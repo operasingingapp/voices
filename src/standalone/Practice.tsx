@@ -11,6 +11,7 @@ import { decorate, syllableRanges, type Deco, type SylProgress } from "./syllabl
 import { buildTips, type TipLine } from "./tips";
 import { onVoicesChanged, speak, stopSpeaking, voiceInfo } from "./speech";
 import { pieceData, type PieceInfo } from "./pieces";
+import { LINE_SOUNDS, resolveLine, type LineChoice } from "./settings";
 
 /*
  * The piece on screen. Only one practice screen is open at a time, so the piece's data lives here, set by
@@ -323,13 +324,7 @@ const Icon = {
   ),
 };
 
-const LINE_SOUNDS: { id: LineInstrument; label: string }[] = [
-  { id: "piano", label: "Piano" },
-  { id: "oboe", label: "Oboe" },
-  { id: "clarinet", label: "Clarinet" },
-  { id: "english-horn", label: "English horn" },
-  { id: "bassoon", label: "Bassoon" },
-];
+
 /** volume slider (0–100, 80 = the part's normal level) to gain: squared, so the slider feels even to the ear */
 const volGain = (v: number, base: number) => base * (Math.max(0, v) / 80) ** 2;
 
@@ -393,9 +388,9 @@ function PracticeScreen({
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
   const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
-  const [lineSoundSaved, setLineSound] = useLocalSetting<LineInstrument>("p:lineSound", "piano");
-  // a choice that no longer exists (the violin) falls back to the piano
-  const lineSound: LineInstrument = LINE_SOUNDS.some((o) => o.id === lineSoundSaved) ? lineSoundSaved : "piano";
+  // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
+  const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
+  const lineSound: LineInstrument = resolveLine(lineChoice, edition.roles.find((r) => r.partKey === voicePart.key)?.voiceType ?? edition.roles[0]?.voiceType ?? "");
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
   const voice = voiceById(voiceSel);

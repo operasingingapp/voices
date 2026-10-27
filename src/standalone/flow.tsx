@@ -7,6 +7,7 @@ import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
 import { ART, NUMBERS, PORTRAITS, STORIES } from "./opera-extra";
+import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
@@ -274,6 +275,18 @@ const InfoIcon = () => (
     <path d="M12 10.5v6M12 7.2v.1" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </svg>
 );
+const GearIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    <path
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinejoin="round"
+      d="M10.3 3.5h3.4l.5 2.4 1.7.9 2.3-.9 1.7 2.9-1.8 1.6v1.9l1.8 1.6-1.7 2.9-2.3-.9-1.7.9-.5 2.4h-3.4l-.5-2.4-1.7-.9-2.3.9-1.7-2.9 1.8-1.6v-1.9L4.1 8.8l1.7-2.9 2.3.9 1.7-.9z"
+    />
+  </svg>
+);
 const PersonIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -485,16 +498,10 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
       </nav>
 
       <span className="sb-spacer" />
-      <button type="button" className="sb-you" aria-current={on(place.screen === "profile")} onClick={() => go({ screen: "profile" })}>
-        <span className="sb-you-icon">
-          <PersonIcon />
-        </span>
-        <span>
-          <b>You</b>
-          <small>{ctx.profile.notSinger ? "Not a singer" : ctx.profile.voices.length ? ctx.profile.voices.join(", ") : "Add your voice"}</small>
-        </span>
+      <button type="button" className="sb-link sb-settings" aria-current={on(place.screen === "profile")} onClick={() => go({ screen: "profile" })}>
+        <GearIcon />
+        <span>Settings</span>
       </button>
-      <StartOver ctx={ctx} />
     </aside>
   );
 }
@@ -994,75 +1001,106 @@ export function ExploreVoices({ ctx, voice: asked }: { ctx: Ctx; voice?: string 
    You
    ==================================================================================== */
 
-export function ProfilePage({ ctx }: { ctx: Ctx }) {
-  const { profile, setProfile } = ctx;
-  const toggleVoice = (v: string) =>
-    setProfile({ voices: profile.voices.includes(v) ? profile.voices.filter((x) => x !== v) : [...profile.voices, v], notSinger: false });
-  const mine = ctx.roles.map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
+/** A setting kept in this browser, read and written under the same key the practice screen uses. */
+function useStored<T>(key: string, initial: T): [T, (v: T) => void] {
+  const [v, setV] = useState<T>(() => {
+    try {
+      const raw = localStorage.getItem(`cp:${key}`);
+      return raw === null ? initial : (JSON.parse(raw) as T);
+    } catch {
+      return initial;
+    }
+  });
+  return [
+    v,
+    (nv: T) => {
+      setV(nv);
+      try {
+        localStorage.setItem(`cp:${key}`, JSON.stringify(nv));
+      } catch {
+        /* storage unavailable */
+      }
+    },
+  ];
+}
+
+function Toggle({ on, onChange, label, hint }: { on: boolean; onChange: (v: boolean) => void; label: string; hint?: string }) {
   return (
-    <main className="screen-body gutter page">
+    <button type="button" className="st-row" role="switch" aria-checked={on} onClick={() => onChange(!on)}>
+      <span className="st-text">
+        <b>{label}</b>
+        {hint && <small>{hint}</small>}
+      </span>
+      <span className="st-switch" aria-hidden="true">
+        <i />
+      </span>
+    </button>
+  );
+}
+
+/** Settings: how practice sounds and looks by default, and the data kept on this device. */
+export function ProfilePage({ ctx }: { ctx: Ctx }) {
+  const [line, setLine] = useStored<LineChoice>("p:lineSound", "auto");
+  const [ipa, setIpa] = useStored("p:ipa", true);
+  const [tr, setTr] = useStored("p:tr", true);
+  const [tips, setTips] = useStored("p:tipsBar", true);
+  const [steady, setSteady] = useStored("p:steady", true);
+  const [countIn, setCountIn] = useStored("p:countin", true);
+  const choice = line === "auto" || LINE_SOUNDS.some((o) => o.id === line) ? line : "auto";
+  return (
+    <main className="screen-body gutter page settings">
       <section className="hero compact">
-        <h1>You</h1>
-        <p className="lede">Your voice and your roles. Everything is kept in this browser on this device; there is no account.</p>
+        <h1>Settings</h1>
+        <p className="lede">How practice sounds and looks when you open a piece. You can still change each one while you practise.</p>
       </section>
-      <section className="block" aria-labelledby="sing-h">
-        <p className="cp-eyebrow" id="sing-h">
-          What you sing
+
+      <section className="block" aria-labelledby="st-line">
+        <p className="cp-eyebrow" id="st-line">
+          Your line is played on
         </p>
-        <div className="voice-chips big">
-          {VOICES.map((v) => (
-            <button key={v} type="button" className="voice-chip" data-tone={voiceTone(v)} aria-pressed={profile.voices.includes(v)} onClick={() => toggleVoice(v)}>
-              {profile.voices.includes(v) && <Check />}
-              {v}
+        <div className="st-chips" role="radiogroup" aria-labelledby="st-line">
+          {[{ id: "auto", label: "Automatic" } as const, ...LINE_SOUNDS].map((o) => (
+            <button key={o.id} type="button" role="radio" aria-checked={choice === o.id} className="st-chip" onClick={() => setLine(o.id)}>
+              {choice === o.id && <Check />}
+              {o.label}
             </button>
           ))}
-          <button type="button" className="voice-chip" aria-pressed={profile.notSinger} onClick={() => setProfile({ voices: [], notSinger: !profile.notSinger })}>
-            {profile.notSinger && <Check />}
-            I'm not a singer
-          </button>
+        </div>
+        <p className="st-note">{choice === "auto" ? `Automatic: ${AUTO_NOTE.charAt(0).toLowerCase()}${AUTO_NOTE.slice(1)}` : "The same instrument for every role."}</p>
+      </section>
+
+      <section className="block" aria-labelledby="st-words">
+        <p className="cp-eyebrow" id="st-words">
+          Under the words
+        </p>
+        <div className="st-list">
+          <Toggle on={ipa} onChange={setIpa} label="IPA" hint="How each word is pronounced, in phonetic letters" />
+          <Toggle on={tr} onChange={setTr} label="English translation" />
+          <Toggle on={tips} onChange={setTips} label="Pronunciation tips" hint="In the Words view: doubled consonants, open and closed vowels, joined words" />
         </div>
       </section>
-      <section className="block" aria-labelledby="roles-h">
-        <p className="cp-eyebrow" id="roles-h">
-          My roles
+
+      <section className="block" aria-labelledby="st-play">
+        <p className="cp-eyebrow" id="st-play">
+          Playing
         </p>
-        {mine.length ? (
-          <ul className="my-roles">
-            {mine.map(({ opera, ch }) => {
-              const pr = progressOf(ctx, opera, ch);
-              return (
-                <li key={`${opera.id}:${ch.id}`} data-tone={voiceTone(ch.voice)}>
-                  <button type="button" className="mr-open" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
-                    <ProgressRing value={pr.pct} size={52} stroke={3}>
-                      <Face opera={opera} ch={ch} />
-                    </ProgressRing>
-                    <span>
-                      <b>{ch.name}</b>
-                      <small>
-                        <span lang={opera.lang}>{opera.title}</span> · {pr.done} of {pr.total} learned
-                      </small>
-                    </span>
-                  </button>
-                  <button type="button" className="cp-btn cp-btn--ghost" onClick={() => ctx.removeRole({ opera: opera.id, character: ch.id })}>
-                    Remove
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
-          <p className="lede">No roles yet. Find one by opera or by voice.</p>
-        )}
+        <div className="st-list">
+          <Toggle on={steady} onChange={setSteady} label="Steady tempo" hint="A steady pulse at the written tempo; off plays the edition's own changes of speed" />
+          <Toggle on={countIn} onChange={setCountIn} label="Count-in" hint="A bar of clicks before the music starts" />
+        </div>
       </section>
-      <section className="block" aria-labelledby="over-h">
-        <p className="cp-eyebrow" id="over-h">
-          Start over
+
+      <section className="block" aria-labelledby="st-data">
+        <p className="cp-eyebrow" id="st-data">
+          Your data
         </p>
-        <p className="lede">Erases your voice, your roles, what you have ticked off, your notes and your settings on this device, and begins again at the welcome.</p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <p className="st-note">
+          Your roles, what you have ticked off, your notes and these settings stay in this browser on this device. There is no account.
+        </p>
+        <div className="st-actions">
           <StartOver ctx={ctx} big />
           <button type="button" className="cp-btn" onClick={() => ctx.go({ screen: "onboarding", step: 1 })}>
-            Only see the welcome again
+            See the welcome again
           </button>
         </div>
       </section>

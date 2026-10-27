@@ -8040,3 +8040,123 @@ p.obp-meta {
   min-width: 0;
   overflow: hidden;
 }
+
+/* =====================================================================
+   Settings: chips for the instrument, switch rows for what shows
+   ===================================================================== */
+.settings .block {
+  max-width: 720px;
+}
+.st-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.st-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--fog);
+  color: var(--ink);
+  font: 500 15px/1 var(--font-sans);
+  cursor: pointer;
+}
+.st-chip svg {
+  width: 16px;
+  height: 16px;
+}
+.st-chip[aria-checked="true"] {
+  background: var(--picked);
+  color: var(--on-pastel);
+}
+.st-note {
+  margin: 10px 0 0;
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+.st-list {
+  display: grid;
+  border-radius: 20px;
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+  overflow: hidden;
+}
+.st-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 60px;
+  padding: 10px 18px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.st-row + .st-row {
+  box-shadow: inset 0 1px 0 var(--fog);
+}
+.st-row:hover {
+  background: color-mix(in srgb, var(--fog) 50%, transparent);
+}
+.st-text {
+  flex: 1;
+  display: grid;
+  gap: 3px;
+}
+.st-text b {
+  font-size: 16px;
+  font-weight: 500;
+}
+.st-text small {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink-muted);
+}
+.st-switch {
+  flex: none;
+  position: relative;
+  width: 46px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--fog-strong);
+  transition: background-color var(--duration-quick) var(--ease-standard);
+}
+.st-switch i {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform var(--duration-quick) var(--ease-standard);
+}
+.st-row[aria-checked="true"] .st-switch {
+  background: var(--now-mark);
+}
+.st-row[aria-checked="true"] .st-switch i {
+  transform: translateX(18px);
+}
+.st-row:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+.st-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.sb-settings {
+  color: var(--ink-muted);
+}
