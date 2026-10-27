@@ -912,28 +912,6 @@ function PracticeScreen({
               <span className="label">Words</span>
             </button>
           </div>
-          {view === "music" && (
-            <button
-              type="button"
-              className="cp-icon-btn line-mode"
-              aria-pressed={minimal}
-              onClick={() => setMinimal(!minimal)}
-              aria-label={minimal ? "Show the full line card" : "Minimal: just the words on a thin line"}
-              title={minimal ? "Full line card" : "Minimal line"}
-            >
-              {minimal ? (
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3.5" y="6" width="17" height="12" rx="3.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
-                  <path d="M7.5 11h9M9.5 14h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
-              ) : (
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M6 10.5h12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                  <path d="M3.5 15h17" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
-                </svg>
-              )}
-            </button>
-          )}
           <button
             type="button"
             className="cp-btn details-btn"
@@ -1002,6 +980,13 @@ function PracticeScreen({
                   EN
                 </button>
               </div>
+              {view === "music" && (
+                <button type="button" className="nl-chip nl-collapse" onClick={() => setMinimal(true)} aria-label="Minimal: just the words on a thin line" title="Minimal">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 9.5h5.5V4M20 9.5h-5.5V4M4 14.5h5.5V20M20 14.5h-5.5V20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              )}
             </div>
           </div>
           <div className="now-body">
@@ -1022,6 +1007,13 @@ function PracticeScreen({
               {Icon.right}
             </button>
           </div>
+          {minimal && view === "music" && (
+            <button type="button" className="line-expand" onClick={() => setMinimal(false)} aria-label="Show the full line card" title="Full line card">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9.5 4H4v5.5M14.5 4H20v5.5M9.5 20H4v-5.5M14.5 20H20v-5.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
         </div>
       </section>
 
