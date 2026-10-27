@@ -276,6 +276,7 @@ async function main() {
     config.voiceName = v.name;
     writeFileSync(CONFIG, JSON.stringify(config, null, 2) + "\n");
     console.log(`Using ${v.name} (${v.id}); saved in voice.config.json. Change it there to use another voice.`);
+    if (process.env.GITHUB_ACTIONS) console.log(`::notice::Voice chosen: ${v.name}`);
   }
   const voiceDir = config.voiceId ? slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "") || "voice" : "voice";
   const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, config.slowSpeed]);
@@ -344,9 +345,13 @@ async function main() {
   mkdirSync(dirname(bankPath), { recursive: true });
   writeFileSync(bankPath, JSON.stringify(bank, null, 1));
   console.log("Done.");
+  if (process.env.GITHUB_ACTIONS) console.log(`::notice::Made ${jobs.length} clips (${chars} characters).`);
 }
 
 main().catch((e) => {
-  console.error(String(e instanceof Error ? e.message : e));
+  const msg = String(e instanceof Error ? e.message : e);
+  console.error(msg);
+  // on GitHub, also as an annotation: readable on the run's page without opening the log
+  if (process.env.GITHUB_ACTIONS) console.log(`::error::${msg.replace(/\r?\n/g, " ")}`);
   process.exit(1);
 });
