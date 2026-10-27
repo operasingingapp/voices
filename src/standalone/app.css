@@ -8160,3 +8160,58 @@ p.obp-meta {
 .sb-settings {
   color: var(--ink-muted);
 }
+
+/* =====================================================================
+   The side panel over the practice screen: slides in from the left
+   ===================================================================== */
+.side-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+}
+.side-drawer.open {
+  pointer-events: auto;
+}
+.sd-scrim {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgb(11 11 11 / 0.2);
+  opacity: 0;
+  transition: opacity var(--duration-settle) var(--ease-standard);
+  cursor: pointer;
+}
+.side-drawer.open .sd-scrim {
+  opacity: 1;
+}
+.sd-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: min(320px, 86vw);
+  transform: translateX(-104%);
+  transition: transform var(--duration-settle) var(--ease-standard);
+  box-shadow: var(--shadow-float);
+}
+.side-drawer.open .sd-panel {
+  transform: none;
+}
+.sd-panel .sidebar {
+  position: static;
+  width: 100%;
+  transform: none;
+  box-shadow: none;
+}
+.p-menu svg {
+  width: 22px;
+  height: 22px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sd-panel,
+  .sd-scrim {
+    transition: none;
+  }
+}

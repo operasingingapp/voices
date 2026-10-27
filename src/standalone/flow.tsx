@@ -506,6 +506,33 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
   );
 }
 
+/**
+ * The side panel over a full-screen page (the practice screen): it slides in from the left over the music,
+ * so you can switch to another piece or role; a tap outside, Escape or going somewhere closes it.
+ */
+export function SideDrawer({ ctx, open, onClose }: { ctx: Ctx; open: boolean; onClose: () => void }) {
+  const key = JSON.stringify(ctx.place);
+  useEffect(() => {
+    onClose();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+  useEffect(() => {
+    if (!open) return;
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", esc);
+    return () => window.removeEventListener("keydown", esc);
+  }, [open, onClose]);
+  return (
+    <div className={`side-drawer${open ? " open" : ""}`} aria-hidden={!open}>
+      <button type="button" className="sd-scrim" aria-label="Close the menu" tabIndex={open ? 0 : -1} onClick={onClose} />
+      {/* closed: out of reach for keyboards and screen readers (inert; React 18 has no type for it) */}
+      <div className="sd-panel" {...(open ? {} : ({ inert: "" } as object))}>
+        <Sidebar ctx={ctx} />
+      </div>
+    </div>
+  );
+}
+
 /** On narrower screens the sidebar slides in; the role you are learning stays in the top bar. */
 function NowPill({ ctx }: { ctx: Ctx }) {
   const cur = resolve(ctx.current);

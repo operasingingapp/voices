@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ExploreOperas,
   ExploreVoices,
@@ -12,6 +12,7 @@ import {
   roleKey,
   same,
   Shell,
+  SideDrawer,
   type Ctx,
   type PiecePlace,
   type Place,
@@ -94,6 +95,9 @@ export function App() {
   const [profile, setProfile] = useState<Profile>(() => read<Profile>(K.profile, { voices: [], notSinger: false }));
   const [onboarded, setOnboarded] = useState<boolean>(() => read<boolean | null>(K.onboarded, null) ?? roles.length > 0);
   const home = (): Place => (current ? { screen: "role", ...current } : { screen: "explore", by: "opera" });
+  // the side panel over the practice screen
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const closeDrawer = useCallback(() => setDrawerOpen(false), []);
   const [place, setPlace] = useState<Place>(() => {
     if (!onboarded) return { screen: "onboarding", step: 1 };
     return migrate(read<unknown>(K.place, null)) ?? home();
@@ -189,7 +193,10 @@ export function App() {
       const r = { opera: opera.id, character: ch.id };
       const key = piece.id ?? piece.title;
       return (
-        <Practice
+        <>
+          <SideDrawer ctx={ctx} open={drawerOpen} onClose={closeDrawer} />
+          <Practice
+          onMenu={() => setDrawerOpen(true)}
           editionId={piece.editionId}
           roleName={ch.name}
           onBack={() => go({ screen: "role", opera: opera.id, character: ch.id })}
@@ -201,7 +208,8 @@ export function App() {
             const i = list?.findIndex((n) => n.piece?.character === ch.id && n.piece.index === place.piece) ?? -1;
             return list && i >= 0 ? { n: i + 1, total: list.length, before: list[i - 1]?.title, after: list[i + 1]?.title, opera: opera.title } : undefined;
           })()}
-        />
+          />
+        </>
       );
     }
     return (

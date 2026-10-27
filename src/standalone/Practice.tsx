@@ -353,6 +353,8 @@ const TIPS_KEY = "cp:tipsDone";
 
 type PracticeProps = {
   onBack: () => void;
+  /** opens the side panel (roles and their pieces) over the screen */
+  onMenu?: () => void;
   roleName: string;
   learned?: boolean;
   onToggleLearned?: () => void;
@@ -370,6 +372,7 @@ export function Practice({ editionId, ...props }: PracticeProps & { editionId: s
 
 function PracticeScreen({
   onBack,
+  onMenu,
   roleName,
   learned,
   onToggleLearned,
@@ -896,6 +899,13 @@ function PracticeScreen({
   return (
     <div className={`practice is-${view}`}>
       <header className="p-head gutter">
+        {onMenu && (
+          <button type="button" className="cp-icon-btn p-menu" onClick={onMenu} aria-label="Your roles and pieces">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.5 7h15M4.5 12h15M4.5 17h15" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
+            </svg>
+          </button>
+        )}
         <button type="button" className="cp-icon-btn" onClick={onBack} aria-label={`Back to ${roleName}`}>
           {Icon.back}
         </button>
