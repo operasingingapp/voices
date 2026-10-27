@@ -7505,3 +7505,191 @@ p.obp-meta {
   border-radius: 4px;
   transition: background-color 80ms linear;
 }
+
+/* =====================================================================
+   Welcome: a slowly drifting gallery of characters, then the operas
+   ===================================================================== */
+.ob-body.ob-welcome {
+  max-width: none;
+  min-width: 0;
+  overflow-x: clip;
+  justify-content: flex-start;
+  gap: 0;
+  padding-block: clamp(28px, 5vh, 56px) 72px;
+}
+.ob-hero {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+.ob-welcome h1 {
+  font-size: clamp(36px, 5vw, 60px);
+}
+.ob-welcome .lede {
+  margin: 0;
+}
+
+.reel {
+  width: 100%;
+  /* the rows are far wider than the screen: they must not widen the page */
+  min-width: 0;
+  max-width: 100vw;
+  display: grid;
+  gap: 20px;
+  overflow: hidden;
+  padding-block: 6px 10px;
+  /* the cards arrive and leave softly at the edges */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.reel-row {
+  display: flex;
+  width: max-content;
+  animation: reel-drift 150s linear infinite;
+  will-change: transform;
+}
+.reel-row.rev {
+  animation-duration: 180s;
+  animation-direction: reverse;
+}
+/* a hand reaching for a card, or a keyboard on one, holds the gallery still */
+.reel:hover .reel-row,
+.reel:focus-within .reel-row {
+  animation-play-state: paused;
+}
+@keyframes reel-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.reel-card {
+  appearance: none;
+  flex: none;
+  display: grid;
+  justify-items: start;
+  gap: 2px;
+  width: clamp(132px, 15vw, 172px);
+  /* spacing as a margin, not a gap, so two copies of a row are exactly twice one */
+  margin-right: 18px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.reel-pic {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 8px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--tone-soft);
+  box-shadow: 0 1px 2px rgba(40, 30, 60, 0.06), 0 10px 26px -14px rgba(40, 30, 60, 0.22);
+  transition: transform 420ms var(--ease-standard), box-shadow 420ms var(--ease-standard);
+}
+.reel-pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 14%;
+  transition: transform 700ms var(--ease-standard);
+}
+.reel-ready {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgba(40, 30, 60, 0.12);
+}
+.reel-ready::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--now-mark);
+  vertical-align: 1px;
+}
+.reel-name {
+  font-size: 15px;
+  line-height: 1.25;
+}
+.reel-opera {
+  font-size: 12.5px;
+  line-height: 1.3;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+@media (hover: hover) {
+  .reel-card:hover .reel-pic {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 4px rgba(40, 30, 60, 0.06), 0 18px 34px -16px rgba(40, 30, 60, 0.32);
+  }
+  .reel-card:hover .reel-pic img {
+    transform: scale(1.04);
+  }
+}
+.reel-card:active .reel-pic {
+  transform: scale(0.97);
+}
+.reel-card:focus-visible {
+  outline: none;
+}
+.reel-card:focus-visible .reel-pic {
+  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reel {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+    padding-inline: 16px;
+  }
+  .reel-row {
+    animation: none;
+  }
+  .reel-card[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.ob-from-opera {
+  width: 100%;
+  max-width: 900px;
+  margin: clamp(36px, 6vh, 56px) auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+.ob-from-opera h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.obs-go {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  color: var(--ink-muted);
+  transform: rotate(180deg);
+}
+.obs-go svg {
+  width: 18px;
+  height: 18px;
+}

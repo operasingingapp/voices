@@ -1262,11 +1262,62 @@ function Preview() {
   );
 }
 
+/** Characters with a portrait, for the welcome gallery. */
+function portraitRoles(): { opera: Opera; ch: Character }[] {
+  const out: { opera: Opera; ch: Character }[] = [];
+  for (const opera of OPERAS) for (const ch of opera.chars) if (PORTRAITS[`${opera.id}:${ch.id}`]) out.push({ opera, ch });
+  return out;
+}
+
+/**
+ * Two rows of character cards drifting slowly in opposite directions, like programmes laid out on a table.
+ * Each row holds its cards four times and moves by half its width (two sets, wider than any screen), so it loops
+ * without a seam; it pauses under the
+ * pointer or keyboard focus, and stands still (scrollable by hand) for people who prefer less motion.
+ */
+function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void }) {
+  const all = portraitRoles();
+  const rows = [all.filter((_, i) => i % 2 === 0), all.filter((_, i) => i % 2 === 1)];
+  return (
+    <div className="reel" role="group" aria-label="Characters">
+      {rows.map((row, r) => (
+        <div key={r} className={`reel-row${r === 1 ? " rev" : ""}`}>
+          {[0, 1, 2, 3].map((copy) =>
+            row.map(({ opera, ch }) => {
+              const art = PORTRAITS[`${opera.id}:${ch.id}`];
+              const ready = ch.pieces.some((p) => p.editionId);
+              return (
+                <button
+                  key={`${copy}-${opera.id}:${ch.id}`}
+                  type="button"
+                  className="reel-card"
+                  data-tone={voiceTone(ch.voice)}
+                  aria-hidden={copy > 0 || undefined}
+                  tabIndex={copy > 0 ? -1 : undefined}
+                  onClick={() => onPick(opera, ch)}
+                >
+                  <span className="reel-pic">
+                    <img src={art.portrait} alt="" decoding="async" draggable={false} />
+                    {ready && <span className="reel-ready">Ready to sing</span>}
+                  </span>
+                  <span className="reel-name">{ch.name}</span>
+                  <span className="reel-opera" lang={opera.lang}>
+                    {opera.title}
+                  </span>
+                </button>
+              );
+            }),
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function Onboarding({
   ctx,
   step: stepAsked,
   role,
-  by = "voice",
   opera: operaId,
 }: {
   ctx: Ctx;
@@ -1275,13 +1326,12 @@ export function Onboarding({
   by?: "voice" | "opera";
   opera?: string;
 }) {
-  const { profile, setProfile } = ctx;
-  // step 2 offers two ways in, by voice or by opera; step 3 is that voice's roles or that opera's cast
+  // two steps: a character (or an opera) on the welcome screen, then that opera's cast to confirm
   const chosenOpera = operaId ? OPERAS.find((o) => o.id === operaId) : undefined;
-  const at = (step: 1 | 2 | 3, extra: { role?: RoleRef; by?: "voice" | "opera"; opera?: string } = {}): Place => ({
+  const at = (step: 1 | 3, extra: { role?: RoleRef; opera?: string } = {}): Place => ({
     screen: "onboarding",
     step,
-    by,
+    by: "opera",
     opera: operaId,
     ...extra,
   });
@@ -1290,33 +1340,28 @@ export function Onboarding({
     ctx.chooseRole({ opera: opera.id, character: ch.id });
     ctx.finishOnboarding({ screen: "role", opera: opera.id, character: ch.id });
   };
-  const toggleVoice = (v: string) =>
-    setProfile({ voices: profile.voices.includes(v) ? profile.voices.filter((x) => x !== v) : [...profile.voices, v], notSinger: false });
-  const chosen = by === "opera" ? !!chosenOpera : profile.voices.length > 0;
-  const roles =
-    by === "opera" ? (chosenOpera ? chosenOpera.chars.map((ch) => ({ opera: chosenOpera, ch })) : []) : profile.voices.flatMap((v) => rolesForVoice(v, false));
-  // nothing chosen yet (e.g. an old saved place): show the choice instead of an empty list
-  const step = stepAsked === 3 && !role && roles.length === 0 ? 2 : stepAsked;
-  // each screen starts at the top
+  const roles = chosenOpera ? chosenOpera.chars.map((ch) => ({ opera: chosenOpera, ch })) : [];
+  // the old middle step, or a cast with no opera: back to the welcome screen
+  const step = stepAsked === 3 && roles.length ? 3 : 1;
   const scroller = useRef<HTMLDivElement>(null);
   const roleKeyNow = role ? roleKey(role) : "";
   useEffect(() => {
     scroller.current?.scrollTo({ top: 0 });
   }, [step, operaId]);
-  // in the list a tap only selects; "Continue with …" then starts with that role
+  // in the cast a tap only selects; "Continue with …" then starts with that role
   const [selected, setSelected] = useState<string | null>(null);
   useEffect(() => {
-    if (role) setSelected(roleKey(role));
-  }, [roleKeyNow]);
+    setSelected(role ? roleKey(role) : null);
+  }, [roleKeyNow, operaId]);
   const selectedRole = roles.find(({ opera, ch }) => `${opera.id}:${ch.id}` === selected) ?? null;
   return (
     <div className={`screen onboarding step-${step}`} ref={scroller}>
       <div className="ob-top gutter">
         <span className="wordmark-lg">Counterpart</span>
-        <div className="ob-steps" aria-label={`Step ${step} of 3`}>
-          <span>Step {step} of 3</span>
+        <div className="ob-steps" aria-label={`Step ${step === 1 ? 1 : 2} of 2`}>
+          <span>Step {step === 1 ? 1 : 2} of 2</span>
           <div className="ob-track" aria-hidden="true">
-            {[1, 2, 3].map((n) => (
+            {[1, 3].map((n) => (
               <i key={n} className={n <= step ? "on" : ""} />
             ))}
           </div>
@@ -1327,122 +1372,51 @@ export function Onboarding({
       </div>
 
       {step === 1 && (
-        <main className="ob-body gutter ob-welcome" key="s1">
-          <h1>Learn your role.</h1>
-          <p className="lede">Every aria, line by line, with the piano to sing with.</p>
-          <Preview />
-          <div className="ob-actions">
-            <button type="button" className="cp-btn cp-btn--ink cp-btn--stand ob-go" onClick={() => ctx.go(at(2))}>
-              Get started
-            </button>
+        <main className="ob-body ob-welcome" key="s1">
+          <div className="ob-hero gutter">
+            <h1>Which role is yours?</h1>
+            <p className="lede">Choose a character to begin, or start from an opera.</p>
           </div>
+          <CastReel onPick={(opera, ch) => ctx.go(at(3, { opera: opera.id, role: { opera: opera.id, character: ch.id } }))} />
+          <section className="ob-from-opera gutter" aria-labelledby="ob-operas-h">
+            <h2 id="ob-operas-h">Or start from an opera</h2>
+            <div className="obs-operas">
+              {OPERAS.map((o, n) => {
+                const art = ART[o.id];
+                const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
+                return (
+                  <button
+                    key={o.id}
+                    type="button"
+                    className="obs-opera"
+                    data-tone={OPERA_TONES[n % OPERA_TONES.length]}
+                    onClick={() => ctx.go(at(3, { opera: o.id, role: undefined }))}
+                  >
+                    <span className="obs-thumb" aria-hidden="true">
+                      {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span lang={o.lang}>{letter}</span>}
+                    </span>
+                    <span className="obs-vtext">
+                      <b lang={o.lang}>{o.title}</b>
+                      <small>
+                        {o.composer} · {o.year} · {o.chars.length} roles
+                      </small>
+                    </span>
+                    <span className="obs-go" aria-hidden="true">
+                      <BackIcon />
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
         </main>
       )}
 
-      {step === 2 && (
-        <main className="ob-body gutter wide xwide" key="s2">
-          <h1>How would you like to start?</h1>
-          <p className="lede">Find a role through your voice, or through an opera you know. You can switch any time.</p>
-          <div className="cp-seg ob-seg" role="group" aria-label="Find a role">
-            <button type="button" aria-pressed={by === "voice"} onClick={() => ctx.go(at(2, { by: "voice" }))}>
-              By voice
-            </button>
-            <button type="button" aria-pressed={by === "opera"} onClick={() => ctx.go(at(2, { by: "opera" }))}>
-              By opera
-            </button>
-          </div>
-          {by === "voice" ? (
-            <>
-              <p className="ob-sub">Choose one or more voices.</p>
-              <div className="obs-voices" role="group" aria-label="Your voice">
-                {VOICES.map((v) => {
-                  const on = profile.voices.includes(v);
-                  const list = rolesForVoice(v, false);
-                  const faces = list.filter(({ opera, ch }) => PORTRAITS[`${opera.id}:${ch.id}`]).slice(0, 3);
-                  const names = list.slice(0, 3).map(({ ch }) => ch.name.replace(/^The /, "the "));
-                  return (
-                    <button key={v} type="button" className="obs-voice" data-tone={voiceTone(v)} aria-pressed={on} onClick={() => toggleVoice(v)}>
-                      <span className="obs-vtext">
-                        <b>{v}</b>
-                        <small>
-                          {names.join(", ")}
-                          {list.length > 3 ? ` and ${list.length - 3} more` : ""}
-                        </small>
-                      </span>
-                      <span className="obs-faces" aria-hidden="true">
-                        {faces.map(({ opera, ch }) => (
-                          <img key={ch.id} src={PORTRAITS[`${opera.id}:${ch.id}`].face} alt="" />
-                        ))}
-                      </span>
-                      <span className="obs-vcheck" aria-hidden="true">
-                        <Check />
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </>
-          ) : (
-            <>
-              <p className="ob-sub">Choose an opera to see its cast.</p>
-              <div className="obs-operas" role="radiogroup" aria-label="Operas">
-                {OPERAS.map((o, n) => {
-                  const art = ART[o.id];
-                  const on = operaId === o.id;
-                  const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
-                  return (
-                    <button
-                      key={o.id}
-                      type="button"
-                      role="radio"
-                      aria-checked={on}
-                      className="obs-opera"
-                      data-tone={OPERA_TONES[n % OPERA_TONES.length]}
-                      onClick={() => ctx.go(at(2, { opera: o.id }))}
-                      onDoubleClick={() => ctx.go(at(3, { opera: o.id }))}
-                    >
-                      <span className="obs-thumb" aria-hidden="true">
-                        {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span lang={o.lang}>{letter}</span>}
-                      </span>
-                      <span className="obs-vtext">
-                        <b lang={o.lang}>{o.title}</b>
-                        <small>
-                          {o.composer} · {o.year} · {o.chars.length} roles
-                        </small>
-                      </span>
-                      <span className="obs-vcheck" aria-hidden="true">
-                        <Check />
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </>
-          )}
-          <div className="ob-sticky">
-            <button type="button" className="back-to inline" onClick={() => ctx.go(at(1))}>
-              <BackIcon />
-              <span>Back</span>
-            </button>
-            <button type="button" className="cp-btn cp-btn--ink cp-btn--stand ob-go" disabled={!chosen} onClick={() => ctx.go(at(3))}>
-              {by === "opera" ? (chosenOpera ? "See the cast" : "Choose an opera") : chosen ? "Continue" : "Choose a voice"}
-            </button>
-          </div>
-        </main>
-      )}
-
-      {step === 3 && (
-        <main className="ob-body gutter wide xwide" key="s3">
-          <h1>Find your first role.</h1>
+      {step === 3 && chosenOpera && (
+        <main className="ob-body gutter wide xwide" key={`s3-${chosenOpera.id}`}>
+          <h1 lang={chosenOpera.lang}>{chosenOpera.title}</h1>
           <p className="lede">
-            {by === "opera" && chosenOpera ? (
-              <>
-                The cast of <i lang={chosenOpera.lang}>{chosenOpera.title}</i>.
-              </>
-            ) : (
-              <>Roles for {profile.voices.map((v) => PLURAL[v]).join(" and ")}.</>
-            )}{" "}
-            Select one to start with. You can add more roles later.
+            {chosenOpera.composer}, {chosenOpera.year}. Select your role; you can add more later.
           </p>
           <div className="showcase" role="radiogroup" aria-label="Roles">
             {roles.map(({ opera, ch }) => {
@@ -1472,7 +1446,7 @@ export function Onboarding({
                   </span>
                   <span className="sc-text">
                     <b>{ch.name}</b>
-                    {by === "opera" ? <span>{ch.voice}</span> : <span lang={opera.lang}>{opera.title}</span>}
+                    <span>{ch.voice}</span>
                     <em>{ch.desc}</em>
                   </span>
                 </button>
@@ -1480,9 +1454,9 @@ export function Onboarding({
             })}
           </div>
           <div className="ob-sticky">
-            <button type="button" className="back-to inline" onClick={() => ctx.go(at(2))}>
+            <button type="button" className="back-to inline" onClick={() => ctx.go({ screen: "onboarding", step: 1, by: "opera" })}>
               <BackIcon />
-              <span>{by === "opera" ? "Operas" : "Voices"}</span>
+              <span>Back</span>
             </button>
             <button
               type="button"
