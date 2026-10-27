@@ -399,8 +399,8 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           const { opera, ch } = cur;
           const pr = progressOf(ctx, opera, ch);
           const target = continueTarget(ctx, opera, ch);
-          // the role's other pieces with music, under the one to continue
-          const more = ch.pieces.map((p, i) => ({ p, i })).filter(({ p, i }) => p.editionId && i !== target?.place.piece);
+          // the role's other pieces, in the order of the opera, under the one to continue (those without music yet quieter)
+          const more = ch.pieces.map((p, i) => ({ p, i })).filter(({ i }) => i !== target?.place.piece);
           return (
             <section className="sb-now" data-tone={voiceTone(ch.voice)} aria-label="What you are learning" key={`${opera.id}:${ch.id}`}>
               <button
@@ -436,12 +436,14 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
                     <button
                       key={pieceKey(p)}
                       type="button"
-                      className="sb-piece"
+                      title={p.editionId ? p.title : `${p.title}: music not here yet`}
+                      className={`sb-piece${p.editionId ? "" : " soon"}`}
                       aria-current={on(place.screen === "piece" && place.opera === opera.id && place.character === ch.id && place.piece === i)}
-                      onClick={() => go({ screen: "piece", opera: opera.id, character: ch.id, piece: i })}
+                      onClick={() => go(p.editionId ? { screen: "piece", opera: opera.id, character: ch.id, piece: i } : { screen: "role", opera: opera.id, character: ch.id })}
+                      aria-label={p.editionId ? undefined : `${p.title}: music not here yet`}
                     >
                       <span className="sb-piece-play" aria-hidden="true">
-                        <Play />
+                        {p.editionId ? <Play /> : null}
                       </span>
                       <span lang={opera.lang}>{p.title}</span>
                       {pr.set.has(pieceKey(p)) && (

@@ -8010,3 +8010,33 @@ p.obp-meta {
   width: 16px;
   height: 16px;
 }
+
+/* pieces whose music is not in the app yet: listed for the whole role, quietly */
+.sb-piece.soon {
+  font-weight: 400;
+  color: var(--on-pastel-muted);
+}
+.sb-piece.soon .sb-piece-play {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.7);
+}
+.sb-piece-soon {
+  margin-left: auto;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--on-pastel-muted);
+}
+.sb-piece > span[lang] {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sb-pieces {
+  grid-template-columns: minmax(0, 1fr);
+}
+.sb-piece {
+  min-width: 0;
+  overflow: hidden;
+}
