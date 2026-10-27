@@ -454,7 +454,8 @@ function buildNotes(edition: CompiledEdition, measures: PerfMeasure[]): PerfNote
 function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[] {
   const info = new Map(edition.notes.map((n) => [n.id, n]));
   const trem = (ev: PerfNote) => info.get(ev.ids[0])?.tremolo;
-  if (!events.some((e) => trem(e))) return events;
+  const trill = (ev: PerfNote) => info.get(ev.ids[0])?.trill;
+  if (!events.some((e) => trem(e) || trill(e))) return events;
   const out: PerfNote[] = [];
   const used = new Set<PerfNote>();
   const repeat = (base: PerfNote, pitches: { midi: number; id: string }[], onQ: number, offQ: number, marks: number) => {
@@ -467,6 +468,28 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
   };
   for (const ev of events) {
     if (used.has(ev)) continue;
+    const tr = trill(ev);
+    if (tr && !trem(ev)) {
+      // A trill, as Mozart's time played it: from the upper note, in sixteenths (thirty-seconds in a slow tempo),
+      // settling on the written note for the last part of its length. Tied notes are one trill.
+      const bpm = tempoNear(edition, ev.ids[0]);
+      const step = bpm >= 90 ? 0.25 : 0.125;
+      const len = ev.offQ - ev.onQ;
+      const settle = Math.min(len / 4, 0.5);
+      const pitches = [
+        { midi: tr.upper, id: ev.ids[0] },
+        { midi: ev.midi, id: ev.ids[0] },
+      ];
+      let k = 0;
+      let t = ev.onQ;
+      for (; t < ev.offQ - settle - step / 2; t += step, k++) {
+        const p = pitches[k % 2];
+        out.push({ ...ev, key: `${ev.key}~t${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(ev.vel * (k === 0 ? 1 : 0.8))), onQ: t, offQ: t + step });
+      }
+      // end on the written note (after the upper one, so the alternation closes cleanly)
+      out.push({ ...ev, key: `${ev.key}~t${k}`, vel: Math.max(1, Math.round(ev.vel * 0.85)), onQ: t, offQ: ev.offQ });
+      continue;
+    }
     const t = trem(ev);
     if (!t || t.type === "stop") {
       if (!t) out.push(ev);
@@ -489,6 +512,15 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
   for (const ev of events) if (trem(ev)?.type === "stop" && !used.has(ev) && !out.some((o) => o.ids[0] === ev.ids[0])) out.push(ev);
   out.sort((a, b) => a.onQ - b.onQ || a.midi - b.midi);
   return out;
+}
+
+/** The written tempo (bpm) in force at a note, from the edition's marks. */
+function tempoNear(edition: CompiledEdition, noteId: string): number {
+  const n = edition.notes.find((x) => x.id === noteId);
+  let bpm = 100;
+  if (!n) return bpm;
+  for (let m = 0; m <= n.m; m++) for (const t of edition.measures[m].tempos) if (m < n.m || t.q <= n.q) bpm = t.bpm;
+  return bpm;
 }
 
 function findOpenAt(open: Map<string, PerfNote>, n: NoteInfo, onQ: number): PerfNote | undefined {

@@ -108,6 +108,7 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
     const xmlPart = partEl.getAttribute("id")!;
     let divisions = 1;
     let time: [number, number] = [4, 4];
+    let fifths = 0; // key signature, for the upper note of a trill
     const vel = new Map<number, number>(); // staff -> velocity
     let startQ = 0;
     kids(partEl, "measure").forEach((mEl, mi) => {
@@ -122,10 +123,13 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
               throw new ImportError(`part ${xmlPart} has more measures than the first part`);
             })();
       let noteSeq = 0;
+      // accidentals written earlier in this bar ("E5" → -1), which hold until the barline
+      const barAlter = new Map<string, number>();
       for (const el of kids(mEl)) {
         switch (el.nodeName) {
           case "attributes": {
             if (kid(el, "divisions")) divisions = num(kid(el, "divisions"));
+            if (kid(el, "key")) fifths = num(kid(kid(el, "key")!, "fifths"));
             const t = kid(el, "time");
             if (t) {
               time = [num(kid(t, "beats")), num(kid(t, "beat-type"))];
@@ -209,6 +213,25 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
             if (ids.has(id)) problems.push(`duplicate note id ${id}`);
             ids.add(id);
             const midi = (num(kid(pitch, "octave")) + 1) * 12 + STEP[txt(kid(pitch, "step"))!] + num(kid(pitch, "alter"), 0);
+            barAlter.set(`${txt(kid(pitch, "step"))}${num(kid(pitch, "octave"))}`, num(kid(pitch, "alter"), 0));
+            // a trill alternates with the next note up the scale: the key's, or as altered earlier in the bar, or as
+            // marked over the trill (an accidental-mark)
+            const orn = kids(el, "notations").flatMap((n) => kids(n, "ornaments"));
+            const trillEl = orn.find((o) => kid(o, "trill-mark"));
+            let trill: { upper: number } | undefined;
+            if (trillEl) {
+              const order = ["C", "D", "E", "F", "G", "A", "B"];
+              const st = txt(kid(pitch, "step"))!;
+              const i = order.indexOf(st);
+              const upStep = order[(i + 1) % 7];
+              const upOct = num(kid(pitch, "octave")) + (i === 6 ? 1 : 0);
+              const sharps = ["F", "C", "G", "D", "A", "E", "B"];
+              let alter = fifths > 0 && sharps.slice(0, fifths).includes(upStep) ? 1 : fifths < 0 && sharps.slice(7 + fifths).includes(upStep) ? -1 : 0;
+              if (barAlter.has(`${upStep}${upOct}`)) alter = barAlter.get(`${upStep}${upOct}`)!;
+              const mark = txt(kid(trillEl, "accidental-mark"));
+              if (mark) alter = { sharp: 1, natural: 0, flat: -1, "double-sharp": 2, "flat-flat": -2 }[mark] ?? alter;
+              trill = { upper: (upOct + 1) * 12 + STEP[upStep] + alter };
+            }
             const ties = kids(el, "tie").map((t) => t.getAttribute("type"));
             const lyrics: NoteLyric[] = kids(el, "lyric").map((ly) => {
               const syllables: LyricSyllable[] = [];
@@ -249,6 +272,7 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
               tieStop: ties.includes("stop"),
               ...(fermata ? { fermata } : {}),
               ...(tremolo ? { tremolo } : {}),
+              ...(trill ? { trill } : {}),
               ...(lyrics.length ? { lyrics } : {}),
             });
             break;

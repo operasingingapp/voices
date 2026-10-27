@@ -81,6 +81,8 @@ export interface NoteInfo {
    * tremolo, e.g. octaves). marks = number of strokes or beams (3 = demisemiquavers).
    */
   tremolo?: { type: "single" | "start" | "stop"; marks: number };
+  /** Trill: alternates with `upper` (MIDI), the next note up the scale. */
+  trill?: { upper: number };
   lyrics?: NoteLyric[];
 }
 
