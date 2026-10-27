@@ -6,7 +6,7 @@ import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
-import { ART, NUMBERS, PORTRAITS, STORIES } from "./opera-extra";
+import { ART, BRAVO, NUMBERS, PORTRAITS, STORIES } from "./opera-extra";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
@@ -109,7 +109,8 @@ export function Avatar({ kind }: { kind: AvatarKind }) {
     ),
   };
   return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }}>
+    // framed like the portraits: a little closer, the head just above the middle, the shoulders to the edge
+    <svg viewBox="4 5 56 59" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }}>
       {parts[kind]}
     </svg>
   );
@@ -428,7 +429,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
                 <span className="sb-role-text">
                   <b>{ch.name}</b>
                   <small>
-                    {pr.done} of {pr.total} learned
+                    {pr.total > 0 && pr.done === pr.total ? "Role learned" : `${pr.done} of ${pr.total} learned`}
                   </small>
                 </span>
               </button>
@@ -503,6 +504,73 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
         <span>Settings</span>
       </button>
     </aside>
+  );
+}
+
+const FEMALE = /^(soprano|mezzo|contralto|alto)/i;
+
+/**
+ * The moment a whole role is learned: the character applauds (a short film with its sound, where there is one;
+ * otherwise the portrait), "Brava!" or "Bravo!", and where to go next. Closes with the button, Escape or a tap outside.
+ */
+export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () => void }) {
+  const opera = OPERAS.find((o) => o.id === r.opera);
+  const ch = opera?.chars.find((c) => c.id === r.character);
+  const film = BRAVO[`${r.opera}:${r.character}`];
+  const art = PORTRAITS[`${r.opera}:${r.character}`];
+  const video = useRef<HTMLVideoElement>(null);
+  const close = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    close.current?.focus();
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", esc);
+    // with its applause if the browser allows (the tick was a tap); silently otherwise
+    const v = video.current;
+    if (v) {
+      v.muted = false;
+      v.play().catch(() => {
+        v.muted = true;
+        void v.play().catch(() => undefined);
+      });
+    }
+    return () => window.removeEventListener("keydown", esc);
+  }, [onClose]);
+  if (!opera || !ch) return null;
+  const n = ch.pieces.length;
+  const word = FEMALE.test(ch.voice) ? "Brava!" : "Bravo!";
+  const count = n === 1 ? "its one piece" : `all ${["", "", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] ?? n} pieces`;
+  return (
+    <div className="bravo" role="dialog" aria-modal="true" aria-labelledby="bravo-h" data-tone={voiceTone(ch.voice)}>
+      <button type="button" className="bravo-scrim" aria-label="Close" tabIndex={-1} onClick={onClose} />
+      <div className="bravo-card">
+        <div className="bravo-media">
+          {film ? (
+            <video ref={video} src={film.video} poster={film.poster} playsInline preload="auto" aria-label={`${ch.name} applauding`} />
+          ) : art ? (
+            <img src={art.portrait} alt="" />
+          ) : (
+            <span className="bravo-bust" aria-hidden="true">
+              <Avatar kind={ch.avatar} />
+            </span>
+          )}
+        </div>
+        <div className="bravo-text">
+          <h2 id="bravo-h">{word}</h2>
+          <p>
+            You have learned the whole role of {ch.name.replace(/^The /, "the ")}: {count} of {ch.name.replace(/^The /, "the ")}'s music in{" "}
+            <i lang={opera.lang}>{opera.title}</i>.
+          </p>
+          <div className="bravo-actions">
+            <button type="button" className="cp-btn" onClick={() => (onClose(), ctx.go({ screen: "explore", by: "opera" }))}>
+              Find a new role
+            </button>
+            <button ref={close} type="button" className="cp-btn cp-btn--ink" onClick={onClose}>
+              Thank you
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -610,7 +678,17 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   return (
     <main className="screen-body gutter page">
       <section className={`rp-head${ART[opera.id] ? " has-art" : ""}`} data-tone={voiceTone(ch.voice)}>
-        {ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />}
+        {pr.total > 0 && pr.done === pr.total && BRAVO[`${opera.id}:${ch.id}`] ? (
+          <div className="art-band bravo-band">
+            <video src={BRAVO[`${opera.id}:${ch.id}`].video} poster={BRAVO[`${opera.id}:${ch.id}`].poster} autoPlay loop muted playsInline aria-label={`${ch.name} applauding`} />
+            <span className="bravo-chip">
+              <Check />
+              Role learned
+            </span>
+          </div>
+        ) : (
+          ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />
+        )}
         <ProgressRing value={pr.pct} size={152} stroke={7}>
           <Face opera={opera} ch={ch} />
         </ProgressRing>

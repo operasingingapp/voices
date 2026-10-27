@@ -43,7 +43,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 8000,
     // inline fonts as data URIs; keep JavaScript, the illustrations and the piano samples as separate
     // files, so they load in parallel and are cached on their own
-    assetsInlineLimit: (file: string) => !/\.(js|webp|jpe?g|png|avif|mp3)$/.test(file),
+    assetsInlineLimit: (file: string) => !/\.(js|webp|jpe?g|png|avif|mp3|mp4)$/.test(file),
     rollupOptions: {
       input: "standalone.html",
       output: { inlineDynamicImports: true, entryFileNames: "assets/app-[hash:8].js", assetFileNames: "assets/[name]-[hash:8][extname]" },

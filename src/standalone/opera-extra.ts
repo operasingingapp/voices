@@ -1,5 +1,7 @@
 /** A short story for each opera, and the full running order where we have it. Written for this app. */
 import figaroCover from "./images/figaro-cover.webp";
+import countessBravo from "./images/figaro-countess-bravo.mp4?url";
+import countessBravoPoster from "./images/figaro-countess-bravo-poster.webp";
 import figaroSquare from "./images/figaro-square.webp";
 import countessFace from "./images/figaro-countess-face.webp";
 import countessPortrait from "./images/figaro-countess-portrait.webp";
@@ -90,6 +92,11 @@ export const PORTRAITS: Record<string, { portrait: string; face: string; alt: st
 };
 
 /** Illustrations for the operas that have one: a wide cover, a square crop for the opera's circle, and what it shows. */
+/** A role's applause when the whole role is learned (key: "opera:character"): a short film, and its last frame. */
+export const BRAVO: Record<string, { video: string; poster: string }> = {
+  "figaro:countess": { video: countessBravo, poster: countessBravoPoster },
+};
+
 export const ART: Record<string, { cover: string; square: string; alt: string }> = {
   zauberfloete: {
     cover: zauberfloteCover,

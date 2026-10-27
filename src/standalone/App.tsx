@@ -13,6 +13,7 @@ import {
   same,
   Shell,
   SideDrawer,
+  Bravo,
   type Ctx,
   type PiecePlace,
   type Place,
@@ -95,6 +96,8 @@ export function App() {
   const [profile, setProfile] = useState<Profile>(() => read<Profile>(K.profile, { voices: [], notSinger: false }));
   const [onboarded, setOnboarded] = useState<boolean>(() => read<boolean | null>(K.onboarded, null) ?? roles.length > 0);
   const home = (): Place => (current ? { screen: "role", ...current } : { screen: "explore", by: "opera" });
+  // a role just learned in full: the celebration shows over whatever screen you are on
+  const [bravo, setBravo] = useState<RoleRef | null>(null);
   // the side panel over the practice screen
   const [drawerOpen, setDrawerOpen] = useState(false);
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
@@ -136,6 +139,11 @@ export function App() {
     last,
     learned,
     toggleLearned: (r, key) => {
+      // the last piece of a role ticked: the whole role is learned, which is worth a moment
+      const ch = findCharacter(findOpera(r.opera), r.character);
+      const keys = ch.pieces.map((p) => p.id ?? p.title);
+      const had = new Set(learned[roleKey(r)] ?? []);
+      if (!had.has(key) && keys.length > 0 && keys.every((k) => k === key || had.has(k))) setBravo(r);
       setLearned((all) => {
         const k = roleKey(r);
         const set = new Set(all[k] ?? []);
@@ -183,6 +191,8 @@ export function App() {
     },
   };
 
+  const bravoEl = bravo ? <Bravo ctx={ctx} r={bravo} onClose={() => setBravo(null)} /> : null;
+
   if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} />;
 
   if (place.screen === "piece") {
@@ -195,6 +205,7 @@ export function App() {
       return (
         <>
           <SideDrawer ctx={ctx} open={drawerOpen} onClose={closeDrawer} />
+          {bravoEl}
           <Practice
           onMenu={() => setDrawerOpen(true)}
           editionId={piece.editionId}
@@ -215,6 +226,7 @@ export function App() {
     return (
       <Shell ctx={ctx}>
         <PiecePage ctx={ctx} opera={opera} ch={ch} index={place.piece} />
+        {bravoEl}
       </Shell>
     );
   }
@@ -226,5 +238,10 @@ export function App() {
   } else if (place.screen === "opera") page = <OperaPage ctx={ctx} opera={findOpera(place.opera)} />;
   else if (place.screen === "explore") page = place.by === "voice" ? <ExploreVoices ctx={ctx} voice={place.voice} /> : <ExploreOperas ctx={ctx} />;
   else page = <ProfilePage ctx={ctx} />;
-  return <Shell ctx={ctx}>{page}</Shell>;
+  return (
+    <Shell ctx={ctx}>
+      {page}
+      {bravoEl}
+    </Shell>
+  );
 }
