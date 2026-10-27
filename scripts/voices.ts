@@ -42,6 +42,8 @@ interface Config {
   stability: number;
   similarityBoost: number;
   maxCharsPerRun: number;
+  /** a voice to look up by name in the Italian voice library, when voiceId is empty (e.g. "Serena") */
+  voiceSearch?: string;
 }
 interface Word {
   text: string;
@@ -192,9 +194,13 @@ async function speak(voiceId: string, text: string, slow: boolean): Promise<Spok
     body: JSON.stringify({
       text,
       model_id: config.modelId,
+      seed: 42,
       voice_settings: {
         stability: config.stability,
         similarity_boost: config.similarityBoost,
+        // no acting: a plain, even reading
+        style: 0,
+        use_speaker_boost: true,
         speed: slow ? config.slowSpeed : config.normalSpeed,
       },
     }),
@@ -247,6 +253,17 @@ function wordTimes(sp: Spoken, text: string, words: string[]): [number, number][
 
 /* ---------------- choosing a voice when none is set ---------------- */
 
+async function findVoice(name: string): Promise<{ id: string; name: string }> {
+  const res = await api(`/v1/shared-voices?language=it&page_size=30&search=${encodeURIComponent(name)}`);
+  const list = ((await res.json()) as { voices: { voice_id: string; public_owner_id: string; name: string }[] }).voices;
+  const v = list.find((x) => x.name.toLowerCase().startsWith(name.toLowerCase())) ?? list[0];
+  if (!v) throw new Error(`No Italian voice called "${name}" in the voice library.`);
+  const added = (await (
+    await api(`/v1/voices/add/${v.public_owner_id}/${v.voice_id}`, { method: "POST", body: JSON.stringify({ new_name: `Counterpart · ${v.name}` }) })
+  ).json()) as { voice_id: string };
+  return { id: added.voice_id, name: v.name };
+}
+
 async function chooseVoice(): Promise<{ id: string; name: string }> {
   console.log("No voice chosen yet: auditioning the most used native Italian voices from the ElevenLabs library.");
   const res = await api(`/v1/shared-voices?language=it&page_size=40&sort=usage_character_count_1y`);
@@ -278,7 +295,7 @@ async function main() {
   if (!todo.length) throw new Error(`No piece "${pieceArg}" in data/content.`);
   if (!DRY && !KEY) throw new Error("ELEVENLABS_API_KEY is not set (on GitHub: a repository secret).");
   if (!DRY && !config.voiceId) {
-    const v = await chooseVoice();
+    const v = config.voiceSearch ? await findVoice(config.voiceSearch) : await chooseVoice();
     config.voiceId = v.id;
     config.voiceName = v.name;
     writeFileSync(CONFIG, JSON.stringify(config, null, 2) + "\n");
@@ -286,7 +303,7 @@ async function main() {
     if (process.env.GITHUB_ACTIONS) console.log(`::notice::Voice chosen: ${v.name}`);
   }
   const voiceDir = config.voiceId ? slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "") || "voice" : "voice";
-  const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost]);
+  const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, "plain-42"]);
   const slowSettings = JSON.stringify([config.slowSpeed, config.slowStretch]);
   const hashOf = (c: Clip) => short(`${settings}|${c.slow ? slowSettings : config.normalSpeed}|${c.kind}|${c.text}`);
 
