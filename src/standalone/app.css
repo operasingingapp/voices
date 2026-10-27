@@ -7879,3 +7879,134 @@ p.obp-meta {
   background: var(--picked);
   color: var(--on-pastel);
 }
+
+/* =====================================================================
+   Side panel: my roles as a row of faces (the chosen one ringed), and the
+   chosen role's card under it: continue, its other pieces, its opera
+   ===================================================================== */
+.sb-roles {
+  display: grid;
+  gap: 8px;
+  margin-bottom: -10px;
+}
+.sb-roles-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sb-roles-head .sb-label {
+  padding-bottom: 0;
+}
+.sb-add {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.sb-add svg {
+  width: 18px;
+  height: 18px;
+}
+.sb-add:hover {
+  background: var(--fog);
+  color: var(--ink);
+}
+.sb-faces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 2px;
+  padding: 0 2px;
+}
+.sb-face {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  width: 64px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity var(--duration-quick) var(--ease-standard), box-shadow var(--duration-quick) var(--ease-standard);
+}
+.sb-face:hover {
+  opacity: 1;
+}
+.sb-face-pic {
+  display: grid;
+  padding: 3px;
+  border-radius: 50%;
+}
+.sb-face[aria-checked="true"] {
+  opacity: 1;
+}
+.sb-face[aria-checked="true"] .sb-face-pic {
+  box-shadow: 0 0 0 2px var(--tone-deep);
+}
+.sb-face-name {
+  max-width: 100%;
+  font: 400 11.5px/1.2 var(--font-sans);
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sb-face[aria-checked="true"] .sb-face-name {
+  color: var(--ink);
+  font-weight: 500;
+}
+.sb-face:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.sb-pieces {
+  display: grid;
+  gap: 2px;
+}
+.sb-piece {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px 0 14px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: inherit;
+  font: 500 14px/1.2 var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+.sb-piece:hover,
+.sb-piece[aria-current="page"] {
+  background: var(--pastel-fog);
+}
+.sb-piece-play {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+.sb-piece-play svg {
+  width: 11px;
+  height: 11px;
+}
+.sb-piece-done {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+}
+.sb-piece-done svg {
+  width: 16px;
+  height: 16px;
+}

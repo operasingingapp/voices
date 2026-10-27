@@ -344,7 +344,7 @@ export function ProgressRing({ value, size, stroke = 4, children }: { value: num
 function Sidebar({ ctx }: { ctx: Ctx }) {
   const { place, go } = ctx;
   const cur = resolve(ctx.current);
-  const others = ctx.roles.filter((r) => !same(r, ctx.current)).map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
+  const all = ctx.roles.map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
   const on = (test: boolean) => (test ? "page" : undefined);
   return (
     <aside className="sidebar" aria-label="Your roles and the library">
@@ -352,13 +352,57 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
         Counterpart
       </button>
 
+      {/* my roles: one face each to switch between them, then the chosen role's card */}
+      {cur && (
+        <div className="sb-roles">
+          <div className="sb-roles-head">
+            <p className="sb-label" id="sb-roles-h">
+              My roles
+            </p>
+            <button type="button" className="sb-add" aria-label="Add a role" title="Add a role" onClick={() => go({ screen: "explore", by: "opera" })}>
+              <Plus />
+            </button>
+          </div>
+          {all.length > 1 && (
+            <div className="sb-faces" role="radiogroup" aria-labelledby="sb-roles-h">
+              {all.map(({ opera, ch }) => {
+                const r = { opera: opera.id, character: ch.id };
+                const picked = same(r, ctx.current);
+                return (
+                  <button
+                    key={`${opera.id}:${ch.id}`}
+                    type="button"
+                    role="radio"
+                    aria-checked={picked}
+                    className="sb-face"
+                    data-tone={voiceTone(ch.voice)}
+                    title={`${ch.name} · ${opera.title}`}
+                    aria-label={`${ch.name}, ${opera.title}`}
+                    onClick={() => ctx.chooseRole(r)}
+                  >
+                    <span className="sb-face-pic">
+                      <ProgressRing value={progressOf(ctx, opera, ch).pct} size={46} stroke={3}>
+                        <Face opera={opera} ch={ch} />
+                      </ProgressRing>
+                    </span>
+                    <span className="sb-face-name">{ch.name.replace(/^The /, "")}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
+
       {cur ? (
         (() => {
           const { opera, ch } = cur;
           const pr = progressOf(ctx, opera, ch);
           const target = continueTarget(ctx, opera, ch);
+          // the role's other pieces with music, under the one to continue
+          const more = ch.pieces.map((p, i) => ({ p, i })).filter(({ p, i }) => p.editionId && i !== target?.place.piece);
           return (
-            <section className="sb-now" data-tone={voiceTone(ch.voice)} aria-label="What you are learning">
+            <section className="sb-now" data-tone={voiceTone(ch.voice)} aria-label="What you are learning" key={`${opera.id}:${ch.id}`}>
               <button
                 type="button"
                 className="sb-role"
@@ -386,6 +430,29 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
                   </span>
                 </button>
               )}
+              {more.length > 0 && (
+                <div className="sb-pieces">
+                  {more.map(({ p, i }) => (
+                    <button
+                      key={pieceKey(p)}
+                      type="button"
+                      className="sb-piece"
+                      aria-current={on(place.screen === "piece" && place.opera === opera.id && place.character === ch.id && place.piece === i)}
+                      onClick={() => go({ screen: "piece", opera: opera.id, character: ch.id, piece: i })}
+                    >
+                      <span className="sb-piece-play" aria-hidden="true">
+                        <Play />
+                      </span>
+                      <span lang={opera.lang}>{p.title}</span>
+                      {pr.set.has(pieceKey(p)) && (
+                        <span className="sb-piece-done" aria-label="learned">
+                          <Check />
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
               <button type="button" className="sb-opera" aria-current={on(place.screen === "opera" && place.opera === opera.id)} onClick={() => go({ screen: "opera", opera: opera.id })}>
                 {ART[opera.id] ? <img className="sb-art" src={ART[opera.id].square} alt="" /> : <Chevron />}
                 <span lang={opera.lang}>{opera.title}</span>
@@ -397,7 +464,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
         <section className="sb-now sb-none">
           <b>No role yet</b>
           <span>Find the character you sing.</span>
-          <button type="button" className="cp-btn cp-btn--ink" onClick={() => go({ screen: "explore", by: "voice" })}>
+          <button type="button" className="cp-btn cp-btn--ink" onClick={() => go({ screen: "explore", by: "opera" })}>
             Find your role
           </button>
         </section>
@@ -414,33 +481,6 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           <span>By voice</span>
         </button>
       </nav>
-
-      {others.length > 0 && (
-        <nav className="sb-group" aria-label="My other roles">
-          <p className="sb-label">My roles</p>
-          {others.map(({ opera, ch }) => {
-            const pr = progressOf(ctx, opera, ch);
-            return (
-              <button
-                key={`${opera.id}:${ch.id}`}
-                type="button"
-                className="sb-link sb-other"
-                data-tone={voiceTone(ch.voice)}
-                aria-current={on(place.screen === "role" && place.opera === opera.id && place.character === ch.id)}
-                onClick={() => go({ screen: "role", opera: opera.id, character: ch.id })}
-              >
-                <ProgressRing value={pr.pct} size={34} stroke={3}>
-                  <Face opera={opera} ch={ch} />
-                </ProgressRing>
-                <span className="sb-other-text">
-                  <b>{ch.name}</b>
-                  <small lang={opera.lang}>{opera.title}</small>
-                </span>
-              </button>
-            );
-          })}
-        </nav>
-      )}
 
       <span className="sb-spacer" />
       <button type="button" className="sb-you" aria-current={on(place.screen === "profile")} onClick={() => go({ screen: "profile" })}>
