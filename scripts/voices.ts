@@ -72,6 +72,8 @@ interface Made {
   file: string;
   /** seconds when each written word starts and ends (lines only) */
   words?: [number, number][];
+  /** the line reshaped like the music (see shapeLine) */
+  sung?: { file: string; hash: string; words: [number, number][] };
 }
 
 /* ---------------- arguments and config ---------------- */
@@ -288,11 +290,12 @@ function save(file: string, audio: Buffer, stretch = 1) {
 /** When each written word is spoken, from the per-character timings. */
 function wordTimes(sp: Spoken, text: string, words: string[]): [number, number][] {
   const spoken = sp.chars.join("");
-  const src = spoken.length ? spoken : text;
+  // matched without regard to case: the line is sent with a capital ("Mi piace") though written "mi piace"
+  const src = (spoken.length ? spoken : text).toLowerCase();
   const out: [number, number][] = [];
   let at = 0;
   for (const w of words) {
-    const core = bare(w);
+    const core = bare(w).toLowerCase();
     const i = core ? src.indexOf(core, at) : -1;
     if (i < 0 || !sp.starts.length) {
       out.push([NaN, NaN]);
@@ -342,11 +345,132 @@ async function chooseVoice(): Promise<{ id: string; name: string }> {
   return { id: audition[0].voiceId, name: audition[0].name };
 }
 
+/* ---------------- shaping a line like the music ---------------- */
+
+/**
+ * A speaking voice keeps its own pace: "Sì, sì" comes out in a third of a second although the second "sì" is held for
+ * a beat and a half. So each recorded line is reshaped after it is made, at no cost: it is cut at the start of every
+ * word, and each word gets time in proportion to its note values (from its onset to the next word's) — a held word is
+ * stretched a little (pitch kept, rubberband) and followed by a short breath; a quick one is left as it is. The pace
+ * comes from the line itself (the median seconds-per-beat of its words), so any line of any aria works the same way.
+ * Words sung on one note (an elision) are kept together. The result goes to the bank's sung/ folder; the plain
+ * recording stays, so the shape can be retuned (SHAPE below) without making anything again.
+ */
+const SHAPE = { minStretch: 1.1, maxStretch: 1.35, maxBreath: 0.45, fade: 0.006, v: 1 };
+
+function spansOf(ph: Phrase, notes: Map<string, number>): (number | undefined)[] {
+  const syl = ph.syllables ?? [];
+  const on = ph.words.map((_, k) => {
+    const s = syl.find((x) => x.word === k);
+    return s ? notes.get(s.noteId) : undefined;
+  });
+  return ph.words.map((_, k) => (on[k] !== undefined && on[k + 1] !== undefined ? on[k + 1]! - on[k]! : undefined));
+}
+
+function duration(file: string): number {
+  try {
+    const out = execFileSync(FFMPEG, ["-hide_banner", "-i", file], { stdio: ["ignore", "pipe", "pipe"] }).toString();
+    void out;
+  } catch (e) {
+    const m = /Duration: (\d+):(\d+):([\d.]+)/.exec(String((e as { stderr?: Buffer }).stderr ?? ""));
+    if (m) return +m[1] * 3600 + +m[2] * 60 + +m[3];
+  }
+  return NaN;
+}
+
+function shapeLine(src: string, out: string, times: [number, number][], spans: (number | undefined)[], joined: Set<number>): [number, number][] | null {
+  const total = duration(join(ROOT, src));
+  if (!(total > 0)) return null;
+  joined = new Set(joined);
+  times.forEach(([a], k) => {
+    if (Number.isFinite(a)) return;
+    if (k > 0) joined.add(k - 1);
+    else joined.add(0);
+  });
+  if (times.every(([a]) => !Number.isFinite(a))) return null;
+  times = times.map(([a, b], k) => (Number.isFinite(a) ? [a, b] : k === 0 ? [0, 0] : times[k - 1]) as [number, number]);
+  // units: runs of words that are cut together (an elision, or a word without timing)
+  const units: { words: number[]; from: number; to: number; beats?: number }[] = [];
+  for (let k = 0; k < times.length; k++) {
+    const prev = units[units.length - 1];
+    if (prev && joined.has(k - 1)) {
+      prev.words.push(k);
+      prev.beats = spans[k] === undefined || prev.beats === undefined ? undefined : prev.beats + spans[k]!;
+    } else units.push({ words: [k], from: k === 0 ? 0 : times[k][0], to: total, beats: spans[k] });
+  }
+  for (let u = 0; u + 1 < units.length; u++) units[u].to = units[u + 1].from;
+  const rates = units.filter((u) => u.beats && u.beats > 0).map((u) => (u.to - u.from) / u.beats!).sort((a, b) => a - b);
+  const pace = rates.length ? rates[Math.floor((rates.length - 1) / 2)] : 0;
+  const parts: string[] = [];
+  const labels: string[] = [];
+  const newTimes: [number, number][] = [];
+  let t = 0;
+  units.forEach((u, i) => {
+    const d = u.to - u.from;
+    const want = u.beats && pace ? u.beats * pace : d;
+    const f = Math.min(SHAPE.maxStretch, Math.max(SHAPE.minStretch, want / d));
+    const breath = i + 1 < units.length ? Math.min(SHAPE.maxBreath, Math.max(0, want - d * f)) : 0;
+    const len = d * f;
+    for (const k of u.words) newTimes[k] = [+(t + (times[k][0] - u.from) * f).toFixed(3), +(t + (times[k][1] - u.from) * f).toFixed(3)];
+    if (u.words[0] === 0) newTimes[0][0] = +(t + Math.max(0, times[0][0]) * f).toFixed(3);
+    parts.push(
+      `[0:a]atrim=start=${u.from.toFixed(4)}:end=${u.to.toFixed(4)},asetpts=PTS-STARTPTS,rubberband=tempo=${(1 / f).toFixed(4)}:pitchq=quality,` +
+        `afade=t=in:d=${SHAPE.fade},afade=t=out:st=${Math.max(0, len - SHAPE.fade).toFixed(4)}:d=${SHAPE.fade}` +
+        `${breath > 0.01 ? `,apad=pad_dur=${breath.toFixed(3)}` : ""}[u${i}]`,
+    );
+    labels.push(`[u${i}]`);
+    t += len + (breath > 0.01 ? breath : 0);
+  });
+  const graph = `${parts.join(";")};${labels.join("")}concat=n=${units.length}:v=0:a=1[out]`;
+  const dst = join(ROOT, out);
+  mkdirSync(dirname(dst), { recursive: true });
+  execFileSync(FFMPEG, ["-v", "error", "-y", "-i", join(ROOT, src), "-filter_complex", graph, "-map", "[out]", "-ar", "44100", "-b:a", "96k", dst]);
+  return newTimes;
+}
+
+function shapeAll(piece: string, voiceDir: string, data: { clips: Record<string, Made & { sung?: { file: string; hash: string; words: [number, number][] } }> }) {
+  const lang = JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { phrases: Phrase[] };
+  const notes = noteTimes(piece);
+  let made = 0;
+  for (const ph of lang.phrases) {
+    const c = data.clips[ph.id];
+    if (!c?.words) continue;
+    const syl = ph.syllables ?? [];
+    const joined = new Set<number>();
+    for (let i = 0; i + 1 < syl.length; i++) if (syl[i].noteId === syl[i + 1].noteId && syl[i + 1].word === syl[i].word + 1) joined.add(syl[i].word);
+    const spans = spansOf(ph, notes);
+    const hash = short(JSON.stringify([SHAPE, c.hash, spans, [...joined]]));
+    const out = c.file.replace("/lines/", "/sung/");
+    if (c.sung?.hash === hash && existsSync(join(ROOT, out))) continue;
+    try {
+      const words = shapeLine(c.file, out, c.words, spans, joined);
+      if (words) {
+        c.sung = { file: out, hash, words };
+        made++;
+      }
+    } catch (e) {
+      console.log(`  could not shape ${ph.id}: ${String(e).slice(0, 200)}`);
+    }
+  }
+  if (made) console.log(`Shaped ${made} line(s) of ${piece} like the music.`);
+}
+
 /* ---------------- the run ---------------- */
 
 async function main() {
   const todo = pieces();
   if (!todo.length) throw new Error(`No piece "${pieceArg}" in data/content.`);
+  if (args.includes("--shape")) {
+    const voiceDir = slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "");
+    for (const piece of todo) {
+      const mPath = join(ROOT, `content/pieces/${piece}/voice/${voiceDir}/manifest.json`);
+      if (!existsSync(mPath)) continue;
+      const data = JSON.parse(readFileSync(mPath, "utf8"));
+      shapeAll(piece, voiceDir, data);
+      writeFileSync(mPath, JSON.stringify(data, null, 1));
+    }
+    return;
+  }
   if (!DRY && !KEY) throw new Error("ELEVENLABS_API_KEY is not set (on GitHub: a repository secret).");
   if (!DRY && !config.voiceId) {
     const v = config.voiceSearch ? await findVoice(config.voiceSearch) : await chooseVoice();
@@ -408,7 +532,8 @@ async function main() {
   for (const j of jobs.slice(0, DRY ? Infinity : 0)) console.log(`  ${j.clip.kind.padEnd(9)} ${j.clip.key.padEnd(18)} ${j.clip.text}`);
   if (DRY) return;
   if (!jobs.length) {
-    for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = bank[r.bankKey];
+    for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = { ...bank[r.bankKey], ...(r.data.clips[r.clipKey]?.sung ? { sung: r.data.clips[r.clipKey].sung } : {}) };
+    manifests.forEach((m, i) => shapeAll(todo[i], voiceDir, m.data as never));
     for (const m of manifests) writeFileSync(m.path, JSON.stringify(m.data, null, 1));
     return;
   }
@@ -432,7 +557,8 @@ async function main() {
   await Promise.all([worker(), worker()]);
 
   // each piece's manifest points at the shared recordings
-  for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = bank[r.bankKey];
+  for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = { ...bank[r.bankKey], ...(r.data.clips[r.clipKey]?.sung ? { sung: r.data.clips[r.clipKey].sung } : {}) };
+  manifests.forEach((m, i) => shapeAll(todo[i], voiceDir, m.data as never));
   for (const m of manifests) {
     mkdirSync(dirname(m.path), { recursive: true });
     writeFileSync(m.path, JSON.stringify(m.data, null, 1));
