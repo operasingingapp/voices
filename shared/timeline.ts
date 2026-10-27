@@ -150,6 +150,10 @@ export class Performance {
       for (const t of mi.tempos) if (t.q > 0) pushTempo(tempo, q + t.q, t.bpm);
       if (measures.length === 1) named.push(q);
       for (const t of mi.tempos) if (t.text && !/^\s*\.\d+\s*$/.test(t.text)) named.push(q + t.q);
+      // a new movement within the piece (recitative → aria → Allegro): a tempo written where the time signature
+      // changes starts a section too, even as a bare number
+      const prevM = k > 0 ? edition.measures[unfolded[k - 1].m] : undefined;
+      if (prevM && mi.tempos.some((t) => t.q === 0) && (prevM.time[0] !== mi.time[0] || prevM.time[1] !== mi.time[1])) named.push(q);
       for (const n of edition.notes) if (n.m === u.m && n.fermata) fermatas.push({ onQ: q + n.q, offQ: q + n.q + n.dur });
       q += mi.durQ;
     });
@@ -345,10 +349,15 @@ function shapeTempo(src: TempoSeg[], mode: TempoMode, named: number[], fermatas:
     else pushTempo(out, p.q, base);
   }
   // fermatas: the note is held about twice its written length
-  for (const f of fermatas) {
-    const b = bpmIn(out, f.onQ);
-    pushTempoAt(out, f.onQ, b / 2);
-    pushTempoAt(out, f.offQ, b);
+  // (a fermata over the voice and the piano together counts once, for its longest note)
+  const held = new Map<number, number>();
+  for (const f of fermatas) held.set(Math.round(f.onQ * 1e4), Math.max(held.get(Math.round(f.onQ * 1e4)) ?? 0, f.offQ));
+  for (const [on4, offQ] of held) {
+    const onQ = on4 / 1e4;
+    const b = bpmIn(out, onQ);
+    const after = bpmIn(out, offQ);
+    pushTempoAt(out, onQ, b / 2);
+    pushTempoAt(out, offQ, after);
   }
   // a gentle broadening through the last bar
   const lastBar = Math.max(0, totalQ - 3);
