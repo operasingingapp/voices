@@ -139,7 +139,12 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
   let joinN = 0;
   const seenJoin = new Set<string>();
   for (const ph of lang.phrases) {
-    const text = plain(ph.original);
+    // where two words are sung on one note (an elision, "piace,‿è"), the punctuation between them goes, so the
+    // voice runs them together instead of pausing at the comma
+    const syl0 = ph.syllables ?? [];
+    const joinsAfter = new Set<number>();
+    for (let i = 0; i + 1 < syl0.length; i++) if (syl0[i].noteId === syl0[i + 1].noteId && syl0[i + 1].word === syl0[i].word + 1) joinsAfter.add(syl0[i].word);
+    const text = plain(ph.words.map((w, k) => (joinsAfter.has(k) ? plain(w.text).replace(/[.,;:!?]+$/, "") : w.text)).join(" "));
     // a repeated line ("Babbo, pietà, pietà!") is made once; the second points to the first
     if (!seenLine.has(text)) {
       seenLine.set(text, ph.id);

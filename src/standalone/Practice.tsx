@@ -43,19 +43,22 @@ const voiceFiles = import.meta.glob(["../../content/voice-bank/*/lines/*.mp3", "
   import: "default",
   eager: true,
 }) as Record<string, string>;
-const voice = Object.values(voiceManifests).find((m) => m.voiceId === (voiceConfig as { voiceId: string }).voiceId) ?? null;
+const voices = Object.values(voiceManifests).filter((m) => m.voiceId);
+const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
+const voiceById = (id: string) => voices.find((m) => m.voiceId === id) ?? voices.find((m) => m.voiceId === defaultVoiceId) ?? voices[0] ?? null;
+const voiceLabel = (m: VoiceManifest) => (m.voiceName ?? "Voice").split(" - ")[0];
 const voiceUrl = (file?: string) => (file ? voiceFiles[`../../${file}`] : undefined);
 const plainText = (t: string) => t.replace(/[’‘]/g, "'").replace(/\s+/g, " ").trim();
 const wordKey = (t: string) => plainText(t).replace(/[.,;:!?«»“”"()—–-]+/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
 /** the recorded line (a repeated line uses the first recording of the same words) */
-function lineClip(id: string, original: string) {
+function lineClip(voice: VoiceManifest | null, id: string, original: string) {
   if (!voice) return null;
   const c = voice.clips[id] ?? Object.entries(voice.clips).find(([k, v]) => !k.endsWith("-slow") && !k.startsWith("join") && v.text === plainText(original))?.[1];
   if (!c) return null;
   const key = Object.entries(voice.clips).find(([, v]) => v === c)?.[0] ?? id;
   return { normal: voiceUrl(c.file), slow: voiceUrl(voice.clips[`${key}-slow`]?.file), words: c.words, slowWords: voice.clips[`${key}-slow`]?.words };
 }
-const wordUrl = (text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);
+const wordUrlIn = (voice: VoiceManifest | null, text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);
 
 const voicePart = edition.parts.find((p) => p.kind === "voice")!;
 const pianoPart = edition.parts.find((p) => p.kind === "piano")!;
@@ -346,6 +349,10 @@ export function Practice({
   // how loud each part is (80 = normal), and what the sung line is played on
   const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
   const [lineSound, setLineSound] = useLocalSetting<LineInstrument>("p:lineSound", "piano");
+  // the spoken voice (while we compare voices, more than one may be bundled)
+  const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
+  const voice = voiceById(voiceSel);
+  const wordUrl = (text: string) => wordUrlIn(voice, text);
   const [soundLoading, setSoundLoading] = useState(false);
   const [mixOpen, setMixOpen] = useState(false);
   const [drawer, setDrawer] = useState<Drawer | null>(null);
@@ -539,7 +546,7 @@ export function Practice({
     const ph = language.phrases.find((p) => p.id === id)!;
     if (engine?.state === "playing") engine.pause();
     setSpeakingId(id);
-    const rec = lineClip(id, ph.original);
+    const rec = lineClip(voice, id, ph.original);
     const times = slow ? rec?.slowWords : rec?.words;
     await speak(
       { text: ph.original, normalUrl: audioUrl(ph.audio.normal?.file), slowUrl: audioUrl(ph.audio.slow?.file), recorded: rec ? { normal: rec.normal, slow: rec.slow } : undefined },
@@ -1273,6 +1280,27 @@ export function Practice({
                   />
                 </div>
               </div>
+              {voices.length > 1 && (
+                <div className="mix-row">
+                  <span className="part-face piano" aria-hidden="true">
+                    {Icon.speaker}
+                  </span>
+                  <div className="mix-main">
+                    <div className="mix-head">
+                      <b>Spoken Italian</b>
+                    </div>
+                    <div className="mix-inst">
+                      <div className="cp-seg" role="group" aria-label="Voice for the spoken lines and words">
+                        {voices.map((m) => (
+                          <button key={m.voiceId} type="button" aria-pressed={voice?.voiceId === m.voiceId} onClick={() => setVoiceSel(m.voiceId)}>
+                            {voiceLabel(m)}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
               {(vol.voice !== 80 || vol.piano !== 80) && (
                 <button type="button" className="mix-reset" onClick={() => setVol({ voice: 80, piano: 80 })}>
                   Back to the usual balance
@@ -1489,7 +1517,7 @@ export function Practice({
                   </p>
                   <p>
                     {voice
-                      ? `Spoken lines and words: a native Italian voice (${(voice.voiceName ?? "").split(" - ")[0]}), made with ElevenLabs. It is spoken, not sung: how the words sound in Italian, not how to sing them.`
+                      ? `Spoken lines and words: a native Italian voice (${voiceLabel(voice)}), made with ElevenLabs. It is spoken, not sung: how the words sound in Italian, not how to sing them.`
                       : `Spoken lines use your device's Italian voice when it has one (${deviceVoice ? `here: ${voiceInfo(false).kind === "device" ? (voiceInfo(false) as { name: string }).name : ""}` : "none found here, so robotic placeholder recordings play"}).`}
                   </p>
                   <p>
