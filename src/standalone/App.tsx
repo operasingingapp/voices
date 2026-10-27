@@ -20,6 +20,7 @@ import {
 } from "./flow";
 import { NUMBERS } from "./opera-extra";
 import { Practice } from "./Practice";
+import { hasPiece } from "./pieces";
 
 const K = {
   place: "cp:place",
@@ -184,11 +185,12 @@ export function App() {
     const opera = findOpera(place.opera);
     const ch = findCharacter(opera, place.character);
     const piece = ch.pieces[place.piece];
-    if (piece?.editionId === "puccini-o-mio-babbino-caro") {
+    if (hasPiece(piece?.editionId)) {
       const r = { opera: opera.id, character: ch.id };
       const key = piece.id ?? piece.title;
       return (
         <Practice
+          editionId={piece.editionId}
           roleName={ch.name}
           onBack={() => go({ screen: "role", opera: opera.id, character: ch.id })}
           learned={(learned[roleKey(r)] ?? []).includes(key)}

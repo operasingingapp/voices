@@ -1,7 +1,4 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import editionJson from "../../data/content/puccini-o-mio-babbino-caro/edition.json";
-import languageJson from "../../data/content/puccini-o-mio-babbino-caro/language.json";
-import scoreXml from "../../data/content/puccini-o-mio-babbino-caro/score.musicxml?raw";
 import { Performance, beatInfo } from "../../shared/timeline";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
@@ -13,21 +10,28 @@ import { PORTRAITS } from "./opera-extra";
 import { decorate, syllableRanges, type Deco, type SylProgress } from "./syllables";
 import { buildTips, type TipLine } from "./tips";
 import { onVoicesChanged, speak, stopSpeaking, voiceInfo } from "./speech";
+import { pieceData, type PieceInfo } from "./pieces";
 
-const edition = editionJson as unknown as CompiledEdition;
-const language = languageJson as unknown as CompiledLanguage;
+/*
+ * The piece on screen. Only one practice screen is open at a time, so the piece's data lives here, set by
+ * Practice (below) before its screen renders; the screen is keyed by piece, so everything else starts afresh.
+ */
+let pieceId = "";
+let info: PieceInfo;
+let edition: CompiledEdition;
+let language: CompiledLanguage;
 const LANGUAGE_NAMES: Record<string, string> = { it: "Italian", de: "German", fr: "French", ru: "Russian", cs: "Czech", es: "Spanish", en: "English", la: "Latin" };
-const ORIGINAL = LANGUAGE_NAMES[language.language] ?? "Original";
+let ORIGINAL = "Original";
 /** Typographic apostrophes for display: l’anello, vo’, I’d (the data keeps plain ones). */
 const curly = (t: string) => t.replace(/'/g, "\u2019");
 
 // Offline placeholder recordings, used only when the device has no Italian voice.
-const audioModules = import.meta.glob("../../data/content/puccini-o-mio-babbino-caro/audio/*.mp3", {
+const audioModules = import.meta.glob(["../../data/content/*/audio/*.mp3", "!../../data/content/cp-fx-*/**"], {
   query: "?inline",
   import: "default",
   eager: true,
 }) as Record<string, string>;
-const audioUrl = (file?: string) => (file ? Object.entries(audioModules).find(([k]) => k.endsWith(`/${file}`))?.[1] : undefined);
+const audioUrl = (file?: string) => (file ? audioModules[`../../data/content/${pieceId}/audio/${file}`] : undefined);
 
 // The real voice: recordings made with ElevenLabs (scripts/voices.ts), the voice set in voice.config.json.
 import voiceConfig from "../../voice.config.json";
@@ -37,13 +41,13 @@ interface VoiceManifest {
   clips: Record<string, { text: string; file: string; words?: [number, number][]; sung?: { file: string; words: [number, number][] } }>;
   words: Record<string, string>;
 }
-const voiceManifests = import.meta.glob("../../content/pieces/puccini-o-mio-babbino-caro/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
+const voiceManifests = import.meta.glob("../../content/pieces/*/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
 const voiceFiles = import.meta.glob(["../../content/voice-bank/*/sung/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
   query: "?url",
   import: "default",
   eager: true,
 }) as Record<string, string>;
-const voices = Object.values(voiceManifests).filter((m) => m.voiceId);
+let voices: VoiceManifest[] = [];
 const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
 const voiceById = (id: string) => voices.find((m) => m.voiceId === id) ?? voices.find((m) => m.voiceId === defaultVoiceId) ?? voices[0] ?? null;
 const voiceLabel = (m: VoiceManifest) => (m.voiceName ?? "Voice").split(" - ")[0];
@@ -62,8 +66,8 @@ function lineClip(voice: VoiceManifest | null, id: string, original: string) {
 }
 const wordUrlIn = (voice: VoiceManifest | null, text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);
 
-const voicePart = edition.parts.find((p) => p.kind === "voice")!;
-const pianoPart = edition.parts.find((p) => p.kind === "piano")!;
+let voicePart: CompiledEdition["parts"][number];
+let pianoPart: CompiledEdition["parts"][number];
 
 /**
  * Display-only preparation of the supplied engraving (the file itself stays unchanged):
@@ -115,16 +119,17 @@ function prepareForDisplay(xml: string): string {
     return xml;
   }
 }
-const displayXml = prepareForDisplay(scoreXml);
+let displayXml = "";
 
 /** Tempo words in force in each bar ("Andantino ingenuo"), shown in the bar box. */
-const tempoWords: string[] = (() => {
+let tempoWords: string[] = [];
+const tempoWordsOf = (edition: CompiledEdition): string[] => {
   let cur = "";
   return edition.measures.map((m) => {
     for (const t of m.tempos) if (t.text && !/^\s*\.\d+\s*$/.test(t.text)) cur = t.text.trim();
     return cur;
   });
-})();
+};
 
 interface Note {
   id: string;
@@ -133,7 +138,29 @@ interface Note {
   body: string;
   at: string;
 }
-const NOTES_KEY = "cp:babbino:notes";
+let NOTES_KEY = "cp:babbino:notes";
+
+const displayCache = new Map<string, string>();
+/** Make `id` the piece on screen (see the top of this file). */
+function loadPiece(id: string) {
+  if (pieceId === id) return;
+  const d = pieceData(id);
+  pieceId = id;
+  info = d.info;
+  edition = d.edition;
+  language = d.language;
+  ORIGINAL = LANGUAGE_NAMES[language.language] ?? "Original";
+  voices = Object.entries(voiceManifests)
+    .filter(([k, m]) => k.includes(`/pieces/${id}/voice/`) && m.voiceId)
+    .map(([, m]) => m);
+  voicePart = edition.parts.find((p) => p.kind === "voice")!;
+  pianoPart = edition.parts.find((p) => p.kind === "piano")!;
+  if (!displayCache.has(id)) displayCache.set(id, prepareForDisplay(d.scoreXml));
+  displayXml = displayCache.get(id)!;
+  tempoWords = tempoWordsOf(edition);
+  // Babbino's notes keep their first key, so nobody loses them
+  NOTES_KEY = id === "puccini-o-mio-babbino-caro" ? "cp:babbino:notes" : `cp:${id}:notes`;
+}
 function loadNotes(): Note[] {
   try {
     return JSON.parse(localStorage.getItem(NOTES_KEY) ?? "[]");
@@ -321,14 +348,7 @@ const TIPS = [
 ];
 const TIPS_KEY = "cp:tipsDone";
 
-export function Practice({
-  onBack,
-  roleName,
-  learned,
-  onToggleLearned,
-  context,
-  inOpera,
-}: {
+type PracticeProps = {
   onBack: () => void;
   roleName: string;
   learned?: boolean;
@@ -337,7 +357,22 @@ export function Practice({
   context?: string;
   /** where it falls in the opera's running order */
   inOpera?: { n: number; total: number; before?: string; after?: string; opera: string };
-}) {
+};
+
+/** The practice screen for one piece (an edition id from pieces.tsx). */
+export function Practice({ editionId, ...props }: PracticeProps & { editionId: string }) {
+  loadPiece(editionId);
+  return <PracticeScreen key={editionId} {...props} />;
+}
+
+function PracticeScreen({
+  onBack,
+  roleName,
+  learned,
+  onToggleLearned,
+  context,
+  inOpera,
+}: PracticeProps) {
   // steady pulse for learning (the file's bar-by-bar rubato smoothed away), or the expressive reading
   const [steady, setSteady] = useLocalSetting("p:steady", true);
   const perf = useMemo(() => new Performance(edition, [], { tempo: steady ? "steady" : "smooth", pedal: true }), [steady]);
@@ -847,7 +882,9 @@ export function Practice({
           {Icon.back}
         </button>
         <div className="p-title">
-          <p className="cp-eyebrow">Aria · {roleName} · Gianni Schicchi</p>
+          <p className="cp-eyebrow">
+            {info.kind} · {roleName} · {info.opera}
+          </p>
           <h1 lang="it">{edition.title}</h1>
         </div>
         <div className="p-tools">
@@ -1190,7 +1227,7 @@ export function Practice({
             aria-label={hearVoice ? `${roleName}'s line plays. Mute it to sing it yourself` : `${roleName}'s line is muted. Play it`}
           >
             <span className="part-face you" data-tone="pink" aria-hidden="true">
-              <img className="face-img" src={PORTRAITS["schicchi:lauretta"].face} alt="" />
+              <img className="face-img" src={PORTRAITS[info.portrait]?.face} alt="" />
             </span>
             <span className="part-text">
               <b>{roleName}</b>
@@ -1223,7 +1260,7 @@ export function Practice({
             <div className="mix-pop" role="dialog" aria-label="Sound">
               <div className="mix-row">
                 <span className="part-face you" data-tone="pink" aria-hidden="true">
-                  <img className="face-img" src={PORTRAITS["schicchi:lauretta"].face} alt="" />
+                  <img className="face-img" src={PORTRAITS[info.portrait]?.face} alt="" />
                 </span>
                 <div className="mix-main">
                   <div className="mix-head">
@@ -1423,15 +1460,15 @@ export function Practice({
                   <dl className="ctx-facts">
                     <div>
                       <dt>Key</dt>
-                      <dd>A♭ major, after a 4-bar introduction</dd>
+                      <dd>{info.facts.key}</dd>
                     </div>
                     <div>
                       <dt>Time</dt>
-                      <dd>6/8 (the introduction in 3/4)</dd>
+                      <dd>{info.facts.time}</dd>
                     </div>
                     <div>
                       <dt>Tempo</dt>
-                      <dd>Andantino ingenuo, ♩. ≈ 33 (♪ = 100), the engraving's marking: Puccini gives no number</dd>
+                      <dd>{info.facts.tempo}</dd>
                     </div>
                     {range && (
                       <div>
@@ -1467,7 +1504,7 @@ export function Practice({
                       <label className="cp-sr" htmlFor="note-input">
                         Note
                       </label>
-                      <textarea id="note-input" value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} placeholder="Breathe after “caro”, keep the line through “mi piace”" />
+                      <textarea id="note-input" value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} placeholder={info.notePlaceholder} />
                       <button type="submit" className="cp-btn cp-btn--ink">
                         Save note
                       </button>
@@ -1501,22 +1538,7 @@ export function Practice({
               )}
               {drawer === "about" && (
                 <section className="about">
-                  <p>
-                    Score: engraving by{" "}
-                    <a href="https://www.cafe-puccini.dk" target="_blank" rel="noreferrer">
-                      www.cafe-puccini.dk
-                    </a>{" "}
-                    (MuseScore, 8 January 2023), licensed{" "}
-                    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noreferrer">
-                      Creative Commons BY-NC-ND
-                    </a>
-                    . Played unchanged, for non-commercial use. On screen it is shown on one line; the tempo and rehearsal marks appear in the bar box, the
-                    engraving's playback-only tempo numbers and the opening stage direction are left off the line, and joined syllables use ‿.
-                  </p>
-                  <p>
-                    Music by Giacomo Puccini (public domain). Text by Giovacchino Forzano, first published 1918: public domain in the US, still protected in the EU
-                    until 2040. The IPA, word meanings and translation were written for this app and have not yet been reviewed by a diction coach.
-                  </p>
+                  {info.about}
                   <p>
                     {voice
                       ? `Spoken lines and words: a native Italian voice (${voiceLabel(voice)}), made with ElevenLabs. It is spoken, not sung: how the words sound in Italian, not how to sing them.`

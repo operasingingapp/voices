@@ -87,7 +87,10 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Dove sono",
-      "kind": "Aria · Act 3"
+      "kind": "Recitative and aria · Act 3",
+      "editionId": "mozart-dove-sono",
+      "when": "Act 3, alone, while Susanna meets the Count",
+      "context": "Alone, the Countess waits for Susanna: tonight she will dress as her maid to catch her own husband. She is ashamed of how low the Count has brought her, then remembers the happy days when he loved her, and ends in a sudden hope that her faithfulness may yet win back his ungrateful heart."
      },
      {
       "title": "Sull'aria… che soave zeffiretto",

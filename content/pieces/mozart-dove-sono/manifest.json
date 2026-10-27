@@ -1,0 +1,138 @@
+{
+ "editionId": "mozart-dove-sono",
+ "editionVersion": "1.0.0-musescore-4.4.4",
+ "title": "Dove sono",
+ "subtitle": "The Countess's recitative and aria from Le nozze di Figaro, Act 3",
+ "kind": "aria",
+ "fixture": false,
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "countess",
+   "name": "The Countess",
+   "voiceType": "Soprano",
+   "partKey": "soprano"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "soprano",
+   "label": "The Countess (Soprano)",
+   "shortLabel": "Countess",
+   "kind": "voice",
+   "roleId": "countess",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "recit",
+   "label": "Recitative: E Susanna non vien!",
+   "start": "1",
+   "end": "25"
+  },
+  {
+   "id": "a",
+   "label": "Dove sono i bei momenti",
+   "start": "26",
+   "end": "44"
+  },
+  {
+   "id": "b",
+   "label": "Perchè mai, se in pianti e in pene",
+   "start": "45",
+   "end": "61"
+  },
+  {
+   "id": "a2",
+   "label": "Dove sono (return)",
+   "start": "62",
+   "end": "76"
+  },
+  {
+   "id": "c",
+   "label": "Allegro: Ah! se almen la mia costanza",
+   "start": "77",
+   "end": "95"
+  },
+  {
+   "id": "c2",
+   "label": "ah! se almen… di cangiar l'ingrato cor",
+   "start": "96",
+   "end": "112"
+  },
+  {
+   "id": "coda",
+   "label": "l'ingrato cor (close)",
+   "start": "113",
+   "end": "135"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), No. 19 (recitative and aria)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "MuseScore 4.4.4 piano-vocal engraving \"42 - E Susanna non vien...Dove sono i bei momenti\", supplied by the user (original kept as source-musescore.mxl)",
+   "author": "Unknown engraver",
+   "licence": "Not stated in the file",
+   "notes": "Check the engraver's licence before distributing. One lyric typo corrected (bar 99: languire‿al → languire‿a)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this MVP",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

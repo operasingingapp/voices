@@ -151,8 +151,8 @@ function noteTimes(piece: string): Map<string, number> {
  * The line as the voice should read it, shaped like the sung line: calm, never shouted, pausing only where the music
  * does. "!" and ";" become plain stops and commas (an exclamation makes the voice shout); a comma stays only where the
  * word is held (1½ beats or more) before the next one, and is dropped where the music runs straight on ("Sì, sì" sung
- * quickly → "Sì sì,"); a word held a whole bar or more gets a comma even without one in the text; words sung on one
- * note (an elision) are never split by punctuation.
+ * quickly → "Sì sì,"); no comma is added inside a phrase ("l'ingrato, cor" reads wrongly; the held note gets its
+ * breath from shapeLine instead); words sung on one note (an elision) are never split by punctuation.
  */
 function phrased(ph: Phrase, joinsAfter: Set<number>, notes: Map<string, number>): string {
   const syl = ph.syllables ?? [];
@@ -163,16 +163,15 @@ function phrased(ph: Phrase, joinsAfter: Set<number>, notes: Map<string, number>
   const out = ph.words.map((w, k) => {
     let t = plain(w.text).replace(/!/g, ".").replace(/;/g, ",");
     const last = k === ph.words.length - 1;
-    if (last) return t.replace(/[.,:]+$/, "") + (/[?]$/.test(t) ? "" : ".");
+    if (last) return t.replace(/[.,:…]+$/, "") + (/[?]$/.test(t) ? "" : ".");
     const a = onset[k];
     const b = onset[k + 1];
     const span = a !== undefined && b !== undefined ? b - a : undefined;
-    const core = t.replace(/[.,:?]+$/, "");
+    const core = t.replace(/[.,:?…]+$/, "");
     if (joinsAfter.has(k)) return core;
     const punct = t.slice(core.length);
     if (span === undefined) return t;
     if (punct && span < 1.5) return core; // the music doesn't stop here
-    if (!punct && span >= 3) return `${core},`; // held a bar or more: a breath
     return punct ? `${core}${punct.replace(/\./g, ",")}` : core;
   });
   // each line read as its own sentence
@@ -196,15 +195,16 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
     const syl0 = ph.syllables ?? [];
     const joinsAfter = new Set<number>();
     for (let i = 0; i + 1 < syl0.length; i++) if (syl0[i].noteId === syl0[i + 1].noteId && syl0[i + 1].word === syl0[i].word + 1) joinsAfter.add(syl0[i].word);
-    const text = config.sayAs?.[plain(ph.original)] ?? phrased(ph, joinsAfter, notes);
-    // a repeated line ("Babbo, pietà, pietà!") is made once; the second points to the first
-    if (!seenLine.has(text)) {
-      seenLine.set(text, ph.id);
-      const ws = ph.words.map((w) => plain(w.text));
-      lines.push({ key: ph.id, kind: "line", text, file: `${base}/lines/${slug(text)}.mp3`, words: ws });
-      if (config.slowLines !== false)
-        lines.push({ key: `${ph.id}-slow`, kind: "line-slow", text, file: `${base}/lines/${slug(text)}-slow.mp3`, words: ws, slow: true });
-    }
+    // a line sung again ("di cangiar l'ingrato cor" seven times) is recorded once, as first read; every
+    // occurrence points to that recording and gets its own shape (shapeLine) from its own notes
+    const same = bare(ph.original).toLowerCase();
+    const text = seenLine.get(same) ?? config.sayAs?.[plain(ph.original)] ?? phrased(ph, joinsAfter, notes);
+    const first = !seenLine.has(same);
+    seenLine.set(same, text);
+    const ws = ph.words.map((w) => plain(w.text));
+    lines.push({ key: ph.id, kind: "line", text, file: `${base}/lines/${slug(text)}.mp3`, words: ws });
+    if (first && config.slowLines !== false)
+      lines.push({ key: `${ph.id}-slow`, kind: "line-slow", text, file: `${base}/lines/${slug(text)}-slow.mp3`, words: ws, slow: true });
     // words sung together on one note across the gap between two words: one clip for the pair
     const syl = ph.syllables ?? [];
     for (let i = 0; i + 1 < syl.length; i++) {
@@ -442,7 +442,8 @@ function shapeAll(piece: string, voiceDir: string, data: { clips: Record<string,
     for (let i = 0; i + 1 < syl.length; i++) if (syl[i].noteId === syl[i + 1].noteId && syl[i + 1].word === syl[i].word + 1) joined.add(syl[i].word);
     const spans = spansOf(ph, notes);
     const hash = short(JSON.stringify([SHAPE, c.hash, spans, [...joined]]));
-    const out = c.file.replace("/lines/", "/sung/");
+    // one shaped file per shape: a line sung again to other notes gets its own
+    const out = c.file.replace("/lines/", "/sung/").replace(/\.mp3$/, `-${hash.slice(0, 6)}.mp3`);
     if (c.sung?.hash === hash && existsSync(join(ROOT, out))) continue;
     try {
       const words = shapeLine(c.file, out, c.words, spans, joined);
