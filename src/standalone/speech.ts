@@ -1,13 +1,15 @@
 /**
- * Spoken pronunciation. Uses the device's own Italian voice (Web Speech API) when one is
- * installed, which on most phones, tablets and Macs sounds far better than any placeholder we
- * can ship. Otherwise it falls back to the offline placeholder recordings bundled with the app.
+ * Spoken pronunciation. First choice: the app's own recordings of a native Italian voice (made with
+ * ElevenLabs, scripts/voices.ts). Where a recording is missing, the device's own Italian voice (Web Speech
+ * API), and last the offline placeholder recordings bundled with the app.
  */
 
 export interface SpeakSource {
   text: string;
   normalUrl?: string;
   slowUrl?: string;
+  /** recordings of the real voice: always preferred */
+  recorded?: { normal?: string; slow?: string };
 }
 
 export type VoiceInfo = { kind: "device"; name: string } | { kind: "recording" } | { kind: "none" };
@@ -55,9 +57,31 @@ export function stopSpeaking() {
   current = null;
 }
 
-/** Speak a phrase; resolves when it ends. */
-export function speak(src: SpeakSource, slow: boolean): Promise<void> {
+/** Speak a phrase; resolves when it ends. onTime: the playback position (s) while a recording plays. */
+export function speak(src: SpeakSource, slow: boolean, onTime?: (sec: number) => void): Promise<void> {
   stopSpeaking();
+  const rec = slow ? src.recorded?.slow : src.recorded?.normal;
+  if (rec) {
+    return new Promise((resolve) => {
+      const a = new Audio(rec);
+      let raf = 0;
+      const done = () => {
+        cancelAnimationFrame(raf);
+        onTime?.(-1);
+        resolve();
+      };
+      const tick = () => {
+        onTime?.(a.currentTime);
+        raf = requestAnimationFrame(tick);
+      };
+      a.onplaying = () => onTime && (raf = requestAnimationFrame(tick));
+      a.onended = done;
+      a.onerror = done;
+      a.onpause = () => a.ended || done();
+      current = a;
+      a.play().catch(done);
+    });
+  }
   const v = italianVoice();
   if (v && window.speechSynthesis) {
     return new Promise((resolve) => {

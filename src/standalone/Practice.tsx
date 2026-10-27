@@ -29,6 +29,34 @@ const audioModules = import.meta.glob("../../data/content/puccini-o-mio-babbino-
 }) as Record<string, string>;
 const audioUrl = (file?: string) => (file ? Object.entries(audioModules).find(([k]) => k.endsWith(`/${file}`))?.[1] : undefined);
 
+// The real voice: recordings made with ElevenLabs (scripts/voices.ts), the voice set in voice.config.json.
+import voiceConfig from "../../voice.config.json";
+interface VoiceManifest {
+  voiceId: string;
+  voiceName?: string;
+  clips: Record<string, { text: string; file: string; words?: [number, number][] }>;
+  words: Record<string, string>;
+}
+const voiceManifests = import.meta.glob("../../content/pieces/puccini-o-mio-babbino-caro/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
+const voiceFiles = import.meta.glob(["../../content/pieces/puccini-o-mio-babbino-caro/voice/*/lines/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
+  query: "?url",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
+const voice = Object.values(voiceManifests).find((m) => m.voiceId === (voiceConfig as { voiceId: string }).voiceId) ?? null;
+const voiceUrl = (file?: string) => (file ? voiceFiles[`../../${file}`] : undefined);
+const plainText = (t: string) => t.replace(/[’‘]/g, "'").replace(/\s+/g, " ").trim();
+const wordKey = (t: string) => plainText(t).replace(/[.,;:!?«»“”"()—–-]+/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+/** the recorded line (a repeated line uses the first recording of the same words) */
+function lineClip(id: string, original: string) {
+  if (!voice) return null;
+  const c = voice.clips[id] ?? Object.entries(voice.clips).find(([k, v]) => !k.endsWith("-slow") && !k.startsWith("join") && v.text === plainText(original))?.[1];
+  if (!c) return null;
+  const key = Object.entries(voice.clips).find(([, v]) => v === c)?.[0] ?? id;
+  return { normal: voiceUrl(c.file), slow: voiceUrl(voice.clips[`${key}-slow`]?.file), words: c.words, slowWords: voice.clips[`${key}-slow`]?.words };
+}
+const wordUrl = (text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);
+
 const voicePart = edition.parts.find((p) => p.kind === "voice")!;
 const pianoPart = edition.parts.find((p) => p.kind === "piano")!;
 
@@ -505,17 +533,32 @@ export function Practice({
     } else goTo(spans[Math.min(spans.length - 1, current.sounding ? i + 1 : i)].startQ - 0.0001);
   };
 
+  // while a recorded line is spoken, the word being said is marked in the text
+  const [spokenWord, setSpokenWord] = useState<{ lineId: string; k: number } | null>(null);
   const sayPhrase = async (id: string, slow = false) => {
     const ph = language.phrases.find((p) => p.id === id)!;
     if (engine?.state === "playing") engine.pause();
     setSpeakingId(id);
-    await speak({ text: ph.original, normalUrl: audioUrl(ph.audio.normal?.file), slowUrl: audioUrl(ph.audio.slow?.file) }, slow);
+    const rec = lineClip(id, ph.original);
+    const times = slow ? rec?.slowWords : rec?.words;
+    await speak(
+      { text: ph.original, normalUrl: audioUrl(ph.audio.normal?.file), slowUrl: audioUrl(ph.audio.slow?.file), recorded: rec ? { normal: rec.normal, slow: rec.slow } : undefined },
+      slow,
+      times
+        ? (sec) => {
+            const k = sec < 0 ? -1 : times.findIndex(([a, b]) => sec >= a - 0.03 && sec < b + 0.05);
+            setSpokenWord((o) => (k < 0 ? null : o?.lineId === id && o.k === k ? o : { lineId: id, k }));
+          }
+        : undefined,
+    );
+    setSpokenWord(null);
     setSpeakingId((s) => (s === id ? null : s));
   };
   const sayWord = async (key: string, text: string, slow = false) => {
     if (engine?.state === "playing") engine.pause();
     setSpeakingWord(key);
-    await speak({ text: text.replace(/[.,;:!?«»“”]+/g, "") }, slow);
+    const url = wordUrl(text);
+    await speak({ text: text.replace(/[.,;:!?«»“”]+/g, ""), recorded: url ? { normal: url, slow: url } : undefined }, slow);
     setSpeakingWord((k) => (k === key ? null : k));
   };
   useEffect(() => () => stopSpeaking(), []);
@@ -632,7 +675,11 @@ export function Practice({
           <span>{curly(line.translation)}</span>
         </div>
         <div className="wc-actions">
-          {deviceVoice ? (
+          {wordUrl(w.text) ? (
+            <button type="button" className="cp-btn cp-btn--ink" onClick={() => sayWord(key, w.text)} aria-pressed={speakingWord === key}>
+              {Icon.speaker} Hear the word
+            </button>
+          ) : deviceVoice ? (
             <>
               <button type="button" className="cp-btn cp-btn--ink" onClick={() => sayWord(key, w.text)} aria-pressed={speakingWord === key}>
                 {Icon.speaker} Hear the word
@@ -711,7 +758,7 @@ export function Practice({
             ))}
           <button
             type="button"
-            className={`now-word${sung ? " w-done" : ""}${lit ? " sung" : ""}${openWord?.lineId === ph.id && openWord.k === k ? " open" : ""}`}
+            className={`now-word${sung ? " w-done" : ""}${lit ? " sung" : ""}${spokenWord?.lineId === ph.id && spokenWord.k === k ? " spoken" : ""}${openWord?.lineId === ph.id && openWord.k === k ? " open" : ""}`}
             aria-label={`${w.text}: show meaning`}
             onClick={(e) => {
               e.stopPropagation();
@@ -1441,7 +1488,9 @@ export function Practice({
                     until 2040. The IPA, word meanings and translation were written for this app and have not yet been reviewed by a diction coach.
                   </p>
                   <p>
-                    Spoken lines use your device's Italian voice when it has one ({deviceVoice ? `here: ${voiceInfo(false).kind === "device" ? (voiceInfo(false) as { name: string }).name : ""}` : "none found here, so robotic placeholder recordings play"}).
+                    {voice
+                      ? `Spoken lines and words: a native Italian voice (${(voice.voiceName ?? "").split(" - ")[0]}), made with ElevenLabs. It is spoken, not sung: how the words sound in Italian, not how to sing them.`
+                      : `Spoken lines use your device's Italian voice when it has one (${deviceVoice ? `here: ${voiceInfo(false).kind === "device" ? (voiceInfo(false) as { name: string }).name : ""}` : "none found here, so robotic placeholder recordings play"}).`}
                   </p>
                   <p>
                     Piano:{" "}

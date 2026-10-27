@@ -35,6 +35,8 @@ interface Config {
   voiceName?: string;
   modelId: string;
   slowSpeed: number;
+  /** extra easing of the slow lines (ffmpeg atempo, pitch kept): 0.85 = 15% longer */
+  slowStretch: number;
   stability: number;
   similarityBoost: number;
   maxCharsPerRun: number;
@@ -82,7 +84,8 @@ const redo = new Set(
 const config: Config = {
   voiceId: "",
   modelId: "eleven_multilingual_v2",
-  slowSpeed: 0.75,
+  slowSpeed: 0.7,
+  slowStretch: 0.85,
   stability: 0.55,
   similarityBoost: 0.75,
   maxCharsPerRun: 30000,
@@ -205,13 +208,13 @@ async function speak(voiceId: string, text: string, slow: boolean): Promise<Spok
 }
 
 /** Even loudness for every clip (speech at about -18 LUFS), saved as MP3. */
-function save(file: string, audio: Buffer) {
+function save(file: string, audio: Buffer, stretch = 1) {
   const out = join(ROOT, file);
   mkdirSync(dirname(out), { recursive: true });
   const tmp = `${out}.raw.mp3`;
   writeFileSync(tmp, audio);
   try {
-    execFileSync(FFMPEG, ["-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-18:TP=-1.5:LRA=11", "-ar", "44100", "-b:a", "96k", out]);
+    execFileSync(FFMPEG, ["-v", "error", "-y", "-i", tmp, "-af", `${stretch !== 1 ? `atempo=${stretch},` : ""}loudnorm=I=-18:TP=-1.5:LRA=11`, "-ar", "44100", "-b:a", "96k", out]);
   } catch {
     writeFileSync(out, audio); // no ffmpeg: keep the file as it came
   }
@@ -279,8 +282,9 @@ async function main() {
     if (process.env.GITHUB_ACTIONS) console.log(`::notice::Voice chosen: ${v.name}`);
   }
   const voiceDir = config.voiceId ? slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "") || "voice" : "voice";
-  const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, config.slowSpeed]);
-  const hashOf = (c: Clip) => short(`${settings}|${c.kind}|${c.text}`);
+  const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost]);
+  const slowSettings = JSON.stringify([config.slowSpeed, config.slowStretch]);
+  const hashOf = (c: Clip) => short(`${settings}|${c.slow ? `${slowSettings}|` : ""}${c.kind}|${c.text}`);
 
   // the shared word bank
   const bankDir = `content/voice-bank/${voiceDir}`;
@@ -331,8 +335,11 @@ async function main() {
       const job = jobs[next++];
       const c = job.clip;
       const sp = await speak(config.voiceId, c.text, !!c.slow);
-      save(c.file, sp.audio);
-      job.done({ text: c.text, hash: hashOf(c), file: c.file, ...(c.words ? { words: wordTimes(sp, c.text, c.words) } : {}) });
+      // the voice's own slowest speed is still quick for learning: the slow line is also eased out a little
+      const stretch = c.slow ? config.slowStretch : 1;
+      save(c.file, sp.audio, stretch);
+      const times = c.words ? wordTimes(sp, c.text, c.words).map(([a, b]) => [+(a / stretch).toFixed(3), +(b / stretch).toFixed(3)] as [number, number]) : undefined;
+      job.done({ text: c.text, hash: hashOf(c), file: c.file, ...(times ? { words: times } : {}) });
       console.log(`  made ${c.key}: ${c.text}`);
     }
   };

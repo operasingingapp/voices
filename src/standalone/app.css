@@ -7498,3 +7498,10 @@ p.obp-meta {
     display: none;
   }
 }
+
+/* the word being said while a recorded line is spoken */
+.now-word.spoken {
+  background: var(--note);
+  border-radius: 4px;
+  transition: background-color 80ms linear;
+}
