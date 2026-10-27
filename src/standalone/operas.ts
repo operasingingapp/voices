@@ -86,11 +86,18 @@ export const OPERAS: Opera[] = [
       "kind": "Cavatina · Act 2"
      },
      {
-      "title": "Dove sono",
-      "kind": "Recitative and aria · Act 3",
-      "editionId": "mozart-dove-sono",
+      "title": "E Susanna non vien!",
+      "kind": "Recitative · Act 3",
+      "editionId": "mozart-e-susanna-non-vien",
       "when": "Act 3, alone, while Susanna meets the Count",
-      "context": "Alone, the Countess waits for Susanna: tonight she will dress as her maid to catch her own husband. She is ashamed of how low the Count has brought her, then remembers the happy days when he loved her, and ends in a sudden hope that her faithfulness may yet win back his ungrateful heart."
+      "context": "Alone, the Countess waits for Susanna: tonight they will swap clothes so that she can catch her own husband. She worries the plan is too bold for so jealous a man, then turns bitter: the Count who loved her, then wronged her, then betrayed her, has brought her so low that she must ask her own maid for help."
+     },
+     {
+      "title": "Dove sono",
+      "kind": "Aria · Act 3",
+      "editionId": "mozart-dove-sono",
+      "when": "Straight after the recitative E Susanna non vien!",
+      "context": "Still alone, the Countess remembers the happy days when the Count loved her and asks where his promises have gone. The slow, singing first part looks back; in the quick ending she finds a sudden hope that her faithfulness may yet win back his ungrateful heart."
      },
      {
       "title": "Sull'aria… che soave zeffiretto",

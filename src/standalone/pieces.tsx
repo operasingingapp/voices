@@ -62,21 +62,46 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-e-susanna-non-vien": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "Begins in C major and moves through several keys, ending ready for Dove sono",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: the engraving plays it at ♩ ≈ 80–116; Mozart gives no tempo",
+    },
+    notePlaceholder: "Speak it first, then sing: let the words set the rhythm",
+    about: (
+      <>
+        <p>
+          Score: bars 1–25 of a piano-vocal engraving made in MuseScore 4.4, supplied by you; the engraver and licence are not stated in the file, so check
+          them before sharing. Split from the aria at the double bar; nothing else changed. On screen the tempo marks appear in the bar box and joined
+          syllables use ‿.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
-    kind: "Recitative and aria",
+    kind: "Aria",
     facts: {
-      key: "C major; the recitative moves through several keys",
-      time: "Recitative in 4/4, Andantino in 2/4, Allegro in 4/4",
-      tempo: "Recitative ♩ ≈ 80–100 (free in performance), Andantino ♩ = 60, Allegro ♩ = 144: the engraving's numbers, Mozart gives words only",
+      key: "C major",
+      time: "Andantino in 2/4, then Allegro in 4/4",
+      tempo: "Andantino ♩ = 60, Allegro ♩ = 144: the engraving's numbers, Mozart gives words only",
     },
     notePlaceholder: "Take time on “Dove sono”, breathe after “piacer”",
     about: (
       <>
         <p>
-          Score: a piano-vocal engraving made in MuseScore 4.4, supplied by you; the engraver and licence are not stated in the file, so check them before
-          sharing. One lyric typo is corrected (bar 99, “languire‿a”). On screen the tempo marks appear in the bar box and joined syllables use ‿.
+          Score: bars 26–135 (here numbered from 1) of a piano-vocal engraving made in MuseScore 4.4, supplied by you; the engraver and licence are not
+          stated in the file, so check them before sharing. One lyric typo is corrected (bar 74, “languire‿a”). On screen the tempo marks appear in the bar
+          box and joined syllables use ‿.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for

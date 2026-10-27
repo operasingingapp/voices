@@ -2,7 +2,7 @@
  "editionId": "mozart-dove-sono",
  "editionVersion": "1.0.0-musescore-4.4.4",
  "title": "Dove sono",
- "subtitle": "The Countess's recitative and aria from Le nozze di Figaro, Act 3",
+ "subtitle": "The Countess's aria from Le nozze di Figaro, Act 3",
  "kind": "aria",
  "fixture": false,
  "composer": "Wolfgang Amadeus Mozart",
@@ -56,52 +56,46 @@
  ],
  "passages": [
   {
-   "id": "recit",
-   "label": "Recitative: E Susanna non vien!",
-   "start": "1",
-   "end": "25"
-  },
-  {
    "id": "a",
    "label": "Dove sono i bei momenti",
-   "start": "26",
-   "end": "44"
+   "start": "1",
+   "end": "19"
   },
   {
    "id": "b",
    "label": "Perchè mai, se in pianti e in pene",
-   "start": "45",
-   "end": "61"
+   "start": "20",
+   "end": "36"
   },
   {
    "id": "a2",
    "label": "Dove sono (return)",
-   "start": "62",
-   "end": "76"
+   "start": "37",
+   "end": "51"
   },
   {
    "id": "c",
    "label": "Allegro: Ah! se almen la mia costanza",
-   "start": "77",
-   "end": "95"
+   "start": "52",
+   "end": "70"
   },
   {
    "id": "c2",
    "label": "ah! se almen… di cangiar l'ingrato cor",
-   "start": "96",
-   "end": "112"
+   "start": "71",
+   "end": "87"
   },
   {
    "id": "coda",
    "label": "l'ingrato cor (close)",
-   "start": "113",
-   "end": "135"
+   "start": "88",
+   "end": "110"
   }
  ],
  "licences": [
   {
    "item": "Music",
-   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), No. 19 (recitative and aria)",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), No. 19, aria",
    "author": "Wolfgang Amadeus Mozart (1756–1791)",
    "licence": "Public domain",
    "notes": ""
@@ -115,10 +109,10 @@
   },
   {
    "item": "Score (score.musicxml)",
-   "source": "MuseScore 4.4.4 piano-vocal engraving \"42 - E Susanna non vien...Dove sono i bei momenti\", supplied by the user (original kept as source-musescore.mxl)",
+   "source": "Bars 26–135 (renumbered 1–110) of a MuseScore 4.4.4 piano-vocal engraving \"42 - E Susanna non vien...Dove sono i bei momenti\", supplied by the user (original kept as source-musescore.mxl)",
    "author": "Unknown engraver",
    "licence": "Not stated in the file",
-   "notes": "Check the engraver's licence before distributing. One lyric typo corrected (bar 99: languire‿al → languire‿a)."
+   "notes": "Check the engraver's licence before distributing. Split from the recitative at the double bar (the first bar repeats the key and clefs). One lyric typo corrected (bar 74, originally 99: languire‿al → languire‿a)."
   },
   {
    "item": "IPA, gloss and translation",

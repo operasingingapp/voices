@@ -1,0 +1,120 @@
+{
+ "editionId": "mozart-e-susanna-non-vien",
+ "editionVersion": "1.0.0-musescore-4.4.4",
+ "title": "E Susanna non vien!",
+ "subtitle": "The Countess's recitative before Dove sono, Le nozze di Figaro, Act 3",
+ "kind": "aria",
+ "fixture": false,
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "countess",
+   "name": "The Countess",
+   "voiceType": "Soprano",
+   "partKey": "soprano"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "soprano",
+   "label": "The Countess (Soprano)",
+   "shortLabel": "Countess",
+   "kind": "voice",
+   "roleId": "countess",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "E Susanna non vien!",
+   "start": "1",
+   "end": "8"
+  },
+  {
+   "id": "b",
+   "label": "Ma che mal c'è?",
+   "start": "9",
+   "end": "13"
+  },
+  {
+   "id": "c",
+   "label": "oh cielo, a qual umil stato",
+   "start": "14",
+   "end": "19"
+  },
+  {
+   "id": "d",
+   "label": "di gelosia, di sdegni… aita!",
+   "start": "19",
+   "end": "25"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), No. 19, recitative",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Bars 1–25 of a MuseScore 4.4.4 piano-vocal engraving \"42 - E Susanna non vien...Dove sono i bei momenti\", supplied by the user (the whole file is kept as ../mozart-dove-sono/source-musescore.mxl)",
+   "author": "Unknown engraver",
+   "licence": "Not stated in the file",
+   "notes": "Check the engraver's licence before distributing. Split from the aria at the double bar; nothing else changed."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this MVP",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}
