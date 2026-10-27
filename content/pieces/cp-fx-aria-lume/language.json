@@ -1,0 +1,152 @@
+{
+  "editionId": "cp-fx-aria-lume",
+  "language": "it",
+  "review": { "status": "unreviewed-fixture" },
+  "notes": "Original fixture text. Words are listed in sung order as [text, gloss, IPA]; the import script aligns each word to the notes it is sung on (melismas and elisions included) and rejects mismatches.",
+  "phrases": [
+    {
+      "id": "clara-a1-v1",
+      "role": "clara",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "5",
+      "original": "Lume di sera, dolce e lontano,",
+      "translation": "Evening light, sweet and far away,",
+      "ipa": "ˈlu.me di ˈse.ra ˈdol.tʃe‿e lonˈta.no",
+      "words": [
+        ["Lume", "light", "ˈlu.me"],
+        ["di", "of", "di"],
+        ["sera,", "evening", "ˈse.ra"],
+        ["dolce", "sweet", "ˈdol.tʃe"],
+        ["e", "and", "e"],
+        ["lontano,", "distant", "lonˈta.no"]
+      ],
+      "glossGroups": [{ "words": [0, 1, 2], "gloss": "evening light (noun + “di” phrase becomes an English compound)" }],
+      "audio": {
+        "normal": { "file": "clara-a1-v1.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false },
+        "slow": { "file": "clara-a1-v1-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 90 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "clara-a2-v1",
+      "role": "clara",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "8",
+      "original": "scendi sul mare, posa la mano.",
+      "translation": "come down upon the sea and lay your hand to rest.",
+      "ipa": "ˈʃen.di sul ˈma.re ˈpɔ.za la ˈma.no",
+      "words": [
+        ["scendi", "descend", "ˈʃen.di"],
+        ["sul", "on-the", "sul"],
+        ["mare,", "sea", "ˈma.re"],
+        ["posa", "lay/rest", "ˈpɔ.za"],
+        ["la", "the", "la"],
+        ["mano.", "hand", "ˈma.no"]
+      ],
+      "glossGroups": [{ "words": [3, 4, 5], "gloss": "lay your hand to rest (Italian uses “the” where English uses “your”)" }],
+      "audio": {
+        "normal": { "file": "clara-a2-v1.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false },
+        "slow": { "file": "clara-a2-v1-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 90 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "clara-a1-v2",
+      "role": "clara",
+      "verse": 2,
+      "occurrence": 2,
+      "startMeasure": "5",
+      "original": "Vento d'aprile, porta il mio canto,",
+      "translation": "April wind, carry my song",
+      "ipa": "ˈvɛn.to daˈpri.le ˈpɔr.ta‿il ˈmi.o ˈkan.to",
+      "words": [
+        ["Vento", "wind", "ˈvɛn.to"],
+        ["d'aprile,", "of-April", "daˈpri.le"],
+        ["porta", "carry", "ˈpɔr.ta"],
+        ["il", "the", "il"],
+        ["mio", "my", "ˈmi.o"],
+        ["canto,", "song", "ˈkan.to"]
+      ],
+      "glossGroups": [
+        { "words": [0, 1], "gloss": "April wind" },
+        { "words": [3, 4, 5], "gloss": "my song (Italian keeps the article before the possessive)" }
+      ],
+      "audio": {
+        "normal": { "file": "clara-a1-v2.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false },
+        "slow": { "file": "clara-a1-v2-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 90 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "clara-a2-v2",
+      "role": "clara",
+      "verse": 2,
+      "occurrence": 2,
+      "startMeasure": "8",
+      "original": "là dove il cuore sospira tanto.",
+      "translation": "to where my heart sighs so deeply.",
+      "ipa": "la ˈdo.ve‿il ˈkwɔ.re soˈspi.ra ˈtan.to",
+      "words": [
+        ["là", "there", "la"],
+        ["dove", "where", "ˈdo.ve"],
+        ["il", "the", "il"],
+        ["cuore", "heart", "ˈkwɔ.re"],
+        ["sospira", "sighs", "soˈspi.ra"],
+        ["tanto.", "so-much", "ˈtan.to"]
+      ],
+      "glossGroups": [{ "words": [2, 3], "gloss": "my heart" }],
+      "audio": {
+        "normal": { "file": "clara-a2-v2.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false },
+        "slow": { "file": "clara-a2-v2-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 90 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "clara-b",
+      "role": "clara",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "13",
+      "original": "Ah! non tardare, torna da me!",
+      "translation": "Ah, do not delay — come back to me!",
+      "ipa": "a non tarˈda.re ˈtor.na da me",
+      "words": [
+        ["Ah!", "ah", "a"],
+        ["non", "not", "non"],
+        ["tardare,", "to-delay", "tarˈda.re"],
+        ["torna", "return", "ˈtor.na"],
+        ["da", "to (lit. at)", "da"],
+        ["me!", "me", "me"]
+      ],
+      "glossGroups": [
+        { "words": [1, 2], "gloss": "don't delay (a negative infinitive used as a command)" },
+        { "words": [3, 4, 5], "gloss": "come back to me" }
+      ],
+      "audio": {
+        "normal": { "file": "clara-b.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false },
+        "slow": { "file": "clara-b-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 90 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "clara-c",
+      "role": "clara",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "17",
+      "original": "Lume di sera, resta con me.",
+      "translation": "Evening light, stay with me.",
+      "ipa": "ˈlu.me di ˈse.ra ˈrɛ.sta kon me",
+      "words": [
+        ["Lume", "light", "ˈlu.me"],
+        ["di", "of", "di"],
+        ["sera,", "evening", "ˈse.ra"],
+        ["resta", "stay", "ˈrɛ.sta"],
+        ["con", "with", "kon"],
+        ["me.", "me", "me"]
+      ],
+      "glossGroups": [{ "words": [0, 1, 2], "gloss": "evening light" }],
+      "audio": {
+        "normal": { "file": "clara-c.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false },
+        "slow": { "file": "clara-c-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 90 wpm", "reviewed": false }
+      }
+    }
+  ]
+}

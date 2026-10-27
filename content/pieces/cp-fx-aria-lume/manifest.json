@@ -1,0 +1,107 @@
+{
+  "editionId": "cp-fx-aria-lume",
+  "editionVersion": "1.0.0",
+  "title": "Lume di sera",
+  "subtitle": "Aria for soprano and piano",
+  "kind": "aria",
+  "fixture": true,
+  "fixtureNotice": "Original development fixture written for the Counterpart MVP. It is not a genuine aria and does not satisfy the repertoire requirement.",
+  "composer": "Counterpart fixture (original, 2026)",
+  "librettist": "Counterpart fixture (original Italian text, 2026)",
+  "language": "it",
+  "files": {
+    "musicxml": "score.musicxml",
+    "language": "language.json",
+    "audioDir": "audio"
+  },
+  "roles": [
+    {
+      "id": "clara",
+      "name": "Clara",
+      "voiceType": "Soprano",
+      "partKey": "soprano"
+    }
+  ],
+  "partMapping": [
+    {
+      "key": "piano",
+      "label": "Piano",
+      "shortLabel": "Piano",
+      "kind": "piano",
+      "source": {
+        "xmlPartId": "P2",
+        "staves": [
+          1,
+          2
+        ]
+      },
+      "channel": 0,
+      "program": 0,
+      "velocityScale": 0.85,
+      "defaultVolume": 0.75
+    },
+    {
+      "key": "soprano",
+      "label": "Clara (Soprano)",
+      "shortLabel": "Clara",
+      "kind": "voice",
+      "roleId": "clara",
+      "source": {
+        "xmlPartId": "P1"
+      },
+      "channel": 3,
+      "program": 0,
+      "velocityScale": 0.8,
+      "defaultVolume": 1.0
+    }
+  ],
+  "passages": [
+    {
+      "id": "intro",
+      "label": "Introduction",
+      "start": "1",
+      "end": "4"
+    },
+    {
+      "id": "a",
+      "label": "Lume di sera / Vento d'aprile",
+      "start": "5",
+      "end": "12"
+    },
+    {
+      "id": "b",
+      "label": "Ah! non tardare (più mosso)",
+      "start": "13",
+      "end": "16"
+    },
+    {
+      "id": "c",
+      "label": "Reprise: resta con me",
+      "start": "17",
+      "end": "20"
+    }
+  ],
+  "licences": [
+    {
+      "item": "Music and notation (score.musicxml)",
+      "source": "Composed for this MVP by the Counterpart build (scripts/compose-fixtures.ts)",
+      "author": "Counterpart development team",
+      "licence": "CC0 1.0 — development fixture",
+      "notes": "Not genuine repertoire. Replace with corrected MusicXML prepared by the editorial team."
+    },
+    {
+      "item": "Italian text, gloss, translation and IPA (language.json)",
+      "source": "Written for this MVP",
+      "author": "Counterpart development team",
+      "licence": "CC0 1.0 — development fixture",
+      "notes": "Unreviewed. Requires review by an Italian diction coach before real use."
+    },
+    {
+      "item": "Spoken pronunciation placeholders (audio/*.mp3)",
+      "source": "Synthesised offline with eSpeak NG 1.52 (espeakng-loader 0.2.4, Italian voice)",
+      "author": "Machine-generated",
+      "licence": "Generated output; eSpeak NG itself is GPL-3.0 and is not distributed with the app",
+      "notes": "Robotic placeholders only, not pronunciation models. To be replaced by reviewed recordings (e.g. produced externally with ElevenLabs)."
+    }
+  ]
+}

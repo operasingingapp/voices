@@ -1,0 +1,488 @@
+/* Counterpart app: design-system tokens (generated from the Counterpart design system's tokens.json). */
+@font-face { font-family: "Jost"; src: url("./fonts/Jost-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("./fonts/Jost-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jost"; src: url("./fonts/Jost-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Charis SIL"; src: url("./fonts/CharisSIL-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Charis SIL"; src: url("./fonts/CharisSIL-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Charis SIL"; src: url("./fonts/CharisSIL-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Noto Music"; src: url("./fonts/NotoMusic-Symbols.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+:root {
+  --canvas: #ffffff;
+  --fog: #f1f2ef;
+  --fog-strong: #e4e6e1;
+  --ink: #0b0b0b;
+  --ink-muted: #5d5f5a;
+  --on-ink: #ffffff;
+  --notation: #0b0b0b;
+  --now: #b9f3cc;
+  --now-mark: #0b7a40;
+  --now-wash: #b9f3cc8c;
+  --now-strong: #9fe8b6;
+  --picked: #e2dcff;
+  --picked-strong: #d2c8ff;
+  --sky-soft: #e6f1ff;
+  --you: #ffc6df;
+  --you-mark: #c8286f;
+  --loop: #d8d1ff;
+  --loop-mark: #5841d8;
+  --loop-wash: #d8d1ff73;
+  --together: #c4e3ff;
+  --together-mark: #1c64c8;
+  --check: #ffed94;
+  --check-mark: #7d5c00;
+  --note: #ffd2bc;
+  --note-mark: #b6461a;
+  --on-pastel: #0b0b0b;
+  --on-pastel-muted: #43453f;
+  --on-pastel-inverse: #ffffff;
+  --pastel-fog: #0b0b0b14;
+  --pastel-fog-strong: #0b0b0b29;
+  --cut-hatch: #0b0b0b29;
+  --alert: #d42a1c;
+  --focus: var(--ink);
+  --shadow-float: 0 0 0 1px #0b0b0b0f, 0 12px 32px -14px #0b0b0b47;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-field: 0px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+  --touch: 48px;
+  --touch-stand: 64px;
+  --panel: 360px;
+  --duration-quick: 120ms;
+  --duration-move: 200ms;
+  --duration-settle: 320ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --font-sans: "Jost", "Noto Music", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
+  /* the sung text and its IPA: Charis SIL, a readable book serif drawn for phonetic transcription */
+  --font-text: "Charis SIL", "Doulos SIL", Charter, Georgia, serif;
+  --font-ipa: "Charis SIL", "Doulos SIL", "Gentium Plus", Georgia, serif;
+  color-scheme: light;
+}
+/* ---- design-system components ---- */
+/* Counterpart components. Plain CSS classes prefixed cp-, built only from tokens.css.
+   Shape rule: round = you can press it (radius-pill, radius-round); square = information (radius-field). */
+
+.cp-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Inside a pastel field everything is dark ink, in both themes. */
+.cp-on-pastel,
+.cp-field--now, .cp-field--you, .cp-field--loop, .cp-field--together, .cp-field--check, .cp-field--note,
+.cp-strip--you, .cp-strip--now, .cp-lyric[data-state="sounding"], .cp-note {
+  --ink: var(--on-pastel);
+  --ink-muted: var(--on-pastel-muted);
+  --on-ink: var(--on-pastel-inverse);
+  --fog: var(--pastel-fog);
+  --fog-strong: var(--pastel-fog-strong);
+  --focus: var(--on-pastel);
+  color: var(--on-pastel);
+}
+
+:where(.cp-btn, .cp-icon-btn, .cp-toggle, .cp-seg button, .cp-slider, .cp-lyric button):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* ---------- Button ---------- */
+.cp-btn {
+  appearance: none;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--touch);
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-pill);
+  background: var(--fog);
+  color: var(--ink);
+  font: 500 15px/1.2 var(--font-sans);
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
+}
+.cp-btn svg { width: 20px; height: 20px; flex: none; }
+.cp-btn:hover { background: var(--fog-strong); }
+.cp-btn:active { transform: scale(0.97); }
+/* the main action of a place: mint, never a black fill */
+.cp-btn--ink { background: var(--now); color: var(--on-pastel); }
+.cp-btn--ink:hover { background: var(--now-strong); }
+.cp-btn[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
+.cp-btn[aria-pressed="true"]:hover { background: var(--picked-strong); }
+.cp-btn--ghost { background: transparent; }
+.cp-btn--stand { min-height: var(--touch-stand); padding: 0 var(--space-6); font-size: 17px; }
+.cp-btn--stand svg { width: 24px; height: 24px; }
+.cp-btn[disabled] { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+/* ---------- IconButton ---------- */
+.cp-icon-btn {
+  appearance: none;
+  border: 0;
+  flex: none;
+  width: var(--touch);
+  height: var(--touch);
+  display: inline-grid;
+  place-items: center;
+  border-radius: var(--radius-round);
+  background: var(--fog);
+  color: var(--ink);
+  font: 500 15px/1 var(--font-sans);
+  cursor: pointer;
+  transition: background-color var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
+}
+.cp-icon-btn svg { width: 22px; height: 22px; }
+.cp-icon-btn:hover { background: var(--fog-strong); }
+.cp-icon-btn:active { transform: scale(0.94); }
+.cp-icon-btn--ink { background: var(--now); color: var(--on-pastel); }
+.cp-icon-btn--ink:hover { background: var(--now-strong); }
+.cp-icon-btn[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
+.cp-icon-btn[aria-pressed="true"]:hover { background: var(--picked-strong); }
+.cp-icon-btn--ghost { background: transparent; }
+.cp-icon-btn--stand { width: var(--touch-stand); height: var(--touch-stand); }
+.cp-icon-btn--stand svg { width: 28px; height: 28px; }
+
+/* ---------- Toggle ---------- */
+.cp-toggle {
+  appearance: none;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--touch);
+  padding: 0 var(--space-5) 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--fog);
+  color: var(--ink);
+  font: 500 15px/1.2 var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--duration-quick) var(--ease-standard);
+}
+.cp-toggle::before {
+  content: "";
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-round);
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+.cp-toggle:hover { background: var(--fog-strong); }
+.cp-toggle[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
+.cp-toggle[aria-pressed="true"]::before { background: var(--loop-mark); }
+.cp-toggle--loop[aria-pressed="true"] { background: var(--loop); color: var(--on-pastel); }
+.cp-toggle--together[aria-pressed="true"] { background: var(--together); color: var(--on-pastel); }
+.cp-toggle--you[aria-pressed="true"] { background: var(--you); color: var(--on-pastel); }
+
+/* ---------- Segmented ---------- */
+.cp-seg {
+  display: inline-flex;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border-radius: var(--radius-pill);
+  background: var(--fog);
+}
+.cp-seg button {
+  appearance: none;
+  border: 0;
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink-muted);
+  font: 500 15px/1.2 var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--duration-quick) var(--ease-standard), color var(--duration-quick) var(--ease-standard);
+}
+.cp-seg button:hover { color: var(--ink); }
+.cp-seg button[aria-selected="true"], .cp-seg button[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
+
+/* ---------- Slider ---------- */
+.cp-slider {
+  --fill: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-width: 96px;
+  height: var(--touch);
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.cp-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(to right, var(--now-mark) var(--fill), var(--fog-strong) var(--fill));
+}
+.cp-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-top: -10px;
+  border: 0;
+  border-radius: var(--radius-round);
+  background: var(--now-mark);
+}
+.cp-slider::-moz-range-track { height: 4px; background: var(--fog-strong); }
+.cp-slider::-moz-range-progress { height: 4px; background: var(--now-mark); }
+.cp-slider::-moz-range-thumb { width: 24px; height: 24px; border: 0; border-radius: var(--radius-round); background: var(--now-mark); }
+
+/* ---------- Tag ---------- */
+.cp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-field);
+  background: var(--fog);
+  color: var(--ink);
+  font: 500 12px/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.cp-tag svg { width: 14px; height: 14px; }
+.cp-tag--ink { background: var(--canvas); color: var(--on-pastel); }
+.cp-tag--now { background: var(--now); color: var(--on-pastel); }
+.cp-tag--you { background: var(--you); color: var(--on-pastel); }
+.cp-tag--loop { background: var(--loop); color: var(--on-pastel); }
+.cp-tag--together { background: var(--together); color: var(--on-pastel); }
+.cp-tag--check { background: var(--check); color: var(--on-pastel); }
+.cp-tag--note { background: var(--note); color: var(--on-pastel); }
+
+/* ---------- Field ---------- */
+.cp-field {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-field);
+  background: var(--fog);
+  color: var(--ink);
+  min-width: 0;
+}
+.cp-field--now { background: var(--now); }
+.cp-field--you { background: var(--you); }
+.cp-field--loop { background: var(--loop); }
+.cp-field--together { background: var(--together); }
+.cp-field--check { background: var(--check); }
+.cp-field--note { background: var(--note); }
+.cp-eyebrow {
+  margin: 0;
+  font: 500 12px/1.2 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.cp-field h3 { margin: 0; font: 500 24px/1.2 var(--font-sans); letter-spacing: -0.005em; }
+.cp-field p { margin: 0; }
+.cp-field .cp-row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+
+/* ---------- PositionReadout ---------- */
+.cp-position {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 0 var(--space-5);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-field);
+  background: var(--fog);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.cp-position[data-state="playing"] {
+  background: var(--now);
+  --ink: var(--on-pastel);
+  --ink-muted: var(--on-pastel-muted);
+  color: var(--on-pastel);
+}
+.cp-position__nums { display: grid; grid-template-columns: auto auto auto; column-gap: var(--space-2); align-items: baseline; }
+.cp-position__nums b { font: 400 48px/1 var(--font-sans); letter-spacing: -0.01em; text-align: right; }
+.cp-position__nums i { font: 400 32px/1 var(--font-sans); font-style: normal; color: var(--ink-muted); }
+.cp-position__nums small { font: 500 12px/1.2 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); text-align: right; padding-top: 4px; }
+.cp-position__side { display: grid; gap: var(--space-2); }
+.cp-pips { display: flex; gap: var(--space-1); }
+.cp-pips b { width: 12px; height: 12px; background: currentColor; opacity: 0.22; }
+.cp-pips b.is-on { opacity: 1; background: var(--now-mark); }
+.cp-position__status { font: 500 15px/1.2 var(--font-sans); display: flex; align-items: center; gap: var(--space-2); }
+.cp-position__status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; opacity: 0.35; }
+.cp-position[data-state="playing"] .cp-position__status::before { opacity: 1; }
+
+/* ---------- TempoControl ---------- */
+.cp-tempo { display: inline-flex; align-items: center; gap: var(--space-2); }
+.cp-tempo__value { display: grid; justify-items: center; min-width: 76px; font-variant-numeric: tabular-nums; }
+.cp-tempo__value b { font: 500 17px/1.2 var(--font-sans); }
+.cp-tempo__value span { font: 400 13px/1.3 var(--font-sans); color: var(--ink-muted); }
+.cp-beat { font-size: 1.4em; line-height: 0; vertical-align: -0.08em; }
+
+/* ---------- TransportDock ---------- */
+.cp-dock {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--canvas);
+  box-shadow: var(--shadow-float);
+  max-width: 100%;
+}
+.cp-dock__group { display: flex; align-items: center; gap: var(--space-2); }
+.cp-dock__sep { width: 1px; align-self: stretch; margin: var(--space-2) 0; background: var(--fog-strong); }
+
+/* ---------- LyricLine (phrase band above the staff) ---------- */
+.cp-lyric {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
+  border-radius: var(--radius-field);
+  color: var(--ink);
+  max-width: 100%;
+  transition: background-color var(--duration-move) var(--ease-standard);
+}
+.cp-lyric[data-state="sounding"] { background: var(--now); }
+.cp-lyric__body { display: grid; gap: 2px; min-width: 0; padding-top: 2px; }
+.cp-lyric__line { margin: 0; font: 500 22px/1.25 var(--font-sans); }
+.cp-lyric__line .cp-w { padding: 0 2px; margin: 0 -2px; }
+.cp-lyric__line .cp-w.is-now { background: var(--canvas); color: var(--on-pastel); }
+.cp-lyric__ipa { margin: 0; font: 400 15px/1.35 var(--font-ipa); color: var(--ink-muted); }
+.cp-lyric__tr { margin: 0; font: italic 400 15px/1.4 var(--font-sans); color: var(--ink-muted); }
+.cp-lyric[data-ipa="off"] .cp-lyric__ipa, .cp-lyric[data-translation="off"] .cp-lyric__tr { display: none; }
+
+/* ---------- GlossWord ---------- */
+.cp-gloss { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.cp-gloss__w {
+  display: grid;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-field);
+  background: var(--fog);
+  min-width: 0;
+}
+.cp-gloss__w b { font: 500 17px/1.25 var(--font-sans); }
+.cp-gloss__w .cp-gloss__ipa { font: 400 13px/1.35 var(--font-ipa); color: var(--ink-muted); }
+.cp-gloss__w .cp-gloss__mean { font: 400 13px/1.4 var(--font-sans); color: var(--ink-muted); }
+.cp-gloss__group { margin: 0; font: italic 400 15px/1.4 var(--font-sans); color: var(--ink-muted); }
+
+/* ---------- MixerStrip ---------- */
+.cp-strip {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-field);
+  background: var(--fog);
+  color: var(--ink);
+  min-width: 0;
+}
+.cp-strip--you { background: var(--you); }
+.cp-strip--now { background: var(--now); }
+.cp-strip__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.cp-strip__name { font: 500 17px/1.25 var(--font-sans); }
+.cp-strip__role { font: 400 13px/1.4 var(--font-sans); color: var(--ink-muted); }
+.cp-strip__ctl { display: flex; align-items: center; gap: var(--space-2); }
+.cp-strip .cp-icon-btn { background: var(--canvas); color: var(--ink); }
+.cp-strip .cp-icon-btn[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
+.cp-strip--you .cp-icon-btn, .cp-strip--now .cp-icon-btn { background: var(--on-pastel-inverse); color: var(--on-pastel); }
+.cp-strip--you .cp-icon-btn[aria-pressed="true"], .cp-strip--now .cp-icon-btn[aria-pressed="true"] { background: var(--on-pastel); color: var(--on-pastel-inverse); }
+
+/* ---------- Score overlays ---------- */
+.cp-score { position: relative; background: var(--canvas); color: var(--notation); }
+.cp-score svg.cp-notation { display: block; width: 100%; height: auto; }
+.cp-ov { position: absolute; pointer-events: none; }
+.cp-ov--now { background: var(--now-wash); }
+.cp-ov--playhead { width: 2px; background: var(--now-mark); }
+.cp-ov--loop { background: var(--loop-wash); box-shadow: inset 3px 0 0 var(--loop-mark), inset -3px 0 0 var(--loop-mark); }
+.cp-ov--cut {
+  background: repeating-linear-gradient(135deg, var(--cut-hatch) 0 2px, transparent 2px 8px);
+}
+.cp-ov--marker { width: 3px; background: var(--together-mark); }
+.cp-ov-label {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 6px;
+  font: 500 12px/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: var(--on-pastel);
+  font-variant-numeric: tabular-nums;
+}
+.cp-ov-label--loop { background: var(--loop); }
+.cp-ov-label--together { background: var(--together); }
+.cp-ov-label--cut { background: var(--canvas); color: var(--ink); font-style: italic; letter-spacing: 0.02em; padding: 0 4px; }
+.cp-pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  background: var(--note);
+  color: var(--on-pastel);
+  font: 500 12px/1 var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+.cp-pin::after { content: ""; position: absolute; left: 10px; top: 22px; width: 2px; height: 8px; background: var(--note-mark); }
+
+/* ---------- Presence ---------- */
+.cp-people { display: grid; gap: var(--space-2); }
+.cp-person { display: flex; align-items: center; gap: var(--space-3); min-height: var(--touch); }
+.cp-person__tile {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--together);
+  color: var(--on-pastel);
+  font: 500 15px/1 var(--font-sans);
+  letter-spacing: 0.02em;
+}
+.cp-person--you .cp-person__tile { background: var(--you); }
+.cp-person--away .cp-person__tile { background: var(--fog); color: var(--ink-muted); }
+.cp-person__who { display: grid; min-width: 0; }
+.cp-person__who b { font: 500 15px/1.25 var(--font-sans); }
+.cp-person__who span { font: 400 13px/1.4 var(--font-sans); color: var(--ink-muted); }
+
+/* ---------- NoteCard ---------- */
+.cp-note {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-field);
+  background: var(--note);
+  max-width: 360px;
+}
+.cp-note__head { display: flex; align-items: center; gap: var(--space-2); }
+.cp-note__head span { font: 400 13px/1.4 var(--font-sans); color: var(--ink-muted); }
+.cp-note p { margin: 0; font: 400 17px/1.5 var(--font-sans); }
+
+/* ---------- Toast ---------- */
+.cp-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-5);
+  border-radius: var(--radius-field);
+  background: var(--picked);
+  color: var(--on-pastel);
+  box-shadow: var(--shadow-float);
+  font: 500 15px/1.3 var(--font-sans);
+}
+.cp-toast .cp-btn { background: var(--canvas); color: var(--on-pastel); min-height: 40px; padding: 0 var(--space-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-btn, .cp-icon-btn, .cp-toggle, .cp-seg button, .cp-lyric { transition: none; }
+  .cp-btn:active, .cp-icon-btn:active { transform: none; }
+}

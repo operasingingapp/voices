@@ -1,0 +1,84 @@
+/**
+ * Spoken pronunciation. Uses the device's own Italian voice (Web Speech API) when one is
+ * installed, which on most phones, tablets and Macs sounds far better than any placeholder we
+ * can ship. Otherwise it falls back to the offline placeholder recordings bundled with the app.
+ */
+
+export interface SpeakSource {
+  text: string;
+  normalUrl?: string;
+  slowUrl?: string;
+}
+
+export type VoiceInfo = { kind: "device"; name: string } | { kind: "recording" } | { kind: "none" };
+
+const PREFERRED = ["alice", "federica", "paola", "elsa", "luca", "google italiano", "cosimo", "isabella"];
+
+let current: HTMLAudioElement | null = null;
+
+function italianVoice(): SpeechSynthesisVoice | null {
+  try {
+    const voices = window.speechSynthesis?.getVoices() ?? [];
+    const it = voices.filter((v) => v.lang?.toLowerCase().startsWith("it"));
+    if (!it.length) return null;
+    for (const p of PREFERRED) {
+      const v = it.find((x) => x.name.toLowerCase().includes(p));
+      if (v) return v;
+    }
+    return it.find((v) => v.localService) ?? it[0];
+  } catch {
+    return null;
+  }
+}
+
+export function voiceInfo(hasRecordings: boolean): VoiceInfo {
+  const v = italianVoice();
+  if (v) return { kind: "device", name: v.name };
+  return hasRecordings ? { kind: "recording" } : { kind: "none" };
+}
+
+/** Re-check voices when the browser finishes loading them (they arrive asynchronously). */
+export function onVoicesChanged(fn: () => void): () => void {
+  const synth = (window as unknown as { speechSynthesis?: SpeechSynthesis }).speechSynthesis;
+  if (!synth) return () => {};
+  synth.addEventListener?.("voiceschanged", fn);
+  return () => synth.removeEventListener?.("voiceschanged", fn);
+}
+
+export function stopSpeaking() {
+  try {
+    window.speechSynthesis?.cancel();
+  } catch {
+    /* not available */
+  }
+  current?.pause();
+  current = null;
+}
+
+/** Speak a phrase; resolves when it ends. */
+export function speak(src: SpeakSource, slow: boolean): Promise<void> {
+  stopSpeaking();
+  const v = italianVoice();
+  if (v && window.speechSynthesis) {
+    return new Promise((resolve) => {
+      const u = new SpeechSynthesisUtterance(src.text);
+      u.voice = v;
+      u.lang = v.lang || "it-IT";
+      u.rate = slow ? 0.62 : 0.92;
+      u.onend = () => resolve();
+      u.onerror = () => resolve();
+      window.speechSynthesis.speak(u);
+    });
+  }
+  const url = slow ? src.slowUrl ?? src.normalUrl : src.normalUrl;
+  if (!url) return Promise.resolve();
+  return new Promise((resolve) => {
+    const a = new Audio(url);
+    a.preservesPitch = true;
+    if (slow && !src.slowUrl) a.playbackRate = 0.7;
+    a.onended = () => resolve();
+    a.onerror = () => resolve();
+    current = a;
+    a.play().catch(() => resolve());
+  });
+}

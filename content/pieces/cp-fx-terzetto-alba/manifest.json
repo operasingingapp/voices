@@ -1,0 +1,153 @@
+{
+  "editionId": "cp-fx-terzetto-alba",
+  "editionVersion": "1.0.0",
+  "title": "Già l'alba chiama",
+  "subtitle": "Terzetto for soprano, tenor, baritone and piano",
+  "kind": "ensemble",
+  "fixture": true,
+  "fixtureNotice": "Original development fixture written for the Counterpart MVP. It is not a genuine ensemble and does not satisfy the repertoire requirement.",
+  "composer": "Counterpart fixture (original, 2026)",
+  "librettist": "Counterpart fixture (original Italian text, 2026)",
+  "language": "it",
+  "files": {
+    "musicxml": "score.musicxml",
+    "language": "language.json",
+    "audioDir": "audio"
+  },
+  "roles": [
+    {
+      "id": "clara",
+      "name": "Clara",
+      "voiceType": "Soprano",
+      "partKey": "soprano"
+    },
+    {
+      "id": "davide",
+      "name": "Davide",
+      "voiceType": "Tenor",
+      "partKey": "tenor"
+    },
+    {
+      "id": "ettore",
+      "name": "Ettore",
+      "voiceType": "Baritone",
+      "partKey": "baritone"
+    }
+  ],
+  "partMapping": [
+    {
+      "key": "piano",
+      "label": "Piano",
+      "shortLabel": "Piano",
+      "kind": "piano",
+      "source": {
+        "xmlPartId": "P4",
+        "staves": [
+          1,
+          2
+        ]
+      },
+      "channel": 0,
+      "program": 0,
+      "velocityScale": 0.85,
+      "defaultVolume": 0.75
+    },
+    {
+      "key": "baritone",
+      "label": "Ettore (Baritone)",
+      "shortLabel": "Ettore",
+      "kind": "voice",
+      "roleId": "ettore",
+      "source": {
+        "xmlPartId": "P3"
+      },
+      "channel": 2,
+      "program": 0,
+      "velocityScale": 0.8,
+      "defaultVolume": 1.0
+    },
+    {
+      "key": "soprano",
+      "label": "Clara (Soprano)",
+      "shortLabel": "Clara",
+      "kind": "voice",
+      "roleId": "clara",
+      "source": {
+        "xmlPartId": "P1"
+      },
+      "channel": 4,
+      "program": 0,
+      "velocityScale": 0.8,
+      "defaultVolume": 1.0
+    },
+    {
+      "key": "tenor",
+      "label": "Davide (Tenor)",
+      "shortLabel": "Davide",
+      "kind": "voice",
+      "roleId": "davide",
+      "source": {
+        "xmlPartId": "P2"
+      },
+      "channel": 5,
+      "program": 0,
+      "velocityScale": 0.8,
+      "defaultVolume": 1.0
+    }
+  ],
+  "passages": [
+    {
+      "id": "intro",
+      "label": "Introduction",
+      "start": "1",
+      "end": "2"
+    },
+    {
+      "id": "a",
+      "label": "Davide: Già l'alba chiama",
+      "start": "3",
+      "end": "6"
+    },
+    {
+      "id": "b",
+      "label": "Clara: Resta, ti prego",
+      "start": "7",
+      "end": "10"
+    },
+    {
+      "id": "c",
+      "label": "Ettore: Il sole sorge",
+      "start": "11",
+      "end": "12"
+    },
+    {
+      "id": "d",
+      "label": "Terzetto: Addio",
+      "start": "13",
+      "end": "16"
+    }
+  ],
+  "licences": [
+    {
+      "item": "Music and notation (score.musicxml)",
+      "source": "Composed for this MVP by the Counterpart build (scripts/compose-fixtures.ts)",
+      "author": "Counterpart development team",
+      "licence": "CC0 1.0 — development fixture",
+      "notes": "Not genuine repertoire. Replace with corrected MusicXML prepared by the editorial team."
+    },
+    {
+      "item": "Italian text, gloss, translation and IPA (language.json)",
+      "source": "Written for this MVP",
+      "author": "Counterpart development team",
+      "licence": "CC0 1.0 — development fixture",
+      "notes": "Unreviewed. Requires review by an Italian diction coach before real use."
+    },
+    {
+      "item": "Spoken pronunciation placeholders (audio/*.mp3)",
+      "source": "Synthesised offline with eSpeak NG 1.52 (espeakng-loader 0.2.4, Italian voice)",
+      "author": "Machine-generated",
+      "licence": "Generated output; eSpeak NG itself is GPL-3.0 and is not distributed with the app",
+      "notes": "Only Clara's phrases have a placeholder; Davide's and Ettore's recordings are deliberately absent so the app's missing-asset state can be exercised."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "editionId": "puccini-o-mio-babbino-caro",
+  "editionVersion": "1.0.0-cafe-puccini-2023-01-08",
+  "title": "O mio babbino caro",
+  "subtitle": "Lauretta's aria from Gianni Schicchi",
+  "kind": "aria",
+  "fixture": false,
+  "composer": "Giacomo Puccini",
+  "librettist": "Giovacchino Forzano",
+  "language": "it",
+  "files": {
+    "musicxml": "score.musicxml",
+    "language": "language.json",
+    "audioDir": "audio"
+  },
+  "roles": [
+    {
+      "id": "lauretta",
+      "name": "Lauretta",
+      "voiceType": "Soprano",
+      "partKey": "soprano"
+    }
+  ],
+  "partMapping": [
+    {
+      "key": "piano",
+      "label": "Piano",
+      "shortLabel": "Piano",
+      "kind": "piano",
+      "source": {
+        "xmlPartId": "P2",
+        "staves": [
+          1,
+          2
+        ]
+      },
+      "channel": 0,
+      "program": 0,
+      "velocityScale": 0.8,
+      "defaultVolume": 0.7
+    },
+    {
+      "key": "soprano",
+      "label": "Lauretta (Soprano)",
+      "shortLabel": "Lauretta",
+      "kind": "voice",
+      "roleId": "lauretta",
+      "source": {
+        "xmlPartId": "P1"
+      },
+      "channel": 3,
+      "program": 0,
+      "velocityScale": 0.85,
+      "defaultVolume": 1.0
+    }
+  ],
+  "passages": [
+    {
+      "id": "intro",
+      "label": "Lead-in",
+      "start": "1",
+      "end": "4"
+    },
+    {
+      "id": "a",
+      "label": "O mio babbino caro",
+      "start": "5",
+      "end": "10"
+    },
+    {
+      "id": "b",
+      "label": "a comperar l'anello! Sì, sì",
+      "start": "11",
+      "end": "14"
+    },
+    {
+      "id": "c",
+      "label": "E se l'amassi indarno",
+      "start": "15",
+      "end": "20"
+    },
+    {
+      "id": "d",
+      "label": "Mi struggo e mi tormento",
+      "start": "21",
+      "end": "26"
+    },
+    {
+      "id": "e",
+      "label": "Babbo, pietà",
+      "start": "27",
+      "end": "31"
+    }
+  ],
+  "licences": [
+    {
+      "item": "Music",
+      "source": "Giacomo Puccini, Gianni Schicchi (1918)",
+      "author": "Giacomo Puccini (1858–1924)",
+      "licence": "Public domain",
+      "notes": "Composer died in 1924."
+    },
+    {
+      "item": "Libretto text",
+      "source": "Giovacchino Forzano, libretto of Gianni Schicchi, first published 1918",
+      "author": "Giovacchino Forzano (1884–1970)",
+      "licence": "Public domain in the United States (published before 1929). In the EU, protected until the end of 2040 (author died 1970).",
+      "notes": "Clear rights before distributing the text in the EU."
+    },
+    {
+      "item": "Score (score.musicxml)",
+      "source": "MusicXML engraving from www.cafe-puccini.dk, dated 2023-01-08 (MuseScore 3.6.2), supplied by the user",
+      "author": "cafe-puccini.dk",
+      "licence": "Creative Commons BY-NC-ND (Attribution, NonCommercial, NoDerivatives)",
+      "notes": "Used unchanged; the original file is kept as source-cafe-puccini.mxl. Credit cafe-puccini.dk, use it only non-commercially and do not distribute altered versions. When displaying, the app hides playback-only tempo numbers and draws the elision tie with a standard character."
+    },
+    {
+      "item": "IPA, gloss and translation",
+      "source": "Written for this MVP",
+      "author": "Counterpart development team",
+      "licence": "CC0 1.0",
+      "notes": "Unreviewed by a diction coach."
+    },
+    {
+      "item": "Spoken pronunciation",
+      "source": "The viewer's device Italian voice (Web Speech API) where available; otherwise offline eSpeak NG 1.52 placeholder recordings",
+      "author": "Machine speech",
+      "licence": "Generated output",
+      "notes": "Not a pronunciation model; replace with reviewed recordings."
+    }
+  ]
+}

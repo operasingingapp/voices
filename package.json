@@ -1,0 +1,57 @@
+{
+  "name": "counterpart",
+  "version": "1.0.0",
+  "description": "Counterpart MVP — opera role learning and shared rehearsal",
+  "scripts": {
+    "setup": "npm run import && npm run seed",
+    "fixtures": "tsx scripts/compose-fixtures.ts && tsx scripts/import-content.ts",
+    "import": "tsx scripts/import-content.ts",
+    "soundbank": "tsx scripts/build-soundbank.ts",
+    "seed": "node --disable-warning=ExperimentalWarning --import tsx server/seed.ts",
+    "dev": "concurrently -n api,web -c blue,magenta \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node --disable-warning=ExperimentalWarning --import tsx --watch server/index.ts",
+    "dev:web": "vite",
+    "build": "vite build",
+    "dev:aria": "vite --open /standalone.html",
+    "build:aria": "npm run import && vite build -c vite.standalone.config.ts",
+    "start": "NODE_ENV=production node --disable-warning=ExperimentalWarning --import tsx server/index.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "demo": "playwright test -c playwright.demo.config.ts"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible-next": "^5.3.0",
+    "@fontsource/charis-sil": "^5.3.0",
+    "express": "^5.3.0",
+    "opensheetmusicdisplay": "^2.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "spessasynth_core": "^4.3.22",
+    "spessasynth_lib": "^4.3.14",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@fontsource/geist": "^5.3.0",
+    "@fontsource/noto-sans": "^5.3.0",
+    "@playwright/test": "^1.63.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@xmldom/xmldom": "^0.9.12",
+    "concurrently": "^10.0.6",
+    "playwright": "^1.63.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  }
+}

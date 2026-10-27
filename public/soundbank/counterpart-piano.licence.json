@@ -1,0 +1,19 @@
+{
+  "file": "counterpart-piano.sf2",
+  "sha256": "ba5a5a96338d74ecf4005da05890ca2d60be4021378a55e8ff2ee3e90ece9061",
+  "bytes": 2178864,
+  "presets": [
+    "0:0 Grand Piano"
+  ],
+  "derivedFrom": {
+    "name": "GeneralUser GS",
+    "version": "2.0.3",
+    "author": "S. Christian Collins",
+    "source": "https://github.com/mrbumpy409/GeneralUser-GS (commit 684543d5e5efaef08d02be50dcda8d552478fa60)",
+    "sourceSha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+    "licence": "GeneralUser GS License v2.0 — free use in software projects; modification permitted (see LICENSE.txt)",
+    "licenceCaveat": "Author states that the origin of some samples cannot be confirmed with 100% certainty. Review before commercial release, or replace with a bank with fully documented sample provenance."
+  },
+  "modification": "All presets except Acoustic Grand Piano (bank 0, program 0) removed with spessasynth_core; samples otherwise unchanged.",
+  "builtAt": "2026-10-26T16:26:03.097Z"
+}

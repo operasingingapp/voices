@@ -1,0 +1,145 @@
+{
+  "editionId": "cp-fx-terzetto-alba",
+  "language": "it",
+  "review": { "status": "unreviewed-fixture" },
+  "notes": "Original fixture text. In the terzetto (m. 13–16) the three characters sing different words at the same time, so each role has its own phrase with its own translation structure.",
+  "phrases": [
+    {
+      "id": "davide-1",
+      "role": "davide",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "3",
+      "original": "Già l'alba chiama, devo partir.",
+      "translation": "Dawn is already calling; I have to go.",
+      "ipa": "dʒa ˈlal.ba ˈkja.ma ˈde.vo parˈtir",
+      "words": [
+        ["Già", "already", "dʒa"],
+        ["l'alba", "the-dawn", "ˈlal.ba"],
+        ["chiama,", "calls", "ˈkja.ma"],
+        ["devo", "I-must", "ˈde.vo"],
+        ["partir.", "leave", "parˈtir"]
+      ],
+      "glossGroups": [
+        { "words": [0, 1, 2], "gloss": "dawn is already calling" },
+        { "words": [3, 4], "gloss": "I have to go (“partir” is a shortened “partire”)" }
+      ],
+      "audio": {}
+    },
+    {
+      "id": "clara-1",
+      "role": "clara",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "7",
+      "original": "Resta, ti prego, non mi lasciar!",
+      "translation": "Stay, I beg you — don't leave me!",
+      "ipa": "ˈrɛ.sta ti ˈprɛ.go non mi laʃˈʃar",
+      "words": [
+        ["Resta,", "stay", "ˈrɛ.sta"],
+        ["ti", "you", "ti"],
+        ["prego,", "I-beg", "ˈprɛ.go"],
+        ["non", "not", "non"],
+        ["mi", "me", "mi"],
+        ["lasciar!", "leave", "laʃˈʃar"]
+      ],
+      "glossGroups": [
+        { "words": [1, 2], "gloss": "I beg you (object pronoun comes first)" },
+        { "words": [3, 4, 5], "gloss": "don't leave me" }
+      ],
+      "audio": {
+        "normal": { "file": "clara-1.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "davide-2",
+      "role": "davide",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "9",
+      "original": "devo partir!",
+      "translation": "I have to go!",
+      "ipa": "ˈde.vo parˈtir",
+      "words": [
+        ["devo", "I-must", "ˈde.vo"],
+        ["partir!", "leave", "parˈtir"]
+      ],
+      "glossGroups": [{ "words": [0, 1], "gloss": "I have to go" }],
+      "audio": {}
+    },
+    {
+      "id": "ettore-1",
+      "role": "ettore",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "11",
+      "original": "Il sole sorge: è tempo, andiam!",
+      "translation": "The sun is rising: it's time — let's go!",
+      "ipa": "il ˈso.le ˈsor.dʒe‿ɛ ˈtɛm.po‿anˈdjam",
+      "words": [
+        ["Il", "the", "il"],
+        ["sole", "sun", "ˈso.le"],
+        ["sorge:", "rises", "ˈsor.dʒe"],
+        ["è", "(it) is", "ɛ"],
+        ["tempo,", "time", "ˈtɛm.po"],
+        ["andiam!", "let's-go", "anˈdjam"]
+      ],
+      "glossGroups": [{ "words": [3, 4], "gloss": "it's time (Italian omits the subject)" }],
+      "audio": {}
+    },
+    {
+      "id": "clara-2",
+      "role": "clara",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "13",
+      "original": "Addio, mio bene, addio!",
+      "translation": "Farewell, my beloved, farewell!",
+      "ipa": "adˈdi.o ˈmi.o ˈbɛ.ne adˈdi.o",
+      "words": [
+        ["Addio,", "farewell", "adˈdi.o"],
+        ["mio", "my", "ˈmi.o"],
+        ["bene,", "beloved (lit. good)", "ˈbɛ.ne"],
+        ["addio!", "farewell", "adˈdi.o"]
+      ],
+      "glossGroups": [{ "words": [1, 2], "gloss": "my beloved (“bene” as a term of endearment)" }],
+      "audio": {
+        "normal": { "file": "clara-2.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian voice, 150 wpm", "reviewed": false }
+      }
+    },
+    {
+      "id": "davide-3",
+      "role": "davide",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "13",
+      "original": "Addio, addio, amor!",
+      "translation": "Farewell, farewell, my love!",
+      "ipa": "adˈdi.o adˈdi.o aˈmor",
+      "words": [
+        ["Addio,", "farewell", "adˈdi.o"],
+        ["addio,", "farewell", "adˈdi.o"],
+        ["amor!", "love", "aˈmor"]
+      ],
+      "glossGroups": [{ "words": [2], "gloss": "my love (no possessive in the Italian)" }],
+      "audio": {}
+    },
+    {
+      "id": "ettore-2",
+      "role": "ettore",
+      "verse": 1,
+      "occurrence": 1,
+      "startMeasure": "13",
+      "original": "Andiamo, andiam, addio!",
+      "translation": "Let's go, let's go — farewell!",
+      "ipa": "anˈdja.mo‿anˈdjam adˈdi.o",
+      "words": [
+        ["Andiamo,", "let's-go", "anˈdja.mo"],
+        ["andiam,", "let's-go", "anˈdjam"],
+        ["addio!", "farewell", "adˈdi.o"]
+      ],
+      "glossGroups": [],
+      "audio": {}
+    }
+  ]
+}

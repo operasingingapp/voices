@@ -1,0 +1,100 @@
+[
+  {
+    "editionId": "cp-fx-aria-lume",
+    "editionVersion": "1.0.0",
+    "scoreVersionId": "cp-fx-aria-lume@1.0.0#ee3f1afbb2",
+    "title": "Lume di sera",
+    "subtitle": "Aria for soprano and piano",
+    "kind": "aria",
+    "fixture": true,
+    "fixtureNotice": "Original development fixture written for the Counterpart MVP. It is not a genuine aria and does not satisfy the repertoire requirement.",
+    "composer": "Counterpart fixture (original, 2026)",
+    "roles": [
+      {
+        "id": "clara",
+        "name": "Clara",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      }
+    ],
+    "measures": 20,
+    "durationSec": 101,
+    "hasRepeats": true,
+    "keySignature": "F major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 6,
+      "withAudio": 6,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "cp-fx-terzetto-alba",
+    "editionVersion": "1.0.0",
+    "scoreVersionId": "cp-fx-terzetto-alba@1.0.0#ca559e0361",
+    "title": "Già l'alba chiama",
+    "subtitle": "Terzetto for soprano, tenor, baritone and piano",
+    "kind": "ensemble",
+    "fixture": true,
+    "fixtureNotice": "Original development fixture written for the Counterpart MVP. It is not a genuine ensemble and does not satisfy the repertoire requirement.",
+    "composer": "Counterpart fixture (original, 2026)",
+    "roles": [
+      {
+        "id": "clara",
+        "name": "Clara",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      },
+      {
+        "id": "davide",
+        "name": "Davide",
+        "voiceType": "Tenor",
+        "partKey": "tenor"
+      },
+      {
+        "id": "ettore",
+        "name": "Ettore",
+        "voiceType": "Baritone",
+        "partKey": "baritone"
+      }
+    ],
+    "measures": 16,
+    "durationSec": 31,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 7,
+      "withAudio": 2,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-o-mio-babbino-caro",
+    "editionVersion": "1.0.0-cafe-puccini-2023-01-08",
+    "scoreVersionId": "puccini-o-mio-babbino-caro@1.0.0-cafe-puccini-2023-01-08#5286b569b1",
+    "title": "O mio babbino caro",
+    "subtitle": "Lauretta's aria from Gianni Schicchi",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "lauretta",
+        "name": "Lauretta",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      }
+    ],
+    "measures": 31,
+    "durationSec": 134,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 12,
+      "withAudio": 12,
+      "reviewed": 0
+    }
+  }
+]

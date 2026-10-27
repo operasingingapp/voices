@@ -1,0 +1,116 @@
+{
+  "editionId": "puccini-o-mio-babbino-caro",
+  "language": "it",
+  "review": { "status": "unreviewed-fixture" },
+  "notes": "Libretto by Giovacchino Forzano (1918). IPA follows sung Italian conventions: stressed syllable marked, elisions joined with ‿, open e/o as ɛ/ɔ.",
+  "phrases": [
+    {
+      "id": "l01", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "5",
+      "original": "O mio babbino caro,",
+      "translation": "Oh my dear papa,",
+      "ipa": "o ˈmi.o babˈbi.no ˈka.ro",
+      "words": [["O", "oh", "o"], ["mio", "my", "ˈmi.o"], ["babbino", "daddy (little papa)", "babˈbi.no"], ["caro,", "dear", "ˈka.ro"]],
+      "glossGroups": [{ "words": [1, 2, 3], "gloss": "my dear daddy (the adjective follows the noun)" }],
+      "audio": { "normal": { "file": "l01.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l01-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l02", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "7",
+      "original": "mi piace, è bello, bello;",
+      "translation": "I like him, he is handsome, so handsome;",
+      "ipa": "mi ˈpja.tʃe‿ɛ ˈbɛl.lo ˈbɛl.lo",
+      "words": [["mi", "to-me", "mi"], ["piace,", "pleases", "ˈpja.tʃe"], ["è", "(he) is", "ɛ"], ["bello,", "handsome", "ˈbɛl.lo"], ["bello;", "handsome", "ˈbɛl.lo"]],
+      "glossGroups": [{ "words": [0, 1], "gloss": "I like him (literally: he pleases me)" }],
+      "audio": { "normal": { "file": "l02.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l02-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l03", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "8",
+      "original": "vo' andare in Porta Rossa",
+      "translation": "I want to go to Porta Rossa",
+      "ipa": "vɔ‿anˈda.re‿in ˈpɔr.ta ˈros.sa",
+      "words": [["vo'", "I-want", "vɔ"], ["andare", "to-go", "anˈda.re"], ["in", "to (lit. in)", "in"], ["Porta", "Porta", "ˈpɔr.ta"], ["Rossa", "Rossa", "ˈros.sa"]],
+      "glossGroups": [{ "words": [3, 4], "gloss": "Porta Rossa, a street of jewellers in Florence" }],
+      "audio": { "normal": { "file": "l03.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l03-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l04", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "11",
+      "original": "a comperar l'anello!",
+      "translation": "to buy the ring!",
+      "ipa": "a kom.peˈrar laˈnɛl.lo",
+      "words": [["a", "to", "a"], ["comperar", "buy", "kom.peˈrar"], ["l'anello!", "the-ring", "laˈnɛl.lo"]],
+      "glossGroups": [],
+      "audio": { "normal": { "file": "l04.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l04-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l05", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "12",
+      "original": "Sì, sì, ci voglio andare!",
+      "translation": "Yes, yes, I want to go there!",
+      "ipa": "si si tʃi ˈvɔʎ.ʎo‿anˈda.re",
+      "words": [["Sì,", "yes", "si"], ["sì,", "yes", "si"], ["ci", "there", "tʃi"], ["voglio", "I-want", "ˈvɔʎ.ʎo"], ["andare!", "to-go", "anˈda.re"]],
+      "glossGroups": [{ "words": [2, 3, 4], "gloss": "I want to go there (“ci” = there, placed before the verb)" }],
+      "audio": { "normal": { "file": "l05.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l05-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l06", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "15",
+      "original": "E se l'amassi indarno,",
+      "translation": "And if my love were in vain,",
+      "ipa": "e se laˈmas.si‿inˈdar.no",
+      "words": [["E", "and", "e"], ["se", "if", "se"], ["l'amassi", "I-loved-him", "laˈmas.si"], ["indarno,", "in-vain", "inˈdar.no"]],
+      "glossGroups": [{ "words": [1, 2, 3], "gloss": "if I loved him in vain (past subjunctive)" }],
+      "audio": { "normal": { "file": "l06.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l06-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l07", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "16",
+      "original": "andrei sul Ponte Vecchio,",
+      "translation": "I would go to the Ponte Vecchio,",
+      "ipa": "anˈdrɛi sul ˈpon.te ˈvɛk.kjo",
+      "words": [["andrei", "I-would-go", "anˈdrɛi"], ["sul", "on-the", "sul"], ["Ponte", "bridge", "ˈpon.te"], ["Vecchio,", "old", "ˈvɛk.kjo"]],
+      "glossGroups": [{ "words": [2, 3], "gloss": "the Ponte Vecchio, Florence's old bridge over the Arno" }],
+      "audio": { "normal": { "file": "l07.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l07-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l08", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "19",
+      "original": "ma per buttarmi in Arno!",
+      "translation": "but only to throw myself into the Arno!",
+      "ipa": "ma per butˈtar.mi‿in ˈar.no",
+      "words": [["ma", "but", "ma"], ["per", "to (in order to)", "per"], ["buttarmi", "throw-myself", "butˈtar.mi"], ["in", "into", "in"], ["Arno!", "Arno (river)", "ˈar.no"]],
+      "glossGroups": [],
+      "audio": { "normal": { "file": "l08.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l08-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l09", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "20",
+      "original": "Mi struggo e mi tormento!",
+      "translation": "I am pining, I am in torment!",
+      "ipa": "mi ˈstrug.go‿e mi torˈmen.to",
+      "words": [["Mi", "myself", "mi"], ["struggo", "I-melt", "ˈstrug.go"], ["e", "and", "e"], ["mi", "myself", "mi"], ["tormento!", "I-torment", "torˈmen.to"]],
+      "glossGroups": [{ "words": [0, 1], "gloss": "I am consumed with longing" }, { "words": [3, 4], "gloss": "I torment myself" }],
+      "audio": { "normal": { "file": "l09.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l09-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l10", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "22",
+      "original": "O Dio, vorrei morir!",
+      "translation": "Oh God, I would rather die!",
+      "ipa": "o ˈdi.o vorˈrɛi moˈrir",
+      "words": [["O", "oh", "o"], ["Dio,", "God", "ˈdi.o"], ["vorrei", "I-would-like", "vorˈrɛi"], ["morir!", "to-die", "moˈrir"]],
+      "glossGroups": [],
+      "audio": { "normal": { "file": "l10.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l10-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l11", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "27",
+      "original": "Babbo, pietà, pietà!",
+      "translation": "Papa, have pity, have pity!",
+      "ipa": "ˈbab.bo pjeˈta pjeˈta",
+      "words": [["Babbo,", "Papa (Tuscan)", "ˈbab.bo"], ["pietà,", "pity", "pjeˈta"], ["pietà!", "pity", "pjeˈta"]],
+      "glossGroups": [{ "words": [1, 2], "gloss": "have pity (on me)" }],
+      "audio": { "normal": { "file": "l11.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l11-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    },
+    {
+      "id": "l12", "role": "lauretta", "verse": 1, "occurrence": 1, "startMeasure": "29",
+      "original": "Babbo, pietà, pietà!",
+      "translation": "Papa, have pity, have pity!",
+      "ipa": "ˈbab.bo pjeˈta pjeˈta",
+      "words": [["Babbo,", "Papa (Tuscan)", "ˈbab.bo"], ["pietà,", "pity", "pjeˈta"], ["pietà!", "pity", "pjeˈta"]],
+      "glossGroups": [{ "words": [1, 2], "gloss": "have pity (on me)" }],
+      "audio": { "normal": { "file": "l12.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 150 wpm", "reviewed": false }, "slow": { "file": "l12-slow.mp3", "kind": "placeholder-tts", "provenance": "eSpeak NG, Italian, 90 wpm", "reviewed": false } }
+    }
+  ]
+}
