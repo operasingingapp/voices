@@ -1,0 +1,67 @@
+# Spoken Italian for every piece, made with ElevenLabs (scripts/voices.ts).
+# Needs the repository secret ELEVENLABS_API_KEY. Runs by hand (Actions → Generate voices → Run workflow),
+# and by itself when a piece's words or the voice settings change. New recordings are committed back.
+name: Generate voices
+
+on:
+  workflow_dispatch:
+    inputs:
+      piece:
+        description: "Piece (folder in data/content), or all"
+        default: all
+      redo:
+        description: "Clips to make again, comma-separated (e.g. l03, w:bello). Optional."
+        default: ""
+        required: false
+      voice:
+        description: "ElevenLabs voice ID to use instead of voice.config.json. Optional."
+        default: ""
+        required: false
+  push:
+    branches: [main]
+    paths:
+      - "data/content/*/language.json"
+      - "voice.config.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voices
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci --ignore-scripts
+      - name: Make sure ffmpeg is there
+        run: which ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+      - name: Generate
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          PIECE: ${{ inputs.piece || 'all' }}
+          REDO: ${{ inputs.redo || '' }}
+          VOICE: ${{ inputs.voice || '' }}
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then
+            echo "::notice::Add the repository secret ELEVENLABS_API_KEY first (Settings → Secrets and variables → Actions). Nothing was made."
+            exit 0
+          fi
+          npx tsx scripts/voices.ts --piece "$PIECE" --redo "$REDO" --voice "$VOICE"
+      - name: Save the new recordings
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content voice.config.json
+          if git diff --cached --quiet; then echo "Nothing new."; exit 0; fi
+          git commit -m "Voices: new recordings"
+          git pull --rebase origin main
+          git push origin HEAD:main
