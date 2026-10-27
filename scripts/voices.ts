@@ -24,6 +24,7 @@ import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync, rmSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { createRequire } from "node:module";
 
 const ROOT = join(import.meta.dirname, "..");
 const API = "https://api.elevenlabs.io";
@@ -89,6 +90,16 @@ const config: Config = {
 };
 if (arg("voice")) config.voiceId = arg("voice");
 const KEY = process.env.ELEVENLABS_API_KEY ?? "";
+/** ffmpeg: the one bundled with the project (ffmpeg-static), else the system's */
+const FFMPEG: string = (() => {
+  try {
+    const p = createRequire(import.meta.url)("ffmpeg-static") as string | null;
+    if (p && existsSync(p)) return p;
+  } catch {
+    /* not installed */
+  }
+  return "ffmpeg";
+})();
 
 /* ---------------- what to make ---------------- */
 
@@ -200,7 +211,7 @@ function save(file: string, audio: Buffer) {
   const tmp = `${out}.raw.mp3`;
   writeFileSync(tmp, audio);
   try {
-    execFileSync("ffmpeg", ["-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-18:TP=-1.5:LRA=11", "-ar", "44100", "-b:a", "96k", out]);
+    execFileSync(FFMPEG, ["-v", "error", "-y", "-i", tmp, "-af", "loudnorm=I=-18:TP=-1.5:LRA=11", "-ar", "44100", "-b:a", "96k", out]);
   } catch {
     writeFileSync(out, audio); // no ffmpeg: keep the file as it came
   }
