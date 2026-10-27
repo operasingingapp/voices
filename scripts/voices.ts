@@ -9,8 +9,8 @@
  * Clips already made with the same text, voice and settings are skipped, so a run only pays for what is new.
  *
  * Output (committed by the workflow):
- *   content/pieces/<id>/voice/<voice>/lines/<line>.mp3, <line>-slow.mp3, joins/<n>.mp3, manifest.json
- *   content/voice-bank/<voice>/words/<slug>.mp3, manifest.json
+ *   content/voice-bank/<voice>/lines|joins|words/<slug>.mp3 and manifest.json: every recording, shared by all pieces
+ *   content/pieces/<id>/voice/<voice>/manifest.json: which recordings the piece uses (line id → recording)
  *
  * No voice chosen yet (voice.config.json "voiceId" empty, no --voice)? The run first auditions the most used
  * native Italian voices from the ElevenLabs library (two lines each, in content/voice-audition/), adds the most
@@ -34,6 +34,8 @@ interface Config {
   voiceId: string;
   voiceName?: string;
   modelId: string;
+  /** speed of lines and words (ElevenLabs 0.7–1.2; 1 = its natural, rather quick pace) */
+  normalSpeed: number;
   slowSpeed: number;
   /** extra easing of the slow lines (ffmpeg atempo, pitch kept): 0.85 = 15% longer */
   slowStretch: number;
@@ -84,8 +86,9 @@ const redo = new Set(
 const config: Config = {
   voiceId: "",
   modelId: "eleven_multilingual_v2",
+  normalSpeed: 0.85,
   slowSpeed: 0.7,
-  slowStretch: 0.85,
+  slowStretch: 0.8,
   stability: 0.55,
   similarityBoost: 0.75,
   maxCharsPerRun: 30000,
@@ -126,7 +129,8 @@ function pieces(): string[] {
 
 function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip[] } {
   const lang = JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { phrases: Phrase[] };
-  const base = `content/pieces/${piece}/voice/${voiceDir}`;
+  // every recording lives in the voice's bank, shared by all pieces: a line or word heard before is never made again
+  const base = `content/voice-bank/${voiceDir}`;
   const lines: Clip[] = [];
   const words: Clip[] = [];
   const seenLine = new Map<string, string>();
@@ -138,8 +142,8 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
     if (!seenLine.has(text)) {
       seenLine.set(text, ph.id);
       const ws = ph.words.map((w) => plain(w.text));
-      lines.push({ key: ph.id, kind: "line", text, file: `${base}/lines/${ph.id}.mp3`, words: ws });
-      lines.push({ key: `${ph.id}-slow`, kind: "line-slow", text, file: `${base}/lines/${ph.id}-slow.mp3`, words: ws, slow: true });
+      lines.push({ key: ph.id, kind: "line", text, file: `${base}/lines/${slug(text)}.mp3`, words: ws });
+      lines.push({ key: `${ph.id}-slow`, kind: "line-slow", text, file: `${base}/lines/${slug(text)}-slow.mp3`, words: ws, slow: true });
     }
     // words sung together on one note across the gap between two words: one clip for the pair
     const syl = ph.syllables ?? [];
@@ -150,7 +154,7 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
       const pair = `${bare(ph.words[a.word].text)} ${bare(ph.words[b.word].text)}`;
       if (seenJoin.has(pair.toLowerCase())) continue;
       seenJoin.add(pair.toLowerCase());
-      lines.push({ key: `join-${++joinN}`, kind: "join", text: `${pair}.`, file: `${base}/joins/${joinN}.mp3` });
+      lines.push({ key: `join-${++joinN}`, kind: "join", text: `${pair}.`, file: `${base}/joins/${slug(pair)}.mp3` });
     }
     for (const w of ph.words) {
       const t = bare(w.text);
@@ -191,7 +195,7 @@ async function speak(voiceId: string, text: string, slow: boolean): Promise<Spok
       voice_settings: {
         stability: config.stability,
         similarity_boost: config.similarityBoost,
-        speed: slow ? config.slowSpeed : 1,
+        speed: slow ? config.slowSpeed : config.normalSpeed,
       },
     }),
   });
@@ -284,7 +288,7 @@ async function main() {
   const voiceDir = config.voiceId ? slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "") || "voice" : "voice";
   const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost]);
   const slowSettings = JSON.stringify([config.slowSpeed, config.slowStretch]);
-  const hashOf = (c: Clip) => short(`${settings}|${c.slow ? `${slowSettings}|` : ""}${c.kind}|${c.text}`);
+  const hashOf = (c: Clip) => short(`${settings}|${c.slow ? slowSettings : config.normalSpeed}|${c.kind}|${c.text}`);
 
   // the shared word bank
   const bankDir = `content/voice-bank/${voiceDir}`;
@@ -295,6 +299,8 @@ async function main() {
   const jobs: Job[] = [];
   const manifests: { path: string; data: { voiceId: string; voiceName?: string; model: string; clips: Record<string, Made> } }[] = [];
   const wordsWanted = new Map<string, Clip>();
+  const refs: { data: { clips: Record<string, Made> }; clipKey: string; bankKey: string }[] = [];
+  const queued = new Set<string>();
   for (const piece of todo) {
     const { lines, words } = clipsFor(piece, voiceDir);
     const mPath = join(ROOT, `content/pieces/${piece}/voice/${voiceDir}/manifest.json`);
@@ -305,9 +311,13 @@ async function main() {
     data.words = data.words ?? {};
     manifests.push({ path: mPath, data });
     for (const c of lines) {
-      const have = data.clips[c.key] as Made | undefined;
-      if (have && have.hash === hashOf(c) && existsSync(join(ROOT, have.file)) && !redo.has(c.key) && !redo.has(c.key.replace(/-slow$/, ""))) continue;
-      jobs.push({ clip: c, done: (m) => (data.clips[c.key] = m) });
+      const bankKey = `${c.kind}:${c.text}`;
+      refs.push({ data, clipKey: c.key, bankKey });
+      const have = bank[bankKey];
+      const fresh = have && have.hash === hashOf(c) && existsSync(join(ROOT, have.file));
+      if ((fresh && !redo.has(c.key) && !redo.has(c.key.replace(/-slow$/, ""))) || queued.has(bankKey)) continue;
+      queued.add(bankKey);
+      jobs.push({ clip: c, done: (m) => (bank[bankKey] = m) });
     }
     for (const w of words) {
       data.words[w.key.slice(2)] = `${bankDir}/words/${slug(w.key.slice(2))}.mp3`;
@@ -325,7 +335,12 @@ async function main() {
   const chars = jobs.reduce((n, j) => n + j.clip.text.length, 0);
   console.log(`${todo.length} piece(s), ${jobs.length} clip(s) to make, ${chars} characters (about ${chars} credits).`);
   for (const j of jobs.slice(0, DRY ? Infinity : 0)) console.log(`  ${j.clip.kind.padEnd(9)} ${j.clip.key.padEnd(18)} ${j.clip.text}`);
-  if (DRY || !jobs.length) return;
+  if (DRY) return;
+  if (!jobs.length) {
+    for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = bank[r.bankKey];
+    for (const m of manifests) writeFileSync(m.path, JSON.stringify(m.data, null, 1));
+    return;
+  }
   if (chars > config.maxCharsPerRun) throw new Error(`That is more than maxCharsPerRun (${config.maxCharsPerRun}) in voice.config.json; raise it to go on.`);
 
   // two at a time: the smaller plans allow only a few requests at once
@@ -345,6 +360,8 @@ async function main() {
   };
   await Promise.all([worker(), worker()]);
 
+  // each piece's manifest points at the shared recordings
+  for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = bank[r.bankKey];
   for (const m of manifests) {
     mkdirSync(dirname(m.path), { recursive: true });
     writeFileSync(m.path, JSON.stringify(m.data, null, 1));

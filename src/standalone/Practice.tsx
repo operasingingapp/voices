@@ -38,7 +38,7 @@ interface VoiceManifest {
   words: Record<string, string>;
 }
 const voiceManifests = import.meta.glob("../../content/pieces/puccini-o-mio-babbino-caro/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
-const voiceFiles = import.meta.glob(["../../content/pieces/puccini-o-mio-babbino-caro/voice/*/lines/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
+const voiceFiles = import.meta.glob(["../../content/voice-bank/*/lines/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
   query: "?url",
   import: "default",
   eager: true,
