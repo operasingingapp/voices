@@ -120,7 +120,7 @@ const FFMPEG: string = (() => {
 /* ---------------- what to make ---------------- */
 
 const plain = (t: string) => t.replace(/[’‘]/g, "'").replace(/\s+/g, " ").trim();
-const bare = (t: string) => plain(t).replace(/[.,;:!?«»“”"()—–-]+/g, " ").replace(/\s+/g, " ").trim();
+const bare = (t: string) => plain(t).replace(/[.,;:!?«»“”"()—–…-]+/g, " ").replace(/\s+/g, " ").trim();
 const short = (s: string) => createHash("sha1").update(s).digest("hex").slice(0, 8);
 const slug = (w: string) =>
   `${w
