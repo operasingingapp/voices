@@ -404,6 +404,8 @@ function PracticeScreen({
   // words view: the IPA under each line can be hidden
   const [showIpa, setShowIpa] = useLocalSetting("p:ipa", true);
   const [showTr, setShowTr] = useLocalSetting("p:tr", true);
+  // minimal: the line as plain text on a thin rule, nothing else (the music gets the room)
+  const [minimal, setMinimal] = useLocalSetting("p:minimal", false);
   // pronunciation tips: in full where a sound first occurs, a quiet mark on the words it applies to later
   // pronunciation tips live in one place: a strip above the words (and the music card's header), about the
   // line you are on; only that line's letters are marked, so the rest stays two clean columns
@@ -910,6 +912,28 @@ function PracticeScreen({
               <span className="label">Words</span>
             </button>
           </div>
+          {view === "music" && (
+            <button
+              type="button"
+              className="cp-icon-btn line-mode"
+              aria-pressed={minimal}
+              onClick={() => setMinimal(!minimal)}
+              aria-label={minimal ? "Show the full line card" : "Minimal: just the words on a thin line"}
+              title={minimal ? "Full line card" : "Minimal line"}
+            >
+              {minimal ? (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="6" width="17" height="12" rx="3.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+                  <path d="M7.5 11h9M9.5 14h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 10.5h12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                  <path d="M3.5 15h17" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.55" />
+                </svg>
+              )}
+            </button>
+          )}
           <button
             type="button"
             className="cp-btn details-btn"
@@ -926,7 +950,7 @@ function PracticeScreen({
 
       {/* the line: a card with one quiet header row (where you are, and how to hear it) above the words */}
       <section
-        className={`now-panel${current.sounding ? " is-now" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}`}
+        className={`now-panel${current.sounding ? " is-now" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && view === "music" ? " minimal" : ""}`}
         data-testid="now-panel"
       >
         <div className="line-card">
