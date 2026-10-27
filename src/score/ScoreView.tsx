@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type MutableRefObject, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MutableRefObject, type ReactNode } from "react";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 import { buildLayout, type Lane, type ScoreLayout } from "./layout";
 import type { Performance } from "../../shared/timeline";
@@ -120,11 +120,43 @@ function rangeRects(layout: ScoreLayout, ms: number[]): Rect[] {
 }
 
 /** The band of the single line that holds anything drawn (slurs and marks above, syllables below), in px. */
+/** Room kept around the drawn music in a strip (px): the now-playing ring around a high or low note fits. */
+const STRIP_PAD = 26;
+
 export function stripCrop(layout: ScoreLayout): { top: number; h: number } | null {
   const s = layout.systems[0];
   if (!s) return null;
+  // cut to what is drawn, so the music sits evenly in its space whatever a piece has above or below it
+  if (layout.ink) {
+    // the staves sit in the middle, with the same room above and below for the highest and lowest notes of the
+    // whole piece: every piece then stands at the same height on screen
+    const mid = (s.top + s.bottom) / 2;
+    const half = Math.max(mid - layout.ink.top, layout.ink.bottom - mid) + STRIP_PAD;
+    // (it may start above the drawing: the line is then moved down within its frame)
+    const top = Math.floor(mid - half);
+    return { top, h: Math.ceil(mid + half) - top };
+  }
   const top = Math.max(0, Math.floor(Math.min(s.extentTop, s.top - 40) - 20));
   return { top, h: Math.ceil(Math.max(s.extentBottom, s.bottom + 30) + 16) - top };
+}
+
+/** Top and bottom of everything drawn in the score (px from the top of the host). */
+function measureInk(host: HTMLElement, svg: SVGSVGElement): { top: number; bottom: number; left: number } | null {
+  const box = host.getBoundingClientRect();
+  const origin = box.top;
+  let top = Infinity;
+  let bottom = -Infinity;
+  let left = Infinity;
+  for (const el of svg.querySelectorAll("path, text, rect, line, ellipse, circle, polygon")) {
+    const b = (el as SVGGraphicsElement).getBoundingClientRect();
+    if (b.width === 0 && b.height === 0) continue;
+    const fill = el.getAttribute("fill");
+    if (fill === "none" && !el.getAttribute("stroke")) continue;
+    top = Math.min(top, b.top - origin);
+    bottom = Math.max(bottom, b.bottom - origin);
+    left = Math.min(left, b.left - box.left);
+  }
+  return Number.isFinite(top) ? { top, bottom, left } : null;
 }
 
 const ENGRAVING_TEXT_FONT = "'Charis SIL', Charter, Georgia, 'Times New Roman', serif";
@@ -459,6 +491,7 @@ export function ScoreView(props: Props) {
       const drawn = hostRef.current?.querySelector("svg") as SVGSVGElement | null;
       if (drawn && props.joinTopStaff === false) detachTopStaff(drawn);
       if (strip) setPinned(drawn ? buildPinned(drawn) : null);
+      if (strip && drawn && hostRef.current) l.ink = measureInk(hostRef.current, drawn);
       lastSystem.current = null;
       setLayout(l);
       props.onLayout?.(l);
@@ -726,7 +759,10 @@ export function ScoreView(props: Props) {
       tabIndex={-1}
     >
       <div className={strip ? "strip-clip" : "sheet-clip"} style={strip && crop ? { height: crop.h } : undefined}>
-      <div className={strip ? "strip-row" : "sheet-row"} style={strip && crop ? { marginTop: -crop.top } : undefined}>
+      <div
+        className={strip ? "strip-row" : "sheet-row"}
+        style={strip && crop ? ({ marginTop: -crop.top, "--ink-left": `${Math.round(layout?.ink?.left ?? 10)}px` } as CSSProperties) : undefined}
+      >
       {strip && pinned && pinIdx >= 0 && (
         <div className="pin-clef" style={{ width: pinned.width, marginRight: -pinned.width, height: layout?.height }} aria-hidden="true">
           <div dangerouslySetInnerHTML={{ __html: pinned.panels[pinIdx].html }} />

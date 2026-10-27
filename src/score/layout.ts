@@ -55,6 +55,9 @@ export class ScoreLayout {
     readonly lanes: Lane[] = [],
   ) {}
 
+  /** What is actually drawn, top to bottom (px from the top of the sheet), measured after rendering. */
+  ink: { top: number; bottom: number; left: number } | null = null;
+
   /** Highest drawn point above the top staff of a system between x0 and x1 (px). */
   skyTop(system: number, x0: number, x1: number): number | null {
     const sky = this.skies.get(system);

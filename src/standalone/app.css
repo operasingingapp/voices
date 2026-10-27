@@ -8215,3 +8215,92 @@ p.obp-meta {
     transition: none;
   }
 }
+
+/* =====================================================================
+   Practice screen alignment: header, line card, music and dock share one
+   left and right edge (the page gutter), with even space between them
+   ===================================================================== */
+.practice {
+  --edge: max(24px, env(safe-area-inset-left, 0px));
+}
+.now-panel {
+  padding: 4px var(--edge) 12px;
+}
+.line-card {
+  max-width: none;
+}
+/* the engraving starts its brace a little in from its own edge (measured: --ink-left): line it up with the edge */
+.p-stage .strip-row {
+  margin-left: calc(var(--edge) - var(--ink-left, 10px));
+}
+@media (max-width: 640px) {
+  .practice {
+    --edge: 16px;
+  }
+  .practice .gutter {
+    padding-left: var(--edge);
+    padding-right: var(--edge);
+  }
+  /* the line card's top row: the dot says it all, the words would push the buttons off the edge */
+  .now-meta {
+    font-size: 0;
+    gap: 0;
+  }
+  .now-bar {
+    padding-left: 8px;
+    gap: 8px;
+  }
+  .now-tools {
+    gap: 4px;
+  }
+  .nl-chip {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 640px) {
+  /* long lines wrap on a phone: the card grows with them rather than letting the words run into the IPA */
+  .now-panel .now-inner {
+    height: auto;
+    min-height: 112px;
+    padding-block: 4px;
+  }
+  .now-panel.no-tr .now-inner,
+  .now-panel.no-ipa .now-inner {
+    height: auto;
+    min-height: 84px;
+  }
+  .now-panel.compact .now-inner {
+    height: auto;
+    min-height: 56px;
+  }
+  .now-panel.minimal .now-inner {
+    height: auto;
+    min-height: 48px;
+  }
+  .now-panel .now-it {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+/* the opera's picture over a role: tall enough to show faces whole, not a strip of foreheads */
+.rp-head .art-band {
+  height: 132px;
+  border-radius: 24px;
+  background-position: 50% 24%;
+  margin: -12px -12px 4px;
+}
+@media (max-width: 640px) {
+  .rp-head .art-band {
+    height: 104px;
+    margin: -8px -8px 0;
+  }
+}
+/* the music stands in the middle of its space even when its frame is taller (a piece with very high and very low
+   notes): the rare extremes are trimmed equally above and below rather than the whole line sliding up */
+.p-stage .score-scroll.strip {
+  justify-content: center;
+}
+.p-stage .strip-clip {
+  margin-block: 0;
+}
