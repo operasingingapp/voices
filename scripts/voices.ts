@@ -46,6 +46,8 @@ interface Config {
   stability: number;
   similarityBoost: number;
   maxCharsPerRun: number;
+  /** lines read differently from the automatic shaping: the written line → exactly what the voice is given */
+  sayAs?: Record<string, string>;
   /** a voice to look up by name in the Italian voice library, when voiceId is empty (e.g. "Serena") */
   voiceSearch?: string;
 }
@@ -194,7 +196,7 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
     const syl0 = ph.syllables ?? [];
     const joinsAfter = new Set<number>();
     for (let i = 0; i + 1 < syl0.length; i++) if (syl0[i].noteId === syl0[i + 1].noteId && syl0[i + 1].word === syl0[i].word + 1) joinsAfter.add(syl0[i].word);
-    const text = phrased(ph, joinsAfter, notes);
+    const text = config.sayAs?.[plain(ph.original)] ?? phrased(ph, joinsAfter, notes);
     // a repeated line ("Babbo, pietà, pietà!") is made once; the second points to the first
     if (!seenLine.has(text)) {
       seenLine.set(text, ph.id);
