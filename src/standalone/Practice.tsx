@@ -34,11 +34,11 @@ import voiceConfig from "../../voice.config.json";
 interface VoiceManifest {
   voiceId: string;
   voiceName?: string;
-  clips: Record<string, { text: string; file: string; words?: [number, number][] }>;
+  clips: Record<string, { text: string; file: string; words?: [number, number][]; sung?: { file: string; words: [number, number][] } }>;
   words: Record<string, string>;
 }
 const voiceManifests = import.meta.glob("../../content/pieces/puccini-o-mio-babbino-caro/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
-const voiceFiles = import.meta.glob(["../../content/voice-bank/*/lines/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
+const voiceFiles = import.meta.glob(["../../content/voice-bank/*/sung/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
   query: "?url",
   import: "default",
   eager: true,
@@ -55,8 +55,10 @@ function lineClip(voice: VoiceManifest | null, id: string, original: string) {
   if (!voice) return null;
   const c = voice.clips[id] ?? Object.entries(voice.clips).find(([k, v]) => !k.endsWith("-slow") && !k.startsWith("join") && v.text === plainText(original))?.[1];
   if (!c) return null;
-  const key = Object.entries(voice.clips).find(([, v]) => v === c)?.[0] ?? id;
-  return { normal: voiceUrl(c.file), slow: voiceUrl(voice.clips[`${key}-slow`]?.file ?? c.file), words: c.words, slowWords: voice.clips[`${key}-slow`]?.words ?? c.words };
+  // the line reshaped like the music (scripts/voices.ts, shapeLine); the tortoise plays the same one slower
+  const file = c.sung?.file ?? c.file;
+  const words = c.sung?.words ?? c.words;
+  return { normal: voiceUrl(file), slow: voiceUrl(file), words, slowWords: words };
 }
 const wordUrlIn = (voice: VoiceManifest | null, text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);
 
