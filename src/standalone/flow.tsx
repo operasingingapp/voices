@@ -1328,7 +1328,7 @@ export function Onboarding({
 }) {
   // two steps: a character (or an opera) on the welcome screen, then that opera's cast to confirm
   const chosenOpera = operaId ? OPERAS.find((o) => o.id === operaId) : undefined;
-  const at = (step: 1 | 3, extra: { role?: RoleRef; opera?: string } = {}): Place => ({
+  const at = (step: 1 | 2 | 3, extra: { role?: RoleRef; opera?: string } = {}): Place => ({
     screen: "onboarding",
     step,
     by: "opera",
@@ -1341,8 +1341,9 @@ export function Onboarding({
     ctx.finishOnboarding({ screen: "role", opera: opera.id, character: ch.id });
   };
   const roles = chosenOpera ? chosenOpera.chars.map((ch) => ({ opera: chosenOpera, ch })) : [];
-  // the old middle step, or a cast with no opera: back to the welcome screen
-  const step = stepAsked === 3 && roles.length ? 3 : 1;
+  // 1: the gallery of characters; 2: the list of operas (a quieter way in); 3: the chosen opera's cast.
+  // A cast with no opera goes back to the gallery.
+  const step = stepAsked === 3 ? (roles.length ? 3 : 1) : stepAsked;
   const scroller = useRef<HTMLDivElement>(null);
   const roleKeyNow = role ? roleKey(role) : "";
   useEffect(() => {
@@ -1358,8 +1359,8 @@ export function Onboarding({
     <div className={`screen onboarding step-${step}`} ref={scroller}>
       <div className="ob-top gutter">
         <span className="wordmark-lg">Counterpart</span>
-        <div className="ob-steps" aria-label={`Step ${step === 1 ? 1 : 2} of 2`}>
-          <span>Step {step === 1 ? 1 : 2} of 2</span>
+        <div className="ob-steps" aria-label={`Step ${step === 3 ? 2 : 1} of 2`}>
+          <span>Step {step === 3 ? 2 : 1} of 2</span>
           <div className="ob-track" aria-hidden="true">
             {[1, 3].map((n) => (
               <i key={n} className={n <= step ? "on" : ""} />
@@ -1378,9 +1379,21 @@ export function Onboarding({
             <p className="lede">Choose a character to begin, or start from an opera.</p>
           </div>
           <CastReel onPick={(opera, ch) => ctx.go(at(3, { opera: opera.id, role: { opera: opera.id, character: ch.id } }))} />
-          <section className="ob-from-opera gutter" aria-labelledby="ob-operas-h">
-            <h2 id="ob-operas-h">Or start from an opera</h2>
-            <div className="obs-operas">
+          <button type="button" className="cp-btn cp-btn--ghost ob-by-opera" onClick={() => ctx.go(at(2, { opera: undefined }))}>
+            Or start from an opera
+            <span className="obs-go" aria-hidden="true">
+              <BackIcon />
+            </span>
+          </button>
+        </main>
+      )}
+
+      {step === 2 && (
+        <main className="ob-body gutter wide ob-opera-list" key="s2">
+          <h1 id="ob-operas-h">Choose an opera</h1>
+          <p className="lede">Then the role you will sing.</p>
+          <section className="ob-from-opera" aria-labelledby="ob-operas-h">
+                        <div className="obs-operas">
               {OPERAS.map((o, n) => {
                 const art = ART[o.id];
                 const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
@@ -1409,6 +1422,12 @@ export function Onboarding({
               })}
             </div>
           </section>
+          <div className="ob-sticky">
+            <button type="button" className="back-to inline" onClick={() => ctx.go(at(1, { opera: undefined }))}>
+              <BackIcon />
+              <span>Characters</span>
+            </button>
+          </div>
         </main>
       )}
 
@@ -1454,9 +1473,9 @@ export function Onboarding({
             })}
           </div>
           <div className="ob-sticky">
-            <button type="button" className="back-to inline" onClick={() => ctx.go({ screen: "onboarding", step: 1, by: "opera" })}>
+            <button type="button" className="back-to inline" onClick={() => ctx.go(at(role ? 1 : 2, { opera: role ? undefined : operaId, role: undefined }))}>
               <BackIcon />
-              <span>Back</span>
+              <span>{role ? "Characters" : "Operas"}</span>
             </button>
             <button
               type="button"

@@ -403,6 +403,7 @@ function PracticeScreen({
   const [view, setView] = useLocalSetting<View>("p:view", "music");
   // words view: the IPA under each line can be hidden
   const [showIpa, setShowIpa] = useLocalSetting("p:ipa", true);
+  const [showTr, setShowTr] = useLocalSetting("p:tr", true);
   // pronunciation tips: in full where a sound first occurs, a quiet mark on the words it applies to later
   // pronunciation tips live in one place: a strip above the words (and the music card's header), about the
   // line you are on; only that line's letters are marked, so the rest stays two clean columns
@@ -893,10 +894,10 @@ function PracticeScreen({
           {Icon.back}
         </button>
         <div className="p-title">
-          <p className="cp-eyebrow">
-            {info.kind} · {roleName} · {info.opera}
-          </p>
           <h1 lang="it">{edition.title}</h1>
+          <p className="p-sub">
+            {info.kind} · {roleName} · <i lang="it">{info.opera}</i>
+          </p>
         </div>
         <div className="p-tools">
           <div className="cp-seg view-switch" role="group" aria-label="What to show">
@@ -924,7 +925,10 @@ function PracticeScreen({
       </header>
 
       {/* the line: a card with one quiet header row (where you are, and how to hear it) above the words */}
-      <section className={`now-panel${current.sounding ? " is-now" : ""}${showIpa ? "" : " no-ipa"}`} data-testid="now-panel">
+      <section
+        className={`now-panel${current.sounding ? " is-now" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}`}
+        data-testid="now-panel"
+      >
         <div className="line-card">
           <div className="now-bar">
             <p className="now-meta">
@@ -959,9 +963,21 @@ function PracticeScreen({
                   {Icon.slow}
                 </button>
               </div>
-              <button type="button" className="nl-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
-                IPA
-              </button>
+              <div className="nl-chips" role="group" aria-label="Show under the words">
+                <button type="button" className="nl-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
+                  IPA
+                </button>
+                <button
+                  type="button"
+                  className="nl-chip"
+                  aria-pressed={showTr}
+                  onClick={() => setShowTr(!showTr)}
+                  title={showTr ? "Hide the English" : "Show the English"}
+                  aria-label="English translation"
+                >
+                  EN
+                </button>
+              </div>
             </div>
           </div>
           <div className="now-body">
@@ -975,7 +991,7 @@ function PracticeScreen({
               <p className="now-ipa" lang="it-fonipa">
                 [{shown.ph.ipa}]
               </p>
-              <p className="now-tr">{curly(shown.ph.translation)}</p>
+              {showTr && <p className="now-tr">{curly(shown.ph.translation)}</p>}
               {view === "music" && cardFor(shown.ph.id, "now-card-word")}
             </div>
             <button type="button" className="now-step" onClick={() => stepLine(1)} aria-label="Next line">
@@ -1013,7 +1029,7 @@ function PracticeScreen({
 
       {view === "words" && (
         <div
-          className={`words-view${playing ? " is-playing" : ""}`}
+          className={`words-view${playing ? " is-playing" : ""}${showTr ? "" : " no-tr"}`}
           ref={wordsRef}
           onPointerDown={(e) => {
             wordsTouched.current = performance.now();
@@ -1035,6 +1051,9 @@ function PracticeScreen({
               <span className="w-tools" role="group" aria-label="Show with the words">
                 <button type="button" className="w-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
                   IPA
+                </button>
+                <button type="button" className="w-chip" aria-pressed={showTr} onClick={() => setShowTr(!showTr)} title={showTr ? "Hide the English" : "Show the English"}>
+                  English
                 </button>
                 <button type="button" className="w-chip" aria-pressed={showTips} onClick={() => setShowTips(!showTips)} title={showTips ? "Hide the pronunciation tips" : "Show the pronunciation tips"}>
                   {Icon.tip}
@@ -1168,7 +1187,7 @@ function PracticeScreen({
                   >
                     {Icon.speaker}
                   </button>
-                  <p className="w-tr">{curly(sp.ph.translation)}</p>
+                  {showTr && <p className="w-tr">{curly(sp.ph.translation)}</p>}
                   {cardFor(sp.ph.id)}
                 </article>
               );
