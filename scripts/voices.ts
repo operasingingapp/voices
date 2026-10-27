@@ -39,6 +39,10 @@ interface Config {
   slowSpeed: number;
   /** extra easing of the slow lines (ffmpeg atempo, pitch kept): 0.85 = 15% longer */
   slowStretch: number;
+  /** make a separate slow recording of each line; false = the app slows the normal one down itself */
+  slowLines?: boolean;
+  /** ElevenLabs speaker boost: a little more presence, sometimes a little less even */
+  speakerBoost?: boolean;
   stability: number;
   similarityBoost: number;
   maxCharsPerRun: number;
@@ -150,7 +154,8 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
       seenLine.set(text, ph.id);
       const ws = ph.words.map((w) => plain(w.text));
       lines.push({ key: ph.id, kind: "line", text, file: `${base}/lines/${slug(text)}.mp3`, words: ws });
-      lines.push({ key: `${ph.id}-slow`, kind: "line-slow", text, file: `${base}/lines/${slug(text)}-slow.mp3`, words: ws, slow: true });
+      if (config.slowLines !== false)
+        lines.push({ key: `${ph.id}-slow`, kind: "line-slow", text, file: `${base}/lines/${slug(text)}-slow.mp3`, words: ws, slow: true });
     }
     // words sung together on one note across the gap between two words: one clip for the pair
     const syl = ph.syllables ?? [];
@@ -205,7 +210,7 @@ async function speak(voiceId: string, text: string, slow: boolean): Promise<Spok
         similarity_boost: config.similarityBoost,
         // no acting: a plain, even reading
         style: 0,
-        use_speaker_boost: true,
+        use_speaker_boost: config.speakerBoost ?? true,
         speed: slow ? config.slowSpeed : config.normalSpeed,
       },
     }),
@@ -308,7 +313,7 @@ async function main() {
     if (process.env.GITHUB_ACTIONS) console.log(`::notice::Voice chosen: ${v.name}`);
   }
   const voiceDir = config.voiceId ? slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "") || "voice" : "voice";
-  const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, "plain-42"]);
+  const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, config.speakerBoost ?? true, "plain-42"]);
   const slowSettings = JSON.stringify([config.slowSpeed, config.slowStretch]);
   const hashOf = (c: Clip) => short(`${settings}|${c.slow ? slowSettings : config.normalSpeed}|${c.kind}|${c.text}`);
 

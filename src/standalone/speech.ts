@@ -64,6 +64,11 @@ export function speak(src: SpeakSource, slow: boolean, onTime?: (sec: number) =>
   if (rec) {
     return new Promise((resolve) => {
       const a = new Audio(rec);
+      // single words have one recording: the tortoise plays it slower, keeping the pitch
+      if (slow && src.recorded?.slow === src.recorded?.normal) {
+        a.preservesPitch = true;
+        a.playbackRate = 0.75;
+      }
       let raf = 0;
       const done = () => {
         cancelAnimationFrame(raf);

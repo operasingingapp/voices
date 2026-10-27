@@ -56,7 +56,7 @@ function lineClip(voice: VoiceManifest | null, id: string, original: string) {
   const c = voice.clips[id] ?? Object.entries(voice.clips).find(([k, v]) => !k.endsWith("-slow") && !k.startsWith("join") && v.text === plainText(original))?.[1];
   if (!c) return null;
   const key = Object.entries(voice.clips).find(([, v]) => v === c)?.[0] ?? id;
-  return { normal: voiceUrl(c.file), slow: voiceUrl(voice.clips[`${key}-slow`]?.file), words: c.words, slowWords: voice.clips[`${key}-slow`]?.words };
+  return { normal: voiceUrl(c.file), slow: voiceUrl(voice.clips[`${key}-slow`]?.file ?? c.file), words: c.words, slowWords: voice.clips[`${key}-slow`]?.words ?? c.words };
 }
 const wordUrlIn = (voice: VoiceManifest | null, text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);
 
