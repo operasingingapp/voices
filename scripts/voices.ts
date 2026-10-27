@@ -133,8 +133,52 @@ function pieces(): string[] {
   return pieceArg === "all" ? real : real.filter((d) => d === pieceArg);
 }
 
+/** when each sung note starts, in quarter notes from the top of the piece */
+function noteTimes(piece: string): Map<string, number> {
+  const f = join(ROOT, "data/content", piece, "edition.json");
+  const at = new Map<string, number>();
+  if (!existsSync(f)) return at;
+  const ed = JSON.parse(readFileSync(f, "utf8")) as { measures: { startQ: number }[]; notes: { id: string; m: number; q: number }[] };
+  for (const n of ed.notes) at.set(n.id, (ed.measures[n.m]?.startQ ?? 0) + n.q);
+  return at;
+}
+
+/**
+ * The line as the voice should read it, shaped like the sung line: calm, never shouted, pausing only where the music
+ * does. "!" and ";" become plain stops and commas (an exclamation makes the voice shout); a comma stays only where the
+ * word is held (1½ beats or more) before the next one, and is dropped where the music runs straight on ("Sì, sì" sung
+ * quickly → "Sì sì,"); a word held a whole bar or more gets a comma even without one in the text; words sung on one
+ * note (an elision) are never split by punctuation.
+ */
+function phrased(ph: Phrase, joinsAfter: Set<number>, notes: Map<string, number>): string {
+  const syl = ph.syllables ?? [];
+  const onset = ph.words.map((_, k) => {
+    const s = syl.find((x) => x.word === k);
+    return s ? notes.get(s.noteId) : undefined;
+  });
+  const out = ph.words.map((w, k) => {
+    let t = plain(w.text).replace(/!/g, ".").replace(/;/g, ",");
+    const last = k === ph.words.length - 1;
+    if (last) return t.replace(/[.,:]+$/, "") + (/[?]$/.test(t) ? "" : ".");
+    const a = onset[k];
+    const b = onset[k + 1];
+    const span = a !== undefined && b !== undefined ? b - a : undefined;
+    const core = t.replace(/[.,:?]+$/, "");
+    if (joinsAfter.has(k)) return core;
+    const punct = t.slice(core.length);
+    if (span === undefined) return t;
+    if (punct && span < 1.5) return core; // the music doesn't stop here
+    if (!punct && span >= 3) return `${core},`; // held a bar or more: a breath
+    return punct ? `${core}${punct.replace(/\./g, ",")}` : core;
+  });
+  // each line read as its own sentence
+  const line = plain(out.join(" "));
+  return line.charAt(0).toUpperCase() + line.slice(1);
+}
+
 function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip[] } {
   const lang = JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { phrases: Phrase[] };
+  const notes = noteTimes(piece);
   // every recording lives in the voice's bank, shared by all pieces: a line or word heard before is never made again
   const base = `content/voice-bank/${voiceDir}`;
   const lines: Clip[] = [];
@@ -148,7 +192,7 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
     const syl0 = ph.syllables ?? [];
     const joinsAfter = new Set<number>();
     for (let i = 0; i + 1 < syl0.length; i++) if (syl0[i].noteId === syl0[i + 1].noteId && syl0[i + 1].word === syl0[i].word + 1) joinsAfter.add(syl0[i].word);
-    const text = plain(ph.words.map((w, k) => (joinsAfter.has(k) ? plain(w.text).replace(/[.,;:!?]+$/, "") : w.text)).join(" "));
+    const text = phrased(ph, joinsAfter, notes);
     // a repeated line ("Babbo, pietà, pietà!") is made once; the second points to the first
     if (!seenLine.has(text)) {
       seenLine.set(text, ph.id);
