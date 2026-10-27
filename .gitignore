@@ -11,3 +11,5 @@ dist-standalone/
 demo-output/
 .vite/
 .DS_Store
+# Local secrets written by `elevenlabs onboard`
+/.env.local
