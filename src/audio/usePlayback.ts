@@ -10,7 +10,7 @@ export interface AudioPort extends SynthPort {
   resume(): Promise<void>;
   configureParts(parts: PlaybackPart[]): void;
   /** play a channel on another instrument (when the sound source has others); resolves once it is ready */
-  setInstrument?(channel: number, id: string): Promise<void>;
+  setInstrument?(channel: number, id: string, range?: [number, number]): Promise<void>;
 }
 
 type PortFactory = (onProgress: (msg: string) => void) => Promise<AudioPort>;

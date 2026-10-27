@@ -7795,11 +7795,10 @@ p.obp-meta {
 .now-panel.minimal {
   padding-bottom: 0;
 }
+/* minimal: the blue card stays, slim, with only the words (no button row, no IPA or English) */
 .now-panel.minimal .line-card {
-  padding: 6px 0 8px;
-  border-radius: 0;
-  background: none;
-  box-shadow: inset 0 -1px 0 var(--fog-strong);
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 .now-panel.minimal .now-bar,
 .now-panel.minimal .now-ipa,
@@ -7858,4 +7857,25 @@ p.obp-meta {
 }
 .now-panel.compact .now-inner {
   height: 66px;
+}
+
+/* five instruments for the line: chips that wrap inside the panel, not one long bar */
+.mix-inst .cp-seg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 100%;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+.mix-inst .cp-seg button {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--fog);
+}
+.mix-inst .cp-seg button[aria-pressed="true"] {
+  background: var(--picked);
+  color: var(--on-pastel);
 }

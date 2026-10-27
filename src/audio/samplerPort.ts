@@ -12,17 +12,21 @@ import type { SynthPort } from "./engine";
 import type { PlaybackPart } from "../../shared/types";
 
 const files = import.meta.glob("../standalone/piano/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
-// instruments for the sung line, loaded only when chosen (real recordings, VSCO 2 CE, CC0)
+// instruments for the sung line, loaded only when chosen (real recordings: VSCO 2 CE, CC0; the English horn
+// from Sonatina Symphonic Orchestra, CC Sampling+ 1.0; see voices/README.md)
 const lineFiles = import.meta.glob("../standalone/voices/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
 const lineTuning = import.meta.glob("../standalone/voices/tuning.json", { import: "default", eager: true }) as Record<string, Record<string, number>>;
 
 /** What the sung line can be played on. */
-export type LineInstrument = "piano" | "oboe" | "violin";
+export type LineInstrument = "piano" | "oboe" | "clarinet" | "english-horn" | "bassoon";
 const LINE_SOUND: Record<Exclude<LineInstrument, "piano">, { release: number; dbPerStep: number }> = {
-  // a held, singing tone: let it go like a breath or a bow lifting, not a damper
+  // a held, singing tone: let it go like a breath, not a damper
   oboe: { release: 0.07, dbPerStep: 0.12 },
-  violin: { release: 0.09, dbPerStep: 0.12 },
+  clarinet: { release: 0.08, dbPerStep: 0.12 },
+  "english-horn": { release: 0.08, dbPerStep: 0.12 },
+  bassoon: { release: 0.08, dbPerStep: 0.12 },
 };
+const isLineKit = (id: string): id is Exclude<LineInstrument, "piano"> => id in LINE_SOUND;
 
 const NOTE: Record<string, number> = { C: 0, Cs: 1, Ds: 3, Fs: 6, A: 9 };
 /** midi number of a sample file name such as "Fs3-v6.mp3" */
@@ -147,6 +151,8 @@ export class SamplerPort implements SynthPort {
   private kitLoads = new Map<string, Promise<void>>();
   /** what each channel plays on (default: the piano) */
   private channelKit = new Map<number, LineInstrument>();
+  /** semitones a channel's line is moved on its instrument (an octave down when the voice sits above its range) */
+  private channelShift = new Map<number, number>();
 
   /** the room's impulse response (also used by the sound checks) */
   static roomImpulse = (ctx: BaseAudioContext) => roomImpulse(ctx);
@@ -226,9 +232,11 @@ export class SamplerPort implements SynthPort {
    * Play a channel on another instrument. Its recordings load now if they have not yet; until they have
    * arrived (and for notes outside its range) the piano plays, so nothing ever goes silent.
    */
-  setInstrument(ch: number, id: string): Promise<void> {
-    const kit = (id === "oboe" || id === "violin" ? id : "piano") as LineInstrument;
+  setInstrument(ch: number, id: string, range?: [number, number]): Promise<void> {
+    const kit: LineInstrument = isLineKit(id) ? id : "piano";
     this.channelKit.set(ch, kit);
+    this.channelShift.set(ch, 0);
+    this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
     let load = this.kitLoads.get(kit);
     if (!load) {
@@ -250,7 +258,7 @@ export class SamplerPort implements SynthPort {
       load.catch(() => this.kitLoads.delete(kit));
       this.kitLoads.set(kit, load);
     }
-    return load;
+    return load.then(() => this.fitRanges());
   }
 
   async resume() {
@@ -297,18 +305,36 @@ export class SamplerPort implements SynthPort {
     return { sample: best, gain: 10 ** (db / 20) };
   }
 
+  private channelRange = new Map<number, [number, number] | undefined>();
+  /**
+   * A line above (or below) an instrument's range is played an octave down (or up) as a whole, as a bassoon
+   * would double a soprano, rather than jumping between the instrument and the piano within a phrase.
+   */
+  private fitRanges() {
+    for (const [ch, kit] of this.channelKit) {
+      const list = kit === "piano" ? undefined : this.kits.get(kit);
+      const r = this.channelRange.get(ch);
+      if (!list?.length || !r) continue;
+      const lo = list[0].midi - 3;
+      const hi = list[list.length - 1].midi + 3;
+      const fits = (s: number) => r[0] + s >= lo && r[1] + s <= hi;
+      this.channelShift.set(ch, [0, -12, 12, -24].find(fits) ?? 0);
+    }
+  }
+
   /** A recording of another instrument for this note, if the channel uses one and it covers the pitch. */
-  private pickLine(ch: number, midi: number, vel: number): { sample: Sample; gain: number; release: number } | null {
+  private pickLine(ch: number, midiAsked: number, vel: number): { sample: Sample; gain: number; release: number; midi: number } | null {
     const kit = this.channelKit.get(ch);
     if (!kit || kit === "piano") return null;
     const list = this.kits.get(kit);
     if (!list?.length) return null;
+    const midi = midiAsked + (this.channelShift.get(ch) ?? 0);
     // no more than a minor third beyond the recorded range: further, a stretched recording sounds false
     if (midi < list[0].midi - 3 || midi > list[list.length - 1].midi + 3) return null;
     let best = list[0];
     for (const x of list) if (Math.abs(x.midi - midi) < Math.abs(best.midi - midi)) best = x;
     const db = (Math.max(1, Math.min(127, vel)) - 64) * LINE_SOUND[kit].dbPerStep;
-    return { sample: best, gain: 10 ** (db / 20), release: LINE_SOUND[kit].release };
+    return { sample: best, gain: 10 ** (db / 20), release: LINE_SOUND[kit].release, midi };
   }
 
   noteOn(ch: number, midi: number, vel: number, time: number) {
@@ -321,7 +347,7 @@ export class SamplerPort implements SynthPort {
     for (const v of this.voices) if (!v.released && v.ch === ch && v.midi === midi) this.release(v, t, 0.03);
     const src = this.ctx.createBufferSource();
     src.buffer = s.buffer;
-    src.playbackRate.value = 2 ** ((midi - s.midi) / 12 - (s.cents ?? 0) / 1200);
+    src.playbackRate.value = 2 ** (((line?.midi ?? midi) - s.midi) / 12 - (s.cents ?? 0) / 1200);
     const env = this.ctx.createGain();
     env.gain.value = picked.gain;
     src.connect(env).connect(this.channel(ch));

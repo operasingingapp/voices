@@ -326,7 +326,9 @@ const Icon = {
 const LINE_SOUNDS: { id: LineInstrument; label: string }[] = [
   { id: "piano", label: "Piano" },
   { id: "oboe", label: "Oboe" },
-  { id: "violin", label: "Violin" },
+  { id: "clarinet", label: "Clarinet" },
+  { id: "english-horn", label: "English horn" },
+  { id: "bassoon", label: "Bassoon" },
 ];
 /** volume slider (0–100, 80 = the part's normal level) to gain: squared, so the slider feels even to the ear */
 const volGain = (v: number, base: number) => base * (Math.max(0, v) / 80) ** 2;
@@ -391,7 +393,9 @@ function PracticeScreen({
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
   const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
-  const [lineSound, setLineSound] = useLocalSetting<LineInstrument>("p:lineSound", "piano");
+  const [lineSoundSaved, setLineSound] = useLocalSetting<LineInstrument>("p:lineSound", "piano");
+  // a choice that no longer exists (the violin) falls back to the piano
+  const lineSound: LineInstrument = LINE_SOUNDS.some((o) => o.id === lineSoundSaved) ? lineSoundSaved : "piano";
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
   const voice = voiceById(voiceSel);
@@ -493,19 +497,24 @@ function PracticeScreen({
     engine.setMix(voicePart.key, { muted: !hearVoice, solo: false, volume: volGain(vol.voice, voicePart.defaultVolume) });
     engine.setMix(pianoPart.key, { muted: !hearPiano, solo: false, volume: volGain(vol.piano, pianoPart.defaultVolume) });
   }, [engine, hearVoice, hearPiano, vol]);
+  // the sung line's lowest and highest notes, so an instrument can take it an octave down when needed
+  const voiceRange = useMemo<[number, number]>(() => {
+    const ms = edition.notes.filter((n) => n.part === voicePart.key).map((n) => n.midi);
+    return [Math.min(...ms), Math.max(...ms)];
+  }, []);
   useEffect(() => {
     const port = pb.port;
     if (!port?.setInstrument) return;
     let alive = true;
     setSoundLoading(lineSound !== "piano");
     port
-      .setInstrument(voicePart.channel, lineSound)
+      .setInstrument(voicePart.channel, lineSound, voiceRange)
       .catch(() => undefined)
       .finally(() => alive && setSoundLoading(false));
     return () => {
       alive = false;
     };
-  }, [pb.port, lineSound]);
+  }, [pb.port, lineSound, voiceRange]);
   // the sound panel closes on a tap elsewhere or Escape
   useEffect(() => {
     if (!mixOpen) return;
@@ -1337,7 +1346,7 @@ function PracticeScreen({
                       ))}
                     </div>
                   </div>
-                  {soundLoading && <p className="mix-note">Loading the {lineSound}…</p>}
+                  {soundLoading && <p className="mix-note">Loading the {LINE_SOUNDS.find((o) => o.id === lineSound)?.label.toLowerCase()}…</p>}
                 </div>
               </div>
               <div className="mix-row">
@@ -1602,11 +1611,19 @@ function PracticeScreen({
                     . Shortened to nine seconds a note and two loudness levels so it loads quickly.
                   </p>
                   <p>
-                    Oboe and violin for the sung line: recordings from{" "}
+                    Oboe, clarinet and bassoon for the sung line: recordings from{" "}
                     <a href="https://github.com/sgossner/VSCO-2-CE" target="_blank" rel="noreferrer">
                       VS Chamber Orchestra: Community Edition
                     </a>{" "}
-                    by Versilian Studios, in the public domain (CC0). The piano's pedalling follows the edition's marks where it has them, and
+                    by Versilian Studios, in the public domain (CC0). English horn:{" "}
+                    <a href="https://github.com/peastman/sso" target="_blank" rel="noreferrer">
+                      Sonatina Symphonic Orchestra
+                    </a>{" "}
+                    by Mattias Westlund, licensed{" "}
+                    <a href="https://creativecommons.org/licenses/sampling+/1.0/" target="_blank" rel="noreferrer">
+                      Creative Commons Sampling Plus 1.0
+                    </a>
+                    . An instrument that cannot reach the line plays it an octave lower. The piano's pedalling follows the edition's marks where it has them, and
                     otherwise changes with the harmony, as an accompanist would.
                   </p>
                 </section>
