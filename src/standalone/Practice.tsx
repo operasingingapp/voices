@@ -105,12 +105,16 @@ function prepareForDisplay(xml: string): string {
       const texts = Array.from(lyric.children).filter((c) => c.nodeName === "text");
       // typographic apostrophes, as in print: l’anello, vo’
       for (const t of texts) t.textContent = (t.textContent ?? "").replace(/'/g, "\u2019");
+      // melisma lines: drawn far too long by the renderer (even under "sò…?", like a crossing-out), and the
+      // highlighted syllables already show what is held, so they are left off
+      for (const e of Array.from(lyric.children).filter((c) => c.nodeName === "extend")) lyric.removeChild(e);
       if (texts.length < 2) continue;
       // two syllables on one note are joined by the undertie (vo’‿an, re‿in); MuseScore's elision glyph is dropped
       texts[0].textContent = texts
         .map((t) => (t.textContent ?? "").replace(/[\uE551\u203F]/g, "").trim())
         .filter(Boolean)
-        .join("\u203F");
+        // hair spaces keep the undertie between the two syllables instead of under their letters
+        .join("\u200A\u203F\u200A");
       for (const t of texts.slice(1)) lyric.removeChild(t);
       for (const e of Array.from(lyric.children).filter((c) => c.nodeName === "elision")) lyric.removeChild(e);
     }
@@ -334,6 +338,8 @@ type OpenWord = { lineId: string; k: number; left: number; top: number };
 const CROP_PAD = 36;
 /** Largest size of the music: comfortable on a music stand, still a few bars per screen. */
 const MAX_ZOOM = 1.15;
+/** Height of a standard line of music at zoom 1 (px): voice over piano with markings, measured on Babbino. */
+const STANDARD_LINE_H = 570;
 
 function fmtTime(sec: number): string {
   const s = Math.max(0, Math.round(sec));
@@ -460,7 +466,12 @@ function PracticeScreen({
     return () => ro.disconnect();
   }, []);
   const [natural, setNatural] = useState(0);
-  const fit = natural && stageH ? (stageH - 24 - CROP_PAD) / natural : Infinity;
+  const naturalRef = useRef(0);
+  naturalRef.current = natural;
+  // One size for every piece: the zoom is set for a standard line (voice and piano with slurs, dynamics and words
+  // above and below, as in Babbino), not for this piece's own height. Fitting each piece to the space made a
+  // plain recitative 40% larger than an aria, with crowded words; a taller piece still shrinks to fit.
+  const fit = natural && stageH ? (stageH - 24 - CROP_PAD) / Math.max(natural, STANDARD_LINE_H) : Infinity;
   const effZoom = Math.max(0.55, Math.min(MAX_ZOOM, Math.floor(fit * 40) / 40));
   const effZoomRef = useRef(effZoom);
   effZoomRef.current = effZoom;
@@ -678,7 +689,7 @@ function PracticeScreen({
   }, [perf]);
 
   useEffect(() => {
-    (window as unknown as Record<string, unknown>).__cp = { perf, layout: () => layoutRef.current, engine, currentQ, port: pb.port };
+    (window as unknown as Record<string, unknown>).__cp = { perf, layout: () => layoutRef.current, engine, currentQ, port: pb.port, natural: () => naturalRef.current };
   });
 
   const wordCard = (lineId: string, k: number, close: () => void) => {

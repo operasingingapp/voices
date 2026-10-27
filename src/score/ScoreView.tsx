@@ -149,7 +149,12 @@ function engraveLikeAPrintedEdition(osmd: OpenSheetMusicDisplay) {
   r.WedgeLineWidth = 0.13;
   r.LyricsHeight = 2.3;
   r.LyricsYMarginToBottomLine = 0.6;
-  r.BetweenSyllableMinimumDistance = 0.8;
+  // room between syllables for the hyphen, and between words for a space: in a quick recitative (sixteenths) the
+  // larger lyrics otherwise touch, and the hyphens are drawn through the letters
+  r.BetweenSyllableMinimumDistance = 2.1;
+  r.LyricsXPaddingFactorForLongLyrics = 1.5;
+  r.LyricsXPaddingWidthThreshold = 0.4;
+  r.LyricOverlapAllowedIntoNextMeasure = 0.5;
   r.MeasureNumberLabelHeight = 1.25;
   r.SlurHeightFactor = 0.55;
   r.DynamicExpressionSpacer = 1;
