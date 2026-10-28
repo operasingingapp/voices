@@ -1547,61 +1547,66 @@ export function Onboarding({
         </button>
       </div>
 
-      {step === 1 && (
-        <main className="ob-body ob-welcome" key="s1">
+      {(step === 1 || step === 2) && (
+        <main className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}`} key="s12">
           <div className="ob-hero gutter">
             <h1>Which role is yours?</h1>
-            <p className="lede">Choose a character to begin, or start from an opera.</p>
-          </div>
-          <CastReel onPick={(opera, ch) => ctx.go(at(3, { opera: opera.id, role: { opera: opera.id, character: ch.id } }))} />
-          <button type="button" className="cp-btn cp-btn--ghost ob-by-opera" onClick={() => ctx.go(at(2, { opera: undefined }))}>
-            Or start from an opera
-            <span className="obs-go" aria-hidden="true">
-              <BackIcon />
-            </span>
-          </button>
-        </main>
-      )}
-
-      {step === 2 && (
-        <main className="ob-body gutter wide ob-opera-list" key="s2">
-          <h1 id="ob-operas-h">Choose an opera</h1>
-          <p className="lede">Then the role you will sing.</p>
-          <section className="ob-from-opera" aria-labelledby="ob-operas-h">
-                        <div className="obs-operas">
-              {OPERAS.map((o, n) => {
-                const art = ART[o.id];
-                const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
-                return (
-                  <button
-                    key={o.id}
-                    type="button"
-                    className="obs-opera"
-                    data-tone={OPERA_TONES[n % OPERA_TONES.length]}
-                    onClick={() => ctx.go(at(3, { opera: o.id, role: undefined }))}
-                  >
-                    <span className="obs-thumb" aria-hidden="true">
-                      {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span lang={o.lang}>{letter}</span>}
-                    </span>
-                    <span className="obs-vtext">
-                      <b lang={o.lang}>{o.title}</b>
-                      <small>
-                        {o.composer} · {o.year} · {o.chars.length} roles
-                      </small>
-                    </span>
-                    <span className="obs-go" aria-hidden="true">
-                      <BackIcon />
-                    </span>
-                  </button>
-                );
-              })}
+            <p className="lede">{step === 1 ? "Choose a character to begin." : "Choose an opera, then the role you will sing."}</p>
+            <div className="ob-mode" role="tablist" aria-label="Start from">
+              {(
+                [
+                  [1, "Characters"],
+                  [2, "Operas"],
+                ] as const
+              ).map(([n, label]) => (
+                <button
+                  key={n}
+                  type="button"
+                  role="tab"
+                  aria-selected={step === n}
+                  aria-controls="ob-choices"
+                  onClick={() => step !== n && ctx.go(at(n, { opera: undefined }))}
+                >
+                  {label}
+                </button>
+              ))}
             </div>
-          </section>
-          <div className="ob-sticky">
-            <button type="button" className="back-to inline" onClick={() => ctx.go(at(1, { opera: undefined }))}>
-              <BackIcon />
-              <span>Characters</span>
-            </button>
+          </div>
+          <div id="ob-choices" role="tabpanel" className="ob-choices">
+            {step === 1 ? (
+              <CastReel onPick={pick} />
+            ) : (
+              <section className="ob-from-opera gutter" aria-label="Operas">
+                <div className="obs-operas">
+                  {OPERAS.map((o, n) => {
+                    const art = ART[o.id];
+                    const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
+                    return (
+                      <button
+                        key={o.id}
+                        type="button"
+                        className="obs-opera"
+                        data-tone={OPERA_TONES[n % OPERA_TONES.length]}
+                        onClick={() => ctx.go(at(3, { opera: o.id, role: undefined }))}
+                      >
+                        <span className="obs-thumb" aria-hidden="true">
+                          {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span lang={o.lang}>{letter}</span>}
+                        </span>
+                        <span className="obs-vtext">
+                          <b lang={o.lang}>{o.title}</b>
+                          <small>
+                            {o.composer} · {o.year} · {o.chars.length} roles
+                          </small>
+                        </span>
+                        <span className="obs-go" aria-hidden="true">
+                          <BackIcon />
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
           </div>
         </main>
       )}

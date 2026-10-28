@@ -8439,3 +8439,57 @@ p.obp-meta {
     padding: 20px 18px 22px;
   }
 }
+
+/* =====================================================================
+   Welcome: Characters | Operas, a two-way switch under the question,
+   so the opera route is as easy to find as the gallery
+   ===================================================================== */
+.ob-mode {
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 10px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--fog);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+}
+.ob-mode button {
+  min-height: 40px;
+  min-width: 124px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+.ob-mode button:hover {
+  color: var(--ink);
+}
+.ob-mode button[aria-selected="true"] {
+  background: var(--canvas);
+  color: var(--ink);
+  box-shadow:
+    0 1px 2px #0b0b0b14,
+    0 2px 8px #0b0b0b0f;
+}
+.ob-mode button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+.ob-choices {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.ob-opera-list .ob-from-opera {
+  margin-top: 0;
+  box-sizing: border-box;
+}
