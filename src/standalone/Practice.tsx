@@ -683,6 +683,8 @@ function PracticeScreen({
   const [view, setView] = useLocalSetting<View>("p:view", "music");
   // the score is on screen in Music and in Both (Both shows the words beside it where there is room)
   const musicOn = view !== "words";
+  // the line box over the music can be put away altogether (the score gets the room); a button in the header brings it back
+  const [cardOn, setCardOn] = useLocalSetting("p:card", true);
   // words view: the IPA under each line can be hidden
   const [showIpa, setShowIpa] = useLocalSetting("p:ipa", false);
   const [showTr, setShowTr] = useLocalSetting("p:tr", true);
@@ -961,6 +963,36 @@ function PracticeScreen({
   const [loop, setLoop] = useState<{ startQ: number; endQ: number } | null>(null);
   // just after the loop button: a line saying how to choose the bars, and the edges pulse
   const [loopHint, setLoopHint] = useState(false);
+  // the last loop is kept (for this piece and role) when you switch looping off: switching it on brings it back,
+  // until you clear it
+  const loopKey = `cp:loop:${portraitKey}:${edition.editionId}`;
+  const [savedLoop, setSavedLoop] = useState<{ startQ: number; endQ: number } | null>(() => {
+    try {
+      return JSON.parse(localStorage.getItem(loopKey) ?? "null");
+    } catch {
+      return null;
+    }
+  });
+  useEffect(() => {
+    if (!loop) return;
+    setSavedLoop(loop);
+    try {
+      localStorage.setItem(loopKey, JSON.stringify(loop));
+    } catch {
+      /* storage unavailable */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loop]);
+  const clearLoop = () => {
+    setLoop(null);
+    setSavedLoop(null);
+    setLoopHint(false);
+    try {
+      localStorage.removeItem(loopKey);
+    } catch {
+      /* storage unavailable */
+    }
+  };
   useEffect(() => {
     if (!loop) setLoopHint(false);
   }, [loop]);
@@ -1429,6 +1461,21 @@ function PracticeScreen({
               <span className="label">Words</span>
             </button>
           </div>
+          {musicOn && (
+            <button
+              type="button"
+              className={`cp-icon-btn card-toggle${cardOn ? " on" : ""}`}
+              aria-pressed={cardOn}
+              onClick={() => setCardOn(!cardOn)}
+              aria-label={cardOn ? "Hide the line box over the music" : "Show the line box over the music"}
+              title={cardOn ? "Hide the line box" : "Show the line box"}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="4.5" width="17" height="7" rx="2" fill={cardOn ? "currentColor" : "none"} fillOpacity={cardOn ? 0.18 : 0} stroke="currentColor" strokeWidth="1.6" />
+                <path d="M6.5 8h8M4 15.5h16M4 19h16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+              </svg>
+            </button>
+          )}
           <button
             type="button"
             className="cp-btn details-btn"
@@ -1445,7 +1492,7 @@ function PracticeScreen({
 
       {/* the line: a card with one quiet header row (where you are, and how to hear it) above the words */}
       <section
-        className={`now-panel${current.sounding ? " is-now" : ""}${live && musicOn ? " is-playing" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && musicOn ? " minimal" : ""}`}
+        className={`now-panel${cardOn || !musicOn ? "" : " card-off"}${current.sounding ? " is-now" : ""}${live && musicOn ? " is-playing" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && musicOn ? " minimal" : ""}`}
         data-testid="now-panel"
       >
         <div className="line-card" style={cardTone}>
@@ -1493,6 +1540,18 @@ function PracticeScreen({
                     <button type="button" role="menuitemcheckbox" aria-checked={showTr} onClick={() => setShowTr(!showTr)}>
                       <span className="cm-check" aria-hidden="true">{showTr ? Icon.check : null}</span>
                       <span>English</span>
+                    </button>
+                    <button
+                      type="button"
+                      role="menuitem"
+                      className="cm-hide"
+                      onClick={() => {
+                        setCardOn(false);
+                        setCardMenu(null);
+                      }}
+                    >
+                      <span className="cm-check" aria-hidden="true" />
+                      <span>Hide this box</span>
                     </button>
                     {hasTips && (
                       <button type="button" role="menuitemcheckbox" aria-checked={showTips} onClick={() => setShowTips(!showTips)}>
@@ -1815,6 +1874,9 @@ function PracticeScreen({
           >
             This line
           </button>
+          <button type="button" className="cp-btn lp-btn" onClick={clearLoop} title="Forget this loop">
+            Clear
+          </button>
           <button type="button" className="cp-btn lp-btn lp-done" onClick={() => setLoopHint(false)}>
             Done
           </button>
@@ -1824,10 +1886,9 @@ function PracticeScreen({
         <div className="tl-label" data-testid="location">
           <b>{status ?? `Bar ${loc.number} · ${beat}`}</b>
           {loop && !status && (
-            <button type="button" className="tl-loop-chip" onClick={() => setLoop(null)} aria-label={`Looping ${loopBars}. Stop looping`}>
+            <button type="button" className="tl-loop-chip" onClick={() => setLoopHint(true)} aria-label={`Looping ${loopBars}. Change or clear the loop`}>
               {Icon.loop}
               {loopBars.replace("bars ", "").replace("bar ", "")}
-              <span aria-hidden="true">×</span>
             </button>
           )}
           <span>{tempoWords[loc.m] || " "}</span>
@@ -2227,9 +2288,14 @@ function PracticeScreen({
                 setLoopHint(false);
                 return;
               }
-              // start with the bar you are on, its two edges ready to drag out over the bars you want
-              const pm = barAt(Math.max(0, q));
-              setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
+              // the last loop again; or the bar you are on, its two edges ready to drag out over the bars you want
+              if (savedLoop && savedLoop.endQ <= perf.totalQ + 1e-6) {
+                setLoop(savedLoop);
+                if (engine && engine.state !== "playing") engine.seek(savedLoop.startQ);
+              } else {
+                const pm = barAt(Math.max(0, q));
+                setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
+              }
               setLoopHint(true);
             }}
             aria-label={loop ? `Looping ${loopBars}. Stop looping` : loopPick ? "Cancel choosing a loop" : "Loop: choose the bars"}

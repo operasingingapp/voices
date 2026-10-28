@@ -11358,3 +11358,15 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice.is-split .words-view .w-gap:first-of-type { margin-top: 8px; }
 }
 @media (min-width: 900px) { .practice.is-split .w-gap-band { min-height: 40px; } }
+
+/* the line box can be put away: the music takes its row */
+.practice > .now-panel.card-off { display: none; }
+.card-toggle { flex: none; }
+.card-toggle svg { width: 22px; height: 22px; }
+.card-toggle.on { background: var(--fog); }
+.card-toggle:not(.on) { background: var(--picked, var(--fog)); }
+.card-menu .cm-hide { order: 10; border-top: 1px solid var(--fog-strong); border-radius: 0 0 12px 12px; margin-top: 4px; }
+
+/* Words without the English: one column, so the page's column narrows to a reading width and sits in the middle
+   (left-aligned text in a centred column: lines still start in one place, nothing hugs the left edge) */
+.practice.is-words .words-view.no-tr .w-grid { max-width: 720px; }
