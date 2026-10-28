@@ -874,7 +874,8 @@ function PracticeScreen({
   // the line shown in the panel: the one being sung, otherwise the next one
   const shown = spans[current.idx];
   // the tips for that line (at most two: the ones that start here come first)
-  const lineTips = (tips.lineTips.get(shown.ph.id) ?? []).slice(0, 2);
+  // one tip per line at most: the one that matters most there
+  const lineTips = (tips.lineTips.get(shown.ph.id) ?? []).slice(0, 1);
   useEffect(() => {
     setTipIdx(0);
     setTipOpen(false);
@@ -1453,24 +1454,8 @@ function PracticeScreen({
                 </>
               )}
             </p>
-            {!playing && curTip && (
-              <button
-                type="button"
-                className="now-tip"
-                onClick={(e) => {
-                  const el = (e.currentTarget.closest(".line-card")?.querySelectorAll<HTMLElement>(".now-it .now-word") ?? [])[curTip.word];
-                  if (el) openWordAt(shown.ph.id, curTip.word, el);
-                }}
-              >
-                {Icon.tip}
-                <span>
-                  {curTip.tip.title} ·{" "}
-                  <i className="now-tip-word" lang={LANG}>
-                    {curly(shown.ph.words[curTip.word]?.text.replace(/[.,;:!?]+$/, "") ?? "")}
-                  </i>
-                </span>
-              </button>
-            )}
+            {/* no tip strip in the card (the card is the words while you sing): a dotted word carries the line's
+                tip, and tapping it opens the word with its sound and the tip */}
             <div className="now-tools">
               <div className="now-listen" role="group" aria-label="Hear this line spoken">
                 <button type="button" className="nl-btn" onClick={() => sayPhrase(shown.ph.id)} aria-pressed={speakingId === shown.ph.id} aria-label="Hear this line spoken" title="Hear it">

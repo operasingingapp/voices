@@ -47,6 +47,7 @@ export interface Tips {
   lineTips: Map<string, { tip: Tip; word: number }[]>;
 }
 
+const PRIORITY = ["double", "link", "open", "gli", "r", "hiatus", "ch", "final"];
 const bare = (t: string) => t.toLowerCase().replace(/[.,;:!?«»“”"()]/g, "");
 const VOWELS = "aeiouɛɔ";
 
@@ -219,7 +220,13 @@ export function buildTips(lines: TipLine[]): Tips {
     ln.words.forEach((_, k) => {
       for (const tip of byWord.get(`${ln.id}:${k}`) ?? []) if (!items.some((x) => x.tip === tip)) items.push({ tip, word: k });
     });
-    items.sort((a, b) => Number(b.tip.lineId === ln.id) - Number(a.tip.lineId === ln.id) || a.word - b.word);
+    // what a coach would point out first: doubled consonants and vowels run together, then open vowels and the
+    // rest; a tip met here for the first time before one already seen
+    const rank = (t: Tip) => {
+      const i = PRIORITY.indexOf(t.id.split(":")[0]);
+      return i < 0 ? PRIORITY.length : i;
+    };
+    items.sort((a, b) => rank(a.tip) - rank(b.tip) || Number(b.tip.lineId === ln.id) - Number(a.tip.lineId === ln.id) || a.word - b.word);
     if (items.length) lineTips.set(ln.id, items);
   }
   return { list, byLine, byWord, marks, links, lineTips };
