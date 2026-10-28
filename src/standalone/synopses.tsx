@@ -517,7 +517,8 @@ export function Story({
       {both && (
         <div className="cp-seg story-tabs" role="tablist" aria-label="Which story">
           <button type="button" role="tab" id={`${idBase}-arc`} aria-selected={tab === "arc"} aria-controls={`${idBase}-panel`} onClick={() => setTab("arc")}>
-            {storyOf(name!)}
+            {/* the character's name alone: "…'s story" did not fit a phone's half of the switch */}
+            {name}
           </button>
           <button type="button" role="tab" id={`${idBase}-all`} aria-selected={tab === "all"} aria-controls={`${idBase}-panel`} onClick={() => setTab("all")}>
             The whole opera
