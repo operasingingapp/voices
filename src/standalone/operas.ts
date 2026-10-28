@@ -1,3 +1,5 @@
+import { SCENES, type Scene } from "./scenes";
+
 /** Well-known operas, their main characters and the arias and ensembles they sing. A first pass from the scores' titles, to be checked. */
 export type AvatarKind = "short" | "cap" | "bun" | "long" | "curls" | "hood" | "beard" | "hat" | "crown";
 export interface Piece {
@@ -1140,3 +1142,98 @@ export const OPERAS: Opera[] = [
   ]
  }
 ];
+
+/* ------------------------------------------------------------------------------------------------
+   Each character's music is every number they sing in, in the order of the opera, taken from the
+   checked running order (scenes.ts). The pieces listed above are the first pass: each is matched to
+   its number and keeps what only it has (the music to practise, the scene notes, its progress key).
+   ------------------------------------------------------------------------------------------------ */
+
+/** a first-pass title → the running order's title, where the two differ */
+const ALIAS: Record<string, string> = {
+  "Sull'aria… che soave zeffiretto": "Sull'aria",
+  "Mi tradì quell'alma ingrata": "In quali eccessi… Mi tradì",
+  "Pa-pa-pa": "Bald prangt, den Morgen zu verkünden",
+  "Vecchia zimarra, senti": "Vecchia zimarra",
+  "Tre sbirri, una carrozza… Te Deum": "Va, Tosca!… Te Deum",
+  "Ha più forte sapore": "Tosca è un buon falco… Ha più forte sapore",
+  "Tu, tu, piccolo iddio": "Con onor muore… Tu, piccolo iddio",
+  "Ora a noi": "The letter",
+};
+const norm = (t: string) =>
+  t
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+function matchScene(title: string, list: Scene[]): Scene | undefined {
+  const exact = ALIAS[title] ?? title;
+  const byTitle = list.find((s) => s.title === exact);
+  if (byTitle) return byTitle;
+  const head = norm(title).split(" ").slice(0, 2).join(" ");
+  return list.find((s) => norm(s.title).startsWith(head)) ?? list.find((s) => norm(s.title).includes(head));
+}
+const actOf = (act: string) => act.replace(/\s*\(.*\)$/, "");
+
+/** the first-pass list's progress keys by position, so places saved by number can be found again */
+export const FIRST_PASS_KEYS: Record<string, string[]> = {};
+/** first-pass pieces that could not be placed in the running order (should stay empty) */
+export const UNPLACED: string[] = [];
+
+for (const opera of OPERAS) {
+  const scenes = SCENES[opera.id] ?? [];
+  for (const ch of opera.chars) {
+    const first = ch.pieces;
+    FIRST_PASS_KEYS[`${opera.id}:${ch.id}`] = first.map((p) => p.id ?? p.title);
+    const sung = scenes.filter((s) => s.who.includes(ch.id));
+    const claimed = new Map<Scene, Piece>();
+    for (const p of first) {
+      const s = matchScene(p.title, sung);
+      if (!s || claimed.has(s)) UNPLACED.push(`${opera.id}:${ch.id} ${p.title}`);
+      else claimed.set(s, p);
+    }
+    ch.pieces = sung.map((s) => {
+      const old = claimed.get(s);
+      const act = actOf(s.act);
+      return {
+        title: old?.editionId ? old.title : s.title,
+        kind: act === "The opera" ? s.kind : `${s.kind} · ${act}`,
+        id: old ? (old.id ?? old.title) : `${act}: ${s.title}`,
+        ...(old?.editionId ? { editionId: old.editionId } : {}),
+        ...(old?.when ? { when: old.when } : {}),
+        context: old?.context ?? s.what,
+      };
+    });
+  }
+}
+
+/** The opera in order, number by number, each linked to a character's piece where someone in the cast sings it. */
+export interface RunningNumber {
+  title: string;
+  kind: string;
+  act: string;
+  who: string[];
+  piece?: { character: string; index: number };
+}
+export const RUNNING: Record<string, RunningNumber[]> = {};
+for (const opera of OPERAS) {
+  const scenes = SCENES[opera.id] ?? [];
+  RUNNING[opera.id] = scenes.map((s) => {
+    // a character's pieces are the numbers they sing, in order: the link is this number's place among them,
+    // preferring a singer whose piece has music to practise
+    let piece: RunningNumber["piece"];
+    for (const id of s.who) {
+      const ch = opera.chars.find((c) => c.id === id);
+      const index = scenes.filter((x) => x.who.includes(id)).indexOf(s);
+      if (!ch || index < 0) continue;
+      if (ch.pieces[index]?.editionId) {
+        piece = { character: id, index };
+        break;
+      }
+      piece ??= { character: id, index };
+    }
+    return { title: s.title, kind: s.kind, act: actOf(s.act), who: s.who, ...(piece ? { piece } : {}) };
+  });
+}

@@ -6,10 +6,10 @@ import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
-import { ART, BRAVO, NUMBERS, PORTRAITS, STORIES } from "./opera-extra";
+import { ART, BRAVO, PORTRAITS, STORIES } from "./opera-extra";
 import { SYNOPSES, Story, storyOf } from "./synopses";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
-import { OPERAS, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
+import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
 export type Tone = "pink" | "lilac" | "peach" | "sky" | "mint" | "butter";
@@ -539,7 +539,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
   if (!opera || !ch) return null;
   const n = ch.pieces.length;
   const word = FEMALE.test(ch.voice) ? "Brava!" : "Bravo!";
-  const count = n === 1 ? "its one piece" : `all ${["", "", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] ?? n} pieces`;
+  const count = n === 1 ? "its one piece" : `all ${["", "", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"][n] ?? n} pieces`;
   return (
     <div className="bravo" role="dialog" aria-modal="true" aria-labelledby="bravo-h" data-tone={voiceTone(ch.voice)}>
       <button type="button" className="bravo-scrim" aria-label="Close" tabIndex={-1} onClick={onClose} />
@@ -888,7 +888,7 @@ interface Row {
   piece?: { character: string; index: number };
 }
 function rowsFor(opera: Opera): Row[] {
-  if (NUMBERS[opera.id]) return NUMBERS[opera.id];
+  if (RUNNING[opera.id]?.length) return RUNNING[opera.id];
   const byTitle = new Map<string, Row & { act: number; order: number }>();
   let order = 0;
   for (const c of opera.chars)
@@ -907,7 +907,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   const mineHere = opera.chars.filter((c) => ctx.roles.some((r) => same(r, { opera: opera.id, character: c.id })));
   const rows = rowsFor(opera);
   const name = (id: string) => opera.chars.find((c) => c.id === id)?.name ?? id;
-  const ordered = !!NUMBERS[opera.id];
+  const ordered = !!RUNNING[opera.id]?.length;
   const [open, setOpen] = useState<number | null>(null);
   return (
     <main className="screen-body gutter page">
@@ -1004,7 +1004,8 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                 <div className="num-text">
                   <b lang={opera.lang}>{row.title}</b>
                   <span>
-                    {row.kind} ·{" "}
+                    {row.kind}
+                    {row.who.length > 0 && " · "}
                     {row.who.map((id, k) => (
                       <span key={id}>
                         {k > 0 && ", "}

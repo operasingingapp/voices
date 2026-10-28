@@ -20,8 +20,7 @@ import {
   type Profile,
   type RoleRef,
 } from "./flow";
-import { NUMBERS } from "./opera-extra";
-import { OPERAS } from "./operas";
+import { FIRST_PASS_KEYS, OPERAS, RUNNING } from "./operas";
 import { Practice } from "./Practice";
 import { hasPiece } from "./pieces";
 
@@ -49,6 +48,28 @@ function write(key: string, v: unknown) {
     /* storage unavailable */
   }
 }
+
+/**
+ * Each role's list of music now holds every number the character sings, so a piece saved by its position
+ * in the old, shorter list is found again by its progress key. Runs once.
+ */
+(function renumberSavedPieces() {
+  try {
+    if (localStorage.getItem("cp:pieceList") === "2") return;
+    for (const key of [K.place, K.last]) {
+      const v = read<{ screen?: string; opera?: string; character?: string; piece?: number } | null>(key, null);
+      if (v?.screen !== "piece" || typeof v.piece !== "number" || !v.opera || !v.character) continue;
+      const oldKey = FIRST_PASS_KEYS[`${v.opera}:${v.character}`]?.[v.piece];
+      const ch = OPERAS.find((o) => o.id === v.opera)?.chars.find((c) => c.id === v.character);
+      const i = oldKey && ch ? ch.pieces.findIndex((p) => p.id === oldKey) : -1;
+      if (i >= 0) write(key, { ...v, piece: i });
+      else localStorage.removeItem(key);
+    }
+    localStorage.setItem("cp:pieceList", "2");
+  } catch {
+    /* storage unavailable */
+  }
+})();
 
 /** Screens saved by earlier versions of the app, mapped to today's. */
 function migrate(p: unknown): Place | null {
@@ -264,7 +285,7 @@ export function App() {
           onToggleLearned={() => ctx.toggleLearned(r, key)}
           context={piece.context}
           inOpera={(() => {
-            const list = NUMBERS[opera.id];
+            const list = RUNNING[opera.id];
             const i = list?.findIndex((n) => n.piece?.character === ch.id && n.piece.index === place.piece) ?? -1;
             return list && i >= 0 ? { n: i + 1, total: list.length, before: list[i - 1]?.title, after: list[i + 1]?.title, opera: opera.title } : undefined;
           })()}

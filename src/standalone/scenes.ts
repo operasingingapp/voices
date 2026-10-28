@@ -44,7 +44,8 @@ export const SCENES: Record<string, Scene[]> = {
       ["Hai già vinta la causa!… Vedrò mentr'io sospiro", "Recitative and aria", ["count"], "Overhearing Susanna tell Figaro ‘the case is won’, the Count swears his servant will not have what he cannot."],
       ["Riconosci in questo amplesso", "Sextet", ["figaro", "bartolo", "count", "susanna"], "A birthmark proves Figaro is Marcellina and Bartolo's lost son. Susanna arrives, sees him embracing Marcellina, slaps him, then learns the truth; the Count fumes."],
       ["Andiam, andiam, bel paggio", "Recitative", ["cherubino"], "Barbarina takes Cherubino off to her house to dress him as a girl among the village girls."],
-      ["E Susanna non vien!… Dove sono", "Recitative and aria", ["countess"], "Waiting for Susanna, the Countess remembers the happy days of her marriage and hopes her constancy may yet change her husband's heart."],
+      ["E Susanna non vien!", "Recitative", ["countess"], "Waiting for Susanna, the Countess worries their plan is too bold, then turns bitter at being brought so low by her husband."],
+      ["Dove sono", "Aria", ["countess"], "She remembers the happy days of her marriage, and hopes her constancy may yet change her husband's heart."],
       ["Io vi dico, signor", "Recitative", ["count"], "The gardener Antonio tells the Count that Cherubino has not gone to Seville: his hat is at Barbarina's."],
       ["Sull'aria", "Duettino", ["countess", "susanna"], "The Countess dictates, and Susanna writes, the note that sets the time and place of the garden meeting, sealed with a pin."],
       ["Ricevete, o padroncina", "Chorus and recitative", ["countess", "susanna", "cherubino", "count"], "Village girls bring the Countess flowers; Cherubino, among them in a dress, is unmasked, and Barbarina asks the Count for him as her husband."],
@@ -305,7 +306,7 @@ export const SCENES: Record<string, Scene[]> = {
       ["Va, Tosca!… Te Deum", "Finale", ["scarpia"], "Scarpia gloats over his plans for the painter and for Tosca as the Te Deum rises."],
     ]),
     ...A("Act 2", [
-      ["Tosca è un buon falco", "Scene", ["scarpia"], "At supper in the Palazzo Farnese, Scarpia savours conquest by force."],
+      ["Tosca è un buon falco… Ha più forte sapore", "Scene and aria", ["scarpia"], "At supper in the Palazzo Farnese, Scarpia savours conquest by force."],
       ["Meno male!… Dov'è Angelotti?", "Interrogation", ["scarpia", "cavaradossi", "tosca"], "Cavaradossi is questioned while Tosca's cantata is heard below; he is taken to be tortured."],
       ["Sale, ascende l'umana cantica… The torture", "Scene", ["tosca", "cavaradossi", "scarpia"], "Hearing his cries, Tosca reveals Angelotti's hiding place."],
       ["Vittoria! Vittoria!", "Scene", ["cavaradossi", "scarpia", "tosca"], "News of Napoleon's victory at Marengo; Cavaradossi defies Scarpia and is dragged away to be shot."],

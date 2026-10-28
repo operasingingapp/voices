@@ -147,33 +147,3 @@ export const STORIES: Record<string, string> = {
     "Florence, 1299. Buoso Donati is dead, and his greedy relatives find he has left everything to the monks. Rinuccio calls in the shrewd Gianni Schicchi, whose daughter Lauretta he wants to marry. Schicchi impersonates the dead man, dictates a new will, and leaves the best of it to himself, so the young lovers can marry.",
 };
 
-export interface Number {
-  title: string;
-  kind: string;
-  /** character ids who sing in it */
-  who: string[];
-  /** the piece (in a character's list) it corresponds to, for a direct link */
-  piece?: { character: string; index: number };
-}
-
-/** Gianni Schicchi is one act; the running order of its scenes and numbers. */
-export const NUMBERS: Record<string, Number[]> = {
-  schicchi: [
-    { title: "Mourning Buoso", kind: "Ensemble", who: ["zita", "rinuccio", "nella", "ciesca", "simone"] },
-    { title: "The rumour, and the search for the will", kind: "Ensemble", who: ["zita", "rinuccio", "nella", "ciesca", "simone"] },
-    { title: "Avete torto… Firenze è come un albero fiorito", kind: "Aria", who: ["rinuccio"], piece: { character: "rinuccio", index: 0 } },
-    { title: "Schicchi's arrival and the quarrel with Zita", kind: "Scene", who: ["schicchi", "lauretta", "rinuccio", "zita"], piece: { character: "lauretta", index: 0 } },
-    { title: "Addio, speranza bella", kind: "Duet", who: ["lauretta", "rinuccio"], piece: { character: "lauretta", index: 1 } },
-    { title: "O mio babbino caro", kind: "Aria", who: ["lauretta"], piece: { character: "lauretta", index: 2 } },
-    { title: "Addio, speranza bella (reprise)", kind: "Duet over the reading of the will", who: ["lauretta", "rinuccio", "schicchi"], piece: { character: "lauretta", index: 3 } },
-    { title: "Back from the terrace", kind: "Short exchange", who: ["lauretta", "schicchi"], piece: { character: "lauretta", index: 4 } },
-    { title: "The doctor's visit", kind: "Scene · Schicchi as Buoso", who: ["schicchi"] },
-    { title: "Si corre dal notaio", kind: "Aria", who: ["schicchi"], piece: { character: "schicchi", index: 0 } },
-    { title: "The relatives bargain", kind: "Ensemble", who: ["zita", "nella", "ciesca", "simone", "rinuccio"] },
-    { title: "Spogliati, bambolino", kind: "Trio", who: ["nella", "ciesca", "zita"], piece: { character: "zita", index: 0 } },
-    { title: "Prima un avvertimento", kind: "Schicchi's warning", who: ["schicchi"], piece: { character: "schicchi", index: 1 } },
-    { title: "The new will", kind: "Scene · with the notary", who: ["schicchi", "zita", "nella", "ciesca", "simone", "rinuccio"] },
-    { title: "Lauretta mia", kind: "Love duet", who: ["lauretta", "rinuccio"], piece: { character: "lauretta", index: 5 } },
-    { title: "Ditemi voi, signori", kind: "Schicchi's words to the audience, spoken", who: ["schicchi"], piece: { character: "schicchi", index: 2 } },
-  ],
-};
