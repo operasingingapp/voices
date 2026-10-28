@@ -9398,10 +9398,59 @@ button.lane-label:hover {
   justify-self: start;
 }
 
-/* the ensemble's piano-in-the-score button: faded shows a half-tone icon, hidden a quiet one */
-.piano-state[data-state="faded"] svg {
-  opacity: 0.5;
+
+/* the piano group in the bar: its icon, then sound on/off, then hidden / faded / clear in the score */
+.piano-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 48px;
+  padding: 0 4px 0 12px;
+  border-radius: 999px;
+  background: var(--canvas);
+  box-shadow: 0 1px 2px rgba(20, 20, 40, 0.08);
 }
+.pg-icon {
+  display: grid;
+  place-items: center;
+  margin-right: 4px;
+  color: var(--ink);
+}
+.pg-icon svg,
+.pg-btn svg {
+  width: 22px;
+  height: 22px;
+}
+.pg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 14px/1 var(--font-sans);
+  cursor: pointer;
+}
+.pg-btn:hover:not(:disabled) {
+  background: var(--fog);
+}
+.pg-btn[aria-pressed="false"],
 .piano-state[data-state="hidden"] {
   color: var(--ink-muted);
+}
+.piano-state[data-state="faded"] svg {
+  opacity: 0.7;
+}
+@media (max-width: 1100px) {
+  .piano-state span {
+    display: none;
+  }
+}
+
+.now-meta .who-pick {
+  margin-left: 0;
 }

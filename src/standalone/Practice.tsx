@@ -497,7 +497,7 @@ function PracticeScreen({
   // in an ensemble the score shows the singers and leaves the piano out unless you ask for it (you still hear it):
   // six staves do not fit a landscape screen at a readable size
   const showOf = (p: CompiledEdition["parts"][number]) => lineSets[p.key]?.show ?? !(ens && p.kind === "piano");
-  const hiddenIds = ens ? orderedIds.filter((xid) => !showOf(partByXml(xid))) : [];
+  const hiddenIds = orderedIds.filter((xid) => !showOf(partByXml(xid)));
   /** several lines' settings changed at once (a preset) */
   const patchLines = (patches: Record<string, LineSet>) => {
     const next = { ...lineSets };
@@ -505,7 +505,7 @@ function PracticeScreen({
     setLineSets(next);
   };
   const lineName = (p: CompiledEdition["parts"][number]) => (p.kind === "piano" ? "Piano" : p.shortLabel);
-  const shownXml = useMemo(() => (ens ? reorderXml(displayXml, orderedIds) : displayXml), [ens, orderedIds]);
+  const shownXml = useMemo(() => (orderedIds.join() === xmlOrder.join() ? displayXml : reorderXml(displayXml, orderedIds)), [orderedIds]);
   const moveLine = (i: number, dir: -1 | 1) => {
     const next = [...orderedIds];
     const j = i + dir;
@@ -1197,9 +1197,13 @@ function PracticeScreen({
         <div className="line-card" style={cardTone}>
           <div className="now-bar">
             <p className="now-meta">
-              <span className="now-dot" aria-hidden="true" />
-              {current.sounding ? "Now singing" : q < spans[0].startQ ? "First line" : "Next"}
-              {whoPick}
+              {/* an ensemble's card heads with the singers (whose words); a solo's with where you are */}
+              {whoPick ?? (
+                <>
+                  <span className="now-dot" aria-hidden="true" />
+                  {current.sounding ? "Now singing" : q < spans[0].startQ ? "First line" : "Next"}
+                </>
+              )}
             </p>
             {!playing && curTip && (
               <button
@@ -1287,16 +1291,12 @@ function PracticeScreen({
           edition={edition}
           perf={perf}
           visibleXmlParts={hiddenIds.length ? orderedIds.filter((x) => !hiddenIds.includes(x)) : null}
-          laneLabels={ens ? Object.fromEntries(orderedIds.map((x) => [x, lineName(partByXml(x)) + (x === voicePart.source.xmlPartId ? " · you" : "")])) : undefined}
-          onLaneLabel={
-            ens
-              ? (xid, el) => {
-                  const r = el.getBoundingClientRect();
-                  setLaneMenu((m) => (m?.xid === xid ? null : { xid, left: r.left, top: r.bottom + 6 }));
-                }
-              : undefined
-          }
-          tintXmlParts={ens ? [voicePart.source.xmlPartId] : undefined}
+          laneLabels={Object.fromEntries(orderedIds.map((x) => [x, lineName(partByXml(x)) + (x === voicePart.source.xmlPartId ? " · you" : "")]))}
+          onLaneLabel={(xid, el) => {
+            const r = el.getBoundingClientRect();
+            setLaneMenu((m) => (m?.xid === xid ? null : { xid, left: r.left, top: r.bottom + 6 }));
+          }}
+          tintXmlParts={[voicePart.source.xmlPartId]}
           zoom={effZoom}
           cursor={cursorRef}
           marker={markerRef}
@@ -1590,8 +1590,8 @@ function PracticeScreen({
         </div>
       </div>
 
-      <footer className={`p-bar gutter${ens ? " ens" : ""}`}>
-        <div className={`bar-parts${ens ? " many" : ""}`} role="group" aria-label="Parts">
+      <footer className="p-bar gutter ens">
+        <div className="bar-parts many" role="group" aria-label="Parts">
           <button
             type="button"
             className="part"
@@ -1635,35 +1635,64 @@ function PracticeScreen({
                 </button>
               );
             })}
-          {!ens && (
-          <button type="button" className="part" title={`Piano: ${hearPiano ? "plays" : "muted"}`} aria-pressed={hearPiano} onClick={() => setHearPiano(!hearPiano)} aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}>
-            <span className="part-face piano" aria-hidden="true">
-              {Icon.piano}
-            </span>
-            <span className="part-text">
-              <b>Piano</b>
-              <small>{hearPiano ? "Plays" : "Muted"}</small>
-            </span>
-            <span className="part-icon">{hearPiano ? Icon.speaker : Icon.muted}</span>
-          </button>
-          )}
+          {(() => {
+            // the piano as one group: heard or not, and in the score hidden, faded or clear (a tap moves to the next)
+            const state = !showOf(pianoPart) ? "hidden" : pianoFaded ? "faded" : "clear";
+            const next = state === "hidden" ? "faded" : state === "faded" ? "clear" : "hidden";
+            return (
+              <div className="piano-group" role="group" aria-label="Piano">
+                <span className="pg-icon" aria-hidden="true">
+                  {Icon.piano}
+                </span>
+                <button
+                  type="button"
+                  className="pg-btn"
+                  aria-pressed={hearPiano}
+                  onClick={() => setHearPiano(!hearPiano)}
+                  aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}
+                  title={hearPiano ? "Piano: plays" : "Piano: muted"}
+                >
+                  {hearPiano ? Icon.speaker : Icon.muted}
+                </button>
+                {view === "music" && (
+                  <button
+                    type="button"
+                    className="pg-btn piano-state"
+                    data-state={state}
+                    onClick={() => {
+                      if (next === "hidden") setLine(pianoPart.key, { show: false });
+                      else {
+                        setLine(pianoPart.key, { show: true });
+                        setPianoFaded(next === "faded");
+                      }
+                    }}
+                    disabled={next === "hidden" && hiddenIds.length >= orderedIds.length - 1}
+                    aria-label={`The piano in the score is ${state}. Tap to make it ${next}`}
+                    title={`Piano in the score: ${state}. Tap for ${next}`}
+                  >
+                    {state === "hidden" ? Icon.eyeOff : state === "faded" ? Icon.fade : Icon.eye}
+                    <span>{state === "hidden" ? "Hidden" : state === "faded" ? "Faded" : "Clear"}</span>
+                  </button>
+                )}
+              </div>
+            );
+          })()}
           <button
             type="button"
             className="cp-btn part-fade mix-btn"
             aria-haspopup="dialog"
             aria-expanded={mixOpen}
-            aria-label={ens ? "Lines: who you sing, and each line's sound, instrument and place in the score" : "Sound: volume of each part, and what the sung line is played on"}
+            aria-label={ens ? "Arrange: who you sing, and each line's sound, instrument and place in the score" : "Arrange: each line's sound, instrument and place in the score"}
             onClick={() => setMixOpen(!mixOpen)}
           >
             {Icon.sliders}
-            <span>{ens ? "Arrange" : "Sound"}</span>
+            <span>Arrange</span>
           </button>
           {mixOpen && (
-            <div className={`mix-pop${ens ? " ens" : ""}`} role="dialog" aria-label={ens ? "Lines" : "Sound"}>
-              {ens ? (
+            <div className="mix-pop ens" role="dialog" aria-label="Arrange the lines">
                 <>
                   <p className="mix-title">Arrange the lines</p>
-                  {onSing && (
+                  {onSing && voiceParts.length > 1 && (
                     <div className="mix-sing">
                       <span className="mix-sub">You sing</span>
                       <div className="cp-seg mix-names" role="group" aria-label="The character you sing">
@@ -1795,7 +1824,9 @@ function PracticeScreen({
                         </button>
                       ))}
                     </div>
-                    <span className="mix-hint">Turn off whoever is sung live: you, or the people singing with you.</span>
+                    <span className="mix-hint">
+                      {ens ? "Turn off whoever is sung live: you, or the people singing with you." : "Turn your line off to sing it yourself."}
+                    </span>
                   </div>
                   <div className="mix-sing">
                     <span className="mix-sub">Show in the score</span>
@@ -1819,71 +1850,6 @@ function PracticeScreen({
                   </div>
                   {soundLoading && <p className="mix-note">Loading the instruments…</p>}
                 </>
-              ) : (
-                <>
-              <div className="mix-row">
-                <span className="part-face you" data-tone="pink" aria-hidden="true">
-                  <RoleFace k={portraitKey} />
-                </span>
-                <div className="mix-main">
-                  <div className="mix-head">
-                    <b>{roleName}'s line</b>
-                    <span>{hearVoice ? `${vol.voice}%` : "Muted"}</span>
-                  </div>
-                  <input
-                    type="range"
-                    className="cp-slider"
-                    min={0}
-                    max={100}
-                    step={5}
-                    value={vol.voice}
-                    style={{ ["--fill" as string]: `${vol.voice}%` }}
-                    aria-label={`${roleName}'s line: volume`}
-                    onChange={(e) => {
-                      setVol({ ...vol, voice: Number(e.target.value) });
-                      if (!hearVoice) setHearVoice(true);
-                    }}
-                  />
-                  <div className="mix-inst">
-                    <span>Played on</span>
-                    <div className="cp-seg" role="group" aria-label={`${roleName}'s line is played on`}>
-                      {LINE_SOUNDS.map((o) => (
-                        <button key={o.id} type="button" aria-pressed={lineSound === o.id} onClick={() => setLineSound(o.id)}>
-                          {o.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  {soundLoading && <p className="mix-note">Loading the {LINE_SOUNDS.find((o) => o.id === lineSound)?.label.toLowerCase()}…</p>}
-                </div>
-              </div>
-              <div className="mix-row">
-                <span className="part-face piano" aria-hidden="true">
-                  {Icon.piano}
-                </span>
-                <div className="mix-main">
-                  <div className="mix-head">
-                    <b>Piano</b>
-                    <span>{hearPiano ? `${vol.piano}%` : "Muted"}</span>
-                  </div>
-                  <input
-                    type="range"
-                    className="cp-slider"
-                    min={0}
-                    max={100}
-                    step={5}
-                    value={vol.piano}
-                    style={{ ["--fill" as string]: `${vol.piano}%` }}
-                    aria-label="Piano: volume"
-                    onChange={(e) => {
-                      setVol({ ...vol, piano: Number(e.target.value) });
-                      if (!hearPiano) setHearPiano(true);
-                    }}
-                  />
-                </div>
-              </div>
-                </>
-              )}
               {!ens && voices.length > 1 && (
                 <div className="mix-row">
                   <span className="part-face piano" aria-hidden="true">
@@ -1919,46 +1885,6 @@ function PracticeScreen({
                 </button>
               )}
             </div>
-          )}
-          {view === "music" && ens && (
-            (() => {
-              // the piano in the score: hidden, faded or clear (a tap moves to the next)
-              const state = !showOf(pianoPart) ? "hidden" : pianoFaded ? "faded" : "clear";
-              const next = state === "hidden" ? "faded" : state === "faded" ? "clear" : "hidden";
-              return (
-                <button
-                  type="button"
-                  className="cp-btn part-fade piano-state"
-                  data-state={state}
-                  aria-pressed={state !== "hidden"}
-                  onClick={() => {
-                    if (next === "hidden") setLine(pianoPart.key, { show: false });
-                    else {
-                      setLine(pianoPart.key, { show: true });
-                      setPianoFaded(next === "faded");
-                    }
-                  }}
-                  aria-label={`The piano in the score is ${state}. Tap to make it ${next}`}
-                  title={`Piano in the score: ${state}. Tap for ${next}`}
-                >
-                  {Icon.piano}
-                  <span>Piano: {state}</span>
-                </button>
-              );
-            })()
-          )}
-          {view === "music" && !ens && (
-          <button
-            type="button"
-            className="cp-btn part-fade"
-            aria-pressed={pianoFaded}
-            onClick={() => setPianoFaded(!pianoFaded)}
-            aria-label={pianoFaded ? "The piano part is faded. Show it clearly" : "Fade the piano part"}
-            title={pianoFaded ? "Show the piano clearly" : "Fade the piano"}
-          >
-            {Icon.fade}
-            <span>Fade piano</span>
-          </button>
           )}
         </div>
 
