@@ -10375,3 +10375,31 @@ p.rp-opera > span:not(:last-child)::after {
 .practice .tl-line.done {
   background: var(--now-mark);
 }
+
+/* the progress line: a hairline for the whole piece, with the passages you sing as soft rounded
+   bars on it; everything before the handle turns green */
+.practice .tl-line {
+  height: 2px;
+  margin-top: -1px;
+  border-radius: 1px;
+  background: color-mix(in srgb, var(--ink) 14%, transparent);
+}
+.practice .tl-line.done {
+  background: color-mix(in srgb, var(--now-mark) 60%, transparent);
+}
+.tl-pass {
+  position: absolute;
+  top: 50%;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--ink) 22%, transparent);
+  pointer-events: none;
+}
+.tl-pass i {
+  display: block;
+  height: 100%;
+  background: var(--now-mark);
+}
+.practice .tl-head { z-index: 2; }
