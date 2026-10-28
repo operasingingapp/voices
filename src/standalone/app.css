@@ -11370,3 +11370,9 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* Words without the English: one column, so the page's column narrows to a reading width and sits in the middle
    (left-aligned text in a centred column: lines still start in one place, nothing hugs the left edge) */
 .practice.is-words .words-view.no-tr .w-grid { max-width: 720px; }
+@media (min-width: 900px) {
+  /* Both: a clean cut, no feathering — the music simply ends at its column, a clear gutter before the words */
+  .practice.is-split > .p-stage::after { content: none; display: none; }
+  .practice.is-split > .p-stage { margin-right: 16px; overflow: hidden; }
+  .practice.is-split > .words-view { margin-left: 0; }
+}
