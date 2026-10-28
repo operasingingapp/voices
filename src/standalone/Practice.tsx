@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { Story, storyOf } from "./synopses";
 import { Performance, beatInfo } from "../../shared/timeline";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
@@ -7,7 +7,7 @@ import type { LineInstrument } from "../audio/samplerPort";
 import { useLocalSetting, useTicker } from "../hooks";
 import { ScoreView, stripCrop, type CursorReading, type Flag, type MarkerReading } from "../score/ScoreView";
 import type { Lane, ScoreLayout } from "../score/layout";
-import { PORTRAITS } from "./opera-extra";
+import { ART_TONES, PORTRAITS } from "./opera-extra";
 import { decorate, syllableRanges, type Deco, type SylProgress } from "./syllables";
 import { buildTips, type TipLine } from "./tips";
 import { onVoicesChanged, setSpeechLanguage, speak, stopSpeaking, voiceInfo } from "./speech";
@@ -571,6 +571,11 @@ function PracticeScreen({
       </select>
     </label>
   ) : null;
+  // the singer's own colours (chosen with their picture) for "you" on this screen, instead of the default pink
+  const practiceTone = (() => {
+    const t = ART_TONES[portraitKey];
+    return t ? ({ "--you": t.deep, "--tone-soft": t.soft, "--tone-strong": t.strong, "--tone-deep": t.deep } as CSSProperties) : undefined;
+  })();
   const voiceTypeOf = (p: CompiledEdition["parts"][number]) => edition.roles.find((r) => r.partKey === p.key)?.voiceType ?? "";
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
@@ -1142,7 +1147,7 @@ function PracticeScreen({
   };
 
   return (
-    <div className={`practice is-${view}`}>
+    <div className={`practice is-${view}`} style={practiceTone}>
       <header className="p-head gutter">
         {onMenu && (
           <button type="button" className="cp-icon-btn p-menu" onClick={onMenu} aria-label="Your roles and pieces">

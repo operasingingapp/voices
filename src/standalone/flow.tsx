@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import editionJson from "../../data/content/puccini-o-mio-babbino-caro/edition.json";
 import languageJson from "../../data/content/puccini-o-mio-babbino-caro/language.json";
 import { Performance } from "../../shared/timeline";
@@ -6,13 +6,25 @@ import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
-import { ART, BRAVO, PORTRAITS, STORIES } from "./opera-extra";
+import { ART, ART_TONES, BRAVO, PORTRAITS, STORIES } from "./opera-extra";
 import { SYNOPSES, Story, storyOf } from "./synopses";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
 export type Tone = "pink" | "lilac" | "peach" | "sky" | "mint" | "butter";
+/**
+ * A character's own card colours, chosen with their picture (ART_TONES): they replace the voice's tone wherever
+ * the character's card, chip or face appears. Without a picture the voice's tone stays.
+ */
+export function opToneStyle(opera: string): CSSProperties | undefined {
+  return toneStyle("op", opera);
+}
+export function toneStyle(opera: string, character: string): CSSProperties | undefined {
+  const t = ART_TONES[`${opera}:${character}`];
+  return t ? ({ "--tone-soft": t.soft, "--tone-strong": t.strong, "--tone-deep": t.deep, "--art-back": t.back } as CSSProperties) : undefined;
+}
+
 export function voiceTone(voice: string): Tone {
   const v = voice.toLowerCase();
   if (v.startsWith("mezzo")) return "lilac";
@@ -390,7 +402,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
                     role="radio"
                     aria-checked={picked}
                     className="sb-face"
-                    data-tone={voiceTone(ch.voice)}
+                    data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}
                     title={`${ch.name} · ${opera.title}`}
                     aria-label={`${ch.name}, ${opera.title}`}
                     onClick={() => ctx.chooseRole(r)}
@@ -417,7 +429,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           // the role's other pieces, in the order of the opera, under the one to continue (those without music yet quieter)
           const more = ch.pieces.map((p, i) => ({ p, i })).filter(({ i }) => i !== target?.place.piece);
           return (
-            <section className="sb-now" data-tone={voiceTone(ch.voice)} aria-label="What you are learning" key={`${opera.id}:${ch.id}`}>
+            <section className="sb-now" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)} aria-label="What you are learning" key={`${opera.id}:${ch.id}`}>
               <button
                 type="button"
                 className="sb-role"
@@ -541,7 +553,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
   const word = FEMALE.test(ch.voice) ? "Brava!" : "Bravo!";
   const count = n === 1 ? "its one piece" : `all ${["", "", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"][n] ?? n} pieces`;
   return (
-    <div className="bravo" role="dialog" aria-modal="true" aria-labelledby="bravo-h" data-tone={voiceTone(ch.voice)}>
+    <div className="bravo" role="dialog" aria-modal="true" aria-labelledby="bravo-h" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
       <button type="button" className="bravo-scrim" aria-label="Close" tabIndex={-1} onClick={onClose} />
       <div className="bravo-card">
         <div className="bravo-media">
@@ -609,7 +621,7 @@ function NowPill({ ctx }: { ctx: Ctx }) {
   const { opera, ch } = cur;
   const target = continueTarget(ctx, opera, ch);
   return (
-    <div className="now-pill" data-tone={voiceTone(ch.voice)}>
+    <div className="now-pill" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
       <button type="button" className="np-role" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
         <span className="np-face">
           <Face opera={opera} ch={ch} />
@@ -751,7 +763,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           { label: ch.name },
         ]}
       />
-      <section className={`rp-head${ART[opera.id] ? " has-art" : ""}`} data-tone={voiceTone(ch.voice)}>
+      <section className={`rp-head${ART[opera.id] ? " has-art" : ""}`} data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
         {ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />}
         <ProgressRing value={pr.pct} size={152} stroke={7}>
           <Face opera={opera} ch={ch} />
@@ -912,7 +924,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   return (
     <main className="screen-body gutter page">
       <Crumbs ctx={ctx} trail={[{ label: "Operas", to: { screen: "explore", by: "opera" } }, { label: opera.title, lang: opera.lang }]} />
-      <section className={`op-head${ART[opera.id] ? " has-art" : ""}`} data-tone={tone}>
+      <section className={`op-head${ART[opera.id] ? " has-art" : ""}`} data-tone={tone} style={opToneStyle(opera.id)}>
         {ART[opera.id] && (
           <figure className="op-cover">
             <img src={ART[opera.id].cover} alt={ART[opera.id].alt} />
@@ -957,7 +969,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                 key={c.id}
                 type="button"
                 className={`sc-card${art ? " has-art" : ""}${ready ? "" : " soon"}`}
-                data-tone={voiceTone(c.voice)}
+                data-tone={voiceTone(c.voice)} style={toneStyle(opera.id, c.id)}
                 onClick={() => ctx.go({ screen: "role", opera: opera.id, character: c.id })}
               >
                 <span className="sc-pic">
@@ -1067,7 +1079,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
 function ReadyCard({ ctx, opera, ch, index }: { ctx: Ctx; opera: Opera; ch: Character; index: number }) {
   const piece = ch.pieces[index];
   return (
-    <button type="button" className="ready-card" data-tone={voiceTone(ch.voice)} onClick={() => ctx.go({ screen: "piece", opera: opera.id, character: ch.id, piece: index })}>
+    <button type="button" className="ready-card" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)} onClick={() => ctx.go({ screen: "piece", opera: opera.id, character: ch.id, piece: index })}>
       <span className="ready-face">
         <Face opera={opera} ch={ch} />
       </span>
@@ -1101,6 +1113,7 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
                 type="button"
                 className={`sc-card${art ? " has-art" : ""}`}
                 data-tone={OPERA_TONES[i % OPERA_TONES.length]}
+                style={opToneStyle(o.id)}
                 onClick={() => ctx.go({ screen: "opera", opera: o.id })}
               >
                 <span className="sc-pic">
@@ -1126,7 +1139,7 @@ function RoleCard({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Character })
   const ready = ch.pieces.filter((p) => p.editionId).length;
   const yours = ctx.roles.some((r) => same(r, { opera: opera.id, character: ch.id }));
   return (
-    <button type="button" className={`vrole${ready ? " ready" : " soon"}`} data-tone={voiceTone(ch.voice)} onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
+    <button type="button" className={`vrole${ready ? " ready" : " soon"}`} data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)} onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
       <span className="vrole-face">
         <Face opera={opera} ch={ch} />
       </span>
@@ -1323,7 +1336,7 @@ export function PiecePage({ ctx, opera, ch, index }: { ctx: Ctx; opera: Opera; c
           { label: p.title, lang: opera.lang },
         ]}
       />
-      <section className="pp-head" data-tone={voiceTone(ch.voice)}>
+      <section className="pp-head" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
         <p className="cp-eyebrow">{p.kind}</p>
         <h1 lang={opera.lang}>{p.title}</h1>
         {p.when && <p className="pp-when">{p.when}</p>}
@@ -1567,7 +1580,7 @@ function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void })
                   key={`${copy}-${opera.id}:${ch.id}`}
                   type="button"
                   className="reel-card"
-                  data-tone={voiceTone(ch.voice)}
+                  data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}
                   aria-hidden={copy > 0 || undefined}
                   tabIndex={copy > 0 ? -1 : undefined}
                   onClick={() => onPick(opera, ch)}
@@ -1688,6 +1701,7 @@ export function Onboarding({
                         type="button"
                         className="obs-opera"
                         data-tone={OPERA_TONES[n % OPERA_TONES.length]}
+                        style={opToneStyle(o.id)}
                         onClick={() => ctx.go(at(3, { opera: o.id, role: undefined }))}
                       >
                         <span className="obs-thumb" aria-hidden="true">
@@ -1729,7 +1743,7 @@ export function Onboarding({
                   role="radio"
                   aria-checked={selected === key}
                   className={`sc-card${art ? " has-art" : ""}${selected === key ? " picked" : ""}`}
-                  data-tone={voiceTone(ch.voice)}
+                  data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}
                   onClick={() => setSelected(key)}
                 >
                   <span className="sc-pic">

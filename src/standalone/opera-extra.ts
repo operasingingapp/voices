@@ -1,124 +1,93 @@
 /** A short story for each opera, and the full running order where we have it. Written for this app. */
-import figaroCover from "./images/figaro-cover.webp";
 import countessBravo from "./images/figaro-countess-bravo.mp4?url";
 import countessBravoPoster from "./images/figaro-countess-bravo-poster.webp";
-import figaroSquare from "./images/figaro-square.webp";
-import countessFace from "./images/figaro-countess-face.webp";
-import countessPortrait from "./images/figaro-countess-portrait.webp";
-import susannaFace from "./images/figaro-susanna-face.webp";
-import susannaPortrait from "./images/figaro-susanna-portrait.webp";
-import annaFace from "./images/giovanni-anna-face.webp";
-import annaPortrait from "./images/giovanni-anna-portrait.webp";
-import zerlinaFace from "./images/giovanni-zerlina-face.webp";
-import zerlinaPortrait from "./images/giovanni-zerlina-portrait.webp";
-import elviraFace from "./images/giovanni-elvira-face.webp";
-import elviraPortrait from "./images/giovanni-elvira-portrait.webp";
-import giovanniCover from "./images/giovanni-cover.webp";
-import giovanniSquare from "./images/giovanni-square.webp";
-import paminaFace from "./images/zauberflote-pamina-face.webp";
-import paminaPortrait from "./images/zauberflote-pamina-portrait.webp";
-import taminoFace from "./images/zauberflote-tamino-face.webp";
-import taminoPortrait from "./images/zauberflote-tamino-portrait.webp";
-import papagenoFace from "./images/zauberflote-papageno-face.webp";
-import papagenoPortrait from "./images/zauberflote-papageno-portrait.webp";
-import queenFace from "./images/zauberflote-queen-face.webp";
-import queenPortrait from "./images/zauberflote-queen-portrait.webp";
-import zauberfloteCover from "./images/zauberflote-cover.webp";
-import zauberfloteSquare from "./images/zauberflote-square.webp";
-import laurettaFace from "./images/lauretta-face.webp";
-import laurettaPortrait from "./images/lauretta-portrait.webp";
-import schicchiFace from "./images/schicchi-schicchi-face.webp";
-import schicchiPortrait from "./images/schicchi-schicchi-portrait.webp";
-import schicchiCover from "./images/schicchi-cover.webp";
-import schicchiSquare from "./images/schicchi-square.webp";
+import artTones from "./art-tones.json";
 
-/** Portraits for the characters that have one (key: "opera:character"): a full portrait and a face crop for circles. */
-export const PORTRAITS: Record<string, { portrait: string; face: string; alt: string }> = {
-  "schicchi:schicchi": {
-    portrait: schicchiPortrait,
-    face: schicchiFace,
-    alt: "Gianni Schicchi in a red cap and red robe, white beard and moustache, holding the will and smiling slyly.",
-  },
-  "schicchi:lauretta": {
-    portrait: laurettaPortrait,
-    face: laurettaFace,
-    alt: "Lauretta in a red dress with a white shawl and a pearl earring, looking up.",
-  },
-  "figaro:susanna": {
-    portrait: susannaPortrait,
-    face: susannaFace,
-    alt: "Susanna in a rose dress, white apron and maid's cap, holding a folded letter and smiling over her shoulder.",
-  },
-  "figaro:countess": {
-    portrait: countessPortrait,
-    face: countessFace,
-    alt: "The Countess in a lavender gown with powdered hair and a pearl earring, holding an open fan.",
-  },
-  "giovanni:anna": {
-    portrait: annaPortrait,
-    face: annaFace,
-    alt: "Donna Anna in black and violet, a white handkerchief at her throat, looking away with a stern, grieving face.",
-  },
-  "giovanni:zerlina": {
-    portrait: zerlinaPortrait,
-    face: zerlinaFace,
-    alt: "Zerlina in a green bodice and white sleeves, a ribbon in her hair, smiling sideways.",
-  },
-  "giovanni:elvira": {
-    portrait: elviraPortrait,
-    face: elviraFace,
-    alt: "Donna Elvira in deep red, auburn hair loosely pinned, a hand at her heart and tears in her eyes.",
-  },
-  "zauberfloete:tamino": {
-    portrait: taminoPortrait,
-    face: taminoFace,
-    alt: "Tamino in a deep teal robe with white sleeves, holding the golden flute and smiling, his dark hair tied back.",
-  },
-  "zauberfloete:papageno": {
-    portrait: papagenoPortrait,
-    face: papagenoFace,
-    alt: "Papageno in a green cloak and a feathered hat, holding his panpipes and grinning upwards.",
-  },
-  "zauberfloete:pamina": {
-    portrait: paminaPortrait,
-    face: paminaFace,
-    alt: "Pamina in flowing lilac and white, dark hair in a long braid, a hand at her heart, looking up.",
-  },
-  "zauberfloete:queen": {
-    portrait: queenPortrait,
-    face: queenFace,
-    alt: "The Queen of the Night in a violet cloak with a high collar, a crown of silver spikes in her long white hair, one hand raised.",
-  },
+/**
+ * The illustrations (images/README.md): each character's portrait and face, each opera's cover and circle, as
+ * <opera>-<character>-portrait|face.webp and <opera>-cover|square.webp. Built from the user's Figma file by
+ * scripts/art/build.py: the figure over its own backdrop, with a fine grain.
+ */
+const pics = import.meta.glob("./images/*.webp", { eager: true, import: "default" }) as Record<string, string>;
+const pic = (name: string) => pics[`./images/${name}.webp`];
+
+/** what each portrait shows (for screen readers) */
+const PORTRAIT_ALT: Record<string, string> = {
+  "figaro:figaro": "Figaro in an olive waistcoat and white shirt, dark hair tied back, smiling and pointing.",
+  "figaro:susanna": "Susanna in a coral dress with a white apron and cap, holding a note.",
+  "figaro:countess": "The Countess in lilac silk, her powdered hair piled high, a white fan in her hand.",
+  "figaro:count": "Count Almaviva in a purple coat with a lace jabot, white hair tied back, looking sideways.",
+  "figaro:cherubino": "Cherubino in a mustard coat with lace at his throat, curly hair, a hand on his heart.",
+  "giovanni:dongiovanni": "Don Giovanni in black with an olive cloak over one shoulder, smiling confidently.",
+  "giovanni:leporello": "Leporello in a brown coat and red waistcoat, holding open a book and raising a finger.",
+  "giovanni:anna": "Donna Anna in black and violet, dark hair loose, looking away with a stern, grieving face.",
+  "giovanni:elvira": "Donna Elvira in deep red, auburn hair pinned up, a hand at her heart.",
+  "giovanni:zerlina": "Zerlina in a green bodice and white blouse, brown hair tied back, a hand at her chin.",
+  "cosi:fiordiligi": "Fiordiligi in a teal bodice with white sleeves, dark hair pinned with pearls, holding a letter.",
+  "cosi:dorabella": "Dorabella in a coral dress, red hair curled, holding a white fan.",
+  "cosi:ferrando": "Ferrando in a gold coat with a lace jabot, dark hair and a moustache, a hand at his chest.",
+  "cosi:guglielmo": "Guglielmo in a teal coat with a lace jabot, dark hair and a moustache, smiling.",
+  "cosi:alfonso": "Don Alfonso in a black coat with a lace jabot, white hair, leaning on a cane.",
+  "zauberfloete:tamino": "Tamino in an ochre tunic with white sleeves, holding the magic flute.",
+  "zauberfloete:pamina": "Pamina in a blue dress, long brown hair, a hand at her heart, looking up.",
+  "zauberfloete:papageno": "Papageno in a green cloak and a feathered cap, holding his panpipes and grinning.",
+  "zauberfloete:queen": "The Queen of the Night in black and violet with a white cape, a silver crescent in her hair, one hand raised.",
+  "zauberfloete:sarastro": "Sarastro in a dark robe with a white collar, a long white beard, his hands folded.",
+  "barbiere:figarob": "Figaro the barber in a red waistcoat and white shirt, scissors in hand, pointing upwards.",
+  "barbiere:rosina": "Rosina in a teal gown with white sleeves, a white flower in her dark hair, holding a letter.",
+  "barbiere:almaviva": "Count Almaviva in a navy coat and gold waistcoat, a hand on his hip.",
+  "barbiere:basilio": "Don Basilio in black with a tricorn hat, a hand at his chin, a rolled paper under his arm.",
+  "barbiere:bartolob": "Doctor Bartolo in a burgundy coat and olive waistcoat, a grey wig, frowning.",
+  "traviata:violetta": "Violetta in a deep red gown with a white wrap, a white camellia in her hair.",
+  "traviata:alfredo": "Alfredo in a black tailcoat and cream waistcoat, holding white gloves.",
+  "traviata:germont": "Giorgio Germont in a dark suit and grey waistcoat, grey hair, his hands folded.",
+  "carmen:carmen": "Carmen in a red dress and black shawl, a red rose in her dark hair, arms crossed.",
+  "carmen:jose": "Don José in a navy uniform with a gold belt, dark hair, a hand at his collar.",
+  "carmen:micaela": "Micaëla in a blue dress and white shawl, a long braid over her shoulder.",
+  "carmen:escamillo": "Escamillo in a black and gold bullfighter's jacket with a gold sash, a hand on his hip.",
+  "butterfly:ciociosan": "Cio-Cio-San in a red and white kimono, white flowers in her black hair.",
+  "butterfly:pinkerton": "Pinkerton in a navy officer's uniform with gold buttons and stripes.",
+  "butterfly:suzuki": "Suzuki in a teal kimono with a gold sash, dark hair tied back.",
+  "schicchi:schicchi": "Gianni Schicchi in a red cap and red robe, white beard and moustache, holding the will and smiling slyly.",
+  "schicchi:lauretta": "Lauretta in a red dress with white sleeves, brown hair, a hand at her chin.",
+};
+const COVER_ALT: Record<string, string> = {
+  figaro: "Figaro and Susanna among the Countess with her fan, the Count and Cherubino.",
+  giovanni: "Don Giovanni in his cloak among Donna Anna, Donna Elvira and Zerlina.",
+  cosi: "Fiordiligi and Dorabella between their officers, with Don Alfonso and Despina looking on.",
+  zauberfloete: "The Queen of the Night reaches over Pamina, while Tamino holds the flute.",
+  barbiere: "Figaro with his scissors and Count Almaviva lean towards Rosina, who holds a letter.",
+  traviata: "Violetta in red between Alfredo and his father Germont.",
+  carmen: "Carmen with a rose in her hair, between Don José, Micaëla and Escamillo.",
+  butterfly: "Pinkerton in uniform with Cio-Cio-San in her kimono, and Suzuki beside them.",
+  schicchi: "Gianni Schicchi, in a red cap, reads the will while Buoso's relatives crowd round the bed; Florence beyond the window.",
 };
 
-/** Illustrations for the operas that have one: a wide cover, a square crop for the opera's circle, and what it shows. */
+/** Portraits for the characters that have one (key: "opera:character"): a full portrait and a face crop for circles. */
+export const PORTRAITS: Record<string, { portrait: string; face: string; alt: string }> = Object.fromEntries(
+  Object.entries(PORTRAIT_ALT)
+    .map(([key, alt]) => [key, { portrait: pic(`${key.replace(":", "-")}-portrait`), face: pic(`${key.replace(":", "-")}-face`), alt }] as const)
+    .filter(([, p]) => p.portrait && p.face),
+);
+
+/**
+ * The colours that go with each picture (key: "opera:character", or "op:<opera>"): its backdrop, and the card
+ * tones around it (soft, strong, deep): a pale tint of the backdrop's complement, so card and picture contrast
+ * and belong together.
+ */
+export const ART_TONES = artTones as Record<string, { soft: string; strong: string; deep: string; back: string }>;
+
 /** A role's applause when the whole role is learned (key: "opera:character"): a short film, and its last frame. */
 export const BRAVO: Record<string, { video: string; poster: string }> = {
   "figaro:countess": { video: countessBravo, poster: countessBravoPoster },
 };
 
-export const ART: Record<string, { cover: string; square: string; alt: string }> = {
-  zauberfloete: {
-    cover: zauberfloteCover,
-    square: zauberfloteSquare,
-    alt: "By moonlight, Tamino holds the golden flute and gazes at Pamina; Papageno, with a bird on his hand, grins beside them, and the Queen of the Night reaches towards them.",
-  },
-  giovanni: {
-    cover: giovanniCover,
-    square: giovanniSquare,
-    alt: "Don Giovanni, smiling, takes Zerlina's hand while Donna Elvira points at him in fury and Donna Anna looks on in distress.",
-  },
-  figaro: {
-    cover: figaroCover,
-    square: figaroSquare,
-    alt: "Figaro points out a folded letter to Susanna as the Countess smiles behind her fan; the Count watches darkly and Cherubino peeps round the door.",
-  },
-  schicchi: {
-    cover: schicchiCover,
-    square: schicchiSquare,
-    alt: "Gianni Schicchi, in a red cap, reads the will while Buoso's relatives crowd round the bed; Florence beyond the window.",
-  },
-};
+/** Illustrations for the operas that have one: a wide cover, a square crop for the opera's circle, and what it shows. */
+export const ART: Record<string, { cover: string; square: string; alt: string }> = Object.fromEntries(
+  Object.entries(COVER_ALT)
+    .map(([op, alt]) => [op, { cover: pic(`${op}-cover`), square: pic(`${op}-square`), alt }] as const)
+    .filter(([, a]) => a.cover && a.square),
+);
 
 export const STORIES: Record<string, string> = {
   figaro:
