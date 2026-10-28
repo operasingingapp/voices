@@ -338,6 +338,12 @@ const Icon = {
       <circle cx="16.5" cy="15.5" r="2.5" fill="currentColor" />
     </svg>
   ),
+  split: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3.5" y="5" width="17" height="14" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
+      <path d="M14 5v14M16.5 9h2M16.5 12h2M16.5 15h2" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  ),
   lines: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path fill="none" stroke="currentColor" strokeWidth="2" d="M4 6.5h16M4 12h16M4 17.5h10" />
@@ -425,7 +431,7 @@ const Icon = {
 const volGain = (v: number, base: number) => base * (Math.max(0, v) / 80) ** 2;
 
 type Drawer = "context" | "tips" | "notes" | "about";
-type View = "music" | "words";
+type View = "music" | "split" | "words";
 type OpenWord = { lineId: string; k: number; left: number; top: number };
 /** The fixed padding stripCrop adds around the drawn band, in px (does not scale with zoom). */
 const CROP_PAD = 36;
@@ -675,8 +681,10 @@ function PracticeScreen({
   const [openWord, setOpenWord] = useState<OpenWord | null>(null);
   useBackToClose(!!openWord, () => setOpenWord(null));
   const [view, setView] = useLocalSetting<View>("p:view", "music");
+  // the score is on screen in Music and in Both (Both shows the words beside it where there is room)
+  const musicOn = view !== "words";
   // words view: the IPA under each line can be hidden
-  const [showIpa, setShowIpa] = useLocalSetting("p:ipa", true);
+  const [showIpa, setShowIpa] = useLocalSetting("p:ipa", false);
   const [showTr, setShowTr] = useLocalSetting("p:tr", true);
   // minimal: the line as plain text on a thin rule, nothing else (the music gets the room)
   // (the "minimal" card is gone: while the music plays the card is words only by itself)
@@ -1339,7 +1347,7 @@ function PracticeScreen({
   const wordsTouched = useRef(0);
   useEffect(() => {
     const box = wordsRef.current;
-    if (!box || view !== "words") return;
+    if (!box || view === "music") return;
     if (performance.now() - wordsTouched.current < 3000) return;
     const el = box.querySelector<HTMLElement>(`[data-key="${activeKey}"]`);
     if (!el) return;
@@ -1405,6 +1413,11 @@ function PracticeScreen({
               {Icon.music}
               <span className="label">Music</span>
             </button>
+            {/* music with the words beside it (a wide screen): the libretto next to the score */}
+            <button type="button" className="vs-split" aria-pressed={view === "split"} onClick={() => setView("split")} title="Music and words side by side">
+              {Icon.split}
+              <span className="label">Both</span>
+            </button>
             <button type="button" aria-pressed={view === "words"} onClick={() => setView("words")}>
               {Icon.lines}
               <span className="label">Words</span>
@@ -1426,7 +1439,7 @@ function PracticeScreen({
 
       {/* the line: a card with one quiet header row (where you are, and how to hear it) above the words */}
       <section
-        className={`now-panel${current.sounding ? " is-now" : ""}${live && view === "music" ? " is-playing" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && view === "music" ? " minimal" : ""}`}
+        className={`now-panel${current.sounding ? " is-now" : ""}${live && musicOn ? " is-playing" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && musicOn ? " minimal" : ""}`}
         data-testid="now-panel"
       >
         <div className="line-card" style={cardTone}>
@@ -1529,7 +1542,7 @@ function PracticeScreen({
                 [{shown.ph.ipa}]
               </p>
               {showTr && <p className="now-tr">{curly(shown.ph.translation)}</p>}
-              {view === "music" && cardFor(shown.ph.id, "now-card-word")}
+              {musicOn && cardFor(shown.ph.id, "now-card-word")}
             </div>
             <button type="button" className="now-step" onClick={() => stepLine(1)} aria-label="Next line">
               {Icon.right}
@@ -1538,7 +1551,7 @@ function PracticeScreen({
         </div>
       </section>
 
-      <main className="p-stage" ref={stageRef} onPointerDown={() => view === "music" && openWord && setOpenWord(null)}>
+      <main className="p-stage" ref={stageRef} onPointerDown={() => musicOn && openWord && setOpenWord(null)}>
         <ScoreView
           xml={shownXml}
           edition={edition}
@@ -1622,7 +1635,7 @@ function PracticeScreen({
           );
         })()}
 
-      {view === "words" && (
+      {(view === "words" || view === "split") && (
         <div
           className={`words-view${playing ? " is-playing" : ""}${showTr ? "" : " no-tr"}`}
           ref={wordsRef}
@@ -1970,7 +1983,7 @@ function PracticeScreen({
                 >
                   {Icon.piano}
                 </button>
-                {view === "music" && (
+                {musicOn && (
                   <>
                     <button
                       type="button"

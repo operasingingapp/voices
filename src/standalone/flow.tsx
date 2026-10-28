@@ -720,14 +720,6 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   const [story, setStory] = useState(false);
   const go = continueTarget(ctx, opera, ch);
   const ready = ch.pieces.filter((p) => p.editionId).length;
-  // what the piece is, and with whom: "Terzettino · Act 1 · with Dorabella and Don Alfonso"
-  const goContext = (() => {
-    if (!go) return "";
-    const p = ch.pieces[go.place.piece];
-    const others = opera.chars.filter((c) => c.id !== ch.id && c.pieces.some((q) => q.editionId && q.editionId === p.editionId)).map((c) => c.name);
-    const w = others.length > 1 ? `${others.slice(0, -1).join(", ")} and ${others[others.length - 1]}` : others[0];
-    return [p.kind, w && `with ${w}`].filter(Boolean).join(" · ");
-  })();
   return (
     <main className="screen-body gutter page">
       <Crumbs
@@ -773,41 +765,21 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
                   return <i key={k} className={done ? "done" : now ? "now" : p.editionId ? "ready" : ""} />;
                 })}
               </div>
+              <div className="rh2-tools">
+                {!mine && (
+                  <button type="button" className="rh2-btn" onClick={() => ctx.toggleRole(r)}>
+                    <Plus />
+                    <span>Add to my roles</span>
+                  </button>
+                )}
+                {SYNOPSES[opera.id] && (
+                  <button type="button" className="rh2-btn" onClick={() => setStory(true)}>
+                    <BookIcon />
+                    <span>{FEMALE.test(ch.voice) ? "Her story" : "His story"}</span>
+                  </button>
+                )}
+              </div>
             </div>
-          )}
-        </div>
-        <div className="rh2-actions">
-          {go && (
-            <button type="button" className="rh2-go" onClick={() => ctx.go(go.place)}>
-              <span className="rh2-play" aria-hidden="true">
-                <Play />
-              </span>
-              <span className="rh2-go-text">
-                <small>
-                  {go.why === "resume"
-                    ? `Pick up where you stopped${resumeBar(opera.id, ch.id, ch.pieces[go.place.piece]?.editionId)}`
-                    : go.why === "next"
-                      ? pr.done
-                        ? "Next to learn"
-                        : "Start here: the first of the role"
-                      : "All learned · sing it again"}
-                </small>
-                <b lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</b>
-                <span className="rh2-go-ctx">{goContext}</span>
-              </span>
-            </button>
-          )}
-          {!mine && (
-            <button type="button" className="rh2-btn" onClick={() => ctx.toggleRole(r)}>
-              <Plus />
-              <span>Add to my roles</span>
-            </button>
-          )}
-          {SYNOPSES[opera.id] && (
-            <button type="button" className="rh2-btn" onClick={() => setStory(true)}>
-              <BookIcon />
-              <span>{FEMALE.test(ch.voice) ? "Her story" : "His story"}</span>
-            </button>
           )}
         </div>
       </section>
@@ -847,7 +819,12 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
                       onClick={ready ? () => ctx.go({ screen: "piece", opera: opera.id, character: ch.id, piece: i }) : toggle}
                     >
                       <b lang={opera.lang}>{p.title}</b>
-                      <span>{p.kind}</span>
+                      <span>
+                        {p.kind}
+                        {ready && ctx.last?.opera === opera.id && ctx.last.character === ch.id && ctx.last.piece === i && (
+                          <em className="ck-last">Last practised{resumeBar(opera.id, ch.id, p.editionId)}</em>
+                        )}
+                      </span>
                     </button>
                   ) : (
                     <span className="ck-text">
@@ -1449,7 +1426,7 @@ function Toggle({ on, onChange, label, hint }: { on: boolean; onChange: (v: bool
 /** Settings: how practice sounds and looks by default, and the data kept on this device. */
 export function ProfilePage({ ctx }: { ctx: Ctx }) {
   const [line, setLine] = useStored<LineChoice>("p:lineSound", "auto");
-  const [ipa, setIpa] = useStored("p:ipa", true);
+  const [ipa, setIpa] = useStored("p:ipa", false);
   const [tr, setTr] = useStored("p:tr", true);
   const [tips, setTips] = useStored("p:tipsBar", true);
   const [countIn, setCountIn] = useStored("p:countin", true);

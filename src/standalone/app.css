@@ -11126,3 +11126,87 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .rh2-row .rh2-name { padding-top: 2px; }
   .rh2-go-ctx { white-space: normal; }
 }
+
+/* role card, calmer: a modest name, two columns of the same weight (who | how far, with the story), no
+   "continue" (the pieces below are where you choose what to practise; the last one is marked there) */
+.rh2 { gap: 14px; padding: 16px 16px 20px; border-radius: 32px; }
+.rh2-band { height: clamp(104px, 12vw, 132px); border-radius: 22px; }
+.rh2-row { grid-template-columns: minmax(0, 1.25fr) minmax(240px, 1fr); align-items: start; gap: 14px 40px; padding: 0 8px; }
+.rh2-row .rh2-id { gap: 18px; padding-left: 0; }
+.rh2-face { width: 112px; height: 112px; box-shadow: 0 0 0 5px var(--tone-soft, var(--fog)); }
+.rh2-row .rh2-face { margin-top: -56px; }
+.rh2-row .rh2-name { padding-top: 10px; }
+.rh2-name h1 { font: 600 30px/1.1 var(--font-sans); letter-spacing: -0.01em; }
+.rh2-name .who-meta { font-size: 15px; margin-top: 4px; }
+.rh2-desc { font-size: 15px; margin-top: 4px; }
+.rh2-row .rh2-prog { padding: 14px 0 0; gap: 10px; }
+.rh2-prog p b { font-size: 22px; }
+.rh2-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.rh2-btn { flex: none; min-height: 44px; padding: 0 18px 0 14px; font-size: 15px; gap: 8px; }
+.rh2-btn svg { width: 18px; height: 18px; }
+.ck-last {
+  margin-left: 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--now-mark) 14%, transparent);
+  color: var(--now-mark);
+  font: 500 12px/1.6 var(--font-sans);
+  font-style: normal;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .rh2-row { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 0 4px; }
+  .rh2-row .rh2-prog { padding-top: 2px; }
+}
+@media (max-width: 640px) {
+  .rh2-band { height: 100px; }
+  .rh2-face { width: 88px; height: 88px; }
+  .rh2-row .rh2-face { margin-top: -44px; }
+  .rh2-row .rh2-id { gap: 14px; }
+  .rh2-row .rh2-name { padding-top: 4px; }
+  .rh2-name h1 { font-size: 24px; }
+  .rh2-name .who-meta, .rh2-desc { font-size: 14px; }
+  .rh2-tools .rh2-btn { flex: 1 1 0; justify-content: center; min-height: 46px; }
+}
+
+/* =====================================================================
+   Both: the music with the words beside it, as a libretto next to the
+   score (wide screens); on narrower ones "Both" is the music view
+   ===================================================================== */
+.practice > .loop-pick { grid-area: 6 / 1 / 7 / -1; }
+@media (min-width: 900px) {
+  .practice.is-split { grid-template-columns: minmax(0, 1fr) clamp(320px, 31%, 420px); }
+  .practice.is-split > .p-head,
+  .practice.is-split > .p-timeline,
+  .practice.is-split > .p-bar { grid-column: 1 / -1; }
+  .practice.is-split > .now-panel { grid-area: 2 / 1; }
+  .practice.is-split > .p-stage { grid-area: 3 / 1; }
+  .practice.is-split > .words-view {
+    grid-area: 2 / 2 / 4 / 3;
+    margin: 0 var(--edge) 12px 0;
+    border-radius: 24px;
+    background: var(--fog);
+  }
+  .practice.is-split > .p-drawer { grid-column: 1 / -1; }
+  .practice.is-split .w-grid { --w-cols: 22px 40px minmax(0, 1fr); max-width: none; padding: 0 6px 40vh; }
+  .practice.is-split .words-view.no-tr .w-grid { --w-cols: 22px 40px minmax(0, 1fr); }
+  .practice.is-split .w-cols { column-gap: 10px; padding: 12px 8px 8px; background: var(--fog); }
+  .practice.is-split .w-col-orig { grid-column: 3; }
+  .practice.is-split .w-col-tr { display: none; }
+  .practice.is-split .words-view .w-line { column-gap: 10px; padding: 8px 8px 10px; }
+  .practice.is-split .words-view .w-it { font-size: 19px; }
+  .practice.is-split .words-view .w-tr { grid-column: 3; grid-row: 2; font-size: 14px; padding-top: 4px; }
+  .practice.is-split .words-view .w-hear { width: 38px; height: 38px; margin-top: -5px; }
+  .practice.is-split .words-view .w-gap,
+  .practice.is-split .w-hint { padding-left: calc(22px + 40px + 28px); margin-left: 0; }
+}
+@media (max-width: 899px) {
+  .practice.is-split > .words-view { display: none; }
+  .view-switch .vs-split { display: none; }
+}
+@media (min-width: 900px) {
+  /* beside the music the words list is just the libretto: whose words, what to show and the tips live in the card */
+  .practice.is-split .w-cols { display: none; }
+  .practice.is-split .w-grid { padding-top: 10px; }
+  .practice.is-split .words-view .w-line.now { background: var(--canvas); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--now-mark) 45%, transparent); }
+}
