@@ -125,6 +125,8 @@ export const STORIES: Record<string, string> = {
     "On their wedding day, Figaro and Susanna, servants of Count Almaviva, set out to outwit the Count, who wants Susanna for himself. With the neglected Countess they plot disguises and swapped letters, and by nightfall in the garden the Count is caught out and begs his wife's forgiveness.",
   giovanni:
     "Don Giovanni seduces his way across Spain and kills the Commendatore while escaping from Donna Anna. Pursued by Anna, Don Ottavio and the abandoned Donna Elvira, he keeps scheming, until the Commendatore's statue accepts his mocking invitation to dinner and drags him to hell.",
+  cosi:
+    "In Naples, two officers bet the cynical Don Alfonso that their fiancées, the sisters Fiordiligi and Dorabella, will stay faithful. Pretending to go to war, they return disguised as ‘Albanians’ and each courts the other's lover, with the maid Despina's help. By evening both sisters have given in; the hoax is revealed, and the couples are reconciled.",
   zauberfloete:
     "Prince Tamino is sent by the Queen of the Night to rescue her daughter Pamina from Sarastro, and finds that Sarastro is wise and the Queen is not. With the bird-catcher Papageno he passes trials of silence, fire and water, and wins Pamina; Papageno finds his Papagena.",
   barbiere:

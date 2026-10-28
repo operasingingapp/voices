@@ -12,6 +12,8 @@ import { decorate, syllableRanges, type Deco, type SylProgress } from "./syllabl
 import { buildTips, type TipLine } from "./tips";
 import { onVoicesChanged, setSpeechLanguage, speak, stopSpeaking, voiceInfo } from "./speech";
 import { pieceData, type PieceInfo } from "./pieces";
+import { Avatar } from "./flow";
+import { OPERAS } from "./operas";
 import { LINE_SOUNDS, resolveLine, type LineChoice } from "./settings";
 
 /*
@@ -19,6 +21,12 @@ import { LINE_SOUNDS, resolveLine, type LineChoice } from "./settings";
  * Practice (below) before its screen renders; the screen is keyed by piece, so everything else starts afresh.
  */
 let pieceId = "";
+/** in an ensemble, the character you sing (a role id in the piece); the other voices are your partners */
+let roleId = "";
+let roleVoiceType = "";
+/** PORTRAITS key of the character you sing */
+let portraitKey = "";
+let otherVoices: CompiledEdition["parts"] = [];
 let info: PieceInfo;
 let edition: CompiledEdition;
 let language: CompiledLanguage;
@@ -57,7 +65,7 @@ const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
 const languageVoiceId = () => {
   const cfg = voiceConfig as { languages?: Record<string, { voiceId?: string }>; male?: Record<string, { voiceId?: string }> };
   // a piece sung by a man uses the language's man's voice, where one is set
-  const male = /tenor|baritone|bass|countertenor/i.test(edition?.roles?.[0]?.voiceType ?? "") ? cfg.male?.[LANG]?.voiceId : undefined;
+  const male = /tenor|baritone|bass|countertenor/i.test(roleVoiceType) ? cfg.male?.[LANG]?.voiceId : undefined;
   return male || (LANG === "it" ? defaultVoiceId : (cfg.languages?.[LANG]?.voiceId ?? ""));
 };
 const voiceById = (id: string) =>
@@ -158,26 +166,39 @@ let NOTES_KEY = "cp:babbino:notes";
 
 const displayCache = new Map<string, string>();
 /** Make `id` the piece on screen (see the top of this file). */
-function loadPiece(id: string) {
-  if (pieceId === id) return;
+function loadPiece(id: string, character?: string) {
+  if (pieceId === id && (!character || roleId === character)) return;
   const d = pieceData(id);
   pieceId = id;
   info = d.info;
   edition = d.edition;
-  language = d.language;
+  // your part: the voice of the character you sing (an ensemble has several), the others sing with you
+  const vparts = edition.parts.filter((p) => p.kind === "voice");
+  voicePart = vparts.find((p) => p.roleId === character) ?? vparts[0];
+  otherVoices = vparts.filter((p) => p !== voicePart);
+  const role = edition.roles.find((r) => r.partKey === voicePart.key) ?? edition.roles[0];
+  roleId = role?.id ?? "";
+  roleVoiceType = role?.voiceType ?? "";
+  portraitKey = edition.roles.length > 1 ? `${info.portrait.split(":")[0]}:${roleId}` : info.portrait;
+  // only your own lines: the words, tips and recordings follow the character you sing
+  language = edition.roles.length > 1 ? { ...d.language, phrases: d.language.phrases.filter((p) => p.roleId === roleId) } : d.language;
   ORIGINAL = LANGUAGE_NAMES[language.language] ?? "Original";
   LANG = language.language || "it";
   setSpeechLanguage(LANG);
   voices = Object.entries(voiceManifests)
     .filter(([k, m]) => k.includes(`/pieces/${id}/voice/`) && m.voiceId)
     .map(([, m]) => m);
-  voicePart = edition.parts.find((p) => p.kind === "voice")!;
+  // in an ensemble, the recordings in your character's voice (a man's for a man) where there are some
+  if (edition.roles.length > 1) {
+    const mine = voices.filter((m) => m.voiceId === languageVoiceId());
+    if (mine.length) voices = mine;
+  }
   pianoPart = edition.parts.find((p) => p.kind === "piano")!;
   if (!displayCache.has(id)) displayCache.set(id, prepareForDisplay(d.scoreXml));
   displayXml = displayCache.get(id)!;
   tempoWords = tempoWordsOf(edition);
   // Babbino's notes keep their first key, so nobody loses them
-  NOTES_KEY = id === "puccini-o-mio-babbino-caro" ? "cp:babbino:notes" : `cp:${id}:notes`;
+  NOTES_KEY = id === "puccini-o-mio-babbino-caro" ? "cp:babbino:notes" : edition.roles.length > 1 ? `cp:${id}:${roleId}:notes` : `cp:${id}:notes`;
 }
 function loadNotes(): Note[] {
   try {
@@ -380,10 +401,20 @@ type PracticeProps = {
 };
 
 /** The practice screen for one piece (an edition id from pieces.tsx). */
-export function Practice({ editionId, ...props }: PracticeProps & { editionId: string }) {
-  loadPiece(editionId);
-  return <PracticeScreen key={editionId} {...props} />;
+export function Practice({ editionId, character, ...props }: PracticeProps & { editionId: string; character?: string }) {
+  loadPiece(editionId, character);
+  return <PracticeScreen key={`${editionId}:${roleId}`} {...props} />;
 }
+
+/** a character's face: the portrait when there is one, otherwise the cast list's simple avatar */
+function RoleFace({ k }: { k: string }) {
+  const art = PORTRAITS[k];
+  if (art) return <img className="face-img" src={art.face} alt="" />;
+  const [o, c] = k.split(":");
+  const ch = OPERAS.find((x) => x.id === o)?.chars.find((x) => x.id === c);
+  return ch ? <Avatar kind={ch.avatar} /> : null;
+}
+const partnerKey = (p: CompiledEdition["parts"][number]) => `${info.portrait.split(":")[0]}:${p.roleId}`;
 
 function PracticeScreen({
   onBack,
@@ -404,12 +435,17 @@ function PracticeScreen({
   const [pianoFaded, setPianoFaded] = useLocalSetting("p:pianoFaded", true);
   const [hearVoice, setHearVoice] = useLocalSetting("p:hearVoice", true);
   const [hearPiano, setHearPiano] = useLocalSetting("p:hearPiano", true);
+  // in an ensemble, the other singers' lines
+  const [hearOthers, setHearOthers] = useLocalSetting("p:hearOthers", true);
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
-  const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
+  const [volSaved, setVol] = useLocalSetting<{ voice: number; piano: number; others?: number }>("p:vol", { voice: 80, piano: 80 });
+  const vol = { others: 70, ...volSaved };
   // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
   const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
-  const lineSound: LineInstrument = resolveLine(lineChoice, edition.roles.find((r) => r.partKey === voicePart.key)?.voiceType ?? edition.roles[0]?.voiceType ?? "");
+  const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType);
+  /** your partners in an ensemble, by name */
+  const others = otherVoices.map((p) => p.shortLabel).join(" & ");
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
   const voice = voiceById(voiceSel);
@@ -512,7 +548,8 @@ function PracticeScreen({
     if (!engine) return;
     engine.setMix(voicePart.key, { muted: !hearVoice, solo: false, volume: volGain(vol.voice, voicePart.defaultVolume) });
     engine.setMix(pianoPart.key, { muted: !hearPiano, solo: false, volume: volGain(vol.piano, pianoPart.defaultVolume) });
-  }, [engine, hearVoice, hearPiano, vol]);
+    for (const p of otherVoices) engine.setMix(p.key, { muted: !hearOthers, solo: false, volume: volGain(vol.others, p.defaultVolume) });
+  }, [engine, hearVoice, hearPiano, hearOthers, vol.voice, vol.piano, vol.others]);
   // the sung line's lowest and highest notes, so an instrument can take it an octave down when needed
   const voiceRange = useMemo<[number, number]>(() => {
     const ms = edition.notes.filter((n) => n.part === voicePart.key).map((n) => n.midi);
@@ -531,6 +568,16 @@ function PracticeScreen({
       alive = false;
     };
   }, [pb.port, lineSound, voiceRange]);
+  // your partners' lines each on the instrument for their own voice, so the three are easy to tell apart
+  useEffect(() => {
+    const port = pb.port;
+    if (!port?.setInstrument) return;
+    for (const p of otherVoices) {
+      const ms = edition.notes.filter((n) => n.part === p.key).map((n) => n.midi);
+      const vt = edition.roles.find((r) => r.partKey === p.key)?.voiceType ?? "";
+      port.setInstrument(p.channel, resolveLine("auto", vt), [Math.min(...ms), Math.max(...ms)]).catch(() => undefined);
+    }
+  }, [pb.port]);
   // the sound panel closes on a tap elsewhere or Escape
   useEffect(() => {
     if (!mixOpen) return;
@@ -687,8 +734,10 @@ function PracticeScreen({
   const beat = Math.floor(loc.beat + 1e-6);
   const countLeft = engine ? engine.countInRemaining() : 0;
   const tempoPct = Math.round((engine?.tempo ?? 1) * 100);
-  const beatSymbol = bi.unitQ === 1.5 ? "♩." : bi.unitQ === 0.5 ? "♪" : "♩";
-  const beatBpm = Math.round((perf.bpmAt(q) / bi.unitQ) * (engine?.tempo ?? 1));
+  // the speed in the beat a singer feels; in 2/2 it is given in quarter notes, as the playback mark is (a half-note glyph is not in every font)
+  const shownQ = bi.unitQ === 2 ? 1 : bi.unitQ;
+  const beatSymbol = shownQ === 1.5 ? "♩." : shownQ === 0.5 ? "♪" : "♩";
+  const beatBpm = Math.round((perf.bpmAt(q) / shownQ) * (engine?.tempo ?? 1));
   const deviceVoice = voiceInfo(false).kind === "device";
   const [finished, setFinished] = useState(false);
   const lastPlayingQ = useRef(0);
@@ -1318,14 +1367,32 @@ function PracticeScreen({
             aria-label={hearVoice ? `${roleName}'s line plays. Mute it to sing it yourself` : `${roleName}'s line is muted. Play it`}
           >
             <span className="part-face you" data-tone="pink" aria-hidden="true">
-              <img className="face-img" src={PORTRAITS[info.portrait]?.face} alt="" />
+              <RoleFace k={portraitKey} />
             </span>
             <span className="part-text">
               <b>{roleName}</b>
-              <small>{hearVoice ? "Her line plays" : "Muted: you sing"}</small>
+              <small>{hearVoice ? `${/tenor|baritone|bass|countertenor/i.test(roleVoiceType) ? "His" : "Her"} line plays` : "Muted: you sing"}</small>
             </span>
             <span className="part-icon">{hearVoice ? Icon.speaker : Icon.muted}</span>
           </button>
+          {otherVoices.length > 0 && (
+            <button
+              type="button"
+              className="part"
+              aria-pressed={hearOthers}
+              onClick={() => setHearOthers(!hearOthers)}
+              aria-label={`${others} ${hearOthers ? "sing with you. Mute them" : "are muted. Play them"}`}
+            >
+              <span className="part-face" aria-hidden="true">
+                <RoleFace k={partnerKey(otherVoices[0])} />
+              </span>
+              <span className="part-text">
+                <b>{others}</b>
+                <small>{hearOthers ? "Sing with you" : "Muted"}</small>
+              </span>
+              <span className="part-icon">{hearOthers ? Icon.speaker : Icon.muted}</span>
+            </button>
+          )}
           <button type="button" className="part" aria-pressed={hearPiano} onClick={() => setHearPiano(!hearPiano)} aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}>
             <span className="part-face piano" aria-hidden="true">
               {Icon.piano}
@@ -1351,7 +1418,7 @@ function PracticeScreen({
             <div className="mix-pop" role="dialog" aria-label="Sound">
               <div className="mix-row">
                 <span className="part-face you" data-tone="pink" aria-hidden="true">
-                  <img className="face-img" src={PORTRAITS[info.portrait]?.face} alt="" />
+                  <RoleFace k={portraitKey} />
                 </span>
                 <div className="mix-main">
                   <div className="mix-head">
@@ -1385,6 +1452,33 @@ function PracticeScreen({
                   {soundLoading && <p className="mix-note">Loading the {LINE_SOUNDS.find((o) => o.id === lineSound)?.label.toLowerCase()}…</p>}
                 </div>
               </div>
+              {otherVoices.length > 0 && (
+                <div className="mix-row">
+                  <span className="part-face" aria-hidden="true">
+                    <RoleFace k={partnerKey(otherVoices[0])} />
+                  </span>
+                  <div className="mix-main">
+                    <div className="mix-head">
+                      <b>{others}</b>
+                      <span>{hearOthers ? `${vol.others}%` : "Muted"}</span>
+                    </div>
+                    <input
+                      type="range"
+                      className="cp-slider"
+                      min={0}
+                      max={100}
+                      step={5}
+                      value={vol.others}
+                      style={{ ["--fill" as string]: `${vol.others}%` }}
+                      aria-label={`${others}: volume`}
+                      onChange={(e) => {
+                        setVol({ ...vol, others: Number(e.target.value) });
+                        if (!hearOthers) setHearOthers(true);
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
               <div className="mix-row">
                 <span className="part-face piano" aria-hidden="true">
                   {Icon.piano}
@@ -1579,7 +1673,7 @@ function PracticeScreen({
                         {storyOf(roleName)}, and the whole opera act by act
                       </small>
                     </summary>
-                    <Story opera={info.portrait.split(":")[0]} character={info.portrait.split(":")[1]} name={roleName} level={4} idBase="ctx-story" />
+                    <Story opera={portraitKey.split(":")[0]} character={portraitKey.split(":")[1]} name={roleName} level={4} idBase="ctx-story" />
                   </details>
                 </section>
               )}

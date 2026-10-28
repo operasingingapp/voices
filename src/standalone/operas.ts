@@ -274,6 +274,89 @@ export const OPERAS: Opera[] = [
   ]
  },
  {
+  "id": "cosi",
+  "title": "Così fan tutte",
+  "composer": "Mozart",
+  "composerFull": "Wolfgang Amadeus Mozart",
+  "year": 1790,
+  "librettist": "Lorenzo Da Ponte",
+  "lang": "it",
+  "chars": [
+   {
+    "id": "fiordiligi",
+    "name": "Fiordiligi",
+    "voice": "Soprano",
+    "desc": "A lady from Ferrara, engaged to Guglielmo.",
+    "avatar": "bun",
+    "pieces": [
+     {
+      "title": "Soave sia il vento",
+      "kind": "Terzettino · Act 1",
+      "editionId": "mozart-soave-sia-il-vento",
+      "when": "Act 1, on the shore at Naples, as the officers' boat sails",
+      "context": "Don Alfonso has bet Ferrando and Guglielmo that their fiancées will not stay faithful for a day, and the officers have pretended to be called to war. Fiordiligi and Dorabella, in tears, watch the boat carry their lovers away, and with Alfonso, who is in on the trick, they pray for a gentle wind, calm waves and every element kind to their wishes. The sisters mean every word; Alfonso is already planning the officers' return in disguise."
+     }
+    ]
+   },
+   {
+    "id": "dorabella",
+    "name": "Dorabella",
+    "voice": "Mezzo-soprano",
+    "desc": "Fiordiligi's sister, engaged to Ferrando.",
+    "avatar": "long",
+    "pieces": [
+     {
+      "title": "Soave sia il vento",
+      "kind": "Terzettino · Act 1",
+      "editionId": "mozart-soave-sia-il-vento",
+      "when": "Act 1, on the shore at Naples, as the officers' boat sails",
+      "context": "Don Alfonso has bet Ferrando and Guglielmo that their fiancées will not stay faithful for a day, and the officers have pretended to be called to war. Fiordiligi and Dorabella, in tears, watch the boat carry their lovers away, and with Alfonso, who is in on the trick, they pray for a gentle wind, calm waves and every element kind to their wishes. The sisters mean every word; Alfonso is already planning the officers' return in disguise."
+     }
+    ]
+   },
+   {
+    "id": "despina",
+    "name": "Despina",
+    "voice": "Soprano",
+    "desc": "The sisters' maid.",
+    "avatar": "cap",
+    "pieces": []
+   },
+   {
+    "id": "ferrando",
+    "name": "Ferrando",
+    "voice": "Tenor",
+    "desc": "An officer, engaged to Dorabella.",
+    "avatar": "curls",
+    "pieces": []
+   },
+   {
+    "id": "guglielmo",
+    "name": "Guglielmo",
+    "voice": "Baritone",
+    "desc": "An officer, engaged to Fiordiligi.",
+    "avatar": "short",
+    "pieces": []
+   },
+   {
+    "id": "alfonso",
+    "name": "Don Alfonso",
+    "voice": "Bass",
+    "desc": "An old philosopher who doubts women's constancy.",
+    "avatar": "beard",
+    "pieces": [
+     {
+      "title": "Soave sia il vento",
+      "kind": "Terzettino · Act 1",
+      "editionId": "mozart-soave-sia-il-vento",
+      "when": "Act 1, on the shore at Naples, as the officers' boat sails",
+      "context": "Don Alfonso has bet Ferrando and Guglielmo that their fiancées will not stay faithful for a day, and the officers have pretended to be called to war. Fiordiligi and Dorabella, in tears, watch the boat carry their lovers away, and with Alfonso, who is in on the trick, they pray for a gentle wind, calm waves and every element kind to their wishes. The sisters mean every word; Alfonso is already planning the officers' return in disguise."
+     }
+    ]
+   }
+  ]
+ },
+ {
   "id": "zauberfloete",
   "title": "Die Zauberflöte",
   "composer": "Mozart",

@@ -1,0 +1,160 @@
+{
+ "editionId": "mozart-soave-sia-il-vento",
+ "editionVersion": "1.0.0-musescore-3.6.1",
+ "title": "Soave sia il vento",
+ "subtitle": "Terzettino for Fiordiligi, Dorabella and Don Alfonso from Così fan tutte, Act 1",
+ "kind": "ensemble",
+ "fixture": false,
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass",
+   "partKey": "alfonso"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass)",
+   "shortLabel": "Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Soave sia il vento (first time)",
+   "start": "1",
+   "end": "12"
+  },
+  {
+   "id": "b",
+   "label": "Soave sia il vento (second time)",
+   "start": "12",
+   "end": "22"
+  },
+  {
+   "id": "c",
+   "label": "ai nostri desir · benigno risponda",
+   "start": "23",
+   "end": "30"
+  },
+  {
+   "id": "d",
+   "label": "ai nostri desir (to the end)",
+   "start": "30",
+   "end": "41"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), No. 10, terzettino",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "MuseScore 3.6.1 piano-vocal engraving \"Soave sia il vento\" (2021), supplied by the user (original kept as source-musescore.mxl)",
+   "author": "Unknown engraver",
+   "licence": "Not stated in the file",
+   "notes": "Check the engraver's licence before distributing. The three voices are named (the engraving labels them Fi., Do. and D.A.); the German singing translation under the Italian is removed; Dorabella's missing ‘e’ of elemento is restored in bar 17; Don Alfonso's ‘be-’ in bar 26 is corrected to ‘ai’ (ai nostri desir); the stage direction is given in English."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this MVP",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

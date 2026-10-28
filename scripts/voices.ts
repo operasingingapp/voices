@@ -495,14 +495,16 @@ function shapeAll(piece: string, voiceDir: string, data: { clips: Record<string,
 
 /* ---------------- the run ---------------- */
 
-/** whether a piece is sung by a man: its (first) role is a tenor, baritone or bass */
+/** a piece's roles' voices: a man's (tenor, baritone, bass) or a woman's. An ensemble may have both, and is made in both voices */
 const MALE = /tenor|baritone|bass|countertenor|haute-contre/i;
-const isMale = (piece: string) => {
+const voiceTypes = (piece: string) => {
   const m = join(ROOT, "content/pieces", piece, "manifest.json");
-  if (!existsSync(m)) return false;
+  if (!existsSync(m)) return [""];
   const roles = (JSON.parse(readFileSync(m, "utf8")) as { roles?: { voiceType?: string }[] }).roles ?? [];
-  return MALE.test(roles[0]?.voiceType ?? "");
+  return roles.length ? roles.map((r) => r.voiceType ?? "") : [""];
 };
+const hasMale = (piece: string) => voiceTypes(piece).some((v) => MALE.test(v));
+const hasFemale = (piece: string) => voiceTypes(piece).some((v) => !MALE.test(v));
 
 /** the language of a piece, from its words */
 const languageOf = (piece: string) =>
@@ -518,7 +520,7 @@ async function main() {
     const inLang = all.filter((p) => languageOf(p) === lang);
     // pieces sung by a man, with a man's voice set for this language, are made separately with it
     const male = config.male?.[lang];
-    const men = male?.voiceId ? inLang.filter(isMale) : [];
+    const men = male?.voiceId ? inLang.filter(hasMale) : [];
     if (men.length) {
       const keep = { voiceId: config.voiceId, voiceName: config.voiceName };
       config.voiceId = male!.voiceId;
@@ -526,7 +528,7 @@ async function main() {
       await runLanguage(lang, men);
       Object.assign(config, keep);
     }
-    const todo = inLang.filter((p) => !men.includes(p));
+    const todo = inLang.filter((p) => !men.includes(p) || hasFemale(p));
     if (!todo.length) continue;
     if (lang === "it") {
       config.voiceId = italian.voiceId;

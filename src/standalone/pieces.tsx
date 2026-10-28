@@ -110,6 +110,31 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-soave-sia-il-vento": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Terzettino",
+    facts: {
+      key: "E major",
+      time: "2/2 (alla breve)",
+      tempo: "Andante, ♩ ≈ 65: the engraving's playback number, Mozart gives the word only",
+    },
+    notePlaceholder: "Keep the line smooth and quiet, and listen to the other two",
+    about: (
+      <>
+        <p>
+          Score: a piano-vocal engraving made in MuseScore 3.6.1 (2021), supplied by you; the engraver and licence are not stated in the file, so check them
+          before sharing. The three voices, labelled Fi., Do. and D.A. in the file, are named; the German singing translation printed under the Italian is
+          left out; Dorabella's missing ‘e’ of elemento is restored in bar 17, and Don Alfonso's ‘be-’ in bar 26 is corrected to ‘ai’ (ai nostri desir). The
+          stage direction at the end is given in English. On screen the tempo marks appear in the bar box and joined syllables use ‿.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

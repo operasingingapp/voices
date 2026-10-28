@@ -78,6 +78,28 @@ export const SYNOPSES: Record<string, Act[]> = {
     },
   ],
 
+  cosi: [
+    {
+      title: "Act 1",
+      where: "Naples: a coffee house, a garden by the sea, the sisters' house",
+      paras: [
+        "The overture's slow introduction closes on the motto the men will later sing to ‘Così fan tutte’, then races off. In a coffee house, the young officers Ferrando and Guglielmo swear that their fiancées, the sisters Dorabella and Fiordiligi, could never be unfaithful. The old philosopher Don Alfonso doubts it, and refuses to fight over it: women's faithfulness, he says, is like the Arabian phoenix, which everyone talks of and nobody has seen. The officers bet him a hundred sequins and promise to do exactly as he says for a day, and plan how they will spend their winnings on a serenade and a banquet.",
+        "In a garden by the sea, the sisters gaze at their lovers' portraits and swear eternal love (“Ah guarda, sorella”). Alfonso arrives, too ‘upset’ to speak, and breaks the news: the officers are ordered to war at once (“Vorrei dir”). The lovers part in anguish (“Sento, o Dio”); a chorus of soldiers sings of military life, and after tearful farewells (“Di scrivermi ogni giorno”) the boat sails. The sisters and Alfonso pray for a gentle wind and calm waves (“Soave sia il vento”). Alone, Alfonso scoffs that whoever trusts a woman's heart ploughs the sea and sows in the sand.",
+        "At home the maid Despina brings chocolate; Dorabella rages at her torments and swears she will die (“Smanie implacabili”). Despina laughs: men, and soldiers above all, are never faithful, so the sisters should amuse themselves (“In uomini, in soldati”). Alfonso bribes Despina to help him introduce two foreign suitors: Ferrando and Guglielmo in disguise as ‘Albanians’. Despina does not recognise them, and the sisters, outraged to find men in their house, order them out (“Alla bella Despinetta”). Alfonso passes the strangers off as his old friends, and when they declare their love Fiordiligi declares she stands as firm as a rock (“Come scoglio”). Guglielmo boasts of their charms, and the sisters walk out (“Non siate ritrosi”).",
+        "The officers laugh at Alfonso, sure they have won (“E voi ridete?”), but he holds them to their promise; told to wait in the garden without dinner, Ferrando sings that love is food enough (“Un'aura amorosa”). Despina offers Alfonso to run the scheme herself. In the garden the sisters are lamenting when the ‘Albanians’ burst in, swallow ‘arsenic’ and collapse. Despina, disguised as a doctor, revives them with a great magnet, and the ‘cured’ men demand a kiss, which the sisters furiously refuse.",
+      ],
+    },
+    {
+      title: "Act 2",
+      where: "The sisters' house, the garden by the sea, and a richly decorated hall",
+      paras: [
+        "Despina tells the sisters that a girl of fifteen should know every trick of love (“Una donna a quindici anni”), and they agree a little flirting can do no harm: Dorabella chooses the dark one, Guglielmo, and Fiordiligi the fair one, Ferrando, so each picks the other's lover (“Prenderò quel brunettino”). In the garden the ‘Albanians’ serenade them from a decorated boat (“Secondate, aurette amiche”). Too shy to speak, they let Despina and Alfonso join their hands with the sisters' (“La mano a me date”), and the couples are left together.",
+        "Walking in the garden, Guglielmo wins Dorabella: he gives her a heart-shaped locket and takes Ferrando's portrait from her (“Il core vi dono”). Fiordiligi sends Ferrando away (“Ah, lo veggio”, often cut), and alone she begs her absent lover's forgiveness for her wavering heart (“Per pietà, ben mio, perdona”). Ferrando tells Guglielmo that Fiordiligi held firm; Guglielmo shows him Dorabella's gift of his portrait, and tells the ladies they do it to so many (“Donne mie, la fate a tanti”). Betrayed and mocked, Ferrando finds he still loves Dorabella (“Tradito, schernito”), and Alfonso insists the test goes on.",
+        "Dorabella confesses to Fiordiligi and urges her to give in: love is a little thief (“È amore un ladroncello”). Fiordiligi resolves to follow Guglielmo to war in uniform, but Ferrando appears and begs her to kill him with his sword, and she gives in (“Fra gli amplessi”), while Guglielmo watches in horror. Alfonso tells the two furious officers to marry their fiancées all the same: everyone blames women, but he forgives them, because they all do it, and the three sing ‘Così fan tutte’.",
+        "A double wedding is prepared, and the couples toast each other while Guglielmo mutters. Despina, disguised as a notary, reads the contract and the sisters sign, when the soldiers' chorus is heard: the officers are back. The ‘Albanians’ hide, and Ferrando and Guglielmo return as themselves, find the contract and rage. They reveal the disguise, Despina is unmasked, the sisters beg forgiveness, and all are reconciled, praising the one who takes life as it comes, guided by reason.",
+      ],
+    },
+  ],
   zauberfloete: [
     {
       title: "Act 1",

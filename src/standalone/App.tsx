@@ -294,6 +294,7 @@ export function App() {
           onMenu={() => setDrawerOpen(true)}
           onOpera={() => go({ screen: "opera", opera: opera.id })}
           editionId={piece.editionId}
+          character={ch.id}
           roleName={ch.name}
           onBack={() => go({ screen: "role", opera: opera.id, character: ch.id })}
           learned={(learned[roleKey(r)] ?? []).includes(key)}

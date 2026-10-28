@@ -72,6 +72,30 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
 
   // ---------------- Die Zauberflöte ----------------
+  "cosi:fiordiligi": [
+    { act: "Act 1", text: "Engaged to Guglielmo, Fiordiligi swears eternal love over his portrait and sees him off to war (“Soave sia il vento”). When two ‘Albanian’ strangers declare their love, she orders them out and swears to stand firm as a rock (“Come scoglio”), and refuses them a kiss even after they ‘poison’ themselves." },
+    { act: "Act 2", text: "She agrees to a little harmless flirting and picks the fair one, Ferrando. She sends him away, and alone begs her lover's forgiveness (“Per pietà”). She resolves to follow Guglielmo to war in uniform, but Ferrando breaks down her resistance (“Fra gli amplessi”). She signs the marriage contract, is caught out, and begs forgiveness." },
+  ],
+  "cosi:dorabella": [
+    { act: "Act 1", text: "Engaged to Ferrando, Dorabella sees him off to war (“Soave sia il vento”) and rages that she will die of grief (“Smanie implacabili”). She joins her sister in sending the ‘Albanian’ strangers away and refusing them a kiss." },
+    { act: "Act 2", text: "Persuaded by Despina, she is the first to give in: she picks the dark one, Guglielmo, and gives him Ferrando's portrait for a heart-shaped locket (“Il core vi dono”). She urges her sister to yield too (“È amore un ladroncello”), signs the marriage contract, is caught out, and begs forgiveness." },
+  ],
+  "cosi:despina": [
+    { act: "Act 1", text: "The sisters' maid laughs at their grief: men are never faithful, so pay them back (“In uomini, in soldati”). Bribed by Alfonso, she helps bring in the ‘Albanians’, takes charge of the plot, and in disguise as a doctor ‘cures’ their poisoning with a magnet." },
+    { act: "Act 2", text: "She teaches the sisters how to play with men (“Una donna a quindici anni”) and joins the couples' hands (“La mano a me date”). Disguised as a notary she marries them, until the officers return, she is unmasked, and finds she was fooled as well." },
+  ],
+  "cosi:ferrando": [
+    { act: "Act 1", text: "Sure of Dorabella's love, Ferrando bets Alfonso she will stay faithful, pretends to leave for war, and returns disguised as an ‘Albanian’ to court Fiordiligi. Sure of winning, he sings that love is food enough (“Un'aura amorosa”), and fakes poisoning to win a kiss." },
+    { act: "Act 2", text: "Fiordiligi sends him away (“Ah, lo veggio”); then he learns Dorabella has given his portrait to Guglielmo, and finds that, betrayed and mocked, he still loves her (“Tradito, schernito”). He wins Fiordiligi at last (“Fra gli amplessi”), joins in ‘Così fan tutte’, and is reconciled at the end." },
+  ],
+  "cosi:guglielmo": [
+    { act: "Act 1", text: "Sure of Fiordiligi's love, Guglielmo bets Alfonso she will stay faithful, pretends to leave for war, and returns disguised as an ‘Albanian’ to court Dorabella, boasting of their charms (“Non siate ritrosi”)." },
+    { act: "Act 2", text: "He serenades the sisters (“Secondate, aurette amiche”) and wins Dorabella, taking Ferrando's portrait for a locket (“Il core vi dono”). He gloats over Ferrando's misfortune (“Donne mie, la fate a tanti”) until he watches Fiordiligi give in, joins in ‘Così fan tutte’, and is reconciled at the end." },
+  ],
+  "cosi:alfonso": [
+    { act: "Act 1", text: "The old philosopher bets the officers a hundred sequins that their fiancées will not stay faithful for a day (“È la fede delle femmine”). He brings the false news of war (“Vorrei dir”), sees the men off (“Soave sia il vento”), bribes Despina and brings in the ‘Albanians’." },
+    { act: "Act 2", text: "With Despina he pairs off the couples (“La mano a me date”) and keeps the test going. Having won, he tells the officers to marry their fiancées anyway, because all women do it (“Tutti accusan le donne”), and in the finale reveals the plot and brings everyone together." },
+  ],
   "zauberfloete:tamino": [
     { act: "Act 1", text: "Saved from a serpent by the Queen's Ladies, Prince Tamino falls in love with Pamina's portrait (“Dies Bildnis”) and sets out with a magic flute to rescue her. At Sarastro's temple he learns Sarastro is no tyrant, and meets Pamina at last." },
     { act: "Act 2", text: "He keeps his vow of silence through every temptation, even when it breaks Pamina's heart. Together they pass through fire and water, protected by the flute, and are welcomed into the temple." },
