@@ -1,7 +1,7 @@
 /**
- * Spoken pronunciation. First choice: the app's own recordings of a native Italian voice (made with
- * ElevenLabs, scripts/voices.ts). Where a recording is missing, the device's own Italian voice (Web Speech
- * API), and last the offline placeholder recordings bundled with the app.
+ * Spoken pronunciation, in the language of the piece on screen. First choice: the app's own recordings of a
+ * native voice (made with ElevenLabs, scripts/voices.ts). Where a recording is missing, the device's own voice
+ * for that language (Web Speech API), and last the offline placeholder recordings bundled with the app.
  */
 
 export interface SpeakSource {
@@ -14,27 +14,36 @@ export interface SpeakSource {
 
 export type VoiceInfo = { kind: "device"; name: string } | { kind: "recording" } | { kind: "none" };
 
-const PREFERRED = ["alice", "federica", "paola", "elsa", "luca", "google italiano", "cosimo", "isabella"];
+const PREFERRED: Record<string, string[]> = {
+  it: ["alice", "federica", "paola", "elsa", "luca", "google italiano", "cosimo", "isabella"],
+  de: ["anna", "petra", "helena", "katja", "google deutsch", "markus", "yannick", "conrad"],
+};
+const LOCALE: Record<string, string> = { it: "it-IT", de: "de-DE", fr: "fr-FR", es: "es-ES", cs: "cs-CZ", ru: "ru-RU", en: "en-GB" };
+let lang = "it";
+/** The language spoken from now on (the piece on screen). */
+export function setSpeechLanguage(code: string) {
+  lang = code || "it";
+}
 
 let current: HTMLAudioElement | null = null;
 
-function italianVoice(): SpeechSynthesisVoice | null {
+function deviceVoice(): SpeechSynthesisVoice | null {
   try {
     const voices = window.speechSynthesis?.getVoices() ?? [];
-    const it = voices.filter((v) => v.lang?.toLowerCase().startsWith("it"));
-    if (!it.length) return null;
-    for (const p of PREFERRED) {
-      const v = it.find((x) => x.name.toLowerCase().includes(p));
+    const mine = voices.filter((v) => v.lang?.toLowerCase().startsWith(lang));
+    if (!mine.length) return null;
+    for (const p of PREFERRED[lang] ?? []) {
+      const v = mine.find((x) => x.name.toLowerCase().includes(p));
       if (v) return v;
     }
-    return it.find((v) => v.localService) ?? it[0];
+    return mine.find((v) => v.localService) ?? mine[0];
   } catch {
     return null;
   }
 }
 
 export function voiceInfo(hasRecordings: boolean): VoiceInfo {
-  const v = italianVoice();
+  const v = deviceVoice();
   if (v) return { kind: "device", name: v.name };
   return hasRecordings ? { kind: "recording" } : { kind: "none" };
 }
@@ -87,12 +96,12 @@ export function speak(src: SpeakSource, slow: boolean, onTime?: (sec: number) =>
       a.play().catch(done);
     });
   }
-  const v = italianVoice();
+  const v = deviceVoice();
   if (v && window.speechSynthesis) {
     return new Promise((resolve) => {
       const u = new SpeechSynthesisUtterance(src.text);
       u.voice = v;
-      u.lang = v.lang || "it-IT";
+      u.lang = v.lang || LOCALE[lang] || lang;
       u.rate = slow ? 0.62 : 0.92;
       u.onend = () => resolve();
       u.onerror = () => resolve();

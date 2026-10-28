@@ -110,6 +110,31 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-der-holle-rache": {
+    portrait: "zauberfloete:queen",
+    opera: "Die Zauberflöte",
+    kind: "Aria",
+    facts: {
+      key: "D minor",
+      time: "4/4",
+      tempo: "Allegro assai, ♩ ≈ 144: the engraving's playback number, Mozart gives words only",
+    },
+    notePlaceholder: "Keep the staccato high notes light; breathe before “Hört”",
+    about: (
+      <>
+        <p>
+          Score: a piano-vocal engraving made in MuseScore 3.6.2 (2022), supplied by you; the engraver and licence are not stated in the file, so check them
+          before sharing. The voice part, labelled Flute in the file, is renamed, and five syllable markings are corrected (Sarastro and Todesschmerzen in
+          bars 13 and 15, ah in bar 39, zertrümmert in bar 57, erblassen in bars 86–87). The coloratura of bars 69–79 is sung on the one word Ban—de, as in
+          the published scores; the engraving's two ‘ah’ restarts inside it are left out. On screen the tempo marks appear in the bar box.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 
 export interface PieceData {

@@ -349,8 +349,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative and aria · Act 1"
      },
      {
-      "title": "Der Hölle Rache kocht in meinem Herzen",
-      "kind": "Aria · Act 2"
+      "title": "Der Hölle Rache",
+      "id": "Der Hölle Rache kocht in meinem Herzen",
+      "kind": "Aria · Act 2",
+      "editionId": "mozart-der-holle-rache",
+      "when": "Act 2, at night in Sarastro's grounds, to Pamina",
+      "context": "The Queen of the Night appears to her daughter Pamina, who lies sleeping in Sarastro's garden, and drives off Monostatos. She learns that Tamino has joined Sarastro's brotherhood, and she has lost the power of the sun circle that her husband left to Sarastro. She gives Pamina a dagger and orders her to kill Sarastro: if she will not, the Queen will disown her for ever and break every bond of nature between them. She ends by calling on the gods of vengeance to hear a mother's oath."
      }
     ]
    },

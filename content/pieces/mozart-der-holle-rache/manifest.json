@@ -1,0 +1,34 @@
+{
+ "editionId": "mozart-der-holle-rache",
+ "editionVersion": "1.0.0-musescore-3.6.2",
+ "title": "Der Hölle Rache",
+ "subtitle": "The Queen of the Night's aria from Die Zauberflöte, Act 2",
+ "kind": "aria",
+ "fixture": false,
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": { "musicxml": "score.musicxml", "language": "language.json", "audioDir": "audio" },
+ "roles": [ { "id": "queen", "name": "The Queen of the Night", "voiceType": "Soprano", "partKey": "soprano" } ],
+ "partMapping": [
+  { "key": "piano", "label": "Piano", "shortLabel": "Piano", "kind": "piano", "source": { "xmlPartId": "P2", "staves": [1, 2] }, "channel": 0, "program": 0, "velocityScale": 0.8, "defaultVolume": 0.7 },
+  { "key": "soprano", "label": "The Queen of the Night (Soprano)", "shortLabel": "Queen", "kind": "voice", "roleId": "queen", "source": { "xmlPartId": "P1" }, "channel": 3, "program": 0, "velocityScale": 0.85, "defaultVolume": 1.0 }
+ ],
+ "passages": [
+  { "id": "a", "label": "Der Hölle Rache kocht in meinem Herzen", "start": "1", "end": "10" },
+  { "id": "b", "label": "Fühlt nicht durch dich Sarastro Todesschmerzen", "start": "11", "end": "19" },
+  { "id": "c", "label": "so bist du… nimmermehr (first coloratura)", "start": "20", "end": "31" },
+  { "id": "d", "label": "meine Tochter nimmermehr (second coloratura)", "start": "32", "end": "51" },
+  { "id": "e", "label": "Verstoßen sei auf ewig", "start": "52", "end": "67" },
+  { "id": "f", "label": "alle Bande (coloratura)", "start": "68", "end": "81" },
+  { "id": "g", "label": "wenn nicht durch dich Sarastro wird erblassen", "start": "82", "end": "87" },
+  { "id": "h", "label": "Hört, Rachegötter!", "start": "88", "end": "99" }
+ ],
+ "licences": [
+  { "item": "Music", "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 14, aria", "author": "Wolfgang Amadeus Mozart (1756–1791)", "licence": "Public domain", "notes": "" },
+  { "item": "Libretto text", "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)", "author": "Emanuel Schikaneder (1751–1812)", "licence": "Public domain", "notes": "" },
+  { "item": "Score (score.musicxml)", "source": "MuseScore 3.6.2 piano-vocal engraving \"Der Hölle Rache\" (2022), supplied by the user (original kept as source-musescore.mxl)", "author": "Unknown engraver", "licence": "Not stated in the file", "notes": "Check the engraver's licence before distributing. The voice part is renamed (the engraving labels it Flute) and the singer label above bar 2 dropped. Five syllable markings corrected (Sarastro / Todesschmerzen in bars 13 and 15, ah in bar 39, zertrümmert in bar 57, erblassen in bars 86–87). The coloratura of bars 69–79 is underlaid on the one word Ban—de, as in the published scores; the engraving's two ‘ah’ restarts inside it (bars 74 and 76) are removed." },
+  { "item": "IPA, gloss and translation", "source": "Written for this MVP", "author": "Counterpart development team", "licence": "CC0 1.0", "notes": "Unreviewed by a diction coach." },
+  { "item": "Spoken pronunciation", "source": "ElevenLabs recordings (scripts/voices.ts)", "author": "Machine speech", "licence": "Generated output", "notes": "Spoken, not sung." }
+ ]
+}

@@ -1,5 +1,5 @@
 /**
- * Spoken Italian for every piece, made with ElevenLabs. Runs on GitHub (see .github/workflows/voices.yml),
+ * Spoken words for every piece, in its own language, made with ElevenLabs. Runs on GitHub (see .github/workflows/voices.yml),
  * where ELEVENLABS_API_KEY is a repository secret; this workspace cannot reach ElevenLabs.
  *
  * For each piece in data/content/<id>/language.json it makes:
@@ -12,10 +12,11 @@
  *   content/voice-bank/<voice>/lines|joins|words/<slug>.mp3 and manifest.json: every recording, shared by all pieces
  *   content/pieces/<id>/voice/<voice>/manifest.json: which recordings the piece uses (line id → recording)
  *
- * No voice chosen yet (voice.config.json "voiceId" empty, no --voice)? The run first auditions the most used
- * native Italian voices from the ElevenLabs library (two lines each, in content/voice-audition/), adds the most
- * used one to the account, writes it into voice.config.json, and goes on with it. Changing voice later is one
- * edit of voice.config.json; the old voice's files stay until removed.
+ * Each language has its own voice: Italian uses "voiceId" in voice.config.json, any other language the entry under
+ * "languages" (e.g. "de"). No voice chosen yet for a language? The run first auditions the most used native voices
+ * of that language from the ElevenLabs library (a line each, in content/voice-audition/), adds the most used one to
+ * the account, writes it into voice.config.json, and goes on with it. Changing voice later is one edit of
+ * voice.config.json; the old voice's files stay until removed.
  *
  *   npx tsx scripts/voices.ts --dry-run                 list what would be made, and the characters it costs
  *   npx tsx scripts/voices.ts --piece <id|all> [--redo l03,w:bello] [--voice <voiceId>]
@@ -50,6 +51,8 @@ interface Config {
   sayAs?: Record<string, string>;
   /** a voice to look up by name in the Italian voice library, when voiceId is empty (e.g. "Serena") */
   voiceSearch?: string;
+  /** the voice for each language other than Italian, by language code */
+  languages?: Record<string, { voiceId: string; voiceName?: string }>;
 }
 interface Word {
   text: string;
@@ -190,6 +193,8 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
   let joinN = 0;
   const seenJoin = new Set<string>();
   for (const ph of lang.phrases) {
+    // a run of coloratura sung on "ah" has nothing to say: no recording
+    if (ph.words.length && ph.words.every((w) => /^(ah|a|oh)$/i.test(bare(w.text)))) continue;
     // where two words are sung on one note (an elision, "piace,‿è"), the punctuation between them goes, so the
     // voice runs them together instead of pausing at the comma
     const syl0 = ph.syllables ?? [];
@@ -323,27 +328,41 @@ async function findVoice(name: string): Promise<{ id: string; name: string }> {
   return { id: added.voice_id, name: v.name };
 }
 
-async function chooseVoice(): Promise<{ id: string; name: string }> {
-  console.log("No voice chosen yet: auditioning the most used native Italian voices from the ElevenLabs library.");
-  const res = await api(`/v1/shared-voices?language=it&page_size=40&sort=usage_character_count_1y`);
+const LANGUAGE_NAME: Record<string, string> = { it: "Italian", de: "German", fr: "French", es: "Spanish", cs: "Czech", ru: "Russian" };
+const AUDITION_LINE: Record<string, string> = {
+  it: "O mio babbino caro, mi piace, è bello, bello.",
+  de: "Der Hölle Rache kocht in meinem Herzen.",
+};
+/** regional accents to pass over: a standard accent reads diction best */
+const REGIONAL: Record<string, RegExp> = {
+  it: /sicil|napol|venet|sard|roman|milan/i,
+  de: /swiss|schweiz|austria|österreich|bavar|bayer|saxon|sächs|berlin|swabian|schwäb/i,
+};
+
+async function chooseVoice(lang = "it"): Promise<{ id: string; name: string }> {
+  const name = LANGUAGE_NAME[lang] ?? lang;
+  console.log(`No ${name} voice chosen yet: auditioning the most used native ${name} voices from the ElevenLabs library.`);
+  const res = await api(`/v1/shared-voices?language=${lang}&page_size=40&sort=usage_character_count_1y`);
   const list = ((await res.json()) as { voices: { voice_id: string; public_owner_id: string; name: string; locale?: string; accent?: string; gender?: string; use_case?: string; free_users_allowed?: boolean }[] }).voices;
-  // narration-style voices with a standard Italian accent read diction best
-  const good = list.filter((v) => (v.locale ?? "it").startsWith("it") && !/sicil|napol|venet|sard|roman|milan/i.test(v.accent ?? ""));
-  const picks = (good.length ? good : list).slice(0, 4);
-  if (!picks.length) throw new Error("No Italian voices were found in the voice library.");
-  const sample = "O mio babbino caro, mi piace, è bello, bello.";
+  // narration-style voices with a standard accent read diction best; a woman's voice, like the Italian one, where there is one
+  const standard = list.filter((v) => (v.locale ?? lang).startsWith(lang) && !(REGIONAL[lang] ?? /$^/).test(v.accent ?? ""));
+  const pool = standard.length ? standard : list;
+  const women = pool.filter((v) => /female|woman/i.test(v.gender ?? ""));
+  const picks = [...women, ...pool.filter((v) => !women.includes(v))].slice(0, 4);
+  if (!picks.length) throw new Error(`No ${name} voices were found in the voice library.`);
+  const sample = AUDITION_LINE[lang] ?? AUDITION_LINE.it;
   const audition: { name: string; voiceId: string; gender?: string; accent?: string; file: string }[] = [];
   for (const v of picks) {
     const added = (await (
       await api(`/v1/voices/add/${v.public_owner_id}/${v.voice_id}`, { method: "POST", body: JSON.stringify({ new_name: `Counterpart · ${v.name}` }) })
     ).json()) as { voice_id: string };
     const sp = await speak(added.voice_id, sample, false);
-    const file = `content/voice-audition/${slug(v.name)}.mp3`;
+    const file = `content/voice-audition/${lang}-${slug(v.name)}.mp3`;
     save(file, sp.audio);
     audition.push({ name: v.name, voiceId: added.voice_id, gender: v.gender, accent: v.accent, file });
     console.log(`  auditioned ${v.name} (${v.gender ?? "?"}, ${v.accent ?? "?"}) → ${file}`);
   }
-  writeFileSync(join(ROOT, "content/voice-audition/audition.json"), JSON.stringify({ sample, voices: audition }, null, 1));
+  writeFileSync(join(ROOT, `content/voice-audition/audition${lang === "it" ? "" : `-${lang}`}.json`), JSON.stringify({ sample, voices: audition }, null, 1));
   return { id: audition[0].voiceId, name: audition[0].name };
 }
 
@@ -460,9 +479,33 @@ function shapeAll(piece: string, voiceDir: string, data: { clips: Record<string,
 
 /* ---------------- the run ---------------- */
 
+/** the language of a piece, from its words */
+const languageOf = (piece: string) =>
+  (JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { language?: string }).language || "it";
+
 async function main() {
-  const todo = pieces();
-  if (!todo.length) throw new Error(`No piece "${pieceArg}" in data/content.`);
+  const all = pieces();
+  if (!all.length) throw new Error(`No piece "${pieceArg}" in data/content.`);
+  // one voice per language: the pieces of each language are made with that language's voice
+  const langs = [...new Set(all.map(languageOf))].sort((a, b) => (a === "it" ? -1 : b === "it" ? 1 : a.localeCompare(b)));
+  const italian = { voiceId: config.voiceId, voiceName: config.voiceName };
+  for (const lang of langs) {
+    const todo = all.filter((p) => languageOf(p) === lang);
+    if (lang === "it") {
+      config.voiceId = italian.voiceId;
+      config.voiceName = italian.voiceName;
+    } else {
+      const v = config.languages?.[lang];
+      // --voice applies to Italian; another language uses its own entry
+      config.voiceId = v?.voiceId ?? "";
+      config.voiceName = v?.voiceName;
+    }
+    await runLanguage(lang, todo);
+    if (lang === "it") Object.assign(italian, { voiceId: config.voiceId, voiceName: config.voiceName });
+  }
+}
+
+async function runLanguage(lang: string, todo: string[]) {
   if (args.includes("--shape")) {
     const voiceDir = slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "");
     for (const piece of todo) {
@@ -476,12 +519,17 @@ async function main() {
   }
   if (!DRY && !KEY) throw new Error("ELEVENLABS_API_KEY is not set (on GitHub: a repository secret).");
   if (!DRY && !config.voiceId) {
-    const v = config.voiceSearch ? await findVoice(config.voiceSearch) : await chooseVoice();
+    const v = lang === "it" && config.voiceSearch ? await findVoice(config.voiceSearch) : await chooseVoice(lang);
+    // save the choice in the file as it stands (only this language's entry changes)
+    const saved = JSON.parse(readFileSync(CONFIG, "utf8"));
+    if (lang === "it") Object.assign(saved, { voiceId: v.id, voiceName: v.name });
+    else saved.languages = { ...(saved.languages ?? {}), [lang]: { voiceId: v.id, voiceName: v.name } };
+    writeFileSync(CONFIG, JSON.stringify(saved, null, 2) + "\n");
     config.voiceId = v.id;
     config.voiceName = v.name;
-    writeFileSync(CONFIG, JSON.stringify(config, null, 2) + "\n");
-    console.log(`Using ${v.name} (${v.id}); saved in voice.config.json. Change it there to use another voice.`);
-    if (process.env.GITHUB_ACTIONS) console.log(`::notice::Voice chosen: ${v.name}`);
+    config.languages = saved.languages;
+    console.log(`Using ${v.name} (${v.id}) for ${LANGUAGE_NAME[lang] ?? lang}; saved in voice.config.json. Change it there to use another voice.`);
+    if (process.env.GITHUB_ACTIONS) console.log(`::notice::${LANGUAGE_NAME[lang] ?? lang} voice chosen: ${v.name}`);
   }
   const voiceDir = config.voiceId ? slug(config.voiceId).replace(/-[0-9a-f]{8}$/, "") || "voice" : "voice";
   const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, config.speakerBoost ?? true, "plain-42"]);
@@ -531,7 +579,7 @@ async function main() {
   }
 
   const chars = jobs.reduce((n, j) => n + j.clip.text.length, 0);
-  console.log(`${todo.length} piece(s), ${jobs.length} clip(s) to make, ${chars} characters (about ${chars} credits).`);
+  console.log(`${LANGUAGE_NAME[lang] ?? lang}: ${todo.length} piece(s), ${jobs.length} clip(s) to make, ${chars} characters (about ${chars} credits).`);
   for (const j of jobs.slice(0, DRY ? Infinity : 0)) console.log(`  ${j.clip.kind.padEnd(9)} ${j.clip.key.padEnd(18)} ${j.clip.text}`);
   if (DRY) return;
   if (!jobs.length) {

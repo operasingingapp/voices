@@ -10,7 +10,7 @@ import type { Lane, ScoreLayout } from "../score/layout";
 import { PORTRAITS } from "./opera-extra";
 import { decorate, syllableRanges, type Deco, type SylProgress } from "./syllables";
 import { buildTips, type TipLine } from "./tips";
-import { onVoicesChanged, speak, stopSpeaking, voiceInfo } from "./speech";
+import { onVoicesChanged, setSpeechLanguage, speak, stopSpeaking, voiceInfo } from "./speech";
 import { pieceData, type PieceInfo } from "./pieces";
 import { LINE_SOUNDS, resolveLine, type LineChoice } from "./settings";
 
@@ -24,10 +24,12 @@ let edition: CompiledEdition;
 let language: CompiledLanguage;
 const LANGUAGE_NAMES: Record<string, string> = { it: "Italian", de: "German", fr: "French", ru: "Russian", cs: "Czech", es: "Spanish", en: "English", la: "Latin" };
 let ORIGINAL = "Original";
+/** the language code of the piece on screen, for lang attributes and speech */
+let LANG = "it";
 /** Typographic apostrophes for display: l’anello, vo’, I’d (the data keeps plain ones). */
 const curly = (t: string) => t.replace(/'/g, "\u2019");
 
-// Offline placeholder recordings, used only when the device has no Italian voice.
+// Offline placeholder recordings, used only when the device has no voice for the piece's language.
 const audioModules = import.meta.glob(["../../data/content/*/audio/*.mp3", "!../../data/content/cp-fx-*/**"], {
   query: "?inline",
   import: "default",
@@ -156,6 +158,8 @@ function loadPiece(id: string) {
   edition = d.edition;
   language = d.language;
   ORIGINAL = LANGUAGE_NAMES[language.language] ?? "Original";
+  LANG = language.language || "it";
+  setSpeechLanguage(LANG);
   voices = Object.entries(voiceManifests)
     .filter(([k, m]) => k.includes(`/pieces/${id}/voice/`) && m.voiceId)
     .map(([, m]) => m);
@@ -416,7 +420,9 @@ function PracticeScreen({
   // pronunciation tips live in one place: a strip above the words (and the music card's header), about the
   // line you are on; only that line's letters are marked, so the rest stays two clean columns
   const [showTips, setShowTips] = useLocalSetting("p:tipsBar", true);
-  const tips = useMemo(() => buildTips(language.phrases as unknown as TipLine[]), []);
+  // the pronunciation tips are worked out for Italian; other languages have none yet
+  const tips = useMemo(() => buildTips(LANG === "it" ? (language.phrases as unknown as TipLine[]) : []), []);
+  const hasTips = tips.list.length > 0;
   const sylRanges = useMemo(() => new Map(language.phrases.map((ph) => [ph.id, syllableRanges(ph)])), []);
   const [tipIdx, setTipIdx] = useState(0);
   const [tipOpen, setTipOpen] = useState(false);
@@ -715,7 +721,7 @@ function PracticeScreen({
     return (
       <>
         <div className="wc-head">
-          <span className="wc-word" lang="it">
+          <span className="wc-word" lang={LANG}>
             {curly(w.text.replace(/[.,;:!?]+$/, ""))}
           </span>
           <button type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close" onClick={close}>
@@ -762,7 +768,7 @@ function PracticeScreen({
               <button type="button" className="cp-btn cp-btn--ink" onClick={() => sayPhrase(lineId)}>
                 {Icon.speaker} Hear the line
               </button>
-              <span className="wc-note">This device has no Italian voice for single words.</span>
+              <span className="wc-note">This device has no {ORIGINAL} voice for single words.</span>
             </>
           )}
         </div>
@@ -914,7 +920,7 @@ function PracticeScreen({
           {Icon.back}
         </button>
         <div className="p-title">
-          <h1 lang="it">{edition.title}</h1>
+          <h1 lang={LANG}>{edition.title}</h1>
           <p className="p-sub">
             {info.kind} ·{" "}
             <button type="button" className="p-sub-link" onClick={onBack}>
@@ -922,11 +928,11 @@ function PracticeScreen({
             </button>{" "}
             ·{" "}
             {onOpera ? (
-              <button type="button" className="p-sub-link" onClick={onOpera} lang="it">
+              <button type="button" className="p-sub-link" onClick={onOpera} lang={LANG}>
                 <i>{info.opera}</i>
               </button>
             ) : (
-              <i lang="it">{info.opera}</i>
+              <i lang={LANG}>{info.opera}</i>
             )}
           </p>
         </div>
@@ -978,7 +984,7 @@ function PracticeScreen({
                 {Icon.tip}
                 <span>
                   {curTip.tip.title} ·{" "}
-                  <i className="now-tip-word" lang="it">
+                  <i className="now-tip-word" lang={LANG}>
                     {curly(shown.ph.words[curTip.word]?.text.replace(/[.,;:!?]+$/, "") ?? "")}
                   </i>
                 </span>
@@ -1023,7 +1029,7 @@ function PracticeScreen({
               {Icon.left}
             </button>
             <div className="now-inner" aria-live="polite">
-              <p className={`now-it${nowSyl ? " in-progress" : ""}`} lang="it">
+              <p className={`now-it${nowSyl ? " in-progress" : ""}`} lang={LANG}>
                 {lineWords(shown.ph, nowSyl, !playing ? litTip : null)}
               </p>
               <p className="now-ipa" lang="it-fonipa">
@@ -1100,12 +1106,14 @@ function PracticeScreen({
                 <button type="button" className="w-chip" aria-pressed={showTr} onClick={() => setShowTr(!showTr)} title={showTr ? "Hide the English" : "Show the English"}>
                   English
                 </button>
-                <button type="button" className="w-chip" aria-pressed={showTips} onClick={() => setShowTips(!showTips)} title={showTips ? "Hide the pronunciation tips" : "Show the pronunciation tips"}>
+                {hasTips && (
+                  <button type="button" className="w-chip" aria-pressed={showTips} onClick={() => setShowTips(!showTips)} title={showTips ? "Hide the pronunciation tips" : "Show the pronunciation tips"}>
                   {Icon.tip}
                   Tips
                 </button>
+                )}
               </span>
-              {showTips && (
+              {showTips && hasTips && (
                 <div className={`tipstrip${curTip ? "" : " empty"}`} aria-live="polite">
                   {curTip ? (
                     <>
@@ -1113,7 +1121,7 @@ function PracticeScreen({
                         {Icon.tip}
                         <span className="ts-where">Bar {edition.measures[shown.ph.startM].number}</span>
                         <span className="ts-title">{curTip.tip.title}</span>
-                        <span className="ts-word" lang="it">
+                        <span className="ts-word" lang={LANG}>
                           {curly(shown.ph.words[curTip.word]?.text.replace(/[.,;:!?]+$/, "") ?? "")}
                         </span>
                         <span className="ts-short">{curTip.tip.short}</span>
@@ -1211,7 +1219,7 @@ function PracticeScreen({
                     {edition.measures[perf.locate(sp.startQ).m].number}
                   </span>
                   <div className="w-orig">
-                    <p className={`w-it${isNow && nowSyl ? " in-progress" : ""}`} lang="it">
+                    <p className={`w-it${isNow && nowSyl ? " in-progress" : ""}`} lang={LANG}>
                       {lineWords(sp.ph, isNow ? nowSyl : null, sp.ph.id === shown.ph.id ? litTip : null)}
                     </p>
                     {showIpa && (
@@ -1401,7 +1409,7 @@ function PracticeScreen({
                   </span>
                   <div className="mix-main">
                     <div className="mix-head">
-                      <b>Spoken Italian</b>
+                      <b>Spoken {ORIGINAL}</b>
                     </div>
                     <div className="mix-inst">
                       <div className="cp-seg" role="group" aria-label="Voice for the spoken lines and words">
@@ -1487,7 +1495,7 @@ function PracticeScreen({
           <aside className="p-drawer" aria-label="Lines, notes and about">
             <div className="p-drawer-head">
               <div className="cp-seg" role="tablist" aria-label="Panel">
-                {((context ? ["context", "tips", "notes", "about"] : ["tips", "notes", "about"]) as Drawer[]).map((d) => (
+                {((context ? ["context", "tips", "notes", "about"] : ["tips", "notes", "about"]) as Drawer[]).filter((d) => d !== "tips" || hasTips).map((d) => (
                   <button key={d} type="button" role="tab" aria-selected={drawer === d} onClick={() => setDrawer(d)}>
                     {d === "context" ? "The scene" : d === "tips" ? "Pronunciation" : d === "notes" ? `Notes${notes.length ? ` · ${notes.length}` : ""}` : "About"}
                   </button>
@@ -1511,7 +1519,7 @@ function PracticeScreen({
                         <li key={t.id}>
                           <button type="button" onClick={() => sp && goTo(sp.startQ - 0.0001)}>
                             <small>
-                              Bar {sp ? edition.measures[sp.ph.startM].number : ""} · <span lang="it">{curly(word)}</span>
+                              Bar {sp ? edition.measures[sp.ph.startM].number : ""} · <span lang={LANG}>{curly(word)}</span>
                             </small>
                             <b>{t.title}</b>
                             <span>{t.body}</span>
@@ -1625,8 +1633,8 @@ function PracticeScreen({
                   {info.about}
                   <p>
                     {voice
-                      ? `Spoken lines and words: a native Italian voice (${voiceLabel(voice)}), made with ElevenLabs. It is spoken, not sung: how the words sound in Italian, not how to sing them.`
-                      : `Spoken lines use your device's Italian voice when it has one (${deviceVoice ? `here: ${voiceInfo(false).kind === "device" ? (voiceInfo(false) as { name: string }).name : ""}` : "none found here, so robotic placeholder recordings play"}).`}
+                      ? `Spoken lines and words: a native ${ORIGINAL} voice (${voiceLabel(voice)}), made with ElevenLabs. It is spoken, not sung: how the words sound in ${ORIGINAL}, not how to sing them.`
+                      : `Spoken lines use your device's ${ORIGINAL} voice when it has one (${deviceVoice ? `here: ${voiceInfo(false).kind === "device" ? (voiceInfo(false) as { name: string }).name : ""}` : "none found here, so robotic placeholder recordings play"}).`}
                   </p>
                   <p>
                     Piano:{" "}
