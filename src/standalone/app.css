@@ -10356,3 +10356,22 @@ p.rp-opera > span:not(:last-child)::after {
   .meet-head .meet-who { margin-top: 6px; font-size: 14px; line-height: 1.4; color: var(--ink-muted); }
 }
 .who-meta { font-weight: 400; }
+
+/* the opera's cover reaches both sides of its card on every screen (the card's side padding is 28 px) */
+@media (max-width: 640px) {
+  .op-head.has-art .op-cover {
+    margin-left: -28px;
+    margin-right: -28px;
+  }
+}
+
+/* the progress line: one even track, the part played filled green, a small round handle */
+.practice .tl-line {
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--ink) 12%, transparent);
+}
+.practice .tl-line.done {
+  background: var(--now-mark);
+}

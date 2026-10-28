@@ -1593,16 +1593,8 @@ function PracticeScreen({
         >
           <span className="tl-line" />
           <span className="tl-line done" style={{ width: `${pct}%` }} />
-          {spans.map((s, i) => {
-            const a = frac(s.startQ) * 100;
-            const b = frac(s.endQ) * 100;
-            const fill = Math.min(100, Math.max(0, ((pct - a) / Math.max(0.001, b - a)) * 100));
-            return (
-              <span key={s.ph.id} className={`tl-seg${i === current.idx && current.sounding ? " now" : ""}`} style={{ left: `${a}%`, width: `${b - a}%` }}>
-                <i style={{ width: `${fill}%` }} />
-              </span>
-            );
-          })}
+          {/* one even line, filled as you go: marking each phrase made a ragged, dashed line when the
+              phrases are of very different lengths (ensembles), and the score already shows where you sing */}
           <span className="tl-head" style={{ left: `${pct}%` }} />
         </div>
         <div className="tl-time">
