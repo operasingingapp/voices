@@ -27,6 +27,9 @@ let roleVoiceType = "";
 /** PORTRAITS key of the character you sing */
 let portraitKey = "";
 let otherVoices: CompiledEdition["parts"] = [];
+/** every sung part, and the score's parts (xml ids) in the file's order */
+let voiceParts: CompiledEdition["parts"] = [];
+let xmlOrder: string[] = [];
 let info: PieceInfo;
 let edition: CompiledEdition;
 let language: CompiledLanguage;
@@ -62,10 +65,10 @@ const voiceFiles = import.meta.glob(["../../content/voice-bank/*/sung/*.mp3", ".
 let voices: VoiceManifest[] = [];
 const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
 /** the voice chosen for the piece's language in voice.config.json (Italian: voiceId; others: languages.<code>) */
-const languageVoiceId = () => {
+const languageVoiceId = (voiceType = roleVoiceType) => {
   const cfg = voiceConfig as { languages?: Record<string, { voiceId?: string }>; male?: Record<string, { voiceId?: string }> };
   // a piece sung by a man uses the language's man's voice, where one is set
-  const male = /tenor|baritone|bass|countertenor/i.test(roleVoiceType) ? cfg.male?.[LANG]?.voiceId : undefined;
+  const male = /tenor|baritone|bass|countertenor/i.test(voiceType) ? cfg.male?.[LANG]?.voiceId : undefined;
   return male || (LANG === "it" ? defaultVoiceId : (cfg.languages?.[LANG]?.voiceId ?? ""));
 };
 const voiceById = (id: string) =>
@@ -145,6 +148,31 @@ function prepareForDisplay(xml: string): string {
 }
 let displayXml = "";
 
+/** The score with its parts in another order (top to bottom), for an ensemble arranged the way you want to read it. */
+function reorderXml(xml: string, order: string[]): string {
+  try {
+    const doc = new DOMParser().parseFromString(xml, "application/xml");
+    const list = doc.getElementsByTagName("part-list")[0];
+    if (!list) return xml;
+    // brackets joining parts would no longer match the new order
+    for (const g of Array.from(list.getElementsByTagName("part-group"))) g.parentNode?.removeChild(g);
+    const sps = Array.from(list.getElementsByTagName("score-part"));
+    for (const id of order) {
+      const el = sps.find((x) => x.getAttribute("id") === id);
+      if (el) list.appendChild(el);
+    }
+    const root = doc.documentElement;
+    const parts = Array.from(root.children).filter((c) => c.nodeName === "part");
+    for (const id of order) {
+      const el = parts.find((x) => x.getAttribute("id") === id);
+      if (el) root.appendChild(el);
+    }
+    return new XMLSerializer().serializeToString(doc);
+  } catch {
+    return xml;
+  }
+}
+
 /** Tempo words in force in each bar ("Andantino ingenuo"), shown in the bar box. */
 let tempoWords: string[] = [];
 const tempoWordsOf = (edition: CompiledEdition): string[] => {
@@ -176,26 +204,23 @@ function loadPiece(id: string, character?: string) {
   const vparts = edition.parts.filter((p) => p.kind === "voice");
   voicePart = vparts.find((p) => p.roleId === character) ?? vparts[0];
   otherVoices = vparts.filter((p) => p !== voicePart);
+  voiceParts = vparts;
   const role = edition.roles.find((r) => r.partKey === voicePart.key) ?? edition.roles[0];
   roleId = role?.id ?? "";
   roleVoiceType = role?.voiceType ?? "";
   portraitKey = edition.roles.length > 1 ? `${info.portrait.split(":")[0]}:${roleId}` : info.portrait;
-  // only your own lines: the words, tips and recordings follow the character you sing
-  language = edition.roles.length > 1 ? { ...d.language, phrases: d.language.phrases.filter((p) => p.roleId === roleId) } : d.language;
+  // every character's lines; the screen shows one character's at a time (yours, unless you choose another)
+  language = d.language;
   ORIGINAL = LANGUAGE_NAMES[language.language] ?? "Original";
   LANG = language.language || "it";
   setSpeechLanguage(LANG);
   voices = Object.entries(voiceManifests)
     .filter(([k, m]) => k.includes(`/pieces/${id}/voice/`) && m.voiceId)
     .map(([, m]) => m);
-  // in an ensemble, the recordings in your character's voice (a man's for a man) where there are some
-  if (edition.roles.length > 1) {
-    const mine = voices.filter((m) => m.voiceId === languageVoiceId());
-    if (mine.length) voices = mine;
-  }
   pianoPart = edition.parts.find((p) => p.kind === "piano")!;
   if (!displayCache.has(id)) displayCache.set(id, prepareForDisplay(d.scoreXml));
   displayXml = displayCache.get(id)!;
+  xmlOrder = [...displayXml.matchAll(/<score-part id="([^"]+)"/g)].map((m) => m[1]);
   tempoWords = tempoWordsOf(edition);
   // Babbino's notes keep their first key, so nobody loses them
   NOTES_KEY = id === "puccini-o-mio-babbino-caro" ? "cp:babbino:notes" : edition.roles.length > 1 ? `cp:${id}:${roleId}:notes` : `cp:${id}:notes`;
@@ -253,6 +278,16 @@ const Icon = {
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path fill="none" stroke="currentColor" strokeWidth="2" d="M3 5h18v14H3zM8 5v14M13 5v14M18 5v14" />
       <path fill="currentColor" d="M6.5 5h3v8h-3zM16.5 5h3v8h-3zM11.5 5h3v8h-3z" opacity="0" />
+    </svg>
+  ),
+  up: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 14.5L12 8.5l6 6" fill="none" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  ),
+  down: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 9.5l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" />
     </svg>
   ),
   left: (
@@ -398,6 +433,8 @@ type PracticeProps = {
   context?: string;
   /** where it falls in the opera's running order */
   inOpera?: { n: number; total: number; before?: string; after?: string; opera: string };
+  /** in an ensemble: sing another character's line (opens that character's piece) */
+  onSing?: (roleId: string) => void;
 };
 
 /** The practice screen for one piece (an edition id from pieces.tsx). */
@@ -425,6 +462,7 @@ function PracticeScreen({
   onToggleLearned,
   context,
   inOpera,
+  onSing,
 }: PracticeProps) {
   // steady pulse for learning (the file's bar-by-bar rubato smoothed away), or the expressive reading
   const [steady, setSteady] = useLocalSetting("p:steady", true);
@@ -435,20 +473,56 @@ function PracticeScreen({
   const [pianoFaded, setPianoFaded] = useLocalSetting("p:pianoFaded", true);
   const [hearVoice, setHearVoice] = useLocalSetting("p:hearVoice", true);
   const [hearPiano, setHearPiano] = useLocalSetting("p:hearPiano", true);
-  // in an ensemble, the other singers' lines
-  const [hearOthers, setHearOthers] = useLocalSetting("p:hearOthers", true);
+  // an ensemble: each of the other singers' lines on its own (heard or not, how loud, on what, shown in the score or not),
+  // the score's parts in the order you choose, and whose words the line card and the words view show
+  const ens = edition.roles.length > 1;
+  type LineSet = { hear?: boolean; vol?: number; inst?: LineChoice; show?: boolean };
+  const [lineSets, setLineSets] = useLocalSetting<Record<string, LineSet>>(`p:lines:${pieceId}`, {});
+  const setLine = (key: string, patch: LineSet) => setLineSets({ ...lineSets, [key]: { ...lineSets[key], ...patch } });
+  const [order, setOrder] = useLocalSetting<string[]>(`p:order:${pieceId}`, []);
+  const orderedIds = useMemo(() => {
+    const saved = order.filter((id) => xmlOrder.includes(id));
+    return [...saved, ...xmlOrder.filter((id) => !saved.includes(id))];
+  }, [order]);
+  const partByXml = (xid: string) => (xid === voicePart.source.xmlPartId ? voicePart : edition.parts.find((x) => x.source.xmlPartId === xid)!);
+  const hiddenIds = ens ? orderedIds.filter((xid) => lineSets[partByXml(xid).key]?.show === false) : [];
+  const shownXml = useMemo(() => (ens ? reorderXml(displayXml, orderedIds) : displayXml), [ens, orderedIds]);
+  const moveLine = (i: number, dir: -1 | 1) => {
+    const next = [...orderedIds];
+    const j = i + dir;
+    if (j < 0 || j >= next.length) return;
+    [next[i], next[j]] = [next[j], next[i]];
+    setOrder(next);
+  };
+  const [wordsRole, setWordsRole] = useState(roleId);
+  const wordsPart = voiceParts.find((p) => p.roleId === wordsRole) ?? voicePart;
+  const wordsName = edition.roles.find((r) => r.id === wordsRole)?.name ?? roleName;
+  const phrases = useMemo(() => (ens ? language.phrases.filter((p) => p.roleId === wordsRole) : language.phrases), [ens, wordsRole]);
+  // whose words: a small menu on the line card and in the words view
+  const whoPick = ens ? (
+    <label className="who-pick">
+      <span>Words of</span>
+      <select value={wordsRole} onChange={(e) => setWordsRole(e.target.value)} aria-label="Whose words to show">
+        {edition.roles.map((r) => (
+          <option key={r.id} value={r.id}>
+            {r.name}
+            {r.id === roleId ? " (you)" : ""}
+          </option>
+        ))}
+      </select>
+    </label>
+  ) : null;
+  const voiceTypeOf = (p: CompiledEdition["parts"][number]) => edition.roles.find((r) => r.partKey === p.key)?.voiceType ?? "";
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
-  const [volSaved, setVol] = useLocalSetting<{ voice: number; piano: number; others?: number }>("p:vol", { voice: 80, piano: 80 });
-  const vol = { others: 70, ...volSaved };
+  const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
   // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
   const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
   const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType);
-  /** your partners in an ensemble, by name */
-  const others = otherVoices.map((p) => p.shortLabel).join(" & ");
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
-  const voice = voiceById(voiceSel);
+  // an ensemble's lines are spoken in the voice of the character whose words are shown (a man's for a man)
+  const voice = (ens && voices.find((m) => m.voiceId === languageVoiceId(edition.roles.find((r) => r.id === wordsRole)?.voiceType ?? ""))) || voiceById(voiceSel);
   const wordUrl = (text: string) => wordUrlIn(voice, text);
   const [soundLoading, setSoundLoading] = useState(false);
   const [mixOpen, setMixOpen] = useState(false);
@@ -465,9 +539,9 @@ function PracticeScreen({
   // line you are on; only that line's letters are marked, so the rest stays two clean columns
   const [showTips, setShowTips] = useLocalSetting("p:tipsBar", true);
   // the pronunciation tips are worked out for Italian; other languages have none yet
-  const tips = useMemo(() => buildTips(LANG === "it" ? (language.phrases as unknown as TipLine[]) : []), []);
+  const tips = useMemo(() => buildTips(LANG === "it" ? (phrases as unknown as TipLine[]) : []), [phrases]);
   const hasTips = tips.list.length > 0;
-  const sylRanges = useMemo(() => new Map(language.phrases.map((ph) => [ph.id, syllableRanges(ph)])), []);
+  const sylRanges = useMemo(() => new Map(phrases.map((ph) => [ph.id, syllableRanges(ph)])), [phrases]);
   const [tipIdx, setTipIdx] = useState(0);
   const [tipOpen, setTipOpen] = useState(false);
   const [tip, setTip] = useState<number>(() => {
@@ -548,8 +622,11 @@ function PracticeScreen({
     if (!engine) return;
     engine.setMix(voicePart.key, { muted: !hearVoice, solo: false, volume: volGain(vol.voice, voicePart.defaultVolume) });
     engine.setMix(pianoPart.key, { muted: !hearPiano, solo: false, volume: volGain(vol.piano, pianoPart.defaultVolume) });
-    for (const p of otherVoices) engine.setMix(p.key, { muted: !hearOthers, solo: false, volume: volGain(vol.others, p.defaultVolume) });
-  }, [engine, hearVoice, hearPiano, hearOthers, vol.voice, vol.piano, vol.others]);
+    for (const p of otherVoices) {
+      const ls = lineSets[p.key] ?? {};
+      engine.setMix(p.key, { muted: !(ls.hear ?? true), solo: false, volume: volGain(ls.vol ?? 70, p.defaultVolume) });
+    }
+  }, [engine, hearVoice, hearPiano, vol, lineSets]);
   // the sung line's lowest and highest notes, so an instrument can take it an octave down when needed
   const voiceRange = useMemo<[number, number]>(() => {
     const ms = edition.notes.filter((n) => n.part === voicePart.key).map((n) => n.midi);
@@ -568,16 +645,18 @@ function PracticeScreen({
       alive = false;
     };
   }, [pb.port, lineSound, voiceRange]);
-  // your partners' lines each on the instrument for their own voice, so the three are easy to tell apart
+  // the other singers' lines: each on the instrument chosen for it, by default the one for its own voice, so they are easy to tell apart
+  const instOf = (p: CompiledEdition["parts"][number]) => resolveLine(lineSets[p.key]?.inst ?? "auto", voiceTypeOf(p));
+  const instKey = otherVoices.map(instOf).join(",");
   useEffect(() => {
     const port = pb.port;
     if (!port?.setInstrument) return;
     for (const p of otherVoices) {
       const ms = edition.notes.filter((n) => n.part === p.key).map((n) => n.midi);
-      const vt = edition.roles.find((r) => r.partKey === p.key)?.voiceType ?? "";
-      port.setInstrument(p.channel, resolveLine("auto", vt), [Math.min(...ms), Math.max(...ms)]).catch(() => undefined);
+      port.setInstrument(p.channel, instOf(p), [Math.min(...ms), Math.max(...ms)]).catch(() => undefined);
     }
-  }, [pb.port]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pb.port, instKey]);
   // the sound panel closes on a tap elsewhere or Escape
   useEffect(() => {
     if (!mixOpen) return;
@@ -599,12 +678,12 @@ function PracticeScreen({
   // lines on the timeline
   const spans = useMemo(
     () =>
-      language.phrases.map((ph) => ({
+      phrases.map((ph) => ({
         ph,
         startQ: perf.toPerfQ({ m: ph.startM, q: ph.startQ, occ: ph.occurrence }),
         endQ: perf.toPerfQ({ m: ph.endM, q: ph.endQ, occ: ph.occurrence }),
       })),
-    [perf],
+    [perf, phrases],
   );
   const currentQ = useCallback(() => (engine ? engine.displayQ() : 0), [engine]);
   const q = useTicker(() => Math.round(currentQ() * 16) / 16, 80);
@@ -618,9 +697,9 @@ function PracticeScreen({
   }, [spans, q]);
 
   const soundingIds = useMemo(() => {
-    const ev = perf.notes.find((n) => n.part === voicePart.key && n.onQ <= q + 1e-6 && n.offQ > q + 1e-6);
+    const ev = perf.notes.find((n) => n.part === wordsPart.key && n.onQ <= q + 1e-6 && n.offQ > q + 1e-6);
     return new Set(ev?.ids ?? []);
-  }, [perf, q]);
+  }, [perf, q, wordsPart]);
 
   // the line shown in the panel: the one being sung, otherwise the next one
   const shown = spans[current.idx];
@@ -635,9 +714,9 @@ function PracticeScreen({
   // where each sung note lies on the timeline, by note id (a tied note: the whole tie)
   const voiceSpan = useMemo(() => {
     const m = new Map<string, { on: number; off: number }>();
-    for (const n of perf.notes) if (n.part === voicePart.key) for (const id of n.ids) if (!m.has(id)) m.set(id, { on: n.onQ, off: n.offQ });
+    for (const n of perf.notes) if (n.part === wordsPart.key) for (const id of n.ids) if (!m.has(id)) m.set(id, { on: n.onQ, off: n.offQ });
     return m;
-  }, [perf]);
+  }, [perf, wordsPart]);
   // the line in progress: which syllables are sung already, and which are on the note sounding now
   // ("bel", then "lo"; two when an elision puts them on one note). null: the line has not begun.
   const nowSyl = useMemo<SylProgress | null>(() => {
@@ -666,7 +745,7 @@ function PracticeScreen({
   // while a recorded line is spoken, the word being said is marked in the text
   const [spokenWord, setSpokenWord] = useState<{ lineId: string; k: number } | null>(null);
   const sayPhrase = async (id: string, slow = false) => {
-    const ph = language.phrases.find((p) => p.id === id)!;
+    const ph = phrases.find((p) => p.id === id)!;
     if (engine?.state === "playing") engine.pause();
     setSpeakingId(id);
     const rec = lineClip(voice, id, ph.original);
@@ -770,7 +849,7 @@ function PracticeScreen({
   });
 
   const wordCard = (lineId: string, k: number, close: () => void) => {
-    const line = language.phrases.find((p) => p.id === lineId);
+    const line = phrases.find((p) => p.id === lineId);
     const w = line?.words[k];
     if (!line || !w) return null;
     const groups = line.glossGroups.filter((g) => g.words.includes(k));
@@ -916,11 +995,12 @@ function PracticeScreen({
     const out: Block[] = [];
     let prevEnd = 0;
     spans.forEach((sp, i) => {
-      if (sp.startQ - prevEnd >= 2.9) out.push({ kind: "gap", key: `gap-${i}`, startQ: prevEnd, endQ: sp.startQ, label: i === 0 ? "Piano introduction" : "Piano" });
+      if (sp.startQ - prevEnd >= 2.9)
+        out.push({ kind: "gap", key: `gap-${i}`, startQ: prevEnd, endQ: sp.startQ, label: i === 0 ? (ens ? "Introduction" : "Piano introduction") : ens ? "Rest" : "Piano" });
       out.push({ kind: "line", key: sp.ph.id, i });
       prevEnd = sp.endQ;
     });
-    if (perf.totalQ - prevEnd >= 2.9) out.push({ kind: "gap", key: "gap-end", startQ: prevEnd, endQ: perf.totalQ, label: "Piano ending" });
+    if (perf.totalQ - prevEnd >= 2.9) out.push({ kind: "gap", key: "gap-end", startQ: prevEnd, endQ: perf.totalQ, label: ens ? "Ending" : "Piano ending" });
     return out;
   }, [spans, perf]);
   const barsOf = (a: number, b: number) => {
@@ -1028,6 +1108,7 @@ function PracticeScreen({
             <p className="now-meta">
               <span className="now-dot" aria-hidden="true" />
               {current.sounding ? "Now singing" : q < spans[0].startQ ? "First line" : "Next"}
+              {whoPick}
             </p>
             {!playing && curTip && (
               <button
@@ -1111,10 +1192,11 @@ function PracticeScreen({
 
       <main className="p-stage" ref={stageRef} onPointerDown={() => view === "music" && openWord && setOpenWord(null)}>
         <ScoreView
-          xml={displayXml}
+          xml={shownXml}
           edition={edition}
           perf={perf}
-          visibleXmlParts={null}
+          visibleXmlParts={hiddenIds.length ? orderedIds.filter((x) => !hiddenIds.includes(x)) : null}
+          laneLabels={ens ? Object.fromEntries(orderedIds.map((x) => [x, x === pianoPart.source.xmlPartId ? "Piano" : partByXml(x).shortLabel])) : undefined}
           zoom={effZoom}
           cursor={cursorRef}
           marker={markerRef}
@@ -1157,6 +1239,7 @@ function PracticeScreen({
               </span>
               {/* what to show: toggles that show their state (lit = shown), as on the music view's card */}
               <span className="w-tools" role="group" aria-label="Show with the words">
+                {whoPick}
                 <button type="button" className="w-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
                   IPA
                 </button>
@@ -1246,7 +1329,7 @@ function PracticeScreen({
                         {on && playing ? (
                           entry ? (
                             <>
-                              <span className="w-gap-long">You come in at bar {entry} · </span>
+                              <span className="w-gap-long">{wordsRole === roleId ? "You come" : `${wordsName} comes`} in at bar {entry} · </span>
                               {Math.ceil(left)} s
                             </>
                           ) : (
@@ -1358,7 +1441,7 @@ function PracticeScreen({
       </div>
 
       <footer className="p-bar gutter">
-        <div className="bar-parts" role="group" aria-label="Parts">
+        <div className={`bar-parts${ens ? " many" : ""}`} role="group" aria-label="Parts">
           <button
             type="button"
             className="part"
@@ -1375,24 +1458,31 @@ function PracticeScreen({
             </span>
             <span className="part-icon">{hearVoice ? Icon.speaker : Icon.muted}</span>
           </button>
-          {otherVoices.length > 0 && (
-            <button
-              type="button"
-              className="part"
-              aria-pressed={hearOthers}
-              onClick={() => setHearOthers(!hearOthers)}
-              aria-label={`${others} ${hearOthers ? "sing with you. Mute them" : "are muted. Play them"}`}
-            >
-              <span className="part-face" aria-hidden="true">
-                <RoleFace k={partnerKey(otherVoices[0])} />
-              </span>
-              <span className="part-text">
-                <b>{others}</b>
-                <small>{hearOthers ? "Sing with you" : "Muted"}</small>
-              </span>
-              <span className="part-icon">{hearOthers ? Icon.speaker : Icon.muted}</span>
-            </button>
-          )}
+          {orderedIds
+            .map(partByXml)
+            .filter((p) => otherVoices.includes(p))
+            .map((p) => {
+              const on = lineSets[p.key]?.hear ?? true;
+              return (
+                <button
+                  key={p.key}
+                  type="button"
+                  className="part"
+                  aria-pressed={on}
+                  onClick={() => setLine(p.key, { hear: !on })}
+                  aria-label={`${p.shortLabel}'s line ${on ? "plays. Mute it" : "is muted. Play it"}`}
+                >
+                  <span className="part-face" aria-hidden="true">
+                    <RoleFace k={partnerKey(p)} />
+                  </span>
+                  <span className="part-text">
+                    <b>{p.shortLabel}</b>
+                    <small>{on ? "Plays" : "Muted"}</small>
+                  </span>
+                  <span className="part-icon">{on ? Icon.speaker : Icon.muted}</span>
+                </button>
+              );
+            })}
           <button type="button" className="part" aria-pressed={hearPiano} onClick={() => setHearPiano(!hearPiano)} aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}>
             <span className="part-face piano" aria-hidden="true">
               {Icon.piano}
@@ -1408,14 +1498,117 @@ function PracticeScreen({
             className="cp-btn part-fade mix-btn"
             aria-haspopup="dialog"
             aria-expanded={mixOpen}
-            aria-label="Sound: volume of each part, and what the sung line is played on"
+            aria-label={ens ? "Lines: who you sing, and each line's sound, instrument and place in the score" : "Sound: volume of each part, and what the sung line is played on"}
             onClick={() => setMixOpen(!mixOpen)}
           >
             {Icon.sliders}
-            <span>Sound</span>
+            <span>{ens ? "Lines" : "Sound"}</span>
           </button>
           {mixOpen && (
-            <div className="mix-pop" role="dialog" aria-label="Sound">
+            <div className={`mix-pop${ens ? " ens" : ""}`} role="dialog" aria-label={ens ? "Lines" : "Sound"}>
+              {ens ? (
+                <>
+                  {onSing && (
+                    <div className="mix-sing">
+                      <span className="mix-sub">You sing</span>
+                      <div className="cp-seg" role="group" aria-label="The character you sing">
+                        {edition.roles.map((r) => (
+                          <button key={r.id} type="button" aria-pressed={r.id === roleId} onClick={() => r.id !== roleId && onSing(r.id)}>
+                            {voiceParts.find((p) => p.roleId === r.id)?.shortLabel ?? r.name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  <p className="mix-sub">The lines, top to bottom as in the score</p>
+                  {orderedIds.map((xid, i) => {
+                    const p = partByXml(xid);
+                    const isPiano = p.kind === "piano";
+                    const isYou = p === voicePart;
+                    const ls = lineSets[p.key] ?? {};
+                    const on = isYou ? hearVoice : isPiano ? hearPiano : (ls.hear ?? true);
+                    const v = isYou ? vol.voice : isPiano ? vol.piano : (ls.vol ?? 70);
+                    const shownHere = ls.show ?? true;
+                    const name = isPiano ? "Piano" : p.shortLabel;
+                    const setOn = (x: boolean) => (isYou ? setHearVoice(x) : isPiano ? setHearPiano(x) : setLine(p.key, { hear: x }));
+                    const inst = isYou ? lineSound : instOf(p);
+                    return (
+                      <div className="mix-row mix-line" key={xid}>
+                        <span className={`part-face${isPiano ? " piano" : ""}${isYou ? " you" : ""}`} data-tone={isYou ? "pink" : undefined} aria-hidden="true">
+                          {isPiano ? Icon.piano : <RoleFace k={partnerKey(p)} />}
+                        </span>
+                        <div className="mix-main">
+                          <div className="mix-head">
+                            <b>
+                              {name}
+                              {isYou && <em className="mix-you">you</em>}
+                            </b>
+                            <span className="mix-tools">
+                              <button
+                                type="button"
+                                className="mix-mini"
+                                aria-pressed={shownHere}
+                                disabled={shownHere && hiddenIds.length >= orderedIds.length - 1}
+                                onClick={() => setLine(p.key, { show: !shownHere })}
+                                aria-label={shownHere ? `Hide ${name} in the score` : `Show ${name} in the score`}
+                                title={shownHere ? "Shown in the score" : "Hidden in the score"}
+                              >
+                                {shownHere ? Icon.eye : Icon.eyeOff}
+                              </button>
+                              <button type="button" className="mix-mini" disabled={i === 0} onClick={() => moveLine(i, -1)} aria-label={`Move ${name} up`} title="Move up">
+                                {Icon.up}
+                              </button>
+                              <button
+                                type="button"
+                                className="mix-mini"
+                                disabled={i === orderedIds.length - 1}
+                                onClick={() => moveLine(i, 1)}
+                                aria-label={`Move ${name} down`}
+                                title="Move down"
+                              >
+                                {Icon.down}
+                              </button>
+                              <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setOn(!on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted"}>
+                                {on ? Icon.speaker : Icon.muted}
+                              </button>
+                            </span>
+                          </div>
+                          <input
+                            type="range"
+                            className="cp-slider"
+                            min={0}
+                            max={100}
+                            step={5}
+                            value={v}
+                            style={{ ["--fill" as string]: `${v}%` }}
+                            aria-label={`${name}: volume`}
+                            onChange={(e) => {
+                              const x = Number(e.target.value);
+                              if (isYou) setVol({ ...vol, voice: x });
+                              else if (isPiano) setVol({ ...vol, piano: x });
+                              else setLine(p.key, { vol: x });
+                              if (!on) setOn(true);
+                            }}
+                          />
+                          {!isPiano && (
+                            <div className="mix-inst">
+                              <span>Played on</span>
+                              <div className="cp-seg" role="group" aria-label={`${name}'s line is played on`}>
+                                {LINE_SOUNDS.map((o) => (
+                                  <button key={o.id} type="button" aria-pressed={inst === o.id} onClick={() => (isYou ? setLineSound(o.id) : setLine(p.key, { inst: o.id }))}>
+                                    {o.label}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </>
+              ) : (
+                <>
               <div className="mix-row">
                 <span className="part-face you" data-tone="pink" aria-hidden="true">
                   <RoleFace k={portraitKey} />
@@ -1452,33 +1645,6 @@ function PracticeScreen({
                   {soundLoading && <p className="mix-note">Loading the {LINE_SOUNDS.find((o) => o.id === lineSound)?.label.toLowerCase()}…</p>}
                 </div>
               </div>
-              {otherVoices.length > 0 && (
-                <div className="mix-row">
-                  <span className="part-face" aria-hidden="true">
-                    <RoleFace k={partnerKey(otherVoices[0])} />
-                  </span>
-                  <div className="mix-main">
-                    <div className="mix-head">
-                      <b>{others}</b>
-                      <span>{hearOthers ? `${vol.others}%` : "Muted"}</span>
-                    </div>
-                    <input
-                      type="range"
-                      className="cp-slider"
-                      min={0}
-                      max={100}
-                      step={5}
-                      value={vol.others}
-                      style={{ ["--fill" as string]: `${vol.others}%` }}
-                      aria-label={`${others}: volume`}
-                      onChange={(e) => {
-                        setVol({ ...vol, others: Number(e.target.value) });
-                        if (!hearOthers) setHearOthers(true);
-                      }}
-                    />
-                  </div>
-                </div>
-              )}
               <div className="mix-row">
                 <span className="part-face piano" aria-hidden="true">
                   {Icon.piano}
@@ -1504,7 +1670,9 @@ function PracticeScreen({
                   />
                 </div>
               </div>
-              {voices.length > 1 && (
+                </>
+              )}
+              {!ens && voices.length > 1 && (
                 <div className="mix-row">
                   <span className="part-face piano" aria-hidden="true">
                     {Icon.speaker}
@@ -1525,8 +1693,16 @@ function PracticeScreen({
                   </div>
                 </div>
               )}
-              {(vol.voice !== 80 || vol.piano !== 80) && (
-                <button type="button" className="mix-reset" onClick={() => setVol({ voice: 80, piano: 80 })}>
+              {(vol.voice !== 80 || vol.piano !== 80 || Object.keys(lineSets).length > 0 || order.length > 0) && (
+                <button
+                  type="button"
+                  className="mix-reset"
+                  onClick={() => {
+                    setVol({ voice: 80, piano: 80 });
+                    setLineSets({});
+                    setOrder([]);
+                  }}
+                >
                   Back to the usual balance
                 </button>
               )}

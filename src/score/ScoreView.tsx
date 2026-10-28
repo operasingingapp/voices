@@ -82,6 +82,8 @@ interface Props {
   renderLanes?: (lanes: Lane[], text: { top: number; bottom: number } | null) => ReactNode;
   /** Colour of the engraved music (follows the theme). */
   ink?: string;
+  /** strip: a name over each part's staff (xml part id → name), kept in view at the left while the score scrolls */
+  laneLabels?: Record<string, string>;
   /** Colour the note sounding now, in the first of these parts that has one (xml part ids). */
   nowNoteParts?: string[];
   /** Parts drawn faded (still on the line, but quiet to the eye). */
@@ -314,6 +316,16 @@ function findSoundingNote(osmd: OpenSheetMusicDisplay, m: number, q: number, par
 }
 
 export function ScoreView(props: Props) {
+  const laneLabelEls = (layout: ScoreLayout) =>
+    props.laneLabels
+      ? layout.lanes
+          .filter((l) => props.laneLabels![l.partId])
+          .map((l) => (
+            <span key={`lbl-${l.partId}`} className="lane-label" style={{ top: l.top - 17 }} aria-hidden="true">
+              {props.laneLabels![l.partId]}
+            </span>
+          ))
+      : null;
   const { xml, visibleXmlParts, zoom } = props;
   const scrollRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
@@ -766,6 +778,7 @@ export function ScoreView(props: Props) {
       {strip && pinned && pinIdx >= 0 && (
         <div className="pin-clef" style={{ width: pinned.width, marginRight: -pinned.width, height: layout?.height }} aria-hidden="true">
           <div dangerouslySetInnerHTML={{ __html: pinned.panels[pinIdx].html }} />
+          {layout && laneLabelEls(layout)}
           {layout &&
             props.fadedXmlParts?.map((pid) => {
               const i = layout.lanes.findIndex((l) => l.partId === pid);
@@ -923,6 +936,7 @@ export function ScoreView(props: Props) {
               });
             })()}
           {layout && hasLyrics && renderSungText(layout)}
+          {layout && !(pinned && pinIdx >= 0) && laneLabelEls(layout)}
           {layout &&
             props.fadedXmlParts?.map((pid) => {
               const i = layout.lanes.findIndex((l) => l.partId === pid);

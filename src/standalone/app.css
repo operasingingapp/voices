@@ -8912,3 +8912,141 @@ p.obp-meta {
   font-weight: 500;
   color: var(--you-mark);
 }
+
+/* ---------------------------------------------------------------------
+   Ensembles: whose words, and the Lines panel (each singer's line on its own)
+   --------------------------------------------------------------------- */
+.who-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 10px;
+  font: 500 12px/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.who-pick select {
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 30px;
+  padding: 0 28px 0 12px;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  border-radius: 999px;
+  background: var(--canvas)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9.5l6 6 6-6' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E")
+    no-repeat right 8px center / 14px;
+  color: var(--ink);
+  font: 500 13px/1 var(--font-sans);
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+}
+.w-tools .who-pick {
+  margin: 0 4px 0 0;
+}
+.w-tools .who-pick select {
+  min-height: 36px;
+}
+@media (max-width: 640px) {
+  .who-pick > span {
+    display: none;
+  }
+}
+.lane-label {
+  position: absolute;
+  left: 6px;
+  z-index: 3;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--canvas) 88%, transparent);
+  color: var(--ink-muted);
+  font: 500 11px/1.4 var(--font-sans);
+  white-space: nowrap;
+  pointer-events: none;
+}
+/* phones: an ensemble's chips are its faces (a muted line fades); the Lines panel says the rest */
+@media (max-width: 640px) {
+  .bar-parts.many .part-icon {
+    display: none;
+  }
+  .bar-parts.many .part {
+    padding: 0 4px;
+    min-width: 0;
+  }
+  .bar-parts.many .part-face {
+    width: 36px;
+    height: 36px;
+  }
+  .bar-parts.many .part[aria-pressed="false"] .part-face {
+    opacity: 0.3;
+  }
+  .mix-pop.ens {
+    max-height: calc(100dvh - 270px);
+  }
+}
+.mix-pop.ens {
+  max-height: min(72vh, 680px);
+  overflow-y: auto;
+  gap: 12px;
+}
+.mix-sub {
+  margin: 0;
+  font: 500 12px/1.2 var(--font-sans);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.mix-sing {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+.mix-sing .cp-seg button {
+  min-height: 38px;
+  padding: 0 14px;
+}
+.mix-line .mix-head {
+  align-items: center;
+}
+.mix-you {
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--pink-soft, #fbd3e6);
+  color: var(--ink);
+  font: 500 11px/1.4 var(--font-sans);
+  font-style: normal;
+  vertical-align: 2px;
+}
+.mix-tools {
+  display: inline-flex;
+  gap: 2px;
+}
+.mix-mini {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.mix-mini svg {
+  width: 19px;
+  height: 19px;
+}
+.mix-mini:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+}
+.mix-mini:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.mix-mini[aria-pressed="false"] {
+  color: var(--ink-muted);
+}

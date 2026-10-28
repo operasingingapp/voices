@@ -295,6 +295,12 @@ export function App() {
           onOpera={() => go({ screen: "opera", opera: opera.id })}
           editionId={piece.editionId}
           character={ch.id}
+          onSing={(id) => {
+            // the same piece, as another character in it
+            const other = opera.chars.find((c) => c.id === id);
+            const index = other?.pieces.findIndex((x) => x.editionId === piece.editionId) ?? -1;
+            if (other && index >= 0) go({ screen: "piece", opera: opera.id, character: other.id, piece: index });
+          }}
           roleName={ch.name}
           onBack={() => go({ screen: "role", opera: opera.id, character: ch.id })}
           learned={(learned[roleKey(r)] ?? []).includes(key)}
