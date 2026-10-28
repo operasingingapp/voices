@@ -998,6 +998,58 @@ function PracticeScreen({
     goTo(pm.startQ + pos.q);
   };
 
+  // choosing a loop in the score itself: drag across bars (mouse) or long-press a bar (touch); then drag its handles
+  const rangeFrom = useRef<PerfMeasure | null>(null);
+  const onRange = (from: { m: number; q: number }, to: { m: number; q: number }, phase: "press" | "start" | "move" | "end") => {
+    const at = (m: number) => perf.occurrences(m)[0];
+    const a = at(from.m);
+    if (!a) return;
+    setLoopPick(null);
+    if (phase === "press") {
+      const r = { startQ: a.startQ, endQ: a.startQ + a.durQ };
+      setLoop(r);
+      if (engine && engine.state !== "playing") engine.seek(r.startQ);
+      return;
+    }
+    if (phase === "start") {
+      // starting a drag on an edge bar of the current loop moves that edge (the other end stays)
+      let anchor = a;
+      if (loop) {
+        const f = barAt(loop.startQ);
+        const z = barAt(loop.endQ - 1e-3);
+        if (z.startQ > f.startQ + 1e-6) {
+          if (Math.abs(a.startQ - f.startQ) < 1e-6) anchor = z;
+          else if (Math.abs(a.startQ - z.startQ) < 1e-6) anchor = f;
+        }
+      }
+      rangeFrom.current = anchor;
+    }
+    const A = rangeFrom.current ?? a;
+    const B = at(to.m) ?? a;
+    const r = { startQ: Math.min(A.startQ, B.startQ), endQ: Math.max(A.startQ + A.durQ, B.startQ + B.durQ) };
+    setLoop((o) => (o && Math.abs(o.startQ - r.startQ) < 1e-6 && Math.abs(o.endQ - r.endQ) < 1e-6 ? o : r));
+    if (phase === "end" && engine && engine.state !== "playing") engine.seek(r.startQ);
+  };
+  const onLoopEdge = (k: "s" | "e", h: { m: number; q: number } | null, step?: number) => {
+    if (!loop) return;
+    const F = barAt(loop.startQ);
+    const Z = barAt(loop.endQ - 1e-3);
+    let r: { startQ: number; endQ: number } | null = null;
+    if (step) {
+      const ms = perf.measures;
+      const M = ms[ms.indexOf(k === "s" ? F : Z) + step];
+      if (!M) return;
+      r = k === "s" ? (M.startQ > Z.startQ + 1e-6 ? null : { startQ: M.startQ, endQ: loop.endQ }) : M.startQ < F.startQ - 1e-6 ? null : { startQ: loop.startQ, endQ: M.startQ + M.durQ };
+    } else if (h) {
+      const o = perf.occurrences(h.m)[0];
+      if (!o) return;
+      // the nearer barline to where the handle is
+      const q = h.q > o.durQ / 2 ? o.startQ + o.durQ : o.startQ;
+      r = k === "s" ? { startQ: Math.min(q, Z.startQ), endQ: loop.endQ } : { startQ: loop.startQ, endQ: Math.max(q, F.startQ + F.durQ) };
+    }
+    if (r && (Math.abs(r.startQ - loop.startQ) > 1e-6 || Math.abs(r.endQ - loop.endQ) > 1e-6)) setLoop(r);
+  };
+
   // the screen stays on while the music plays (a tablet on a music stand must not dim mid-aria)
   useEffect(() => {
     if (!playing || !("wakeLock" in navigator)) return;
@@ -1474,6 +1526,8 @@ function PracticeScreen({
           cuts={[]}
           flags={flags}
           onTap={onTap}
+          onRange={onRange}
+          onLoopEdge={onLoopEdge}
           onFlag={() => setDrawer("notes")}
           onUserScroll={() => undefined}
           onLayout={onLayout}

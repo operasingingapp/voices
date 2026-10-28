@@ -62,6 +62,10 @@ interface Props {
   cuts: Cut[];
   flags: Flag[];
   onTap: (pos: { m: number; q: number }, ev: { shift: boolean }) => void;
+  /** dragging across bars (mouse), or a long press (touch): choose a range of bars, e.g. to loop */
+  onRange?: (from: { m: number; q: number }, to: { m: number; q: number }, phase: "press" | "start" | "move" | "end") => void;
+  /** dragging (or arrow keys on) the loop's start or end handle */
+  onLoopEdge?: (edge: "s" | "e", at: { m: number; q: number } | null, step?: number) => void;
   onFlag?: (flag: Flag) => void;
   onUserScroll: () => void;
   onLayout?: (layout: ScoreLayout) => void;
@@ -694,7 +698,70 @@ export function ScoreView(props: Props) {
     return out;
   }, [props.selection]);
 
+  // a range of bars: drag with a mouse, or long-press with a finger (a finger's drag scrolls the music)
+  type Drag = { x: number; y: number; a: { m: number; q: number }; last: { m: number; q: number }; on: boolean; id: number; touch: boolean; timer: number };
+  const dragRef = useRef<Drag | null>(null);
+  const hitXY = (x: number, y: number) => {
+    const l = layoutRef.current;
+    const host = hostRef.current;
+    if (!l || !host) return null;
+    const r = host.getBoundingClientRect();
+    return l.hit(x - r.left, y - r.top);
+  };
+  const endDrag = () => {
+    const d = dragRef.current;
+    if (d) window.clearTimeout(d.timer);
+    dragRef.current = null;
+    document.body.classList.remove("cp-dragsel");
+  };
+  const onPointerDown = (e: React.PointerEvent) => {
+    if (!props.onRange || e.button > 0 || (e.target as HTMLElement).closest("button, .word-card, .sung-block, .ov-lh")) return;
+    const a = hitXY(e.clientX, e.clientY);
+    if (!a) return;
+    const d: Drag = { x: e.clientX, y: e.clientY, a, last: a, on: false, id: e.pointerId, touch: e.pointerType === "touch", timer: 0 };
+    dragRef.current = d;
+    if (d.touch)
+      d.timer = window.setTimeout(() => {
+        if (dragRef.current !== d) return;
+        d.on = true;
+        props.onRange?.(a, a, "press");
+        navigator.vibrate?.(12);
+      }, 450);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    const d = dragRef.current;
+    if (!d || d.id !== e.pointerId) return;
+    const dist = Math.hypot(e.clientX - d.x, e.clientY - d.y);
+    if (d.touch) {
+      if (!d.on && dist > 10) endDrag();
+      return;
+    }
+    if (!d.on) {
+      if (dist < 8) return;
+      d.on = true;
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch {
+        /* capture unavailable */
+      }
+      props.onRange?.(d.a, d.a, "start");
+      document.body.classList.add("cp-dragsel");
+    }
+    const h = hitXY(e.clientX, e.clientY);
+    if (h && h.m !== d.last.m) {
+      d.last = h;
+      props.onRange?.(d.a, h, "move");
+    }
+  };
   const onPointerUp = (e: React.PointerEvent) => {
+    const d = dragRef.current;
+    if (d) {
+      endDrag();
+      if (d.on) {
+        if (!d.touch) props.onRange?.(d.a, hitXY(e.clientX, e.clientY) ?? d.last, "end");
+        return;
+      }
+    }
     const l = layoutRef.current;
     const host = hostRef.current;
     if (!l || !host) return;
@@ -851,6 +918,9 @@ export function ScoreView(props: Props) {
         ref={sheetRef}
         style={strip && layout ? { width: layout.width, height: layout.height } : undefined}
         onPointerUp={onPointerUp}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerCancel={endDrag}
       >
         {error && <p className="score-error">{error}</p>}
         {!loaded && !error && <p className="score-loading">Engraving the score…</p>}
@@ -860,6 +930,58 @@ export function ScoreView(props: Props) {
             rangeRects(layout, loopMeasures).map((r, i) => (
               <div key={`loop${i}`} className="ov-loop" style={{ left: r.x, top: r.y + 6, width: r.w, height: r.h - 12 }} />
             ))}
+          {layout &&
+            props.onLoopEdge &&
+            (() => {
+              // the loop's two edges as handles: drag them (or use the arrow keys) to move where it starts and ends
+              const rs = rangeRects(layout, loopMeasures);
+              if (!rs.length) return null;
+              const first = rs[0];
+              const last = rs[rs.length - 1];
+              const handle = (k: "s" | "e", x: number, g: typeof first) => (
+                <div
+                  key={`lh-${k}`}
+                  className={`ov-lh ov-lh-${k}`}
+                  role="slider"
+                  tabIndex={0}
+                  aria-label={k === "s" ? "Loop start: drag to change" : "Loop end: drag to change"}
+                  title={k === "s" ? "Drag to move where the loop starts" : "Drag to move where the loop ends"}
+                  style={{ left: x, top: g.y + 6, height: g.h - 12 }}
+                  onPointerDown={(e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    e.currentTarget.setPointerCapture(e.pointerId);
+                    e.currentTarget.dataset.drag = String(e.clientY);
+                    document.body.classList.add("cp-dragsel");
+                  }}
+                  onPointerMove={(e) => {
+                    const y = e.currentTarget.dataset.drag;
+                    if (y === undefined) return;
+                    e.stopPropagation();
+                    const h = hitXY(e.clientX, e.clientY) ?? hitXY(e.clientX, Number(y));
+                    if (h) props.onLoopEdge?.(k, h);
+                  }}
+                  onPointerUp={(e) => {
+                    e.stopPropagation();
+                    delete e.currentTarget.dataset.drag;
+                    document.body.classList.remove("cp-dragsel");
+                  }}
+                  onPointerCancel={(e) => {
+                    delete e.currentTarget.dataset.drag;
+                    document.body.classList.remove("cp-dragsel");
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                  onKeyDown={(e) => {
+                    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      props.onLoopEdge?.(k, null, e.key === "ArrowLeft" ? -1 : 1);
+                    }
+                  }}
+                />
+              );
+              return [handle("s", first.x, first), handle("e", last.x + last.w, last)];
+            })()}
           {layout &&
             rangeRects(layout, selMeasures).map((r, i) => (
               <div key={`sel${i}`} className="ov-selection" style={{ left: r.x, top: r.y, width: r.w, height: r.h }} />

@@ -10938,3 +10938,38 @@ p.rp-opera > span:not(:last-child)::after {
 .pc-play svg, .pc-go svg { width: 18px; height: 18px; }
 .pc-soon { flex: none; color: var(--ink-muted); font: 500 13px/1 var(--font-sans); }
 .search-results .vroles { margin-top: 0; }
+
+/* choosing bars by dragging: no text selection meanwhile; the loop drawn with a top and bottom rule and two handles */
+body.cp-dragsel,
+body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !important; cursor: col-resize !important; }
+.score-sheet { -webkit-touch-callout: none; }
+.score-overlay > .ov-loop { box-shadow: inset 0 3px 0 var(--loop-mark), inset 0 -3px 0 var(--loop-mark); }
+.score-overlay > .ov-lh {
+  position: absolute;
+  pointer-events: auto;
+  z-index: 4;
+  width: 7px;
+  background: var(--loop-mark);
+  cursor: ew-resize;
+  touch-action: none;
+  outline: none;
+  transition: transform 0.12s;
+}
+.ov-lh-s { margin-left: -7px; border-radius: 4px 0 0 4px; }
+.ov-lh-e { border-radius: 0 4px 4px 0; }
+.ov-lh::before { content: ""; position: absolute; inset: -4px -16px; }
+.ov-lh::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 18px;
+  margin: -9px 0 0 -1px;
+  border-left: 2px solid #fff;
+  border-radius: 1px;
+  opacity: 0.85;
+}
+.ov-lh:hover,
+.ov-lh[data-drag] { filter: brightness(1.15); }
+.ov-lh:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--loop-mark) 35%, transparent); }
