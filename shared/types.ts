@@ -76,6 +76,8 @@ export interface NoteInfo {
   tieStart: boolean;
   tieStop: boolean;
   fermata?: boolean;
+  /** staccato, staccatissimo or spiccato: played detached, never held by the pedal */
+  staccato?: boolean;
   /**
    * Tremolo: "single" repeats this note; "start"/"stop" alternate it with the next note (a fingered
    * tremolo, e.g. octaves). marks = number of strokes or beams (3 = demisemiquavers).
@@ -112,6 +114,8 @@ export interface CompiledEdition {
   kind: "aria" | "ensemble";
   fixture: boolean;
   fixtureNotice?: string;
+  /** the accompanist's pedalling: "romantic" with the harmony (default), "classical" lightly, beat by beat */
+  pedal?: "romantic" | "classical";
   composer: string;
   librettist: string;
   language: string;

@@ -23,6 +23,8 @@ export interface SynthPort {
   setMasterMuted(muted: boolean, time: number): void;
   click(time: number, accent: boolean): void;
   cancelClicks(): void;
+  /** how much of the sound goes into the room, 1 = the default hall (ports without a room ignore it) */
+  setRoom?(level: number): void;
 }
 
 export interface MixState {

@@ -750,6 +750,12 @@ function PracticeScreen({
       alive = false;
     };
   }, [pb.port, lineSound, voiceRange]);
+  // The room suits the pedalling. Puccini is pedalled with the harmony (and its own Ped. marks), so the
+  // default hall is enough; Mozart is pedalled lightly, beat by beat, to keep the texture clear, and
+  // without a little more hall that clean playing sounds dry: the room gives it the warmth instead.
+  useEffect(() => {
+    pb.port?.setRoom?.(edition.pedal === "classical" ? 1.35 : 1);
+  }, [pb.port]);
   // the other singers' lines: each on the instrument chosen for it, by default the one for its own voice, so they are easy to tell apart
   const instOf = (p: CompiledEdition["parts"][number]) => resolveLine(lineSets[p.key]?.inst ?? "auto", voiceTypeOf(p));
   const instKey = otherVoices.map(instOf).join(",");
@@ -1938,14 +1944,15 @@ function PracticeScreen({
 
         <div className="bar-right">
           <div className="cp-tempo">
+            {/* the beat it plays at, then the speed as a percentage between slower and faster */}
+            <span className="cp-tempo__beat" aria-label={`About ${beatBpm} beats a minute`}>
+              <span className="cp-beat">{beatSymbol}</span> = {beatBpm}
+            </span>
             <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
               {Icon.minus}
             </button>
             <div className="cp-tempo__value" data-testid="tempo">
               <b>{tempoPct}%</b>
-              <span>
-                <span className="cp-beat">{beatSymbol}</span> ≈ {beatBpm}
-              </span>
             </div>
             <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={() => engine?.setTempoFactor(Math.min(1.5, +((engine?.tempo ?? 1) + 0.05).toFixed(2)))}>
               {Icon.plus}

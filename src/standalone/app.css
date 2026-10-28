@@ -9947,3 +9947,357 @@ p.rp-opera > span:not(:last-child)::after {
     margin-left: auto;
   }
 }
+
+/* the story's and the card's Back: shown on phones, where the X becomes a plain Back like every screen's */
+.sheet-back {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 0 12px 0 4px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 16px/1 var(--font-sans);
+  cursor: pointer;
+}
+.sheet-back svg {
+  width: 22px;
+  height: 22px;
+}
+.meet-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 36px 36px 0;
+}
+.meet-head h2 {
+  margin: -6px 0 0;
+  font: 400 clamp(36px, 4.4vw, 52px)/1.02 var(--font-sans);
+  letter-spacing: -0.015em;
+}
+.meet-scroll {
+  padding-top: 14px;
+}
+@media (max-width: 720px) {
+  .sheet-back {
+    display: inline-flex;
+  }
+  .sheet-x,
+  .meet-close {
+    display: none;
+  }
+  .syn-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: max(10px, env(safe-area-inset-top)) 16px 12px 12px;
+  }
+  .syn-head > div {
+    padding-left: 8px;
+  }
+  /* the character card: a sheet from the bottom, as tall as it needs; Back on top, a small portrait beside
+     the name, the story under them, the two choices across the foot */
+  .meet {
+    place-items: end stretch;
+    padding: 0;
+  }
+  .meet-card {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    grid-template-areas: "back back" "pic head" "story story" "act act";
+    column-gap: 14px;
+    width: 100%;
+    max-height: min(92dvh, 760px);
+    border-radius: 28px 28px 0 0;
+  }
+  .meet-body {
+    display: contents;
+  }
+  .meet-back {
+    grid-area: back;
+    justify-self: start;
+    margin: 8px 0 2px 8px;
+  }
+  .meet-pic {
+    grid-area: pic;
+    align-self: start;
+    width: 96px;
+    height: 128px;
+    margin-left: 16px;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+  .meet-head {
+    grid-area: head;
+    align-self: center;
+    gap: 6px;
+    padding: 0 16px 0 0;
+  }
+  .meet-head .cp-eyebrow {
+    font-size: 11px;
+  }
+  .meet-head h2 {
+    margin: 0;
+    font-size: 30px;
+  }
+  .meet-who {
+    font-size: 15px;
+  }
+  .meet-scroll {
+    grid-area: story;
+    padding: 16px 20px 12px;
+  }
+  .meet-story {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .meet-actions {
+    grid-area: act;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 12px 16px max(14px, env(safe-area-inset-bottom));
+  }
+  .meet-actions .cp-btn {
+    justify-content: center;
+    width: 100%;
+  }
+  .meet-take {
+    min-height: 50px;
+  }
+}
+@media (max-width: 720px) {
+  .meet-card {
+    grid-template-columns: 112px minmax(0, 1fr);
+  }
+}
+
+/* the speed: the beat first (quiet), then − 100% + */
+.cp-tempo__beat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 0 8px 0 12px;
+  color: var(--ink-muted);
+  font: 500 14px/1 var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.cp-tempo__beat .cp-beat {
+  font-size: 17px;
+}
+.practice .cp-tempo__value b {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* =====================================================================
+   The progress line, quieter: one slim even track; the sung lines a little
+   darker than the rests, all of it filling green as you go; a small handle
+   ===================================================================== */
+.practice .tl-line {
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--ink) 9%, transparent);
+}
+.practice .tl-line.done {
+  background: color-mix(in srgb, var(--now-mark) 45%, transparent);
+}
+.practice .tl-seg {
+  height: 4px;
+  margin-top: -2px;
+  border: 0;
+  border-radius: 0;
+  background: color-mix(in srgb, var(--ink) 20%, transparent);
+  box-shadow: none;
+}
+.practice .tl-seg + .tl-seg {
+  border-left: 0;
+}
+.practice .tl-seg i {
+  background: var(--now-mark);
+}
+.practice .tl-seg.now {
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 0;
+  box-shadow: none;
+}
+.practice .tl-head {
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  background: var(--canvas);
+  box-shadow: 0 0 0 2px var(--now-mark), 0 1px 3px rgba(20, 30, 25, 0.2);
+}
+/* phones: the speed pill's beat stays, the count-in follows it */
+@media (max-width: 640px) {
+  .cp-tempo__beat {
+    padding: 0 4px 0 10px;
+    font-size: 13px;
+  }
+}
+
+/* =====================================================================
+   The role's head, one calm row: portrait, then who (opera, name, voice and
+   a line about them), then how far along; what to do sits underneath
+   ===================================================================== */
+.rp-head {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "band band band"
+    "ring id prog"
+    "acts acts acts";
+  align-items: center;
+  gap: 20px 28px;
+}
+.rp-head .art-band { grid-area: band; }
+.rp-head > .ring { grid-area: ring; align-self: center; }
+.rp-head > .rp-id { grid-area: id; display: flex; gap: 6px; }
+.rp-head > .rp-progress { grid-area: prog; align-self: center; }
+.rp-head > .rp-actions {
+  grid-area: acts;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid color-mix(in srgb, var(--on-pastel) 12%, transparent);
+}
+.rp-opera-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 0;
+  min-height: 34px;
+  margin: 0 0 0 -12px;
+  padding: 0 8px 0 12px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: inherit;
+  font: 500 15px/1.25 var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--duration-move) var(--ease-standard);
+}
+.rp-opera-link > span:first-child { font-style: italic; }
+.rp-opera-link .rp-opera-by { color: var(--ink-muted); }
+.rp-opera-link .rp-opera-by::before { content: "·"; margin: 0 7px; }
+.rp-opera-link svg { width: 16px; height: 16px; margin-left: 4px; flex: none; }
+.rp-opera-link:hover,
+.rp-opera-link:focus-visible { background: color-mix(in srgb, var(--canvas) 55%, transparent); }
+.rp-head .rp-id h1 { margin: 2px 0 0; }
+.rp-desc { margin: 0; max-width: 480px; line-height: 1.45; }
+.rp-voice {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--canvas) 60%, transparent);
+  color: var(--on-pastel);
+  font: 500 13px/1.5 var(--font-sans);
+  vertical-align: 1px;
+}
+.rp-head > .rp-progress {
+  min-width: 200px;
+  padding: 18px 20px;
+  gap: 10px;
+}
+.rp-head > .rp-progress p b { font-size: 40px; }
+.rp-go { flex: 0 0 auto; max-width: none; }
+@media (max-width: 640px) {
+  .rp-head {
+    grid-template-columns: 84px minmax(0, 1fr);
+    grid-template-areas:
+      "band band"
+      "ring id"
+      "prog prog"
+      "acts acts";
+    gap: 14px 16px;
+  }
+  .rp-head > .ring { grid-row: auto; align-self: center; }
+  .rp-head > .rp-id { display: flex; }
+  .rp-head .rp-id h1 { font-size: 32px; }
+  .rp-opera-link { font-size: 14px; min-height: 30px; }
+  .rp-desc { font-size: 15px; }
+  .rp-head > .rp-progress { min-width: 0; padding: 12px 16px; }
+  .rp-head > .rp-progress p b { font-size: 24px; }
+  .rp-head > .rp-actions { padding-top: 14px; }
+  .rp-head > .rp-actions .rp-go { flex: 1 1 100%; justify-content: center; }
+  .rp-head > .rp-actions .mine-toggle,
+  .rp-head > .rp-actions .rp-syn-btn { flex: 1 1 0; justify-content: center; min-width: 0; padding: 0 12px; }
+}
+
+/* phones: the practice bar's playback and speed rows are one width, filled evenly */
+@media (max-width: 640px) {
+  .practice .p-bar .bar-transport,
+  .practice .p-bar .bar-right {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
+  }
+  .practice .p-bar .bar-transport > [data-testid="play"],
+  .practice .p-bar .bar-transport > [data-testid="pause"] {
+    flex: 1 1 auto;
+    border-radius: 999px;
+  }
+  .practice .p-bar .bar-right .cp-tempo {
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+}
+.rp-head > .rp-actions {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rp-head > .rp-actions .mine-toggle {
+  margin-left: auto;
+}
+@media (max-width: 640px) {
+  .rp-head > .rp-actions {
+    align-items: stretch;
+  }
+  .rp-head > .rp-actions .mine-toggle {
+    margin-left: 0;
+  }
+  .rp-head > .rp-actions .mine-toggle,
+  .rp-head > .rp-actions .rp-syn-btn {
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
+
+/* the role's head, final balance: a calmer name, the progress card the same height as the portrait */
+.rp-syn-short { display: none; }
+.rp-head .rp-id h1 { font-size: clamp(36px, 4.2vw, 52px); }
+.rp-head > .rp-progress { min-height: 0; }
+@media (max-width: 640px) {
+  .rp-syn-long { display: none; }
+  .rp-syn-short { display: inline; }
+  .rp-head { grid-template-columns: 88px minmax(0, 1fr); gap: 14px; }
+  .rp-head > .ring { width: 88px !important; height: 88px !important; }
+  .rp-head .rp-id { gap: 2px; }
+  .rp-head .rp-id h1 { font-size: 28px; line-height: 1.1; }
+  .rp-opera-link { min-height: 26px; font-size: 13px; }
+  .rp-desc { font-size: 14px; line-height: 1.4; }
+  .rp-voice { font-size: 12px; padding: 1px 8px; margin-right: 6px; }
+  /* progress: one slim row, figure, dots, count */
+  .rp-head > .rp-progress { flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 16px; }
+  .rp-head > .rp-progress p { flex: none; white-space: nowrap; }
+  .rp-head > .rp-progress p b { font-size: 20px; }
+  .rp-head > .rp-progress .rp-bar { order: 0; flex: 1 1 auto; min-width: 0; }
+  .rp-head > .rp-progress small { flex: none; margin: 0; white-space: nowrap; }
+}
+
+/* the progress line: the sung lines only a shade darker than the rests, so the line reads as one */
+.practice .tl-line { background: color-mix(in srgb, var(--ink) 8%, transparent); }
+.practice .tl-seg { background: color-mix(in srgb, var(--ink) 15%, transparent); }

@@ -14,7 +14,13 @@
  *    semitone or a tone away begins (a melody or a bass line moving by step), as a pianist's finger
  *    legato and half-pedalling would keep them clean. Thirds and wider, the harmony, ring on.
  * 5. Re-striking a key ends its previous sound, as on a real piano.
+ * 6. Detached notes (staccato and the like) are never held, and where the left hand plays detached
+ *    the pedal is up for that beat.
  * Voices are never pedalled; only parts of kind "piano".
+ *
+ * Style (the edition's `pedal`): "romantic" (the default: Puccini, Verdi) holds a harmony as long as
+ * it lasts. "classical" (Mozart) pedals lightly: a fresh pedal on every beat, so a harmony never
+ * rings past its beat and the texture stays clear, as on a fortepiano.
  */
 import type { CompiledEdition } from "./types";
 import type { PerfMeasure, PerfNote } from "./timeline";
@@ -30,12 +36,13 @@ interface Span {
 
 export function applyPedal(edition: CompiledEdition, measures: PerfMeasure[], notes: PerfNote[], totalQ: number, beatUnit: (time: [number, number]) => number): PerfNote[] {
   const staffOf = new Map(edition.notes.map((n) => [n.id, n.staff]));
+  const detached = new Set(edition.notes.filter((n) => n.staccato).map((n) => n.id));
   for (const part of edition.parts) {
     if (part.kind !== "piano") continue;
     const pn = notes.filter((n) => n.part === part.key).sort((a, b) => a.onQ - b.onQ);
     if (!pn.length) continue;
-    const spans = pedalSpans(edition, measures, pn, part.key, staffOf, totalQ, beatUnit);
-    sustain(pn, spans);
+    const spans = pedalSpans(edition, measures, pn, part.key, staffOf, detached, totalQ, beatUnit);
+    sustain(pn, spans, detached);
   }
   return notes;
 }
@@ -47,6 +54,7 @@ function pedalSpans(
   pn: PerfNote[],
   partKey: string,
   staffOf: Map<string, number>,
+  detached: Set<string>,
   totalQ: number,
   beatUnit: (time: [number, number]) => number,
 ): Span[] {
@@ -79,7 +87,9 @@ function pedalSpans(
 
   // 2. harmony changes at beats
   const pc = (m: number) => ((m % 12) + 12) % 12;
+  const classical = edition.pedal === "classical";
   const changes: number[] = [];
+  const dry: number[] = []; // beats played detached: the pedal is up
   let held: Set<number> | null = null; // pitch classes of the harmony being held
   let bass: number | null = null;
   const beats: number[] = [];
@@ -96,12 +106,20 @@ function pedalSpans(
     if (!inBeat.length) continue;
     const left = inBeat.filter((n) => staffOf.get(n.ids[0]) === 2);
     const harmony = left.length ? left : inBeat;
+    // 6. a beat whose harmony is all detached gets no pedal
+    if (harmony.every((n) => n.ids.every((id) => detached.has(id)))) {
+      dry.push(b0);
+      held = null;
+      bass = null;
+      continue;
+    }
     const set = new Set(harmony.map((n) => pc(n.midi)));
     // a bass note: the left hand's lowest note of the beat, struck at its start
     const low = Math.min(...harmony.map((n) => n.midi));
     const first = harmony.filter((n) => Math.abs(n.onQ - b0) < EPS);
     const newBass = first.some((n) => n.midi === low) ? pc(low) : null;
     const fresh =
+      classical ||
       held === null ||
       rests.some((r) => Math.abs(r.e - b0) < EPS) ||
       (newBass !== null && newBass !== bass) ||
@@ -118,6 +136,8 @@ function pedalSpans(
   for (let i = 0; i < changes.length; i++) {
     const s = changes[i];
     let e = changes[i + 1] ?? totalQ;
+    const d = dry.find((x) => x > s + EPS && x < e - EPS);
+    if (d !== undefined) e = d;
     const r = rests.find((x) => x.s > s + EPS && x.s < e - EPS);
     if (r) e = r.s;
     auto.push({ s, e });
@@ -143,8 +163,9 @@ function pedalSpans(
 }
 
 /** Lengthen notes released while the pedal is down, then apply rules 4 and 5. */
-function sustain(pn: PerfNote[], spans: Span[]) {
+function sustain(pn: PerfNote[], spans: Span[], detached: Set<string>) {
   for (const n of pn) {
+    if (n.ids.every((id) => detached.has(id))) continue;
     // the pedal is caught if the key is still down just after the span begins (a legato change
     // goes down a moment after the new notes are struck), and the key is released before it ends
     const sp = spans.find((x) => n.offQ > x.s + 1e-3 && n.offQ < x.e - EPS && n.onQ < x.e - EPS);

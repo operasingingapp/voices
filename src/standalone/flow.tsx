@@ -698,13 +698,18 @@ function SynopsisSheet({ opera, ch, onClose }: { opera: Opera; ch?: Character; o
       <button type="button" className="syn-scrim" aria-label="Close the synopsis" tabIndex={-1} onClick={onClose} />
       <div className="syn-panel">
         <header className="syn-head">
+          {/* phones: a Back like every other screen's (the X is for larger screens) */}
+          <button type="button" className="sheet-back" onClick={onClose}>
+            <BackIcon />
+            <span>Back</span>
+          </button>
           <div>
             <p className="cp-eyebrow" lang={opera.lang}>
               {opera.title} · {opera.composer}
             </p>
             <h2 id="syn-h">The story</h2>
           </div>
-          <button ref={close} type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close the synopsis" onClick={onClose}>
+          <button ref={close} type="button" className="cp-icon-btn cp-icon-btn--ghost sheet-x" aria-label="Close the synopsis" onClick={onClose}>
             <CloseIcon />
           </button>
         </header>
@@ -778,51 +783,56 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           <Face opera={opera} ch={ch} />
         </ProgressRing>
         <div className="rp-id">
-          {/* the opera as context (the breadcrumb above is the way there) */}
-          <p className="rp-opera">
+          {/* the opera this role belongs to: tap it to go there */}
+          <button type="button" className="rp-opera-link" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
             <span lang={opera.lang}>{opera.title}</span>
             <span className="rp-opera-by">{opera.composer}</span>
-            <span className="rp-opera-by">{ch.voice}</span>
-          </p>
+            <Chevron />
+          </button>
           <h1>{ch.name}</h1>
-          <p className="rp-desc">{ch.desc}</p>
-          <div className="rp-actions">
-            {/* the main thing to do here: practise (the next piece with music, or the one you were on) */}
-            {go && (
-              <button type="button" className="cp-btn cp-btn--ink rp-go" onClick={() => ctx.go(go.place)}>
-                <Play />
-                <span>
-                  {go.resumed ? "Continue" : "Practise"} <i lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</i>
-                </span>
-              </button>
-            )}
-            <div className="rp-more">
-            <button type="button" className="cp-btn mine-toggle" aria-pressed={mine} onClick={() => ctx.toggleRole(r)}>
-              {mine ? <Check /> : <Plus />}
-              {mine ? "In my roles" : "Add to my roles"}
-            </button>
-            {SYNOPSES[opera.id] && (
-              <button type="button" className="cp-btn rp-syn-btn" onClick={() => setStory(true)}>
-                <BookIcon />
-                {storyOf(ch.name)}
-              </button>
-            )}
-            </div>
-          </div>
+          <p className="rp-desc">
+            <span className="rp-voice">{ch.voice}</span>
+            {ch.desc}
+          </p>
         </div>
         {pr.total > 0 && (
           <div className="rp-progress" aria-label={`${pr.done} of ${pr.total} learned`}>
             <p>
-              <b>{pr.done}</b> of {pr.total} learned
+              <b>{Math.round(pr.pct * 100)}%</b> learned
             </p>
             <div className="rp-bar" aria-hidden="true">
               {ch.pieces.map((p) => (
                 <i key={pieceKey(p)} className={pr.set.has(pieceKey(p)) ? "on" : ""} />
               ))}
             </div>
-            <small>{pr.done === pr.total ? "The whole role is learned." : `${Math.round(pr.pct * 100)}% of the role`}</small>
+            <small>{pr.done === pr.total ? "The whole role is learned." : `${pr.done} of ${pr.total} pieces`}</small>
           </div>
         )}
+        <div className="rp-actions">
+          {/* the main thing to do here: practise (the next piece with music, or the one you were on) */}
+          {go && (
+            <button type="button" className="cp-btn cp-btn--ink rp-go" onClick={() => ctx.go(go.place)}>
+              <Play />
+              <span>
+                {go.resumed ? "Continue" : "Practise"} <i lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</i>
+              </span>
+            </button>
+          )}
+          <button type="button" className="cp-btn mine-toggle" aria-pressed={mine} onClick={() => ctx.toggleRole(r)}>
+            {mine ? <Check /> : <Plus />}
+            {mine ? "In my roles" : "Add to my roles"}
+          </button>
+          {SYNOPSES[opera.id] && (
+            <button type="button" className="cp-btn rp-syn-btn" onClick={() => setStory(true)}>
+              <BookIcon />
+              {/* on a phone just "Story": the full label would not fit beside "Add to my roles" */}
+              <span className="rp-syn-long">{storyOf(ch.name)}</span>
+              <span className="rp-syn-short" aria-hidden="true">
+                Story
+              </span>
+            </button>
+          )}
+        </div>
       </section>
 
       <section className="block" aria-labelledby="music-h">
@@ -1668,20 +1678,26 @@ function MeetCharacter({ opera, ch, onTake, onOpera, onClose }: { opera: Opera; 
         <button type="button" className="cp-icon-btn cp-icon-btn--ghost meet-close" aria-label="Back to the characters" onClick={onClose}>
           <CloseIcon />
         </button>
+        <button type="button" className="sheet-back meet-back" onClick={onClose}>
+          <BackIcon />
+          <span>Back</span>
+        </button>
         {art && (
           <div className="meet-pic">
             <img src={art.portrait} alt={art.alt} />
           </div>
         )}
         <div className="meet-body">
+          <div className="meet-head">
+            <p className="cp-eyebrow" lang={opera.lang}>
+              {opera.title} · {opera.composer}, {opera.year}
+            </p>
+            <h2 id="meet-h">{ch.name}</h2>
+            <p className="meet-who">
+              <span className="meet-voice">{ch.voice}</span> {ch.desc}
+            </p>
+          </div>
           <div className="meet-scroll">
-          <p className="cp-eyebrow" lang={opera.lang}>
-            {opera.title} · {opera.composer}, {opera.year}
-          </p>
-          <h2 id="meet-h">{ch.name}</h2>
-          <p className="meet-who">
-            <span className="meet-voice">{ch.voice}</span> {ch.desc}
-          </p>
           {/* their story as plain prose: no act labels, no titles of numbers */}
           {arc.map((a) => (
             <p key={a.act} className="meet-story">

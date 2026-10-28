@@ -47,6 +47,8 @@ interface Manifest {
   kind: "aria" | "ensemble";
   fixture: boolean;
   fixtureNotice?: string;
+  /** how the accompanist pedals: "romantic" with the harmony (default), "classical" lightly, beat by beat */
+  pedal?: "romantic" | "classical";
   composer: string;
   librettist: string;
   language: string;
@@ -246,6 +248,10 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
               return { verse: Number(ly.getAttribute("number") ?? 1), syllables, ...(kid(ly, "extend") ? { extend: true } : {}) };
             });
             const fermata = !!kids(el, "notations").some((n) => kid(n, "fermata"));
+            // detached notes (staccato, staccatissimo, spiccato) are never held by the pedal
+            const staccato = kids(el, "notations")
+              .flatMap((n) => kids(n, "articulations"))
+              .some((ar) => !!(kid(ar, "staccato") || kid(ar, "staccatissimo") || kid(ar, "spiccato")));
             const tremEl = kids(el, "notations")
               .flatMap((n) => kids(n, "ornaments"))
               .map((o) => kid(o, "tremolo"))
@@ -271,6 +277,7 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
               tieStart: ties.includes("start"),
               tieStop: ties.includes("stop"),
               ...(fermata ? { fermata } : {}),
+              ...(staccato ? { staccato } : {}),
               ...(tremolo ? { tremolo } : {}),
               ...(trill ? { trill } : {}),
               ...(lyrics.length ? { lyrics } : {}),
@@ -517,6 +524,7 @@ function importPiece(dir: string) {
     kind: manifest.kind,
     fixture: manifest.fixture,
     fixtureNotice: manifest.fixtureNotice,
+    ...(manifest.pedal ? { pedal: manifest.pedal } : {}),
     composer: manifest.composer,
     librettist: manifest.librettist,
     language: manifest.language,

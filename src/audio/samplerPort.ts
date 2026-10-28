@@ -194,6 +194,11 @@ export class SamplerPort implements SynthPort {
     this.clickBus.connect(this.master);
   }
 
+  /** more or less room (1 = the default send); eased so a change mid-piece never clicks */
+  setRoom(level: number) {
+    this.reverbSend.gain.setTargetAtTime(REVERB_SEND * level, this.ctx.currentTime, 0.05);
+  }
+
   static async create(onProgress?: (msg: string) => void): Promise<SamplerPort> {
     const ctx = new AudioContext({ latencyHint: "interactive" });
     const port = new SamplerPort(ctx);
