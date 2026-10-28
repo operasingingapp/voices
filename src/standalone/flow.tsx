@@ -938,7 +938,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
       {ctx.place.screen === "opera" && ctx.place.synopsis && SYNOPSES[opera.id] && (
         <SynopsisSheet
           opera={opera}
-          ch={opera.chars.find((c) => c.id === (ctx.place.screen === "opera" ? ctx.place.as : undefined)) ?? mineHere[0]}
+          ch={opera.chars.find((c) => c.id === (ctx.place.screen === "opera" ? ctx.place.as : undefined))}
           onClose={() => ctx.go({ screen: "opera", opera: opera.id })}
         />
       )}
