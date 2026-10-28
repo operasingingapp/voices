@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { ARCS, type ArcStep } from "./arcs";
 /**
  * The full story of each opera, act by act, written for this app (not taken from any programme or book).
  * `where` is the setting of the act; the paragraphs follow the order of the music.
@@ -362,6 +364,68 @@ export function SynopsisActs({ acts, you, level = 3 }: { acts: Act[]; you?: stri
           ))}
         </section>
       ))}
+    </div>
+  );
+}
+
+/** "The Countess's story" */
+export function storyOf(name: string): string {
+  return `${name}’s story`;
+}
+
+/** One character's path, act by act (only the acts they are in). */
+export function ArcSteps({ steps, level = 3 }: { steps: ArcStep[]; level?: 2 | 3 | 4 }) {
+  const H = `h${level}` as "h2" | "h3" | "h4";
+  return (
+    <div className="syn syn-arc">
+      {steps.map((s) => (
+        <section key={s.act} className="syn-act">
+          <H className="syn-title">{s.act}</H>
+          <p className="syn-p">{s.text}</p>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * The story, two ways: one character's path through it, and the whole opera act by act.
+ * Without a character (or without a path written for them) only the whole opera is shown.
+ */
+export function Story({
+  opera,
+  character,
+  name,
+  level = 3,
+  idBase = "story",
+}: {
+  opera: string;
+  character?: string;
+  name?: string;
+  level?: 2 | 3 | 4;
+  idBase?: string;
+}) {
+  const arc = character ? ARCS[`${opera}:${character}`] : undefined;
+  const acts = SYNOPSES[opera];
+  const [tab, setTab] = useState<"arc" | "all">(arc ? "arc" : "all");
+  useEffect(() => setTab(arc ? "arc" : "all"), [opera, character, arc]);
+  if (!acts && !arc) return null;
+  const both = !!arc && !!acts && !!name;
+  return (
+    <div className="story">
+      {both && (
+        <div className="cp-seg story-tabs" role="tablist" aria-label="Which story">
+          <button type="button" role="tab" id={`${idBase}-arc`} aria-selected={tab === "arc"} aria-controls={`${idBase}-panel`} onClick={() => setTab("arc")}>
+            {storyOf(name!)}
+          </button>
+          <button type="button" role="tab" id={`${idBase}-all`} aria-selected={tab === "all"} aria-controls={`${idBase}-panel`} onClick={() => setTab("all")}>
+            The whole opera
+          </button>
+        </div>
+      )}
+      <div id={`${idBase}-panel`} role={both ? "tabpanel" : undefined} aria-labelledby={both ? `${idBase}-${tab}` : undefined}>
+        {tab === "arc" && arc ? <ArcSteps steps={arc} level={level} /> : acts ? <SynopsisActs acts={acts} you={name} level={level} /> : null}
+      </div>
     </div>
   );
 }

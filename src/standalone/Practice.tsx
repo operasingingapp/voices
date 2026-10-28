@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { SYNOPSES, SynopsisActs } from "./synopses";
+import { Story, storyOf } from "./synopses";
 import { Performance, beatInfo } from "../../shared/timeline";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
@@ -1556,15 +1556,15 @@ function PracticeScreen({
                       <dd>About {fmtTime(perf.totalSec)} at the written tempo</dd>
                     </div>
                   </dl>
-                  {SYNOPSES[info.portrait.split(":")[0]] && (
-                    <details className="ctx-syn">
-                      <summary>
-                        <span>The whole opera's story</span>
-                        <small>Synopsis, act by act</small>
-                      </summary>
-                      <SynopsisActs acts={SYNOPSES[info.portrait.split(":")[0]]} you={roleName} level={4} />
-                    </details>
-                  )}
+                  <details className="ctx-syn">
+                    <summary>
+                      <span>The story</span>
+                      <small>
+                        {storyOf(roleName)}, and the whole opera act by act
+                      </small>
+                    </summary>
+                    <Story opera={info.portrait.split(":")[0]} character={info.portrait.split(":")[1]} name={roleName} level={4} idBase="ctx-story" />
+                  </details>
                 </section>
               )}
               {drawer === "notes" && (

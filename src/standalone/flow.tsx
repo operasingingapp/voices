@@ -7,7 +7,7 @@ import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
 import { ART, BRAVO, NUMBERS, PORTRAITS, STORIES } from "./opera-extra";
-import { SYNOPSES, SynopsisActs } from "./synopses";
+import { SYNOPSES, Story, storyOf } from "./synopses";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
@@ -141,7 +141,7 @@ export type PiecePlace = { screen: "piece"; opera: string; character: string; pi
 export type Place =
   | { screen: "onboarding"; step: 1 | 2 | 3; role?: RoleRef; by?: "voice" | "opera"; opera?: string }
   | { screen: "role"; opera: string; character: string }
-  | { screen: "opera"; opera: string; synopsis?: boolean }
+  | { screen: "opera"; opera: string; synopsis?: boolean; as?: string }
   | { screen: "explore"; by: "opera" | "voice"; voice?: string }
   | { screen: "profile" }
   | PiecePlace;
@@ -667,7 +667,7 @@ const BookIcon = () => (
  * The whole story, act by act, in a reading panel over the opera's page (Back, Escape or a tap outside closes it);
  * your role's name is picked out so you can follow your part.
  */
-function SynopsisSheet({ opera, you, onClose }: { opera: Opera; you?: string; onClose: () => void }) {
+function SynopsisSheet({ opera, ch, onClose }: { opera: Opera; ch?: Character; onClose: () => void }) {
   const close = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     close.current?.focus();
@@ -684,14 +684,14 @@ function SynopsisSheet({ opera, you, onClose }: { opera: Opera; you?: string; on
             <p className="cp-eyebrow" lang={opera.lang}>
               {opera.title} · {opera.composer}
             </p>
-            <h2 id="syn-h">Synopsis</h2>
+            <h2 id="syn-h">The story</h2>
           </div>
           <button ref={close} type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close the synopsis" onClick={onClose}>
             <CloseIcon />
           </button>
         </header>
         <div className="syn-body">
-          <SynopsisActs acts={SYNOPSES[opera.id]} you={you} />
+          <Story opera={opera.id} character={ch?.id} name={ch?.name} idBase="sheet-story" />
         </div>
       </div>
     </div>
@@ -770,9 +770,9 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
               {mine ? "In my roles" : "Add to my roles"}
             </button>
             {SYNOPSES[opera.id] && (
-              <button type="button" className="cp-btn rp-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true })}>
+              <button type="button" className="cp-btn rp-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true, as: ch.id })}>
                 <BookIcon />
-                Synopsis
+                {storyOf(ch.name)}
               </button>
             )}
           </div>
@@ -931,12 +931,16 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
         {SYNOPSES[opera.id] && (
           <button type="button" className="cp-btn op-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true })}>
             <BookIcon />
-            Full synopsis
+            The story
           </button>
         )}
       </section>
       {ctx.place.screen === "opera" && ctx.place.synopsis && SYNOPSES[opera.id] && (
-        <SynopsisSheet opera={opera} you={mineHere[0]?.name} onClose={() => ctx.go({ screen: "opera", opera: opera.id })} />
+        <SynopsisSheet
+          opera={opera}
+          ch={opera.chars.find((c) => c.id === (ctx.place.screen === "opera" ? ctx.place.as : undefined)) ?? mineHere[0]}
+          onClose={() => ctx.go({ screen: "opera", opera: opera.id })}
+        />
       )}
 
       <section className="block" aria-labelledby="chars-h">

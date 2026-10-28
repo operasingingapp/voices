@@ -8798,3 +8798,23 @@ p.obp-meta {
   font-size: 15px;
   line-height: 1.55;
 }
+
+/* the story, two ways: a switch between the character's path and the whole opera */
+.story-tabs {
+  display: flex;
+  width: 100%;
+  margin: 18px 0 2px;
+}
+.story-tabs button {
+  flex: 1 1 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ctx-syn .story-tabs {
+  margin-top: 4px;
+}
+.syn-arc .syn-act {
+  padding-top: 18px;
+}

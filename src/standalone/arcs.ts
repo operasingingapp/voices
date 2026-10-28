@@ -1,0 +1,283 @@
+/**
+ * Each character's own path through the opera, act by act: only the acts they are in, told from their side.
+ * Written for this app. Keyed "opera:character".
+ */
+export interface ArcStep {
+  act: string;
+  text: string;
+}
+
+export const ARCS: Record<string, ArcStep[]> = {
+  // ---------------- Le nozze di Figaro ----------------
+  "figaro:figaro": [
+    { act: "Act 1", text: "On his wedding day Figaro measures the new room, until Susanna tells him why the Count put it next to his own. He vows to make the Count dance to his tune (“Se vuol ballare”), brings the villagers to press for the wedding, and teases Cherubino about army life (“Non più andrai”)." },
+    { act: "Act 2", text: "He plots with the women: an anonymous note to make the Count jealous, and Cherubino in a dress to keep Susanna's rendezvous. When the gardener complains of a man jumping from the window, Figaro claims it was him and bluffs through the dropped commission. Marcellina then arrives to claim him." },
+    { act: "Act 3", text: "Ordered to pay Marcellina or marry her, he is saved by a birthmark: she and Bartolo are his long-lost parents. Susanna slaps him before she understands; then the family celebrates and the wedding goes ahead." },
+    { act: "Act 4", text: "Hearing of Susanna's note to the Count, he believes she is betraying him and rails against women (“Aprite un po' quegli occhi”). In the dark he recognises her voice under the Countess's cloak, pays her back by courting her, and they make up before the Count is caught out." },
+  ],
+  "figaro:susanna": [
+    { act: "Act 1", text: "Susanna warns Figaro that the Count wants her, fends the Count off, and hides Cherubino, who is discovered anyway." },
+    { act: "Act 2", text: "With the Countess she dresses Cherubino as a girl. When the Count comes back with tools to break into the closet, she slips in, lets the page escape through the window, and steps out to the Count's confusion." },
+    { act: "Act 3", text: "Sent by the Countess, she promises the Count a meeting in the garden. Finding Figaro embracing Marcellina, she slaps him, then learns Marcellina is his mother. She writes the note of the rendezvous to the Countess's dictation (“Sull'aria”) and slips it to the Count at the wedding." },
+    { act: "Act 4", text: "Wearing the Countess's clothes, she knows Figaro is listening and teases him with a song of longing (“Deh vieni, non tardar”). When he courts her as ‘the Countess’ she boxes his ears, then forgives him." },
+  ],
+  "figaro:countess": [
+    { act: "Act 2", text: "Alone, the Countess grieves for her husband's lost love (“Porgi, amor”) and agrees to Figaro's plan. When the Count finds the closet locked she has to confess Cherubino is inside, only for Susanna to step out; the Count begs her pardon and she grants it." },
+    { act: "Act 3", text: "Waiting for Susanna, she remembers the happy days of her marriage and resolves to win the Count back (“E Susanna non vien!… Dove sono”). She dictates the note setting the garden rendezvous (“Sull'aria”) and decides to go herself, dressed as Susanna." },
+    { act: "Act 4", text: "In Susanna's clothes she fends off Cherubino and is wooed by her own husband. When the Count refuses all pardon, she steps forward as herself; he kneels, and she forgives him." },
+  ],
+  "figaro:count": [
+    { act: "Act 1", text: "The Count tries to make a date with Susanna, hides from Basilio, and finds Cherubino in the armchair. He puts off Figaro's wedding and sends the page to the army." },
+    { act: "Act 2", text: "An anonymous note makes him jealous. Hearing a noise in the closet, he fetches tools to break it open, finds only Susanna, and has to beg his wife's pardon. He welcomes Marcellina's claim on Figaro." },
+    { act: "Act 3", text: "Susanna agrees to meet him, but he overhears her and swears he will not lose to his servant (“Vedrò mentr'io sospiro”). The trial backfires when Figaro proves to be Marcellina's son. At the wedding he receives a note and pricks his finger on its pin." },
+    { act: "Act 4", text: "In the garden he courts ‘Susanna’, really his wife. Finding Figaro with ‘the Countess’, he calls everyone and refuses pardon, until his true wife appears. He kneels to ask her forgiveness." },
+  ],
+  "figaro:cherubino": [
+    { act: "Act 1", text: "Dismissed for being caught with Barbarina, the page begs Susanna to help and pours out his confusion about love (“Non so più cosa son”). Discovered hiding in the Count's presence, he is packed off to the army." },
+    { act: "Act 2", text: "He sings the Countess his love song (“Voi che sapete”), is dressed as a girl, hides in the closet when the Count arrives, and escapes by jumping from the window." },
+    { act: "Act 3", text: "Disguised among the village girls bringing flowers, he is found out, and saved when Barbarina asks the Count for him as her husband." },
+    { act: "Act 4", text: "In the garden he flirts with ‘Susanna’, really the Countess, and dodges a slap that lands on Figaro." },
+  ],
+  "figaro:bartolo": [
+    { act: "Act 1", text: "Doctor Bartolo still resents Figaro for helping Rosina marry the Count, and promises Marcellina revenge by law (“La vendetta”)." },
+    { act: "Act 2", text: "He arrives with Marcellina and Basilio to press her claim on Figaro." },
+    { act: "Act 3", text: "At the hearing a birthmark reveals that Figaro is his and Marcellina's son, stolen as a baby. He agrees to marry Marcellina at last." },
+    { act: "Act 4", text: "He follows Figaro into the garden and is there when the Count is caught out." },
+  ],
+
+  // ---------------- Don Giovanni ----------------
+  "giovanni:dongiovanni": [
+    { act: "Act 1", text: "Masked, Don Giovanni flees Donna Anna's room and kills her father, the Commendatore. He slips away from Donna Elvira, sweeps the bride Zerlina off her feet (“Là ci darem la mano”), and throws a party (“Fin ch'han dal vino”) where his three masked accusers unmask him; he escapes." },
+    { act: "Act 2", text: "He swaps cloaks with Leporello to serenade Elvira's maid (“Deh, vieni alla finestra”) and beats Masetto. In the graveyard he mocks the Commendatore's statue and invites it to supper. When it comes and demands that he repent, he refuses and is dragged down to hell." },
+  ],
+  "giovanni:leporello": [
+    { act: "Act 1", text: "Leporello grumbles on watch while his master is inside the Commendatore's house. He shows Donna Elvira the catalogue of Giovanni's conquests (“Madamina”) and keeps the wedding guests busy at the party." },
+    { act: "Act 2", text: "Disguised as his master, he leads Elvira away; cornered by the others, he unmasks and escapes. In the graveyard he is made to invite the statue to supper, and he watches, terrified, as his master is dragged to hell." },
+  ],
+  "giovanni:anna": [
+    { act: "Act 1", text: "Donna Anna fights off a masked intruder and finds her father dead. She makes Don Ottavio swear vengeance. She recognises Giovanni's voice as her attacker's and tells Ottavio what happened that night (“Or sai chi l'onore”), then unmasks Giovanni at his own party." },
+    { act: "Act 2", text: "She corners Leporello in Giovanni's cloak. She asks Ottavio to wait for her love while she mourns (“Non mi dir”), and at the end promises to marry him after a year." },
+  ],
+  "giovanni:elvira": [
+    { act: "Act 1", text: "Donna Elvira arrives searching for the man who abandoned her in Burgos (“Ah, chi mi dice mai”) and finds it is Giovanni; Leporello shows her his catalogue. She warns Zerlina (“Ah, fuggi il traditor”) and Anna, and unmasks Giovanni at the party." },
+    { act: "Act 2", text: "She is deceived by Leporello in Giovanni's cloak. Betrayed again, she still pities Giovanni (“Mi tradì”), and begs him at supper to change his life. In the end she retires to a convent." },
+  ],
+  "giovanni:zerlina": [
+    { act: "Act 1", text: "On her wedding day Zerlina is charmed by Giovanni (“Là ci darem la mano”), until Elvira warns her. She makes peace with jealous Masetto (“Batti, batti”), and screams for help when Giovanni drags her off at the party." },
+    { act: "Act 2", text: "She comforts the beaten Masetto (“Vedrai, carino”) and joins the hunt for Giovanni. At the end she and Masetto go home to supper." },
+  ],
+  "giovanni:ottavio": [
+    { act: "Act 1", text: "Don Ottavio swears vengeance with Anna for her father's death. When she tells him Giovanni was the attacker, he resolves to set her mind at peace (“Dalla sua pace”) and goes masked to the party." },
+    { act: "Act 2", text: "He vows to bring Giovanni to justice (“Il mio tesoro”) and, at the end, agrees to wait a year for Anna." },
+  ],
+
+  // ---------------- Die Zauberflöte ----------------
+  "zauberfloete:tamino": [
+    { act: "Act 1", text: "Saved from a serpent by the Queen's Ladies, Prince Tamino falls in love with Pamina's portrait (“Dies Bildnis”) and sets out with a magic flute to rescue her. At Sarastro's temple he learns Sarastro is no tyrant, and meets Pamina at last." },
+    { act: "Act 2", text: "He keeps his vow of silence through every temptation, even when it breaks Pamina's heart. Together they pass through fire and water, protected by the flute, and are welcomed into the temple." },
+  ],
+  "zauberfloete:pamina": [
+    { act: "Act 1", text: "Held in Sarastro's realm and guarded by Monostatos, Pamina learns from Papageno that a prince loves her, and they sing of love (“Bei Männern”). Caught trying to escape, she tells Sarastro the truth, and meets Tamino." },
+    { act: "Act 2", text: "Her mother gives her a dagger to kill Sarastro. Tamino's silence makes her think he no longer loves her (“Ach, ich fühl's”), and she is about to take her life when the Spirits stop her. She walks with Tamino through fire and water." },
+  ],
+  "zauberfloete:papageno": [
+    { act: "Act 1", text: "The bird-catcher (“Der Vogelfänger bin ich ja”) claims he killed the serpent and gets his mouth padlocked. Sent with Tamino and a set of magic bells, he finds Pamina and sings with her of love; his bells save them from Monostatos." },
+    { act: "Act 2", text: "He fails the trial of silence but is promised a wife. Alone and despairing, he is about to hang himself when the Spirits remind him of his bells; Papagena appears (“Pa-pa-pa”)." },
+  ],
+  "zauberfloete:queen": [
+    { act: "Act 1", text: "The Queen of the Night appears to Tamino, grieving for her daughter, taken by Sarastro, and promises Pamina to him if he rescues her (“O zittre nicht”)." },
+    { act: "Act 2", text: "She gives Pamina a dagger and demands that she kill Sarastro (“Der Hölle Rache”). With her Ladies and Monostatos she storms the temple, and is cast into eternal night." },
+  ],
+  "zauberfloete:sarastro": [
+    { act: "Act 1", text: "Sarastro hears Pamina's confession kindly, punishes Monostatos, and sends Tamino and Papageno to be tested." },
+    { act: "Act 2", text: "He asks the gods to guide the young couple (“O Isis und Osiris”), tells Pamina there is no vengeance in these halls (“In diesen heil'gen Hallen”), and welcomes the lovers as the Queen's night is defeated." },
+  ],
+
+  // ---------------- Il barbiere di Siviglia ----------------
+  "barbiere:figarob": [
+    { act: "Act 1", text: "Figaro bursts in, the busiest man in Seville (“Largo al factotum”), and for a fee plans the Count's way into Bartolo's house. He carries Rosina's letter to ‘Lindoro’." },
+    { act: "Act 2", text: "Shaving Bartolo during the music lesson, he steals the balcony key. That night he climbs in with the Count and makes sure the notary marries the right couple." },
+  ],
+  "barbiere:rosina": [
+    { act: "Act 1", text: "Kept locked up by her guardian, Rosina is set on winning ‘Lindoro’, the student singing under her window (“Una voce poco fa”). She gives Figaro a letter for him." },
+    { act: "Act 2", text: "Her lover comes as a music teacher. When Bartolo convinces her that Lindoro is only the Count's go-between, she agrees in anger to marry Bartolo, until Lindoro reveals that he is the Count, and they are married." },
+  ],
+  "barbiere:almaviva": [
+    { act: "Act 1", text: "Count Almaviva serenades Rosina at dawn (“Ecco, ridente in cielo”), then sings as ‘Lindoro’, a poor student. With Figaro's plan he enters the house as a drunken soldier and causes chaos until the police arrive." },
+    { act: "Act 2", text: "He returns as ‘Don Alonso’ to give Rosina her music lesson, climbs in at night, reveals who he is, and marries her under Bartolo's nose." },
+  ],
+  "barbiere:basilio": [
+    { act: "Act 1", text: "The music master Basilio warns Bartolo that the Count is in town, and advises slander to get rid of him (“La calunnia”)." },
+    { act: "Act 2", text: "Arriving in the middle of the lesson, he is bribed and told he has a fever (“Buona sera”). Bribed again, he is witness at Rosina's wedding to the Count." },
+  ],
+  "barbiere:bartolob": [
+    { act: "Act 1", text: "Doctor Bartolo means to marry his ward Rosina himself. He tells her she won't fool a doctor of his standing (“A un dottor della mia sorte”), and is outraged by the drunken soldier." },
+    { act: "Act 2", text: "Suspicious of the new music teacher, he turns Rosina against Lindoro and sends for the notary, only to find her married to the Count. He takes the dowry as consolation." },
+  ],
+
+  // ---------------- L'elisir d'amore ----------------
+  "elisir:nemorino": [
+    { act: "Act 1", text: "Shy Nemorino loves Adina (“Quanto è bella”) and buys a love potion from Dulcamara, cheap Bordeaux. Tipsy and confident, he ignores her, and she agrees to marry Belcore that very day." },
+    { act: "Act 2", text: "He enlists to pay for more elixir. The village girls, who know he has inherited a fortune, crowd round him; he thinks it is the potion. Seeing a tear on Adina's cheek (“Una furtiva lagrima”), he knows she loves him, and she does." },
+  ],
+  "elisir:adina": [
+    { act: "Act 1", text: "Adina laughs at the tale of Tristan's potion and warns Nemorino she is fickle. Stung by his sudden indifference, she agrees to marry Belcore at once." },
+    { act: "Act 2", text: "She delays signing the marriage contract. Learning that Nemorino enlisted for her, she understands her heart, buys back his papers and confesses her love." },
+  ],
+  "elisir:dulcamara": [
+    { act: "Act 1", text: "The quack doctor arrives selling a cure for everything (“Udite, udite, o rustici”) and sells Nemorino a bottle of wine as Isolde's elixir." },
+    { act: "Act 2", text: "He sings a barcarolle with Adina at the wedding, tells her what Nemorino has done for her, and leaves with the whole village buying his elixir." },
+  ],
+  "elisir:belcore": [
+    { act: "Act 1", text: "Sergeant Belcore marches in and proposes to Adina on the spot; to his delight she agrees to marry him, first in six days, then that evening." },
+    { act: "Act 2", text: "He signs Nemorino up for twenty scudi, then loses Adina to him and shrugs: there are plenty of other women." },
+  ],
+
+  // ---------------- Rigoletto ----------------
+  "rigoletto:rigoletto": [
+    { act: "Act 1", text: "The Duke's jester mocks the courtiers and Count Monterone, who curses him. Haunted by the curse, he meets the assassin Sparafucile (“Pari siamo”) and visits his hidden daughter Gilda. Tricked by the courtiers, he helps them carry her off." },
+    { act: "Act 2", text: "He searches the palace for Gilda and turns on the courtiers (“Cortigiani, vil razza dannata”). When she tells him how she was deceived, he swears vengeance on the Duke." },
+    { act: "Act 3", text: "He shows Gilda the Duke's faithlessness and pays Sparafucile to kill him. Gloating over the sack, he hears the Duke singing and finds his dying daughter inside. The curse is fulfilled." },
+  ],
+  "rigoletto:gilda": [
+    { act: "Act 1", text: "Kept hidden by her father, Gilda has fallen for a student she saw at church. When he appears and declares his love she dreams of his name (“Caro nome”), and is carried off by the courtiers." },
+    { act: "Act 2", text: "Seduced by the Duke, she tells her father everything (“Tutte le feste al tempio”) and begs him to forgive the man she still loves." },
+    { act: "Act 3", text: "She sees the Duke wooing Maddalena. Overhearing the plan to kill whoever comes to the door, she knocks, dressed as a man, and dies in her father's arms." },
+  ],
+  "rigoletto:duke": [
+    { act: "Act 1", text: "The Duke boasts that one woman is as good as another (“Questa o quella”). Disguised as a poor student, he declares his love to Gilda." },
+    { act: "Act 2", text: "He mourns her abduction (“Parmi veder le lagrime”) until he hears she is in the palace, and hurries to her." },
+    { act: "Act 3", text: "At Sparafucile's inn he sings that women are fickle (“La donna è mobile”) and woos Maddalena, and leaves alive, never knowing who died in his place." },
+  ],
+  "rigoletto:maddalena": [
+    { act: "Act 3", text: "Sparafucile's sister lures the Duke to the inn and flirts with him (“Bella figlia dell'amore”). Charmed, she begs her brother to spare him, and he agrees to kill the next stranger at the door instead." },
+  ],
+
+  // ---------------- La traviata ----------------
+  "traviata:violetta": [
+    { act: "Act 1", text: "Violetta, a celebrated courtesan, meets Alfredo at her party and laughs off his love. Alone, she wonders if this could be true love (“Ah, fors'è lui”), then swears to stay free (“Sempre libera”)." },
+    { act: "Act 2", text: "She has given up Paris for Alfredo. His father demands she leave him for his family's sake, and she agrees, heartbroken. At Flora's party Alfredo insults her before everyone." },
+    { act: "Act 3", text: "Dying and alone, she bids farewell to her past (“Addio, del passato”). Alfredo returns (“Parigi, o cara”), but too late; she dies in his arms." },
+  ],
+  "traviata:alfredo": [
+    { act: "Act 1", text: "Alfredo leads the drinking song (“Libiamo”) and declares he has loved Violetta for a year (“Un dì, felice”)." },
+    { act: "Act 2", text: "Happy in the country (“De' miei bollenti spiriti”), he learns she is selling her things for them, and rushes to Paris. Reading her farewell, he follows her to Flora's party and throws his winnings at her." },
+    { act: "Act 3", text: "Knowing the truth at last, he returns to ask her forgiveness, and loses her." },
+  ],
+  "traviata:germont": [
+    { act: "Act 2", text: "Giorgio Germont calls on Violetta to demand she give up his son, and is moved by her sacrifice. He tries to comfort Alfredo with memories of home (“Di Provenza il mar”) and rebukes him at Flora's party." },
+    { act: "Act 3", text: "He writes to Violetta to tell her Alfredo knows the truth, and comes to ask her forgiveness as she dies." },
+  ],
+
+  // ---------------- Carmen ----------------
+  "carmen:carmen": [
+    { act: "Act 1", text: "Carmen sings that love is a wild bird (Habanera) and throws her flower at Don José. Arrested after a fight, she charms him into letting her escape (Seguidilla)." },
+    { act: "Act 2", text: "At Lillas Pastia's tavern she meets Escamillo, dances for José, and taunts him when duty calls; after his fight with his officer he must join her smugglers." },
+    { act: "Act 3", text: "Weary of José, she reads her fate in the cards and turns up death, again and again." },
+    { act: "Act 4", text: "She arrives at the bullring with Escamillo, faces José, throws away his ring, and is killed." },
+  ],
+  "carmen:jose": [
+    { act: "Act 1", text: "Corporal Don José receives Carmen's flower and his mother's message through Micaëla. Ordered to guard Carmen, he lets her escape, and is jailed." },
+    { act: "Act 2", text: "Released, he goes to Carmen, shows her the flower he kept (“La fleur que tu m'avais jetée”), fights his officer, and must desert." },
+    { act: "Act 3", text: "A jealous smuggler, he fights Escamillo, then leaves with Micaëla for his dying mother, warning Carmen they will meet again." },
+    { act: "Act 4", text: "Outside the bullring he begs Carmen to come back, and kills her when she refuses." },
+  ],
+  "carmen:micaela": [
+    { act: "Act 1", text: "Micaëla brings Don José a letter and a kiss from his mother (“Parle-moi de ma mère”)." },
+    { act: "Act 3", text: "She braves the smugglers' mountain camp to find José (“Je dis que rien ne m'épouvante”) and takes him home to his dying mother." },
+  ],
+  "carmen:escamillo": [
+    { act: "Act 2", text: "The bullfighter makes his entrance (Toreador song) and is taken with Carmen." },
+    { act: "Act 3", text: "Seeking Carmen in the mountains, he fights José and invites everyone to his next fight in Seville." },
+    { act: "Act 4", text: "He arrives at the bullring with Carmen and wins in the ring as she dies outside." },
+  ],
+
+  // ---------------- La bohème ----------------
+  "boheme:rodolfo": [
+    { act: "Act 1", text: "The poet burns his manuscript for warmth, stays behind to write, and meets his neighbour Mimì; their hands meet in the dark (“Che gelida manina”)." },
+    { act: "Act 2", text: "He brings Mimì to the Café Momus and buys her a bonnet." },
+    { act: "Act 3", text: "He tells Marcello the truth: Mimì is gravely ill and he is too poor to help her. Mimì overhears, and they agree to part in the spring." },
+    { act: "Act 4", text: "Alone in the garret he cannot forget her. She is brought back to die, and they remember the night they met." },
+  ],
+  "boheme:mimi": [
+    { act: "Act 1", text: "Mimì knocks for a light, loses her key, and tells Rodolfo about her life embroidering flowers (“Sì, mi chiamano Mimì”)." },
+    { act: "Act 2", text: "At the Café Momus she meets Rodolfo's friends." },
+    { act: "Act 3", text: "Coughing, she tells Marcello of Rodolfo's jealousy, overhears that she is dying, and bids Rodolfo a gentle farewell (“Donde lieta uscì”)." },
+    { act: "Act 4", text: "Brought back to the garret by Musetta, she dies peacefully beside Rodolfo." },
+  ],
+  "boheme:musetta": [
+    { act: "Act 2", text: "Musetta sweeps into the Café Momus with a rich admirer and wins Marcello back with her waltz (“Quando m'en vo”), leaving the admirer the bill." },
+    { act: "Act 3", text: "She quarrels loudly with Marcello outside the inn." },
+    { act: "Act 4", text: "She brings the dying Mimì to the garret, sells her earrings for medicine, and prays for her." },
+  ],
+  "boheme:marcello": [
+    { act: "Act 1", text: "The painter freezes in the garret with Rodolfo and heads off to the Café Momus with his friends." },
+    { act: "Act 2", text: "Musetta's waltz is aimed at him, and he gives in." },
+    { act: "Act 3", text: "Mimì confides in him, and he hears from Rodolfo how ill she is." },
+    { act: "Act 4", text: "Pining for Musetta, he helps care for Mimì in her last hour." },
+  ],
+  "boheme:colline": [
+    { act: "Act 1", text: "The philosopher joins the friends' Christmas Eve feast and helps get rid of the landlord." },
+    { act: "Act 4", text: "To pay for Mimì's medicine he says goodbye to his old coat (“Vecchia zimarra”) and goes to sell it." },
+  ],
+
+  // ---------------- Tosca ----------------
+  "tosca:tosca": [
+    { act: "Act 1", text: "Floria Tosca visits her lover Cavaradossi in the church, jealous of the woman in his painting; Scarpia feeds her jealousy with a fan." },
+    { act: "Act 2", text: "She hears Cavaradossi tortured and gives up Angelotti's hiding place. Scarpia names his price; she asks why God has abandoned her (“Vissi d'arte”), agrees, and stabs him." },
+    { act: "Act 3", text: "She tells Cavaradossi the execution will be a pretence, finds him dead, and leaps from the castle walls." },
+  ],
+  "tosca:cavaradossi": [
+    { act: "Act 1", text: "The painter compares his Magdalene to Tosca (“Recondita armonia”) and helps the escaped prisoner Angelotti hide." },
+    { act: "Act 2", text: "Arrested and tortured, he defies Scarpia (“Vittoria!”) and is taken to be shot." },
+    { act: "Act 3", text: "Waiting for dawn, he remembers Tosca (“E lucevan le stelle”). Told the execution is a sham, he faces the firing squad, and the bullets are real." },
+  ],
+  "tosca:scarpia": [
+    { act: "Act 1", text: "The police chief tracks Angelotti to the church, uses a fan to stir Tosca's jealousy, and gloats during the Te Deum." },
+    { act: "Act 2", text: "He tortures Cavaradossi, demands Tosca herself as the price of his life, arranges a ‘mock’ execution, and is stabbed by her." },
+  ],
+
+  // ---------------- Madama Butterfly ----------------
+  "butterfly:ciociosan": [
+    { act: "Act 1", text: "Cio-Cio-San, fifteen, marries Pinkerton, gives up her religion for him, and is cursed and disowned by her family. He comforts her, and they sing of their love." },
+    { act: "Act 2", text: "Three years later she is sure he will return (“Un bel dì vedremo”), refuses Prince Yamadori, shows Sharpless her son, and fills the house with flowers when his ship arrives." },
+    { act: "Act 3", text: "After a night's vigil she sees Pinkerton's American wife, agrees to give up her son, and takes her life with her father's dagger." },
+  ],
+  "butterfly:pinkerton": [
+    { act: "Act 1", text: "The American lieutenant leases a house and a bride, ignores Sharpless's warning, and woos Butterfly on their wedding night." },
+    { act: "Act 3", text: "He returns with his American wife, is overcome with remorse (“Addio, fiorito asil”), and arrives as Butterfly dies." },
+  ],
+  "butterfly:suzuki": [
+    { act: "Act 1", text: "Butterfly's maid serves at the wedding and prays for her mistress." },
+    { act: "Act 2", text: "She doubts Pinkerton will return, but helps fill the house with flowers (Flower duet) and keeps the night's vigil." },
+    { act: "Act 3", text: "She learns the truth from Sharpless and is with Butterfly at the end." },
+  ],
+  "butterfly:sharpless": [
+    { act: "Act 1", text: "The American consul warns Pinkerton that Butterfly takes the marriage seriously." },
+    { act: "Act 2", text: "He brings Pinkerton's letter but cannot read her all of it, and is shaken to meet her son." },
+    { act: "Act 3", text: "He returns with Pinkerton and his wife, and reproaches Pinkerton for what he has done." },
+  ],
+
+  // ---------------- Gianni Schicchi (one act) ----------------
+  "schicchi:schicchi": [
+    { act: "The opera", text: "Called in by Rinuccio to save the relatives' inheritance, Gianni Schicchi refuses until his daughter Lauretta begs him. He hides the body, climbs into Buoso's bed, dictates a new will to the notary, and leaves the best of it to himself, so the young couple can marry." },
+  ],
+  "schicchi:lauretta": [
+    { act: "The opera", text: "Lauretta loves Rinuccio, but his family scorn her father. When Schicchi refuses to help them, she begs him, threatening to throw herself in the Arno if she cannot marry (“O mio babbino caro”). At the end she and Rinuccio embrace, free to marry." },
+  ],
+  "schicchi:rinuccio": [
+    { act: "The opera", text: "Rinuccio finds the will, praises Florence and its new men like Schicchi (“Firenze è come un albero fiorito”), and calls Schicchi in. Schicchi's trick lets him marry Lauretta." },
+  ],
+  "schicchi:zita": [
+    { act: "The opera", text: "Buoso's cousin Zita leads the mourning, and the hunt for the will. She scorns Schicchi and his daughter, and is driven out of the house at the end." },
+  ],
+  "schicchi:nella": [
+    { act: "The opera", text: "One of the relatives, Nella helps dress Schicchi as the dead man and is driven out with the others." },
+  ],
+  "schicchi:ciesca": [
+    { act: "The opera", text: "La Ciesca joins the greedy relatives, secretly bribes Schicchi for the best property, and is driven out empty-handed." },
+  ],
+  "schicchi:simone": [
+    { act: "The opera", text: "The oldest relative, Simone, knows the law. He hopes for the mills of Signa, and is driven out with the rest." },
+  ],
+};
