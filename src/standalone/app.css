@@ -5069,7 +5069,7 @@ span.ck-text {
   margin: 0 auto;
   padding: 8px 10px 14px;
   border-radius: 24px;
-  background: var(--sky-soft);
+  background: var(--line-bg, var(--sky-soft));
 }
 .now-bar {
   display: flex;
@@ -5327,7 +5327,8 @@ span.ck-text {
   background: var(--now-mark);
   box-shadow: none;
 }
-.p-bar .bar-stop {
+.p-bar .bar-stop,
+.p-bar .bar-start {
   background: var(--fog);
 }
 
@@ -8916,42 +8917,61 @@ p.obp-meta {
 /* ---------------------------------------------------------------------
    Ensembles: whose words, and the Lines panel (each singer's line on its own)
    --------------------------------------------------------------------- */
+/* whose words: the singers' faces, the chosen one ringed and named */
 .who-pick {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   margin-left: 10px;
-  font: 500 12px/1 var(--font-sans);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-.who-pick select {
-  appearance: none;
-  -webkit-appearance: none;
-  min-height: 30px;
-  padding: 0 28px 0 12px;
-  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  padding: 3px;
   border-radius: 999px;
-  background: var(--canvas)
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9.5l6 6 6-6' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E")
-    no-repeat right 8px center / 14px;
-  color: var(--ink);
-  font: 500 13px/1 var(--font-sans);
+  background: color-mix(in srgb, var(--canvas) 70%, transparent);
   letter-spacing: 0;
   text-transform: none;
+}
+.who-face {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 3px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 13px/1 var(--font-sans);
   cursor: pointer;
+}
+.who-face.on {
+  padding-right: 12px;
+  background: var(--canvas);
+  box-shadow: 0 1px 3px rgba(20, 20, 40, 0.12);
+}
+.who-face-img {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--fog);
+  opacity: 0.7;
+}
+.who-face.on .who-face-img {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--line-ring, var(--ink));
+}
+.who-face-img img,
+.who-face-img svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.who-face:not(.on) .who-face-name {
+  display: none;
 }
 .w-tools .who-pick {
   margin: 0 4px 0 0;
-}
-.w-tools .who-pick select {
-  min-height: 36px;
-}
-@media (max-width: 640px) {
-  .who-pick > span {
-    display: none;
-  }
 }
 .lane-label {
   position: absolute;
@@ -9015,7 +9035,7 @@ button.lane-label:hover {
   margin-left: 8px;
   padding: 2px 8px;
   border-radius: 999px;
-  background: var(--pink-soft, #fbd3e6);
+  background: var(--you, #fbd3e6);
   color: var(--ink);
   font: 500 11px/1.4 var(--font-sans);
   font-style: normal;
@@ -9230,4 +9250,142 @@ button.lane-label:hover {
 .mix-sing .cp-seg button[aria-pressed="true"] {
   background: var(--picked);
   color: var(--on-pastel);
+}
+
+/* the Arrange panel, wide: every line on one row (volume, instrument, order) */
+.mix-pop.ens {
+  width: min(720px, calc(100vw - 32px));
+}
+.mix-names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.mix-sing .mix-names button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px 0 10px;
+}
+.mix-names button svg {
+  width: 17px;
+  height: 17px;
+}
+.mix-names button:disabled {
+  opacity: 0.45;
+}
+.mix-chip-face {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  margin-left: -4px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.mix-chip-face img,
+.mix-chip-face svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mix-order-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.mix-rows {
+  display: grid;
+  gap: 4px;
+}
+.mix-line {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px 36px minmax(84px, 120px) 34px minmax(80px, 1fr) 132px 72px;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 2px 4px 2px 0;
+  border-radius: 14px;
+}
+.mix-line .part-face {
+  width: 36px;
+  height: 36px;
+  margin: 0;
+}
+.mix-line.off .part-face,
+.mix-line.off .mix-line-name {
+  opacity: 0.45;
+}
+.mix-line-name {
+  overflow: hidden;
+  font: 500 15px/1.2 var(--font-sans);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mix-line .mix-you {
+  margin-left: 6px;
+}
+.mix-line-vol.cp-slider {
+  height: 34px;
+}
+.mix-line-inst select {
+  width: 100%;
+  min-height: 36px;
+  padding: 0 28px 0 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--fog)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9.5l6 6 6-6' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E")
+    no-repeat right 9px center / 14px;
+  color: var(--ink);
+  font: 500 14px/1 var(--font-sans);
+  cursor: pointer;
+}
+.mix-arrows {
+  display: inline-flex;
+}
+.mix-line .mix-handle {
+  width: 24px;
+  height: 40px;
+  margin: 0;
+}
+/* phones: the row folds in two (name and controls, then volume and instrument) */
+@media (max-width: 640px) {
+  .mix-line {
+    grid-template-columns: 22px 32px minmax(0, 1fr) 34px 72px;
+    grid-template-areas: "h f n m a" "h v v i i";
+    row-gap: 2px;
+    padding: 6px 0;
+  }
+  .mix-line .mix-handle { grid-area: h; }
+  .mix-line .part-face { grid-area: f; width: 32px; height: 32px; }
+  .mix-line .mix-line-name { grid-area: n; }
+  .mix-line > .mix-mini { grid-area: m; }
+  .mix-line .mix-arrows { grid-area: a; }
+  .mix-line .mix-line-vol { grid-area: v; }
+  .mix-line .mix-line-inst { grid-area: i; }
+}
+
+.mix-rows {
+  margin-bottom: 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+}
+/* a solo's bar on an iPad: Sound and Fade keep their icons only, so the start button fits */
+@media (max-width: 1279px) {
+  .p-bar:not(.ens) .part-fade span {
+    display: none;
+  }
+  .p-bar:not(.ens) .part-fade {
+    padding: 0 14px;
+  }
+}
+@media (max-width: 1100px) {
+  .p-bar:not(.ens) .part-text {
+    display: none;
+  }
 }

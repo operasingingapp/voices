@@ -283,6 +283,11 @@ const Icon = {
       <path fill="currentColor" d="M6.5 5h3v8h-3zM16.5 5h3v8h-3zM11.5 5h3v8h-3z" opacity="0" />
     </svg>
   ),
+  fromStart: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="currentColor" d="M6 5h2.2v14H6zM19 5.6v12.8L9.4 12z" />
+    </svg>
+  ),
   up: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M6 14.5L12 8.5l6 6" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -559,18 +564,34 @@ function PracticeScreen({
   const phrases = useMemo(() => (ens ? language.phrases.filter((p) => p.roleId === wordsRole) : language.phrases), [ens, wordsRole]);
   // whose words: a small menu on the line card and in the words view
   const whoPick = ens ? (
-    <label className="who-pick">
-      <span>Words of</span>
-      <select value={wordsRole} onChange={(e) => setWordsRole(e.target.value)} aria-label="Whose words to show">
-        {edition.roles.map((r) => (
-          <option key={r.id} value={r.id}>
-            {r.name}
-            {r.id === roleId ? " (you)" : ""}
-          </option>
-        ))}
-      </select>
-    </label>
+    <span className="who-pick" role="radiogroup" aria-label="Whose words to show">
+      {voiceParts.map((p) => {
+        const on = p.roleId === wordsRole;
+        return (
+          <button
+            key={p.key}
+            type="button"
+            role="radio"
+            aria-checked={on}
+            className={`who-face${on ? " on" : ""}`}
+            onClick={() => p.roleId && setWordsRole(p.roleId)}
+            title={`${p.shortLabel}'s words${p === voicePart ? " (you)" : ""}`}
+            aria-label={`${p.shortLabel}'s words${p === voicePart ? " (you)" : ""}`}
+          >
+            <span className="who-face-img" aria-hidden="true">
+              <RoleFace k={partnerKey(p)} />
+            </span>
+            <span className="who-face-name">{p.shortLabel}</span>
+          </button>
+        );
+      })}
+    </span>
   ) : null;
+  // the line card takes the colours of the character whose words it shows
+  const cardTone = (() => {
+    const t = ART_TONES[ens ? `${portraitKey.split(":")[0]}:${wordsRole}` : portraitKey];
+    return t ? ({ "--line-bg": `color-mix(in srgb, ${t.strong} 55%, ${t.soft})`, "--line-ring": t.deep } as CSSProperties) : undefined;
+  })();
   // the singer's own colours (chosen with their picture) for "you" on this screen, instead of the default pink
   const practiceTone = (() => {
     const t = ART_TONES[portraitKey];
@@ -584,41 +605,7 @@ function PracticeScreen({
     p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? true);
   const setHear = (p: CompiledEdition["parts"][number], x: boolean) =>
     p === voicePart ? setHearVoice(x) : p.kind === "piano" ? setHearPiano(x) : setLine(p.key, { hear: x });
-  // practice presets for an ensemble: who is heard (a muted line is sung live, by you or by whoever is in the room),
-  // and who is shown in the score
-  type Hear = "all" | "notMe" | "mePiano" | "piano";
-  const hearNow: Hear | null = (() => {
-    const others = otherVoices.map((p) => lineSets[p.key]?.hear ?? true);
-    if (!hearPiano) return null;
-    if (hearVoice && others.every(Boolean)) return "all";
-    if (!hearVoice && others.every(Boolean)) return "notMe";
-    if (hearVoice && others.every((x) => !x)) return "mePiano";
-    if (!hearVoice && others.every((x) => !x)) return "piano";
-    return null;
-  })();
-  const setHearPreset = (h: Hear) => {
-    setHearPiano(true);
-    setHearVoice(h === "all" || h === "mePiano");
-    patchLines(Object.fromEntries(otherVoices.map((p) => [p.key, { hear: h === "all" || h === "notMe" }])));
-  };
-  type Show = "all" | "singers" | "mePiano" | "me";
-  const showPreset = (sh: Show) =>
-    patchLines(
-      Object.fromEntries(
-        edition.parts.map((p) => [
-          p.key,
-          { show: sh === "all" || (sh === "singers" && p.kind === "voice") || p === voicePart || (sh === "mePiano" && p.kind === "piano") },
-        ]),
-      ),
-    );
-  const showNow: Show | null = (() => {
-    const sh = (p: CompiledEdition["parts"][number]) => showOf(p);
-    const others = otherVoices.map(sh);
-    const pianoOn = sh(pianoPart);
-    if (others.every(Boolean)) return pianoOn ? "all" : "singers";
-    if (others.every((x) => !x)) return pianoOn ? "mePiano" : "me";
-    return null;
-  })();
+
   // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
   const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
   const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType);
@@ -1206,7 +1193,7 @@ function PracticeScreen({
         className={`now-panel${current.sounding ? " is-now" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && view === "music" ? " minimal" : ""}`}
         data-testid="now-panel"
       >
-        <div className="line-card">
+        <div className="line-card" style={cardTone}>
           <div className="now-bar">
             <p className="now-meta">
               <span className="now-dot" aria-hidden="true" />
@@ -1602,7 +1589,7 @@ function PracticeScreen({
         </div>
       </div>
 
-      <footer className="p-bar gutter">
+      <footer className={`p-bar gutter${ens ? " ens" : ""}`}>
         <div className={`bar-parts${ens ? " many" : ""}`} role="group" aria-label="Parts">
           <button
             type="button"
@@ -1647,6 +1634,7 @@ function PracticeScreen({
                 </button>
               );
             })}
+          {!ens && (
           <button type="button" className="part" title={`Piano: ${hearPiano ? "plays" : "muted"}`} aria-pressed={hearPiano} onClick={() => setHearPiano(!hearPiano)} aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}>
             <span className="part-face piano" aria-hidden="true">
               {Icon.piano}
@@ -1657,6 +1645,7 @@ function PracticeScreen({
             </span>
             <span className="part-icon">{hearPiano ? Icon.speaker : Icon.muted}</span>
           </button>
+          )}
           <button
             type="button"
             className="cp-btn part-fade mix-btn"
@@ -1676,65 +1665,34 @@ function PracticeScreen({
                   {onSing && (
                     <div className="mix-sing">
                       <span className="mix-sub">You sing</span>
-                      <div className="cp-seg" role="group" aria-label="The character you sing">
-                        {edition.roles.map((r) => (
-                          <button key={r.id} type="button" aria-pressed={r.id === roleId} onClick={() => r.id !== roleId && onSing(r.id)}>
-                            {voiceParts.find((p) => p.roleId === r.id)?.shortLabel ?? r.name}
+                      <div className="cp-seg mix-names" role="group" aria-label="The character you sing">
+                        {voiceParts.map((p) => (
+                          <button key={p.key} type="button" aria-pressed={p === voicePart} onClick={() => p !== voicePart && p.roleId && onSing(p.roleId)}>
+                            <span className="mix-chip-face" aria-hidden="true">
+                              <RoleFace k={partnerKey(p)} />
+                            </span>
+                            {p.shortLabel}
                           </button>
                         ))}
                       </div>
                     </div>
                   )}
-                  <div className="mix-sing">
-                    <span className="mix-sub">Hear</span>
-                    <div className="cp-seg mix-wrap" role="group" aria-label="Who is heard">
-                      {(
-                        [
-                          ["all", "Everyone"],
-                          ["notMe", "All but me"],
-                          ["mePiano", "Me and piano"],
-                          ["piano", "Piano only"],
-                        ] as [Hear, string][]
-                      ).map(([h, label]) => (
-                        <button key={h} type="button" aria-pressed={hearNow === h} onClick={() => setHearPreset(h)}>
-                          {label}
-                        </button>
-                      ))}
-                    </div>
-                    <span className="mix-hint">A muted line is sung live: by you, or by whoever is singing with you.</span>
-                  </div>
-                  <div className="mix-sing">
-                    <span className="mix-sub">Show in the score</span>
-                    <div className="cp-seg mix-wrap" role="group" aria-label="Who is shown in the score">
-                      {(
-                        [
-                          ["all", "Everyone"],
-                          ["singers", "Singers"],
-                          ["mePiano", "Me and piano"],
-                          ["me", "Just me"],
-                        ] as [Show, string][]
-                      ).map(([sh, label]) => (
-                        <button key={sh} type="button" aria-pressed={showNow === sh} onClick={() => showPreset(sh)}>
-                          {label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
                   <div className="mix-sing mix-order">
-                    <span className="mix-sub">Order, top to bottom</span>
-                    <div className="cp-seg" role="group" aria-label="Order of the lines">
-                      <button type="button" aria-pressed={scoreOrder} onClick={() => setOrder([])}>
-                        As in the score
-                      </button>
-                      <button
-                        type="button"
-                        aria-pressed={meOnTop && !scoreOrder}
-                        onClick={() => placeLine(orderedIds.indexOf(voicePart.source.xmlPartId), 0)}
-                      >
-                        My line on top
-                      </button>
+                    <div className="mix-order-head">
+                      <span className="mix-sub">Each line: order, volume and instrument</span>
+                      <div className="cp-seg" role="group" aria-label="Order of the lines">
+                        <button type="button" aria-pressed={scoreOrder} onClick={() => setOrder([])}>
+                          As in the score
+                        </button>
+                        <button
+                          type="button"
+                          aria-pressed={meOnTop && !scoreOrder}
+                          onClick={() => placeLine(orderedIds.indexOf(voicePart.source.xmlPartId), 0)}
+                        >
+                          My line on top
+                        </button>
+                      </div>
                     </div>
-                    <span className="mix-hint">Or drag a line by its handle, use the arrows, or tap a name on the score.</span>
                   </div>
                   <div className="mix-rows" ref={rowsRef}>
                   {orderedIds.map((xid, i) => {
@@ -1744,13 +1702,12 @@ function PracticeScreen({
                     const ls = lineSets[p.key] ?? {};
                     const on = hearOf(p);
                     const v = isYou ? vol.voice : isPiano ? vol.piano : (ls.vol ?? 70);
-                    const shownHere = showOf(p);
                     const name = lineName(p);
                     const inst = isYou ? lineSound : instOf(p);
                     const dragging = drag?.from === i;
                     const dropHere = drag && drag.over === i && drag.from !== i ? (drag.over < drag.from ? " drop-above" : " drop-below") : "";
                     return (
-                      <div className={`mix-row mix-line${dragging ? " dragging" : ""}${dropHere}`} key={xid}>
+                      <div className={`mix-line${dragging ? " dragging" : ""}${dropHere}${on ? "" : " off"}`} key={xid}>
                         <button
                           type="button"
                           className="mix-handle"
@@ -1771,79 +1728,95 @@ function PracticeScreen({
                             <path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" />
                           </svg>
                         </button>
-                        <span className={`part-face${isPiano ? " piano" : ""}${isYou ? " you" : ""}`} data-tone={isYou ? "pink" : undefined} aria-hidden="true">
+                        <span className={`part-face${isPiano ? " piano" : ""}${isYou ? " you" : ""}`} aria-hidden="true">
                           {isPiano ? Icon.piano : <RoleFace k={partnerKey(p)} />}
                         </span>
-                        <div className="mix-main">
-                          <div className="mix-head">
-                            <b>
-                              {name}
-                              {isYou && <em className="mix-you">you</em>}
-                            </b>
-                            <span className="mix-tools">
-                              <button type="button" className="mix-mini" disabled={i === 0} onClick={() => moveLine(i, -1)} aria-label={`Move ${name} up`} title="Move up">
-                                {Icon.up}
-                              </button>
-                              <button
-                                type="button"
-                                className="mix-mini"
-                                disabled={i === orderedIds.length - 1}
-                                onClick={() => moveLine(i, 1)}
-                                aria-label={`Move ${name} down`}
-                                title="Move down"
-                              >
-                                {Icon.down}
-                              </button>
-                              <button
-                                type="button"
-                                className="mix-mini"
-                                aria-pressed={shownHere}
-                                disabled={shownHere && hiddenIds.length >= orderedIds.length - 1}
-                                onClick={() => setLine(p.key, { show: !shownHere })}
-                                aria-label={shownHere ? `Hide ${name} in the score` : `Show ${name} in the score`}
-                                title={shownHere ? "Shown in the score" : "Hidden in the score"}
-                              >
-                                {shownHere ? Icon.eye : Icon.eyeOff}
-                              </button>
-                              <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setHear(p, !on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted: sung live"}>
-                                {on ? Icon.speaker : Icon.muted}
-                              </button>
-                            </span>
-                          </div>
-                          <input
-                            type="range"
-                            className="cp-slider"
-                            min={0}
-                            max={100}
-                            step={5}
-                            value={v}
-                            style={{ ["--fill" as string]: `${v}%` }}
-                            aria-label={`${name}: volume`}
-                            onChange={(e) => {
-                              const x = Number(e.target.value);
-                              if (isYou) setVol({ ...vol, voice: x });
-                              else if (isPiano) setVol({ ...vol, piano: x });
-                              else setLine(p.key, { vol: x });
-                              if (!on) setHear(p, true);
-                            }}
-                          />
-                          {!isPiano && (
-                            <div className="mix-inst">
-                              <span>Played on</span>
-                              <div className="cp-seg" role="group" aria-label={`${name}'s line is played on`}>
-                                {LINE_SOUNDS.map((o) => (
-                                  <button key={o.id} type="button" aria-pressed={inst === o.id} onClick={() => (isYou ? setLineSound(o.id) : setLine(p.key, { inst: o.id }))}>
-                                    {o.label}
-                                  </button>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                        </div>
+                        <b className="mix-line-name">
+                          {name}
+                          {isYou && <em className="mix-you">you</em>}
+                        </b>
+                        <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setHear(p, !on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted: sung live"}>
+                          {on ? Icon.speaker : Icon.muted}
+                        </button>
+                        <input
+                          type="range"
+                          className="cp-slider mix-line-vol"
+                          min={0}
+                          max={100}
+                          step={5}
+                          value={v}
+                          style={{ ["--fill" as string]: `${v}%` }}
+                          aria-label={`${name}: volume`}
+                          onChange={(e) => {
+                            const x = Number(e.target.value);
+                            if (isYou) setVol({ ...vol, voice: x });
+                            else if (isPiano) setVol({ ...vol, piano: x });
+                            else setLine(p.key, { vol: x });
+                            if (!on) setHear(p, true);
+                          }}
+                        />
+                        {isPiano ? (
+                          <span className="mix-line-inst none" />
+                        ) : (
+                          <label className="mix-line-inst">
+                            <select
+                              value={inst}
+                              onChange={(e) => (isYou ? setLineSound(e.target.value as LineChoice) : setLine(p.key, { inst: e.target.value as LineChoice }))}
+                              aria-label={`${name}'s line is played on`}
+                            >
+                              {LINE_SOUNDS.map((o) => (
+                                <option key={o.id} value={o.id}>
+                                  {o.label}
+                                </option>
+                              ))}
+                            </select>
+                          </label>
+                        )}
+                        <span className="mix-arrows">
+                          <button type="button" className="mix-mini" disabled={i === 0} onClick={() => moveLine(i, -1)} aria-label={`Move ${name} up`} title="Move up">
+                            {Icon.up}
+                          </button>
+                          <button type="button" className="mix-mini" disabled={i === orderedIds.length - 1} onClick={() => moveLine(i, 1)} aria-label={`Move ${name} down`} title="Move down">
+                            {Icon.down}
+                          </button>
+                        </span>
                       </div>
                     );
                   })}
                   </div>
+                  <div className="mix-sing">
+                    <span className="mix-sub">Hear</span>
+                    <div className="cp-seg mix-names" role="group" aria-label="Who is heard">
+                      {orderedIds.map(partByXml).map((p) => (
+                        <button key={p.key} type="button" aria-pressed={hearOf(p)} onClick={() => setHear(p, !hearOf(p))}>
+                          {hearOf(p) ? Icon.speaker : Icon.muted}
+                          {lineName(p)}
+                        </button>
+                      ))}
+                    </div>
+                    <span className="mix-hint">Turn off whoever is sung live: you, or the people singing with you.</span>
+                  </div>
+                  <div className="mix-sing">
+                    <span className="mix-sub">Show in the score</span>
+                    <div className="cp-seg mix-names" role="group" aria-label="Who is shown in the score">
+                      {orderedIds.map(partByXml).map((p) => {
+                        const on = showOf(p);
+                        return (
+                          <button
+                            key={p.key}
+                            type="button"
+                            aria-pressed={on}
+                            disabled={on && hiddenIds.length >= orderedIds.length - 1}
+                            onClick={() => setLine(p.key, { show: !on })}
+                          >
+                            {on ? Icon.eye : Icon.eyeOff}
+                            {lineName(p)}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  {soundLoading && <p className="mix-note">Loading the instruments…</p>}
                 </>
               ) : (
                 <>
@@ -1955,7 +1928,7 @@ function PracticeScreen({
               aria-label={showOf(pianoPart) ? "The piano is shown in the score. Hide it" : "Show the piano in the score"}
               title={showOf(pianoPart) ? "Hide the piano in the score" : "Show the piano in the score"}
             >
-              {showOf(pianoPart) ? Icon.eye : Icon.eyeOff}
+              {Icon.piano}
               <span>Piano in score</span>
             </button>
           )}
@@ -1975,7 +1948,21 @@ function PracticeScreen({
         </div>
 
         <div className="bar-transport">
-          <button type="button" className="cp-icon-btn bar-stop" onClick={() => engine?.stop()} aria-label="Stop and go back to the start">
+          <button
+            type="button"
+            className="cp-icon-btn bar-start"
+            onClick={async () => {
+              if (!engine) return;
+              engine.seek(0);
+              if (engine.state !== "playing") await play();
+            }}
+            disabled={pb.status !== "ready"}
+            aria-label="Play from the start"
+            title="From the start"
+          >
+            {Icon.fromStart}
+          </button>
+          <button type="button" className="cp-icon-btn bar-stop" onClick={() => engine?.stop()} aria-label="Stop and go back to the start" title="Stop">
             {Icon.stop}
           </button>
           {playing ? (
