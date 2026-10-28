@@ -112,17 +112,20 @@ function prepareForDisplay(xml: string): string {
         types.every((dt) =>
           Array.from(dt.children).every((c) => c.nodeName === "metronome" || (c.nodeName === "words" && /^\s*\.\d+\s*$/.test(c.textContent ?? ""))),
         );
-      const inVoice = dir.closest("part")?.getAttribute("id") === voicePart.source.xmlPartId;
+      // any sung part (an ensemble's parts can be put in any order, so none keeps marks above it)
+      const inVoice = voiceParts.some((v) => v.source.xmlPartId === dir.closest("part")?.getAttribute("id"));
       const tempoMark =
         !!Array.from(dir.children).find((c) => c.nodeName === "sound")?.getAttribute("tempo") ||
         types.some((dt) => Array.from(dt.children).some((c) => c.nodeName === "rehearsal" || c.nodeName === "metronome"));
       // stage directions under the voice ("Lauretta (in ginocchio…)") would push the syllables down along the whole line
       const words = types.flatMap((dt) => Array.from(dt.children)).map((c) => (c.nodeName === "words" ? (c.textContent ?? "").trim() : null));
       const stageDirection = inVoice && words.length > 0 && words.every((w) => w !== null && (w.length > 20 || /^[A-Z][a-z]+$/.test(w)));
+      // the number's heading printed over the first staff ("Nr. 10. Terzettino"): the title says it already
+      const heading = inVoice && words.length > 0 && words.every((w) => w !== null && /^(Nr|No|N)\.?\s*\d+/.test(w));
       // piano pedal brackets: a pianist's marking; drawn far below the bass staff they cost the whole line
       // its size, and a singer reading along does not use them
       const pedalOnly = types.length > 0 && types.every((dt) => Array.from(dt.children).every((c) => c.nodeName === "pedal"));
-      if (playbackOnly || (inVoice && tempoMark) || stageDirection || pedalOnly) dir.parentNode?.removeChild(dir);
+      if (playbackOnly || (inVoice && tempoMark) || stageDirection || heading || pedalOnly) dir.parentNode?.removeChild(dir);
     }
     for (const lyric of Array.from(doc.getElementsByTagName("lyric"))) {
       const texts = Array.from(lyric.children).filter((c) => c.nodeName === "text");
@@ -485,7 +488,17 @@ function PracticeScreen({
     return [...saved, ...xmlOrder.filter((id) => !saved.includes(id))];
   }, [order]);
   const partByXml = (xid: string) => (xid === voicePart.source.xmlPartId ? voicePart : edition.parts.find((x) => x.source.xmlPartId === xid)!);
-  const hiddenIds = ens ? orderedIds.filter((xid) => lineSets[partByXml(xid).key]?.show === false) : [];
+  // in an ensemble the score shows the singers and leaves the piano out unless you ask for it (you still hear it):
+  // six staves do not fit a landscape screen at a readable size
+  const showOf = (p: CompiledEdition["parts"][number]) => lineSets[p.key]?.show ?? !(ens && p.kind === "piano");
+  const hiddenIds = ens ? orderedIds.filter((xid) => !showOf(partByXml(xid))) : [];
+  /** several lines' settings changed at once (a preset) */
+  const patchLines = (patches: Record<string, LineSet>) => {
+    const next = { ...lineSets };
+    for (const [k, v] of Object.entries(patches)) next[k] = { ...next[k], ...v };
+    setLineSets(next);
+  };
+  const lineName = (p: CompiledEdition["parts"][number]) => (p.kind === "piano" ? "Piano" : p.shortLabel);
   const shownXml = useMemo(() => (ens ? reorderXml(displayXml, orderedIds) : displayXml), [ens, orderedIds]);
   const moveLine = (i: number, dir: -1 | 1) => {
     const next = [...orderedIds];
@@ -494,6 +507,52 @@ function PracticeScreen({
     [next[i], next[j]] = [next[j], next[i]];
     setOrder(next);
   };
+  /** move a line to another place in the list (dragged, or "to the top") */
+  const placeLine = (from: number, to: number) => {
+    if (from === to) return;
+    const next = [...orderedIds];
+    const [x] = next.splice(from, 1);
+    next.splice(to, 0, x);
+    setOrder(next);
+  };
+  const meOnTop = orderedIds[0] === voicePart.source.xmlPartId;
+  const scoreOrder = orderedIds.join() === xmlOrder.join();
+  // dragging a line by its handle in the Arrange panel
+  const rowsRef = useRef<HTMLDivElement>(null);
+  const [drag, setDrag] = useState<{ from: number; over: number } | null>(null);
+  const dragOver = (clientY: number, from: number) => {
+    // near the panel's top or bottom edge, the panel scrolls along
+    const pop = rowsRef.current?.closest<HTMLElement>(".mix-pop");
+    if (pop) {
+      const pr = pop.getBoundingClientRect();
+      if (clientY < pr.top + 48) pop.scrollTop -= 14;
+      else if (clientY > pr.bottom - 48) pop.scrollTop += 14;
+    }
+    const rows = Array.from(rowsRef.current?.querySelectorAll<HTMLElement>(".mix-line") ?? []);
+    let over = rows.length - 1;
+    for (let k = 0; k < rows.length; k++) {
+      const r = rows[k].getBoundingClientRect();
+      if (clientY < r.top + r.height / 2) {
+        over = k;
+        break;
+      }
+    }
+    setDrag({ from, over });
+  };
+  // a menu on a staff's name in the score
+  const [laneMenu, setLaneMenu] = useState<{ xid: string; left: number; top: number } | null>(null);
+  useEffect(() => {
+    if (!laneMenu) return;
+    const close = (e: Event) => {
+      if (e instanceof KeyboardEvent ? e.key === "Escape" : !(e.target as HTMLElement).closest(".lane-menu, .lane-label")) setLaneMenu(null);
+    };
+    window.addEventListener("pointerdown", close);
+    window.addEventListener("keydown", close);
+    return () => {
+      window.removeEventListener("pointerdown", close);
+      window.removeEventListener("keydown", close);
+    };
+  }, [laneMenu]);
   const [wordsRole, setWordsRole] = useState(roleId);
   const wordsPart = voiceParts.find((p) => p.roleId === wordsRole) ?? voicePart;
   const wordsName = edition.roles.find((r) => r.id === wordsRole)?.name ?? roleName;
@@ -516,6 +575,45 @@ function PracticeScreen({
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
   const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
+  const hearOf = (p: CompiledEdition["parts"][number]) =>
+    p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? true);
+  const setHear = (p: CompiledEdition["parts"][number], x: boolean) =>
+    p === voicePart ? setHearVoice(x) : p.kind === "piano" ? setHearPiano(x) : setLine(p.key, { hear: x });
+  // practice presets for an ensemble: who is heard (a muted line is sung live, by you or by whoever is in the room),
+  // and who is shown in the score
+  type Hear = "all" | "notMe" | "mePiano" | "piano";
+  const hearNow: Hear | null = (() => {
+    const others = otherVoices.map((p) => lineSets[p.key]?.hear ?? true);
+    if (!hearPiano) return null;
+    if (hearVoice && others.every(Boolean)) return "all";
+    if (!hearVoice && others.every(Boolean)) return "notMe";
+    if (hearVoice && others.every((x) => !x)) return "mePiano";
+    if (!hearVoice && others.every((x) => !x)) return "piano";
+    return null;
+  })();
+  const setHearPreset = (h: Hear) => {
+    setHearPiano(true);
+    setHearVoice(h === "all" || h === "mePiano");
+    patchLines(Object.fromEntries(otherVoices.map((p) => [p.key, { hear: h === "all" || h === "notMe" }])));
+  };
+  type Show = "all" | "singers" | "mePiano" | "me";
+  const showPreset = (sh: Show) =>
+    patchLines(
+      Object.fromEntries(
+        edition.parts.map((p) => [
+          p.key,
+          { show: sh === "all" || (sh === "singers" && p.kind === "voice") || p === voicePart || (sh === "mePiano" && p.kind === "piano") },
+        ]),
+      ),
+    );
+  const showNow: Show | null = (() => {
+    const sh = (p: CompiledEdition["parts"][number]) => showOf(p);
+    const others = otherVoices.map(sh);
+    const pianoOn = sh(pianoPart);
+    if (others.every(Boolean)) return pianoOn ? "all" : "singers";
+    if (others.every((x) => !x)) return pianoOn ? "mePiano" : "me";
+    return null;
+  })();
   // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
   const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
   const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType);
@@ -1196,7 +1294,16 @@ function PracticeScreen({
           edition={edition}
           perf={perf}
           visibleXmlParts={hiddenIds.length ? orderedIds.filter((x) => !hiddenIds.includes(x)) : null}
-          laneLabels={ens ? Object.fromEntries(orderedIds.map((x) => [x, x === pianoPart.source.xmlPartId ? "Piano" : partByXml(x).shortLabel])) : undefined}
+          laneLabels={ens ? Object.fromEntries(orderedIds.map((x) => [x, lineName(partByXml(x)) + (x === voicePart.source.xmlPartId ? " · you" : "")])) : undefined}
+          onLaneLabel={
+            ens
+              ? (xid, el) => {
+                  const r = el.getBoundingClientRect();
+                  setLaneMenu((m) => (m?.xid === xid ? null : { xid, left: r.left, top: r.bottom + 6 }));
+                }
+              : undefined
+          }
+          tintXmlParts={ens ? [voicePart.source.xmlPartId] : undefined}
           zoom={effZoom}
           cursor={cursorRef}
           marker={markerRef}
@@ -1212,10 +1319,60 @@ function PracticeScreen({
           strip
           joinTopStaff={false}
           ink="#0b0b0b"
-          fadedXmlParts={pianoFaded ? [pianoPart.source.xmlPartId] : []}
+          fadedXmlParts={pianoFaded && !hiddenIds.includes(pianoPart.source.xmlPartId) ? [pianoPart.source.xmlPartId] : []}
           nowNoteParts={pianoFaded ? [voicePart.source.xmlPartId] : [voicePart.source.xmlPartId, pianoPart.source.xmlPartId]}
         />
       </main>
+
+      {laneMenu &&
+        (() => {
+          const i = orderedIds.indexOf(laneMenu.xid);
+          const p = partByXml(laneMenu.xid);
+          const name = lineName(p);
+          const on = hearOf(p);
+          const done = (f: () => void) => () => {
+            f();
+            setLaneMenu(null);
+          };
+          return (
+            <div className="lane-menu" role="menu" aria-label={name} style={{ left: Math.min(laneMenu.left, window.innerWidth - 260), top: laneMenu.top }}>
+              <p className="lane-menu-title">
+                {name}
+                {p === voicePart && <em className="mix-you">you</em>}
+              </p>
+              <button type="button" role="menuitem" disabled={i === 0} onClick={done(() => placeLine(i, 0))}>
+                {Icon.up}
+                <span>Put at the top</span>
+              </button>
+              <button type="button" role="menuitem" disabled={i === 0} onClick={done(() => moveLine(i, -1))}>
+                {Icon.up}
+                <span>Move up</span>
+              </button>
+              <button type="button" role="menuitem" disabled={i === orderedIds.length - 1} onClick={done(() => moveLine(i, 1))}>
+                {Icon.down}
+                <span>Move down</span>
+              </button>
+              <button type="button" role="menuitem" disabled={hiddenIds.length >= orderedIds.length - 1} onClick={done(() => setLine(p.key, { show: false }))}>
+                {Icon.eyeOff}
+                <span>Hide in the score</span>
+              </button>
+              <button type="button" role="menuitem" onClick={done(() => setHear(p, !on))}>
+                {on ? Icon.muted : Icon.speaker}
+                <span>{on ? (p.kind === "piano" ? "Mute the piano" : "Mute: sung live") : "Play this line"}</span>
+              </button>
+              {p.kind === "voice" && p !== voicePart && onSing && p.roleId && (
+                <button type="button" role="menuitem" onClick={done(() => onSing(p.roleId!))}>
+                  {Icon.music}
+                  <span>Sing {name}'s part</span>
+                </button>
+              )}
+              <button type="button" role="menuitem" className="lane-menu-more" onClick={done(() => setMixOpen(true))}>
+                {Icon.sliders}
+                <span>Arrange all lines…</span>
+              </button>
+            </div>
+          );
+        })()}
 
       {view === "words" && (
         <div
@@ -1448,6 +1605,7 @@ function PracticeScreen({
             aria-pressed={hearVoice}
             onClick={() => setHearVoice(!hearVoice)}
             aria-label={hearVoice ? `${roleName}'s line plays. Mute it to sing it yourself` : `${roleName}'s line is muted. Play it`}
+            title={`${roleName} (you): ${hearVoice ? "plays" : "muted, you sing"}`}
           >
             <span className="part-face you" data-tone="pink" aria-hidden="true">
               <RoleFace k={portraitKey} />
@@ -1471,6 +1629,7 @@ function PracticeScreen({
                   aria-pressed={on}
                   onClick={() => setLine(p.key, { hear: !on })}
                   aria-label={`${p.shortLabel}'s line ${on ? "plays. Mute it" : "is muted. Play it"}`}
+                  title={`${p.shortLabel}: ${on ? "plays" : "muted, sung live"}`}
                 >
                   <span className="part-face" aria-hidden="true">
                     <RoleFace k={partnerKey(p)} />
@@ -1483,7 +1642,7 @@ function PracticeScreen({
                 </button>
               );
             })}
-          <button type="button" className="part" aria-pressed={hearPiano} onClick={() => setHearPiano(!hearPiano)} aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}>
+          <button type="button" className="part" title={`Piano: ${hearPiano ? "plays" : "muted"}`} aria-pressed={hearPiano} onClick={() => setHearPiano(!hearPiano)} aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}>
             <span className="part-face piano" aria-hidden="true">
               {Icon.piano}
             </span>
@@ -1502,12 +1661,13 @@ function PracticeScreen({
             onClick={() => setMixOpen(!mixOpen)}
           >
             {Icon.sliders}
-            <span>{ens ? "Lines" : "Sound"}</span>
+            <span>{ens ? "Arrange" : "Sound"}</span>
           </button>
           {mixOpen && (
             <div className={`mix-pop${ens ? " ens" : ""}`} role="dialog" aria-label={ens ? "Lines" : "Sound"}>
               {ens ? (
                 <>
+                  <p className="mix-title">Arrange the lines</p>
                   {onSing && (
                     <div className="mix-sing">
                       <span className="mix-sub">You sing</span>
@@ -1520,20 +1680,92 @@ function PracticeScreen({
                       </div>
                     </div>
                   )}
-                  <p className="mix-sub">The lines, top to bottom as in the score</p>
+                  <div className="mix-sing">
+                    <span className="mix-sub">Hear</span>
+                    <div className="cp-seg mix-wrap" role="group" aria-label="Who is heard">
+                      {(
+                        [
+                          ["all", "Everyone"],
+                          ["notMe", "All but me"],
+                          ["mePiano", "Me and piano"],
+                          ["piano", "Piano only"],
+                        ] as [Hear, string][]
+                      ).map(([h, label]) => (
+                        <button key={h} type="button" aria-pressed={hearNow === h} onClick={() => setHearPreset(h)}>
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                    <span className="mix-hint">A muted line is sung live: by you, or by whoever is singing with you.</span>
+                  </div>
+                  <div className="mix-sing">
+                    <span className="mix-sub">Show in the score</span>
+                    <div className="cp-seg mix-wrap" role="group" aria-label="Who is shown in the score">
+                      {(
+                        [
+                          ["all", "Everyone"],
+                          ["singers", "Singers"],
+                          ["mePiano", "Me and piano"],
+                          ["me", "Just me"],
+                        ] as [Show, string][]
+                      ).map(([sh, label]) => (
+                        <button key={sh} type="button" aria-pressed={showNow === sh} onClick={() => showPreset(sh)}>
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mix-sing mix-order">
+                    <span className="mix-sub">Order, top to bottom</span>
+                    <div className="cp-seg" role="group" aria-label="Order of the lines">
+                      <button type="button" aria-pressed={scoreOrder} onClick={() => setOrder([])}>
+                        As in the score
+                      </button>
+                      <button
+                        type="button"
+                        aria-pressed={meOnTop && !scoreOrder}
+                        onClick={() => placeLine(orderedIds.indexOf(voicePart.source.xmlPartId), 0)}
+                      >
+                        My line on top
+                      </button>
+                    </div>
+                    <span className="mix-hint">Or drag a line by its handle, use the arrows, or tap a name on the score.</span>
+                  </div>
+                  <div className="mix-rows" ref={rowsRef}>
                   {orderedIds.map((xid, i) => {
                     const p = partByXml(xid);
                     const isPiano = p.kind === "piano";
                     const isYou = p === voicePart;
                     const ls = lineSets[p.key] ?? {};
-                    const on = isYou ? hearVoice : isPiano ? hearPiano : (ls.hear ?? true);
+                    const on = hearOf(p);
                     const v = isYou ? vol.voice : isPiano ? vol.piano : (ls.vol ?? 70);
-                    const shownHere = ls.show ?? true;
-                    const name = isPiano ? "Piano" : p.shortLabel;
-                    const setOn = (x: boolean) => (isYou ? setHearVoice(x) : isPiano ? setHearPiano(x) : setLine(p.key, { hear: x }));
+                    const shownHere = showOf(p);
+                    const name = lineName(p);
                     const inst = isYou ? lineSound : instOf(p);
+                    const dragging = drag?.from === i;
+                    const dropHere = drag && drag.over === i && drag.from !== i ? (drag.over < drag.from ? " drop-above" : " drop-below") : "";
                     return (
-                      <div className="mix-row mix-line" key={xid}>
+                      <div className={`mix-row mix-line${dragging ? " dragging" : ""}${dropHere}`} key={xid}>
+                        <button
+                          type="button"
+                          className="mix-handle"
+                          aria-label={`Drag to move ${name}`}
+                          title="Drag to move"
+                          onPointerDown={(e) => {
+                            e.currentTarget.setPointerCapture(e.pointerId);
+                            setDrag({ from: i, over: i });
+                          }}
+                          onPointerMove={(e) => drag && dragOver(e.clientY, drag.from)}
+                          onPointerUp={() => {
+                            if (drag) placeLine(drag.from, drag.over);
+                            setDrag(null);
+                          }}
+                          onPointerCancel={() => setDrag(null)}
+                        >
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" />
+                          </svg>
+                        </button>
                         <span className={`part-face${isPiano ? " piano" : ""}${isYou ? " you" : ""}`} data-tone={isYou ? "pink" : undefined} aria-hidden="true">
                           {isPiano ? Icon.piano : <RoleFace k={partnerKey(p)} />}
                         </span>
@@ -1544,17 +1776,6 @@ function PracticeScreen({
                               {isYou && <em className="mix-you">you</em>}
                             </b>
                             <span className="mix-tools">
-                              <button
-                                type="button"
-                                className="mix-mini"
-                                aria-pressed={shownHere}
-                                disabled={shownHere && hiddenIds.length >= orderedIds.length - 1}
-                                onClick={() => setLine(p.key, { show: !shownHere })}
-                                aria-label={shownHere ? `Hide ${name} in the score` : `Show ${name} in the score`}
-                                title={shownHere ? "Shown in the score" : "Hidden in the score"}
-                              >
-                                {shownHere ? Icon.eye : Icon.eyeOff}
-                              </button>
                               <button type="button" className="mix-mini" disabled={i === 0} onClick={() => moveLine(i, -1)} aria-label={`Move ${name} up`} title="Move up">
                                 {Icon.up}
                               </button>
@@ -1568,7 +1789,18 @@ function PracticeScreen({
                               >
                                 {Icon.down}
                               </button>
-                              <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setOn(!on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted"}>
+                              <button
+                                type="button"
+                                className="mix-mini"
+                                aria-pressed={shownHere}
+                                disabled={shownHere && hiddenIds.length >= orderedIds.length - 1}
+                                onClick={() => setLine(p.key, { show: !shownHere })}
+                                aria-label={shownHere ? `Hide ${name} in the score` : `Show ${name} in the score`}
+                                title={shownHere ? "Shown in the score" : "Hidden in the score"}
+                              >
+                                {shownHere ? Icon.eye : Icon.eyeOff}
+                              </button>
+                              <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setHear(p, !on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted: sung live"}>
                                 {on ? Icon.speaker : Icon.muted}
                               </button>
                             </span>
@@ -1587,7 +1819,7 @@ function PracticeScreen({
                               if (isYou) setVol({ ...vol, voice: x });
                               else if (isPiano) setVol({ ...vol, piano: x });
                               else setLine(p.key, { vol: x });
-                              if (!on) setOn(true);
+                              if (!on) setHear(p, true);
                             }}
                           />
                           {!isPiano && (
@@ -1606,6 +1838,7 @@ function PracticeScreen({
                       </div>
                     );
                   })}
+                  </div>
                 </>
               ) : (
                 <>
@@ -1708,7 +1941,20 @@ function PracticeScreen({
               )}
             </div>
           )}
-          {view === "music" && (
+          {view === "music" && ens && (
+            <button
+              type="button"
+              className="cp-btn part-fade"
+              aria-pressed={showOf(pianoPart)}
+              onClick={() => setLine(pianoPart.key, { show: !showOf(pianoPart) })}
+              aria-label={showOf(pianoPart) ? "The piano is shown in the score. Hide it" : "Show the piano in the score"}
+              title={showOf(pianoPart) ? "Hide the piano in the score" : "Show the piano in the score"}
+            >
+              {showOf(pianoPart) ? Icon.eye : Icon.eyeOff}
+              <span>Piano in score</span>
+            </button>
+          )}
+          {view === "music" && !ens && (
           <button
             type="button"
             className="cp-btn part-fade"

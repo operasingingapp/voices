@@ -84,6 +84,10 @@ interface Props {
   ink?: string;
   /** strip: a name over each part's staff (xml part id → name), kept in view at the left while the score scrolls */
   laneLabels?: Record<string, string>;
+  /** tapping a part's name (strip): e.g. a menu to move or hide that part */
+  onLaneLabel?: (partId: string, el: HTMLElement) => void;
+  /** parts given a soft tint across the score (xml part ids): the line you sing, easy to find */
+  tintXmlParts?: string[];
   /** Colour the note sounding now, in the first of these parts that has one (xml part ids). */
   nowNoteParts?: string[];
   /** Parts drawn faded (still on the line, but quiet to the eye). */
@@ -320,12 +324,49 @@ export function ScoreView(props: Props) {
     props.laneLabels
       ? layout.lanes
           .filter((l) => props.laneLabels![l.partId])
-          .map((l) => (
-            <span key={`lbl-${l.partId}`} className="lane-label" style={{ top: l.top - 17 }} aria-hidden="true">
-              {props.laneLabels![l.partId]}
-            </span>
-          ))
+          .map((l) =>
+            props.onLaneLabel ? (
+              <button
+                key={`lbl-${l.partId}`}
+                type="button"
+                className="lane-label"
+                style={{ top: l.top - 30 }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  props.onLaneLabel!(l.partId, e.currentTarget);
+                }}
+                onPointerUp={(e) => e.stopPropagation()}
+                aria-label={`${props.laneLabels![l.partId]}: move, hide or mute this line`}
+              >
+                {props.laneLabels![l.partId]}
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2.2" />
+                </svg>
+              </button>
+            ) : (
+              <span key={`lbl-${l.partId}`} className="lane-label" style={{ top: l.top - 30 }} aria-hidden="true">
+                {props.laneLabels![l.partId]}
+              </span>
+            ),
+          )
       : null;
+  /** the band of a part, from halfway to the part above to halfway to the part below */
+  const laneBand = (layout: ScoreLayout, pid: string) => {
+    const i = layout.lanes.findIndex((l) => l.partId === pid);
+    if (i < 0) return null;
+    const lane = layout.lanes[i];
+    const prev = layout.lanes[i - 1];
+    const next = layout.lanes[i + 1];
+    // the first and last parts: just beyond what they draw (and the name above the first)
+    const top = prev ? (prev.extBottom + lane.extTop) / 2 : Math.max(0, Math.min(lane.extTop, lane.top - 34) - 8);
+    const bottom = next ? (lane.extBottom + next.extTop) / 2 : Math.min(layout.height, lane.extBottom + 10);
+    return { top, height: bottom - top };
+  };
+  const tintEls = (layout: ScoreLayout) =>
+    props.tintXmlParts?.map((pid) => {
+      const b = laneBand(layout, pid);
+      return b ? <div key={`tint-${pid}`} className="ov-you" style={{ position: "absolute", left: 0, top: b.top, width: "100%", height: b.height }} /> : null;
+    });
   const { xml, visibleXmlParts, zoom } = props;
   const scrollRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
@@ -343,6 +384,9 @@ export function ScoreView(props: Props) {
   const [pinned, setPinned] = useState<ReturnType<typeof buildPinned>>(null);
   const [pinIdx, setPinIdx] = useState(-1);
   const [loaded, setLoaded] = useState(false);
+  // counts finished loads: a new score that loads at once (its parts put in another order) still gets drawn,
+  // though "loading" and "loaded" arrive together and leave "loaded" looking unchanged
+  const [loadTick, setLoadTick] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [width, setWidth] = useState(0);
   const layoutRef = useRef<ScoreLayout | null>(null);
@@ -414,7 +458,10 @@ export function ScoreView(props: Props) {
     Promise.resolve(fontsReady)
       .then(() => osmd.load(xml))
       .then(() => {
-        if (!cancelled) setLoaded(true);
+        if (!cancelled) {
+          setLoaded(true);
+          setLoadTick((t) => t + 1);
+        }
       })
       .catch((e: Error) => !cancelled && setError(`The score could not be displayed: ${e.message}`));
     return () => {
@@ -473,7 +520,8 @@ export function ScoreView(props: Props) {
   const rowsKey = `${rowSrc?.ipa ? "i" : ""}${rowSrc?.translation ? "t" : ""}`;
   useEffect(() => {
     const osmd = osmdRef.current;
-    if (!osmd || !loaded || !width) return;
+    // a new score (e.g. its parts put in another order) is still loading: it renders when it has
+    if (!osmd || !loaded || !width || !osmd.Sheet) return;
     for (const ins of osmd.Sheet.Instruments) ins.Visible = !visibleXmlParts || visibleXmlParts.includes(ins.IdString);
     if (props.ink) {
       osmd.EngravingRules.applyDefaultColorMusic(props.ink);
@@ -511,7 +559,7 @@ export function ScoreView(props: Props) {
       setError(`The score could not be displayed: ${(e as Error).message}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loaded, visKey, zoom, width, hasBands, hasLyrics, rowsKey, props.ink]);
+  }, [loaded, loadTick, visKey, zoom, width, hasBands, hasLyrics, rowsKey, props.ink]);
 
   // animation loop: cursor, marker, auto-scroll
   useEffect(() => {
@@ -778,6 +826,7 @@ export function ScoreView(props: Props) {
       {strip && pinned && pinIdx >= 0 && (
         <div className="pin-clef" style={{ width: pinned.width, marginRight: -pinned.width, height: layout?.height }} aria-hidden="true">
           <div dangerouslySetInnerHTML={{ __html: pinned.panels[pinIdx].html }} />
+          {layout && tintEls(layout)}
           {layout && laneLabelEls(layout)}
           {layout &&
             props.fadedXmlParts?.map((pid) => {
@@ -936,6 +985,7 @@ export function ScoreView(props: Props) {
               });
             })()}
           {layout && hasLyrics && renderSungText(layout)}
+          {layout && tintEls(layout)}
           {layout && !(pinned && pinIdx >= 0) && laneLabelEls(layout)}
           {layout &&
             props.fadedXmlParts?.map((pid) => {
