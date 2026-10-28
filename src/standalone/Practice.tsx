@@ -13,6 +13,7 @@ import { buildTips, type TipLine } from "./tips";
 import { onVoicesChanged, setSpeechLanguage, speak, stopSpeaking, voiceInfo } from "./speech";
 import { pieceData, type PieceInfo } from "./pieces";
 import { Avatar } from "./flow";
+import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { LINE_SOUNDS, resolveLine, type LineChoice } from "./settings";
 
@@ -393,6 +394,13 @@ const Icon = {
       <path fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" d="M18.6 13.2h1.3a1.7 1.7 0 0 0 0-3.4h-.6M7 15.5v2.6M15 15.5v2.6M8.3 9.6l2.8 5.9 2.8-5.9" />
     </svg>
   ),
+  metronome: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9.2 3.5h5.6L18.5 20.5H5.5z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M12 16.5l4.5-8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M7.5 16.5h9" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  ),
   sliders: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M4 7h9M17 7h3M4 17h3M11 17h9" />
@@ -548,6 +556,7 @@ function PracticeScreen({
   };
   // a menu on a staff's name in the score
   const [laneMenu, setLaneMenu] = useState<{ xid: string; left: number; top: number } | null>(null);
+  useBackToClose(!!laneMenu, () => setLaneMenu(null));
   useEffect(() => {
     if (!laneMenu) return;
     const close = (e: Event) => {
@@ -619,7 +628,11 @@ function PracticeScreen({
   const [soundLoading, setSoundLoading] = useState(false);
   const [mixOpen, setMixOpen] = useState(false);
   const [drawer, setDrawer] = useState<Drawer | null>(null);
+  // back (the gesture, or the browser's) closes what is open over the music, one thing at a time
+  useBackToClose(!!drawer, () => setDrawer(null));
+  useBackToClose(mixOpen, () => setMixOpen(false));
   const [openWord, setOpenWord] = useState<OpenWord | null>(null);
+  useBackToClose(!!openWord, () => setOpenWord(null));
   const [view, setView] = useLocalSetting<View>("p:view", "music");
   // words view: the IPA under each line can be hidden
   const [showIpa, setShowIpa] = useLocalSetting("p:ipa", true);
@@ -1938,8 +1951,16 @@ function PracticeScreen({
               {Icon.plus}
             </button>
           </div>
-          <button type="button" className="cp-toggle" aria-pressed={countIn} onClick={() => setCountIn(!countIn)}>
-            Count-in
+          <button
+            type="button"
+            className="cp-toggle countin"
+            aria-pressed={countIn}
+            onClick={() => setCountIn(!countIn)}
+            aria-label={countIn ? "Count-in on: a bar of clicks before the music. Turn it off" : "Count-in off. Turn it on"}
+            title="Count-in"
+          >
+            {Icon.metronome}
+            <span>Count-in</span>
           </button>
         </div>
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}

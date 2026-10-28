@@ -9,6 +9,7 @@ import { decorate, syllableRanges } from "./syllables";
 import { ART, ART_TONES, BRAVO, PORTRAITS, STORIES } from "./opera-extra";
 import { SYNOPSES, Story, storyOf } from "./synopses";
 import { ARCS } from "./arcs";
+import { useBackToClose } from "./nav";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
@@ -533,6 +534,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
   const art = PORTRAITS[`${r.opera}:${r.character}`];
   const video = useRef<HTMLVideoElement>(null);
   const close = useRef<HTMLButtonElement>(null);
+  useBackToClose(true, onClose);
   useEffect(() => {
     close.current?.focus();
     const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -592,6 +594,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
  * so you can switch to another piece or role; a tap outside, Escape or going somewhere closes it.
  */
 export function SideDrawer({ ctx, open, onClose }: { ctx: Ctx; open: boolean; onClose: () => void }) {
+  useBackToClose(open, onClose);
   const key = JSON.stringify(ctx.place);
   useEffect(() => {
     onClose();
@@ -639,6 +642,8 @@ function NowPill({ ctx }: { ctx: Ctx }) {
 
 export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  // the menu, on a narrow screen: back closes it
+  useBackToClose(open, () => setOpen(false));
   const mainRef = useRef<HTMLDivElement>(null);
   const key = JSON.stringify(ctx.place);
   useEffect(() => {
@@ -681,6 +686,7 @@ const BookIcon = () => (
  */
 function SynopsisSheet({ opera, ch, onClose }: { opera: Opera; ch?: Character; onClose: () => void }) {
   const close = useRef<HTMLButtonElement>(null);
+  useBackToClose(true, onClose);
   useEffect(() => {
     close.current?.focus();
     const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -753,6 +759,9 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   const pr = progressOf(ctx, opera, ch);
   // one piece's scene open at a time, inside its own row
   const [open, setOpen] = useState<string | null>(null);
+  // the character's story opens over this page, and closes back to it
+  const [story, setStory] = useState(false);
+  const go = continueTarget(ctx, opera, ch);
   return (
     <main className="screen-body gutter page">
       <Crumbs
@@ -769,24 +778,36 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           <Face opera={opera} ch={ch} />
         </ProgressRing>
         <div className="rp-id">
-          <button type="button" className="rp-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
+          {/* the opera as context (the breadcrumb above is the way there) */}
+          <p className="rp-opera">
             <span lang={opera.lang}>{opera.title}</span>
             <span className="rp-opera-by">{opera.composer}</span>
-            <Chevron />
-          </button>
+            <span className="rp-opera-by">{ch.voice}</span>
+          </p>
           <h1>{ch.name}</h1>
           <p className="rp-desc">{ch.desc}</p>
           <div className="rp-actions">
+            {/* the main thing to do here: practise (the next piece with music, or the one you were on) */}
+            {go && (
+              <button type="button" className="cp-btn cp-btn--ink rp-go" onClick={() => ctx.go(go.place)}>
+                <Play />
+                <span>
+                  {go.resumed ? "Continue" : "Practise"} <i lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</i>
+                </span>
+              </button>
+            )}
+            <div className="rp-more">
             <button type="button" className="cp-btn mine-toggle" aria-pressed={mine} onClick={() => ctx.toggleRole(r)}>
               {mine ? <Check /> : <Plus />}
               {mine ? "In my roles" : "Add to my roles"}
             </button>
             {SYNOPSES[opera.id] && (
-              <button type="button" className="cp-btn rp-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true, as: ch.id })}>
+              <button type="button" className="cp-btn rp-syn-btn" onClick={() => setStory(true)}>
                 <BookIcon />
                 {storyOf(ch.name)}
               </button>
             )}
+            </div>
           </div>
         </div>
         {pr.total > 0 && (
@@ -885,6 +906,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           })()}
         </p>
       </section>
+      {story && SYNOPSES[opera.id] && <SynopsisSheet opera={opera} ch={ch} onClose={() => setStory(false)} />}
     </main>
   );
 }
@@ -921,6 +943,8 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   const name = (id: string) => opera.chars.find((c) => c.id === id)?.name ?? id;
   const ordered = !!RUNNING[opera.id]?.length;
   const [open, setOpen] = useState<number | null>(null);
+  // the opera's story opens over this page (a saved place may still ask for it)
+  const [story, setStory] = useState(ctx.place.screen === "opera" && !!ctx.place.synopsis);
   return (
     <main className="screen-body gutter page">
       <Crumbs ctx={ctx} trail={[{ label: "Operas", to: { screen: "explore", by: "opera" } }, { label: opera.title, lang: opera.lang }]} />
@@ -941,17 +965,17 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
           </p>
         )}
         {SYNOPSES[opera.id] && (
-          <button type="button" className="cp-btn op-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true })}>
+          <button type="button" className="cp-btn op-syn-btn" onClick={() => setStory(true)}>
             <BookIcon />
             The story
           </button>
         )}
       </section>
-      {ctx.place.screen === "opera" && ctx.place.synopsis && SYNOPSES[opera.id] && (
+      {story && SYNOPSES[opera.id] && (
         <SynopsisSheet
           opera={opera}
           ch={opera.chars.find((c) => c.id === (ctx.place.screen === "opera" ? ctx.place.as : undefined))}
-          onClose={() => ctx.go({ screen: "opera", opera: opera.id })}
+          onClose={() => setStory(false)}
         />
       )}
 
@@ -1267,7 +1291,6 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
   const [ipa, setIpa] = useStored("p:ipa", true);
   const [tr, setTr] = useStored("p:tr", true);
   const [tips, setTips] = useStored("p:tipsBar", true);
-  const [steady, setSteady] = useStored("p:steady", true);
   const [countIn, setCountIn] = useStored("p:countin", true);
   const choice = line === "auto" || LINE_SOUNDS.some((o) => o.id === line) ? line : "auto";
   return (
@@ -1308,7 +1331,7 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
           Playing
         </p>
         <div className="st-list">
-          <Toggle on={steady} onChange={setSteady} label="Steady tempo" hint="A steady pulse at the written tempo; off plays the edition's own changes of speed" />
+
           <Toggle on={countIn} onChange={setCountIn} label="Count-in" hint="A bar of clicks before the music starts" />
         </div>
       </section>
@@ -1629,6 +1652,7 @@ function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void })
  */
 function MeetCharacter({ opera, ch, onTake, onOpera, onClose }: { opera: Opera; ch: Character; onTake: () => void; onOpera: () => void; onClose: () => void }) {
   const take = useRef<HTMLButtonElement>(null);
+  useBackToClose(true, onClose);
   useEffect(() => {
     take.current?.focus();
     const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();

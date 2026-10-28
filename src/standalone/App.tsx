@@ -190,7 +190,9 @@ export function App() {
   const go = (p: Place) => {
     if (JSON.stringify(p) === JSON.stringify(place)) return;
     try {
-      history.pushState({ cp: p }, "");
+      // a panel open over this screen took a history step: the new screen replaces that step
+      if ((history.state as { overlay?: number } | null)?.overlay) history.replaceState({ cp: p }, "");
+      else history.pushState({ cp: p }, "");
     } catch {
       /* history unavailable: moving still works */
     }

@@ -9662,3 +9662,288 @@ button.lane-label:hover {
   margin: 0;
   font: 400 17px/1.6 var(--font-sans);
 }
+
+/* the details panel's tabs never push its close button off a narrow screen: they scroll, it stays */
+.p-drawer-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.p-drawer-head .cp-seg {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.p-drawer-head .cp-seg::-webkit-scrollbar {
+  display: none;
+}
+.p-drawer-head .cp-seg button {
+  flex: none;
+}
+.p-drawer-head > .cp-icon-btn {
+  flex: none;
+}
+
+/* the screen's scroller holds everything placed inside it (screen-reader labels, card images), so nothing
+   reaches past it and lets the whole page scroll into blank space on a phone */
+.screen {
+  position: relative;
+}
+
+/* ---------------------------------------------------------------------
+   The role page's head: the cover band across, the portrait and name, then
+   what to do (Practise first), then how far along you are
+   --------------------------------------------------------------------- */
+.rp-head .art-band {
+  justify-self: stretch;
+  width: auto;
+}
+p.rp-opera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin: 0;
+  font: 500 15px/1.3 var(--font-sans);
+}
+p.rp-opera > span:first-child {
+  font-style: italic;
+}
+.rp-opera-by {
+  color: var(--ink-muted);
+}
+.rp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.rp-go {
+  min-height: 52px;
+  padding: 0 22px 0 18px;
+  font-size: 16px;
+}
+.rp-go svg {
+  width: 18px;
+  height: 18px;
+}
+.rp-go i {
+  font-style: italic;
+}
+@media (max-width: 640px) {
+  .rp-head {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 14px 16px;
+    padding: 16px;
+    border-radius: 28px;
+  }
+  .rp-head .art-band {
+    grid-column: 1 / -1;
+  }
+  .rp-head .ring {
+    width: 84px !important;
+    height: 84px !important;
+    align-self: start;
+  }
+  .rp-id h1 {
+    font-size: 36px;
+  }
+  .rp-actions {
+    grid-column: 1 / -1;
+  }
+  /* the actions and the progress span the card under the portrait and name */
+  .rp-id {
+    display: contents;
+  }
+  .rp-id > p.rp-opera,
+  .rp-id > h1,
+  .rp-id > .rp-desc {
+    grid-column: 2;
+  }
+  .rp-id > .rp-actions {
+    grid-column: 1 / -1;
+  }
+  .rp-go {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .rp-progress {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .rp-head .ring {
+    grid-row: span 3;
+  }
+}
+
+/* the opera line: one run of text that wraps at its dots, never starting a line with one */
+p.rp-opera {
+  display: block;
+}
+p.rp-opera > span {
+  display: inline-block;
+}
+p.rp-opera .rp-opera-by::before {
+  content: "·";
+  margin: 0 7px;
+}
+/* progress: as tall as it needs, centred beside the name (iPad); a slim strip on a phone */
+.rp-progress {
+  align-self: center;
+}
+@media (max-width: 640px) {
+  .rp-progress {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    min-width: 0;
+  }
+  .rp-progress p b {
+    font-size: 26px;
+  }
+  .rp-progress .rp-bar {
+    order: 3;
+    flex: 1 1 100%;
+  }
+  .rp-progress small {
+    margin-left: auto;
+  }
+}
+/* the secondary actions beside each other, under Practise */
+.rp-actions .mine-toggle,
+.rp-actions .rp-syn-btn {
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 15px;
+}
+.rp-go {
+  flex: 1 1 100%;
+  max-width: max-content;
+}
+@media (max-width: 640px) {
+  .rp-go {
+    max-width: none;
+  }
+}
+p.rp-opera .rp-opera-by::before {
+  content: none;
+}
+p.rp-opera > span:not(:last-child)::after {
+  content: "·";
+  margin: 0 7px;
+  color: var(--ink-muted);
+}
+
+/* Count-in: the word on wide screens, the metronome on a phone */
+.countin svg {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+/* ---------------------------------------------------------------------
+   The practice screen on a phone: the piece's name under the icons; the
+   line card's tools wrap rather than run off; play and speed share a row
+   --------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .p-head {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  .p-title {
+    order: 9;
+    flex: 1 1 100%;
+  }
+  .p-title h1 {
+    display: block !important;
+    font-size: 16px !important;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  .now-bar {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .who-face:not(.on) .who-face-name,
+  .who-face .who-face-name {
+    display: none;
+  }
+  .who-face.on {
+    padding-right: 3px;
+  }
+  .practice .p-bar .bar-right {
+    width: auto;
+  }
+  .countin span {
+    display: none;
+  }
+  .countin svg {
+    display: block;
+  }
+  .practice .p-bar .countin {
+    padding: 0 12px;
+  }
+}
+/* small phones: the faces and the piano's buttons a little narrower, so the parts row fits */
+@media (max-width: 380px) {
+  .practice .p-bar .bar-parts > .part {
+    padding: 0 2px;
+  }
+  .practice .p-bar .bar-parts .part-face {
+    width: 38px;
+    height: 38px;
+  }
+  .piano-group {
+    padding-left: 8px;
+  }
+  .pg-btn {
+    min-width: 34px;
+    padding: 0 6px;
+  }
+  .pg-icon {
+    margin-right: 0;
+  }
+}
+
+/* Practise on its own line, the two quieter actions together under it */
+.rp-actions {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rp-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .rp-actions {
+    align-items: stretch;
+  }
+}
+/* up to an upright iPad: progress as a slim strip across the card */
+@media (max-width: 860px) {
+  .rp-progress {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    min-width: 0;
+    padding: 12px 16px;
+    border-radius: 18px;
+  }
+  .rp-progress p b {
+    font-size: 26px;
+  }
+  .rp-progress .rp-bar {
+    order: 3;
+    flex: 1 1 100%;
+  }
+  .rp-progress small {
+    margin-left: auto;
+  }
+}
