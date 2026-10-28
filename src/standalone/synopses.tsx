@@ -128,7 +128,7 @@ export const SYNOPSES: Record<string, Act[]> = {
       paras: [
         "The shy villager Nemorino adores the rich and clever Adina, who laughs as she reads her farmhands the tale of Tristan and the love potion. The swaggering Sergeant Belcore marches in with his soldiers and courts Adina at once; she tells Nemorino plainly that she is fickle.",
         "The travelling quack Doctor Dulcamara arrives selling a cure for everything. Nemorino asks for Isolde's love potion and is sold a bottle of Bordeaux, which will work, he is told, in a day.",
-        "Tipsy and sure of himself, Nemorino ignores Adina. Stung, she agrees to marry Belcore in six days; then orders call the soldiers away, and she agrees to marry him that very evening. Nemorino begs her to wait one more day.",
+        "Tipsy and sure of himself, Nemorino ignores Adina. Stung, she agrees to marry Belcore in six days; then orders call the soldiers away the next morning, and she agrees to marry him that very day. Nemorino begs her to wait one more day.",
       ],
     },
     {
@@ -326,10 +326,10 @@ export const SYNOPSES: Record<string, Act[]> = {
       title: "The opera",
       where: "Florence, 1299: the bedroom of Buoso Donati, who has just died. In one act",
       paras: [
-        "Buoso's relatives kneel weeping round his bed, until they hear a rumour that he has left everything to the monks. They hunt for the will, and the young Rinuccio finds it; before handing it over he makes his aunt Zita promise he can marry Lauretta, daughter of Gianni Schicchi. The will confirms the worst.",
+        "Buoso's relatives kneel weeping round his bed, until they hear a rumour that he has left everything to the monks. They hunt for the will, and the young Rinuccio finds it; before handing it over he makes his aunt Zita promise he can marry Lauretta, daughter of Gianni Schicchi, and sends for her father. The will confirms the worst.",
         "Rinuccio says only Schicchi can save them. The relatives sneer at the newcomer from the country; Rinuccio praises Florence and its new men. Schicchi arrives with Lauretta and, insulted, refuses to help, until Lauretta begs him (“O mio babbino caro”).",
-        "Nobody yet knows Buoso is dead. Schicchi has the body hidden, climbs into the bed and, imitating the dead man's voice, fools the doctor. Each relative secretly bribes him for the best property. He warns them that forging a will means exile and the loss of a hand, for all of them.",
-        "Before the notary Schicchi dictates the new will and leaves the house, the mill and the mule to ‘my devoted friend Gianni Schicchi’. The relatives can say nothing. When the notary has gone he drives them out, and Lauretta and Rinuccio embrace. Schicchi asks the audience to forgive him, given the happy ending.",
+        "Nobody yet knows Buoso is dead. Schicchi has the body hidden, climbs into the bed and, imitating the dead man's voice, fools the doctor. Each relative secretly bribes him for the best property. The women dress him in Buoso's nightclothes, and he warns them that forging a will means exile and the loss of a hand, for all of them.",
+        "Before the notary Schicchi dictates the new will and leaves the house, the mill and the mule to ‘my devoted friend Gianni Schicchi’. The relatives can say nothing. When the notary has gone he drives them out, looting as they go, and Lauretta and Rinuccio embrace. Schicchi asks the audience to forgive him, given the happy ending.",
       ],
     },
   ],
@@ -383,15 +383,24 @@ function SceneList({ scenes, opera, you }: { scenes: Scene[]; opera: string; you
   return (
     <ol className="syn-scenes">
       {scenes.map((sc, i) => {
+        const sings = !!you && sc.who.includes(you);
+        const silent = !!you && !sings && !!sc.also?.includes(you);
         const others = sc.who.filter((w) => w !== you).map(name);
         return (
-          <li key={i} className={you && sc.who.includes(you) ? "mine" : undefined}>
+          <li key={i} className={sings ? "mine" : silent ? "mine silent" : undefined}>
             <span className="sc-head">
               <b lang={o?.lang}>{sc.title}</b>
               <small>{sc.kind}</small>
             </span>
             <span className="sc-what">{sc.what}</span>
-            {you && others.length > 0 && <span className="sc-with">With {others.join(", ")}</span>}
+            {you && (silent || others.length > 0) && (
+              <span className="sc-with">
+                {silent && <em>On stage, silent</em>}
+                {silent && others.length > 0 && " · "}
+                {others.length > 0 && `${silent ? "Sung by" : "With"} ${others.join(", ")}`}
+              </span>
+            )}
+            {!you && sc.who.length > 0 && <span className="sc-with">{sc.who.map(name).join(", ")}</span>}
           </li>
         );
       })}
@@ -412,10 +421,13 @@ function byAct(scenes: Scene[]): [string, Scene[]][] {
  */
 export function ArcSteps({ opera, character, steps, level = 3 }: { opera: string; character: string; steps: ArcStep[]; level?: 2 | 3 | 4 }) {
   const H = `h${level}` as "h2" | "h3" | "h4";
-  const mine = (SCENES[opera] ?? []).filter((sc) => sc.who.includes(character));
+  const all = SCENES[opera] ?? [];
+  const mine = all.filter((sc) => sc.who.includes(character) || sc.also?.includes(character));
+  const sung = all.filter((sc) => sc.who.includes(character)).length;
   const acts = byAct(mine);
   const actName = (a: string) => a.replace(/\s*\(.*\)$/, "");
-  const count = mine.length;
+  const count = sung;
+  const silentCount = mine.length - sung;
   // every act they are in: those with a summary, and any where they only join an ensemble
   const order = [...new Set([...(SCENES[opera] ?? []).map((sc) => actName(sc.act)), ...steps.map((x) => x.act)])].filter(
     (a) => steps.some((x) => x.act === a) || acts.some(([b]) => actName(b) === a),
@@ -424,7 +436,8 @@ export function ArcSteps({ opera, character, steps, level = 3 }: { opera: string
     <div className="syn syn-arc">
       {count > 0 && (
         <p className="syn-count">
-          {count} {count === 1 ? "number" : "numbers"} in the opera
+          Sings in {count} {count === 1 ? "number" : "numbers"}
+          {silentCount > 0 && `, on stage without singing in ${silentCount} more`}
         </p>
       )}
       {order.map((act) => {

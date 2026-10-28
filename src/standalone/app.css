@@ -8903,3 +8903,12 @@ p.obp-meta {
 .syn-numbers .syn-scenes {
   margin-top: 10px;
 }
+.syn-scenes li.mine.silent {
+  background: transparent;
+  border-left-style: dashed;
+}
+.sc-with em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--you-mark);
+}

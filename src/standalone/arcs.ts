@@ -42,7 +42,7 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 1", text: "Doctor Bartolo still resents Figaro for helping Rosina marry the Count, and promises Marcellina revenge by law (“La vendetta”)." },
     { act: "Act 2", text: "He arrives with Marcellina and Basilio to press her claim on Figaro." },
     { act: "Act 3", text: "At the hearing a birthmark reveals that Figaro is his and Marcellina's son, stolen as a baby. He agrees to marry Marcellina at last." },
-    { act: "Act 4", text: "He follows Figaro into the garden and is there when the Count is caught out." },
+    { act: "Act 4", text: "In the garden at night Figaro posts him and Basilio nearby, to come when he whistles and witness Susanna's betrayal." },
   ],
 
   // ---------------- Don Giovanni ----------------
@@ -218,6 +218,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "boheme:colline": [
     { act: "Act 1", text: "The philosopher joins the friends' Christmas Eve feast and helps get rid of the landlord." },
+    { act: "Act 2", text: "He joins his friends at the Café Momus on Christmas Eve, and marches off with them behind the military band." },
     { act: "Act 4", text: "To pay for Mimì's medicine he says goodbye to his old coat (“Vecchia zimarra”) and goes to sell it." },
   ],
 
@@ -266,7 +267,7 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "The opera", text: "Lauretta loves Rinuccio, but his family scorn her father. When Schicchi refuses to help them, she begs him, threatening to throw herself in the Arno if she cannot marry (“O mio babbino caro”). At the end she and Rinuccio embrace, free to marry." },
   ],
   "schicchi:rinuccio": [
-    { act: "The opera", text: "Rinuccio finds the will, praises Florence and its new men like Schicchi (“Firenze è come un albero fiorito”), and calls Schicchi in. Schicchi's trick lets him marry Lauretta." },
+    { act: "The opera", text: "Rinuccio finds the will, makes Zita promise he may marry Lauretta, and sends for Schicchi. When the will is read, he says only Schicchi can save them and praises Florence and its new men (“Firenze è come un albero fiorito”). Schicchi's trick lets him marry Lauretta." },
   ],
   "schicchi:zita": [
     { act: "The opera", text: "Buoso's cousin Zita leads the mourning, and the hunt for the will. She scorns Schicchi and his daughter, and is driven out of the house at the end." },
