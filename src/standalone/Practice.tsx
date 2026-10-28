@@ -1593,15 +1593,15 @@ function PracticeScreen({
         >
           <span className="tl-line" />
           <span className="tl-line done" style={{ width: `${pct}%` }} />
-          {/* where you sing, as a few calm passages: phrases closer than a breath on this line are joined,
-              so pieces with many short lines of different lengths never look ragged or dashed */}
+          {/* each phrase you sing as a soft rounded bar, the rests between them as the hairline; only phrases
+              whose gap would be a sliver at this width are joined, so it never reads as dashes */}
           {(() => {
             const out: [number, number][] = [];
             for (const sp of spans) {
               const a = frac(sp.startQ) * 100;
               const b = frac(sp.endQ) * 100;
               const last = out[out.length - 1];
-              if (last && a - last[1] < 3.5) last[1] = Math.max(last[1], b);
+              if (last && a - last[1] < 1.2) last[1] = Math.max(last[1], b);
               else out.push([a, b]);
             }
             return out.map(([a, b]) => {

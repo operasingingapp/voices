@@ -10403,3 +10403,5 @@ p.rp-opera > span:not(:last-child)::after {
   background: var(--now-mark);
 }
 .practice .tl-head { z-index: 2; }
+
+.tl-pass { height: 8px; margin-top: -4px; border-radius: 4px; background: color-mix(in srgb, var(--ink) 20%, transparent); box-shadow: 0 0 0 1.5px var(--canvas); }
