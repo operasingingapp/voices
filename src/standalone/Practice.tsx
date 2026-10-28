@@ -1414,7 +1414,7 @@ function PracticeScreen({
               <span className="label">Music</span>
             </button>
             {/* music with the words beside it (a wide screen): the libretto next to the score */}
-            <button type="button" className="vs-split" aria-pressed={view === "split"} onClick={() => setView("split")} title="Music and words side by side">
+            <button type="button" className="vs-split" aria-pressed={view === "split"} onClick={() => setView(view === "split" ? "music" : "split")} title={view === "split" ? "Hide the words beside the music" : "Music and words side by side"}>
               {Icon.split}
               <span className="label">Both</span>
             </button>
