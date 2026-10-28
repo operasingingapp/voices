@@ -9652,3 +9652,13 @@ button.lane-label:hover {
   min-height: 48px;
   height: 48px;
 }
+
+.pg-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.meet-story {
+  margin: 0;
+  font: 400 17px/1.6 var(--font-sans);
+}

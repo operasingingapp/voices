@@ -474,7 +474,8 @@ function PracticeScreen({
   onSing,
 }: PracticeProps) {
   // steady pulse for learning (the file's bar-by-bar rubato smoothed away), or the expressive reading
-  const [steady, setSteady] = useLocalSetting("p:steady", true);
+  // (always steady now: the switch is gone from the bar)
+  const steady = true;
   const perf = useMemo(() => new Performance(edition, [], { tempo: steady ? "steady" : "smooth", pedal: true }), [steady]);
   const pb = usePlayback(perf, edition.parts);
   const engine = pb.engine;
@@ -1637,8 +1638,7 @@ function PracticeScreen({
             })}
           {(() => {
             // the piano as one group: heard or not, and in the score hidden, faded or clear (a tap moves to the next)
-            const state = !showOf(pianoPart) ? "hidden" : pianoFaded ? "faded" : "clear";
-            const next = state === "hidden" ? "faded" : state === "faded" ? "clear" : "hidden";
+            const shownP = showOf(pianoPart);
             return (
               <div className="piano-group" role="group" aria-label="Piano">
                 <span className="pg-icon" aria-hidden="true">
@@ -1655,24 +1655,30 @@ function PracticeScreen({
                   {hearPiano ? Icon.speaker : Icon.muted}
                 </button>
                 {view === "music" && (
-                  <button
-                    type="button"
-                    className="pg-btn piano-state"
-                    data-state={state}
-                    onClick={() => {
-                      if (next === "hidden") setLine(pianoPart.key, { show: false });
-                      else {
-                        setLine(pianoPart.key, { show: true });
-                        setPianoFaded(next === "faded");
-                      }
-                    }}
-                    disabled={next === "hidden" && hiddenIds.length >= orderedIds.length - 1}
-                    aria-label={`The piano in the score is ${state}. Tap to make it ${next}`}
-                    title={`Piano in the score: ${state}. Tap for ${next}`}
-                  >
-                    {state === "hidden" ? Icon.eyeOff : state === "faded" ? Icon.fade : Icon.eye}
-                    <span>{state === "hidden" ? "Hidden" : state === "faded" ? "Faded" : "Clear"}</span>
-                  </button>
+                  <>
+                    <button
+                      type="button"
+                      className="pg-btn"
+                      aria-pressed={shownP}
+                      disabled={shownP && hiddenIds.length >= orderedIds.length - 1}
+                      onClick={() => setLine(pianoPart.key, { show: !shownP })}
+                      aria-label={shownP ? "The piano is shown in the score. Hide it" : "The piano is hidden in the score. Show it"}
+                      title={shownP ? "Piano in the score: shown" : "Piano in the score: hidden"}
+                    >
+                      {shownP ? Icon.eye : Icon.eyeOff}
+                    </button>
+                    <button
+                      type="button"
+                      className="pg-btn"
+                      aria-pressed={pianoFaded}
+                      disabled={!shownP}
+                      onClick={() => setPianoFaded(!pianoFaded)}
+                      aria-label={pianoFaded ? "The piano is faded in the score. Show it clearly" : "Fade the piano in the score"}
+                      title={pianoFaded ? "Piano faded" : "Piano clear"}
+                    >
+                      {Icon.fade}
+                    </button>
+                  </>
                 )}
               </div>
             );
@@ -1932,15 +1938,6 @@ function PracticeScreen({
               {Icon.plus}
             </button>
           </div>
-          <button
-            type="button"
-            className="cp-toggle"
-            aria-pressed={steady}
-            onClick={() => setSteady(!steady)}
-            title={steady ? "Steady pulse. Turn off to hear the score's rubato" : "With the score's rubato. Turn on for a steady pulse"}
-          >
-            Steady
-          </button>
           <button type="button" className="cp-toggle" aria-pressed={countIn} onClick={() => setCountIn(!countIn)}>
             Count-in
           </button>

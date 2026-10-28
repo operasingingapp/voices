@@ -1637,10 +1637,6 @@ function MeetCharacter({ opera, ch, onTake, onOpera, onClose }: { opera: Opera; 
   }, [onClose]);
   const art = PORTRAITS[`${opera.id}:${ch.id}`];
   const arc = ARCS[`${opera.id}:${ch.id}`] ?? [];
-  const n = ch.pieces.length;
-  const ready = ch.pieces.filter((p) => p.editionId);
-  const first = ch.pieces[0]?.title;
-  const last = ch.pieces[n - 1]?.title;
   return (
     <div className="meet" role="dialog" aria-modal="true" aria-labelledby="meet-h" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
       <button type="button" className="meet-scrim" aria-label="Back to the characters" tabIndex={-1} onClick={onClose} />
@@ -1662,40 +1658,12 @@ function MeetCharacter({ opera, ch, onTake, onOpera, onClose }: { opera: Opera; 
           <p className="meet-who">
             <span className="meet-voice">{ch.voice}</span> {ch.desc}
           </p>
-          {arc.length > 0 && (
-            <ol className="meet-arc">
-              {arc.map((a) => (
-                <li key={a.act}>
-                  <b>{a.act}</b>
-                  <span>{a.text}</span>
-                </li>
-              ))}
-            </ol>
-          )}
-          <div className="meet-music">
-            <p>
-              {n === 1 ? (
-                <>
-                  One number: <i lang={opera.lang}>{first}</i>.
-                </>
-              ) : (
-                <>
-                  {n} numbers, from <i lang={opera.lang}>{first}</i> to <i lang={opera.lang}>{last}</i>.
-                </>
-              )}
+          {/* their story as plain prose: no act labels, no titles of numbers */}
+          {arc.map((a) => (
+            <p key={a.act} className="meet-story">
+              {a.text.replace(/\s*\(“[^”]*”(?:,\s*often cut)?\)/g, "").replace(/\s+([,.;:])/g, "$1")}
             </p>
-            {ready.length > 0 && (
-              <p className="meet-ready">
-                <span className="reel-ready">Ready to sing</span>
-                {ready.map((p, i) => (
-                  <span key={p.editionId}>
-                    {i > 0 && ", "}
-                    <i lang={opera.lang}>{p.title}</i>
-                  </span>
-                ))}
-              </p>
-            )}
-          </div>
+          ))}
           </div>
           <div className="meet-actions">
             <button ref={take} type="button" className="cp-btn cp-btn--ink meet-take" onClick={onTake}>
