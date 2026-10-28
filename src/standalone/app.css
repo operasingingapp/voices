@@ -8818,3 +8818,88 @@ p.obp-meta {
 .syn-arc .syn-act {
   padding-top: 18px;
 }
+
+/* the numbers of an act: what happens in each, and who else sings */
+.syn-count {
+  margin: 14px 0 -6px;
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.syn-scenes {
+  display: grid;
+  gap: 2px;
+  margin: 4px 0 8px;
+  padding: 0;
+  list-style: none;
+  counter-reset: sc;
+}
+.syn-scenes li {
+  display: grid;
+  gap: 3px;
+  padding: 10px 12px 10px 14px;
+  border-left: 2px solid var(--fog-strong);
+  counter-increment: sc;
+}
+.syn-scenes li.mine {
+  border-left-color: var(--you-mark);
+  background: color-mix(in srgb, var(--you) 22%, transparent);
+  border-radius: 0 12px 12px 0;
+}
+.sc-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+}
+.sc-head b {
+  font-weight: 500;
+  font-size: 15.5px;
+}
+.sc-head small {
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+}
+.sc-what {
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.sc-with {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.syn-numbers {
+  margin: 2px 0 6px;
+}
+.syn-numbers summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  background: var(--fog);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+.syn-numbers summary::-webkit-details-marker {
+  display: none;
+}
+.syn-numbers summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin: -3px 0 0 2px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+.syn-numbers[open] summary::after {
+  margin-top: 3px;
+  transform: rotate(-135deg);
+}
+.syn-numbers .syn-scenes {
+  margin-top: 10px;
+}

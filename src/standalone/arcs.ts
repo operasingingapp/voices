@@ -208,7 +208,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   "boheme:musetta": [
     { act: "Act 2", text: "Musetta sweeps into the Café Momus with a rich admirer and wins Marcello back with her waltz (“Quando m'en vo”), leaving the admirer the bill." },
     { act: "Act 3", text: "She quarrels loudly with Marcello outside the inn." },
-    { act: "Act 4", text: "She brings the dying Mimì to the garret, sells her earrings for medicine, and prays for her." },
+    { act: "Act 4", text: "She brings the dying Mimì to the garret, gives Marcello her earrings to sell for medicine, fetches a muff for Mimì's hands, and prays for her." },
   ],
   "boheme:marcello": [
     { act: "Act 1", text: "The painter freezes in the garret with Rodolfo and heads off to the Café Momus with his friends." },

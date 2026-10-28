@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ARCS, type ArcStep } from "./arcs";
+import { OPERAS } from "./operas";
+import { SCENES, type Scene } from "./scenes";
 /**
  * The full story of each opera, act by act, written for this app (not taken from any programme or book).
  * `where` is the setting of the act; the paragraphs follow the order of the music.
@@ -145,7 +147,7 @@ export const SYNOPSES: Record<string, Act[]> = {
       title: "Act 1",
       where: "Mantua, in the sixteenth century: the Duke's palace, then a street at night",
       paras: [
-        "At a ball the Duke of Mantua boasts that one woman is as good as another. His hunchbacked jester Rigoletto mocks the courtiers, and then Count Monterone, whose daughter the Duke has seduced. Monterone curses them both.",
+        "At a ball the Duke of Mantua boasts that one woman is as good as another. His hunchbacked jester Rigoletto mocks the courtiers, and then Count Monterone, whose daughter the Duke has seduced. The Duke has Monterone arrested, and Monterone curses them both.",
         "On his way home, troubled by the curse, Rigoletto meets the assassin Sparafucile, who offers his services. Rigoletto compares the two of them, one killing with a blade, the other with his tongue. At home he visits his daughter Gilda, whom he keeps hidden from the world.",
         "The Duke, disguised as a poor student, ‘Gualtier Maldè’, has been watching Gilda at church; he slips into the courtyard and declares his love, and she dreams of his name after he has gone (“Caro nome”). The courtiers, believing Gilda to be Rigoletto's mistress, trick him into helping them carry her off. Too late, he remembers the curse.",
       ],
@@ -207,7 +209,7 @@ export const SYNOPSES: Record<string, Act[]> = {
     },
     {
       title: "Act 2",
-      where: "Lillas Pastia's tavern, a month later",
+      where: "Lillas Pastia's tavern, two months later",
       paras: [
         "Carmen and her friends dance. The bullfighter Escamillo comes in with his admirers, sings of the ring (Toreador song) and is taken with Carmen; she puts him off. The smugglers want Carmen for a job, but she is waiting for José, just released from prison.",
         "Carmen dances for José; when the bugle calls him back to barracks she mocks him for leaving. He shows her the flower she threw, kept all through his imprisonment (Flower song). When his officer, Zuniga, arrives and orders him out, José draws his sword, and now he has no choice but to join the smugglers.",
@@ -251,7 +253,7 @@ export const SYNOPSES: Record<string, Act[]> = {
       title: "Act 3",
       where: "A toll gate on the edge of Paris, February",
       paras: [
-        "Mimì, coughing, finds Marcello at the inn where he and Musetta live, and tells him Rodolfo's jealousy is unbearable. Rodolfo comes out and confesses to Marcello the real reason he wants to part: Mimì is gravely ill and he is too poor to care for her. Mimì, hidden, hears everything.",
+        "Mimì, coughing, finds Marcello at the inn where he and Musetta live, and tells him Rodolfo's jealousy is unbearable. Rodolfo comes out and tells Marcello he wants to leave her, blaming her flirting; pressed, he admits the real reason: Mimì is gravely ill and he is too poor to care for her. Mimì, hidden, hears everything.",
         "Mimì and Rodolfo say goodbye without bitterness (“Donde lieta uscì”) and agree to stay together until the spring, while Marcello and Musetta quarrel loudly.",
       ],
     },
@@ -259,7 +261,7 @@ export const SYNOPSES: Record<string, Act[]> = {
       title: "Act 4",
       where: "The garret, months later",
       paras: [
-        "Rodolfo and Marcello, both apart from their lovers, try to work and cannot. The four friends clown about until Musetta rushes in: Mimì is with her, dying, and wanted to see Rodolfo. Musetta goes to sell her earrings for medicine, and Colline to sell his coat (“Vecchia zimarra”).",
+        "Rodolfo and Marcello, both apart from their lovers, try to work and cannot. The four friends clown about until Musetta rushes in: Mimì is with her, dying, and wanted to see Rodolfo. Musetta gives Marcello her earrings to sell for medicine, and Colline goes to pawn his coat (“Vecchia zimarra”).",
         "Alone, Mimì and Rodolfo remember the night they met. The others return with a muff to warm her hands. She falls asleep and, without anyone noticing at first, dies.",
       ],
     },
@@ -311,7 +313,7 @@ export const SYNOPSES: Record<string, Act[]> = {
     },
     {
       title: "Act 3",
-      where: "Butterfly's house, at dawn",
+      where: "Butterfly's house, at dawn (in the two-act version, the second part of Act 2)",
       paras: [
         "Pinkerton arrives with Sharpless and his American wife, Kate, who will bring up the boy. Overcome with remorse, Pinkerton cannot face Butterfly and leaves.",
         "Butterfly sees Kate and understands. She agrees to give up her son if Pinkerton comes for him himself, blindfolds the child, and kills herself with her father's dagger as Pinkerton is heard calling her name.",
@@ -344,7 +346,7 @@ function namePattern(name: string): RegExp {
  * The acts, each with its setting and its story; your role's name stands out so you can follow your part.
  * `level` is the heading level of the act titles, to fit the page around them.
  */
-export function SynopsisActs({ acts, you, level = 3 }: { acts: Act[]; you?: string; level?: 2 | 3 | 4 }) {
+export function SynopsisActs({ acts, you, level = 3, after }: { acts: Act[]; you?: string; level?: 2 | 3 | 4; after?: (i: number) => React.ReactNode }) {
   const H = `h${level}` as "h2" | "h3" | "h4";
   const mark = (text: string) => {
     if (!you) return text;
@@ -353,7 +355,7 @@ export function SynopsisActs({ acts, you, level = 3 }: { acts: Act[]; you?: stri
   };
   return (
     <div className="syn">
-      {acts.map((a) => (
+      {acts.map((a, ai) => (
         <section key={a.title} className="syn-act">
           <H className="syn-title">{a.title}</H>
           {a.where && <p className="syn-where">{a.where}</p>}
@@ -362,6 +364,7 @@ export function SynopsisActs({ acts, you, level = 3 }: { acts: Act[]; you?: stri
               {mark(p)}
             </p>
           ))}
+          {after?.(ai)}
         </section>
       ))}
     </div>
@@ -373,24 +376,75 @@ export function storyOf(name: string): string {
   return `${name}’s story`;
 }
 
-/** One character's path, act by act (only the acts they are in). */
-export function ArcSteps({ steps, level = 3 }: { steps: ArcStep[]; level?: 2 | 3 | 4 }) {
+/** The opera's numbers, each with what happens and who else sings in it. */
+function SceneList({ scenes, opera, you }: { scenes: Scene[]; opera: string; you?: string }) {
+  const o = OPERAS.find((x) => x.id === opera);
+  const name = (id: string) => o?.chars.find((c) => c.id === id)?.name ?? id;
+  return (
+    <ol className="syn-scenes">
+      {scenes.map((sc, i) => {
+        const others = sc.who.filter((w) => w !== you).map(name);
+        return (
+          <li key={i} className={you && sc.who.includes(you) ? "mine" : undefined}>
+            <span className="sc-head">
+              <b lang={o?.lang}>{sc.title}</b>
+              <small>{sc.kind}</small>
+            </span>
+            <span className="sc-what">{sc.what}</span>
+            {you && others.length > 0 && <span className="sc-with">With {others.join(", ")}</span>}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+/** Group a running order by act, keeping the order acts first appear in. */
+function byAct(scenes: Scene[]): [string, Scene[]][] {
+  const out = new Map<string, Scene[]>();
+  for (const sc of scenes) out.set(sc.act, [...(out.get(sc.act) ?? []), sc]);
+  return [...out];
+}
+
+/**
+ * One character's path: for each act they are in, what happens to them, then every number they sing in it,
+ * arias, duets, ensembles and finales alike.
+ */
+export function ArcSteps({ opera, character, steps, level = 3 }: { opera: string; character: string; steps: ArcStep[]; level?: 2 | 3 | 4 }) {
   const H = `h${level}` as "h2" | "h3" | "h4";
+  const mine = (SCENES[opera] ?? []).filter((sc) => sc.who.includes(character));
+  const acts = byAct(mine);
+  const actName = (a: string) => a.replace(/\s*\(.*\)$/, "");
+  const count = mine.length;
+  // every act they are in: those with a summary, and any where they only join an ensemble
+  const order = [...new Set([...(SCENES[opera] ?? []).map((sc) => actName(sc.act)), ...steps.map((x) => x.act)])].filter(
+    (a) => steps.some((x) => x.act === a) || acts.some(([b]) => actName(b) === a),
+  );
   return (
     <div className="syn syn-arc">
-      {steps.map((s) => (
-        <section key={s.act} className="syn-act">
-          <H className="syn-title">{s.act}</H>
-          <p className="syn-p">{s.text}</p>
-        </section>
-      ))}
+      {count > 0 && (
+        <p className="syn-count">
+          {count} {count === 1 ? "number" : "numbers"} in the opera
+        </p>
+      )}
+      {order.map((act) => {
+        const st = steps.find((x) => x.act === act);
+        const here = acts.find(([a]) => actName(a) === act)?.[1] ?? [];
+        return (
+          <section key={act} className="syn-act">
+            <H className="syn-title">{act}</H>
+            {st && <p className="syn-p">{st.text}</p>}
+            {here.length > 0 && <SceneList scenes={here} opera={opera} you={character} />}
+          </section>
+        );
+      })}
     </div>
   );
 }
 
 /**
- * The story, two ways: one character's path through it, and the whole opera act by act.
- * Without a character (or without a path written for them) only the whole opera is shown.
+ * The story, two ways: one character's path through it, and the whole opera act by act (with every number
+ * of the act folded under its story). Without a character only the whole opera is shown.
  */
 export function Story({
   opera,
@@ -411,6 +465,7 @@ export function Story({
   useEffect(() => setTab(arc ? "arc" : "all"), [opera, character, arc]);
   if (!acts && !arc) return null;
   const both = !!arc && !!acts && !!name;
+  const numbers = byAct(SCENES[opera] ?? []);
   return (
     <div className="story">
       {both && (
@@ -424,7 +479,24 @@ export function Story({
         </div>
       )}
       <div id={`${idBase}-panel`} role={both ? "tabpanel" : undefined} aria-labelledby={both ? `${idBase}-${tab}` : undefined}>
-        {tab === "arc" && arc ? <ArcSteps steps={arc} level={level} /> : acts ? <SynopsisActs acts={acts} you={name} level={level} /> : null}
+        {tab === "arc" && arc && character ? (
+          <ArcSteps opera={opera} character={character} steps={arc} level={level} />
+        ) : acts ? (
+          <SynopsisActs
+            acts={acts}
+            you={name}
+            level={level}
+            after={(i) => {
+              const list = numbers[i]?.[1];
+              return list?.length ? (
+                <details className="syn-numbers">
+                  <summary>Every number in {acts[i].title === "The opera" ? "the opera" : acts[i].title.toLowerCase().replace("act", "Act")} · {list.length}</summary>
+                  <SceneList scenes={list} opera={opera} />
+                </details>
+              ) : null;
+            }}
+          />
+        ) : null}
       </div>
     </div>
   );
