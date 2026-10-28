@@ -783,17 +783,16 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           <Face opera={opera} ch={ch} />
         </ProgressRing>
         <div className="rp-id">
-          {/* the opera this role belongs to: tap it to go there */}
-          <button type="button" className="rp-opera-link" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
-            <span lang={opera.lang}>{opera.title}</span>
-            <span className="rp-opera-by">{opera.composer}</span>
-            <Chevron />
-          </button>
+          {/* who first; then one quiet line: the voice, and the opera (tap it to go there); then the line about them */}
           <h1>{ch.name}</h1>
-          <p className="rp-desc">
-            <span className="rp-voice">{ch.voice}</span>
-            {ch.desc}
+          <p className="who-meta">
+            <span>{ch.voice}</span>
+            <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
+              <i lang={opera.lang}>{opera.title}</i>
+              <Chevron />
+            </button>
           </p>
+          <p className="rp-desc">{ch.desc}</p>
         </div>
         {pr.total > 0 && (
           <div className="rp-progress" aria-label={`${pr.done} of ${pr.total} learned`}>
@@ -1689,13 +1688,15 @@ function MeetCharacter({ opera, ch, onTake, onOpera, onClose }: { opera: Opera; 
         )}
         <div className="meet-body">
           <div className="meet-head">
-            <p className="cp-eyebrow" lang={opera.lang}>
-              {opera.title} · {opera.composer}, {opera.year}
-            </p>
+            {/* who first; then one quiet line (voice · opera); then the line about them */}
             <h2 id="meet-h">{ch.name}</h2>
-            <p className="meet-who">
-              <span className="meet-voice">{ch.voice}</span> {ch.desc}
+            <p className="who-meta">
+              <span>{ch.voice}</span>
+              <span>
+                <i lang={opera.lang}>{opera.title}</i>, {opera.composer}
+              </span>
             </p>
+            <p className="meet-who">{ch.desc}</p>
           </div>
           <div className="meet-scroll">
           {/* their story as plain prose: no act labels, no titles of numbers */}

@@ -10301,3 +10301,58 @@ p.rp-opera > span:not(:last-child)::after {
 /* the progress line: the sung lines only a shade darker than the rests, so the line reads as one */
 .practice .tl-line { background: color-mix(in srgb, var(--ink) 8%, transparent); }
 .practice .tl-seg { background: color-mix(in srgb, var(--ink) 15%, transparent); }
+
+/* =====================================================================
+   A character's head (role page and the card before taking a role): the
+   name, then one quiet line — voice · opera — then the line about them.
+   No pills, no eyebrow over the name.
+   ===================================================================== */
+.who-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 0;
+  margin: 4px 0 0;
+  color: var(--ink-muted);
+  font: 500 15px/1.35 var(--font-sans);
+}
+.who-meta > *:not(:last-child)::after {
+  content: "·";
+  margin: 0 8px;
+}
+.who-meta i { font-style: italic; }
+.who-opera {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin: -6px -8px -6px -8px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+  text-underline-offset: 3px;
+}
+.who-opera svg { width: 14px; height: 14px; flex: none; }
+.who-opera:hover,
+.who-opera:focus-visible { background: color-mix(in srgb, var(--canvas) 55%, transparent); }
+.rp-head .rp-id .rp-desc,
+.meet-head .meet-who {
+  margin: 8px 0 0;
+  max-width: 460px;
+  color: var(--ink);
+  font: 400 16px/1.45 var(--font-sans);
+}
+.meet-head .who-meta { margin-top: 6px; }
+@media (max-width: 640px) {
+  .rp-head > .rp-id { justify-content: center; }
+  .rp-head .rp-id h1 { font-size: 28px; line-height: 1.1; }
+  .who-meta { font-size: 14px; margin-top: 2px; }
+  .rp-head .rp-id .rp-desc,
+  .meet-head .meet-who { margin-top: 6px; font-size: 14px; line-height: 1.4; color: var(--ink-muted); }
+}
+.who-meta { font-weight: 400; }
