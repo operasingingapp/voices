@@ -1242,7 +1242,17 @@ for (const opera of OPERAS) {
  * The lists as the app had them before the last check (version 2), rebuilt from today's running order and the few
  * changes that check made, so a place saved then by its position can be found again.
  */
-const V2_NEW = new Set(["Quante buffonerie!… Che novità!", "E perché fosti meco", "Si ridesta in ciel l'aurora", "Flora's invitation", "Ohè, là, le guardie!"]);
+const V2_NEW = new Set([
+  "Quante buffonerie!… Che novità!",
+  "E perché fosti meco",
+  "Si ridesta in ciel l'aurora",
+  "Flora's invitation",
+  "Ohè, là, le guardie!",
+  // added with the overtures, preludes and entr'actes; the instrumental ones have no singers and change no list
+  "Scorrendo uniti remota via",
+  "Possente amor mi chiama",
+  "Dormi amor mio",
+]);
 const V2_ADDED: Record<string, string[]> = {
   "Contro un cor che accende amore": ["almaviva"],
   "O soave fanciulla": ["marcello", "colline"],

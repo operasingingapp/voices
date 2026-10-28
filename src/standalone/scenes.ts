@@ -20,6 +20,7 @@ const A = (act: string, list: [string, string, string[], string, string[]?][]): 
 export const SCENES: Record<string, Scene[]> = {
   figaro: [
     ...A("Act 1", [
+      ["Sinfonia", "Overture", [], "The overture, a whirl of quick, quiet strings bursting into full orchestra: the ‘mad day’ in miniature. It quotes no tune from the opera."],
       ["Cinque… dieci… venti…", "Duettino", ["figaro", "susanna"], "Figaro measures the room for the marriage bed while Susanna tries on her bridal hat."],
       ["Se a caso madama", "Duettino", ["figaro", "susanna"], "Susanna explains why the Count has given them a room so close to his own: he wants her."],
       ["Bravo, signor padrone… Se vuol ballare", "Recitative and cavatina", ["figaro"], "Alone, Figaro vows that if the Count wants to dance, he will call the tune."],
@@ -35,7 +36,7 @@ export const SCENES: Record<string, Scene[]> = {
       ["Figaro's plan", "Recitative", ["countess", "susanna", "figaro"], "Figaro explains: an anonymous note to make the Count jealous, and Cherubino dressed as Susanna to keep her rendezvous."],
       ["Voi che sapete", "Arietta", ["cherubino"], "Cherubino sings the Countess the love song he has written for her.", ["countess", "susanna"]],
       ["Venite, inginocchiatevi", "Aria", ["susanna"], "Susanna dresses Cherubino as a girl, and admires the result.", ["cherubino", "countess"]],
-      ["Quante buffonerie!… Che novità!", "Recitative", ["countess", "susanna", "cherubino", "count"], "Cherubino's commission has no seal. The Count knocks; Cherubino hides in the closet, and the Count, finding the door locked and hearing a noise, grows suspicious."],
+      ["Quante buffonerie!… Che novità!", "Recitative", ["countess", "susanna", "cherubino", "count"], "Cherubino shows the women his commission. The Count knocks; Cherubino hides in the closet, and the Count, finding the door locked and hearing a noise, grows suspicious."],
       ["Susanna, or via, sortite", "Trio", ["count", "countess", "susanna"], "The Count, hearing a noise in the closet, orders ‘Susanna’ to come out; the Countess forbids it, and Susanna watches from hiding."],
       ["Aprite, presto, aprite", "Duettino", ["susanna", "cherubino"], "While the Count fetches tools, Susanna takes Cherubino's place in the closet, and he jumps from the window."],
       ["Esci omai, garzon malnato", "Finale", ["count", "countess", "susanna", "figaro", "bartolo"], "The Countess confesses it is Cherubino inside; out steps Susanna, and the Count must beg pardon. Antonio complains of a man jumping onto his flowers, Figaro claims it was him and bluffs through Cherubino's dropped commission, and Marcellina, Bartolo and Basilio arrive with her claim."],
@@ -51,7 +52,7 @@ export const SCENES: Record<string, Scene[]> = {
       ["Io vi dico, signor", "Recitative", ["count"], "The gardener Antonio tells the Count that Cherubino has not gone to Seville: his hat is at Barbarina's."],
       ["Sull'aria", "Duettino", ["countess", "susanna"], "The Countess dictates, and Susanna writes, the note that sets the time and place of the garden meeting, sealed with a pin."],
       ["Ricevete, o padroncina", "Chorus and recitative", ["countess", "susanna", "cherubino", "count"], "Village girls bring the Countess flowers; Cherubino, among them in a dress, is unmasked, and Barbarina asks the Count for him as her husband."],
-      ["Ecco la marcia", "Finale", ["count", "countess", "susanna", "figaro"], "The double wedding of Figaro and Susanna, Marcellina and Bartolo. Susanna slips the note to the Count, who pricks his finger on the pin."],
+      ["Ecco la marcia", "Finale", ["count", "countess", "susanna", "figaro"], "A march brings in the two couples for the double wedding, Figaro and Susanna, Marcellina and Bartolo. During the fandango Susanna slips the note to the Count, who pricks his finger on the pin, and Figaro, seeing him, laughs at some lover's note. The Count invites everyone to the evening's celebrations."],
     ]),
     ...A("Act 4", [
       ["L'ho perduta, me meschina", "Cavatina and recitative", ["figaro"], "Barbarina has lost the pin she was to return to Susanna; from her, Figaro learns of the rendezvous and thinks himself betrayed. Marcellina resolves to warn Susanna."],
@@ -67,6 +68,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   giovanni: [
     ...A("Act 1", [
+      ["Ouverture", "Overture", [], "The overture opens with the solemn chords of the Commendatore's return in the last scene, then turns to a lively allegro that runs straight into the first scene."],
       ["Notte e giorno faticar", "Introduction", ["leporello", "anna", "dongiovanni"], "Leporello grumbles on watch; Giovanni flees Anna's room; the Commendatore challenges him and is killed."],
       ["Fuggi, crudele, fuggi", "Recitative and duet", ["anna", "ottavio"], "Anna finds her father dead, and she and Ottavio swear vengeance."],
       ["Ah, chi mi dice mai", "Aria", ["elvira", "dongiovanni", "leporello"], "Elvira searches for the man who left her; Giovanni comes to console the stranger, and finds it is her."],
@@ -101,6 +103,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   zauberfloete: [
     ...A("Act 1", [
+      ["Ouvertüre", "Overture", [], "Three solemn chords, then a quick fugal allegro; the three chords return at the centre."],
       ["Zu Hilfe! Zu Hilfe!", "Introduction", ["tamino"], "Tamino, chased by a serpent, faints; three Ladies of the Queen kill it."],
       ["Der Vogelfänger bin ich ja", "Aria", ["papageno"], "Papageno introduces himself. In the spoken scene that follows he claims he killed the serpent, and the Ladies padlock his mouth.", ["tamino"]],
       ["Dies Bildnis ist bezaubernd schön", "Aria", ["tamino"], "Tamino falls in love with Pamina's portrait."],
@@ -111,7 +114,8 @@ export const SCENES: Record<string, Scene[]> = {
       ["Zum Ziele führt dich diese Bahn", "Finale", ["tamino", "pamina", "papageno", "sarastro"], "The Spirits lead Tamino to the temple, where the Speaker tells him Sarastro is no tyrant; his flute charms animals. Papageno's bells set Monostatos's slaves dancing. Sarastro arrives; Pamina confesses she fled; Tamino and Pamina meet, and are taken to be tested."],
     ]),
     ...A("Act 2", [
-      ["O Isis und Osiris", "March and aria with chorus", ["sarastro"], "The priests agree Tamino may be tested, and Sarastro asks the gods to guide the couple."],
+      ["Marsch der Priester", "March", [], "The priests assemble in a palm grove."],
+      ["O Isis und Osiris", "Aria with chorus", ["sarastro"], "The priests agree Tamino may undergo the trials, sounding the threefold chord; Sarastro asks Isis and Osiris to guide the young couple."],
       ["Bewahret euch vor Weibertücken", "Duet", [], "Two priests warn Tamino and Papageno against women's wiles and impose silence.", ["tamino", "papageno"]],
       ["Wie? Wie? Wie?", "Quintet", ["tamino", "papageno"], "The Ladies tempt the two men to speak; Tamino holds firm."],
       ["Alles fühlt der Liebe Freuden", "Aria", [], "Monostatos creeps up on the sleeping Pamina.", ["pamina"]],
@@ -128,6 +132,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   barbiere: [
     ...A("Act 1", [
+      ["Sinfonia", "Overture", [], "The overture, borrowed by Rossini from two earlier operas of his, with a slow introduction, a quick main section and a famous crescendo."],
       ["Piano, pianissimo… Ecco, ridente in cielo", "Introduction and cavatina", ["almaviva"], "At dawn the Count serenades Rosina with hired musicians, and gets no answer."],
       ["Largo al factotum", "Cavatina", ["figarob"], "Figaro, barber and fixer, the busiest man in Seville."],
       ["Se il mio nome saper voi bramate", "Canzone", ["almaviva", "rosina"], "The Count, as the poor student ‘Lindoro’, sings his name to Rosina, who answers from her window.", ["figarob"]],
@@ -154,6 +159,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   elisir: [
     ...A("Act 1", [
+      ["Preludio", "Prelude", [], "A short orchestral prelude."],
       ["Bel conforto al mietitore… Quanto è bella", "Introduction and cavatina", ["nemorino"], "Harvest time; Nemorino watches Adina reading, and despairs of ever winning her.", ["adina"]],
       ["Della crudele Isotta", "Cavatina", ["adina"], "Adina reads the tale of Tristan and the love potion to the farmhands, and laughs.", ["nemorino"]],
       ["Come Paride vezzoso", "Cavatina", ["belcore", "adina", "nemorino"], "Sergeant Belcore arrives and proposes to Adina on the spot."],
@@ -179,6 +185,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   rigoletto: [
     ...A("Act 1", [
+      ["Preludio", "Prelude", [], "A brief, dark prelude built on the repeated note of Monterone's curse."],
       ["Della mia bella incognita… Questa o quella", "Scene and ballata", ["duke"], "At a ball, the Duke boasts that one woman is as good as another."],
       ["Partite? Crudele!", "Minuet and scene", ["duke", "rigoletto"], "The Duke courts Countess Ceprano while Rigoletto mocks her husband; the courtiers plot revenge on the jester."],
       ["Ch'io gli parli", "Scene", ["rigoletto", "duke"], "Count Monterone accuses the Duke of seducing his daughter; Rigoletto mocks him, the Duke has him arrested, and Monterone curses them both."],
@@ -190,7 +197,9 @@ export const SCENES: Record<string, Scene[]> = {
       ["Zitti, zitti, moviamo a vendetta", "Finale", ["rigoletto", "gilda"], "The courtiers trick a blindfolded Rigoletto into holding the ladder while they carry Gilda off; too late he remembers the curse."],
     ]),
     ...A("Act 2", [
-      ["Ella mi fu rapita!… Parmi veder le lagrime", "Scene and aria", ["duke"], "The Duke mourns Gilda's abduction, then learns she is in the palace and hurries to her."],
+      ["Ella mi fu rapita!… Parmi veder le lagrime", "Scene and aria", ["duke"], "The Duke, who returned to find the house empty, mourns Gilda's abduction."],
+      ["Scorrendo uniti remota via", "Chorus", ["duke"], "The courtiers tell him how they carried off ‘Rigoletto's mistress’; she is here in the palace."],
+      ["Possente amor mi chiama", "Cabaletta", ["duke"], "Love calls him, and he hurries to her."],
       ["Povero Rigoletto!… Cortigiani, vil razza dannata", "Scene and aria", ["rigoletto"], "Rigoletto searches for his daughter among the courtiers, rages, then begs."],
       ["Tutte le feste al tempio", "Duet", ["gilda", "rigoletto"], "Gilda tells her father how she was courted and deceived."],
       ["Sì, vendetta, tremenda vendetta", "Duet", ["rigoletto", "gilda"], "As Monterone is led to prison, Rigoletto swears vengeance; Gilda begs mercy for the Duke."],
@@ -207,6 +216,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   traviata: [
     ...A("Act 1", [
+      ["Preludio", "Prelude", [], "Divided strings, high and quiet, foretell Violetta's illness; then the melody of her plea in Act 2 (“Amami, Alfredo”)."],
       ["Dell'invito trascorsa è già l'ora", "Introduction", ["violetta", "alfredo"], "Violetta's party; Gastone introduces Alfredo, who called every day during her illness."],
       ["Libiamo ne' lieti calici", "Brindisi", ["alfredo", "violetta"], "Alfredo leads the drinking song; Violetta answers."],
       ["Un dì, felice, eterea", "Waltz and duet", ["alfredo", "violetta"], "Alfredo declares a year's love; Violetta laughs it off, but gives him a flower to return when it fades."],
@@ -226,7 +236,9 @@ export const SCENES: Record<string, Scene[]> = {
       ["Ogni suo aver tal femmina… Alfredo, Alfredo, di questo core", "Finale", ["alfredo", "violetta", "germont"], "Alfredo throws his winnings at her as payment; Germont rebukes his son, and the Baron challenges him."],
     ]),
     ...A("Act 3", [
+      ["Preludio", "Prelude", [], "The prelude to Act 1 returns, sadder still."],
       ["Teneste la promessa… Addio, del passato", "Scene and aria", ["violetta"], "Dying, she rereads Germont's letter: Alfredo knows and is coming. She bids farewell to her past."],
+      ["Largo al quadrupede", "Bacchanal (offstage chorus)", [], "Outside, the Carnival crowd parades a fatted ox through the streets."],
       ["Parigi, o cara", "Duet", ["alfredo", "violetta"], "Alfredo returns; they dream of leaving Paris."],
       ["Gran Dio! morir sì giovane", "Duet", ["violetta", "alfredo"], "Too weak to dress, she cries out against dying so young."],
       ["Prendi, quest'è l'immagine", "Finale", ["violetta", "alfredo", "germont"], "Germont arrives to ask forgiveness; she gives Alfredo her portrait, feels a sudden strength, and dies."],
@@ -235,6 +247,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   carmen: [
     ...A("Act 1", [
+      ["Prélude", "Prelude", [], "The bullfight music and the Toreador tune, then, darkly, the motif of fate."],
       ["Sur la place chacun passe", "Chorus and scene", ["micaela"], "Soldiers watch the square; Micaëla looks for Don José and leaves."],
       ["Avec la garde montante", "Children's chorus", ["jose"], "The guard changes; José arrives."],
       ["La cloche a sonné", "Chorus of the cigarette girls", ["carmen"], "The girls come out on their break; the young men wait for Carmen, who arrives last."],
@@ -246,6 +259,7 @@ export const SCENES: Record<string, Scene[]> = {
       ["Voici l'ordre; partez", "Finale", ["carmen"], "On the way to prison she pushes José over and escapes; he will be arrested for it.", ["jose"]],
     ]),
     ...A("Act 2", [
+      ["Entr'acte", "Entr'acte", [], "The tune of José's song “Dragon d'Alcala”, played on two bassoons."],
       ["Les tringles des sistres tintaient", "Gypsy song", ["carmen"], "Two months later, Carmen and her friends dance for the officers at the tavern."],
       ["Vivat! vivat le torero!", "Chorus", ["carmen"], "The crowd hails the bullfighter Escamillo; Zuniga invites him in.", ["escamillo"]],
       ["Votre toast, je peux vous le rendre", "Toreador song", ["escamillo", "carmen"], "Escamillo sings of the ring and is taken with Carmen, who puts him off."],
@@ -255,6 +269,7 @@ export const SCENES: Record<string, Scene[]> = {
       ["Holà! Carmen! Holà!", "Finale", ["carmen", "jose"], "His officer Zuniga arrives, José draws on him, and must now join the smugglers in the mountains."],
     ]),
     ...A("Act 3", [
+      ["Entr'acte", "Entr'acte", [], "A quiet pastorale for flute and harp."],
       ["Écoute, compagnon, écoute", "Sextet and chorus", ["carmen", "jose"], "The smugglers' camp at night; Carmen and José quarrel."],
       ["Mêlons! Coupons!… En vain pour éviter", "Card trio", ["carmen"], "Frasquita and Mercédès read happy fortunes; Carmen's cards show death, again and again."],
       ["Quant au douanier, c'est notre affaire", "Ensemble", ["carmen"], "The women will charm the customs men while the smugglers get the goods through."],
@@ -263,6 +278,7 @@ export const SCENES: Record<string, Scene[]> = {
       ["Holà, holà, José!", "Finale", ["jose", "micaela", "carmen", "escamillo"], "Micaëla tells José his mother is dying; he goes, warning Carmen they will meet again."],
     ]),
     ...A("Act 4", [
+      ["Entr'acte", "Entr'acte", [], "A fiery Spanish dance, the Aragonaise."],
       ["À deux cuartos!", "Chorus", [], "Vendors and the crowd outside the bullring."],
       ["Les voici, voici la quadrille… Si tu m'aimes, Carmen", "March, chorus and duet", ["escamillo", "carmen"], "The procession of the bullfighters; Escamillo and Carmen pledge their love before he goes in. Frasquita and Mercédès warn her that José is in the crowd."],
       ["C'est toi! C'est moi!", "Final duet", ["carmen", "jose"], "José begs Carmen to come back; she throws away his ring, and as the crowd acclaims Escamillo, he kills her and gives himself up."],
@@ -302,7 +318,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   tosca: [
     ...A("Act 1", [
-      ["Ah! Finalmente!", "Scene", [], "The escaped prisoner Angelotti hides in the Attavanti chapel; the Sacristan grumbles."],
+      ["Ah! Finalmente!", "Scene", [], "Three crashing chords, the motif of Scarpia, and the curtain rises: the escaped prisoner Angelotti finds the key his sister left and hides in the Attavanti chapel. The Sacristan potters in, grumbling."],
       ["Recondita armonia", "Aria", ["cavaradossi"], "Cavaradossi compares his painted Magdalene to Tosca."],
       ["Voi! Cavaradossi!", "Scene", ["cavaradossi", "tosca"], "Angelotti reveals himself and Cavaradossi promises help, until Tosca's voice calls “Mario!” from outside and Angelotti hides again."],
       ["Mario! Mario!… Non la sospiri la nostra casetta", "Duet", ["tosca", "cavaradossi"], "Tosca, jealous of the blonde Magdalene, arranges to meet him tonight. When she has gone, a cannon announces the escape, and Cavaradossi leads Angelotti off to hide at his villa."],
@@ -329,6 +345,7 @@ export const SCENES: Record<string, Scene[]> = {
 
   butterfly: [
     ...A("Act 1", [
+      ["Introduction", "Orchestral introduction", [], "A busy fugue in the strings leads straight into the first scene."],
       ["E soffitto… e pareti", "Scene", ["pinkerton", "suzuki"], "The broker Goro shows Pinkerton the house he has leased, and the servants."],
       ["Dovunque al mondo", "Aria", ["pinkerton", "sharpless"], "Pinkerton toasts the Yankee roaming the world; Sharpless warns him the girl is in earnest."],
       ["Ancora un passo or via… Quanto cielo! Quanto mar!", "Entrance", ["ciociosan", "sharpless", "pinkerton"], "Butterfly arrives with her friends, the happiest girl in Japan, and tells Sharpless about her family, once rich, and her age: fifteen."],
@@ -345,6 +362,8 @@ export const SCENES: Record<string, Scene[]> = {
       ["The vigil", "Humming chorus", [], "Butterfly keeps watch all night; Suzuki and the child fall asleep.", ["ciociosan", "suzuki"]],
     ]),
     ...A("Act 3 (Act 2, part 2, in the two-act version)", [
+      ["Intermezzo", "Intermezzo (orchestral)", [], "The night passes and dawn breaks over the harbour, with distant sailors' voices; Butterfly still watches, Suzuki and the child asleep.", ["ciociosan", "suzuki"]],
+      ["Dormi amor mio", "Lullaby", ["ciociosan", "suzuki"], "Suzuki persuades Butterfly to rest; she carries the sleeping child upstairs, singing him a lullaby."],
       ["Io so che alle sue pene", "Trio", ["sharpless", "pinkerton", "suzuki"], "At dawn Pinkerton arrives with Sharpless; Suzuki learns of his American wife."],
       ["Addio, fiorito asil", "Aria", ["pinkerton", "sharpless"], "Overcome with remorse, Pinkerton cannot face Butterfly, and leaves; Sharpless tells him she will be told."],
       ["Suzuki! Dove sei?", "Scene", ["ciociosan", "suzuki", "sharpless"], "Butterfly sees Kate Pinkerton and understands; Kate offers to raise the child, and Butterfly agrees, if Pinkerton comes for him himself in half an hour."],
@@ -360,7 +379,7 @@ export const SCENES: Record<string, Scene[]> = {
     ["Addio, speranza bella", "Duet", ["lauretta", "rinuccio"], "The lovers fear they will be parted."],
     ["O mio babbino caro", "Aria", ["lauretta"], "Lauretta begs her father to help, or she will throw herself in the Arno.", ["schicchi", "rinuccio", "zita", "nella", "ciesca", "simone"]],
     ["Addio, speranza bella (reprise)", "Duet over the reading of the will", ["lauretta", "rinuccio", "schicchi"], "Schicchi reads the will while the lovers sigh."],
-    ["Back from the terrace", "Short exchange", ["lauretta", "schicchi"], "Schicchi sends Lauretta out to feed the bird, and has an idea."],
+    ["Back from the terrace", "Short exchange", ["lauretta", "schicchi"], "Schicchi, with an idea forming, sends Lauretta out to the terrace to feed the bird, so that she knows nothing of the fraud; she calls back that it will not eat, and he tells her to give it some water."],
     ["The doctor's visit", "Scene · Schicchi as Buoso", ["schicchi"], "Hidden in the bed, Schicchi fools the doctor with Buoso's voice."],
     ["Si corre dal notaio", "Aria", ["schicchi"], "Schicchi explains his plan: he will be Buoso and dictate a new will."],
     ["The relatives bargain", "Ensemble", ["zita", "nella", "ciesca", "simone", "rinuccio", "schicchi"], "They squabble over the mule, the house and the mills, and each secretly bribes Schicchi."],
