@@ -52,7 +52,7 @@ interface Config {
   /** a voice to look up by name in the Italian voice library, when voiceId is empty (e.g. "Serena") */
   voiceSearch?: string;
   /** the voice for each language other than Italian, by language code */
-  languages?: Record<string, { voiceId: string; voiceName?: string }>;
+  languages?: Record<string, { voiceId: string; voiceName?: string; voiceSearch?: string }>;
 }
 interface Word {
   text: string;
@@ -317,11 +317,13 @@ function wordTimes(sp: Spoken, text: string, words: string[]): [number, number][
 
 /* ---------------- choosing a voice when none is set ---------------- */
 
-async function findVoice(name: string): Promise<{ id: string; name: string }> {
-  const res = await api(`/v1/shared-voices?language=it&page_size=30&search=${encodeURIComponent(name)}`);
-  const list = ((await res.json()) as { voices: { voice_id: string; public_owner_id: string; name: string }[] }).voices;
-  const v = list.find((x) => x.name.toLowerCase().startsWith(name.toLowerCase())) ?? list[0];
-  if (!v) throw new Error(`No Italian voice called "${name}" in the voice library.`);
+async function findVoice(name: string, lang = "it"): Promise<{ id: string; name: string }> {
+  const res = await api(`/v1/shared-voices?language=${lang}&page_size=30&sort=usage_character_count_1y&search=${encodeURIComponent(name)}`);
+  const list = ((await res.json()) as { voices: { voice_id: string; public_owner_id: string; name: string; gender?: string }[] }).voices;
+  // the most used voice of that name (the list comes sorted by use); a woman's voice where the name is shared
+  const named = list.filter((x) => x.name.toLowerCase().startsWith(name.toLowerCase()));
+  const v = named.find((x) => /female|woman/i.test(x.gender ?? "")) ?? named[0] ?? list[0];
+  if (!v) throw new Error(`No ${LANGUAGE_NAME[lang] ?? lang} voice called "${name}" in the voice library.`);
   const added = (await (
     await api(`/v1/voices/add/${v.public_owner_id}/${v.voice_id}`, { method: "POST", body: JSON.stringify({ new_name: `Counterpart · ${v.name}` }) })
   ).json()) as { voice_id: string };
@@ -519,11 +521,12 @@ async function runLanguage(lang: string, todo: string[]) {
   }
   if (!DRY && !KEY) throw new Error("ELEVENLABS_API_KEY is not set (on GitHub: a repository secret).");
   if (!DRY && !config.voiceId) {
-    const v = lang === "it" && config.voiceSearch ? await findVoice(config.voiceSearch) : await chooseVoice(lang);
+    const search = lang === "it" ? config.voiceSearch : config.languages?.[lang]?.voiceSearch;
+    const v = search ? await findVoice(search, lang) : await chooseVoice(lang);
     // save the choice in the file as it stands (only this language's entry changes)
     const saved = JSON.parse(readFileSync(CONFIG, "utf8"));
     if (lang === "it") Object.assign(saved, { voiceId: v.id, voiceName: v.name });
-    else saved.languages = { ...(saved.languages ?? {}), [lang]: { voiceId: v.id, voiceName: v.name } };
+    else saved.languages = { ...(saved.languages ?? {}), [lang]: { ...(saved.languages?.[lang] ?? {}), voiceId: v.id, voiceName: v.name } };
     writeFileSync(CONFIG, JSON.stringify(saved, null, 2) + "\n");
     config.voiceId = v.id;
     config.voiceName = v.name;
