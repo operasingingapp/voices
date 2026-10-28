@@ -217,7 +217,6 @@ export function progressOf(ctx: Ctx, opera: Opera, ch: Character) {
   const done = ch.pieces.filter((p) => set.has(pieceKey(p))).length;
   return { done, total, pct: total ? done / total : 0, set };
 }
-/** The aria to go back to for a role: the one last practised, otherwise the first that is ready. */
 /** " · bar 23": where you stopped in that piece (saved by the practice screen), or nothing */
 function resumeBar(opera: string, character: string, editionId?: string): string {
   if (!editionId) return "";
@@ -228,10 +227,20 @@ function resumeBar(opera: string, character: string, editionId?: string): string
     return "";
   }
 }
-function continueTarget(ctx: Ctx, opera: Opera, ch: Character): { place: PiecePlace; resumed: boolean } | null {
-  if (ctx.last && ctx.last.opera === opera.id && ctx.last.character === ch.id && ch.pieces[ctx.last.piece]?.editionId) return { place: ctx.last, resumed: true };
-  const i = ch.pieces.findIndex((p) => p.editionId);
-  return i >= 0 ? { place: { screen: "piece", opera: opera.id, character: ch.id, piece: i }, resumed: false } : null;
+/**
+ * What to practise next in a role, and why: the piece you were working on (unless you have since ticked it
+ * learned), otherwise the first piece with music you have not learned yet, in the order of the opera;
+ * when every one is learned, the first again, to keep it in the voice.
+ */
+function continueTarget(ctx: Ctx, opera: Opera, ch: Character): { place: PiecePlace; resumed: boolean; why: "resume" | "next" | "again" } | null {
+  const learned = progressOf(ctx, opera, ch).set;
+  const at = (i: number): PiecePlace => ({ screen: "piece", opera: opera.id, character: ch.id, piece: i });
+  if (ctx.last && ctx.last.opera === opera.id && ctx.last.character === ch.id && ch.pieces[ctx.last.piece]?.editionId && !learned.has(pieceKey(ch.pieces[ctx.last.piece])))
+    return { place: ctx.last, resumed: true, why: "resume" };
+  const i = ch.pieces.findIndex((p) => p.editionId && !learned.has(pieceKey(p)));
+  if (i >= 0) return { place: at(i), resumed: false, why: "next" };
+  const j = ch.pieces.findIndex((p) => p.editionId);
+  return j >= 0 ? { place: at(j), resumed: false, why: "again" } : null;
 }
 /** Every piece in the library that is ready to learn, with where it lives. */
 export function readyPieces(): { opera: Opera; ch: Character; index: number }[] {
@@ -710,6 +719,15 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   // the character's story opens over this page, and closes back to it
   const [story, setStory] = useState(false);
   const go = continueTarget(ctx, opera, ch);
+  const ready = ch.pieces.filter((p) => p.editionId).length;
+  // what the piece is, and with whom: "Terzettino · Act 1 · with Dorabella and Don Alfonso"
+  const goContext = (() => {
+    if (!go) return "";
+    const p = ch.pieces[go.place.piece];
+    const others = opera.chars.filter((c) => c.id !== ch.id && c.pieces.some((q) => q.editionId && q.editionId === p.editionId)).map((c) => c.name);
+    const w = others.length > 1 ? `${others.slice(0, -1).join(", ")} and ${others[others.length - 1]}` : others[0];
+    return [p.kind, w && `with ${w}`].filter(Boolean).join(" · ");
+  })();
   return (
     <main className="screen-body gutter page">
       <Crumbs
@@ -724,35 +742,40 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           line, a bar of the role's pieces (learned, the one in hand, the rest), then continue and the story */}
       <section className="rh2" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
         <div className="rh2-band" role={ART[opera.id] ? "img" : undefined} aria-label={ART[opera.id]?.alt} style={ART[opera.id] ? { backgroundImage: `url(${ART[opera.id].cover})` } : undefined} />
-        <div className="rh2-id">
-          <span className="rh2-face">
-            <Face opera={opera} ch={ch} />
-          </span>
-          <div className="rh2-name">
-            <h1>{ch.name}</h1>
-            <p className="who-meta">
-              <span>{ch.voice}</span>
-              <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
-                <i lang={opera.lang}>{opera.title}</i>
-              </button>
-            </p>
-          </div>
-        </div>
-        {pr.total > 0 && (
-          <div className="rh2-prog">
-            <div className="rh2-segs" aria-hidden="true">
-              {ch.pieces.map((p, i) => {
-                const k = pieceKey(p);
-                const done = pr.set.has(k);
-                const now = !done && go?.resumed && go.place.piece === i;
-                return <i key={k} className={done ? "done" : now ? "now" : ""} />;
-              })}
+        <div className="rh2-row">
+          <div className="rh2-id">
+            <span className="rh2-face">
+              <Face opera={opera} ch={ch} />
+            </span>
+            <div className="rh2-name">
+              <h1>{ch.name}</h1>
+              <p className="who-meta">
+                <span>{ch.voice}</span>
+                <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
+                  <i lang={opera.lang}>{opera.title}</i>
+                </button>
+              </p>
+              <p className="rh2-desc">{ch.desc}</p>
             </div>
-            <p>
-              {pr.done === pr.total ? "The whole role is learned" : `${pr.done} of ${pr.total} learned`}
-            </p>
           </div>
-        )}
+          {pr.total > 0 && (
+            <div className="rh2-prog">
+              <p>
+                <b>{pr.done}</b>
+                <span> of {pr.total} learned</span>
+                {ready > 0 && ready < pr.total && <small> · {ready} with music</small>}
+              </p>
+              <div className="rh2-segs" aria-hidden="true">
+                {ch.pieces.map((p, i) => {
+                  const k = pieceKey(p);
+                  const done = pr.set.has(k);
+                  const now = !done && go?.place.piece === i;
+                  return <i key={k} className={done ? "done" : now ? "now" : p.editionId ? "ready" : ""} />;
+                })}
+              </div>
+            </div>
+          )}
+        </div>
         <div className="rh2-actions">
           {go && (
             <button type="button" className="rh2-go" onClick={() => ctx.go(go.place)}>
@@ -760,8 +783,17 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
                 <Play />
               </span>
               <span className="rh2-go-text">
-                <small>{go.resumed ? `Continue${resumeBar(opera.id, ch.id, ch.pieces[go.place.piece]?.editionId)}` : "Start"}</small>
+                <small>
+                  {go.why === "resume"
+                    ? `Pick up where you stopped${resumeBar(opera.id, ch.id, ch.pieces[go.place.piece]?.editionId)}`
+                    : go.why === "next"
+                      ? pr.done
+                        ? "Next to learn"
+                        : "Start here: the first of the role"
+                      : "All learned · sing it again"}
+                </small>
                 <b lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</b>
+                <span className="rh2-go-ctx">{goContext}</span>
               </span>
             </button>
           )}
