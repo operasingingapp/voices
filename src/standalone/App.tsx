@@ -21,6 +21,7 @@ import {
   type RoleRef,
 } from "./flow";
 import { NUMBERS } from "./opera-extra";
+import { OPERAS } from "./operas";
 import { Practice } from "./Practice";
 import { hasPiece } from "./pieces";
 
@@ -81,6 +82,26 @@ function migrate(p: unknown): Place | null {
  * into everything else: by opera and by voice. A first visit starts with three short onboarding steps.
  * Everything is remembered in this browser on this device.
  */
+function titleOf(place: Place): string {
+  const tail = " · Counterpart";
+  const o = "opera" in place && place.opera ? OPERAS.find((x) => x.id === place.opera) : undefined;
+  const c = o && "character" in place ? o.chars.find((x) => x.id === place.character) : undefined;
+  switch (place.screen) {
+    case "piece":
+      return `${c?.pieces[place.piece]?.title ?? "Practice"}${tail}`;
+    case "role":
+      return `${c?.name ?? "Role"}${tail}`;
+    case "opera":
+      return `${o?.title ?? "Opera"}${tail}`;
+    case "explore":
+      return `${place.by === "voice" ? "By voice" : "Operas"}${tail}`;
+    case "profile":
+      return `Settings${tail}`;
+    default:
+      return "Counterpart";
+  }
+}
+
 export function App() {
   const [last, setLast] = useState<PiecePlace | null>(() => {
     const l = migrate(read<unknown>(K.last, null));
@@ -129,7 +150,34 @@ export function App() {
     setRoles(rest);
     if (same(current, r)) setCurrent(rest[0] ?? null);
   };
-  const go = (p: Place) => setPlace(p);
+  // every move is a step in the browser's history, so Back (the button, or a swipe on iPad) retraces it
+  const go = (p: Place) => {
+    if (JSON.stringify(p) === JSON.stringify(place)) return;
+    try {
+      history.pushState({ cp: p }, "");
+    } catch {
+      /* history unavailable: moving still works */
+    }
+    setPlace(p);
+  };
+  useEffect(() => {
+    try {
+      history.replaceState({ ...(history.state ?? {}), cp: place }, "");
+    } catch {
+      /* ignore */
+    }
+    const back = (e: PopStateEvent) => {
+      const p = (e.state as { cp?: Place } | null)?.cp;
+      if (p) setPlace(p);
+    };
+    window.addEventListener("popstate", back);
+    return () => window.removeEventListener("popstate", back);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  // the tab names the page you are on
+  useEffect(() => {
+    document.title = titleOf(place);
+  }, [place]);
   const ctx: Ctx = {
     place,
     go,
@@ -208,6 +256,7 @@ export function App() {
           {bravoEl}
           <Practice
           onMenu={() => setDrawerOpen(true)}
+          onOpera={() => go({ screen: "opera", opera: opera.id })}
           editionId={piece.editionId}
           roleName={ch.name}
           onBack={() => go({ screen: "role", opera: opera.id, character: ch.id })}

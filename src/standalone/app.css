@@ -8493,3 +8493,137 @@ p.obp-meta {
   margin-top: 0;
   box-sizing: border-box;
 }
+
+/* =====================================================================
+   Where you are: a breadcrumb trail above each page's header
+   (Operas › opera › role › piece); on a phone only the step above, as a back link
+   ===================================================================== */
+.crumbs {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  margin: -10px 0 -14px;
+  min-width: 0;
+}
+.crumbs-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+  font: 500 14px/1.2 var(--font-sans);
+}
+.crumbs-trail li {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+.crumbs-trail li + li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin: 0 8px 0 4px;
+  border-top: 1.5px solid var(--ink-muted);
+  border-right: 1.5px solid var(--ink-muted);
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+.crumbs-trail button {
+  min-height: 36px;
+  margin: 0 -8px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink-muted);
+  font: inherit;
+  cursor: pointer;
+}
+.crumbs-trail button:hover {
+  background: var(--fog);
+  color: var(--ink);
+}
+.crumbs-trail [aria-current="page"] {
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.crumbs-up {
+  display: none;
+}
+@media (max-width: 700px) {
+  .crumbs-trail {
+    display: none;
+  }
+  .crumbs-up {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    min-height: 44px;
+    margin-left: -10px;
+    padding: 0 14px 0 6px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--ink);
+    font: 500 15px/1.2 var(--font-sans);
+    cursor: pointer;
+  }
+  .crumbs-up svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* the role's header reads opera → character → voice → who she is */
+.rp-id .rp-opera {
+  order: 0;
+  min-height: 32px;
+  margin-bottom: 2px;
+  gap: 8px;
+  font: 500 15px/1.2 var(--font-sans);
+}
+.rp-opera-by {
+  color: var(--on-pastel-muted);
+  font-weight: 400;
+}
+.rp-opera-by::before {
+  content: "·";
+  margin-right: 8px;
+}
+.rp-voice {
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--on-pastel-muted);
+}
+.rp-id .rp-desc {
+  margin: 4px 0 0;
+}
+
+/* the line under a piece's title: the role and the opera open their pages */
+.p-sub-link {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 120ms ease;
+}
+.p-sub-link:hover,
+.p-sub-link:focus-visible {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}

@@ -656,12 +656,36 @@ export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
   );
 }
 
-function BackTo({ label, onClick }: { label: string; onClick: () => void }) {
+/**
+ * Where this page sits: Operas › the opera › the role › the piece. Every step but the last opens that page;
+ * the last is where you are. On a phone the trail keeps only the step above, as a back link.
+ */
+export function Crumbs({ ctx, trail }: { ctx: Ctx; trail: { label: string; to?: Place; lang?: string }[] }) {
+  const up = [...trail].reverse().find((t) => t.to);
   return (
-    <button type="button" className="back-to" onClick={onClick}>
-      <BackIcon />
-      <span>{label}</span>
-    </button>
+    <nav className="crumbs" aria-label="Where you are">
+      {up?.to && (
+        <button type="button" className="crumbs-up" onClick={() => ctx.go(up.to!)} aria-label={`Back to ${up.label}`}>
+          <BackIcon />
+          <span lang={up.lang}>{up.label}</span>
+        </button>
+      )}
+      <ol className="crumbs-trail">
+        {trail.map((t, i) => (
+          <li key={i}>
+            {t.to ? (
+              <button type="button" onClick={() => ctx.go(t.to!)} lang={t.lang}>
+                {t.label}
+              </button>
+            ) : (
+              <span aria-current="page" lang={t.lang}>
+                {t.label}
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
   );
 }
 
@@ -677,17 +701,27 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   const [open, setOpen] = useState<string | null>(null);
   return (
     <main className="screen-body gutter page">
+      <Crumbs
+        ctx={ctx}
+        trail={[
+          { label: "Operas", to: { screen: "explore", by: "opera" } },
+          { label: opera.title, lang: opera.lang, to: { screen: "opera", opera: opera.id } },
+          { label: ch.name },
+        ]}
+      />
       <section className={`rp-head${ART[opera.id] ? " has-art" : ""}`} data-tone={voiceTone(ch.voice)}>
         {ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />}
         <ProgressRing value={pr.pct} size={152} stroke={7}>
           <Face opera={opera} ch={ch} />
         </ProgressRing>
         <div className="rp-id">
-          <h1>{ch.name}</h1>
           <button type="button" className="rp-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
-            <span lang={opera.lang}>{opera.title}</span> · {opera.composer}
+            <span lang={opera.lang}>{opera.title}</span>
+            <span className="rp-opera-by">{opera.composer}</span>
             <Chevron />
           </button>
+          <h1>{ch.name}</h1>
+          <p className="rp-voice">{ch.voice}</p>
           <p className="rp-desc">{ch.desc}</p>
           <div className="rp-actions">
             <button type="button" className="cp-btn mine-toggle" aria-pressed={mine} onClick={() => ctx.toggleRole(r)}>
@@ -830,7 +864,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <main className="screen-body gutter page">
-      <BackTo label="All operas" onClick={() => ctx.go({ screen: "explore", by: "opera" })} />
+      <Crumbs ctx={ctx} trail={[{ label: "Operas", to: { screen: "explore", by: "opera" } }, { label: opera.title, lang: opera.lang }]} />
       <section className={`op-head${ART[opera.id] ? " has-art" : ""}`} data-tone={tone}>
         {ART[opera.id] && (
           <figure className="op-cover">
@@ -1219,11 +1253,17 @@ export function PiecePage({ ctx, opera, ch, index }: { ctx: Ctx; opera: Opera; c
   if (!p) return null;
   return (
     <main className="screen-body gutter page piece-page">
-      <BackTo label={ch.name} onClick={() => ctx.go({ screen: "role", ...r })} />
+      <Crumbs
+        ctx={ctx}
+        trail={[
+          { label: "Operas", to: { screen: "explore", by: "opera" } },
+          { label: opera.title, lang: opera.lang, to: { screen: "opera", opera: opera.id } },
+          { label: ch.name, to: { screen: "role", ...r } },
+          { label: p.title, lang: opera.lang },
+        ]}
+      />
       <section className="pp-head" data-tone={voiceTone(ch.voice)}>
-        <p className="cp-eyebrow">
-          {p.kind} · <span lang={opera.lang}>{opera.title}</span>
-        </p>
+        <p className="cp-eyebrow">{p.kind}</p>
         <h1 lang={opera.lang}>{p.title}</h1>
         {p.when && <p className="pp-when">{p.when}</p>}
         <div className="pp-actions">

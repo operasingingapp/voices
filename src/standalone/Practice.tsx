@@ -355,6 +355,8 @@ type PracticeProps = {
   onBack: () => void;
   /** opens the side panel (roles and their pieces) over the screen */
   onMenu?: () => void;
+  /** opens the opera's page (from the line under the title) */
+  onOpera?: () => void;
   roleName: string;
   learned?: boolean;
   onToggleLearned?: () => void;
@@ -373,6 +375,7 @@ export function Practice({ editionId, ...props }: PracticeProps & { editionId: s
 function PracticeScreen({
   onBack,
   onMenu,
+  onOpera,
   roleName,
   learned,
   onToggleLearned,
@@ -912,7 +915,18 @@ function PracticeScreen({
         <div className="p-title">
           <h1 lang="it">{edition.title}</h1>
           <p className="p-sub">
-            {info.kind} · {roleName} · <i lang="it">{info.opera}</i>
+            {info.kind} ·{" "}
+            <button type="button" className="p-sub-link" onClick={onBack}>
+              {roleName}
+            </button>{" "}
+            ·{" "}
+            {onOpera ? (
+              <button type="button" className="p-sub-link" onClick={onOpera} lang="it">
+                <i>{info.opera}</i>
+              </button>
+            ) : (
+              <i lang="it">{info.opera}</i>
+            )}
           </p>
         </div>
         <div className="p-tools">
