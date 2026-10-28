@@ -762,7 +762,10 @@ function PracticeScreen({
   // above and below, as in Babbino), not for this piece's own height. Fitting each piece to the space made a
   // plain recitative 40% larger than an aria, with crowded words; a taller piece still shrinks to fit.
   const fit = natural && stageH ? (stageH - 24 - CROP_PAD) / Math.max(natural, STANDARD_LINE_H) : Infinity;
-  const fitZoom = Math.max(0.55, Math.min(MAX_ZOOM, Math.floor(fit * 40) / 40));
+  // with the line box hidden and the bar folded there is far more height: the music grows a little into it, but
+  // not to poster size (a phone shows too few bars, an iPad's notes look shouted)
+  const roomCap = typeof window !== "undefined" && window.innerWidth < 700 ? 0.65 : 0.8;
+  const fitZoom = Math.max(0.55, Math.min(MAX_ZOOM, roomCap, Math.floor(fit * 40) / 40));
   // while the music plays the size holds (redrawing then would compete with the sound): opening the full bar
   // over a playing piece on a phone leaves the music as it is until you pause
   const heldZoom = useRef<number | null>(null);
@@ -1213,7 +1216,7 @@ function PracticeScreen({
   }, [perf]);
 
   useEffect(() => {
-    (window as unknown as Record<string, unknown>).__cp = { perf, layout: () => layoutRef.current, engine, currentQ, port: pb.port, natural: () => naturalRef.current };
+    (window as unknown as Record<string, unknown>).__cp = { perf, layout: () => layoutRef.current, engine, currentQ, port: pb.port, natural: () => naturalRef.current, zoom: () => effZoomRef.current };
   });
 
   const wordCard = (lineId: string, k: number, close: () => void) => {

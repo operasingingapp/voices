@@ -324,6 +324,12 @@ function findSoundingNote(osmd: OpenSheetMusicDisplay, m: number, q: number, par
 }
 
 export function ScoreView(props: Props) {
+  // a part's name sits above its staff, clear of the clef (a treble clef rises about two staff spaces above the
+  // top line; a staff space is 10 px at zoom 1), and never higher than the lowest ink of the part above
+  const labelTop = (l: ScoreLayout["lanes"][number]) => {
+    const want = l.top - Math.round(2.1 * 10 * props.zoom) - 23;
+    return Math.round(want);
+  };
   const laneLabelEls = (layout: ScoreLayout) =>
     props.laneLabels
       ? layout.lanes
@@ -334,7 +340,7 @@ export function ScoreView(props: Props) {
                 key={`lbl-${l.partId}`}
                 type="button"
                 className="lane-label"
-                style={{ top: l.top - 30 }}
+                style={{ top: labelTop(l) }}
                 onClick={(e) => {
                   e.stopPropagation();
                   props.onLaneLabel!(l.partId, e.currentTarget);
@@ -348,7 +354,7 @@ export function ScoreView(props: Props) {
                 </svg>
               </button>
             ) : (
-              <span key={`lbl-${l.partId}`} className="lane-label" style={{ top: l.top - 30 }} aria-hidden="true">
+              <span key={`lbl-${l.partId}`} className="lane-label" style={{ top: labelTop(l) }} aria-hidden="true">
                 {props.laneLabels![l.partId]}
               </span>
             ),
