@@ -11350,3 +11350,11 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .tl-loop-chip { background: var(--loop); color: var(--loop-mark); }
 .loop-pick { background: color-mix(in srgb, var(--loop) 45%, var(--canvas)); border-top-color: color-mix(in srgb, var(--loop-mark) 25%, transparent); }
 .loop-pick .lp-icon { background: var(--loop-mark); }
+@media (min-width: 900px) {
+  /* Both: the words panel starts level with the line card, and its first row sits level with the card's tools */
+  .practice.is-split > .words-view { margin-top: 6px; }
+  .practice.is-split .w-grid { padding-top: 0; }
+  .practice.is-split .words-view .w-gap:first-child,
+  .practice.is-split .words-view .w-gap:first-of-type { margin-top: 8px; }
+}
+@media (min-width: 900px) { .practice.is-split .w-gap-band { min-height: 40px; } }
