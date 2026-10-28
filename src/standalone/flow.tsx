@@ -7,6 +7,7 @@ import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
 import { ART, BRAVO, NUMBERS, PORTRAITS, STORIES } from "./opera-extra";
+import { SYNOPSES, SynopsisActs } from "./synopses";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
@@ -140,7 +141,7 @@ export type PiecePlace = { screen: "piece"; opera: string; character: string; pi
 export type Place =
   | { screen: "onboarding"; step: 1 | 2 | 3; role?: RoleRef; by?: "voice" | "opera"; opera?: string }
   | { screen: "role"; opera: string; character: string }
-  | { screen: "opera"; opera: string }
+  | { screen: "opera"; opera: string; synopsis?: boolean }
   | { screen: "explore"; by: "opera" | "voice"; voice?: string }
   | { screen: "profile" }
   | PiecePlace;
@@ -656,6 +657,47 @@ export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
   );
 }
 
+const BookIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 6.5c-1.8-1.3-4.3-1.9-7.5-1.9v13c3.2 0 5.7.6 7.5 1.9m0-13c1.8-1.3 4.3-1.9 7.5-1.9v13c-3.2 0-5.7.6-7.5 1.9m0-13v13" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+  </svg>
+);
+
+/**
+ * The whole story, act by act, in a reading panel over the opera's page (Back, Escape or a tap outside closes it);
+ * your role's name is picked out so you can follow your part.
+ */
+function SynopsisSheet({ opera, you, onClose }: { opera: Opera; you?: string; onClose: () => void }) {
+  const close = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    close.current?.focus();
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", esc);
+    return () => window.removeEventListener("keydown", esc);
+  }, [onClose]);
+  return (
+    <div className="syn-sheet" role="dialog" aria-modal="true" aria-labelledby="syn-h">
+      <button type="button" className="syn-scrim" aria-label="Close the synopsis" tabIndex={-1} onClick={onClose} />
+      <div className="syn-panel">
+        <header className="syn-head">
+          <div>
+            <p className="cp-eyebrow" lang={opera.lang}>
+              {opera.title} · {opera.composer}
+            </p>
+            <h2 id="syn-h">Synopsis</h2>
+          </div>
+          <button ref={close} type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close the synopsis" onClick={onClose}>
+            <CloseIcon />
+          </button>
+        </header>
+        <div className="syn-body">
+          <SynopsisActs acts={SYNOPSES[opera.id]} you={you} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /**
  * Where this page sits: Operas › the opera › the role › the piece. Every step but the last opens that page;
  * the last is where you are. On a phone the trail keeps only the step above, as a back link.
@@ -727,6 +769,12 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
               {mine ? <Check /> : <Plus />}
               {mine ? "In my roles" : "Add to my roles"}
             </button>
+            {SYNOPSES[opera.id] && (
+              <button type="button" className="cp-btn rp-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true })}>
+                <BookIcon />
+                Synopsis
+              </button>
+            )}
           </div>
         </div>
         {pr.total > 0 && (
@@ -880,7 +928,16 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             Your role: <b>{mineHere.map((c) => c.name).join(", ")}</b>
           </p>
         )}
+        {SYNOPSES[opera.id] && (
+          <button type="button" className="cp-btn op-syn-btn" onClick={() => ctx.go({ screen: "opera", opera: opera.id, synopsis: true })}>
+            <BookIcon />
+            Full synopsis
+          </button>
+        )}
       </section>
+      {ctx.place.screen === "opera" && ctx.place.synopsis && SYNOPSES[opera.id] && (
+        <SynopsisSheet opera={opera} you={mineHere[0]?.name} onClose={() => ctx.go({ screen: "opera", opera: opera.id })} />
+      )}
 
       <section className="block" aria-labelledby="chars-h">
         <p className="cp-eyebrow" id="chars-h">
