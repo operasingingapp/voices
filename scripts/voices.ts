@@ -13,7 +13,8 @@
  *   content/pieces/<id>/voice/<voice>/manifest.json: which recordings the piece uses (line id → recording)
  *
  * Each language has its own voice: Italian uses "voiceId" in voice.config.json, any other language the entry under
- * "languages" (e.g. "de"). No voice chosen yet for a language? The run first auditions the most used native voices
+ * "languages" (e.g. "de"). A piece sung by a man (its role a tenor, baritone or bass) uses the language's entry
+ * under "male" when there is one (e.g. "it": MarcoTrox), and the language's voice otherwise. No voice chosen yet for a language? The run first auditions the most used native voices
  * of that language from the ElevenLabs library (a line each, in content/voice-audition/), adds the most used one to
  * the account, writes it into voice.config.json, and goes on with it. Changing voice later is one edit of
  * voice.config.json; the old voice's files stay until removed.
@@ -53,6 +54,8 @@ interface Config {
   voiceSearch?: string;
   /** the voice for each language other than Italian, by language code */
   languages?: Record<string, { voiceId: string; voiceName?: string; voiceSearch?: string }>;
+  /** the voice for pieces sung by a man, by language code; without one, the language's voice is used */
+  male?: Record<string, { voiceId: string; voiceName?: string }>;
 }
 interface Word {
   text: string;
@@ -481,6 +484,15 @@ function shapeAll(piece: string, voiceDir: string, data: { clips: Record<string,
 
 /* ---------------- the run ---------------- */
 
+/** whether a piece is sung by a man: its (first) role is a tenor, baritone or bass */
+const MALE = /tenor|baritone|bass|countertenor|haute-contre/i;
+const isMale = (piece: string) => {
+  const m = join(ROOT, "content/pieces", piece, "manifest.json");
+  if (!existsSync(m)) return false;
+  const roles = (JSON.parse(readFileSync(m, "utf8")) as { roles?: { voiceType?: string }[] }).roles ?? [];
+  return MALE.test(roles[0]?.voiceType ?? "");
+};
+
 /** the language of a piece, from its words */
 const languageOf = (piece: string) =>
   (JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { language?: string }).language || "it";
@@ -492,7 +504,19 @@ async function main() {
   const langs = [...new Set(all.map(languageOf))].sort((a, b) => (a === "it" ? -1 : b === "it" ? 1 : a.localeCompare(b)));
   const italian = { voiceId: config.voiceId, voiceName: config.voiceName };
   for (const lang of langs) {
-    const todo = all.filter((p) => languageOf(p) === lang);
+    const inLang = all.filter((p) => languageOf(p) === lang);
+    // pieces sung by a man, with a man's voice set for this language, are made separately with it
+    const male = config.male?.[lang];
+    const men = male?.voiceId ? inLang.filter(isMale) : [];
+    if (men.length) {
+      const keep = { voiceId: config.voiceId, voiceName: config.voiceName };
+      config.voiceId = male!.voiceId;
+      config.voiceName = male!.voiceName;
+      await runLanguage(lang, men);
+      Object.assign(config, keep);
+    }
+    const todo = inLang.filter((p) => !men.includes(p));
+    if (!todo.length) continue;
     if (lang === "it") {
       config.voiceId = italian.voiceId;
       config.voiceName = italian.voiceName;

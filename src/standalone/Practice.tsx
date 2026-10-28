@@ -54,8 +54,12 @@ const voiceFiles = import.meta.glob(["../../content/voice-bank/*/sung/*.mp3", ".
 let voices: VoiceManifest[] = [];
 const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
 /** the voice chosen for the piece's language in voice.config.json (Italian: voiceId; others: languages.<code>) */
-const languageVoiceId = () =>
-  LANG === "it" ? defaultVoiceId : ((voiceConfig as { languages?: Record<string, { voiceId?: string }> }).languages?.[LANG]?.voiceId ?? "");
+const languageVoiceId = () => {
+  const cfg = voiceConfig as { languages?: Record<string, { voiceId?: string }>; male?: Record<string, { voiceId?: string }> };
+  // a piece sung by a man uses the language's man's voice, where one is set
+  const male = /tenor|baritone|bass|countertenor/i.test(edition?.roles?.[0]?.voiceType ?? "") ? cfg.male?.[LANG]?.voiceId : undefined;
+  return male || (LANG === "it" ? defaultVoiceId : (cfg.languages?.[LANG]?.voiceId ?? ""));
+};
 const voiceById = (id: string) =>
   voices.find((m) => m.voiceId === id) ?? voices.find((m) => m.voiceId === languageVoiceId()) ?? voices[0] ?? null;
 const voiceLabel = (m: VoiceManifest) => (m.voiceName ?? "Voice").split(" - ")[0];
