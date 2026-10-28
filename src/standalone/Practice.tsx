@@ -959,6 +959,11 @@ function PracticeScreen({
   // Loop: the bars of one line (with the bar before it when the line starts on a downbeat, so the
   // accompaniment leads you in), or bars tapped in the score while looping (the loop grows to take them in)
   const [loop, setLoop] = useState<{ startQ: number; endQ: number } | null>(null);
+  // just after the loop button: a line saying how to choose the bars, and the edges pulse
+  const [loopHint, setLoopHint] = useState(false);
+  useEffect(() => {
+    if (!loop) setLoopHint(false);
+  }, [loop]);
   // on a phone the bar folds to one slim row while the music plays (the score gets the room); a tap opens it
   const [barOpen, setBarOpen] = useState(true);
   useEffect(() => setBarOpen(!live), [live]);
@@ -1379,7 +1384,7 @@ function PracticeScreen({
   };
 
   return (
-    <div className={`practice is-${view}`} style={practiceTone}>
+    <div className={`practice is-${view}${loop && loopHint ? " loop-hint" : ""}`} style={practiceTone}>
       <header className="p-head gutter">
         {onMenu && (
           <button type="button" className="cp-icon-btn p-menu" onClick={onMenu} aria-label="Your roles and pieces">
@@ -1792,48 +1797,26 @@ function PracticeScreen({
       )}
 
       {/* where you are, and the progress line to scrub: in the dock, right above the playback buttons */}
-      {loopPick && (
+      {loop && loopHint && (
         <div className="loop-pick gutter" role="status">
           <span className="lp-icon" aria-hidden="true">
             {Icon.loop}
           </span>
           <p>
-            {loopPick.first ? (
-              <>
-                <b>Bar {edition.measures[loopPick.first.m].number}</b> · now tap the last bar
-              </>
-            ) : (
-              <>
-                <b>Loop</b> · tap the first bar in the music
-              </>
-            )}
+            <b>Looping {loopBars}</b> · drag the purple edges to choose the bars
           </p>
-          {loopPick.first ? (
-            <button
-              type="button"
-              className="cp-btn lp-btn"
-              onClick={() => {
-                const f = loopPick.first!;
-                setLoop({ startQ: f.startQ, endQ: f.startQ + f.durQ });
-                setLoopPick(null);
-              }}
-            >
-              Just this bar
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="cp-btn lp-btn"
-              onClick={() => {
-                loopLine();
-                setLoopPick(null);
-              }}
-            >
-              This line
-            </button>
-          )}
-          <button type="button" className="cp-icon-btn cp-icon-btn--ghost lp-x" aria-label="Cancel" onClick={() => setLoopPick(null)}>
-            {Icon.close}
+          <button
+            type="button"
+            className="cp-btn lp-btn"
+            onClick={() => {
+              loopLine();
+              setLoopHint(false);
+            }}
+          >
+            This line
+          </button>
+          <button type="button" className="cp-btn lp-btn lp-done" onClick={() => setLoopHint(false)}>
+            Done
           </button>
         </div>
       )}
@@ -2238,7 +2221,17 @@ function PracticeScreen({
             type="button"
             className="cp-icon-btn bar-loop"
             aria-pressed={!!loop}
-            onClick={() => (loop ? setLoop(null) : setLoopPick(loopPick ? null : { first: null }))}
+            onClick={() => {
+              if (loop) {
+                setLoop(null);
+                setLoopHint(false);
+                return;
+              }
+              // start with the bar you are on, its two edges ready to drag out over the bars you want
+              const pm = barAt(Math.max(0, q));
+              setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
+              setLoopHint(true);
+            }}
             aria-label={loop ? `Looping ${loopBars}. Stop looping` : loopPick ? "Cancel choosing a loop" : "Loop: choose the bars"}
             title={loop ? `Looping ${loopBars}: tap bars in the score to add them` : "Loop: choose the bars"}
           >

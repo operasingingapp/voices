@@ -732,56 +732,58 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
       />
       {/* the role's card: the opera's picture with the character's portrait over its edge, the name and one quiet
           line, a bar of the role's pieces (learned, the one in hand, the rest), then continue and the story */}
-      <section className="rh2" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
-        <div className="rh2-band" role={ART[opera.id] ? "img" : undefined} aria-label={ART[opera.id]?.alt} style={ART[opera.id] ? { backgroundImage: `url(${ART[opera.id].cover})` } : undefined} />
-        <div className="rh2-row">
-          <div className="rh2-id">
-            <span className="rh2-face">
-              <Face opera={opera} ch={ch} />
-            </span>
-            <div className="rh2-name">
-              <h1>{ch.name}</h1>
-              <p className="who-meta">
-                <span>{ch.voice}</span>
-                <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
-                  <i lang={opera.lang}>{opera.title}</i>
-                </button>
-              </p>
-              <p className="rh2-desc">{ch.desc}</p>
-            </div>
+      {/* the role's card: the opera's picture, the portrait over its lower left edge and the story at its lower right;
+          the name, voice and opera, a line about them; then how far through the role you are, across the card */}
+      <section className="rc" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
+        <div className="rc-band" role={ART[opera.id] ? "img" : undefined} aria-label={ART[opera.id]?.alt} style={ART[opera.id] ? { backgroundImage: `url(${ART[opera.id].cover})` } : undefined}>
+          <div className="rc-band-tools">
+            {!mine && (
+              <button type="button" className="rc-pill" onClick={() => ctx.toggleRole(r)}>
+                <Plus />
+                <span>Add to my roles</span>
+              </button>
+            )}
+            {SYNOPSES[opera.id] && (
+              <button type="button" className="rc-pill" onClick={() => setStory(true)}>
+                <BookIcon />
+                <span>{FEMALE.test(ch.voice) ? "Her story" : "His story"}</span>
+              </button>
+            )}
           </div>
-          {pr.total > 0 && (
-            <div className="rh2-prog">
-              <p>
-                <b>{pr.done}</b>
-                <span> of {pr.total} learned</span>
-                {ready > 0 && ready < pr.total && <small> · {ready} with music</small>}
-              </p>
-              <div className="rh2-segs" aria-hidden="true">
-                {ch.pieces.map((p, i) => {
-                  const k = pieceKey(p);
-                  const done = pr.set.has(k);
-                  const now = !done && go?.place.piece === i;
-                  return <i key={k} className={done ? "done" : now ? "now" : p.editionId ? "ready" : ""} />;
-                })}
-              </div>
-              <div className="rh2-tools">
-                {!mine && (
-                  <button type="button" className="rh2-btn" onClick={() => ctx.toggleRole(r)}>
-                    <Plus />
-                    <span>Add to my roles</span>
-                  </button>
-                )}
-                {SYNOPSES[opera.id] && (
-                  <button type="button" className="rh2-btn" onClick={() => setStory(true)}>
-                    <BookIcon />
-                    <span>{FEMALE.test(ch.voice) ? "Her story" : "His story"}</span>
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
         </div>
+        <div className="rc-id">
+          <span className="rc-face">
+            <Face opera={opera} ch={ch} />
+          </span>
+          <div className="rc-text">
+            <h1>{ch.name}</h1>
+            <p className="who-meta">
+              <span>{ch.voice}</span>
+              <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
+                <i lang={opera.lang}>{opera.title}</i>
+              </button>
+            </p>
+            <p className="rc-desc">{ch.desc}</p>
+          </div>
+        </div>
+        {pr.total > 0 && (
+          <div className="rc-prog">
+            <div className="rc-segs" aria-hidden="true">
+              {ch.pieces.map((p, i) => {
+                const k = pieceKey(p);
+                const done = pr.set.has(k);
+                const now = !done && go?.place.piece === i;
+                return <i key={k} className={done ? "done" : now ? "now" : p.editionId ? "ready" : ""} />;
+              })}
+            </div>
+            <p className="rc-prog-text">
+              <span>
+                <b>{pr.done}</b> of {pr.total} learned
+              </span>
+              {ready > 0 && <span>{ready === pr.total ? "All with music" : `${ready} with music`}</span>}
+            </p>
+          </div>
+        )}
       </section>
 
       <section className="block" aria-labelledby="music-h">

@@ -11233,3 +11233,120 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   }
   .practice.is-split > .words-view { margin-left: 4px; }
 }
+
+/* =====================================================================
+   The role card (rc): picture, portrait bottom-left over it and the story
+   bottom-right on it (they balance), the name block, then progress across
+   ===================================================================== */
+.rc {
+  display: grid;
+  padding: 12px 12px 18px;
+  border-radius: 32px;
+  background: var(--tone-soft, var(--fog));
+  color: var(--ink);
+}
+.rc-band {
+  position: relative;
+  height: clamp(124px, 14vw, 156px);
+  border-radius: 22px;
+  background: var(--tone-strong, var(--fog-strong)) center 32% / cover no-repeat;
+}
+.rc-band-tools {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  gap: 8px;
+}
+.rc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--canvas) 94%, transparent);
+  color: var(--ink);
+  font: 500 15px/1 var(--font-sans);
+  box-shadow: 0 4px 14px rgba(20, 30, 25, 0.14);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+.rc-pill svg { width: 18px; height: 18px; }
+.rc-pill:hover { background: var(--canvas); }
+.rc-id {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 16px;
+}
+.rc-face {
+  flex: none;
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--tone-strong, var(--canvas));
+  box-shadow: 0 0 0 6px var(--tone-soft, var(--fog));
+}
+.rc-face img,
+.rc-face svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rc-text { min-width: 0; padding-top: 14px; }
+.rc-text h1 { margin: 0; font: 600 30px/1.1 var(--font-sans); letter-spacing: -0.01em; }
+.rc-text .who-meta { margin-top: 4px; font-size: 15px; color: var(--ink); opacity: 0.8; }
+.rc-text .who-opera { color: var(--ink); }
+.rc-desc { margin: 4px 0 0; max-width: 560px; font: 400 15px/1.4 var(--font-sans); opacity: 0.7; }
+.rc-prog { display: grid; gap: 10px; padding: 20px 16px 0; }
+.rc-segs { display: flex; gap: 4px; }
+.rc-segs i { flex: 1; height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+.rc-segs i.ready { background: color-mix(in srgb, var(--ink) 20%, transparent); }
+.rc-segs i.now { background: color-mix(in srgb, var(--now-mark) 45%, transparent); }
+.rc-segs i.done { background: var(--now-mark); }
+.rc-prog-text {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  font: 400 14px/1.3 var(--font-sans);
+  color: var(--ink);
+  opacity: 0.75;
+}
+.rc-prog-text b { font-weight: 600; opacity: 1; }
+@media (max-width: 640px) {
+  .rc { padding: 10px 10px 16px; border-radius: 28px; }
+  .rc-band { height: 112px; border-radius: 18px; }
+  .rc-band-tools { right: 10px; bottom: 10px; }
+  .rc-pill { min-height: 38px; padding: 0 14px 0 11px; font-size: 14px; }
+  .rc-pill svg { width: 16px; height: 16px; }
+  .rc-id { gap: 14px; padding: 0 8px; }
+  .rc-face { width: 88px; height: 88px; margin-top: -44px; box-shadow: 0 0 0 5px var(--tone-soft, var(--fog)); }
+  .rc-text { padding-top: 8px; }
+  .rc-text h1 { font-size: 24px; }
+  .rc-text .who-meta,
+  .rc-desc { font-size: 14px; }
+  .rc-prog { padding: 16px 8px 0; }
+}
+.rc-face { position: relative; z-index: 1; }
+
+/* a new loop: its edges pulse until you have seen how to move them */
+.practice.loop-hint .ov-lh { animation: lh-pulse 1.4s ease-in-out infinite; }
+@keyframes lh-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--loop-mark) 45%, transparent); }
+  50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--loop-mark) 0%, transparent); transform: scaleX(1.4); }
+}
+@media (prefers-reduced-motion: reduce) { .practice.loop-hint .ov-lh { animation: none; } }
+.loop-pick .lp-done { background: var(--ink); color: var(--canvas); }
+/* touch: wider handles to catch with a finger */
+@media (pointer: coarse) {
+  .score-overlay > .ov-lh { width: 10px; }
+  .ov-lh-s { margin-left: -10px; }
+  .ov-lh::before { inset: -6px -22px; }
+}
+/* the loop has one colour everywhere: the design system's loop violet (score, button, progress line, labels) */
+.practice .p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
+.tl-loop { background: color-mix(in srgb, var(--loop-mark) 14%, transparent); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--loop-mark) 45%, transparent); }
+.tl-loop-chip { background: var(--loop); color: var(--loop-mark); }
+.loop-pick { background: color-mix(in srgb, var(--loop) 45%, var(--canvas)); border-top-color: color-mix(in srgb, var(--loop-mark) 25%, transparent); }
+.loop-pick .lp-icon { background: var(--loop-mark); }
