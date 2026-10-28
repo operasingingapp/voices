@@ -10490,3 +10490,186 @@ p.rp-opera > span:not(:last-child)::after {
   color: var(--ink-muted);
   font: italic 400 15px/1.3 var(--font-sans);
 }
+
+/* =====================================================================
+   The line card while the music plays: the words only. The header (who,
+   tips, hear it, show) and the line arrows step away, and come back on pause.
+   ===================================================================== */
+.now-panel .now-bar,
+.now-panel .now-step {
+  transition: opacity 180ms ease, max-height 220ms ease, min-height 220ms ease, margin 220ms ease;
+}
+.now-panel .now-bar { max-height: 80px; }
+.now-panel.is-playing .now-bar {
+  max-height: 0;
+  min-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.now-panel.is-playing .now-step {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .now-panel .now-bar, .now-panel .now-step { transition: none; }
+}
+
+/* the card's small menus: whose words, and what to show */
+.card-menu-wrap { position: relative; display: inline-flex; }
+.card-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 10px 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--canvas) 70%, transparent);
+  color: var(--ink);
+  font: 500 14px/1 var(--font-sans);
+  cursor: pointer;
+}
+.card-menu-btn svg { width: 16px; height: 16px; opacity: 0.7; }
+.card-menu-btn .cmb-k { color: var(--ink-muted); font-weight: 400; }
+.card-menu-btn b { font-weight: 600; }
+.cmb-you {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--you, var(--now-mark)) 16%, transparent);
+  color: var(--ink);
+  font: 500 11px/1.5 var(--font-sans);
+  font-style: normal;
+}
+.card-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 40;
+  display: grid;
+  min-width: 200px;
+  padding: 6px;
+  border-radius: 18px;
+  background: var(--canvas);
+  box-shadow: 0 10px 30px rgba(20, 30, 25, 0.16), 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
+}
+.card-menu--end { left: auto; right: 0; }
+.card-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 12px 0 8px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 15px/1.2 var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+.card-menu button:hover,
+.card-menu button:focus-visible { background: var(--fog); }
+.cm-check { display: grid; place-items: center; width: 20px; height: 20px; color: var(--now-mark); }
+.cm-check svg { width: 18px; height: 18px; }
+.now-tools { align-items: center; }
+
+/* =====================================================================
+   Loop
+   ===================================================================== */
+.practice .p-bar .bar-loop { background: var(--canvas); }
+.practice .p-bar .bar-loop[aria-pressed="true"] {
+  background: var(--now-mark);
+  color: #fff;
+}
+.tl-loop {
+  position: absolute;
+  top: 50%;
+  height: 22px;
+  margin-top: -11px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--now-mark) 14%, transparent);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--now-mark) 45%, transparent);
+  pointer-events: none;
+}
+.tl-label { display: flex; align-items: center; gap: 8px; }
+.tl-loop-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--now-mark) 14%, transparent);
+  color: var(--now-mark);
+  font: 600 13px/1 var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tl-loop-chip svg { width: 15px; height: 15px; }
+.tl-loop-chip span { margin-left: 2px; font-weight: 400; opacity: 0.8; }
+
+/* =====================================================================
+   Phone: the bar folds to one slim row while the music plays
+   ===================================================================== */
+.bar-more { display: none !important; }
+@media (max-width: 640px) {
+  .practice .p-bar.folded {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .practice .p-bar.folded .bar-parts,
+  .practice .p-bar.folded .bar-start,
+  .practice .p-bar.folded .cp-tempo__beat,
+  .practice .p-bar.folded .countin { display: none !important; }
+  .practice .p-bar.folded .bar-transport,
+  .practice .p-bar.folded .bar-right {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  .practice .p-bar.folded .bar-transport > [data-testid="play"],
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { flex: 0 0 64px; width: 64px; }
+  .practice .p-bar.folded .bar-right { flex: 1 1 auto; justify-content: center; }
+  .practice .p-bar.folded .bar-right .cp-tempo { justify-content: center; }
+  .practice .p-bar.folded .bar-more {
+    display: grid !important;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--fog);
+  }
+  /* phone taps: the piano's buttons at least 44 px wide */
+  .practice .p-bar .pg-btn { min-width: 44px; }
+}
+
+/* the piano group: the piano icon is the sound switch */
+.pg-piano { position: relative; }
+.pg-piano[aria-pressed="false"] svg { opacity: 0.4; }
+.pg-piano[aria-pressed="false"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 26px;
+  height: 2px;
+  margin: -1px 0 0 -13px;
+  border-radius: 1px;
+  background: var(--ink);
+  box-shadow: 0 0 0 1.5px var(--canvas);
+  transform: rotate(-40deg);
+}
+.piano-group { padding-left: 4px !important; }
+@media (max-width: 640px) {
+  .practice .p-bar .bar-parts > .part { padding: 0 2px; }
+  .practice .p-bar .bar-parts .part-face { width: 40px; height: 40px; }
+  .practice .p-bar .mix-btn { min-width: 44px; width: 44px; padding: 0; justify-content: center; }
+}
+@media (max-width: 370px) {
+  .practice .p-bar .pg-btn { min-width: 40px; }
+}
+@media (max-width: 370px) {
+  .practice .p-bar .bar-parts > .part { padding: 0 1px; }
+}

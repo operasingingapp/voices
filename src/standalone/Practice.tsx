@@ -285,6 +285,16 @@ const Icon = {
       <path fill="currentColor" d="M5.9 5.9h2.7V13H5.9zM10.65 5.9h2.7V13h-2.7zM15.4 5.9h2.7V13h-2.7z" />
     </svg>
   ),
+  loop: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17 4.5l2.5 2.5L17 9.5M19.2 7H8.5A3.5 3.5 0 0 0 5 10.5V11M7 19.5L4.5 17 7 14.5M4.8 17h10.7a3.5 3.5 0 0 0 3.5-3.5V13" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  chevUp: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 14.5L12 8.5l6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
   fromStart: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path fill="currentColor" d="M6 5h2.2v14H6zM19 5.6v12.8L9.4 12z" />
@@ -420,7 +430,8 @@ type OpenWord = { lineId: string; k: number; left: number; top: number };
 /** The fixed padding stripCrop adds around the drawn band, in px (does not scale with zoom). */
 const CROP_PAD = 36;
 /** Largest size of the music: comfortable on a music stand, still a few bars per screen. */
-const MAX_ZOOM = 1.15;
+// a large screen (an iPad on a music stand) gets the music larger rather than empty space around it
+const MAX_ZOOM = 1.3;
 /** Height of a standard line of music at zoom 1 (px): voice over piano with markings, measured on Babbino. */
 const STANDARD_LINE_H = 570;
 
@@ -573,29 +584,59 @@ function PracticeScreen({
   const wordsPart = voiceParts.find((p) => p.roleId === wordsRole) ?? voicePart;
   const wordsName = edition.roles.find((r) => r.id === wordsRole)?.name ?? roleName;
   const phrases = useMemo(() => (ens ? language.phrases.filter((p) => p.roleId === wordsRole) : language.phrases), [ens, wordsRole]);
-  // whose words: a small menu on the line card and in the words view
+  // the small menus in the line card's header: whose words (an ensemble), and what to show under them
+  const [cardMenu, setCardMenu] = useState<null | "words" | "show">(null);
+  useBackToClose(!!cardMenu, () => setCardMenu(null));
+  useEffect(() => {
+    if (!cardMenu) return;
+    const close = (e: Event) => {
+      if (e instanceof KeyboardEvent ? e.key === "Escape" : !(e.target as HTMLElement).closest(".card-menu, .card-menu-btn")) setCardMenu(null);
+    };
+    window.addEventListener("pointerdown", close);
+    window.addEventListener("keydown", close);
+    return () => {
+      window.removeEventListener("pointerdown", close);
+      window.removeEventListener("keydown", close);
+    };
+  }, [cardMenu]);
   const whoPick = ens ? (
-    <span className="who-pick" role="radiogroup" aria-label="Whose words to show">
-      {voiceParts.map((p) => {
-        const on = p.roleId === wordsRole;
-        return (
-          <button
-            key={p.key}
-            type="button"
-            role="radio"
-            aria-checked={on}
-            className={`who-face${on ? " on" : ""}`}
-            onClick={() => p.roleId && setWordsRole(p.roleId)}
-            title={`${p.shortLabel}'s words${p === voicePart ? " (you)" : ""}`}
-            aria-label={`${p.shortLabel}'s words${p === voicePart ? " (you)" : ""}`}
-          >
-            <span className="who-face-img" aria-hidden="true">
-              <RoleFace k={partnerKey(p)} />
-            </span>
-            <span className="who-face-name">{p.shortLabel}</span>
-          </button>
-        );
-      })}
+    <span className="card-menu-wrap">
+      <button
+        type="button"
+        className="card-menu-btn words-btn"
+        aria-haspopup="menu"
+        aria-expanded={cardMenu === "words"}
+        onClick={() => setCardMenu(cardMenu === "words" ? null : "words")}
+        aria-label={`Words shown: ${wordsName}${wordsRole === roleId ? " (you)" : ""}. Choose whose words`}
+      >
+        <span className="cmb-k">Words</span>
+        <b>{wordsName}</b>
+        {wordsRole === roleId && <em className="cmb-you">you</em>}
+        {Icon.down}
+      </button>
+      {cardMenu === "words" && (
+        <span className="card-menu" role="menu" aria-label="Whose words to show">
+          {voiceParts.map((p) => {
+            const on = p.roleId === wordsRole;
+            return (
+              <button
+                key={p.key}
+                type="button"
+                role="menuitemradio"
+                aria-checked={on}
+                onClick={() => {
+                  if (p.roleId) setWordsRole(p.roleId);
+                  setCardMenu(null);
+                }}
+              >
+                <span className="cm-check" aria-hidden="true">{on ? Icon.check : null}</span>
+                <span>{p.shortLabel}</span>
+                {p === voicePart && <em className="cmb-you">you</em>}
+              </button>
+            );
+          })}
+        </span>
+      )}
     </span>
   ) : null;
   // the line card takes the colours of the character whose words it shows
@@ -638,7 +679,8 @@ function PracticeScreen({
   const [showIpa, setShowIpa] = useLocalSetting("p:ipa", true);
   const [showTr, setShowTr] = useLocalSetting("p:tr", true);
   // minimal: the line as plain text on a thin rule, nothing else (the music gets the room)
-  const [minimal, setMinimal] = useLocalSetting("p:minimal", false);
+  // (the "minimal" card is gone: while the music plays the card is words only by itself)
+  const minimal = false;
   // pronunciation tips: in full where a sound first occurs, a quiet mark on the words it applies to later
   // pronunciation tips live in one place: a strip above the words (and the music card's header), about the
   // line you are on; only that line's letters are marked, so the rest stays two clean columns
@@ -710,7 +752,13 @@ function PracticeScreen({
   // above and below, as in Babbino), not for this piece's own height. Fitting each piece to the space made a
   // plain recitative 40% larger than an aria, with crowded words; a taller piece still shrinks to fit.
   const fit = natural && stageH ? (stageH - 24 - CROP_PAD) / Math.max(natural, STANDARD_LINE_H) : Infinity;
-  const effZoom = Math.max(0.55, Math.min(MAX_ZOOM, Math.floor(fit * 40) / 40));
+  const fitZoom = Math.max(0.55, Math.min(MAX_ZOOM, Math.floor(fit * 40) / 40));
+  // while the music plays the size holds (redrawing then would compete with the sound): opening the full bar
+  // over a playing piece on a phone leaves the music as it is until you pause
+  const heldZoom = useRef<number | null>(null);
+  if (engine?.state !== "playing") heldZoom.current = null;
+  else if (heldZoom.current === null) heldZoom.current = fitZoom;
+  const effZoom = heldZoom.current ?? fitZoom;
   const effZoomRef = useRef(effZoom);
   effZoomRef.current = effZoom;
   const onLayout = (l: ScoreLayout) => {
@@ -798,7 +846,10 @@ function PracticeScreen({
   );
   const currentQ = useCallback(() => (engine ? engine.displayQ() : 0), [engine]);
   const q = useTicker(() => Math.round(currentQ() * 16) / 16, 80);
+  const [starting, setStarting] = useState(false);
   const playing = engine?.state === "playing";
+  // the screen's playing shape (also for the moment just before the music starts)
+  const live = playing || starting;
 
   const current = useMemo(() => {
     const cur = spans.findIndex((s) => q >= s.startQ - 1e-6 && q < s.endQ - 1e-6);
@@ -888,13 +939,71 @@ function PracticeScreen({
     stopSpeaking();
     setSpeakingId(null);
     await pb.port.resume();
+    // the screen first takes its playing shape (words-only card, folded bar on a phone: the music is redrawn
+    // larger), then the music starts, so that redrawing never competes with the sound for the processor
+    setStarting(true);
+    await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(r, 30))));
+    setStarting(false);
     engine.play();
   };
 
+  // Loop: the bars of one line (with the bar before it when the line starts on a downbeat, so the
+  // accompaniment leads you in), or bars tapped in the score while looping (the loop grows to take them in)
+  const [loop, setLoop] = useState<{ startQ: number; endQ: number } | null>(null);
+  // on a phone the bar folds to one slim row while the music plays (the score gets the room); a tap opens it
+  const [barOpen, setBarOpen] = useState(true);
+  useEffect(() => setBarOpen(!live), [live]);
+  useEffect(() => engine?.setLoop(loop), [engine, loop]);
+  const barAt = (pq: number) => perf.measures.find((pm) => pq >= pm.startQ - 1e-6 && pq < pm.startQ + pm.durQ - 1e-6) ?? perf.measures[perf.measures.length - 1];
+  const loopLine = () => {
+    const sp = spans[current.idx];
+    const first = barAt(Math.max(0, sp.startQ - 0.5));
+    const last = barAt(Math.max(sp.startQ, sp.endQ - 1e-3));
+    const range = { startQ: first.startQ, endQ: last.startQ + last.durQ };
+    setLoop(range);
+    if (engine && engine.state !== "playing") engine.seek(range.startQ);
+  };
+  const loopBars = loop
+    ? (() => {
+        const a = perf.locate(loop.startQ).number;
+        const b = perf.locate(loop.endQ - 1e-3).number;
+        return a === b ? `bar ${a}` : `bars ${a}–${b}`;
+      })()
+    : "";
   const onTap = (pos: { m: number; q: number }) => {
     const occs = perf.occurrences(pos.m);
-    if (occs.length) goTo(occs[0].startQ + pos.q);
+    if (!occs.length) return;
+    const pm = occs[0];
+    if (loop && (pm.startQ < loop.startQ - 1e-6 || pm.startQ >= loop.endQ - 1e-6)) {
+      setLoop({ startQ: Math.min(loop.startQ, pm.startQ), endQ: Math.max(loop.endQ, pm.startQ + pm.durQ) });
+      return;
+    }
+    goTo(pm.startQ + pos.q);
   };
+
+  // the screen stays on while the music plays (a tablet on a music stand must not dim mid-aria)
+  useEffect(() => {
+    if (!playing || !("wakeLock" in navigator)) return;
+    let lock: { release: () => Promise<void> } | null = null;
+    let alive = true;
+    const take = () =>
+      (navigator as unknown as { wakeLock: { request: (t: "screen") => Promise<{ release: () => Promise<void> }> } }).wakeLock
+        .request("screen")
+        .then((l) => {
+          if (alive) lock = l;
+          else void l.release();
+        })
+        .catch(() => undefined);
+    take();
+    // the lock is dropped when the page is hidden; take it again on return
+    const vis = () => document.visibilityState === "visible" && take();
+    document.addEventListener("visibilitychange", vis);
+    return () => {
+      alive = false;
+      document.removeEventListener("visibilitychange", vis);
+      lock?.release().catch(() => undefined);
+    };
+  }, [playing]);
 
   // keyboard: space plays and pauses, arrows move by line
   useEffect(() => {
@@ -1215,7 +1324,7 @@ function PracticeScreen({
 
       {/* the line: a card with one quiet header row (where you are, and how to hear it) above the words */}
       <section
-        className={`now-panel${current.sounding ? " is-now" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && view === "music" ? " minimal" : ""}`}
+        className={`now-panel${current.sounding ? " is-now" : ""}${live && view === "music" ? " is-playing" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && view === "music" ? " minimal" : ""}`}
         data-testid="now-panel"
       >
         <div className="line-card" style={cardTone}>
@@ -1257,28 +1366,39 @@ function PracticeScreen({
                   {Icon.slow}
                 </button>
               </div>
-              <div className="nl-chips" role="group" aria-label="Show under the words">
-                <button type="button" className="nl-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
-                  IPA
-                </button>
+              {/* what to show under the words: set once, so it lives in a small menu, not on every line */}
+              <span className="card-menu-wrap">
                 <button
                   type="button"
-                  className="nl-chip"
-                  aria-pressed={showTr}
-                  onClick={() => setShowTr(!showTr)}
-                  title={showTr ? "Hide the English" : "Show the English"}
-                  aria-label="English translation"
+                  className="card-menu-btn show-btn"
+                  aria-haspopup="menu"
+                  aria-expanded={cardMenu === "show"}
+                  onClick={() => setCardMenu(cardMenu === "show" ? null : "show")}
+                  aria-label="Show under the words: IPA, English, pronunciation tips"
+                  title="Show"
                 >
-                  EN
+                  <span>Show</span>
+                  {Icon.down}
                 </button>
-              </div>
-              {view === "music" && (
-                <button type="button" className="nl-chip nl-collapse" onClick={() => setMinimal(true)} aria-label="Minimal: just the words on a thin line" title="Minimal">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 9.5h5.5V4M20 9.5h-5.5V4M4 14.5h5.5V20M20 14.5h-5.5V20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-              )}
+                {cardMenu === "show" && (
+                  <span className="card-menu card-menu--end" role="menu" aria-label="Show under the words">
+                    <button type="button" role="menuitemcheckbox" aria-checked={showIpa} onClick={() => setShowIpa(!showIpa)}>
+                      <span className="cm-check" aria-hidden="true">{showIpa ? Icon.check : null}</span>
+                      <span>IPA</span>
+                    </button>
+                    <button type="button" role="menuitemcheckbox" aria-checked={showTr} onClick={() => setShowTr(!showTr)}>
+                      <span className="cm-check" aria-hidden="true">{showTr ? Icon.check : null}</span>
+                      <span>English</span>
+                    </button>
+                    {hasTips && (
+                      <button type="button" role="menuitemcheckbox" aria-checked={showTips} onClick={() => setShowTips(!showTips)}>
+                        <span className="cm-check" aria-hidden="true">{showTips ? Icon.check : null}</span>
+                        <span>Pronunciation tips</span>
+                      </button>
+                    )}
+                  </span>
+                )}
+              </span>
             </div>
           </div>
           <div className="now-body">
@@ -1313,13 +1433,6 @@ function PracticeScreen({
               {Icon.right}
             </button>
           </div>
-          {minimal && view === "music" && (
-            <button type="button" className="line-expand" onClick={() => setMinimal(false)} aria-label="Show the full line card" title="Full line card">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M9.5 4H4v5.5M14.5 4H20v5.5M9.5 20H4v-5.5M14.5 20H20v-5.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          )}
         </div>
       </section>
 
@@ -1339,7 +1452,7 @@ function PracticeScreen({
           cursor={cursorRef}
           marker={markerRef}
           scrollTarget={playing ? "cursor" : "none"}
-          loop={null}
+          loop={loop}
           selection={null}
           cuts={[]}
           flags={flags}
@@ -1581,6 +1694,13 @@ function PracticeScreen({
       <div className="p-timeline gutter">
         <div className="tl-label" data-testid="location">
           <b>{status ?? `Bar ${loc.number} · ${beat}`}</b>
+          {loop && !status && (
+            <button type="button" className="tl-loop-chip" onClick={() => setLoop(null)} aria-label={`Looping ${loopBars}. Stop looping`}>
+              {Icon.loop}
+              {loopBars.replace("bars ", "").replace("bar ", "")}
+              <span aria-hidden="true">×</span>
+            </button>
+          )}
           <span>{tempoWords[loc.m] || " "}</span>
         </div>
         <div
@@ -1610,6 +1730,7 @@ function PracticeScreen({
           }}
         >
           <span className="tl-line" />
+          {loop && <span className="tl-loop" style={{ left: `${frac(loop.startQ) * 100}%`, width: `${(frac(loop.endQ) - frac(loop.startQ)) * 100}%` }} />}
           <span className="tl-line done" style={{ width: `${pct}%` }} />
           {/* each phrase you sing as a soft rounded bar, the rests between them as the hairline; only phrases
               whose gap would be a sliver at this width are joined, so it never reads as dashes */}
@@ -1639,7 +1760,7 @@ function PracticeScreen({
         </div>
       </div>
 
-      <footer className="p-bar gutter ens">
+      <footer className={`p-bar gutter ens${barOpen ? "" : " folded"}`}>
         <div className="bar-parts many" role="group" aria-label="Parts">
           <button
             type="button"
@@ -1689,18 +1810,16 @@ function PracticeScreen({
             const shownP = showOf(pianoPart);
             return (
               <div className="piano-group" role="group" aria-label="Piano">
-                <span className="pg-icon" aria-hidden="true">
-                  {Icon.piano}
-                </span>
+                {/* the piano itself is the sound switch: lit when it plays, struck through when muted */}
                 <button
                   type="button"
-                  className="pg-btn"
+                  className="pg-btn pg-piano"
                   aria-pressed={hearPiano}
                   onClick={() => setHearPiano(!hearPiano)}
                   aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}
                   title={hearPiano ? "Piano: plays" : "Piano: muted"}
                 >
-                  {hearPiano ? Icon.speaker : Icon.muted}
+                  {Icon.piano}
                 </button>
                 {view === "music" && (
                   <>
@@ -1969,6 +2088,16 @@ function PracticeScreen({
               {Icon.play}
             </button>
           )}
+          <button
+            type="button"
+            className="cp-icon-btn bar-loop"
+            aria-pressed={!!loop}
+            onClick={() => (loop ? setLoop(null) : loopLine())}
+            aria-label={loop ? `Looping ${loopBars}. Stop looping` : "Loop this line"}
+            title={loop ? `Looping ${loopBars}: tap bars in the score to add them` : "Loop this line"}
+          >
+            {Icon.loop}
+          </button>
         </div>
 
         <div className="bar-right">
@@ -2002,6 +2131,9 @@ function PracticeScreen({
             <span>Count-in</span>
           </button>
         </div>
+        <button type="button" className="cp-icon-btn bar-more" onClick={() => setBarOpen(true)} aria-label="Show all the controls" title="More">
+          {Icon.chevUp}
+        </button>
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
       </footer>
 
