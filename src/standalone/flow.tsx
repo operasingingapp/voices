@@ -721,7 +721,6 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
             <Chevron />
           </button>
           <h1>{ch.name}</h1>
-          <p className="rp-voice">{ch.voice}</p>
           <p className="rp-desc">{ch.desc}</p>
           <div className="rp-actions">
             <button type="button" className="cp-btn mine-toggle" aria-pressed={mine} onClick={() => ctx.toggleRole(r)}>

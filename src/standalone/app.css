@@ -8595,16 +8595,8 @@ p.obp-meta {
   content: "·";
   margin-right: 8px;
 }
-.rp-voice {
-  margin: 2px 0 0;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--on-pastel-muted);
-}
 .rp-id .rp-desc {
-  margin: 4px 0 0;
+  margin: 6px 0 0;
 }
 
 /* the line under a piece's title: the role and the opera open their pages */
