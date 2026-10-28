@@ -1139,6 +1139,10 @@ function PracticeScreen({
   const status = countLeft ? `Count-in ${countLeft}` : pb.status === "loading" ? "Loading the piano…" : null;
   const qNow = Math.max(0, q);
   const tf = engine?.tempo ?? 1;
+  // a rest while playing: how many beats until your next line (the panel counts you in on the last three)
+  const restBeats = playing && !current.sounding && shown.startQ > q ? (perf.qToSec(shown.startQ) - perf.qToSec(q)) / tf / (60 / Math.max(20, beatBpm)) : 0;
+  const resting = restBeats > 0;
+  const restLit = Math.min(3, Math.max(0, 4 - Math.ceil(restBeats)));
   const total = perf.totalSec;
   const frac = (pq: number) => Math.min(1, Math.max(0, perf.qToSec(Math.max(0, pq)) / total));
   const pct = frac(qNow) * 100;
@@ -1281,7 +1285,21 @@ function PracticeScreen({
             <button type="button" className="now-step" onClick={() => stepLine(-1)} aria-label="Back to the start of this line, or the line before">
               {Icon.left}
             </button>
-            <div className="now-inner" aria-live="polite">
+            <div className={`now-inner${resting ? " resting" : ""}`} aria-live="polite">
+              {/* while the music plays on between your lines: three dots that light one by one on the last
+                  three beats before you come in, and the next line, small, to get ready for */}
+              {resting && (
+                <div className="now-rest" aria-hidden="true">
+                  <span className="rest-dots">
+                    {[0, 1, 2].map((i) => (
+                      <i key={i} className={i < restLit ? "on" : ""} />
+                    ))}
+                  </span>
+                  <span className="rest-next" lang={LANG}>
+                    {shown.ph.words.map((w) => w.text).join(" ")}
+                  </span>
+                </div>
+              )}
               <p className={`now-it${nowSyl ? " in-progress" : ""}`} lang={LANG}>
                 {lineWords(shown.ph, nowSyl, !playing ? litTip : null)}
               </p>
@@ -1959,6 +1977,8 @@ function PracticeScreen({
             <span className="cp-tempo__beat" aria-label={`About ${beatBpm} beats a minute`}>
               <span className="cp-beat">{beatSymbol}</span> = {beatBpm}
             </span>
+            {/* − 100% + as one control */}
+            <div className="cp-speed" role="group" aria-label="Speed">
             <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
               {Icon.minus}
             </button>
@@ -1968,6 +1988,7 @@ function PracticeScreen({
             <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={() => engine?.setTempoFactor(Math.min(1.5, +((engine?.tempo ?? 1) + 0.05).toFixed(2)))}>
               {Icon.plus}
             </button>
+            </div>
           </div>
           <button
             type="button"
