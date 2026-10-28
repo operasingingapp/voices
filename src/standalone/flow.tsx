@@ -218,6 +218,16 @@ export function progressOf(ctx: Ctx, opera: Opera, ch: Character) {
   return { done, total, pct: total ? done / total : 0, set };
 }
 /** The aria to go back to for a role: the one last practised, otherwise the first that is ready. */
+/** " · bar 23": where you stopped in that piece (saved by the practice screen), or nothing */
+function resumeBar(opera: string, character: string, editionId?: string): string {
+  if (!editionId) return "";
+  try {
+    const v = JSON.parse(localStorage.getItem(`cp:at:${opera}:${character}:${editionId}`) ?? "null") as { bar?: string } | null;
+    return v?.bar && v.bar !== "1" ? ` · bar ${v.bar}` : "";
+  } catch {
+    return "";
+  }
+}
 function continueTarget(ctx: Ctx, opera: Opera, ch: Character): { place: PiecePlace; resumed: boolean } | null {
   if (ctx.last && ctx.last.opera === opera.id && ctx.last.character === ch.id && ch.pieces[ctx.last.piece]?.editionId) return { place: ctx.last, resumed: true };
   const i = ch.pieces.findIndex((p) => p.editionId);
@@ -710,58 +720,61 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           { label: ch.name },
         ]}
       />
-      <section className={`rp-head${ART[opera.id] ? " has-art" : ""}`} data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
-        {ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />}
-        <ProgressRing value={pr.pct} size={152} stroke={7}>
-          <Face opera={opera} ch={ch} />
-        </ProgressRing>
-        <div className="rp-id">
-          {/* who first; then one quiet line: the voice, and the opera (tap it to go there); then the line about them */}
-          <h1>{ch.name}</h1>
-          <p className="who-meta">
-            <span>{ch.voice}</span>
-            <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
-              <i lang={opera.lang}>{opera.title}</i>
-              <Chevron />
-            </button>
-          </p>
-          <p className="rp-desc">{ch.desc}</p>
+      {/* the role's card: the opera's picture with the character's portrait over its edge, the name and one quiet
+          line, a bar of the role's pieces (learned, the one in hand, the rest), then continue and the story */}
+      <section className="rh2" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
+        <div className="rh2-band" role={ART[opera.id] ? "img" : undefined} aria-label={ART[opera.id]?.alt} style={ART[opera.id] ? { backgroundImage: `url(${ART[opera.id].cover})` } : undefined} />
+        <div className="rh2-id">
+          <span className="rh2-face">
+            <Face opera={opera} ch={ch} />
+          </span>
+          <div className="rh2-name">
+            <h1>{ch.name}</h1>
+            <p className="who-meta">
+              <span>{ch.voice}</span>
+              <button type="button" className="who-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
+                <i lang={opera.lang}>{opera.title}</i>
+              </button>
+            </p>
+          </div>
         </div>
         {pr.total > 0 && (
-          <div className="rp-progress" aria-label={`${pr.done} of ${pr.total} learned`}>
-            <p>
-              <b>{Math.round(pr.pct * 100)}%</b> learned
-            </p>
-            <div className="rp-bar" aria-hidden="true">
-              {ch.pieces.map((p) => (
-                <i key={pieceKey(p)} className={pr.set.has(pieceKey(p)) ? "on" : ""} />
-              ))}
+          <div className="rh2-prog">
+            <div className="rh2-segs" aria-hidden="true">
+              {ch.pieces.map((p, i) => {
+                const k = pieceKey(p);
+                const done = pr.set.has(k);
+                const now = !done && go?.resumed && go.place.piece === i;
+                return <i key={k} className={done ? "done" : now ? "now" : ""} />;
+              })}
             </div>
-            <small>{pr.done === pr.total ? "The whole role is learned." : `${pr.done} of ${pr.total} pieces`}</small>
+            <p>
+              {pr.done === pr.total ? "The whole role is learned" : `${pr.done} of ${pr.total} learned`}
+            </p>
           </div>
         )}
-        <div className="rp-actions">
-          {/* the main thing to do here: practise (the next piece with music, or the one you were on) */}
+        <div className="rh2-actions">
           {go && (
-            <button type="button" className="cp-btn cp-btn--ink rp-go" onClick={() => ctx.go(go.place)}>
-              <Play />
-              <span>
-                {go.resumed ? "Continue" : "Practise"} <i lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</i>
+            <button type="button" className="rh2-go" onClick={() => ctx.go(go.place)}>
+              <span className="rh2-play" aria-hidden="true">
+                <Play />
+              </span>
+              <span className="rh2-go-text">
+                <small>{go.resumed ? `Continue${resumeBar(opera.id, ch.id, ch.pieces[go.place.piece]?.editionId)}` : "Start"}</small>
+                <b lang={opera.lang}>{ch.pieces[go.place.piece]?.title}</b>
               </span>
             </button>
           )}
-          <button type="button" className="cp-btn mine-toggle" aria-pressed={mine} onClick={() => ctx.toggleRole(r)}>
-            {mine ? <Check /> : <Plus />}
-            {mine ? "In my roles" : "Add to my roles"}
-          </button>
+          {!mine && (
+            <button type="button" className="rh2-btn" onClick={() => ctx.toggleRole(r)}>
+              <Plus />
+              <span>Add to my roles</span>
+            </button>
+          )}
           {SYNOPSES[opera.id] && (
-            <button type="button" className="cp-btn rp-syn-btn" onClick={() => setStory(true)}>
+            <button type="button" className="rh2-btn" onClick={() => setStory(true)}>
               <BookIcon />
-              {/* on a phone just "Story": the full label would not fit beside "Add to my roles" */}
-              <span className="rp-syn-long">{storyOf(ch.name)}</span>
-              <span className="rp-syn-short" aria-hidden="true">
-                Story
-              </span>
+              <span>{FEMALE.test(ch.voice) ? "Her story" : "His story"}</span>
             </button>
           )}
         </div>

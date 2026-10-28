@@ -1050,6 +1050,39 @@ function PracticeScreen({
     if (r && (Math.abs(r.startQ - loop.startQ) > 1e-6 || Math.abs(r.endQ - loop.endQ) > 1e-6)) setLoop(r);
   };
 
+  // where you stopped, per piece and role: shown on the role card ("Continue · bar 23") and where the piece opens next time
+  const atKey = `cp:at:${portraitKey}:${edition.editionId}`;
+  const restored = useRef(false);
+  const lastQ = useRef(0);
+  lastQ.current = q;
+  useEffect(() => {
+    if (!engine || pb.status !== "ready" || restored.current) return;
+    restored.current = true;
+    try {
+      const v = JSON.parse(localStorage.getItem(atKey) ?? "null") as { q?: number } | null;
+      if (v?.q && v.q > 0 && v.q < perf.totalQ - 1 && engine.state !== "playing") engine.seek(v.q);
+    } catch {
+      /* storage unavailable */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine, pb.status]);
+  useEffect(() => {
+    if (!engine || playing) return;
+    const save = () => {
+      if (!restored.current) return;
+      try {
+        // the last position this screen showed (on leaving, the engine may already be stopped)
+        const q = lastQ.current;
+        localStorage.setItem(atKey, JSON.stringify({ q, bar: perf.locate(q).number }));
+      } catch {
+        /* storage unavailable */
+      }
+    };
+    save();
+    return save;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine, playing, Math.round(q)]);
+
   // the screen stays on while the music plays (a tablet on a music stand must not dim mid-aria)
   useEffect(() => {
     if (!playing || !("wakeLock" in navigator)) return;

@@ -10973,3 +10973,119 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .ov-lh:hover,
 .ov-lh[data-drag] { filter: brightness(1.15); }
 .ov-lh:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--loop-mark) 35%, transparent); }
+
+/* =====================================================================
+   The role card: the opera's picture, the portrait over its lower edge,
+   the name and one quiet line; the role's pieces as a segmented bar;
+   continue (where you stopped) and the story
+   ===================================================================== */
+.rh2 {
+  display: grid;
+  gap: 18px;
+  padding: 20px 20px 22px;
+  border-radius: 36px;
+  background: var(--tone-soft, var(--fog));
+  color: var(--ink);
+}
+.rh2-band {
+  height: clamp(120px, 16vw, 168px);
+  border-radius: 24px;
+  background: var(--tone-strong, var(--fog-strong)) center 32% / cover no-repeat;
+}
+.rh2-id {
+  display: flex;
+  align-items: flex-end;
+  gap: 22px;
+  margin-top: calc(-1 * clamp(64px, 8vw, 84px));
+  padding-left: 12px;
+}
+.rh2-face {
+  flex: none;
+  width: clamp(120px, 15vw, 156px);
+  height: clamp(120px, 15vw, 156px);
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--tone-strong, var(--canvas));
+  box-shadow: 0 0 0 6px var(--tone-soft, var(--fog));
+}
+.rh2-face img,
+.rh2-face svg { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rh2-name { min-width: 0; padding-bottom: 8px; }
+.rh2-name h1 {
+  margin: 0;
+  font: 600 clamp(34px, 4.4vw, 52px)/1.05 var(--font-sans);
+  letter-spacing: -0.015em;
+}
+.rh2-name .who-meta { margin-top: 6px; font-size: 16px; color: var(--ink); opacity: 0.8; }
+.rh2-name .who-opera { color: var(--ink); text-decoration-color: currentColor; }
+.rh2-prog { display: grid; gap: 10px; padding: 0 4px; }
+.rh2-segs { display: flex; gap: 5px; }
+.rh2-segs i {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--ink) 12%, transparent);
+}
+.rh2-segs i.done { background: var(--now-mark); }
+.rh2-segs i.now { background: color-mix(in srgb, var(--now-mark) 45%, transparent); }
+.rh2-prog p { margin: 0; font: 400 15px/1.3 var(--font-sans); color: var(--ink); opacity: 0.75; }
+.rh2-actions { display: flex; gap: 12px; align-items: stretch; }
+.rh2-go {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 76px;
+  padding: 10px 24px 10px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--now);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.rh2-play {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--canvas);
+}
+.rh2-play svg { width: 20px; height: 20px; margin-left: 2px; }
+.rh2-go-text { display: grid; gap: 2px; min-width: 0; }
+.rh2-go-text small { font: 400 14px/1.2 var(--font-sans); opacity: 0.75; }
+.rh2-go-text b { font: 600 20px/1.2 var(--font-sans); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rh2-btn {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 76px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--canvas);
+  color: var(--ink);
+  font: 500 17px/1 var(--font-sans);
+  cursor: pointer;
+}
+.rh2-btn svg { width: 20px; height: 20px; }
+@media (max-width: 640px) {
+  .rh2 { padding: 14px 14px 16px; gap: 14px; border-radius: 28px; }
+  .rh2-band { height: 112px; border-radius: 18px; }
+  .rh2-id { gap: 14px; margin-top: -52px; padding-left: 6px; }
+  .rh2-face { width: 96px; height: 96px; box-shadow: 0 0 0 5px var(--tone-soft, var(--fog)); }
+  .rh2-name { padding-bottom: 2px; }
+  .rh2-name h1 { font-size: 30px; }
+  .rh2-name .who-meta { font-size: 14px; }
+  .rh2-actions { flex-wrap: wrap; }
+  .rh2-go { flex: 1 1 100%; min-height: 68px; }
+  .rh2-play { width: 46px; height: 46px; }
+  .rh2-go-text b { font-size: 18px; }
+  .rh2-btn { flex: 1 1 0; min-height: 52px; padding: 0 16px; font-size: 15px; }
+}
+.rh2-go:hover { background: var(--now-strong); }
