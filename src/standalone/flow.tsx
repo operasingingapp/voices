@@ -678,17 +678,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   return (
     <main className="screen-body gutter page">
       <section className={`rp-head${ART[opera.id] ? " has-art" : ""}`} data-tone={voiceTone(ch.voice)}>
-        {pr.total > 0 && pr.done === pr.total && BRAVO[`${opera.id}:${ch.id}`] ? (
-          <div className="art-band bravo-band">
-            <video src={BRAVO[`${opera.id}:${ch.id}`].video} poster={BRAVO[`${opera.id}:${ch.id}`].poster} autoPlay loop muted playsInline aria-label={`${ch.name} applauding`} />
-            <span className="bravo-chip">
-              <Check />
-              Role learned
-            </span>
-          </div>
-        ) : (
-          ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />
-        )}
+        {ART[opera.id] && <div className="art-band" role="img" aria-label={ART[opera.id].alt} style={{ backgroundImage: `url(${ART[opera.id].cover})` }} />}
         <ProgressRing value={pr.pct} size={152} stroke={7}>
           <Face opera={opera} ch={ch} />
         </ProgressRing>
