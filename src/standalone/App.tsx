@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   ExploreOperas,
-  ExploreVoices,
+  ExploreVoices, ExplorePieces,
   findCharacter,
   findOpera,
   PiecePage,
@@ -330,7 +330,7 @@ export function App() {
     const opera = findOpera(place.opera);
     page = <RolePage ctx={ctx} opera={opera} ch={findCharacter(opera, place.character)} />;
   } else if (place.screen === "opera") page = <OperaPage ctx={ctx} opera={findOpera(place.opera)} />;
-  else if (place.screen === "explore") page = place.by === "voice" ? <ExploreVoices ctx={ctx} voice={place.voice} /> : <ExploreOperas ctx={ctx} />;
+  else if (place.screen === "explore") page = place.by === "voice" ? <ExploreVoices ctx={ctx} voice={place.voice} /> : place.by === "piece" ? <ExplorePieces ctx={ctx} /> : <ExploreOperas ctx={ctx} />;
   else page = <ProfilePage ctx={ctx} />;
   return (
     <Shell ctx={ctx}>

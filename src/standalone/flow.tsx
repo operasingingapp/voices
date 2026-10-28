@@ -156,7 +156,7 @@ export type Place =
   | { screen: "onboarding"; step: 1 | 2 | 3; role?: RoleRef; by?: "voice" | "opera"; opera?: string }
   | { screen: "role"; opera: string; character: string }
   | { screen: "opera"; opera: string; synopsis?: boolean; as?: string }
-  | { screen: "explore"; by: "opera" | "voice"; voice?: string }
+  | { screen: "explore"; by: "opera" | "voice" | "piece"; voice?: string }
   | { screen: "profile" }
   | PiecePlace;
 
@@ -366,154 +366,82 @@ export function ProgressRing({ value, size, stroke = 4, children }: { value: num
    The shell: the sidebar (what you are learning, then everything else), and the page
    ==================================================================================== */
 
+const HomeIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 10.5L12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+  </svg>
+);
+const SearchIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" />
+    <path d="M15 15l5 5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>
+);
+
+/**
+ * The rail: Home and Search, then your roles as faces (the one you are on lit), and a place to add one.
+ * The same on every screen; on a phone it slides in from the menu button.
+ */
 function Sidebar({ ctx }: { ctx: Ctx }) {
   const { place, go } = ctx;
-  const cur = resolve(ctx.current);
   const all = ctx.roles.map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
-  const on = (test: boolean) => (test ? "page" : undefined);
+  const cur = resolve(ctx.current);
+  const onRole = (o: string, c: string) => (place.screen === "role" || place.screen === "piece") && place.opera === o && place.character === c;
+  const home = ctx.home();
+  // with a role, Home is that role's page, and the role's face is what lights; without one, Home is the search
+  const atHome = !cur && place.screen === "explore" && home.screen === "explore";
   return (
-    <aside className="sidebar" aria-label="Your roles and the library">
-      <button type="button" className="sb-mark" onClick={() => go(ctx.home())}>
-        Counterpart
-      </button>
-
-      {/* my roles: one face each to switch between them, then the chosen role's card */}
-      {cur && (
-        <div className="sb-roles">
-          <div className="sb-roles-head">
-            <p className="sb-label" id="sb-roles-h">
-              My roles
-            </p>
-            <button type="button" className="sb-add" aria-label="Add a role" title="Add a role" onClick={() => go({ screen: "explore", by: "opera" })}>
-              <Plus />
-            </button>
-          </div>
-          {all.length > 1 && (
-            <div className="sb-faces" role="radiogroup" aria-labelledby="sb-roles-h">
-              {all.map(({ opera, ch }) => {
-                const r = { opera: opera.id, character: ch.id };
-                const picked = same(r, ctx.current);
-                return (
-                  <button
-                    key={`${opera.id}:${ch.id}`}
-                    type="button"
-                    role="radio"
-                    aria-checked={picked}
-                    className="sb-face"
-                    data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}
-                    title={`${ch.name} · ${opera.title}`}
-                    aria-label={`${ch.name}, ${opera.title}`}
-                    onClick={() => ctx.chooseRole(r)}
-                  >
-                    <span className="sb-face-pic">
-                      <ProgressRing value={progressOf(ctx, opera, ch).pct} size={46} stroke={3}>
-                        <Face opera={opera} ch={ch} />
-                      </ProgressRing>
-                    </span>
-                    <span className="sb-face-name">{ch.name.replace(/^The /, "")}</span>
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      )}
-
-      {cur ? (
-        (() => {
-          const { opera, ch } = cur;
-          const pr = progressOf(ctx, opera, ch);
-          const target = continueTarget(ctx, opera, ch);
-          // the role's other pieces, in the order of the opera, under the one to continue (those without music yet quieter)
-          const more = ch.pieces.map((p, i) => ({ p, i })).filter(({ i }) => i !== target?.place.piece);
-          return (
-            <section className="sb-now" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)} aria-label="What you are learning" key={`${opera.id}:${ch.id}`}>
-              <button
-                type="button"
-                className="sb-role"
-                aria-current={on(place.screen === "role" && place.opera === opera.id && place.character === ch.id)}
-                onClick={() => go({ screen: "role", opera: opera.id, character: ch.id })}
-              >
-                <ProgressRing value={pr.pct} size={60} stroke={4}>
-                  <Face opera={opera} ch={ch} />
-                </ProgressRing>
-                <span className="sb-role-text">
-                  <b>{ch.name}</b>
-                  <small>
-                    {pr.total > 0 && pr.done === pr.total ? "Role learned" : `${pr.done} of ${pr.total} learned`}
-                  </small>
-                </span>
-              </button>
-              {target && (
-                <button type="button" className="sb-continue" onClick={() => go(target.place)}>
-                  <span className="sb-play">
-                    <Play />
-                  </span>
-                  <span>
-                    <small>{target.resumed ? "Continue" : "Start"}</small>
-                    <b lang={opera.lang}>{ch.pieces[target.place.piece].title}</b>
-                  </span>
-                </button>
-              )}
-              {more.length > 0 && (
-                <div className="sb-pieces">
-                  {more.map(({ p, i }) => (
-                    <button
-                      key={pieceKey(p)}
-                      type="button"
-                      title={p.editionId ? p.title : `${p.title}: music not here yet`}
-                      className={`sb-piece${p.editionId ? "" : " soon"}`}
-                      aria-current={on(place.screen === "piece" && place.opera === opera.id && place.character === ch.id && place.piece === i)}
-                      onClick={() => go(p.editionId ? { screen: "piece", opera: opera.id, character: ch.id, piece: i } : { screen: "role", opera: opera.id, character: ch.id })}
-                      aria-label={p.editionId ? undefined : `${p.title}: music not here yet`}
-                    >
-                      <span className="sb-piece-play" aria-hidden="true">
-                        {p.editionId ? <Play /> : null}
-                      </span>
-                      <span lang={opera.lang}>{p.title}</span>
-                      {pr.set.has(pieceKey(p)) && (
-                        <span className="sb-piece-done" aria-label="learned">
-                          <Check />
-                        </span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )}
-              <button type="button" className="sb-opera" aria-current={on(place.screen === "opera" && place.opera === opera.id)} onClick={() => go({ screen: "opera", opera: opera.id })}>
-                {ART[opera.id] ? <img className="sb-art" src={ART[opera.id].square} alt="" /> : <Chevron />}
-                <span lang={opera.lang}>{opera.title}</span>
-              </button>
-            </section>
-          );
-        })()
-      ) : (
-        <section className="sb-now sb-none">
-          <b>No role yet</b>
-          <span>Find the character you sing.</span>
-          <button type="button" className="cp-btn cp-btn--ink" onClick={() => go({ screen: "explore", by: "opera" })}>
-            Find your role
-          </button>
-        </section>
-      )}
-
-      <nav className="sb-group" aria-label="Explore">
-        <p className="sb-label">Explore</p>
-        <button type="button" className="sb-link" aria-current={on(place.screen === "explore" && place.by === "opera")} onClick={() => go({ screen: "explore", by: "opera" })}>
-          <LibraryIcon />
-          <span>By opera</span>
+    <aside className="rail" aria-label="Home, search and your roles">
+      <nav className="rail-top" aria-label="Main">
+        <button type="button" className="rail-link" aria-current={atHome ? "page" : undefined} onClick={() => go(home)}>
+          <HomeIcon />
+          <span>Home</span>
         </button>
-        <button type="button" className="sb-link" aria-current={on(place.screen === "explore" && place.by === "voice")} onClick={() => go({ screen: "explore", by: "voice" })}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" strokeWidth="1.8" />
-            <path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
-          <span>By role</span>
+        <button type="button" className="rail-link" aria-current={(place.screen === "explore" && !atHome) || place.screen === "opera" ? "page" : undefined} onClick={() => go({ screen: "explore", by: "opera" })}>
+          <SearchIcon />
+          <span>Search</span>
         </button>
       </nav>
-
-      <span className="sb-spacer" />
-      <button type="button" className="sb-link sb-settings" aria-current={on(place.screen === "profile")} onClick={() => go({ screen: "profile" })}>
+      <span className="rail-rule" aria-hidden="true" />
+      <p className="rail-label" id="rail-roles">
+        Roles
+      </p>
+      <div className="rail-roles" role="list" aria-labelledby="rail-roles">
+        {all.map(({ opera, ch }) => {
+          const r = { opera: opera.id, character: ch.id };
+          const lit = onRole(opera.id, ch.id);
+          return (
+            <button
+              key={`${opera.id}:${ch.id}`}
+              type="button"
+              role="listitem"
+              className="rail-role"
+              aria-current={lit ? "page" : undefined}
+              data-tone={voiceTone(ch.voice)}
+              style={toneStyle(opera.id, ch.id)}
+              title={`${ch.name} · ${opera.title}`}
+              aria-label={`${ch.name}, ${opera.title}`}
+              onClick={() => {
+                ctx.chooseRole(r);
+                go({ screen: "role", opera: opera.id, character: ch.id });
+              }}
+            >
+              <ProgressRing value={progressOf(ctx, opera, ch).pct} size={56} stroke={3}>
+                <Face opera={opera} ch={ch} />
+              </ProgressRing>
+              <span className="rail-role-name">{ch.name.replace(/^The /, "")}</span>
+            </button>
+          );
+        })}
+        <button type="button" className="rail-add" aria-label="Add a role" title="Add a role" onClick={() => go({ screen: "explore", by: "voice" })}>
+          <span className="rail-add-ring">
+            <Plus />
+          </span>
+          {all.length === 0 && <span className="rail-role-name">Add a role</span>}
+        </button>
+      </div>
+      <span className="rail-spacer" />
+      <button type="button" className="rail-link rail-settings" aria-current={place.screen === "profile" ? "page" : undefined} onClick={() => go({ screen: "profile" })}>
         <GearIcon />
         <span>Settings</span>
       </button>
@@ -716,6 +644,11 @@ function SynopsisSheet({ opera, ch, onClose }: { opera: Opera; ch?: Character; o
         <div className="syn-body">
           <Story opera={opera.id} character={ch?.id} name={ch?.name} idBase="sheet-story" />
         </div>
+        {/* phones: a way out always under the thumb, however far down the story you have read */}
+        <button type="button" className="syn-float-back" onClick={onClose}>
+          <BackIcon />
+          <span>{ch ? `Back to ${ch.name}` : "Back"}</span>
+        </button>
       </div>
     </div>
   );
@@ -1128,13 +1061,14 @@ function ReadyCard({ ctx, opera, ch, index }: { ctx: Ctx; opera: Opera; ch: Char
 }
 
 /** Explore's two ways in, on both pages: by opera, or by role (with the voice-type filter) */
-function ExploreSwitch({ ctx, by }: { ctx: Ctx; by: "opera" | "voice" }) {
+function ExploreSwitch({ ctx, by }: { ctx: Ctx; by: "opera" | "voice" | "piece" }) {
   return (
-    <div className="ob-mode explore-mode" role="tablist" aria-label="Explore by">
+    <div className="ob-mode explore-mode" role="tablist" aria-label="Browse by">
       {(
         [
           ["opera", "Operas"],
           ["voice", "Roles"],
+          ["piece", "Arias"],
         ] as const
       ).map(([b, label]) => (
         <button key={b} type="button" role="tab" aria-selected={by === b} onClick={() => by !== b && ctx.go({ screen: "explore", by: b })}>
@@ -1145,14 +1079,192 @@ function ExploreSwitch({ ctx, by }: { ctx: Ctx; by: "opera" | "voice" }) {
   );
 }
 
-export function ExploreOperas({ ctx }: { ctx: Ctx }) {
+/** Every piece of music once (an ensemble once, with all who sing it), in the order of the operas. */
+interface PieceRow {
+  opera: Opera;
+  title: string;
+  kind: string;
+  ready: boolean;
+  singers: { ch: Character; index: number }[];
+}
+function allPieces(): PieceRow[] {
+  const rows: PieceRow[] = [];
+  for (const opera of OPERAS) {
+    const byKey = new Map<string, PieceRow>();
+    for (const ch of opera.chars)
+      ch.pieces.forEach((p, index) => {
+        const k = p.editionId ?? p.id ?? p.title;
+        let row = byKey.get(k);
+        if (!row) {
+          row = { opera, title: p.title, kind: p.kind, ready: !!p.editionId, singers: [] };
+          byKey.set(k, row);
+          rows.push(row);
+        }
+        row.singers.push({ ch, index });
+      });
+  }
+  return rows;
+}
+const fold = (t: string) =>
+  t
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[’'.,!?…]/g, "")
+    .toLowerCase();
+
+function PieceItem({ ctx, row }: { ctx: Ctx; row: PieceRow }) {
+  const first = row.singers.find(({ ch }) => ctx.roles.some((r) => same(r, { opera: row.opera.id, character: ch.id }))) ?? row.singers[0];
+  return (
+    <button
+      type="button"
+      className={`pc-row${row.ready ? " ready" : " soon"}`}
+      onClick={() => ctx.go(row.ready ? { screen: "piece", opera: row.opera.id, character: first.ch.id, piece: first.index } : { screen: "role", opera: row.opera.id, character: first.ch.id })}
+    >
+      <span className="pc-faces" aria-hidden="true">
+        {row.singers.slice(0, 3).map(({ ch }) => (
+          <span key={ch.id} className="pc-face" style={toneStyle(row.opera.id, ch.id)}>
+            <Face opera={row.opera} ch={ch} />
+          </span>
+        ))}
+      </span>
+      <span className="pc-text">
+        <b lang={row.opera.lang}>{row.title}</b>
+        <span>
+          {row.kind} · {row.singers.map(({ ch }) => ch.name).join(", ")} · <i lang={row.opera.lang}>{row.opera.title}</i>
+        </span>
+      </span>
+      {row.ready ? (
+        <span className="pc-play" aria-label="Music ready">
+          <Play />
+        </span>
+      ) : (
+        <span className="pc-soon">Soon</span>
+      )}
+    </button>
+  );
+}
+
+/** Search: one box over everything (operas, roles, arias); below it, browse by opera, by role or every aria. */
+let lastQuery = "";
+function SearchFrame({ ctx, by, children }: { ctx: Ctx; by: "opera" | "voice" | "piece"; children: ReactNode }) {
+  const [q, setQ] = useState(lastQuery);
+  useEffect(() => {
+    lastQuery = q;
+  }, [q]);
+  const t = fold(q.trim());
+  const hit = (...xs: string[]) => xs.some((x) => fold(x).includes(t));
+  const operas = t ? OPERAS.filter((o) => hit(o.title, o.composer, o.composerFull, String(o.year))) : [];
+  const roles = t ? OPERAS.flatMap((o) => o.chars.filter((c) => hit(c.name, c.voice)).map((ch) => ({ opera: o, ch }))) : [];
+  const pieces = t ? allPieces().filter((r) => hit(r.title, r.kind)) : [];
+  const none = t && !operas.length && !roles.length && !pieces.length;
   return (
     <main className="screen-body gutter page">
-      <section className="hero compact">
-        <h1>Operas</h1>
-        <p className="lede">Choose an opera to see its story, its characters and its music. In the order of their first performance.</p>
-        <ExploreSwitch ctx={ctx} by="opera" />
+      <section className="hero compact search-hero">
+        <h1>Search</h1>
+        <label className="search-box">
+          <SearchIcon />
+          <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="An opera, a role or an aria" aria-label="Search operas, roles and arias" autoComplete="off" spellCheck={false} />
+          {q && (
+            <button type="button" className="search-clear" aria-label="Clear the search" onClick={() => setQ("")}>
+              <CloseIcon />
+            </button>
+          )}
+        </label>
+        {!t && <ExploreSwitch ctx={ctx} by={by} />}
       </section>
+      {t ? (
+        <div className="search-results">
+          {none && (
+            <div className="empty-field">
+              <p>Nothing called “{q.trim()}” yet. Try a composer, a character or the first words of an aria.</p>
+            </div>
+          )}
+          {pieces.length > 0 && (
+            <section className="block" aria-label="Arias">
+              <p className="cp-eyebrow">Arias and ensembles</p>
+              <div className="pc-list">
+                {pieces.slice(0, 30).map((row) => (
+                  <PieceItem key={`${row.opera.id}:${row.title}`} ctx={ctx} row={row} />
+                ))}
+              </div>
+            </section>
+          )}
+          {roles.length > 0 && (
+            <section className="block" aria-label="Roles">
+              <p className="cp-eyebrow">Roles</p>
+              <div className="vroles">
+                {roles.slice(0, 24).map(({ opera, ch }) => (
+                  <RoleCard key={`${opera.id}:${ch.id}`} ctx={ctx} opera={opera} ch={ch} />
+                ))}
+              </div>
+            </section>
+          )}
+          {operas.length > 0 && (
+            <section className="block" aria-label="Operas">
+              <p className="cp-eyebrow">Operas</p>
+              <div className="pc-list">
+                {operas.map((o) => (
+                  <button key={o.id} type="button" className="pc-row ready" onClick={() => ctx.go({ screen: "opera", opera: o.id })}>
+                    <span className="pc-faces" aria-hidden="true">
+                      <span className="pc-face pc-op">{ART[o.id] ? <img src={ART[o.id].square} alt="" /> : null}</span>
+                    </span>
+                    <span className="pc-text">
+                      <b lang={o.lang}>{o.title}</b>
+                      <span>
+                        {o.composer} · {o.year}
+                      </span>
+                    </span>
+                    <span className="pc-go" aria-hidden="true">
+                      <Chevron />
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+      ) : (
+        children
+      )}
+    </main>
+  );
+}
+
+/** Every aria, duet and ensemble, opera by opera: those with music first within each. */
+export function ExplorePieces({ ctx }: { ctx: Ctx }) {
+  const [readyOnly, setReadyOnly] = useState(false);
+  const rows = allPieces().filter((r) => !readyOnly || r.ready);
+  return (
+    <SearchFrame ctx={ctx} by="piece">
+      <div className="voice-bar">
+        <p className="lede pc-lede">Every aria, duet and ensemble, opera by opera.</p>
+        <button type="button" className="cp-toggle" aria-pressed={readyOnly} onClick={() => setReadyOnly(!readyOnly)}>
+          Ready only
+        </button>
+      </div>
+      {OPERAS.map((o) => {
+        const mine = rows.filter((r) => r.opera === o).sort((a, b) => Number(b.ready) - Number(a.ready));
+        if (!mine.length) return null;
+        return (
+          <section key={o.id} className="block" aria-label={o.title}>
+            <p className="cp-eyebrow" lang={o.lang}>
+              {o.title} · {o.composer}
+            </p>
+            <div className="pc-list">
+              {mine.map((row) => (
+                <PieceItem key={row.title} ctx={ctx} row={row} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </SearchFrame>
+  );
+}
+
+export function ExploreOperas({ ctx }: { ctx: Ctx }) {
+  return (
+    <SearchFrame ctx={ctx} by="opera">
       <section className="block" aria-label="All operas">
         <p className="cp-eyebrow">All operas</p>
         <div className="showcase tiles">
@@ -1183,7 +1295,7 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
           })}
         </div>
       </section>
-    </main>
+    </SearchFrame>
   );
 }
 
@@ -1218,12 +1330,7 @@ export function ExploreVoices({ ctx, voice: asked }: { ctx: Ctx; voice?: string 
   const [readyOnly, setReadyOnly] = useState(false);
   const list = rolesForVoice(voice, readyOnly);
   return (
-    <main className="screen-body gutter page">
-      <section className="hero compact">
-        <h1>Roles</h1>
-        <p className="lede">Every role across all the operas, by type of voice. Roles with music ready come first.</p>
-        <ExploreSwitch ctx={ctx} by="voice" />
-      </section>
+    <SearchFrame ctx={ctx} by="voice">
       <div className="voice-bar">
         <div className="voice-chips" role="group" aria-label="Type of voice">
           {VOICES.map((v) => (
@@ -1249,7 +1356,7 @@ export function ExploreVoices({ ctx, voice: asked }: { ctx: Ctx; voice?: string 
           <p>Turn off “Ready only” to see every {voice.toLowerCase()} role, and tick off what you learn from your own scores.</p>
         </div>
       )}
-    </main>
+    </SearchFrame>
   );
 }
 

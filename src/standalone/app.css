@@ -10673,3 +10673,268 @@ p.rp-opera > span:not(:last-child)::after {
 @media (max-width: 370px) {
   .practice .p-bar .bar-parts > .part { padding: 0 1px; }
 }
+
+/* the story on a phone: a Back pill floating at the foot of the sheet, always in reach */
+.syn-float-back { display: none; }
+@media (max-width: 720px) {
+  .syn-float-back {
+    position: absolute;
+    left: 50%;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 20px 0 14px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--canvas);
+    font: 500 15px/1 var(--font-sans);
+    box-shadow: 0 8px 24px rgba(20, 30, 25, 0.25);
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  .syn-float-back svg { width: 18px; height: 18px; }
+  .syn-body { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* choosing the bars to loop: a quiet strip over the progress line, with the way out */
+.loop-pick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background: color-mix(in srgb, var(--now-mark) 10%, var(--canvas));
+  border-top: 1px solid color-mix(in srgb, var(--now-mark) 25%, transparent);
+}
+.loop-pick p { flex: 1; margin: 0; font: 400 15px/1.3 var(--font-sans); color: var(--ink); }
+.loop-pick .lp-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--now-mark); color: #fff; flex: none; }
+.loop-pick .lp-icon svg { width: 20px; height: 20px; }
+.loop-pick .lp-btn { min-height: 40px; padding: 0 14px; font-size: 14px; background: var(--canvas); white-space: nowrap; }
+.loop-pick .lp-x { flex: none; }
+.practice .p-bar .bar-loop[aria-label^="Cancel"] { background: color-mix(in srgb, var(--now-mark) 25%, var(--canvas)); }
+
+/* =====================================================================
+   The rail: Home, Search, your roles as faces, add a role; Settings at
+   the foot. Always beside the page from a small tablet up; on a phone it
+   slides in from the menu button.
+   ===================================================================== */
+.shell { grid-template-columns: 104px minmax(0, 1fr); }
+.rail {
+  box-sizing: border-box;
+  width: 104px;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: max(16px, env(safe-area-inset-top, 0px)) 8px max(16px, env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px));
+  background: #f6f6f3;
+  box-shadow: inset -1px 0 0 var(--fog-strong);
+}
+.rail::-webkit-scrollbar { display: none; }
+.rail-top { display: grid; gap: 6px; width: 100%; }
+.rail-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  min-height: 64px;
+  padding: 6px 4px;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 12px/1.2 var(--font-sans);
+  cursor: pointer;
+  transition: background-color var(--duration-move) var(--ease-standard);
+}
+.rail-link svg { width: 24px; height: 24px; }
+.rail-link:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.rail-link[aria-current="page"] {
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 22%, transparent);
+}
+.rail-rule { width: 56px; height: 1px; margin: 10px 0 8px; background: var(--fog-strong); flex: none; }
+.rail-label {
+  margin: 4px 0 6px;
+  color: var(--ink-muted);
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.rail-roles { display: grid; gap: 4px; width: 100%; justify-items: center; }
+.rail-role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 4px 8px;
+  border: 0;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color var(--duration-move) var(--ease-standard);
+}
+.rail-role:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
+.rail-role[aria-current="page"] { background: var(--tone-soft, var(--fog)); }
+.rail-role .ring { flex: none; }
+.rail-role-name {
+  max-width: 88px;
+  font: 500 12px/1.2 var(--font-sans);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.rail-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 4px;
+  border: 0;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.rail-add-ring {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1.5px dashed color-mix(in srgb, var(--ink) 35%, transparent);
+  border-radius: 50%;
+  color: var(--ink);
+}
+.rail-add-ring svg { width: 22px; height: 22px; }
+.rail-add:hover .rail-add-ring { background: var(--canvas); }
+.rail-spacer { flex: 1 1 auto; min-height: 12px; }
+.rail-settings { flex: none; }
+
+@media (min-width: 700px) {
+  .shell { grid-template-columns: 104px minmax(0, 1fr); }
+  .topbar { display: none !important; }
+  .shell .scrim { display: none !important; }
+}
+@media (max-width: 699px) {
+  .shell { grid-template-columns: minmax(0, 1fr); }
+  .shell > .rail {
+    position: fixed;
+    z-index: 60;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-104%);
+    transition: transform var(--duration-settle) var(--ease-standard);
+    box-shadow: var(--shadow-float);
+  }
+  .shell.open > .rail { transform: none; }
+}
+/* over the practice screen */
+.sd-panel { width: 104px !important; }
+.sd-panel .rail { height: 100%; }
+
+/* =====================================================================
+   Search: one box over operas, roles and arias; then browse by tab
+   ===================================================================== */
+.search-hero { display: grid; gap: 16px; }
+.search-hero h1 { margin: 0; }
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 640px;
+  min-height: 56px;
+  padding: 0 8px 0 18px;
+  border-radius: 999px;
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 14%, transparent);
+  color: var(--ink-muted);
+  cursor: text;
+}
+.search-box:focus-within { box-shadow: inset 0 0 0 2px var(--ink); color: var(--ink); }
+.search-box > svg { width: 22px; height: 22px; flex: none; }
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 400 17px/1 var(--font-sans);
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-box input::-webkit-search-cancel-button { display: none; }
+.search-clear {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--fog);
+  color: var(--ink);
+  cursor: pointer;
+}
+.search-clear svg { width: 18px; height: 18px; }
+.pc-lede { margin: 0; flex: 1; }
+.pc-list { display: grid; gap: 8px; }
+.pc-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 68px;
+  padding: 10px 14px 10px 12px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--fog);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--duration-move) var(--ease-standard);
+}
+.pc-row:hover { background: color-mix(in srgb, var(--ink) 8%, var(--fog)); }
+.pc-row.soon .pc-text b { color: var(--ink-muted); }
+.pc-faces { display: flex; flex: none; }
+.pc-face {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--tone-soft, var(--canvas));
+  box-shadow: 0 0 0 2px var(--fog);
+}
+.pc-face + .pc-face { margin-left: -14px; }
+.pc-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pc-op { border-radius: 12px; }
+.pc-text { display: grid; gap: 3px; flex: 1; min-width: 0; }
+.pc-text b { font: 500 17px/1.25 var(--font-sans); }
+.pc-text span { color: var(--ink-muted); font: 400 14px/1.35 var(--font-sans); }
+.pc-play, .pc-go {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--canvas);
+  color: var(--now-mark);
+}
+.pc-go { color: var(--ink); }
+.pc-play svg, .pc-go svg { width: 18px; height: 18px; }
+.pc-soon { flex: none; color: var(--ink-muted); font: 500 13px/1 var(--font-sans); }
+.search-results .vroles { margin-top: 0; }

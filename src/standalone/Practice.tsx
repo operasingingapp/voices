@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { Story, storyOf } from "./synopses";
-import { Performance, beatInfo } from "../../shared/timeline";
+import { Performance, beatInfo, type PerfMeasure } from "../../shared/timeline";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
 import type { LineInstrument } from "../audio/samplerPort";
@@ -970,10 +970,27 @@ function PracticeScreen({
         return a === b ? `bar ${a}` : `bars ${a}–${b}`;
       })()
     : "";
+  // choosing the bars to loop: the loop button asks for the first bar, then the last (or "just this line")
+  const [loopPick, setLoopPick] = useState<null | { first: PerfMeasure | null }>(null);
+  useBackToClose(!!loopPick, () => setLoopPick(null));
   const onTap = (pos: { m: number; q: number }) => {
     const occs = perf.occurrences(pos.m);
     if (!occs.length) return;
     const pm = occs[0];
+    if (loopPick) {
+      if (!loopPick.first) {
+        setLoopPick({ first: pm });
+        if (engine && engine.state !== "playing") engine.seek(pm.startQ);
+        return;
+      }
+      const a = loopPick.first.startQ <= pm.startQ ? loopPick.first : pm;
+      const b = loopPick.first.startQ <= pm.startQ ? pm : loopPick.first;
+      const range = { startQ: a.startQ, endQ: b.startQ + b.durQ };
+      setLoop(range);
+      setLoopPick(null);
+      if (engine && engine.state !== "playing") engine.seek(range.startQ);
+      return;
+    }
     if (loop && (pm.startQ < loop.startQ - 1e-6 || pm.startQ >= loop.endQ - 1e-6)) {
       setLoop({ startQ: Math.min(loop.startQ, pm.startQ), endQ: Math.max(loop.endQ, pm.startQ + pm.durQ) });
       return;
@@ -1453,7 +1470,7 @@ function PracticeScreen({
           marker={markerRef}
           scrollTarget={playing ? "cursor" : "none"}
           loop={loop}
-          selection={null}
+          selection={loopPick?.first ? { startM: loopPick.first.m, endM: loopPick.first.m } : null}
           cuts={[]}
           flags={flags}
           onTap={onTap}
@@ -1691,6 +1708,51 @@ function PracticeScreen({
       )}
 
       {/* where you are, and the progress line to scrub: in the dock, right above the playback buttons */}
+      {loopPick && (
+        <div className="loop-pick gutter" role="status">
+          <span className="lp-icon" aria-hidden="true">
+            {Icon.loop}
+          </span>
+          <p>
+            {loopPick.first ? (
+              <>
+                <b>Bar {edition.measures[loopPick.first.m].number}</b> · now tap the last bar
+              </>
+            ) : (
+              <>
+                <b>Loop</b> · tap the first bar in the music
+              </>
+            )}
+          </p>
+          {loopPick.first ? (
+            <button
+              type="button"
+              className="cp-btn lp-btn"
+              onClick={() => {
+                const f = loopPick.first!;
+                setLoop({ startQ: f.startQ, endQ: f.startQ + f.durQ });
+                setLoopPick(null);
+              }}
+            >
+              Just this bar
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="cp-btn lp-btn"
+              onClick={() => {
+                loopLine();
+                setLoopPick(null);
+              }}
+            >
+              This line
+            </button>
+          )}
+          <button type="button" className="cp-icon-btn cp-icon-btn--ghost lp-x" aria-label="Cancel" onClick={() => setLoopPick(null)}>
+            {Icon.close}
+          </button>
+        </div>
+      )}
       <div className="p-timeline gutter">
         <div className="tl-label" data-testid="location">
           <b>{status ?? `Bar ${loc.number} · ${beat}`}</b>
@@ -2092,9 +2154,9 @@ function PracticeScreen({
             type="button"
             className="cp-icon-btn bar-loop"
             aria-pressed={!!loop}
-            onClick={() => (loop ? setLoop(null) : loopLine())}
-            aria-label={loop ? `Looping ${loopBars}. Stop looping` : "Loop this line"}
-            title={loop ? `Looping ${loopBars}: tap bars in the score to add them` : "Loop this line"}
+            onClick={() => (loop ? setLoop(null) : setLoopPick(loopPick ? null : { first: null }))}
+            aria-label={loop ? `Looping ${loopBars}. Stop looping` : loopPick ? "Cancel choosing a loop" : "Loop: choose the bars"}
+            title={loop ? `Looping ${loopBars}: tap bars in the score to add them` : "Loop: choose the bars"}
           >
             {Icon.loop}
           </button>
