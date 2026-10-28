@@ -1237,3 +1237,40 @@ for (const opera of OPERAS) {
     return { title: s.title, kind: s.kind, act: actOf(s.act), who: s.who, ...(piece ? { piece } : {}) };
   });
 }
+
+/**
+ * The lists as the app had them before the last check (version 2), rebuilt from today's running order and the few
+ * changes that check made, so a place saved then by its position can be found again.
+ */
+const V2_NEW = new Set(["Quante buffonerie!… Che novità!", "E perché fosti meco", "Si ridesta in ciel l'aurora", "Flora's invitation", "Ohè, là, le guardie!"]);
+const V2_ADDED: Record<string, string[]> = {
+  "Contro un cor che accende amore": ["almaviva"],
+  "O soave fanciulla": ["marcello", "colline"],
+  "Voi! Cavaradossi!": ["tosca"],
+  "Ancora un passo or via… Quanto cielo! Quanto mar!": ["sharpless", "pinkerton"],
+  "The relatives bargain": ["schicchi"],
+  "Addio, fiorito asil": ["sharpless"],
+};
+const V2_REMOVED: Record<string, string[]> = {
+  "Bel conforto al mietitore… Quanto è bella": ["adina"],
+  "The letter": ["suzuki"],
+};
+export const V2_KEYS: Record<string, string[]> = {};
+for (const opera of OPERAS) {
+  const scenes = SCENES[opera.id] ?? [];
+  for (const ch of opera.chars) {
+    const now = scenes.filter((s) => s.who.includes(ch.id));
+    V2_KEYS[`${opera.id}:${ch.id}`] = scenes
+      .filter((s) => !V2_NEW.has(s.title))
+      .filter((s) => {
+        const who = new Set(s.who);
+        for (const id of V2_ADDED[s.title] ?? []) who.delete(id);
+        for (const id of V2_REMOVED[s.title] ?? []) who.add(id);
+        return who.has(ch.id);
+      })
+      .map((s) => {
+        const i = now.indexOf(s);
+        return i >= 0 ? ch.pieces[i].id! : `${actOf(s.act)}: ${s.title}`;
+      });
+  }
+}

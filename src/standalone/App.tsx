@@ -20,7 +20,7 @@ import {
   type Profile,
   type RoleRef,
 } from "./flow";
-import { FIRST_PASS_KEYS, OPERAS, RUNNING } from "./operas";
+import { FIRST_PASS_KEYS, OPERAS, RUNNING, V2_KEYS } from "./operas";
 import { Practice } from "./Practice";
 import { hasPiece } from "./pieces";
 
@@ -55,21 +55,30 @@ function write(key: string, v: unknown) {
  */
 (function renumberSavedPieces() {
   try {
-    if (localStorage.getItem("cp:pieceList") === "2") return;
+    const version = localStorage.getItem("cp:pieceList");
+    if (version === "3") return;
+    const before = version === "2" ? V2_KEYS : FIRST_PASS_KEYS;
     for (const key of [K.place, K.last]) {
-      const v = read<{ screen?: string; opera?: string; character?: string; piece?: number } | null>(key, null);
-      if (v?.screen !== "piece" || typeof v.piece !== "number" || !v.opera || !v.character) continue;
-      const oldKey = FIRST_PASS_KEYS[`${v.opera}:${v.character}`]?.[v.piece];
+      const v = read<{ screen?: string; opera?: string; character?: string; piece?: number; key?: string } | null>(key, null);
+      if (v?.screen !== "piece" || typeof v.piece !== "number" || !v.opera || !v.character || v.key) continue;
+      const oldKey = before[`${v.opera}:${v.character}`]?.[v.piece];
       const ch = OPERAS.find((o) => o.id === v.opera)?.chars.find((c) => c.id === v.character);
       const i = oldKey && ch ? ch.pieces.findIndex((p) => p.id === oldKey) : -1;
       if (i >= 0) write(key, { ...v, piece: i });
       else localStorage.removeItem(key);
     }
-    localStorage.setItem("cp:pieceList", "2");
+    localStorage.setItem("cp:pieceList", "3");
   } catch {
     /* storage unavailable */
   }
 })();
+
+/** A piece is saved with its progress key too, so it can be found again if the list changes. */
+function withKey(p: Place): Place & { key?: string } {
+  if (p.screen !== "piece") return p;
+  const key = OPERAS.find((o) => o.id === p.opera)?.chars.find((c) => c.id === p.character)?.pieces[p.piece]?.id;
+  return key ? { ...p, key } : p;
+}
 
 /** Screens saved by earlier versions of the app, mapped to today's. */
 function migrate(p: unknown): Place | null {
@@ -82,8 +91,14 @@ function migrate(p: unknown): Place | null {
       return o.opera ? { screen: "opera", opera: o.opera } : null;
     case "pieces":
       return o.opera && o.character ? { screen: "role", opera: o.opera, character: o.character } : null;
-    case "piece":
-      return o.opera && o.character && typeof o.piece === "number" ? { screen: "piece", opera: o.opera, character: o.character, piece: o.piece } : null;
+    case "piece": {
+      if (!o.opera || !o.character || typeof o.piece !== "number") return null;
+      // a piece saved with its key is found by the key, wherever the list has moved it
+      const key = (o as { key?: string }).key;
+      const ch = OPERAS.find((x) => x.id === o.opera)?.chars.find((c) => c.id === o.character);
+      const i = key && ch ? ch.pieces.findIndex((p) => p.id === key) : -1;
+      return { screen: "piece", opera: o.opera, character: o.character, piece: i >= 0 ? i : o.piece };
+    }
     case "about":
       // a piece's own info page is gone: its scene now opens inside the role's list
       return o.opera && o.character ? { screen: "role", opera: o.opera, character: o.character } : null;
@@ -148,14 +163,14 @@ export function App() {
     return migrate(read<unknown>(K.place, null)) ?? home();
   });
 
-  useEffect(() => write(K.place, place), [place]);
+  useEffect(() => write(K.place, withKey(place)), [place]);
   // however you arrive at an aria (a tap, or reopening the app on it), it becomes the one to continue
   useEffect(() => {
     if (place.screen !== "piece") return;
     if (!findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId) return;
     const r = { opera: place.opera, character: place.character };
     setLast(place);
-    write(K.last, place);
+    write(K.last, withKey(place));
     setRoles((rs) => (rs.some((x) => same(x, r)) ? rs : [...rs, r]));
     setCurrent(r);
   }, [place]);
