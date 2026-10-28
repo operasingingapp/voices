@@ -1473,9 +1473,8 @@ function PracticeScreen({
             )}
             <div className="now-tools">
               <div className="now-listen" role="group" aria-label="Hear this line spoken">
-                <button type="button" className="nl-btn" onClick={() => sayPhrase(shown.ph.id)} aria-pressed={speakingId === shown.ph.id}>
+                <button type="button" className="nl-btn" onClick={() => sayPhrase(shown.ph.id)} aria-pressed={speakingId === shown.ph.id} aria-label="Hear this line spoken" title="Hear it">
                   {Icon.speaker}
-                  <span>Hear it</span>
                 </button>
                 <button type="button" className="nl-btn nl-slow" onClick={() => sayPhrase(shown.ph.id, true)} aria-label="Hear it slowly" title="Slowly">
                   {Icon.slow}
