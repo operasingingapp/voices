@@ -8,6 +8,7 @@ import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
 import { ART, ART_TONES, BRAVO, PORTRAITS, STORIES } from "./opera-extra";
 import { SYNOPSES, Story, storyOf } from "./synopses";
+import { ARCS } from "./arcs";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
@@ -284,15 +285,17 @@ const InfoIcon = () => (
   </svg>
 );
 const GearIcon = () => (
+  // a cog with eight even teeth (after Lucide's "settings", ISC licence)
   <svg viewBox="0 0 24 24" aria-hidden="true">
-    <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" strokeWidth="1.8" />
     <path
       fill="none"
       stroke="currentColor"
       strokeWidth="1.8"
+      strokeLinecap="round"
       strokeLinejoin="round"
-      d="M10.3 3.5h3.4l.5 2.4 1.7.9 2.3-.9 1.7 2.9-1.8 1.6v1.9l1.8 1.6-1.7 2.9-2.3-.9-1.7.9-.5 2.4h-3.4l-.5-2.4-1.7-.9-2.3.9-1.7-2.9 1.8-1.6v-1.9L4.1 8.8l1.7-2.9 2.3.9 1.7-.9z"
+      d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
     />
+    <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" strokeWidth="1.8" />
   </svg>
 );
 const PersonIcon = () => (
@@ -1620,6 +1623,94 @@ function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void })
   );
 }
 
+/**
+ * Meeting a character before taking the role (the welcome screen): the portrait large, who they are, their story
+ * in the opera act by act, and a taste of their music; then "This is my role", or back to choosing.
+ */
+function MeetCharacter({ opera, ch, onTake, onOpera, onClose }: { opera: Opera; ch: Character; onTake: () => void; onOpera: () => void; onClose: () => void }) {
+  const take = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    take.current?.focus();
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", esc);
+    return () => window.removeEventListener("keydown", esc);
+  }, [onClose]);
+  const art = PORTRAITS[`${opera.id}:${ch.id}`];
+  const arc = ARCS[`${opera.id}:${ch.id}`] ?? [];
+  const n = ch.pieces.length;
+  const ready = ch.pieces.filter((p) => p.editionId);
+  const first = ch.pieces[0]?.title;
+  const last = ch.pieces[n - 1]?.title;
+  return (
+    <div className="meet" role="dialog" aria-modal="true" aria-labelledby="meet-h" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
+      <button type="button" className="meet-scrim" aria-label="Back to the characters" tabIndex={-1} onClick={onClose} />
+      <div className="meet-card">
+        <button type="button" className="cp-icon-btn cp-icon-btn--ghost meet-close" aria-label="Back to the characters" onClick={onClose}>
+          <CloseIcon />
+        </button>
+        {art && (
+          <div className="meet-pic">
+            <img src={art.portrait} alt={art.alt} />
+          </div>
+        )}
+        <div className="meet-body">
+          <div className="meet-scroll">
+          <p className="cp-eyebrow" lang={opera.lang}>
+            {opera.title} · {opera.composer}, {opera.year}
+          </p>
+          <h2 id="meet-h">{ch.name}</h2>
+          <p className="meet-who">
+            <span className="meet-voice">{ch.voice}</span> {ch.desc}
+          </p>
+          {arc.length > 0 && (
+            <ol className="meet-arc">
+              {arc.map((a) => (
+                <li key={a.act}>
+                  <b>{a.act}</b>
+                  <span>{a.text}</span>
+                </li>
+              ))}
+            </ol>
+          )}
+          <div className="meet-music">
+            <p>
+              {n === 1 ? (
+                <>
+                  One number: <i lang={opera.lang}>{first}</i>.
+                </>
+              ) : (
+                <>
+                  {n} numbers, from <i lang={opera.lang}>{first}</i> to <i lang={opera.lang}>{last}</i>.
+                </>
+              )}
+            </p>
+            {ready.length > 0 && (
+              <p className="meet-ready">
+                <span className="reel-ready">Ready to sing</span>
+                {ready.map((p, i) => (
+                  <span key={p.editionId}>
+                    {i > 0 && ", "}
+                    <i lang={opera.lang}>{p.title}</i>
+                  </span>
+                ))}
+              </p>
+            )}
+          </div>
+          </div>
+          <div className="meet-actions">
+            <button ref={take} type="button" className="cp-btn cp-btn--ink meet-take" onClick={onTake}>
+              This is my role
+            </button>
+            <button type="button" className="cp-btn cp-btn--ghost" onClick={onOpera}>
+              See the whole cast of <i lang={opera.lang}>{opera.title}</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Onboarding({
   ctx,
   step: stepAsked,
@@ -1647,6 +1738,8 @@ export function Onboarding({
     ctx.finishOnboarding({ screen: "role", opera: opera.id, character: ch.id });
   };
   const roles = chosenOpera ? chosenOpera.chars.map((ch) => ({ opera: chosenOpera, ch })) : [];
+  // a character tapped in the gallery: met first, then taken
+  const [meet, setMeet] = useState<{ opera: Opera; ch: Character } | null>(null);
   // 1: the gallery of characters; 2: the list of operas (a quieter way in); 3: the chosen opera's cast.
   // A cast with no opera goes back to the gallery.
   const step = stepAsked === 3 ? (roles.length ? 3 : 1) : stepAsked;
@@ -1705,7 +1798,7 @@ export function Onboarding({
           </div>
           <div id="ob-choices" role="tabpanel" className="ob-choices">
             {step === 1 ? (
-              <CastReel onPick={pick} />
+              <CastReel onPick={(opera, ch) => setMeet({ opera, ch })} />
             ) : (
               <section className="ob-from-opera gutter" aria-label="Operas">
                 <div className="obs-operas">
@@ -1799,6 +1892,19 @@ export function Onboarding({
             </button>
           </div>
         </main>
+      )}
+      {meet && (
+        <MeetCharacter
+          opera={meet.opera}
+          ch={meet.ch}
+          onTake={() => pick(meet.opera, meet.ch)}
+          onOpera={() => {
+            const o = meet.opera.id;
+            setMeet(null);
+            ctx.go(at(3, { opera: o, role: { opera: o, character: meet.ch.id } }));
+          }}
+          onClose={() => setMeet(null)}
+        />
       )}
     </div>
   );
