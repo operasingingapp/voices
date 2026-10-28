@@ -9389,3 +9389,19 @@ button.lane-label:hover {
     display: none;
   }
 }
+
+/* Explore: Operas | Roles, under the page's heading */
+.explore-mode {
+  width: max-content;
+  max-width: 100%;
+  margin: 18px 0 0;
+  justify-self: start;
+}
+
+/* the ensemble's piano-in-the-score button: faded shows a half-tone icon, hidden a quiet one */
+.piano-state[data-state="faded"] svg {
+  opacity: 0.5;
+}
+.piano-state[data-state="hidden"] {
+  color: var(--ink-muted);
+}

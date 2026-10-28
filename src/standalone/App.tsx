@@ -130,7 +130,7 @@ function titleOf(place: Place): string {
     case "opera":
       return `${o?.title ?? "Opera"}${tail}`;
     case "explore":
-      return `${place.by === "voice" ? "By voice" : "Operas"}${tail}`;
+      return `${place.by === "voice" ? "Roles" : "Operas"}${tail}`;
     case "profile":
       return `Settings${tail}`;
     default:

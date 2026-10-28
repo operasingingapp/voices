@@ -279,8 +279,9 @@ const Icon = {
   ),
   piano: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="none" stroke="currentColor" strokeWidth="2" d="M3 5h18v14H3zM8 5v14M13 5v14M18 5v14" />
-      <path fill="currentColor" d="M6.5 5h3v8h-3zM16.5 5h3v8h-3zM11.5 5h3v8h-3z" opacity="0" />
+      <rect x="2.5" y="5" width="19" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M7.25 13v6M12 13v6M16.75 13v6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+      <path fill="currentColor" d="M5.9 5.9h2.7V13H5.9zM10.65 5.9h2.7V13h-2.7zM15.4 5.9h2.7V13h-2.7z" />
     </svg>
   ),
   fromStart: (
@@ -1920,17 +1921,31 @@ function PracticeScreen({
             </div>
           )}
           {view === "music" && ens && (
-            <button
-              type="button"
-              className="cp-btn part-fade"
-              aria-pressed={showOf(pianoPart)}
-              onClick={() => setLine(pianoPart.key, { show: !showOf(pianoPart) })}
-              aria-label={showOf(pianoPart) ? "The piano is shown in the score. Hide it" : "Show the piano in the score"}
-              title={showOf(pianoPart) ? "Hide the piano in the score" : "Show the piano in the score"}
-            >
-              {Icon.piano}
-              <span>Piano in score</span>
-            </button>
+            (() => {
+              // the piano in the score: hidden, faded or clear (a tap moves to the next)
+              const state = !showOf(pianoPart) ? "hidden" : pianoFaded ? "faded" : "clear";
+              const next = state === "hidden" ? "faded" : state === "faded" ? "clear" : "hidden";
+              return (
+                <button
+                  type="button"
+                  className="cp-btn part-fade piano-state"
+                  data-state={state}
+                  aria-pressed={state !== "hidden"}
+                  onClick={() => {
+                    if (next === "hidden") setLine(pianoPart.key, { show: false });
+                    else {
+                      setLine(pianoPart.key, { show: true });
+                      setPianoFaded(next === "faded");
+                    }
+                  }}
+                  aria-label={`The piano in the score is ${state}. Tap to make it ${next}`}
+                  title={`Piano in the score: ${state}. Tap for ${next}`}
+                >
+                  {Icon.piano}
+                  <span>Piano: {state}</span>
+                </button>
+              );
+            })()
           )}
           {view === "music" && !ens && (
           <button

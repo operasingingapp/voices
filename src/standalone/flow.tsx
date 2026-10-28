@@ -277,12 +277,6 @@ const LibraryIcon = () => (
     <circle cx="17" cy="17" r="3.5" fill="none" stroke="currentColor" strokeWidth="2" />
   </svg>
 );
-const VoiceIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
-    <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" strokeWidth="2" />
-  </svg>
-);
 const InfoIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -506,8 +500,11 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           <span>By opera</span>
         </button>
         <button type="button" className="sb-link" aria-current={on(place.screen === "explore" && place.by === "voice")} onClick={() => go({ screen: "explore", by: "voice" })}>
-          <VoiceIcon />
-          <span>By voice</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" strokeWidth="1.8" />
+            <path d="M5 20c.8-3.8 3.6-6 7-6s6.2 2.2 7 6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+          <span>By role</span>
         </button>
       </nav>
 
@@ -1094,12 +1091,31 @@ function ReadyCard({ ctx, opera, ch, index }: { ctx: Ctx; opera: Opera; ch: Char
   );
 }
 
+/** Explore's two ways in, on both pages: by opera, or by role (with the voice-type filter) */
+function ExploreSwitch({ ctx, by }: { ctx: Ctx; by: "opera" | "voice" }) {
+  return (
+    <div className="ob-mode explore-mode" role="tablist" aria-label="Explore by">
+      {(
+        [
+          ["opera", "Operas"],
+          ["voice", "Roles"],
+        ] as const
+      ).map(([b, label]) => (
+        <button key={b} type="button" role="tab" aria-selected={by === b} onClick={() => by !== b && ctx.go({ screen: "explore", by: b })}>
+          {label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export function ExploreOperas({ ctx }: { ctx: Ctx }) {
   return (
     <main className="screen-body gutter page">
       <section className="hero compact">
         <h1>Operas</h1>
         <p className="lede">Choose an opera to see its story, its characters and its music. In the order of their first performance.</p>
+        <ExploreSwitch ctx={ctx} by="opera" />
       </section>
       <section className="block" aria-label="All operas">
         <p className="cp-eyebrow">All operas</p>
@@ -1168,11 +1184,12 @@ export function ExploreVoices({ ctx, voice: asked }: { ctx: Ctx; voice?: string 
   return (
     <main className="screen-body gutter page">
       <section className="hero compact">
-        <h1>By voice</h1>
-        <p className="lede">Every role for a voice, across all the operas. Roles with music ready come first.</p>
+        <h1>Roles</h1>
+        <p className="lede">Every role across all the operas, by type of voice. Roles with music ready come first.</p>
+        <ExploreSwitch ctx={ctx} by="voice" />
       </section>
       <div className="voice-bar">
-        <div className="voice-chips" role="group" aria-label="Voice">
+        <div className="voice-chips" role="group" aria-label="Type of voice">
           {VOICES.map((v) => (
             <button key={v} type="button" className="voice-chip" data-tone={voiceTone(v)} aria-pressed={v === voice} onClick={() => ctx.go({ screen: "explore", by: "voice", voice: v })}>
               {v}
