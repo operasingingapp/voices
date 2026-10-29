@@ -653,7 +653,7 @@ p {
 
 /* playback position on the music */
 .ov-measure-now {
-  display: none !important;
+  display: none;
 }
 /* the note sounding now: coloured, with a soft mint disc behind it */
 .cp-now-note path,
@@ -3080,14 +3080,14 @@ button.ck-text:focus-visible {
 .p-stage .ov-cursor::before {
   width: 2px;
   left: -1px;
-  background: var(--now-mark) !important;
+  background: var(--now-mark);
   opacity: 0.35;
 }
 .p-stage .ov-cursor[data-playing="true"]::before {
   opacity: 0.22;
 }
 .p-stage .cursor-label {
-  display: none !important;
+  display: none;
 }
 .pin-clef > div {
   width: 100%;
@@ -4997,8 +4997,8 @@ button.lane-label:hover {
     flex: 1 1 100%;
   }
   .p-title h1 {
-    display: block !important;
-    font-size: 16px !important;
+    display: block;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0;
   }
@@ -5474,7 +5474,7 @@ button.lane-label:hover {
 /* =====================================================================
    Phone: the bar folds to one slim row while the music plays
    ===================================================================== */
-.bar-more { display: none !important; }
+.bar-more { display: none; }
 @media (max-width: 640px) {
   .practice .p-bar.folded {
     flex-wrap: nowrap;
@@ -5634,8 +5634,8 @@ button.lane-label:hover {
 
 @media (min-width: 700px) {
   .shell { grid-template-columns: 104px minmax(0, 1fr); }
-  .topbar { display: none !important; }
-  .shell .scrim { display: none !important; }
+  .topbar { display: none; }
+  .shell .scrim { display: none; }
 }
 @media (max-width: 699px) {
   .shell { grid-template-columns: minmax(0, 1fr); }
@@ -5652,7 +5652,7 @@ button.lane-label:hover {
   .shell.open > .rail { transform: none; }
 }
 /* over the practice screen */
-.sd-panel { width: 104px !important; }
+.sd-panel { width: 104px; }
 .sd-panel .rail { height: 100%; }
 
 /* =====================================================================
@@ -6030,7 +6030,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* phones: the bar is folded by default (one slim row); the arrow opens every control and folds them again */
 @media (max-width: 640px) {
-  .practice .p-bar .bar-more { display: grid !important; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--fog); }
+  .practice .p-bar .bar-more { display: grid; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--fog); }
   .practice .p-bar .bar-more svg { transition: transform var(--duration-move) var(--ease-standard); }
   .practice .p-bar .bar-more.open svg { transform: rotate(180deg); }
   .practice .p-bar:not(.folded) .bar-parts { order: 0; }
@@ -6113,7 +6113,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
    [your face: sing it yourself] [again from this line] [ ▶ ] [loop] [more]
    The speed sits at the end of the progress row as a chip; bar · beat and the clock are gone there
    ===================================================================== */
-.bar-again { display: none !important; }
+.bar-again { display: none; }
 .tl-speed { display: none; }
 @media (max-width: 640px) {
   .practice .p-bar.folded { justify-content: space-between; gap: 0; position: relative; display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; align-items: center; }
@@ -6129,8 +6129,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
   .practice > .p-timeline .tl-time,
   .practice > .p-timeline .tl-bar,
-  .practice > .p-timeline .tl-label span { display: none !important; }
-  .practice > .p-timeline .tl-label:not(:has(.tl-loop-chip)) { display: none !important; }
+  .practice > .p-timeline .tl-label span { display: none; }
+  .practice > .p-timeline .tl-label:not(:has(.tl-loop-chip)) { display: none; }
   .tl-speed { display: block; position: relative; flex: none; }
   .tl-speed-chip {
     display: inline-flex; align-items: center; gap: 5px; height: 34px; padding: 0 12px 0 10px; border: 0; border-radius: 17px;
@@ -6160,40 +6160,40 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 @media (max-width: 640px) {
   .practice > .p-timeline { padding-left: 26px; padding-right: 20px; gap: 14px; }
   .practice .p-bar.p-bar.p-bar {
-    display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); row-gap: 12px; column-gap: 0;
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); row-gap: 12px; column-gap: 0;
     justify-items: center; align-items: center; padding: 4px 12px 12px;
   }
   .practice .p-bar.p-bar.p-bar > .bar-parts, .practice .p-bar.p-bar.p-bar .bar-transport, .practice .p-bar.p-bar.p-bar .bar-right, .practice .p-bar.p-bar.p-bar .cp-tempo {
-    display: contents !important; background: none !important; box-shadow: none !important; border: 0 !important;
+    display: contents; background: none !important; box-shadow: none; border: 0;
   }
-  .practice .p-bar.p-bar.p-bar .bar-start, .practice .p-bar.p-bar.p-bar .bar-stop { display: none !important; }
+  .practice .p-bar.p-bar.p-bar .bar-start, .practice .p-bar.p-bar.p-bar .bar-stop { display: none; }
   /* the transport row */
-  .practice .p-bar.p-bar.p-bar > .bar-parts > .part:first-child { display: flex !important; grid-column: 1; grid-row: var(--tr); }
-  .practice .p-bar.p-bar.p-bar .bar-again { display: grid !important; grid-column: 2; grid-row: var(--tr); width: 44px; height: 44px; place-items: center; background: none; }
+  .practice .p-bar.p-bar.p-bar > .bar-parts > .part:first-child { display: flex; grid-column: 1; grid-row: var(--tr); }
+  .practice .p-bar.p-bar.p-bar .bar-again { display: grid; grid-column: 2; grid-row: var(--tr); width: 44px; height: 44px; place-items: center; background: none; }
   .practice .p-bar.p-bar.p-bar .bar-again svg { width: 24px; height: 24px; }
   .practice .p-bar.p-bar.p-bar .bar-transport > [data-testid="play"], .practice .p-bar.p-bar.p-bar .bar-transport > [data-testid="pause"] {
-    grid-column: 3; grid-row: var(--tr); width: 60px !important; height: 60px !important; flex: none !important; border-radius: 50%;
+    grid-column: 3; grid-row: var(--tr); width: 60px; height: 60px; flex: none; border-radius: 50%;
   }
   .practice .p-bar.p-bar.p-bar .bar-loop { grid-column: 4; grid-row: var(--tr); justify-self: center; margin: 0; width: 44px; height: 44px; border-radius: 50%; background: none; }
   .practice .p-bar.p-bar.p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
-  .practice .p-bar.p-bar.p-bar .bar-more { display: grid !important; grid-column: 5; grid-row: var(--tr); justify-self: center; width: 44px !important; height: 44px !important; flex: none !important; background: none !important; margin: 0; }
+  .practice .p-bar.p-bar.p-bar .bar-more { display: grid; grid-column: 5; grid-row: var(--tr); justify-self: center; width: 44px; height: 44px; flex: none !important; background: none !important; margin: 0; }
   /* row 1: the others, the piano, Arrange, spread across the width */
   .practice .p-bar.p-bar.p-bar .bar-mix {
     grid-column: 1 / -1; grid-row: 1; justify-self: stretch; display: flex; align-items: center;
     padding: 4px 10px 12px; border-bottom: 1px solid var(--line, rgba(0,0,0,.08));
   }
-  .practice .p-bar.p-bar.p-bar .bar-mix .piano-group { background: none !important; box-shadow: none !important; padding: 0; gap: 0; }
+  .practice .p-bar.p-bar.p-bar .bar-mix .piano-group { background: none !important; box-shadow: none; padding: 0; gap: 0; }
   .practice .p-bar.p-bar.p-bar .bar-mix .pg-btn, .practice .p-bar.p-bar.p-bar .bar-mix .mix-btn { width: 44px; min-width: 44px; height: 44px; padding: 0; background: none !important; justify-content: center; }
   .practice .p-bar.p-bar.p-bar .bar-mix .mix-btn span { display: none; }
   /* row 2: the beat, the speed, the count-in, on the same columns as the row below */
-  .practice .p-bar.p-bar.p-bar .cp-tempo__beat { display: block !important; grid-column: 1; grid-row: 2; font-size: 14px; color: var(--ink-muted); white-space: nowrap; }
+  .practice .p-bar.p-bar.p-bar .cp-tempo__beat { display: block; grid-column: 1; grid-row: 2; font-size: 14px; color: var(--ink-muted); white-space: nowrap; }
   .practice .p-bar.p-bar.p-bar .cp-speed {
-    display: flex !important; position: static !important; grid-column: 2 / 5; grid-row: 2; justify-self: center; align-items: center;
-    height: 44px; padding: 0 4px; border-radius: 22px; background: var(--fog) !important; box-shadow: none !important; border: 0 !important;
+    display: flex; position: static; grid-column: 2 / 5; grid-row: 2; justify-self: center; align-items: center;
+    height: 44px; padding: 0 4px; border-radius: 22px; background: var(--fog) !important; box-shadow: none; border: 0;
   }
   .practice .p-bar.p-bar.p-bar .cp-speed .cp-icon-btn { width: 44px; height: 44px; background: none !important; }
   .practice .p-bar.p-bar.p-bar .cp-speed .cp-tempo__value { min-width: 64px; text-align: center; background: none !important; }
-  .practice .p-bar.p-bar.p-bar .countin { display: flex !important; grid-column: 5; grid-row: 2; background: none !important; box-shadow: none !important; border: 0 !important; min-width: 44px; height: 44px; padding: 0; justify-content: center; }
+  .practice .p-bar.p-bar.p-bar .countin { display: flex; grid-column: 5; grid-row: 2; background: none !important; box-shadow: none; border: 0; min-width: 44px; height: 44px; padding: 0; justify-content: center; }
   .practice .p-bar.p-bar.p-bar.folded .bar-mix, .practice .p-bar.p-bar.p-bar.folded .cp-tempo__beat, .practice .p-bar.p-bar.p-bar.folded .cp-speed, .practice .p-bar.p-bar.p-bar.folded .countin { display: none !important; }
 }
 
@@ -6329,9 +6329,9 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   /* Arrange: a sheet from the bottom over a dimmed screen, with Done */
   .practice .mix-scrim { display: block; position: fixed; inset: 0; z-index: 80; border: 0; padding: 0; background: rgba(14, 16, 12, 0.4); }
   .practice .mix-pop.mix-pop {
-    position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important; z-index: 81;
-    width: auto !important; max-width: none !important; max-height: 82vh; overflow-y: auto; transform: none !important;
-    border-radius: 20px 20px 0 0 !important; padding: 16px 16px calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+    position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 81;
+    width: auto; max-width: none; max-height: 82vh; overflow-y: auto; transform: none;
+    border-radius: 20px 20px 0 0; padding: 16px 16px calc(20px + env(safe-area-inset-bottom, 0px));
   }
   .practice .mix-pop .mix-head { position: sticky; top: -16px; z-index: 2; margin: -16px -16px 8px; padding: 14px 16px 10px; background: inherit; }
   .practice .mix-done { display: inline-flex; height: 36px; padding: 0 16px; }
@@ -6345,15 +6345,15 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice > .p-head .cp-icon-btn { width: 40px; height: 40px; flex: none; }
   .practice > .p-head .p-title { order: 0; flex: 1 1 auto; min-width: 0; margin-left: 4px; display: grid; gap: 1px; }
   .practice > .p-head .p-title h1 {
-    display: block !important; margin: 0; font: 600 17px/1.2 var(--font-sans) !important; letter-spacing: -0.01em;
+    display: block; margin: 0; font: 600 17px/1.2 var(--font-sans); letter-spacing: -0.01em;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   .practice > .p-head .p-title .p-sub {
-    display: block !important; margin: 0; font: 400 12.5px/1.3 var(--font-sans); color: var(--ink-muted);
+    display: block; margin: 0; font: 400 12.5px/1.3 var(--font-sans); color: var(--ink-muted);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
   .practice > .p-head .p-title .p-sub .p-kind { display: none; }
-  .practice > .p-head .p-title .p-sub-link { display: inline !important; font-size: inherit; padding: 0 !important; min-height: 0 !important; height: auto !important; vertical-align: baseline; white-space: nowrap; }
+  .practice > .p-head .p-title .p-sub-link { display: inline; font-size: inherit; padding: 0; min-height: 0; height: auto; vertical-align: baseline; white-space: nowrap; }
   .practice > .p-head .p-tools { flex: none; margin-left: 0; }
   .practice > .p-head .view-switch button { width: 44px; padding: 0; justify-content: center; }
 }
@@ -6380,7 +6380,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
       below it, where the loop card floats. The box's tools are one row: whose words, hear, show, fold. */
 @media (max-width: 640px) {
   .practice .p-stage .score-scroll.strip { justify-content: flex-start; padding-top: 6px; }
-  .practice > .now-panel .now-bar { flex-wrap: nowrap !important; align-items: center; gap: 6px; row-gap: 0; }
+  .practice > .now-panel .now-bar { flex-wrap: nowrap; align-items: center; gap: 6px; row-gap: 0; }
   .practice > .now-panel .now-meta { flex: 0 1 auto; min-width: 0; margin: 0; }
   .practice > .now-panel .now-tools { flex: 0 0 auto; margin-left: auto; gap: 4px; flex-wrap: nowrap; }
   .practice > .now-panel .words-btn .cmb-k { display: none; }
@@ -6414,10 +6414,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .cp-seg button[aria-selected="true"], .cp-seg button[aria-pressed="true"],
 .voice-chip[aria-pressed="true"], .st-chip[aria-checked="true"] {
   background: var(--canvas) !important; color: var(--ink) !important;
-  box-shadow: 0 1px 2px rgba(20, 24, 18, 0.08), 0 0 0 1px rgba(20, 24, 18, 0.04) !important;
+  box-shadow: 0 1px 2px rgba(20, 24, 18, 0.08), 0 0 0 1px rgba(20, 24, 18, 0.04);
 }
 .voice-chips, .st-chips {
-  display: inline-flex !important; flex-wrap: wrap; gap: 4px !important; padding: 4px; border-radius: 26px; background: var(--fog);
+  display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 26px; background: var(--fog);
 }
 .voice-chip, .st-chip { background: transparent !important; color: var(--ink-muted); box-shadow: none; }
 .voice-chip:hover, .st-chip:hover { color: var(--ink); }
@@ -6431,22 +6431,22 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .voice-chip { flex: none; }
 }
 /* 9. One primary button: the green of play (Done on the loop card was black) */
-.loop-pick .lp-btn.lp-done { background: var(--now) !important; color: var(--on-pastel) !important; }
+.loop-pick .lp-btn.lp-done { background: var(--now); color: var(--on-pastel); }
 /* 11. Tags are pills, like every other small label; "Your role" sits by the name, not in a column of its own */
-.cp-tag { border-radius: 999px !important; padding: 3px 9px !important; font-size: 12px !important; line-height: 1.2 !important; }
+.cp-tag { border-radius: 999px; padding: 3px 9px; font-size: 12px !important; line-height: 1.2 !important; }
 .vrole-text > b { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; }
 .vrole-yours { font-weight: 500; letter-spacing: 0; vertical-align: middle; }
 /* 12. You: a green ring round your own face in the bar (green = your line, as in the score) */
 .practice .p-bar .bar-parts > .part:first-child .part-face { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px var(--now-mark); }
 .practice .p-bar .bar-parts > .part:first-child[aria-pressed="false"] .part-face { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 45%, transparent); }
 /* 13. Progress shows one thing: learned (green) and still to learn (grey) */
-.rc-segs i.ready, .rc-segs i.now { background: color-mix(in srgb, var(--ink) 10%, transparent) !important; }
+.rc-segs i.ready, .rc-segs i.now { background: color-mix(in srgb, var(--ink) 10%, transparent); }
 /* 14. On wider screens a suggestion card runs across its width: who and what on the left, the button on the right */
 @media (min-width: 641px) {
   .hm .hm-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 16px; }
   .hm .hm-card > .cp-eyebrow { grid-column: 1 / -1; }
   .hm .hm-card > .hm-card-row { grid-column: 1; }
-  .hm .hm-card > .cp-btn { grid-column: 2; grid-row: 2; margin: 0 16px 0 0 !important; align-self: center; }
+  .hm .hm-card > .cp-btn { grid-column: 2; grid-row: 2; margin: 0 16px 0 0; align-self: center; }
 }
 /* 15–16. Phone top bar: the way back lives here (one row of navigation, not two); the wordmark only on pages
    with nowhere to go back to; your face on the right opens your role */
@@ -6470,52 +6470,52 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .mix-pop .mix-line-inst select { width: 100%; text-overflow: clip; }
 }
 /* 19. Without music is said in words, not by fading: every row and card stays at full strength */
-.vrole.soon .vrole-text, .vrole.soon .vrole-face { opacity: 1 !important; }
+.vrole.soon .vrole-text, .vrole.soon .vrole-face { opacity: 1; }
 .vrole.soon { background: var(--canvas) !important; }
-.pc-row.soon .pc-text b { color: var(--ink) !important; }
-.pc-soon { padding: 4px 10px; border-radius: 999px; background: var(--fog); font-size: 12px !important; white-space: nowrap; }
+.pc-row.soon .pc-text b { color: var(--ink); }
+.pc-soon { padding: 4px 10px; border-radius: 999px; background: var(--fog); font-size: 12px; white-space: nowrap; }
 /* 20. The aria list: titles line up (the faces get a column of their own) and the rows are light, with hairlines */
-.pc-list { gap: 0 !important; }
-.pc-row { background: transparent !important; border-radius: 0 !important; border-bottom: 1px solid var(--fog) !important; min-height: 64px; padding-left: 4px !important; }
+.pc-list { gap: 0; }
+.pc-row { background: transparent !important; border-radius: 0; border-bottom: 1px solid var(--fog); min-height: 64px; padding-left: 4px; }
 .pc-row:hover { background: color-mix(in srgb, var(--ink) 3%, transparent) !important; }
 .pc-faces { width: 104px; }
-.pc-face { box-shadow: 0 0 0 2px var(--canvas) !important; }
+.pc-face { box-shadow: 0 0 0 2px var(--canvas); }
 @media (max-width: 640px) { .pc-face { width: 40px; height: 40px; } .pc-face + .pc-face { margin-left: -14px; } }
 .pc-row .pc-play { background: var(--now) !important; color: var(--on-pastel); }
 /* 21. The search box runs the full width of the page's content, edge to edge with the grid under it */
-.search-box { max-width: none !important; }
+.search-box { max-width: none; }
 /* 22. Your role on an opera's tile is a tag on its picture, so every tile is the same height */
 .sc-pic { position: relative; }
 .sc-pic-tag { position: absolute; left: 10px; top: 10px; max-width: calc(100% - 20px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 /* 23. Home's section headers share one height, so side-by-side sections start on the same line */
-.hm-roles > .cp-eyebrow, .hm-head { min-height: 36px; display: flex; align-items: center; margin: 0 0 12px !important; padding: 0; }
-.hm-head .cp-eyebrow { margin: 0 !important; }
-.hm-head .hm-all { margin: 0 -8px 0 0 !important; min-height: 36px; }
+.hm-roles > .cp-eyebrow, .hm-head { min-height: 36px; display: flex; align-items: center; margin: 0 0 12px; padding: 0; }
+.hm-head .cp-eyebrow { margin: 0; }
+.hm-head .hm-all { margin: 0 -8px 0 0; min-height: 36px; }
 /* 24. An opera's cover keeps the heads in the picture: cropped from the bottom, not the top */
-.op-cover img, .op-cover > img { object-position: 50% 12% !important; }
+.op-cover img, .op-cover > img { object-position: 50% 12%; }
 /* 25. Phone welcome: the two rows of characters fill the screen (larger cards) instead of leaving its lower half empty */
 @media (max-width: 640px) {
   .ob-welcome .reel { gap: 16px; }
-  .ob-welcome .reel-card { width: min(172px, 44vw) !important; }
+  .ob-welcome .reel-card { width: min(172px, 44vw); }
 }
 /* 26. Phone: "Her story", "Add to my roles" and "The story" leave the picture (where they covered faces) for a
        row under the words; wider screens keep them on the picture's corner */
-.rc-tools-below, .op-syn-phone { display: none !important; }
+.rc-tools-below, .op-syn-phone { display: none; }
 @media (max-width: 640px) {
-  .rc-band-tools, .op-cover-story { display: none !important; }
-  .rc-tools-below { display: flex !important; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .rc-band-tools, .op-cover-story { display: none; }
+  .rc-tools-below { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
   .rc-tools-below .rc-pill { min-height: 38px; padding: 0 14px 0 11px; font-size: 14px; background: var(--canvas); box-shadow: none; }
-  .op-syn-phone { display: inline-flex !important; justify-self: start; margin-top: 4px; }
+  .op-syn-phone { display: inline-flex; justify-self: start; margin-top: 4px; }
 }
 /* audit check: phone list rows give the words the width (one face, a narrow column); results sections breathe */
 @media (max-width: 640px) {
-  .pc-faces { width: 44px !important; }
+  .pc-faces { width: 44px; }
   .pc-faces .pc-face + .pc-face { display: none; }
-  .pc-row { gap: 12px !important; }
-  .pc-soon { font-size: 11px !important; padding: 3px 8px; }
+  .pc-row { gap: 12px; }
+  .pc-soon { font-size: 11px; padding: 3px 8px; }
 }
 .search-results > .block + .block { margin-top: 28px; }
 @media (max-width: 999px), (orientation: portrait) {
-  .hm-roles > .cp-eyebrow, .hm-head { min-height: 0; margin-bottom: 10px !important; }
+  .hm-roles > .cp-eyebrow, .hm-head { min-height: 0; margin-bottom: 10px; }
 }
 .hero.search-hero { max-width: none; }
