@@ -13,7 +13,7 @@ kids = {}
 for x in nodes: kids.setdefault(x['parent'], []).append(x)
 frames = [x for x in nodes if x['type'] == 'FRAME' and x['parent'] == '0:1']
 # flat-colour images and the cut-out with the same picture (checked pixel for pixel)
-CUTOUT = {'fe348f': 'd201fa', '3b62b0': '2351a6', '8592af': 'ee0895', '130313': 'ff8c08', 'afda86': '4f735b'}
+CUTOUT = {'fe348f': 'd201fa', '3b62b0': '2351a6', '8592af': 'ee0895', '130313': 'ff8c08', 'afda86': '4f735b', 'e8c371': 'd637af'}
 SIZES = {'portrait': (720, 964), 'face': (320, 320), 'cover': (1600, 893), 'square': (480, 480)}
 _cache = {}
 def img(h):
