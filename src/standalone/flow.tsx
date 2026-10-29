@@ -631,6 +631,51 @@ const BookIcon = () => (
  * The whole story, act by act, in a reading panel over the opera's page (Back, Escape or a tap outside closes it);
  * your role's name is picked out so you can follow your part.
  */
+/** a phone: the story is a page of its own (in the page's normal flow), not a sheet laid over it */
+function usePhone() {
+  const q = "(max-width: 720px)";
+  const [phone, setPhone] = useState(() => typeof window !== "undefined" && window.matchMedia(q).matches);
+  useEffect(() => {
+    const m = window.matchMedia(q);
+    const on = () => setPhone(m.matches);
+    m.addEventListener("change", on);
+    return () => m.removeEventListener("change", on);
+  }, []);
+  return phone;
+}
+
+/**
+ * The story on a phone, as a page: Back at the top (staying in view while you read) and again at the end, in the
+ * page's own flow, so nothing can cover it or leave it out of reach.
+ */
+function StoryPage({ opera, ch, onClose }: { opera: Opera; ch?: Character; onClose: () => void }) {
+  const top = useRef<HTMLDivElement>(null);
+  useBackToClose(true, onClose);
+  useEffect(() => {
+    top.current?.scrollIntoView({ block: "start" });
+  }, []);
+  const label = ch ? `Back to ${ch.name}` : `Back to ${opera.title}`;
+  return (
+    <div className="story-page" ref={top} role="region" aria-labelledby="syn-h">
+      <header className="story-page-head">
+        <button type="button" className="sheet-back" onClick={onClose}>
+          <BackIcon />
+          <span>{label}</span>
+        </button>
+        <p className="cp-eyebrow" lang={opera.lang}>
+          {opera.title} · {opera.composer}
+        </p>
+        <h1 id="syn-h">The story</h1>
+      </header>
+      <Story opera={opera.id} character={ch?.id} name={ch?.name} idBase="page-story" />
+      <button type="button" className="cp-btn story-page-end" onClick={onClose}>
+        <BackIcon />
+        <span>{label}</span>
+      </button>
+    </div>
+  );
+}
+
 function SynopsisSheet({ opera, ch, onClose }: { opera: Opera; ch?: Character; onClose: () => void }) {
   const close = useRef<HTMLButtonElement>(null);
   useBackToClose(true, onClose);
@@ -718,8 +763,15 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
   const [open, setOpen] = useState<string | null>(null);
   // the character's story opens over this page, and closes back to it
   const [story, setStory] = useState(false);
+  const phone = usePhone();
   const go = continueTarget(ctx, opera, ch);
   const ready = ch.pieces.filter((p) => p.editionId).length;
+  if (story && phone && SYNOPSES[opera.id])
+    return (
+      <main className="screen-body gutter page">
+        <StoryPage opera={opera} ch={ch} onClose={() => setStory(false)} />
+      </main>
+    );
   return (
     <main className="screen-body gutter page">
       <Crumbs
@@ -911,6 +963,13 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   const [open, setOpen] = useState<number | null>(null);
   // the opera's story opens over this page (a saved place may still ask for it)
   const [story, setStory] = useState(ctx.place.screen === "opera" && !!ctx.place.synopsis);
+  const phone = usePhone();
+  if (story && phone && SYNOPSES[opera.id])
+    return (
+      <main className="screen-body gutter page">
+        <StoryPage opera={opera} ch={opera.chars.find((c) => c.id === (ctx.place.screen === "opera" ? ctx.place.as : undefined))} onClose={() => setStory(false)} />
+      </main>
+    );
   return (
     <main className="screen-body gutter page">
       <Crumbs ctx={ctx} trail={[{ label: "Operas", to: { screen: "explore", by: "opera" } }, { label: opera.title, lang: opera.lang }]} />
@@ -918,6 +977,13 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
         {ART[opera.id] && (
           <figure className="op-cover">
             <img src={ART[opera.id].cover} alt={ART[opera.id].alt} />
+            {/* the story sits on the picture's lower right, as on a character's card */}
+            {SYNOPSES[opera.id] && (
+              <button type="button" className="rc-pill op-cover-story" onClick={() => setStory(true)}>
+                <BookIcon />
+                <span>The story</span>
+              </button>
+            )}
           </figure>
         )}
         <p className="cp-eyebrow">
@@ -930,7 +996,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             Your role: <b>{mineHere.map((c) => c.name).join(", ")}</b>
           </p>
         )}
-        {SYNOPSES[opera.id] && (
+        {SYNOPSES[opera.id] && !ART[opera.id] && (
           <button type="button" className="cp-btn op-syn-btn" onClick={() => setStory(true)}>
             <BookIcon />
             The story
@@ -1136,7 +1202,7 @@ const fold = (t: string) =>
     .replace(/[’'.,!?…]/g, "")
     .toLowerCase();
 
-function PieceItem({ ctx, row }: { ctx: Ctx; row: PieceRow }) {
+function PieceItem({ ctx, row, inOpera = false }: { ctx: Ctx; row: PieceRow; inOpera?: boolean }) {
   const first = row.singers.find(({ ch }) => ctx.roles.some((r) => same(r, { opera: row.opera.id, character: ch.id }))) ?? row.singers[0];
   return (
     <button
@@ -1154,7 +1220,13 @@ function PieceItem({ ctx, row }: { ctx: Ctx; row: PieceRow }) {
       <span className="pc-text">
         <b lang={row.opera.lang}>{row.title}</b>
         <span>
-          {row.kind} · {row.singers.map(({ ch }) => ch.name).join(", ")} · <i lang={row.opera.lang}>{row.opera.title}</i>
+          {row.kind} · {row.singers.map(({ ch }) => ch.name).join(", ")}
+          {!inOpera && (
+            <>
+              {" · "}
+              <i lang={row.opera.lang}>{row.opera.title}</i>
+            </>
+          )}
         </span>
       </span>
       {row.ready ? (
@@ -1276,7 +1348,7 @@ export function ExplorePieces({ ctx }: { ctx: Ctx }) {
             </p>
             <div className="pc-list">
               {mine.map((row) => (
-                <PieceItem key={row.title} ctx={ctx} row={row} />
+                <PieceItem key={row.title} ctx={ctx} row={row} inOpera />
               ))}
             </div>
           </section>
@@ -1290,7 +1362,6 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
   return (
     <SearchFrame ctx={ctx} by="opera">
       <section className="block" aria-label="All operas">
-        <p className="cp-eyebrow">All operas</p>
         <div className="showcase tiles">
           {OPERAS.map((o, i) => {
             const art = ART[o.id];
@@ -1473,6 +1544,24 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
         <div className="st-list">
 
           <Toggle on={countIn} onChange={setCountIn} label="Count-in" hint="A bar of clicks before the music starts" />
+          {/* the walk through the practice screen, once more next time a piece opens */}
+          <button
+            type="button"
+            className="st-row"
+            onClick={(e) => {
+              try {
+                localStorage.removeItem("cp:guide2");
+              } catch {
+                /* storage unavailable */
+              }
+              e.currentTarget.querySelector("small")!.textContent = "It will show the next time you open a piece.";
+            }}
+          >
+            <span className="st-text">
+              <b>Show the guide again</b>
+              <small>A short walk through the practice screen</small>
+            </span>
+          </button>
         </div>
       </section>
 

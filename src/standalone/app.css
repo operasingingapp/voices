@@ -11376,3 +11376,154 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice.is-split > .p-stage { margin-right: 16px; overflow: hidden; }
   .practice.is-split > .words-view { margin-left: 0; }
 }
+
+/* =====================================================================
+   One colour system. Ink for text, warm neutrals for surfaces, green for
+   "act / done / on" (play, progress, switches), violet for the loop only.
+   A character's colour lives in its picture and a pale tint of the same hue
+   on its own card; nothing else is pink, lilac or sky blue.
+   ===================================================================== */
+:root {
+  --picked: #e6e8e3;
+  --picked-strong: #dadcd6;
+  --sky-soft: #e4f5ea;
+  --together: #e9ebe6;
+  --you: var(--now-mark);
+}
+/* segmented controls: the chosen segment is a white tab on the grey track (as Search's tabs) */
+.cp-seg button[aria-selected="true"],
+.cp-seg button[aria-pressed="true"] {
+  background: var(--canvas);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(20, 22, 18, 0.12);
+}
+/* toggled chips (IPA, English, Tips, Ready only, voices): a darker neutral with ink, never a pastel */
+.nl-chip[aria-pressed="true"],
+.w-chip[aria-pressed="true"],
+.voice-chip[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--canvas);
+}
+.voice-chip { background: var(--fog); color: var(--ink); }
+.voice-chip[aria-pressed="false"] small { color: var(--ink-muted); }
+.card-toggle:not(.on) { background: var(--ink); color: var(--canvas); }
+/* your own lane in the score: a faint green wash (green = you, acting) */
+.ov-you { background: var(--now-mark); opacity: 0.07; }
+
+/* =====================================================================
+   One type scale: page titles 40, the opera 48, a character 32 — all in
+   the same medium weight; body 16; meta 14
+   ===================================================================== */
+.hero h1,
+.hero.compact h1 { font-size: 40px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.05; }
+.op-head h1 { font-size: clamp(36px, 4.4vw, 48px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.05; }
+.rc-text h1 { font-size: 32px; font-weight: 500; }
+@media (max-width: 640px) {
+  .hero h1,
+  .hero.compact h1 { font-size: 32px; }
+  .op-head h1 { font-size: 34px; }
+  .rc-text h1 { font-size: 26px; }
+}
+
+/* =====================================================================
+   Shapes: no decorative shadows (flat surfaces; only menus and popovers float)
+   ===================================================================== */
+.sc-pic,
+.sc-card:hover .sc-pic { box-shadow: none !important; }
+.rc-pill { box-shadow: none; background: var(--canvas); backdrop-filter: none; }
+
+/* the rail: every chosen place lit the same way — a white tile with a hairline */
+.rail-link[aria-current="page"],
+.rail-role[aria-current="page"] {
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+}
+
+/* =====================================================================
+   The role's pieces: the ones you can practise stand out (white, with play);
+   the rest step back (no card, smaller, the scene behind a small chevron)
+   ===================================================================== */
+.checklist { gap: 6px; }
+.ck.ready { background: var(--canvas); box-shadow: inset 0 0 0 1.5px var(--now-mark); }
+.ck.ready .ck-text b { font-size: 19px; }
+.ck.soon {
+  min-height: 56px;
+  padding: 6px 10px 6px 16px;
+  border-radius: 18px;
+  background: transparent;
+}
+.ck.soon:hover { background: var(--fog); }
+.ck.soon .ck-box { width: 32px; height: 32px; border-width: 1.5px; }
+.ck.soon .ck-box svg { width: 16px; height: 16px; }
+.ck.soon .ck-text b { font-size: 16px; font-weight: 400; opacity: 0.75; }
+.ck.soon .ck-text > span { font-size: 13px; opacity: 0.7; }
+.ck.soon .ck-scene { min-height: 36px; padding: 0 10px; background: transparent; box-shadow: none; }
+.ck.soon .ck-scene .ck-scene-label { display: none; }
+
+/* =====================================================================
+   The opera's header: a pale tint of its own picture, a readable measure,
+   your role and the story on one line
+   ===================================================================== */
+.op-head .op-story { max-width: 640px; font-size: 17px; line-height: 1.55; }
+.op-head .op-yours { font-size: 15px; }
+.op-cover { position: relative; }
+.op-cover-story { position: absolute; right: 16px; bottom: 16px; }
+@media (max-width: 640px) { .op-cover-story { right: 10px; bottom: 10px; } }
+.voice-chip[aria-pressed="true"] { box-shadow: none; }
+/* Search on a phone: the box and the tabs fit the page */
+.search-hero { min-width: 0; }
+.search-box { box-sizing: border-box; width: 100%; max-width: 640px; }
+.search-hero .explore-mode { box-sizing: border-box; max-width: 100%; width: fit-content; }
+@media (max-width: 640px) {
+  .search-hero .explore-mode { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); }
+}
+.search-hero { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 640px) {
+  .search-hero .explore-mode button { min-width: 0; padding-left: 8px; padding-right: 8px; }
+}
+
+/* the story on a phone: a page in the normal flow, Back at the top like every other page, and again at the end */
+.story-page { display: grid; gap: 10px; padding-bottom: 40px; scroll-margin-top: 80px; }
+.story-page-head { display: grid; gap: 4px; padding-bottom: 12px; border-bottom: 1px solid var(--fog-strong); }
+.story-page-head .sheet-back { display: inline-flex; justify-self: start; margin: 0 0 8px -8px; }
+.story-page-head h1 { margin: 0; font: 500 32px/1.1 var(--font-sans); letter-spacing: -0.01em; }
+.story-page-end { justify-self: center; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; margin-top: 20px; padding: 0 20px 0 14px; background: var(--fog); }
+.story-page-end svg { width: 18px; height: 18px; }
+/* the story's numbers that are yours: a quiet neutral card with a green edge (green = yours / act), no pink */
+.syn-scenes li.mine { border-left-color: var(--now-mark); background: var(--fog); }
+.sc-with em { color: var(--ink); }
+
+/* phones: the bar is folded by default (one slim row); the arrow opens every control and folds them again */
+@media (max-width: 640px) {
+  .practice .p-bar .bar-more { display: grid !important; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--fog); }
+  .practice .p-bar .bar-more svg { transition: transform var(--duration-move) var(--ease-standard); }
+  .practice .p-bar .bar-more.open svg { transform: rotate(180deg); }
+  .practice .p-bar:not(.folded) .bar-parts { order: 0; }
+  .practice .p-bar:not(.folded) .bar-transport { order: 1; }
+  .practice .p-bar:not(.folded) .bar-right { order: 2; flex: 1 1 0 !important; width: auto !important; min-width: 0; }
+  .practice .p-bar:not(.folded) .bar-more { order: 3; align-self: center; }
+}
+
+/* =====================================================================
+   The guide: the screen dims, one part stays lit, a card explains it
+   ===================================================================== */
+.guide-scrim { position: fixed; inset: 0; z-index: 99; pointer-events: auto; }
+.guide-hole {
+  position: fixed;
+  border-radius: 20px;
+  box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.55), 0 0 0 2px var(--canvas);
+  transition: left 240ms var(--ease-standard), top 240ms var(--ease-standard), width 240ms var(--ease-standard), height 240ms var(--ease-standard);
+  pointer-events: none;
+}
+.tip { z-index: 100; box-shadow: var(--shadow-float); max-width: calc(100vw - 32px); }
+.tip .tip-arrow { display: none; }
+.tip p { margin: 0; }
+.tip p b { color: var(--ink-muted); }
+.tip-title { display: block; margin: 2px 0 4px; font: 500 19px/1.25 var(--font-sans); }
+.tip-dots { display: flex; gap: 6px; }
+.tip-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--fog-strong); }
+.tip-dots i.done { background: color-mix(in srgb, var(--now-mark) 45%, transparent); }
+.tip-dots i.on { width: 18px; border-radius: 3px; background: var(--now-mark); }
+.tip-actions { display: flex; align-items: center; gap: 8px; }
+.tip-actions .tip-skip { margin-right: auto; padding-left: 0; color: var(--ink-muted); }
+@media (prefers-reduced-motion: reduce) { .guide-hole { transition: none; } }

@@ -73,13 +73,13 @@ def render(fr, bg, out_size, seed, replace=None, keep_scene=False):
     return Image.fromarray(outp.clip(0, 255).astype(np.uint8))
 
 def tones(bg):
+    """the card colours that go with a backdrop: pale tints of the backdrop's own hue, so a card and its picture
+    read as one (a lavender picture on a pale lavender card); quiet enough for the ink on them"""
     r, g, b = (int(bg[i:i + 2], 16) / 255 for i in (1, 3, 5))
     h, l, s = colorsys.rgb_to_hls(r, g, b)
-    hc = (h + 0.5) % 1
-    # the opposite of a teal or sage backdrop is a candy pink: a warm peach-clay instead, still its complement
-    if 0.80 < hc < 0.99: hc = 0.035
     hexc = lambda hh, ll, ss: '#%02x%02x%02x' % tuple(round(v * 255) for v in colorsys.hls_to_rgb(hh, ll, ss))
-    return {'soft': hexc(hc, 0.94, 0.42), 'strong': hexc(hc, 0.86, 0.42), 'deep': hexc(hc, 0.72, 0.36), 'back': bg}
+    sat = min(max(s, 0.18), 0.32)
+    return {'soft': hexc(h, 0.955, sat), 'strong': hexc(h, 0.90, sat), 'deep': hexc(h, 0.74, sat * 1.1), 'back': bg}
 
 os.makedirs(OUT, exist_ok=True)
 manifest = {}

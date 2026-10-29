@@ -446,13 +446,21 @@ function fmtTime(sec: number): string {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
 
-/** Three tips shown once, the first time you practise, each next to what it explains. */
-const TIPS = [
-  { sel: ".now-it", text: "Tap any word for its meaning and how to say it." },
-  { sel: ".view-switch", text: "Words shows the whole text, without the notes." },
-  { sel: ".part-fade", text: "Fade the piano so your own line stands out." },
+/**
+ * The guide: the first time you practise, a short walk through the screen, one part at a time, each lit with the
+ * rest dimmed (the first selector found on screen is used, so a phone and an iPad each get their own controls).
+ */
+const TIPS: { sel: string[]; title: string; text: string; alt?: Record<string, string> }[] = [
+  { sel: [".line-card"], title: "The line you sing", text: "Your words, the syllable you are on lit as the music plays. Tap a dotted word to hear it and read how to say it. Show chooses IPA and English." },
+  { sel: [".p-stage"], title: "The music", text: "Your line is tinted green. Tap a part's name to move, hide or mute it. Drag across bars, or press and hold one, to loop them." },
+  { sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play", text: "Play and pause (the space bar too). A bar of clicks counts you in." },
+  { sel: [".bar-loop"], title: "Loop", text: "Loops the bar you are on. Drag its purple edges over the bars you want; it is kept until you clear it." },
+  { sel: [".cp-speed"], title: "Speed", text: "Slower to learn the notes, then back to 100%." },
+  { sel: [".bar-parts", ".bar-more"], title: "Who plays", text: "Tap a singer's face to mute that line and sing it yourself. The piano can be muted, hidden or faded. Arrange sets each line's instrument and place.", alt: { ".bar-more": "This arrow opens every control: tap a singer's face to mute that line and sing it yourself, mute, hide or fade the piano, the count-in, and Arrange for each line's instrument and place." } },
+  { sel: [".view-switch"], title: "Music, Both, Words", text: "Words shows the whole text; Both puts it beside the music on a big screen." },
+  { sel: [".card-toggle"], title: "More room for the music", text: "Hide the line box to give the score the whole screen. Tap again to bring it back." },
 ];
-const TIPS_KEY = "cp:tipsDone";
+const TIPS_KEY = "cp:guide2";
 
 type PracticeProps = {
   onBack: () => void;
@@ -708,7 +716,8 @@ function PracticeScreen({
       return -1;
     }
   });
-  const [tipPos, setTipPos] = useState<{ left: number; top: number; above: boolean; arrow: number; w: number } | null>(null);
+  const [tipSel, setTipSel] = useState<string | null>(null);
+  const [tipPos, setTipPos] = useState<{ left: number; top: number; above: boolean; arrow: number; w: number; hole: { x: number; y: number; w: number; h: number } } | null>(null);
   const endTips = () => {
     setTip(-1);
     try {
@@ -720,8 +729,11 @@ function PracticeScreen({
   useLayoutEffect(() => {
     if (tip < 0) return;
     const placeTip = () => {
-      const el = document.querySelector<HTMLElement>(TIPS[tip].sel);
-      if (!el || !el.getClientRects().length || getComputedStyle(el).visibility === "hidden") {
+      const seen = (e: HTMLElement | null): e is HTMLElement => !!e && e.getClientRects().length > 0 && getComputedStyle(e).visibility !== "hidden" && getComputedStyle(e).display !== "none";
+      const q = TIPS[tip].sel.find((x) => seen(document.querySelector<HTMLElement>(x)));
+      const el = q ? document.querySelector<HTMLElement>(q) : null;
+      setTipSel(q ?? null);
+      if (!el) {
         if (tip < TIPS.length - 1) setTip(tip + 1);
         else endTips();
         return;
@@ -730,8 +742,19 @@ function PracticeScreen({
       const w = Math.min(320, window.innerWidth - 32);
       const cx = r.left + r.width / 2;
       const left = Math.max(16, Math.min(cx - w / 2, window.innerWidth - 16 - w));
-      const below = r.bottom + 160 < window.innerHeight;
-      setTipPos({ left, top: below ? r.bottom + 14 : r.top - 14, above: !below, arrow: Math.max(18, Math.min(w - 18, cx - left)), w });
+      // a big part (the music) gets the card over its lower part rather than off-screen
+      const below = r.bottom + 190 < window.innerHeight;
+      const above = !below && r.top - 190 > 0;
+      const top = below ? r.bottom + 14 : above ? r.top - 14 : Math.max(16, r.bottom - 200);
+      const pad = 6;
+      setTipPos({
+        left,
+        top,
+        above,
+        arrow: Math.max(18, Math.min(w - 18, cx - left)),
+        w,
+        hole: { x: Math.max(4, r.left - pad), y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8, r.width + pad * 2), h: Math.min(window.innerHeight - 8, r.height + pad * 2) },
+      });
     };
     placeTip();
     window.addEventListener("resize", placeTip);
@@ -1000,8 +1023,8 @@ function PracticeScreen({
     if (!loop) setLoopHint(false);
   }, [loop]);
   // on a phone the bar folds to one slim row while the music plays (the score gets the room); a tap opens it
-  const [barOpen, setBarOpen] = useState(true);
-  useEffect(() => setBarOpen(!live), [live]);
+  // phones: the bar is one slim row (play, loop, speed); the arrow opens every control, and closes them again
+  const [barOpen, setBarOpen] = useLocalSetting("p:barOpen", false);
   useEffect(() => engine?.setLoop(loop), [engine, loop]);
   const barAt = (pq: number) => perf.measures.find((pm) => pq >= pm.startQ - 1e-6 && pq < pm.startQ + pm.durQ - 1e-6) ?? perf.measures[perf.measures.length - 1];
   const loopLine = () => {
@@ -1479,17 +1502,6 @@ function PracticeScreen({
               </svg>
             </button>
           )}
-          <button
-            type="button"
-            className="cp-btn details-btn"
-            aria-label={`Details: the scene, notes${notes.length ? ` (${notes.length})` : ""} and about`}
-            aria-pressed={!!drawer}
-            onClick={() => setDrawer(drawer ? null : context ? "context" : "notes")}
-          >
-            {Icon.info}
-            <span className="label">Details</span>
-            {learned && <span className="details-done" aria-hidden="true">{Icon.check}</span>}
-          </button>
         </div>
       </header>
 
@@ -2339,7 +2351,14 @@ function PracticeScreen({
             <span>Count-in</span>
           </button>
         </div>
-        <button type="button" className="cp-icon-btn bar-more" onClick={() => setBarOpen(true)} aria-label="Show all the controls" title="More">
+        <button
+          type="button"
+          className={`cp-icon-btn bar-more${barOpen ? " open" : ""}`}
+          onClick={() => setBarOpen(!barOpen)}
+          aria-expanded={barOpen}
+          aria-label={barOpen ? "Fewer controls" : "All the controls: singers, piano, speed details"}
+          title={barOpen ? "Fewer" : "More"}
+        >
           {Icon.chevUp}
         </button>
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
@@ -2546,28 +2565,45 @@ function PracticeScreen({
         </div>
       )}
       {tip >= 0 && tipPos && (
-        <div
-          className={`tip${tipPos.above ? " above" : ""}`}
-          style={{ left: tipPos.left, top: tipPos.top, width: tipPos.w }}
-          role="dialog"
-          aria-label={`Tip ${tip + 1} of ${TIPS.length}`}
-        >
-          <span className="tip-arrow" style={{ left: tipPos.arrow }} />
-          <p>
-            <b>
-              Tip {tip + 1} of {TIPS.length}
-            </b>
-            {TIPS[tip].text}
-          </p>
-          <div className="tip-actions">
-            <button type="button" className="cp-btn cp-btn--ghost" onClick={endTips}>
-              Skip tips
-            </button>
-            <button type="button" className="cp-btn cp-btn--ink" onClick={() => (tip < TIPS.length - 1 ? setTip(tip + 1) : endTips())}>
-              {tip < TIPS.length - 1 ? "Next" : "Got it"}
-            </button>
+        <>
+          {/* the rest of the screen dims; what the step is about stays lit (and the screen waits for the guide) */}
+          <div className="guide-scrim" aria-hidden="true">
+            <span className="guide-hole" style={{ left: tipPos.hole.x, top: tipPos.hole.y, width: tipPos.hole.w, height: tipPos.hole.h }} />
           </div>
-        </div>
+          <div
+            className={`tip${tipPos.above ? " above" : ""}`}
+            style={{ left: tipPos.left, top: tipPos.top, width: tipPos.w }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Guide, step ${tip + 1} of ${TIPS.length}: ${TIPS[tip].title}`}
+          >
+            <p>
+              <b>
+                {tip + 1} of {TIPS.length}
+              </b>
+              <strong className="tip-title">{TIPS[tip].title}</strong>
+              {(tipSel && TIPS[tip].alt?.[tipSel]) || TIPS[tip].text}
+            </p>
+            <div className="tip-dots" aria-hidden="true">
+              {TIPS.map((_, i) => (
+                <i key={i} className={i === tip ? "on" : i < tip ? "done" : ""} />
+              ))}
+            </div>
+            <div className="tip-actions">
+              <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={endTips}>
+                Skip the guide
+              </button>
+              {tip > 0 && (
+                <button type="button" className="cp-btn" onClick={() => setTip(tip - 1)}>
+                  Back
+                </button>
+              )}
+              <button type="button" className="cp-btn cp-btn--ink" onClick={() => (tip < TIPS.length - 1 ? setTip(tip + 1) : endTips())}>
+                {tip < TIPS.length - 1 ? "Next" : "Start practising"}
+              </button>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
