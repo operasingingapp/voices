@@ -440,21 +440,7 @@ function fmtTime(sec: number): string {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
 
-/**
- * The guide: the first time you practise, a short walk through the screen, one part at a time, each lit with the
- * rest dimmed (the first selector found on screen is used, so a phone and an iPad each get their own controls).
- */
-const TIPS: { sel: string[]; title: string; text: string; alt?: Record<string, string> }[] = [
-  { sel: [".line-card"], title: "The line you sing", text: "Your words, the syllable you are on lit as the music plays. Tap a dotted word to hear it and read how to say it. Show chooses IPA and English." },
-  { sel: [".p-stage"], title: "The music", text: "Your line is tinted green. Tap a part's name to move, hide or mute it. Drag across bars, or press and hold one, to loop them." },
-  { sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play", text: "Play and pause (the space bar too). A bar of clicks counts you in." },
-  { sel: [".bar-loop"], title: "Loop", text: "Loops the bar you are on. Drag its purple edges over the bars you want; it is kept until you clear it." },
-  { sel: [".cp-speed"], title: "Speed", text: "Slower to learn the notes, then back to 100%." },
-  { sel: [".bar-parts", ".bar-more"], title: "Who plays", text: "Tap a singer's face to mute that line and sing it yourself. The piano can be muted, hidden or faded. Arrange sets each line's instrument and place.", alt: { ".bar-more": "This arrow opens every control: tap a singer's face to mute that line and sing it yourself, mute, hide or fade the piano, the count-in, and Arrange for each line's instrument and place." } },
-  { sel: [".view-switch"], title: "Music and Words", text: "Words shows the whole text to study: the English, the IPA, each line to hear." },
-  { sel: [".card-toggle"], title: "More room for the music", text: "Hide the line box to give the score the whole screen. Tap again to bring it back." },
-];
-const TIPS_KEY = "cp:guide2";
+const TIPS_KEY = "cp:guide3";
 
 type PracticeProps = {
   onBack: () => void;
@@ -705,57 +691,6 @@ function PracticeScreen({
   const sylRanges = useMemo(() => new Map(phrases.map((ph) => [ph.id, syllableRanges(ph)])), [phrases]);
   const [tipIdx, setTipIdx] = useState(0);
   const [tipOpen, setTipOpen] = useState(false);
-  const [tip, setTip] = useState<number>(() => {
-    try {
-      return localStorage.getItem(TIPS_KEY) ? -1 : 0;
-    } catch {
-      return -1;
-    }
-  });
-  const [tipSel, setTipSel] = useState<string | null>(null);
-  const [tipPos, setTipPos] = useState<{ left: number; top: number; above: boolean; arrow: number; w: number; hole: { x: number; y: number; w: number; h: number } } | null>(null);
-  const endTips = () => {
-    setTip(-1);
-    try {
-      localStorage.setItem(TIPS_KEY, "1");
-    } catch {
-      /* storage unavailable */
-    }
-  };
-  useLayoutEffect(() => {
-    if (tip < 0) return;
-    const placeTip = () => {
-      const seen = (e: HTMLElement | null): e is HTMLElement => !!e && e.getClientRects().length > 0 && getComputedStyle(e).visibility !== "hidden" && getComputedStyle(e).display !== "none";
-      const q = TIPS[tip].sel.find((x) => seen(document.querySelector<HTMLElement>(x)));
-      const el = q ? document.querySelector<HTMLElement>(q) : null;
-      setTipSel(q ?? null);
-      if (!el) {
-        if (tip < TIPS.length - 1) setTip(tip + 1);
-        else endTips();
-        return;
-      }
-      const r = el.getBoundingClientRect();
-      const w = Math.min(320, window.innerWidth - 32);
-      const cx = r.left + r.width / 2;
-      const left = Math.max(16, Math.min(cx - w / 2, window.innerWidth - 16 - w));
-      // a big part (the music) gets the card over its lower part rather than off-screen
-      const below = r.bottom + 190 < window.innerHeight;
-      const above = !below && r.top - 190 > 0;
-      const top = below ? r.bottom + 14 : above ? r.top - 14 : Math.max(16, r.bottom - 200);
-      const pad = 6;
-      setTipPos({
-        left,
-        top,
-        above,
-        arrow: Math.max(18, Math.min(w - 18, cx - left)),
-        w,
-        hole: { x: Math.max(4, r.left - pad), y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8, r.width + pad * 2), h: Math.min(window.innerHeight - 8, r.height + pad * 2) },
-      });
-    };
-    placeTip();
-    window.addEventListener("resize", placeTip);
-    return () => window.removeEventListener("resize", placeTip);
-  }, [tip, view]);
   const [speakingId, setSpeakingId] = useState<string | null>(null);
   const [speakingWord, setSpeakingWord] = useState<string | null>(null);
   const [notes, setNotes] = useState<Note[]>(loadNotes);
@@ -1111,9 +1046,11 @@ function PracticeScreen({
     } else if (h) {
       const o = perf.occurrences(h.m)[0];
       if (!o) return;
-      // the nearer barline to where the handle is
-      const q = h.q > o.durQ / 2 ? o.startQ + o.durQ : o.startQ;
-      r = k === "s" ? { startQ: Math.min(q, Z.startQ), endQ: loop.endQ } : { startQ: loop.startQ, endQ: Math.max(q, F.startQ + F.durQ) };
+      // a bar the edge is dragged a little way into is taken in (a quarter of it is enough), so the loop follows
+      // the finger rather than waiting for the far half of a long bar
+      const qEnd = h.q > o.durQ * 0.25 ? o.startQ + o.durQ : o.startQ;
+      const qStart = h.q < o.durQ * 0.75 ? o.startQ : o.startQ + o.durQ;
+      r = k === "s" ? { startQ: Math.min(qStart, Z.startQ), endQ: loop.endQ } : { startQ: loop.startQ, endQ: Math.max(qEnd, F.startQ + F.durQ) };
     }
     if (r && (Math.abs(r.startQ - loop.startQ) > 1e-6 || Math.abs(r.endQ - loop.endQ) > 1e-6)) setLoop(r);
   };
@@ -1436,6 +1373,231 @@ function PracticeScreen({
     const f = Math.min(1, Math.max(0, (clientX - r.left) / r.width));
     goTo(perf.secToQ(f * total));
   };
+
+  /* ------------------------------------------------------------------------------------------------
+     The guide: the first time a piece opens, a short rehearsal done for real. Each step lights one control
+     (the rest dims and does not respond), says what to do, and moves on when you have done it. At the end
+     (or on skipping) everything goes back as it was.
+     ------------------------------------------------------------------------------------------------ */
+  type GuideStep = { id: string; part: string; sel: string[]; title: string; text: string; done?: () => boolean; holeRight?: number; skipIf?: () => boolean };
+  const [guide, setGuide] = useState<number>(() => {
+    try {
+      return localStorage.getItem(TIPS_KEY) ? -2 : -1;
+    } catch {
+      return -2;
+    }
+  });
+  const [guideOk, setGuideOk] = useState(false);
+  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null } | null>(null);
+  const pianoShownNow = showOf(pianoPart);
+  const firstBar = perf.measures[0];
+  const steps: GuideStep[] = [
+    { id: "play", part: "Listen", sel: ['.bar-transport [data-testid="play"]'], title: "Press play", text: "A bar of clicks counts you in, then the music starts.", done: () => playing },
+    { id: "pause", part: "Listen", sel: ['.bar-transport [data-testid="pause"]'], title: "Where you are", text: "The lit syllable in the box and the green note in the score are the same moment. Press pause.", done: () => !playing },
+    { id: "next", part: "Find your way", sel: [".now-body .now-step:last-child"], title: "The next line", text: "Tap › to go to the next line (‹ goes back).", done: () => guideQ.current !== null && Math.abs(q - guideQ.current) > 0.01 },
+    { id: "word", part: "Find your way", sel: [".now-it"], title: "A word", text: "Tap a word: hear it, see how it is pronounced.", done: () => !!openWord },
+    { id: "more", part: "Sing it yourself", sel: [".bar-more"], title: "All the controls", text: "Open the controls with the arrow.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
+    { id: "mute", part: "Sing it yourself", sel: [".bar-parts > .part:first-child"], title: "Sing it yourself", text: "This is you. Tap your face: your line stops sounding, so you sing it.", done: () => !hearVoice },
+    { id: "piano", part: "Sing it yourself", sel: [".piano-group .pg-btn:nth-child(2)"], title: "The piano in the score", text: pianoShownNow ? "Tap the eye to hide the piano: just the voices in the score." : "Tap the eye to show the piano's part in the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
+    { id: "loop", part: "Practise a passage", sel: [".bar-loop"], title: "Loop", text: "Tap loop: the bar you are on repeats.", done: () => !!loop },
+    { id: "edge", part: "Practise a passage", sel: [".ov-lh-e"], holeRight: 140, title: "Take in more bars", text: "Drag the purple edge to the right, over a bar or two.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
+    { id: "playloop", part: "Practise a passage", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play the passage", text: "Press play: it repeats until you pause.", done: () => playing },
+    { id: "words", part: "The text", sel: [".view-switch button:nth-child(2)"], title: "Words", text: "Tap Words: the whole text, with the English, to study.", done: () => view === "words" },
+    { id: "music", part: "The text", sel: [".view-switch button:first-child"], title: "Back to the music", text: "Tap Music to come back.", done: () => view === "music" },
+  ];
+  const step = guide >= 0 ? steps[guide] : null;
+  // where the music stood when a step began (a step done by moving through the piece compares with it)
+  const guideQ = useRef<number | null>(null);
+  useEffect(() => {
+    guideQ.current = guide >= 0 ? q : null;
+    if (guide >= 0 && steps[guide]?.id === "edge" && !loop) {
+      const pm = barAt(Math.max(0, q));
+      setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [guide]);
+  const putBack = () => {
+    const g = guideStart.current;
+    if (engine?.state === "playing") engine.pause();
+    setOpenWord(null);
+    if (g) {
+      setHearVoice(g.hearVoice);
+      setLine(pianoPart.key, { show: g.pianoShown });
+      setView(g.view);
+      engine?.setTempoFactor(g.tempo);
+      setLoop(g.loop);
+      setLoopHint(false);
+      try {
+        if (g.hadLoop) localStorage.setItem(loopKey, g.hadLoop);
+        else localStorage.removeItem(loopKey);
+      } catch {
+        /* storage unavailable */
+      }
+      setSavedLoop(g.hadLoop ? JSON.parse(g.hadLoop) : null);
+    }
+  };
+  const endGuide = (put = true) => {
+    if (put) putBack();
+    setGuide(-2);
+    try {
+      localStorage.setItem(TIPS_KEY, "1");
+    } catch {
+      /* storage unavailable */
+    }
+  };
+  const startGuide = () => {
+    let hadLoop: string | null = null;
+    try {
+      hadLoop = localStorage.getItem(loopKey);
+    } catch {
+      /* storage unavailable */
+    }
+    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop };
+    setLoop(null);
+    setView("music");
+    setGuide(0);
+  };
+  const advance = (from: number) => {
+    let n = from + 1;
+    while (n < steps.length && steps[n].skipIf?.()) n++;
+    // the passage repeats; leave it playing on a step that needs no sound, and close a word card left open
+    setOpenWord(null);
+    setGuide(n < steps.length ? n : steps.length);
+  };
+  // a step done: a tick for a moment, then the next one
+  useEffect(() => {
+    if (step && !guideOk && step.done?.()) setGuideOk(true);
+  });
+  useEffect(() => {
+    if (!guideOk) return;
+    const t = window.setTimeout(() => {
+      setGuideOk(false);
+      advance(guide);
+    }, 650);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [guideOk, guide]);
+  // where the lit control is, and where the card goes
+  const [guideBox, setGuideBox] = useState<{ hole: { x: number; y: number; w: number; h: number }; left: number; top: number; above: boolean; w: number } | null>(null);
+  useLayoutEffect(() => {
+    if (!step) {
+      setGuideBox(null);
+      return;
+    }
+    const place = () => {
+      const seen = (e: Element | null): e is HTMLElement => !!e && (e as HTMLElement).getClientRects().length > 0 && getComputedStyle(e).display !== "none" && getComputedStyle(e).visibility !== "hidden";
+      const el = step.sel.map((q) => document.querySelector(q)).find(seen);
+      if (!el) {
+        const w = Math.min(340, window.innerWidth - 32);
+        setGuideBox({ hole: { x: -9999, y: -9999, w: 0, h: 0 }, left: (window.innerWidth - w) / 2, top: window.innerHeight / 2 - 100, above: false, w });
+        return;
+      }
+      const r = el.getBoundingClientRect();
+      const pad = 6;
+      const hole = { x: Math.max(4, r.left - pad), y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8 - Math.max(4, r.left - pad), r.width + pad * 2 + (step.holeRight ?? 0)), h: Math.min(window.innerHeight - 8, r.height + pad * 2) };
+      const w = Math.min(340, window.innerWidth - 32);
+      const cx = hole.x + hole.w / 2;
+      const left = Math.max(16, Math.min(cx - w / 2, window.innerWidth - 16 - w));
+      const below = hole.y + hole.h + 210 < window.innerHeight;
+      setGuideBox({ hole, left, top: below ? hole.y + hole.h + 12 : hole.y - 12, above: !below, w });
+    };
+    place();
+    const t = window.setInterval(place, 300);
+    window.addEventListener("resize", place);
+    return () => {
+      window.clearInterval(t);
+      window.removeEventListener("resize", place);
+    };
+  }, [guide, view, barOpen, !!loop, playing]);
+  // only the lit control (and the guide's card) answers while a step waits
+  useEffect(() => {
+    if (!step || !guideBox) return;
+    const block = (e: Event) => {
+      const t = e.target as HTMLElement;
+      if (t.closest(".tip, .word-card, .ov-lh")) return;
+      const pe = e as PointerEvent;
+      const { x, y, w, h } = guideBox.hole;
+      if (pe.clientX >= x && pe.clientX <= x + w && pe.clientY >= y && pe.clientY <= y + h) return;
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    window.addEventListener("pointerdown", block, true);
+    window.addEventListener("click", block, true);
+    return () => {
+      window.removeEventListener("pointerdown", block, true);
+      window.removeEventListener("click", block, true);
+    };
+  }, [step, guideBox]);
+  const guideUi =
+    guide === -1 && pb.status === "ready" ? (
+      <div className="guide-intro" role="dialog" aria-modal="true" aria-labelledby="guide-h">
+        <div className="tip guide-intro-card">
+          <p>
+            <b>New here?</b>
+            <strong className="tip-title" id="guide-h">
+              Learn this screen by doing it
+            </strong>
+            About a minute: play, find your way, sing your line yourself, loop a passage. Everything goes back as it was afterwards.
+          </p>
+          <div className="tip-actions">
+            <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={() => endGuide(false)}>
+              Not now
+            </button>
+            <button type="button" className="cp-btn cp-btn--ink" onClick={startGuide}>
+              Start
+            </button>
+          </div>
+        </div>
+      </div>
+    ) : guide === steps.length ? (
+      <div className="guide-intro" role="dialog" aria-modal="true" aria-labelledby="guide-h">
+        <div className="tip guide-intro-card">
+          <p>
+            <b>Done</b>
+            <strong className="tip-title" id="guide-h">
+              That is the whole screen
+            </strong>
+            Everything is back as it was. You can see this again in Settings.
+          </p>
+          <div className="tip-actions">
+            <button type="button" className="cp-btn cp-btn--ink" onClick={() => endGuide(true)}>
+              Start practising
+            </button>
+          </div>
+        </div>
+      </div>
+    ) : step && guideBox ? (
+      <>
+        <div className="guide-scrim" aria-hidden="true">
+          <span className={`guide-hole${guideOk ? " ok" : ""}`} style={{ left: guideBox.hole.x, top: guideBox.hole.y, width: guideBox.hole.w, height: guideBox.hole.h }} />
+        </div>
+        <div className={`tip${guideBox.above ? " above" : ""}${guideOk ? " ok" : ""}`} style={{ left: guideBox.left, top: guideBox.top, width: guideBox.w }} role="dialog" aria-label={`Guide: ${step.title}`}>
+          <p>
+            <b>
+              {step.part} · {guide + 1} of {steps.length}
+            </b>
+            <strong className="tip-title">
+              {guideOk && <span className="tip-ok">{Icon.check}</span>}
+              {step.title}
+            </strong>
+            {step.text}
+          </p>
+          <div className="tip-dots" aria-hidden="true">
+            {steps.map((_, i) => (
+              <i key={i} className={i === guide ? "on" : i < guide ? "done" : ""} />
+            ))}
+          </div>
+          <div className="tip-actions">
+            <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={() => endGuide(true)}>
+              Skip the guide
+            </button>
+            <button type="button" className="cp-btn" onClick={() => advance(guide)}>
+              Skip this step
+            </button>
+          </div>
+        </div>
+      </>
+    ) : null;
 
   return (
     <div className={`practice is-${view}${loop && loopHint ? " loop-hint" : ""}`} style={practiceTone}>
@@ -2555,47 +2717,7 @@ function PracticeScreen({
           </button>
         </div>
       )}
-      {tip >= 0 && tipPos && (
-        <>
-          {/* the rest of the screen dims; what the step is about stays lit (and the screen waits for the guide) */}
-          <div className="guide-scrim" aria-hidden="true">
-            <span className="guide-hole" style={{ left: tipPos.hole.x, top: tipPos.hole.y, width: tipPos.hole.w, height: tipPos.hole.h }} />
-          </div>
-          <div
-            className={`tip${tipPos.above ? " above" : ""}`}
-            style={{ left: tipPos.left, top: tipPos.top, width: tipPos.w }}
-            role="dialog"
-            aria-modal="true"
-            aria-label={`Guide, step ${tip + 1} of ${TIPS.length}: ${TIPS[tip].title}`}
-          >
-            <p>
-              <b>
-                {tip + 1} of {TIPS.length}
-              </b>
-              <strong className="tip-title">{TIPS[tip].title}</strong>
-              {(tipSel && TIPS[tip].alt?.[tipSel]) || TIPS[tip].text}
-            </p>
-            <div className="tip-dots" aria-hidden="true">
-              {TIPS.map((_, i) => (
-                <i key={i} className={i === tip ? "on" : i < tip ? "done" : ""} />
-              ))}
-            </div>
-            <div className="tip-actions">
-              <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={endTips}>
-                Skip the guide
-              </button>
-              {tip > 0 && (
-                <button type="button" className="cp-btn" onClick={() => setTip(tip - 1)}>
-                  Back
-                </button>
-              )}
-              <button type="button" className="cp-btn cp-btn--ink" onClick={() => (tip < TIPS.length - 1 ? setTip(tip + 1) : endTips())}>
-                {tip < TIPS.length - 1 ? "Next" : "Start practising"}
-              </button>
-            </div>
-          </div>
-        </>
-      )}
+      {guideUi}
     </div>
   );
 }

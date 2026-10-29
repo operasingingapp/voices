@@ -1550,7 +1550,7 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
             className="st-row"
             onClick={(e) => {
               try {
-                localStorage.removeItem("cp:guide2");
+                localStorage.removeItem("cp:guide3");
               } catch {
                 /* storage unavailable */
               }

@@ -11527,3 +11527,19 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .tip-actions { display: flex; align-items: center; gap: 8px; }
 .tip-actions .tip-skip { margin-right: auto; padding-left: 0; color: var(--ink-muted); }
 @media (prefers-reduced-motion: reduce) { .guide-hole { transition: none; } }
+
+/* the guide, done for real: the lit control answers, the rest is dimmed and still */
+.guide-scrim { pointer-events: none; }
+.guide-hole { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 5px color-mix(in srgb, var(--now-mark) 60%, transparent); animation: guide-pulse 1.6s ease-in-out infinite; }
+.guide-hole.ok { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 5px var(--now-mark); animation: none; }
+@keyframes guide-pulse {
+  0%, 100% { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 55%, transparent); }
+  50% { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 9px color-mix(in srgb, var(--now-mark) 20%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) { .guide-hole { animation: none; } }
+.tip.above { transform: translateY(-100%); }
+.tip.ok { box-shadow: var(--shadow-float), 0 0 0 2px var(--now-mark); }
+.tip-ok { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 8px; border-radius: 50%; background: var(--now-mark); color: #fff; vertical-align: -3px; }
+.tip-ok svg { width: 14px; height: 14px; }
+.guide-intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(14, 16, 12, 0.45); }
+.guide-intro-card { position: static; width: min(400px, 100%); }
