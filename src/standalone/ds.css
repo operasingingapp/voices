@@ -1,4 +1,4 @@
-/* Counterpart app: design-system tokens (generated from the Counterpart design system's tokens.json). */
+/* Sottovoce app: design-system tokens (from the Sottovoce design system's tokens.json). */
 @font-face { font-family: "Jost"; src: url("./fonts/Jost-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Jost"; src: url("./fonts/Jost-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Jost"; src: url("./fonts/Jost-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
@@ -18,15 +18,15 @@
   --now-mark: #0b7a40;
   --now-wash: #b9f3cc8c;
   --now-strong: #9fe8b6;
-  --picked: #e2dcff;
-  --picked-strong: #d2c8ff;
-  --sky-soft: #e6f1ff;
-  --you: #ffc6df;
+  --picked: #e6e8e3;
+  --picked-strong: #dadcd6;
+  --now-soft: #e4f5ea;
+  --you: var(--now-mark);
   --you-mark: #c8286f;
   --loop: #d8d1ff;
   --loop-mark: #5841d8;
   --loop-wash: #d8d1ff73;
-  --together: #c4e3ff;
+  --together: #e9ebe6;
   --together-mark: #1c64c8;
   --check: #ffed94;
   --check-mark: #7d5c00;
@@ -50,6 +50,40 @@
   --space-7: 48px;
   --space-8: 64px;
   --space-9: 96px;
+  --rail: #f6f6f3;
+  --fog-soft: #f7f7f5;
+  --stripe: #f8f8f6;
+  --ink-ahead: #6f716c;
+  --notation-muted: #77776f;
+  --on-mark: #ffffff;
+  --tip-ink: #7d70d4;
+  --tip-bg: #f4f1ff;
+  --join: #ffc9cf;
+  --join-mark: #b4233a;
+  --mix-you: #fbd3e6;
+  --scrim-18: rgba(11, 11, 11, 0.18);
+  --scrim-20: rgba(11, 11, 11, 0.2);
+  --scrim-28: rgba(11, 11, 11, 0.28);
+  --scrim-32: rgba(11, 11, 11, 0.32);
+  --scrim-40: rgba(14, 16, 12, 0.4);
+  --scrim-45: rgba(14, 16, 12, 0.45);
+  --scrim-50: rgba(14, 16, 12, 0.5);
+  --tone-pink-soft: #ffe8f2; --tone-pink: #ffc6df; --tone-pink-deep: #f3a0c8;
+  --tone-lilac-soft: #f0edff; --tone-lilac: #d8d1ff; --tone-lilac-deep: #b3a6f4;
+  --tone-peach-soft: #ffeee5; --tone-peach: #ffd2bc; --tone-peach-deep: #f3ad88;
+  --tone-sky-soft: #e8f2ff; --tone-sky: #c4e3ff; --tone-sky-deep: #8fc1f1;
+  --tone-mint-soft: #e5faec; --tone-mint: #b9f3cc; --tone-mint-deep: #82d9a2;
+  --tone-butter-soft: #fff8d9; --tone-butter: #ffed94; --tone-butter-deep: #ead25c;
+  --shadow-raised: 0 1px 2px rgba(20, 24, 18, 0.08), 0 0 0 1px rgba(20, 24, 18, 0.04);
+  --shadow-raised-bar: 0 1px 2px rgba(20, 20, 40, 0.08);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-card: 20px;
+  --radius-lg: 22px;
+  --radius-row: 26px;
+  --radius-xl: 28px;
+  --radius-2xl: 32px;
+  --rail-w: 300px;
   --radius-field: 0px;
   --radius-pill: 999px;
   --radius-round: 50%;

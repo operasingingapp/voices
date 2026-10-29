@@ -71,12 +71,12 @@ p {
 
 /* ---------- opera, character and piece screens ---------- */
 /* pastel tones: soft for fields, strong for marks, deep for an avatar's body */
-[data-tone="pink"] { --tone-soft: #ffe8f2; --tone-strong: #ffc6df; --tone-deep: #f3a0c8; }
-[data-tone="lilac"] { --tone-soft: #f0edff; --tone-strong: #d8d1ff; --tone-deep: #b3a6f4; }
-[data-tone="peach"] { --tone-soft: #ffeee5; --tone-strong: #ffd2bc; --tone-deep: #f3ad88; }
-[data-tone="sky"] { --tone-soft: #e8f2ff; --tone-strong: #c4e3ff; --tone-deep: #8fc1f1; }
-[data-tone="mint"] { --tone-soft: #e5faec; --tone-strong: #b9f3cc; --tone-deep: #82d9a2; }
-[data-tone="butter"] { --tone-soft: #fff8d9; --tone-strong: #ffed94; --tone-deep: #ead25c; }
+[data-tone="pink"] { --tone-soft: var(--tone-pink-soft); --tone-strong: var(--tone-pink); --tone-deep: var(--tone-pink-deep); }
+[data-tone="lilac"] { --tone-soft: var(--tone-lilac-soft); --tone-strong: var(--tone-lilac); --tone-deep: var(--tone-lilac-deep); }
+[data-tone="peach"] { --tone-soft: var(--tone-peach-soft); --tone-strong: var(--tone-peach); --tone-deep: var(--tone-peach-deep); }
+[data-tone="sky"] { --tone-soft: var(--tone-sky-soft); --tone-strong: var(--tone-sky); --tone-deep: var(--tone-sky-deep); }
+[data-tone="mint"] { --tone-soft: var(--tone-mint-soft); --tone-strong: var(--tone-mint); --tone-deep: var(--tone-mint-deep); }
+[data-tone="butter"] { --tone-soft: var(--tone-butter-soft); --tone-strong: var(--tone-butter); --tone-deep: var(--tone-butter-deep); }
 
 .screen {
   height: 100%;
@@ -198,7 +198,7 @@ p {
 .now-panel {
   position: relative;
   z-index: 12;
-  background: var(--sky-soft);
+  background: var(--now-soft);
   --ink: var(--on-pastel);
   --ink-muted: var(--on-pastel-muted);
   --fog: var(--pastel-fog);
@@ -420,7 +420,7 @@ p {
   background: var(--fog);
 }
 .w-line.now {
-  background: var(--sky-soft);
+  background: var(--now-soft);
   --ink: var(--on-pastel);
   --ink-muted: var(--on-pastel-muted);
   --fog: var(--pastel-fog);
@@ -431,7 +431,7 @@ p {
   width: 36px;
   height: 36px;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   display: grid;
   place-items: center;
   background: var(--fog);
@@ -545,7 +545,7 @@ p {
   flex: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
   background: var(--you);
   display: grid;
@@ -667,7 +667,7 @@ p {
   width: 36px;
   height: 36px;
   margin: -18px 0 0 -18px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--now);
   mix-blend-mode: multiply;
   will-change: transform;
@@ -958,7 +958,7 @@ p {
 }
 .ring-in {
   position: absolute;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
   background: var(--tone-soft, var(--fog));
 }
@@ -972,7 +972,7 @@ p {
     inset: 0;
     border: 0;
     padding: 0;
-    background: rgb(11 11 11 / 0.18);
+    background: var(--scrim-18);
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--duration-settle) var(--ease-standard);
@@ -1029,7 +1029,7 @@ p {
 .np-face {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
   background: var(--tone-soft);
 }
@@ -1049,7 +1049,7 @@ p {
   gap: 16px;
   min-height: 76px;
   padding: 12px 14px 12px 16px;
-  border-radius: 26px;
+  border-radius: var(--radius-row);
   background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
@@ -1067,7 +1067,7 @@ p {
   width: 44px;
   height: 44px;
   border: 2px solid var(--fog-strong);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--canvas);
   color: transparent;
   cursor: pointer;
@@ -1091,7 +1091,7 @@ p {
 .ck.done .ck-box {
   border-color: var(--now-mark);
   background: var(--now-mark);
-  color: #ffffff;
+  color: var(--on-mark);
 }
 .ck-text {
   flex: 1;
@@ -1153,13 +1153,13 @@ p {
   gap: 16px;
   min-height: 64px;
   padding: 10px 12px 10px 14px;
-  border-radius: 22px;
+  border-radius: var(--radius-lg);
 }
 .num:nth-child(odd) {
-  background: #f8f8f6;
+  background: var(--stripe);
 }
 .num.yours {
-  background: #ffe8f2;
+  background: var(--tone-pink-soft);
 }
 .num-i {
   flex: none;
@@ -1238,7 +1238,7 @@ p {
   gap: 14px;
   padding: 12px 14px 12px 12px;
   border: 0;
-  border-radius: 26px;
+  border-radius: var(--radius-row);
   background: var(--tone-strong);
   color: var(--on-pastel);
   font: inherit;
@@ -1253,7 +1253,7 @@ p {
   flex: none;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
   background: var(--tone-soft);
 }
@@ -1368,7 +1368,7 @@ p {
   position: absolute;
   width: 13px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--ink);
   transform: rotate(-20deg);
   transition: background-color 200ms var(--ease-standard), box-shadow 200ms var(--ease-standard);
@@ -1406,7 +1406,7 @@ p {
 .tip {
   position: fixed;
   padding: 16px 16px 12px 18px;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: var(--canvas);
   display: grid;
   gap: 10px;
@@ -1538,12 +1538,12 @@ p {
 }
 .ctx-where li {
   padding: 8px 12px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   font-size: 14.5px;
 }
 .ctx-where li.was {
   color: var(--ink-muted);
-  background: #f7f7f5;
+  background: var(--fog-soft);
 }
 .ctx-where li.is {
   font-weight: 500;
@@ -1599,7 +1599,7 @@ button.ck-text:focus-visible {
   flex-direction: column;
   gap: 8px;
   padding: 28px;
-  border-radius: 32px;
+  border-radius: var(--radius-2xl);
   background: var(--tone-soft);
   color: var(--on-pastel);
 }
@@ -1638,7 +1638,7 @@ button.ck-text:focus-visible {
   place-items: center;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   box-shadow: inset 0 0 0 2px var(--fog-strong);
   color: transparent;
 }
@@ -1669,7 +1669,7 @@ button.ck-text:focus-visible {
   min-height: 56px;
   padding: 6px 14px;
   border: 0;
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   background: transparent;
   color: var(--ink);
   font: inherit;
@@ -1745,7 +1745,7 @@ button.ck-text:focus-visible {
 }
 .num.yours,
 .num.yours.ready {
-  background: #ffe8f2;
+  background: var(--tone-pink-soft);
 }
 .num-go {
   background: var(--now);
@@ -1771,7 +1771,7 @@ button.ck-text:focus-visible {
   width: 48px;
   height: 48px;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--now);
   color: var(--on-pastel);
   cursor: pointer;
@@ -1805,7 +1805,7 @@ button.ck-text:focus-visible {
 .ctx-learned[aria-checked="true"] .pp-box {
   background: var(--now-mark);
   box-shadow: none;
-  color: #ffffff;
+  color: var(--on-mark);
 }
 /* when the aria has been sung to the end */
 .finish-toast {
@@ -1822,7 +1822,7 @@ button.ck-text:focus-visible {
   width: max-content;
   max-width: calc(100vw - 32px);
   padding: 12px 12px 12px 20px;
-  border-radius: 28px;
+  border-radius: var(--radius-xl);
   background: var(--canvas);
   box-shadow: var(--shadow-float), 0 0 0 1px var(--fog-strong);
   animation: toast-in 260ms var(--ease-standard);
@@ -1894,7 +1894,7 @@ button.ck-text:focus-visible {
 .sc-pic {
   display: block;
   aspect-ratio: 3 / 4;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--tone-soft);
   box-shadow: 0 1px 2px rgba(40, 30, 60, 0.06), 0 8px 24px -12px rgba(40, 30, 60, 0.18);
@@ -2022,7 +2022,7 @@ button.ck-text:focus-visible {
   height: 38px;
   padding: 0 10px 0 14px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--fog-strong);
   color: var(--ink-muted);
@@ -2041,7 +2041,7 @@ button.ck-text:focus-visible {
   color: var(--ink);
 }
 .ck-scene[aria-expanded="true"] {
-  background: var(--sky-soft);
+  background: var(--now-soft);
   box-shadow: none;
   color: var(--ink);
 }
@@ -2214,7 +2214,7 @@ button.ck-text:focus-visible {
   height: 32px;
   padding: 0 14px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--fog-strong);
   color: var(--ink-muted);
@@ -2265,7 +2265,7 @@ button.ck-text:focus-visible {
   width: 7px;
   height: 7px;
   margin-right: 6px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--now-mark);
   vertical-align: 1px;
 }
@@ -2319,7 +2319,7 @@ button.ck-text:focus-visible {
   align-self: stretch;
   justify-content: flex-start;
   min-height: 0;
-  border-radius: 0;
+  border-radius: var(--radius-field);
   color: var(--ink-muted);
 }
 .words-view .w-gap:hover {
@@ -2399,7 +2399,7 @@ button.ck-text:focus-visible {
   margin: 0 auto;
   padding: 8px 10px 14px;
   border-radius: 24px;
-  background: var(--line-bg, var(--sky-soft));
+  background: var(--line-bg, var(--now-soft));
 }
 .now-bar {
   display: flex;
@@ -2424,7 +2424,7 @@ button.ck-text:focus-visible {
 .now-dot {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--pastel-fog-strong);
   transition: background-color var(--duration-move) var(--ease-standard);
 }
@@ -2439,7 +2439,7 @@ button.ck-text:focus-visible {
   align-items: center;
   gap: 2px;
   padding: 3px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--canvas);
 }
 .nl-btn {
@@ -2449,7 +2449,7 @@ button.ck-text:focus-visible {
   height: 34px;
   padding: 0 14px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--on-pastel);
   font: 500 14px/1 var(--font-sans);
@@ -2473,7 +2473,7 @@ button.ck-text:focus-visible {
   height: 18px;
 }
 .nl-btn:hover {
-  background: var(--sky-soft);
+  background: var(--now-soft);
 }
 .nl-btn:focus-visible {
   outline: 2px solid var(--focus);
@@ -2491,7 +2491,7 @@ button.ck-text:focus-visible {
   width: 44px;
   height: 44px;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: transparent;
   color: var(--on-pastel);
   opacity: 0.6;
@@ -2585,7 +2585,7 @@ button.ck-text:focus-visible {
 .bar-right {
   padding: 4px;
   gap: 4px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog);
 }
 .p-bar .part {
@@ -2596,7 +2596,7 @@ button.ck-text:focus-visible {
 .p-bar .part[aria-pressed="true"] {
   background: var(--canvas);
   color: var(--ink);
-  box-shadow: 0 1px 2px rgba(20, 20, 40, 0.08);
+  box-shadow: var(--shadow-raised-bar);
 }
 .p-bar .part[aria-pressed="false"] .part-text b {
   text-decoration: line-through;
@@ -2633,7 +2633,7 @@ button.ck-text:focus-visible {
 .p-bar .cp-toggle[aria-pressed="true"] {
   background: var(--canvas);
   color: var(--ink);
-  box-shadow: 0 1px 2px rgba(20, 20, 40, 0.08);
+  box-shadow: var(--shadow-raised-bar);
 }
 .p-bar .cp-toggle[aria-pressed="true"]::before {
   background: var(--now-mark);
@@ -2646,7 +2646,7 @@ button.ck-text:focus-visible {
 @media (max-width: 640px) {
   .line-card {
     padding: 6px 4px 10px;
-    border-radius: 18px;
+    border-radius: var(--radius-md);
   }
   .now-bar {
     padding: 0 2px 0 10px;
@@ -2706,7 +2706,7 @@ button.ck-text:focus-visible {
   align-items: flex-start;
   gap: 10px;
   margin: 0;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   color: var(--ink);
   line-height: 1.5;
   text-align: left;
@@ -2855,7 +2855,7 @@ button.ck-text:focus-visible {
   width: 18px;
   height: 18px;
   margin: -9px 0 0 -9px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--canvas);
   box-shadow: 0 0 0 2.5px var(--now-mark), 0 1px 4px rgba(20, 30, 25, 0.25);
 }
@@ -3007,7 +3007,7 @@ button.ck-text:focus-visible {
   min-height: 74px;
   padding: 10px 16px 10px 10px;
   border: 0;
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
   color: var(--ink);
@@ -3029,7 +3029,7 @@ button.ck-text:focus-visible {
   place-items: center;
   width: 54px;
   height: 54px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   overflow: hidden;
   transition: background-color 360ms var(--ease-standard);
 }
@@ -3106,16 +3106,16 @@ button.ck-text:focus-visible {
 }
 .score-sheet .measure-number text {
   font-style: italic;
-  fill: #77776f;
+  fill: var(--notation-muted);
   paint-order: stroke;
-  stroke: #ffffff;
+  stroke: var(--canvas);
   stroke-width: 5px;
   stroke-linejoin: round;
 }
 /* dynamics and expression words (pp, dolce): the same halo, so they stay readable where slurs pass */
 .score-sheet g.vf-text:not(.lyrics):not(.measure-number):not(.dash) text {
   paint-order: stroke;
-  stroke: #ffffff;
+  stroke: var(--canvas);
   stroke-width: 6px;
   stroke-linejoin: round;
 }
@@ -3197,7 +3197,7 @@ button.ck-text:focus-visible {
   gap: 14px;
   width: min(440px, calc(100vw - 32px));
   padding: 16px 18px 12px;
-  border-radius: 22px;
+  border-radius: var(--radius-lg);
   background: var(--canvas);
   box-shadow: var(--shadow-float);
 }
@@ -3386,7 +3386,7 @@ button.ck-text:focus-visible {
   gap: 12px;
   min-height: 44px;
   padding: 0 16px 0 14px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   background: var(--fog);
   color: var(--ink-muted);
   transition: background-color var(--duration-quick) var(--ease-standard);
@@ -3428,7 +3428,7 @@ button.ck-text:focus-visible {
   background: var(--fog-strong);
 }
 .words-view .w-gap.now .w-gap-band {
-  background: var(--sky-soft);
+  background: var(--now-soft);
   color: var(--ink);
 }
 .words-view .w-gap.now .w-gap-side {
@@ -3538,7 +3538,7 @@ button.ck-text:focus-visible {
   width: 100%;
   aspect-ratio: 4 / 5;
   margin-bottom: 8px;
-  border-radius: 22px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--tone-soft);
   box-shadow: 0 1px 2px rgba(40, 30, 60, 0.06), 0 10px 26px -14px rgba(40, 30, 60, 0.22);
@@ -3557,7 +3557,7 @@ button.ck-text:focus-visible {
   left: 10px;
   bottom: 10px;
   padding: 4px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.9);
   color: var(--ink);
   font-size: 11.5px;
@@ -3570,7 +3570,7 @@ button.ck-text:focus-visible {
   width: 6px;
   height: 6px;
   margin-right: 6px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--now-mark);
   vertical-align: 1px;
 }
@@ -3700,7 +3700,7 @@ button.ck-text:focus-visible {
   min-height: 44px;
   padding: 0 18px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog);
   color: var(--ink);
   font: 500 15px/1 var(--font-sans);
@@ -3719,7 +3719,7 @@ button.ck-text:focus-visible {
 }
 .st-list {
   display: grid;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
   overflow: hidden;
@@ -3758,7 +3758,7 @@ button.ck-text:focus-visible {
   position: relative;
   width: 46px;
   height: 28px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog-strong);
   transition: background-color var(--duration-quick) var(--ease-standard);
 }
@@ -3768,8 +3768,8 @@ button.ck-text:focus-visible {
   left: 3px;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
-  background: #fff;
+  border-radius: var(--radius-round);
+  background: var(--on-pastel-inverse);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: transform var(--duration-quick) var(--ease-standard);
 }
@@ -3807,7 +3807,7 @@ button.ck-text:focus-visible {
   inset: 0;
   border: 0;
   padding: 0;
-  background: rgb(11 11 11 / 0.2);
+  background: var(--scrim-20);
   opacity: 0;
   transition: opacity var(--duration-settle) var(--ease-standard);
   cursor: pointer;
@@ -3913,7 +3913,7 @@ button.ck-text:focus-visible {
   inset: 0;
   border: 0;
   padding: 0;
-  background: rgb(11 11 11 / 0.32);
+  background: var(--scrim-32);
   animation: bravo-fade 300ms var(--ease-standard) both;
 }
 .bravo-card {
@@ -3921,7 +3921,7 @@ button.ck-text:focus-visible {
   width: min(720px, 100%);
   max-height: calc(100dvh - 48px);
   overflow: auto;
-  border-radius: 32px;
+  border-radius: var(--radius-2xl);
   background: var(--canvas);
   box-shadow: 0 30px 80px -20px rgb(20 10 40 / 0.45);
   animation: bravo-rise 520ms cubic-bezier(0.2, 0.9, 0.25, 1.15) both;
@@ -4009,7 +4009,7 @@ button.ck-text:focus-visible {
   align-items: center;
   gap: 6px;
   padding: 7px 14px 7px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: rgb(255 255 255 / 0.92);
   color: var(--on-pastel);
   font: 500 14px/1 var(--font-sans);
@@ -4041,7 +4041,7 @@ button.ck-text:focus-visible {
   gap: 2px;
   margin-top: 10px;
   padding: 4px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
@@ -4050,7 +4050,7 @@ button.ck-text:focus-visible {
   min-width: 124px;
   padding: 0 20px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--ink-muted);
   font: inherit;
@@ -4226,7 +4226,7 @@ button.ck-text:focus-visible {
   inset: 0;
   border: 0;
   padding: 0;
-  background: rgb(11 11 11 / 0.28);
+  background: var(--scrim-28);
   animation: bravo-fade 240ms var(--ease-standard) both;
 }
 .syn-panel {
@@ -4395,7 +4395,7 @@ button.ck-text:focus-visible {
   counter-increment: sc;
 }
 .syn-scenes li.mine {
-  border-radius: 0 12px 12px 0;
+  border-radius: var(--radius-field) var(--radius-sm) var(--radius-sm) var(--radius-field);
 }
 .sc-head {
   display: flex;
@@ -4474,7 +4474,7 @@ button.ck-text:focus-visible {
   min-height: 22px;
   padding: 0 6px 0 9px;
   border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--canvas);
   color: var(--ink);
   font: 500 12px/1 var(--font-sans);
@@ -4513,8 +4513,8 @@ button.lane-label:hover {
 .mix-you {
   margin-left: 8px;
   padding: 2px 8px;
-  border-radius: 999px;
-  background: var(--you, #fbd3e6);
+  border-radius: var(--radius-pill);
+  background: var(--you, var(--mix-you));
   color: var(--ink);
   font: 500 11px/1.4 var(--font-sans);
   font-style: normal;
@@ -4527,7 +4527,7 @@ button.lane-label:hover {
   height: 34px;
   padding: 0;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: transparent;
   color: var(--ink);
   cursor: pointer;
@@ -4603,7 +4603,7 @@ button.lane-label:hover {
   place-items: center;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--canvas);
   box-shadow: 0 1px 2px rgba(20, 20, 40, 0.15);
 }
@@ -4629,7 +4629,7 @@ button.lane-label:hover {
 .mix-sing .cp-seg button {
   min-height: 38px;
   padding: 0 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog);
 }
 .mix-sing .cp-seg button[aria-pressed="true"] {
@@ -4662,7 +4662,7 @@ button.lane-label:hover {
   height: 26px;
   margin-left: -4px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
 }
 .mix-chip-face img {
   width: 100%;
@@ -4714,7 +4714,7 @@ button.lane-label:hover {
   appearance: none;
   -webkit-appearance: none;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog)
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9.5l6 6 6-6' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E")
     no-repeat right 9px center / 14px;
@@ -4769,9 +4769,9 @@ button.lane-label:hover {
   gap: 2px;
   min-height: 48px;
   padding: 0 4px 0 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--canvas);
-  box-shadow: 0 1px 2px rgba(20, 20, 40, 0.08);
+  box-shadow: var(--shadow-raised-bar);
 }
 .pg-btn svg {
   width: 22px;
@@ -4785,7 +4785,7 @@ button.lane-label:hover {
   min-height: 40px;
   padding: 0 9px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--ink);
   font: 500 14px/1 var(--font-sans);
@@ -4812,7 +4812,7 @@ button.lane-label:hover {
   inset: 0;
   border: 0;
   padding: 0;
-  background: rgb(11 11 11 / 0.32);
+  background: var(--scrim-32);
   animation: bravo-fade 240ms var(--ease-standard) both;
 }
 .meet-card {
@@ -4822,7 +4822,7 @@ button.lane-label:hover {
   width: min(960px, 100%);
   max-height: min(720px, calc(100dvh - 48px));
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: var(--radius-2xl);
   background: var(--tone-soft);
   box-shadow: var(--shadow-float);
   animation: meet-in 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
@@ -4904,7 +4904,7 @@ button.lane-label:hover {
   min-height: 56px;
   padding: 4px;
   gap: 4px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--fog);
 }
 .practice .p-bar .bar-transport .cp-icon-btn,
@@ -5032,7 +5032,7 @@ button.lane-label:hover {
   min-height: 44px;
   padding: 0 12px 0 4px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--ink);
   font: 500 16px/1 var(--font-sans);
@@ -5076,7 +5076,7 @@ button.lane-label:hover {
     column-gap: 14px;
     width: 100%;
     max-height: min(92dvh, 760px);
-    border-radius: 28px 28px 0 0;
+    border-radius: var(--radius-xl) var(--radius-xl) var(--radius-field) var(--radius-field);
   }
   .meet-body {
     display: contents;
@@ -5093,7 +5093,7 @@ button.lane-label:hover {
     height: 128px;
     margin-left: 16px;
     overflow: hidden;
-    border-radius: 18px;
+    border-radius: var(--radius-md);
   }
   .meet-head {
     grid-area: head;
@@ -5164,7 +5164,7 @@ button.lane-label:hover {
   width: 14px;
   height: 14px;
   margin: -7px 0 0 -7px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--canvas);
   box-shadow: 0 0 0 2px var(--now-mark), 0 1px 3px rgba(20, 30, 25, 0.2);
 }
@@ -5192,7 +5192,7 @@ button.lane-label:hover {
   .practice .p-bar .bar-transport > [data-testid="play"],
   .practice .p-bar .bar-transport > [data-testid="pause"] {
     flex: 1 1 auto;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
   }
 }
 
@@ -5290,7 +5290,7 @@ button.lane-label:hover {
   align-items: center;
   height: 48px;
   padding: 0 2px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--canvas);
 }
 .practice .cp-speed .cp-icon-btn {
@@ -5349,7 +5349,7 @@ button.lane-label:hover {
 .rest-dots i {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: color-mix(in srgb, var(--ink) 18%, transparent);
   transition: background-color 120ms ease, transform 120ms ease;
 }
@@ -5394,7 +5394,7 @@ button.lane-label:hover {
   min-height: 40px;
   padding: 0 10px 0 14px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--canvas) 70%, transparent);
   color: var(--ink);
   font: 500 14px/1 var(--font-sans);
@@ -5405,7 +5405,7 @@ button.lane-label:hover {
 .card-menu-btn b { font-weight: 600; }
 .cmb-you {
   padding: 1px 7px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--you, var(--now-mark)) 16%, transparent);
   color: var(--ink);
   font: 500 11px/1.5 var(--font-sans);
@@ -5419,7 +5419,7 @@ button.lane-label:hover {
   display: grid;
   min-width: 200px;
   padding: 6px;
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   background: var(--canvas);
   box-shadow: 0 10px 30px rgba(20, 30, 25, 0.16), 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent);
 }
@@ -5431,7 +5431,7 @@ button.lane-label:hover {
   min-height: 44px;
   padding: 0 12px 0 8px;
   border: 0;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   background: transparent;
   color: var(--ink);
   font: 500 15px/1.2 var(--font-sans);
@@ -5464,7 +5464,7 @@ button.lane-label:hover {
   height: 28px;
   padding: 0 8px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   font: 600 13px/1 var(--font-sans);
   white-space: nowrap;
   cursor: pointer;
@@ -5492,7 +5492,7 @@ button.lane-label:hover {
   .practice .p-bar.folded .bar-right .cp-tempo { justify-content: center; }
   .practice .p-bar.folded .bar-more {
     display: grid !important;
-    border-radius: 50%;
+    border-radius: var(--radius-round);
   }
   /* phone taps: the piano's buttons at least 44 px wide */
   .practice .p-bar .pg-btn { min-width: 44px; }
@@ -5524,7 +5524,7 @@ button.lane-label:hover {
   border-top: 1px solid color-mix(in srgb, var(--now-mark) 25%, transparent);
 }
 .loop-pick p { flex: 1; margin: 0; font: 400 15px/1.3 var(--font-sans); color: var(--ink); }
-.loop-pick .lp-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; color: #fff; flex: none; }
+.loop-pick .lp-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: var(--radius-round); color: var(--on-mark); flex: none; }
 .loop-pick .lp-icon svg { width: 20px; height: 20px; }
 .loop-pick .lp-btn { min-height: 40px; padding: 0 14px; font-size: 14px; background: var(--canvas); white-space: nowrap; }
 
@@ -5545,7 +5545,7 @@ button.lane-label:hover {
   align-items: center;
   gap: 4px;
   padding: max(16px, env(safe-area-inset-top, 0px)) 8px max(16px, env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px));
-  background: #f6f6f3;
+  background: var(--rail);
   box-shadow: inset -1px 0 0 var(--fog-strong);
 }
 .rail::-webkit-scrollbar { display: none; }
@@ -5560,7 +5560,7 @@ button.lane-label:hover {
   min-height: 64px;
   padding: 6px 4px;
   border: 0;
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   background: transparent;
   color: var(--ink);
   font: 500 12px/1.2 var(--font-sans);
@@ -5590,7 +5590,7 @@ button.lane-label:hover {
   width: 100%;
   padding: 10px 4px 8px;
   border: 0;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: transparent;
   color: var(--ink);
   cursor: pointer;
@@ -5613,7 +5613,7 @@ button.lane-label:hover {
   width: 100%;
   padding: 10px 4px;
   border: 0;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: transparent;
   color: var(--ink-muted);
   cursor: pointer;
@@ -5624,7 +5624,7 @@ button.lane-label:hover {
   width: 54px;
   height: 54px;
   border: 1.5px dashed color-mix(in srgb, var(--ink) 35%, transparent);
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   color: var(--ink);
 }
 .rail-add-ring svg { width: 22px; height: 22px; }
@@ -5666,7 +5666,7 @@ button.lane-label:hover {
   gap: 10px;
   min-height: 56px;
   padding: 0 8px 0 18px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--canvas);
   box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 14%, transparent);
   color: var(--ink-muted);
@@ -5693,7 +5693,7 @@ button.lane-label:hover {
   width: 40px;
   height: 40px;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--fog);
   color: var(--ink);
   cursor: pointer;
@@ -5717,13 +5717,13 @@ button.lane-label:hover {
 .pc-face {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
   background: var(--tone-soft, var(--canvas));
 }
 .pc-face + .pc-face { margin-left: -14px; }
 .pc-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.pc-op { border-radius: 12px; }
+.pc-op { border-radius: var(--radius-sm); }
 .pc-text { display: grid; gap: 3px; flex: 1; min-width: 0; }
 .pc-text b { font: 500 17px/1.25 var(--font-sans); }
 .pc-text span { color: var(--ink-muted); font: 400 14px/1.35 var(--font-sans); }
@@ -5733,7 +5733,7 @@ button.lane-label:hover {
   width: 40px;
   height: 40px;
   flex: none;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   background: var(--canvas);
   color: var(--now-mark);
 }
@@ -5758,8 +5758,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   outline: none;
   transition: transform 0.12s;
 }
-.ov-lh-s { margin-left: -7px; border-radius: 4px 0 0 4px; }
-.ov-lh-e { border-radius: 0 4px 4px 0; }
+.ov-lh-s { margin-left: -7px; border-radius: 4px var(--radius-field) var(--radius-field) 4px; }
+.ov-lh-e { border-radius: var(--radius-field) 4px 4px var(--radius-field); }
 .ov-lh::before { content: ""; position: absolute; inset: -4px -16px; }
 .ov-lh::after {
   content: "";
@@ -5769,7 +5769,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   width: 0;
   height: 18px;
   margin: -9px 0 0 -1px;
-  border-left: 2px solid #fff;
+  border-left: 2px solid var(--on-mark);
   border-radius: 1px;
   opacity: 0.85;
 }
@@ -5805,14 +5805,14 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .rc {
   display: grid;
   padding: 12px 12px 18px;
-  border-radius: 32px;
+  border-radius: var(--radius-2xl);
   background: var(--tone-soft, var(--fog));
   color: var(--ink);
 }
 .rc-band {
   position: relative;
   height: clamp(124px, 14vw, 156px);
-  border-radius: 22px;
+  border-radius: var(--radius-lg);
   background: var(--tone-strong, var(--fog-strong)) center 32% / cover no-repeat;
 }
 .rc-band-tools {
@@ -5829,7 +5829,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   min-height: 44px;
   padding: 0 18px 0 14px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--ink);
   font: 500 15px/1 var(--font-sans);
   cursor: pointer;
@@ -5847,7 +5847,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   width: 120px;
   height: 120px;
   margin-top: -60px;
-  border-radius: 50%;
+  border-radius: var(--radius-round);
   overflow: hidden;
   background: var(--tone-strong, var(--canvas));
   box-shadow: 0 0 0 6px var(--tone-soft, var(--fog));
@@ -5876,8 +5876,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 }
 .rc-prog-text b { font-weight: 600; opacity: 1; }
 @media (max-width: 640px) {
-  .rc { padding: 10px 10px 16px; border-radius: 28px; }
-  .rc-band { height: 112px; border-radius: 18px; }
+  .rc { padding: 10px 10px 16px; border-radius: var(--radius-xl); }
+  .rc-band { height: 112px; border-radius: var(--radius-md); }
   .rc-band-tools { right: 10px; bottom: 10px; }
   .rc-pill { min-height: 38px; padding: 0 14px 0 11px; font-size: 14px; }
   .rc-pill svg { width: 16px; height: 16px; }
@@ -5899,7 +5899,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .loop-pick .lp-done { background: var(--ink); color: var(--canvas); }
 /* touch: wider handles to catch with a finger */
 /* the loop has one colour everywhere: the design system's loop violet (score, button, progress line, labels) */
-.practice .p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
+.practice .p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: var(--on-mark); }
 .tl-loop { background: color-mix(in srgb, var(--loop-mark) 14%, transparent); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--loop-mark) 45%, transparent); }
 .tl-loop-chip { background: var(--loop); color: var(--loop-mark); }
 .loop-pick { background: color-mix(in srgb, var(--loop) 45%, var(--canvas)); border-top-color: color-mix(in srgb, var(--loop-mark) 25%, transparent); }
@@ -5917,18 +5917,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
    A character's colour lives in its picture and a pale tint of the same hue
    on its own card; nothing else is pink, lilac or sky blue.
    ===================================================================== */
-:root {
-  --tip-ink: #7d70d4;
-  --tip-bg: #f4f1ff;
-  --ink-ahead: #6f716c;
-  --join: #ffc9cf;
-  --join-mark: #b4233a;
-  --picked: #e6e8e3;
-  --picked-strong: #dadcd6;
-  --sky-soft: #e4f5ea;
-  --together: #e9ebe6;
-  --you: var(--now-mark);
-}
 /* segmented controls: the chosen segment is a white tab on the grey track (as Search's tabs) */
 .cp-seg button[aria-selected="true"],
 .cp-seg button[aria-pressed="true"] {
@@ -5985,7 +5973,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .ck.soon {
   min-height: 56px;
   padding: 6px 10px 6px 16px;
-  border-radius: 18px;
+  border-radius: var(--radius-md);
   background: transparent;
 }
 .ck.soon:hover { background: var(--fog); }
@@ -6030,7 +6018,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* phones: the bar is folded by default (one slim row); the arrow opens every control and folds them again */
 @media (max-width: 640px) {
-  .practice .p-bar .bar-more { display: grid; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--fog); }
+  .practice .p-bar .bar-more { display: grid; flex: 0 0 48px; width: 48px; height: 48px; border-radius: var(--radius-round); background: var(--fog); }
   .practice .p-bar .bar-more svg { transition: transform var(--duration-move) var(--ease-standard); }
   .practice .p-bar .bar-more.open svg { transform: rotate(180deg); }
   .practice .p-bar:not(.folded) .bar-parts { order: 0; }
@@ -6045,7 +6033,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .guide-scrim { position: fixed; inset: 0; z-index: 99; }
 .guide-hole {
   position: fixed;
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   transition: left 240ms var(--ease-standard), top 240ms var(--ease-standard), width 240ms var(--ease-standard), height 240ms var(--ease-standard);
   pointer-events: none;
 }
@@ -6054,20 +6042,20 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .tip p b { color: var(--ink-muted); }
 .tip-title { display: block; margin: 2px 0 4px; font: 500 19px/1.25 var(--font-sans); }
 .tip-dots { display: flex; gap: 6px; }
-.tip-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--fog-strong); }
+.tip-dots i { width: 6px; height: 6px; border-radius: var(--radius-round); background: var(--fog-strong); }
 .tip-dots i.on { width: 18px; border-radius: 3px; background: var(--now-mark); }
 .tip-actions { display: flex; align-items: center; gap: 8px; }
 .tip-actions .tip-skip { margin-right: auto; padding-left: 0; color: var(--ink-muted); }
 
 /* the guide, done for real: the lit control answers, the rest is dimmed and still */
 .guide-scrim { pointer-events: none; }
-.guide-hole { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 5px color-mix(in srgb, var(--now-mark) 60%, transparent); animation: guide-pulse 1.6s ease-in-out infinite; }
+.guide-hole { box-shadow: 0 0 0 9999px var(--scrim-50), 0 0 0 2px var(--canvas), 0 0 0 5px color-mix(in srgb, var(--now-mark) 60%, transparent); animation: guide-pulse 1.6s ease-in-out infinite; }
 @keyframes guide-pulse {
-  0%, 100% { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 55%, transparent); }
-  50% { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 9px color-mix(in srgb, var(--now-mark) 20%, transparent); }
+  0%, 100% { box-shadow: 0 0 0 9999px var(--scrim-50), 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 55%, transparent); }
+  50% { box-shadow: 0 0 0 9999px var(--scrim-50), 0 0 0 2px var(--canvas), 0 0 0 9px color-mix(in srgb, var(--now-mark) 20%, transparent); }
 }
 .tip.above { transform: translateY(-100%); }
-.guide-intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(14, 16, 12, 0.45); }
+.guide-intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: var(--scrim-45); }
 .guide-intro-card { position: static; width: min(400px, 100%); }
 
 /* phone: the loop strip's words get their own row, the buttons sit under them */
@@ -6086,10 +6074,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .p-bar.folded .cp-tempo { background: none !important; box-shadow: none !important; border: 0 !important; padding: 0 !important; gap: 4px; }
   .practice .p-bar.folded .bar-right { flex: 0 1 auto !important; }
   .practice .p-bar.folded .bar-transport > [data-testid="play"],
-  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { border-radius: 50%; }
-  .practice .p-bar.folded .bar-loop { width: 44px; height: 44px; border-radius: 50%; background: none; box-shadow: none; }
-  .practice .p-bar.folded .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
-  .practice .p-bar.folded .cp-speed { background: var(--fog) !important; box-shadow: none !important; border: 0 !important; height: 44px; padding: 0 2px; border-radius: 22px; }
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { border-radius: var(--radius-round); }
+  .practice .p-bar.folded .bar-loop { width: 44px; height: 44px; border-radius: var(--radius-round); background: none; box-shadow: none; }
+  .practice .p-bar.folded .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: var(--on-mark); }
+  .practice .p-bar.folded .cp-speed { background: var(--fog) !important; box-shadow: none !important; border: 0 !important; height: 44px; padding: 0 2px; border-radius: var(--radius-lg); }
   .practice .p-bar.folded .cp-speed .cp-icon-btn { width: 40px; height: 40px; background: none; }
   .practice .p-bar.folded .cp-speed .cp-tempo__value { min-width: 52px; text-align: center; font-size: 16px; }
   .practice .p-bar.folded .bar-more { flex: 0 0 44px !important; width: 44px !important; height: 44px !important; background: none !important; }
@@ -6140,11 +6128,11 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .tl-speed-chip[aria-expanded="true"] { background: var(--ink); color: var(--canvas); }
   .tl-speed-pop {
     position: absolute; right: 0; bottom: calc(100% + 8px); z-index: 30; display: flex; align-items: center; gap: 2px;
-    height: 52px; padding: 0 6px; border-radius: 26px; background: var(--canvas); box-shadow: var(--shadow-float); white-space: nowrap;
+    height: 52px; padding: 0 6px; border-radius: var(--radius-row); background: var(--canvas); box-shadow: var(--shadow-float); white-space: nowrap;
   }
   .tl-speed-pop b { min-width: 52px; text-align: center; font: 500 16px/1 var(--font-sans); font-variant-numeric: tabular-nums; }
   .tl-speed-pop .cp-icon-btn { width: 44px; height: 44px; }
-  .tl-speed-reset { height: 36px; margin-left: 4px; padding: 0 12px; border: 0; border-radius: 18px; background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); }
+  .tl-speed-reset { height: 36px; margin-left: 4px; padding: 0 12px; border: 0; border-radius: var(--radius-md); background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); }
   .tl-speed-reset:disabled { display: none; }
 }
 
@@ -6172,10 +6160,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .p-bar.p-bar.p-bar .bar-again { display: grid; grid-column: 2; grid-row: var(--tr); width: 44px; height: 44px; place-items: center; background: none; }
   .practice .p-bar.p-bar.p-bar .bar-again svg { width: 24px; height: 24px; }
   .practice .p-bar.p-bar.p-bar .bar-transport > [data-testid="play"], .practice .p-bar.p-bar.p-bar .bar-transport > [data-testid="pause"] {
-    grid-column: 3; grid-row: var(--tr); width: 60px; height: 60px; flex: none; border-radius: 50%;
+    grid-column: 3; grid-row: var(--tr); width: 60px; height: 60px; flex: none; border-radius: var(--radius-round);
   }
-  .practice .p-bar.p-bar.p-bar .bar-loop { grid-column: 4; grid-row: var(--tr); justify-self: center; margin: 0; width: 44px; height: 44px; border-radius: 50%; background: none; }
-  .practice .p-bar.p-bar.p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
+  .practice .p-bar.p-bar.p-bar .bar-loop { grid-column: 4; grid-row: var(--tr); justify-self: center; margin: 0; width: 44px; height: 44px; border-radius: var(--radius-round); background: none; }
+  .practice .p-bar.p-bar.p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: var(--on-mark); }
   .practice .p-bar.p-bar.p-bar .bar-more { display: grid; grid-column: 5; grid-row: var(--tr); justify-self: center; width: 44px; height: 44px; flex: none !important; background: none !important; margin: 0; }
   /* row 1: the others, the piano, Arrange, spread across the width */
   .practice .p-bar.p-bar.p-bar .bar-mix {
@@ -6189,7 +6177,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .p-bar.p-bar.p-bar .cp-tempo__beat { display: block; grid-column: 1; grid-row: 2; font-size: 14px; color: var(--ink-muted); white-space: nowrap; }
   .practice .p-bar.p-bar.p-bar .cp-speed {
     display: flex; position: static; grid-column: 2 / 5; grid-row: 2; justify-self: center; align-items: center;
-    height: 44px; padding: 0 4px; border-radius: 22px; background: var(--fog) !important; box-shadow: none; border: 0;
+    height: 44px; padding: 0 4px; border-radius: var(--radius-lg); background: var(--fog) !important; box-shadow: none; border: 0;
   }
   .practice .p-bar.p-bar.p-bar .cp-speed .cp-icon-btn { width: 44px; height: 44px; background: none !important; }
   .practice .p-bar.p-bar.p-bar .cp-speed .cp-tempo__value { min-width: 64px; text-align: center; background: none !important; }
@@ -6199,7 +6187,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* the words box folds in place: a chevron in its own tool row, and when folded a one-line strip
    with the line being sung; tap the strip to unfold */
-.card-fold { display: grid; place-items: center; flex: none; width: 40px; height: 40px; margin-left: auto; border: 0; border-radius: 50%; background: none; color: var(--ink); }
+.card-fold { display: grid; place-items: center; flex: none; width: 40px; height: 40px; margin-left: auto; border: 0; border-radius: var(--radius-round); background: none; color: var(--ink); }
 .card-fold svg { width: 22px; height: 22px; }
 .card-fold:hover { background: var(--fog); }
 .practice > .card-strip {
@@ -6208,7 +6196,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   background: var(--canvas); box-shadow: inset 0 0 0 1px var(--line, rgba(0, 0, 0, 0.08)); color: var(--ink); text-align: left;
 }
 .card-strip .cs-text { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 400 19px/1.2 var(--font-serif, Georgia, serif); }
-.card-strip .cs-chev { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--fog); flex: none; }
+.card-strip .cs-chev { display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--radius-round); background: var(--fog); flex: none; }
 .card-strip .cs-chev svg { width: 20px; height: 20px; }
 
 /* the other singers: one group that scrolls sideways when there are many (six voices and more);
@@ -6222,7 +6210,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   }
   .practice .p-bar .bar-mix .bar-others::-webkit-scrollbar { display: none; }
   .practice .p-bar .bar-mix .bar-others > .part { flex: none; scroll-snap-align: start; }
-  .practice .p-bar .bar-mix .piano-group { flex: none; padding-left: 6px !important; border-left: 1px solid var(--line, rgba(0, 0, 0, 0.1)); border-radius: 0; }
+  .practice .p-bar .bar-mix .piano-group { flex: none; padding-left: 6px !important; border-left: 1px solid var(--line, rgba(0, 0, 0, 0.1)); border-radius: var(--radius-field); }
   .practice .p-bar .bar-mix .mix-btn { flex: none; }
 }
 /* the fold chevron sits in the box's top-right corner, the same place and shape as the unfold chevron on the strip */
@@ -6300,11 +6288,11 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   /* row 1: one soft pill, like the iPad's left group */
   .practice .p-bar.p-bar.p-bar:not(.folded) .bar-mix {
     display: flex !important; grid-column: 1 / -1; grid-row: 1; justify-self: stretch; align-items: center; gap: 4px;
-    padding: 4px !important; border: 0 !important; border-radius: 28px; background: var(--fog) !important;
+    padding: 4px !important; border: 0 !important; border-radius: var(--radius-xl); background: var(--fog) !important;
   }
   .practice .p-bar.p-bar.p-bar:not(.folded) .bar-mix .bar-others { gap: 4px; padding: 0; }
   .practice .p-bar.p-bar.p-bar:not(.folded) .bar-mix .piano-group {
-    flex: none; display: flex; padding: 0 2px !important; border: 0 !important; border-radius: 22px !important;
+    flex: none; display: flex; padding: 0 2px !important; border: 0 !important; border-radius: var(--radius-lg) !important;
     background: var(--canvas) !important;
   }
   .practice .p-bar.p-bar.p-bar:not(.folded) .bar-mix .pg-btn { width: 40px !important; min-width: 40px !important; height: 44px !important; }
@@ -6313,25 +6301,25 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   /* row 2: the iPad's right group */
   .practice .p-bar.p-bar.p-bar:not(.folded) .bar-right {
     display: flex !important; grid-column: 1 / -1; grid-row: 2; justify-self: stretch; align-items: center; gap: 4px;
-    padding: 4px 4px 4px 14px !important; border-radius: 28px; background: var(--fog) !important;
+    padding: 4px 4px 4px 14px !important; border-radius: var(--radius-xl); background: var(--fog) !important;
   }
   .practice .p-bar.p-bar.p-bar:not(.folded) .cp-tempo { display: flex !important; flex: 1; align-items: center; justify-content: space-between; gap: 4px; }
   .practice .p-bar.p-bar.p-bar:not(.folded) .cp-tempo__beat { display: block !important; font-size: 14px; color: var(--ink-muted); white-space: nowrap; }
-  .practice .p-bar.p-bar.p-bar:not(.folded) .cp-speed { display: flex !important; height: 44px; padding: 0 2px; border-radius: 22px; background: var(--canvas) !important; }
+  .practice .p-bar.p-bar.p-bar:not(.folded) .cp-speed { display: flex !important; height: 44px; padding: 0 2px; border-radius: var(--radius-lg); background: var(--canvas) !important; }
   .practice .p-bar.p-bar.p-bar:not(.folded) .cp-speed .cp-icon-btn { width: 40px; height: 44px; }
   .practice .p-bar.p-bar.p-bar:not(.folded) .cp-speed .cp-tempo__value { min-width: 54px; }
   .practice .p-bar.p-bar.p-bar:not(.folded) .countin {
-    display: inline-flex !important; align-items: center; gap: 6px; height: 44px; padding: 0 14px !important; border-radius: 22px;
+    display: inline-flex !important; align-items: center; gap: 6px; height: 44px; padding: 0 14px !important; border-radius: var(--radius-lg);
     background: var(--canvas) !important; white-space: nowrap;
   }
   .practice .p-bar.p-bar.p-bar:not(.folded) .countin span { display: inline !important; font: 500 14px/1 var(--font-sans); }
   .practice .p-bar.p-bar.p-bar:not(.folded) .countin svg { display: none; }
   /* Arrange: a sheet from the bottom over a dimmed screen, with Done */
-  .practice .mix-scrim { display: block; position: fixed; inset: 0; z-index: 80; border: 0; padding: 0; background: rgba(14, 16, 12, 0.4); }
+  .practice .mix-scrim { display: block; position: fixed; inset: 0; z-index: 80; border: 0; padding: 0; background: var(--scrim-40); }
   .practice .mix-pop.mix-pop {
     position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 81;
     width: auto; max-width: none; max-height: 82vh; overflow-y: auto; transform: none;
-    border-radius: 20px 20px 0 0; padding: 16px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+    border-radius: var(--radius-card) var(--radius-card) var(--radius-field) var(--radius-field); padding: 16px 16px calc(20px + env(safe-area-inset-bottom, 0px));
   }
   .practice .mix-pop .mix-head { position: sticky; top: -16px; z-index: 2; margin: -16px -16px 8px; padding: 14px 16px 10px; background: inherit; }
   .practice .mix-done { display: inline-flex; height: 36px; padding: 0 16px; }
@@ -6374,7 +6362,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* 2. The loop strip floats over the bottom of the score as a card, so opening it never moves the bar */
 .practice > .loop-pick.loop-pick {
   grid-area: 3 / 1 / 4 / -1; align-self: end; z-index: 25; margin: 0 max(16px, var(--edge, 16px)) 10px;
-  border: 0; border-radius: 18px; box-shadow: var(--shadow-float); padding: 10px 10px 10px 16px;
+  border: 0; border-radius: var(--radius-md); box-shadow: var(--shadow-float); padding: 10px 10px 10px 16px;
 }
 /* 3. Phone: the music sits right under the words box (the eye reads one, then the other); the spare height goes
       below it, where the loop card floats. The box's tools are one row: whose words, hear, show, fold. */
@@ -6400,7 +6388,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
       scene opens with the same round chevron button, with or without music */
 .ck:not(.done) .ck-box { color: color-mix(in srgb, var(--ink) 22%, transparent); }
 .ck .ck-scene, .ck.soon .ck-scene {
-  width: 36px; height: 36px; min-height: 36px; padding: 0; justify-content: center; border-radius: 50%;
+  width: 36px; height: 36px; min-height: 36px; padding: 0; justify-content: center; border-radius: var(--radius-round);
   background: transparent; box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
 .ck .ck-scene .ck-scene-label { display: none; }
@@ -6414,10 +6402,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .cp-seg button[aria-selected="true"], .cp-seg button[aria-pressed="true"],
 .voice-chip[aria-pressed="true"], .st-chip[aria-checked="true"] {
   background: var(--canvas) !important; color: var(--ink) !important;
-  box-shadow: 0 1px 2px rgba(20, 24, 18, 0.08), 0 0 0 1px rgba(20, 24, 18, 0.04);
+  box-shadow: var(--shadow-raised);
 }
 .voice-chips, .st-chips {
-  display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 26px; background: var(--fog);
+  display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: var(--radius-row); background: var(--fog);
 }
 .voice-chip, .st-chip { background: transparent !important; color: var(--ink-muted); box-shadow: none; }
 .voice-chip:hover, .st-chip:hover { color: var(--ink); }
@@ -6433,7 +6421,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* 9. One primary button: the green of play (Done on the loop card was black) */
 .loop-pick .lp-btn.lp-done { background: var(--now); color: var(--on-pastel); }
 /* 11. Tags are pills, like every other small label; "Your role" sits by the name, not in a column of its own */
-.cp-tag { border-radius: 999px; padding: 3px 9px; font-size: 12px !important; line-height: 1.2 !important; }
+.cp-tag { border-radius: var(--radius-pill); padding: 3px 9px; font-size: 12px !important; line-height: 1.2 !important; }
 .vrole-text > b { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; }
 .vrole-yours { font-weight: 500; letter-spacing: 0; vertical-align: middle; }
 /* 12. You: a green ring round your own face in the bar (green = your line, as in the score) */
@@ -6473,10 +6461,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .vrole.soon .vrole-text, .vrole.soon .vrole-face { opacity: 1; }
 .vrole.soon { background: var(--canvas) !important; }
 .pc-row.soon .pc-text b { color: var(--ink); }
-.pc-soon { padding: 4px 10px; border-radius: 999px; background: var(--fog); font-size: 12px; white-space: nowrap; }
+.pc-soon { padding: 4px 10px; border-radius: var(--radius-pill); background: var(--fog); font-size: 12px; white-space: nowrap; }
 /* 20. The aria list: titles line up (the faces get a column of their own) and the rows are light, with hairlines */
 .pc-list { gap: 0; }
-.pc-row { background: transparent !important; border-radius: 0; border-bottom: 1px solid var(--fog); min-height: 64px; padding-left: 4px; }
+.pc-row { background: transparent !important; border-radius: var(--radius-field); border-bottom: 1px solid var(--fog); min-height: 64px; padding-left: 4px; }
 .pc-row:hover { background: color-mix(in srgb, var(--ink) 3%, transparent) !important; }
 .pc-faces { width: 104px; }
 .pc-face { box-shadow: 0 0 0 2px var(--canvas); }
