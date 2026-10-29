@@ -20,8 +20,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 button,
-input,
-textarea {
+input {
   font: inherit;
   color: inherit;
 }
@@ -34,75 +33,10 @@ p {
 }
 
 /* ---------- top bar shared by every screen ---------- */
-.bar {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 12px;
-  min-height: 76px;
-  padding-block: 12px;
-  background: color-mix(in srgb, var(--canvas) 92%, transparent);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-}
-.wordmark {
-  justify-self: start;
-  min-height: var(--touch);
-  padding: 0 8px 0 0;
-  border: 0;
-  background: transparent;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  cursor: pointer;
-}
 /* the two sections, centred like an iPad tab bar */
-.tabs button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 0 20px 0 16px;
-  font-size: 15px;
-}
-.tabs svg {
-  width: 20px;
-  height: 20px;
-}
-.bar-end {
-  justify-self: end;
-}
 /* back to the previous screen, top left of the content */
-.back-to {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  min-height: 44px;
-  margin: -8px 0 -24px -10px;
-  padding: 0 14px 0 6px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: var(--ink);
-  font: 500 15px/1.2 var(--font-sans);
-  cursor: pointer;
-}
-.back-to:hover {
-  background: var(--fog);
-}
-.back-to svg {
-  width: 22px;
-  height: 22px;
-}
 
 /* ---------- welcome: first visit only ---------- */
-.welcome {
-  background: linear-gradient(180deg, var(--sky-soft) 0%, var(--canvas) 62%);
-}
 .welcome-body {
   max-width: 1040px;
   margin: 0 auto;
@@ -130,120 +64,9 @@ p {
   line-height: 1.5;
   color: var(--ink-muted);
 }
-.welcome-steps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin: 18px 0 8px;
-  padding: 0;
-  list-style: none;
-  counter-reset: step;
-}
-.welcome-steps li {
-  counter-increment: step;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 20px;
-  border-radius: 28px;
-  background: var(--tone-strong);
-  color: var(--on-pastel);
-}
-.welcome-steps li b {
-  font-size: 19px;
-  font-weight: 500;
-}
-.welcome-steps li b::before {
-  content: counter(step) "  ";
-  color: var(--on-pastel-muted);
-}
-.welcome-steps li > span:last-child {
-  font-size: 14px;
-  line-height: 1.45;
-  color: var(--on-pastel-muted);
-}
-.ws-art {
-  display: block;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 8px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft);
-}
-.bubble-art {
-  position: relative;
-}
-.bubble-art span {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--canvas);
-}
-.bubble-art span:nth-child(1) {
-  left: 10px;
-  top: 12px;
-}
-.bubble-art span:nth-child(2) {
-  left: 34px;
-  top: 22px;
-  background: var(--tone-deep);
-}
-.bubble-art span:nth-child(3) {
-  left: 18px;
-  top: 38px;
-  width: 22px;
-  height: 22px;
-}
-.line-art {
-  position: relative;
-}
-.line-art::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  top: 36px;
-  height: 2px;
-  background: var(--tone-deep);
-}
-.line-art i {
-  position: absolute;
-  width: 11px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--on-pastel);
-  transform: rotate(-20deg);
-}
-.line-art i:nth-child(1) { left: 14px; top: 38px; }
-.line-art i:nth-child(2) { left: 26px; top: 30px; background: var(--now-mark); }
-.line-art i:nth-child(3) { left: 38px; top: 24px; }
-.line-art i:nth-child(4) { left: 50px; top: 32px; }
-.welcome-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 8px;
-}
-.welcome-try {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.welcome-try svg {
-  width: 20px;
-  height: 20px;
-  color: var(--now-mark);
-}
 .welcome-note {
   font-size: 13px;
   color: var(--ink-muted);
-}
-.roles-empty {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 640px;
 }
 
 /* ---------- opera, character and piece screens ---------- */
@@ -291,193 +114,8 @@ p {
   gap: 14px;
 }
 /* the intro for a first visit */
-.steps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 6px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.steps li {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 44px;
-  padding: 0 18px 0 6px;
-  border-radius: var(--radius-pill);
-  background: var(--sky-soft);
-  font-size: 15px;
-  font-weight: 500;
-}
-.steps li b {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--canvas);
-  font-weight: 500;
-}
-.steps li:nth-child(2) {
-  background: #ffe8f2;
-}
-.steps li:nth-child(3) {
-  background: #e5faec;
-}
-#all-operas {
-  scroll-margin-top: 16px;
-}
 
 /* my roles: the first thing on the home screen once you have one */
-.role-tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
-  gap: 16px;
-}
-.role-tile {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 16px;
-  border-radius: 32px;
-  background: var(--tone-strong);
-  color: var(--on-pastel);
-}
-.role-open {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.role-open:focus-visible,
-.role-add:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 4px;
-}
-.role-face {
-  flex: none;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft);
-  transition: transform var(--duration-quick) var(--ease-standard);
-}
-.role-open:active .role-face {
-  transform: scale(0.96);
-}
-.role-text {
-  flex: 1;
-  min-width: 0;
-  display: grid;
-  gap: 2px;
-}
-.role-text b {
-  font-size: 28px;
-  line-height: 1.1;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.role-text span {
-  font-size: 15px;
-  color: var(--on-pastel-muted);
-}
-.role-text small {
-  font-size: 13px;
-  color: var(--on-pastel-muted);
-}
-.role-chev {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--canvas);
-}
-.role-chev svg {
-  width: 20px;
-  height: 20px;
-}
-.role-continue {
-  justify-content: flex-start;
-  min-height: 52px;
-  padding: 0 22px 0 18px;
-  background: var(--canvas);
-  white-space: normal;
-  text-align: left;
-}
-.role-continue:hover {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--pastel-fog-strong);
-}
-.role-continue svg {
-  color: var(--now-mark);
-}
-.role-add {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-height: 120px;
-  padding: 16px;
-  border: 2px dashed var(--fog-strong);
-  border-radius: 32px;
-  background: transparent;
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.role-add:hover {
-  background: var(--fog);
-}
-.role-add .role-text b {
-  font-size: 22px;
-}
-.role-add .role-text span {
-  color: var(--ink-muted);
-}
-.role-add-icon {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  background: var(--fog);
-}
-.role-add-icon svg {
-  width: 28px;
-  height: 28px;
-}
-.char {
-  position: relative;
-}
-.mine-tag {
-  position: absolute;
-  top: 104px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
-.mine-toggle {
-  align-self: flex-start;
-  background: var(--canvas);
-}
-.mine-toggle:hover {
-  background: var(--canvas);
-}
-.mine-toggle[aria-pressed="true"],
-.mine-toggle[aria-pressed="true"]:hover {
-  background: var(--picked);
-}
 .hero.compact h1 {
   font-size: clamp(36px, 4.6vw, 54px);
 }
@@ -491,260 +129,6 @@ p {
   font-size: 14px;
   color: var(--on-pastel-muted);
 }
-.mine-toggle svg {
-  width: 18px;
-  height: 18px;
-}
-
-.ready-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr));
-  gap: 16px;
-}
-.ready-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 16px 16px 16px 16px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: var(--tone-strong, var(--you));
-  color: var(--on-pastel);
-  text-align: left;
-  font: inherit;
-  cursor: pointer;
-  transition: transform var(--duration-quick) var(--ease-standard);
-}
-.ready-card:active {
-  transform: scale(0.985);
-}
-.ready-face {
-  flex: none;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft);
-}
-.ready-text {
-  flex: 1;
-  min-width: 0;
-  display: grid;
-  gap: 2px;
-}
-.ready-text b {
-  font-size: 24px;
-  line-height: 1.15;
-  font-weight: 500;
-}
-.ready-text span {
-  font-size: 14px;
-  color: var(--on-pastel-muted);
-}
-.ready-go {
-  flex: none;
-  pointer-events: none;
-  background: var(--canvas);
-}
-
-.bubbles {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
-  gap: 20px;
-}
-.bubble {
-  aspect-ratio: 1;
-  width: 100%;
-  padding: 16px;
-  border: 0;
-  border-radius: 50%;
-  background: var(--tone-soft, var(--fog));
-  color: var(--on-pastel);
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: background-color var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
-}
-.bubble:hover {
-  background: var(--tone-strong, var(--fog-strong));
-}
-.bubble:active {
-  transform: scale(0.97);
-}
-.bubble .year {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--ink-muted);
-  font-variant-numeric: tabular-nums;
-}
-.bubble .name {
-  font-size: 21px;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
-.bubble .who {
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.bubble.ready {
-  background: var(--tone-strong, var(--you));
-  box-shadow: inset 0 0 0 3px var(--canvas), 0 0 0 3px var(--now-mark);
-}
-.bubble.ready .year,
-.bubble.ready .who {
-  color: var(--on-pastel-muted);
-}
-
-.chars {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 32px 20px;
-}
-.char {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--ink);
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-.char .face {
-  display: block;
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft, var(--fog));
-  transition: background-color var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
-}
-.char:hover .face {
-  background: var(--tone-strong, var(--fog-strong));
-}
-.char:active .face {
-  transform: scale(0.97);
-}
-.char .n {
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 500;
-}
-.char .v,
-.char .c {
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--ink-muted);
-}
-.char .c b {
-  margin-left: 6px;
-  font-size: 12px;
-}
-
-.role {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 32px 56px;
-}
-.role-card {
-  flex: 1 1 300px;
-  max-width: 400px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background: var(--tone-strong, var(--you));
-}
-.role-card .portrait {
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft, var(--on-pastel-inverse));
-}
-.role-card h1 {
-  margin: 0;
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-.role-card .meta {
-  font-size: 15px;
-  color: var(--on-pastel-muted);
-}
-.pieces {
-  flex: 999 1 480px;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.piece {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  min-height: 80px;
-  padding: 12px 12px 12px 28px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: var(--fog);
-  color: var(--ink);
-  text-align: left;
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard);
-}
-.piece:hover {
-  background: var(--fog-strong);
-}
-.piece.ready {
-  background: var(--now);
-  color: var(--on-pastel);
-  --ink-muted: var(--on-pastel-muted);
-}
-.piece.ready:hover {
-  background: var(--now-strong);
-}
-.piece .t {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.piece .t b {
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 500;
-}
-.piece .t span {
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.piece .go {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--canvas);
-}
-.piece .go svg {
-  width: 22px;
-  height: 22px;
-}
 .empty-field {
   padding: 28px;
   background: var(--tone-soft, var(--fog));
@@ -753,25 +137,8 @@ p {
   gap: 16px;
   max-width: 640px;
 }
-.empty-field h2 {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 500;
-}
 .empty-field p {
   color: var(--ink-muted);
-}
-.empty-field .cp-btn:not(.cp-btn--ink) {
-  background: var(--canvas);
-}
-.empty-face {
-  display: block;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-strong);
 }
 
 /* ---------- practice screen ----------
@@ -825,14 +192,6 @@ p {
   align-items: center;
   gap: 8px;
 }
-.p-tools .cp-btn {
-  min-height: 44px;
-  padding: 0 18px 0 14px;
-}
-.p-tools .cp-btn svg {
-  width: 18px;
-  height: 18px;
-}
 
 /* the line you are singing: always here, always whole, centred */
 .p-timeline,
@@ -847,14 +206,7 @@ p {
   --focus: var(--on-pastel);
   color: var(--on-pastel);
 }
-.now-grid {
-  display: grid;
-  grid-template-columns: minmax(56px, 1fr) minmax(0, max-content) minmax(56px, 1fr);
-  align-items: stretch;
-  column-gap: 16px;
-}
 .now-inner {
-  position: relative;
   height: 172px;
   padding-block: 6px 14px;
   display: flex;
@@ -862,49 +214,6 @@ p {
   align-items: center;
   text-align: center;
   gap: 2px;
-}
-.now-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 40px;
-}
-.now-top .cp-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-right: 6px;
-  white-space: nowrap;
-}
-.now-top .cp-eyebrow::before {
-  content: "";
-  flex: none;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--pastel-fog-strong);
-  transition: background-color var(--duration-move) var(--ease-standard);
-}
-.now-panel.is-now .now-top .cp-eyebrow::before {
-  background: var(--now-mark);
-}
-.now-top .cp-btn {
-  min-height: 36px;
-  padding: 0 14px;
-  font-size: 14px;
-  background: var(--canvas);
-}
-.now-top .cp-btn svg {
-  width: 18px;
-  height: 18px;
-}
-.now-top .cp-btn:hover {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--pastel-fog-strong);
-}
-.now-top .cp-btn[aria-pressed="true"] {
-  background: var(--picked);
 }
 .now-it {
   margin-top: 4px;
@@ -927,9 +236,6 @@ p {
 .now-word:hover {
   box-shadow: inset 0 -2px 0 var(--pastel-fog-strong);
 }
-.now-word.now {
-  background: var(--now);
-}
 .now-word.open {
   box-shadow: inset 0 -4px 0 var(--picked-strong);
 }
@@ -948,70 +254,8 @@ p {
   line-height: 1.4;
   font-style: italic;
 }
-.now-card-word {
-  width: min(360px, calc(100vw - 32px));
-  text-align: left;
-}
 
 /* the lines before and after, at the sides: tap to move between lines */
-.now-side {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-}
-.now-side.next {
-  justify-content: flex-end;
-  text-align: right;
-}
-.now-arrow {
-  flex: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--canvas);
-  transition: background-color var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
-}
-.now-arrow svg {
-  width: 22px;
-  height: 22px;
-}
-.now-side:hover .now-arrow {
-  box-shadow: inset 0 0 0 1px var(--pastel-fog-strong);
-}
-.now-side:active .now-arrow {
-  transform: scale(0.94);
-}
-.now-side:focus-visible {
-  outline: none;
-}
-.now-side:focus-visible .now-arrow {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.now-peek {
-  display: grid;
-  gap: 2px;
-  min-width: 0;
-  max-width: 220px;
-  font-size: 15px;
-  line-height: 1.3;
-  color: var(--ink-muted);
-}
-.now-peek small {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 
 /* the progress line: how long the aria is, where the lines are, where you are */
 .p-timeline {
@@ -1071,38 +315,6 @@ p {
 .tl-line {
   left: 0;
   width: 100%;
-  height: 2px;
-  margin-top: -1px;
-  background: var(--pastel-fog-strong);
-}
-.tl-line.done {
-  background: var(--now-mark);
-}
-.tl-seg {
-  height: 12px;
-  margin-top: -6px;
-  background: var(--canvas);
-  box-shadow: 0 0 0 1px var(--pastel-fog);
-  overflow: hidden;
-}
-.tl-seg + .tl-seg {
-  border-left: 2px solid var(--sky-soft);
-}
-.tl-seg i {
-  display: block;
-  height: 100%;
-  background: var(--now-strong);
-}
-.tl-seg.now {
-  box-shadow: 0 0 0 2px var(--now-mark);
-}
-.tl-head {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  border-radius: 50%;
-  background: var(--now-mark);
-  box-shadow: 0 0 0 3px var(--canvas);
 }
 
 /* the music */
@@ -1193,15 +405,6 @@ p {
   overscroll-behavior: contain;
   background: var(--canvas);
 }
-.words-list {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 28px 24px 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 6px;
-}
 .w-line {
   position: relative;
   padding: 18px 24px 20px;
@@ -1216,36 +419,13 @@ p {
 .w-line:hover {
   background: var(--fog);
 }
-.w-line.now,
-.w-line.next {
+.w-line.now {
   background: var(--sky-soft);
   --ink: var(--on-pastel);
   --ink-muted: var(--on-pastel-muted);
   --fog: var(--pastel-fog);
   --fog-strong: var(--pastel-fog-strong);
   color: var(--on-pastel);
-}
-.w-line.past {
-  opacity: 0.5;
-}
-.w-line.past:hover {
-  opacity: 1;
-}
-.w-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 36px;
-}
-.w-line.now .w-head .cp-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background: var(--now-mark);
-  vertical-align: 1px;
 }
 .w-hear {
   width: 36px;
@@ -1258,12 +438,8 @@ p {
   color: var(--ink);
   cursor: pointer;
 }
-.w-line.now .w-hear,
-.w-line.next .w-hear {
+.w-line.now .w-hear {
   background: var(--canvas);
-}
-.w-hear[aria-pressed="true"] {
-  background: var(--picked);
 }
 .w-hear svg {
   width: 18px;
@@ -1286,13 +462,8 @@ p {
   font-style: italic;
   color: var(--ink-muted);
 }
-.w-line.now .w-tr,
-.w-line.next .w-tr {
+.w-line.now .w-tr {
   color: var(--ink);
-}
-.w-line .word-card {
-  text-align: left;
-  cursor: auto;
 }
 .w-gap {
   align-self: center;
@@ -1415,11 +586,6 @@ p {
   width: 20px;
   height: 20px;
 }
-.cp-tempo__value .cp-beat {
-  font-size: 1.4em;
-  line-height: 0;
-  vertical-align: -0.08em;
-}
 .dock-status {
   width: 100%;
   text-align: center;
@@ -1452,7 +618,6 @@ p {
   letter-spacing: -0.01em;
 }
 .wc-ipa {
-  font-family: var(--font-ipa);
   font-size: 17px;
   color: var(--ink-muted);
 }
@@ -1555,26 +720,10 @@ p {
   background: var(--loop-wash);
   box-shadow: inset 3px 0 0 var(--loop-mark), inset -3px 0 0 var(--loop-mark);
 }
-.ov-selection {
-  outline: 2px dashed var(--loop-mark);
-  background: var(--loop-wash);
-}
-.ov-flag {
-  pointer-events: auto;
-  height: 22px;
-  padding: 0 6px;
-  border: 0;
-  font: 500 12px/1 var(--font-sans);
-  background: var(--note);
-  color: var(--on-pastel);
-}
 
 /* side panel: all lines, notes, about */
 .p-drawer-head {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 12px;
   padding: 16px;
 }
 .p-drawer-body {
@@ -1585,51 +734,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-.line-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 10px;
-}
-.line-row.now {
-  background: var(--now);
-  --ink: var(--on-pastel);
-  --ink-muted: var(--on-pastel-muted);
-  --fog: var(--pastel-fog);
-  color: var(--on-pastel);
-}
-.line-go {
-  flex: 1;
-  min-width: 0;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  text-align: left;
-  color: inherit;
-  cursor: pointer;
-  display: grid;
-  gap: 2px;
-}
-.line-go .it {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.25;
-}
-.line-go .ipa {
-  font-family: var(--font-ipa);
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.line-go .en {
-  font-size: 14px;
-  font-style: italic;
-  color: var(--ink-muted);
-}
-.line-go .bars {
-  font-size: 12px;
-  color: var(--ink-muted);
-  font-variant-numeric: tabular-nums;
 }
 .notes-form {
   display: grid;
@@ -1642,15 +746,6 @@ p {
   background: var(--canvas);
   color: var(--ink);
   resize: vertical;
-}
-.about p + p {
-  margin-top: 8px;
-}
-.about a {
-  color: inherit;
-}
-.about {
-  font-size: 15px;
 }
 
 /* side panel: all lines, notes, about — over the text and the music, never over the title */
@@ -1707,12 +802,6 @@ p {
 }
 /* narrower iPad (portrait): the sides keep their arrows, the parts keep their faces */
 @media (max-width: 1100px) {
-  .now-peek {
-    display: none;
-  }
-  .p-tools .cp-btn--ghost {
-    display: none;
-  }
   .tl-label,
   .tl-time {
     width: 132px;
@@ -1740,90 +829,18 @@ p {
 }
 /* phone */
 @media (max-width: 640px) {
-  .bar {
-    grid-template-columns: auto 1fr;
-    min-height: 64px;
-  }
-  .bar .tabs {
-    justify-self: end;
-  }
-  .bar-end {
-    display: none;
-  }
-  .wordmark {
-    font-size: 19px;
-  }
-  .tabs button {
-    padding: 0 14px;
-  }
-  .tabs button svg {
-    display: none;
-  }
-  .welcome-steps {
-    grid-template-columns: 1fr;
-  }
-  .welcome-steps li {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: 14px;
-  }
-  .ws-art {
-    margin: 0;
-    zoom: 0.7;
-  }
-  .welcome-steps li > span:last-child {
-    flex-basis: 100%;
-  }
-  .ready-card {
-    gap: 14px;
-    border-radius: 28px;
-    padding: 12px 18px 12px 12px;
-  }
-  .ready-face {
-    width: 56px;
-    height: 56px;
-  }
-  .ready-text b {
-    font-size: 20px;
-  }
-  .ready-go {
-    display: none;
-  }
-  .role-face,
-  .role-add-icon {
-    width: 64px;
-    height: 64px;
-  }
-  .role-text b {
-    font-size: 22px;
-  }
   .p-head {
     min-height: 0;
     padding-block: 8px;
   }
-  .p-title .cp-eyebrow,
   .p-title .p-sub {
     display: none;
-  }
-  .p-title h1 {
-    font-size: 21px;
-  }
-  .p-tools .cp-btn {
-    min-height: 44px;
-    padding: 0 12px;
   }
   .p-tools .label {
     display: none;
   }
   .view-switch button {
     padding: 0 12px;
-  }
-  .p-title h1 {
-    display: none;
-  }
-  .words-list {
-    padding: 16px 8px 40vh;
   }
   .w-line {
     padding: 14px 12px 16px;
@@ -1838,31 +855,9 @@ p {
   .p-head {
     gap: 10px;
   }
-  .now-grid {
-    grid-template-columns: 44px minmax(0, 1fr) 44px;
-    column-gap: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-  .now-arrow {
-    width: 40px;
-    height: 40px;
-  }
   .now-inner {
     height: 176px;
     padding-top: 10px;
-  }
-  .now-top {
-    flex-wrap: wrap;
-    row-gap: 4px;
-  }
-  .now-top .cp-eyebrow {
-    flex-basis: 100%;
-    justify-content: center;
-    margin: 0;
-  }
-  .now-bars {
-    display: none;
   }
   .now-it {
     font-size: 25px;
@@ -1911,14 +906,6 @@ p {
     justify-content: center;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .bubble,
-  .piece,
-  .now-word,
-  .ov-fade {
-    transition: none;
-  }
-}
 
 /* =====================================================================
    App shell: sidebar with the role you are learning, then everything else
@@ -1926,7 +913,6 @@ p {
 .shell {
   height: 100%;
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
   overflow: hidden;
 }
@@ -1949,228 +935,7 @@ p {
 .scrim {
   display: none;
 }
-.sidebar {
-  height: 100%;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  padding: 20px 16px max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
-  background: #f6f6f3;
-  box-shadow: inset -1px 0 0 var(--fog-strong);
-}
-.sb-mark {
-  align-self: flex-start;
-  min-height: 40px;
-  padding: 0 8px;
-  border: 0;
-  background: transparent;
-  font: 400 22px/1 var(--font-sans);
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  cursor: pointer;
-}
 /* what you are learning */
-.sb-now {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px;
-  border-radius: 26px;
-  background: var(--tone-strong, var(--canvas));
-  color: var(--on-pastel);
-}
-.sb-role,
-.sb-continue,
-.sb-opera,
-.sb-link,
-.sb-you {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.sb-role {
-  padding: 2px;
-  border-radius: 20px;
-}
-.sb-role-text {
-  display: grid;
-  gap: 2px;
-}
-.sb-role-text b {
-  font-size: 24px;
-  line-height: 1.1;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.sb-role-text small {
-  font-size: 13px;
-  color: var(--on-pastel-muted);
-}
-.sb-continue {
-  min-height: 56px;
-  padding: 8px 14px 8px 8px;
-  border-radius: var(--radius-pill);
-  background: var(--canvas);
-}
-.sb-continue:hover {
-  box-shadow: inset 0 0 0 1px var(--pastel-fog-strong);
-}
-.sb-play {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--now);
-}
-.sb-play svg {
-  width: 18px;
-  height: 18px;
-}
-.sb-continue > span:last-child {
-  display: grid;
-  min-width: 0;
-  line-height: 1.2;
-}
-.sb-continue small {
-  font-size: 12px;
-  color: var(--on-pastel-muted);
-}
-.sb-continue b {
-  font-size: 15px;
-  font-weight: 500;
-}
-.sb-opera {
-  min-height: 44px;
-  padding: 0 12px;
-  border-radius: var(--radius-pill);
-  font-size: 15px;
-  font-weight: 500;
-}
-.sb-opera svg {
-  width: 18px;
-  height: 18px;
-}
-.sb-opera:hover,
-.sb-opera[aria-current="page"] {
-  background: var(--pastel-fog);
-}
-.sb-none {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-  padding: 18px;
-}
-.sb-none b {
-  font-size: 18px;
-  font-weight: 500;
-}
-.sb-none span {
-  font-size: 14px;
-  color: var(--ink-muted);
-}
-.sb-group {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.sb-label {
-  padding: 0 12px 6px;
-  font: 500 11px/1.2 var(--font-sans);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-.sb-link {
-  min-height: 48px;
-  padding: 0 12px;
-  border-radius: 16px;
-  font-size: 16px;
-}
-.sb-link svg {
-  flex: none;
-  width: 22px;
-  height: 22px;
-}
-.sb-link:hover {
-  background: var(--fog);
-}
-.sb-link[aria-current="page"],
-.sb-role[aria-current="page"] .sb-role-text b,
-.sb-you[aria-current="page"] {
-  font-weight: 500;
-}
-.sb-link[aria-current="page"],
-.sb-you[aria-current="page"] {
-  background: var(--picked);
-}
-.sb-other {
-  min-height: 56px;
-}
-.sb-other-text {
-  display: grid;
-  line-height: 1.2;
-}
-.sb-other-text b {
-  font-weight: 500;
-  font-size: 15px;
-}
-.sb-other-text small {
-  font-size: 12px;
-  color: var(--ink-muted);
-}
-.sb-spacer {
-  flex: 1;
-}
-.sb-you {
-  min-height: 56px;
-  padding: 6px 12px 6px 6px;
-  border-radius: var(--radius-pill);
-}
-.sb-you:hover {
-  background: var(--fog);
-}
-.sb-you-icon {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.sb-you-icon svg {
-  width: 20px;
-  height: 20px;
-}
-.sb-you > span:last-child {
-  display: grid;
-  line-height: 1.2;
-}
-.sb-you b {
-  font-weight: 500;
-}
-.sb-you small {
-  font-size: 12px;
-  color: var(--ink-muted);
-}
-.sb-role:focus-visible,
-.sb-continue:focus-visible,
-.sb-opera:focus-visible,
-.sb-link:focus-visible,
-.sb-you:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
 
 /* the progress ring around a portrait */
 .ring {
@@ -2200,23 +965,6 @@ p {
 
 /* narrower screens: the sidebar slides in; the role you are learning stays in the top bar */
 @media (max-width: 1079px) {
-  .shell {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .sidebar {
-    position: fixed;
-    z-index: 60;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: min(320px, 86vw);
-    transform: translateX(-104%);
-    transition: transform var(--duration-settle) var(--ease-standard);
-    box-shadow: var(--shadow-float);
-  }
-  .shell.open .sidebar {
-    transform: none;
-  }
   .scrim {
     display: block;
     position: fixed;
@@ -2285,138 +1033,12 @@ p {
   overflow: hidden;
   background: var(--tone-soft);
 }
-.np-play {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 0;
-  border-radius: 50%;
-  background: var(--canvas);
-  color: var(--now-mark);
-  cursor: pointer;
-}
-.np-play svg {
-  width: 18px;
-  height: 18px;
-}
 
 /* =====================================================================
    A role and its checklist
    ===================================================================== */
-.rp-head {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 24px 32px;
-  padding: 28px;
-  border-radius: 36px;
-  background: var(--tone-strong);
-  color: var(--on-pastel);
-  --ink: var(--on-pastel);
-  --ink-muted: var(--on-pastel-muted);
-}
-.rp-id {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-width: 0;
-}
-.rp-id h1 {
-  margin: 0;
-  font-size: clamp(44px, 5vw, 64px);
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-.rp-opera {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  min-height: 36px;
-  margin-left: -10px;
-  padding: 0 10px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  font: 500 16px/1 var(--font-sans);
-  color: inherit;
-  cursor: pointer;
-}
-.rp-opera svg {
-  width: 16px;
-  height: 16px;
-}
-.rp-opera:hover {
-  background: var(--pastel-fog);
-}
-.rp-desc {
-  color: var(--on-pastel-muted);
-  max-width: 460px;
-}
-.rp-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-.rp-continue {
-  background: var(--canvas);
-}
-.rp-continue:hover {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--pastel-fog-strong);
-}
-.rp-continue svg {
-  color: var(--now-mark);
-}
-.mine-toggle {
-  background: var(--canvas);
-}
-.rp-progress {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  min-width: 220px;
-  padding: 20px 22px;
-  border-radius: 26px;
-  background: var(--canvas);
-}
-.rp-progress p {
-  font-size: 15px;
-  color: var(--on-pastel-muted);
-}
-.rp-progress p b {
-  font-size: 44px;
-  line-height: 1;
-  font-weight: 400;
-  color: var(--on-pastel);
-  margin-right: 4px;
-}
-.rp-bar {
-  display: flex;
-  gap: 4px;
-}
-.rp-bar i {
-  flex: 1;
-  height: 10px;
-  border-radius: 5px;
-  background: var(--fog-strong);
-  transition: background-color var(--duration-move) var(--ease-standard);
-}
-.rp-bar i.on {
-  background: var(--now-mark);
-}
-.rp-progress small {
-  font-size: 13px;
-  color: var(--on-pastel-muted);
-}
 .checklist {
   display: grid;
-  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2431,12 +1053,7 @@ p {
   background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
-.ck.ready {
-  background: var(--now);
-  box-shadow: none;
-}
 .ck.soon {
-  background: #f7f7f5;
   box-shadow: none;
 }
 .ck.soon .ck-text b,
@@ -2491,26 +1108,6 @@ p {
   font-size: 14px;
   color: var(--ink-muted);
 }
-.ck-text em {
-  font-style: normal;
-}
-.ck-go {
-  flex: none;
-  background: var(--canvas);
-}
-.ck-go:hover {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--pastel-fog-strong);
-}
-.ck-go svg {
-  color: var(--now-mark);
-}
-.ck-soon {
-  flex: none;
-  padding: 0 8px;
-  font-size: 13px;
-  color: var(--ink-muted);
-}
 .ck-note {
   font-size: 14px;
   color: var(--ink-muted);
@@ -2529,10 +1126,6 @@ p {
 }
 .op-head h1 {
   margin: 0;
-  font-size: clamp(44px, 6vw, 72px);
-  line-height: 0.98;
-  font-weight: 400;
-  letter-spacing: -0.02em;
 }
 .op-story {
   max-width: 760px;
@@ -2546,11 +1139,6 @@ p {
 .op-yours b {
   color: var(--ink);
   font-weight: 500;
-}
-.chars .n,
-.chars .v,
-.chars .c {
-  display: block;
 }
 .numbers {
   display: grid;
@@ -2572,9 +1160,6 @@ p {
 }
 .num.yours {
   background: #ffe8f2;
-}
-.num.ready {
-  background: var(--now);
 }
 .num-i {
   flex: none;
@@ -2604,7 +1189,6 @@ p {
 }
 .num-go {
   flex: none;
-  background: var(--canvas);
 }
 .num-go svg {
   color: var(--now-mark);
@@ -2633,31 +1217,15 @@ p {
   padding: 0 20px;
   border: 0;
   border-radius: var(--radius-pill);
-  background: var(--tone-soft, var(--fog));
-  color: var(--on-pastel);
   font: 500 15px/1 var(--font-sans);
   cursor: pointer;
   transition: background-color var(--duration-quick) var(--ease-standard);
-}
-.voice-chip small {
-  font-weight: 400;
-  color: var(--on-pastel-muted);
-}
-.voice-chip svg {
-  width: 18px;
-  height: 18px;
 }
 .voice-chip:hover {
   background: var(--tone-strong, var(--fog-strong));
 }
 .voice-chip[aria-pressed="true"] {
   background: var(--tone-strong, var(--picked));
-  box-shadow: inset 0 0 0 2px var(--tone-deep, var(--loop-mark));
-}
-.voice-chips.big .voice-chip {
-  min-height: 60px;
-  padding: 0 26px;
-  font-size: 17px;
 }
 .vroles {
   display: grid;
@@ -2680,13 +1248,6 @@ p {
 }
 .vrole:active {
   transform: scale(0.98);
-}
-.vrole.soon {
-  background: #f7f7f5;
-}
-.vrole.soon .vrole-text,
-.vrole.soon .vrole-face {
-  opacity: 0.6;
 }
 .vrole-face {
   flex: none;
@@ -2717,46 +1278,6 @@ p {
 /* =====================================================================
    You
    ===================================================================== */
-.my-roles {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  max-width: 640px;
-}
-.my-roles li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 8px 8px 8px;
-  border-radius: 24px;
-  background: var(--tone-soft);
-}
-.mr-open {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  text-align: left;
-  color: inherit;
-  cursor: pointer;
-}
-.mr-open > span:last-child {
-  display: grid;
-  line-height: 1.25;
-}
-.mr-open b {
-  font-weight: 500;
-  font-size: 17px;
-}
-.mr-open small {
-  font-size: 13px;
-  color: var(--ink-muted);
-}
 
 /* =====================================================================
    Onboarding: one calm centred column, plain background, clear steps
@@ -2841,94 +1362,8 @@ p {
   color: var(--ink-muted);
   text-wrap: pretty;
 }
-.ob-hint {
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.ob-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
-}
-.ob-go {
-  min-width: 220px;
-}
-.ob-actions .back-to.inline {
-  margin: 0;
-}
-.ob-actions .cp-btn svg {
-  width: 20px;
-  height: 20px;
-}
-.ob-alt {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.ob-alt:hover {
-  background: var(--fog);
-}
 
 /* step 1: what practice looks like */
-.ob-preview {
-  width: min(540px, 100%);
-  margin-top: 16px;
-  border-radius: 24px;
-  overflow: hidden;
-  background: var(--canvas);
-  box-shadow: 0 0 0 1px var(--fog-strong), 0 24px 48px -32px rgb(11 11 11 / 0.3);
-  text-align: center;
-}
-.obp-panel {
-  display: grid;
-  justify-items: center;
-  gap: 2px;
-  padding: 20px 20px 16px;
-  background: var(--sky-soft);
-}
-.obp-eyebrow {
-  font: 500 11px/1.4 var(--font-sans);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--now-mark);
-}
-.obp-it {
-  font-size: 30px;
-  line-height: 1.2;
-}
-.obp-it span {
-  padding: 0 0.1em;
-  transition: background-color 200ms var(--ease-standard);
-}
-.obp-it span + span {
-  margin-left: 0.22em;
-}
-.obp-it span.on {
-  background: var(--now);
-}
-.obp-ipa {
-  font-family: var(--font-ipa);
-  font-size: 15px;
-  color: var(--ink-muted);
-}
-.obp-tr {
-  font-size: 15px;
-  font-style: italic;
-}
-.obp-staff {
-  position: relative;
-  height: 96px;
-}
-.obp-line {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  height: 1px;
-  background: var(--ink-muted);
-  opacity: 0.45;
-}
 .obp-note {
   position: absolute;
   width: 13px;
@@ -2944,254 +1379,11 @@ p {
 }
 
 /* step 2: a clear list of choices */
-.ob-options {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  width: min(600px, 100%);
-  margin-top: 8px;
-}
-.ob-option {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-height: 60px;
-  padding: 10px 16px 10px 20px;
-  border: 0;
-  border-radius: 18px;
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard), box-shadow var(--duration-quick) var(--ease-standard);
-}
-.ob-option.wide {
-  grid-column: 1 / -1;
-}
-.ob-option:hover {
-  background: #fafaf8;
-  box-shadow: inset 0 0 0 1px var(--ink-muted);
-}
-.ob-option[aria-pressed="true"] {
-  background: var(--tone-soft, var(--fog));
-  box-shadow: inset 0 0 0 2px var(--tone-deep, var(--ink));
-}
-.ob-option:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.obo-text {
-  flex: 1;
-  min-width: 0;
-  display: grid;
-  gap: 2px;
-}
-.obo-text b {
-  font-size: 17px;
-  font-weight: 500;
-}
-.obo-text small {
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.obo-check {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1.5px var(--fog-strong);
-  color: transparent;
-  transition: background-color var(--duration-quick) var(--ease-standard);
-}
-.obo-check svg {
-  width: 16px;
-  height: 16px;
-}
-.ob-option[aria-pressed="true"] .obo-check {
-  background: var(--now-mark);
-  box-shadow: none;
-  color: #ffffff;
-}
 
 /* step 3: the role with music first, the others as a quiet list */
-.ob-ready {
-  display: grid;
-  gap: 10px;
-  width: min(600px, 100%);
-  margin-top: 8px;
-}
-.ob-feature {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 14px 14px 14px 14px;
-  border: 0;
-  border-radius: 22px;
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 1px var(--tone-strong);
-  color: var(--on-pastel);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: box-shadow var(--duration-quick) var(--ease-standard);
-}
-.ob-feature:hover {
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
-.ob-feature:focus-visible,
-.ob-mini:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.obf-face {
-  flex: none;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-strong);
-}
-.obf-text {
-  flex: 1;
-  min-width: 0;
-  display: grid;
-  gap: 2px;
-}
-.obf-text small {
-  font: 500 11px/1.4 var(--font-sans);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--now-mark);
-}
-.obf-text b {
-  font-size: 26px;
-  line-height: 1.1;
-  font-weight: 500;
-}
-.obf-text span {
-  font-size: 15px;
-  color: var(--on-pastel-muted);
-}
-.obf-go {
-  flex: none;
-  pointer-events: none;
-  background: var(--canvas);
-}
-.ob-later-h {
-  margin-top: 20px;
-}
-.ob-later {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
-  width: 100%;
-}
-.ob-mini {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border: 0;
-  border-radius: 14px;
-  background: transparent;
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.ob-mini:hover {
-  background: var(--fog);
-}
-.obm-face {
-  flex: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft);
-}
-.ob-mini > span:last-child {
-  display: grid;
-  min-width: 0;
-  line-height: 1.25;
-}
-.ob-mini b {
-  font-size: 14px;
-  font-weight: 500;
-}
-.ob-mini small {
-  font-size: 12px;
-  color: var(--ink-muted);
-}
-.ob-routes {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  width: min(640px, 100%);
-  margin-top: 8px;
-}
-.ob-route {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  padding: 22px;
-  border: 0;
-  border-radius: 22px;
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.ob-route:hover {
-  box-shadow: inset 0 0 0 1px var(--ink-muted);
-}
-.ob-route svg {
-  width: 26px;
-  height: 26px;
-  margin-bottom: 6px;
-}
-.ob-route b {
-  font-size: 20px;
-  font-weight: 500;
-}
-.ob-route span {
-  font-size: 14px;
-  color: var(--ink-muted);
-}
 @media (max-width: 640px) {
-  .ob-top {
-    grid-template-columns: auto 1fr auto;
-    gap: 12px;
-  }
   .ob-track i {
     width: 28px;
-  }
-  .ob-options,
-  .ob-routes {
-    grid-template-columns: 1fr;
-  }
-  .ob-later {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .obf-face {
-    width: 60px;
-    height: 60px;
-  }
-  .obf-text b {
-    font-size: 22px;
-  }
-  .obf-go {
-    display: none;
-  }
-  .obp-it {
-    font-size: 22px;
   }
   .ob-body {
     padding-top: 28px;
@@ -3202,7 +1394,6 @@ p {
 }
 @media (prefers-reduced-motion: reduce) {
   .ob-body,
-  .obp-it span,
   .obp-note {
     transition: none;
     animation: none;
@@ -3212,26 +1403,13 @@ p {
 /* =====================================================================
    Practice extras: mark as learned, and the first-time tips
    ===================================================================== */
-.learned-toggle[aria-pressed="true"],
-.learned-toggle[aria-pressed="true"]:hover {
-  background: var(--now);
-}
-.learned-toggle svg {
-  width: 18px;
-  height: 18px;
-}
 .tip {
   position: fixed;
-  z-index: 100;
   padding: 16px 16px 12px 18px;
   border-radius: 20px;
   background: var(--canvas);
-  box-shadow: var(--shadow-float), 0 0 0 2px var(--now-mark);
   display: grid;
   gap: 10px;
-}
-.tip.above {
-  transform: translateY(-100%);
 }
 .tip p {
   font-size: 16px;
@@ -3242,77 +1420,19 @@ p {
   font: 500 11px/1.4 var(--font-sans);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--now-mark);
   margin-bottom: 2px;
 }
 .tip-actions {
-  display: flex;
   justify-content: flex-end;
-  gap: 6px;
 }
 .tip-actions .cp-btn {
   min-height: 40px;
   padding: 0 16px;
 }
-.tip-arrow {
-  position: absolute;
-  top: -7px;
-  width: 14px;
-  height: 14px;
-  margin-left: -7px;
-  background: var(--canvas);
-  transform: rotate(45deg);
-  box-shadow: -2px -2px 0 0 var(--now-mark);
-}
-.tip.above .tip-arrow {
-  top: auto;
-  bottom: -7px;
-  box-shadow: 2px 2px 0 0 var(--now-mark);
-}
-
-@media (max-width: 860px) {
-  .rp-head {
-    grid-template-columns: auto minmax(0, 1fr);
-    padding: 22px;
-  }
-  .rp-progress {
-    grid-column: 1 / -1;
-  }
-}
 @media (max-width: 640px) {
-  .rp-head {
-    grid-template-columns: minmax(0, 1fr);
-    justify-items: start;
-  }
-  .rp-head .ring {
-    width: 112px !important;
-    height: 112px !important;
-  }
-  .ck {
-    flex-wrap: wrap;
-  }
-  .ck-text {
-    flex-basis: calc(100% - 60px);
-  }
-  .ck-go,
-  .ck-soon {
-    margin-left: 60px;
-  }
-  .ob-routes {
-    grid-template-columns: 1fr;
-  }
   .ob-top {
     grid-template-columns: auto 1fr auto;
     gap: 12px;
-  }
-  .ob-dots {
-    justify-content: center;
-  }
-  .obp-it {
-    font-size: 22px;
-  }
-  .learned-toggle .label {
-    display: none;
   }
   .now-pill .np-role span:last-child {
     display: none;
@@ -3353,11 +1473,6 @@ p {
   color: var(--ink);
   font-size: 15px;
 }
-.start-over.armed,
-.start-over.armed:hover {
-  background: var(--note);
-  color: var(--on-pastel);
-}
 .start-over:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
@@ -3371,150 +1486,8 @@ p {
   color: var(--on-pastel-muted);
   margin: 2px 0;
 }
-.chars .d {
-  display: block;
-  max-width: 170px;
-  margin: 4px auto 0;
-  font-size: 12.5px;
-  line-height: 1.35;
-  color: var(--ink-muted);
-}
-.ck-context {
-  margin-top: 6px;
-  max-width: 720px;
-  font-size: 14.5px;
-  line-height: 1.5;
-  color: var(--ink);
-}
-.ck.soon .ck-context {
-  color: var(--ink-muted);
-}
 
 /* onboarding step 3: choose a role, read about it, confirm */
-.ob-pick {
-  position: relative;
-  width: 100%;
-  margin-top: 8px;
-  text-align: left;
-}
-.ob-roles .vrole {
-  position: relative;
-  align-items: flex-start;
-}
-.vrole-check {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--now-mark);
-  color: #ffffff;
-  opacity: 0;
-  transform: scale(0.7);
-  transition: opacity var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
-}
-.vrole-check svg {
-  width: 16px;
-  height: 16px;
-}
-.vrole.picked {
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
-.vrole.picked .vrole-check {
-  opacity: 1;
-  transform: none;
-}
-.vrole.picked.soon .vrole-text,
-.vrole.picked.soon .vrole-face {
-  opacity: 1;
-}
-.ob-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 20px 22px 22px;
-  border-radius: 26px;
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 1px var(--tone-strong);
-  color: var(--on-pastel);
-  text-align: left;
-}
-.obd-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.obd-face {
-  flex: none;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-strong);
-}
-.obd-head h2 {
-  margin: 0;
-  font-size: 30px;
-  line-height: 1.05;
-  font-weight: 500;
-}
-.obd-head p {
-  font-size: 14px;
-  color: var(--on-pastel-muted);
-}
-.obd-desc {
-  font-size: 16px;
-  font-weight: 500;
-}
-.obd-story {
-  font-size: 14.5px;
-  line-height: 1.5;
-  color: var(--on-pastel-muted);
-}
-.obd-music {
-  display: grid;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.obd-music li {
-  display: grid;
-  padding: 8px 12px;
-  border-radius: 12px;
-  background: rgb(255 255 255 / 0.6);
-}
-.obd-music li.ready {
-  background: var(--now);
-}
-.obd-music b {
-  font-size: 14.5px;
-  font-weight: 500;
-}
-.obd-music span {
-  font-size: 12.5px;
-  color: var(--on-pastel-muted);
-}
-.obd-actions {
-  display: flex;
-  gap: 8px;
-}
-.obd-actions .cp-btn {
-  flex: 1;
-}
-.ob-scrim {
-  display: none;
-}
-.ob-alt-link {
-  color: var(--ink-muted);
-}
-.ob-alt-link svg {
-  width: 18px;
-  height: 18px;
-}
 /* wide screens: the list and the chosen role side by side */
 @media (min-width: 1000px) {
   .ob-body.picking {
@@ -3538,29 +1511,6 @@ p {
 }
 /* narrower screens: the chosen role rises as a sheet over the list */
 @media (max-width: 999px) {
-  .ob-scrim {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 49;
-    border: 0;
-    padding: 0;
-    background: rgb(11 11 11 / 0.18);
-  }
-  .ob-detail {
-    position: fixed;
-    z-index: 50;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: 82vh;
-    overflow-y: auto;
-    padding: 18px 20px calc(20px + env(safe-area-inset-bottom, 0px));
-    border-radius: 28px 28px 0 0;
-    background: var(--canvas);
-    box-shadow: var(--shadow-float);
-    animation: sheet-in 260ms var(--ease-standard);
-  }
   @keyframes sheet-in {
     from {
       transform: translateY(40px);
@@ -3570,10 +1520,6 @@ p {
 }
 
 /* practice: the scene and facts about the aria */
-.ctx {
-  display: grid;
-  gap: 12px;
-}
 .ctx-text {
   font-size: 17px;
   line-height: 1.6;
@@ -3601,7 +1547,6 @@ p {
 }
 .ctx-where li.is {
   font-weight: 500;
-  background: var(--now);
 }
 .ctx-facts {
   display: grid;
@@ -3625,112 +1570,6 @@ p {
 }
 
 /* onboarding: a role, on its own screen */
-.ob-roles {
-  width: 100%;
-  margin-top: 8px;
-  text-align: left;
-}
-.ob-roles .vrole {
-  align-items: center;
-}
-.vrole-go {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--canvas);
-  opacity: 0.9;
-}
-.vrole-go svg {
-  width: 16px;
-  height: 16px;
-}
-.ob-role {
-  justify-content: flex-start;
-  padding-top: 24px;
-  gap: 12px;
-}
-.obr-back {
-  align-self: flex-start;
-}
-.obr-face {
-  display: block;
-  width: 140px;
-  height: 140px;
-  margin-top: 8px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 1px var(--tone-strong);
-}
-.ob-role h1 {
-  margin-top: 6px;
-}
-.obr-meta {
-  font-size: 16px;
-  color: var(--ink-muted);
-}
-.obr-desc {
-  color: var(--ink) !important;
-  font-size: 20px !important;
-}
-.obr-more {
-  display: grid;
-  gap: 28px;
-  width: 100%;
-  margin-top: 28px;
-  padding-top: 28px;
-  box-shadow: inset 0 1px 0 var(--fog);
-  text-align: left;
-}
-.obr-more section {
-  display: grid;
-  gap: 10px;
-}
-.obr-story {
-  font-size: 16px;
-  line-height: 1.6;
-}
-.obr-music {
-  display: grid;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.obr-music li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  column-gap: 12px;
-  padding: 12px 16px;
-  border-radius: 16px;
-  background: #f7f7f5;
-}
-.obr-music li.ready {
-  background: var(--now);
-}
-.obr-music b {
-  font-size: 16px;
-  font-weight: 500;
-}
-.obr-music span {
-  grid-column: 1;
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-.obr-music small {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: center;
-  font-size: 12.5px;
-  color: var(--ink-muted);
-}
-.obr-music li.ready small {
-  color: var(--now-mark);
-  font-weight: 500;
-}
 
 /* checklist rows open the piece's page */
 button.ck-text {
@@ -3747,32 +1586,8 @@ button.ck-text:focus-visible {
   outline-offset: 4px;
   border-radius: 8px;
 }
-.ck-more {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--ink-muted);
-  cursor: pointer;
-}
-.ck-more svg {
-  width: 20px;
-  height: 20px;
-}
-.ck-more:hover {
-  background: rgb(11 11 11 / 0.06);
-  color: var(--ink);
-}
 .num.linked {
   cursor: pointer;
-}
-.num.linked:hover .num-text b {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 /* a piece's own page */
@@ -3794,10 +1609,6 @@ button.ck-text:focus-visible {
   line-height: 1.02;
   font-weight: 400;
   letter-spacing: -0.02em;
-}
-.pp-when {
-  font-size: 17px;
-  color: var(--on-pastel-muted);
 }
 .pp-actions {
   display: flex;
@@ -3835,11 +1646,6 @@ button.ck-text:focus-visible {
   width: 15px !important;
   height: 15px !important;
 }
-.pp-learned[aria-checked="true"] .pp-box {
-  background: var(--now-mark);
-  box-shadow: none;
-  color: #ffffff;
-}
 .pp-section {
   gap: 10px;
 }
@@ -3847,44 +1653,6 @@ button.ck-text:focus-visible {
   max-width: 680px;
   font-size: 19px;
   line-height: 1.6;
-}
-.pp-order {
-  display: grid;
-  gap: 6px;
-  max-width: 560px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.pp-order li {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 10px 14px;
-  border-radius: 14px;
-  font-size: 15px;
-}
-.pp-order li.was {
-  color: var(--ink-muted);
-  background: #f7f7f5;
-}
-.pp-order li.is {
-  font-weight: 500;
-  background: var(--now);
-}
-.pp-order li.is span {
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--on-pastel-muted);
-  font-variant-numeric: tabular-nums;
-}
-.pp-with {
-  font-size: 15px;
-  color: var(--ink-muted);
-}
-.pp-with b {
-  font-weight: 500;
-  color: var(--ink);
 }
 .pp-nav {
   display: flex;
@@ -3934,48 +1702,6 @@ button.ck-text:focus-visible {
 }
 
 /* onboarding step 3: select, then continue */
-.vrole-radio {
-  flex: none;
-  align-self: center;
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1.5px var(--fog-strong);
-  color: transparent;
-  transition: background-color var(--duration-quick) var(--ease-standard);
-}
-.vrole-radio svg {
-  width: 16px;
-  height: 16px;
-}
-.vrole.picked .vrole-radio {
-  background: var(--now-mark);
-  box-shadow: none;
-  color: #ffffff;
-}
-.ob-roles .vrole:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.ob-sticky {
-  position: sticky;
-  bottom: 0;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  margin-top: 4px;
-  padding: 16px 0 calc(16px + env(safe-area-inset-bottom, 0px));
-  background: linear-gradient(to bottom, rgb(255 255 255 / 0), var(--canvas) 30%);
-}
-.ob-sticky .back-to.inline {
-  margin: 0;
-}
 
 /* opera illustrations: a cover on the opera's page, the circle in the list, a thin band on its roles */
 .op-head.has-art {
@@ -3994,117 +1720,22 @@ button.ck-text:focus-visible {
   object-fit: cover;
   object-position: 50% 38%;
 }
-.bubble-label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-.bubble.has-art {
-  justify-content: flex-end;
-  padding-bottom: 12%;
-  background-size: cover;
-  background-position: 50% 30%;
-  background-color: var(--tone-soft);
-}
-.bubble.has-art:hover {
-  background-size: cover;
-  filter: saturate(1.05);
-}
-.bubble.has-art .bubble-label {
-  gap: 0;
-  padding: 6px 14px 7px;
-  border-radius: 14px;
-  background: rgb(255 255 255 / 0.94);
-}
-.bubble.has-art .bubble-label .year {
-  font-size: 10px;
-}
-.bubble.has-art .bubble-label .name {
-  font-size: 15px;
-  white-space: nowrap;
-}
-.bubble.has-art > .cp-tag {
-  display: none;
-}
-.bubble.has-art .bubble-label .who {
-  display: none;
-}
-.art-band {
-  height: 64px;
-  border-radius: 18px;
-  background-size: cover;
-  background-position: 50% 30%;
-}
-.rp-head .art-band {
-  grid-column: 1 / -1;
-  margin: -8px -8px 0;
-}
-.obr-band {
-  width: 100%;
-  height: 72px;
-  margin-bottom: 4px;
-}
 @media (max-width: 640px) {
   .op-cover {
     margin: 0 -22px 10px;
   }
-  .art-band {
-    height: 52px;
-  }
-}
-
-.sb-art {
-  flex: none;
-  width: 28px;
-  height: 28px;
-  margin-left: -4px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 55% 30%;
 }
 
 /* =====================================================================
    Availability is never a colour: pieces and roles with music look normal,
    the rest are simply faded (one day everything will have music)
    ===================================================================== */
-.ck.ready {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.ck-go {
-  background: var(--now);
-}
-.ck-go:hover {
-  background: var(--now-strong);
-  box-shadow: none;
-}
 .vrole.ready {
   background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
 .vrole.soon {
-  background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog);
-}
-.vrole.picked,
-.vrole.picked.soon {
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
-.obr-music li,
-.obr-music li.ready {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.obr-music li:not(.ready) b,
-.obr-music li:not(.ready) span,
-.obr-music li:not(.ready) small {
-  opacity: 0.55;
-}
-.obr-music li.ready small {
-  color: var(--ink-muted);
-  font-weight: 400;
 }
 .num.ready {
   background: transparent;
@@ -4119,17 +1750,6 @@ button.ck-text:focus-visible {
 .num-go {
   background: var(--now);
 }
-.bubble.ready {
-  box-shadow: none;
-}
-.char.soon .face,
-.char.soon > span:last-child {
-  opacity: 0.6;
-}
-.char.soon:hover .face {
-  opacity: 0.85;
-}
-.pp-order li.is,
 .ctx-where li.is {
   background: var(--canvas);
   box-shadow: inset 0 0 0 1.5px var(--ink);
@@ -4141,55 +1761,6 @@ button.ck-text:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.ob-role {
-  justify-content: center;
-  gap: 10px;
-}
-.obr-portrait {
-  display: block;
-  width: auto;
-  height: min(46vh, 440px);
-  max-width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 28px;
-  box-shadow: 0 30px 60px -36px rgb(11 11 11 / 0.45);
-  margin-bottom: 10px;
-}
-.obr-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 14px;
-}
-.obr-actions .cp-btn {
-  min-width: 220px;
-}
-.obr-all {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.obr-all:hover {
-  background: var(--fog);
-}
-.obr-all svg {
-  width: 20px;
-  height: 20px;
-}
-@media (max-width: 640px) {
-  .obr-portrait {
-    height: min(40vh, 360px);
-  }
-  .obr-actions {
-    flex-direction: column-reverse;
-    width: 100%;
-  }
-  .obr-actions .cp-btn {
-    width: 100%;
-  }
 }
 
 /* role list: a piece with music plays from its row */
@@ -4216,8 +1787,7 @@ button.ck-text:focus-visible {
 .ck-play:active {
   transform: scale(0.94);
 }
-.ck-play:focus-visible,
-.ck-more:focus-visible {
+.ck-play:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
@@ -4226,27 +1796,6 @@ button.ck-text:focus-visible {
 }
 
 /* practice: one Details button */
-.details-btn {
-  position: relative;
-}
-.details-btn svg {
-  width: 18px;
-  height: 18px;
-}
-.details-done {
-  display: grid;
-  place-items: center;
-  width: 20px;
-  height: 20px;
-  margin-left: 2px;
-  border-radius: 50%;
-  background: var(--now-mark);
-  color: #ffffff;
-}
-.details-done svg {
-  width: 13px !important;
-  height: 13px !important;
-}
 .ctx-learned {
   justify-self: start;
   background: var(--canvas);
@@ -4284,12 +1833,6 @@ button.ck-text:focus-visible {
     opacity: 0;
   }
 }
-.ft-text {
-  font-size: 15px;
-}
-.ft-text b {
-  font-weight: 500;
-}
 .finish-toast .cp-btn svg {
   width: 18px;
   height: 18px;
@@ -4311,10 +1854,6 @@ button.ck-text:focus-visible {
     width: 40px;
     height: 40px;
   }
-  .ck-more {
-    width: 36px;
-    height: 36px;
-  }
   .ck-play {
     width: 44px;
     height: 44px;
@@ -4323,18 +1862,6 @@ button.ck-text:focus-visible {
 
 /* Find your first role: every role looks the same until one is selected; only the small
    "Music ready / coming later" line says which have music. Fading here read as "not selected". */
-.ob-roles .vrole.soon {
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-}
-.ob-roles .vrole.soon .vrole-text,
-.ob-roles .vrole.soon .vrole-face {
-  opacity: 1;
-}
-.ob-roles .vrole.picked {
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
 
 /* =====================================================================
    Find your first role: a showcase of portrait cards
@@ -4365,7 +1892,6 @@ button.ck-text:focus-visible {
   -webkit-tap-highlight-color: transparent;
 }
 .sc-pic {
-  position: relative;
   display: block;
   aspect-ratio: 3 / 4;
   border-radius: 20px;
@@ -4410,33 +1936,6 @@ button.ck-text:focus-visible {
 }
 .sc-card:active .sc-pic {
   transform: scale(0.98);
-}
-.sc-card.picked .sc-pic {
-  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 6px var(--tone-deep), 0 16px 32px -14px rgba(40, 30, 60, 0.28);
-}
-.sc-check {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--now-mark);
-  color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  transform: scale(0.7);
-  transition: opacity var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
-}
-.sc-check svg {
-  width: 16px;
-  height: 16px;
-}
-.sc-card.picked .sc-check {
-  opacity: 1;
-  transform: none;
 }
 .sc-text {
   display: grid;
@@ -4489,12 +1988,6 @@ button.ck-text:focus-visible {
     display: none;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .sc-pic,
-  .sc-pic img {
-    transition: none;
-  }
-}
 
 /* =====================================================================
    A piece's scene opens inside its own row (no separate page):
@@ -4520,9 +2013,6 @@ button.ck-text:focus-visible {
 .num > .num-text {
   flex: 1 1 0;
   min-width: 0;
-}
-span.ck-text {
-  padding: 4px 0;
 }
 .ck-scene {
   flex: none;
@@ -4570,8 +2060,7 @@ span.ck-text {
   transition: grid-template-rows 260ms var(--ease-standard), visibility 0s linear 260ms;
   cursor: auto;
 }
-.ck.open .ck-panel,
-.num.open .ck-panel {
+.ck.open .ck-panel {
   grid-template-rows: 1fr;
   visibility: visible;
   transition: grid-template-rows 260ms var(--ease-standard);
@@ -4602,6 +2091,7 @@ span.ck-text {
   color: var(--ink);
 }
 .num.linked:hover .num-text b {
+  text-underline-offset: 3px;
   text-decoration: none;
 }
 @media (max-width: 640px) {
@@ -4623,49 +2113,10 @@ span.ck-text {
     font-size: 15px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .ck-panel,
-  .ck.open .ck-panel,
-  .num.open .ck-panel,
-  .ck-scene svg {
-    transition: none;
-  }
-}
 
 /* =====================================================================
    Onboarding step 2: two ways in, by voice or by opera
    ===================================================================== */
-.ob-seg {
-  align-self: center;
-  margin: 8px 0 4px;
-}
-.ob-seg button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 46px;
-  padding: 0 22px;
-  font-size: 16px;
-}
-.ob-seg svg {
-  width: 18px;
-  height: 18px;
-}
-.ob-sub {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: var(--ink-muted);
-}
-.ob-operas {
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 18px 14px;
-}
-.ob-operas .sc-pic {
-  aspect-ratio: 1 / 1;
-}
-.ob-operas .sc-pic img {
-  object-position: 50% 50%;
-}
 .sc-year {
   position: absolute;
   inset: 0;
@@ -4677,22 +2128,7 @@ span.ck-text {
   color: var(--tone-deep);
   opacity: 0.7;
 }
-.ob-operas .sc-text b {
-  font-size: 17px;
-}
-@media (max-width: 640px) {
-  .ob-seg button {
-    padding: 0 16px;
-    font-size: 15px;
-  }
-  .ob-operas {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 /* the opera you came back from is marked, quietly */
-.sc-card.was .sc-pic {
-  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--fog-strong), 0 8px 24px -12px rgba(40, 30, 60, 0.18);
-}
 
 /* =====================================================================
    Operas and casts use the same cards as onboarding: square opera tiles,
@@ -4707,11 +2143,6 @@ span.ck-text {
 }
 .showcase.tiles .sc-text b {
   font-size: 17px;
-}
-.sc-yours {
-  margin-top: 4px;
-  color: var(--ink) !important;
-  font-weight: 500;
 }
 .showcase.cast {
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -4730,9 +2161,6 @@ span.ck-text {
 }
 .sc-card.soon .sc-text {
   opacity: 0.65;
-}
-.sc-card.soon .sc-tag {
-  opacity: 1;
 }
 @media (max-width: 640px) {
   .showcase.tiles,
@@ -4782,10 +2210,6 @@ span.ck-text {
   text-transform: uppercase;
   color: var(--ink-muted);
 }
-.w-chips {
-  display: inline-flex;
-  gap: 6px;
-}
 .w-chip {
   height: 32px;
   padding: 0 14px;
@@ -4810,18 +2234,12 @@ span.ck-text {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
-.w-hint {
-  margin: 0 12px 10px calc(40px + 44px + 14px * 2 + 12px);
-  font-size: 14px;
-  color: var(--ink-muted);
-}
 
 .words-view .w-line {
   display: grid;
   grid-template-columns: var(--w-cols);
   column-gap: 14px;
   row-gap: 0;
-  align-items: start;
   padding: 10px 12px 12px;
   border-radius: 14px;
   text-align: left;
@@ -4857,14 +2275,10 @@ span.ck-text {
 }
 .words-view .w-it {
   margin: 0;
-  font-size: 22px;
-  line-height: 1.3;
   letter-spacing: 0;
 }
 .words-view .w-ipa {
   margin: 3px 0 0;
-  font-size: 14.5px;
-  line-height: 1.4;
 }
 .words-view .w-hear {
   grid-column: 2;
@@ -4880,15 +2294,9 @@ span.ck-text {
   opacity: 1;
   background: var(--fog);
 }
-.words-view .w-line.now .w-hear,
-.words-view .w-line.next .w-hear {
+.words-view .w-line.now .w-hear {
   background: transparent;
   color: var(--ink);
-  opacity: 1;
-}
-.words-view .w-hear[aria-pressed="true"] {
-  background: var(--picked);
-  color: var(--on-pastel);
   opacity: 1;
 }
 .words-view .w-hear:focus-visible {
@@ -4899,91 +2307,29 @@ span.ck-text {
 .words-view .w-tr {
   grid-column: 4;
   margin: 0;
-  padding-top: 4px;
-  font-size: 17px;
   font-style: normal;
-  line-height: 1.45;
-  color: var(--ink-muted);
 }
-.words-view .w-line.now .w-tr,
-.words-view .w-line.next .w-tr {
+.words-view .w-line.now .w-tr {
   color: var(--ink);
 }
 /* lines already sung recede only while the music plays; when reading, every line is equal */
-.words-view .w-line.past {
-  opacity: 1;
-}
-.words-view.is-playing .w-line.past {
-  opacity: 0.55;
-}
 
 /* piano interludes divide the verses */
 .words-view .w-gap {
   align-self: stretch;
-  display: flex;
   justify-content: flex-start;
-  width: 100%;
   min-height: 0;
-  margin: 14px 0 4px;
-  padding: 6px 12px 6px calc(40px + 44px + 14px * 2 + 12px);
   border-radius: 0;
-  background: transparent;
   color: var(--ink-muted);
-}
-.words-view .w-gap:first-of-type {
-  margin-top: 4px;
-}
-.w-gap-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 32px;
-  padding: 0 14px 0 10px;
-  border-radius: 999px;
-  font: 500 13px/1.2 var(--font-sans);
-  letter-spacing: 0.02em;
 }
 .words-view .w-gap:hover {
   background: transparent;
 }
-.words-view .w-gap:hover .w-gap-label {
-  background: var(--fog);
-}
 .words-view .w-gap.now {
   background: transparent;
 }
-.words-view .w-gap.now .w-gap-label {
-  background: var(--now);
-  color: var(--on-pastel);
-}
 
 /* Hide Italian: the original is blurred until you tap it */
-.w-reveal {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.w-reveal .w-it {
-  display: block;
-}
-.w-orig.covered .w-it,
-.w-orig.covered .w-ipa {
-  filter: blur(9px);
-  user-select: none;
-  -webkit-user-select: none;
-}
-.w-orig.covered .w-ipa {
-  filter: blur(6px);
-}
-.w-orig.shown .w-it {
-  cursor: pointer;
-}
 
 @media (max-width: 640px) {
   .w-grid {
@@ -5004,37 +2350,23 @@ span.ck-text {
     column-gap: 10px;
     padding: 8px 8px 10px;
   }
-  .words-view .w-it {
-    font-size: 20px;
-  }
-  .words-view .w-tr {
-    grid-column: 3;
-    grid-row: 2;
-    font-size: 15px;
-  }
   .words-view .w-hear {
     width: 40px;
     height: 40px;
     margin-top: -5px;
   }
-  .words-view .w-gap,
-  .w-hint {
+  .words-view .w-gap {
     padding-left: calc(22px + 40px + 10px * 2 + 8px);
     margin-left: 0;
   }
 }
 @media (max-width: 640px) {
   .words-view .w-ipa {
-    font-size: 13.5px;
     opacity: 0.85;
   }
   .words-view .w-tr {
-    padding-top: 5px;
-    color: var(--ink);
-    opacity: 0.8;
-  }
-  .words-view .w-line.now .w-tr {
-    opacity: 1;
+    grid-column: 3;
+    grid-row: 2;
   }
 }
 /* the speaker comes before the Italian in the grid but after it in the page: keep every cell on the first row */
@@ -5062,10 +2394,8 @@ span.ck-text {
 }
 .now-panel {
   background: var(--canvas);
-  padding: 2px 16px 10px;
 }
 .line-card {
-  max-width: 1120px;
   margin: 0 auto;
   padding: 8px 10px 14px;
   border-radius: 24px;
@@ -5145,9 +2475,6 @@ span.ck-text {
 .nl-btn:hover {
   background: var(--sky-soft);
 }
-.nl-btn[aria-pressed="true"] {
-  background: var(--picked);
-}
 .nl-btn:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 1px;
@@ -5189,7 +2516,6 @@ span.ck-text {
 }
 /* fixed height: the music below never jumps when a line is longer */
 .now-panel .now-inner {
-  height: 124px;
   padding: 0;
   gap: 0;
   justify-content: center;
@@ -5215,11 +2541,6 @@ span.ck-text {
   font-size: clamp(16px, 1.6vw, 18px);
   font-style: normal;
   line-height: 1.4;
-  color: var(--ink);
-  opacity: 0.8;
-}
-.now-panel .now-word.now {
-  border-radius: 6px;
 }
 .now-card-word {
   width: min(360px, calc(100vw - 32px));
@@ -5248,8 +2569,7 @@ span.ck-text {
   color: var(--ink);
   opacity: 0.78;
 }
-.words-view .w-line.now .w-tr,
-.words-view .w-line.next .w-tr {
+.words-view .w-line.now .w-tr {
   opacity: 1;
 }
 .wc-word {
@@ -5257,9 +2577,6 @@ span.ck-text {
 }
 .wc-ipa {
   font-family: var(--font-ipa);
-}
-.obp-it {
-  font-family: var(--font-text);
 }
 
 /* the bottom bar in three calm groups: parts · play · speed. "On" is the
@@ -5299,11 +2616,6 @@ span.ck-text {
   color: var(--ink-muted);
   box-shadow: none;
 }
-.p-bar .part-fade[aria-pressed="true"] {
-  background: var(--canvas);
-  color: var(--ink);
-  box-shadow: 0 1px 2px rgba(20, 20, 40, 0.08);
-}
 .p-bar .cp-tempo {
   gap: 0;
 }
@@ -5331,16 +2643,7 @@ span.ck-text {
 .p-bar .bar-start {
   background: var(--fog);
 }
-
-@media (orientation: portrait) and (min-width: 700px) {
-  .now-panel .now-inner {
-    height: 150px;
-  }
-}
 @media (max-width: 640px) {
-  .now-panel {
-    padding: 0 8px 8px;
-  }
   .line-card {
     padding: 6px 4px 10px;
     border-radius: 18px;
@@ -5348,16 +2651,10 @@ span.ck-text {
   .now-bar {
     padding: 0 2px 0 10px;
   }
-  .now-bars {
-    display: none;
-  }
   .nl-btn {
     height: 32px;
     padding: 0 11px;
     font-size: 13px;
-  }
-  .nl-btn:first-child span {
-    display: none;
   }
   .now-body {
     grid-template-columns: 36px minmax(0, 1fr) 36px;
@@ -5366,12 +2663,6 @@ span.ck-text {
   .now-step {
     width: 36px;
     height: 36px;
-  }
-  .now-panel .now-inner {
-    height: 112px;
-  }
-  .now-panel .now-it {
-    font-size: 25px;
   }
   .now-panel .now-ipa,
   .now-panel .now-tr {
@@ -5401,7 +2692,6 @@ span.ck-text {
 .words-view .w-line > .w-tr {
   padding-top: 0;
 }
-.words-view .w-orig > .w-reveal,
 .words-view .w-orig > .w-it {
   display: block;
 }
@@ -5411,286 +2701,49 @@ span.ck-text {
    In full under the line where a sound first occurs; a dotted mark on
    the letters it applies to; a tie under words that run together
    ===================================================================== */
-.w-mark {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.2em;
-  text-decoration-color: color-mix(in srgb, var(--picked-strong) 55%, transparent);
-}
-.w-mark.anchor {
-  text-decoration-color: var(--picked-strong);
-}
-.w-tie {
-  position: relative;
-}
-.w-tie::after {
-  content: "";
-  position: absolute;
-  left: -0.16em;
-  right: -0.16em;
-  bottom: -0.06em;
-  height: 0.26em;
-  border: 1.5px solid color-mix(in srgb, var(--picked-strong) 80%, transparent);
-  border-top: 0;
-  border-radius: 0 0 50% 50% / 0 0 100% 100%;
-  pointer-events: none;
-}
-.w-tips {
-  grid-column: 3 / -1;
-  grid-row: 2;
-  display: grid;
-  gap: 6px;
-  margin-top: 10px;
-  cursor: auto;
-}
-.w-tip,
 .wc-tip {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   margin: 0;
-  padding: 10px 14px;
   border-radius: 12px;
-  background: color-mix(in srgb, var(--picked) 38%, var(--canvas));
   color: var(--ink);
-  font-size: 14.5px;
   line-height: 1.5;
   text-align: left;
 }
-.w-tip svg,
-.wc-tip svg,
-.now-tip svg {
-  flex: none;
-  width: 18px;
-  height: 18px;
-  margin-top: 1px;
-  color: var(--picked-strong);
-}
-.w-tip b,
 .wc-tip b {
   font-weight: 500;
 }
-.w-tip-also {
-  color: var(--ink-muted);
-}
-.words-view .w-line.now .w-tip {
-  background: var(--canvas);
-}
-.wc-tip {
-  padding: 8px 12px;
-  font-size: 14px;
-}
 
 /* music card: one short line in the header, only while paused */
-.now-tip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-  max-width: 52%;
-  height: 32px;
-  margin-left: auto;
-  padding: 0 12px;
-  border: 0;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--canvas) 55%, transparent);
-  color: var(--on-pastel);
-  font: 500 13px/1 var(--font-sans);
-  cursor: pointer;
-}
-.now-tip span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.now-tip svg {
-  margin-top: 0;
-}
-.now-tip:hover {
-  background: var(--canvas);
-}
-.now-tip:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
-}
 
 /* Details → Pronunciation */
-.tips-intro {
-  margin: 4px 0 12px;
-  font-size: 14px;
-  color: var(--ink-muted);
-}
-.tips-list ol {
-  display: grid;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.tips-list li button {
-  display: grid;
-  gap: 2px;
-  width: 100%;
-  padding: 12px 14px;
-  border: 0;
-  border-radius: 14px;
-  background: var(--fog);
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.tips-list li button:hover {
-  background: color-mix(in srgb, var(--picked) 38%, var(--canvas));
-}
-.tips-list small {
-  font-size: 12px;
-  color: var(--ink-muted);
-}
-.tips-list small span {
-  font-family: var(--font-text);
-  font-size: 13px;
-}
-.tips-list b {
-  font-size: 15px;
-  font-weight: 500;
-}
-.tips-list li button > span {
-  font-size: 14px;
-  line-height: 1.45;
-  color: var(--ink-muted);
-}
-
-@media (max-width: 640px) {
-  .w-tips {
-    grid-column: 3;
-    grid-row: 3;
-  }
-  .w-tip {
-    padding: 8px 10px;
-    font-size: 14px;
-  }
-  .now-tip {
-    width: 32px;
-    padding: 0;
-    justify-content: center;
-  }
-  .now-tip span {
-    display: none;
-  }
-}
 /* tips: a stronger lilac for marks and icons, and one quiet box per line */
-:root {
-  --tip-ink: #7d70d4;
-  --tip-bg: #f4f1ff;
-}
 .w-mark {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
   text-decoration-color: color-mix(in srgb, var(--tip-ink) 45%, transparent);
 }
 .w-mark.anchor {
   text-decoration-color: var(--tip-ink);
 }
-.w-tie::after {
-  border-color: color-mix(in srgb, var(--tip-ink) 75%, transparent);
-}
-.w-tip svg,
-.wc-tip svg,
-.now-tip svg {
+.wc-tip svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
   color: var(--tip-ink);
 }
-.w-tips {
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: var(--tip-bg);
-}
-.w-tips .w-tip {
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
-  font-size: 14px;
-}
-.words-view .w-line.now .w-tips {
-  background: var(--canvas);
-}
-.words-view .w-line.now .w-tip {
-  background: transparent;
-}
 .wc-tip {
+  padding: 8px 12px;
+  font-size: 14px;
   background: var(--tip-bg);
 }
 
 /* tips, quieter: names only under the line; tap one to read it (and to mark every word it applies to) */
-.words-view .w-tips {
-  gap: 6px;
-  margin-top: 6px;
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
-}
-.words-view .w-line.now .w-tips {
-  background: transparent;
-}
-.w-tipnames {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.w-tipname {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  height: 28px;
-  padding: 0 11px 0 8px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--tip-bg);
-  color: var(--ink);
-  font: 500 13px/1 var(--font-sans);
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard);
-}
-.w-tipname svg {
-  width: 15px;
-  height: 15px;
-  color: var(--tip-ink);
-}
-.w-tipname:hover {
-  background: var(--picked);
-}
-.w-tipname[aria-expanded="true"] {
-  background: var(--picked);
-}
-.w-tipname:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.words-view .w-line.now .w-tipname {
-  background: var(--canvas);
-}
-.words-view .w-line.now .w-tipname[aria-expanded="true"] {
-  background: var(--picked);
-}
-.w-tipbody {
-  max-width: 68ch;
-  margin: 2px 0 4px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: var(--tip-bg);
-  font-size: 14.5px;
-  line-height: 1.5;
-  color: var(--ink);
-}
-.words-view .w-line.now .w-tipbody {
-  background: var(--canvas);
-}
 /* every word a tip applies to, lit while that tip is open */
-.w-mark.lit {
-  text-decoration-color: var(--tip-ink);
-  background: color-mix(in srgb, var(--picked) 45%, transparent);
-  border-radius: 3px;
-}
 
 /* =====================================================================
    One place for pronunciation: a strip above the words, about the line
@@ -5710,10 +2763,6 @@ span.ck-text {
   background: var(--tip-bg);
   min-height: 44px;
 }
-.tipstrip.empty {
-  background: transparent;
-  box-shadow: inset 0 0 0 1px var(--fog);
-}
 .ts-main {
   flex: 1;
   min-width: 0;
@@ -5730,8 +2779,7 @@ span.ck-text {
   white-space: nowrap;
   cursor: pointer;
 }
-.ts-main svg,
-.ts-none svg {
+.ts-main svg {
   flex: none;
   width: 18px;
   height: 18px;
@@ -5768,42 +2816,14 @@ span.ck-text {
   font-weight: 500;
   color: var(--tip-ink);
 }
-.ts-next {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  height: 32px;
-  padding: 0 6px 0 12px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--canvas);
-  color: var(--ink);
-  font: 500 13px/1 var(--font-sans);
-  cursor: pointer;
-}
-.ts-next svg {
-  width: 16px;
-  height: 16px;
-}
 .ts-body {
   flex-basis: 100%;
-  max-width: 72ch;
   margin: 0 0 8px 28px;
   font-size: 14.5px;
   line-height: 1.5;
   color: var(--ink);
 }
-.ts-none {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-height: 36px;
-  font-size: 14px;
-  color: var(--ink-muted);
-}
-.ts-main:focus-visible,
-.ts-next:focus-visible {
+.ts-main:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
   border-radius: 8px;
@@ -5831,25 +2851,6 @@ span.ck-text {
 .tl-line.done {
   background: color-mix(in srgb, var(--now-mark) 35%, var(--canvas));
 }
-.tl-seg {
-  height: 6px;
-  margin-top: -3px;
-  border-radius: 3px;
-  background: var(--fog-strong);
-  box-shadow: 0 0 0 1.5px var(--canvas);
-}
-.tl-seg + .tl-seg {
-  border-left: 0;
-}
-.tl-seg i {
-  background: var(--now-mark);
-}
-.tl-seg.now {
-  height: 10px;
-  margin-top: -5px;
-  border-radius: 5px;
-  box-shadow: 0 0 0 1.5px var(--canvas);
-}
 .tl-head {
   width: 18px;
   height: 18px;
@@ -5863,310 +2864,10 @@ span.ck-text {
   max-width: none;
   padding-right: 12px;
 }
-.now-tip-word {
-  font-family: var(--font-text);
-  font-size: 15px;
-  font-style: normal;
-}
 
 /* =====================================================================
    Welcome: a faithful, living miniature of the practice screen
    ===================================================================== */
-.ob-welcome {
-  max-width: 760px;
-  gap: 0;
-}
-.ob-welcome h1 {
-  margin-bottom: 8px;
-}
-.ob-welcome .lede {
-  margin-bottom: 26px;
-}
-.ob-welcome .ob-preview {
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 14px 14px 0;
-  border-radius: 26px;
-  background: var(--canvas);
-  box-shadow: 0 0 0 1px var(--fog), 0 18px 40px -22px rgba(40, 40, 70, 0.28);
-  overflow: hidden;
-  text-align: left;
-}
-.obp-track {
-  position: relative;
-  height: 18px;
-  margin: 0 6px 10px;
-}
-.obp-track > * {
-  position: absolute;
-  top: 50%;
-}
-.obp-track-line {
-  left: 0;
-  right: 0;
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 2px;
-  background: var(--fog);
-}
-.obp-seg {
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 2px;
-  background: var(--fog-strong);
-  box-shadow: 0 0 0 1px var(--canvas);
-}
-.obp-seg.now {
-  height: 7px;
-  margin-top: -3.5px;
-  border-radius: 4px;
-}
-.obp-track-done {
-  left: 0;
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 2px;
-  background: var(--now-mark);
-  transition: width 400ms linear;
-}
-.obp-head {
-  width: 12px;
-  height: 12px;
-  margin: -6px 0 0 -6px;
-  border-radius: 50%;
-  background: var(--canvas);
-  box-shadow: 0 0 0 2px var(--now-mark);
-  transition: left 400ms linear;
-}
-.obp-card {
-  padding: 8px 10px 14px;
-  border-radius: 18px;
-  background: var(--sky-soft);
-  color: var(--on-pastel);
-  text-align: center;
-}
-.obp-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 30px;
-  padding: 0 2px 0 8px;
-}
-.obp-meta {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 10.5px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.obp-meta i {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--now-mark);
-}
-.obp-listen {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  height: 26px;
-  padding: 0 10px;
-  border-radius: 999px;
-  background: var(--canvas);
-  font-size: 11.5px;
-  font-weight: 500;
-}
-.obp-listen svg {
-  width: 14px;
-  height: 14px;
-}
-.obp-listen b {
-  margin-left: 5px;
-  padding-left: 8px;
-  font-weight: 500;
-  box-shadow: inset 1px 0 0 var(--pastel-fog-strong);
-}
-.ob-welcome .obp-it {
-  display: block;
-  margin: 2px 0 0;
-  font-family: var(--font-text);
-  font-size: clamp(24px, 3.6vw, 32px);
-  line-height: 1.2;
-}
-.ob-welcome .obp-it span {
-  display: inline;
-  padding: 0 0.08em;
-  border-radius: 5px;
-  transition: background-color 160ms ease;
-}
-.ob-welcome .obp-it span + span {
-  margin-left: 0.18em;
-}
-.ob-welcome .obp-it span.on {
-  background: var(--now);
-}
-.ob-welcome .obp-ipa {
-  margin: 4px 0 0;
-  font-family: var(--font-ipa);
-  font-size: 14px;
-  color: var(--ink-muted);
-}
-.ob-welcome .obp-tr {
-  margin: 2px 0 0;
-  font-size: 14px;
-  font-style: normal;
-  opacity: 0.85;
-}
-.obp-music {
-  position: relative;
-  height: 150px;
-  margin: 0 -14px;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-}
-.obp-strip {
-  position: absolute;
-  left: 0;
-  top: 6px;
-  bottom: 0;
-  width: max-content;
-  transition: transform 520ms cubic-bezier(0.3, 0.1, 0.3, 1);
-}
-.obp-score,
-.obp-score svg {
-  display: block;
-  height: 100%;
-  width: auto;
-}
-.obp-score svg {
-  height: 144px;
-  overflow: visible;
-}
-.obp-score .obp-fade {
-  fill: var(--canvas);
-  opacity: 0.8;
-}
-.obp-halo {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  margin: -15px 0 0 -15px;
-  border-radius: 50%;
-  background: var(--now);
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-.obp-cursor {
-  position: absolute;
-  top: 0;
-  bottom: 18px;
-  width: 2px;
-  margin-left: -1px;
-  background: var(--now-mark);
-  opacity: 0.3;
-  transition: left 200ms ease;
-}
-.ob-points {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  width: 100%;
-  max-width: 680px;
-  margin: 22px auto 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-.ob-points li {
-  display: grid;
-  gap: 2px;
-}
-.ob-points b {
-  font-size: 15px;
-  font-weight: 500;
-}
-.ob-points span {
-  font-size: 13.5px;
-  line-height: 1.35;
-  color: var(--ink-muted);
-}
-.ob-welcome .ob-actions {
-  margin-top: 26px;
-}
-@media (max-width: 640px) {
-  .ob-welcome .ob-preview {
-    padding: 10px 8px 0;
-    border-radius: 20px;
-  }
-  .obp-music {
-    height: 118px;
-    margin: 0 -8px;
-  }
-  .obp-score svg {
-    height: 112px;
-  }
-  .obp-listen {
-    display: none;
-  }
-  .ob-points {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .ob-points li {
-    display: block;
-  }
-  .ob-points b::after {
-    content: " ";
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .obp-strip,
-  .obp-cursor,
-  .obp-head,
-  .obp-track-done {
-    transition: none;
-  }
-}
-.obp-music {
-  height: 178px;
-  margin-top: 6px;
-}
-.obp-score svg {
-  height: 172px;
-}
-@media (max-width: 640px) {
-  .obp-music {
-    height: 128px;
-  }
-  .obp-score svg {
-    height: 122px;
-  }
-}
-.obp-music {
-  height: 186px;
-  margin-top: 2px;
-}
-.obp-strip {
-  top: 14px;
-}
-.ob-welcome .lede {
-  margin-bottom: 22px;
-}
-.ob-points {
-  margin-top: 18px;
-}
-.ob-welcome .ob-actions {
-  margin-top: 22px;
-}
-@media (max-width: 640px) {
-  .obp-music {
-    height: 136px;
-  }
-}
 
 /* the syllable being sung, one note at a time: "bel", then "lo" */
 .syl-now {
@@ -6179,208 +2880,22 @@ span.ck-text {
 }
 
 /* welcome demo: real playback of bars 7–8 */
-.ob-welcome .obp-it span {
-  padding: 0;
-  border-radius: 0;
-  background: none;
-}
-.ob-welcome .obp-it span + span {
-  margin-left: 0;
-}
-.ob-welcome .obp-it .syl-now {
-  background: var(--now);
-  border-radius: 4px;
-}
-.ob-welcome .ob-preview {
-  padding-top: 12px;
-}
-.obp-card {
-  padding: 10px 12px 14px;
-}
-p.obp-meta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-  margin: 0 0 2px;
-  min-height: 18px;
-  color: var(--ink-muted);
-}
-.ob-preview.is-playing p.obp-meta {
-  color: var(--on-pastel);
-}
-.ob-preview.is-playing .obp-strip {
-  transition: none;
-}
-.obp-cursor {
-  transition: none;
-}
-.obp-foot {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 0 -14px;
-  padding: 10px 14px 12px;
-  border-top: 1px solid var(--fog);
-}
-.obp-play {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  height: 44px;
-  padding: 0 18px 0 6px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--fog);
-  color: var(--ink);
-  font: 500 15px/1 var(--font-sans);
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard);
-}
-.obp-play:hover {
-  background: var(--fog-strong);
-}
-.obp-play:disabled {
-  cursor: progress;
-  color: var(--ink-muted);
-}
-.obp-play:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.obp-play-icon {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--now);
-  color: var(--on-pastel);
-}
-.obp-play-icon svg {
-  width: 18px;
-  height: 18px;
-}
-.obp-hint {
-  min-width: 0;
-  font-size: 13px;
-  line-height: 1.35;
-  color: var(--ink-muted);
-}
-@media (max-width: 640px) {
-  .obp-foot {
-    margin: 0 -8px;
-    padding: 8px 10px 10px;
-    gap: 10px;
-  }
-  .obp-play {
-    padding-right: 14px;
-    font-size: 14px;
-  }
-  .obp-hint {
-    font-size: 12px;
-  }
-}
 
 /* =====================================================================
    Welcome, redesigned: words on the left, the playable line on the right,
    and the cast drifting past along the bottom
    ===================================================================== */
 .ob-welcome {
-  max-width: 1120px;
-  padding-block: 24px 0;
-  justify-content: flex-start;
   gap: 0;
 }
-.obw-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  align-items: center;
-  gap: 48px;
-  width: 100%;
-  text-align: left;
-}
-.obw-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.obw-eyebrow {
-  margin: 0 0 14px;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
 .ob-welcome h1 {
-  margin: 0 0 12px;
-  font-size: clamp(44px, 5.6vw, 64px);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
+  margin-bottom: 8px;
 }
 .ob-welcome .lede {
-  margin: 0 0 24px;
-  max-width: 34ch;
-  text-align: left;
-}
-.obw-points {
-  display: grid;
-  gap: 12px;
-  margin: 0 0 28px;
-  padding: 0;
-  list-style: none;
-}
-.obw-points li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 15.5px;
-  line-height: 1.35;
-  color: var(--ink-muted);
-}
-.obw-points b {
-  font-weight: 500;
-  color: var(--ink);
-}
-.obw-icon {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 11px;
-  background: var(--tone-soft);
-  color: var(--on-pastel);
-}
-.obw-icon svg {
-  width: 19px;
-  height: 19px;
-}
-.ob-welcome .ob-actions {
-  margin: 0;
-  justify-content: flex-start;
-}
-.ob-welcome .ob-preview {
-  max-width: none;
+  margin-bottom: 22px;
 }
 
 /* the cast */
-.obw-cast {
-  width: 100vw;
-  margin: 40px calc(50% - 50vw) 0;
-  padding-bottom: 28px;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
-}
-.obw-cast-track {
-  display: flex;
-  gap: 14px;
-  width: max-content;
-  animation: cast-drift linear infinite;
-}
 @keyframes cast-drift {
   from {
     transform: translateX(0);
@@ -6389,243 +2904,10 @@ p.obp-meta {
     transform: translateX(-33.3333%);
   }
 }
-.obw-cast figure {
-  flex: none;
-  width: 118px;
-  margin: 0;
-}
-.obw-cast img {
-  display: block;
-  width: 118px;
-  height: 150px;
-  object-fit: cover;
-  object-position: 50% 10%;
-  border-radius: 16px;
-}
-.obw-cast figcaption {
-  display: grid;
-  margin-top: 7px;
-  line-height: 1.25;
-  text-align: left;
-}
-.obw-cast figcaption b {
-  font-size: 13px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.obw-cast figcaption span {
-  font-size: 11.5px;
-  color: var(--ink-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (prefers-reduced-motion: reduce) {
-  .obw-cast-track {
-    animation: none;
-  }
-}
-@media (max-width: 999px) {
-  .ob-welcome {
-    max-width: 720px;
-  }
-  .obw-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .obw-intro {
-    align-items: center;
-    text-align: center;
-  }
-  .ob-welcome .lede {
-    text-align: center;
-  }
-  .obw-points {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-  }
-  .obw-points li {
-    flex-direction: column;
-    gap: 8px;
-    font-size: 14px;
-  }
-  .obw-points b {
-    display: block;
-  }
-  .ob-welcome .ob-actions {
-    justify-content: center;
-  }
-  .obw-grid::after {
-    content: none;
-  }
-}
-@media (max-width: 640px) {
-  .obw-points {
-    grid-template-columns: 1fr;
-    justify-items: start;
-    text-align: left;
-  }
-  .obw-points li {
-    flex-direction: row;
-  }
-  .obw-points b {
-    display: inline;
-  }
-  .obw-cast {
-    margin-top: 28px;
-  }
-  .obw-cast figure,
-  .obw-cast img {
-    width: 92px;
-  }
-  .obw-cast img {
-    height: 118px;
-  }
-}
 
 /* =====================================================================
    How would you like to start: two picture cards, then voices with faces
    ===================================================================== */
-.obs-ways {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  width: 100%;
-  max-width: 860px;
-  margin: 10px auto 0;
-}
-.obs-way {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  min-height: 104px;
-  padding: 16px 20px 16px 16px;
-  border: 0;
-  border-radius: 22px;
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard), box-shadow var(--duration-quick) var(--ease-standard);
-}
-.obs-way:hover {
-  box-shadow: inset 0 0 0 1px var(--tone-deep);
-}
-.obs-way[aria-pressed="true"] {
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
-.obs-way:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.obs-art {
-  flex: none;
-  display: flex;
-}
-.obs-art img {
-  width: 58px;
-  height: 72px;
-  object-fit: cover;
-  object-position: 50% 20%;
-  border-radius: 12px;
-  box-shadow: 0 0 0 3px var(--canvas);
-}
-.obs-art img + img {
-  margin-left: -18px;
-}
-.obs-way[aria-pressed="true"] .obs-art img {
-  box-shadow: 0 0 0 3px var(--tone-soft);
-}
-.obs-text {
-  display: grid;
-  gap: 3px;
-  min-width: 0;
-}
-.obs-text b {
-  font-size: 19px;
-  font-weight: 500;
-}
-.obs-text span {
-  font-size: 14px;
-  line-height: 1.35;
-  color: var(--ink-muted);
-}
-.obs-check,
-.obs-vcheck {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--now-mark);
-  color: #fff;
-  opacity: 0;
-  transform: scale(0.7);
-  transition: opacity var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
-}
-.obs-check svg,
-.obs-vcheck svg {
-  width: 14px;
-  height: 14px;
-}
-.obs-way[aria-pressed="true"] .obs-check,
-.obs-voice[aria-pressed="true"] .obs-vcheck {
-  opacity: 1;
-  transform: none;
-}
-.obs-voices {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: 10px;
-  width: 100%;
-  max-width: 860px;
-  margin: 0 auto;
-}
-.obs-voice {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-height: 78px;
-  padding: 12px 16px 12px 18px;
-  border: 0;
-  border-radius: 18px;
-  background: var(--canvas);
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard), box-shadow var(--duration-quick) var(--ease-standard);
-}
-.obs-voice::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 16px;
-  bottom: 16px;
-  width: 4px;
-  border-radius: 0 4px 4px 0;
-  background: var(--tone-deep);
-}
-.obs-voice:hover {
-  box-shadow: inset 0 0 0 1px var(--tone-deep);
-}
-.obs-voice[aria-pressed="true"] {
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
-.obs-voice:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
 .obs-vtext {
   flex: 1;
   min-width: 0;
@@ -6641,47 +2923,6 @@ p.obp-meta {
   line-height: 1.35;
   color: var(--ink-muted);
 }
-.obs-faces {
-  flex: none;
-  display: flex;
-  padding-right: 20px;
-}
-.obs-faces img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 0 2.5px var(--canvas);
-}
-.obs-faces img + img {
-  margin-left: -10px;
-}
-.obs-voice[aria-pressed="true"] .obs-faces img {
-  box-shadow: 0 0 0 2.5px var(--tone-soft);
-}
-@media (max-width: 640px) {
-  .obs-ways {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .obs-way {
-    min-height: 88px;
-    gap: 14px;
-  }
-  .obs-art img {
-    width: 46px;
-    height: 58px;
-  }
-  .obs-art img + img {
-    margin-left: -16px;
-  }
-  .obs-text b {
-    font-size: 17px;
-  }
-}
-.obs-faces {
-  padding-right: 30px;
-}
 
 /* =====================================================================
    Welcome, calm: the title, one line, the playable line, one button
@@ -6694,44 +2935,15 @@ p.obp-meta {
 }
 .ob-welcome h1 {
   margin: 0 0 6px;
-  font-size: clamp(40px, 5vw, 56px);
   line-height: 1.05;
   letter-spacing: -0.015em;
 }
 .ob-welcome .lede {
   max-width: none;
-  margin: 0 0 26px;
   text-align: center;
-}
-.ob-welcome .ob-preview {
-  max-width: 680px;
-}
-.ob-welcome .ob-actions {
-  justify-content: center;
-  margin-top: 28px;
 }
 
 /* step 2: a plain two-way toggle, each side with its little picture stack */
-.ob-seg button {
-  gap: 10px;
-  padding: 0 20px 0 10px;
-}
-.seg-faces {
-  display: inline-flex;
-}
-.seg-faces img {
-  width: 26px;
-  height: 26px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 0 2px var(--fog);
-}
-.seg-faces img + img {
-  margin-left: -8px;
-}
-.ob-seg button[aria-pressed="true"] .seg-faces img {
-  box-shadow: 0 0 0 2px var(--picked);
-}
 /* one title size across the three onboarding steps */
 .onboarding .ob-body h1 {
   font-size: clamp(36px, 5vw, 56px);
@@ -6754,25 +2966,12 @@ p.obp-meta {
   color: var(--ink);
   opacity: 0.72;
 }
-.ob-welcome .obp-card {
-  padding: 18px 14px 18px;
-}
-.ob-welcome .obp-ipa {
-  margin-top: 4px;
-}
-.ob-welcome .obp-tr {
-  margin-top: 10px;
-  opacity: 0.72;
-}
 @media (orientation: portrait) and (min-width: 700px) {
   .now-panel .now-inner {
     height: 156px;
   }
 }
 @media (max-width: 640px) {
-  .now-panel .now-inner {
-    height: 120px;
-  }
   .now-panel .now-tr {
     margin-top: 7px;
   }
@@ -6780,97 +2979,16 @@ p.obp-meta {
 
 /* onboarding button rows: the main button stays centred under the content, Back sits just to its left,
    both on the same centre line */
-.ob-sticky,
-.ob-actions:has(> .back-to) {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: center;
-  column-gap: 12px;
-}
-.ob-sticky > .back-to,
-.ob-actions > .back-to {
-  grid-column: 1;
-  justify-self: end;
-  align-self: center;
-  margin: 0;
-}
-.ob-sticky > .cp-btn,
-.ob-actions:has(> .back-to) > .cp-btn {
-  grid-column: 2;
-}
-.ob-sticky > .back-to:only-child {
-  grid-column: 2;
-  justify-self: center;
-}
-@media (max-width: 640px) {
-  .ob-sticky,
-  .ob-actions:has(> .back-to) {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-  }
-  .ob-sticky > .cp-btn,
-  .ob-actions:has(> .back-to) > .cp-btn {
-    flex: 1;
-    min-width: 0;
-    max-width: 260px;
-  }
-}
 
 /* =====================================================================
    Onboarding choices: pictures rest in soft black and white, so a grid of
    illustrations stays calm; the one you choose comes into colour
    ===================================================================== */
-.onboarding .sc-pic img,
-.onboarding .obs-faces img,
-.onboarding .seg-faces img {
-  filter: grayscale(1) contrast(0.9) brightness(1.06);
-  transition: filter 360ms var(--ease-standard);
-}
-.onboarding .sc-card.picked .sc-pic img,
-.onboarding .obs-voice[aria-pressed="true"] .obs-faces img,
-.onboarding .ob-seg button[aria-pressed="true"] .seg-faces img {
-  filter: none;
-}
-@media (hover: hover) {
-  .onboarding .sc-card:not(.picked):hover .sc-pic img,
-  .onboarding .obs-voice:not([aria-pressed="true"]):hover .obs-faces img {
-    filter: grayscale(0.45) brightness(1.02);
-  }
-}
 /* cards without a picture follow the same rule: grey until chosen */
 /* softer black and white, closer to a pencil study than a photocopy */
-.onboarding .sc-pic img,
-.onboarding .obs-faces img,
-.onboarding .seg-faces img {
-  filter: grayscale(1) contrast(0.78) brightness(1.13);
-}
-.onboarding .sc-card.picked .sc-pic img,
-.onboarding .obs-voice[aria-pressed="true"] .obs-faces img,
-.onboarding .ob-seg button[aria-pressed="true"] .seg-faces img {
-  filter: none;
-}
 
 /* People in colour, scenes in black and white until chosen:
    a portrait is one figure on a plain ground and reads calmly in colour; a whole scene shrunk to a tile is busy */
-.onboarding .sc-pic img,
-.onboarding .obs-faces img,
-.onboarding .seg-faces img {
-  filter: none;
-}
-.onboarding .ob-operas .sc-pic img,
-.onboarding .ob-seg button:not([aria-pressed="true"]) .seg-faces.scenes img {
-  filter: grayscale(1) contrast(0.78) brightness(1.13);
-}
-.onboarding .ob-operas .sc-card.picked .sc-pic img {
-  filter: none;
-}
-.onboarding .ob-operas .sc-card:not(.picked) .sc-pic {
-  background: #f2f2f0;
-}
-.onboarding .ob-operas .sc-card:not(.picked) .sc-year {
-  color: #b9b9b4;
-}
 
 /* By opera: a programme-like list, the same cards as the voices; small pictures, grey until chosen */
 .obs-operas {
@@ -6901,17 +3019,9 @@ p.obp-meta {
 .obs-opera:hover {
   box-shadow: inset 0 0 0 1px var(--tone-deep);
 }
-.obs-opera[aria-checked="true"] {
-  background: var(--tone-soft);
-  box-shadow: inset 0 0 0 2px var(--tone-deep);
-}
 .obs-opera:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
-}
-.obs-opera[aria-checked="true"] .obs-vcheck {
-  opacity: 1;
-  transform: none;
 }
 .obs-thumb {
   flex: none;
@@ -6921,38 +3031,25 @@ p.obp-meta {
   height: 54px;
   border-radius: 12px;
   overflow: hidden;
-  background: #f2f2f0;
   transition: background-color 360ms var(--ease-standard);
 }
 .obs-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(1) contrast(0.78) brightness(1.13);
   transition: filter 360ms var(--ease-standard);
 }
 .obs-thumb span {
   font-family: var(--font-text);
   font-size: 26px;
   font-style: italic;
-  color: #b4b4ae;
   transition: color 360ms var(--ease-standard);
-}
-.obs-opera[aria-checked="true"] .obs-thumb img {
-  filter: none;
-}
-.obs-opera[aria-checked="true"] .obs-thumb {
-  background: var(--canvas);
-}
-.obs-opera[aria-checked="true"] .obs-thumb span {
-  color: var(--tone-deep);
 }
 .obs-opera .obs-vtext b {
   font-size: 16.5px;
 }
 /* opera pictures in colour all the time; the initials take the opera's pastel */
-.obs-thumb img,
-.onboarding .ob-seg button:not([aria-pressed="true"]) .seg-faces.scenes img {
+.obs-thumb img {
   filter: none;
 }
 .obs-thumb {
@@ -6962,13 +3059,7 @@ p.obp-meta {
   color: var(--tone-deep);
 }
 /* no coloured edge on the voice cards */
-.obs-voice::before {
-  content: none;
-}
 /* the toggle: words only */
-.ob-seg button {
-  padding: 0 24px;
-}
 
 /* =====================================================================
    Engraving, after a printed edition
@@ -6980,17 +3071,11 @@ p.obp-meta {
   z-index: 4;
   flex: none;
   pointer-events: none;
-  background: linear-gradient(to right, var(--canvas) 0, var(--canvas) calc(100% - 14px), transparent 100%);
 }
 .pin-clef svg {
   display: block;
-  overflow: visible;
 }
 /* bar numbers: small italic, quiet, as in Henle */
-.score-sheet .measure-number text {
-  font-style: italic;
-  fill: #77776f;
-}
 /* the position: a quiet mint line behind the music; the lit note already says where you are */
 .p-stage .ov-cursor::before {
   width: 2px;
@@ -7011,42 +3096,30 @@ p.obp-meta {
 .pin-clef svg {
   overflow: hidden;
 }
-.obp-score .measure-number text {
-  font-style: italic;
-  fill: #77776f;
-}
 
 /* the pinned clef and key: a solid column with a crisp edge, as at the start of a printed system
    (no fade: music half-seen through a gradient read as a smudge) */
-.pin-clef {
-  background: var(--canvas);
-  box-shadow: 1px 0 0 var(--fog-strong), 6px 0 10px -6px rgba(30, 30, 40, 0.18);
-}
 /* bar numbers: lifted clear of the staff, small italic, with a paper-coloured halo so a slur or hairpin
    never runs through them */
-.score-sheet .measure-number,
-.obp-score .measure-number {
+.score-sheet .measure-number {
   transform: translateY(-9px);
 }
-.score-sheet .measure-number text,
-.obp-score .measure-number text {
+.score-sheet .measure-number text {
+  font-style: italic;
+  fill: #77776f;
   paint-order: stroke;
   stroke: #ffffff;
   stroke-width: 5px;
   stroke-linejoin: round;
 }
 /* dynamics and expression words (pp, dolce): the same halo, so they stay readable where slurs pass */
-.score-sheet g.vf-text:not(.lyrics):not(.measure-number):not(.dash) text,
-.obp-score g.vf-text:not(.lyrics):not(.measure-number):not(.dash) text {
+.score-sheet g.vf-text:not(.lyrics):not(.measure-number):not(.dash) text {
   paint-order: stroke;
   stroke: #ffffff;
   stroke-width: 6px;
   stroke-linejoin: round;
 }
 /* no edge line: the staff simply continues out from under the clef and key */
-.pin-clef {
-  box-shadow: none;
-}
 @media (max-width: 640px) {
   .p-bar .bar-right {
     gap: 2px;
@@ -7073,44 +3146,19 @@ p.obp-meta {
    read ahead). Two syllables sung on one note across a word gap (an elision)
    light up as one rose shape, and always carry the tie ‿ between the words.
    ===================================================================== */
-:root {
-  --ink-ahead: #6f716c;
-  --join: #ffc9cf;
-  --join-mark: #b4233a;
-}
 .in-progress .now-word {
   color: var(--ink-ahead);
   transition: color var(--duration-quick) var(--ease-standard);
 }
-.in-progress .now-word.w-done,
-.in-progress .syl-done,
-.in-progress .syl-now,
-.in-progress .syl-join {
-  color: var(--ink);
-}
-.syl-join {
-  background: var(--join);
+.in-progress .syl-now {
   color: var(--ink);
 }
 /* the joined shape runs on through each word's edge (the button's side padding) to the tie */
-.syl-join-l {
-  border-radius: 4px 0 0 4px;
-  box-shadow: 0 0 0 0.06em var(--join), 0.12em 0 0 0.06em var(--join);
-}
-.syl-join-r {
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 0 0 0.06em var(--join), -0.12em 0 0 0.06em var(--join);
-}
 /* the tie between two words sung on one note, as printed in the score: vo’‿andare */
 .w-join {
   position: relative; /* above the neighbouring syllables' shading, so the tie is never covered */
   z-index: 1;
   color: var(--ink-muted);
-}
-.w-join.on {
-  background: var(--join);
-  box-shadow: 0 0 0 0.06em var(--join);
-  color: var(--join-mark);
 }
 
 /* =====================================================================
@@ -7118,7 +3166,6 @@ p.obp-meta {
    ===================================================================== */
 .now-tools {
   display: inline-flex;
-  align-items: center;
   gap: 8px;
 }
 .nl-slow {
@@ -7128,46 +3175,9 @@ p.obp-meta {
   width: 22px;
   height: 22px;
 }
-.nl-chip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  height: 40px;
-  min-width: 40px;
-  padding: 0 14px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--canvas);
-  color: var(--ink-muted);
-  font: 500 14px/1 var(--font-sans);
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: background-color var(--duration-quick) var(--ease-standard), color var(--duration-quick) var(--ease-standard);
-}
-.nl-chip:hover {
-  color: var(--ink);
-}
-.nl-chip[aria-pressed="true"] {
-  background: var(--picked);
-  color: var(--on-pastel);
-}
-.nl-chip:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
-}
-.nl-icon {
-  padding: 0;
-  width: 40px;
-}
-.nl-icon svg {
-  width: 20px;
-  height: 20px;
-}
 .now-panel.no-ipa .now-ipa {
   display: none;
 }
-
 
 /* =====================================================================
    Sound: each part's volume, and what the sung line is played on
@@ -7191,66 +3201,13 @@ p.obp-meta {
   background: var(--canvas);
   box-shadow: var(--shadow-float);
 }
-.mix-row {
-  display: grid;
-  grid-template-columns: 38px minmax(0, 1fr);
-  gap: 14px;
-  align-items: start;
-}
-.mix-row .part-face {
-  margin-top: 2px;
-}
 .mix-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   font: 500 15px/1.3 var(--font-sans);
-}
-.mix-head span {
-  color: var(--ink-muted);
-  font-variant-numeric: tabular-nums;
-}
-.mix-main .cp-slider {
-  height: 36px;
-}
-.mix-inst {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px 12px;
-}
-.mix-inst > span {
-  font: 400 13px/1.2 var(--font-sans);
-  color: var(--ink-muted);
-}
-.mix-inst .cp-seg button {
-  min-height: 36px;
-  padding: 0 14px;
 }
 .mix-note {
   margin: 6px 0 0;
   font: 400 13px/1.3 var(--font-sans);
   color: var(--ink-muted);
-}
-.mix-reset {
-  justify-self: start;
-  min-height: 36px;
-  padding: 0 4px;
-  border: 0;
-  background: transparent;
-  color: var(--ink-muted);
-  font: 500 14px/1 var(--font-sans);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  cursor: pointer;
-}
-@media (max-width: 640px) {
-  .nl-btn span {
-    display: none;
-  }
-  .now-tools {
-    gap: 4px;
-  }
 }
 /* tablets: the part chips keep to their names (the speaker icon shows on/off) */
 @media (max-width: 1279px) {
@@ -7496,17 +3453,9 @@ p.obp-meta {
     column-gap: 10px;
     padding: 0 8px;
   }
-  .w-gap-long {
-    display: none;
-  }
 }
 
 /* the word being said while a recorded line is spoken */
-.now-word.spoken {
-  background: var(--note);
-  border-radius: 4px;
-  transition: background-color 80ms linear;
-}
 
 /* =====================================================================
    Welcome: a slowly drifting gallery of characters, then the operas
@@ -7653,20 +3602,6 @@ p.obp-meta {
 .reel-card:focus-visible .reel-pic {
   box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--ink);
 }
-@media (prefers-reduced-motion: reduce) {
-  .reel {
-    overflow-x: auto;
-    -webkit-mask-image: none;
-    mask-image: none;
-    padding-inline: 16px;
-  }
-  .reel-row {
-    animation: none;
-  }
-  .reel-card[aria-hidden="true"] {
-    display: none;
-  }
-}
 
 .ob-from-opera {
   width: 100%;
@@ -7675,14 +3610,6 @@ p.obp-meta {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 16px;
-}
-.ob-from-opera h2 {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
 }
 .obs-go {
   margin-left: auto;
@@ -7709,109 +3636,22 @@ p.obp-meta {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.nl-chips {
-  display: inline-flex;
-  gap: 6px;
-}
-.now-panel.no-tr .now-inner,
 .now-panel.no-ipa .now-inner {
   height: 98px;
 }
 /* only the words: a slim card (the line itself keeps its size in every mode) */
-.now-panel.compact .now-inner {
-  height: 62px;
-}
-.words-view.no-tr .w-grid {
-  --w-cols: 40px 44px minmax(0, 1fr) auto;
-}
-.words-view.no-tr .w-col-tr {
-  display: none;
-}
 
 /* the quieter way in: a small link under the gallery, to the list of operas on its own screen */
-.ob-by-opera {
-  align-self: center;
-  margin-top: clamp(14px, 2.5vh, 32px);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 44px;
-  padding: 0 14px 0 20px;
-  border-radius: 999px;
-  color: var(--ink-muted);
-  font-size: 15px;
-}
-.ob-by-opera:hover {
-  color: var(--ink);
-}
-.ob-by-opera .obs-go svg {
-  width: 16px;
-  height: 16px;
-}
-.ob-opera-list .ob-from-opera {
-  margin-top: 16px;
-}
 
 /* =====================================================================
    Minimal line: only the words (with their syllables lighting up) on a
    thin rule; no card, no buttons. Words can still be tapped for meaning.
    ===================================================================== */
-.nl-collapse svg {
-  width: 18px;
-  height: 18px;
-}
-.nl-collapse {
-  padding: 0 11px;
-}
 .line-card {
   position: relative;
 }
 /* minimal: the only control is a faint "expand" at the end of the line, to bring the card back */
-.line-expand {
-  position: absolute;
-  right: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--ink-muted);
-  opacity: 0.45;
-  cursor: pointer;
-  transition: opacity var(--duration-quick) var(--ease-standard), background-color var(--duration-quick) var(--ease-standard);
-}
-.line-expand svg {
-  width: 18px;
-  height: 18px;
-}
-.line-expand:hover,
-.line-expand:focus-visible {
-  opacity: 1;
-  background: var(--fog);
-}
-.now-panel.minimal {
-  padding-bottom: 0;
-}
 /* minimal: the blue card stays, slim, with only the words (no button row, no IPA or English) */
-.now-panel.minimal .line-card {
-  padding: 4px 10px;
-  border-radius: 20px;
-}
-.now-panel.minimal .now-bar,
-.now-panel.minimal .now-ipa,
-.now-panel.minimal .now-tr {
-  display: none;
-}
-.now-panel.minimal .now-step {
-  visibility: hidden;
-}
-.now-panel.minimal .now-inner {
-  height: 56px;
-}
 
 /* =====================================================================
    Highlights sit on the letters only: the serif's line box is far taller
@@ -7819,9 +3659,7 @@ p.obp-meta {
    colour is a band about the height of the letters, centred on them.
    ===================================================================== */
 .now-it .syl-now,
-.w-it .syl-now,
-.now-it .syl-join,
-.w-it .syl-join {
+.w-it .syl-now {
   box-shadow: none;
   border-radius: 0.14em;
   background-color: transparent;
@@ -7830,217 +3668,19 @@ p.obp-meta {
   background-position: 0 58%;
   padding-inline: 0.05em;
   margin-inline: -0.05em;
-}
-.now-it .syl-now,
-.w-it .syl-now {
   background-image: linear-gradient(var(--now), var(--now));
 }
-.now-it .syl-join,
-.w-it .syl-join {
-  background-image: linear-gradient(var(--join), var(--join));
-}
 /* a joined pair runs on to the tie between the words */
-.now-it .syl-join-l,
-.w-it .syl-join-l {
-  padding-right: 0.17em;
-  margin-right: -0.17em;
-  border-radius: 0.14em 0 0 0.14em;
-}
-.now-it .syl-join-r,
-.w-it .syl-join-r {
-  padding-left: 0.17em;
-  margin-left: -0.17em;
-  border-radius: 0 0.14em 0.14em 0;
-}
 /* words only: as much blue below the line as above it */
-.now-panel.compact .line-card {
-  padding-bottom: 14px;
-}
-.now-panel.compact .now-inner {
-  height: 66px;
-}
 
 /* five instruments for the line: chips that wrap inside the panel, not one long bar */
-.mix-inst .cp-seg {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  max-width: 100%;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-}
-.mix-inst .cp-seg button {
-  min-height: 36px;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: var(--fog);
-}
-.mix-inst .cp-seg button[aria-pressed="true"] {
-  background: var(--picked);
-  color: var(--on-pastel);
-}
 
 /* =====================================================================
    Side panel: my roles as a row of faces (the chosen one ringed), and the
    chosen role's card under it: continue, its other pieces, its opera
    ===================================================================== */
-.sb-roles {
-  display: grid;
-  gap: 8px;
-  margin-bottom: -10px;
-}
-.sb-roles-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.sb-roles-head .sb-label {
-  padding-bottom: 0;
-}
-.sb-add {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--ink-muted);
-  cursor: pointer;
-}
-.sb-add svg {
-  width: 18px;
-  height: 18px;
-}
-.sb-add:hover {
-  background: var(--fog);
-  color: var(--ink);
-}
-.sb-faces {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 2px;
-  padding: 0 2px;
-}
-.sb-face {
-  display: grid;
-  justify-items: center;
-  gap: 4px;
-  width: 64px;
-  padding: 0;
-  border: 0;
-  border-radius: 12px;
-  background: transparent;
-  cursor: pointer;
-  opacity: 0.75;
-  transition: opacity var(--duration-quick) var(--ease-standard), box-shadow var(--duration-quick) var(--ease-standard);
-}
-.sb-face:hover {
-  opacity: 1;
-}
-.sb-face-pic {
-  display: grid;
-  padding: 3px;
-  border-radius: 50%;
-}
-.sb-face[aria-checked="true"] {
-  opacity: 1;
-}
-.sb-face[aria-checked="true"] .sb-face-pic {
-  box-shadow: 0 0 0 2px var(--tone-deep);
-}
-.sb-face-name {
-  max-width: 100%;
-  font: 400 11.5px/1.2 var(--font-sans);
-  color: var(--ink-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.sb-face[aria-checked="true"] .sb-face-name {
-  color: var(--ink);
-  font-weight: 500;
-}
-.sb-face:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-.sb-pieces {
-  display: grid;
-  gap: 2px;
-}
-.sb-piece {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  min-height: 42px;
-  padding: 0 12px 0 14px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: inherit;
-  font: 500 14px/1.2 var(--font-sans);
-  text-align: left;
-  cursor: pointer;
-}
-.sb-piece:hover,
-.sb-piece[aria-current="page"] {
-  background: var(--pastel-fog);
-}
-.sb-piece-play {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-}
-.sb-piece-play svg {
-  width: 11px;
-  height: 11px;
-}
-.sb-piece-done {
-  margin-left: auto;
-  display: grid;
-  place-items: center;
-}
-.sb-piece-done svg {
-  width: 16px;
-  height: 16px;
-}
 
 /* pieces whose music is not in the app yet: listed for the whole role, quietly */
-.sb-piece.soon {
-  font-weight: 400;
-  color: var(--on-pastel-muted);
-}
-.sb-piece.soon .sb-piece-play {
-  background: transparent;
-  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.7);
-}
-.sb-piece-soon {
-  margin-left: auto;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--on-pastel-muted);
-}
-.sb-piece > span[lang] {
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.sb-pieces {
-  grid-template-columns: minmax(0, 1fr);
-}
-.sb-piece {
-  min-width: 0;
-  overflow: hidden;
-}
 
 /* =====================================================================
    Settings: chips for the instrument, switch rows for what shows
@@ -8066,10 +3706,6 @@ p.obp-meta {
   font: 500 15px/1 var(--font-sans);
   cursor: pointer;
 }
-.st-chip svg {
-  width: 16px;
-  height: 16px;
-}
 .st-chip[aria-checked="true"] {
   background: var(--picked);
   color: var(--on-pastel);
@@ -8089,9 +3725,6 @@ p.obp-meta {
   overflow: hidden;
 }
 .st-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   width: 100%;
   min-height: 60px;
   padding: 10px 18px;
@@ -8099,8 +3732,6 @@ p.obp-meta {
   background: transparent;
   color: var(--ink);
   font: inherit;
-  text-align: left;
-  cursor: pointer;
 }
 .st-row + .st-row {
   box-shadow: inset 0 1px 0 var(--fog);
@@ -8158,9 +3789,6 @@ p.obp-meta {
   gap: 8px;
   margin-top: 14px;
 }
-.sb-settings {
-  color: var(--ink-muted);
-}
 
 /* =====================================================================
    The side panel over the practice screen: slides in from the left
@@ -8192,7 +3820,6 @@ p.obp-meta {
   top: 0;
   bottom: 0;
   left: 0;
-  width: min(320px, 86vw);
   transform: translateX(-104%);
   transition: transform var(--duration-settle) var(--ease-standard);
   box-shadow: var(--shadow-float);
@@ -8200,21 +3827,9 @@ p.obp-meta {
 .side-drawer.open .sd-panel {
   transform: none;
 }
-.sd-panel .sidebar {
-  position: static;
-  width: 100%;
-  transform: none;
-  box-shadow: none;
-}
 .p-menu svg {
   width: 22px;
   height: 22px;
-}
-@media (prefers-reduced-motion: reduce) {
-  .sd-panel,
-  .sd-scrim {
-    transition: none;
-  }
 }
 
 /* =====================================================================
@@ -8254,9 +3869,6 @@ p.obp-meta {
   .now-tools {
     gap: 4px;
   }
-  .nl-chip {
-    padding: 0 10px;
-  }
 }
 @media (max-width: 640px) {
   /* long lines wrap on a phone: the card grows with them rather than letting the words run into the IPA */
@@ -8265,18 +3877,9 @@ p.obp-meta {
     min-height: 112px;
     padding-block: 4px;
   }
-  .now-panel.no-tr .now-inner,
   .now-panel.no-ipa .now-inner {
     height: auto;
     min-height: 84px;
-  }
-  .now-panel.compact .now-inner {
-    height: auto;
-    min-height: 56px;
-  }
-  .now-panel.minimal .now-inner {
-    height: auto;
-    min-height: 48px;
   }
   .now-panel .now-it {
     font-size: 24px;
@@ -8285,18 +3888,6 @@ p.obp-meta {
 }
 
 /* the opera's picture over a role: tall enough to show faces whole, not a strip of foreheads */
-.rp-head .art-band {
-  height: 132px;
-  border-radius: 24px;
-  background-position: 50% 24%;
-  margin: -12px -12px 4px;
-}
-@media (max-width: 640px) {
-  .rp-head .art-band {
-    height: 104px;
-    margin: -8px -8px 0;
-  }
-}
 /* the music stands in the middle of its space even when its frame is taller (a piece with very high and very low
    notes): the rare extremes are trimmed equally above and below rather than the whole line sliding up */
 .p-stage .score-scroll.strip {
@@ -8581,24 +4172,6 @@ p.obp-meta {
 }
 
 /* the role's header reads opera → character → voice → who she is */
-.rp-id .rp-opera {
-  order: 0;
-  min-height: 32px;
-  margin-bottom: 2px;
-  gap: 8px;
-  font: 500 15px/1.2 var(--font-sans);
-}
-.rp-opera-by {
-  color: var(--on-pastel-muted);
-  font-weight: 400;
-}
-.rp-opera-by::before {
-  content: "·";
-  margin-right: 8px;
-}
-.rp-id .rp-desc {
-  margin: 6px 0 0;
-}
 
 /* the line under a piece's title: the role and the opera open their pages */
 .p-sub-link {
@@ -8625,19 +4198,16 @@ p.obp-meta {
    Synopsis: the whole story, act by act, in a reading panel from the right
    (from the opera's page or the role's), and folded into practice's "The scene"
    ===================================================================== */
-.op-syn-btn,
-.rp-syn-btn {
+.op-syn-btn {
   align-self: flex-start;
   gap: 8px;
   background: var(--canvas);
 }
-.op-syn-btn:hover,
-.rp-syn-btn:hover {
+.op-syn-btn:hover {
   background: var(--canvas);
   box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
-.op-syn-btn svg,
-.rp-syn-btn svg {
+.op-syn-btn svg {
   width: 20px;
   height: 20px;
 }
@@ -8725,26 +4295,9 @@ p.obp-meta {
   max-width: 62ch;
   text-wrap: pretty;
 }
-.syn-you {
-  font-weight: 600;
-  background: linear-gradient(transparent 58%, var(--you) 58%);
-  padding: 0 1px;
-}
 @media (max-width: 700px) {
-  .syn-panel {
-    width: 100%;
-  }
-  .syn-head {
-    padding-left: 20px;
-  }
   .syn-body {
     padding-inline: 20px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .syn-panel,
-  .syn-scrim {
-    animation: none;
   }
 }
 
@@ -8842,8 +4395,6 @@ p.obp-meta {
   counter-increment: sc;
 }
 .syn-scenes li.mine {
-  border-left-color: var(--you-mark);
-  background: color-mix(in srgb, var(--you) 22%, transparent);
   border-radius: 0 12px 12px 0;
 }
 .sc-head {
@@ -8897,10 +4448,6 @@ p.obp-meta {
   border-bottom: 1.5px solid currentColor;
   transform: rotate(45deg);
 }
-.syn-numbers[open] summary::after {
-  margin-top: 3px;
-  transform: rotate(-135deg);
-}
 .syn-numbers .syn-scenes {
   margin-top: 10px;
 }
@@ -8911,68 +4458,12 @@ p.obp-meta {
 .sc-with em {
   font-style: normal;
   font-weight: 500;
-  color: var(--you-mark);
 }
 
 /* ---------------------------------------------------------------------
    Ensembles: whose words, and the Lines panel (each singer's line on its own)
    --------------------------------------------------------------------- */
 /* whose words: the singers' faces, the chosen one ringed and named */
-.who-pick {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-left: 10px;
-  padding: 3px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--canvas) 70%, transparent);
-  letter-spacing: 0;
-  text-transform: none;
-}
-.who-face {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 36px;
-  padding: 3px;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
-  font: 500 13px/1 var(--font-sans);
-  cursor: pointer;
-}
-.who-face.on {
-  padding-right: 12px;
-  background: var(--canvas);
-  box-shadow: 0 1px 3px rgba(20, 20, 40, 0.12);
-}
-.who-face-img {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  border-radius: 50%;
-  background: var(--fog);
-  opacity: 0.7;
-}
-.who-face.on .who-face-img {
-  opacity: 1;
-  box-shadow: 0 0 0 2px var(--line-ring, var(--ink));
-}
-.who-face-img img,
-.who-face-img svg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.who-face:not(.on) .who-face-name {
-  display: none;
-}
-.w-tools .who-pick {
-  margin: 0 4px 0 0;
-}
 .lane-label {
   position: absolute;
   left: 6px;
@@ -9001,11 +4492,6 @@ button.lane-label:hover {
   height: 14px;
   color: var(--ink-muted);
 }
-@media (max-width: 640px) {
-  .mix-pop.ens {
-    max-height: calc(100dvh - 270px);
-  }
-}
 .mix-pop.ens {
   max-height: min(72vh, 680px);
   overflow-y: auto;
@@ -9024,13 +4510,6 @@ button.lane-label:hover {
   padding-bottom: 12px;
   border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
 }
-.mix-sing .cp-seg button {
-  min-height: 38px;
-  padding: 0 14px;
-}
-.mix-line .mix-head {
-  align-items: center;
-}
 .mix-you {
   margin-left: 8px;
   padding: 2px 8px;
@@ -9040,10 +4519,6 @@ button.lane-label:hover {
   font: 500 11px/1.4 var(--font-sans);
   font-style: normal;
   vertical-align: 2px;
-}
-.mix-tools {
-  display: inline-flex;
-  gap: 2px;
 }
 .mix-mini {
   display: inline-grid;
@@ -9068,14 +4543,9 @@ button.lane-label:hover {
   opacity: 0.3;
   cursor: default;
 }
-.mix-mini[aria-pressed="false"] {
-  color: var(--ink-muted);
-}
 
 /* the line you sing, softly tinted across the score */
 .ov-you {
-  background: var(--you);
-  opacity: 0.16;
   pointer-events: none;
 }
 /* the pinned clefs: a clean edge, so the music scrolling beneath never shows half-hidden notes */
@@ -9084,94 +4554,14 @@ button.lane-label:hover {
   box-shadow: 8px 0 10px -8px rgba(20, 20, 40, 0.18);
 }
 /* a staff's menu (tap its name on the score) */
-.lane-menu {
-  position: fixed;
-  z-index: 80;
-  display: grid;
-  min-width: 230px;
-  padding: 8px;
-  border-radius: 18px;
-  background: var(--canvas);
-  box-shadow: var(--shadow-float);
-}
-.lane-menu-title {
-  margin: 4px 10px 6px;
-  font: 600 14px/1.3 var(--font-sans);
-}
-.lane-menu button {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 0;
-  border-radius: 12px;
-  background: transparent;
-  color: var(--ink);
-  font: 500 15px/1.2 var(--font-sans);
-  text-align: left;
-  cursor: pointer;
-}
-.lane-menu button svg {
-  width: 20px;
-  height: 20px;
-  flex: none;
-}
-.lane-menu button:hover:not(:disabled) {
-  background: var(--fog);
-}
-.lane-menu button:disabled {
-  opacity: 0.35;
-  cursor: default;
-}
-.lane-menu .lane-menu-more {
-  margin-top: 4px;
-  border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
-  border-radius: 0 0 12px 12px;
-  color: var(--ink-muted);
-}
 /* the Arrange panel */
 .mix-title {
   margin: 0;
   font: 600 17px/1.3 var(--font-sans);
 }
-.mix-hint {
-  font: 400 13px/1.35 var(--font-sans);
-  color: var(--ink-muted);
-}
-.mix-wrap {
-  flex-wrap: wrap;
-}
-.mix-rows {
-  display: grid;
-  gap: 10px;
-}
-.mix-row.mix-line {
-  grid-template-columns: 28px 38px minmax(0, 1fr);
-  gap: 10px;
-  padding: 8px 6px 8px 0;
-  border-radius: 16px;
-  position: relative;
-}
 .mix-line.dragging {
   background: var(--fog);
   opacity: 0.8;
-}
-.mix-line.drop-above::before,
-.mix-line.drop-below::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  border-radius: 2px;
-  background: var(--accent, #0b7a3b);
-}
-.mix-line.drop-above::before {
-  top: -7px;
-}
-.mix-line.drop-below::after {
-  bottom: -7px;
 }
 .mix-handle {
   display: grid;
@@ -9227,11 +4617,6 @@ button.lane-label:hover {
 .bar-parts.many .part[aria-pressed="false"] .part-face {
   opacity: 0.35;
 }
-@media (min-width: 1500px) {
-  .bar-parts.many .part-text {
-    display: flex;
-  }
-}
 .mix-sing .cp-seg {
   display: flex;
   flex-wrap: wrap;
@@ -9271,9 +4656,6 @@ button.lane-label:hover {
   width: 17px;
   height: 17px;
 }
-.mix-names button:disabled {
-  opacity: 0.45;
-}
 .mix-chip-face {
   display: grid;
   width: 26px;
@@ -9282,8 +4664,7 @@ button.lane-label:hover {
   overflow: hidden;
   border-radius: 50%;
 }
-.mix-chip-face img,
-.mix-chip-face svg {
+.mix-chip-face img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -9313,10 +4694,6 @@ button.lane-label:hover {
   width: 36px;
   height: 36px;
   margin: 0;
-}
-.mix-line.off .part-face,
-.mix-line.off .mix-line-name {
-  opacity: 0.45;
 }
 .mix-line-name {
   overflow: hidden;
@@ -9376,19 +4753,6 @@ button.lane-label:hover {
   border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
 }
 /* a solo's bar on an iPad: Sound and Fade keep their icons only, so the start button fits */
-@media (max-width: 1279px) {
-  .p-bar:not(.ens) .part-fade span {
-    display: none;
-  }
-  .p-bar:not(.ens) .part-fade {
-    padding: 0 14px;
-  }
-}
-@media (max-width: 1100px) {
-  .p-bar:not(.ens) .part-text {
-    display: none;
-  }
-}
 
 /* Explore: Operas | Roles, under the page's heading */
 .explore-mode {
@@ -9397,7 +4761,6 @@ button.lane-label:hover {
   margin: 18px 0 0;
   justify-self: start;
 }
-
 
 /* the piano group in the bar: its icon, then sound on/off, then hidden / faded / clear in the score */
 .piano-group {
@@ -9410,13 +4773,6 @@ button.lane-label:hover {
   background: var(--canvas);
   box-shadow: 0 1px 2px rgba(20, 20, 40, 0.08);
 }
-.pg-icon {
-  display: grid;
-  place-items: center;
-  margin-right: 4px;
-  color: var(--ink);
-}
-.pg-icon svg,
 .pg-btn svg {
   width: 22px;
   height: 22px;
@@ -9438,21 +4794,8 @@ button.lane-label:hover {
 .pg-btn:hover:not(:disabled) {
   background: var(--fog);
 }
-.pg-btn[aria-pressed="false"],
-.piano-state[data-state="hidden"] {
+.pg-btn[aria-pressed="false"] {
   color: var(--ink-muted);
-}
-.piano-state[data-state="faded"] svg {
-  opacity: 0.7;
-}
-@media (max-width: 1100px) {
-  .piano-state span {
-    display: none;
-  }
-}
-
-.now-meta .who-pick {
-  margin-left: 0;
 }
 
 /* meeting a character (the welcome screen): portrait, who they are, their story, their music */
@@ -9533,53 +4876,6 @@ button.lane-label:hover {
   margin: 0;
   font: 400 17px/1.45 var(--font-sans);
 }
-.meet-voice {
-  display: inline-block;
-  margin-right: 6px;
-  padding: 2px 10px;
-  border-radius: 999px;
-  background: var(--tone-strong);
-  font-size: 13px;
-  font-weight: 500;
-}
-.meet-arc {
-  display: grid;
-  gap: 12px;
-  margin: 4px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.meet-arc li {
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  gap: 12px;
-  font: 400 15px/1.5 var(--font-sans);
-}
-.meet-arc b {
-  padding-top: 1px;
-  font: 600 12px/1.6 var(--font-sans);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-.meet-music {
-  padding: 14px 16px;
-  border-radius: 18px;
-  background: var(--canvas);
-  font: 400 15px/1.45 var(--font-sans);
-}
-.meet-music p {
-  margin: 0;
-}
-.meet-ready {
-  margin-top: 8px !important;
-}
-.meet-ready .reel-ready {
-  position: static;
-  display: inline-flex;
-  margin-right: 8px;
-  vertical-align: 1px;
-}
 .meet-actions {
   display: flex;
   flex-wrap: wrap;
@@ -9595,25 +4891,6 @@ button.lane-label:hover {
   font-size: 17px;
 }
 /* phones and upright small tablets: the portrait above, the rest under it */
-@media (max-width: 720px) {
-  .meet {
-    padding: 0;
-    place-items: end stretch;
-  }
-  .meet-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: 240px minmax(0, 1fr);
-    width: 100%;
-    max-height: calc(100dvh - 24px);
-    border-radius: 28px 28px 0 0;
-  }
-  .meet-scroll {
-    padding: 22px 20px 14px;
-  }
-  .meet-actions {
-    padding: 12px 20px max(16px, env(safe-area-inset-bottom));
-  }
-}
 
 /* =====================================================================
    The practice bar, balanced: three pills of one height (parts, playback,
@@ -9695,150 +4972,10 @@ button.lane-label:hover {
    The role page's head: the cover band across, the portrait and name, then
    what to do (Practise first), then how far along you are
    --------------------------------------------------------------------- */
-.rp-head .art-band {
-  justify-self: stretch;
-  width: auto;
-}
-p.rp-opera {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 8px;
-  margin: 0;
-  font: 500 15px/1.3 var(--font-sans);
-}
-p.rp-opera > span:first-child {
-  font-style: italic;
-}
-.rp-opera-by {
-  color: var(--ink-muted);
-}
-.rp-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.rp-go {
-  min-height: 52px;
-  padding: 0 22px 0 18px;
-  font-size: 16px;
-}
-.rp-go svg {
-  width: 18px;
-  height: 18px;
-}
-.rp-go i {
-  font-style: italic;
-}
-@media (max-width: 640px) {
-  .rp-head {
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    gap: 14px 16px;
-    padding: 16px;
-    border-radius: 28px;
-  }
-  .rp-head .art-band {
-    grid-column: 1 / -1;
-  }
-  .rp-head .ring {
-    width: 84px !important;
-    height: 84px !important;
-    align-self: start;
-  }
-  .rp-id h1 {
-    font-size: 36px;
-  }
-  .rp-actions {
-    grid-column: 1 / -1;
-  }
-  /* the actions and the progress span the card under the portrait and name */
-  .rp-id {
-    display: contents;
-  }
-  .rp-id > p.rp-opera,
-  .rp-id > h1,
-  .rp-id > .rp-desc {
-    grid-column: 2;
-  }
-  .rp-id > .rp-actions {
-    grid-column: 1 / -1;
-  }
-  .rp-go {
-    flex: 1 1 100%;
-    justify-content: center;
-  }
-  .rp-progress {
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 18px;
-  }
-}
-@media (max-width: 640px) {
-  .rp-head .ring {
-    grid-row: span 3;
-  }
-}
 
 /* the opera line: one run of text that wraps at its dots, never starting a line with one */
-p.rp-opera {
-  display: block;
-}
-p.rp-opera > span {
-  display: inline-block;
-}
-p.rp-opera .rp-opera-by::before {
-  content: "·";
-  margin: 0 7px;
-}
 /* progress: as tall as it needs, centred beside the name (iPad); a slim strip on a phone */
-.rp-progress {
-  align-self: center;
-}
-@media (max-width: 640px) {
-  .rp-progress {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 12px;
-    min-width: 0;
-  }
-  .rp-progress p b {
-    font-size: 26px;
-  }
-  .rp-progress .rp-bar {
-    order: 3;
-    flex: 1 1 100%;
-  }
-  .rp-progress small {
-    margin-left: auto;
-  }
-}
 /* the secondary actions beside each other, under Practise */
-.rp-actions .mine-toggle,
-.rp-actions .rp-syn-btn {
-  min-height: 44px;
-  padding: 0 16px;
-  font-size: 15px;
-}
-.rp-go {
-  flex: 1 1 100%;
-  max-width: max-content;
-}
-@media (max-width: 640px) {
-  .rp-go {
-    max-width: none;
-  }
-}
-p.rp-opera .rp-opera-by::before {
-  content: none;
-}
-p.rp-opera > span:not(:last-child)::after {
-  content: "·";
-  margin: 0 7px;
-  color: var(--ink-muted);
-}
 
 /* Count-in: the word on wide screens, the metronome on a phone */
 .countin svg {
@@ -9869,13 +5006,6 @@ p.rp-opera > span:not(:last-child)::after {
     flex-wrap: wrap;
     row-gap: 6px;
   }
-  .who-face:not(.on) .who-face-name,
-  .who-face .who-face-name {
-    display: none;
-  }
-  .who-face.on {
-    padding-right: 3px;
-  }
   .practice .p-bar .bar-right {
     width: auto;
   }
@@ -9890,63 +5020,9 @@ p.rp-opera > span:not(:last-child)::after {
   }
 }
 /* small phones: the faces and the piano's buttons a little narrower, so the parts row fits */
-@media (max-width: 380px) {
-  .practice .p-bar .bar-parts .part {
-    padding: 0 2px;
-  }
-  .practice .p-bar .bar-parts .part-face {
-    width: 38px;
-    height: 38px;
-  }
-  .piano-group {
-    padding-left: 8px;
-  }
-  .pg-btn {
-    min-width: 34px;
-    padding: 0 6px;
-  }
-  .pg-icon {
-    margin-right: 0;
-  }
-}
 
 /* Practise on its own line, the two quieter actions together under it */
-.rp-actions {
-  flex-direction: column;
-  align-items: flex-start;
-}
-.rp-more {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-@media (max-width: 640px) {
-  .rp-actions {
-    align-items: stretch;
-  }
-}
 /* up to an upright iPad: progress as a slim strip across the card */
-@media (max-width: 860px) {
-  .rp-progress {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 12px;
-    min-width: 0;
-    padding: 12px 16px;
-    border-radius: 18px;
-  }
-  .rp-progress p b {
-    font-size: 26px;
-  }
-  .rp-progress .rp-bar {
-    order: 3;
-    flex: 1 1 100%;
-  }
-  .rp-progress small {
-    margin-left: auto;
-  }
-}
 
 /* the story's and the card's Back: shown on phones, where the X becomes a plain Back like every screen's */
 .sheet-back {
@@ -9984,18 +5060,8 @@ p.rp-opera > span:not(:last-child)::after {
   .sheet-back {
     display: inline-flex;
   }
-  .sheet-x,
   .meet-close {
     display: none;
-  }
-  .syn-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-    padding: max(10px, env(safe-area-inset-top)) 16px 12px 12px;
-  }
-  .syn-head > div {
-    padding-left: 8px;
   }
   /* the character card: a sheet from the bottom, as tall as it needs; Back on top, a small portrait beside
      the name, the story under them, the two choices across the foot */
@@ -10005,7 +5071,6 @@ p.rp-opera > span:not(:last-child)::after {
   }
   .meet-card {
     display: grid;
-    grid-template-columns: 96px minmax(0, 1fr);
     grid-template-rows: auto auto minmax(0, 1fr) auto;
     grid-template-areas: "back back" "pic head" "story story" "act act";
     column-gap: 14px;
@@ -10035,9 +5100,6 @@ p.rp-opera > span:not(:last-child)::after {
     align-self: center;
     gap: 6px;
     padding: 0 16px 0 0;
-  }
-  .meet-head .cp-eyebrow {
-    font-size: 11px;
   }
   .meet-head h2 {
     margin: 0;
@@ -10098,35 +5160,6 @@ p.rp-opera > span:not(:last-child)::after {
    The progress line, quieter: one slim even track; the sung lines a little
    darker than the rests, all of it filling green as you go; a small handle
    ===================================================================== */
-.practice .tl-line {
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 2px;
-  background: color-mix(in srgb, var(--ink) 9%, transparent);
-}
-.practice .tl-line.done {
-  background: color-mix(in srgb, var(--now-mark) 45%, transparent);
-}
-.practice .tl-seg {
-  height: 4px;
-  margin-top: -2px;
-  border: 0;
-  border-radius: 0;
-  background: color-mix(in srgb, var(--ink) 20%, transparent);
-  box-shadow: none;
-}
-.practice .tl-seg + .tl-seg {
-  border-left: 0;
-}
-.practice .tl-seg i {
-  background: var(--now-mark);
-}
-.practice .tl-seg.now {
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 0;
-  box-shadow: none;
-}
 .practice .tl-head {
   width: 14px;
   height: 14px;
@@ -10147,93 +5180,6 @@ p.rp-opera > span:not(:last-child)::after {
    The role's head, one calm row: portrait, then who (opera, name, voice and
    a line about them), then how far along; what to do sits underneath
    ===================================================================== */
-.rp-head {
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  grid-template-areas:
-    "band band band"
-    "ring id prog"
-    "acts acts acts";
-  align-items: center;
-  gap: 20px 28px;
-}
-.rp-head .art-band { grid-area: band; }
-.rp-head > .ring { grid-area: ring; align-self: center; }
-.rp-head > .rp-id { grid-area: id; display: flex; gap: 6px; }
-.rp-head > .rp-progress { grid-area: prog; align-self: center; }
-.rp-head > .rp-actions {
-  grid-area: acts;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  padding-top: 18px;
-  border-top: 1px solid color-mix(in srgb, var(--on-pastel) 12%, transparent);
-}
-.rp-opera-link {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2px 0;
-  min-height: 34px;
-  margin: 0 0 0 -12px;
-  padding: 0 8px 0 12px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: inherit;
-  font: 500 15px/1.25 var(--font-sans);
-  text-align: left;
-  cursor: pointer;
-  transition: background-color var(--duration-move) var(--ease-standard);
-}
-.rp-opera-link > span:first-child { font-style: italic; }
-.rp-opera-link .rp-opera-by { color: var(--ink-muted); }
-.rp-opera-link .rp-opera-by::before { content: "·"; margin: 0 7px; }
-.rp-opera-link svg { width: 16px; height: 16px; margin-left: 4px; flex: none; }
-.rp-opera-link:hover,
-.rp-opera-link:focus-visible { background: color-mix(in srgb, var(--canvas) 55%, transparent); }
-.rp-head .rp-id h1 { margin: 2px 0 0; }
-.rp-desc { margin: 0; max-width: 480px; line-height: 1.45; }
-.rp-voice {
-  display: inline-block;
-  margin-right: 8px;
-  padding: 2px 10px;
-  border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--canvas) 60%, transparent);
-  color: var(--on-pastel);
-  font: 500 13px/1.5 var(--font-sans);
-  vertical-align: 1px;
-}
-.rp-head > .rp-progress {
-  min-width: 200px;
-  padding: 18px 20px;
-  gap: 10px;
-}
-.rp-head > .rp-progress p b { font-size: 40px; }
-.rp-go { flex: 0 0 auto; max-width: none; }
-@media (max-width: 640px) {
-  .rp-head {
-    grid-template-columns: 84px minmax(0, 1fr);
-    grid-template-areas:
-      "band band"
-      "ring id"
-      "prog prog"
-      "acts acts";
-    gap: 14px 16px;
-  }
-  .rp-head > .ring { grid-row: auto; align-self: center; }
-  .rp-head > .rp-id { display: flex; }
-  .rp-head .rp-id h1 { font-size: 32px; }
-  .rp-opera-link { font-size: 14px; min-height: 30px; }
-  .rp-desc { font-size: 15px; }
-  .rp-head > .rp-progress { min-width: 0; padding: 12px 16px; }
-  .rp-head > .rp-progress p b { font-size: 24px; }
-  .rp-head > .rp-actions { padding-top: 14px; }
-  .rp-head > .rp-actions .rp-go { flex: 1 1 100%; justify-content: center; }
-  .rp-head > .rp-actions .mine-toggle,
-  .rp-head > .rp-actions .rp-syn-btn { flex: 1 1 0; justify-content: center; min-width: 0; padding: 0 12px; }
-}
 
 /* phones: the practice bar's playback and speed rows are one width, filled evenly */
 @media (max-width: 640px) {
@@ -10248,59 +5194,11 @@ p.rp-opera > span:not(:last-child)::after {
     flex: 1 1 auto;
     border-radius: 999px;
   }
-  .practice .p-bar .bar-right .cp-tempo {
-    flex: 1 1 auto;
-    justify-content: space-between;
-  }
-}
-.rp-head > .rp-actions {
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-.rp-head > .rp-actions .mine-toggle {
-  margin-left: auto;
-}
-@media (max-width: 640px) {
-  .rp-head > .rp-actions {
-    align-items: stretch;
-  }
-  .rp-head > .rp-actions .mine-toggle {
-    margin-left: 0;
-  }
-  .rp-head > .rp-actions .mine-toggle,
-  .rp-head > .rp-actions .rp-syn-btn {
-    font-size: 14px;
-    line-height: 1.2;
-    text-align: center;
-  }
 }
 
 /* the role's head, final balance: a calmer name, the progress card the same height as the portrait */
-.rp-syn-short { display: none; }
-.rp-head .rp-id h1 { font-size: clamp(36px, 4.2vw, 52px); }
-.rp-head > .rp-progress { min-height: 0; }
-@media (max-width: 640px) {
-  .rp-syn-long { display: none; }
-  .rp-syn-short { display: inline; }
-  .rp-head { grid-template-columns: 88px minmax(0, 1fr); gap: 14px; }
-  .rp-head > .ring { width: 88px !important; height: 88px !important; }
-  .rp-head .rp-id { gap: 2px; }
-  .rp-head .rp-id h1 { font-size: 28px; line-height: 1.1; }
-  .rp-opera-link { min-height: 26px; font-size: 13px; }
-  .rp-desc { font-size: 14px; line-height: 1.4; }
-  .rp-voice { font-size: 12px; padding: 1px 8px; margin-right: 6px; }
-  /* progress: one slim row, figure, dots, count */
-  .rp-head > .rp-progress { flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 16px; }
-  .rp-head > .rp-progress p { flex: none; white-space: nowrap; }
-  .rp-head > .rp-progress p b { font-size: 20px; }
-  .rp-head > .rp-progress .rp-bar { order: 0; flex: 1 1 auto; min-width: 0; }
-  .rp-head > .rp-progress small { flex: none; margin: 0; white-space: nowrap; }
-}
 
 /* the progress line: the sung lines only a shade darker than the rests, so the line reads as one */
-.practice .tl-line { background: color-mix(in srgb, var(--ink) 8%, transparent); }
-.practice .tl-seg { background: color-mix(in srgb, var(--ink) 15%, transparent); }
 
 /* =====================================================================
    A character's head (role page and the card before taking a role): the
@@ -10337,10 +5235,8 @@ p.rp-opera > span:not(:last-child)::after {
   text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
   text-underline-offset: 3px;
 }
-.who-opera svg { width: 14px; height: 14px; flex: none; }
 .who-opera:hover,
 .who-opera:focus-visible { background: color-mix(in srgb, var(--canvas) 55%, transparent); }
-.rp-head .rp-id .rp-desc,
 .meet-head .meet-who {
   margin: 8px 0 0;
   max-width: 460px;
@@ -10349,10 +5245,7 @@ p.rp-opera > span:not(:last-child)::after {
 }
 .meet-head .who-meta { margin-top: 6px; }
 @media (max-width: 640px) {
-  .rp-head > .rp-id { justify-content: center; }
-  .rp-head .rp-id h1 { font-size: 28px; line-height: 1.1; }
   .who-meta { font-size: 14px; margin-top: 2px; }
-  .rp-head .rp-id .rp-desc,
   .meet-head .meet-who { margin-top: 6px; font-size: 14px; line-height: 1.4; color: var(--ink-muted); }
 }
 .who-meta { font-weight: 400; }
@@ -10366,15 +5259,6 @@ p.rp-opera > span:not(:last-child)::after {
 }
 
 /* the progress line: one even track, the part played filled green, a small round handle */
-.practice .tl-line {
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 2px;
-  background: color-mix(in srgb, var(--ink) 12%, transparent);
-}
-.practice .tl-line.done {
-  background: var(--now-mark);
-}
 
 /* the progress line: a hairline for the whole piece, with the passages you sing as soft rounded
    bars on it; everything before the handle turns green */
@@ -10387,16 +5271,6 @@ p.rp-opera > span:not(:last-child)::after {
 .practice .tl-line.done {
   background: color-mix(in srgb, var(--now-mark) 60%, transparent);
 }
-.tl-pass {
-  position: absolute;
-  top: 50%;
-  height: 6px;
-  margin-top: -3px;
-  border-radius: 3px;
-  overflow: hidden;
-  background: color-mix(in srgb, var(--ink) 22%, transparent);
-  pointer-events: none;
-}
 .tl-pass i {
   display: block;
   height: 100%;
@@ -10404,7 +5278,11 @@ p.rp-opera > span:not(:last-child)::after {
 }
 .practice .tl-head { z-index: 2; }
 
-.tl-pass { height: 8px; margin-top: -4px; border-radius: 4px; background: color-mix(in srgb, var(--ink) 20%, transparent); box-shadow: 0 0 0 1.5px var(--canvas); }
+.tl-pass {
+  position: absolute;
+  top: 50%;
+  overflow: hidden;
+  pointer-events: none; height: 8px; margin-top: -4px; border-radius: 4px; background: color-mix(in srgb, var(--ink) 20%, transparent); box-shadow: 0 0 0 1.5px var(--canvas); }
 
 /* speed: − 100% + sit together in one white pill, so they read as one control */
 .practice .cp-speed {
@@ -10448,9 +5326,8 @@ p.rp-opera > span:not(:last-child)::after {
   }
   .practice .p-bar .bar-parts::-webkit-scrollbar { display: none; }
   .practice .p-bar .bar-parts .part { flex: none; }
-  .practice .p-bar .bar-parts .part-face { width: 40px; height: 40px; }
   .practice .p-bar .piano-group { flex: none; }
-  .practice .p-bar .pg-btn { min-width: 36px; padding: 0 5px; }
+  .practice .p-bar .pg-btn { padding: 0 5px; }
   .practice .p-bar .bar-right .cp-tempo { flex: 1 1 auto; justify-content: space-between; gap: 4px; }
   .practice .p-bar .bar-right .cp-tempo__beat { padding: 0 0 0 10px; }
 }
@@ -10476,12 +5353,10 @@ p.rp-opera > span:not(:last-child)::after {
   background: color-mix(in srgb, var(--ink) 18%, transparent);
   transition: background-color 120ms ease, transform 120ms ease;
 }
-.rest-dots i.on { background: var(--now-mark); transform: scale(1.15); }
 .now-inner.resting .rest-dots:not(:has(.on)) i { animation: rest-breathe 2.4s ease-in-out infinite; }
 .rest-dots i:nth-child(2) { animation-delay: 0.3s !important; }
 .rest-dots i:nth-child(3) { animation-delay: 0.6s !important; }
 @keyframes rest-breathe { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .now-inner.resting .rest-dots i { animation: none !important; } }
 .rest-next {
   max-width: 100%;
   overflow: hidden;
@@ -10501,18 +5376,13 @@ p.rp-opera > span:not(:last-child)::after {
 }
 .now-panel .now-bar { max-height: 80px; }
 .now-panel.is-playing .now-bar {
-  max-height: 0;
   min-height: 0;
   opacity: 0;
-  overflow: hidden;
   pointer-events: none;
 }
 .now-panel.is-playing .now-step {
   opacity: 0;
   pointer-events: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .now-panel .now-bar, .now-panel .now-step { transition: none; }
 }
 
 /* the card's small menus: whose words, and what to show */
@@ -10578,18 +5448,12 @@ p.rp-opera > span:not(:last-child)::after {
    Loop
    ===================================================================== */
 .practice .p-bar .bar-loop { background: var(--canvas); }
-.practice .p-bar .bar-loop[aria-pressed="true"] {
-  background: var(--now-mark);
-  color: #fff;
-}
 .tl-loop {
   position: absolute;
   top: 50%;
   height: 22px;
   margin-top: -11px;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--now-mark) 14%, transparent);
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--now-mark) 45%, transparent);
   pointer-events: none;
 }
 .tl-label { display: flex; align-items: center; gap: 8px; }
@@ -10601,14 +5465,11 @@ p.rp-opera > span:not(:last-child)::after {
   padding: 0 8px;
   border: 0;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--now-mark) 14%, transparent);
-  color: var(--now-mark);
   font: 600 13px/1 var(--font-sans);
   white-space: nowrap;
   cursor: pointer;
 }
 .tl-loop-chip svg { width: 15px; height: 15px; }
-.tl-loop-chip span { margin-left: 2px; font-weight: 400; opacity: 0.8; }
 
 /* =====================================================================
    Phone: the bar folds to one slim row while the music plays
@@ -10617,8 +5478,6 @@ p.rp-opera > span:not(:last-child)::after {
 @media (max-width: 640px) {
   .practice .p-bar.folded {
     flex-wrap: nowrap;
-    align-items: center;
-    gap: 8px;
   }
   .practice .p-bar.folded .bar-parts,
   .practice .p-bar.folded .bar-start,
@@ -10629,17 +5488,11 @@ p.rp-opera > span:not(:last-child)::after {
     flex: 0 0 auto;
     width: auto;
   }
-  .practice .p-bar.folded .bar-transport > [data-testid="play"],
-  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { flex: 0 0 64px; width: 64px; }
-  .practice .p-bar.folded .bar-right { flex: 1 1 auto; justify-content: center; }
+  .practice .p-bar.folded .bar-right { justify-content: center; }
   .practice .p-bar.folded .bar-right .cp-tempo { justify-content: center; }
   .practice .p-bar.folded .bar-more {
     display: grid !important;
-    flex: 0 0 48px;
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
-    background: var(--fog);
   }
   /* phone taps: the piano's buttons at least 44 px wide */
   .practice .p-bar .pg-btn { min-width: 44px; }
@@ -10647,56 +5500,16 @@ p.rp-opera > span:not(:last-child)::after {
 
 /* the piano group: the piano icon is the sound switch */
 .pg-piano { position: relative; }
-.pg-piano[aria-pressed="false"] svg { opacity: 0.4; }
-.pg-piano[aria-pressed="false"]::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 26px;
-  height: 2px;
-  margin: -1px 0 0 -13px;
-  border-radius: 1px;
-  background: var(--ink);
-  box-shadow: 0 0 0 1.5px var(--canvas);
-  transform: rotate(-40deg);
-}
 .piano-group { padding-left: 4px !important; }
 @media (max-width: 640px) {
   .practice .p-bar .bar-parts .part { padding: 0 2px; }
   .practice .p-bar .bar-parts .part-face { width: 40px; height: 40px; }
   .practice .p-bar .mix-btn { min-width: 44px; width: 44px; padding: 0; justify-content: center; }
 }
-@media (max-width: 370px) {
-  .practice .p-bar .pg-btn { min-width: 40px; }
-}
-@media (max-width: 370px) {
-  .practice .p-bar .bar-parts .part { padding: 0 1px; }
-}
 
 /* the story on a phone: a Back pill floating at the foot of the sheet, always in reach */
 .syn-float-back { display: none; }
 @media (max-width: 720px) {
-  .syn-float-back {
-    position: absolute;
-    left: 50%;
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-    z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 48px;
-    padding: 0 20px 0 14px;
-    border: 0;
-    border-radius: 999px;
-    background: var(--ink);
-    color: var(--canvas);
-    font: 500 15px/1 var(--font-sans);
-    box-shadow: 0 8px 24px rgba(20, 30, 25, 0.25);
-    transform: translateX(-50%);
-    cursor: pointer;
-  }
-  .syn-float-back svg { width: 18px; height: 18px; }
   .syn-body { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
 }
 
@@ -10708,15 +5521,12 @@ p.rp-opera > span:not(:last-child)::after {
   min-height: 56px;
   padding-top: 6px;
   padding-bottom: 6px;
-  background: color-mix(in srgb, var(--now-mark) 10%, var(--canvas));
   border-top: 1px solid color-mix(in srgb, var(--now-mark) 25%, transparent);
 }
 .loop-pick p { flex: 1; margin: 0; font: 400 15px/1.3 var(--font-sans); color: var(--ink); }
-.loop-pick .lp-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--now-mark); color: #fff; flex: none; }
+.loop-pick .lp-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; color: #fff; flex: none; }
 .loop-pick .lp-icon svg { width: 20px; height: 20px; }
 .loop-pick .lp-btn { min-height: 40px; padding: 0 14px; font-size: 14px; background: var(--canvas); white-space: nowrap; }
-.loop-pick .lp-x { flex: none; }
-.practice .p-bar .bar-loop[aria-label^="Cancel"] { background: color-mix(in srgb, var(--now-mark) 25%, var(--canvas)); }
 
 /* =====================================================================
    The rail: Home, Search, your roles as faces, add a role; Settings at
@@ -10854,7 +5664,6 @@ p.rp-opera > span:not(:last-child)::after {
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 640px;
   min-height: 56px;
   padding: 0 8px 0 18px;
   border-radius: 999px;
@@ -10891,24 +5700,19 @@ p.rp-opera > span:not(:last-child)::after {
 }
 .search-clear svg { width: 18px; height: 18px; }
 .pc-lede { margin: 0; flex: 1; }
-.pc-list { display: grid; gap: 8px; }
+.pc-list { display: grid; }
 .pc-row {
   display: flex;
   align-items: center;
   gap: 14px;
   width: 100%;
-  min-height: 68px;
   padding: 10px 14px 10px 12px;
   border: 0;
-  border-radius: 20px;
-  background: var(--fog);
   color: var(--ink);
   text-align: left;
   cursor: pointer;
   transition: background-color var(--duration-move) var(--ease-standard);
 }
-.pc-row:hover { background: color-mix(in srgb, var(--ink) 8%, var(--fog)); }
-.pc-row.soon .pc-text b { color: var(--ink-muted); }
 .pc-faces { display: flex; flex: none; }
 .pc-face {
   width: 44px;
@@ -10916,7 +5720,6 @@ p.rp-opera > span:not(:last-child)::after {
   border-radius: 50%;
   overflow: hidden;
   background: var(--tone-soft, var(--canvas));
-  box-shadow: 0 0 0 2px var(--fog);
 }
 .pc-face + .pc-face { margin-left: -14px; }
 .pc-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -10979,195 +5782,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
    the name and one quiet line; the role's pieces as a segmented bar;
    continue (where you stopped) and the story
    ===================================================================== */
-.rh2 {
-  display: grid;
-  gap: 18px;
-  padding: 20px 20px 22px;
-  border-radius: 36px;
-  background: var(--tone-soft, var(--fog));
-  color: var(--ink);
-}
-.rh2-band {
-  height: clamp(120px, 16vw, 168px);
-  border-radius: 24px;
-  background: var(--tone-strong, var(--fog-strong)) center 32% / cover no-repeat;
-}
-.rh2-id {
-  display: flex;
-  align-items: flex-end;
-  gap: 22px;
-  margin-top: calc(-1 * clamp(64px, 8vw, 84px));
-  padding-left: 12px;
-}
-.rh2-face {
-  flex: none;
-  width: clamp(120px, 15vw, 156px);
-  height: clamp(120px, 15vw, 156px);
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--tone-strong, var(--canvas));
-  box-shadow: 0 0 0 6px var(--tone-soft, var(--fog));
-}
-.rh2-face img,
-.rh2-face svg { width: 100%; height: 100%; object-fit: cover; display: block; }
-.rh2-name { min-width: 0; padding-bottom: 8px; }
-.rh2-name h1 {
-  margin: 0;
-  font: 600 clamp(34px, 4.4vw, 52px)/1.05 var(--font-sans);
-  letter-spacing: -0.015em;
-}
-.rh2-name .who-meta { margin-top: 6px; font-size: 16px; color: var(--ink); opacity: 0.8; }
-.rh2-name .who-opera { color: var(--ink); text-decoration-color: currentColor; }
-.rh2-prog { display: grid; gap: 10px; padding: 0 4px; }
-.rh2-segs { display: flex; gap: 5px; }
-.rh2-segs i {
-  flex: 1;
-  height: 6px;
-  border-radius: 3px;
-  background: color-mix(in srgb, var(--ink) 12%, transparent);
-}
-.rh2-segs i.done { background: var(--now-mark); }
-.rh2-segs i.now { background: color-mix(in srgb, var(--now-mark) 45%, transparent); }
-.rh2-prog p { margin: 0; font: 400 15px/1.3 var(--font-sans); color: var(--ink); opacity: 0.75; }
-.rh2-actions { display: flex; gap: 12px; align-items: stretch; }
-.rh2-go {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-height: 76px;
-  padding: 10px 24px 10px 12px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--now);
-  color: var(--ink);
-  text-align: left;
-  cursor: pointer;
-}
-.rh2-play {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--canvas);
-}
-.rh2-play svg { width: 20px; height: 20px; margin-left: 2px; }
-.rh2-go-text { display: grid; gap: 2px; min-width: 0; }
-.rh2-go-text small { font: 400 14px/1.2 var(--font-sans); opacity: 0.75; }
-.rh2-go-text b { font: 600 20px/1.2 var(--font-sans); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.rh2-btn {
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 76px;
-  padding: 0 28px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--canvas);
-  color: var(--ink);
-  font: 500 17px/1 var(--font-sans);
-  cursor: pointer;
-}
-.rh2-btn svg { width: 20px; height: 20px; }
-@media (max-width: 640px) {
-  .rh2 { padding: 14px 14px 16px; gap: 14px; border-radius: 28px; }
-  .rh2-band { height: 112px; border-radius: 18px; }
-  .rh2-id { gap: 14px; margin-top: -52px; padding-left: 6px; }
-  .rh2-face { width: 96px; height: 96px; box-shadow: 0 0 0 5px var(--tone-soft, var(--fog)); }
-  .rh2-name { padding-bottom: 2px; }
-  .rh2-name h1 { font-size: 30px; }
-  .rh2-name .who-meta { font-size: 14px; }
-  .rh2-actions { flex-wrap: wrap; }
-  .rh2-go { flex: 1 1 100%; min-height: 68px; }
-  .rh2-play { width: 46px; height: 46px; }
-  .rh2-go-text b { font-size: 18px; }
-  .rh2-btn { flex: 1 1 0; min-height: 52px; padding: 0 16px; font-size: 15px; }
-}
-.rh2-go:hover { background: var(--now-strong); }
 
 /* role card, balanced: who on the left, how far on the right (one row on a tablet), Continue says why */
-.rh2-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 34%);
-  align-items: end;
-  gap: 16px 32px;
-}
-.rh2-row .rh2-id { margin-top: calc(-1 * clamp(64px, 8vw, 84px)); }
-.rh2 > .rh2-id { margin-top: 0; }
-.rh2-desc { margin: 6px 0 0; max-width: 460px; font: 400 15px/1.4 var(--font-sans); color: var(--ink); opacity: 0.7; }
-.rh2-row .rh2-prog { padding: 0 4px 10px; gap: 8px; }
-.rh2-prog p { display: flex; align-items: baseline; gap: 0; flex-wrap: wrap; }
-.rh2-prog p b { font: 600 26px/1 var(--font-sans); margin-right: 4px; opacity: 1; }
-.rh2-prog p small { font-size: 13px; }
-.rh2-segs i.ready { background: color-mix(in srgb, var(--ink) 20%, transparent); }
-.rh2-go-ctx { font: 400 13px/1.3 var(--font-sans); opacity: 0.7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-@media (max-width: 760px) {
-  .rh2-row { grid-template-columns: minmax(0, 1fr); }
-  .rh2-row .rh2-prog { padding-bottom: 0; }
-}
-@media (max-width: 640px) {
-  .rh2-row .rh2-id { margin-top: -52px; }
-  .rh2-desc { font-size: 14px; }
-  .rh2-prog p b { font-size: 22px; }
-}
 /* only the portrait reaches up over the picture; the name always starts below it */
-.rh2-row .rh2-id { margin-top: 0; align-items: flex-start; }
-.rh2-row .rh2-face { margin-top: calc(-1 * clamp(64px, 8vw, 84px)); }
-.rh2-row .rh2-name { padding: 6px 0 0; }
-.rh2-row { align-items: center; }
-.rh2-prog p small { margin-left: 6px; }
-@media (max-width: 640px) {
-  .rh2-row .rh2-face { margin-top: -52px; }
-  .rh2-row .rh2-name { padding-top: 2px; }
-  .rh2-go-ctx { white-space: normal; }
-}
 
 /* role card, calmer: a modest name, two columns of the same weight (who | how far, with the story), no
    "continue" (the pieces below are where you choose what to practise; the last one is marked there) */
-.rh2 { gap: 14px; padding: 16px 16px 20px; border-radius: 32px; }
-.rh2-band { height: clamp(104px, 12vw, 132px); border-radius: 22px; }
-.rh2-row { grid-template-columns: minmax(0, 1.25fr) minmax(240px, 1fr); align-items: start; gap: 14px 40px; padding: 0 8px; }
-.rh2-row .rh2-id { gap: 18px; padding-left: 0; }
-.rh2-face { width: 112px; height: 112px; box-shadow: 0 0 0 5px var(--tone-soft, var(--fog)); }
-.rh2-row .rh2-face { margin-top: -56px; }
-.rh2-row .rh2-name { padding-top: 10px; }
-.rh2-name h1 { font: 600 30px/1.1 var(--font-sans); letter-spacing: -0.01em; }
-.rh2-name .who-meta { font-size: 15px; margin-top: 4px; }
-.rh2-desc { font-size: 15px; margin-top: 4px; }
-.rh2-row .rh2-prog { padding: 14px 0 0; gap: 10px; }
-.rh2-prog p b { font-size: 22px; }
-.rh2-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-.rh2-btn { flex: none; min-height: 44px; padding: 0 18px 0 14px; font-size: 15px; gap: 8px; }
-.rh2-btn svg { width: 18px; height: 18px; }
-.ck-last {
-  margin-left: 8px;
-  padding: 1px 8px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--now-mark) 14%, transparent);
-  color: var(--now-mark);
-  font: 500 12px/1.6 var(--font-sans);
-  font-style: normal;
-  white-space: nowrap;
-}
-@media (max-width: 760px) {
-  .rh2-row { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 0 4px; }
-  .rh2-row .rh2-prog { padding-top: 2px; }
-}
-@media (max-width: 640px) {
-  .rh2-band { height: 100px; }
-  .rh2-face { width: 88px; height: 88px; }
-  .rh2-row .rh2-face { margin-top: -44px; }
-  .rh2-row .rh2-id { gap: 14px; }
-  .rh2-row .rh2-name { padding-top: 4px; }
-  .rh2-name h1 { font-size: 24px; }
-  .rh2-name .who-meta, .rh2-desc { font-size: 14px; }
-  .rh2-tools .rh2-btn { flex: 1 1 0; justify-content: center; min-height: 46px; }
-}
 
 /* =====================================================================
    Both: the music with the words beside it, as a libretto next to the
@@ -11175,63 +5795,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
    ===================================================================== */
 .practice > .loop-pick { grid-area: 6 / 1 / 7 / -1; }
 @media (min-width: 900px) {
-  .practice.is-split { grid-template-columns: minmax(0, 1fr) clamp(320px, 31%, 420px); }
-  .practice.is-split > .p-head,
-  .practice.is-split > .p-timeline,
-  .practice.is-split > .p-bar { grid-column: 1 / -1; }
-  .practice.is-split > .now-panel { grid-area: 2 / 1; }
-  .practice.is-split > .p-stage { grid-area: 3 / 1; }
-  .practice.is-split > .words-view {
-    grid-area: 2 / 2 / 4 / 3;
-    margin: 0 var(--edge) 12px 0;
-    border-radius: 24px;
-    background: var(--fog);
-  }
   .practice.is-split > .p-drawer { grid-column: 1 / -1; }
-  .practice.is-split .w-grid { --w-cols: 22px 40px minmax(0, 1fr); max-width: none; padding: 0 6px 40vh; }
-  .practice.is-split .words-view.no-tr .w-grid { --w-cols: 22px 40px minmax(0, 1fr); }
-  .practice.is-split .w-cols { column-gap: 10px; padding: 12px 8px 8px; background: var(--fog); }
-  .practice.is-split .w-col-orig { grid-column: 3; }
-  .practice.is-split .w-col-tr { display: none; }
-  .practice.is-split .words-view .w-line { column-gap: 10px; padding: 8px 8px 10px; }
-  .practice.is-split .words-view .w-it { font-size: 19px; }
-  .practice.is-split .words-view .w-tr { grid-column: 3; grid-row: 2; font-size: 14px; padding-top: 4px; }
-  .practice.is-split .words-view .w-hear { width: 38px; height: 38px; margin-top: -5px; }
-  .practice.is-split .words-view .w-gap,
-  .practice.is-split .w-hint { padding-left: calc(22px + 40px + 28px); margin-left: 0; }
-}
-@media (max-width: 899px) {
-  .practice.is-split > .words-view { display: none; }
-  .view-switch .vs-split { display: none; }
-}
-@media (min-width: 900px) {
-  /* beside the music the words list is just the libretto: whose words, what to show and the tips live in the card */
-  .practice.is-split .w-cols { display: none; }
-  .practice.is-split .w-grid { padding-top: 10px; }
-  .practice.is-split .words-view .w-line.now { background: var(--canvas); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--now-mark) 45%, transparent); }
-}
-@media (min-width: 900px) {
-  /* the piano's passages in the narrow words panel: one clean row (what, bars, seconds), nothing squeezed */
-  .practice.is-split .words-view .w-gap { padding-left: 0; margin: 6px 0; width: 100%; }
-  .practice.is-split .w-gap-band { grid-column: 1 / -1; padding: 0 14px; gap: 10px; }
-  .practice.is-split .w-gap-long,
-  .practice.is-split .w-gap-bars { display: none; }
-  .practice.is-split .w-gap-main { flex: 1 1 auto; overflow: hidden; }
-  .practice.is-split .w-gap-main b { overflow: hidden; text-overflow: ellipsis; }
-  /* clear room between the music and the words: the score ends in a soft fade, a gutter, then the panel */
-  .practice.is-split > .p-stage { margin-right: 12px; }
-  .practice.is-split > .p-stage::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40px;
-    background: linear-gradient(to right, transparent, var(--canvas));
-    pointer-events: none;
-    z-index: 5;
-  }
-  .practice.is-split > .words-view { margin-left: 4px; }
 }
 
 /* =====================================================================
@@ -11266,11 +5830,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   padding: 0 18px 0 14px;
   border: 0;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--canvas) 94%, transparent);
   color: var(--ink);
   font: 500 15px/1 var(--font-sans);
-  box-shadow: 0 4px 14px rgba(20, 30, 25, 0.14);
-  backdrop-filter: blur(6px);
   cursor: pointer;
 }
 .rc-pill svg { width: 18px; height: 18px; }
@@ -11323,7 +5884,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .rc-id { gap: 14px; padding: 0 8px; }
   .rc-face { width: 88px; height: 88px; margin-top: -44px; box-shadow: 0 0 0 5px var(--tone-soft, var(--fog)); }
   .rc-text { padding-top: 8px; }
-  .rc-text h1 { font-size: 24px; }
   .rc-text .who-meta,
   .rc-desc { font-size: 14px; }
   .rc-prog { padding: 16px 8px 0; }
@@ -11336,46 +5896,20 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--loop-mark) 45%, transparent); }
   50% { box-shadow: 0 0 0 8px color-mix(in srgb, var(--loop-mark) 0%, transparent); transform: scaleX(1.4); }
 }
-@media (prefers-reduced-motion: reduce) { .practice.loop-hint .ov-lh { animation: none; } }
 .loop-pick .lp-done { background: var(--ink); color: var(--canvas); }
 /* touch: wider handles to catch with a finger */
-@media (pointer: coarse) {
-  .score-overlay > .ov-lh { width: 10px; }
-  .ov-lh-s { margin-left: -10px; }
-  .ov-lh::before { inset: -6px -22px; }
-}
 /* the loop has one colour everywhere: the design system's loop violet (score, button, progress line, labels) */
 .practice .p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
 .tl-loop { background: color-mix(in srgb, var(--loop-mark) 14%, transparent); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--loop-mark) 45%, transparent); }
 .tl-loop-chip { background: var(--loop); color: var(--loop-mark); }
 .loop-pick { background: color-mix(in srgb, var(--loop) 45%, var(--canvas)); border-top-color: color-mix(in srgb, var(--loop-mark) 25%, transparent); }
 .loop-pick .lp-icon { background: var(--loop-mark); }
-@media (min-width: 900px) {
-  /* Both: the words panel starts level with the line card, and its first row sits level with the card's tools */
-  .practice.is-split > .words-view { margin-top: 6px; }
-  .practice.is-split .w-grid { padding-top: 0; }
-  .practice.is-split .words-view .w-gap:first-child,
-  .practice.is-split .words-view .w-gap:first-of-type { margin-top: 8px; }
-}
-@media (min-width: 900px) { .practice.is-split .w-gap-band { min-height: 40px; } }
 
 /* the line box can be put away: the music takes its row */
 .practice > .now-panel.card-off { display: none; }
-.card-toggle { flex: none; }
-.card-toggle svg { width: 22px; height: 22px; }
-.card-toggle.on { background: var(--fog); }
-.card-toggle:not(.on) { background: var(--picked, var(--fog)); }
-.card-menu .cm-hide { order: 10; border-top: 1px solid var(--fog-strong); border-radius: 0 0 12px 12px; margin-top: 4px; }
 
 /* Words without the English: one column, so the page's column narrows to a reading width and sits in the middle
    (left-aligned text in a centred column: lines still start in one place, nothing hugs the left edge) */
-.practice.is-words .words-view.no-tr .w-grid { max-width: 720px; }
-@media (min-width: 900px) {
-  /* Both: a clean cut, no feathering — the music simply ends at its column, a clear gutter before the words */
-  .practice.is-split > .p-stage::after { content: none; display: none; }
-  .practice.is-split > .p-stage { margin-right: 16px; overflow: hidden; }
-  .practice.is-split > .words-view { margin-left: 0; }
-}
 
 /* =====================================================================
    One colour system. Ink for text, warm neutrals for surfaces, green for
@@ -11384,6 +5918,11 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
    on its own card; nothing else is pink, lilac or sky blue.
    ===================================================================== */
 :root {
+  --tip-ink: #7d70d4;
+  --tip-bg: #f4f1ff;
+  --ink-ahead: #6f716c;
+  --join: #ffc9cf;
+  --join-mark: #b4233a;
   --picked: #e6e8e3;
   --picked-strong: #dadcd6;
   --sky-soft: #e4f5ea;
@@ -11398,15 +5937,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   box-shadow: 0 1px 2px rgba(20, 22, 18, 0.12);
 }
 /* toggled chips (IPA, English, Tips, Ready only, voices): a darker neutral with ink, never a pastel */
-.nl-chip[aria-pressed="true"],
 .w-chip[aria-pressed="true"],
 .voice-chip[aria-pressed="true"] {
   background: var(--ink);
   color: var(--canvas);
 }
 .voice-chip { background: var(--fog); color: var(--ink); }
-.voice-chip[aria-pressed="false"] small { color: var(--ink-muted); }
-.card-toggle:not(.on) { background: var(--ink); color: var(--canvas); }
 /* your own lane in the score: a faint green wash (green = you, acting) */
 .ov-you { background: var(--now-mark); opacity: 0.07; }
 
@@ -11471,13 +6007,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 @media (max-width: 640px) { .op-cover-story { right: 10px; bottom: 10px; } }
 .voice-chip[aria-pressed="true"] { box-shadow: none; }
 /* Search on a phone: the box and the tabs fit the page */
-.search-hero { min-width: 0; }
-.search-box { box-sizing: border-box; width: 100%; max-width: 640px; }
+.search-box { box-sizing: border-box; width: 100%; }
 .search-hero .explore-mode { box-sizing: border-box; max-width: 100%; width: fit-content; }
 @media (max-width: 640px) {
   .search-hero .explore-mode { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); }
 }
-.search-hero { grid-template-columns: minmax(0, 1fr); }
+.search-hero { min-width: 0; grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 640px) {
   .search-hero .explore-mode button { min-width: 0; padding-left: 8px; padding-right: 8px; }
 }
@@ -11507,40 +6042,31 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* =====================================================================
    The guide: the screen dims, one part stays lit, a card explains it
    ===================================================================== */
-.guide-scrim { position: fixed; inset: 0; z-index: 99; pointer-events: auto; }
+.guide-scrim { position: fixed; inset: 0; z-index: 99; }
 .guide-hole {
   position: fixed;
   border-radius: 20px;
-  box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.55), 0 0 0 2px var(--canvas);
   transition: left 240ms var(--ease-standard), top 240ms var(--ease-standard), width 240ms var(--ease-standard), height 240ms var(--ease-standard);
   pointer-events: none;
 }
 .tip { z-index: 100; box-shadow: var(--shadow-float); max-width: calc(100vw - 32px); }
-.tip .tip-arrow { display: none; }
 .tip p { margin: 0; }
 .tip p b { color: var(--ink-muted); }
 .tip-title { display: block; margin: 2px 0 4px; font: 500 19px/1.25 var(--font-sans); }
 .tip-dots { display: flex; gap: 6px; }
 .tip-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--fog-strong); }
-.tip-dots i.done { background: color-mix(in srgb, var(--now-mark) 45%, transparent); }
 .tip-dots i.on { width: 18px; border-radius: 3px; background: var(--now-mark); }
 .tip-actions { display: flex; align-items: center; gap: 8px; }
 .tip-actions .tip-skip { margin-right: auto; padding-left: 0; color: var(--ink-muted); }
-@media (prefers-reduced-motion: reduce) { .guide-hole { transition: none; } }
 
 /* the guide, done for real: the lit control answers, the rest is dimmed and still */
 .guide-scrim { pointer-events: none; }
 .guide-hole { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 5px color-mix(in srgb, var(--now-mark) 60%, transparent); animation: guide-pulse 1.6s ease-in-out infinite; }
-.guide-hole.ok { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 5px var(--now-mark); animation: none; }
 @keyframes guide-pulse {
   0%, 100% { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 55%, transparent); }
   50% { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 9px color-mix(in srgb, var(--now-mark) 20%, transparent); }
 }
-@media (prefers-reduced-motion: reduce) { .guide-hole { animation: none; } }
 .tip.above { transform: translateY(-100%); }
-.tip.ok { box-shadow: var(--shadow-float), 0 0 0 2px var(--now-mark); }
-.tip-ok { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 8px; border-radius: 50%; background: var(--now-mark); color: #fff; vertical-align: -3px; }
-.tip-ok svg { width: 14px; height: 14px; }
 .guide-intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(14, 16, 12, 0.45); }
 .guide-intro-card { position: static; width: min(400px, 100%); }
 
@@ -11555,13 +6081,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* phone, folded bar: one flat row, one level of shape. A round play button, the loop as a plain icon,
    the speed in a single soft pill, the arrow as a plain icon. No pills inside pills. */
 @media (max-width: 640px) {
-  .practice .p-bar.folded { gap: 4px; justify-content: space-between; }
   .practice .p-bar.folded .bar-transport,
   .practice .p-bar.folded .bar-right,
   .practice .p-bar.folded .cp-tempo { background: none !important; box-shadow: none !important; border: 0 !important; padding: 0 !important; gap: 4px; }
   .practice .p-bar.folded .bar-right { flex: 0 1 auto !important; }
   .practice .p-bar.folded .bar-transport > [data-testid="play"],
-  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { flex: 0 0 52px !important; width: 52px !important; height: 52px; border-radius: 50%; }
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { border-radius: 50%; }
   .practice .p-bar.folded .bar-loop { width: 44px; height: 44px; border-radius: 50%; background: none; box-shadow: none; }
   .practice .p-bar.folded .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
   .practice .p-bar.folded .cp-speed { background: var(--fog) !important; box-shadow: none !important; border: 0 !important; height: 44px; padding: 0 2px; border-radius: 22px; }
@@ -11572,29 +6097,15 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* phone, folded bar, balanced: [speed chip]   [ ▶ ]   [loop][⌃]. The two sides are the same width,
    play sits in the middle. One level of shape: the play disc, the speed chip, nothing else filled. */
-.speed-chip { display: none; }
 @media (max-width: 640px) {
-  .practice .p-bar.folded { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; position: relative; }
   .practice .p-bar.folded .bar-transport,
   .practice .p-bar.folded .bar-right,
   .practice .p-bar.folded .cp-tempo { display: contents !important; }
-  .practice .p-bar.folded .speed-chip {
-    display: inline-flex; align-items: center; justify-content: center;
-    grid-column: 1; grid-row: 1; justify-self: start;
-    width: 92px; height: 44px; border: 0; border-radius: 22px;
-    background: var(--fog); color: var(--ink); font: 500 16px/1 var(--font-sans); font-variant-numeric: tabular-nums;
-  }
-  .practice .p-bar.folded .speed-chip[aria-expanded="true"] { background: var(--ink); color: var(--canvas); }
   .practice .p-bar.folded .bar-transport > [data-testid="play"],
-  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { grid-column: 2; grid-row: 1; width: 60px !important; height: 60px; flex: none !important; }
-  .practice .p-bar.folded .bar-loop { grid-column: 3; grid-row: 1; justify-self: end; margin-right: 48px; }
-  .practice .p-bar.folded .bar-more { grid-column: 3; grid-row: 1; justify-self: end; }
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { grid-row: 1; width: 60px !important; height: 60px; flex: none !important; }
+  .practice .p-bar.folded .bar-loop { grid-row: 1; }
+  .practice .p-bar.folded .bar-more { grid-row: 1; }
   .practice .p-bar.folded .cp-speed { display: none !important; }
-  .practice .p-bar.folded .cp-speed.pop {
-    display: flex !important; position: absolute; left: 16px; bottom: calc(100% + 8px); z-index: 20;
-    background: var(--canvas) !important; box-shadow: var(--shadow-float) !important; border-radius: 26px; height: 52px; padding: 0 4px; align-items: center;
-  }
-  .practice .p-bar.folded .cp-speed.pop .cp-icon-btn { width: 44px; height: 44px; }
 }
 
 /* =====================================================================
@@ -11605,7 +6116,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .bar-again { display: none !important; }
 .tl-speed { display: none; }
 @media (max-width: 640px) {
-  .practice .p-bar.folded { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; align-items: center; }
+  .practice .p-bar.folded { justify-content: space-between; gap: 0; position: relative; display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; align-items: center; }
   .practice .p-bar.folded > .bar-parts.many { display: contents !important; }
   .practice .p-bar.folded > .bar-parts > *:not(:first-child) { display: none !important; }
   .practice .p-bar.folded > .bar-parts > .part:first-child { grid-column: 1; grid-row: 1; }
@@ -11619,7 +6130,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice > .p-timeline .tl-time,
   .practice > .p-timeline .tl-bar,
   .practice > .p-timeline .tl-label span { display: none !important; }
-  .practice > .p-timeline { gap: 12px; }
   .practice > .p-timeline .tl-label:not(:has(.tl-loop-chip)) { display: none !important; }
   .tl-speed { display: block; position: relative; flex: none; }
   .tl-speed-chip {
@@ -11651,9 +6161,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice > .p-timeline { padding-left: 26px; padding-right: 20px; gap: 14px; }
   .practice .p-bar.p-bar.p-bar {
     display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); row-gap: 12px; column-gap: 0;
-    justify-items: center; align-items: center; padding: 4px 12px 12px; --tr: 3;
+    justify-items: center; align-items: center; padding: 4px 12px 12px;
   }
-  .practice .p-bar.p-bar.p-bar.folded { --tr: 1; }
   .practice .p-bar.p-bar.p-bar > .bar-parts, .practice .p-bar.p-bar.p-bar .bar-transport, .practice .p-bar.p-bar.p-bar .bar-right, .practice .p-bar.p-bar.p-bar .cp-tempo {
     display: contents !important; background: none !important; box-shadow: none !important; border: 0 !important;
   }
@@ -11670,7 +6179,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .p-bar.p-bar.p-bar .bar-more { display: grid !important; grid-column: 5; grid-row: var(--tr); justify-self: center; width: 44px !important; height: 44px !important; flex: none !important; background: none !important; margin: 0; }
   /* row 1: the others, the piano, Arrange, spread across the width */
   .practice .p-bar.p-bar.p-bar .bar-mix {
-    grid-column: 1 / -1; grid-row: 1; justify-self: stretch; display: flex; align-items: center; justify-content: space-between;
+    grid-column: 1 / -1; grid-row: 1; justify-self: stretch; display: flex; align-items: center;
     padding: 4px 10px 12px; border-bottom: 1px solid var(--line, rgba(0,0,0,.08));
   }
   .practice .p-bar.p-bar.p-bar .bar-mix .piano-group { background: none !important; box-shadow: none !important; padding: 0; gap: 0; }
@@ -11713,9 +6222,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   }
   .practice .p-bar .bar-mix .bar-others::-webkit-scrollbar { display: none; }
   .practice .p-bar .bar-mix .bar-others > .part { flex: none; scroll-snap-align: start; }
-  .practice .p-bar .bar-mix .bar-others.more-r { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); }
-  .practice .p-bar .bar-mix .bar-others.more-l { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); }
-  .practice .p-bar .bar-mix .bar-others.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); }
   .practice .p-bar .bar-mix .piano-group { flex: none; padding-left: 6px !important; border-left: 1px solid var(--line, rgba(0, 0, 0, 0.1)); border-radius: 0; }
   .practice .p-bar .bar-mix .mix-btn { flex: none; }
 }
@@ -11733,14 +6239,9 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .hm-cont-id{align-items:center}
 .hm-cont-id .rc-face{width:88px;height:88px;box-shadow:none;margin-top:0}
 .hm-cont-id .rc-text{flex:1;padding-top:0}
-.hm-title{letter-spacing:-.01em;margin:0;font:500 26px/1.1 var(--font-sans)}
-.hm-continue{grid-template-columns:minmax(0,1fr) auto}
-.hm-continue>*{grid-column:1/-1}
-.hm-band{display:none}
 .hm-continue>.hm-cont-id{grid-column:1;grid-row:2}
 .hm-continue>.hm-cont-act{grid-column:2;grid-row:2;align-self:center;padding-right:var(--space-4)}
 .hm .rc-prog{padding-top:0}
-.hm-bar{gap:0}
 .hm-card-row{align-items:center;gap:var(--space-3);padding:0 var(--space-4);display:flex}
 .hm-card>.cp-btn{justify-self:start;margin:var(--space-1) var(--space-4) 0}
 .hm-role{width:100%;color:var(--ink);font:inherit;text-align:left;cursor:pointer;border:0}
@@ -11753,17 +6254,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .hm-tiles .reel-card{width:auto;margin-right:0}
 .rail-role-text{display:contents}
 .rail-role-meta,.rail-add-label{display:none}
-@media (orientation:landscape) and (width>=1000px){.hm-top.both{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
-.hm-top.both .hm-sugs{grid-auto-flow:row}
-.hm-top.both .hm-continue{grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(4,auto) 1fr}
+@media (orientation:landscape) and (width>=1000px){
 .hm-top.both .hm-continue>.hm-cont-id,.hm-top.both .hm-continue>.hm-cont-act{grid-column:1;grid-row:auto}
-.hm-top.both .hm-band{height:112px;display:block}
 .hm-top.both .hm-cont-id{align-items:flex-start}
 .hm-top.both .hm-cont-id .rc-face{width:120px;height:120px;box-shadow:0 0 0 6px var(--tone-soft,var(--fog));margin-top:-60px}
 .hm-top.both .hm-cont-id .rc-text{padding-top:14px}
 .hm-top.both .hm-continue>.hm-cont-act{align-self:end;padding:0 var(--space-4)}
-.hm-top.both .hm-card{grid-template-rows:auto auto 1fr}
-.hm-top.both .hm-card>.cp-btn{align-self:end}
 .hm-bottom.both{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
 .hm-bottom.both .hm-role-list{grid-template-columns:minmax(0,1fr)}
 .hm-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -11782,14 +6278,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 }
 @media (width<=640px){.hm-sugs{grid-auto-flow:row}
 .hm-role-list{grid-template-columns:minmax(0,1fr)}
-.hm-continue{grid-template-columns:minmax(0,1fr)}
 .hm-continue>.hm-cont-id,.hm-continue>.hm-cont-act{grid-column:1;grid-row:auto}
 .hm-continue>.hm-cont-act{padding:0 var(--space-4)}
-.hm-go{width:100%}
 .hm-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-
-
 
 /* =====================================================================
    Phone, bar opened: the iPad's own groups, stacked. Same pills, same icons, same words:
@@ -11871,7 +6363,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
    ===================================================================== */
 /* 1. Words view header: the picker's name keeps its own type (not the column heading's capitals); on a phone the
       column heading gives way to the tools, which get the whole row and scroll sideways if they must */
-.w-tools .who-pick b { font-size: inherit; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); }
 @media (max-width: 640px) {
   .words-view .w-cols .w-col-orig { display: none; }
   .words-view .w-cols .w-tools {
@@ -11893,7 +6384,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice > .now-panel .now-meta { flex: 0 1 auto; min-width: 0; margin: 0; }
   .practice > .now-panel .now-tools { flex: 0 0 auto; margin-left: auto; gap: 4px; flex-wrap: nowrap; }
   .practice > .now-panel .words-btn .cmb-k { display: none; }
-  .practice > .now-panel .words-btn { max-width: 132px; padding: 0 8px 0 12px; height: 36px; }
+  .practice > .now-panel .words-btn { padding: 0 8px 0 12px; height: 36px; }
   .practice > .now-panel .words-btn b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
   .practice > .now-panel .nl-btn { width: 36px; height: 36px; }
   .practice > .now-panel .show-btn { height: 36px; padding: 0 10px 0 12px; }
@@ -11905,11 +6396,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* 5. the typed letters, marked in results */
 .q-mark { background: color-mix(in srgb, var(--now-mark) 22%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
 /* 6. touch screens keep a "hover" under the finger after a tap: the menu's hover tint only where there is a mouse */
-@media (hover: none) {
-  .rail-link:hover:not([aria-current="page"]),
-  .rail-role:hover:not([aria-current="page"]),
-  .rail-add:hover { background: transparent; }
-}
 /* 7. Role list: the tick circle shows a faint ✓ (it reads "tick when learned", not a radio button); every row's
       scene opens with the same round chevron button, with or without music */
 .ck:not(.done) .ck-box { color: color-mix(in srgb, var(--ink) 22%, transparent); }
@@ -11961,8 +6447,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .hm .hm-card > .cp-eyebrow { grid-column: 1 / -1; }
   .hm .hm-card > .hm-card-row { grid-column: 1; }
   .hm .hm-card > .cp-btn { grid-column: 2; grid-row: 2; margin: 0 16px 0 0 !important; align-self: center; }
-  .hm-top.both .hm-card { grid-template-columns: minmax(0, 1fr); }
-  .hm-top.both .hm-card > .cp-btn { grid-column: 1; grid-row: auto; margin: 4px 16px 0 !important; justify-self: start; }
 }
 /* 15–16. Phone top bar: the way back lives here (one row of navigation, not two); the wordmark only on pages
    with nowhere to go back to; your face on the right opens your role */
@@ -11975,20 +6459,18 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .topbar .topbar-back .crumbs-up svg { width: 20px; height: 20px; flex: none; }
 .topbar:has(.crumbs-up) .topbar-mark { display: none; }
 .now-pill .np-role { padding: 3px; }
-.now-pill .np-play { display: none; }
 @media (max-width: 699px) { .screen-body .crumbs { display: none; } }
 /* 17. A row that does something shows it: a chevron at its end */
 .st-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; cursor: pointer; }
 .st-chev { flex: none; color: var(--ink-muted); display: grid; }
 .st-chev svg { width: 18px; height: 18px; }
 /* 18. Arrange: drag to reorder on touch screens (the arrows stay for keyboard and mouse); room for "English horn" */
-@media (pointer: coarse) { .mix-pop .mix-arrows { display: none !important; } }
 @media (max-width: 640px) {
   .mix-pop .mix-line-inst { min-width: 136px; }
   .mix-pop .mix-line-inst select { width: 100%; text-overflow: clip; }
 }
 /* 19. Without music is said in words, not by fading: every row and card stays at full strength */
-.vrole.soon .vrole-text, .vrole.soon .vrole-face, .ob-roles .vrole.soon .vrole-text, .ob-roles .vrole.soon .vrole-face { opacity: 1 !important; }
+.vrole.soon .vrole-text, .vrole.soon .vrole-face { opacity: 1 !important; }
 .vrole.soon { background: var(--canvas) !important; }
 .pc-row.soon .pc-text b { color: var(--ink) !important; }
 .pc-soon { padding: 4px 10px; border-radius: 999px; background: var(--fog); font-size: 12px !important; white-space: nowrap; }
@@ -11998,7 +6480,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .pc-row:hover { background: color-mix(in srgb, var(--ink) 3%, transparent) !important; }
 .pc-faces { width: 104px; }
 .pc-face { box-shadow: 0 0 0 2px var(--canvas) !important; }
-@media (max-width: 640px) { .pc-faces { width: 92px; } .pc-face { width: 40px; height: 40px; } .pc-face + .pc-face { margin-left: -14px; } }
+@media (max-width: 640px) { .pc-face { width: 40px; height: 40px; } .pc-face + .pc-face { margin-left: -14px; } }
 .pc-row .pc-play { background: var(--now) !important; color: var(--on-pastel); }
 /* 21. The search box runs the full width of the page's content, edge to edge with the grid under it */
 .search-box { max-width: none !important; }
