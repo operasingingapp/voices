@@ -51,7 +51,8 @@ def grain(size, seed, strength=7.0):
             n /= max(n.std(), 1e-3)
         return n * amount
     k = strength / 7.0
-    return layer(0.45, 6.5 * k) + layer(2.2, 2.6 * k) + layer(12, 2.4 * k)
+    # fine: a speckle at pixel size, a little grain just above it, and only a hint of mottling
+    return layer(0, 5.0 * k) + layer(0.6, 2.0 * k) + layer(8, 1.2 * k)
 
 def render(fr, bg, out_size, seed, replace=None, keep_scene=False):
     W, Hh = round(fr['size']['x']), round(fr['size']['y'])
