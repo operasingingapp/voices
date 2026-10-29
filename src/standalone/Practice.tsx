@@ -975,22 +975,6 @@ function PracticeScreen({
   // the other singers' row: which edges have more faces beyond them
   const othersRef = useRef<HTMLDivElement>(null);
   const [othersMore, setOthersMore] = useState("");
-  const sheetOthersRef = useRef<HTMLDivElement>(null);
-  const [sheetMore, setSheetMore] = useState("");
-  const sheetEdges = useCallback(() => {
-    const el = sheetOthersRef.current;
-    if (!el) return;
-    const v = `${el.scrollLeft > 2 ? " more-l" : ""}${el.scrollLeft + el.clientWidth < el.scrollWidth - 2 ? " more-r" : ""}`;
-    setSheetMore((o) => (o === v ? o : v));
-  }, []);
-  useEffect(() => {
-    const el = sheetOthersRef.current;
-    if (!el) return;
-    sheetEdges();
-    const ro = new ResizeObserver(sheetEdges);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [sheetEdges, barOpen]);
   const othersEdges = useCallback(() => {
     const el = othersRef.current;
     if (!el) return;
@@ -1513,7 +1497,7 @@ function PracticeScreen({
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
     { id: "more", part: "Sing", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
     { id: "mute", part: "Sing", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Tap your face. Now you sing it.", done: () => !hearVoice },
-    { id: "piano", part: "Sing", sel: [".bar-sheet .bs-seg", ".piano-group .pg-btn:nth-child(2)"], title: pianoShownNow ? "Hide the piano part" : "Show the piano part", text: window.matchMedia("(max-width: 640px)").matches ? (pianoShownNow ? "Tap Hidden to see only the voices." : "Tap Clear to add the piano to the score.") : pianoShownNow ? "Tap the eye to see only the voices." : "Tap the eye to add the piano to the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
+    { id: "piano", part: "Sing", sel: [".piano-group .pg-btn:nth-child(2)"], title: pianoShownNow ? "Hide the piano part" : "Show the piano part", text: pianoShownNow ? "Tap the eye to see only the voices." : "Tap the eye to add the piano to the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
   const step = guide >= 0 ? steps[guide] : null;
@@ -2262,98 +2246,6 @@ function PracticeScreen({
       </div>
 
       <footer className={`p-bar gutter ens${barOpen ? "" : " folded"}`}>
-        {/* phone, opened: every setting as a labelled row (name on the left, its control on the right) */}
-        {barOpen && (
-          <div className="bar-sheet">
-            {otherVoices.length > 0 && (
-              <div className="bs-row bs-singers">
-                <span className="bs-label">Singers</span>
-                <div className={`bs-chips${sheetMore}`} ref={sheetOthersRef} onScroll={sheetEdges}>
-                  {orderedIds
-                    .map(partByXml)
-                    .filter((p) => otherVoices.includes(p))
-                    .map((p) => {
-                      const on = lineSets[p.key]?.hear ?? true;
-                      return (
-                        <button key={p.key} type="button" className="bs-chip" aria-pressed={on} onClick={() => setLine(p.key, { hear: !on })} aria-label={`${p.shortLabel}'s line ${on ? "plays. Mute it" : "is muted. Play it"}`}>
-                          <span className="bs-chip-face" aria-hidden="true">
-                            <RoleFace k={partnerKey(p)} />
-                          </span>
-                          <span className="bs-chip-name">{p.shortLabel}</span>
-                          <span className="bs-chip-icon" aria-hidden="true">
-                            {on ? Icon.speaker : Icon.muted}
-                          </span>
-                        </button>
-                      );
-                    })}
-                </div>
-              </div>
-            )}
-            <div className="bs-row">
-              <span className="bs-label">Piano</span>
-              <button type="button" role="switch" aria-checked={hearPiano} className="bs-switch" onClick={() => setHearPiano(!hearPiano)} aria-label="Piano sound">
-                <i aria-hidden="true" />
-              </button>
-            </div>
-            {musicOn &&
-              (() => {
-                const shownP = showOf(pianoPart);
-                const state = !shownP ? "hidden" : pianoFaded ? "faded" : "clear";
-                const canHide = !(shownP && hiddenIds.length >= orderedIds.length - 1);
-                return (
-                  <div className="bs-row">
-                    <span className="bs-label">Piano in the score</span>
-                    <div className="cp-seg bs-seg" role="group" aria-label="Piano in the score">
-                      <button type="button" aria-pressed={state === "clear"} onClick={() => (setLine(pianoPart.key, { show: true }), setPianoFaded(false))}>
-                        Clear
-                      </button>
-                      <button type="button" aria-pressed={state === "faded"} onClick={() => (setLine(pianoPart.key, { show: true }), setPianoFaded(true))}>
-                        Faded
-                      </button>
-                      <button type="button" aria-pressed={state === "hidden"} disabled={!canHide} onClick={() => setLine(pianoPart.key, { show: false })}>
-                        Hidden
-                      </button>
-                    </div>
-                  </div>
-                );
-              })()}
-            <div className="bs-row">
-              <span className="bs-label">
-                Speed
-                <small>
-                  <span className="cp-beat">{beatSymbol}</span> = {Math.round(beatBpm)}
-                </small>
-              </span>
-              <div className="bs-stepper" role="group" aria-label="Speed">
-                <button type="button" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
-                  {Icon.minus}
-                </button>
-                <b>{tempoPct}%</b>
-                <button type="button" aria-label="Faster" onClick={() => engine?.setTempoFactor(Math.min(1.5, +((engine?.tempo ?? 1) + 0.05).toFixed(2)))}>
-                  {Icon.plus}
-                </button>
-              </div>
-            </div>
-            <div className="bs-row">
-              <span className="bs-label">
-                Count-in
-                <small>A bar of clicks first</small>
-              </span>
-              <button type="button" role="switch" aria-checked={countIn} className="bs-switch" onClick={() => setCountIn(!countIn)} aria-label="Count-in">
-                <i aria-hidden="true" />
-              </button>
-            </div>
-            <button type="button" className="bs-row bs-link" onClick={() => setMixOpen(true)} aria-haspopup="dialog">
-              <span className="bs-label">
-                Arrange
-                <small>Order, volume and sound of each line</small>
-              </span>
-              <span className="bs-chev" aria-hidden="true">
-                {Icon.right}
-              </span>
-            </button>
-          </div>
-        )}
         <div className="bar-parts many" role="group" aria-label="Parts">
           <button
             type="button"
@@ -2460,10 +2352,16 @@ function PracticeScreen({
             <span>Arrange</span>
           </button>
           </div>
+          {mixOpen && <button type="button" className="mix-scrim" aria-label="Close Arrange" tabIndex={-1} onClick={() => setMixOpen(false)} />}
           {mixOpen && (
             <div className="mix-pop ens" role="dialog" aria-label="Arrange the lines">
                 <>
-                  <p className="mix-title">Arrange the lines</p>
+                  <div className="mix-head">
+                    <p className="mix-title">Arrange the lines</p>
+                    <button type="button" className="cp-btn cp-btn--ink mix-done" onClick={() => setMixOpen(false)}>
+                      Done
+                    </button>
+                  </div>
                   {onSing && voiceParts.length > 1 && (
                     <div className="mix-sing">
                       <span className="mix-sub">You sing</span>
