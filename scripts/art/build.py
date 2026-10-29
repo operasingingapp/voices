@@ -99,8 +99,10 @@ for i, (key, c) in enumerate(chars.items()):
     opera, ch = key.split(':')
     bg = pal[key]
     for k in ('portrait', 'face'):
-        fr = next(f for f in frames if kind(f) == k and c[k] in [CUTOUT.get(l[0], l[0]) for l in layers(f)])
-        im = render(fr, bg, SIZES[k], seed=i * 7 + (k == 'face'), fill=k in c.get('fill', []))
+        # the frame holding this picture; where a picture is used in several frames, the one named for the character
+        fr = next(f for f in frames if kind(f) == k and c[k] in [CUTOUT.get(l[0], l[0]) for l in layers(f)] and (k not in c.get('frame', {}) or f['name'] == c['frame'][k]))
+        # a frame holding the wrong picture: its layout, with the character's own picture swapped in
+        im = render(fr, bg, SIZES[k], seed=i * 7 + (k == 'face'), fill=k in c.get('fill', []), replace=c.get('swap', {}).get(k))
         # mirrored where the picture should face the other way
         if c.get('flip'): im = im.transpose(Image.FLIP_LEFT_RIGHT)
         im.save(f'{OUT}/{opera}-{ch}-{k}.webp', quality=88, method=6)

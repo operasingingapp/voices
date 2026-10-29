@@ -1101,6 +1101,30 @@ export const OPERAS: Opera[] = [
       "kind": "Letter scene with Cio-Cio-San · Act 2"
      }
     ]
+   },
+   {
+    "id": "goro",
+    "name": "Goro",
+    "voice": "Tenor",
+    "desc": "The marriage broker.",
+    "avatar": "hat",
+    "pieces": []
+   },
+   {
+    "id": "bonze",
+    "name": "The Bonze",
+    "voice": "Bass",
+    "desc": "Cio-Cio-San's uncle, a Buddhist priest.",
+    "avatar": "beard",
+    "pieces": []
+   },
+   {
+    "id": "kate",
+    "name": "Kate Pinkerton",
+    "voice": "Mezzo-soprano",
+    "desc": "Pinkerton's American wife.",
+    "avatar": "bun",
+    "pieces": []
    }
   ]
  },
