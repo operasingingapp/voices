@@ -338,12 +338,6 @@ const Icon = {
       <circle cx="16.5" cy="15.5" r="2.5" fill="currentColor" />
     </svg>
   ),
-  split: (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="3.5" y="5" width="17" height="14" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.7" />
-      <path d="M14 5v14M16.5 9h2M16.5 12h2M16.5 15h2" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  ),
   lines: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path fill="none" stroke="currentColor" strokeWidth="2" d="M4 6.5h16M4 12h16M4 17.5h10" />
@@ -457,7 +451,7 @@ const TIPS: { sel: string[]; title: string; text: string; alt?: Record<string, s
   { sel: [".bar-loop"], title: "Loop", text: "Loops the bar you are on. Drag its purple edges over the bars you want; it is kept until you clear it." },
   { sel: [".cp-speed"], title: "Speed", text: "Slower to learn the notes, then back to 100%." },
   { sel: [".bar-parts", ".bar-more"], title: "Who plays", text: "Tap a singer's face to mute that line and sing it yourself. The piano can be muted, hidden or faded. Arrange sets each line's instrument and place.", alt: { ".bar-more": "This arrow opens every control: tap a singer's face to mute that line and sing it yourself, mute, hide or fade the piano, the count-in, and Arrange for each line's instrument and place." } },
-  { sel: [".view-switch"], title: "Music, Both, Words", text: "Words shows the whole text; Both puts it beside the music on a big screen." },
+  { sel: [".view-switch"], title: "Music and Words", text: "Words shows the whole text to study: the English, the IPA, each line to hear." },
   { sel: [".card-toggle"], title: "More room for the music", text: "Hide the line box to give the score the whole screen. Tap again to bring it back." },
 ];
 const TIPS_KEY = "cp:guide2";
@@ -688,7 +682,9 @@ function PracticeScreen({
   useBackToClose(mixOpen, () => setMixOpen(false));
   const [openWord, setOpenWord] = useState<OpenWord | null>(null);
   useBackToClose(!!openWord, () => setOpenWord(null));
-  const [view, setView] = useLocalSetting<View>("p:view", "music");
+  const [viewSaved, setView] = useLocalSetting<View>("p:view", "music");
+  // "Both" (the words beside the music) is gone: a saved choice of it opens the music
+  const view: View = viewSaved === "split" ? "music" : viewSaved;
   // the score is on screen in Music and in Both (Both shows the words beside it where there is room)
   const musicOn = view !== "words";
   // the line box over the music can be put away altogether (the score gets the room); a button in the header brings it back
@@ -1477,11 +1473,6 @@ function PracticeScreen({
               {Icon.music}
               <span className="label">Music</span>
             </button>
-            {/* music with the words beside it (a wide screen): the libretto next to the score */}
-            <button type="button" className="vs-split" aria-pressed={view === "split"} onClick={() => setView(view === "split" ? "music" : "split")} title={view === "split" ? "Hide the words beside the music" : "Music and words side by side"}>
-              {Icon.split}
-              <span className="label">Both</span>
-            </button>
             <button type="button" aria-pressed={view === "words"} onClick={() => setView("words")}>
               {Icon.lines}
               <span className="label">Words</span>
@@ -1698,7 +1689,7 @@ function PracticeScreen({
           );
         })()}
 
-      {(view === "words" || view === "split") && (
+      {view === "words" && (
         <div
           className={`words-view${playing ? " is-playing" : ""}${showTr ? "" : " no-tr"}`}
           ref={wordsRef}
