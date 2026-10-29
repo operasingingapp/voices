@@ -47,7 +47,7 @@ export interface Tips {
   lineTips: Map<string, { tip: Tip; word: number }[]>;
 }
 
-const PRIORITY = ["double", "link", "open", "gli", "r", "hiatus", "ch", "final"];
+const PRIORITY = ["double", "link", "open", "gli", "gn", "sc", "r", "hiatus", "ch", "softc", "softg", "z", "final", "stress"];
 const bare = (t: string) => t.toLowerCase().replace(/[.,;:!?«»“”"()]/g, "");
 const VOWELS = "aeiouɛɔ";
 
@@ -64,19 +64,28 @@ export function buildTips(lines: TipLine[]): Tips {
     arr.push(m);
     marks.set(key, arr);
   };
-  /** first occurrence makes the tip; later ones are added to "also" */
+  /** every word a kind of tip applies to, as written, in order */
+  const seen = new Map<string, string[]>();
+  /** each line's own copy of a tip: worded for the word in that line, not the first one in the piece */
+  const local: { tip: Tip; text: string }[] = [];
+  /** first occurrence makes the piece's tip (the list); every occurrence gets its own wording */
   const hit = (kind: string, lineId: string, k: number, text: string, make: () => Omit<Tip, "id" | "lineId" | "word" | "also">) => {
     const key = `${lineId}:${k}`;
     let tip = found.get(kind);
     const anchor = !tip;
+    const words = seen.get(kind) ?? [];
+    if (!words.includes(text)) words.push(text);
+    seen.set(kind, words);
+    const own: Tip = { id: kind, lineId, word: k, also: [], ...make() };
     if (!tip) {
-      tip = { id: kind, lineId, word: k, also: [], ...make() };
+      tip = { ...own, also: [] };
       found.set(kind, tip);
       list.push(tip);
     } else if (!tip.also.includes(text) && text !== anchorText.get(kind)) tip.also.push(text);
     if (anchor) anchorText.set(kind, text);
+    local.push({ tip: own, text });
     const arr = byWord.get(key) ?? [];
-    if (!arr.includes(tip)) arr.push(tip);
+    if (!arr.some((t) => t.id === kind)) arr.push(own);
     byWord.set(key, arr);
     return anchor;
   };
@@ -199,6 +208,60 @@ export function buildTips(lines: TipLine[]): Tips {
         mark(key, { from: rr, to: rr + 2, tip: "r", anchor: a });
       }
 
+      // gn is one sound
+      const gn = lower.indexOf("gn");
+      if (gn >= 0) {
+        const a = hit("gn", ln.id, k, shown, () => ({
+          title: "gn",
+          body: `gn is one sound, [ɲ]: like the ny in “canyon”, and held a little between vowels: ${shown} [${w.ipa}].`,
+          short: "gn = [ɲ], as in “canyon”",
+        }));
+        mark(key, { from: gn, to: gn + 2, tip: "gn", anchor: a });
+      }
+
+      // sc before e or i is sh
+      const sc = /sc[ie]/.exec(lower);
+      if (sc) {
+        const a = hit("sc", ln.id, k, shown, () => ({
+          title: "sc is sh",
+          body: `Before e or i, sc is one soft sound, [ʃ], as in “she”: ${shown} [${w.ipa}].`,
+          short: "sc = sh",
+        }));
+        mark(key, { from: sc.index, to: sc.index + 2, tip: "sc", anchor: a });
+      }
+
+      // a plain c or g before e or i is soft (not ch, gh, sc, gli, or a doubled one, which has its own tip)
+      const sftc = /(?<![sc])c(?=[ie])/.exec(lower);
+      if (sftc && !dbl) {
+        const a = hit("softc", ln.id, k, shown, () => ({
+          title: "Soft c",
+          body: `Before e or i, c is the “ch” of “church”: ${shown} [${w.ipa}]. Before a, o, u it is a hard k.`,
+          short: "c = “ch” of “church”",
+        }));
+        mark(key, { from: sftc.index, to: sftc.index + 1, tip: "softc", anchor: a });
+      }
+      const sftg = /(?<!g)g(?=[ie])(?!li)/.exec(lower);
+      if (sftg && !dbl) {
+        const a = hit("softg", ln.id, k, shown, () => ({
+          title: "Soft g",
+          body: `Before e or i, g is the “j” of “jet”: ${shown} [${w.ipa}]. Before a, o, u it is a hard g.`,
+          short: "g = “j” of “jet”",
+        }));
+        mark(key, { from: sftg.index, to: sftg.index + 1, tip: "softg", anchor: a });
+      }
+
+      // z is ts or dz, never an English z
+      const zz = lower.indexOf("z");
+      if (zz >= 0 && !dbl) {
+        const voiced = /dz|ʣ/.test(w.ipa);
+        const a = hit("z", ln.id, k, shown, () => ({
+          title: "Italian z",
+          body: `z is never a buzzing English z: here it is [${voiced ? "dz" : "ts"}], ${voiced ? "as in “adze”" : "as in “cats”"}: ${shown} [${w.ipa}].`,
+          short: voiced ? "z = [dz]" : "z = [ts]",
+        }));
+        mark(key, { from: zz, to: zz + 1, tip: "z", anchor: a });
+      }
+
       // stress on a final accented vowel (pietà), not one-syllable words like sì
       const fin = /[àèìòù]$/.exec(text);
       if (fin && text.length > 2) {
@@ -214,11 +277,37 @@ export function buildTips(lines: TipLine[]): Tips {
 
   const byLine = new Map<string, Tip[]>();
   for (const t of list) byLine.set(t.lineId, [...(byLine.get(t.lineId) ?? []), t]);
+  // a line with none of the sounds above still gets a tip: where its longest word leans
+  for (const ln of lines) {
+    if (ln.words.some((_, k) => (byWord.get(`${ln.id}:${k}`) ?? []).length)) continue;
+    let best = -1;
+    let most = 1;
+    ln.words.forEach((w, k) => {
+      const n = w.ipa.split(".").length;
+      if (n > most && w.ipa.includes("ˈ")) { most = n; best = k; }
+    });
+    if (best < 0) continue;
+    const w = ln.words[best];
+    const shown = w.text.replace(/[.,;:!?]+$/, "").replace(/'/g, "’");
+    const syl = w.ipa.replace(/ˌ/g, "").split(".");
+    const at = syl.findIndex((x) => x.includes("ˈ"));
+    const loud = syl.map((x, i) => (i === at ? x.replace("ˈ", "").toUpperCase() : x)).join("-");
+    hit("stress", ln.id, best, shown, () => ({
+      title: "Where the word leans",
+      body: `${shown[0].toUpperCase()}${shown.slice(1)} [${w.ipa}] leans on one syllable: ${loud}. Give it the weight and keep the others light and short, with pure vowels.`,
+      short: `lean on ${syl[at]?.replace("ˈ", "") ?? ""}`,
+    }));
+  }
+  // each line's copy lists the other words in the piece with the same sound
+  for (const { tip, text } of local) tip.also = (seen.get(tip.id) ?? []).filter((x) => x !== text).slice(0, 4);
+  for (const tip of list) tip.also = (seen.get(tip.id) ?? []).filter((x) => x !== anchorText.get(tip.id));
+
   const lineTips = new Map<string, { tip: Tip; word: number }[]>();
+  let prevKind = "";
   for (const ln of lines) {
     const items: { tip: Tip; word: number }[] = [];
     ln.words.forEach((_, k) => {
-      for (const tip of byWord.get(`${ln.id}:${k}`) ?? []) if (!items.some((x) => x.tip === tip)) items.push({ tip, word: k });
+      for (const tip of byWord.get(`${ln.id}:${k}`) ?? []) if (!items.some((x) => x.tip.id === tip.id)) items.push({ tip, word: k });
     });
     // what a coach would point out first: doubled consonants and vowels run together, then open vowels and the
     // rest; a tip met here for the first time before one already seen
@@ -226,8 +315,10 @@ export function buildTips(lines: TipLine[]): Tips {
       const i = PRIORITY.indexOf(t.id.split(":")[0]);
       return i < 0 ? PRIORITY.length : i;
     };
-    items.sort((a, b) => rank(a.tip) - rank(b.tip) || Number(b.tip.lineId === ln.id) - Number(a.tip.lineId === ln.id) || a.word - b.word);
-    if (items.length) lineTips.set(ln.id, items);
+    items.sort((a, b) => rank(a.tip) - rank(b.tip) || Number(found.get(b.tip.id)?.lineId === ln.id) - Number(found.get(a.tip.id)?.lineId === ln.id) || a.word - b.word);
+    // vary the advice: if the previous line led with the same kind of tip, lead with the next one here
+    if (items.length > 1 && items[0].tip.id === prevKind) items.push(items.shift()!);
+    if (items.length) { lineTips.set(ln.id, items); prevKind = items[0].tip.id; }
   }
   return { list, byLine, byWord, marks, links, lineTips };
 }
