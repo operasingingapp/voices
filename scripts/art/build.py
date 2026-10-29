@@ -99,6 +99,8 @@ for i, (key, c) in enumerate(chars.items()):
     for k in ('portrait', 'face'):
         fr = next(f for f in frames if kind(f) == k and c[k] in [CUTOUT.get(l[0], l[0]) for l in layers(f)])
         im = render(fr, bg, SIZES[k], seed=i * 7 + (k == 'face'))
+        # mirrored where the picture should face the other way
+        if c.get('flip'): im = im.transpose(Image.FLIP_LEFT_RIGHT)
         im.save(f'{OUT}/{opera}-{ch}-{k}.webp', quality=88, method=6)
     manifest[key] = tones(bg)
 OPF = {'figaro': 'Le nozze di Figaro', 'giovanni': 'Don Giovanni', 'cosi': 'Cosi fan tutte', 'zauberfloete': 'Magic Flute', 'barbiere': 'Barbiere di Sevigla',
