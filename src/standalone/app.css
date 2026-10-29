@@ -9645,8 +9645,8 @@ button.lane-label:hover {
 .practice .p-bar .bar-stop {
   background: var(--canvas);
 }
-.practice .p-bar .bar-parts > .part,
-.practice .p-bar .bar-parts > .mix-btn,
+.practice .p-bar .bar-parts .part,
+.practice .p-bar .bar-parts .mix-btn,
 .practice .p-bar .piano-group,
 .practice .p-bar .bar-right > * {
   min-height: 48px;
@@ -9891,7 +9891,7 @@ p.rp-opera > span:not(:last-child)::after {
 }
 /* small phones: the faces and the piano's buttons a little narrower, so the parts row fits */
 @media (max-width: 380px) {
-  .practice .p-bar .bar-parts > .part {
+  .practice .p-bar .bar-parts .part {
     padding: 0 2px;
   }
   .practice .p-bar .bar-parts .part-face {
@@ -10447,7 +10447,7 @@ p.rp-opera > span:not(:last-child)::after {
     scrollbar-width: none;
   }
   .practice .p-bar .bar-parts::-webkit-scrollbar { display: none; }
-  .practice .p-bar .bar-parts > .part { flex: none; }
+  .practice .p-bar .bar-parts .part { flex: none; }
   .practice .p-bar .bar-parts .part-face { width: 40px; height: 40px; }
   .practice .p-bar .piano-group { flex: none; }
   .practice .p-bar .pg-btn { min-width: 36px; padding: 0 5px; }
@@ -10663,7 +10663,7 @@ p.rp-opera > span:not(:last-child)::after {
 }
 .piano-group { padding-left: 4px !important; }
 @media (max-width: 640px) {
-  .practice .p-bar .bar-parts > .part { padding: 0 2px; }
+  .practice .p-bar .bar-parts .part { padding: 0 2px; }
   .practice .p-bar .bar-parts .part-face { width: 40px; height: 40px; }
   .practice .p-bar .mix-btn { min-width: 44px; width: 44px; padding: 0; justify-content: center; }
 }
@@ -10671,7 +10671,7 @@ p.rp-opera > span:not(:last-child)::after {
   .practice .p-bar .pg-btn { min-width: 40px; }
 }
 @media (max-width: 370px) {
-  .practice .p-bar .bar-parts > .part { padding: 0 1px; }
+  .practice .p-bar .bar-parts .part { padding: 0 1px; }
 }
 
 /* the story on a phone: a Back pill floating at the foot of the sheet, always in reach */
@@ -11637,3 +11637,88 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .tl-speed-reset { height: 36px; margin-left: 4px; padding: 0 12px; border: 0; border-radius: 18px; background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); }
   .tl-speed-reset:disabled { display: none; }
 }
+
+/* =====================================================================
+   Phone bar, both states, on one five-column grid (the columns line up from row to row)
+     open:   [others · piano · Arrange]
+             [♩=62 |   −  95%  +   | count-in]
+             [you | again | ▶ | loop | ⌄]
+     folded: only the last row. That row never moves; opening adds rows above it.
+   Flat: the play disc and the speed pill are the only filled shapes.
+   ===================================================================== */
+.bar-mix { display: contents; }
+@media (max-width: 640px) {
+  .practice > .p-timeline { padding-left: 26px; padding-right: 20px; gap: 14px; }
+  .practice .p-bar.p-bar.p-bar {
+    display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); row-gap: 12px; column-gap: 0;
+    justify-items: center; align-items: center; padding: 4px 12px 12px; --tr: 3;
+  }
+  .practice .p-bar.p-bar.p-bar.folded { --tr: 1; }
+  .practice .p-bar.p-bar.p-bar > .bar-parts, .practice .p-bar.p-bar.p-bar .bar-transport, .practice .p-bar.p-bar.p-bar .bar-right, .practice .p-bar.p-bar.p-bar .cp-tempo {
+    display: contents !important; background: none !important; box-shadow: none !important; border: 0 !important;
+  }
+  .practice .p-bar.p-bar.p-bar .bar-start, .practice .p-bar.p-bar.p-bar .bar-stop { display: none !important; }
+  /* the transport row */
+  .practice .p-bar.p-bar.p-bar > .bar-parts > .part:first-child { display: flex !important; grid-column: 1; grid-row: var(--tr); }
+  .practice .p-bar.p-bar.p-bar .bar-again { display: grid !important; grid-column: 2; grid-row: var(--tr); width: 44px; height: 44px; place-items: center; background: none; }
+  .practice .p-bar.p-bar.p-bar .bar-again svg { width: 24px; height: 24px; }
+  .practice .p-bar.p-bar.p-bar .bar-transport > [data-testid="play"], .practice .p-bar.p-bar.p-bar .bar-transport > [data-testid="pause"] {
+    grid-column: 3; grid-row: var(--tr); width: 60px !important; height: 60px !important; flex: none !important; border-radius: 50%;
+  }
+  .practice .p-bar.p-bar.p-bar .bar-loop { grid-column: 4; grid-row: var(--tr); justify-self: center; margin: 0; width: 44px; height: 44px; border-radius: 50%; background: none; }
+  .practice .p-bar.p-bar.p-bar .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
+  .practice .p-bar.p-bar.p-bar .bar-more { display: grid !important; grid-column: 5; grid-row: var(--tr); justify-self: center; width: 44px !important; height: 44px !important; flex: none !important; background: none !important; margin: 0; }
+  /* row 1: the others, the piano, Arrange, spread across the width */
+  .practice .p-bar.p-bar.p-bar .bar-mix {
+    grid-column: 1 / -1; grid-row: 1; justify-self: stretch; display: flex; align-items: center; justify-content: space-between;
+    padding: 4px 10px 12px; border-bottom: 1px solid var(--line, rgba(0,0,0,.08));
+  }
+  .practice .p-bar.p-bar.p-bar .bar-mix .piano-group { background: none !important; box-shadow: none !important; padding: 0; gap: 0; }
+  .practice .p-bar.p-bar.p-bar .bar-mix .pg-btn, .practice .p-bar.p-bar.p-bar .bar-mix .mix-btn { width: 44px; min-width: 44px; height: 44px; padding: 0; background: none !important; justify-content: center; }
+  .practice .p-bar.p-bar.p-bar .bar-mix .mix-btn span { display: none; }
+  /* row 2: the beat, the speed, the count-in, on the same columns as the row below */
+  .practice .p-bar.p-bar.p-bar .cp-tempo__beat { display: block !important; grid-column: 1; grid-row: 2; font-size: 14px; color: var(--ink-muted); white-space: nowrap; }
+  .practice .p-bar.p-bar.p-bar .cp-speed {
+    display: flex !important; position: static !important; grid-column: 2 / 5; grid-row: 2; justify-self: center; align-items: center;
+    height: 44px; padding: 0 4px; border-radius: 22px; background: var(--fog) !important; box-shadow: none !important; border: 0 !important;
+  }
+  .practice .p-bar.p-bar.p-bar .cp-speed .cp-icon-btn { width: 44px; height: 44px; background: none !important; }
+  .practice .p-bar.p-bar.p-bar .cp-speed .cp-tempo__value { min-width: 64px; text-align: center; background: none !important; }
+  .practice .p-bar.p-bar.p-bar .countin { display: flex !important; grid-column: 5; grid-row: 2; background: none !important; box-shadow: none !important; border: 0 !important; min-width: 44px; height: 44px; padding: 0; justify-content: center; }
+  .practice .p-bar.p-bar.p-bar.folded .bar-mix, .practice .p-bar.p-bar.p-bar.folded .cp-tempo__beat, .practice .p-bar.p-bar.p-bar.folded .cp-speed, .practice .p-bar.p-bar.p-bar.folded .countin { display: none !important; }
+}
+
+/* the words box folds in place: a chevron in its own tool row, and when folded a one-line strip
+   with the line being sung; tap the strip to unfold */
+.card-fold { display: grid; place-items: center; flex: none; width: 40px; height: 40px; margin-left: auto; border: 0; border-radius: 50%; background: none; color: var(--ink); }
+.card-fold svg { width: 22px; height: 22px; }
+.card-fold:hover { background: var(--fog); }
+.practice > .card-strip {
+  grid-area: 2 / 1; z-index: 12; display: flex; align-items: center; gap: 10px; min-width: 0;
+  margin: 6px max(16px, var(--edge, 16px)) 0; padding: 0 8px 0 18px; height: 48px; border: 0; border-radius: 16px;
+  background: var(--canvas); box-shadow: inset 0 0 0 1px var(--line, rgba(0, 0, 0, 0.08)); color: var(--ink); text-align: left;
+}
+.card-strip .cs-text { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 400 19px/1.2 var(--font-serif, Georgia, serif); }
+.card-strip .cs-chev { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--fog); flex: none; }
+.card-strip .cs-chev svg { width: 20px; height: 20px; }
+
+/* the other singers: one group that scrolls sideways when there are many (six voices and more);
+   a soft fade on the side where more faces wait. The piano and Arrange stay put at the right. */
+.bar-others { display: contents; }
+@media (max-width: 640px) {
+  .practice .p-bar.p-bar.p-bar .bar-mix { justify-content: flex-start; gap: 6px; }
+  .practice .p-bar .bar-mix .bar-others {
+    display: flex; flex: 1 1 auto; min-width: 0; gap: 6px; padding: 2px 0;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: none;
+  }
+  .practice .p-bar .bar-mix .bar-others::-webkit-scrollbar { display: none; }
+  .practice .p-bar .bar-mix .bar-others > .part { flex: none; scroll-snap-align: start; }
+  .practice .p-bar .bar-mix .bar-others.more-r { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); }
+  .practice .p-bar .bar-mix .bar-others.more-l { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); }
+  .practice .p-bar .bar-mix .bar-others.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); }
+  .practice .p-bar .bar-mix .piano-group { flex: none; padding-left: 6px !important; border-left: 1px solid var(--line, rgba(0, 0, 0, 0.1)); border-radius: 0; }
+  .practice .p-bar .bar-mix .mix-btn { flex: none; }
+}
+/* the fold chevron sits in the box's top-right corner, the same place and shape as the unfold chevron on the strip */
+.practice > .now-panel .card-fold { position: absolute; top: 14px; right: calc(var(--edge, 16px) + 6px); margin: 0; background: var(--fog); z-index: 2; }
+@media (min-width: 641px) { .practice > .now-panel .card-fold { position: static; margin-left: 4px; } }

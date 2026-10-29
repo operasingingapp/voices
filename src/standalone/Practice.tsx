@@ -962,6 +962,27 @@ function PracticeScreen({
   // phones: the bar is one slim row (play, loop, speed); the arrow opens every control, and closes them again
   const [barOpen, setBarOpen] = useLocalSetting("p:barOpen", false);
   const [speedPop, setSpeedPop] = useState(false);
+  // the other singers' row: which edges have more faces beyond them
+  const othersRef = useRef<HTMLDivElement>(null);
+  const [othersMore, setOthersMore] = useState("");
+  const othersEdges = useCallback(() => {
+    const el = othersRef.current;
+    if (!el) return;
+    const l = el.scrollLeft > 2;
+    const r = el.scrollLeft + el.clientWidth < el.scrollWidth - 2;
+    const v = `${l ? " more-l" : ""}${r ? " more-r" : ""}`;
+    setOthersMore((o) => (o === v ? o : v));
+  }, []);
+  useEffect(() => {
+    const el = othersRef.current;
+    if (!el) return;
+    othersEdges();
+    const ro = new ResizeObserver(othersEdges);
+    ro.observe(el);
+    const mo = new MutationObserver(othersEdges);
+    mo.observe(el, { childList: true });
+    return () => (ro.disconnect(), mo.disconnect());
+  }, [othersEdges, barOpen]);
   useEffect(() => {
     if (!speedPop) return;
     const off = (e: PointerEvent) => {
@@ -1675,21 +1696,6 @@ function PracticeScreen({
               <span className="label">Words</span>
             </button>
           </div>
-          {musicOn && (
-            <button
-              type="button"
-              className={`cp-icon-btn card-toggle${cardOn ? " on" : ""}`}
-              aria-pressed={cardOn}
-              onClick={() => setCardOn(!cardOn)}
-              aria-label={cardOn ? "Hide the line box over the music" : "Show the line box over the music"}
-              title={cardOn ? "Hide the line box" : "Show the line box"}
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3.5" y="4.5" width="17" height="7" rx="2" fill={cardOn ? "currentColor" : "none"} fillOpacity={cardOn ? 0.18 : 0} stroke="currentColor" strokeWidth="1.6" />
-                <path d="M6.5 8h8M4 15.5h16M4 19h16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
-            </button>
-          )}
         </div>
       </header>
 
@@ -1744,18 +1750,6 @@ function PracticeScreen({
                       <span className="cm-check" aria-hidden="true">{showTr ? Icon.check : null}</span>
                       <span>English</span>
                     </button>
-                    <button
-                      type="button"
-                      role="menuitem"
-                      className="cm-hide"
-                      onClick={() => {
-                        setCardOn(false);
-                        setCardMenu(null);
-                      }}
-                    >
-                      <span className="cm-check" aria-hidden="true" />
-                      <span>Hide this box</span>
-                    </button>
                     {hasTips && (
                       <button type="button" role="menuitemcheckbox" aria-checked={showTips} onClick={() => setShowTips(!showTips)}>
                         <span className="cm-check" aria-hidden="true">{showTips ? Icon.check : null}</span>
@@ -1765,6 +1759,10 @@ function PracticeScreen({
                   </span>
                 )}
               </span>
+              {/* fold the box away to one line, to give the music the room */}
+              <button type="button" className="card-fold" onClick={() => setCardOn(false)} aria-label="Fold the words box to one line" title="Fold">
+                {Icon.up}
+              </button>
             </div>
           </div>
           <div className="now-body">
@@ -1801,6 +1799,17 @@ function PracticeScreen({
           </div>
         </div>
       </section>
+      {/* folded: the line in one row; tap it to unfold the box */}
+      {musicOn && !cardOn && (
+        <button type="button" className="card-strip" onClick={() => setCardOn(true)} aria-label="Unfold the words box">
+          <span className="cs-text" lang={LANG}>
+            {shown.ph.original}
+          </span>
+          <span className="cs-chev" aria-hidden="true">
+            {Icon.down}
+          </span>
+        </button>
+      )}
 
       <main className="p-stage" ref={stageRef} onPointerDown={() => musicOn && openWord && setOpenWord(null)}>
         <ScoreView
@@ -2195,6 +2204,10 @@ function PracticeScreen({
             </span>
             <span className="part-icon">{hearVoice ? Icon.speaker : Icon.muted}</span>
           </button>
+          {/* the others, the piano and Arrange: one row of its own on phone (elsewhere it simply flows on) */}
+          <div className="bar-mix">
+          {/* the other singers: with many voices they scroll sideways, a soft edge showing there are more */}
+          <div className={`bar-others${othersMore}`} ref={othersRef} onScroll={othersEdges}>
           {orderedIds
             .map(partByXml)
             .filter((p) => otherVoices.includes(p))
@@ -2221,6 +2234,7 @@ function PracticeScreen({
                 </button>
               );
             })}
+          </div>
           {(() => {
             // the piano as one group: heard or not, and in the score hidden, faded or clear (a tap moves to the next)
             const shownP = showOf(pianoPart);
@@ -2277,6 +2291,7 @@ function PracticeScreen({
             {Icon.sliders}
             <span>Arrange</span>
           </button>
+          </div>
           {mixOpen && (
             <div className="mix-pop ens" role="dialog" aria-label="Arrange the lines">
                 <>
