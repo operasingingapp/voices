@@ -680,6 +680,16 @@ function PracticeScreen({
   const musicOn = view !== "words";
   // the line box over the music can be put away altogether (the score gets the room); a button in the header brings it back
   const [cardOn, setCardOn] = useLocalSetting("p:card", true);
+  // while the music plays the box shows the words only; a tap on it brings its tools back for a few seconds
+  // (as a video player's controls do), and they stay while you use them
+  const [cardPeek, setCardPeek] = useState(false);
+  const peekTimer = useRef<number | undefined>(undefined);
+  const peekCard = useCallback(() => {
+    setCardPeek(true);
+    window.clearTimeout(peekTimer.current);
+    peekTimer.current = window.setTimeout(() => setCardPeek(false), 4000);
+  }, []);
+  useEffect(() => () => window.clearTimeout(peekTimer.current), []);
   // words view: the IPA under each line can be hidden
   const [showIpa, setShowIpa] = useLocalSetting("p:ipa", false);
   const [showTr, setShowTr] = useLocalSetting("p:tr", true);
@@ -1750,8 +1760,9 @@ function PracticeScreen({
 
       {/* the line: a card with one quiet header row (where you are, and how to hear it) above the words */}
       <section
-        className={`now-panel${cardOn || !musicOn ? "" : " card-off"}${current.sounding ? " is-now" : ""}${live && musicOn ? " is-playing" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && musicOn ? " minimal" : ""}`}
+        className={`now-panel${cardOn || !musicOn ? "" : " card-off"}${current.sounding ? " is-now" : ""}${live && musicOn && !cardPeek && !cardMenu ? " is-playing" : ""}${live && musicOn && cardPeek ? " peek" : ""}${showIpa ? "" : " no-ipa"}${showTr ? "" : " no-tr"}${!showIpa && !showTr ? " compact" : ""}${minimal && musicOn ? " minimal" : ""}`}
         data-testid="now-panel"
+        onPointerDown={() => live && musicOn && peekCard()}
       >
         <div className="line-card" style={cardTone}>
           <div className="now-bar">

@@ -11720,8 +11720,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .p-bar .bar-mix .mix-btn { flex: none; }
 }
 /* the fold chevron sits in the box's top-right corner, the same place and shape as the unfold chevron on the strip */
-.practice > .now-panel .card-fold { position: absolute; top: 14px; right: calc(var(--edge, 16px) + 6px); margin: 0; background: var(--fog); z-index: 2; }
-@media (min-width: 641px) { .practice > .now-panel .card-fold { position: static; margin-left: 4px; } }
+/* the fold chevron: in line, at the end of the box's tools, never over them */
+.practice > .now-panel .card-fold { position: static; margin: 0 0 0 4px; background: var(--fog); }
 
 /* Home (merged from the other session's version 1793260566): greeting, pick up where you left off, up next and due for review, your roles, more roles for your voice; the rail shows each role's progress on wide landscape screens */
 .hm{gap:var(--space-6)}
