@@ -24,7 +24,7 @@ const PORTRAIT_ALT: Record<string, string> = {
   "giovanni:elvira": "Donna Elvira in deep red, auburn hair pinned up, a hand at her heart.",
   "giovanni:zerlina": "Zerlina in a green bodice and white blouse, brown hair tied back, a hand at her chin.",
   "cosi:fiordiligi": "Fiordiligi in a teal bodice with white sleeves, dark hair pinned with pearls, a letter at her heart.",
-  "cosi:dorabella": "Dorabella in a red dress with white sleeves, red hair pinned up, holding a white fan.",
+  "cosi:dorabella": "Dorabella in a coral-red dress with white sleeves, auburn hair in soft waves, a folded fan in her hands.",
   "cosi:ferrando": "Ferrando in a gold-striped coat with a white jabot, dark hair, a hand at his chest.",
   "cosi:guglielmo": "Guglielmo in a dark teal coat with a white jabot, dark hair and a moustache, one hand open.",
   "cosi:alfonso": "Don Alfonso in a black coat and white shirt, grey hair, a hand at his collar.",
