@@ -11865,3 +11865,175 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice > .p-head .p-tools { flex: none; margin-left: 0; }
   .practice > .p-head .view-switch button { width: 44px; padding: 0; justify-content: center; }
 }
+
+/* =====================================================================
+   Audit fixes (29 Oct)
+   ===================================================================== */
+/* 1. Words view header: the picker's name keeps its own type (not the column heading's capitals); on a phone the
+      column heading gives way to the tools, which get the whole row and scroll sideways if they must */
+.w-tools .who-pick b { font-size: inherit; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); }
+@media (max-width: 640px) {
+  .words-view .w-cols .w-col-orig { display: none; }
+  .words-view .w-cols .w-tools {
+    grid-column: 1 / -1; justify-self: stretch; min-width: 0; overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap;
+  }
+  .words-view .w-cols .w-tools::-webkit-scrollbar { display: none; }
+  .words-view .w-cols .w-tools > * { flex: none; }
+}
+/* 2. The loop strip floats over the bottom of the score as a card, so opening it never moves the bar */
+.practice > .loop-pick.loop-pick {
+  grid-area: 3 / 1 / 4 / -1; align-self: end; z-index: 25; margin: 0 max(16px, var(--edge, 16px)) 10px;
+  border: 0; border-radius: 18px; box-shadow: var(--shadow-float); padding: 10px 10px 10px 16px;
+}
+/* 3. Phone: the music sits right under the words box (the eye reads one, then the other); the spare height goes
+      below it, where the loop card floats. The box's tools are one row: whose words, hear, show, fold. */
+@media (max-width: 640px) {
+  .practice .p-stage .score-scroll.strip { justify-content: flex-start; padding-top: 6px; }
+  .practice > .now-panel .now-bar { flex-wrap: nowrap !important; align-items: center; gap: 6px; row-gap: 0; }
+  .practice > .now-panel .now-meta { flex: 0 1 auto; min-width: 0; margin: 0; }
+  .practice > .now-panel .now-tools { flex: 0 0 auto; margin-left: auto; gap: 4px; flex-wrap: nowrap; }
+  .practice > .now-panel .words-btn .cmb-k { display: none; }
+  .practice > .now-panel .words-btn { max-width: 132px; padding: 0 8px 0 12px; height: 36px; }
+  .practice > .now-panel .words-btn b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  .practice > .now-panel .nl-btn { width: 36px; height: 36px; }
+  .practice > .now-panel .show-btn { height: 36px; padding: 0 10px 0 12px; }
+  .practice > .now-panel .card-fold { width: 36px; height: 36px; }
+}
+/* 4. While playing the tools fade where they are (no collapse), so nothing below moves */
+.now-panel.is-playing .now-bar { max-height: 80px !important; overflow: visible !important; }
+.now-panel.peek .now-bar, .now-panel .now-bar { transition: opacity 180ms ease; }
+/* 5. the typed letters, marked in results */
+.q-mark { background: color-mix(in srgb, var(--now-mark) 22%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
+/* 6. touch screens keep a "hover" under the finger after a tap: the menu's hover tint only where there is a mouse */
+@media (hover: none) {
+  .rail-link:hover:not([aria-current="page"]),
+  .rail-role:hover:not([aria-current="page"]),
+  .rail-add:hover { background: transparent; }
+}
+/* 7. Role list: the tick circle shows a faint ✓ (it reads "tick when learned", not a radio button); every row's
+      scene opens with the same round chevron button, with or without music */
+.ck:not(.done) .ck-box { color: color-mix(in srgb, var(--ink) 22%, transparent); }
+.ck .ck-scene, .ck.soon .ck-scene {
+  width: 36px; height: 36px; min-height: 36px; padding: 0; justify-content: center; border-radius: 50%;
+  background: transparent; box-shadow: inset 0 0 0 1px var(--fog-strong);
+}
+.ck .ck-scene .ck-scene-label { display: none; }
+.ck.open .ck-scene svg { transform: rotate(180deg); }
+.ck .ck-scene svg { transition: transform var(--duration-move, 200ms) var(--ease-standard, ease); }
+.w-cols .words-btn b { font-size: inherit; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--ink); }
+@media (max-width: 640px) { .practice > .now-panel .words-btn { max-width: 150px; } }
+/* 8. One look for each kind of choice.
+      One from a set: a white pill raised on a soft grey track (tabs, voice filters, instrument, Music | Words).
+      On or off: green (switches; chips with a green dot and a green tint). The loop alone is purple. */
+.cp-seg button[aria-selected="true"], .cp-seg button[aria-pressed="true"],
+.voice-chip[aria-pressed="true"], .st-chip[aria-checked="true"] {
+  background: var(--canvas) !important; color: var(--ink) !important;
+  box-shadow: 0 1px 2px rgba(20, 24, 18, 0.08), 0 0 0 1px rgba(20, 24, 18, 0.04) !important;
+}
+.voice-chips, .st-chips {
+  display: inline-flex !important; flex-wrap: wrap; gap: 4px !important; padding: 4px; border-radius: 26px; background: var(--fog);
+}
+.voice-chip, .st-chip { background: transparent !important; color: var(--ink-muted); box-shadow: none; }
+.voice-chip:hover, .st-chip:hover { color: var(--ink); }
+.cp-toggle[aria-pressed="true"], .w-tools .w-chip[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--now-mark) 14%, var(--canvas)) !important; color: var(--ink) !important;
+}
+.cp-toggle[aria-pressed="true"]::before { background: var(--now-mark) !important; box-shadow: inset 0 0 0 2px var(--now-mark) !important; }
+@media (max-width: 640px) {
+  .voice-chips { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+  .voice-chips::-webkit-scrollbar { display: none; }
+  .voice-chip { flex: none; }
+}
+/* 9. One primary button: the green of play (Done on the loop card was black) */
+.loop-pick .lp-btn.lp-done { background: var(--now) !important; color: var(--on-pastel) !important; }
+/* 11. Tags are pills, like every other small label; "Your role" sits by the name, not in a column of its own */
+.cp-tag { border-radius: 999px !important; padding: 3px 9px !important; font-size: 12px !important; line-height: 1.2 !important; }
+.vrole-text > b { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; }
+.vrole-yours { font-weight: 500; letter-spacing: 0; vertical-align: middle; }
+/* 12. You: a green ring round your own face in the bar (green = your line, as in the score) */
+.practice .p-bar .bar-parts > .part:first-child .part-face { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px var(--now-mark); }
+.practice .p-bar .bar-parts > .part:first-child[aria-pressed="false"] .part-face { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 45%, transparent); }
+/* 13. Progress shows one thing: learned (green) and still to learn (grey) */
+.rc-segs i.ready, .rc-segs i.now { background: color-mix(in srgb, var(--ink) 10%, transparent) !important; }
+/* 14. On wider screens a suggestion card runs across its width: who and what on the left, the button on the right */
+@media (min-width: 641px) {
+  .hm .hm-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 16px; }
+  .hm .hm-card > .cp-eyebrow { grid-column: 1 / -1; }
+  .hm .hm-card > .hm-card-row { grid-column: 1; }
+  .hm .hm-card > .cp-btn { grid-column: 2; grid-row: 2; margin: 0 16px 0 0 !important; align-self: center; }
+  .hm-top.both .hm-card { grid-template-columns: minmax(0, 1fr); }
+  .hm-top.both .hm-card > .cp-btn { grid-column: 1; grid-row: auto; margin: 4px 16px 0 !important; justify-self: start; }
+}
+/* 15–16. Phone top bar: the way back lives here (one row of navigation, not two); the wordmark only on pages
+   with nowhere to go back to; your face on the right opens your role */
+.topbar-back { display: contents; }
+.topbar .topbar-back .crumbs-up {
+  display: inline-flex; align-items: center; gap: 4px; min-width: 0; flex: 1 1 auto; height: 44px; padding: 0 8px 0 2px;
+  border: 0; background: none; color: var(--ink); font: 500 16px/1 var(--font-sans);
+}
+.topbar .topbar-back .crumbs-up span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.topbar .topbar-back .crumbs-up svg { width: 20px; height: 20px; flex: none; }
+.topbar:has(.crumbs-up) .topbar-mark { display: none; }
+.now-pill .np-role { padding: 3px; }
+.now-pill .np-play { display: none; }
+@media (max-width: 699px) { .screen-body .crumbs { display: none; } }
+/* 17. A row that does something shows it: a chevron at its end */
+.st-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; cursor: pointer; }
+.st-chev { flex: none; color: var(--ink-muted); display: grid; }
+.st-chev svg { width: 18px; height: 18px; }
+/* 18. Arrange: drag to reorder on touch screens (the arrows stay for keyboard and mouse); room for "English horn" */
+@media (pointer: coarse) { .mix-pop .mix-arrows { display: none !important; } }
+@media (max-width: 640px) {
+  .mix-pop .mix-line-inst { min-width: 136px; }
+  .mix-pop .mix-line-inst select { width: 100%; text-overflow: clip; }
+}
+/* 19. Without music is said in words, not by fading: every row and card stays at full strength */
+.vrole.soon .vrole-text, .vrole.soon .vrole-face, .ob-roles .vrole.soon .vrole-text, .ob-roles .vrole.soon .vrole-face { opacity: 1 !important; }
+.vrole.soon { background: var(--canvas) !important; }
+.pc-row.soon .pc-text b { color: var(--ink) !important; }
+.pc-soon { padding: 4px 10px; border-radius: 999px; background: var(--fog); font-size: 12px !important; white-space: nowrap; }
+/* 20. The aria list: titles line up (the faces get a column of their own) and the rows are light, with hairlines */
+.pc-list { gap: 0 !important; }
+.pc-row { background: transparent !important; border-radius: 0 !important; border-bottom: 1px solid var(--fog) !important; min-height: 64px; padding-left: 4px !important; }
+.pc-row:hover { background: color-mix(in srgb, var(--ink) 3%, transparent) !important; }
+.pc-faces { width: 104px; }
+.pc-face { box-shadow: 0 0 0 2px var(--canvas) !important; }
+@media (max-width: 640px) { .pc-faces { width: 92px; } .pc-face { width: 40px; height: 40px; } .pc-face + .pc-face { margin-left: -14px; } }
+.pc-row .pc-play { background: var(--now) !important; color: var(--on-pastel); }
+/* 21. The search box runs the full width of the page's content, edge to edge with the grid under it */
+.search-box { max-width: none !important; }
+/* 22. Your role on an opera's tile is a tag on its picture, so every tile is the same height */
+.sc-pic { position: relative; }
+.sc-pic-tag { position: absolute; left: 10px; top: 10px; max-width: calc(100% - 20px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+/* 23. Home's section headers share one height, so side-by-side sections start on the same line */
+.hm-roles > .cp-eyebrow, .hm-head { min-height: 36px; display: flex; align-items: center; margin: 0 0 12px !important; padding: 0; }
+.hm-head .cp-eyebrow { margin: 0 !important; }
+.hm-head .hm-all { margin: 0 -8px 0 0 !important; min-height: 36px; }
+/* 24. An opera's cover keeps the heads in the picture: cropped from the bottom, not the top */
+.op-cover img, .op-cover > img { object-position: 50% 12% !important; }
+/* 25. Phone welcome: the two rows of characters fill the screen (larger cards) instead of leaving its lower half empty */
+@media (max-width: 640px) {
+  .ob-welcome .reel { gap: 16px; }
+  .ob-welcome .reel-card { width: min(172px, 44vw) !important; }
+}
+/* 26. Phone: "Her story", "Add to my roles" and "The story" leave the picture (where they covered faces) for a
+       row under the words; wider screens keep them on the picture's corner */
+.rc-tools-below, .op-syn-phone { display: none !important; }
+@media (max-width: 640px) {
+  .rc-band-tools, .op-cover-story { display: none !important; }
+  .rc-tools-below { display: flex !important; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .rc-tools-below .rc-pill { min-height: 38px; padding: 0 14px 0 11px; font-size: 14px; background: var(--canvas); box-shadow: none; }
+  .op-syn-phone { display: inline-flex !important; justify-self: start; margin-top: 4px; }
+}
+/* audit check: phone list rows give the words the width (one face, a narrow column); results sections breathe */
+@media (max-width: 640px) {
+  .pc-faces { width: 44px !important; }
+  .pc-faces .pc-face + .pc-face { display: none; }
+  .pc-row { gap: 12px !important; }
+  .pc-soon { font-size: 11px !important; padding: 3px 8px; }
+}
+.search-results > .block + .block { margin-top: 28px; }
+@media (max-width: 999px), (orientation: portrait) {
+  .hm-roles > .cp-eyebrow, .hm-head { min-height: 0; margin-bottom: 10px !important; }
+}
+.hero.search-hero { max-width: none; }

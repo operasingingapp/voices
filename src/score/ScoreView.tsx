@@ -392,6 +392,12 @@ export function ScoreView(props: Props) {
   const measureEl = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<ScoreLayout | null>(null);
   const [pinned, setPinned] = useState<ReturnType<typeof buildPinned>>(null);
+  // the loop's rectangles, never under the pinned clef and key at the left edge (bar 1's box includes them)
+  const loopRects = (l: ScoreLayout) =>
+    rangeRects(l, loopMeasures).map((r) => {
+      const edge = strip && pinned ? pinned.width : 0;
+      return r.x < edge ? { ...r, w: r.w - (edge - r.x), x: edge } : r;
+    });
   const [pinIdx, setPinIdx] = useState(-1);
   const [loaded, setLoaded] = useState(false);
   // counts finished loads: a new score that loads at once (its parts put in another order) still gets drawn,
@@ -933,14 +939,14 @@ export function ScoreView(props: Props) {
         <div ref={hostRef} className="osmd-host" />
         <div className="score-overlay" aria-hidden={false}>
           {layout &&
-            rangeRects(layout, loopMeasures).map((r, i) => (
+            loopRects(layout).map((r, i) => (
               <div key={`loop${i}`} className="ov-loop" style={{ left: r.x, top: r.y + 6, width: r.w, height: r.h - 12 }} />
             ))}
           {layout &&
             props.onLoopEdge &&
             (() => {
               // the loop's two edges as handles: drag them (or use the arrow keys) to move where it starts and ends
-              const rs = rangeRects(layout, loopMeasures);
+              const rs = loopRects(layout);
               if (!rs.length) return null;
               const first = rs[0];
               const last = rs[rs.length - 1];

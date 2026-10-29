@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import editionJson from "../../data/content/puccini-o-mio-babbino-caro/edition.json";
 import languageJson from "../../data/content/puccini-o-mio-babbino-caro/language.json";
 import { Performance } from "../../shared/timeline";
@@ -449,7 +450,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
                 <Face opera={opera} ch={ch} />
               </ProgressRing>
               <span className="rail-role-text">
-                <span className="rail-role-name">{ch.name.replace(/^The /, "")}</span>
+                <span className="rail-role-name">{ch.name}</span>
                 {(() => {
                   const m = progressOf(ctx, opera, ch);
                   return <span className="rail-role-meta">{`${m.done} of ${m.total} learned`}</span>;
@@ -573,20 +574,14 @@ function NowPill({ ctx }: { ctx: Ctx }) {
   const cur = resolve(ctx.current);
   if (!cur) return null;
   const { opera, ch } = cur;
-  const target = continueTarget(ctx, opera, ch);
   return (
     <div className="now-pill" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
       <button type="button" className="np-role" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
         <span className="np-face">
           <Face opera={opera} ch={ch} />
         </span>
-        <span>{ch.name}</span>
+        <span className="sr-only">{ch.name}</span>
       </button>
-      {target && (
-        <button type="button" className="np-play" aria-label={`${target.resumed ? "Continue" : "Start"} ${ch.pieces[target.place.piece].title}`} onClick={() => ctx.go(target.place)}>
-          <Play />
-        </button>
-      )}
     </div>
   );
 }
@@ -609,6 +604,8 @@ export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
           <button type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Open the menu" onClick={() => setOpen(true)}>
             <MenuIcon />
           </button>
+          {/* on a phone, a page's way back sits here (see Crumbs) instead of in a row of its own */}
+          <span id="topbar-back" className="topbar-back" />
           <button type="button" className="topbar-mark" onClick={() => ctx.go(ctx.home())}>
             Sottovoce
           </button>
@@ -636,15 +633,14 @@ const BookIcon = () => (
  * your role's name is picked out so you can follow your part.
  */
 /** a phone: the story is a page of its own (in the page's normal flow), not a sheet laid over it */
-function usePhone() {
-  const q = "(max-width: 720px)";
+function usePhone(q = "(max-width: 720px)") {
   const [phone, setPhone] = useState(() => typeof window !== "undefined" && window.matchMedia(q).matches);
   useEffect(() => {
     const m = window.matchMedia(q);
     const on = () => setPhone(m.matches);
     m.addEventListener("change", on);
     return () => m.removeEventListener("change", on);
-  }, []);
+  }, [q]);
   return phone;
 }
 
@@ -728,14 +724,19 @@ function SynopsisSheet({ opera, ch, onClose }: { opera: Opera; ch?: Character; o
  */
 export function Crumbs({ ctx, trail }: { ctx: Ctx; trail: { label: string; to?: Place; lang?: string }[] }) {
   const up = [...trail].reverse().find((t) => t.to);
+  // the top bar shows below the width where the side rail appears (700px)
+  const phone = usePhone("(max-width: 699px)");
+  const [slot, setSlot] = useState<HTMLElement | null>(null);
+  useEffect(() => setSlot(document.getElementById("topbar-back")), []);
+  const upBtn = up?.to ? (
+    <button type="button" className="crumbs-up" onClick={() => ctx.go(up.to!)} aria-label={`Back to ${up.label}`}>
+      <BackIcon />
+      <span lang={up.lang}>{up.label}</span>
+    </button>
+  ) : null;
   return (
     <nav className="crumbs" aria-label="Where you are">
-      {up?.to && (
-        <button type="button" className="crumbs-up" onClick={() => ctx.go(up.to!)} aria-label={`Back to ${up.label}`}>
-          <BackIcon />
-          <span lang={up.lang}>{up.label}</span>
-        </button>
-      )}
+      {phone && slot && upBtn ? createPortal(upBtn, slot) : upBtn}
       <ol className="crumbs-trail">
         {trail.map((t, i) => (
           <li key={i}>
@@ -820,6 +821,21 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
               </button>
             </p>
             <p className="rc-desc">{ch.desc}</p>
+            {/* phone: the card's tools under the words, so they never sit on the faces in the picture */}
+            <div className="rc-tools-below">
+              {!mine && (
+                <button type="button" className="rc-pill" onClick={() => ctx.toggleRole(r)}>
+                  <Plus />
+                  <span>Add to my roles</span>
+                </button>
+              )}
+              {SYNOPSES[opera.id] && (
+                <button type="button" className="rc-pill" onClick={() => setStory(true)}>
+                  <BookIcon />
+                  <span>{FEMALE.test(ch.voice) ? "Her story" : "His story"}</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
         {pr.total > 0 && (
@@ -923,7 +939,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           {(() => {
             const canPlay = ch.pieces.some((p) => p.editionId);
             const canRead = ch.pieces.some((p) => p.context);
-            const how = canPlay && canRead ? "Tap a piece to practise. Tap Scene for the story. " : canPlay ? "Tap a piece to practise. " : canRead ? "Tap Scene to read what happens in a piece. " : "";
+            const how = canPlay && canRead ? "Tap a piece to practise. Tap ⌄ for its scene. " : canPlay ? "Tap a piece to practise. " : canRead ? "Tap ⌄ to read what happens in a piece. " : "";
             return `${how}Tick a piece when you know it.`;
           })()}
         </p>
@@ -1000,8 +1016,8 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             Your role: <b>{mineHere.map((c) => c.name).join(", ")}</b>
           </p>
         )}
-        {SYNOPSES[opera.id] && !ART[opera.id] && (
-          <button type="button" className="cp-btn op-syn-btn" onClick={() => setStory(true)}>
+        {SYNOPSES[opera.id] && (
+          <button type="button" className={`cp-btn op-syn-btn${ART[opera.id] ? " op-syn-phone" : ""}`} onClick={() => setStory(true)}>
             <BookIcon />
             The story
           </button>
@@ -1206,7 +1222,33 @@ const fold = (t: string) =>
     .replace(/[’'.,!?…]/g, "")
     .toLowerCase();
 
-function PieceItem({ ctx, row, inOpera = false }: { ctx: Ctx; row: PieceRow; inOpera?: boolean }) {
+/** the part of a name that matches what was typed, marked (accents and capitals ignored) */
+function Mark({ text, q }: { text: string; q?: string }) {
+  if (!q) return <>{text}</>;
+  const f = fold(text);
+  const w = fold(q).split(/\s+/)[0];
+  if (!w) return <>{text}</>;
+  // fold keeps one character per letter except the dropped punctuation: map back through the kept indices
+  const keep: number[] = [];
+  [...text.normalize("NFC")].forEach((ch, i) => {
+    if (!/[’'.,!?…]/.test(ch)) keep.push(i);
+  });
+  let at = -1;
+  for (let i = 0; i <= f.length - w.length; i++) if (f.startsWith(w, i) && (i === 0 || /[\s\-–—/(]/.test(f[i - 1]))) { at = i; break; }
+  if (at < 0 || keep[at] === undefined || keep[at + w.length - 1] === undefined) return <>{text}</>;
+  const chars = [...text.normalize("NFC")];
+  const a = keep[at];
+  const b = keep[at + w.length - 1] + 1;
+  return (
+    <>
+      {chars.slice(0, a).join("")}
+      <mark className="q-mark">{chars.slice(a, b).join("")}</mark>
+      {chars.slice(b).join("")}
+    </>
+  );
+}
+
+function PieceItem({ ctx, row, inOpera = false, mark }: { ctx: Ctx; row: PieceRow; inOpera?: boolean; mark?: string }) {
   const first = row.singers.find(({ ch }) => ctx.roles.some((r) => same(r, { opera: row.opera.id, character: ch.id }))) ?? row.singers[0];
   return (
     <button
@@ -1222,7 +1264,9 @@ function PieceItem({ ctx, row, inOpera = false }: { ctx: Ctx; row: PieceRow; inO
         ))}
       </span>
       <span className="pc-text">
-        <b lang={row.opera.lang}>{row.title}</b>
+        <b lang={row.opera.lang}>
+          <Mark text={row.title} q={mark} />
+        </b>
         <span>
           {row.kind} · {row.singers.map(({ ch }) => ch.name).join(", ")}
           {!inOpera && (
@@ -1238,7 +1282,7 @@ function PieceItem({ ctx, row, inOpera = false }: { ctx: Ctx; row: PieceRow; inO
           <Play />
         </span>
       ) : (
-        <span className="pc-soon">Soon</span>
+        <span className="pc-soon">No music yet</span>
       )}
     </button>
   );
@@ -1252,10 +1296,25 @@ function SearchFrame({ ctx, by, children }: { ctx: Ctx; by: "opera" | "voice" | 
     lastQuery = q;
   }, [q]);
   const t = fold(q.trim());
-  const hit = (...xs: string[]) => xs.some((x) => fold(x).includes(t));
-  const operas = t ? OPERAS.filter((o) => hit(o.title, o.composer, o.composerFull, String(o.year))) : [];
-  const roles = t ? OPERAS.flatMap((o) => o.chars.filter((c) => hit(c.name, c.voice)).map((ch) => ({ opera: o, ch }))) : [];
-  const pieces = t ? allPieces().filter((r) => hit(r.title, r.kind)) : [];
+  // a match is on the start of words ("dor" finds Dorabella and Dormi, not toreador), best first: the name itself
+  // starting with it, then every word typed starting a word in it
+  const qw = t.split(/\s+/).filter(Boolean);
+  const score = (x: string) => {
+    const f = fold(x);
+    if (f.startsWith(t)) return 3;
+    const ws = f.split(/[\s\-–—/()]+/);
+    return qw.every((w) => ws.some((v) => v.startsWith(w))) ? 2 : 0;
+  };
+  const best = (main: string, ...rest: string[]) => Math.max(score(main) + 1, ...rest.map(score));
+  const ranked = <T,>(xs: T[], s: (x: T) => number) =>
+    xs
+      .map((x) => [x, s(x)] as const)
+      .filter(([, n]) => n > 1)
+      .sort((a, b) => b[1] - a[1])
+      .map(([x]) => x);
+  const operas = t ? ranked(OPERAS, (o) => best(o.title, o.composer, o.composerFull, String(o.year))) : [];
+  const roles = t ? ranked(OPERAS.flatMap((o) => o.chars.map((ch) => ({ opera: o, ch }))), (r) => best(r.ch.name, r.ch.voice)) : [];
+  const pieces = t ? ranked(allPieces(), (r) => { const n = best(r.title, r.kind); return n > 1 && r.ready ? n + 0.5 : n; }) : [];
   const none = t && !operas.length && !roles.length && !pieces.length;
   return (
     <main className="screen-body gutter page">
@@ -1279,16 +1338,6 @@ function SearchFrame({ ctx, by, children }: { ctx: Ctx; by: "opera" | "voice" | 
               <p>Nothing called “{q.trim()}” yet. Try a composer, a character or the first words of an aria.</p>
             </div>
           )}
-          {pieces.length > 0 && (
-            <section className="block" aria-label="Arias">
-              <p className="cp-eyebrow">Arias and ensembles</p>
-              <div className="pc-list">
-                {pieces.slice(0, 30).map((row) => (
-                  <PieceItem key={`${row.opera.id}:${row.title}`} ctx={ctx} row={row} />
-                ))}
-              </div>
-            </section>
-          )}
           {roles.length > 0 && (
             <section className="block" aria-label="Roles">
               <p className="cp-eyebrow">Roles</p>
@@ -1309,7 +1358,9 @@ function SearchFrame({ ctx, by, children }: { ctx: Ctx; by: "opera" | "voice" | 
                       <span className="pc-face pc-op">{ART[o.id] ? <img src={ART[o.id].square} alt="" /> : null}</span>
                     </span>
                     <span className="pc-text">
-                      <b lang={o.lang}>{o.title}</b>
+                      <b lang={o.lang}>
+                        <Mark text={o.title} q={q.trim()} />
+                      </b>
                       <span>
                         {o.composer} · {o.year}
                       </span>
@@ -1318,6 +1369,16 @@ function SearchFrame({ ctx, by, children }: { ctx: Ctx; by: "opera" | "voice" | 
                       <Chevron />
                     </span>
                   </button>
+                ))}
+              </div>
+            </section>
+          )}
+          {pieces.length > 0 && (
+            <section className="block" aria-label="Arias">
+              <p className="cp-eyebrow">Arias and ensembles</p>
+              <div className="pc-list">
+                {pieces.slice(0, 30).map((row) => (
+                  <PieceItem key={`${row.opera.id}:${row.title}`} ctx={ctx} row={row} mark={q.trim()} />
                 ))}
               </div>
             </section>
@@ -1381,13 +1442,13 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
               >
                 <span className="sc-pic">
                   {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span className="sc-year">{o.year}</span>}
+                  {yours.length > 0 && <span className="cp-tag cp-tag--now sc-pic-tag">{yours.length === 1 ? `Your role: ${yours[0].name}` : "Your roles"}</span>}
                 </span>
                 <span className="sc-text">
                   <b lang={o.lang}>{o.title}</b>
                   <span>
                     {o.composer} · {o.year}
                   </span>
-                  {yours.length > 0 && <small className="sc-yours">Your role: {yours.map((c) => c.name).join(", ")}</small>}
                 </span>
               </button>
             );
@@ -1407,12 +1468,17 @@ function RoleCard({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Character })
         <Face opera={opera} ch={ch} />
       </span>
       <span className="vrole-text">
-        <b>{ch.name}</b>
+        <b>
+          {ch.name}
+          {yours && <span className="cp-tag cp-tag--now vrole-yours">Your role</span>}
+        </b>
         <span lang={opera.lang}>{opera.title}</span>
         <em>{ch.desc}</em>
-        <small>{ch.pieces.length === 0 ? "Ensembles only" : ch.pieces.length === 1 ? "1 piece" : `${ch.pieces.length} pieces`}</small>
+        <small>
+          {ch.pieces.length === 0 ? "Ensembles only" : ch.pieces.length === 1 ? "1 piece" : `${ch.pieces.length} pieces`}
+          {ready > 0 ? ` · ${ready} with music` : ""}
+        </small>
       </span>
-      {yours && <span className="cp-tag cp-tag--now">Yours</span>}
     </button>
   );
 }
@@ -1522,7 +1588,6 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
         <div className="st-chips" role="radiogroup" aria-labelledby="st-line">
           {[{ id: "auto", label: "Automatic" } as const, ...LINE_SOUNDS].map((o) => (
             <button key={o.id} type="button" role="radio" aria-checked={choice === o.id} className="st-chip" onClick={() => setLine(o.id)}>
-              {choice === o.id && <Check />}
               {o.label}
             </button>
           ))}
@@ -1564,6 +1629,9 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
             <span className="st-text">
               <b>Replay the tour</b>
               <small>One minute on the practice screen</small>
+            </span>
+            <span className="st-chev" aria-hidden="true">
+              <Chevron />
             </span>
           </button>
         </div>
@@ -2008,7 +2076,7 @@ export function Onboarding({
         <main className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}`} key="s12">
           <div className="ob-hero gutter">
             <h1>Which role is yours?</h1>
-            <p className="lede">{step === 1 ? "Choose a character to begin." : "Choose an opera, then the role you will sing."}</p>
+            <p className="lede">{step === 1 ? "Choose a character to begin. “Ready to sing” means its music is here to practise." : "Choose an opera, then the role you will sing."}</p>
             <div className="ob-mode" role="tablist" aria-label="Start from">
               {(
                 [
@@ -2283,8 +2351,8 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
     : [];
   const dueR = due as (HomeRef & { when: number; learned: number }) | null;
   const sugs = [
-    next && { key: "next", label: "Up next · New", r: next, sub: `${next.ch.name} · ${kindText(next.piece.kind)}`, go: "Start learning", mode: "start" as const },
-    dueR && { key: "due", label: "Due for review", r: dueR as HomeRef, sub: `Learned ${relTime(dueR.learned)}`, go: "Run it once", mode: "start" as const },
+    next && { key: "next", label: "Learn next", r: next, sub: `${next.ch.name} · ${kindText(next.piece.kind)}`, go: "Start", mode: "start" as const },
+    dueR && { key: "due", label: "Time to review", r: dueR as HomeRef, sub: `Learned ${relTime(dueR.learned)}`, go: "Sing it through", mode: "start" as const },
   ].filter((x): x is NonNullable<typeof x> => !!x);
   const tone = (c: { opera: Opera; ch: Character }) => ({ "data-tone": voiceTone(c.ch.voice), style: toneStyle(c.opera.id, c.ch.id) });
 

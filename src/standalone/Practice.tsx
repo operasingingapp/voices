@@ -610,7 +610,6 @@ function PracticeScreen({
       >
         <span className="cmb-k">Words</span>
         <b>{wordsName}</b>
-        {wordsRole === roleId && <em className="cmb-you">you</em>}
         {Icon.down}
       </button>
       {cardMenu === "words" && (
@@ -832,6 +831,15 @@ function PracticeScreen({
   const playing = engine?.state === "playing";
   // the screen's playing shape (also for the moment just before the music starts)
   const live = playing || starting;
+  // the box keeps the height it had when the music started: a rest (three dots) or a short line never makes
+  // the score below jump while you sing
+  const lineCardRef = useRef<HTMLDivElement>(null);
+  const [cardH, setCardH] = useState(0);
+  useLayoutEffect(() => {
+    if (live) setCardH(lineCardRef.current?.offsetHeight ?? 0);
+    else setCardH(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [live]);
 
   const current = useMemo(() => {
     const cur = spans.findIndex((s) => q >= s.startQ - 1e-6 && q < s.endQ - 1e-6);
@@ -1764,7 +1772,7 @@ function PracticeScreen({
         data-testid="now-panel"
         onPointerDown={() => live && musicOn && peekCard()}
       >
-        <div className="line-card" style={cardTone}>
+        <div className="line-card" ref={lineCardRef} style={live && cardH ? { ...cardTone, minHeight: cardH } : cardTone}>
           <div className="now-bar">
             <p className="now-meta">
               {/* an ensemble's card heads with the singers (whose words); a solo's with where you are */}
@@ -2354,10 +2362,10 @@ function PracticeScreen({
           </div>
           {mixOpen && <button type="button" className="mix-scrim" aria-label="Close Arrange" tabIndex={-1} onClick={() => setMixOpen(false)} />}
           {mixOpen && (
-            <div className="mix-pop ens" role="dialog" aria-label="Arrange the lines">
+            <div className="mix-pop ens" role="dialog" aria-label="Arrange">
                 <>
                   <div className="mix-head">
-                    <p className="mix-title">Arrange the lines</p>
+                    <p className="mix-title">Arrange</p>
                     <button type="button" className="cp-btn cp-btn--ink mix-done" onClick={() => setMixOpen(false)}>
                       Done
                     </button>
@@ -2483,20 +2491,6 @@ function PracticeScreen({
                       </div>
                     );
                   })}
-                  </div>
-                  <div className="mix-sing">
-                    <span className="mix-sub">Hear</span>
-                    <div className="cp-seg mix-names" role="group" aria-label="Who is heard">
-                      {orderedIds.map(partByXml).map((p) => (
-                        <button key={p.key} type="button" aria-pressed={hearOf(p)} onClick={() => setHear(p, !hearOf(p))}>
-                          {hearOf(p) ? Icon.speaker : Icon.muted}
-                          {lineName(p)}
-                        </button>
-                      ))}
-                    </div>
-                    <span className="mix-hint">
-                      {ens ? "Mute anyone who is singing live." : "Mute your line to sing it yourself."}
-                    </span>
                   </div>
                   <div className="mix-sing">
                     <span className="mix-sub">Show in the score</span>
