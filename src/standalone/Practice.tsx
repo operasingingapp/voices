@@ -1730,15 +1730,15 @@ function PracticeScreen({
         <div className="p-title">
           <h1 lang={LANG}>{edition.title}</h1>
           <p className="p-sub">
-            {info.kind} ·{" "}
-            <button type="button" className="p-sub-link" onClick={onBack}>
+            <span className="p-kind">{info.kind} · </span>
+            <a href="#" className="p-sub-link" onClick={(e) => (e.preventDefault(), onBack())}>
               {roleName}
-            </button>{" "}
+            </a>{" "}
             ·{" "}
             {onOpera ? (
-              <button type="button" className="p-sub-link" onClick={onOpera} lang={LANG}>
+              <a href="#" className="p-sub-link" onClick={(e) => (e.preventDefault(), onOpera())} lang={LANG}>
                 <i>{info.opera}</i>
-              </button>
+              </a>
             ) : (
               <i lang={LANG}>{info.opera}</i>
             )}
