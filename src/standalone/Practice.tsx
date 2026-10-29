@@ -1427,6 +1427,11 @@ function PracticeScreen({
     guideQ.current = guide >= 0 ? q : null;
     // the loop is set: put the strip away so the bar is clear for playing
     if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
+    // the loop part is over: the singing steps play the music straight on, without the loop
+    if (guide >= 0 && steps[guide]?.part === "Sing" && loop) {
+      setLoop(null);
+      setLoopHint(false);
+    }
     if (guide >= 0 && steps[guide]?.id === "edge" && !loop) {
       const pm = barAt(Math.max(0, q));
       setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
