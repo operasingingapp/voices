@@ -11722,3 +11722,70 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* the fold chevron sits in the box's top-right corner, the same place and shape as the unfold chevron on the strip */
 .practice > .now-panel .card-fold { position: absolute; top: 14px; right: calc(var(--edge, 16px) + 6px); margin: 0; background: var(--fog); z-index: 2; }
 @media (min-width: 641px) { .practice > .now-panel .card-fold { position: static; margin-left: 4px; } }
+
+/* Home (merged from the other session's version 1793260566): greeting, pick up where you left off, up next and due for review, your roles, more roles for your voice; the rail shows each role's progress on wide landscape screens */
+.hm{gap:var(--space-6)}
+.hm-hello h1{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.hm-top,.hm-bottom{gap:var(--space-5);grid-template-columns:minmax(0,1fr);display:grid}
+.hm-sugs{gap:var(--space-3);grid-auto-columns:minmax(0,1fr);grid-auto-flow:column;display:grid}
+.hm .rc{gap:var(--space-3);align-content:start}
+.hm .rc>.cp-eyebrow{padding:var(--space-1) var(--space-4) 0}
+.hm-cont-id{align-items:center}
+.hm-cont-id .rc-face{width:88px;height:88px;box-shadow:none;margin-top:0}
+.hm-cont-id .rc-text{flex:1;padding-top:0}
+.hm-title{letter-spacing:-.01em;margin:0;font:500 26px/1.1 var(--font-sans)}
+.hm-continue{grid-template-columns:minmax(0,1fr) auto}
+.hm-continue>*{grid-column:1/-1}
+.hm-band{display:none}
+.hm-continue>.hm-cont-id{grid-column:1;grid-row:2}
+.hm-continue>.hm-cont-act{grid-column:2;grid-row:2;align-self:center;padding-right:var(--space-4)}
+.hm .rc-prog{padding-top:0}
+.hm-bar{gap:0}
+.hm-card-row{align-items:center;gap:var(--space-3);padding:0 var(--space-4);display:flex}
+.hm-card>.cp-btn{justify-self:start;margin:var(--space-1) var(--space-4) 0}
+.hm-role{width:100%;color:var(--ink);font:inherit;text-align:left;cursor:pointer;border:0}
+.hm-role-id{align-items:center;gap:var(--space-3);padding:0 var(--space-1);display:flex}
+.hm-role .rc-prog{padding:0 var(--space-1)}
+.hm-role-list{gap:var(--space-3);grid-template-columns:repeat(2,minmax(0,1fr));display:grid}
+.hm-head{justify-content:space-between;align-items:center;gap:var(--space-3);display:flex}
+.hm-all{padding:0 var(--space-3);margin:calc(-1*var(--space-3)) calc(-1*var(--space-3)) calc(-1*var(--space-3)) 0}
+.hm-tiles{gap:var(--space-4);grid-template-columns:repeat(4,minmax(0,1fr));display:grid}
+.hm-tiles .reel-card{width:auto;margin-right:0}
+.rail-role-text{display:contents}
+.rail-role-meta,.rail-add-label{display:none}
+@media (orientation:landscape) and (width>=1000px){.hm-top.both{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+.hm-top.both .hm-sugs{grid-auto-flow:row}
+.hm-top.both .hm-continue{grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(4,auto) 1fr}
+.hm-top.both .hm-continue>.hm-cont-id,.hm-top.both .hm-continue>.hm-cont-act{grid-column:1;grid-row:auto}
+.hm-top.both .hm-band{height:112px;display:block}
+.hm-top.both .hm-cont-id{align-items:flex-start}
+.hm-top.both .hm-cont-id .rc-face{width:120px;height:120px;box-shadow:0 0 0 6px var(--tone-soft,var(--fog));margin-top:-60px}
+.hm-top.both .hm-cont-id .rc-text{padding-top:14px}
+.hm-top.both .hm-continue>.hm-cont-act{align-self:end;padding:0 var(--space-4)}
+.hm-top.both .hm-card{grid-template-rows:auto auto 1fr}
+.hm-top.both .hm-card>.cp-btn{align-self:end}
+.hm-bottom.both{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
+.hm-bottom.both .hm-role-list{grid-template-columns:minmax(0,1fr)}
+.hm-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hm-tiles>:nth-child(4){display:none}
+.shell{grid-template-columns:300px minmax(0,1fr)}
+.shell>.rail{align-items:stretch;width:300px;padding-inline:var(--space-4)}
+.shell>.rail .rail-link{min-height:var(--touch);justify-content:flex-start;gap:var(--space-3);padding:0 var(--space-4);font-size:15px;flex-direction:row}
+.shell>.rail .rail-rule{width:auto;margin-inline:var(--space-4)}
+.shell>.rail .rail-label{padding-inline:var(--space-4)}
+.shell>.rail .rail-roles{justify-items:stretch}
+.shell>.rail .rail-role,.shell>.rail .rail-add{text-align:left;gap:var(--space-3);padding:var(--space-2) var(--space-3);flex-direction:row}
+.shell>.rail .rail-role-text{gap:var(--space-1);min-width:0;display:grid}
+.shell>.rail .rail-role-name{text-align:left;max-width:none;font-size:15px}
+.shell>.rail .rail-role-meta{color:var(--ink-muted);font:400 12px/1.2 var(--font-sans);display:block}
+.shell>.rail .rail-add-label{display:block}
+}
+@media (width<=640px){.hm-sugs{grid-auto-flow:row}
+.hm-role-list{grid-template-columns:minmax(0,1fr)}
+.hm-continue{grid-template-columns:minmax(0,1fr)}
+.hm-continue>.hm-cont-id,.hm-continue>.hm-cont-act{grid-column:1;grid-row:auto}
+.hm-continue>.hm-cont-act{padding:0 var(--space-4)}
+.hm-go{width:100%}
+.hm-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+

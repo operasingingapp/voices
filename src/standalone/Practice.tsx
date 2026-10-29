@@ -1099,8 +1099,34 @@ function PracticeScreen({
     if (!engine || pb.status !== "ready" || restored.current) return;
     restored.current = true;
     try {
-      const v = JSON.parse(localStorage.getItem(atKey) ?? "null") as { q?: number } | null;
-      if (v?.q && v.q > 0 && v.q < perf.totalQ - 1 && engine.state !== "playing") engine.seek(v.q);
+      type Saved = { q?: number; tempo?: number; loop?: { startQ: number; endQ: number } | null; mix?: { hv?: boolean; hp?: boolean; pf?: boolean; lines?: typeof lineSets } };
+      const v = JSON.parse(localStorage.getItem(atKey) ?? "null") as Saved | null;
+      // opened from Home: "resume" brings back the place, loop, speed and mix; "start" begins clean
+      let open: { ed?: string; mode?: string; at?: number } | null = null;
+      try {
+        open = JSON.parse(sessionStorage.getItem("cp:open") ?? "null");
+      } catch {
+        /* storage unavailable */
+      }
+      const mode = open && open.ed === edition.editionId && Date.now() - (open.at ?? 0) < 60000 ? open.mode : null;
+      if (mode) sessionStorage.removeItem("cp:open");
+      if (mode === "start") {
+        setLoop(null);
+        if (engine.state !== "playing") engine.seek(0);
+      } else {
+        if (v?.q && v.q > 0 && v.q < perf.totalQ - 1 && engine.state !== "playing") engine.seek(v.q);
+        if (mode === "resume" && v) {
+          if (v.tempo) engine.setTempoFactor(v.tempo);
+          if (v.loop && v.loop.endQ > v.loop.startQ) setLoop(v.loop);
+          const mx = v.mix;
+          if (mx) {
+            if (typeof mx.hv === "boolean") setHearVoice(mx.hv);
+            if (typeof mx.hp === "boolean") setHearPiano(mx.hp);
+            if (typeof mx.pf === "boolean") setPianoFaded(mx.pf);
+            if (mx.lines && typeof mx.lines === "object") setLineSets(mx.lines);
+          }
+        }
+      }
     } catch {
       /* storage unavailable */
     }
@@ -1113,7 +1139,30 @@ function PracticeScreen({
       try {
         // the last position this screen showed (on leaving, the engine may already be stopped)
         const q = lastQ.current;
-        localStorage.setItem(atKey, JSON.stringify({ q, bar: perf.locate(q).number }));
+        // where you stopped, and how (for Home's "Pick up where you left off")
+        const lb: [string, string] | null = loop ? [perf.locate(loop.startQ).number, perf.locate(Math.max(loop.startQ, loop.endQ - 0.001)).number] : null;
+        const loopLineN = loop
+          ? spans.findIndex((r) => {
+              const a = barAt(Math.max(0, r.startQ - 0.5));
+              const z = barAt(Math.max(r.startQ, r.endQ - 0.001));
+              return Math.abs(a.startQ - loop.startQ) < 1e-6 && Math.abs(z.startQ + z.durQ - loop.endQ) < 1e-6;
+            }) + 1
+          : 0;
+        localStorage.setItem(
+          atKey,
+          JSON.stringify({
+            q,
+            bar: perf.locate(q).number,
+            of: perf.locate(Math.max(0, perf.totalQ - 0.001)).number,
+            p: perf.totalQ ? Math.min(1, Math.max(0, q / perf.totalQ)) : 0,
+            t: Date.now(),
+            loop: loop ?? null,
+            lb,
+            loopLine: loopLineN,
+            tempo: engine?.tempo ?? 1,
+            mix: { hv: hearVoice, hp: hearPiano, pf: pianoFaded, lines: lineSets },
+          }),
+        );
       } catch {
         /* storage unavailable */
       }
@@ -1121,7 +1170,7 @@ function PracticeScreen({
     save();
     return save;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [engine, playing, Math.round(q)]);
+  }, [engine, playing, Math.round(q), loop, engine?.tempo, hearVoice, hearPiano, pianoFaded, lineSets]);
 
   // the screen stays on while the music plays (a tablet on a music stand must not dim mid-aria)
   useEffect(() => {

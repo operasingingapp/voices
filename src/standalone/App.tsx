@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import {
   ExploreOperas,
-  ExploreVoices, ExplorePieces,
+  ExploreVoices, ExplorePieces, HomePage, markLearnedAt,
   findCharacter,
   findOpera,
   PiecePage,
@@ -102,6 +102,7 @@ function migrate(p: unknown): Place | null {
     case "about":
       // a piece's own info page is gone: its scene now opens inside the role's list
       return o.opera && o.character ? { screen: "role", opera: o.opera, character: o.character } : null;
+    case "home":
     case "role":
     case "opera":
     case "explore":
@@ -133,6 +134,8 @@ function titleOf(place: Place): string {
       return `${place.by === "voice" ? "Roles" : "Operas"}${tail}`;
     case "profile":
       return `Settings${tail}`;
+    case "home":
+      return `Home${tail}`;
     default:
       return "Counterpart";
   }
@@ -152,7 +155,7 @@ export function App() {
   const [learned, setLearned] = useState<Record<string, string[]>>(() => read(K.learned, {}));
   const [profile, setProfile] = useState<Profile>(() => read<Profile>(K.profile, { voices: [], notSinger: false }));
   const [onboarded, setOnboarded] = useState<boolean>(() => read<boolean | null>(K.onboarded, null) ?? roles.length > 0);
-  const home = (): Place => (current ? { screen: "role", ...current } : { screen: "explore", by: "opera" });
+  const home = (): Place => (roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
   // a role just learned in full: the celebration shows over whatever screen you are on
   const [bravo, setBravo] = useState<RoleRef | null>(null);
   // the side panel over the practice screen
@@ -230,6 +233,7 @@ export function App() {
       const keys = ch.pieces.map((p) => p.id ?? p.title);
       const had = new Set(learned[roleKey(r)] ?? []);
       if (!had.has(key) && keys.length > 0 && keys.every((k) => k === key || had.has(k))) setBravo(r);
+      markLearnedAt(`${roleKey(r)}:${key}`, !had.has(key));
       setLearned((all) => {
         const k = roleKey(r);
         const set = new Set(all[k] ?? []);
@@ -279,6 +283,7 @@ export function App() {
 
   const bravoEl = bravo ? <Bravo ctx={ctx} r={bravo} onClose={() => setBravo(null)} /> : null;
 
+  if (place.screen === "home" && !roles.length) return <Onboarding ctx={ctx} step={1} />;
   if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} />;
 
   if (place.screen === "piece") {
@@ -329,7 +334,8 @@ export function App() {
   if (place.screen === "role") {
     const opera = findOpera(place.opera);
     page = <RolePage ctx={ctx} opera={opera} ch={findCharacter(opera, place.character)} />;
-  } else if (place.screen === "opera") page = <OperaPage ctx={ctx} opera={findOpera(place.opera)} />;
+  } else if (place.screen === "home") page = <HomePage ctx={ctx} />;
+  else if (place.screen === "opera") page = <OperaPage ctx={ctx} opera={findOpera(place.opera)} />;
   else if (place.screen === "explore") page = place.by === "voice" ? <ExploreVoices ctx={ctx} voice={place.voice} /> : place.by === "piece" ? <ExplorePieces ctx={ctx} /> : <ExploreOperas ctx={ctx} />;
   else page = <ProfilePage ctx={ctx} />;
   return (
