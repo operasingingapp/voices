@@ -45,7 +45,7 @@ export function App() {
     refresh();
   }, [refresh]);
 
-  if (!checked) return <div className="boot">Counterpart</div>;
+  if (!checked) return <div className="boot">Sottovoce</div>;
 
   let page: React.ReactNode;
   let m: Record<string, string> | null;

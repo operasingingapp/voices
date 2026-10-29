@@ -44,7 +44,7 @@ export function InvitePage({ token }: { token: string }) {
   return (
     <main className="login">
       <div className="login-panel wide">
-        <h1 className="wordmark">Counterpart</h1>
+        <h1 className="wordmark">Sottovoce</h1>
         {error && !inv && <p className="form-error">{error}</p>}
         {inv && (
           <>

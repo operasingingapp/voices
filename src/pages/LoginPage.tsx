@@ -29,7 +29,7 @@ export function LoginPage() {
   return (
     <main className="login">
       <div className="login-panel">
-        <h1 className="wordmark">Counterpart</h1>
+        <h1 className="wordmark">Sottovoce</h1>
         <p className="login-lede">Learn your part. Rehearse from the same bar.</p>
         <form onSubmit={submit} className="form">
           <label>

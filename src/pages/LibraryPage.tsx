@@ -27,7 +27,7 @@ export function AppHeader(props: { children?: React.ReactNode }) {
   return (
     <header className="app-header">
       <Link to="/" className="wordmark small">
-        Counterpart
+        Sottovoce
       </Link>
       <div className="app-header-mid">{props.children}</div>
       <div className="app-header-user">

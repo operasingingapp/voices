@@ -610,7 +610,7 @@ export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
             <MenuIcon />
           </button>
           <button type="button" className="topbar-mark" onClick={() => ctx.go(ctx.home())}>
-            Counterpart
+            Sottovoce
           </button>
           <NowPill ctx={ctx} />
         </header>
@@ -1990,7 +1990,7 @@ export function Onboarding({
   return (
     <div className={`screen onboarding step-${step}`} ref={scroller}>
       <div className="ob-top gutter">
-        <span className="wordmark-lg">Counterpart</span>
+        <span className="wordmark-lg">Sottovoce</span>
         <div className="ob-steps" aria-label={`Step ${step === 3 ? 2 : 1} of 2`}>
           <span>Step {step === 3 ? 2 : 1} of 2</span>
           <div className="ob-track" aria-hidden="true">

@@ -1,5 +1,5 @@
 /**
- * Counterpart playback engine.
+ * Sottovoce playback engine.
  *
  * One clock: every note-on/off, count-in click and loop jump is scheduled against the audio
  * device's clock (AudioContext.currentTime) through a short look-ahead. The visual position is

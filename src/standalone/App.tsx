@@ -115,12 +115,12 @@ function migrate(p: unknown): Place | null {
 }
 
 /**
- * Counterpart. The sidebar always shows the role you are learning (and how far you are), then the two ways
+ * Sottovoce. The sidebar always shows the role you are learning (and how far you are), then the two ways
  * into everything else: by opera and by voice. A first visit starts with three short onboarding steps.
  * Everything is remembered in this browser on this device.
  */
 function titleOf(place: Place): string {
-  const tail = " · Counterpart";
+  const tail = " · Sottovoce";
   const o = "opera" in place && place.opera ? OPERAS.find((x) => x.id === place.opera) : undefined;
   const c = o && "character" in place ? o.chars.find((x) => x.id === place.character) : undefined;
   switch (place.screen) {
@@ -137,7 +137,7 @@ function titleOf(place: Place): string {
     case "home":
       return `Home${tail}`;
     default:
-      return "Counterpart";
+      return "Sottovoce";
   }
 }
 
