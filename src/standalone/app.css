@@ -11543,3 +11543,11 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .tip-ok svg { width: 14px; height: 14px; }
 .guide-intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 16px; background: rgba(14, 16, 12, 0.45); }
 .guide-intro-card { position: static; width: min(400px, 100%); }
+
+/* phone: the loop strip's words get their own row, the buttons sit under them */
+@media (max-width: 640px) {
+  .loop-pick { flex-wrap: wrap; row-gap: 8px; }
+  .loop-pick .lp-icon { display: none; }
+  .loop-pick p { flex: 1 0 100%; }
+  .loop-pick .lp-btn { flex: 1; }
+}

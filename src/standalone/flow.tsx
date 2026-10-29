@@ -498,9 +498,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
     return () => window.removeEventListener("keydown", esc);
   }, [onClose]);
   if (!opera || !ch) return null;
-  const n = ch.pieces.length;
   const word = FEMALE.test(ch.voice) ? "Brava!" : "Bravo!";
-  const count = n === 1 ? "its one piece" : `all ${["", "", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"][n] ?? n} pieces`;
   return (
     <div className="bravo" role="dialog" aria-modal="true" aria-labelledby="bravo-h" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)}>
       <button type="button" className="bravo-scrim" aria-label="Close" tabIndex={-1} onClick={onClose} />
@@ -519,7 +517,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
         <div className="bravo-text">
           <h2 id="bravo-h">{word}</h2>
           <p>
-            You have learned the whole role of {ch.name.replace(/^The /, "the ")}: {count} of {ch.name.replace(/^The /, "the ")}'s music in{" "}
+            You’ve learned everything {ch.name.replace(/^The /, "the ")} sings in{" "}
             <i lang={opera.lang}>{opera.title}</i>.
           </p>
           <div className="bravo-actions">
@@ -527,7 +525,7 @@ export function Bravo({ ctx, r, onClose }: { ctx: Ctx; r: RoleRef; onClose: () =
               Find a new role
             </button>
             <button ref={close} type="button" className="cp-btn cp-btn--ink" onClick={onClose}>
-              Thank you
+              Close
             </button>
           </div>
         </div>
@@ -919,7 +917,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           {(() => {
             const canPlay = ch.pieces.some((p) => p.editionId);
             const canRead = ch.pieces.some((p) => p.context);
-            const how = canPlay && canRead ? "Tap a piece to practise it, or Scene to read what happens in it. " : canPlay ? "Tap a piece to practise it. " : canRead ? "Tap Scene to read what happens in a piece. " : "";
+            const how = canPlay && canRead ? "Tap a piece to practise. Tap Scene for the story. " : canPlay ? "Tap a piece to practise. " : canRead ? "Tap Scene to read what happens in a piece. " : "";
             return `${how}Tick a piece when you know it.`;
           })()}
         </p>
@@ -1508,7 +1506,7 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
     <main className="screen-body gutter page settings">
       <section className="hero compact">
         <h1>Settings</h1>
-        <p className="lede">How practice sounds and looks when you open a piece. You can still change each one while you practise.</p>
+        <p className="lede">Defaults for every piece. You can change them while you practise.</p>
       </section>
 
       <section className="block" aria-labelledby="st-line">
@@ -1531,9 +1529,9 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
           Under the words
         </p>
         <div className="st-list">
-          <Toggle on={ipa} onChange={setIpa} label="IPA" hint="How each word is pronounced, in phonetic letters" />
+          <Toggle on={ipa} onChange={setIpa} label="IPA" hint="Each word in phonetic letters" />
           <Toggle on={tr} onChange={setTr} label="English translation" />
-          <Toggle on={tips} onChange={setTips} label="Pronunciation tips" hint="In the Words view: doubled consonants, open and closed vowels, joined words" />
+          <Toggle on={tips} onChange={setTips} label="Pronunciation tips" hint="Double consonants, open vowels and linked words, in Words" />
         </div>
       </section>
 
@@ -1554,12 +1552,12 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
               } catch {
                 /* storage unavailable */
               }
-              e.currentTarget.querySelector("small")!.textContent = "It will show the next time you open a piece.";
+              e.currentTarget.querySelector("small")!.textContent = "It will start when you next open a piece.";
             }}
           >
             <span className="st-text">
-              <b>Show the guide again</b>
-              <small>A short walk through the practice screen</small>
+              <b>Replay the tour</b>
+              <small>One minute on the practice screen</small>
             </span>
           </button>
         </div>
@@ -1570,12 +1568,12 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
           Your data
         </p>
         <p className="st-note">
-          Your roles, what you have ticked off, your notes and these settings stay in this browser on this device. There is no account.
+          Your roles, progress, notes and settings are saved in this browser only. No account needed.
         </p>
         <div className="st-actions">
           <StartOver ctx={ctx} big />
           <button type="button" className="cp-btn" onClick={() => ctx.go({ screen: "onboarding", step: 1 })}>
-            See the welcome again
+            Show the welcome again
           </button>
         </div>
       </section>
@@ -1619,7 +1617,7 @@ export function PiecePage({ ctx, opera, ch, index }: { ctx: Ctx; opera: Opera; c
               Practise
             </button>
           ) : (
-            <span className="pp-soon">The music for this piece isn't added yet. Learn it from your own score and tick it off here.</span>
+            <span className="pp-soon">No music here yet. Learn it from your own score, then mark it learned.</span>
           )}
           <button type="button" className="cp-btn pp-learned" role="checkbox" aria-checked={done} onClick={() => ctx.toggleLearned(r, k)}>
             <span className="pp-box">

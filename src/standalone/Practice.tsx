@@ -1392,24 +1392,41 @@ function PracticeScreen({
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   const steps: GuideStep[] = [
-    { id: "play", part: "Listen", sel: ['.bar-transport [data-testid="play"]'], title: "Press play", text: "A bar of clicks counts you in, then the music starts.", done: () => playing },
-    { id: "pause", part: "Listen", sel: ['.bar-transport [data-testid="pause"]'], title: "Where you are", text: "The lit syllable in the box and the green note in the score are the same moment. Press pause.", done: () => !playing },
-    { id: "next", part: "Find your way", sel: [".now-body .now-step:last-child"], title: "The next line", text: "Tap › to go to the next line (‹ goes back).", done: () => guideQ.current !== null && Math.abs(q - guideQ.current) > 0.01 },
-    { id: "word", part: "Find your way", sel: [".now-it"], title: "A word", text: "Tap a word: hear it, see how it is pronounced.", done: () => !!openWord },
-    { id: "more", part: "Sing it yourself", sel: [".bar-more"], title: "All the controls", text: "Open the controls with the arrow.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
-    { id: "mute", part: "Sing it yourself", sel: [".bar-parts > .part:first-child"], title: "Sing it yourself", text: "This is you. Tap your face: your line stops sounding, so you sing it.", done: () => !hearVoice },
-    { id: "piano", part: "Sing it yourself", sel: [".piano-group .pg-btn:nth-child(2)"], title: "The piano in the score", text: pianoShownNow ? "Tap the eye to hide the piano: just the voices in the score." : "Tap the eye to show the piano's part in the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
-    { id: "loop", part: "Practise a passage", sel: [".bar-loop"], title: "Loop", text: "Tap loop: the bar you are on repeats.", done: () => !!loop },
-    { id: "edge", part: "Practise a passage", sel: [".ov-lh-e"], holeRight: 140, title: "Take in more bars", text: "Drag the purple edge to the right, over a bar or two.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
-    { id: "playloop", part: "Practise a passage", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play the passage", text: "Press play: it repeats until you pause.", done: () => playing },
-    { id: "words", part: "The text", sel: [".view-switch button:nth-child(2)"], title: "Words", text: "Tap Words: the whole text, with the English, to study.", done: () => view === "words" },
-    { id: "music", part: "The text", sel: [".view-switch button:first-child"], title: "Back to the music", text: "Tap Music to come back.", done: () => view === "music" },
+    { id: "listen", part: "Listen", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Press play and listen", text: "The lit word follows the music. Press pause when you’re ready.", done: () => gTrack.current.played && !playing },
+    { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
+    { id: "word", part: "The words", sel: [".word-card .wc-actions .cp-btn--ink", ".now-it"], title: "Hear a word", text: openWord ? "Tap Hear the word." : "Tap any word in the line.", done: () => gTrack.current.wordSpoke && !speakingWord },
+    { id: "next", part: "The words", sel: [".now-body .now-step:last-child"], title: "Next line", text: "Tap › to move on. ‹ goes back.", done: () => guideQ.current !== null && Math.abs(q - guideQ.current) > 0.01 },
+    { id: "words", part: "The words", sel: [".view-switch button:nth-child(2)"], title: "See the whole text", text: "Tap Words for the full text and translation.", done: () => view === "words" },
+    { id: "music", part: "The words", sel: [".view-switch button:first-child"], title: "Back to the score", text: "Tap Music.", done: () => view === "music" },
+    { id: "loop", part: "Loop", sel: [".bar-loop"], title: "Loop a bar", text: "Tap loop. The bar you’re on will repeat.", done: () => !!loop },
+    { id: "edge", part: "Loop", sel: [".ov-lh-e"], holeRight: 140, title: "Add bars", text: "Drag the purple edge to the right.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
+    { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
+    { id: "more", part: "Sing", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
+    { id: "mute", part: "Sing", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Tap your face. Now you sing it.", done: () => !hearVoice },
+    { id: "piano", part: "Sing", sel: [".piano-group .pg-btn:nth-child(2)"], title: pianoShownNow ? "Hide the piano part" : "Show the piano part", text: pianoShownNow ? "Tap the eye to see only the voices." : "Tap the eye to add the piano to the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
+    { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
   const step = guide >= 0 ? steps[guide] : null;
   // where the music stood when a step began (a step done by moving through the piece compares with it)
   const guideQ = useRef<number | null>(null);
+  // what has happened during this step: music heard, a loop gone round, the line or a word spoken
+  // steps that do not apply on this screen, settled when the tour starts (for the count)
+  const guideSkip = useRef<Set<string>>(new Set());
+  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, lastQ: 0 });
   useEffect(() => {
+    if (guide < 0) return;
+    const t = gTrack.current;
+    if (playing && guideQ.current !== null && Math.abs(q - guideQ.current) > 1) t.played = true;
+    if (playing && q < t.lastQ - 0.5) t.wrapped = true;
+    t.lastQ = q;
+    if (speakingId) t.spoke = true;
+    if (speakingWord) t.wordSpoke = true;
+  });
+  useEffect(() => {
+    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, lastQ: q };
     guideQ.current = guide >= 0 ? q : null;
+    // the loop is set: put the strip away so the bar is clear for playing
+    if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
     if (guide >= 0 && steps[guide]?.id === "edge" && !loop) {
       const pm = barAt(Math.max(0, q));
       setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
@@ -1453,6 +1470,7 @@ function PracticeScreen({
       /* storage unavailable */
     }
     guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop };
+    guideSkip.current = new Set(steps.filter((g) => g.skipIf?.()).map((g) => g.id));
     setLoop(null);
     setView("music");
     setGuide(0);
@@ -1533,18 +1551,17 @@ function PracticeScreen({
       <div className="guide-intro" role="dialog" aria-modal="true" aria-labelledby="guide-h">
         <div className="tip guide-intro-card">
           <p>
-            <b>New here?</b>
             <strong className="tip-title" id="guide-h">
-              Learn this screen by doing it
+              Take a quick tour?
             </strong>
-            About a minute: play, find your way, sing your line yourself, loop a passage. Everything goes back as it was afterwards.
+            One minute. You’ll try each control once.
           </p>
           <div className="tip-actions">
             <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={() => endGuide(false)}>
               Not now
             </button>
             <button type="button" className="cp-btn cp-btn--ink" onClick={startGuide}>
-              Start
+              Start tour
             </button>
           </div>
         </div>
@@ -1553,15 +1570,14 @@ function PracticeScreen({
       <div className="guide-intro" role="dialog" aria-modal="true" aria-labelledby="guide-h">
         <div className="tip guide-intro-card">
           <p>
-            <b>Done</b>
             <strong className="tip-title" id="guide-h">
-              That is the whole screen
+              You’re ready
             </strong>
-            Everything is back as it was. You can see this again in Settings.
+            Your settings are back as they were. Replay the tour in Settings.
           </p>
           <div className="tip-actions">
             <button type="button" className="cp-btn cp-btn--ink" onClick={() => endGuide(true)}>
-              Start practising
+              Start singing
             </button>
           </div>
         </div>
@@ -1574,7 +1590,7 @@ function PracticeScreen({
         <div className={`tip${guideBox.above ? " above" : ""}${guideOk ? " ok" : ""}`} style={{ left: guideBox.left, top: guideBox.top, width: guideBox.w }} role="dialog" aria-label={`Guide: ${step.title}`}>
           <p>
             <b>
-              {step.part} · {guide + 1} of {steps.length}
+              {step.part} · {steps.slice(0, guide + 1).filter((g) => !guideSkip.current.has(g.id)).length} of {steps.length - guideSkip.current.size}
             </b>
             <strong className="tip-title">
               {guideOk && <span className="tip-ok">{Icon.check}</span>}
@@ -1589,10 +1605,10 @@ function PracticeScreen({
           </div>
           <div className="tip-actions">
             <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={() => endGuide(true)}>
-              Skip the guide
+              End tour
             </button>
             <button type="button" className="cp-btn" onClick={() => advance(guide)}>
-              Skip this step
+              Skip
             </button>
           </div>
         </div>
@@ -2030,7 +2046,7 @@ function PracticeScreen({
             {Icon.loop}
           </span>
           <p>
-            <b>Looping {loopBars}</b> · drag the purple edges to choose the bars
+            <b>Looping {loopBars}.</b> Drag the purple edges to change it.
           </p>
           <button
             type="button"
@@ -2213,7 +2229,7 @@ function PracticeScreen({
             className="cp-btn part-fade mix-btn"
             aria-haspopup="dialog"
             aria-expanded={mixOpen}
-            aria-label={ens ? "Arrange: who you sing, and each line's sound, instrument and place in the score" : "Arrange: each line's sound, instrument and place in the score"}
+            aria-label={ens ? "Arrange: who you sing, and how each line sounds and shows" : "Arrange: how each line sounds and shows"}
             onClick={() => setMixOpen(!mixOpen)}
           >
             {Icon.sliders}
@@ -2356,7 +2372,7 @@ function PracticeScreen({
                       ))}
                     </div>
                     <span className="mix-hint">
-                      {ens ? "Turn off whoever is sung live: you, or the people singing with you." : "Turn your line off to sing it yourself."}
+                      {ens ? "Mute anyone who is singing live." : "Mute your line to sing it yourself."}
                     </span>
                   </div>
                   <div className="mix-sing">
@@ -2535,7 +2551,7 @@ function PracticeScreen({
               {drawer === "tips" && (
                 <section className="tips-list">
                   <p className="cp-eyebrow">Pronunciation · {tips.list.length} tips</p>
-                  <p className="tips-intro">How the words are spoken, in the order you meet them. Tap one to go to its line.</p>
+                  <p className="tips-intro">Pronunciation, line by line. Tap one to go there.</p>
                   <ol>
                     {tips.list.map((t) => {
                       const i = spans.findIndex((sp) => sp.ph.id === t.lineId);
@@ -2628,7 +2644,7 @@ function PracticeScreen({
                       </button>
                     </form>
                   </section>
-                  {notes.length === 0 && <p className="wc-note">Notes stay in this browser on this device. Tap the music first to choose the bar.</p>}
+                  {notes.length === 0 && <p className="wc-note">Notes are saved on this device. Tap a bar first to choose where.</p>}
                   {notes.map((n) => (
                     <article key={n.id} className="cp-note" style={{ maxWidth: "none" }}>
                       <div className="cp-note__head">
@@ -2697,8 +2713,8 @@ function PracticeScreen({
       {finished && onToggleLearned && (
         <div className="finish-toast" role="status">
           <span className="ft-text">
-            <b>That's the whole aria.</b>
-            {learned ? " It's marked as learned." : " Do you know it now?"}
+            <b>End of the piece.</b>
+            {learned ? " Marked as learned." : " Do you know it?"}
           </span>
           {!learned && (
             <button
