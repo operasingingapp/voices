@@ -1,5 +1,5 @@
 """Build the app's character and opera art from the user's Figma file: each frame's crop exactly as placed in
-Figma, the cut-out over a chosen backdrop with a very fine grain, saved at the app's sizes. Also writes the
+Figma, the cut-out over a chosen backdrop with a paper grain, saved at the app's sizes. Also writes the
 tones (card colours) that go with each backdrop."""
 import json, glob, os, sys, colorsys
 import numpy as np
@@ -39,10 +39,19 @@ def layers(fr):
     return out
 
 def grain(size, seed, strength=7.0):
+    """paper grain, as in the Figma backdrops: a fine speckle over a medium grain and a soft mottling,
+    so a flat colour reads as printed paper. strength is the speckle's size in 0-255 levels at the output size."""
     rng = np.random.default_rng(seed)
-    n = rng.normal(0, 1, (size[1], size[0])).astype(np.float32)
-    n = np.asarray(Image.fromarray(((n * 40) + 128).clip(0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.55))).astype(np.float32)
-    return (n - 128) / 40 * strength
+    w, h = size
+    def layer(blur, amount):
+        n = rng.normal(0, 1, (h, w)).astype(np.float32)
+        if blur:
+            im = Image.fromarray(((n * 32) + 128).clip(0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(blur))
+            n = np.asarray(im).astype(np.float32) - 128
+            n /= max(n.std(), 1e-3)
+        return n * amount
+    k = strength / 7.0
+    return layer(0.45, 6.5 * k) + layer(2.2, 2.6 * k) + layer(12, 2.4 * k)
 
 def render(fr, bg, out_size, seed, replace=None, keep_scene=False):
     W, Hh = round(fr['size']['x']), round(fr['size']['y'])
@@ -89,7 +98,7 @@ for i, (key, c) in enumerate(chars.items()):
     for k in ('portrait', 'face'):
         fr = next(f for f in frames if kind(f) == k and c[k] in [CUTOUT.get(l[0], l[0]) for l in layers(f)])
         im = render(fr, bg, SIZES[k], seed=i * 7 + (k == 'face'))
-        im.save(f'{OUT}/{opera}-{ch}-{k}.webp', quality=80 if k == 'portrait' else 82, method=6)
+        im.save(f'{OUT}/{opera}-{ch}-{k}.webp', quality=88, method=6)
     manifest[key] = tones(bg)
 OPF = {'figaro': 'Le nozze di Figaro', 'giovanni': 'Don Giovanni', 'cosi': 'Cosi fan tutte', 'zauberfloete': 'Magic Flute', 'barbiere': 'Barbiere di Sevigla',
        'traviata': 'La traviata', 'carmen': 'Carmen', 'butterfly': 'Madama Butterfly', 'schicchi': 'Gianni Schicchi'}
@@ -106,7 +115,7 @@ for j, (op, name) in enumerate(OPF.items()):
             im = big.crop((x0, 0, x0 + 1619, 1619)).resize(SIZES[k], Image.LANCZOS)
         else:
             im = render(fr, bg, SIZES[k], seed=500 + j * 3 + (k == 'square'), keep_scene=scene)
-        im.save(f'{OUT}/{op}-{k}.webp', quality=72 if k == 'cover' else 80, method=6)
+        im.save(f'{OUT}/{op}-{k}.webp', quality=84 if k == 'cover' else 88, method=6)
     if bg: manifest['op:' + op] = tones(bg)
 json.dump(manifest, open(f'{OUT}/tones.json', 'w'), indent=1)
 print('done', len(manifest))
