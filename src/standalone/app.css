@@ -11551,3 +11551,21 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .loop-pick p { flex: 1 0 100%; }
   .loop-pick .lp-btn { flex: 1; }
 }
+
+/* phone, folded bar: one flat row, one level of shape. A round play button, the loop as a plain icon,
+   the speed in a single soft pill, the arrow as a plain icon. No pills inside pills. */
+@media (max-width: 640px) {
+  .practice .p-bar.folded { gap: 4px; justify-content: space-between; }
+  .practice .p-bar.folded .bar-transport,
+  .practice .p-bar.folded .bar-right,
+  .practice .p-bar.folded .cp-tempo { background: none !important; box-shadow: none !important; border: 0 !important; padding: 0 !important; gap: 4px; }
+  .practice .p-bar.folded .bar-right { flex: 0 1 auto !important; }
+  .practice .p-bar.folded .bar-transport > [data-testid="play"],
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { flex: 0 0 52px !important; width: 52px !important; height: 52px; border-radius: 50%; }
+  .practice .p-bar.folded .bar-loop { width: 44px; height: 44px; border-radius: 50%; background: none; box-shadow: none; }
+  .practice .p-bar.folded .bar-loop[aria-pressed="true"] { background: var(--loop-mark); color: #fff; }
+  .practice .p-bar.folded .cp-speed { background: var(--fog) !important; box-shadow: none !important; border: 0 !important; height: 44px; padding: 0 2px; border-radius: 22px; }
+  .practice .p-bar.folded .cp-speed .cp-icon-btn { width: 40px; height: 40px; background: none; }
+  .practice .p-bar.folded .cp-speed .cp-tempo__value { min-width: 52px; text-align: center; font-size: 16px; }
+  .practice .p-bar.folded .bar-more { flex: 0 0 44px !important; width: 44px !important; height: 44px !important; background: none !important; }
+}
