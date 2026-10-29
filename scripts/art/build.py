@@ -54,12 +54,14 @@ def grain(size, seed, strength=7.0):
     # fine: a speckle at pixel size, a little grain just above it, and only a hint of mottling
     return layer(0, 5.0 * k) + layer(0.6, 2.0 * k) + layer(8, 1.2 * k)
 
-def render(fr, bg, out_size, seed, replace=None, keep_scene=False):
+def render(fr, bg, out_size, seed, replace=None, keep_scene=False, fill=False):
     W, Hh = round(fr['size']['x']), round(fr['size']['y'])
     s = out_size[0] / W
     ow, oh = out_size
     figure = Image.new('RGBA', (ow, oh), (0, 0, 0, 0))
     for h, x, y, w, hh, fx, fy in layers(fr):
+        # a picture placed smaller than its frame in Figma, stretched to fill the frame like the others
+        if fill: x, y, w, hh = 0, 0, W, Hh
         h = (replace or {}).get(h, CUTOUT.get(h, h))
         im = img(h)
         # FILL: scale to cover the rectangle, centred
@@ -98,7 +100,7 @@ for i, (key, c) in enumerate(chars.items()):
     bg = pal[key]
     for k in ('portrait', 'face'):
         fr = next(f for f in frames if kind(f) == k and c[k] in [CUTOUT.get(l[0], l[0]) for l in layers(f)])
-        im = render(fr, bg, SIZES[k], seed=i * 7 + (k == 'face'))
+        im = render(fr, bg, SIZES[k], seed=i * 7 + (k == 'face'), fill=k in c.get('fill', []))
         # mirrored where the picture should face the other way
         if c.get('flip'): im = im.transpose(Image.FLIP_LEFT_RIGHT)
         im.save(f'{OUT}/{opera}-{ch}-{k}.webp', quality=88, method=6)
