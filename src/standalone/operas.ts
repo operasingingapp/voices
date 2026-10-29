@@ -765,6 +765,30 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 2"
      }
     ]
+   },
+   {
+    "id": "flora",
+    "name": "Flora Bervoix",
+    "voice": "Mezzo-soprano",
+    "desc": "Violetta's friend, who gives the party in Act 2.",
+    "avatar": "long",
+    "pieces": []
+   },
+   {
+    "id": "douphol",
+    "name": "Baron Douphol",
+    "voice": "Baritone",
+    "desc": "Violetta's protector, and Alfredo's rival.",
+    "avatar": "beard",
+    "pieces": []
+   },
+   {
+    "id": "annina",
+    "name": "Annina",
+    "voice": "Soprano",
+    "desc": "Violetta's maid.",
+    "avatar": "bun",
+    "pieces": []
    }
   ]
  },
