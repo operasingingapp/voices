@@ -11596,3 +11596,44 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   }
   .practice .p-bar.folded .cp-speed.pop .cp-icon-btn { width: 44px; height: 44px; }
 }
+
+/* =====================================================================
+   Phone, folded bar: what a singer reaches for mid-practice, in five equal places
+   [your face: sing it yourself] [again from this line] [ ▶ ] [loop] [more]
+   The speed sits at the end of the progress row as a chip; bar · beat and the clock are gone there
+   ===================================================================== */
+.bar-again { display: none !important; }
+.tl-speed { display: none; }
+@media (max-width: 640px) {
+  .practice .p-bar.folded { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); justify-items: center; align-items: center; }
+  .practice .p-bar.folded > .bar-parts.many { display: contents !important; }
+  .practice .p-bar.folded > .bar-parts > *:not(:first-child) { display: none !important; }
+  .practice .p-bar.folded > .bar-parts > .part:first-child { grid-column: 1; grid-row: 1; }
+  .practice .p-bar.folded .bar-again { display: grid !important; grid-column: 2; grid-row: 1; width: 44px; height: 44px; place-items: center; background: none; }
+  .practice .p-bar.folded .bar-again svg { width: 24px; height: 24px; }
+  .practice .p-bar.folded .bar-transport > [data-testid="play"],
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { grid-column: 3; }
+  .practice .p-bar.folded .bar-loop { grid-column: 4; justify-self: center; margin-right: 0; }
+  .practice .p-bar.folded .bar-more { grid-column: 5; justify-self: center; }
+
+  .practice > .p-timeline .tl-time,
+  .practice > .p-timeline .tl-bar,
+  .practice > .p-timeline .tl-label span { display: none !important; }
+  .practice > .p-timeline { gap: 12px; }
+  .practice > .p-timeline .tl-label:not(:has(.tl-loop-chip)) { display: none !important; }
+  .tl-speed { display: block; position: relative; flex: none; }
+  .tl-speed-chip {
+    display: inline-flex; align-items: center; gap: 5px; height: 34px; padding: 0 12px 0 10px; border: 0; border-radius: 17px;
+    background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); font-variant-numeric: tabular-nums;
+  }
+  .tl-speed-chip svg { width: 18px; height: 18px; }
+  .tl-speed-chip[aria-expanded="true"] { background: var(--ink); color: var(--canvas); }
+  .tl-speed-pop {
+    position: absolute; right: 0; bottom: calc(100% + 8px); z-index: 30; display: flex; align-items: center; gap: 2px;
+    height: 52px; padding: 0 6px; border-radius: 26px; background: var(--canvas); box-shadow: var(--shadow-float); white-space: nowrap;
+  }
+  .tl-speed-pop b { min-width: 52px; text-align: center; font: 500 16px/1 var(--font-sans); font-variant-numeric: tabular-nums; }
+  .tl-speed-pop .cp-icon-btn { width: 44px; height: 44px; }
+  .tl-speed-reset { height: 36px; margin-left: 4px; padding: 0 12px; border: 0; border-radius: 18px; background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); }
+  .tl-speed-reset:disabled { display: none; }
+}

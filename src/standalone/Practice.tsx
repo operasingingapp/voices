@@ -295,6 +295,11 @@ const Icon = {
       <path d="M6 14.5L12 8.5l6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   ),
+  again: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4.5v3.8h3.8" />
+    </svg>
+  ),
   fromStart: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path fill="currentColor" d="M6 5h2.2v14H6zM19 5.6v12.8L9.4 12z" />
@@ -960,7 +965,7 @@ function PracticeScreen({
   useEffect(() => {
     if (!speedPop) return;
     const off = (e: PointerEvent) => {
-      if (!(e.target as HTMLElement).closest(".cp-speed, .speed-chip")) setSpeedPop(false);
+      if (!(e.target as HTMLElement).closest(".tl-speed")) setSpeedPop(false);
     };
     window.addEventListener("pointerdown", off);
     return () => window.removeEventListener("pointerdown", off);
@@ -2082,7 +2087,7 @@ function PracticeScreen({
       )}
       <div className="p-timeline gutter">
         <div className="tl-label" data-testid="location">
-          <b>{status ?? `Bar ${loc.number} · ${beat}`}</b>
+          <b className="tl-bar">{status ?? `Bar ${loc.number}`}</b>
           {loop && !status && (
             <button type="button" className="tl-loop-chip" onClick={() => setLoopHint(true)} aria-label={`Looping ${loopBars}. Change or clear the loop`}>
               {Icon.loop}
@@ -2146,6 +2151,29 @@ function PracticeScreen({
         <div className="tl-time">
           {fmtTime(perf.qToSec(qNow) / tf)} <span>/ {fmtTime(total / tf)}</span>
         </div>
+        {/* phone, folded bar: the speed as a chip at the end of this row; − and + open above it */}
+        {!barOpen && (
+          <div className="tl-speed">
+            <button type="button" className="tl-speed-chip" aria-expanded={speedPop} aria-label={`Speed ${tempoPct}%. Change it`} onClick={() => setSpeedPop(!speedPop)}>
+              {Icon.slow}
+              {tempoPct}%
+            </button>
+            {speedPop && (
+              <div className="tl-speed-pop" role="group" aria-label="Speed">
+                <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
+                  {Icon.minus}
+                </button>
+                <b>{tempoPct}%</b>
+                <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={() => engine?.setTempoFactor(Math.min(1.5, +((engine?.tempo ?? 1) + 0.05).toFixed(2)))}>
+                  {Icon.plus}
+                </button>
+                <button type="button" className="tl-speed-reset" onClick={() => engine?.setTempoFactor(1)} disabled={tempoPct === 100}>
+                  100%
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <footer className={`p-bar gutter ens${barOpen ? "" : " folded"}`}>
@@ -2464,6 +2492,21 @@ function PracticeScreen({
           >
             {Icon.fromStart}
           </button>
+          {/* phone, folded bar: again from this line (or the one just sung), and play */}
+          <button
+            type="button"
+            className="cp-icon-btn bar-again"
+            onClick={async () => {
+              if (!engine) return;
+              stepLine(-1);
+              if (engine.state !== "playing") await play();
+            }}
+            disabled={pb.status !== "ready"}
+            aria-label="Again from the start of this line"
+            title="Again from this line"
+          >
+            {Icon.again}
+          </button>
           <button type="button" className="cp-icon-btn bar-stop" onClick={() => engine?.stop()} aria-label="Stop and go back to the start" title="Stop">
             {Icon.stop}
           </button>
@@ -2510,11 +2553,7 @@ function PracticeScreen({
               <span className="cp-beat">{beatSymbol}</span> = {beatBpm}
             </span>
             {/* − 100% + as one control */}
-            {/* phone, folded bar: the speed is a chip; tapping it opens − and + above it */}
-            <button type="button" className="speed-chip" aria-expanded={speedPop} aria-label={`Speed ${tempoPct}%`} onClick={() => setSpeedPop(!speedPop)}>
-              {tempoPct}%
-            </button>
-            <div className={`cp-speed${speedPop ? " pop" : ""}`} role="group" aria-label="Speed">
+            <div className="cp-speed" role="group" aria-label="Speed">
             <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
               {Icon.minus}
             </button>
