@@ -11569,3 +11569,30 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .p-bar.folded .cp-speed .cp-tempo__value { min-width: 52px; text-align: center; font-size: 16px; }
   .practice .p-bar.folded .bar-more { flex: 0 0 44px !important; width: 44px !important; height: 44px !important; background: none !important; }
 }
+
+/* phone, folded bar, balanced: [speed chip]   [ ▶ ]   [loop][⌃]. The two sides are the same width,
+   play sits in the middle. One level of shape: the play disc, the speed chip, nothing else filled. */
+.speed-chip { display: none; }
+@media (max-width: 640px) {
+  .practice .p-bar.folded { display: grid !important; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; position: relative; }
+  .practice .p-bar.folded .bar-transport,
+  .practice .p-bar.folded .bar-right,
+  .practice .p-bar.folded .cp-tempo { display: contents !important; }
+  .practice .p-bar.folded .speed-chip {
+    display: inline-flex; align-items: center; justify-content: center;
+    grid-column: 1; grid-row: 1; justify-self: start;
+    width: 92px; height: 44px; border: 0; border-radius: 22px;
+    background: var(--fog); color: var(--ink); font: 500 16px/1 var(--font-sans); font-variant-numeric: tabular-nums;
+  }
+  .practice .p-bar.folded .speed-chip[aria-expanded="true"] { background: var(--ink); color: var(--canvas); }
+  .practice .p-bar.folded .bar-transport > [data-testid="play"],
+  .practice .p-bar.folded .bar-transport > [data-testid="pause"] { grid-column: 2; grid-row: 1; width: 60px !important; height: 60px; flex: none !important; }
+  .practice .p-bar.folded .bar-loop { grid-column: 3; grid-row: 1; justify-self: end; margin-right: 48px; }
+  .practice .p-bar.folded .bar-more { grid-column: 3; grid-row: 1; justify-self: end; }
+  .practice .p-bar.folded .cp-speed { display: none !important; }
+  .practice .p-bar.folded .cp-speed.pop {
+    display: flex !important; position: absolute; left: 16px; bottom: calc(100% + 8px); z-index: 20;
+    background: var(--canvas) !important; box-shadow: var(--shadow-float) !important; border-radius: 26px; height: 52px; padding: 0 4px; align-items: center;
+  }
+  .practice .p-bar.folded .cp-speed.pop .cp-icon-btn { width: 44px; height: 44px; }
+}

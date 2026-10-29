@@ -956,6 +956,15 @@ function PracticeScreen({
   // on a phone the bar folds to one slim row while the music plays (the score gets the room); a tap opens it
   // phones: the bar is one slim row (play, loop, speed); the arrow opens every control, and closes them again
   const [barOpen, setBarOpen] = useLocalSetting("p:barOpen", false);
+  const [speedPop, setSpeedPop] = useState(false);
+  useEffect(() => {
+    if (!speedPop) return;
+    const off = (e: PointerEvent) => {
+      if (!(e.target as HTMLElement).closest(".cp-speed, .speed-chip")) setSpeedPop(false);
+    };
+    window.addEventListener("pointerdown", off);
+    return () => window.removeEventListener("pointerdown", off);
+  }, [speedPop]);
   useEffect(() => engine?.setLoop(loop), [engine, loop]);
   const barAt = (pq: number) => perf.measures.find((pm) => pq >= pm.startQ - 1e-6 && pq < pm.startQ + pm.durQ - 1e-6) ?? perf.measures[perf.measures.length - 1];
   const loopLine = () => {
@@ -2501,7 +2510,11 @@ function PracticeScreen({
               <span className="cp-beat">{beatSymbol}</span> = {beatBpm}
             </span>
             {/* − 100% + as one control */}
-            <div className="cp-speed" role="group" aria-label="Speed">
+            {/* phone, folded bar: the speed is a chip; tapping it opens − and + above it */}
+            <button type="button" className="speed-chip" aria-expanded={speedPop} aria-label={`Speed ${tempoPct}%`} onClick={() => setSpeedPop(!speedPop)}>
+              {tempoPct}%
+            </button>
+            <div className={`cp-speed${speedPop ? " pop" : ""}`} role="group" aria-label="Speed">
             <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
               {Icon.minus}
             </button>
