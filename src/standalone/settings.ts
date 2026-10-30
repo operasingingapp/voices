@@ -14,6 +14,7 @@ export const LINE_SOUNDS: { id: LineInstrument; label: string }[] = [
   { id: "piano", label: "Piano" },
   { id: "oboe", label: "Oboe" },
   { id: "clarinet", label: "Clarinet" },
+  { id: "flute", label: "Flute" },
   { id: "english-horn", label: "English horn" },
   { id: "bassoon", label: "Bassoon" },
 ];

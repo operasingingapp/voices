@@ -3089,11 +3089,11 @@ function PracticeScreen({
                     </p>
                   )}
                   <p>
-                    Oboe, clarinet and bassoon for the sung line: recordings from{" "}
-                    <a href="https://github.com/sgossner/VSCO-2-CE" target="_blank" rel="noreferrer">
-                      VS Chamber Orchestra: Community Edition
-                    </a>{" "}
-                    by Versilian Studios, in the public domain (CC0). English horn:{" "}
+                    Oboe, clarinet, bassoon and flute for the sung line: the{" "}
+                    <a href="https://theremin.music.uiowa.edu/MIS.html" target="_blank" rel="noreferrer">
+                      University of Iowa Musical Instrument Samples
+                    </a>
+                    , free to use without restrictions. English horn:{" "}
                     <a href="https://github.com/peastman/sso" target="_blank" rel="noreferrer">
                       Sonatina Symphonic Orchestra
                     </a>{" "}

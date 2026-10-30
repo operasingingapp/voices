@@ -18,40 +18,84 @@ import type { PlaybackPart } from "../../shared/types";
 
 import NOCT from "../standalone/piano/noct.json";
 
-const files = import.meta.glob("../standalone/piano/noct-v*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
+const files = import.meta.glob("../standalone/piano/noct-v*.mp3", {
+  query: "?url",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
 interface PianoNote {
   midi: number;
   start: number; // seconds into the layer's file where the note's slot begins (after its gap)
   dur: number;
 }
-const PIANO = NOCT as unknown as { gap: number; layers: Record<string, { file: string; notes: PianoNote[] }>; cents: Record<string, number> };
+const PIANO = NOCT as unknown as {
+  gap: number;
+  layers: Record<string, { file: string; notes: PianoNote[] }>;
+  cents: Record<string, number>;
+};
 /** the lowest velocity of each of the 16 layers (the Accurate-Salamander SFZ's mapping) */
-const LAYER_FROM = [1, 27, 33, 38, 43, 48, 53, 59, 65, 72, 80, 88, 96, 104, 112, 120];
+const LAYER_FROM = [
+  1, 27, 33, 38, 43, 48, 53, 59, 65, 72, 80, 88, 96, 104, 112, 120,
+];
 const layerOf = (vel: number) => {
   let l = 1;
-  for (let i = 0; i < LAYER_FROM.length; i++) if (vel >= LAYER_FROM[i]) l = i + 1;
+  for (let i = 0; i < LAYER_FROM.length; i++)
+    if (vel >= LAYER_FROM[i]) l = i + 1;
   return l;
 };
 /** every layer is recorded at the same loudness; this matches the old piano's level at velocity 64 */
 const PIANO_LEVEL_DB = -7.5;
 /** decoding rate for the piano: enough for a piano's overtones, a third less memory than 48 kHz */
 const PIANO_RATE = 32000;
-// instruments for the sung line, loaded only when chosen (real recordings: VSCO 2 CE, CC0; the English horn
-// from Sonatina Symphonic Orchestra, CC Sampling+ 1.0; see voices/README.md)
-const hallFiles = import.meta.glob("../standalone/room/*.wav", { query: "?url", import: "default", eager: true }) as Record<string, string>;
-const lineFiles = import.meta.glob("../standalone/voices/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
-const lineTuning = import.meta.glob("../standalone/voices/tuning.json", { import: "default", eager: true }) as Record<string, Record<string, number>>;
+// instruments for the sung line, loaded only when chosen (real recordings: the University of Iowa MIS, free for any
+// use; the English horn from Sonatina Symphonic Orchestra, CC Sampling+ 1.0; see voices/README.md)
+const hallFiles = import.meta.glob("../standalone/room/*.wav", {
+  query: "?url",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
+const lineFiles = import.meta.glob("../standalone/voices/*.mp3", {
+  query: "?url",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
+const lineTuning = import.meta.glob("../standalone/voices/tuning.json", {
+  import: "default",
+  eager: true,
+}) as Record<string, Record<string, number>>;
+/** an instrument packed into one file: its notes one after another, each in a slot of `slot` seconds */
+interface PackedKit {
+  slot: number;
+  notes: { midi: number; cents: number }[];
+}
+const packedKits = import.meta.glob("../standalone/voices/*.kit.json", {
+  import: "default",
+  eager: true,
+}) as Record<string, PackedKit>;
 
 /** What the sung line can be played on. */
-export type LineInstrument = "piano" | "oboe" | "clarinet" | "english-horn" | "bassoon" | "singer";
-const LINE_SOUND: Record<Exclude<LineInstrument, "piano" | "singer">, { release: number; dbPerStep: number }> = {
+export type LineInstrument =
+  | "piano"
+  | "oboe"
+  | "clarinet"
+  | "flute"
+  | "english-horn"
+  | "bassoon"
+  | "singer";
+const LINE_SOUND: Record<
+  Exclude<LineInstrument, "piano" | "singer">,
+  { release: number; dbPerStep: number }
+> = {
   // a held, singing tone: let it go like a breath, not a damper
   oboe: { release: 0.07, dbPerStep: 0.12 },
   clarinet: { release: 0.08, dbPerStep: 0.12 },
+  flute: { release: 0.08, dbPerStep: 0.12 },
   "english-horn": { release: 0.08, dbPerStep: 0.12 },
   bassoon: { release: 0.08, dbPerStep: 0.12 },
 };
-const isLineKit = (id: string): id is Exclude<LineInstrument, "piano" | "singer"> => id in LINE_SOUND;
+const isLineKit = (
+  id: string,
+): id is Exclude<LineInstrument, "piano" | "singer"> => id in LINE_SOUND;
 
 /** how loud a recorded singer plays against the piano (the recordings are levelled to -20 LUFS) */
 const SINGER_LEVEL_DB = -3;
@@ -73,7 +117,6 @@ interface Singer {
   follow: { t: number; s: number; f: number } | null;
   playing: { src: AudioBufferSourceNode; env: GainNode }[];
 }
-
 
 interface Sample {
   midi: number;
@@ -114,7 +157,8 @@ function unlockMediaPlayback() {
     const n = rate / 10;
     const buf = new ArrayBuffer(44 + n);
     const v = new DataView(buf);
-    const w = (o: number, t: string) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+    const w = (o: number, t: string) =>
+      [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
     w(0, "RIFF");
     v.setUint32(4, 36 + n, true);
     w(8, "WAVE");
@@ -129,7 +173,9 @@ function unlockMediaPlayback() {
     w(36, "data");
     v.setUint32(40, n, true);
     for (let i = 0; i < n; i++) v.setUint8(44 + i, 128);
-    const el = new Audio(URL.createObjectURL(new Blob([buf], { type: "audio/wav" })));
+    const el = new Audio(
+      URL.createObjectURL(new Blob([buf], { type: "audio/wav" })),
+    );
     el.setAttribute("playsinline", "");
     el.volume = 0.01;
     void el.play().catch(() => undefined);
@@ -147,7 +193,11 @@ const REVERB_SEND = 0.8;
  * reflections, then a diffuse tail of about 1.4 s (to -60 dB) that grows darker as it fades, as
  * high frequencies are absorbed faster than low ones. Each side gets its own noise, for width.
  */
-function roomImpulse(ctx: BaseAudioContext, rt60 = 1.4, seconds = 1.6): AudioBuffer {
+function roomImpulse(
+  ctx: BaseAudioContext,
+  rt60 = 1.4,
+  seconds = 1.6,
+): AudioBuffer {
   const rate = ctx.sampleRate;
   const len = Math.round(rate * seconds);
   const buf = ctx.createBuffer(2, len, rate);
@@ -176,7 +226,8 @@ function roomImpulse(ctx: BaseAudioContext, rt60 = 1.4, seconds = 1.6): AudioBuf
       const swell = Math.min(1, t / 0.03); // the diffuse tail builds up over the first 30 ms
       d[i] = lp * Math.exp((-6.91 * t) / rt60) * swell;
     }
-    for (const [at, gain, side] of early) d[Math.round(at * rate)] += side === c ? gain : gain * 0.5;
+    for (const [at, gain, side] of early)
+      d[Math.round(at * rate)] += side === c ? gain : gain * 0.5;
   }
   return buf;
 }
@@ -190,7 +241,10 @@ const RESONANCE_SEND = 0.08;
  * for width. Convolved with a note it brings out the partials the strings share with it, as the undamped strings do
  * when the pedal is down. Rendered by the audio engine itself, off the page's thread.
  */
-async function stringsImpulse(rate: number, seconds = 1.8): Promise<AudioBuffer> {
+async function stringsImpulse(
+  rate: number,
+  seconds = 1.8,
+): Promise<AudioBuffer> {
   const len = Math.round(rate * seconds);
   const oc = new OfflineAudioContext(2, len, rate);
   const out = oc.createChannelMerger(2);
@@ -224,7 +278,8 @@ async function stringsImpulse(rate: number, seconds = 1.8): Promise<AudioBuffer>
   }
   const buf = await oc.startRendering();
   let peak = 0;
-  for (let c = 0; c < 2; c++) for (const v of buf.getChannelData(c)) peak = Math.max(peak, Math.abs(v));
+  for (let c = 0; c < 2; c++)
+    for (const v of buf.getChannelData(c)) peak = Math.max(peak, Math.abs(v));
   for (let c = 0; c < 2; c++) {
     const d = buf.getChannelData(c);
     for (let i = 0; i < d.length; i++) d[i] /= peak * 40;
@@ -287,7 +342,12 @@ export class SamplerPort implements SynthPort {
     preDelay.delayTime.value = 0.022;
     const room = ctx.createConvolver();
     room.buffer = roomImpulse(ctx);
-    this.master.connect(this.reverbSend).connect(lowCut).connect(preDelay).connect(room).connect(makeup);
+    this.master
+      .connect(this.reverbSend)
+      .connect(lowCut)
+      .connect(preDelay)
+      .connect(room)
+      .connect(makeup);
     // Sympathetic resonance: with the dampers lifted, every string answers the notes it shares partials with. Only
     // notes held by the pedal are sent here (where a pianist's pedal is down), quietly, so the pedalled passages
     // bloom as on a real piano while the dry ones stay clear.
@@ -332,10 +392,13 @@ export class SamplerPort implements SynthPort {
       const buf = await this.ctx.decodeAudioData(await res.arrayBuffer());
       const energy = (b: AudioBuffer) => {
         let e = 0;
-        for (let c = 0; c < b.numberOfChannels; c++) for (const v of b.getChannelData(c)) e += v * v;
+        for (let c = 0; c < b.numberOfChannels; c++)
+          for (const v of b.getChannelData(c)) e += v * v;
         return e / b.numberOfChannels;
       };
-      const k = Math.sqrt(energy(this.room.buffer!) / Math.max(1e-12, energy(buf)));
+      const k = Math.sqrt(
+        energy(this.room.buffer!) / Math.max(1e-12, energy(buf)),
+      );
       for (let c = 0; c < buf.numberOfChannels; c++) {
         const d = buf.getChannelData(c);
         for (let i = 0; i < d.length; i++) d[i] *= k;
@@ -372,22 +435,34 @@ export class SamplerPort implements SynthPort {
 
   /** more or less room (1 = the default send); eased so a change mid-piece never clicks */
   setRoom(level: number) {
-    this.reverbSend.gain.setTargetAtTime(REVERB_SEND * level, this.ctx.currentTime, 0.05);
+    this.reverbSend.gain.setTargetAtTime(
+      REVERB_SEND * level,
+      this.ctx.currentTime,
+      0.05,
+    );
   }
 
-  static async create(onProgress?: (msg: string) => void): Promise<SamplerPort> {
+  static async create(
+    onProgress?: (msg: string) => void,
+  ): Promise<SamplerPort> {
     const ctx = new AudioContext({ latencyHint: "interactive" });
     const port = new SamplerPort(ctx);
-    if (!Object.keys(files).length) throw new Error("The piano samples are missing");
+    if (!Object.keys(files).length)
+      throw new Error("The piano samples are missing");
     onProgress?.("Loading the piano");
     // a middle layer over the whole keyboard first: enough to play anything; a piece's own layers follow (prepare)
-    await port.loadLayer(8, new Set(PIANO.layers["8"].notes.map((n) => n.midi)));
+    await port.loadLayer(
+      8,
+      new Set(PIANO.layers["8"].notes.map((n) => n.midi)),
+    );
     return port;
   }
 
   private fileUrl(layer: number): string {
     const name = PIANO.layers[String(layer)].file;
-    const url = Object.entries(files).find(([path]) => path.endsWith("/" + name))?.[1];
+    const url = Object.entries(files).find(([path]) =>
+      path.endsWith("/" + name),
+    )?.[1];
     if (!url) throw new Error("A piano layer is missing");
     return url;
   }
@@ -411,7 +486,9 @@ export class SamplerPort implements SynthPort {
       // decode at 32 kHz (an offline context decodes at its own rate), then keep only the notes asked for
       let whole: AudioBuffer;
       try {
-        whole = await new OfflineAudioContext(2, 1, PIANO_RATE).decodeAudioData(data);
+        whole = await new OfflineAudioContext(2, 1, PIANO_RATE).decodeAudioData(
+          data,
+        );
       } catch {
         whole = await this.ctx.decodeAudioData(data);
       }
@@ -420,7 +497,10 @@ export class SamplerPort implements SynthPort {
         if (!missing.includes(n.midi)) continue;
         // find the onset near the slot's start (MP3 encoders and decoders shift audio by a few ms)
         const ch0 = whole.getChannelData(0);
-        const from = Math.max(0, Math.round((n.start - PIANO.gap * 0.8) * rate));
+        const from = Math.max(
+          0,
+          Math.round((n.start - PIANO.gap * 0.8) * rate),
+        );
         const limit = Math.min(ch0.length, Math.round((n.start + 0.15) * rate));
         let on = Math.round(n.start * rate);
         for (let i = from; i < limit; i++)
@@ -429,8 +509,13 @@ export class SamplerPort implements SynthPort {
             break;
           }
         const len = Math.min(ch0.length - on, Math.round(n.dur * rate));
-        const buf = new AudioBuffer({ numberOfChannels: whole.numberOfChannels, length: len, sampleRate: rate });
-        for (let c = 0; c < whole.numberOfChannels; c++) buf.copyToChannel(whole.getChannelData(c).subarray(on, on + len), c);
+        const buf = new AudioBuffer({
+          numberOfChannels: whole.numberOfChannels,
+          length: len,
+          sampleRate: rate,
+        });
+        for (let c = 0; c < whole.numberOfChannels; c++)
+          buf.copyToChannel(whole.getChannelData(c).subarray(on, on + len), c);
         layerRef.notes.set(n.midi, { midi: n.midi, buffer: buf, offset: 0 });
       }
     });
@@ -450,7 +535,11 @@ export class SamplerPort implements SynthPort {
    */
   prepare(notes: { midi: number; vel: number }[]) {
     const recorded = PIANO.layers["8"].notes.map((n) => n.midi);
-    const nearest = (m: number) => recorded.reduce((b, k) => (Math.abs(k - m) < Math.abs(b - m) ? k : b), recorded[0]);
+    const nearest = (m: number) =>
+      recorded.reduce(
+        (b, k) => (Math.abs(k - m) < Math.abs(b - m) ? k : b),
+        recorded[0],
+      );
     const count = new Map<number, number>();
     const keys = new Set<number>();
     for (const n of notes) {
@@ -459,21 +548,26 @@ export class SamplerPort implements SynthPort {
       keys.add(nearest(n.midi));
     }
     // at most the six layers the piece uses most (a handful of notes in another layer play on the nearest one)
-    const layers = [...count.keys()].sort((a, b) => count.get(b)! - count.get(a)!).slice(0, 6);
+    const layers = [...count.keys()]
+      .sort((a, b) => count.get(b)! - count.get(a)!)
+      .slice(0, 6);
     this.want = { layers: new Set([8, ...layers]), keys };
     // free what this piece does not need (layer 8 stays: it covers everything while others load)
-    for (const [l] of this.layers) if (!this.want.layers.has(l)) this.layers.delete(l);
+    for (const [l] of this.layers)
+      if (!this.want.layers.has(l)) this.layers.delete(l);
     let chain = Promise.resolve();
-    for (const l of layers) chain = chain.then(() => this.loadLayer(l, keys).catch(() => undefined));
+    for (const l of layers)
+      chain = chain.then(() => this.loadLayer(l, keys).catch(() => undefined));
     // once the piece's own layers are in, the whole-keyboard layer keeps only the piece's keys too
     const want = this.want;
     void chain.then(() => {
       const L8 = this.layers.get(8);
       if (!L8 || this.want !== want) return;
-      for (const k of [...L8.notes.keys()]) if (!keys.has(k)) {
-        L8.notes.delete(k);
-        L8.keys.delete(k);
-      }
+      for (const k of [...L8.notes.keys()])
+        if (!keys.has(k)) {
+          L8.notes.delete(k);
+          L8.keys.delete(k);
+        }
     });
   }
 
@@ -481,7 +575,11 @@ export class SamplerPort implements SynthPort {
    * Play a channel on another instrument. Its recordings load now if they have not yet; until they have
    * arrived (and for notes outside its range) the piano plays, so nothing ever goes silent.
    */
-  setInstrument(ch: number, id: string, range?: [number, number]): Promise<void> {
+  setInstrument(
+    ch: number,
+    id: string,
+    range?: [number, number],
+  ): Promise<void> {
     const kit: LineInstrument = isLineKit(id) || id === "singer" ? id : "piano";
     const sg = this.singers.get(ch);
     if (sg && kit !== "singer") this.stopSinger(sg, this.ctx.currentTime);
@@ -489,24 +587,64 @@ export class SamplerPort implements SynthPort {
     this.channelShift.set(ch, 0);
     this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
-    if (kit === "singer") return this.singers.get(ch)?.ready ?? Promise.resolve();
+    if (kit === "singer")
+      return this.singers.get(ch)?.ready ?? Promise.resolve();
     let load = this.kitLoads.get(kit);
     if (!load) {
-      const tuning = Object.values(lineTuning)[0] ?? {};
-      const list = Object.entries(lineFiles)
-        .map(([path, url]) => ({ m: new RegExp(`/${kit}-(\\d+)\\.mp3$`).exec(path), url }))
-        .filter((x) => x.m)
-        .map(({ m, url }) => ({ midi: Number(m![1]), url, cents: tuning[`${kit}-${m![1]}`] ?? 0 }));
-      load = Promise.all(
-        list.map(async ({ midi, url, cents }) => {
-          const res = await fetch(url);
+      const packed = Object.entries(packedKits).find(([path]) =>
+        path.endsWith(`/${kit}.kit.json`),
+      )?.[1];
+      const packedUrl = Object.entries(lineFiles).find(([path]) =>
+        path.endsWith(`/${kit}.kit.mp3`),
+      )?.[1];
+      if (packed && packedUrl) {
+        load = (async () => {
+          const res = await fetch(packedUrl);
           if (!res.ok) throw new Error("A recording could not be loaded");
-          const buffer = await this.ctx.decodeAudioData(await res.arrayBuffer());
-          return { midi, buffer, offset: leadingSilence(buffer), cents };
-        }),
-      ).then((samples) => {
-        this.kits.set(kit, samples.sort((a, b) => a.midi - b.midi));
-      });
+          const all = await this.ctx.decodeAudioData(await res.arrayBuffer());
+          const slot = Math.round(packed.slot * all.sampleRate);
+          const data = all.getChannelData(0);
+          const samples = packed.notes.map(({ midi, cents }, i) => {
+            const from = i * slot;
+            const len = Math.max(0, Math.min(slot, data.length - from));
+            const buffer = this.ctx.createBuffer(1, len, all.sampleRate);
+            buffer.copyToChannel(data.subarray(from, from + len), 0);
+            return { midi, buffer, offset: leadingSilence(buffer), cents };
+          });
+          this.kits.set(
+            kit,
+            samples.sort((a, b) => a.midi - b.midi),
+          );
+        })();
+      } else {
+        const tuning = Object.values(lineTuning)[0] ?? {};
+        const list = Object.entries(lineFiles)
+          .map(([path, url]) => ({
+            m: new RegExp(`/${kit}-(\\d+)\\.mp3$`).exec(path),
+            url,
+          }))
+          .filter((x) => x.m)
+          .map(({ m, url }) => ({
+            midi: Number(m![1]),
+            url,
+            cents: tuning[`${kit}-${m![1]}`] ?? 0,
+          }));
+        load = Promise.all(
+          list.map(async ({ midi, url, cents }) => {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error("A recording could not be loaded");
+            const buffer = await this.ctx.decodeAudioData(
+              await res.arrayBuffer(),
+            );
+            return { midi, buffer, offset: leadingSilence(buffer), cents };
+          }),
+        ).then((samples) => {
+          this.kits.set(
+            kit,
+            samples.sort((a, b) => a.midi - b.midi),
+          );
+        });
+      }
       load.catch(() => this.kitLoads.delete(kit));
       this.kitLoads.set(kit, load);
     }
@@ -522,7 +660,10 @@ export class SamplerPort implements SynthPort {
    * (the score's own, and 70%). The one nearest the tempo plays, so it is barely re-timed. Each is fetched the
    * first time it is needed. Resolves once the line can play at the score's tempo.
    */
-  setRecording(ch: number, recs: { tempo: number; url: string; map: RecordingMap }[] | null): Promise<void> {
+  setRecording(
+    ch: number,
+    recs: { tempo: number; url: string; map: RecordingMap }[] | null,
+  ): Promise<void> {
     const old = this.singers.get(ch);
     const key = recs?.map((r) => r.url).join("|");
     if (old && recs && old.key === key) {
@@ -536,13 +677,21 @@ export class SamplerPort implements SynthPort {
     if (old) this.stopSinger(old, this.ctx.currentTime);
     this.singers.delete(ch);
     if (!recs?.length) return Promise.resolve();
-    const sg: Singer = { key: key!, sources: recs.map((r) => ({ ...r, line: null, load: null })), follow: null, playing: [], ready: Promise.resolve() };
+    const sg: Singer = {
+      key: key!,
+      sources: recs.map((r) => ({ ...r, line: null, load: null })),
+      follow: null,
+      playing: [],
+      ready: Promise.resolve(),
+    };
     sg.ready = this.lineFor(sg, sg.follow?.f ?? 1).then(async (line) => {
       // lay it out for the tempo now, so pressing play does not wait for it
       await line.timed(this.ctx, sg.follow?.f ?? 1).catch(() => undefined);
       if (sg.follow) this.startSinger(ch, sg); // playback may already be running: join in where it is now
     });
-    sg.ready.catch(() => this.singers.get(ch) === sg && this.singers.delete(ch));
+    sg.ready.catch(
+      () => this.singers.get(ch) === sg && this.singers.delete(ch),
+    );
     this.singers.set(ch, sg);
     return sg.ready;
   }
@@ -558,14 +707,19 @@ export class SamplerPort implements SynthPort {
 
   /** the recording to use at tempo f (the one rendered nearest it), loaded; the others are let go (memory) */
   private lineFor(sg: Singer, f: number): Promise<RecordedLine> {
-    const src = sg.sources.reduce((a, b) => (Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a));
+    const src = sg.sources.reduce((a, b) =>
+      Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a,
+    );
     if (!src.load) {
-      src.load = RecordedLine.load(this.ctx, src.url, src.map, src.tempo).then((line) => {
-        line.setMap(src.map); // the map may have changed while it loaded
-        src.line = line;
-        for (const o of sg.sources) if (o !== src) (o.line = null), (o.load = null);
-        return line;
-      });
+      src.load = RecordedLine.load(this.ctx, src.url, src.map, src.tempo).then(
+        (line) => {
+          line.setMap(src.map); // the map may have changed while it loaded
+          src.line = line;
+          for (const o of sg.sources)
+            if (o !== src) ((o.line = null), (o.load = null));
+          return line;
+        },
+      );
       src.load.catch(() => (src.load = null));
     }
     return src.load;
@@ -587,13 +741,19 @@ export class SamplerPort implements SynthPort {
     const level = 10 ** (SINGER_LEVEL_DB / 20);
     const FADE = 0.025;
     /** play buf from audio time a0, sounding from app time out0 to out1 (seconds at this tempo) */
-    const play = (buf: AudioBuffer, out0: number, out1: number, a0: number, tail: boolean) => {
+    const play = (
+      buf: AudioBuffer,
+      out0: number,
+      out1: number,
+      a0: number,
+      tail: boolean,
+    ) => {
       const now = this.ctx.currentTime + 0.03;
       const pos = fl.s / fl.f; // app time at clock fl.t
       let t0 = fl.t + (out0 - pos);
       let off = a0;
-      if (t0 < now) (off += now - t0), (t0 = now);
-      if (off < 0) (t0 -= off), (off = 0);
+      if (t0 < now) ((off += now - t0), (t0 = now));
+      if (off < 0) ((t0 -= off), (off = 0));
       const t1 = fl.t + (out1 - pos) + (tail ? 0 : FADE);
       if (t1 <= t0 + 0.01 || off >= buf.duration) return;
       const src = this.ctx.createBufferSource();
@@ -615,13 +775,17 @@ export class SamplerPort implements SynthPort {
       };
       sg.playing.push(item);
     };
-    this.lineFor(sg, fl.f).then((line) => {
-      if (sg.follow !== fl) return; // stopped or restarted meanwhile
-      const go = (buf: AudioBuffer) => sg.follow === fl && play(buf, 0, buf.duration, 0, true);
-      const ready = line.ready(fl.f);
-      if (ready) go(ready);
-      else line.timed(this.ctx, fl.f).then(go, () => undefined);
-    }, () => undefined);
+    this.lineFor(sg, fl.f).then(
+      (line) => {
+        if (sg.follow !== fl) return; // stopped or restarted meanwhile
+        const go = (buf: AudioBuffer) =>
+          sg.follow === fl && play(buf, 0, buf.duration, 0, true);
+        const ready = line.ready(fl.f);
+        if (ready) go(ready);
+        else line.timed(this.ctx, fl.f).then(go, () => undefined);
+      },
+      () => undefined,
+    );
   }
 
   private stopSinger(sg: Singer, time: number) {
@@ -659,7 +823,10 @@ export class SamplerPort implements SynthPort {
 
   /** is this channel's line sung by its recording (so its notes stay silent)? */
   private sung(ch: number) {
-    return this.channelKit.get(ch) === "singer" && !!this.singers.get(ch)?.sources.some((x) => x.line);
+    return (
+      this.channelKit.get(ch) === "singer" &&
+      !!this.singers.get(ch)?.sources.some((x) => x.line)
+    );
   }
 
   async resume() {
@@ -673,10 +840,19 @@ export class SamplerPort implements SynthPort {
 
   outputTime() {
     const ts = this.ctx.getOutputTimestamp?.();
-    if (ts && ts.contextTime !== undefined && ts.performanceTime !== undefined && ts.contextTime > 0) {
+    if (
+      ts &&
+      ts.contextTime !== undefined &&
+      ts.performanceTime !== undefined &&
+      ts.contextTime > 0
+    ) {
       return ts.contextTime + (performance.now() - ts.performanceTime) / 1000;
     }
-    return this.ctx.currentTime - (this.ctx.outputLatency || 0) - (this.ctx.baseLatency || 0);
+    return (
+      this.ctx.currentTime -
+      (this.ctx.outputLatency || 0) -
+      (this.ctx.baseLatency || 0)
+    );
   }
 
   private channel(ch: number): GainNode {
@@ -695,7 +871,10 @@ export class SamplerPort implements SynthPort {
    * suits accompaniment on a tablet), as every layer is recorded at the same level. Until the right layer has
    * loaded, the nearest loaded one plays.
    */
-  private pick(midi: number, vel: number): { sample: Sample; gain: number; cents: number } | null {
+  private pick(
+    midi: number,
+    vel: number,
+  ): { sample: Sample; gain: number; cents: number } | null {
     const want = layerOf(vel);
     let best: Sample | null = null;
     let bestScore = Infinity;
@@ -710,7 +889,11 @@ export class SamplerPort implements SynthPort {
       }
     if (!best) return null;
     const db = (Math.max(1, Math.min(127, vel)) - 64) * 0.2 + PIANO_LEVEL_DB;
-    return { sample: best, gain: 10 ** (db / 20), cents: PIANO.cents[String(midi)] ?? 0 };
+    return {
+      sample: best,
+      gain: 10 ** (db / 20),
+      cents: PIANO.cents[String(midi)] ?? 0,
+    };
   }
 
   private channelRange = new Map<number, [number, number] | undefined>();
@@ -731,18 +914,30 @@ export class SamplerPort implements SynthPort {
   }
 
   /** A recording of another instrument for this note, if the channel uses one and it covers the pitch. */
-  private pickLine(ch: number, midiAsked: number, vel: number): { sample: Sample; gain: number; release: number; midi: number } | null {
+  private pickLine(
+    ch: number,
+    midiAsked: number,
+    vel: number,
+  ): { sample: Sample; gain: number; release: number; midi: number } | null {
     const kit = this.channelKit.get(ch);
     if (!kit || kit === "piano" || kit === "singer") return null;
     const list = this.kits.get(kit);
     if (!list?.length) return null;
     const midi = midiAsked + (this.channelShift.get(ch) ?? 0);
     // no more than a minor third beyond the recorded range: further, a stretched recording sounds false
-    if (midi < list[0].midi - 3 || midi > list[list.length - 1].midi + 3) return null;
+    if (midi < list[0].midi - 3 || midi > list[list.length - 1].midi + 3)
+      return null;
     let best = list[0];
-    for (const x of list) if (Math.abs(x.midi - midi) < Math.abs(best.midi - midi)) best = x;
-    const db = (Math.max(1, Math.min(127, vel)) - 64) * LINE_SOUND[kit].dbPerStep;
-    return { sample: best, gain: 10 ** (db / 20), release: LINE_SOUND[kit].release, midi };
+    for (const x of list)
+      if (Math.abs(x.midi - midi) < Math.abs(best.midi - midi)) best = x;
+    const db =
+      (Math.max(1, Math.min(127, vel)) - 64) * LINE_SOUND[kit].dbPerStep;
+    return {
+      sample: best,
+      gain: 10 ** (db / 20),
+      release: LINE_SOUND[kit].release,
+      midi,
+    };
   }
 
   noteOn(ch: number, midi: number, vel: number, time: number, held = false) {
@@ -753,18 +948,29 @@ export class SamplerPort implements SynthPort {
     const s = picked.sample;
     const t = Math.max(time, this.ctx.currentTime);
     // striking a key again ends its previous sound (the hammer stops the string), also for unisons
-    for (const v of this.voices) if (!v.released && v.ch === ch && v.midi === midi) this.release(v, t, 0.06);
+    for (const v of this.voices)
+      if (!v.released && v.ch === ch && v.midi === midi)
+        this.release(v, t, 0.06);
     const src = this.ctx.createBufferSource();
     src.buffer = s.buffer;
     const tune = line ? -(s.cents ?? 0) : "cents" in picked ? picked.cents : 0;
-    src.playbackRate.value = 2 ** (((line?.midi ?? midi) - s.midi) / 12 + tune / 1200);
+    src.playbackRate.value =
+      2 ** (((line?.midi ?? midi) - s.midi) / 12 + tune / 1200);
     const env = this.ctx.createGain();
     env.gain.value = picked.gain;
     src.connect(env).connect(this.channel(ch));
     // a note the pedal holds also sets the other strings ringing: a little of it goes to the resonance
     if (held) env.connect(this.resonanceSend);
     src.start(t, s.offset);
-    const voice: Voice = { ch, midi, src, env, start: t, released: false, release: line?.release ?? 0.12 };
+    const voice: Voice = {
+      ch,
+      midi,
+      src,
+      env,
+      start: t,
+      released: false,
+      release: line?.release ?? 0.12,
+    };
     src.onended = () => {
       this.voices = this.voices.filter((x) => x !== voice);
       env.disconnect();
@@ -790,7 +996,10 @@ export class SamplerPort implements SynthPort {
 
   noteOff(ch: number, midi: number, time: number) {
     // the oldest sounding note on this key that began before the release
-    const v = this.voices.find((x) => !x.released && x.ch === ch && x.midi === midi && x.start <= time + 1e-4);
+    const v = this.voices.find(
+      (x) =>
+        !x.released && x.ch === ch && x.midi === midi && x.start <= time + 1e-4,
+    );
     // a piano damper (or a breath, a bow lifting): a short, soft release rather than a click
     if (v) this.release(v, time, v.release);
   }
@@ -854,6 +1063,7 @@ export class SamplerPort implements SynthPort {
 function leadingSilence(b: AudioBuffer): number {
   const data = b.getChannelData(0);
   const limit = Math.min(data.length, Math.round(b.sampleRate * 0.1));
-  for (let i = 0; i < limit; i++) if (Math.abs(data[i]) > 0.002) return Math.max(0, i - 8) / b.sampleRate;
+  for (let i = 0; i < limit; i++)
+    if (Math.abs(data[i]) > 0.002) return Math.max(0, i - 8) / b.sampleRate;
   return 0;
 }

@@ -1,17 +1,17 @@
 # Instruments for the sung line
 
-**Oboe** (with vibrato), **clarinet** (long sustain) and **bassoon** (with vibrato; plain sustain where the
-vibrato set has gaps) from **VS Chamber Orchestra: Community Edition** (VSCO 2 CE) by Versilian Studios,
-recorded by Sam Gossner and Simon Dalzell, released under
-[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain).
-Source: <https://github.com/sgossner/VSCO-2-CE>.
+**Oboe**, **clarinet** (B♭), **bassoon** and **flute** (with vibrato) from the **University of Iowa Electronic
+Music Studios Musical Instrument Samples** (the 1997 sets, played at mf), which "may be downloaded and used for any
+projects, without restrictions". Source: <https://theremin.music.uiowa.edu/MIS.html>. Built with
+`scripts/instruments/iowa.py`: each chromatic scale cut into notes, every note's pitch checked, a whole-tone set kept.
 
 **English horn** (cor anglais, sustain) from **Sonatina Symphonic Orchestra** by Mattias Westlund, released
 under [Creative Commons Sampling Plus 1.0](https://creativecommons.org/licenses/sampling+/1.0/).
 Source: <https://github.com/peastman/sso>.
 
-Changed for this app: one loudness layer each (oboe v3, clarinet and bassoon v2); VSCO names its files an
-octave low, so the true pitch is used here (measured). Each note is levelled to the same loudness, cut to
+Changed for this app: one loudness layer each. Each note is levelled to the same loudness, cut to
 6 s (recordings shorter than that are lengthened by crossfading their steady middle) with a 0.5 s fade,
-and re-encoded as 96 kbps MP3. `tuning.json` holds each recording's measured pitch deviation in cents,
-which the player corrects. Files are named `<instrument>-<midi>.mp3`.
+and re-encoded as 96 kbps MP3. Each Iowa instrument is one file, `<instrument>.kit.mp3`, its notes one
+after another in 6.5 s slots; `<instrument>.kit.json` lists them in order with each recording's measured
+pitch deviation in cents, which the player corrects. The English horn is one file per note,
+`english-horn-<midi>.mp3`, with its tuning in `tuning.json`.
