@@ -886,6 +886,8 @@ function PracticeScreen({
   useEffect(() => {
     const port = pb.port;
     if (!port?.setRecording) return;
+    // the port outlives the piece: drop any other piece's singers first, or they would sing along here
+    port.keepRecordings?.(voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel));
     for (const p of voiceParts) {
       const recs = recordingsOf(p.key);
       if (!recs.length) continue;
@@ -899,6 +901,11 @@ function PracticeScreen({
       port.setRecording(p.channel, placed).catch(() => undefined);
     }
   }, [pb.port, perf]);
+  // leaving the piece: its singers go too
+  useEffect(() => {
+    const port = pb.port;
+    return () => port?.keepRecordings?.([]);
+  }, [pb.port]);
   useEffect(() => {
     const port = pb.port;
     if (!port?.setInstrument) return;

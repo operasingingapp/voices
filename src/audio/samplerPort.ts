@@ -416,6 +416,15 @@ export class SamplerPort implements SynthPort {
     return sg.ready;
   }
 
+  /** forget the recorded singers on every channel but these (the port outlives a piece) */
+  keepRecordings(channels: number[]) {
+    for (const [ch, sg] of [...this.singers]) {
+      if (channels.includes(ch)) continue;
+      this.stopSinger(sg, this.ctx.currentTime);
+      this.singers.delete(ch);
+    }
+  }
+
   /** the recording to use at tempo f (the one rendered nearest it), loaded */
   private lineFor(sg: Singer, f: number): Promise<RecordedLine> {
     const src = sg.sources.reduce((a, b) => (Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a));
