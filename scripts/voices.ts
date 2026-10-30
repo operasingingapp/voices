@@ -394,7 +394,24 @@ async function chooseVoice(lang = "it"): Promise<{ id: string; name: string }> {
  * Words sung on one note (an elision) are kept together. The result goes to the bank's sung/ folder; the plain
  * recording stays, so the shape can be retuned (SHAPE below) without making anything again.
  */
-const SHAPE = { minStretch: 1.1, maxStretch: 1.35, maxBreath: 0.45, fade: 0.006, v: 1 };
+// cuts go only where the voice is already quiet (a gap between words: the quietest 5 ms within `seek` of the word
+// boundary, at least `quietDb` below the line's loudest); words that run into each other stay one piece, stretched
+// together, so no cut or fade ever lands inside sounding speech
+const SHAPE = { minStretch: 1.1, maxStretch: 1.35, maxBreath: 0.45, fade: 0.006, seek: 0.04, quietDb: 30, v: 2 };
+
+/** the line's level, 5 ms windows (dB), from its samples at 16 kHz */
+function levels(file: string): { db: Float32Array; step: number } {
+  const raw = execFileSync(FFMPEG, ["-v", "error", "-i", file, "-f", "f32le", "-ac", "1", "-ar", "16000", "-"], { maxBuffer: 1 << 28 });
+  const x = new Float32Array(raw.buffer, raw.byteOffset, Math.floor(raw.byteLength / 4));
+  const W = 80;
+  const db = new Float32Array(Math.floor(x.length / W));
+  for (let i = 0; i < db.length; i++) {
+    let acc = 0;
+    for (let j = 0; j < W; j++) acc += x[i * W + j] ** 2;
+    db[i] = 10 * Math.log10(acc / W + 1e-12);
+  }
+  return { db, step: W / 16000 };
+}
 
 function spansOf(ph: Phrase, notes: Map<string, number>): (number | undefined)[] {
   const syl = ph.syllables ?? [];
@@ -435,6 +452,23 @@ function shapeLine(src: string, out: string, times: [number, number][], spans: (
       prev.words.push(k);
       prev.beats = spans[k] === undefined || prev.beats === undefined ? undefined : prev.beats + spans[k]!;
     } else units.push({ words: [k], from: k === 0 ? 0 : times[k][0], to: total, beats: spans[k] });
+  }
+  // move each cut to the quietest moment near it; where there is none, the two units become one
+  const { db, step } = levels(join(ROOT, src));
+  const peak = db.reduce((m, v) => Math.max(m, v), -120);
+  for (let u = 1; u < units.length; u++) {
+    const c = Math.round(units[u].from / step);
+    const r = Math.round(SHAPE.seek / step);
+    let best = c;
+    for (let i = Math.max(1, c - r); i <= Math.min(db.length - 1, c + r); i++) if (db[i] < (db[best] ?? Infinity)) best = i;
+    if ((db[best] ?? peak) <= peak - SHAPE.quietDb) {
+      units[u].from = best * step;
+      continue;
+    }
+    const prev = units[u - 1];
+    prev.words.push(...units[u].words);
+    prev.beats = prev.beats === undefined || units[u].beats === undefined ? undefined : prev.beats + units[u].beats!;
+    units.splice(u--, 1);
   }
   for (let u = 0; u + 1 < units.length; u++) units[u].to = units[u + 1].from;
   const rates = units.filter((u) => u.beats && u.beats > 0).map((u) => (u.to - u.from) / u.beats!).sort((a, b) => a - b);
