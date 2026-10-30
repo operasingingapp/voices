@@ -111,7 +111,7 @@ export const OPERAS: Opera[] = [
     "id": "count",
     "name": "Count Almaviva",
     "voice": "Baritone",
-    "desc": "The Countess's husband, who has given up his feudal right over his servants' brides, and would like it back for Susanna.",
+    "desc": "The Countess's husband, jealous of his wife though unfaithful himself, who has given up his feudal right over his servants' brides and would like it back for Susanna.",
     "avatar": "crown",
     "pieces": [
      {
