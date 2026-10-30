@@ -73,10 +73,19 @@ const COVER_ALT: Record<string, string> = {
   schicchi: "Gianni Schicchi, in a red cap, reads the will while Buoso's relatives crowd round the bed; Florence beyond the window.",
 };
 
+/** characters who are the same person in another opera, drawn once (Beaumarchais's Bartolo and Basilio) */
+const SAME_AS: Record<string, string> = {
+  "figaro:bartolo": "barbiere:bartolob",
+  "figaro:basilio": "barbiere:basilio",
+};
+
 /** Portraits for the characters that have one (key: "opera:character"): a full portrait and a face crop for circles. */
 export const PORTRAITS: Record<string, { portrait: string; face: string; alt: string }> = Object.fromEntries(
-  Object.entries(PORTRAIT_ALT)
-    .map(([key, alt]) => [key, { portrait: pic(`${key.replace(":", "-")}-portrait`), face: pic(`${key.replace(":", "-")}-face`), alt }] as const)
+  [...Object.entries(PORTRAIT_ALT), ...Object.entries(SAME_AS).map(([key, from]) => [key, PORTRAIT_ALT[from]] as const)]
+    .map(([key, alt]) => {
+      const file = (SAME_AS[key] ?? key).replace(":", "-");
+      return [key, { portrait: pic(`${file}-portrait`), face: pic(`${file}-face`), alt }] as const;
+    })
     .filter(([, p]) => p.portrait && p.face),
 );
 
@@ -85,7 +94,11 @@ export const PORTRAITS: Record<string, { portrait: string; face: string; alt: st
  * tones around it (soft, strong, deep): a pale tint of the backdrop's complement, so card and picture contrast
  * and belong together.
  */
-export const ART_TONES = artTones as Record<string, { soft: string; strong: string; deep: string; back: string }>;
+export const ART_TONES = (() => {
+  const t = { ...(artTones as Record<string, { soft: string; strong: string; deep: string; back: string }>) };
+  for (const [key, from] of Object.entries(SAME_AS)) if (t[from] && !t[key]) t[key] = t[from];
+  return t;
+})();
 
 /** A role's applause when the whole role is learned (key: "opera:character"): a short film, and its last frame. */
 export const BRAVO: Record<string, { video: string; poster: string }> = {

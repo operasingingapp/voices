@@ -44,6 +44,30 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 3", text: "At the hearing a birthmark reveals that Figaro is his and Marcellina's son, stolen as a baby. He agrees to marry Marcellina at last." },
     { act: "Act 4", text: "In the garden at night Figaro posts him and Basilio nearby, to come when he whistles and witness Susanna's betrayal." },
   ],
+  "figaro:marcellina": [
+    { act: "Act 1", text: "Marcellina holds a contract: Figaro borrowed money from her and promised to marry her if he could not repay it. With Bartolo's help she means to enforce it, and she trades sugary insults with Susanna at the door (“Via resti servita”)." },
+    { act: "Act 2", text: "At the end of the act she arrives with Bartolo and Basilio to lay her claim before the Count, just as he is ready to stop the wedding." },
+    { act: "Act 3", text: "The judge orders Figaro to pay or marry her, but a birthmark on his arm shows that he is her own long-lost son by Bartolo (“Riconosci in questo amplesso”). Mother and son embrace, and Bartolo agrees to marry her at last, so a double wedding is set." },
+    { act: "Act 4", text: "Now on Susanna's side, she resolves to warn her of Figaro's suspicions and reflects that only humans mistreat their mates (“Il capro e la capretta”). In the dark garden she hides to watch." },
+  ],
+  "figaro:basilio": [
+    { act: "Act 1", text: "The music master brings the Count's advances to Susanna and spreads gossip about Cherubino and the Countess, not knowing the Count is hiding to hear it (“Cosa sento!”). Then he is told to bring Cherubino back once the boy has left for the army." },
+    { act: "Act 2", text: "He arrives at the end of the act with Marcellina and Bartolo to support her claim." },
+    { act: "Act 4", text: "Called by Figaro to the garden to witness Susanna's betrayal, he explains how he learned to give way to the powerful (“In quegli anni”). He hides nearby and comes out with the others at the end." },
+  ],
+  "figaro:curzio": [
+    { act: "Act 3", text: "The stammering judge rules that Figaro must pay Marcellina or marry her, and stays to see the case turned upside down when Figaro turns out to be her son (“Riconosci in questo amplesso”)." },
+    { act: "Act 4", text: "He is among the household who come with torches at the end and see the Count beg his wife's pardon." },
+  ],
+  "figaro:barbarina": [
+    { act: "Act 3", text: "Sweet on Cherubino, she takes him home to dress him as a village girl, and brings him with the girls who give flowers to the Countess. When he is found out, she reminds the Count of the promises he made her when he kissed her, and asks for Cherubino as her husband." },
+    { act: "Act 4", text: "Sent by the Count to return the pin to Susanna, she has lost it (“L'ho perduta, me meschina”), and lets slip to Figaro where the meeting will be. Then, in the dark, she waits with fruit and cakes for Cherubino in the pavilion on the left." },
+  ],
+  "figaro:antonio": [
+    { act: "Act 2", text: "The gardener storms in, half drunk, complaining that a man has jumped from the window onto his flowers, and hands over a paper the man dropped: Cherubino's commission." },
+    { act: "Act 3", text: "He tells the Count that Cherubino has not gone to Seville, and later unmasks the page among the village girls by pulling off his bonnet." },
+    { act: "Act 4", text: "He comes with torches at the end and sees the Count kneel to ask his wife's pardon." },
+  ],
 
   // ---------------- Don Giovanni ----------------
   "giovanni:dongiovanni": [

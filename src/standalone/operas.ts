@@ -149,6 +149,46 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 1"
      }
     ]
+   },
+   {
+    "id": "marcellina",
+    "name": "Marcellina",
+    "voice": "Mezzo-soprano",
+    "desc": "Bartolo's old housekeeper, who has lent Figaro money on his promise to marry her.",
+    "avatar": "bun",
+    "pieces": []
+   },
+   {
+    "id": "basilio",
+    "name": "Don Basilio",
+    "voice": "Tenor",
+    "desc": "The music master, a gossip in the Count's pay.",
+    "avatar": "hat",
+    "pieces": []
+   },
+   {
+    "id": "curzio",
+    "name": "Don Curzio",
+    "voice": "Tenor",
+    "desc": "The stammering judge who hears Marcellina's case.",
+    "avatar": "short",
+    "pieces": []
+   },
+   {
+    "id": "barbarina",
+    "name": "Barbarina",
+    "voice": "Soprano",
+    "desc": "The gardener's young daughter, sweet on Cherubino.",
+    "avatar": "long",
+    "pieces": []
+   },
+   {
+    "id": "antonio",
+    "name": "Antonio",
+    "voice": "Bass",
+    "desc": "The Count's gardener, Susanna's uncle and Barbarina's father.",
+    "avatar": "cap",
+    "pieces": []
    }
   ]
  },
@@ -1417,6 +1457,8 @@ const V2_NEW = new Set([
   "Scorrendo uniti remota via",
   "Possente amor mi chiama",
   "Dormi amor mio",
+  // added with the full Figaro cast (2026-10)
+  "È Barbarina… Chi va là?",
 ]);
 const V2_ADDED: Record<string, string[]> = {
   "Contro un cor che accende amore": ["almaviva"],
@@ -1425,10 +1467,13 @@ const V2_ADDED: Record<string, string[]> = {
   "Ancora un passo or via… Quanto cielo! Quanto mar!": ["sharpless", "pinkerton"],
   "The relatives bargain": ["schicchi"],
   "Addio, fiorito asil": ["sharpless"],
+  "Pian pianin le andrò più presso": ["bartolo"],
 };
 const V2_REMOVED: Record<string, string[]> = {
   "Bel conforto al mietitore… Quanto è bella": ["adina"],
   "The letter": ["suzuki"],
+  // Figaro's cast check: this recitative is Barbarina's; Figaro's own scene with Bartolo follows it
+  "Nel padiglione a manca": ["figaro", "bartolo"],
 };
 export const V2_KEYS: Record<string, string[]> = {};
 for (const opera of OPERAS) {
