@@ -38,6 +38,7 @@ const PIANO_LEVEL_DB = -7.5;
 const PIANO_RATE = 32000;
 // instruments for the sung line, loaded only when chosen (real recordings: VSCO 2 CE, CC0; the English horn
 // from Sonatina Symphonic Orchestra, CC Sampling+ 1.0; see voices/README.md)
+const hallFiles = import.meta.glob("../standalone/room/*.wav", { query: "?url", import: "default", eager: true }) as Record<string, string>;
 const lineFiles = import.meta.glob("../standalone/voices/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
 const lineTuning = import.meta.glob("../standalone/voices/tuning.json", { import: "default", eager: true }) as Record<string, Record<string, number>>;
 
@@ -236,12 +237,72 @@ export class SamplerPort implements SynthPort {
     const room = ctx.createConvolver();
     room.buffer = roomImpulse(ctx);
     this.master.connect(this.reverbSend).connect(lowCut).connect(preDelay).connect(room).connect(makeup);
+    this.roomIn = preDelay;
+    this.roomOut = makeup;
+    this.room = room;
+    void this.loadHall();
     this.masterAnalyser = ctx.createAnalyser();
     this.masterAnalyser.fftSize = 2048;
     limiter.connect(this.masterAnalyser);
     this.clickBus = ctx.createGain();
     this.clickBus.gain.value = 0.35;
     this.clickBus.connect(this.master);
+  }
+
+  private roomIn!: AudioNode;
+  private roomOut!: AudioNode;
+  private room!: ConvolverNode;
+
+  /**
+   * The real hall: St Paul's Hall, Huddersfield, as measured for the MAIR library (University of Huddersfield,
+   * CC BY 4.0), from its ambience microphones (the hall's sound without the direct sound), trimmed to about 1.6 s.
+   * It replaces the generated room once it has loaded, at the same overall level, with a short crossfade.
+   */
+  private async loadHall() {
+    const url = Object.values(hallFiles)[0];
+    if (!url) return;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) return;
+      const buf = await this.ctx.decodeAudioData(await res.arrayBuffer());
+      const energy = (b: AudioBuffer) => {
+        let e = 0;
+        for (let c = 0; c < b.numberOfChannels; c++) for (const v of b.getChannelData(c)) e += v * v;
+        return e / b.numberOfChannels;
+      };
+      const k = Math.sqrt(energy(this.room.buffer!) / Math.max(1e-12, energy(buf)));
+      for (let c = 0; c < buf.numberOfChannels; c++) {
+        const d = buf.getChannelData(c);
+        for (let i = 0; i < d.length; i++) d[i] *= k;
+      }
+      const hall = this.ctx.createConvolver();
+      hall.normalize = this.room.normalize;
+      hall.buffer = buf;
+      const t = this.ctx.currentTime;
+      const fadeIn = this.ctx.createGain();
+      const fadeOut = this.ctx.createGain();
+      fadeIn.gain.setValueAtTime(0, t);
+      fadeIn.gain.linearRampToValueAtTime(1, t + 0.5);
+      this.roomIn.connect(hall).connect(fadeIn).connect(this.roomOut);
+      this.roomIn.disconnect(this.room);
+      this.room.disconnect();
+      this.roomIn.connect(this.room).connect(fadeOut).connect(this.roomOut);
+      fadeOut.gain.setValueAtTime(1, t);
+      fadeOut.gain.linearRampToValueAtTime(0, t + 0.5);
+      const old = this.room;
+      this.room = hall;
+      window.setTimeout(() => {
+        try {
+          this.roomIn.disconnect(old);
+          old.disconnect();
+          fadeOut.disconnect();
+        } catch {
+          /* already gone */
+        }
+      }, 3000);
+    } catch {
+      /* the generated room stays */
+    }
   }
 
   /** more or less room (1 = the default send); eased so a change mid-piece never clicks */

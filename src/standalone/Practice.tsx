@@ -3068,6 +3068,17 @@ function PracticeScreen({
                     </a>
                     . All 16 loudness levels, each note up to ten seconds.
                   </p>
+                  <p>
+                    The hall the piano sounds in: St Paul’s Hall, Huddersfield, from the{" "}
+                    <a href="https://github.com/APL-Huddersfield/MAIR-Library-and-Renderer" target="_blank" rel="noreferrer">
+                      MAIR library
+                    </a>{" "}
+                    by Hyunkook Lee and Connor Millns (Applied Psychoacoustics Lab, University of Huddersfield), licensed{" "}
+                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">
+                      Creative Commons BY 4.0
+                    </a>
+                    ; its reverberation shortened a little for practice.
+                  </p>
                   {voiceParts.some((p) => sungOf(p.key)) && (
                     <p>
                       Singer: the line sung on “ah”, rendered from the score with{" "}
