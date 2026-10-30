@@ -181,6 +181,57 @@ function roomImpulse(ctx: BaseAudioContext, rt60 = 1.4, seconds = 1.6): AudioBuf
   return buf;
 }
 
+/** how much of a pedalled note feeds the strings' resonance */
+const RESONANCE_SEND = 0.08;
+
+/**
+ * The open strings of a grand piano, answering: a softly decaying series of partials for every string (A0 to C8, the
+ * lower strings ringing longer, each partial a little sharp as on a real string), each side started a moment apart
+ * for width. Convolved with a note it brings out the partials the strings share with it, as the undamped strings do
+ * when the pedal is down. Rendered by the audio engine itself, off the page's thread.
+ */
+async function stringsImpulse(rate: number, seconds = 1.8): Promise<AudioBuffer> {
+  const len = Math.round(rate * seconds);
+  const oc = new OfflineAudioContext(2, len, rate);
+  const out = oc.createChannelMerger(2);
+  out.connect(oc.destination);
+  let seed = 0x1234567;
+  const rnd = () => {
+    seed ^= seed << 13;
+    seed ^= seed >>> 17;
+    seed ^= seed << 5;
+    return (seed >>> 0) / 4294967296;
+  };
+  for (let c = 0; c < 2; c++) {
+    for (let m = 21; m <= 108; m++) {
+      const f0 = 440 * 2 ** ((m - 69) / 12);
+      const tau = 0.25 + 1.4 * Math.max(0, (108 - m) / 87); // low strings ring longer
+      for (let h = 1; h <= 4; h++) {
+        const f = f0 * h * Math.sqrt(1 + 0.0004 * h * h);
+        if (f > rate / 2 - 1000) break;
+        const at = rnd() * 0.004;
+        const osc = oc.createOscillator();
+        osc.frequency.value = f;
+        const g = oc.createGain();
+        g.gain.setValueAtTime(0, 0);
+        g.gain.linearRampToValueAtTime(1 / (h * h), at + 0.012);
+        g.gain.setTargetAtTime(0, at + 0.012, tau / h);
+        osc.connect(g).connect(out, 0, c);
+        osc.start(at);
+        osc.stop(Math.min(seconds, at + 7 * (tau / h)));
+      }
+    }
+  }
+  const buf = await oc.startRendering();
+  let peak = 0;
+  for (let c = 0; c < 2; c++) for (const v of buf.getChannelData(c)) peak = Math.max(peak, Math.abs(v));
+  for (let c = 0; c < 2; c++) {
+    const d = buf.getChannelData(c);
+    for (let i = 0; i < d.length; i++) d[i] /= peak * 40;
+  }
+  return buf;
+}
+
 export class SamplerPort implements SynthPort {
   readonly ctx: AudioContext;
   readonly masterAnalyser: AnalyserNode;
@@ -237,6 +288,19 @@ export class SamplerPort implements SynthPort {
     const room = ctx.createConvolver();
     room.buffer = roomImpulse(ctx);
     this.master.connect(this.reverbSend).connect(lowCut).connect(preDelay).connect(room).connect(makeup);
+    // Sympathetic resonance: with the dampers lifted, every string answers the notes it shares partials with. Only
+    // notes held by the pedal are sent here (where a pianist's pedal is down), quietly, so the pedalled passages
+    // bloom as on a real piano while the dry ones stay clear.
+    this.resonanceSend = ctx.createGain();
+    this.resonanceSend.gain.value = RESONANCE_SEND;
+    // the strings' answer is rendered in the background; silent until it is ready
+    stringsImpulse(ctx.sampleRate)
+      .then((buf) => {
+        const strings = ctx.createConvolver();
+        strings.buffer = buf;
+        this.resonanceSend.connect(strings).connect(this.master);
+      })
+      .catch(() => undefined);
     this.roomIn = preDelay;
     this.roomOut = makeup;
     this.room = room;
@@ -249,6 +313,7 @@ export class SamplerPort implements SynthPort {
     this.clickBus.connect(this.master);
   }
 
+  private resonanceSend!: GainNode;
   private roomIn!: AudioNode;
   private roomOut!: AudioNode;
   private room!: ConvolverNode;
@@ -680,7 +745,7 @@ export class SamplerPort implements SynthPort {
     return { sample: best, gain: 10 ** (db / 20), release: LINE_SOUND[kit].release, midi };
   }
 
-  noteOn(ch: number, midi: number, vel: number, time: number) {
+  noteOn(ch: number, midi: number, vel: number, time: number, held = false) {
     if (this.sung(ch)) return;
     const line = this.pickLine(ch, midi, vel);
     const picked = line ?? this.pick(midi, vel);
@@ -696,6 +761,8 @@ export class SamplerPort implements SynthPort {
     const env = this.ctx.createGain();
     env.gain.value = picked.gain;
     src.connect(env).connect(this.channel(ch));
+    // a note the pedal holds also sets the other strings ringing: a little of it goes to the resonance
+    if (held) env.connect(this.resonanceSend);
     src.start(t, s.offset);
     const voice: Voice = { ch, midi, src, env, start: t, released: false, release: line?.release ?? 0.12 };
     src.onended = () => {

@@ -16,7 +16,8 @@ import type { PlaybackPart } from "../../shared/types";
 export interface SynthPort {
   currentTime(): number; // scheduling clock (seconds)
   outputTime(): number; // clock time currently reaching the speakers
-  noteOn(channel: number, midi: number, velocity: number, time: number): void;
+  /** held: the sustain pedal keeps this note sounding past its written end (a port may add the strings' resonance) */
+  noteOn(channel: number, midi: number, velocity: number, time: number, held?: boolean): void;
   noteOff(channel: number, midi: number, time: number): void;
   allSoundOff(channel: number, time: number): void;
   setChannelGain(channel: number, gain: number): void;
@@ -402,7 +403,7 @@ export class PlaybackEngine {
     const vel = Math.max(1, Math.min(127, Math.round(v)));
     const k = `${ch}:${ev.midi}`;
     this.sounding.set(k, (this.sounding.get(k) ?? 0) + 1);
-    this.port.noteOn(ch, ev.midi, vel, t);
+    this.port.noteOn(ch, ev.midi, vel, t, ev.soundOffQ !== undefined && ev.soundOffQ > ev.offQ + 1e-6);
     this.lastScheduledT = Math.max(this.lastScheduledT, t);
     this.log?.push({ kind: "on", part: ev.part, channel: ch, midi: ev.midi, time: t, q });
     this.active.set(ev.key, { ev, channel: ch, offQ });
