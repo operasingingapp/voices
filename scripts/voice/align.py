@@ -30,7 +30,12 @@ if fs > 16000:
     from scipy.signal import resample_poly
     from math import gcd
     g = gcd(int(fs), 16000); x = resample_poly(x, 16000 // g, int(fs) // g); fs = 16000
-f0, t = pw.harvest(x, fs, f0_floor=70, f0_ceil=1400, frame_period=FP)
+# the lowest pitch to look for: just under the line's lowest note (a low floor costs much memory on a long take)
+FLOOR = max(60.0, 0.8 * 440 * 2 ** ((min(e[2] for e in ev) - 69) / 12))
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from pitch import harvest
+f0, t = harvest(x, fs, f0_floor=FLOOR, f0_ceil=1400, frame_period=FP)
 rms = np.array([np.sqrt(np.mean(x[int(a * fs):int(a * fs) + int(FP / 1000 * fs)] ** 2) + 1e-12) for a in t])
 loud = 20 * np.log10(rms) > 20 * np.log10(rms.max()) - 45
 am = np.where((f0 > 0) & loud, 69 + 12 * np.log2(np.maximum(f0, 1) / 440), 0.0)

@@ -13,7 +13,11 @@ if fs > 16000:
     from math import gcd
     g = gcd(int(fs), 16000); x = resample_poly(x, 16000 // g, int(fs) // g); fs = 16000
 FP = 5.0
-f0, t = pw.harvest(x, fs, f0_floor=70, f0_ceil=1400, frame_period=FP)
+FLOOR = max(60.0, 0.8 * 440 * 2 ** ((min(r['midi'] for r in R) - 69) / 12))
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from pitch import harvest
+f0, t = harvest(x, fs, f0_floor=FLOOR, f0_ceil=1400, frame_period=FP)
 w = int(FP / 1000 * fs)
 rms = np.sqrt(np.convolve(x ** 2, np.ones(w) / w, 'same')[(t * fs).astype(int).clip(0, len(x) - 1)] + 1e-12)
 db = 20 * np.log10(rms); thr = db.max() - 40
@@ -27,11 +31,15 @@ for i, r in enumerate(R):
     if prev and abs(prev['end'] - r['q']) < 1e-6 and prev['midi'] != r['midi']:
         for j in range(lo, hi):
             seg = m[j:j + 3]
+            # a pitch tracker can jump an octave on a low voice: read it in the octave nearest the two notes
+            mid = (r['midi'] + prev['midi']) / 2
+            seg = seg - 12 * np.round((seg - mid) / 12)
             if np.all(np.abs(seg - r['midi']) < np.abs(seg - prev['midi'])): new = j; break
     elif not prev or prev['end'] < r['q'] - 1e-6:
         for j in range(lo, hi):
             if np.all(db[j:j + 3] > thr) and np.all(f0[j:j + 3] > 0): new = j; break
-    if new is not None:
+    # more than 50 ms from the first alignment: more likely a misreading than a better onset
+    if new is not None and abs(new * FP / 1000 - a) <= 0.05:
         r['audio'] = round(new * FP / 1000, 3); moved.append(r['audio'] - a)
 for i in range(1, len(R)):
     if R[i]['audio'] <= R[i - 1]['audio'] + 0.02: R[i]['audio'] = round(R[i - 1]['audio'] + 0.02, 3)
