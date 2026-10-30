@@ -526,8 +526,10 @@ function PracticeScreen({
   const holdSwallowClick = useRef(false);
   const holdOptAt = (x: number, y: number) =>
     (document.elementFromPoint(x, y) as HTMLElement | null)?.closest<HTMLElement>("[data-hold-opt]")?.dataset.holdOpt ?? null;
+  // your own line's sound is one setting shared with Arrange and Settings; the others' are per line
   const pickHold = (key: string, id: string) => {
-    setLine(key, { inst: id as LineChoice });
+    if (key === voicePart.key) setLineSound(id as LineChoice);
+    else setLine(key, { inst: id as LineChoice });
     setHoldMenu(null);
   };
   const holdHandlers = (p: CompiledEdition["parts"][number], name: string) => {
@@ -2355,7 +2357,7 @@ function PracticeScreen({
       {holdMenu &&
         createPortal(
           (() => {
-            const choice = lineSets[holdMenu.key]?.inst ?? "auto";
+            const choice = holdMenu.key === voicePart.key ? lineChoice : (lineSets[holdMenu.key]?.inst ?? "auto");
             const auto = resolveLine("auto", holdMenu.voiceType);
             const W = 240;
             const left = Math.max(8, Math.min(window.innerWidth - W - 8, holdMenu.rect.left + holdMenu.rect.width / 2 - W / 2));
@@ -2608,10 +2610,11 @@ function PracticeScreen({
                         ) : (
                           <label className="mix-line-inst">
                             <select
-                              value={inst}
+                              value={isYou ? lineChoice : (lineSets[p.key]?.inst ?? "auto")}
                               onChange={(e) => (isYou ? setLineSound(e.target.value as LineChoice) : setLine(p.key, { inst: e.target.value as LineChoice }))}
                               aria-label={`${name}'s line is played on`}
                             >
+                              <option value="auto">Automatic ({LINE_SOUNDS.find((o) => o.id === resolveLine("auto", voiceTypeOf(p)))?.label})</option>
                               {LINE_SOUNDS.map((o) => (
                                 <option key={o.id} value={o.id}>
                                   {o.label}
