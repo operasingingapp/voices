@@ -50,16 +50,20 @@ const audioModules = import.meta.glob(["../../data/content/*/audio/*.mp3", "!../
 }) as Record<string, string>;
 const audioUrl = (file?: string) => (file ? audioModules[`../../data/content/${pieceId}/audio/${file}`] : undefined);
 
-// Recorded singers: a sung line rendered from the score (src/standalone/recordings/<piece>/<part>.mp3) and where
-// each of its notes starts in the recording (<part>.json, scripts/voice/align.py). Fetched only when sung.
+// Recorded singers: a sung line rendered from the score at the score's tempo (recordings/<piece>/<part>.mp3) and
+// at 70% (<part>-70.mp3), with where each of its notes starts in the recording (.json, scripts/voice/align.py).
+// Each is fetched the first time it is sung.
 const recordingFiles = import.meta.glob("./recordings/*/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
 const recordingMaps = import.meta.glob("./recordings/*/*.json", { import: "default", eager: true }) as Record<string, { onsets: Record<string, number> }>;
-const recordingOf = (partKey: string) => {
-  const url = recordingFiles[`./recordings/${pieceId}/${partKey}.mp3`];
-  const map = recordingMaps[`./recordings/${pieceId}/${partKey}.json`];
-  return url && map ? { url, onsets: map.onsets } : null;
-};
-const sungOf = (partKey: string) => !!recordingOf(partKey);
+const recordingsOf = (partKey: string) =>
+  Object.entries(recordingFiles).flatMap(([path, url]) => {
+    const m = new RegExp(`^\\./recordings/${pieceId}/${partKey}(?:-(\\d+))?\\.mp3$`).exec(path);
+    const map = m && recordingMaps[path.replace(/\.mp3$/, ".json")];
+    return m && map ? [{ tempo: m[1] ? Number(m[1]) / 100 : 1, url, onsets: map.onsets }] : [];
+  });
+const sungOf = (partKey: string) => recordingsOf(partKey).length > 0;
+/** the speeds a recorded singer offers: those it was rendered at (re-timing further would be heard) */
+const SUNG_TEMPOS = [0.7, 1];
 
 // The real voice: recordings made with ElevenLabs (scripts/voices.ts), the voice set in voice.config.json.
 import voiceConfig from "../../voice.config.json";
@@ -883,13 +887,16 @@ function PracticeScreen({
     const port = pb.port;
     if (!port?.setRecording) return;
     for (const p of voiceParts) {
-      const rec = recordingOf(p.key);
-      if (!rec) continue;
-      const pts = perf.notes
-        .filter((n) => n.part === p.key && rec.onsets[n.ids[0]] !== undefined)
-        .map((n) => [perf.qToSec(n.onQ), rec.onsets[n.ids[0]]] as const)
-        .sort((a, b) => a[0] - b[0]);
-      port.setRecording(p.channel, { url: rec.url, map: { perf: pts.map((x) => x[0]), audio: pts.map((x) => x[1]) } }).catch(() => undefined);
+      const recs = recordingsOf(p.key);
+      if (!recs.length) continue;
+      const placed = recs.map((rec) => {
+        const pts = perf.notes
+          .filter((n) => n.part === p.key && rec.onsets[n.ids[0]] !== undefined)
+          .map((n) => [perf.qToSec(n.onQ), rec.onsets[n.ids[0]]] as const)
+          .sort((a, b) => a[0] - b[0]);
+        return { tempo: rec.tempo, url: rec.url, map: { perf: pts.map((x) => x[0]), audio: pts.map((x) => x[1]) } };
+      });
+      port.setRecording(p.channel, placed).catch(() => undefined);
     }
   }, [pb.port, perf]);
   useEffect(() => {
@@ -1368,6 +1375,19 @@ function PracticeScreen({
   const beat = Math.floor(loc.beat + 1e-6);
   const countLeft = engine ? engine.countInRemaining() : 0;
   const tempoPct = Math.round((engine?.tempo ?? 1) * 100);
+  // With a recorded singer the speed is one it was rendered at (100% or 70%): further re-timing would be heard.
+  // Otherwise − and + move in steps of 5%.
+  const singing = (lineSound === "singer" && hearVoice) || otherVoices.some((p) => instOf(p) === "singer" && hearOf(p));
+  const tf0 = engine?.tempo ?? 1;
+  const slower = () => engine?.setTempoFactor(singing ? SUNG_TEMPOS[0] : Math.max(0.4, +(tf0 - 0.05).toFixed(2)));
+  const faster = () => engine?.setTempoFactor(singing ? 1 : Math.min(1.5, +(tf0 + 0.05).toFixed(2)));
+  const canSlower = singing ? tf0 > SUNG_TEMPOS[0] + 1e-3 : tf0 > 0.4 + 1e-3;
+  const canFaster = singing ? tf0 < 1 - 1e-3 : tf0 < 1.5 - 1e-3;
+  // the singer starts singing (or a speed is restored): take the nearer of its speeds
+  useEffect(() => {
+    if (!engine || !singing || SUNG_TEMPOS.some((x) => Math.abs(x - engine.tempo) < 1e-3)) return;
+    engine.setTempoFactor(engine.tempo < 0.85 ? SUNG_TEMPOS[0] : 1);
+  }, [engine, singing, tf0]);
   // the speed in the beat a singer feels; in 2/2 it is given in quarter notes, as the playback mark is (a half-note glyph is not in every font)
   const shownQ = bi.unitQ === 2 ? 1 : bi.unitQ;
   const beatSymbol = shownQ === 1.5 ? "♩." : shownQ === 0.5 ? "♪" : "♩";
@@ -2363,11 +2383,11 @@ function PracticeScreen({
             </button>
             {speedPop && (
               <div className="tl-speed-pop" role="group" aria-label="Speed">
-                <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
+                <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={!canSlower}>
                   {Icon.minus}
                 </button>
                 <b>{tempoPct}%</b>
-                <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={() => engine?.setTempoFactor(Math.min(1.5, +((engine?.tempo ?? 1) + 0.05).toFixed(2)))}>
+                <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={!canFaster}>
                   {Icon.plus}
                 </button>
                 <button type="button" className="tl-speed-reset" onClick={() => engine?.setTempoFactor(1)} disabled={tempoPct === 100}>
@@ -2798,13 +2818,13 @@ function PracticeScreen({
             </span>
             {/* − 100% + as one control */}
             <div className="cp-speed" role="group" aria-label="Speed">
-            <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={() => engine?.setTempoFactor(Math.max(0.4, +((engine?.tempo ?? 1) - 0.05).toFixed(2)))}>
+            <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={!canSlower}>
               {Icon.minus}
             </button>
             <div className="cp-tempo__value" data-testid="tempo">
               <b>{tempoPct}%</b>
             </div>
-            <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={() => engine?.setTempoFactor(Math.min(1.5, +((engine?.tempo ?? 1) + 0.05).toFixed(2)))}>
+            <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={!canFaster}>
               {Icon.plus}
             </button>
             </div>

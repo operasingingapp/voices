@@ -175,6 +175,7 @@
 .cp-icon-btn svg { width: 22px; height: 22px; }
 .cp-icon-btn:hover { background: var(--fog-strong); }
 .cp-icon-btn:active { transform: scale(0.94); }
+.cp-icon-btn:disabled { color: var(--notation-muted); cursor: default; transform: none; background: var(--fog); }
 .cp-icon-btn--ink { background: var(--now); color: var(--on-pastel); }
 .cp-icon-btn--ink:hover { background: var(--now-strong); }
 .cp-icon-btn[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }

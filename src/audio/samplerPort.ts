@@ -55,10 +55,19 @@ const isLineKit = (id: string): id is Exclude<LineInstrument, "piano" | "singer"
 /** how loud a recorded singer plays against the piano (the recordings are levelled to -20 LUFS) */
 const SINGER_LEVEL_DB = -3;
 
-interface Singer {
+interface SingerSource {
+  /** the tempo factor it was rendered at (1: the score's tempo) */
+  tempo: number;
   url: string;
   map: RecordingMap;
   line: RecordedLine | null;
+  load: Promise<RecordedLine> | null;
+}
+
+interface Singer {
+  key: string;
+  sources: SingerSource[];
+  ready: Promise<void>;
   /** where playback last (re)started: clock time, app-timeline seconds there, tempo factor */
   follow: { t: number; s: number; f: number } | null;
   playing: { src: AudioBufferSourceNode; env: GainNode } | null;
@@ -350,7 +359,7 @@ export class SamplerPort implements SynthPort {
     this.channelShift.set(ch, 0);
     this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
-    if (kit === "singer") return this.singers.get(ch)?.load ?? Promise.resolve();
+    if (kit === "singer") return this.singers.get(ch)?.ready ?? Promise.resolve();
     let load = this.kitLoads.get(kit);
     if (!load) {
       const tuning = Object.values(lineTuning)[0] ?? {};
@@ -376,30 +385,49 @@ export class SamplerPort implements SynthPort {
 
   /* ---------------- a recorded singer ---------------- */
 
-  private singers = new Map<number, Singer & { load: Promise<void> }>();
+  private singers = new Map<number, Singer>();
 
-  /** the recording a channel sings when its instrument is "singer" (null: none); resolves once it can play */
-  setRecording(ch: number, rec: { url: string; map: RecordingMap } | null): Promise<void> {
+  /**
+   * The recordings a channel sings when its instrument is "singer" (null: none): one per tempo it was rendered at
+   * (the score's own, and 70%). The one nearest the tempo plays, so it is barely re-timed. Each is fetched the
+   * first time it is needed. Resolves once the line can play at the score's tempo.
+   */
+  setRecording(ch: number, recs: { tempo: number; url: string; map: RecordingMap }[] | null): Promise<void> {
     const old = this.singers.get(ch);
-    if (old && rec && old.url === rec.url) {
-      old.map = rec.map;
-      old.line?.setMap(rec.map);
-      return old.load;
+    const key = recs?.map((r) => r.url).join("|");
+    if (old && recs && old.key === key) {
+      for (const r of recs) {
+        const src = old.sources.find((x) => x.url === r.url)!;
+        src.map = r.map;
+        src.line?.setMap(r.map);
+      }
+      return old.ready;
     }
     if (old) this.stopSinger(old, this.ctx.currentTime);
     this.singers.delete(ch);
-    if (!rec) return Promise.resolve();
-    const s = { url: rec.url, map: rec.map, line: null, follow: null, playing: null } as Singer & { load: Promise<void> };
-    s.load = RecordedLine.load(rec.url, rec.map).then(async (line) => {
-      line.setMap(s.map); // the map may have changed while it loaded
-      s.line = line;
-      await line.timed(this.ctx, s.follow?.f ?? 1).catch(() => undefined);
-      // playback may already be running: join in where it is now
-      if (s.follow) this.startSinger(ch, s);
+    if (!recs?.length) return Promise.resolve();
+    const sg: Singer = { key: key!, sources: recs.map((r) => ({ ...r, line: null, load: null })), follow: null, playing: null, ready: Promise.resolve() };
+    sg.ready = this.lineFor(sg, 1).then(async (line) => {
+      await line.timed(this.ctx, sg.follow?.f ?? 1).catch(() => undefined);
+      if (sg.follow) this.startSinger(ch, sg); // playback may already be running: join in where it is now
     });
-    s.load.catch(() => this.singers.get(ch) === s && this.singers.delete(ch));
-    this.singers.set(ch, s);
-    return s.load;
+    sg.ready.catch(() => this.singers.get(ch) === sg && this.singers.delete(ch));
+    this.singers.set(ch, sg);
+    return sg.ready;
+  }
+
+  /** the recording to use at tempo f (the one rendered nearest it), loaded */
+  private lineFor(sg: Singer, f: number): Promise<RecordedLine> {
+    const src = sg.sources.reduce((a, b) => (Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a));
+    if (!src.load) {
+      src.load = RecordedLine.load(src.url, src.map).then((line) => {
+        line.setMap(src.map); // the map may have changed while it loaded
+        src.line = line;
+        return line;
+      });
+      src.load.catch(() => (src.load = null));
+    }
+    return src.load;
   }
 
   /** the engine (re)starts the timeline: at clock time t, app-timeline seconds s, at tempo f */
@@ -414,7 +442,7 @@ export class SamplerPort implements SynthPort {
 
   private startSinger(ch: number, sg: Singer) {
     const fl = sg.follow;
-    if (!sg.line || !fl) return;
+    if (!fl || !sg.sources.some((x) => x.line)) return;
     const go = (buf: AudioBuffer) => {
       if (sg.follow !== fl) return; // stopped or restarted meanwhile
       const t = Math.max(fl.t, this.ctx.currentTime + 0.03);
@@ -435,9 +463,9 @@ export class SamplerPort implements SynthPort {
       };
       sg.playing = playing;
     };
-    const ready = sg.line.ready(fl.f);
-    if (ready) go(ready);
-    else sg.line.timed(this.ctx, fl.f).then(go, () => undefined);
+    this.lineFor(sg, fl.f)
+      .then((line) => line.ready(fl.f) ?? line.timed(this.ctx, fl.f))
+      .then(go, () => undefined);
   }
 
   private stopSinger(sg: Singer, time: number) {
@@ -458,7 +486,7 @@ export class SamplerPort implements SynthPort {
 
   /** is this channel's line sung by its recording (so its notes stay silent)? */
   private sung(ch: number) {
-    return this.channelKit.get(ch) === "singer" && !!this.singers.get(ch)?.line;
+    return this.channelKit.get(ch) === "singer" && !!this.singers.get(ch)?.sources.some((x) => x.line);
   }
 
   async resume() {
