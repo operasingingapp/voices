@@ -98,7 +98,7 @@ export const OPERAS: Opera[] = [
       "title": "Dove sono",
       "kind": "Aria · Act 3",
       "editionId": "mozart-dove-sono",
-      "when": "Straight after the recitative E Susanna non vien!",
+      "when": "Straight after the recitative “E Susanna non vien!”",
       "context": "Still alone, the Countess remembers the happy days when the Count loved her and asks where his promises have gone. The slow, singing first part looks back; in the quick ending she finds a sudden hope that her faithfulness may yet win back his ungrateful heart."
      },
      {
