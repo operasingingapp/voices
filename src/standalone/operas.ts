@@ -92,7 +92,7 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "editionId": "mozart-e-susanna-non-vien",
       "when": "Act 3, alone, waiting to hear how the Count took Susanna's promise of a meeting",
-      "context": "Alone, the Countess waits for Susanna, anxious to know how the Count took her proposal. The plan seems bold with so jealous a husband, but what harm is there in changing clothes with Susanna under cover of night, to catch him herself? Then she turns bitter: the Count who loved her, then wronged her, then betrayed her, has brought her so low that she must ask her own maid for help."
+      "context": "Alone, the Countess waits for Susanna, anxious to know how the Count took Susanna's proposal. The plan seems bold with so jealous a husband, but what harm is there in changing clothes with Susanna under cover of night, to catch him herself? Then she turns bitter: the Count who loved her, then wronged her, then betrayed her, has brought her so low that she must ask her own maid for help."
      },
      {
       "title": "Dove sono",
