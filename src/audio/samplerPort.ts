@@ -16,6 +16,10 @@ import type { SynthPort } from "./engine";
 import type { PlaybackPart } from "../../shared/types";
 
 import NOCT from "../standalone/piano/noct.json";
+import VOICE_F1 from "../standalone/voices/voice/soprano-f1.json";
+import { VoiceBank, VoiceSinger, type VoiceBankMeta } from "./voiceSinger";
+
+const voiceBin = import.meta.glob("../standalone/voices/voice/*.bin", { query: "?url", import: "default", eager: true }) as Record<string, string>;
 
 const files = import.meta.glob("../standalone/piano/noct-v*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
 interface PianoNote {
@@ -41,15 +45,19 @@ const lineFiles = import.meta.glob("../standalone/voices/*.mp3", { query: "?url"
 const lineTuning = import.meta.glob("../standalone/voices/tuning.json", { import: "default", eager: true }) as Record<string, Record<string, number>>;
 
 /** What the sung line can be played on. */
-export type LineInstrument = "piano" | "oboe" | "clarinet" | "english-horn" | "bassoon";
-const LINE_SOUND: Record<Exclude<LineInstrument, "piano">, { release: number; dbPerStep: number }> = {
+export type LineInstrument = "voice" | "piano" | "oboe" | "clarinet" | "english-horn" | "bassoon";
+const LINE_SOUND: Record<Exclude<LineInstrument, "piano" | "voice">, { release: number; dbPerStep: number }> = {
   // a held, singing tone: let it go like a breath, not a damper
   oboe: { release: 0.07, dbPerStep: 0.12 },
   clarinet: { release: 0.08, dbPerStep: 0.12 },
   "english-horn": { release: 0.08, dbPerStep: 0.12 },
   bassoon: { release: 0.08, dbPerStep: 0.12 },
 };
-const isLineKit = (id: string): id is Exclude<LineInstrument, "piano"> => id in LINE_SOUND;
+const isLineKit = (id: string): id is Exclude<LineInstrument, "piano" | "voice"> => id in LINE_SOUND;
+/** the voice's level against the instruments (its bank is levelled to a steady energy per period) */
+const VOICE_LEVEL_DB = -14;
+/** how far past its recorded notes the voice may sing (it keeps its colour, so further than a recording could) */
+const VOICE_REACH = 4;
 
 
 interface Sample {
@@ -73,6 +81,7 @@ interface Voice {
   start: number;
   released: boolean;
   release: number; // seconds (time constant) the sound takes to die away when the note ends
+  sungUntil?: number; // a sung note: when its own release begins (a note-off then needs nothing more)
 }
 
 /** iPhone/iPad: play as media (not "ambient"), so the music sounds even with the silent switch on. */
@@ -173,6 +182,10 @@ export class SamplerPort implements SynthPort {
   /** the other instruments, once loaded (sorted by pitch) */
   private kits = new Map<string, Sample[]>();
   private kitLoads = new Map<string, Promise<void>>();
+  /** the sung voice, once loaded, and one singer per channel that uses it */
+  private voiceBank: VoiceBank | null = null;
+  private voiceLoad: Promise<void> | null = null;
+  private singers = new Map<number, VoiceSinger>();
   /** what each channel plays on (default: the piano) */
   private channelKit = new Map<number, LineInstrument>();
   /** semitones a channel's line is moved on its instrument (an octave down when the voice sits above its range) */
@@ -330,11 +343,21 @@ export class SamplerPort implements SynthPort {
    * arrived (and for notes outside its range) the piano plays, so nothing ever goes silent.
    */
   setInstrument(ch: number, id: string, range?: [number, number]): Promise<void> {
-    const kit: LineInstrument = isLineKit(id) ? id : "piano";
+    const kit: LineInstrument = id === "voice" ? "voice" : isLineKit(id) ? id : "piano";
     this.channelKit.set(ch, kit);
     this.channelShift.set(ch, 0);
     this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
+    if (kit === "voice") {
+      if (!this.voiceLoad) {
+        const url = Object.values(voiceBin)[0];
+        this.voiceLoad = VoiceBank.load(VOICE_F1 as unknown as VoiceBankMeta, url).then((b) => {
+          this.voiceBank = b;
+        });
+        this.voiceLoad.catch(() => (this.voiceLoad = null));
+      }
+      return this.voiceLoad;
+    }
     let load = this.kitLoads.get(kit);
     if (!load) {
       const tuning = Object.values(lineTuning)[0] ?? {};
@@ -416,7 +439,7 @@ export class SamplerPort implements SynthPort {
    */
   private fitRanges() {
     for (const [ch, kit] of this.channelKit) {
-      const list = kit === "piano" ? undefined : this.kits.get(kit);
+      const list = kit === "piano" || kit === "voice" ? undefined : this.kits.get(kit);
       const r = this.channelRange.get(ch);
       if (!list?.length || !r) continue;
       const lo = list[0].midi - 3;
@@ -429,7 +452,7 @@ export class SamplerPort implements SynthPort {
   /** A recording of another instrument for this note, if the channel uses one and it covers the pitch. */
   private pickLine(ch: number, midiAsked: number, vel: number): { sample: Sample; gain: number; release: number; midi: number } | null {
     const kit = this.channelKit.get(ch);
-    if (!kit || kit === "piano") return null;
+    if (!kit || kit === "piano" || kit === "voice") return null;
     const list = this.kits.get(kit);
     if (!list?.length) return null;
     const midi = midiAsked + (this.channelShift.get(ch) ?? 0);
@@ -441,7 +464,38 @@ export class SamplerPort implements SynthPort {
     return { sample: best, gain: 10 ** (db / 20), release: LINE_SOUND[kit].release, midi };
   }
 
-  noteOn(ch: number, midi: number, vel: number, time: number) {
+  /** A note on the sung voice: sung now for its whole length (the engine says how long), played on the clock. */
+  private singNote(ch: number, midi: number, vel: number, time: number, dur: number): boolean {
+    const bank = this.voiceBank;
+    if (this.channelKit.get(ch) !== "voice" || !bank) return false;
+    if (midi < bank.lo - VOICE_REACH || midi > bank.hi + VOICE_REACH) return false;
+    let singer = this.singers.get(ch);
+    if (!singer) {
+      singer = new VoiceSinger(bank);
+      this.singers.set(ch, singer);
+    }
+    const t = Math.max(time, this.ctx.currentTime);
+    const db = (Math.max(1, Math.min(127, vel)) - 80) * 0.25 + VOICE_LEVEL_DB;
+    const y = singer.sing(t, dur, midi, 10 ** (db / 20));
+    const buf = this.ctx.createBuffer(1, y.length, bank.sampleRate);
+    buf.copyToChannel(y as Float32Array<ArrayBuffer>, 0);
+    for (const v of this.voices) if (!v.released && v.ch === ch && v.midi === midi) this.release(v, t, 0.02);
+    const src = this.ctx.createBufferSource();
+    src.buffer = buf;
+    const env = this.ctx.createGain();
+    src.connect(env).connect(this.channel(ch));
+    src.start(t);
+    const voice: Voice = { ch, midi, src, env, start: t, released: false, release: 0.03, sungUntil: t + dur };
+    src.onended = () => {
+      this.voices = this.voices.filter((x) => x !== voice);
+      env.disconnect();
+    };
+    this.voices.push(voice);
+    return true;
+  }
+
+  noteOn(ch: number, midi: number, vel: number, time: number, dur?: number) {
+    if (this.channelKit.get(ch) === "voice" && this.singNote(ch, midi, vel, time, dur ?? 2)) return;
     const line = this.pickLine(ch, midi, vel);
     const picked = line ?? this.pick(midi, vel);
     if (!picked) return;
@@ -484,11 +538,17 @@ export class SamplerPort implements SynthPort {
   noteOff(ch: number, midi: number, time: number) {
     // the oldest sounding note on this key that began before the release
     const v = this.voices.find((x) => !x.released && x.ch === ch && x.midi === midi && x.start <= time + 1e-4);
-    // a piano damper (or a breath, a bow lifting): a short, soft release rather than a click
+    // a piano damper (or a breath, a bow lifting): a short, soft release rather than a click; a sung note ends
+    // itself, unless it is stopped early (a jump, a slower or faster tempo)
+    if (v && v.sungUntil !== undefined && time >= v.sungUntil - 0.02) {
+      v.released = true;
+      return;
+    }
     if (v) this.release(v, time, v.release);
   }
 
   allSoundOff(ch: number, time: number) {
+    this.singers.get(ch)?.reset();
     for (const v of this.voices) if (v.ch === ch) this.release(v, time, 0.01);
   }
 
