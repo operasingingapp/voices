@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as RPointerEvent, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { Story, storyOf } from "./synopses";
 import { Performance, beatInfo, type PerfMeasure } from "../../shared/timeline";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
@@ -516,6 +517,104 @@ function PracticeScreen({
   // in an ensemble the score shows the singers and leaves the piano out unless you ask for it (you still hear it):
   // six staves do not fit a landscape screen at a readable size
   const showOf = (p: CompiledEdition["parts"][number]) => lineSets[p.key]?.show ?? !(ens && p.kind === "piano");
+
+  // Hold a singer's face in the bar to choose what their line plays on: keep holding, slide to a sound and let go
+  // (or let go first and tap one). A short tap still mutes and unmutes.
+  type HoldMenu = { key: string; name: string; voiceType: string; rect: DOMRect; active: string | null; drag: boolean };
+  const [holdMenu, setHoldMenu] = useState<HoldMenu | null>(null);
+  const holdRef = useRef<{ timer: number; x: number; y: number; fired: boolean } | null>(null);
+  const holdSwallowClick = useRef(false);
+  const holdOptAt = (x: number, y: number) =>
+    (document.elementFromPoint(x, y) as HTMLElement | null)?.closest<HTMLElement>("[data-hold-opt]")?.dataset.holdOpt ?? null;
+  const pickHold = (key: string, id: string) => {
+    setLine(key, { inst: id as LineChoice });
+    setHoldMenu(null);
+  };
+  const holdHandlers = (p: CompiledEdition["parts"][number], name: string) => {
+    const open = (el: HTMLElement, drag: boolean) =>
+      setHoldMenu({ key: p.key, name, voiceType: voiceTypeOf(p), rect: el.getBoundingClientRect(), active: null, drag });
+    return {
+      onPointerDown: (e: RPointerEvent<HTMLButtonElement>) => {
+        if (e.button !== 0) return;
+        const el = e.currentTarget;
+        const pid = e.pointerId;
+        holdSwallowClick.current = false;
+        const h = { timer: 0, x: e.clientX, y: e.clientY, fired: false };
+        h.timer = window.setTimeout(() => {
+          h.fired = true;
+          holdSwallowClick.current = true;
+          // keep the finger's moves and its release coming here while it slides over the menu
+          try {
+            el.setPointerCapture(pid);
+          } catch {
+            /* the pointer is gone */
+          }
+          try {
+            navigator.vibrate?.(12);
+          } catch {
+            /* no vibration here */
+          }
+          open(el, true);
+        }, 380);
+        holdRef.current = h;
+      },
+      onPointerMove: (e: RPointerEvent<HTMLButtonElement>) => {
+        const h = holdRef.current;
+        if (!h) return;
+        if (!h.fired) {
+          if (Math.hypot(e.clientX - h.x, e.clientY - h.y) > 10) {
+            clearTimeout(h.timer);
+            holdRef.current = null;
+          }
+          return;
+        }
+        const id = holdOptAt(e.clientX, e.clientY);
+        setHoldMenu((m) => (m && m.active !== id ? { ...m, active: id } : m));
+      },
+      onPointerUp: (e: RPointerEvent<HTMLButtonElement>) => {
+        const h = holdRef.current;
+        holdRef.current = null;
+        if (!h) return;
+        clearTimeout(h.timer);
+        if (!h.fired) return;
+        const id = holdOptAt(e.clientX, e.clientY);
+        if (id) pickHold(p.key, id);
+        else setHoldMenu((m) => (m ? { ...m, drag: false, active: null } : m));
+      },
+      onPointerCancel: () => {
+        const h = holdRef.current;
+        holdRef.current = null;
+        if (!h) return;
+        clearTimeout(h.timer);
+        if (h.fired) setHoldMenu((m) => (m ? { ...m, drag: false, active: null } : m));
+      },
+      onClickCapture: (e: React.MouseEvent) => {
+        if (!holdSwallowClick.current) return;
+        holdSwallowClick.current = false;
+        e.preventDefault();
+        e.stopPropagation();
+      },
+      // a face is a picture: without this a mouse drag would pick the image up and cancel the hold
+      onDragStart: (e: React.DragEvent) => e.preventDefault(),
+      onContextMenu: (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        open(e.currentTarget, false);
+      },
+    };
+  };
+  useEffect(() => {
+    if (!holdMenu || holdMenu.drag) return;
+    const away = (e: Event) => {
+      if (!(e.target as HTMLElement).closest?.(".hold-menu")) setHoldMenu(null);
+    };
+    const key = (e: KeyboardEvent) => e.key === "Escape" && setHoldMenu(null);
+    document.addEventListener("pointerdown", away);
+    document.addEventListener("keydown", key);
+    return () => {
+      document.removeEventListener("pointerdown", away);
+      document.removeEventListener("keydown", key);
+    };
+  }, [holdMenu]);
   const hiddenIds = orderedIds.filter((xid) => !showOf(partByXml(xid)));
   /** several lines' settings changed at once (a preset) */
   const patchLines = (patches: Record<string, LineSet>) => {
@@ -2253,6 +2352,45 @@ function PracticeScreen({
         )}
       </div>
 
+      {holdMenu &&
+        createPortal(
+          (() => {
+            const choice = lineSets[holdMenu.key]?.inst ?? "auto";
+            const auto = resolveLine("auto", holdMenu.voiceType);
+            const W = 240;
+            const left = Math.max(8, Math.min(window.innerWidth - W - 8, holdMenu.rect.left + holdMenu.rect.width / 2 - W / 2));
+            const opts: { id: string; label: string; note?: string }[] = [
+              { id: "auto", label: "Automatic", note: LINE_SOUNDS.find((o) => o.id === auto)?.label },
+              ...LINE_SOUNDS.map((o) => ({ id: o.id, label: o.label })),
+            ];
+            return (
+              <div
+                className={`hold-menu${holdMenu.drag ? " is-drag" : ""}`}
+                role="menu"
+                aria-label={`What ${holdMenu.name}'s line plays on`}
+                style={{ left, width: W, bottom: window.innerHeight - holdMenu.rect.top + 10 }}
+              >
+                <p className="hold-menu-title">{holdMenu.name}’s line plays on</p>
+                {opts.map((o) => (
+                  <button
+                    key={o.id}
+                    type="button"
+                    role="menuitemradio"
+                    aria-checked={choice === o.id}
+                    data-hold-opt={o.id}
+                    className={holdMenu.active === o.id ? "is-active" : undefined}
+                    onClick={() => pickHold(holdMenu.key, o.id)}
+                  >
+                    <span className="cm-check" aria-hidden="true">{choice === o.id ? Icon.check : null}</span>
+                    <span>{o.label}</span>
+                    {o.note && <small>{o.note}</small>}
+                  </button>
+                ))}
+              </div>
+            );
+          })(),
+          document.body,
+        )}
       <footer className={`p-bar gutter ens${barOpen ? "" : " folded"}`}>
         <div className="bar-parts many" role="group" aria-label="Parts">
           <button
@@ -2260,6 +2398,7 @@ function PracticeScreen({
             className="part"
             aria-pressed={hearVoice}
             onClick={() => setHearVoice(!hearVoice)}
+            {...holdHandlers(voicePart, roleName)}
             aria-label={hearVoice ? `${roleName}'s line plays. Mute it to sing it yourself` : `${roleName}'s line is muted. Play it`}
             title={`${roleName} (you): ${hearVoice ? "plays" : "muted, you sing"}`}
           >
@@ -2288,6 +2427,7 @@ function PracticeScreen({
                   className="part"
                   aria-pressed={on}
                   onClick={() => setLine(p.key, { hear: !on })}
+                  {...holdHandlers(p, p.shortLabel)}
                   aria-label={`${p.shortLabel}'s line ${on ? "plays. Mute it" : "is muted. Play it"}`}
                   title={`${p.shortLabel}: ${on ? "plays" : "muted, sung live"}`}
                 >

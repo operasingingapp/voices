@@ -7893,3 +7893,67 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .hm-roles > .cp-eyebrow, .hm-head { min-height: 0; margin-bottom: 10px; }
 }
 .hero.search-hero { max-width: none; }
+
+/* Hold a singer's face to choose their line's sound: the menu rises above the bar */
+.p-bar .part { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; touch-action: pan-x; }
+.p-bar .part img { -webkit-user-drag: none; user-drag: none; pointer-events: none; }
+.hold-menu {
+  position: fixed;
+  z-index: 90;
+  display: grid;
+  padding: 6px;
+  border-radius: var(--radius-md);
+  background: var(--canvas);
+  box-shadow: var(--shadow-float);
+  animation: hold-in var(--duration-move) var(--ease-standard);
+  -webkit-user-select: none;
+  user-select: none;
+}
+@keyframes hold-in { from { opacity: 0; transform: translateY(6px) scale(0.98); } }
+@media (prefers-reduced-motion: reduce) { .hold-menu { animation: none; } }
+.hold-menu-title { margin: 4px 8px 6px; font: 500 12px/1.2 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.hold-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 12px 0 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  font: 500 15px/1.2 var(--font-sans);
+  text-align: left;
+  cursor: pointer;
+}
+.hold-menu button small { margin-left: auto; font: 400 13px/1 var(--font-sans); color: var(--ink-muted); }
+.hold-menu button:hover, .hold-menu button:focus-visible, .hold-menu button.is-active { background: var(--fog); }
+.hold-menu.is-drag button.is-active { background: var(--now-soft); }
+
+/* Arrange on a phone: two calm rows per line, nothing past the sheet's edge.
+   Row 1: handle, face, name (and "you"), the speaker at the end. Row 2: the volume under the name, the instrument
+   at the end, aligned with the speaker above it. */
+@media (max-width: 640px) {
+  .practice .mix-pop .mix-line {
+    grid-template-columns: 22px 40px minmax(0, 1fr) 128px;
+    grid-template-areas: "h f n m" "h v v i";
+    column-gap: 12px;
+    row-gap: 6px;
+    min-height: 0;
+    padding: 10px 0;
+  }
+  .practice .mix-pop .mix-line .part-face { grid-area: f; width: 40px; height: 40px; min-width: 0; margin: 0; }
+  .practice .mix-pop .mix-line .mix-line-name { grid-area: n; display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 16px; }
+  .practice .mix-pop .mix-line .mix-you { margin-left: 0; flex: none; }
+  .practice .mix-pop .mix-line > .mix-mini { grid-area: m; justify-self: end; }
+  .practice .mix-pop .mix-line .mix-arrows { display: none; }
+  .practice .mix-pop .mix-line .mix-line-vol { grid-area: v; min-width: 0; width: 100%; }
+  .practice .mix-pop .mix-line .mix-line-inst { grid-area: i; min-width: 0; width: 100%; }
+  .practice .mix-pop .mix-line .mix-line-inst select { width: 100%; min-height: 40px; text-overflow: ellipsis; }
+  .practice .mix-pop .mix-line .mix-handle { grid-area: h; align-self: center; }
+}
+@media (max-width: 640px) {
+  /* the piano has no instrument to choose: its volume runs the full row */
+  .practice .mix-pop .mix-line:has(.mix-line-inst.none) .mix-line-vol { grid-area: 2 / 2 / 3 / -1; }
+  .practice .mix-pop .mix-line .mix-line-inst.none { display: none; }
+}
