@@ -13,6 +13,7 @@
  * All timing uses the AudioContext clock, like the SoundFont port it replaces.
  */
 import type { SynthPort } from "./engine";
+import { RecordedLine, type RecordingMap } from "./recordedLine";
 import type { PlaybackPart } from "../../shared/types";
 
 import NOCT from "../standalone/piano/noct.json";
@@ -41,15 +42,27 @@ const lineFiles = import.meta.glob("../standalone/voices/*.mp3", { query: "?url"
 const lineTuning = import.meta.glob("../standalone/voices/tuning.json", { import: "default", eager: true }) as Record<string, Record<string, number>>;
 
 /** What the sung line can be played on. */
-export type LineInstrument = "piano" | "oboe" | "clarinet" | "english-horn" | "bassoon";
-const LINE_SOUND: Record<Exclude<LineInstrument, "piano">, { release: number; dbPerStep: number }> = {
+export type LineInstrument = "piano" | "oboe" | "clarinet" | "english-horn" | "bassoon" | "singer";
+const LINE_SOUND: Record<Exclude<LineInstrument, "piano" | "singer">, { release: number; dbPerStep: number }> = {
   // a held, singing tone: let it go like a breath, not a damper
   oboe: { release: 0.07, dbPerStep: 0.12 },
   clarinet: { release: 0.08, dbPerStep: 0.12 },
   "english-horn": { release: 0.08, dbPerStep: 0.12 },
   bassoon: { release: 0.08, dbPerStep: 0.12 },
 };
-const isLineKit = (id: string): id is Exclude<LineInstrument, "piano"> => id in LINE_SOUND;
+const isLineKit = (id: string): id is Exclude<LineInstrument, "piano" | "singer"> => id in LINE_SOUND;
+
+/** how loud a recorded singer plays against the piano (the recordings are levelled to -20 LUFS) */
+const SINGER_LEVEL_DB = -3;
+
+interface Singer {
+  url: string;
+  map: RecordingMap;
+  line: RecordedLine | null;
+  /** where playback last (re)started: clock time, app-timeline seconds there, tempo factor */
+  follow: { t: number; s: number; f: number } | null;
+  playing: { src: AudioBufferSourceNode; env: GainNode } | null;
+}
 
 
 interface Sample {
@@ -330,11 +343,14 @@ export class SamplerPort implements SynthPort {
    * arrived (and for notes outside its range) the piano plays, so nothing ever goes silent.
    */
   setInstrument(ch: number, id: string, range?: [number, number]): Promise<void> {
-    const kit: LineInstrument = isLineKit(id) ? id : "piano";
+    const kit: LineInstrument = isLineKit(id) || id === "singer" ? id : "piano";
+    const sg = this.singers.get(ch);
+    if (sg && kit !== "singer") this.stopSinger(sg, this.ctx.currentTime);
     this.channelKit.set(ch, kit);
     this.channelShift.set(ch, 0);
     this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
+    if (kit === "singer") return this.singers.get(ch)?.load ?? Promise.resolve();
     let load = this.kitLoads.get(kit);
     if (!load) {
       const tuning = Object.values(lineTuning)[0] ?? {};
@@ -356,6 +372,93 @@ export class SamplerPort implements SynthPort {
       this.kitLoads.set(kit, load);
     }
     return load.then(() => this.fitRanges());
+  }
+
+  /* ---------------- a recorded singer ---------------- */
+
+  private singers = new Map<number, Singer & { load: Promise<void> }>();
+
+  /** the recording a channel sings when its instrument is "singer" (null: none); resolves once it can play */
+  setRecording(ch: number, rec: { url: string; map: RecordingMap } | null): Promise<void> {
+    const old = this.singers.get(ch);
+    if (old && rec && old.url === rec.url) {
+      old.map = rec.map;
+      old.line?.setMap(rec.map);
+      return old.load;
+    }
+    if (old) this.stopSinger(old, this.ctx.currentTime);
+    this.singers.delete(ch);
+    if (!rec) return Promise.resolve();
+    const s = { url: rec.url, map: rec.map, line: null, follow: null, playing: null } as Singer & { load: Promise<void> };
+    s.load = RecordedLine.load(rec.url, rec.map).then(async (line) => {
+      line.setMap(s.map); // the map may have changed while it loaded
+      s.line = line;
+      await line.timed(this.ctx, s.follow?.f ?? 1).catch(() => undefined);
+      // playback may already be running: join in where it is now
+      if (s.follow) this.startSinger(ch, s);
+    });
+    s.load.catch(() => this.singers.get(ch) === s && this.singers.delete(ch));
+    this.singers.set(ch, s);
+    return s.load;
+  }
+
+  /** the engine (re)starts the timeline: at clock time t, app-timeline seconds s, at tempo f */
+  follow(t: number, s: number, f: number) {
+    for (const [ch, sg] of this.singers) {
+      if (this.channelKit.get(ch) !== "singer") continue;
+      this.stopSinger(sg, t);
+      sg.follow = { t, s, f };
+      this.startSinger(ch, sg);
+    }
+  }
+
+  private startSinger(ch: number, sg: Singer) {
+    const fl = sg.follow;
+    if (!sg.line || !fl) return;
+    const go = (buf: AudioBuffer) => {
+      if (sg.follow !== fl) return; // stopped or restarted meanwhile
+      const t = Math.max(fl.t, this.ctx.currentTime + 0.03);
+      const offset = (fl.s + (t - fl.t) * fl.f) / fl.f;
+      if (offset >= buf.duration) return;
+      const src = this.ctx.createBufferSource();
+      src.buffer = buf;
+      const env = this.ctx.createGain();
+      const g = 10 ** (SINGER_LEVEL_DB / 20);
+      env.gain.setValueAtTime(0, t);
+      env.gain.linearRampToValueAtTime(g, t + 0.02);
+      src.connect(env).connect(this.channel(ch));
+      src.start(t, Math.max(0, offset));
+      const playing = { src, env };
+      src.onended = () => {
+        env.disconnect();
+        if (sg.playing === playing) sg.playing = null;
+      };
+      sg.playing = playing;
+    };
+    const ready = sg.line.ready(fl.f);
+    if (ready) go(ready);
+    else sg.line.timed(this.ctx, fl.f).then(go, () => undefined);
+  }
+
+  private stopSinger(sg: Singer, time: number) {
+    sg.follow = null;
+    const p = sg.playing;
+    if (!p) return;
+    sg.playing = null;
+    const t = Math.max(time, this.ctx.currentTime);
+    p.env.gain.cancelScheduledValues(t);
+    p.env.gain.setValueAtTime(p.env.gain.value, t);
+    p.env.gain.linearRampToValueAtTime(0, t + 0.02);
+    try {
+      p.src.stop(t + 0.03);
+    } catch {
+      /* already stopped */
+    }
+  }
+
+  /** is this channel's line sung by its recording (so its notes stay silent)? */
+  private sung(ch: number) {
+    return this.channelKit.get(ch) === "singer" && !!this.singers.get(ch)?.line;
   }
 
   async resume() {
@@ -429,7 +532,7 @@ export class SamplerPort implements SynthPort {
   /** A recording of another instrument for this note, if the channel uses one and it covers the pitch. */
   private pickLine(ch: number, midiAsked: number, vel: number): { sample: Sample; gain: number; release: number; midi: number } | null {
     const kit = this.channelKit.get(ch);
-    if (!kit || kit === "piano") return null;
+    if (!kit || kit === "piano" || kit === "singer") return null;
     const list = this.kits.get(kit);
     if (!list?.length) return null;
     const midi = midiAsked + (this.channelShift.get(ch) ?? 0);
@@ -442,6 +545,7 @@ export class SamplerPort implements SynthPort {
   }
 
   noteOn(ch: number, midi: number, vel: number, time: number) {
+    if (this.sung(ch)) return;
     const line = this.pickLine(ch, midi, vel);
     const picked = line ?? this.pick(midi, vel);
     if (!picked) return;
@@ -490,6 +594,8 @@ export class SamplerPort implements SynthPort {
 
   allSoundOff(ch: number, time: number) {
     for (const v of this.voices) if (v.ch === ch) this.release(v, time, 0.01);
+    const sg = this.singers.get(ch);
+    if (sg) this.stopSinger(sg, time);
   }
 
   setChannelGain(ch: number, gain: number) {

@@ -25,6 +25,12 @@ export interface SynthPort {
   cancelClicks(): void;
   /** how much of the sound goes into the room, 1 = the default hall (ports without a room ignore it) */
   setRoom?(level: number): void;
+  /**
+   * The timeline (re)starts: from clock time t it runs from performance second s (at tempo 1) at tempo factor f.
+   * Called on play, on every tempo change and at every loop jump; a stop arrives as allSoundOff. Ports that
+   * play recordings along the timeline (a recorded singer) follow it; others ignore it.
+   */
+  follow?(t: number, s: number, f: number): void;
 }
 
 export interface MixState {
@@ -178,10 +184,12 @@ export class PlaybackEngine {
       if (this.port.currentTime() < this.startT) {
         // still counting in: the music starts at the planned time with the new tempo
         a.f = f;
+        this.port.follow?.(a.t, this.perf!.qToSec(a.q), f);
       } else {
         const t = this.timeOf(this.schedQ);
         this.anchors.push({ t, q: this.schedQ, f });
         this.trimAnchors();
+        this.port.follow?.(t, this.perf!.qToSec(this.schedQ), f);
       }
       if (this.endAt !== null) this.endAt = this.timeOf(this.segmentEnd());
     }
@@ -235,6 +243,7 @@ export class PlaybackEngine {
     this.anchors = [{ t: tStart, q: q0, f: this.tempoFactor }];
     this.endAt = null;
     this.resetCursor(q0, tStart);
+    this.port.follow?.(tStart, perf.qToSec(q0), this.tempoFactor);
     this._state = "playing";
     this.tick();
     this.emit();
@@ -432,6 +441,7 @@ export class PlaybackEngine {
         this.anchors.push({ t: tEnd, q: this.loop.startQ, f: this.anchor().f });
         this.trimAnchors();
         this.resetCursor(this.loop.startQ, tEnd);
+        this.port.follow?.(tEnd, perf.qToSec(this.loop.startQ), this.anchor().f);
         continue;
       }
       this.endAt = tEnd;

@@ -3,6 +3,12 @@ import type { LineInstrument } from "../audio/samplerPort";
 
 export type LineChoice = LineInstrument | "auto";
 
+/** A recorded singer, where the piece has one for this line: offered first and chosen by "Automatic". */
+export const SINGER = { id: "singer" as LineInstrument, label: "Singer" };
+
+/** What the sung line can be played on (the singer only where a recording exists). */
+export const lineSounds = (sung: boolean) => (sung ? [SINGER, ...LINE_SOUNDS] : LINE_SOUNDS);
+
 /** What the sung line can be played on. */
 export const LINE_SOUNDS: { id: LineInstrument; label: string }[] = [
   { id: "piano", label: "Piano" },
@@ -28,7 +34,8 @@ export function autoInstrument(voiceType: string): LineInstrument {
 
 export const AUTO_NOTE = "Oboe for sopranos, English horn for mezzos and contraltos, clarinet for tenors, bassoon for baritones and basses.";
 
-export function resolveLine(choice: string, voiceType: string): LineInstrument {
-  if (choice === "auto") return autoInstrument(voiceType);
-  return LINE_SOUNDS.some((o) => o.id === choice) ? (choice as LineInstrument) : autoInstrument(voiceType);
+/** the instrument a choice means; `sung`: this line has a recorded singer (then "Automatic" is the singer) */
+export function resolveLine(choice: string, voiceType: string, sung = false): LineInstrument {
+  if (choice === "auto") return sung ? "singer" : autoInstrument(voiceType);
+  return lineSounds(sung).some((o) => o.id === choice) ? (choice as LineInstrument) : sung ? "singer" : autoInstrument(voiceType);
 }

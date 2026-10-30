@@ -16,7 +16,7 @@ import { pieceData, type PieceInfo } from "./pieces";
 import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
-import { LINE_SOUNDS, resolveLine, type LineChoice } from "./settings";
+import { lineSounds, resolveLine, type LineChoice } from "./settings";
 
 /*
  * The piece on screen. Only one practice screen is open at a time, so the piece's data lives here, set by
@@ -49,6 +49,17 @@ const audioModules = import.meta.glob(["../../data/content/*/audio/*.mp3", "!../
   eager: true,
 }) as Record<string, string>;
 const audioUrl = (file?: string) => (file ? audioModules[`../../data/content/${pieceId}/audio/${file}`] : undefined);
+
+// Recorded singers: a sung line rendered from the score (src/standalone/recordings/<piece>/<part>.mp3) and where
+// each of its notes starts in the recording (<part>.json, scripts/voice/align.py). Fetched only when sung.
+const recordingFiles = import.meta.glob("./recordings/*/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
+const recordingMaps = import.meta.glob("./recordings/*/*.json", { import: "default", eager: true }) as Record<string, { onsets: Record<string, number> }>;
+const recordingOf = (partKey: string) => {
+  const url = recordingFiles[`./recordings/${pieceId}/${partKey}.mp3`];
+  const map = recordingMaps[`./recordings/${pieceId}/${partKey}.json`];
+  return url && map ? { url, onsets: map.onsets } : null;
+};
+const sungOf = (partKey: string) => !!recordingOf(partKey);
 
 // The real voice: recordings made with ElevenLabs (scripts/voices.ts), the voice set in voice.config.json.
 import voiceConfig from "../../voice.config.json";
@@ -759,7 +770,7 @@ function PracticeScreen({
 
   // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
   const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
-  const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType);
+  const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType, sungOf(voicePart.key));
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
   // an ensemble's lines are spoken in the voice of the character whose words are shown (a man's for a man)
@@ -867,6 +878,20 @@ function PracticeScreen({
     const ms = edition.notes.filter((n) => n.part === voicePart.key).map((n) => n.midi);
     return [Math.min(...ms), Math.max(...ms)];
   }, []);
+  // the recorded singers, placed on this performance's timeline (before their instruments are chosen below)
+  useEffect(() => {
+    const port = pb.port;
+    if (!port?.setRecording) return;
+    for (const p of voiceParts) {
+      const rec = recordingOf(p.key);
+      if (!rec) continue;
+      const pts = perf.notes
+        .filter((n) => n.part === p.key && rec.onsets[n.ids[0]] !== undefined)
+        .map((n) => [perf.qToSec(n.onQ), rec.onsets[n.ids[0]]] as const)
+        .sort((a, b) => a[0] - b[0]);
+      port.setRecording(p.channel, { url: rec.url, map: { perf: pts.map((x) => x[0]), audio: pts.map((x) => x[1]) } }).catch(() => undefined);
+    }
+  }, [pb.port, perf]);
   useEffect(() => {
     const port = pb.port;
     if (!port?.setInstrument) return;
@@ -887,7 +912,7 @@ function PracticeScreen({
     pb.port?.setRoom?.(edition.pedal === "classical" ? 1.35 : 1);
   }, [pb.port]);
   // the other singers' lines: each on the instrument chosen for it, by default the one for its own voice, so they are easy to tell apart
-  const instOf = (p: CompiledEdition["parts"][number]) => resolveLine(lineSets[p.key]?.inst ?? "auto", voiceTypeOf(p));
+  const instOf = (p: CompiledEdition["parts"][number]) => resolveLine(lineSets[p.key]?.inst ?? "auto", voiceTypeOf(p), sungOf(p.key));
   const instKey = otherVoices.map(instOf).join(",");
   useEffect(() => {
     const port = pb.port;
@@ -2358,12 +2383,13 @@ function PracticeScreen({
         createPortal(
           (() => {
             const choice = holdMenu.key === voicePart.key ? lineChoice : (lineSets[holdMenu.key]?.inst ?? "auto");
-            const auto = resolveLine("auto", holdMenu.voiceType);
+            const sung = sungOf(holdMenu.key);
+            const auto = resolveLine("auto", holdMenu.voiceType, sung);
             const W = 240;
             const left = Math.max(8, Math.min(window.innerWidth - W - 8, holdMenu.rect.left + holdMenu.rect.width / 2 - W / 2));
             const opts: { id: string; label: string; note?: string }[] = [
-              { id: "auto", label: "Automatic", note: LINE_SOUNDS.find((o) => o.id === auto)?.label },
-              ...LINE_SOUNDS.map((o) => ({ id: o.id, label: o.label })),
+              { id: "auto", label: "Automatic", note: lineSounds(sung).find((o) => o.id === auto)?.label },
+              ...lineSounds(sung).map((o) => ({ id: o.id, label: o.label })),
             ];
             return (
               <div
@@ -2614,8 +2640,8 @@ function PracticeScreen({
                               onChange={(e) => (isYou ? setLineSound(e.target.value as LineChoice) : setLine(p.key, { inst: e.target.value as LineChoice }))}
                               aria-label={`${name}'s line is played on`}
                             >
-                              <option value="auto">Automatic ({LINE_SOUNDS.find((o) => o.id === resolveLine("auto", voiceTypeOf(p)))?.label})</option>
-                              {LINE_SOUNDS.map((o) => (
+                              <option value="auto">Automatic ({lineSounds(sungOf(p.key)).find((o) => o.id === resolveLine("auto", voiceTypeOf(p), sungOf(p.key)))?.label})</option>
+                              {lineSounds(sungOf(p.key)).map((o) => (
                                 <option key={o.id} value={o.id}>
                                   {o.label}
                                 </option>
@@ -2968,6 +2994,15 @@ function PracticeScreen({
                     </a>
                     . All 16 loudness levels, each note up to ten seconds.
                   </p>
+                  {voiceParts.some((p) => sungOf(p.key)) && (
+                    <p>
+                      Singer: the line sung on “ah”, rendered from the score with{" "}
+                      <a href="https://cantai.app/" target="_blank" rel="noreferrer">
+                        Cantai
+                      </a>{" "}
+                      (a singing voice made from recordings of professional opera singers), re-timed to follow your tempo.
+                    </p>
+                  )}
                   <p>
                     Oboe, clarinet and bassoon for the sung line: recordings from{" "}
                     <a href="https://github.com/sgossner/VSCO-2-CE" target="_blank" rel="noreferrer">

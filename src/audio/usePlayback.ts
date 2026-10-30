@@ -11,6 +11,8 @@ export interface AudioPort extends SynthPort {
   configureParts(parts: PlaybackPart[]): void;
   /** play a channel on another instrument (when the sound source has others); resolves once it is ready */
   setInstrument?(channel: number, id: string, range?: [number, number]): Promise<void>;
+  /** a recording of a channel's line, sung when its instrument is "singer" (null: none); resolves once it can play */
+  setRecording?(channel: number, rec: { url: string; map: { perf: number[]; audio: number[] } } | null): Promise<void>;
   /** the piece's notes, at the velocity they will sound: lets a sampled instrument load what the piece uses */
   prepare?(notes: { midi: number; vel: number }[]): void;
 }
