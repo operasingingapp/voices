@@ -80,7 +80,7 @@ export const OPERAS: Opera[] = [
     "id": "countess",
     "name": "The Countess",
     "voice": "Soprano",
-    "desc": "Rosina of Beaumarchais's The Barber of Seville, now Countess Almaviva, neglected by her husband.",
+    "desc": "Rosina of Beaumarchais's ‘The Barber of Seville’, now Countess Almaviva, neglected by her husband.",
     "avatar": "crown",
     "pieces": [
      {
@@ -124,7 +124,7 @@ export const OPERAS: Opera[] = [
     "id": "cherubino",
     "name": "Cherubino",
     "voice": "Mezzo-soprano",
-    "desc": "The Count's young page, in love with every woman he sees; a trouser role, sung by a woman (written for soprano; today usually a mezzo).",
+    "desc": "The Count's young page, in love with every woman he sees; a trouser role, sung by a woman. (Mozart wrote the role for a soprano; today it is usually sung by a mezzo.)",
     "avatar": "curls",
     "pieces": [
      {
