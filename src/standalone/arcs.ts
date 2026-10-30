@@ -13,7 +13,7 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 1", text: "On his wedding day Figaro measures the new room, until Susanna tells him why the Count put it next to his own. He vows to make the Count dance to his tune (“Se vuol ballare”), brings the villagers to press for the wedding, and teases Cherubino about army life (“Non più andrai”), quietly telling him to stay until they have talked." },
     { act: "Act 2", text: "He plots with the women: an anonymous note to make the Count jealous, and Cherubino in a dress to keep Susanna's rendezvous. Shown the note, he denies writing it. When the gardener complains of a man jumping from the window, Figaro claims it was him and bluffs through the dropped commission. Marcellina then arrives to claim him." },
     { act: "Act 3", text: "Ordered to pay Marcellina or marry her, he is saved by a birthmark: she and Bartolo are his long-lost parents. Susanna slaps him before she understands; then the family celebrates. Confronted with Cherubino, he bluffs that they may both have jumped, and at the wedding he sees the Count prick his finger on some lover's note." },
-    { act: "Act 4", text: "Hearing of Susanna's note to the Count, he believes she is betraying him and rails against women (“Aprite un po' quegli occhi”). After taking the slap the Count meant for Cherubino, he recognises Susanna's voice under the Countess's cloak, pays her back by courting her, and they make up, then play a love scene to bait the Count, until the Count is caught out." },
+    { act: "Act 4", text: "Hearing of Susanna's note to the Count, he believes she is betraying him and rails against women (“Aprite un po' quegli occhi”). After taking the slap the Count meant for Cherubino, he recognises Susanna's voice under the Countess's clothes, pays her back by courting her, and they make up, then play a love scene to bait the Count, until the Count is caught out." },
   ],
   "figaro:susanna": [
     { act: "Act 1", text: "Susanna warns Figaro that the Count wants her and that Basilio pleads his case, trades sugary insults with Marcellina at the door (“Via resti servita”), and fends the Count off. She hides Cherubino in the armchair, but he is discovered anyway." },
@@ -34,7 +34,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "figaro:cherubino": [
     { act: "Act 1", text: "Dismissed for being caught with Barbarina, the page begs Susanna to help and pours out his confusion about love (“Non so più cosa son”). Discovered hiding in the Count's presence, he is packed off to the army." },
-    { act: "Act 2", text: "He sings the Countess his love song (“Voi che sapete”), is dressed as a girl, hides in the closet when the Count arrives, and escapes by jumping from the window." },
+    { act: "Act 2", text: "He sings the Countess his love song (“Voi che sapete”), is partly dressed as a girl, hides in the closet when the Count arrives, and escapes by jumping from the window." },
     { act: "Act 3", text: "Disguised among the village girls bringing flowers, he is found out, and Barbarina puts the Count on the spot by asking for him as her husband." },
     { act: "Act 4", text: "In the dark garden, heading for the pavilion where Barbarina is waiting, he finds ‘Susanna’, really the Countess, flirts with her, and tries to steal a kiss that lands on the Count. He escapes into the pavilion, and the Count's slap lands on Figaro. At the end the Count drags him out, the first of those hiding there." },
   ],
@@ -66,7 +66,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   "figaro:antonio": [
     { act: "Act 2", text: "The gardener storms in, half drunk, complaining that a man has jumped from the window onto his flowers, and hands Figaro the papers the man dropped, which the Count takes: Cherubino's commission." },
     { act: "Act 3", text: "He tells the Count that Cherubino has not gone to Seville, and later unmasks the page among the village girls by pulling off his bonnet." },
-    { act: "Act 4", text: "He comes with torches at the end, sees his daughter Barbarina dragged out of hiding with the page, and sees the Count beg his wife's pardon." },
+    { act: "Act 4", text: "He comes with torches at the end, sees his daughter Barbarina come out of hiding after the page, and sees the Count beg his wife's pardon." },
   ],
 
   // ---------------- Don Giovanni ----------------
