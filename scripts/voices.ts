@@ -541,7 +541,7 @@ async function main() {
       // --voice applies to Italian; another language uses its own entry, with its own settings where it has them
       config.voiceId = v?.voiceId ?? "";
       config.voiceName = v?.voiceName;
-      for (const k of Object.keys(base) as (keyof typeof base)[]) if (v?.[k] !== undefined) (config as Record<string, unknown>)[k] = v[k];
+      for (const k of Object.keys(base) as (keyof typeof base)[]) if (v?.[k] !== undefined) (config as unknown as Record<string, unknown>)[k] = v[k];
     }
     await runLanguage(lang, todo);
     Object.assign(config, base);
