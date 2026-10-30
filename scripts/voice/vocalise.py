@@ -34,5 +34,14 @@ for s in root.iter('sound'):
 for p in root.iter('per-minute'):
     try: p.text = fmt(float(p.text) * scale)
     except ValueError: pass
+# A tempo given only as a word ("Andante") and a <sound tempo> is read by MuseScore per beat of the metre: in 2/2,
+# per half note, twice as fast as meant (MusicXML's sound tempo is always quarter notes). An explicit metronome
+# mark in quarter notes leaves no doubt.
+for d in root.iter('direction'):
+    snd = d.find('sound')
+    if snd is None or not snd.get('tempo') or d.find('.//metronome') is not None: continue
+    dt = ET.Element('direction-type'); met = ET.SubElement(dt, 'metronome', {'parentheses': 'yes'})
+    ET.SubElement(met, 'beat-unit').text = 'quarter'; ET.SubElement(met, 'per-minute').text = snd.get('tempo')
+    d.insert(list(d).index(d.find('direction-type')) + 1 if d.find('direction-type') is not None else 0, dt)
 tree.write(dst, encoding='UTF-8', xml_declaration=True)
 print(dst, n, 'syllables')
