@@ -162,7 +162,7 @@ export const OPERAS: Opera[] = [
     "id": "basilio",
     "name": "Don Basilio",
     "voice": "Tenor",
-    "desc": "The music master, a gossip in the Count's pay.",
+    "desc": "Susanna's singing master, the Count's go-between with her, and a gossip.",
     "avatar": "hat",
     "pieces": []
    },

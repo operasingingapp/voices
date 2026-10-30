@@ -52,7 +52,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "figaro:basilio": [
     { act: "Act 1", text: "The music master brings the Count's advances to Susanna and spreads gossip about Cherubino and the Countess, not knowing the Count is hiding to hear it, and is caught out when the Count bursts from his hiding place (“Cosa sento!”). He is there when the villagers praise the Count and Cherubino is sent to the army." },
-    { act: "Act 2", text: "Having delivered Figaro's anonymous note to the Count, he arrives at the end of the act with Marcellina and Bartolo to support her claim." },
+    { act: "Act 2", text: "Having delivered Figaro's anonymous note to the Count, he arrives at the end of the act with Marcellina and Bartolo to support her claim. (Off stage in Act 3, he is sent by the Count to find out whether Cherubino ever reached Seville.)" },
     { act: "Act 4", text: "Called by Figaro to the garden to witness Susanna's betrayal, he explains how he learned to give way to the powerful (“In quegli anni”). He waits nearby and comes running with the others at the end." },
   ],
   "figaro:curzio": [
@@ -61,7 +61,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "figaro:barbarina": [
     { act: "Act 3", text: "Sweet on Cherubino, she takes him home to dress him as a village girl, and brings him with the girls who give flowers to the Countess, passing him off as her cousin. When he is found out, she reminds the Count of the promises he made her when he kissed her, and asks for Cherubino as her husband." },
-    { act: "Act 4", text: "Sent by the Count to return to Susanna, as his answer, the pin that sealed the love note Susanna slipped him at the wedding, she has lost it (“L'ho perduta, me meschina”), and lets slip the Count's message, ‘the seal of the pines’, which tells Figaro where the meeting will be. Then, in the dark garden, she waits with an orange, a pear and a ring-cake for Cherubino in the pavilion on the left, where the Count finds her at the end." },
+    { act: "Act 4", text: "Sent by the Count to return to Susanna, as his answer, the pin that sealed the love note Susanna slipped him at the wedding, she has lost it, and Figaro slips her another (“L'ho perduta, me meschina”), and lets slip the Count's message, ‘the seal of the pines’, which tells Figaro where the meeting will be. Then, in the dark garden, she waits with an orange, a pear and a ring-cake for Cherubino in the pavilion on the left, where the Count finds her at the end." },
   ],
   "figaro:antonio": [
     { act: "Act 2", text: "The gardener storms in, furious (the others say drunk), complaining that a man has jumped from the window onto his flowers, and hands Figaro the papers the man dropped, which the Count takes: Cherubino's commission." },
