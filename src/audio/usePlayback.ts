@@ -12,7 +12,7 @@ export interface AudioPort extends SynthPort {
   /** play a channel on another instrument (when the sound source has others); resolves once it is ready */
   setInstrument?(channel: number, id: string, range?: [number, number]): Promise<void>;
   /** recordings of a channel's line (one per tempo rendered), sung when its instrument is "singer"; resolves once it can play */
-  setRecording?(channel: number, recs: { tempo: number; url: string; map: { perf: number[]; audio: number[] } }[] | null): Promise<void>;
+  setRecording?(channel: number, recs: { tempo: number; url: string; map: { perf: number[]; audio: number[]; ends?: number[] } }[] | null): Promise<void>;
   /** forget the recorded singers on every channel but these (another piece's must not sing along) */
   keepRecordings?(channels: number[]): void;
   /** the piece's notes, at the velocity they will sound: lets a sampled instrument load what the piece uses */

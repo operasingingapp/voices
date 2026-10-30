@@ -894,9 +894,9 @@ function PracticeScreen({
       const placed = recs.map((rec) => {
         const pts = perf.notes
           .filter((n) => n.part === p.key && rec.onsets[n.ids[0]] !== undefined)
-          .map((n) => [perf.qToSec(n.onQ), rec.onsets[n.ids[0]]] as const)
+          .map((n) => [perf.qToSec(n.onQ), rec.onsets[n.ids[0]], perf.qToSec(n.offQ)] as const)
           .sort((a, b) => a[0] - b[0]);
-        return { tempo: rec.tempo, url: rec.url, map: { perf: pts.map((x) => x[0]), audio: pts.map((x) => x[1]) } };
+        return { tempo: rec.tempo, url: rec.url, map: { perf: pts.map((x) => x[0]), audio: pts.map((x) => x[1]), ends: pts.map((x) => x[2]) } };
       });
       port.setRecording(p.channel, placed).catch(() => undefined);
     }

@@ -70,7 +70,7 @@ interface Singer {
   ready: Promise<void>;
   /** where playback last (re)started: clock time, app-timeline seconds there, tempo factor */
   follow: { t: number; s: number; f: number } | null;
-  playing: { src: AudioBufferSourceNode; env: GainNode } | null;
+  playing: { src: AudioBufferSourceNode; env: GainNode }[];
 }
 
 
@@ -202,6 +202,7 @@ export class SamplerPort implements SynthPort {
 
   /** the room's impulse response (also used by the sound checks) */
   static roomImpulse = (ctx: BaseAudioContext) => roomImpulse(ctx);
+  private dryBus: GainNode;
   /** how much of the piano goes into the room (0 = dry) */
   readonly reverbSend: GainNode;
 
@@ -218,6 +219,9 @@ export class SamplerPort implements SynthPort {
     limiter.attack.value = 0.003;
     limiter.release.value = 0.25;
     this.master.connect(makeup).connect(limiter).connect(ctx.destination);
+    // recordings that carry their own room join after the room send
+    this.dryBus = ctx.createGain();
+    this.dryBus.connect(makeup);
     // The room: the piano as heard a few metres away in a small recital hall. The bass is kept out of it
     // (below ~220 Hz a room only muddies the harmony), and a short pre-delay keeps every attack clear,
     // so rhythm and words stay as precise as the dry sound.
@@ -406,8 +410,9 @@ export class SamplerPort implements SynthPort {
     if (old) this.stopSinger(old, this.ctx.currentTime);
     this.singers.delete(ch);
     if (!recs?.length) return Promise.resolve();
-    const sg: Singer = { key: key!, sources: recs.map((r) => ({ ...r, line: null, load: null })), follow: null, playing: null, ready: Promise.resolve() };
-    sg.ready = this.lineFor(sg, 1).then(async (line) => {
+    const sg: Singer = { key: key!, sources: recs.map((r) => ({ ...r, line: null, load: null })), follow: null, playing: [], ready: Promise.resolve() };
+    sg.ready = this.lineFor(sg, sg.follow?.f ?? 1).then(async (line) => {
+      // lay it out for the tempo now, so pressing play does not wait for it
       await line.timed(this.ctx, sg.follow?.f ?? 1).catch(() => undefined);
       if (sg.follow) this.startSinger(ch, sg); // playback may already be running: join in where it is now
     });
@@ -425,13 +430,14 @@ export class SamplerPort implements SynthPort {
     }
   }
 
-  /** the recording to use at tempo f (the one rendered nearest it), loaded */
+  /** the recording to use at tempo f (the one rendered nearest it), loaded; the others are let go (memory) */
   private lineFor(sg: Singer, f: number): Promise<RecordedLine> {
     const src = sg.sources.reduce((a, b) => (Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a));
     if (!src.load) {
-      src.load = RecordedLine.load(src.url, src.map).then((line) => {
+      src.load = RecordedLine.load(this.ctx, src.url, src.map, src.tempo).then((line) => {
         line.setMap(src.map); // the map may have changed while it loaded
         src.line = line;
+        for (const o of sg.sources) if (o !== src) (o.line = null), (o.load = null);
         return line;
       });
       src.load.catch(() => (src.load = null));
@@ -452,45 +458,77 @@ export class SamplerPort implements SynthPort {
   private startSinger(ch: number, sg: Singer) {
     const fl = sg.follow;
     if (!fl || !sg.sources.some((x) => x.line)) return;
-    const go = (buf: AudioBuffer) => {
-      if (sg.follow !== fl) return; // stopped or restarted meanwhile
-      const t = Math.max(fl.t, this.ctx.currentTime + 0.03);
-      const offset = (fl.s + (t - fl.t) * fl.f) / fl.f;
-      if (offset >= buf.duration) return;
+    const level = 10 ** (SINGER_LEVEL_DB / 20);
+    const FADE = 0.025;
+    /** play buf from audio time a0, sounding from app time out0 to out1 (seconds at this tempo) */
+    const play = (buf: AudioBuffer, out0: number, out1: number, a0: number, tail: boolean) => {
+      const now = this.ctx.currentTime + 0.03;
+      const pos = fl.s / fl.f; // app time at clock fl.t
+      let t0 = fl.t + (out0 - pos);
+      let off = a0;
+      if (t0 < now) (off += now - t0), (t0 = now);
+      if (off < 0) (t0 -= off), (off = 0);
+      const t1 = fl.t + (out1 - pos) + (tail ? 0 : FADE);
+      if (t1 <= t0 + 0.01 || off >= buf.duration) return;
       const src = this.ctx.createBufferSource();
       src.buffer = buf;
       const env = this.ctx.createGain();
-      const g = 10 ** (SINGER_LEVEL_DB / 20);
-      env.gain.setValueAtTime(0, t);
-      env.gain.linearRampToValueAtTime(g, t + 0.02);
-      src.connect(env).connect(this.channel(ch));
-      src.start(t, Math.max(0, offset));
-      const playing = { src, env };
+      env.gain.setValueAtTime(0, t0);
+      env.gain.linearRampToValueAtTime(level, t0 + FADE);
+      if (!tail) {
+        env.gain.setValueAtTime(level, t1 - FADE);
+        env.gain.linearRampToValueAtTime(0, t1);
+      }
+      src.connect(env).connect(this.dryChannel(ch));
+      src.start(t0, off);
+      if (!tail) src.stop(t1 + 0.01);
+      const item = { src, env };
       src.onended = () => {
         env.disconnect();
-        if (sg.playing === playing) sg.playing = null;
+        sg.playing = sg.playing.filter((x) => x !== item);
       };
-      sg.playing = playing;
+      sg.playing.push(item);
     };
-    this.lineFor(sg, fl.f)
-      .then((line) => line.ready(fl.f) ?? line.timed(this.ctx, fl.f))
-      .then(go, () => undefined);
+    this.lineFor(sg, fl.f).then((line) => {
+      if (sg.follow !== fl) return; // stopped or restarted meanwhile
+      const go = (buf: AudioBuffer) => sg.follow === fl && play(buf, 0, buf.duration, 0, true);
+      const ready = line.ready(fl.f);
+      if (ready) go(ready);
+      else line.timed(this.ctx, fl.f).then(go, () => undefined);
+    }, () => undefined);
   }
 
   private stopSinger(sg: Singer, time: number) {
     sg.follow = null;
-    const p = sg.playing;
-    if (!p) return;
-    sg.playing = null;
+    const list = sg.playing;
+    sg.playing = [];
     const t = Math.max(time, this.ctx.currentTime);
-    p.env.gain.cancelScheduledValues(t);
-    p.env.gain.setValueAtTime(p.env.gain.value, t);
-    p.env.gain.linearRampToValueAtTime(0, t + 0.02);
-    try {
-      p.src.stop(t + 0.03);
-    } catch {
-      /* already stopped */
+    for (const p of list) {
+      p.env.gain.cancelScheduledValues(t);
+      p.env.gain.setValueAtTime(p.env.gain.value, t);
+      p.env.gain.linearRampToValueAtTime(0, t + 0.02);
+      try {
+        p.src.stop(t + 0.03);
+      } catch {
+        /* already stopped */
+      }
     }
+  }
+
+  /**
+   * A recorded singer's way out: the channel's level and mute, but not the room. The recording carries its own
+   * hall; the piano's on top of it would blur the voice.
+   */
+  private dryChannels = new Map<number, GainNode>();
+  private dryChannel(ch: number): GainNode {
+    let g = this.dryChannels.get(ch);
+    if (!g) {
+      g = this.ctx.createGain();
+      g.gain.value = this.channel(ch).gain.value;
+      g.connect(this.dryBus);
+      this.dryChannels.set(ch, g);
+    }
+    return g;
   }
 
   /** is this channel's line sung by its recording (so its notes stay silent)? */
@@ -637,6 +675,8 @@ export class SamplerPort implements SynthPort {
 
   setChannelGain(ch: number, gain: number) {
     this.channel(ch).gain.value = gain;
+    const dry = this.dryChannels.get(ch);
+    if (dry) dry.gain.value = gain;
   }
 
   setMasterMuted(muted: boolean, time: number) {
