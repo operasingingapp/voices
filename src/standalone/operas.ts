@@ -91,7 +91,7 @@ export const OPERAS: Opera[] = [
       "title": "E Susanna non vien!",
       "kind": "Recitative · Act 3",
       "editionId": "mozart-e-susanna-non-vien",
-      "when": "Act 3, alone, while Susanna meets the Count",
+      "when": "Act 3, alone, waiting to hear how the Count took Susanna's promise of a meeting",
       "context": "Alone, the Countess waits for Susanna: tonight they will swap clothes so that she can catch her own husband. She worries the plan is too bold for so jealous a man, then turns bitter: the Count who loved her, then wronged her, then betrayed her, has brought her so low that she must ask her own maid for help."
      },
      {
@@ -124,7 +124,7 @@ export const OPERAS: Opera[] = [
     "id": "cherubino",
     "name": "Cherubino",
     "voice": "Mezzo-soprano",
-    "desc": "The Count's young page, in love with every woman he sees; a trouser role, sung by a woman.",
+    "desc": "The Count's young page, in love with every woman he sees; a trouser role, sung by a woman (written for soprano; today usually a mezzo).",
     "avatar": "curls",
     "pieces": [
      {

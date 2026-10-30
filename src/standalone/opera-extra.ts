@@ -114,7 +114,7 @@ export const ART: Record<string, { cover: string; square: string; alt: string }>
 
 export const STORIES: Record<string, string> = {
   figaro:
-    "On their wedding day, Susanna tells Figaro that their master, Count Almaviva, wants her for himself. With the neglected Countess they plot to catch him out, while old Marcellina tries to hold Figaro to a promise of marriage, until a birthmark shows she is his long-lost mother. By nightfall, in the garden, the Countess and Susanna have changed clothes, the Count is caught courting his own wife, and he begs her forgiveness.",
+    "On their wedding day, Susanna tells Figaro that their master, Count Almaviva, wants her for himself. With the neglected Countess they plot to catch him out, while the lovesick page Cherubino keeps turning up where he shouldn't, and old Marcellina tries to hold Figaro to a promise of marriage, until a birthmark shows she is his long-lost mother. By nightfall, in the garden, the Countess and Susanna have changed clothes, the Count is caught courting his own wife, and he begs her forgiveness.",
   giovanni:
     "Don Giovanni seduces his way across Spain and kills the Commendatore while escaping from Donna Anna. Pursued by Anna, Don Ottavio and the abandoned Donna Elvira, he keeps scheming, until the Commendatore's statue accepts his mocking invitation to dinner and drags him to hell.",
   cosi:
