@@ -80,7 +80,7 @@ export const OPERAS: Opera[] = [
     "id": "countess",
     "name": "The Countess",
     "voice": "Soprano",
-    "desc": "Rosina of Il barbiere di Siviglia, now Countess Almaviva, neglected by her husband.",
+    "desc": "Rosina of Beaumarchais's The Barber of Seville, now Countess Almaviva, neglected by her husband.",
     "avatar": "crown",
     "pieces": [
      {
@@ -111,7 +111,7 @@ export const OPERAS: Opera[] = [
     "id": "count",
     "name": "Count Almaviva",
     "voice": "Baritone",
-    "desc": "Count Almaviva, who has given up his feudal right over his servants' brides, and would like it back for Susanna.",
+    "desc": "The Countess's husband, who has given up his feudal right over his servants' brides, and would like it back for Susanna.",
     "avatar": "crown",
     "pieces": [
      {
@@ -1476,6 +1476,8 @@ const V2_NEW = new Set([
   "Cosa mi narri!",
   "Signor… se trattenete",
   "Ha i diavoli nel corpo",
+  "Oh guarda il demonietto!",
+  "Piegato è il foglio",
 ]);
 const V2_ADDED: Record<string, string[]> = {
   "Contro un cor che accende amore": ["almaviva"],
