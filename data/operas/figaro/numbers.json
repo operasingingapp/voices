@@ -1,0 +1,56 @@
+{
+ "opera": "figaro",
+ "sources": {
+  "libretto": "Le nozze di Figaro, Vienna: Kurzbek 1786 (first print), read in the Digitale Mozart-Edition critical text (LV_9, 2014)",
+  "score": "to check: Breitkopf & Härtel vocal score, P. Klengel (plate 29136), IMSLP"
+ },
+ "status": "numbers, cast and who sings checked against the 1786 libretto; titles, kinds and numbering still to check against the score",
+ "cast": [
+  { "id": "count", "name": "Il Conte di Almaviva", "voice": "Baritone" },
+  { "id": "countess", "name": "La Contessa di Almaviva", "voice": "Soprano" },
+  { "id": "susanna", "name": "Susanna", "voice": "Soprano", "note": "promessa sposa di Figaro" },
+  { "id": "figaro", "name": "Figaro", "voice": "Bass-baritone" },
+  { "id": "cherubino", "name": "Cherubino", "voice": "Mezzo-soprano", "note": "paggio del Conte; a trouser role, soprano clef in the score" },
+  { "id": "marcellina", "name": "Marcellina", "voice": "Mezzo-soprano", "note": "soprano clef in the score; usually sung by a mezzo" },
+  { "id": "bartolo", "name": "Bartolo", "voice": "Bass", "note": "medico di Siviglia" },
+  { "id": "basilio", "name": "Basilio", "voice": "Tenor", "note": "maestro di musica" },
+  { "id": "curzio", "name": "Don Curzio", "voice": "Tenor", "note": "giudice" },
+  { "id": "barbarina", "name": "Barbarina", "voice": "Soprano", "note": "figlia di Antonio" },
+  { "id": "antonio", "name": "Antonio", "voice": "Bass", "note": "giardiniere del Conte e zio di Susanna" }
+ ],
+ "numbers": [
+  { "no": "Ouv.", "act": 1, "title": "Sinfonia", "kind": "Overture", "who": [] },
+  { "no": "1", "act": 1, "scene": "I", "title": "Cinque… dieci… venti…", "kind": "Duettino", "who": ["figaro", "susanna"] },
+  { "no": "2", "act": 1, "scene": "I", "title": "Se a caso madama", "kind": "Duettino", "who": ["figaro", "susanna"] },
+  { "no": "3", "act": 1, "scene": "II", "title": "Se vuol ballare", "recit": "Bravo, signor padrone!", "kind": "Cavatina", "who": ["figaro"] },
+  { "no": "4", "act": 1, "scene": "III", "title": "La vendetta", "kind": "Aria", "who": ["bartolo"] },
+  { "no": "5", "act": 1, "scene": "IV", "title": "Via resti servita", "kind": "Duettino", "who": ["marcellina", "susanna"] },
+  { "no": "6", "act": 1, "scene": "V", "title": "Non so più cosa son, cosa faccio", "kind": "Aria", "who": ["cherubino"] },
+  { "no": "7", "act": 1, "scene": "VII", "title": "Cosa sento!", "kind": "Terzetto", "who": ["count", "basilio", "susanna"] },
+  { "no": "8", "act": 1, "scene": "VIII", "title": "Giovani liete", "kind": "Coro", "who": ["chorus"] },
+  { "no": "9", "act": 1, "scene": "VIII", "title": "Non più andrai", "kind": "Aria", "who": ["figaro"] },
+  { "no": "10", "act": 2, "scene": "I", "title": "Porgi, amor", "kind": "Cavatina", "who": ["countess"] },
+  { "no": "11", "act": 2, "scene": "II", "title": "Voi che sapete", "kind": "Arietta", "who": ["cherubino"] },
+  { "no": "12", "act": 2, "scene": "II", "title": "Venite, inginocchiatevi", "kind": "Aria", "who": ["susanna"], "alt": "Un moto di gioia (K. 579, Vienna 1789)" },
+  { "no": "13", "act": 2, "scene": "III", "title": "Susanna, or via, sortite", "kind": "Terzetto", "who": ["count", "countess", "susanna"] },
+  { "no": "14", "act": 2, "scene": "IV", "title": "Aprite, presto, aprite", "kind": "Duettino", "who": ["susanna", "cherubino"] },
+  { "no": "15", "act": 2, "scene": "VI–ultima", "title": "Esci omai, garzon malnato", "kind": "Finale", "who": ["count", "countess", "susanna", "figaro", "antonio", "marcellina", "bartolo", "basilio"] },
+  { "no": "16", "act": 3, "scene": "II", "title": "Crudel! perché finora", "kind": "Duetto", "who": ["count", "susanna"] },
+  { "no": "17", "act": 3, "scene": "III", "title": "Vedrò mentr'io sospiro", "recit": "Hai già vinta la causa!", "kind": "Recitativo ed Aria", "who": ["count"] },
+  { "no": "18", "act": 3, "scene": "IV–V", "title": "Riconosci in questo amplesso", "kind": "Sestetto", "who": ["marcellina", "figaro", "bartolo", "curzio", "count", "susanna"] },
+  { "no": "19", "act": 3, "scene": "VII", "title": "Dove sono", "recit": "E Susanna non vien!", "kind": "Recitativo ed Aria", "who": ["countess"] },
+  { "no": "20", "act": 3, "scene": "IX", "title": "Sull'aria… Che soave zeffiretto", "kind": "Duettino", "who": ["countess", "susanna"] },
+  { "no": "21", "act": 3, "scene": "X", "title": "Ricevete, o padroncina", "kind": "Coro", "who": ["chorus"] },
+  { "no": "22", "act": 3, "scene": "XII–XIV", "title": "Ecco la marcia", "kind": "Finale", "who": ["figaro", "susanna", "count", "countess", "chorus"], "note": "‘Amanti costanti’ sung by two girls (‘due giovinette’) and the chorus" },
+  { "no": "23", "act": 4, "scene": "I", "title": "L'ho perduta, me meschina", "kind": "Cavatina", "who": ["barbarina"] },
+  { "no": "24", "act": 4, "scene": "III", "title": "Il capro e la capretta", "kind": "Aria", "who": ["marcellina"], "note": "often cut" },
+  { "no": "25", "act": 4, "scene": "VI", "title": "In quegli anni", "kind": "Aria", "who": ["basilio"], "note": "often cut" },
+  { "no": "26", "act": 4, "scene": "VII", "title": "Aprite un po' quegli occhi", "recit": "Tutto è disposto", "kind": "Recitativo ed Aria", "who": ["figaro"] },
+  { "no": "27", "act": 4, "scene": "IX", "title": "Deh vieni, non tardar", "recit": "Giunse alfin il momento", "kind": "Recitativo ed Aria", "who": ["susanna"], "alt": "Al desio di chi t'adora (K. 577, Vienna 1789)" },
+  { "no": "28", "act": 4, "scene": "XI–XV", "title": "Pian pianin le andrò più presso", "kind": "Finale", "who": ["cherubino", "countess", "count", "figaro", "susanna", "antonio", "basilio", "bartolo", "curzio", "barbarina", "marcellina", "chorus"] }
+ ],
+ "libretto_only": [
+  { "act": 3, "scene": "VI", "first": "Se così brami", "who": ["cherubino"], "note": "verses in the 1786 libretto apparently not set by Mozart; to confirm with the score" },
+  { "act": 4, "scene": "X", "first": "Voi che intendete", "who": ["cherubino"], "note": "verses in the 1786 libretto apparently not set by Mozart; to confirm with the score" }
+ ]
+}
