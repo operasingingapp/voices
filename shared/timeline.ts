@@ -486,7 +486,8 @@ function buildNotes(edition: CompiledEdition, measures: PerfMeasure[]): PerfNote
 }
 
 /**
- * A tremolo is written as one or two long notes with strokes; it is played as fast repeated notes.
+ * A tremolo is written as one or two long notes with strokes. Measured ones (one or two strokes) are played as
+ * written; a real tremolo (three or more) as held notes touched again softly every half second or so.
  * Fingered (two-note) tremolos alternate the two pitches across both notes' time; single-note tremolos
  * repeat the note. The strokes give the note value (3 = demisemiquavers, an eighth of a quarter).
  * The repeats keep the written notes' ids, so the score still lights the notated notehead.
@@ -499,22 +500,29 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
   const out: PerfNote[] = [];
   const used = new Set<PerfNote>();
   const repeat = (base: PerfNote, pitches: { midi: number; id: string }[], onQ: number, offQ: number, marks: number) => {
-    // One or two strokes are measured (eighths, sixteenths). Three or more mean a real tremolo, as fast as the hand
-    // goes whatever the tempo: about twelve strokes a second, in whole notes of the beat so it keeps time.
-    let step = 1 / 2 ** marks;
     if (marks >= 3) {
+      // A real tremolo (three or more strokes) is the orchestra's strings, reduced for piano. Hammered out on
+      // sampled keys it rattles, so it is played as a répétiteur plays it: the notes held together, and touched
+      // again softly about every half second (on the beat or a division of it, so it keeps time), the later
+      // touches lighter than the first.
       const qps = tempoNear(edition, base.ids[0]) / 60;
-      step = 1 / 2 ** Math.max(2, Math.min(4, Math.round(Math.log2(12 / qps))));
+      const step = Math.max(0.25, Math.min(2, 2 ** Math.round(Math.log2(qps * 0.55))));
+      let k = 0;
+      for (let t = onQ; t < offQ - EPS; t += step, k++) {
+        const end = Math.min(offQ, t + step);
+        const vel = k === 0 ? base.vel * 0.8 : base.vel * (k % 2 ? 0.46 : 0.52);
+        for (const p of pitches) out.push({ ...base, key: `${base.key}~${k}~${p.midi}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: end });
+      }
+      return;
     }
+    // one or two strokes are measured: eighths or sixteenths, as written, but light, with only the beat leaning a
+    // little (a row of equal strikes on the same sampled key rattles)
+    const step = 1 / 2 ** marks;
     let k = 0;
     for (let t = onQ; t < offQ - EPS; t += step, k++) {
       const p = pitches[k % pitches.length];
-      // A pianist's tremolo is a soft shimmer under the first stroke, not a row of hammer blows: the repeats well
-      // below the written loudness, the hand's natural lilt (every other stroke a little lighter), and no two quite
-      // alike (a fixed pattern, so it plays the same every time).
-      const lilt = k % 2 ? 0.9 : 1;
-      const wobble = 1 + 0.06 * Math.sin(k * 2.39996 + base.midi);
-      const vel = k === 0 ? base.vel * 0.85 : base.vel * 0.62 * lilt * wobble;
+      const onBeat = Math.abs(t - Math.round(t)) < EPS;
+      const vel = k === 0 ? base.vel * 0.85 : base.vel * (onBeat ? 0.66 : 0.54);
       out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
     }
   };
