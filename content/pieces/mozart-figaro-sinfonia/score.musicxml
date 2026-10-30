@@ -2375,6 +2375,21 @@
       <note>
         <grace />
         <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>6</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>32nd</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">continue</beam>
+        <beam number="3">continue</beam>
+      </note>
+      <note>
+        <grace />
+        <pitch>
           <step>B</step>
           <octave>5</octave>
         </pitch>
@@ -2599,6 +2614,21 @@
         <notations>
           <slur type="start" number="1" />
         </notations>
+      </note>
+      <note>
+        <grace />
+        <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>6</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>32nd</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">continue</beam>
+        <beam number="3">continue</beam>
       </note>
       <note>
         <grace />
@@ -5365,6 +5395,21 @@
       <note>
         <grace />
         <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>6</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>32nd</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">continue</beam>
+        <beam number="3">continue</beam>
+      </note>
+      <note>
+        <grace />
+        <pitch>
           <step>B</step>
           <octave>5</octave>
         </pitch>
@@ -5589,6 +5634,21 @@
         <notations>
           <slur type="start" number="1" />
         </notations>
+      </note>
+      <note>
+        <grace />
+        <pitch>
+          <step>C</step>
+          <alter>1</alter>
+          <octave>6</octave>
+        </pitch>
+        <voice>1</voice>
+        <type>32nd</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">continue</beam>
+        <beam number="2">continue</beam>
+        <beam number="3">continue</beam>
       </note>
       <note>
         <grace />
@@ -6775,6 +6835,26 @@
         </notations>
       </note>
       <note>
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -6816,6 +6896,26 @@
         <chord />
         <pitch>
           <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
+        <chord />
+        <pitch>
+          <step>E</step>
           <octave>3</octave>
         </pitch>
         <duration>24</duration>
@@ -6994,6 +7094,26 @@
         </notations>
       </note>
       <note>
+        <chord />
+        <pitch>
+          <step>E</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
         <pitch>
           <step>A</step>
           <octave>3</octave>
@@ -7035,6 +7155,26 @@
         <chord />
         <pitch>
           <step>D</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
+        <chord />
+        <pitch>
+          <step>E</step>
           <octave>3</octave>
         </pitch>
         <duration>24</duration>
@@ -8129,7 +8269,7 @@
       </note>
       <note>
         <pitch>
-          <step>A</step>
+          <step>G</step>
           <octave>5</octave>
         </pitch>
         <duration>24</duration>
@@ -18147,7 +18287,7 @@
         </notations>
       </note>
       <backup>
-        <duration>96</duration>
+        <duration>48</duration>
       </backup>
       <note>
         <pitch>
@@ -18163,7 +18303,7 @@
           </notations>
       </note>
       <backup>
-        <duration>48</duration>
+        <duration>96</duration>
       </backup>
       <note>
         <pitch>
@@ -19245,6 +19385,26 @@
         <pitch>
           <step>D</step>
           <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>2</octave>
         </pitch>
         <duration>24</duration>
         <voice>5</voice>
@@ -20522,6 +20682,26 @@
         <pitch>
           <step>D</step>
           <octave>4</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
+        <chord />
+        <pitch>
+          <step>B</step>
+          <octave>3</octave>
         </pitch>
         <duration>24</duration>
         <voice>5</voice>
@@ -22173,27 +22353,6 @@
         <pitch>
           <step>A</step>
           <octave>3</octave>
-        </pitch>
-        <duration>24</duration>
-        <voice>5</voice>
-        <type>half</type>
-        <time-modification>
-          <actual-notes>2</actual-notes>
-          <normal-notes>1</normal-notes>
-        </time-modification>
-        <staff>2</staff>
-        <notations>
-          <ornaments>
-            <tremolo type="start">1</tremolo>
-          </ornaments>
-        </notations>
-      </note>
-      <note>
-        <chord />
-        <pitch>
-          <step>C</step>
-          <alter>1</alter>
-          <octave>4</octave>
         </pitch>
         <duration>24</duration>
         <voice>5</voice>
@@ -37587,7 +37746,6 @@
         <staff>1</staff>
         <notations>
           <tied type="stop" />
-          <tied type="stop" />
           <tied type="start" />
         </notations>
       </note>
@@ -37647,7 +37805,7 @@
         </notations>
       </note>
       <backup>
-        <duration>96</duration>
+        <duration>48</duration>
       </backup>
       <note>
         <pitch>
@@ -37663,7 +37821,7 @@
           </notations>
       </note>
       <backup>
-        <duration>48</duration>
+        <duration>96</duration>
       </backup>
       <note>
         <pitch>
@@ -38139,6 +38297,7 @@
         <notations>
           <ornaments>
             <trill-mark />
+            <accidental-mark>natural</accidental-mark>
           </ornaments>
         </notations>
       </note>
@@ -38762,6 +38921,26 @@
       <note>
         <pitch>
           <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
+        <chord />
+        <pitch>
+          <step>E</step>
           <octave>3</octave>
         </pitch>
         <duration>24</duration>
@@ -40042,6 +40221,26 @@
       <note>
         <pitch>
           <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>24</duration>
+        <voice>5</voice>
+        <type>half</type>
+        <time-modification>
+          <actual-notes>2</actual-notes>
+          <normal-notes>1</normal-notes>
+        </time-modification>
+        <staff>2</staff>
+        <notations>
+          <ornaments>
+            <tremolo type="start">1</tremolo>
+          </ornaments>
+        </notations>
+      </note>
+      <note>
+        <chord />
+        <pitch>
+          <step>E</step>
           <octave>3</octave>
         </pitch>
         <duration>24</duration>
@@ -43393,7 +43592,7 @@
       </note>
       <note>
         <pitch>
-          <step>A</step>
+          <step>G</step>
           <octave>5</octave>
         </pitch>
         <duration>24</duration>
