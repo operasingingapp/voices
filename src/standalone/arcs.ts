@@ -16,26 +16,26 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 4", text: "Hearing of Susanna's note to the Count, he believes she is betraying him and rails against women (“Aprite un po' quegli occhi”). In the dark he recognises her voice under the Countess's cloak, pays her back by courting her, and they make up before the Count is caught out." },
   ],
   "figaro:susanna": [
-    { act: "Act 1", text: "Susanna warns Figaro that the Count wants her, fends the Count off, and hides Cherubino, who is discovered anyway." },
+    { act: "Act 1", text: "Susanna warns Figaro that the Count wants her and that Basilio pleads his case, trades sugary insults with Marcellina at the door (“Via resti servita”), and fends the Count off. She hides Cherubino in the armchair, but he is discovered anyway." },
     { act: "Act 2", text: "With the Countess she starts dressing Cherubino as a girl (“Venite, inginocchiatevi”). When the Count, suspecting a lover in the locked closet, goes off for tools to break it open, she lets the page out, sees him jump from the window, and takes his place, stepping out to the Count's confusion." },
     { act: "Act 3", text: "Sent by the Countess, she promises the Count a meeting in the garden. Finding Figaro embracing Marcellina, she slaps him, then learns Marcellina is his mother. She writes the note of the rendezvous to the Countess's dictation (“Sull'aria”) and slips it to the Count at the wedding." },
-    { act: "Act 4", text: "Wearing the Countess's clothes, she knows Figaro is listening and teases him with a song of longing (“Deh vieni, non tardar”). When he courts her as ‘the Countess’ she boxes his ears, then forgives him." },
+    { act: "Act 4", text: "Wearing the Countess's clothes, she knows Figaro is listening and teases him with a song of longing (“Deh vieni, non tardar”). When he courts her as ‘the Countess’ she boxes his ears, then forgives him, and together they play out a love scene to bait the Count. When the Count drags everyone out of hiding, she comes out in the Countess's clothes and begs his pardon, until the real Countess appears." },
   ],
   "figaro:countess": [
     { act: "Act 2", text: "Alone, the Countess grieves for her husband's lost love (“Porgi, amor”) and agrees to Figaro's plan. When the Count finds the closet locked she has to confess Cherubino is inside, only for Susanna to step out; the Count begs her pardon and she grants it." },
     { act: "Act 3", text: "She sends Susanna to promise the Count a meeting in the garden, meaning to go herself in Susanna's clothes, without telling Figaro. Waiting, she remembers the happy days of her marriage and hopes to win her husband back (“E Susanna non vien!… Dove sono”). She dictates the note that sets the time and place (“Sull'aria”), and welcomes the village girls, among them Cherubino in disguise." },
-    { act: "Act 4", text: "In Susanna's clothes she fends off Cherubino and is wooed by her own husband. When the Count refuses all pardon, she steps forward as herself; he kneels, and she forgives him." },
+    { act: "Act 4", text: "In Susanna's clothes she fends off Cherubino and is wooed by her own husband, who gives her a ring. When the Count refuses all pardon, she steps forward as herself and tries to kneel for the others; he stops her and begs her forgiveness, and she forgives him." },
   ],
   "figaro:count": [
-    { act: "Act 1", text: "The Count tries to make a date with Susanna, hides from Basilio, and finds Cherubino in the armchair. He puts off Figaro's wedding and sends the page to the army." },
-    { act: "Act 2", text: "An anonymous note makes him jealous. Hearing a noise in the closet, he fetches tools to break it open, finds only Susanna, and has to beg his wife's pardon. He welcomes Marcellina's claim on Figaro." },
-    { act: "Act 3", text: "Susanna agrees to meet him, but he overhears her and swears he will not lose to his servant (“Vedrò mentr'io sospiro”). The trial backfires when Figaro proves to be Marcellina's son. At the wedding he receives a note and pricks his finger on its pin." },
-    { act: "Act 4", text: "In the garden he courts ‘Susanna’, really his wife. Finding Figaro with ‘the Countess’, he calls everyone and refuses pardon, until his true wife appears. He kneels to ask her forgiveness." },
+    { act: "Act 1", text: "The Count tries to make a date with Susanna, hides from Basilio behind the armchair, and finds Cherubino on it. When Figaro brings the villagers to thank him for giving up his feudal right, he promises the wedding but asks for a delay, and sends the page to his regiment." },
+    { act: "Act 2", text: "An anonymous note makes him jealous. Hearing a noise in the locked closet, he fetches tools to break it open; his wife confesses Cherubino is inside, but out steps Susanna, and he has to beg her pardon. He questions Figaro over the note, Antonio's crushed carnations and the page's commission, and welcomes Marcellina's claim on Figaro." },
+    { act: "Act 3", text: "Susanna agrees to meet him, but he overhears her and swears he will not lose to his servant (“Vedrò mentr'io sospiro”). The trial backfires when Figaro proves to be Marcellina's son. Antonio tells him Cherubino is still in the castle and unmasks him among the village girls, and Barbarina embarrasses him by asking for the page as her husband. At the wedding he receives Susanna's note and pricks his finger on its pin." },
+    { act: "Act 4", text: "In the garden he courts ‘Susanna’, really his wife, and gives her a ring. Finding Figaro with ‘the Countess’, he calls everyone and refuses pardon though all kneel to him, until his true wife appears, and he begs her forgiveness (“Contessa, perdono”)." },
   ],
   "figaro:cherubino": [
     { act: "Act 1", text: "Dismissed for being caught with Barbarina, the page begs Susanna to help and pours out his confusion about love (“Non so più cosa son”). Discovered hiding in the Count's presence, he is packed off to the army." },
     { act: "Act 2", text: "He sings the Countess his love song (“Voi che sapete”), is dressed as a girl, hides in the closet when the Count arrives, and escapes by jumping from the window." },
-    { act: "Act 3", text: "Disguised among the village girls bringing flowers, he is found out, and saved when Barbarina asks the Count for him as her husband." },
+    { act: "Act 3", text: "Disguised among the village girls bringing flowers, he is found out, and Barbarina puts the Count on the spot by asking for him as her husband." },
     { act: "Act 4", text: "In the dark garden he comes looking for Barbarina, flirts with ‘Susanna’, really the Countess, and tries to steal a kiss that lands on the Count. He escapes into the pavilion, and the Count's slap lands on Figaro. At the end the Count drags him out, the first of those hiding there." },
   ],
   "figaro:bartolo": [
@@ -48,7 +48,7 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 1", text: "Marcellina holds a contract: Figaro borrowed money from her and promised to marry her if he could not repay it. With Bartolo's help she means to enforce it, and she trades sugary insults with Susanna at the door (“Via resti servita”)." },
     { act: "Act 2", text: "At the end of the act she arrives with Bartolo and Basilio to lay her claim before the Count, just as he is ready to stop the wedding." },
     { act: "Act 3", text: "The judge orders Figaro to pay or marry her, but a birthmark on his arm shows that he is her own long-lost son by Bartolo (“Riconosci in questo amplesso”). Mother and son embrace, and Bartolo agrees to marry her at last, so a double wedding is set." },
-    { act: "Act 4", text: "Now on Susanna's side, she resolves to warn her of Figaro's suspicions and reflects that only humans mistreat their mates (“Il capro e la capretta”). In the dark garden she warns the women that Figaro is there and hides in the pavilion, where the Count later finds her with Barbarina and Cherubino." },
+    { act: "Act 4", text: "Now on Susanna's side, she resolves to warn her of Figaro's suspicions and reflects that animals live at peace with their mates, while only women are treated cruelly by men (“Il capro e la capretta”). In the dark garden she warns the women that Figaro is there and hides in the pavilion, where the Count later finds her with Barbarina and Cherubino." },
   ],
   "figaro:basilio": [
     { act: "Act 1", text: "The music master brings the Count's advances to Susanna and spreads gossip about Cherubino and the Countess, not knowing the Count is hiding to hear it (“Cosa sento!”). He is there when the villagers praise the Count and Cherubino is sent to the army." },
@@ -57,16 +57,16 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "figaro:curzio": [
     { act: "Act 3", text: "The judge rules that Figaro must pay Marcellina or marry her, and stays to see the case turned upside down when Figaro turns out to be her son (“Riconosci in questo amplesso”)." },
-    { act: "Act 4", text: "He is among the household who come with torches at the end and see the Count beg his wife's pardon." },
+    { act: "Act 4", text: "In Mozart's score he is among those who come running with torches at the end, and sees the Count beg his wife's pardon." },
   ],
   "figaro:barbarina": [
     { act: "Act 3", text: "Sweet on Cherubino, she takes him home to dress him as a village girl, and brings him with the girls who give flowers to the Countess. When he is found out, she reminds the Count of the promises he made her when he kissed her, and asks for Cherubino as her husband." },
-    { act: "Act 4", text: "Sent by the Count to return the pin to Susanna, she has lost it (“L'ho perduta, me meschina”), and lets slip to Figaro where the meeting will be. Then, in the dark, she waits with fruit and cakes for Cherubino in the pavilion on the left." },
+    { act: "Act 4", text: "Sent by the Count to return the pin to Susanna, she has lost it (“L'ho perduta, me meschina”), and lets slip to Figaro where the meeting will be. Then, in the dark garden, she waits with fruit and cakes for Cherubino in the pavilion on the left, where the Count finds her at the end." },
   ],
   "figaro:antonio": [
-    { act: "Act 2", text: "The gardener storms in, half drunk, complaining that a man has jumped from the window onto his flowers, and hands over a paper the man dropped: Cherubino's commission." },
+    { act: "Act 2", text: "The gardener storms in, half drunk, complaining that a man has jumped from the window onto his flowers, and hands Figaro the papers the man dropped, which the Count takes: Cherubino's commission." },
     { act: "Act 3", text: "He tells the Count that Cherubino has not gone to Seville, and later unmasks the page among the village girls by pulling off his bonnet." },
-    { act: "Act 4", text: "He comes with torches at the end and sees the Count kneel to ask his wife's pardon." },
+    { act: "Act 4", text: "He comes with torches at the end, finds his daughter Barbarina hiding with the page, and sees the Count beg his wife's pardon." },
   ],
 
   // ---------------- Don Giovanni ----------------
