@@ -1,4 +1,4 @@
-"""Score -> MusicXML for Cantai: every sung syllable becomes VOWEL (melisma notes keep no lyric, so the vowel carries
+"""Score -> MusicXML for Cantai: every sung syllable becomes VOWEL (\"text\": the words as written) (melisma notes keep no lyric, so the vowel carries
 on), tempos scaled by SCALE; with PART_ID, only that singer (and the piano) is kept.
     python3 vocalise.py IN.musicxml OUT.musicxml SCALE [VOWEL] [PART_ID]"""
 import sys, re
@@ -36,15 +36,16 @@ if KEEP:
         if pt.get('id') in drop: root.remove(pt)
 n = 0
 for lyr in root.iter('lyric'):
-    if lyr.get('number', '1') not in ('1', None) and lyr.get('number') != '1':
+    if lyr.get('number', '1') != '1':
         lyr.clear(); lyr.tag = 'drop'; continue
+    n += 1
+    if VOWEL == 'text': continue  # the words as written
     ext = lyr.find('extend')
     for c in list(lyr):
         if c.tag not in ('extend',): lyr.remove(c)
     s = ET.SubElement(lyr, 'syllabic'); s.text = 'single'
     t = ET.SubElement(lyr, 'text'); t.text = VOWEL
     if ext is not None: lyr.remove(ext); lyr.append(ext)
-    n += 1
 for note in root.iter('note'):
     for d in [c for c in note if c.tag == 'drop']: note.remove(d)
 fmt = lambda v: ('%.2f' % v).rstrip('0').rstrip('.')
