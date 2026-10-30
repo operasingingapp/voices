@@ -178,7 +178,7 @@ export const OPERAS: Opera[] = [
     "id": "barbarina",
     "name": "Barbarina",
     "voice": "Soprano",
-    "desc": "The gardener's young daughter, sweet on Cherubino.",
+    "desc": "The gardener's young daughter, Susanna's cousin, sweet on Cherubino; the Count has been flirting with her.",
     "avatar": "long",
     "pieces": []
    },
