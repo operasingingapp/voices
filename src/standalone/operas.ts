@@ -30,7 +30,7 @@ export const OPERAS: Opera[] = [
     "id": "figaro",
     "name": "Figaro",
     "voice": "Bass-baritone",
-    "desc": "The Count's valet, about to marry Susanna.",
+    "desc": "The Count's valet, about to marry Susanna. (Mozart's score lists the role as a bass; today it is usually sung by a bass-baritone.)",
     "avatar": "short",
     "pieces": [
      {
@@ -92,7 +92,7 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "editionId": "mozart-e-susanna-non-vien",
       "when": "Act 3, alone, waiting to hear how the Count took Susanna's promise of a meeting",
-      "context": "Alone, the Countess waits for Susanna: tonight they will swap clothes so that she can catch her own husband. She worries the plan is too bold for so jealous a man, then turns bitter: the Count who loved her, then wronged her, then betrayed her, has brought her so low that she must ask her own maid for help."
+      "context": "Alone, the Countess waits for Susanna, anxious to know how the Count took her proposal. The plan seems bold with so jealous a husband, but what harm is there in changing clothes with Susanna under cover of night, to catch him herself? Then she turns bitter: the Count who loved her, then wronged her, then betrayed her, has brought her so low that she must ask her own maid for help."
      },
      {
       "title": "Dove sono",
@@ -111,7 +111,7 @@ export const OPERAS: Opera[] = [
     "id": "count",
     "name": "Count Almaviva",
     "voice": "Baritone",
-    "desc": "The Countess's husband, jealous of his wife though unfaithful himself, who has given up his feudal right over his servants' brides and would like it back for Susanna.",
+    "desc": "The Countess's husband, jealous of his wife though unfaithful himself, who has given up his feudal right over his servants' brides and would like it back for Susanna. (Mozart's score lists the role as a bass; today it is sung by a baritone.)",
     "avatar": "crown",
     "pieces": [
      {
