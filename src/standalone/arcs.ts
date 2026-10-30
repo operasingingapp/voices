@@ -36,7 +36,7 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 1", text: "Dismissed for being caught with Barbarina, the page begs Susanna to help and pours out his confusion about love (“Non so più cosa son”). Discovered hiding in the Count's presence, he is packed off to the army." },
     { act: "Act 2", text: "He sings the Countess his love song (“Voi che sapete”), is dressed as a girl, hides in the closet when the Count arrives, and escapes by jumping from the window." },
     { act: "Act 3", text: "Disguised among the village girls bringing flowers, he is found out, and Barbarina puts the Count on the spot by asking for him as her husband." },
-    { act: "Act 4", text: "In the dark garden he finds ‘Susanna’, really the Countess, flirts with her, and tries to steal a kiss that lands on the Count. He escapes into the pavilion, and the Count's slap lands on Figaro. At the end the Count drags him out, the first of those hiding there." },
+    { act: "Act 4", text: "In the dark garden, heading for the pavilion where Barbarina is waiting, he finds ‘Susanna’, really the Countess, flirts with her, and tries to steal a kiss that lands on the Count. He escapes into the pavilion, and the Count's slap lands on Figaro. At the end the Count drags him out, the first of those hiding there." },
   ],
   "figaro:bartolo": [
     { act: "Act 1", text: "Doctor Bartolo still resents Figaro for helping Rosina marry the Count, and promises Marcellina revenge by law (“La vendetta”)." },

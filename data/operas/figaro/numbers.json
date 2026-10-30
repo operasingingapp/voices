@@ -2,9 +2,9 @@
  "opera": "figaro",
  "sources": {
   "libretto": "Le nozze di Figaro, Vienna: Kurzbek 1786 (first print), read in the Digitale Mozart-Edition critical text (LV_9, 2014)",
-  "score": "to check: Breitkopf & Härtel vocal score, P. Klengel (plate 29136), IMSLP"
+  "score": "Breitkopf & Härtel vocal score, piano reduction by Paul Klengel (Edition Breitkopf 1716, plate 29136; IMSLP #846696)"
  },
- "status": "numbers, cast and who sings checked against the 1786 libretto; titles, kinds and numbering still to check against the score",
+ "status": "numbers, kinds and singers checked against the Klengel vocal score's index; story and who is on stage checked against the 1786 libretto; sung text still to read from the score, piece by piece",
  "cast": [
   {
    "id": "count",
@@ -76,18 +76,20 @@
    "act": 1,
    "title": "Sinfonia",
    "kind": "Overture",
-   "who": []
+   "who": [],
+   "page": 1
   },
   {
    "no": "1",
    "act": 1,
    "scene": "I",
    "title": "Cinque… dieci… venti…",
-   "kind": "Duettino",
+   "kind": "Duetto",
    "who": [
     "figaro",
     "susanna"
-   ]
+   ],
+   "page": 8
   },
   {
    "no": "2",
@@ -98,7 +100,8 @@
    "who": [
     "figaro",
     "susanna"
-   ]
+   ],
+   "page": 16
   },
   {
    "no": "3",
@@ -109,7 +112,8 @@
    "kind": "Cavatina",
    "who": [
     "figaro"
-   ]
+   ],
+   "page": 26
   },
   {
    "no": "4",
@@ -119,7 +123,8 @@
    "kind": "Aria",
    "who": [
     "bartolo"
-   ]
+   ],
+   "page": 32
   },
   {
    "no": "5",
@@ -130,7 +135,8 @@
    "who": [
     "marcellina",
     "susanna"
-   ]
+   ],
+   "page": 38
   },
   {
    "no": "6",
@@ -140,7 +146,8 @@
    "kind": "Aria",
    "who": [
     "cherubino"
-   ]
+   ],
+   "page": 48
   },
   {
    "no": "7",
@@ -152,7 +159,8 @@
     "count",
     "basilio",
     "susanna"
-   ]
+   ],
+   "page": 60
   },
   {
    "no": "8",
@@ -162,7 +170,8 @@
    "kind": "Coro",
    "who": [
     "chorus"
-   ]
+   ],
+   "page": 75
   },
   {
    "no": "9",
@@ -172,7 +181,8 @@
    "kind": "Aria",
    "who": [
     "figaro"
-   ]
+   ],
+   "page": 84
   },
   {
    "no": "10",
@@ -182,17 +192,19 @@
    "kind": "Cavatina",
    "who": [
     "countess"
-   ]
+   ],
+   "page": 90
   },
   {
    "no": "11",
    "act": 2,
    "scene": "II",
    "title": "Voi che sapete",
-   "kind": "Arietta",
+   "kind": "Canzona",
    "who": [
     "cherubino"
-   ]
+   ],
+   "page": 103
   },
   {
    "no": "12",
@@ -203,7 +215,8 @@
    "who": [
     "susanna"
    ],
-   "alt": "Un moto di gioia (K. 579, Vienna 1789)"
+   "alt": "Un moto di gioia (K. 579, Vienna 1789)",
+   "page": 109
   },
   {
    "no": "13",
@@ -215,7 +228,8 @@
     "count",
     "countess",
     "susanna"
-   ]
+   ],
+   "page": 123
   },
   {
    "no": "14",
@@ -226,7 +240,8 @@
    "who": [
     "susanna",
     "cherubino"
-   ]
+   ],
+   "page": 134
   },
   {
    "no": "15",
@@ -243,7 +258,8 @@
     "marcellina",
     "bartolo",
     "basilio"
-   ]
+   ],
+   "page": 141
   },
   {
    "no": "16",
@@ -254,7 +270,8 @@
    "who": [
     "count",
     "susanna"
-   ]
+   ],
+   "page": 210
   },
   {
    "no": "17",
@@ -265,7 +282,8 @@
    "kind": "Recitativo ed Aria",
    "who": [
     "count"
-   ]
+   ],
+   "page": 216
   },
   {
    "no": "18",
@@ -280,7 +298,8 @@
     "curzio",
     "count",
     "susanna"
-   ]
+   ],
+   "page": 228
   },
   {
    "no": "19",
@@ -291,18 +310,20 @@
    "kind": "Recitativo ed Aria",
    "who": [
     "countess"
-   ]
+   ],
+   "page": 248
   },
   {
    "no": "20",
    "act": 3,
    "scene": "IX",
-   "title": "Sull'aria… Che soave zeffiretto",
-   "kind": "Duettino",
+   "title": "Che soave zeffiretto (‘Sull'aria’)",
+   "kind": "Duetto",
    "who": [
     "countess",
     "susanna"
-   ]
+   ],
+   "page": 257
   },
   {
    "no": "21",
@@ -312,7 +333,8 @@
    "kind": "Coro",
    "who": [
     "chorus"
-   ]
+   ],
+   "page": 260
   },
   {
    "no": "22",
@@ -327,7 +349,8 @@
     "countess",
     "chorus"
    ],
-   "note": "‘Amanti costanti’ sung by two girls (‘due giovinette’) and the chorus"
+   "note": "‘Amanti costanti’ sung by two women (‘due donne’) and the chorus",
+   "page": 270
   },
   {
    "no": "23",
@@ -337,7 +360,8 @@
    "kind": "Cavatina",
    "who": [
     "barbarina"
-   ]
+   ],
+   "page": 282
   },
   {
    "no": "24",
@@ -348,7 +372,8 @@
    "who": [
     "marcellina"
    ],
-   "note": "often cut"
+   "note": "often cut",
+   "page": 289
   },
   {
    "no": "25",
@@ -359,7 +384,8 @@
    "who": [
     "basilio"
    ],
-   "note": "often cut"
+   "note": "often cut",
+   "page": 298
   },
   {
    "no": "26",
@@ -370,7 +396,8 @@
    "kind": "Recitativo ed Aria",
    "who": [
     "figaro"
-   ]
+   ],
+   "page": 304
   },
   {
    "no": "27",
@@ -382,7 +409,8 @@
    "who": [
     "susanna"
    ],
-   "alt": "Al desio di chi t'adora (K. 577, Vienna 1789)"
+   "alt": "Al desio di chi t'adora (K. 577, Vienna 1789)",
+   "page": 314
   },
   {
    "no": "28",
@@ -403,7 +431,8 @@
     "barbarina",
     "marcellina"
    ],
-   "note": "the 1786 libretto brings on a chorus with torches; to confirm with the score whether Mozart gives it any music"
+   "note": "no chorus: the score's last scene lists only the eleven soloists",
+   "page": 318
   }
  ],
  "libretto_only": [
@@ -414,18 +443,17 @@
    "who": [
     "cherubino"
    ],
-   "note": "verses in the 1786 libretto apparently not set by Mozart; to confirm with the score"
+   "note": "not set: the score's recitative ‘Andiam, andiam, bel paggio’ goes straight on to No. 19"
   },
   {
    "act": 4,
    "scene": "X",
-   "first": "Perfida! E in quella forma",
+   "first": "Voi che intendete",
    "who": [
-    "figaro",
-    "cherubino",
-    "countess"
+    "cherubino"
    ],
-   "note": "the whole scene, including Cherubino's verses ‘Voi che intendete’, apparently not set by Mozart: No. 28 follows No. 27 directly; to confirm with the score"
+   "note": "in the score Cherubino only hums ‘La la la la lera’ here; the recitative around it (‘Perfida! e in quella forma’) is set"
   }
- ]
+ ],
+ "page_offset": "PDF page = printed page + 8"
 }
