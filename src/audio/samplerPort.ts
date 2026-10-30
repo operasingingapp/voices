@@ -627,7 +627,7 @@ export class SamplerPort implements SynthPort {
     const s = picked.sample;
     const t = Math.max(time, this.ctx.currentTime);
     // striking a key again ends its previous sound (the hammer stops the string), also for unisons
-    for (const v of this.voices) if (!v.released && v.ch === ch && v.midi === midi) this.release(v, t, 0.03);
+    for (const v of this.voices) if (!v.released && v.ch === ch && v.midi === midi) this.release(v, t, 0.06);
     const src = this.ctx.createBufferSource();
     src.buffer = s.buffer;
     const tune = line ? -(s.cents ?? 0) : "cents" in picked ? picked.cents : 0;

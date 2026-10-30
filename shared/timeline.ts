@@ -499,11 +499,23 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
   const out: PerfNote[] = [];
   const used = new Set<PerfNote>();
   const repeat = (base: PerfNote, pitches: { midi: number; id: string }[], onQ: number, offQ: number, marks: number) => {
-    const step = 1 / 2 ** marks; // in quarters: 1 stroke = eighths, 2 = sixteenths, 3 = demisemiquavers
+    // One or two strokes are measured (eighths, sixteenths). Three or more mean a real tremolo, as fast as the hand
+    // goes whatever the tempo: about twelve strokes a second, in whole notes of the beat so it keeps time.
+    let step = 1 / 2 ** marks;
+    if (marks >= 3) {
+      const qps = tempoNear(edition, base.ids[0]) / 60;
+      step = 1 / 2 ** Math.max(2, Math.min(4, Math.round(Math.log2(12 / qps))));
+    }
     let k = 0;
     for (let t = onQ; t < offQ - EPS; t += step, k++) {
       const p = pitches[k % pitches.length];
-      out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(base.vel * (k === 0 ? 1 : 0.82))), onQ: t, offQ: Math.min(offQ, t + step) });
+      // A pianist's tremolo is a soft shimmer under the first stroke, not a row of hammer blows: the repeats well
+      // below the written loudness, the hand's natural lilt (every other stroke a little lighter), and no two quite
+      // alike (a fixed pattern, so it plays the same every time).
+      const lilt = k % 2 ? 0.9 : 1;
+      const wobble = 1 + 0.06 * Math.sin(k * 2.39996 + base.midi);
+      const vel = k === 0 ? base.vel * 0.85 : base.vel * 0.62 * lilt * wobble;
+      out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
     }
   };
   for (const ev of events) {
