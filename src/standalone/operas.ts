@@ -80,7 +80,7 @@ export const OPERAS: Opera[] = [
     "id": "countess",
     "name": "The Countess",
     "voice": "Soprano",
-    "desc": "Countess Almaviva, neglected by her husband.",
+    "desc": "Rosina of Il barbiere di Siviglia, now Countess Almaviva, neglected by her husband.",
     "avatar": "crown",
     "pieces": [
      {
@@ -111,7 +111,7 @@ export const OPERAS: Opera[] = [
     "id": "count",
     "name": "Count Almaviva",
     "voice": "Baritone",
-    "desc": "Figaro's master.",
+    "desc": "Count Almaviva, who has given up his feudal right over his servants' brides, and would like it back for Susanna.",
     "avatar": "crown",
     "pieces": [
      {
@@ -124,7 +124,7 @@ export const OPERAS: Opera[] = [
     "id": "cherubino",
     "name": "Cherubino",
     "voice": "Mezzo-soprano",
-    "desc": "The Count's young page, sung by a woman.",
+    "desc": "The Count's young page, in love with every woman he sees; a trouser role, sung by a woman.",
     "avatar": "curls",
     "pieces": [
      {
@@ -141,7 +141,7 @@ export const OPERAS: Opera[] = [
     "id": "bartolo",
     "name": "Doctor Bartolo",
     "voice": "Bass",
-    "desc": "A doctor from Seville.",
+    "desc": "A doctor from Seville, Rosina's old guardian, who has not forgiven Figaro for helping her marry the Count.",
     "avatar": "beard",
     "pieces": [
      {
@@ -170,7 +170,7 @@ export const OPERAS: Opera[] = [
     "id": "curzio",
     "name": "Don Curzio",
     "voice": "Tenor",
-    "desc": "The stammering judge who hears Marcellina's case.",
+    "desc": "The judge who hears Marcellina's case against Figaro.",
     "avatar": "short",
     "pieces": []
    },
@@ -1459,6 +1459,23 @@ const V2_NEW = new Set([
   "Dormi amor mio",
   // added with the full Figaro cast (2026-10)
   "È Barbarina… Chi va là?",
+  "Cosa stai misurando",
+  "Or bene, ascolta e taci",
+  "Ed aspettaste il giorno",
+  "Tutto ancor non ho perso",
+  "Va' là, vecchia pedante",
+  "Ah son perduto!",
+  "Basilio, in traccia subito",
+  "Quanto duolmi, Susanna",
+  "Bravo! Che bella voce!",
+  "Dunque voi non aprite?",
+  "Tutto è come il lasciai",
+  "Che imbarazzo è mai questo!",
+  "È decisa la lite",
+  "Eccovi, o caro amico",
+  "Cosa mi narri!",
+  "Signor… se trattenete",
+  "Ha i diavoli nel corpo",
 ]);
 const V2_ADDED: Record<string, string[]> = {
   "Contro un cor che accende amore": ["almaviva"],
@@ -1468,6 +1485,7 @@ const V2_ADDED: Record<string, string[]> = {
   "The relatives bargain": ["schicchi"],
   "Addio, fiorito asil": ["sharpless"],
   "Pian pianin le andrò più presso": ["bartolo"],
+  "Signora, ella mi disse": ["figaro"],
 };
 const V2_REMOVED: Record<string, string[]> = {
   "Bel conforto al mietitore… Quanto è bella": ["adina"],
