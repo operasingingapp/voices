@@ -2812,14 +2812,18 @@ function PracticeScreen({
                   </p>
                   <p>
                     Piano:{" "}
+                    <a href="https://www.ir.isas.jaxa.jp/~cyamauch/AccurateSalamander/" target="_blank" rel="noreferrer">
+                      Noct-Salamander Grand Piano
+                    </a>{" "}
+                    by Chisato Yamauchi (Accurate-Salamander Project), retuned by Hiroharu Narikawa, from the{" "}
                     <a href="https://github.com/sfzinstruments/SalamanderGrandPiano" target="_blank" rel="noreferrer">
                       Salamander Grand Piano V3
                     </a>{" "}
-                    by Alexander Holm, a Yamaha C5, licensed{" "}
+                    by Alexander Holm, a Yamaha C5; licensed{" "}
                     <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noreferrer">
                       Creative Commons BY 3.0
                     </a>
-                    . Shortened to nine seconds a note and two loudness levels so it loads quickly.
+                    . All 16 loudness levels, each note up to ten seconds.
                   </p>
                   <p>
                     Oboe, clarinet and bassoon for the sung line: recordings from{" "}

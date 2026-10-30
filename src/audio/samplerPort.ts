@@ -1,17 +1,40 @@
 /**
- * SynthPort playing the Salamander Grand Piano (Yamaha C5, recorded by Alexander Holm, CC BY 3.0)
+ * SynthPort playing the Noct-Salamander Grand Piano (the Salamander Grand Piano V3, a Yamaha C5 recorded by
+ * Alexander Holm, retuned and evened out by Chisato Yamauchi's Accurate-Salamander Project; CC BY 3.0)
  * through the browser's own Web Audio: no AudioWorklet, no WebAssembly, so it works under strict page
  * policies and on iPad.
  *
- * Samples: every minor third from A0 to C8, at two loudness levels (Salamander layers 6 and 12),
- * trimmed to 9 s with a fade. A note uses the nearest recorded pitch, shifted by at most a semitone and
- * a half; the soft layer loads first so playback can start, the loud layer follows.
+ * Samples: every minor third from A0 to C8 at all 16 loudness layers, each layer one MP3 holding its 30 notes
+ * one after another (see scripts/piano/pack.py and piano/noct.json). A note uses the nearest recorded pitch,
+ * shifted by at most a semitone and a half, and the layer that matches its velocity.
+ *
+ * Memory: 16 decoded layers would not fit a tablet, so only the layers a piece uses are loaded (prepare()),
+ * only for the keys it plays, decoded at 32 kHz; until a layer has arrived the nearest loaded one plays.
  * All timing uses the AudioContext clock, like the SoundFont port it replaces.
  */
 import type { SynthPort } from "./engine";
 import type { PlaybackPart } from "../../shared/types";
 
-const files = import.meta.glob("../standalone/piano/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
+import NOCT from "../standalone/piano/noct.json";
+
+const files = import.meta.glob("../standalone/piano/noct-v*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
+interface PianoNote {
+  midi: number;
+  start: number; // seconds into the layer's file where the note's slot begins (after its gap)
+  dur: number;
+}
+const PIANO = NOCT as unknown as { gap: number; layers: Record<string, { file: string; notes: PianoNote[] }>; cents: Record<string, number> };
+/** the lowest velocity of each of the 16 layers (the Accurate-Salamander SFZ's mapping) */
+const LAYER_FROM = [1, 27, 33, 38, 43, 48, 53, 59, 65, 72, 80, 88, 96, 104, 112, 120];
+const layerOf = (vel: number) => {
+  let l = 1;
+  for (let i = 0; i < LAYER_FROM.length; i++) if (vel >= LAYER_FROM[i]) l = i + 1;
+  return l;
+};
+/** every layer is recorded at the same loudness; this matches the old piano's level at velocity 64 */
+const PIANO_LEVEL_DB = -7.5;
+/** decoding rate for the piano: enough for a piano's overtones, a third less memory than 48 kHz */
+const PIANO_RATE = 32000;
 // instruments for the sung line, loaded only when chosen (real recordings: VSCO 2 CE, CC0; the English horn
 // from Sonatina Symphonic Orchestra, CC Sampling+ 1.0; see voices/README.md)
 const lineFiles = import.meta.glob("../standalone/voices/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
@@ -28,19 +51,18 @@ const LINE_SOUND: Record<Exclude<LineInstrument, "piano">, { release: number; db
 };
 const isLineKit = (id: string): id is Exclude<LineInstrument, "piano"> => id in LINE_SOUND;
 
-const NOTE: Record<string, number> = { C: 0, Cs: 1, Ds: 3, Fs: 6, A: 9 };
-/** midi number of a sample file name such as "Fs3-v6.mp3" */
-function sampleMidi(path: string): { midi: number; layer: number } | null {
-  const m = /\/([A-G]s?)(\d)-v(\d+)\.mp3$/.exec(path);
-  if (!m || NOTE[m[1]] === undefined) return null;
-  return { midi: (Number(m[2]) + 1) * 12 + NOTE[m[1]], layer: Number(m[3]) };
-}
 
 interface Sample {
   midi: number;
   buffer: AudioBuffer;
   offset: number; // seconds of encoder silence to skip at the start
   cents?: number; // how sharp the recording is (corrected when played)
+}
+/** a layer of the piano: its notes so far (only the keys a piece needs), and the keys still loading */
+interface PianoLayer {
+  notes: Map<number, Sample>;
+  loading: Promise<void> | null;
+  keys: Set<number>;
 }
 
 interface Voice {
@@ -144,8 +166,10 @@ export class SamplerPort implements SynthPort {
   private clicks: AudioScheduledSourceNode[] = [];
   private channels = new Map<number, GainNode>();
   private voices: Voice[] = [];
-  /** piano samples by loudness layer, each sorted by pitch */
-  private layers = new Map<number, Sample[]>();
+  /** piano layers that have (some) notes loaded, by layer number 1..16 */
+  private layers = new Map<number, PianoLayer>();
+  /** what the current piece needs: its layers and the recorded keys under its notes */
+  private want = { layers: new Set<number>(), keys: new Set<number>() };
   /** the other instruments, once loaded (sorted by pitch) */
   private kits = new Map<string, Sample[]>();
   private kitLoads = new Map<string, Promise<void>>();
@@ -202,35 +226,103 @@ export class SamplerPort implements SynthPort {
   static async create(onProgress?: (msg: string) => void): Promise<SamplerPort> {
     const ctx = new AudioContext({ latencyHint: "interactive" });
     const port = new SamplerPort(ctx);
-    const byLayer = new Map<number, { midi: number; url: string }[]>();
-    for (const [path, url] of Object.entries(files)) {
-      const s = sampleMidi(path);
-      if (!s) continue;
-      byLayer.set(s.layer, [...(byLayer.get(s.layer) ?? []), { midi: s.midi, url }]);
-    }
-    const layers = [...byLayer.keys()].sort((a, b) => a - b);
-    if (!layers.length) throw new Error("The piano samples are missing");
+    if (!Object.keys(files).length) throw new Error("The piano samples are missing");
     onProgress?.("Loading the piano");
-    // the softer layer first: enough to play; the louder one arrives in the background
-    await port.loadLayer(layers[0], byLayer.get(layers[0])!);
-    for (const l of layers.slice(1)) void port.loadLayer(l, byLayer.get(l)!).catch(() => undefined);
+    // a middle layer over the whole keyboard first: enough to play anything; a piece's own layers follow (prepare)
+    await port.loadLayer(8, new Set(PIANO.layers["8"].notes.map((n) => n.midi)));
     return port;
   }
 
-  private async loadLayer(layer: number, list: { midi: number; url: string }[]) {
-    const samples = await Promise.all(
-      list.map(async ({ midi, url }) => {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error("A piano sample could not be loaded");
-        const buffer = await this.ctx.decodeAudioData(await res.arrayBuffer());
-        return { midi, buffer, offset: leadingSilence(buffer) };
-      }),
-    );
-    this.layers.set(layer, samples.sort((a, b) => a.midi - b.midi));
+  private fileUrl(layer: number): string {
+    const name = PIANO.layers[String(layer)].file;
+    const url = Object.entries(files).find(([path]) => path.endsWith("/" + name))?.[1];
+    if (!url) throw new Error("A piano layer is missing");
+    return url;
+  }
+
+  /** Load one layer's notes for these recorded keys (the ones not loaded yet), cut out of its file. */
+  private loadLayer(layer: number, keys: Set<number>): Promise<void> {
+    let L = this.layers.get(layer);
+    if (!L) {
+      L = { notes: new Map(), loading: null, keys: new Set() };
+      this.layers.set(layer, L);
+    }
+    const missing = [...keys].filter((k) => !L!.keys.has(k));
+    if (!missing.length) return L.loading ?? Promise.resolve();
+    for (const k of missing) L.keys.add(k);
+    const prev = L.loading ?? Promise.resolve();
+    const layerRef = L;
+    const run = prev.then(async () => {
+      const res = await fetch(this.fileUrl(layer));
+      if (!res.ok) throw new Error("A piano layer could not be loaded");
+      const data = await res.arrayBuffer();
+      // decode at 32 kHz (an offline context decodes at its own rate), then keep only the notes asked for
+      let whole: AudioBuffer;
+      try {
+        whole = await new OfflineAudioContext(2, 1, PIANO_RATE).decodeAudioData(data);
+      } catch {
+        whole = await this.ctx.decodeAudioData(data);
+      }
+      const rate = whole.sampleRate;
+      for (const n of PIANO.layers[String(layer)].notes) {
+        if (!missing.includes(n.midi)) continue;
+        // find the onset near the slot's start (MP3 encoders and decoders shift audio by a few ms)
+        const ch0 = whole.getChannelData(0);
+        const from = Math.max(0, Math.round((n.start - PIANO.gap * 0.8) * rate));
+        const limit = Math.min(ch0.length, Math.round((n.start + 0.15) * rate));
+        let on = Math.round(n.start * rate);
+        for (let i = from; i < limit; i++)
+          if (Math.abs(ch0[i]) > 0.002) {
+            on = Math.max(0, i - 8);
+            break;
+          }
+        const len = Math.min(ch0.length - on, Math.round(n.dur * rate));
+        const buf = new AudioBuffer({ numberOfChannels: whole.numberOfChannels, length: len, sampleRate: rate });
+        for (let c = 0; c < whole.numberOfChannels; c++) buf.copyToChannel(whole.getChannelData(c).subarray(on, on + len), c);
+        layerRef.notes.set(n.midi, { midi: n.midi, buffer: buf, offset: 0 });
+      }
+    });
+    L.loading = run.catch(() => {
+      for (const k of missing) layerRef.keys.delete(k);
+    });
+    return run;
   }
 
   configureParts(_parts: PlaybackPart[]) {
     /* every part plays on the piano unless setInstrument chooses otherwise */
+  }
+
+  /**
+   * The piece's notes (pitch and the velocity they will be played at): load the layers it uses, for the recorded
+   * keys under its notes, one layer at a time (the most used first), and let go of layers it does not use.
+   */
+  prepare(notes: { midi: number; vel: number }[]) {
+    const recorded = PIANO.layers["8"].notes.map((n) => n.midi);
+    const nearest = (m: number) => recorded.reduce((b, k) => (Math.abs(k - m) < Math.abs(b - m) ? k : b), recorded[0]);
+    const count = new Map<number, number>();
+    const keys = new Set<number>();
+    for (const n of notes) {
+      const l = layerOf(n.vel);
+      count.set(l, (count.get(l) ?? 0) + 1);
+      keys.add(nearest(n.midi));
+    }
+    // at most the six layers the piece uses most (a handful of notes in another layer play on the nearest one)
+    const layers = [...count.keys()].sort((a, b) => count.get(b)! - count.get(a)!).slice(0, 6);
+    this.want = { layers: new Set([8, ...layers]), keys };
+    // free what this piece does not need (layer 8 stays: it covers everything while others load)
+    for (const [l] of this.layers) if (!this.want.layers.has(l)) this.layers.delete(l);
+    let chain = Promise.resolve();
+    for (const l of layers) chain = chain.then(() => this.loadLayer(l, keys).catch(() => undefined));
+    // once the piece's own layers are in, the whole-keyboard layer keeps only the piece's keys too
+    const want = this.want;
+    void chain.then(() => {
+      const L8 = this.layers.get(8);
+      if (!L8 || this.want !== want) return;
+      for (const k of [...L8.notes.keys()]) if (!keys.has(k)) {
+        L8.notes.delete(k);
+        L8.keys.delete(k);
+      }
+    });
   }
 
   /**
@@ -294,20 +386,27 @@ export class SamplerPort implements SynthPort {
   }
 
   /**
-   * The recording to use and how loud to play it. Loudness follows the velocity on a gentle scale
-   * (0.2 dB per step, so pp to ff spans about 16 dB, which suits accompaniment on a tablet); from forte up
-   * the louder recording is used, turned down by the 6 dB it is already louder, so its brighter tone
-   * comes in without a jump in level.
+   * The recording to use and how loud to play it. The layer follows the velocity (its tone: softer layers are
+   * darker); the loudness follows it on a gentle scale (0.2 dB per step, so pp to ff spans about 16 dB, which
+   * suits accompaniment on a tablet), as every layer is recorded at the same level. Until the right layer has
+   * loaded, the nearest loaded one plays.
    */
-  private pick(midi: number, vel: number): { sample: Sample; gain: number } | null {
-    const keys = [...this.layers.keys()].sort((a, b) => a - b);
-    if (!keys.length) return null;
-    const loud = vel >= 80 && keys.length > 1;
-    const list = this.layers.get(loud ? keys[keys.length - 1] : keys[0])!;
-    let best = list[0];
-    for (const s of list) if (Math.abs(s.midi - midi) < Math.abs(best.midi - midi)) best = s;
-    const db = (Math.max(1, Math.min(127, vel)) - 64) * 0.2 - (loud ? 6 : 0);
-    return { sample: best, gain: 10 ** (db / 20) };
+  private pick(midi: number, vel: number): { sample: Sample; gain: number; cents: number } | null {
+    const want = layerOf(vel);
+    let best: Sample | null = null;
+    let bestScore = Infinity;
+    for (const [l, L] of this.layers)
+      for (const s of L.notes.values()) {
+        // the nearest pitch first, then the nearest layer
+        const score = Math.abs(s.midi - midi) * 100 + Math.abs(l - want);
+        if (score < bestScore) {
+          bestScore = score;
+          best = s;
+        }
+      }
+    if (!best) return null;
+    const db = (Math.max(1, Math.min(127, vel)) - 64) * 0.2 + PIANO_LEVEL_DB;
+    return { sample: best, gain: 10 ** (db / 20), cents: PIANO.cents[String(midi)] ?? 0 };
   }
 
   private channelRange = new Map<number, [number, number] | undefined>();
@@ -352,7 +451,8 @@ export class SamplerPort implements SynthPort {
     for (const v of this.voices) if (!v.released && v.ch === ch && v.midi === midi) this.release(v, t, 0.03);
     const src = this.ctx.createBufferSource();
     src.buffer = s.buffer;
-    src.playbackRate.value = 2 ** (((line?.midi ?? midi) - s.midi) / 12 - (s.cents ?? 0) / 1200);
+    const tune = line ? -(s.cents ?? 0) : "cents" in picked ? picked.cents : 0;
+    src.playbackRate.value = 2 ** (((line?.midi ?? midi) - s.midi) / 12 + tune / 1200);
     const env = this.ctx.createGain();
     env.gain.value = picked.gain;
     src.connect(env).connect(this.channel(ch));

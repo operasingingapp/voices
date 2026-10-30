@@ -5,7 +5,7 @@ import "./ds.css";
 import "./app.css";
 import { App } from "./App";
 
-// The practice app accompanies on a sampled grand piano (Salamander Grand Piano V3, CC BY 3.0).
+// The practice app accompanies on a sampled grand piano (Noct-Salamander, from the Salamander Grand Piano V3; CC BY 3.0).
 setPortFactory((onProgress) => SamplerPort.create(onProgress));
 
 createRoot(document.getElementById("root")!).render(<App />);

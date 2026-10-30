@@ -11,6 +11,8 @@ export interface AudioPort extends SynthPort {
   configureParts(parts: PlaybackPart[]): void;
   /** play a channel on another instrument (when the sound source has others); resolves once it is ready */
   setInstrument?(channel: number, id: string, range?: [number, number]): Promise<void>;
+  /** the piece's notes, at the velocity they will sound: lets a sampled instrument load what the piece uses */
+  prepare?(notes: { midi: number; vel: number }[]): void;
 }
 
 type PortFactory = (onProgress: (msg: string) => void) => Promise<AudioPort>;
@@ -145,6 +147,8 @@ export function usePlayback(perf: Performance | null, parts: PlaybackPart[] | un
   useEffect(() => {
     if (!engine || !perf || !parts || !port) return;
     port.configureParts(parts);
+    const scale = new Map(parts.map((p) => [p.key, p.velocityScale ?? 1]));
+    port.prepare?.(perf.notes.map((n) => ({ midi: n.midi, vel: Math.max(1, Math.min(127, Math.round(n.vel * (scale.get(n.part) ?? 1)))) })));
     engine.setPerformance(perf, parts);
   }, [engine, perf, parts, port]);
 
