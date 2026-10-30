@@ -54,7 +54,8 @@ interface Config {
   voiceSearch?: string;
   /** the voice for each language other than Italian, by language code */
   /** libraryId: the exact voice wanted from the ElevenLabs library (several voices share a name) */
-  languages?: Record<string, { voiceId: string; voiceName?: string; voiceSearch?: string; libraryId?: string }>;
+  /** a language may also set its own model, speed and stability (each falls back to the settings above) */
+  languages?: Record<string, { voiceId: string; voiceName?: string; voiceSearch?: string; libraryId?: string } & Partial<Pick<Config, "modelId" | "normalSpeed" | "slowSpeed" | "stability" | "similarityBoost" | "speakerBoost">>>;
   /** the voice for pieces sung by a man, by language code; without one, the language's voice is used */
   male?: Record<string, { voiceId: string; voiceName?: string }>;
 }
@@ -533,13 +534,17 @@ async function main() {
     if (lang === "it") {
       config.voiceId = italian.voiceId;
       config.voiceName = italian.voiceName;
-    } else {
+    }
+    const base = { modelId: config.modelId, normalSpeed: config.normalSpeed, slowSpeed: config.slowSpeed, stability: config.stability, similarityBoost: config.similarityBoost, speakerBoost: config.speakerBoost };
+    if (lang !== "it") {
       const v = config.languages?.[lang];
-      // --voice applies to Italian; another language uses its own entry
+      // --voice applies to Italian; another language uses its own entry, with its own settings where it has them
       config.voiceId = v?.voiceId ?? "";
       config.voiceName = v?.voiceName;
+      for (const k of Object.keys(base) as (keyof typeof base)[]) if (v?.[k] !== undefined) (config as Record<string, unknown>)[k] = v[k];
     }
     await runLanguage(lang, todo);
+    Object.assign(config, base);
     if (lang === "it") Object.assign(italian, { voiceId: config.voiceId, voiceName: config.voiceName });
   }
 }
