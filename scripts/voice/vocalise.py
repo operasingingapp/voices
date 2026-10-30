@@ -13,6 +13,25 @@ if KEEP:
     drop = {i for i, n in names.items() if i != KEEP and 'piano' not in n.lower()}
     for sp in list(pl.findall('score-part')):
         if sp.get('id') in drop: pl.remove(sp)
+    # tempo marks often live in the top part only: carry them into the first part kept, at the same place
+    parts = root.findall('part')
+    kept = [pt for pt in parts if pt.get('id') not in drop]
+    if kept and any(s.get('tempo') for pt in parts if pt.get('id') in drop for s in pt.iter('sound')) and not any(s.get('tempo') for s in kept[0].iter('sound')):
+        src = next(pt for pt in parts if pt.get('id') in drop and any(s.get('tempo') for s in pt.iter('sound')))
+        tgt = {m.get('number'): m for m in kept[0].findall('measure')}
+        for m in src.findall('measure'):
+            t, pos = tgt.get(m.get('number')), 0
+            for el in list(m):
+                if el.tag == 'note' and el.find('chord') is None: pos += int(el.findtext('duration') or 0)
+                elif el.tag == 'backup': pos -= int(el.findtext('duration') or 0)
+                elif el.tag == 'forward': pos += int(el.findtext('duration') or 0)
+                elif el.tag == 'direction' and t is not None and el.find('sound') is not None and el.find('sound').get('tempo'):
+                    import copy
+                    d = copy.deepcopy(el)
+                    for o in d.findall('offset'): d.remove(o)
+                    if pos: ET.SubElement(d, 'offset').text = str(pos)
+                    at = next((i for i, c in enumerate(t) if c.tag not in ('print', 'attributes')), len(t))
+                    t.insert(at, d)
     for pt in list(root.findall('part')):
         if pt.get('id') in drop: root.remove(pt)
 n = 0
