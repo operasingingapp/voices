@@ -1479,6 +1479,13 @@ const V2_NEW = new Set([
   "Ha i diavoli nel corpo",
   "Oh guarda il demonietto!",
   "Piegato è il foglio",
+  "Susanna! Signore!",
+  "Signori, di fuori son già i suonatori",
+  "Ah! signor!",
+  "Voi, signor, che giusto siete",
+  "Amanti costanti",
+  "Andate, amici!",
+  "Gente, gente, all'armi!",
 ]);
 const V2_ADDED: Record<string, string[]> = {
   "Contro un cor che accende amore": ["almaviva"],
@@ -1487,7 +1494,6 @@ const V2_ADDED: Record<string, string[]> = {
   "Ancora un passo or via… Quanto cielo! Quanto mar!": ["sharpless", "pinkerton"],
   "The relatives bargain": ["schicchi"],
   "Addio, fiorito asil": ["sharpless"],
-  "Pian pianin le andrò più presso": ["bartolo"],
   "Signora, ella mi disse": ["figaro"],
 };
 const V2_REMOVED: Record<string, string[]> = {
@@ -1495,6 +1501,8 @@ const V2_REMOVED: Record<string, string[]> = {
   "The letter": ["suzuki"],
   // Figaro's cast check: this recitative is Barbarina's; Figaro's own scene with Bartolo follows it
   "Nel padiglione a manca": ["figaro", "bartolo"],
+  // the finales split into the score's sections: Susanna, Figaro and Bartolo now come in only in later sections of Act 2's
+  "Esci omai, garzon malnato": ["susanna", "figaro", "bartolo"],
 };
 export const V2_KEYS: Record<string, string[]> = {};
 for (const opera of OPERAS) {
