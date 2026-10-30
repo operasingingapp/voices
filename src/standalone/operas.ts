@@ -270,6 +270,36 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 2"
      }
     ]
+   },
+   {
+    "id": "masetto",
+    "name": "Masetto",
+    "voice": "Bass",
+    "desc": "Zerlina's bridegroom, a young peasant.",
+    "avatar": "cap",
+    "pieces": [
+     {
+      "title": "Ho capito, signor sì",
+      "kind": "Aria · Act 1"
+     }
+    ]
+   },
+   {
+    "id": "commendatore",
+    "name": "Il Commendatore",
+    "voice": "Bass",
+    "desc": "Donna Anna's father, who returns as a statue.",
+    "avatar": "beard",
+    "pieces": [
+     {
+      "title": "O statua gentilissima",
+      "kind": "Duet with Leporello and Don Giovanni · Act 2"
+     },
+     {
+      "title": "Già la mensa è preparata",
+      "kind": "Finale · Act 2"
+     }
+    ]
    }
   ]
  },

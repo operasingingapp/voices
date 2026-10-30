@@ -5,6 +5,8 @@ import json, glob, os, sys, colorsys
 import numpy as np
 from PIL import Image, ImageFilter
 FIG, TOOLS, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
+# which Figma file this is: characters say where their pictures are ("source"; the main file when they do not)
+SOURCE = sys.argv[4] if len(sys.argv) > 4 else 'images.fig'
 H = {os.path.basename(f)[:6]: f for f in glob.glob(f'{FIG}/x/images/*')}
 nodes = json.load(open(f'{FIG}/nodes2.json'))
 chars = json.load(open(f'{TOOLS}/chars.json'))
@@ -13,7 +15,8 @@ kids = {}
 for x in nodes: kids.setdefault(x['parent'], []).append(x)
 frames = [x for x in nodes if x['type'] == 'FRAME' and x['parent'] == '0:1']
 # flat-colour images and the cut-out with the same picture (checked pixel for pixel)
-CUTOUT = {'fe348f': 'd201fa', '3b62b0': '2351a6', '8592af': 'ee0895', '130313': 'ff8c08', 'afda86': '4f735b', 'e8c371': 'd637af'}
+CUTOUT = {'02126f': '6b0482', '9ef056': '545994', '88051f': 'e3ffd8', 'b52c08': '2d6c48', 'b5cc24': 'c08645',  # more_roles.fig
+          'fe348f': 'd201fa', '3b62b0': '2351a6', '8592af': 'ee0895', '130313': 'ff8c08', 'afda86': '4f735b', 'e8c371': 'd637af'}
 SIZES = {'portrait': (720, 964), 'face': (320, 320), 'cover': (1600, 893), 'square': (480, 480)}
 _cache = {}
 def img(h):
@@ -96,6 +99,7 @@ def tones(bg):
 os.makedirs(OUT, exist_ok=True)
 manifest = {}
 for i, (key, c) in enumerate(chars.items()):
+    if c.get('source', 'images.fig') != SOURCE: continue
     opera, ch = key.split(':')
     bg = pal[key]
     for k in ('portrait', 'face'):
@@ -110,6 +114,7 @@ for i, (key, c) in enumerate(chars.items()):
 OPF = {'figaro': 'Le nozze di Figaro', 'giovanni': 'Don Giovanni', 'cosi': 'Cosi fan tutte', 'zauberfloete': 'Magic Flute', 'barbiere': 'Barbiere di Sevigla',
        'traviata': 'La traviata', 'carmen': 'Carmen', 'butterfly': 'Madama Butterfly', 'schicchi': 'Gianni Schicchi'}
 for j, (op, name) in enumerate(OPF.items()):
+    if SOURCE != 'images.fig': break  # the covers are in the main file
     bg = pal['op:' + op]
     for k in ('cover', 'square'):
         fr = next(f for f in frames if f['name'] == name and kind(f) == k)

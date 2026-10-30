@@ -70,6 +70,14 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 1", text: "Don Ottavio swears vengeance with Anna for her father's death. When she tells him Giovanni was the attacker, he resolves to set her mind at peace (“Dalla sua pace”) and goes masked to the party." },
     { act: "Act 2", text: "He vows to bring Giovanni to justice (“Il mio tesoro”) and, at the end, agrees to wait a year for Anna." },
   ],
+  "giovanni:masetto": [
+    { act: "Act 1", text: "On his wedding day Masetto is sent away by Giovanni, who wants Zerlina for himself; he goes, seething (“Ho capito, signor sì”). Zerlina wins him round (“Batti, batti”), and at the party he sees Giovanni drag her off." },
+    { act: "Act 2", text: "He sets out with armed friends to kill Giovanni, but Giovanni, disguised as Leporello, sends them away and beats him. Zerlina comforts him (“Vedrai, carino”). At the end the two go home to supper." },
+  ],
+  "giovanni:commendatore": [
+    { act: "Act 1", text: "Hearing his daughter Donna Anna cry for help, the Commendatore challenges the masked intruder, Don Giovanni, and is killed in the duel." },
+    { act: "Act 2", text: "His statue speaks in the graveyard and accepts Giovanni's mocking invitation to supper. It comes, demands that Giovanni repent, and when he refuses, drags him down to hell." },
+  ],
 
   // ---------------- Die Zauberflöte ----------------
   "cosi:fiordiligi": [

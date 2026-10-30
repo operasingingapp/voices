@@ -1,46 +1,263 @@
 {
- "figaro:figaro": {"portrait": "d637af", "face": "d637af", "figma": "Figaro"},
- "figaro:susanna": {"portrait": "27fc3c", "face": "27fc3c", "figma": "Susanna"},
- "figaro:countess": {"portrait": "bfc945", "face": "bfc945", "figma": "Countess Rosina"},
- "figaro:count": {"portrait": "1af3af", "face": "1af3af", "figma": "Count Almaviva"},
- "figaro:cherubino": {"portrait": "db9e3e", "face": "db9e3e", "figma": "Cherubinno", "fill": ["portrait"]},
- "giovanni:dongiovanni": {"portrait": "1a780c", "face": "1a780c", "figma": "Don Giovanni"},
- "giovanni:leporello": {"portrait": "40ffe2", "face": "88b566", "figma": "Leporello"},
- "giovanni:anna": {"portrait": "771f4d", "face": "771f4d", "figma": "Donna Anna"},
- "giovanni:elvira": {"portrait": "15acc1", "face": "15acc1", "figma": "Donna Elvira"},
- "giovanni:zerlina": {"portrait": "d9689d", "face": "d9689d", "figma": "Zerlina"},
- "cosi:fiordiligi": {"portrait": "49d4c6", "face": "49d4c6", "figma": "Fiordiligi"},
- "cosi:dorabella": {"portrait": "3a6bee", "face": "3a6bee", "figma": "Dorabella"},
- "cosi:ferrando": {"portrait": "45958f", "face": "45958f", "figma": "Ferrando"},
- "cosi:guglielmo": {"portrait": "4b42a2", "face": "4b42a2", "figma": "Guglielmo"},
- "cosi:alfonso": {"portrait": "463faf", "face": "463faf", "figma": "Don Alfonso"},
- "zauberfloete:tamino": {"portrait": "aec01e", "face": "aec01e", "figma": "Tamino"},
- "zauberfloete:pamina": {"portrait": "29fc45", "face": "29fc45", "figma": "Pamina"},
- "zauberfloete:papageno": {"portrait": "50a7d9", "face": "50a7d9", "figma": "Papageno"},
- "zauberfloete:queen": {"portrait": "ff8c08", "face": "ff8c08", "figma": "Queen of the night"},
- "zauberfloete:sarastro": {"portrait": "4f735b", "face": "4f735b", "figma": "Sarastro"},
- "barbiere:figarob": {"portrait": "de3564", "face": "de3564", "figma": "Figaro"},
- "barbiere:rosina": {"portrait": "d67157", "face": "d67157", "figma": "Rosina"},
- "barbiere:almaviva": {"portrait": "37a170", "face": "37a170", "figma": "Almaviva"},
- "barbiere:basilio": {"portrait": "5bb2dd", "face": "5bb2dd", "figma": "Don Basilio"},
- "barbiere:bartolob": {"portrait": "d9f910", "face": "d9f910", "figma": "Dr Bartolo"},
- "traviata:violetta": {"portrait": "a57b7d", "face": "a57b7d", "figma": "Violetta"},
- "traviata:alfredo": {"portrait": "b9872b", "face": "b9872b", "figma": "Alfredo", "frame": {"portrait": "Alfredo", "face": "Alfredo"}},
- "traviata:germont": {"portrait": "c47557", "face": "c47557", "figma": "Giorgio"},
- "traviata:flora": {"portrait": "563671", "face": "563671", "figma": "Flora"},
- "traviata:douphol": {"portrait": "1927d9", "face": "1927d9", "figma": "Baron Douphol"},
- "traviata:annina": {"portrait": "9db547", "face": "9db547", "figma": "Annina"},
- "carmen:carmen": {"portrait": "beaa6c", "face": "beaa6c", "figma": "Carmen"},
- "carmen:jose": {"portrait": "a37e29", "face": "a37e29", "figma": "Don Jose"},
- "carmen:micaela": {"portrait": "d1e688", "face": "d1e688", "figma": "Michaela"},
- "carmen:escamillo": {"portrait": "906497", "face": "906497", "figma": "Escamillo"},
- "butterfly:ciociosan": {"portrait": "44d41d", "face": "44d41d", "figma": "Cio-Cio-San"},
- "butterfly:pinkerton": {"portrait": "314667", "face": "314667", "figma": "Pinkerton"},
- "butterfly:suzuki": {"portrait": "506ead", "face": "506ead", "figma": "Suzuki"},
- "butterfly:sharpless": {"portrait": "5784fa", "face": "b9872b", "figma": "Sharpless", "frame": {"face": "Sharpless"}, "swap": {"face": {"b9872b": "5784fa"}}},
- "butterfly:goro": {"portrait": "e8d97f", "face": "e8d97f", "figma": "Goro"},
- "butterfly:bonze": {"portrait": "830d46", "face": "830d46", "figma": "Bonze"},
- "butterfly:kate": {"portrait": "7fdda8", "face": "7fdda8", "figma": "Kate"},
- "schicchi:schicchi": {"portrait": "e0d666", "face": "e0d666", "figma": "Gianni Schicchi"},
- "schicchi:lauretta": {"portrait": "caef8a", "face": "caef8a", "figma": "Lauretta"}
+ "figaro:figaro": {
+  "portrait": "d637af",
+  "face": "d637af",
+  "figma": "Figaro"
+ },
+ "figaro:susanna": {
+  "portrait": "27fc3c",
+  "face": "27fc3c",
+  "figma": "Susanna"
+ },
+ "figaro:countess": {
+  "portrait": "bfc945",
+  "face": "bfc945",
+  "figma": "Countess Rosina"
+ },
+ "figaro:count": {
+  "portrait": "1af3af",
+  "face": "1af3af",
+  "figma": "Count Almaviva"
+ },
+ "figaro:cherubino": {
+  "portrait": "db9e3e",
+  "face": "db9e3e",
+  "figma": "Cherubinno",
+  "fill": [
+   "portrait"
+  ]
+ },
+ "giovanni:dongiovanni": {
+  "portrait": "850904",
+  "face": "850904",
+  "figma": "Don Giovanni",
+  "source": "more_roles.fig"
+ },
+ "giovanni:leporello": {
+  "portrait": "b15c40",
+  "face": "b15c40",
+  "figma": "Leporello",
+  "source": "more_roles.fig"
+ },
+ "giovanni:anna": {
+  "portrait": "fcb31b",
+  "face": "fcb31b",
+  "figma": "Donna Anna",
+  "source": "more_roles.fig"
+ },
+ "giovanni:elvira": {
+  "portrait": "6b0482",
+  "face": "6b0482",
+  "figma": "Donna Elvira",
+  "source": "more_roles.fig"
+ },
+ "giovanni:zerlina": {
+  "portrait": "f73612",
+  "face": "f73612",
+  "figma": "Zerlina",
+  "source": "more_roles.fig"
+ },
+ "giovanni:ottavio": {
+  "portrait": "29a1c5",
+  "face": "29a1c5",
+  "figma": "Don Ottavio",
+  "source": "more_roles.fig"
+ },
+ "giovanni:masetto": {
+  "portrait": "44af45",
+  "face": "44af45",
+  "figma": "Masetto",
+  "source": "more_roles.fig"
+ },
+ "giovanni:commendatore": {
+  "portrait": "545994",
+  "face": "545994",
+  "figma": "Commendatore",
+  "source": "more_roles.fig"
+ },
+ "cosi:fiordiligi": {
+  "portrait": "49d4c6",
+  "face": "49d4c6",
+  "figma": "Fiordiligi"
+ },
+ "cosi:dorabella": {
+  "portrait": "3a6bee",
+  "face": "3a6bee",
+  "figma": "Dorabella"
+ },
+ "cosi:ferrando": {
+  "portrait": "45958f",
+  "face": "45958f",
+  "figma": "Ferrando"
+ },
+ "cosi:guglielmo": {
+  "portrait": "4b42a2",
+  "face": "4b42a2",
+  "figma": "Guglielmo"
+ },
+ "cosi:alfonso": {
+  "portrait": "e3ffd8",
+  "face": "e3ffd8",
+  "figma": "Don Alfonso",
+  "source": "more_roles.fig"
+ },
+ "zauberfloete:tamino": {
+  "portrait": "aec01e",
+  "face": "aec01e",
+  "figma": "Tamino"
+ },
+ "zauberfloete:pamina": {
+  "portrait": "29fc45",
+  "face": "29fc45",
+  "figma": "Pamina"
+ },
+ "zauberfloete:papageno": {
+  "portrait": "50a7d9",
+  "face": "50a7d9",
+  "figma": "Papageno"
+ },
+ "zauberfloete:queen": {
+  "portrait": "ff8c08",
+  "face": "ff8c08",
+  "figma": "Queen of the night"
+ },
+ "zauberfloete:sarastro": {
+  "portrait": "4f735b",
+  "face": "4f735b",
+  "figma": "Sarastro"
+ },
+ "barbiere:figarob": {
+  "portrait": "de3564",
+  "face": "de3564",
+  "figma": "Figaro"
+ },
+ "barbiere:rosina": {
+  "portrait": "d67157",
+  "face": "d67157",
+  "figma": "Rosina"
+ },
+ "barbiere:almaviva": {
+  "portrait": "37a170",
+  "face": "37a170",
+  "figma": "Almaviva"
+ },
+ "barbiere:basilio": {
+  "portrait": "5bb2dd",
+  "face": "5bb2dd",
+  "figma": "Don Basilio"
+ },
+ "barbiere:bartolob": {
+  "portrait": "d9f910",
+  "face": "d9f910",
+  "figma": "Dr Bartolo"
+ },
+ "traviata:violetta": {
+  "portrait": "a57b7d",
+  "face": "a57b7d",
+  "figma": "Violetta"
+ },
+ "traviata:alfredo": {
+  "portrait": "b9872b",
+  "face": "b9872b",
+  "figma": "Alfredo",
+  "frame": {
+   "portrait": "Alfredo",
+   "face": "Alfredo"
+  }
+ },
+ "traviata:germont": {
+  "portrait": "c47557",
+  "face": "c47557",
+  "figma": "Giorgio"
+ },
+ "traviata:flora": {
+  "portrait": "563671",
+  "face": "563671",
+  "figma": "Flora"
+ },
+ "traviata:douphol": {
+  "portrait": "1927d9",
+  "face": "1927d9",
+  "figma": "Baron Douphol"
+ },
+ "traviata:annina": {
+  "portrait": "9db547",
+  "face": "9db547",
+  "figma": "Annina"
+ },
+ "carmen:carmen": {
+  "portrait": "beaa6c",
+  "face": "beaa6c",
+  "figma": "Carmen"
+ },
+ "carmen:jose": {
+  "portrait": "a37e29",
+  "face": "a37e29",
+  "figma": "Don Jose"
+ },
+ "carmen:micaela": {
+  "portrait": "d1e688",
+  "face": "d1e688",
+  "figma": "Michaela"
+ },
+ "carmen:escamillo": {
+  "portrait": "906497",
+  "face": "906497",
+  "figma": "Escamillo"
+ },
+ "butterfly:ciociosan": {
+  "portrait": "44d41d",
+  "face": "44d41d",
+  "figma": "Cio-Cio-San"
+ },
+ "butterfly:pinkerton": {
+  "portrait": "314667",
+  "face": "314667",
+  "figma": "Pinkerton"
+ },
+ "butterfly:suzuki": {
+  "portrait": "506ead",
+  "face": "506ead",
+  "figma": "Suzuki"
+ },
+ "butterfly:sharpless": {
+  "portrait": "5784fa",
+  "face": "b9872b",
+  "figma": "Sharpless",
+  "frame": {
+   "face": "Sharpless"
+  },
+  "swap": {
+   "face": {
+    "b9872b": "5784fa"
+   }
+  }
+ },
+ "butterfly:goro": {
+  "portrait": "e8d97f",
+  "face": "e8d97f",
+  "figma": "Goro"
+ },
+ "butterfly:bonze": {
+  "portrait": "830d46",
+  "face": "830d46",
+  "figma": "Bonze"
+ },
+ "butterfly:kate": {
+  "portrait": "7fdda8",
+  "face": "7fdda8",
+  "figma": "Kate"
+ },
+ "schicchi:schicchi": {
+  "portrait": "c08645",
+  "face": "c08645",
+  "figma": "Gianni Schicchi",
+  "source": "more_roles.fig"
+ },
+ "schicchi:lauretta": {
+  "portrait": "2d6c48",
+  "face": "2d6c48",
+  "figma": "Lauretta",
+  "source": "more_roles.fig"
+ }
 }
