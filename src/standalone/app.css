@@ -7982,3 +7982,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice .mix-pop .mix-line:has(.mix-line-inst.none) .mix-line-vol { grid-area: 2 / 2 / 3 / -1; }
   .practice .mix-pop .mix-line .mix-line-inst.none { display: none; }
 }
+
+/* an instrumental number (the overture's screen): no words above the music, so the line stands in the middle */
+.practice.listen > .p-stage .score-scroll.strip {
+  justify-content: center;
+}

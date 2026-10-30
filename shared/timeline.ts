@@ -499,7 +499,8 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
   if (!events.some((e) => trem(e) || trill(e))) return events;
   const out: PerfNote[] = [];
   const used = new Set<PerfNote>();
-  const repeat = (base: PerfNote, pitches: { midi: number; id: string }[], onQ: number, offQ: number, marks: number) => {
+  // pitches: what sounds at each stroke in turn; a fingered tremolo between chords alternates the whole chords
+  const repeat = (base: PerfNote, pitches: { midi: number; id: string }[][], onQ: number, offQ: number, marks: number) => {
     if (marks >= 3) {
       // A real tremolo (three or more strokes) is the orchestra's strings, reduced for piano: a soft shimmer, as fast
       // as the hand goes whatever the tempo (about twelve strokes a second, in even divisions of the beat so it
@@ -509,11 +510,11 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
       const step = 1 / 2 ** Math.max(2, Math.min(4, Math.round(Math.log2(12 / qps))));
       let k = 0;
       for (let t = onQ; t < offQ - EPS; t += step, k++) {
-        const p = pitches[k % pitches.length];
         const lilt = k % 2 ? 0.9 : 1;
         const wobble = 1 + 0.06 * Math.sin(k * 2.39996 + base.midi);
         const vel = Math.min(k === 0 ? 72 : 56, k === 0 ? base.vel * 0.7 : base.vel * 0.5 * lilt * wobble);
-        out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
+        for (const [j, p] of pitches[k % pitches.length].entries())
+          out.push({ ...base, key: `${base.key}~${k}${j ? `.${j}` : ""}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
       }
       return;
     }
@@ -522,10 +523,10 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
     const step = 1 / 2 ** marks;
     let k = 0;
     for (let t = onQ; t < offQ - EPS; t += step, k++) {
-      const p = pitches[k % pitches.length];
       const onBeat = Math.abs(t - Math.round(t)) < EPS;
       const vel = Math.min(k === 0 ? 72 : onBeat ? 60 : 52, k === 0 ? base.vel * 0.8 : base.vel * (onBeat ? 0.62 : 0.5));
-      out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
+      for (const [j, p] of pitches[k % pitches.length].entries())
+        out.push({ ...base, key: `${base.key}~${k}${j ? `.${j}` : ""}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
     }
   };
   for (const ev of events) {
@@ -558,17 +559,32 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
       continue;
     }
     if (t.type === "single") {
-      repeat(ev, [{ midi: ev.midi, id: ev.ids[0] }], ev.onQ, ev.offQ, t.marks);
+      repeat(ev, [[{ midi: ev.midi, id: ev.ids[0] }]], ev.onQ, ev.offQ, t.marks);
       continue;
     }
-    // start: its partner is the stop note in the same part that begins where this one ends
-    const partner = events.find((o) => !used.has(o) && o !== ev && o.part === ev.part && trem(o)?.type === "stop" && Math.abs(o.onQ - ev.offQ) < EPS);
-    if (!partner) {
+    // start: its partner is the stop note in the same part that begins where this one ends; a tremolo between
+    // chords (a reduction's string chord against a bass) takes every start note struck with this one, and every
+    // stop note after it
+    const partners = events.filter((o) => !used.has(o) && o !== ev && o.part === ev.part && trem(o)?.type === "stop" && Math.abs(o.onQ - ev.offQ) < EPS);
+    if (!partners.length) {
       out.push(ev);
       continue;
     }
-    used.add(partner);
-    repeat(ev, [{ midi: ev.midi, id: ev.ids[0] }, { midi: partner.midi, id: partner.ids[0] }], ev.onQ, partner.offQ, t.marks);
+    const chord = [
+      ev,
+      ...events.filter(
+        (o) => !used.has(o) && o !== ev && o.part === ev.part && trem(o)?.type === "start" && Math.abs(o.onQ - ev.onQ) < EPS && Math.abs(o.offQ - ev.offQ) < EPS,
+      ),
+    ];
+    for (const o of [...chord, ...partners]) used.add(o);
+    const end = Math.max(...partners.map((o) => o.offQ));
+    repeat(
+      ev,
+      [chord.map((o) => ({ midi: o.midi, id: o.ids[0] })), partners.map((o) => ({ midi: o.midi, id: o.ids[0] }))],
+      ev.onQ,
+      end,
+      t.marks,
+    );
   }
   // stop notes whose start was not found still sound as written
   for (const ev of events) if (trem(ev)?.type === "stop" && !used.has(ev) && !out.some((o) => o.ids[0] === ev.ids[0])) out.push(ev);

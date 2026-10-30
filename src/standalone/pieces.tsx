@@ -110,6 +110,29 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-figaro-sinfonia": {
+    // no one sings it: the opera's own picture stands for it
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Overture",
+    facts: {
+      key: "D major",
+      time: "¢ (alla breve)",
+      tempo: "Presto, played at a half note = 144 (♩ = 288): Mozart gives the word only",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          Score: Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain. Read into
+          MusicXML from the scan by you, then checked bar by bar against the printed pages and corrected: the tremolos, the right hand of bars 107–125
+          (read in the wrong clef), a handful of wrong or extra notes, ties and lengths, and the closing notes of the trills. The instrument cues printed
+          over the staves are left off. Mozart gives no metronome number; it plays at a half note = 144, about four minutes.
+        </p>
+        <p>Music by Wolfgang Amadeus Mozart (1786), public domain.</p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

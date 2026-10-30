@@ -22,7 +22,8 @@ import {
 } from "./flow";
 import { FIRST_PASS_KEYS, OPERAS, RUNNING, V2_KEYS } from "./operas";
 import { Practice } from "./Practice";
-import { hasPiece } from "./pieces";
+import { Listen } from "./Listen";
+import { hasPiece, pieceData } from "./pieces";
 
 const K = {
   place: "cp:place",
@@ -109,6 +110,10 @@ function migrate(p: unknown): Place | null {
     case "profile":
     case "onboarding":
       return o as Place;
+    case "listen": {
+      const e = (o as { edition?: string }).edition;
+      return o.opera && hasPiece(e) ? { screen: "listen", opera: o.opera, edition: e } : null;
+    }
     default:
       return null;
   }
@@ -136,6 +141,8 @@ function titleOf(place: Place): string {
       return `Settings${tail}`;
     case "home":
       return `Home${tail}`;
+    case "listen":
+      return `${hasPiece(place.edition) ? pieceData(place.edition).edition.title : "Listen"}${tail}`;
     default:
       return "Sottovoce";
   }
@@ -327,6 +334,19 @@ export function App() {
         <PiecePage ctx={ctx} opera={opera} ch={ch} index={place.piece} />
         {bravoEl}
       </Shell>
+    );
+  }
+
+  if (place.screen === "listen" && hasPiece(place.edition)) {
+    const opera = findOpera(place.opera);
+    return (
+      <Listen
+        key={place.edition}
+        editionId={place.edition}
+        operaTitle={opera.title}
+        onBack={() => go({ screen: "opera", opera: opera.id })}
+        onOpera={() => go({ screen: "opera", opera: opera.id })}
+      />
     );
   }
 

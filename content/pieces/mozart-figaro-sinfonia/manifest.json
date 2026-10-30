@@ -1,0 +1,53 @@
+{
+ "editionId": "mozart-figaro-sinfonia",
+ "editionVersion": "1.0.0-klengel",
+ "title": "Sinfonia",
+ "subtitle": "The overture to Le nozze di Figaro, in Paul Klengel's piano reduction",
+ "kind": "overture",
+ "fixture": false,
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P1",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.8
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), Sinfonia (overture)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Piano reduction by Paul Klengel in the Breitkopf & Härtel vocal score (Edition Breitkopf 1716, plate 29136, about 1900; IMSLP #846696), pages 1–7, read into MusicXML with the Halbestunde app by the user (the scan's reading kept as source-halbestunde.musicxml)",
+   "author": "Paul Klengel (1854–1935)",
+   "licence": "Public domain",
+   "notes": "Corrected against the printed pages: two-note tremolos written out as tremolos, the right hand of bars 107–125 restored to the treble clef, wrong or extra notes in bars 13–15, 18, 30–32, 44, 92–94, 106, 151–153, 156 and 188–197, the length of bar 45, ties in bars 102, 174–175, 182–183 and 214–216, the closing notes of five trills, the forte at bar 250 and the cut-time sign. Instrument cues and misread text left out. Playback tempo set to half note = 144 (Presto; Mozart gives no number)."
+  }
+ ]
+}

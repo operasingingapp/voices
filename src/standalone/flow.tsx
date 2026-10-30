@@ -12,6 +12,7 @@ import { SYNOPSES, Story, storyOf } from "./synopses";
 import { ARCS } from "./arcs";
 import { useBackToClose } from "./nav";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
+import { hasPiece } from "./pieces";
 import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
@@ -160,6 +161,8 @@ export type Place =
   | { screen: "explore"; by: "opera" | "voice" | "piece"; voice?: string }
   | { screen: "profile" }
   | { screen: "home" }
+  /** an instrumental number (an overture) to hear with its score */
+  | { screen: "listen"; opera: string; edition: string }
   | PiecePlace;
 
 /** Everything a screen needs: where you are, your roles, your progress, and how to move. */
@@ -958,6 +961,7 @@ interface Row {
   kind: string;
   who: string[];
   piece?: { character: string; index: number };
+  editionId?: string;
 }
 function rowsFor(opera: Opera): Row[] {
   if (RUNNING[opera.id]?.length) return RUNNING[opera.id];
@@ -1078,7 +1082,8 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
           {rows.map((row, i) => {
             const ch = row.piece ? opera.chars.find((c) => c.id === row.piece!.character) : undefined;
             const p = ch && row.piece ? ch.pieces[row.piece.index] : undefined;
-            const ready = !!p?.editionId;
+            const listen = hasPiece(row.editionId) ? row.editionId : undefined;
+            const ready = !!p?.editionId || !!listen;
             const yours = row.who.some((id) => mineHere.some((c) => c.id === id));
             const isOpen = open === i;
             const toggle = () => setOpen(isOpen ? null : i);
@@ -1129,6 +1134,19 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                   >
                     <Play />
                     Practise
+                  </button>
+                )}
+                {listen && (
+                  <button
+                    type="button"
+                    className="cp-btn cp-btn--ink num-go"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      ctx.go({ screen: "listen", opera: opera.id, edition: listen });
+                    }}
+                  >
+                    <Play />
+                    Listen
                   </button>
                 )}
                 {p?.context && (

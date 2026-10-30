@@ -260,7 +260,7 @@ function saveNotes(n: Note[]) {
   }
 }
 
-const Icon = {
+export const Icon = {
   tip: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
@@ -449,14 +449,14 @@ type Drawer = "context" | "tips" | "notes" | "about";
 type View = "music" | "split" | "words";
 type OpenWord = { lineId: string; k: number; left: number; top: number };
 /** The fixed padding stripCrop adds around the drawn band, in px (does not scale with zoom). */
-const CROP_PAD = 36;
+export const CROP_PAD = 36;
 /** Largest size of the music: comfortable on a music stand, still a few bars per screen. */
 // a large screen (an iPad on a music stand) gets the music larger rather than empty space around it
-const MAX_ZOOM = 1.3;
+export const MAX_ZOOM = 1.3;
 /** Height of a standard line of music at zoom 1 (px): voice over piano with markings, measured on Babbino. */
-const STANDARD_LINE_H = 570;
+export const STANDARD_LINE_H = 570;
 
-function fmtTime(sec: number): string {
+export function fmtTime(sec: number): string {
   const s = Math.max(0, Math.round(sec));
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }

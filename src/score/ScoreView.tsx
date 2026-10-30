@@ -463,6 +463,9 @@ export function ScoreView(props: Props) {
     osmd.EngravingRules.PageRightMargin = 3;
     osmd.EngravingRules.PageTopMargin = 4;
     osmd.EngravingRules.MinimumDistanceBetweenSystems = 9;
+    // the single line is as long as the piece: OSMD's default limit (32767 px) breaks a long one (an overture)
+    // onto a second line partway through
+    if (strip) osmd.EngravingRules.SheetMaximumWidth = 1_000_000;
     engraveLikeAPrintedEdition(osmd);
     osmdRef.current = osmd;
     setLoaded(false);

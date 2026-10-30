@@ -1422,7 +1422,13 @@ export interface RunningNumber {
   act: string;
   who: string[];
   piece?: { character: string; index: number };
+  /** a number no one sings (an overture, an entr'acte) whose music is in the app to hear */
+  editionId?: string;
 }
+/** the instrumental numbers with music in the app: opera → the running order's title → edition */
+const INSTRUMENTAL: Record<string, Record<string, string>> = {
+  figaro: { Sinfonia: "mozart-figaro-sinfonia" },
+};
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {
   const scenes = SCENES[opera.id] ?? [];
@@ -1440,7 +1446,8 @@ for (const opera of OPERAS) {
       }
       piece ??= { character: id, index };
     }
-    return { title: s.title, kind: s.kind, act: actOf(s.act), who: s.who, ...(piece ? { piece } : {}) };
+    const editionId = s.who.length ? undefined : INSTRUMENTAL[opera.id]?.[s.title];
+    return { title: s.title, kind: s.kind, act: actOf(s.act), who: s.who, ...(piece ? { piece } : {}), ...(editionId ? { editionId } : {}) };
   });
 }
 
