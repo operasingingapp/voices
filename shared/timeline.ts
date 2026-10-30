@@ -110,7 +110,12 @@ export class Performance {
   readonly cuts: CutLike[];
   private byM = new Map<number, PerfMeasure[]>();
 
-  constructor(edition: CompiledEdition, cuts: CutLike[] = [], opts: { tempo?: TempoMode; pedal?: boolean } = {}) {
+  /**
+   * opts.warp: move the timing by `off` seconds at performance position `q` (straight lines between the points,
+   * held before the first and after the last): to follow a recording that took its own time somewhere (a fermata,
+   * a ritardando), so the piano plays with it.
+   */
+  constructor(edition: CompiledEdition, cuts: CutLike[] = [], opts: { tempo?: TempoMode; pedal?: boolean; warp?: { q: number; off: number }[] } = {}) {
     this.edition = edition;
     this.cuts = cuts;
     this.cutSet = new Set<number>();
@@ -171,6 +176,7 @@ export class Performance {
       else tempo[i].sec = tempo[i - 1].sec + ((tempo[i].q - tempo[i - 1].q) * 60) / tempo[i - 1].bpm;
     }
     this.tempo = tempo.length ? tempo : [{ q: 0, bpm: 100, sec: 0 }];
+    if (opts.warp?.length) this.tempo = warpTempo(this.tempo, opts.warp, q);
     this.totalSec = this.qToSec(this.totalQ);
     this.notes = buildNotes(edition, measures);
     if (opts.pedal) applyPedal(edition, measures, this.notes, this.totalQ, (t) => beatInfo(t).unitQ);
@@ -376,6 +382,40 @@ function bpmIn(list: TempoSeg[], q: number): number {
 }
 
 /** Insert a tempo point into a sorted list, keeping it sorted. */
+/** the tempo list with its timing moved by warp (see the Performance constructor) */
+function warpTempo(segs: TempoSeg[], warp: { q: number; off: number }[], totalQ: number): TempoSeg[] {
+  const w = [...warp].sort((a, b) => a.q - b.q);
+  const secOf = (q: number) => {
+    let k = 0;
+    for (let i = 0; i < segs.length; i++) if (segs[i].q <= q + EPS) k = i;
+    return segs[k].sec + ((q - segs[k].q) * 60) / segs[k].bpm;
+  };
+  const offAt = (q: number) => {
+    if (q <= w[0].q) return w[0].off;
+    if (q >= w[w.length - 1].q) return w[w.length - 1].off;
+    let k = 0;
+    while (w[k + 1].q < q) k++;
+    const a = w[k];
+    const b = w[k + 1];
+    return a.off + ((q - a.q) * (b.off - a.off)) / Math.max(EPS, b.q - a.q);
+  };
+  const qs = [...new Set([...segs.map((s) => s.q), ...w.map((x) => x.q).filter((x) => x > 0 && x < totalQ), totalQ])].sort((a, b) => a - b);
+  const out: TempoSeg[] = [];
+  for (let i = 0; i < qs.length - 1; i++) {
+    const a = qs[i];
+    const b = qs[i + 1];
+    if (b - a < EPS) continue;
+    const sa = secOf(a) + offAt(a);
+    const sb = secOf(b) + offAt(b);
+    // never backwards or frozen: at most eight times slower or faster than written
+    const plain = secOf(b) - secOf(a);
+    const dur = Math.min(plain * 8, Math.max(plain / 8, sb - sa));
+    out.push({ q: a, bpm: ((b - a) * 60) / dur, sec: 0 });
+  }
+  for (let i = 0; i < out.length; i++) out[i].sec = i ? out[i - 1].sec + ((out[i].q - out[i - 1].q) * 60) / out[i - 1].bpm : 0;
+  return out.length ? out : segs;
+}
+
 function pushTempoAt(list: TempoSeg[], q: number, bpm: number) {
   const i = list.findIndex((t) => t.q > q - EPS);
   if (i < 0) list.push({ q, bpm, sec: 0 });

@@ -22,6 +22,46 @@ export interface RecordingMap {
 const DRIFT = 0.06;
 const pause = () => new Promise<void>((r) => setTimeout(r, 0));
 
+/**
+ * Runs of notes that keep one offset between the recording and the app's time (d: recording minus app time, per
+ * note, in order): each note's offset is cleaned first (the median of it and its two neighbours on each side, so
+ * one misplaced onset does not count), and a run lasts while the cleaned offsets stay within DRIFT of its first.
+ * Each run's offset is the median of its notes'.
+ */
+export function offsetRuns(d: number[], x?: number[]): { from: number; to: number; off: number }[] {
+  const n = d.length;
+  const med = d.map((_, i) => {
+    const xs = d.slice(Math.max(0, i - 2), Math.min(n, i + 3)).sort((x, y) => x - y);
+    return xs[xs.length >> 1];
+  });
+  const runs: { from: number; to: number; off: number }[] = [];
+  let i = 0;
+  while (i < n) {
+    let j = i + 1;
+    while (j < n && Math.abs(med[j] - med[i]) <= DRIFT) j++;
+    const xs = d.slice(i, j).sort((x, y) => x - y);
+    runs.push({ from: i, to: j - 1, off: xs[xs.length >> 1] });
+    i = j;
+  }
+  if (!x) return runs;
+  // a run whose offset would make the stretch from the last one run backwards or race (a trill or a run of fast
+  // notes the analysis could not place) is not a drift: it joins the run before
+  const kept: typeof runs = [];
+  for (const r of runs) {
+    const prev = kept[kept.length - 1];
+    if (prev) {
+      const dx = x[r.from] - x[prev.to];
+      const ratio = (dx + r.off - prev.off) / Math.max(1e-6, dx);
+      if (!(ratio > 0.1 && ratio < 10)) {
+        prev.to = r.to;
+        continue;
+      }
+    }
+    kept.push({ ...r });
+  }
+  return kept;
+}
+
 export class RecordedLine {
   /** the recording as decoded (all its channels, the device's rate) */
   readonly buffer: AudioBuffer;
@@ -60,29 +100,15 @@ export class RecordedLine {
    */
   private anchors(f: number): { out: number[]; aud: number[] } {
     const { perf, audio } = this.map;
-    const n = perf.length;
-    const d = perf.map((p, i) => audio[i] - p / f);
-    // each note's offset, cleaned: the median of it and its neighbours (one misplaced onset does not count)
-    const med = d.map((_, i) => {
-      const xs = d.slice(Math.max(0, i - 2), Math.min(n, i + 3)).sort((x, y) => x - y);
-      return xs[xs.length >> 1];
-    });
     const out: number[] = [];
     const aud: number[] = [];
-    let i = 0;
-    while (i < n) {
-      // a run: the notes whose offset stays within DRIFT of the run's own (its first notes' median)
-      let j = i + 1;
-      while (j < n && Math.abs(med[j] - med[i]) <= DRIFT) j++;
-      const run = d.slice(i, j).sort((x, y) => x - y);
-      const off = run[run.length >> 1];
-      out.push(perf[i] / f);
-      aud.push(perf[i] / f + off);
-      if (j - 1 > i) {
-        out.push(perf[j - 1] / f);
-        aud.push(perf[j - 1] / f + off);
+    for (const r of offsetRuns(perf.map((p, i) => audio[i] - p / f), perf.map((p) => p / f))) {
+      out.push(perf[r.from] / f);
+      aud.push(perf[r.from] / f + r.off);
+      if (r.to > r.from) {
+        out.push(perf[r.to] / f);
+        aud.push(perf[r.to] / f + r.off);
       }
-      i = j;
     }
     return { out, aud };
   }

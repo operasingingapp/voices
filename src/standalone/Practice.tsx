@@ -17,6 +17,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
+import { offsetRuns } from "../audio/recordedLine";
 
 /*
  * The piece on screen. Only one practice screen is open at a time, so the piece's data lives here, set by
@@ -510,7 +511,27 @@ function PracticeScreen({
   // steady pulse for learning (the file's bar-by-bar rubato smoothed away), or the expressive reading
   // (always steady now: the switch is gone from the bar)
   const steady = true;
-  const perf = useMemo(() => new Performance(edition, [], { tempo: steady ? "steady" : "smooth", pedal: true }), [steady]);
+  // With a recorded singer, the piano follows the recording: the score's own tempo marks (as the singer was
+  // rendered from them), moved wherever the recording took its own time (fermatas, ritardandos), so the voice
+  // plays as recorded and the piano breathes with it.
+  const perf = useMemo(() => {
+    const part = voiceParts.find((p) => recordingsOf(p.key).some((r) => r.tempo === 1));
+    const rec = part && recordingsOf(part.key).find((r) => r.tempo === 1);
+    if (!part || !rec) return new Performance(edition, [], { tempo: steady ? "steady" : "smooth", pedal: true });
+    const base = new Performance(edition, [], { tempo: "score", pedal: true });
+    const pts = base.notes
+      .filter((n) => n.part === part.key && rec.onsets[n.ids[0]] !== undefined)
+      .map((n) => [n.onQ, rec.onsets[n.ids[0]] - base.qToSec(n.onQ)] as const)
+      .sort((a, b) => a[0] - b[0]);
+    const runs = offsetRuns(pts.map((x) => x[1]), pts.map((x) => base.qToSec(x[0])));
+    if (!runs.length) return base;
+    const off0 = runs[0].off;
+    const warp = runs.flatMap((r) => [
+      { q: pts[r.from][0], off: r.off - off0 },
+      ...(r.to > r.from ? [{ q: pts[r.to][0], off: r.off - off0 }] : []),
+    ]);
+    return new Performance(edition, [], { tempo: "score", pedal: true, warp });
+  }, [steady]);
   const pb = usePlayback(perf, edition.parts);
   const engine = pb.engine;
 
