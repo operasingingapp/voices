@@ -7,8 +7,13 @@ A = json.load(open(path)); R = A['notes']
 x, fs = sf.read(audio)
 if x.ndim > 1: x = x.mean(axis=1)
 x = np.ascontiguousarray(x, dtype=np.float64)
+# pitch needs no more than 16 kHz, and WORLD's memory grows with the rate (a 5-minute take at 44.1 kHz needs >6 GB)
+if fs > 16000:
+    from scipy.signal import resample_poly
+    from math import gcd
+    g = gcd(int(fs), 16000); x = resample_poly(x, 16000 // g, int(fs) // g); fs = 16000
 FP = 5.0
-f0, t = pw.harvest(x, fs, f0_floor=120, f0_ceil=1400, frame_period=FP)
+f0, t = pw.harvest(x, fs, f0_floor=70, f0_ceil=1400, frame_period=FP)
 w = int(FP / 1000 * fs)
 rms = np.sqrt(np.convolve(x ** 2, np.ones(w) / w, 'same')[(t * fs).astype(int).clip(0, len(x) - 1)] + 1e-12)
 db = 20 * np.log10(rms); thr = db.max() - 40

@@ -20,11 +20,17 @@ for n in S:
     if n['tieStop'] and ev and ev[-1][2] == n['midi'] and abs(ev[-1][1] - Q) < 1e-6:
         ev[-1][1] = Q + n['dur']; continue
     ev.append([Q, Q + n['dur'], n['midi'], n['id']])
-FP = 20.0
+import os
+FP = float(os.environ.get('FP', '20'))
 x, fs = sf.read(audio)
 if x.ndim > 1: x = x.mean(axis=1)
 x = np.ascontiguousarray(x, dtype=np.float64)
-f0, t = pw.harvest(x, fs, f0_floor=120, f0_ceil=1400, frame_period=FP)
+# pitch needs no more than 16 kHz, and WORLD's memory grows with the rate (a 5-minute take at 44.1 kHz needs >6 GB)
+if fs > 16000:
+    from scipy.signal import resample_poly
+    from math import gcd
+    g = gcd(int(fs), 16000); x = resample_poly(x, 16000 // g, int(fs) // g); fs = 16000
+f0, t = pw.harvest(x, fs, f0_floor=70, f0_ceil=1400, frame_period=FP)
 rms = np.array([np.sqrt(np.mean(x[int(a * fs):int(a * fs) + int(FP / 1000 * fs)] ** 2) + 1e-12) for a in t])
 loud = 20 * np.log10(rms) > 20 * np.log10(rms.max()) - 45
 am = np.where((f0 > 0) & loud, 69 + 12 * np.log2(np.maximum(f0, 1) / 440), 0.0)
@@ -38,7 +44,7 @@ for q0, q1, m, _ in ev:
 def dtw(sm, am, band):
     N, M = len(sm), len(am)
     INF = 1e18
-    D = np.full((N + 1, M + 1), INF); D[0, 0] = 0.0
+    D = np.full((N + 1, M + 1), INF, dtype=np.float32); D[0, 0] = 0.0
     for i in range(1, N + 1):
         c = int(i * M / N)
         lo, hi = max(1, c - band), min(M, c + band)
