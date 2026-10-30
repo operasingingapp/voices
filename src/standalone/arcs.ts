@@ -61,7 +61,7 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "figaro:barbarina": [
     { act: "Act 3", text: "Sweet on Cherubino, she takes him home to dress him as a village girl, and brings him with the girls who give flowers to the Countess, passing him off as her cousin. When he is found out, she reminds the Count of the promises he made her when he kissed her, and asks for Cherubino as her husband." },
-    { act: "Act 4", text: "Sent by the Count to return to Susanna, as his answer, the pin that sealed the love note Susanna slipped him at the wedding, she has lost it, and Figaro slips her another (“L'ho perduta, me meschina”), and lets slip the Count's message, ‘the seal of the pines’, which tells Figaro where the meeting will be. Then, in the dark garden, she waits with an orange, a pear and a ring-cake for Cherubino in the pavilion on the left, where the Count finds her at the end." },
+    { act: "Act 4", text: "The Count has sent her to return to Susanna, as his answer, the pin that sealed the love note Susanna slipped him at the wedding, and she has lost it (“L'ho perduta, me meschina”). Figaro slips her another pin and gets the Count's message out of her, ‘this is the seal of the pines’, which tells him where the meeting will be. Then, in the dark garden, she waits with an orange, a pear and a ring-cake for Cherubino in the pavilion on the left, where the Count finds her at the end." },
   ],
   "figaro:antonio": [
     { act: "Act 2", text: "The gardener storms in, furious (the others say drunk), complaining that a man has jumped from the window onto his flowers, and hands Figaro the papers the man dropped, which the Count takes: Cherubino's commission." },
