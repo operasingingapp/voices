@@ -6699,6 +6699,7 @@ button.lane-label:hover {
 }
 .card-menu button:hover,
 .card-menu button:focus-visible { background: var(--fog); }
+.card-menu .cm-sep { display: block; height: 1px; margin: 4px 8px; background: var(--fog-strong); }
 .cm-check { display: grid; place-items: center; width: 20px; height: 20px; color: var(--now-mark); }
 .cm-check svg { width: 18px; height: 18px; }
 .now-tools { align-items: center; }
@@ -7338,12 +7339,36 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* the guide, done for real: the lit control answers, the rest is dimmed and still */
 .guide-scrim { pointer-events: none; }
-.guide-hole { box-shadow: 0 0 0 9999px var(--scrim-50), 0 0 0 2px var(--canvas), 0 0 0 5px color-mix(in srgb, var(--now-mark) 60%, transparent); animation: guide-pulse 1.6s ease-in-out infinite; }
-.guide-hole.ok { box-shadow: 0 0 0 9999px rgba(14, 16, 12, 0.5), 0 0 0 2px var(--canvas), 0 0 0 5px var(--now-mark); animation: none; }
-@keyframes guide-pulse {
-  0%, 100% { box-shadow: 0 0 0 9999px var(--scrim-50), 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 55%, transparent); }
-  50% { box-shadow: 0 0 0 9999px var(--scrim-50), 0 0 0 2px var(--canvas), 0 0 0 9px color-mix(in srgb, var(--now-mark) 20%, transparent); }
+/* the lit control: a clear ring in the app's green that breathes, and a soft wave that rolls out from it, drawn
+   over the dimmed screen so the eye goes straight to it */
+.guide-hole { box-shadow: 0 0 0 9999px var(--scrim-50); }
+.guide-hole::before,
+.guide-hole::after { content: ""; position: absolute; border-radius: inherit; pointer-events: none; }
+.guide-hole::before {
+  inset: -3px;
+  border: 3px solid var(--now-mark);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--now-mark) 0%, transparent), 0 0 22px 4px color-mix(in srgb, var(--now-mark) 45%, transparent);
+  animation: guide-breathe 1.4s var(--ease-standard) infinite;
 }
+.guide-hole::after { inset: -3px; border: 2px solid var(--now-mark); animation: guide-wave 1.4s ease-out infinite; }
+@keyframes guide-breathe {
+  0%, 100% { box-shadow: 0 0 10px 1px color-mix(in srgb, var(--now-mark) 30%, transparent); }
+  50% { box-shadow: 0 0 28px 8px color-mix(in srgb, var(--now-mark) 60%, transparent); }
+}
+@keyframes guide-wave {
+  0% { inset: -3px; opacity: 0.9; }
+  100% { inset: -22px; opacity: 0; }
+}
+.guide-hole.ok::before { animation: none; box-shadow: 0 0 20px 4px color-mix(in srgb, var(--now-mark) 55%, transparent); }
+.guide-hole.ok::after { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .guide-hole::before { animation: none; box-shadow: 0 0 18px 4px color-mix(in srgb, var(--now-mark) 50%, transparent); }
+  .guide-hole::after { display: none; }
+}
+.tip-actions .tip-nav { width: 40px; height: 40px; }
+.tip-actions .tip-nav:disabled { opacity: 0.35; cursor: default; }
+.tip-actions .tip-next { gap: 4px; padding-right: 12px; }
+.tip-actions .tip-next svg { width: 18px; height: 18px; }
 .tip.above { transform: translateY(-100%); }
 .tip.ok { box-shadow: var(--shadow-float), 0 0 0 2px var(--now-mark); }
 .tip-ok { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 8px; border-radius: 50%; background: var(--now-mark); color: #fff; vertical-align: -3px; }

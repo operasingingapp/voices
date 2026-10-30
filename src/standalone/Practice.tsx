@@ -1744,6 +1744,37 @@ function PracticeScreen({
     setOpenWord(null);
     setGuide(n < steps.length ? n : steps.length);
   };
+  // moving through the steps by hand, either way (a step that does not apply here is passed over)
+  const lastStep = (() => {
+    let n = steps.length - 1;
+    while (n > 0 && guideSkip.current.has(steps[n].id)) n--;
+    return n;
+  })();
+  const firstStep = (from: number) => {
+    let n = from - 1;
+    while (n >= 0 && guideSkip.current.has(steps[n].id)) n--;
+    return n < 0;
+  };
+  const goBackStep = (from: number) => {
+    let n = from - 1;
+    while (n >= 0 && guideSkip.current.has(steps[n].id)) n--;
+    if (n < 0) return;
+    if (engine?.state === "playing") engine.pause();
+    setOpenWord(null);
+    setGuideOk(false);
+    setGuide(n);
+  };
+  const nextStep = () => {
+    if (engine?.state === "playing") engine.pause();
+    setGuideOk(false);
+    advance(guide);
+  };
+  // the tour again, from anywhere (the end card, the Show menu): what was changed goes back first
+  const replayGuide = () => {
+    if (guide >= 0 || guide === steps.length) putBack();
+    setCardMenu(null);
+    window.setTimeout(startGuide, 0);
+  };
   // a step done: a tick for a moment, then the next one
   useEffect(() => {
     if (step && !guideOk && step.done?.()) setGuideOk(true);
@@ -1835,9 +1866,12 @@ function PracticeScreen({
             <strong className="tip-title" id="guide-h">
               You’re ready
             </strong>
-            Your settings are back as they were. Replay the tour in Settings.
+            Your settings are back as they were. You can take the tour again any time from Show, above the words.
           </p>
           <div className="tip-actions">
+            <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={replayGuide}>
+              Take the tour again
+            </button>
             <button type="button" className="cp-btn cp-btn--ink" onClick={() => endGuide(true)}>
               Start singing
             </button>
@@ -1869,8 +1903,12 @@ function PracticeScreen({
             <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={() => endGuide(true)}>
               End tour
             </button>
-            <button type="button" className="cp-btn" onClick={() => advance(guide)}>
-              Skip
+            <button type="button" className="cp-icon-btn tip-nav" onClick={() => goBackStep(guide)} disabled={firstStep(guide)} aria-label="Previous step">
+              {Icon.left}
+            </button>
+            <button type="button" className="cp-btn tip-next" onClick={() => nextStep()}>
+              {guide === lastStep ? "Finish" : "Next"}
+              {Icon.right}
             </button>
           </div>
         </div>
@@ -1979,6 +2017,11 @@ function PracticeScreen({
                         <span>Pronunciation tips</span>
                       </button>
                     )}
+                    <span className="cm-sep" role="separator" />
+                    <button type="button" role="menuitem" onClick={replayGuide}>
+                      <span className="cm-check" aria-hidden="true" />
+                      <span>Take the tour</span>
+                    </button>
                   </span>
                 )}
               </span>
