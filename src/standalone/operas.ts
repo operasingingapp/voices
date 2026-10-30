@@ -80,7 +80,7 @@ export const OPERAS: Opera[] = [
     "id": "countess",
     "name": "The Countess",
     "voice": "Soprano",
-    "desc": "Rosina of Beaumarchais's ‘The Barber of Seville’, now Countess Almaviva, neglected by her husband.",
+    "desc": "Rosina of Beaumarchais's play The Barber of Seville, now Countess Almaviva, neglected by her husband.",
     "avatar": "crown",
     "pieces": [
      {
@@ -99,7 +99,7 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 3",
       "editionId": "mozart-dove-sono",
       "when": "Straight after the recitative “E Susanna non vien!”",
-      "context": "Still alone, the Countess remembers the happy days when the Count loved her and asks where his promises have gone. The slow, singing first part looks back; in the quick ending she finds a sudden hope that her faithfulness may yet win back his ungrateful heart."
+      "context": "Still alone, the Countess remembers the happy days when the Count loved her and asks where his promises have gone. The slow, singing first part looks back; in the quick ending she clings to the hope that her faithfulness may yet win back his ungrateful heart."
      },
      {
       "title": "Sull'aria… che soave zeffiretto",
