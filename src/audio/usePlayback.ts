@@ -151,8 +151,14 @@ export function usePlayback(perf: Performance | null, parts: PlaybackPart[] | un
   useEffect(() => {
     if (!engine || !perf || !parts || !port) return;
     port.configureParts(parts);
-    const scale = new Map(parts.map((p) => [p.key, p.velocityScale ?? 1]));
-    port.prepare?.(perf.notes.map((n) => ({ midi: n.midi, vel: Math.max(1, Math.min(127, Math.round(n.vel * (scale.get(n.part) ?? 1)))) })));
+    const byKey = new Map(parts.map((p) => [p.key, p]));
+    const velOf = (n: { part: string; vel: number }) => {
+      const p = byKey.get(n.part);
+      let v = n.vel * (p?.velocityScale ?? 1);
+      if (p?.velocityCeiling !== undefined && v > p.velocityCeiling) v = p.velocityCeiling + (v - p.velocityCeiling) / 3;
+      return Math.max(1, Math.min(127, Math.round(v)));
+    };
+    port.prepare?.(perf.notes.map((n) => ({ midi: n.midi, vel: velOf(n) })));
     engine.setPerformance(perf, parts);
   }, [engine, perf, parts, port]);
 

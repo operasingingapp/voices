@@ -43,6 +43,7 @@ export function applyPedal(edition: CompiledEdition, measures: PerfMeasure[], no
     if (!pn.length) continue;
     const spans = pedalSpans(edition, measures, pn, part.key, staffOf, detached, totalQ, beatUnit);
     sustain(pn, spans, detached);
+    if (edition.pedal === "classical") legatoTouch(pn, detached);
   }
   return notes;
 }
@@ -163,6 +164,28 @@ function pedalSpans(
 }
 
 /** Lengthen notes released while the pedal is down, then apply rules 4 and 5. */
+/**
+ * Mozart, lightly pedalled, still sings: a pianist joins the notes with the fingers, each key let go a moment after
+ * the next is struck. Every note the pedal does not hold (and that is not detached) rings on a little past its
+ * written end, up to a third of its length and never more than a sixteenth, and never into a note a step away (a
+ * line moving by step stays clean). Without it, fast figures on sampled keys sound dry and rough.
+ */
+function legatoTouch(pn: PerfNote[], detached: Set<string>) {
+  for (const n of pn) {
+    if (n.soundOffQ !== undefined || n.ids.every((id) => detached.has(id))) continue;
+    let end = n.offQ + Math.min(0.25, (n.offQ - n.onQ) / 3);
+    for (const o of pn) {
+      if (o.onQ <= n.onQ + EPS) continue;
+      if (o.onQ >= end - EPS) break;
+      if (Math.abs(o.midi - n.midi) <= 2 && o.onQ > n.offQ - EPS) {
+        end = Math.max(n.offQ, Math.min(end, o.onQ + 0.05));
+        break;
+      }
+    }
+    if (end > n.offQ + EPS) n.soundOffQ = end;
+  }
+}
+
 function sustain(pn: PerfNote[], spans: Span[], detached: Set<string>) {
   for (const n of pn) {
     if (n.ids.every((id) => detached.has(id))) continue;

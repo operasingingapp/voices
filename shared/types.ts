@@ -19,6 +19,8 @@ export interface PlaybackPart {
   channel: number; // MIDI channel used by the synth (explicit, never inferred from order)
   program: number; // GM program (0 = Acoustic Grand Piano)
   velocityScale: number; // vocal lines use a softer touch
+  /** above this (after velocityScale) loudness grows only a third as fast: an accompaniment stays under the voice */
+  velocityCeiling?: number;
   defaultVolume: number; // 0..1
 }
 

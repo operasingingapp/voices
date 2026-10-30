@@ -487,7 +487,7 @@ function buildNotes(edition: CompiledEdition, measures: PerfMeasure[]): PerfNote
 
 /**
  * A tremolo is written as one or two long notes with strokes. Measured ones (one or two strokes) are played as
- * written; a real tremolo (three or more) as held notes touched again softly every half second or so.
+ * written, lightly; a real tremolo (three or more) as a soft shimmer at a hand's speed.
  * Fingered (two-note) tremolos alternate the two pitches across both notes' time; single-note tremolos
  * repeat the note. The strokes give the note value (3 = demisemiquavers, an eighth of a quarter).
  * The repeats keep the written notes' ids, so the score still lights the notated notehead.
@@ -501,17 +501,19 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
   const used = new Set<PerfNote>();
   const repeat = (base: PerfNote, pitches: { midi: number; id: string }[], onQ: number, offQ: number, marks: number) => {
     if (marks >= 3) {
-      // A real tremolo (three or more strokes) is the orchestra's strings, reduced for piano. Hammered out on
-      // sampled keys it rattles, so it is played as a répétiteur plays it: the notes held together, and touched
-      // again softly about every half second (on the beat or a division of it, so it keeps time), the later
-      // touches lighter than the first.
+      // A real tremolo (three or more strokes) is the orchestra's strings, reduced for piano: a soft shimmer, as fast
+      // as the hand goes whatever the tempo (about twelve strokes a second, in even divisions of the beat so it
+      // keeps time). Always quiet: the repeats about half the written loudness, every other one a little lighter,
+      // no two quite alike (a fixed pattern, so it plays the same every time).
       const qps = tempoNear(edition, base.ids[0]) / 60;
-      const step = Math.max(0.25, Math.min(2, 2 ** Math.round(Math.log2(qps * 0.55))));
+      const step = 1 / 2 ** Math.max(2, Math.min(4, Math.round(Math.log2(12 / qps))));
       let k = 0;
       for (let t = onQ; t < offQ - EPS; t += step, k++) {
-        const end = Math.min(offQ, t + step);
-        const vel = k === 0 ? base.vel * 0.8 : base.vel * (k % 2 ? 0.46 : 0.52);
-        for (const p of pitches) out.push({ ...base, key: `${base.key}~${k}~${p.midi}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: end });
+        const p = pitches[k % pitches.length];
+        const lilt = k % 2 ? 0.9 : 1;
+        const wobble = 1 + 0.06 * Math.sin(k * 2.39996 + base.midi);
+        const vel = Math.min(k === 0 ? 72 : 56, k === 0 ? base.vel * 0.7 : base.vel * 0.5 * lilt * wobble);
+        out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
       }
       return;
     }
@@ -522,7 +524,7 @@ function expandTremolos(edition: CompiledEdition, events: PerfNote[]): PerfNote[
     for (let t = onQ; t < offQ - EPS; t += step, k++) {
       const p = pitches[k % pitches.length];
       const onBeat = Math.abs(t - Math.round(t)) < EPS;
-      const vel = k === 0 ? base.vel * 0.85 : base.vel * (onBeat ? 0.66 : 0.54);
+      const vel = Math.min(k === 0 ? 72 : onBeat ? 60 : 52, k === 0 ? base.vel * 0.8 : base.vel * (onBeat ? 0.62 : 0.5));
       out.push({ ...base, key: `${base.key}~${k}`, ids: [p.id], midi: p.midi, vel: Math.max(1, Math.round(vel)), onQ: t, offQ: Math.min(offQ, t + step) });
     }
   };

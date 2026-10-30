@@ -394,7 +394,12 @@ export class PlaybackEngine {
   private startNote(ev: PerfNote, t: number, offQ: number, q: number) {
     const ch = this.channelOf(ev.part);
     const p = this.parts.get(ev.part);
-    const vel = Math.max(1, Math.min(127, Math.round(ev.vel * (p?.velocityScale ?? 1))));
+    // an accompaniment stays under the voice: above a gentle ceiling its loudness grows only a third as fast
+    // (a score's forte is the orchestra's; one piano at forte under a singer only hammers)
+    let v = ev.vel * (p?.velocityScale ?? 1);
+    const ceil = p?.velocityCeiling;
+    if (ceil !== undefined && v > ceil) v = ceil + (v - ceil) / 3;
+    const vel = Math.max(1, Math.min(127, Math.round(v)));
     const k = `${ch}:${ev.midi}`;
     this.sounding.set(k, (this.sounding.get(k) ?? 0) + 1);
     this.port.noteOn(ch, ev.midi, vel, t);

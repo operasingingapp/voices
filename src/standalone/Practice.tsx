@@ -513,7 +513,9 @@ function PracticeScreen({
   // The piano keeps the steady practice tempo. A recorded singer was rendered at that same timing (the vocalise
   // scores carry the app's tempo map), so the voice plays as recorded; where a take still differs, it is fitted.
   const perf = useMemo(() => new Performance(edition, [], { tempo: steady ? "steady" : "smooth", pedal: true }), [steady]);
-  const pb = usePlayback(perf, edition.parts);
+  // the piano accompanies: its loudest moments are tamed so it never hammers under the voice
+  const playParts = useMemo(() => edition.parts.map((p) => (p.kind === "piano" ? { ...p, velocityCeiling: 52 } : p)), []);
+  const pb = usePlayback(perf, playParts);
   const engine = pb.engine;
 
   const [pianoFaded, setPianoFaded] = useLocalSetting("p:pianoFaded", true);
