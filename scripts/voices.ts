@@ -666,7 +666,32 @@ async function runLanguage(lang: string, todo: string[]) {
   if (process.env.GITHUB_ACTIONS) console.log(`::notice::Made ${jobs.length} clips (${chars} characters).`);
 }
 
-main().catch((e) => {
+/** shaped lines no manifest uses any more (a line made again is shaped to a new file): removed, so they are not shipped */
+function pruneSung() {
+  const bank = join(ROOT, "content/voice-bank");
+  if (!existsSync(bank)) return;
+  const used = new Set<string>();
+  const walk = (d: string) => {
+    for (const e of readdirSync(d, { withFileTypes: true })) {
+      const p = join(d, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith(".json")) for (const m of readFileSync(p, "utf8").matchAll(/[\w.-]+\/sung\/[\w.-]+\.mp3/g)) used.add(m[0].split("/sung/")[1]);
+    }
+  };
+  walk(join(ROOT, "content"));
+  let n = 0;
+  for (const v of readdirSync(bank)) {
+    const dir = join(bank, v, "sung");
+    if (!existsSync(dir)) continue;
+    for (const f of readdirSync(dir)) if (f.endsWith(".mp3") && !used.has(f)) {
+      rmSync(join(dir, f));
+      n++;
+    }
+  }
+  if (n) console.log(`Removed ${n} shaped lines no longer used.`);
+}
+
+main().then(pruneSung).catch((e) => {
   const msg = String(e instanceof Error ? e.message : e);
   console.error(msg);
   // on GitHub, also as an annotation: readable on the run's page without opening the log
