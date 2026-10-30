@@ -1356,7 +1356,8 @@ export const OPERAS: Opera[] = [
 
 /** a first-pass title → the running order's title, where the two differ */
 const ALIAS: Record<string, string> = {
-  "Sull'aria… che soave zeffiretto": "Sull'aria",
+  "Sull'aria… che soave zeffiretto": "Che soave zeffiretto",
+  "Hai già vinta la causa… Vedrò mentr'io sospiro": "Vedrò, mentr'io sospiro",
   "Mi tradì quell'alma ingrata": "In quali eccessi… Mi tradì",
   "Pa-pa-pa": "Bald prangt, den Morgen zu verkünden",
   "Vecchia zimarra, senti": "Vecchia zimarra",
@@ -1523,3 +1524,15 @@ for (const opera of OPERAS) {
       });
   }
 }
+
+// Figaro's list has since been rebuilt to follow the score's table of contents piece by piece, so its old
+// lists are kept as they were rather than rebuilt from today's running order
+const FIGARO_V2: Record<string, string[]> = {
+  "figaro:figaro": ["Cinque, dieci, venti", "Act 1: Se a caso madama", "Se vuol ballare", "Act 1: Giovani liete", "Non più andrai", "Act 2: Vieni, cara Susanna", "Act 2: Esci omai, garzon malnato", "Act 3: Riconosci in questo amplesso", "Act 3: Ecco la marcia", "Act 4: L'ho perduta, me meschina", "Act 4: Nel padiglione a manca", "Aprite un po' quegli occhi", "Act 4: Pian pianin le andrò più presso"],
+  "figaro:susanna": ["Cinque, dieci, venti", "Act 1: Se a caso madama", "Act 1: Via resti servita", "Act 1: Cosa sento!", "Act 1: Giovani liete", "Act 2: Vieni, cara Susanna", "Venite, inginocchiatevi", "Act 2: Susanna, or via, sortite", "Act 2: Aprite, presto, aprite", "Act 2: Esci omai, garzon malnato", "Act 3: Crudel! perché finora", "Act 3: Riconosci in questo amplesso", "Sull'aria… che soave zeffiretto", "Act 3: Ricevete, o padroncina", "Act 3: Ecco la marcia", "Act 4: Signora, ella mi disse", "Deh vieni, non tardar", "Act 4: Pian pianin le andrò più presso"],
+  "figaro:countess": ["Porgi, amor", "Act 2: Vieni, cara Susanna", "Act 2: Susanna, or via, sortite", "Act 2: Esci omai, garzon malnato", "E Susanna non vien!", "Dove sono", "Sull'aria… che soave zeffiretto", "Act 3: Ricevete, o padroncina", "Act 3: Ecco la marcia", "Act 4: Signora, ella mi disse", "Act 4: Pian pianin le andrò più presso"],
+  "figaro:count": ["Act 1: Cosa sento!", "Act 1: Giovani liete", "Act 2: Susanna, or via, sortite", "Act 2: Esci omai, garzon malnato", "Act 3: Crudel! perché finora", "Hai già vinta la causa… Vedrò mentr'io sospiro", "Act 3: Riconosci in questo amplesso", "Act 3: Io vi dico, signor", "Act 3: Ricevete, o padroncina", "Act 3: Ecco la marcia", "Act 4: Pian pianin le andrò più presso"],
+  "figaro:cherubino": ["Non so più cosa son", "Act 1: Giovani liete", "Voi che sapete", "Act 2: Aprite, presto, aprite", "Act 3: Andiam, andiam, bel paggio", "Act 3: Ricevete, o padroncina", "Act 4: Pian pianin le andrò più presso"],
+  "figaro:bartolo": ["La vendetta", "Act 2: Esci omai, garzon malnato", "Act 3: Riconosci in questo amplesso", "Act 4: Nel padiglione a manca"],
+};
+Object.assign(V2_KEYS, FIGARO_V2);
