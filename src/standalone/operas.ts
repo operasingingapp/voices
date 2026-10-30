@@ -154,7 +154,7 @@ export const OPERAS: Opera[] = [
     "id": "marcellina",
     "name": "Marcellina",
     "voice": "Mezzo-soprano",
-    "desc": "Bartolo's former housekeeper, now at the Count's castle, who has lent Figaro money on his promise to marry her. (Mozart wrote the role for a soprano; today it is usually sung by a mezzo.)",
+    "desc": "Housekeeper at the castle, once Bartolo's servant, who has lent Figaro money on his promise to marry her. (Mozart wrote the role for a soprano; today it is usually sung by a mezzo.)",
     "avatar": "bun",
     "pieces": []
    },
