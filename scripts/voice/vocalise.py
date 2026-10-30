@@ -63,5 +63,58 @@ for d in root.iter('direction'):
     dt = ET.Element('direction-type'); met = ET.SubElement(dt, 'metronome', {'parentheses': 'yes'})
     ET.SubElement(met, 'beat-unit').text = 'quarter'; ET.SubElement(met, 'per-minute').text = snd.get('tempo')
     d.insert(list(d).index(d.find('direction-type')) + 1 if d.find('direction-type') is not None else 0, dt)
+# TEMPO_JSON: the app's own tempo map (scripts/voice/app-tempo.ts) replaces the score's tempo marks, so the render
+# keeps exactly the app's time (its steady pulse, and its fermatas as written into that map: the score's fermatas
+# are dropped so they are not held twice). Each point is an invisible metronome mark in the first part.
+import os, json as _json
+if os.environ.get('TEMPO_JSON'):
+    pts = _json.load(open(os.environ['TEMPO_JSON']))
+    for d in list(root.iter('direction')):
+        snd = d.find('sound')
+        if snd is not None and snd.get('tempo'):
+            del snd.attrib['tempo']
+        for dt in list(d.findall('direction-type')):
+            if dt.find('metronome') is not None: d.remove(dt)
+    for parent in root.iter():
+        for c in [c for c in parent if c.tag == 'fermata']: parent.remove(c)
+    # a notation program places a tempo mark on a note, not between notes (an <offset> is ignored): put each mark
+    # just before a note or rest that starts at its position, in whichever part has one there
+    def events(m, div):
+        """(position in quarters, index in the measure) of each note or rest that starts somewhere new"""
+        pos, out = 0, []
+        for i, el in enumerate(list(m)):
+            if el.tag == 'note':
+                if el.find('chord') is None:
+                    out.append((round(pos / div, 4), i))
+                    if el.find('grace') is None: pos += int(el.findtext('duration') or 0)
+            elif el.tag == 'backup': pos -= int(el.findtext('duration') or 0)
+            elif el.tag == 'forward': pos += int(el.findtext('duration') or 0)
+        return out
+    parts = []
+    for pt in root.findall('part'):
+        div, meas = 1, {}
+        for m in pt.findall('measure'):
+            dv = m.find('attributes/divisions')
+            if dv is not None: div = int(dv.text)
+            meas[m.get('number')] = (m, div)
+        parts.append(meas)
+    missed = 0
+    for pt in sorted(pts, key=lambda x: -x['q']):  # from the end of each bar, so earlier indices stay valid
+        placed = False
+        for meas in parts:
+            m, dv = meas[str(pt['measure'])]
+            at = next((i for q, i in events(m, dv) if abs(q - pt['q']) < 1e-3), None)
+            if at is None: continue
+            d = ET.Element('direction', {'placement': 'above'})
+            dt = ET.SubElement(d, 'direction-type')
+            met = ET.SubElement(dt, 'metronome', {'print-object': 'no'})
+            ET.SubElement(met, 'beat-unit').text = 'quarter'
+            ET.SubElement(met, 'per-minute').text = fmt(pt['bpm'] * scale)
+            ET.SubElement(d, 'sound', {'tempo': fmt(pt['bpm'] * scale)})
+            m.insert(at, d)
+            placed = True
+            break
+        missed += not placed
+    if missed: print('tempo marks with no note to sit on:', missed, file=sys.stderr)
 tree.write(dst, encoding='UTF-8', xml_declaration=True)
 print(dst, n, 'syllables')
