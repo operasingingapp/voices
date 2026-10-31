@@ -14170,7 +14170,7 @@
         <staff>1</staff>
         <beam number="1">begin</beam>
         <notations>
-          <slur type="start" number="1" />
+          <slur type="start" number="5" />
         </notations>
       </note>
       <note>
@@ -14199,8 +14199,7 @@
         <staff>1</staff>
         <beam number="1">end</beam>
         <notations>
-          <slur type="stop" number="1" />
-        </notations>
+          </notations>
       </note>
       <note>
         <rest />
@@ -14307,7 +14306,8 @@
         <staff>2</staff>
         <beam number="1">end</beam>
         <notations>
-          </notations>
+          <slur type="stop" number="5" />
+        </notations>
       </note>
     </measure>
     <measure number="251">
