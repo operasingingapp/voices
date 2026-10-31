@@ -54,6 +54,6 @@ def cut(a, b, out, title, tempo, first_attrs):
     ET.indent(t, space='  ')
     with open(out, 'wb') as fo:
         fo.write(head.encode()); t.write(fo, encoding='utf-8', xml_declaration=False)
-cut(1, 88, 'app/duettino.musicxml', 'Le nozze di Figaro: No. 1 Duettino', ('Allegro', 138), True)
-cut(89, 107, 'app/recit.musicxml', 'Le nozze di Figaro: Recitativo (Cosa stai misurando)', ('Recitativo', 100), True)
+cut(1, 88, 'app/duettino.musicxml', 'Le nozze di Figaro: No. 1 Duettino', ('Allegro', 130), True)
+cut(89, 107, 'app/recit.musicxml', 'Le nozze di Figaro: Recitativo (Cosa stai misurando)', ('Recitativo', 116), True)
 print('ok')

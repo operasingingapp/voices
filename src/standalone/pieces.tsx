@@ -117,7 +117,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "4/4",
-      tempo: "Allegro, played at ♩ = 138: Mozart gives the word only",
+      tempo: "Allegro, played at ♩ = 130 (about 2:40, as in most recordings): Mozart gives the word only",
     },
     notePlaceholder: "Figaro counts and measures; Susanna wants him to look at her hat",
     about: (
@@ -142,7 +142,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at ♩ = 100",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 116 (about 40 seconds, as in most recordings)",
     },
     notePlaceholder: "Speak it first, then sing: let the words set the rhythm",
     about: (
