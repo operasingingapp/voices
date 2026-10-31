@@ -37829,12 +37829,14 @@
           <octave>5</octave>
         </pitch>
         <duration>48</duration>
+        <tie type="start" />
         <voice>3</voice>
         <type>half</type>
         <stem>up</stem>
         <staff>1</staff>
         <notations>
-          </notations>
+          <tied type="start" />
+        </notations>
       </note>
       <backup>
         <duration>96</duration>
@@ -37934,11 +37936,13 @@
           <octave>5</octave>
         </pitch>
         <duration>24</duration>
+        <tie type="stop" />
         <voice>2</voice>
         <type>quarter</type>
         <stem>down</stem>
         <staff>1</staff>
         <notations>
+          <tied type="stop" />
           <slur type="start" number="1" />
         </notations>
       </note>
