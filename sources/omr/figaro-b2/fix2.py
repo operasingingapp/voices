@@ -94,6 +94,13 @@ for line in open(FX, encoding="utf-8"):
             a = ET.Element("accidental"); kids = list(n1)
             j = max(i for i, x in enumerate(kids) if x.tag in ("type", "dot", "voice")) + 1; n1.insert(j, a)
         a.text = w[4]; n1.set("_keep", "1")
+    elif op == "graceslur":   # graceslur BAR PART ONSET: slur from the grace note(s) before the note at ONSET to it
+        part, st = target(w[2]); m, ns = notes_at(part, st, int(w[1])); q = int(Fraction(w[3]) * 24)
+        g = [n for o, n in ns if o == q and n.find("grace") is not None]
+        main = [n for o, n in ns if o == q and n.find("grace") is None and n.find("pitch") is not None]
+        if not g or not main: raise SystemExit(f"no grace at {w[1]} {w[2]} {w[3]}")
+        SLURN[0] = NEXTN[SLURN[0]]; num = str(SLURN[0])
+        ET.SubElement(notations(g[0]), "slur", type="start", number=num); ET.SubElement(notations(main[0]), "slur", type="stop", number=num)
     elif op == "noword":   # noword BAR PART TEXT
         part, st = target(w[2]); m = meas(part, int(w[1]))
         for d in m.findall("direction"):

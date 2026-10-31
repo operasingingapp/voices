@@ -15286,10 +15286,6 @@
           <ornaments>
             <tremolo type="start">1</tremolo>
           </ornaments>
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
         </notations>
       </note>
       <note>
@@ -15391,8 +15387,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -15574,8 +15568,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -15698,10 +15690,6 @@
           <ornaments>
             <tremolo type="start">1</tremolo>
           </ornaments>
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
         </notations>
       </note>
       <note>
@@ -15803,8 +15791,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -16014,8 +16000,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -16138,8 +16122,6 @@
           <ornaments>
             <tremolo type="start">1</tremolo>
           </ornaments>
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
         </notations>
       </note>
       <note>
@@ -16241,8 +16223,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -16351,7 +16331,6 @@
           <ornaments>
             <tremolo type="start">1</tremolo>
           </ornaments>
-          <slur type="start" number="2" />
         </notations>
       </note>
       <note>
@@ -16673,7 +16652,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -16746,8 +16724,6 @@
           <ornaments>
             <tremolo type="start">1</tremolo>
           </ornaments>
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
         </notations>
       </note>
       <note>
@@ -16848,8 +16824,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -16926,8 +16900,6 @@
           <ornaments>
             <tremolo type="start">1</tremolo>
           </ornaments>
-          <slur type="start" number="1" />
-          <slur type="start" number="2" />
         </notations>
       </note>
       <note>
@@ -17028,8 +17000,6 @@
           <ornaments>
             <tremolo type="stop">1</tremolo>
           </ornaments>
-          <slur type="stop" number="1" />
-          <slur type="stop" number="2" />
         </notations>
       </note>
       <backup>
@@ -18300,12 +18270,14 @@
           <octave>5</octave>
         </pitch>
         <duration>48</duration>
+        <tie type="start" />
         <voice>3</voice>
         <type>half</type>
         <stem>up</stem>
         <staff>1</staff>
         <notations>
-          </notations>
+          <tied type="start" />
+        </notations>
       </note>
       <backup>
         <duration>96</duration>
@@ -18406,10 +18378,14 @@
           <octave>5</octave>
         </pitch>
         <duration>24</duration>
+        <tie type="stop" />
         <voice>2</voice>
         <type>quarter</type>
         <stem>down</stem>
         <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -18421,6 +18397,9 @@
         <type>quarter</type>
         <stem>down</stem>
         <staff>1</staff>
+        <notations>
+          <slur type="stop" number="3" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -18468,6 +18447,9 @@
         <type>half</type>
         <stem>down</stem>
         <staff>1</staff>
+        <notations>
+          <slur type="start" number="3" />
+        </notations>
       </note>
       <backup>
         <duration>48</duration>
@@ -37829,12 +37811,14 @@
           <octave>5</octave>
         </pitch>
         <duration>48</duration>
+        <tie type="start" />
         <voice>3</voice>
         <type>half</type>
         <stem>up</stem>
         <staff>1</staff>
         <notations>
-          </notations>
+          <tied type="start" />
+        </notations>
       </note>
       <backup>
         <duration>96</duration>
@@ -37934,11 +37918,13 @@
           <octave>5</octave>
         </pitch>
         <duration>24</duration>
+        <tie type="stop" />
         <voice>2</voice>
         <type>quarter</type>
         <stem>down</stem>
         <staff>1</staff>
         <notations>
+          <tied type="stop" />
           <slur type="start" number="1" />
         </notations>
       </note>
