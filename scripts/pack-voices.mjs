@@ -41,7 +41,21 @@ for (const id of fs.readdirSync(bank).sort().filter((d) => used.has(d))) {
     }
   }
   if (!parts.length) continue;
-  fs.writeFileSync(path.join(out, `${id}.mp3`), Buffer.concat(parts));
-  fs.writeFileSync(path.join(out, `${id}.json`), JSON.stringify(index));
-  console.log(id, Object.keys(index).length, "clips", off, "bytes");
+  // split into packs of at most ~12 MB (the host takes files up to 20 MiB): <id>-0.mp3, <id>-1.mp3 ...
+  const LIMIT = 12 * 1024 * 1024;
+  const files = Object.keys(index);
+  let chunk = 0, buf = [], idx = {}, o2 = 0;
+  const flush = () => {
+    if (!buf.length) return;
+    fs.writeFileSync(path.join(out, `${id}-${chunk}.mp3`), Buffer.concat(buf));
+    fs.writeFileSync(path.join(out, `${id}-${chunk}.json`), JSON.stringify(idx));
+    chunk++; buf = []; idx = {}; o2 = 0;
+  };
+  files.forEach((f, k) => {
+    const [o, len] = index[f];
+    if (o2 + len > LIMIT) flush();
+    idx[f] = [o2, len]; buf.push(parts[k]); o2 += len;
+  });
+  flush();
+  console.log(id, files.length, "clips", off, "bytes in", chunk, "packs");
 }
