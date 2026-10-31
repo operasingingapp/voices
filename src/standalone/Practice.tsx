@@ -2338,26 +2338,35 @@ function PracticeScreen({
               const showFace = allWords && (!prevSp || prevSp.ph.roleId !== role);
               const cue = allWords && !mine && !!nextSp && nextSp.ph.roleId === roleId;
               const singer = edition.roles.find((r) => r.id === role)?.name ?? "";
+              // a speech: the run of lines one singer sings before the other answers (yours get one highlight band)
+              const speechEnd = allWords && (!nextSp || nextSp.ph.roleId !== role || nextB !== blocks[bi + 1]);
+              const otherName = (r: string) => edition.roles.find((x) => x.id === r)?.name ?? "";
               return (
                 <article
                   key={bk.key}
                   data-key={bk.key}
-                  className={`w-line${isNow ? " now" : ""}${isNext ? " next" : ""}${past ? " past" : ""}${allWords ? (mine ? " mine" : " other") : ""}${cue ? " cue" : ""}${together ? " together" : ""}${showFace ? " has-who" : ""}`}
+                  className={`w-line${isNow ? " now" : ""}${isNext ? " next" : ""}${past ? " past" : ""}${allWords ? ` script${mine ? " mine" : " other"}` : ""}${cue ? " cue" : ""}${together ? " together" : ""}${showFace ? " speech-start" : ""}${speechEnd ? " speech-end" : ""}`}
                   onClick={() => goTo(sp.startQ - 0.0001)}
                   aria-current={isNow ? "true" : undefined}
                 >
-                  <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
-                    {edition.measures[perf.locate(sp.startQ).m].number}
-                  </span>
-                  {showFace && (
-                    <span className="w-who" title={together ? `${singer}, at the same time` : singer}>
-                      <span className="w-who-face" aria-hidden="true">
-                        <RoleFace k={`${info.portrait.split(":")[0]}:${role}`} />
+                  {allWords ? (
+                    // the margin, as in a script: who sings (at the start of each speech) and the bar
+                    <span className="w-gut">
+                      {showFace && (
+                        <span className="w-who">
+                          <span className="w-who-face" aria-hidden="true">
+                            <RoleFace k={`${info.portrait.split(":")[0]}:${role}`} />
+                          </span>
+                          <span className="w-who-name">{mine ? "You" : singer}</span>
+                        </span>
+                      )}
+                      <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
+                        {together ? `bar ${edition.measures[perf.locate(sp.startQ).m].number} · with ${otherName(prevSp!.ph.roleId)}` : `bar ${edition.measures[perf.locate(sp.startQ).m].number}`}
                       </span>
-                      <span className="w-who-name">
-                        {mine ? `${singer} · you` : singer}
-                        {together && <em> · together</em>}
-                      </span>
+                    </span>
+                  ) : (
+                    <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
+                      {edition.measures[perf.locate(sp.startQ).m].number}
                     </span>
                   )}
                   <div className="w-orig">
