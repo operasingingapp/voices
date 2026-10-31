@@ -698,7 +698,6 @@ function PracticeScreen({
   const [wordsRole, setWordsRole] = useState(roleId);
   const wordsPart = voiceParts.find((p) => p.roleId === wordsRole) ?? voicePart;
   const wordsName = edition.roles.find((r) => r.id === wordsRole)?.name ?? roleName;
-  const phrases = useMemo(() => (ens ? language.phrases.filter((p) => p.roleId === wordsRole) : language.phrases), [ens, wordsRole]);
   // the small menus in the line card's header: whose words (an ensemble), and what to show under them
   const [cardMenu, setCardMenu] = useState<null | "words" | "show">(null);
   useBackToClose(!!cardMenu, () => setCardMenu(null));
@@ -778,7 +777,8 @@ function PracticeScreen({
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
   // an ensemble's lines are spoken in the voice of the character whose words are shown (a man's for a man)
-  const voice = (ens && voices.find((m) => m.voiceId === languageVoiceId(edition.roles.find((r) => r.id === wordsRole)?.voiceType ?? ""))) || voiceById(voiceSel);
+  const voiceFor = (role: string) => (ens && voices.find((m) => m.voiceId === languageVoiceId(edition.roles.find((r) => r.id === role)?.voiceType ?? ""))) || voiceById(voiceSel);
+  const voice = voiceFor(wordsRole);
   const wordUrl = (text: string) => wordUrlIn(voice, text);
   const [soundLoading, setSoundLoading] = useState(false);
   const [mixOpen, setMixOpen] = useState(false);
@@ -793,6 +793,14 @@ function PracticeScreen({
   const view: View = viewSaved === "split" ? "music" : viewSaved;
   // the score is on screen in Music and in Both (Both shows the words beside it where there is room)
   const musicOn = view !== "words";
+  // Words in an ensemble: the whole text, everyone's lines in the order sung (yours in full ink, the others faded), or
+  // "Just mine". The music's line card keeps its own choice of whose words it shows.
+  const [justMine, setJustMine] = useLocalSetting("p:wordsMine", false);
+  const allWords = ens && view === "words" && !justMine;
+  const phrases = useMemo(
+    () => (!ens || allWords ? language.phrases : language.phrases.filter((p) => p.roleId === (view === "words" ? roleId : wordsRole))),
+    [ens, allWords, view, wordsRole],
+  );
   // the line box over the music can be put away altogether (the score gets the room); a button in the header brings it back
   const [cardOn, setCardOn] = useLocalSetting("p:card", true);
   // while the music plays the box shows the words only; a tap on it brings its tools back for a few seconds
@@ -958,11 +966,13 @@ function PracticeScreen({
   // lines on the timeline
   const spans = useMemo(
     () =>
-      phrases.map((ph) => ({
-        ph,
-        startQ: perf.toPerfQ({ m: ph.startM, q: ph.startQ, occ: ph.occurrence }),
-        endQ: perf.toPerfQ({ m: ph.endM, q: ph.endQ, occ: ph.occurrence }),
-      })),
+      phrases
+        .map((ph) => ({
+          ph,
+          startQ: perf.toPerfQ({ m: ph.startM, q: ph.startQ, occ: ph.occurrence }),
+          endQ: perf.toPerfQ({ m: ph.endM, q: ph.endQ, occ: ph.occurrence }),
+        }))
+        .sort((a, b) => a.startQ - b.startQ || Number(b.ph.roleId === roleId) - Number(a.ph.roleId === roleId)),
     [perf, phrases],
   );
   const currentQ = useCallback(() => (engine ? engine.displayQ() : 0), [engine]);
@@ -989,9 +999,12 @@ function PracticeScreen({
   }, [spans, q]);
 
   const soundingIds = useMemo(() => {
-    const ev = perf.notes.find((n) => n.part === wordsPart.key && n.onQ <= q + 1e-6 && n.offQ > q + 1e-6);
+    // the part singing the line in view (the whole text mixes the singers' lines)
+    const role = spans[current.idx]?.ph.roleId;
+    const key = voiceParts.find((p) => p.roleId === role)?.key ?? wordsPart.key;
+    const ev = perf.notes.find((n) => n.part === key && n.onQ <= q + 1e-6 && n.offQ > q + 1e-6);
     return new Set(ev?.ids ?? []);
-  }, [perf, q, wordsPart]);
+  }, [perf, q, wordsPart, spans, current.idx]);
 
   // the line shown in the panel: the one being sung, otherwise the next one
   const shown = spans[current.idx];
@@ -1007,7 +1020,8 @@ function PracticeScreen({
   // where each sung note lies on the timeline, by note id (a tied note: the whole tie)
   const voiceSpan = useMemo(() => {
     const m = new Map<string, { on: number; off: number }>();
-    for (const n of perf.notes) if (n.part === wordsPart.key) for (const id of n.ids) if (!m.has(id)) m.set(id, { on: n.onQ, off: n.offQ });
+    const keys = new Set([wordsPart.key, ...voiceParts.map((p) => p.key)]);
+    for (const n of perf.notes) if (keys.has(n.part)) for (const id of n.ids) if (!m.has(id)) m.set(id, { on: n.onQ, off: n.offQ });
     return m;
   }, [perf, wordsPart]);
   // the line in progress: which syllables are sung already, and which are on the note sounding now
@@ -1041,7 +1055,8 @@ function PracticeScreen({
     const ph = phrases.find((p) => p.id === id)!;
     if (engine?.state === "playing") engine.pause();
     setSpeakingId(id);
-    const rec = lineClip(voice, id, ph.original);
+    // each line in the voice of the character who sings it (a man's for a man)
+    const rec = lineClip(voiceFor(ph.roleId ?? wordsRole), id, ph.original);
     const times = slow ? rec?.slowWords : rec?.words;
     await speak(
       { text: ph.original, normalUrl: audioUrl(ph.audio.normal?.file), slowUrl: audioUrl(ph.audio.slow?.file), recorded: rec ? { normal: rec.normal, slow: rec.slow } : undefined },
@@ -1577,15 +1592,16 @@ function PracticeScreen({
     type Block = { kind: "gap"; key: string; startQ: number; endQ: number; label: string } | { kind: "line"; key: string; i: number };
     const out: Block[] = [];
     let prevEnd = 0;
+    const minGap = allWords ? 7.9 : 2.9;
     spans.forEach((sp, i) => {
-      if (sp.startQ - prevEnd >= 2.9)
+      if (sp.startQ - prevEnd >= (i === 0 ? 2.9 : minGap))
         out.push({ kind: "gap", key: `gap-${i}`, startQ: prevEnd, endQ: sp.startQ, label: i === 0 ? (ens ? "Introduction" : "Piano introduction") : ens ? "Rest" : "Piano" });
       out.push({ kind: "line", key: sp.ph.id, i });
-      prevEnd = sp.endQ;
+      prevEnd = Math.max(prevEnd, sp.endQ);
     });
     if (perf.totalQ - prevEnd >= 2.9) out.push({ kind: "gap", key: "gap-end", startQ: prevEnd, endQ: perf.totalQ, label: ens ? "Ending" : "Piano ending" });
     return out;
-  }, [spans, perf]);
+  }, [spans, perf, allWords]);
   const barsOf = (a: number, b: number) => {
     const m0 = edition.measures[perf.locate(a).m].number;
     const m1 = edition.measures[perf.locate(Math.max(a, b - 0.01)).m].number;
@@ -2182,7 +2198,17 @@ function PracticeScreen({
               </span>
               {/* what to show: toggles that show their state (lit = shown), as on the music view's card */}
               <span className="w-tools" role="group" aria-label="Show with the words">
-                {whoPick}
+                {ens && (
+                  <button
+                    type="button"
+                    className="w-chip"
+                    aria-pressed={justMine}
+                    onClick={() => setJustMine(!justMine)}
+                    title={justMine ? "Show everyone's lines" : `Show only ${roleName}'s lines`}
+                  >
+                    Just mine
+                  </button>
+                )}
                 <button type="button" className="w-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
                   IPA
                 </button>
@@ -2272,7 +2298,12 @@ function PracticeScreen({
                         {on && playing ? (
                           entry ? (
                             <>
-                              <span className="w-gap-long">{wordsRole === roleId ? "You come" : `${wordsName} comes`} in at bar {entry} · </span>
+                              <span className="w-gap-long">
+                                {after && after.kind === "line" && spans[after.i].ph.roleId !== roleId
+                                  ? `${edition.roles.find((r) => r.id === spans[after.i].ph.roleId)?.name ?? "The next singer"} comes`
+                                  : "You come"}{" "}
+                                in at bar {entry} ·{" "}
+                              </span>
                               {Math.ceil(left)} s
                             </>
                           ) : (
@@ -2290,17 +2321,45 @@ function PracticeScreen({
               const isNow = current.sounding && bk.i === current.idx;
               const isNext = !current.sounding && bk.i === current.idx && activeKey === sp.ph.id;
               const past = sp.endQ <= qNow + 1e-6 && !isNow;
+              // the whole text of an ensemble: who sings each line (a face where the singer changes), yours in
+              // full ink and the others faded, the line before each of yours (your cue) a little stronger, and
+              // lines sung at the same time joined
+              const bi = blocks.indexOf(bk);
+              const prevB = blocks
+                .slice(0, bi)
+                .reverse()
+                .find((b) => b.kind === "line");
+              const nextB = blocks.slice(bi + 1).find((b) => b.kind === "line");
+              const prevSp = prevB?.kind === "line" ? spans[prevB.i] : null;
+              const nextSp = nextB?.kind === "line" ? spans[nextB.i] : null;
+              const role = sp.ph.roleId;
+              const mine = !allWords || role === roleId;
+              const together = allWords && !!prevSp && prevSp.ph.roleId !== role && sp.startQ < prevSp.endQ - 1e-6;
+              const showFace = allWords && (!prevSp || prevSp.ph.roleId !== role);
+              const cue = allWords && !mine && !!nextSp && nextSp.ph.roleId === roleId;
+              const singer = edition.roles.find((r) => r.id === role)?.name ?? "";
               return (
                 <article
                   key={bk.key}
                   data-key={bk.key}
-                  className={`w-line${isNow ? " now" : ""}${isNext ? " next" : ""}${past ? " past" : ""}`}
+                  className={`w-line${isNow ? " now" : ""}${isNext ? " next" : ""}${past ? " past" : ""}${allWords ? (mine ? " mine" : " other") : ""}${cue ? " cue" : ""}${together ? " together" : ""}${showFace ? " has-who" : ""}`}
                   onClick={() => goTo(sp.startQ - 0.0001)}
                   aria-current={isNow ? "true" : undefined}
                 >
                   <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
                     {edition.measures[perf.locate(sp.startQ).m].number}
                   </span>
+                  {showFace && (
+                    <span className="w-who" title={together ? `${singer}, at the same time` : singer}>
+                      <span className="w-who-face" aria-hidden="true">
+                        <RoleFace k={`${info.portrait.split(":")[0]}:${role}`} />
+                      </span>
+                      <span className="w-who-name">
+                        {mine ? `${singer} · you` : singer}
+                        {together && <em> · together</em>}
+                      </span>
+                    </span>
+                  )}
                   <div className="w-orig">
                     <p className={`w-it${isNow && nowSyl ? " in-progress" : ""}`} lang={LANG}>
                       {lineWords(sp.ph, isNow ? nowSyl : null, sp.ph.id === shown.ph.id ? litTip : null)}
