@@ -305,6 +305,34 @@
     }
   },
   {
+    "editionId": "mozart-la-vendetta",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-la-vendetta@1.0.0-klengel#54e1dab951",
+    "title": "La vendetta",
+    "subtitle": "Bartolo's aria from Le nozze di Figaro, Act 1",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "bartolo",
+        "name": "Bartolo",
+        "voiceType": "Bass",
+        "partKey": "bartolo"
+      }
+    ],
+    "measures": 104,
+    "durationSec": 201,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-or-bene-ascolta-e-taci",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-or-bene-ascolta-e-taci@1.0.0-klengel#9b15e0cc4d",
@@ -341,7 +369,7 @@
   {
     "editionId": "mozart-se-a-caso-madama",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-se-a-caso-madama@1.0.0-klengel#821690bf19",
+    "scoreVersionId": "mozart-se-a-caso-madama@1.0.0-klengel#53d02fe5ba",
     "title": "Se a caso madama",
     "subtitle": "Figaro and Susanna's duettino from Le nozze di Figaro, Act 1",
     "kind": "duet",

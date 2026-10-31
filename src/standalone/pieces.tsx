@@ -230,6 +230,32 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-la-vendetta": {
+    portrait: "figaro:bartolo",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "D major",
+      time: "Allegro con spirito in 4/4",
+      tempo: "♩ = 124 (about 3:20, as in most recordings): Mozart gives the words only",
+    },
+    notePlaceholder: "Pompous and pleased with himself: the patter in the middle must stay crisp",
+    about: (
+      <>
+        <p>
+          Score: No. 4 from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Read into MusicXML from the scan by you; the sung line was written out twice independently from the printed pages, the piano rewritten from the
+          print twice independently and reconciled, and the whole checked until a full round, an accidentals pass and two fresh checkers found nothing.
+          Only the Italian words are kept. In bar 65 (bar 416 of the vocal score) the piano's last B is printed without a sign after a B♭ earlier in the
+          split bar; it is played here as B natural, which the harmony needs.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-se-a-caso-madama": {
     portrait: "figaro:figaro",
     opera: "Le nozze di Figaro",

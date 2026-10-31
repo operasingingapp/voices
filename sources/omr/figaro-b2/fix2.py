@@ -67,6 +67,7 @@ def add_dir(m, q, el, staff=None):
         f = ET.SubElement(m, "forward"); ET.SubElement(f, "duration").text = str(q - pos)
     m.append(el)
 SLURN = [2]
+NEXTN = {2: 3, 3: 4, 4: 5, 5: 6, 6: 14, 14: 15, 15: 16, 16: 3}   # numbers kept free of the piano rewrites' per-voice 7-13
 for line in open(FX, encoding="utf-8"):
     line = line.strip()
     if not line or line.startswith("#"): continue
@@ -136,7 +137,8 @@ for line in open(FX, encoding="utf-8"):
                 break
     elif op == "slur":
         _, n1, _ = at(int(w[1]), w[2], w[3]); _, n2, _ = at(int(w[4]), w[2], w[5])
-        ET.SubElement(notations(n1), "slur", type="start", number="2"); ET.SubElement(notations(n2), "slur", type="stop", number="2")
+        SLURN[0] = NEXTN[SLURN[0]]; num = str(SLURN[0])
+        ET.SubElement(notations(n1), "slur", type="start", number=num); ET.SubElement(notations(n2), "slur", type="stop", number=num)
     elif op == "slurp":   # slurp BAR PART ONSET PITCH BAR2 ONSET2 PITCH2 (pitch like A3, Bb3)
         def atp(b, pc, on, pit):
             part, st = target(pc); m, ns = notes_at(part, st, b); q = int(Fraction(on) * 24)
@@ -148,7 +150,7 @@ for line in open(FX, encoding="utf-8"):
                     return n
             raise SystemExit(f"no {pit} at {b} {pc} {on}")
         n1 = atp(int(w[1]), w[2], w[3], w[4]); n2 = atp(int(w[5]), w[8] if len(w) > 8 else w[2], w[6], w[7])
-        SLURN[0] = SLURN[0] % 4 + 3
+        SLURN[0] = NEXTN[SLURN[0]]
         num = str(SLURN[0])
         ET.SubElement(notations(n1), "slur", type="start", number=num); ET.SubElement(notations(n2), "slur", type="stop", number=num)
     elif op == "tempo":   # tempo BAR BPM (quarter notes per minute, for playback)

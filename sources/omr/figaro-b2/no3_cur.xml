@@ -4927,12 +4927,6 @@
           </dynamics>
         </direction-type>
       </direction>
-      <direction placement="below">
-        <direction-type>
-          <words>staccato</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -5104,6 +5098,15 @@
         <stem>up</stem>
         <staff>2</staff>
       </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words>staccato</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="200">
       <note>
@@ -5575,12 +5578,6 @@
       </note>
     </measure>
     <measure number="203">
-      <direction placement="below">
-        <direction-type>
-          <words>staccato</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -5722,6 +5719,15 @@
         <stem>up</stem>
         <staff>2</staff>
       </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words>staccato</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="204">
       <note>
@@ -11178,14 +11184,6 @@
       </note>
     </measure>
     <measure number="235">
-      <direction placement="below">
-        <direction-type>
-          <dynamics>
-            <p />
-          </dynamics>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -11334,6 +11332,17 @@
           </articulations>
         </notations>
       </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="236">
       <note>
@@ -14298,8 +14307,7 @@
         <staff>2</staff>
         <beam number="1">end</beam>
         <notations>
-          <slur type="stop" number="1" />
-        </notations>
+          </notations>
       </note>
     </measure>
     <measure number="251">
@@ -16973,12 +16981,6 @@
           </dynamics>
         </direction-type>
       </direction>
-      <direction placement="below">
-        <direction-type>
-          <words>Presto</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <rest />
         <duration>12</duration>
@@ -17120,6 +17122,15 @@
           <slur type="stop" number="1" />
         </notations>
       </note>
+      <backup>
+        <duration>48</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words>Presto</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="263">
       <note>
@@ -19465,7 +19476,7 @@
         <stem>down</stem>
         <staff>1</staff>
         <notations>
-          <slur type="start" number="2" />
+          <slur type="start" number="3" />
         </notations>
       </note>
       <note>
@@ -19535,7 +19546,7 @@
         <stem>up</stem>
         <staff>1</staff>
         <notations>
-          <slur type="stop" number="2" />
+          <slur type="stop" number="3" />
         </notations>
       </note>
       <note>
@@ -19839,7 +19850,7 @@
         <stem>up</stem>
         <staff>1</staff>
         <notations>
-          <slur type="start" number="2" />
+          <slur type="start" number="4" />
         </notations>
       </note>
       <note>
@@ -19908,7 +19919,7 @@
         <stem>up</stem>
         <staff>1</staff>
         <notations>
-          <slur type="stop" number="2" />
+          <slur type="stop" number="4" />
         </notations>
       </note>
       <note>
@@ -21307,12 +21318,6 @@
       </note>
     </measure>
     <measure number="298">
-      <direction placement="below">
-        <direction-type>
-          <words>cresc.</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <rest />
         <duration>12</duration>
@@ -21426,6 +21431,15 @@
         <stem>down</stem>
         <staff>2</staff>
       </note>
+      <backup>
+        <duration>48</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words>cresc.</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="299">
       <direction>
@@ -21735,18 +21749,6 @@
           </dynamics>
         </direction-type>
       </direction>
-      <direction placement="below">
-        <direction-type>
-          <words>Tempo I</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
-      <direction placement="below">
-        <direction-type>
-          <words>staccato</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -21888,6 +21890,21 @@
         <stem>up</stem>
         <staff>2</staff>
       </note>
+      <backup>
+        <duration>72</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words>Tempo I</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <words>staccato</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="303">
       <note>
@@ -24275,12 +24292,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="below">
-        <direction-type>
-          <words>Presto</words>
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -24415,6 +24426,15 @@
         <staff>2</staff>
         <beam number="1">end</beam>
       </note>
+      <backup>
+        <duration>48</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <words>Presto</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
     </measure>
     <measure number="322">
       <note>

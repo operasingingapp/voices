@@ -191,7 +191,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "La vendetta",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "editionId": "mozart-la-vendetta"
      },
      {
       "title": "Ed aspettaste il giorno",

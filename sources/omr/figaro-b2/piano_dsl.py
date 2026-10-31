@@ -85,8 +85,8 @@ def notes_for(tokens, staff, voice):
             nt = ET.Element("notations")
             if "~" in fl or ptie: ET.SubElement(nt, "tied", type="start")
             if k == 0:
-                if "(" in fl: ET.SubElement(nt, "slur", type="start", number=str(6 + voice))
                 if ")" in fl: ET.SubElement(nt, "slur", type="stop", number=str(6 + voice))
+                if "(" in fl: ET.SubElement(nt, "slur", type="start", number=str(6 + voice))
                 if "!" in fl: ET.SubElement(nt, "fermata", type="upright")
                 art = [x for x, c in (("staccato", "*"), ("accent", ">")) if c in fl]
                 if art:

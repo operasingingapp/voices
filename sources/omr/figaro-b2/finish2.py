@@ -193,6 +193,7 @@ for part in r.findall("part"):
                         st = n.findtext("staff")
                         alt = [k for k, (nt0, s0) in open_.items() if k != num and (k == "1" or int(k) >= 7) and nt0 in STAFF_OF and STAFF_OF[nt0] == st]
                         if alt: num = alt[-1]; s_.set("number", num)
+                        else: nt.remove(s_); continue   # a stop with nothing to close
                     open_.pop(num, None)
     for nt_, s_ in open_.values(): nt_.remove(s_)
 # a rest marked as a whole-bar rest that does not fill the bar (two halves of a bar joined): an ordinary rest
