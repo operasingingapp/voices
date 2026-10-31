@@ -566,6 +566,18 @@ const languageOf = (piece: string) =>
   (JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { language?: string }).language || "it";
 
 async function main() {
+  // --say "text": one plain recording of the text as written (a trial of a voice), nothing else
+  const say = arg("say");
+  if (say) {
+    const voice = VOICE_ARG || config.male?.it?.voiceId || config.voiceId;
+    const sp = await speak(voice, say, false);
+    const slug = say.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+    const dir = join(ROOT, "content/voice-trials", voice.toLowerCase());
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, `${slug}.mp3`), sp.audio); // exactly as ElevenLabs gave it
+    console.log(`Said it with ${voice}: content/voice-trials/${voice.toLowerCase()}/${slug}.mp3`);
+    return;
+  }
   const all = pieces();
   if (!all.length) throw new Error(`No piece "${pieceArg}" in data/content.`);
   // one voice per language: the pieces of each language are made with that language's voice

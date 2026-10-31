@@ -17,6 +17,10 @@ on:
         description: "ElevenLabs voice ID to use instead of voice.config.json. Optional."
         default: ""
         required: false
+      say:
+        description: "Instead: one plain trial recording of this text (with the voice above). Optional."
+        default: ""
+        required: false
   push:
     branches: [main]
     paths:
@@ -50,11 +54,13 @@ jobs:
           PIECE: ${{ inputs.piece || 'all' }}
           REDO: ${{ inputs.redo || '' }}
           VOICE: ${{ inputs.voice || '' }}
+          SAY: ${{ inputs.say || '' }}
         run: |
           if [ -z "$ELEVENLABS_API_KEY" ]; then
             echo "::notice::Add the repository secret ELEVENLABS_API_KEY first (Settings → Secrets and variables → Actions). Nothing was made."
             exit 0
           fi
+          if [ -n "$SAY" ]; then npx tsx scripts/voices.ts --voice "$VOICE" --say "$SAY"; exit 0; fi
           npx tsx scripts/voices.ts --piece "$PIECE" --redo "$REDO" --voice "$VOICE"
       - name: Save the new recordings
         run: |
