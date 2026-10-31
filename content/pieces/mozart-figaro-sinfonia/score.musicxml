@@ -20092,6 +20092,9 @@
         <type>quarter</type>
         <stem>up</stem>
         <staff>1</staff>
+        <notations>
+          <slur type="start" number="1" placement="below" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -20127,6 +20130,9 @@
         <type>quarter</type>
         <stem>up</stem>
         <staff>1</staff>
+        <notations>
+          <slur type="stop" number="1" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -38854,9 +38860,6 @@
         <type>quarter</type>
         <stem>down</stem>
         <staff>1</staff>
-        <notations>
-          <slur type="start" number="1" />
-        </notations>
       </note>
       <note>
         <pitch>
@@ -39091,7 +39094,6 @@
         <stem>down</stem>
         <staff>1</staff>
         <notations>
-          <slur type="stop" number="1" />
           <slur type="stop" number="2" />
         </notations>
       </note>
@@ -40106,9 +40108,6 @@
         <type>quarter</type>
         <stem>down</stem>
         <staff>1</staff>
-        <notations>
-          <slur type="start" number="1" />
-        </notations>
       </note>
       <note>
         <chord />
@@ -40403,7 +40402,6 @@
         <stem>down</stem>
         <staff>1</staff>
         <notations>
-          <slur type="stop" number="1" />
           <slur type="stop" number="2" />
         </notations>
       </note>
@@ -42767,11 +42765,6 @@
         <type>quarter</type>
         <stem>down</stem>
         <staff>2</staff>
-        <notations>
-          <articulations>
-            <staccato />
-          </articulations>
-        </notations>
       </note>
       <note>
         <chord />
@@ -42802,11 +42795,6 @@
         <type>quarter</type>
         <stem>down</stem>
         <staff>2</staff>
-        <notations>
-          <articulations>
-            <staccato />
-          </articulations>
-        </notations>
       </note>
       <note>
         <chord />

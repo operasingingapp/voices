@@ -1,3 +1,4 @@
+import { packedUrl, preloadVoicePacks } from "./voicePack";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as RPointerEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { Story, storyOf } from "./synopses";
@@ -74,11 +75,6 @@ interface VoiceManifest {
   words: Record<string, string>;
 }
 const voiceManifests = import.meta.glob("../../content/pieces/*/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
-const voiceFiles = import.meta.glob(["../../content/voice-bank/*/sung/*.mp3", "../../content/voice-bank/*/words/*.mp3"], {
-  query: "?url",
-  import: "default",
-  eager: true,
-}) as Record<string, string>;
 let voices: VoiceManifest[] = [];
 const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
 /** the voice chosen for the piece's language in voice.config.json (Italian: voiceId; others: languages.<code>) */
@@ -91,7 +87,7 @@ const languageVoiceId = (voiceType = roleVoiceType) => {
 const voiceById = (id: string) =>
   voices.find((m) => m.voiceId === id) ?? voices.find((m) => m.voiceId === languageVoiceId()) ?? voices[0] ?? null;
 const voiceLabel = (m: VoiceManifest) => (m.voiceName ?? "Voice").split(" - ")[0];
-const voiceUrl = (file?: string) => (file ? voiceFiles[`../../${file}`] : undefined);
+const voiceUrl = (file?: string) => packedUrl(file);
 const plainText = (t: string) => t.replace(/[’‘]/g, "'").replace(/\s+/g, " ").trim();
 const wordKey = (t: string) => plainText(t).replace(/[.,;:!?«»“”"()—–-]+/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
 /** the recorded line (a repeated line uses the first recording of the same words) */
@@ -1068,6 +1064,7 @@ function PracticeScreen({
     setSpeakingWord((k) => (k === key ? null : k));
   };
   useEffect(() => () => stopSpeaking(), []);
+  useEffect(() => preloadVoicePacks(), []);
 
   const play = async () => {
     if (!engine || !pb.port) return;

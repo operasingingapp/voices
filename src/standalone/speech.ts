@@ -1,3 +1,4 @@
+import { resolveAudio } from "./voicePack";
 /**
  * Spoken pronunciation, in the language of the piece on screen. First choice: the app's own recordings of a
  * native voice (made with ElevenLabs, scripts/voices.ts). Where a recording is missing, the device's own voice
@@ -71,8 +72,10 @@ export function speak(src: SpeakSource, slow: boolean, onTime?: (sec: number) =>
   stopSpeaking();
   const rec = slow ? src.recorded?.slow : src.recorded?.normal;
   if (rec) {
+    const r = resolveAudio(rec);
+    if (typeof r !== "string") return r.then((u) => speak({ ...src, recorded: { normal: u, slow: src.recorded?.slow === src.recorded?.normal ? u : src.recorded?.slow } }, slow, onTime), () => undefined);
     return new Promise((resolve) => {
-      const a = new Audio(rec);
+      const a = new Audio(r);
       // single words have one recording: the tortoise plays it slower, keeping the pitch
       if (slow && src.recorded?.slow === src.recorded?.normal) {
         a.preservesPitch = true;
