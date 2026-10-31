@@ -8228,3 +8228,33 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   color: var(--ink-2, #555);
   font-size: 16px;
 }
+
+/* the operas' gallery: wider, landscape cards (their covers), the title in italics */
+.reel-card--opera { width: clamp(200px, 22vw, 248px); }
+.reel-card--opera .reel-pic { aspect-ratio: 4 / 3; }
+.reel-card--opera .reel-pic img { object-position: 50% 40%; }
+.reel-card--opera .reel-name { font-style: italic; font-size: 16px; }
+.reel-card--opera .reel-sub { font-style: normal; }
+.reel-letter {
+  display: grid; place-items: center; width: 100%; height: 100%;
+  font: italic 400 56px/1 var(--font-serif, Georgia, serif);
+  color: var(--tone-deep);
+}
+@media (max-width: 600px) { .ob-welcome .reel-card--opera { width: min(232px, 62vw); } }
+
+/* meeting an opera: its people as a row of faces */
+.meet-people { display: flex; flex-wrap: wrap; gap: 12px 10px; margin-top: 18px; }
+.meet-person {
+  appearance: none; display: grid; justify-items: center; gap: 5px; width: 72px;
+  padding: 0; border: 0; background: none; color: var(--ink); font: inherit; font-size: 12.5px;
+  line-height: 1.2; text-align: center; cursor: pointer;
+}
+.meet-person img {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 0 0 2px var(--tone-soft); transition: transform 300ms var(--ease-standard);
+}
+@media (hover: hover) { .meet-person:hover img { transform: translateY(-2px); } }
+.meet-person:focus-visible { outline: 2px solid var(--tone-strong); outline-offset: 3px; border-radius: 8px; }
+.meet-note { margin: 14px 0 0; color: var(--ink-muted); font-size: 14px; }
+.meet--opera .meet-pic img { object-position: 50% 40%; }
+.meet--opera.covered { visibility: hidden; }

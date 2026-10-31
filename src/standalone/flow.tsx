@@ -1966,6 +1966,126 @@ function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void })
 }
 
 /**
+ * The operas as a gallery like the characters': wide cover cards drifting slowly in two rows (operas with a cover
+ * first; the rest show their initial on the opera's colour). A tap opens a short card about the opera.
+ */
+function OperaReel({ onPick }: { onPick: (opera: Opera) => void }) {
+  const all = [...OPERAS].sort((a, b) => Number(!!ART[b.id]) - Number(!!ART[a.id]));
+  const rows = [all.filter((_, i) => i % 2 === 0), all.filter((_, i) => i % 2 === 1)];
+  return (
+    <div className="reel reel--operas" role="group" aria-label="Operas">
+      {rows.map((row, r) => (
+        <div key={r} className={`reel-row${r === 1 ? " rev" : ""}`}>
+          {[0, 1, 2, 3].map((copy) =>
+            row.map((o) => {
+              const art = ART[o.id];
+              const n = OPERAS.indexOf(o);
+              const ready = o.chars.some((ch) => ch.pieces.some((p) => p.editionId));
+              const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
+              return (
+                <button
+                  key={`${copy}-${o.id}`}
+                  type="button"
+                  className="reel-card reel-card--opera"
+                  data-tone={OPERA_TONES[n % OPERA_TONES.length]}
+                  style={opToneStyle(o.id)}
+                  aria-hidden={copy > 0 || undefined}
+                  tabIndex={copy > 0 ? -1 : undefined}
+                  onClick={() => onPick(o)}
+                >
+                  <span className="reel-pic">
+                    {art ? <img src={art.cover} alt="" decoding="async" draggable={false} /> : <span className="reel-letter" lang={o.lang}>{letter}</span>}
+                    {ready && <span className="reel-ready">Ready to sing</span>}
+                  </span>
+                  <span className="reel-name" lang={o.lang}>
+                    {o.title}
+                  </span>
+                  <span className="reel-opera reel-sub">
+                    {o.composer} · {o.year}
+                  </span>
+                </button>
+              );
+            }),
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Meeting an opera before choosing a role in it (the welcome screen): its picture, what it is about, its people
+ * (a tap meets one), then "Choose your role" or the whole opera's page.
+ */
+function MeetOpera({ opera, covered, onRoles, onPage, onMeet, onClose }: { opera: Opera; covered: boolean; onRoles: () => void; onPage: () => void; onMeet: (ch: Character) => void; onClose: () => void }) {
+  const go = useRef<HTMLButtonElement>(null);
+  useBackToClose(true, onClose);
+  useEffect(() => {
+    if (covered) return;
+    go.current?.focus();
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", esc);
+    return () => window.removeEventListener("keydown", esc);
+  }, [onClose, covered]);
+  const art = ART[opera.id];
+  const n = OPERAS.indexOf(opera);
+  const people = opera.chars.filter((ch) => PORTRAITS[`${opera.id}:${ch.id}`]);
+  const ready = opera.chars.filter((ch) => ch.pieces.some((p) => p.editionId)).length;
+  return (
+    <div className={`meet meet--opera${covered ? " covered" : ""}`} aria-hidden={covered || undefined} role="dialog" aria-modal="true" aria-labelledby="meet-op-h" data-tone={OPERA_TONES[n % OPERA_TONES.length]} style={opToneStyle(opera.id)}>
+      <button type="button" className="meet-scrim" aria-label="Back to the operas" tabIndex={-1} onClick={onClose} />
+      <div className="meet-card">
+        <button type="button" className="cp-icon-btn cp-icon-btn--ghost meet-close" aria-label="Back to the operas" onClick={onClose}>
+          <CloseIcon />
+        </button>
+        <button type="button" className="sheet-back meet-back" onClick={onClose}>
+          <BackIcon />
+          <span>Back</span>
+        </button>
+        <div className="meet-pic">{art && <img src={art.cover} alt={art.alt} />}</div>
+        <div className="meet-body">
+          <div className="meet-head">
+            <h2 id="meet-op-h" lang={opera.lang}>
+              {opera.title}
+            </h2>
+            <p className="who-meta">
+              <span>{opera.composerFull ?? opera.composer}</span>
+              <span>
+                {opera.year}, words by {opera.librettist}
+              </span>
+            </p>
+          </div>
+          <div className="meet-scroll">
+            {STORIES[opera.id] && <p className="meet-story">{STORIES[opera.id]}</p>}
+            {people.length > 0 && (
+              <div className="meet-people" aria-label="Its people">
+                {people.map((ch) => (
+                  <button key={ch.id} type="button" className="meet-person" onClick={() => onMeet(ch)}>
+                    <img src={PORTRAITS[`${opera.id}:${ch.id}`].face} alt="" />
+                    <span>{ch.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+            <p className="meet-note">
+              {opera.chars.length} roles{ready ? `, ${ready} with music ready to sing` : ""}.
+            </p>
+          </div>
+          <div className="meet-actions">
+            <button ref={go} type="button" className="cp-btn cp-btn--ink meet-take" onClick={onRoles}>
+              Choose your role
+            </button>
+            <button type="button" className="cp-btn cp-btn--ghost" onClick={onPage}>
+              See the whole opera
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
  * Meeting a character before taking the role (the welcome screen): the portrait large, who they are, their story
  * in the opera act by act, and a taste of their music; then "This is my role", or back to choosing.
  */
@@ -2059,6 +2179,8 @@ export function Onboarding({
   const roles = chosenOpera ? chosenOpera.chars.map((ch) => ({ opera: chosenOpera, ch })) : [];
   // a character tapped in the gallery: met first, then taken
   const [meet, setMeet] = useState<{ opera: Opera; ch: Character } | null>(null);
+  // an opera tapped in its gallery: a short card about it first
+  const [meetOp, setMeetOp] = useState<Opera | null>(null);
   // 1: the gallery of characters; 2: the list of operas (a quieter way in); 3: the chosen opera's cast.
   // A cast with no opera goes back to the gallery.
   const step = stepAsked === 3 ? (roles.length ? 3 : 1) : stepAsked;
@@ -2094,7 +2216,7 @@ export function Onboarding({
         <main className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}`} key="s12">
           <div className="ob-hero gutter">
             <h1>Which role is yours?</h1>
-            <p className="lede">{step === 1 ? "Choose a character to begin. “Ready to sing” means its music is here to practise." : "Choose an opera to read about it and meet its characters."}</p>
+            <p className="lede">{step === 1 ? "Choose a character to begin. “Ready to sing” means its music is here to practise." : "Choose an opera to read about it and meet its people."}</p>
             <div className="ob-mode" role="tablist" aria-label="Start from">
               {(
                 [
@@ -2119,37 +2241,7 @@ export function Onboarding({
             {step === 1 ? (
               <CastReel onPick={(opera, ch) => setMeet({ opera, ch })} />
             ) : (
-              <section className="ob-from-opera gutter" aria-label="Operas">
-                <div className="obs-operas">
-                  {OPERAS.map((o, n) => {
-                    const art = ART[o.id];
-                    const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
-                    return (
-                      <button
-                        key={o.id}
-                        type="button"
-                        className="obs-opera"
-                        data-tone={OPERA_TONES[n % OPERA_TONES.length]}
-                        style={opToneStyle(o.id)}
-                        onClick={() => ctx.finishOnboarding({ screen: "opera", opera: o.id })}
-                      >
-                        <span className="obs-thumb" aria-hidden="true">
-                          {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span lang={o.lang}>{letter}</span>}
-                        </span>
-                        <span className="obs-vtext">
-                          <b lang={o.lang}>{o.title}</b>
-                          <small>
-                            {o.composer} · {o.year} · {o.chars.length} roles
-                          </small>
-                        </span>
-                        <span className="obs-go" aria-hidden="true">
-                          <BackIcon />
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </section>
+              <OperaReel onPick={(o) => setMeetOp(o)} />
             )}
           </div>
         </main>
@@ -2211,6 +2303,24 @@ export function Onboarding({
             </button>
           </div>
         </main>
+      )}
+      {meetOp && (
+        <MeetOpera
+          opera={meetOp}
+          covered={!!meet}
+          onRoles={() => {
+            const o = meetOp.id;
+            setMeetOp(null);
+            ctx.go(at(3, { opera: o, role: undefined }));
+          }}
+          onPage={() => {
+            const o = meetOp.id;
+            setMeetOp(null);
+            ctx.finishOnboarding({ screen: "opera", opera: o });
+          }}
+          onMeet={(ch) => setMeet({ opera: meetOp, ch })}
+          onClose={() => setMeetOp(null)}
+        />
       )}
       {meet && (
         <MeetCharacter
