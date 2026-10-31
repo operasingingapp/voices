@@ -6062,6 +6062,14 @@ button.lane-label:hover {
   box-shadow: var(--shadow-float);
   animation: meet-in 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+/* a set height, and one row that may shrink: a long story scrolls inside the card instead of stretching the row,
+   which used to blow the portrait up to the card's full content height (the face cut off at the top) */
+@media (min-width: 721px) {
+  .meet-card {
+    height: min(720px, calc(100dvh - 48px));
+    grid-template-rows: minmax(0, 1fr);
+  }
+}
 @keyframes meet-in {
   from {
     transform: translateY(18px) scale(0.98);
