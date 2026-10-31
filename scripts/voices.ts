@@ -64,6 +64,7 @@ interface Word {
 }
 interface Phrase {
   id: string;
+  role?: string;
   original: string;
   words: Word[];
   syllables?: { noteId: string; word: number }[];
@@ -197,7 +198,10 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
   const seenLine = new Map<string, string>();
   let joinN = 0;
   const seenJoin = new Set<string>();
+  const roleMale = roleGenders(piece);
   for (const ph of lang.phrases) {
+    // in a piece for men and women, each voice records only its own singers' lines (a man's voice for the men)
+    if (VOICE_IS_MALE !== null && ph.role && roleMale[ph.role] !== undefined && roleMale[ph.role] !== VOICE_IS_MALE) continue;
     // a run of coloratura sung on "ah" has nothing to say: no recording
     if (ph.words.length && ph.words.every((w) => /^(ah|a|oh)$/i.test(bare(w.text)))) continue;
     // where two words are sung on one note (an elision, "piace,‿è"), the punctuation between them goes, so the
@@ -538,6 +542,15 @@ const voiceTypes = (piece: string) => {
   const roles = (JSON.parse(readFileSync(m, "utf8")) as { roles?: { voiceType?: string }[] }).roles ?? [];
   return roles.length ? roles.map((r) => r.voiceType ?? "") : [""];
 };
+/** role id -> sung by a man */
+const roleGenders = (piece: string): Record<string, boolean> => {
+  const m = join(ROOT, "content/pieces", piece, "manifest.json");
+  if (!existsSync(m)) return {};
+  const roles = (JSON.parse(readFileSync(m, "utf8")) as { roles?: { id: string; voiceType?: string }[] }).roles ?? [];
+  return Object.fromEntries(roles.map((r) => [r.id, MALE.test(r.voiceType ?? "")]));
+};
+/** while a run records with the man's voice: true; the woman's: false; a piece in one voice only: null */
+let VOICE_IS_MALE: boolean | null = null;
 const hasMale = (piece: string) => voiceTypes(piece).some((v) => MALE.test(v));
 const hasFemale = (piece: string) => voiceTypes(piece).some((v) => !MALE.test(v));
 
@@ -560,7 +573,9 @@ async function main() {
       const keep = { voiceId: config.voiceId, voiceName: config.voiceName };
       config.voiceId = male!.voiceId;
       config.voiceName = male!.voiceName;
+      VOICE_IS_MALE = true;
       await runLanguage(lang, men);
+      VOICE_IS_MALE = null;
       Object.assign(config, keep);
     }
     const todo = inLang.filter((p) => !men.includes(p) || hasFemale(p));
@@ -577,7 +592,9 @@ async function main() {
       config.voiceName = v?.voiceName;
       for (const k of Object.keys(base) as (keyof typeof base)[]) if (v?.[k] !== undefined) (config as unknown as Record<string, unknown>)[k] = v[k];
     }
+    VOICE_IS_MALE = men.length ? false : null;
     await runLanguage(lang, todo);
+    VOICE_IS_MALE = null;
     Object.assign(config, base);
     if (lang === "it") Object.assign(italian, { voiceId: config.voiceId, voiceName: config.voiceName });
   }
