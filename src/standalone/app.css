@@ -8127,9 +8127,9 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
     grid-row: 2;
   }
 }
-/* the script needs no column headings (the margin says who; the English is plainly the English) */
-.words-view .w-grid:has(.w-line.script) .w-col-orig b,
-.words-view .w-grid:has(.w-line.script) .w-col-tr b {
+/* no column headings: they collided with the toolbar, and the English chip already names the English column */
+.words-view .w-col-orig b,
+.words-view .w-col-tr b {
   display: none;
 }
 /* Everyone / Only mine: the same height, type and pill shape as the chips beside it; the chosen side is lit the same
