@@ -8132,3 +8132,49 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .words-view .w-grid:has(.w-line.script) .w-col-tr b {
   display: none;
 }
+/* Everyone / Only mine: a small two-way switch the size of the chips beside it */
+.w-seg {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--fog);
+}
+.w-seg button {
+  height: 26px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink-muted);
+  font: 500 13px/1 var(--font-sans);
+  cursor: pointer;
+}
+.w-seg button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+/* Telling yours from theirs without fading theirs into illegibility (the other singer's line is the cue you listen
+   for, so it must stay readable): yours carry three marks at once (a band in your colour, a solid bar in your
+   colour at its edge, and the strongest ink); theirs sit on white, in a grey that still reads easily. */
+.words-view .w-line.script.mine {
+  background: var(--tone-soft, #f1e9fb);
+  box-shadow: inset 4px 0 0 var(--you, #7c5cbf);
+}
+.words-view .w-line.script.mine:hover {
+  background: color-mix(in srgb, var(--tone-strong, #e2d4f5) 45%, var(--tone-soft, #f1e9fb));
+}
+.words-view .w-line.script.mine .w-it {
+  color: var(--ink);
+  font-weight: 500;
+}
+.words-view .w-line.other .w-it,
+.words-view .w-line.other .w-tr {
+  color: color-mix(in srgb, var(--ink) 58%, var(--canvas));
+}
+.words-view .w-line.other.cue .w-it {
+  color: color-mix(in srgb, var(--ink) 58%, var(--canvas));
+}
+.words-view .w-line.script.mine .w-who {
+  color: var(--ink);
+}

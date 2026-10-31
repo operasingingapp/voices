@@ -2199,15 +2199,15 @@ function PracticeScreen({
               {/* what to show: toggles that show their state (lit = shown), as on the music view's card */}
               <span className="w-tools" role="group" aria-label="Show with the words">
                 {ens && (
-                  <button
-                    type="button"
-                    className="w-chip"
-                    aria-pressed={justMine}
-                    onClick={() => setJustMine(!justMine)}
-                    title={justMine ? "Show everyone's lines" : `Show only ${roleName}'s lines`}
-                  >
-                    Just mine
-                  </button>
+                  // whose lines: everyone's (the whole scene) or only yours (to memorise)
+                  <span className="cp-seg w-seg" role="group" aria-label="Whose lines to show">
+                    <button type="button" aria-pressed={!justMine} onClick={() => setJustMine(false)}>
+                      Everyone
+                    </button>
+                    <button type="button" aria-pressed={justMine} onClick={() => setJustMine(true)}>
+                      Only mine
+                    </button>
+                  </span>
                 )}
                 <button type="button" className="w-chip" aria-pressed={showIpa} onClick={() => setShowIpa(!showIpa)} title={showIpa ? "Hide the IPA" : "Show the IPA"}>
                   IPA
