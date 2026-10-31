@@ -23,7 +23,7 @@ import {
 import { FIRST_PASS_KEYS, OPERAS, RUNNING, V2_KEYS } from "./operas";
 import { Practice } from "./Practice";
 import { Listen } from "./Listen";
-import { hasPiece, pieceData } from "./pieces";
+import { hasPiece, loadScore, pieceData, scoreReady } from "./pieces";
 
 const K = {
   place: "cp:place",
@@ -160,6 +160,7 @@ export function App() {
   });
   const [current, setCurrent] = useState<RoleRef | null>(() => read<RoleRef | null>(K.current, null) ?? (last ? { opera: last.opera, character: last.character } : roles[0] ?? null));
   const [learned, setLearned] = useState<Record<string, string[]>>(() => read(K.learned, {}));
+  const [, setScoreTick] = useState(0);
   const [profile, setProfile] = useState<Profile>(() => read<Profile>(K.profile, { voices: [], notSinger: false }));
   const [onboarded, setOnboarded] = useState<boolean>(() => read<boolean | null>(K.onboarded, null) ?? roles.length > 0);
   const home = (): Place => (roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
@@ -293,6 +294,19 @@ export function App() {
   if (place.screen === "home" && !roles.length) return <Onboarding ctx={ctx} step={1} />;
   if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} />;
 
+  // a piece's score is fetched when it opens: show a short wait until it is here
+  const wantScore = place.screen === "piece" ? findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId : place.screen === "listen" ? place.edition : undefined;
+  if (wantScore && hasPiece(wantScore) && !scoreReady(wantScore)) {
+    loadScore(wantScore).then(
+      () => setScoreTick((n) => n + 1),
+      () => setScoreTick((n) => n + 1),
+    );
+    return (
+      <div className="score-wait" role="status">
+        Opening the score…
+      </div>
+    );
+  }
   if (place.screen === "piece") {
     const opera = findOpera(place.opera);
     const ch = findCharacter(opera, place.character);

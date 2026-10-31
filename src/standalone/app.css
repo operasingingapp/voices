@@ -8218,3 +8218,13 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .now-panel .now-it.longer {
   font-size: clamp(20px, 2.3vw, 26px);
 }
+
+/* while a piece's score is fetched */
+.score-wait {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg, #fff);
+  color: var(--ink-2, #555);
+  font-size: 16px;
+}

@@ -13,11 +13,36 @@ const languages = import.meta.glob(["../../data/content/*/language.json", "!../.
   string,
   CompiledLanguage
 >;
-const scores = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**"], {
-  query: "?raw",
+// the scores are separate files, fetched when a piece opens (bundled in, they made the app too large to publish)
+const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**"], {
+  query: "?url",
   import: "default",
   eager: true,
 }) as Record<string, string>;
+const scoreText = new Map<string, string>();
+const scoreLoading = new Map<string, Promise<void>>();
+/** true when the piece's score is loaded and pieceData() can be used */
+export const scoreReady = (id: string) => scoreText.has(id);
+/** load the piece's score (once) */
+export function loadScore(id: string): Promise<void> {
+  if (scoreText.has(id)) return Promise.resolve();
+  let p = scoreLoading.get(id);
+  if (!p) {
+    const url = scoreUrls[`../../data/content/${id}/score.musicxml`];
+    p = fetch(url)
+      .then((r) => {
+        if (!r.ok) throw new Error(`score ${id}: ${r.status}`);
+        return r.text();
+      })
+      .then((t) => void scoreText.set(id, t))
+      .catch((e) => {
+        scoreLoading.delete(id);
+        throw e;
+      });
+    scoreLoading.set(id, p);
+  }
+  return p;
+}
 
 export interface PieceInfo {
   /** PORTRAITS key, "opera:character" */
@@ -600,7 +625,7 @@ export function pieceData(id: string): PieceData {
     id,
     edition: byId(editions, id, "edition.json") as CompiledEdition,
     language: byId(languages, id, "language.json") as CompiledLanguage,
-    scoreXml: byId(scores, id, "score.musicxml") as string,
+    scoreXml: scoreText.get(id) ?? "",
     info: PIECE_INFO[id],
   };
 }
