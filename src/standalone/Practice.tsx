@@ -2340,7 +2340,6 @@ function PracticeScreen({
               const singer = edition.roles.find((r) => r.id === role)?.name ?? "";
               // a speech: the run of lines one singer sings before the other answers (yours get one highlight band)
               const speechEnd = allWords && (!nextSp || nextSp.ph.roleId !== role || nextB !== blocks[bi + 1]);
-              const otherName = (r: string) => edition.roles.find((x) => x.id === r)?.name ?? "";
               return (
                 <article
                   key={bk.key}
@@ -2350,8 +2349,8 @@ function PracticeScreen({
                   aria-current={isNow ? "true" : undefined}
                 >
                   {allWords ? (
-                    // the margin, as in a script: who sings (at the start of each speech) and the bar
-                    <span className="w-gut">
+                    // the margin, as in a script: only who sings, at the start of each speech
+                    <span className="w-gut" title={`${singer}, ${barsOf(sp.startQ, sp.endQ)}`}>
                       {showFace && (
                         <span className="w-who">
                           <span className="w-who-face" aria-hidden="true">
@@ -2360,9 +2359,6 @@ function PracticeScreen({
                           <span className="w-who-name">{mine ? "You" : singer}</span>
                         </span>
                       )}
-                      <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
-                        {together ? `bar ${edition.measures[perf.locate(sp.startQ).m].number} · with ${otherName(prevSp!.ph.roleId)}` : `bar ${edition.measures[perf.locate(sp.startQ).m].number}`}
-                      </span>
                     </span>
                   ) : (
                     <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
