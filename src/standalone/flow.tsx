@@ -2094,7 +2094,7 @@ export function Onboarding({
         <main className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}`} key="s12">
           <div className="ob-hero gutter">
             <h1>Which role is yours?</h1>
-            <p className="lede">{step === 1 ? "Choose a character to begin. “Ready to sing” means its music is here to practise." : "Choose an opera, then the role you will sing."}</p>
+            <p className="lede">{step === 1 ? "Choose a character to begin. “Ready to sing” means its music is here to practise." : "Choose an opera to read about it and meet its characters."}</p>
             <div className="ob-mode" role="tablist" aria-label="Start from">
               {(
                 [
@@ -2131,7 +2131,7 @@ export function Onboarding({
                         className="obs-opera"
                         data-tone={OPERA_TONES[n % OPERA_TONES.length]}
                         style={opToneStyle(o.id)}
-                        onClick={() => ctx.go(at(3, { opera: o.id, role: undefined }))}
+                        onClick={() => ctx.finishOnboarding({ screen: "opera", opera: o.id })}
                       >
                         <span className="obs-thumb" aria-hidden="true">
                           {art ? <img src={art.square} alt="" loading="lazy" decoding="async" /> : <span lang={o.lang}>{letter}</span>}
@@ -2220,7 +2220,7 @@ export function Onboarding({
           onOpera={() => {
             const o = meet.opera.id;
             setMeet(null);
-            ctx.go(at(3, { opera: o, role: { opera: o, character: meet.ch.id } }));
+            ctx.finishOnboarding({ screen: "opera", opera: o });
           }}
           onClose={() => setMeet(null)}
         />
