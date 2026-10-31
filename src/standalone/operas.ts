@@ -62,6 +62,18 @@ export const OPERAS: Opera[] = [
       "kind": "Duettino · Act 1",
       "id": "Act 1: Se a caso madama",
       "editionId": "mozart-se-a-caso-madama"
+     },
+     {
+      "title": "Or bene, ascolta e taci",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Or bene, ascolta e taci",
+      "editionId": "mozart-or-bene-ascolta-e-taci"
+     },
+     {
+      "title": "Bravo, signor padrone!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Bravo, signor padrone!",
+      "editionId": "mozart-bravo-signor-padrone"
      }
     ]
    },
@@ -100,6 +112,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duettino · Act 1",
       "id": "Act 1: Se a caso madama",
       "editionId": "mozart-se-a-caso-madama"
+     },
+     {
+      "title": "Or bene, ascolta e taci",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Or bene, ascolta e taci",
+      "editionId": "mozart-or-bene-ascolta-e-taci"
      }
     ]
    },
@@ -174,6 +192,12 @@ export const OPERAS: Opera[] = [
      {
       "title": "La vendetta",
       "kind": "Aria · Act 1"
+     },
+     {
+      "title": "Ed aspettaste il giorno",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ed aspettaste il giorno",
+      "editionId": "mozart-ed-aspettaste-il-giorno"
      }
     ]
    },
@@ -183,7 +207,14 @@ export const OPERAS: Opera[] = [
     "voice": "Mezzo-soprano",
     "desc": "Housekeeper at the castle, once Bartolo's servant, who has lent Figaro money on his promise to marry her. (Mozart wrote the role for a soprano; today it is usually sung by a mezzo.)",
     "avatar": "bun",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Ed aspettaste il giorno",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ed aspettaste il giorno",
+      "editionId": "mozart-ed-aspettaste-il-giorno"
+     }
+    ]
    },
    {
     "id": "basilio",

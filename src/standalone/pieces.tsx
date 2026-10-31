@@ -158,6 +158,78 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-or-bene-ascolta-e-taci": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 112 (about 1:25, as in most recordings)",
+    },
+    notePlaceholder: "Speak it first, then sing: Susanna is telling, Figaro is finding out",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 2 (bars 145–184 of the vocal score, here numbered 1–40) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Read into MusicXML from the scan by you; the sung lines were written out twice independently from the printed pages, the piano corrected bar by
+          bar, and the whole checked until a full round, an accidentals pass and a fresh checker found nothing. Only the Italian words are kept.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-bravo-signor-padrone": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free: ♩ = 84, then Andante ♩ = 66 for the last four bars (about 45 seconds, as in most recordings)",
+    },
+    notePlaceholder: "Bitter and quick, then slower as the plan forms",
+    about: (
+      <>
+        <p>
+          Score: the recitative before No. 3 (bars 185–198 of the vocal score, here numbered 1–14) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Read into MusicXML from the scan by you; the sung lines were written out twice independently from the printed pages, the piano corrected bar by
+          bar, and the whole checked until a full round, an accidentals pass and a fresh checker found nothing. Only the Italian words are kept.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ed-aspettaste-il-giorno": {
+    portrait: "figaro:bartolo",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92 (about a minute, as in most recordings)",
+    },
+    notePlaceholder: "Two old plotters: Marcellina eager, Bartolo savouring it",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 3 (bars 330–351 of the vocal score, here numbered 1–22) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Read into MusicXML from the scan by you; the sung lines were written out twice independently from the printed pages, the piano corrected bar by
+          bar, and the whole checked until a full round, an accidentals pass and a fresh checker found nothing. Only the Italian words are kept.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-se-a-caso-madama": {
     portrait: "figaro:figaro",
     opera: "Le nozze di Figaro",

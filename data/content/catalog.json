@@ -70,6 +70,34 @@
     }
   },
   {
+    "editionId": "mozart-bravo-signor-padrone",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-bravo-signor-padrone@1.0.0-klengel#b25a762559",
+    "title": "Bravo, signor padrone!",
+    "subtitle": "Figaro's recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 14,
+    "durationSec": 43,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 8,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-cinque-dieci-venti",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-cinque-dieci-venti@1.0.0-klengel#1738b259bf",
@@ -222,6 +250,40 @@
     }
   },
   {
+    "editionId": "mozart-ed-aspettaste-il-giorno",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-ed-aspettaste-il-giorno@1.0.0-klengel#96b1a1e4cd",
+    "title": "Ed aspettaste il giorno",
+    "subtitle": "Bartolo and Marcellina's recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      },
+      {
+        "id": "bartolo",
+        "name": "Bartolo",
+        "voiceType": "Bass",
+        "partKey": "bartolo"
+      }
+    ],
+    "measures": 22,
+    "durationSec": 57,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-figaro-sinfonia",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-figaro-sinfonia@1.0.0-klengel#9e683356b0",
@@ -238,6 +300,40 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 0,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-or-bene-ascolta-e-taci",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-or-bene-ascolta-e-taci@1.0.0-klengel#9b15e0cc4d",
+    "title": "Or bene, ascolta e taci",
+    "subtitle": "Susanna and Figaro's recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 40,
+    "durationSec": 86,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 32,
       "withAudio": 0,
       "reviewed": 0
     }
