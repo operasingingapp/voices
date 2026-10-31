@@ -45,7 +45,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Non più andrai",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "editionId": "mozart-non-piu-andrai"
      },
      {
       "title": "Aprite un po' quegli occhi",
@@ -74,6 +75,24 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Bravo, signor padrone!",
       "editionId": "mozart-bravo-signor-padrone"
+     },
+     {
+      "title": "Cos'è questa commedia",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Cos'è questa commedia",
+      "editionId": "mozart-cos-e-questa-commedia"
+     },
+     {
+      "title": "Evviva!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Evviva! Evviva!",
+      "editionId": "mozart-evviva"
+     },
+     {
+      "title": "Vieni, cara Susanna",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vieni, cara Susanna",
+      "editionId": "mozart-vieni-cara-susanna"
      }
     ]
    },
@@ -118,6 +137,30 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Or bene, ascolta e taci",
       "editionId": "mozart-or-bene-ascolta-e-taci"
+     },
+     {
+      "title": "Basilio, in traccia tosto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Basilio, in traccia tosto",
+      "editionId": "mozart-basilio-in-traccia-tosto"
+     },
+     {
+      "title": "Cos'è questa commedia",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Cos'è questa commedia",
+      "editionId": "mozart-cos-e-questa-commedia"
+     },
+     {
+      "title": "Evviva!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Evviva! Evviva!",
+      "editionId": "mozart-evviva"
+     },
+     {
+      "title": "Vieni, cara Susanna",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vieni, cara Susanna",
+      "editionId": "mozart-vieni-cara-susanna"
      }
     ]
    },
@@ -130,7 +173,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Porgi, amor",
-      "kind": "Cavatina · Act 2"
+      "kind": "Cavatina · Act 2",
+      "editionId": "mozart-porgi-amor"
      },
      {
       "title": "E Susanna non vien!",
@@ -149,6 +193,12 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sull'aria… che soave zeffiretto",
       "kind": "Letter duet with Susanna · Act 3"
+     },
+     {
+      "title": "Vieni, cara Susanna",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vieni, cara Susanna",
+      "editionId": "mozart-vieni-cara-susanna"
      }
     ]
    },
@@ -162,6 +212,24 @@ export const OPERAS: Opera[] = [
      {
       "title": "Hai già vinta la causa… Vedrò mentr'io sospiro",
       "kind": "Recitative and aria · Act 3"
+     },
+     {
+      "title": "Basilio, in traccia tosto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Basilio, in traccia tosto",
+      "editionId": "mozart-basilio-in-traccia-tosto"
+     },
+     {
+      "title": "Cos'è questa commedia",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Cos'è questa commedia",
+      "editionId": "mozart-cos-e-questa-commedia"
+     },
+     {
+      "title": "Evviva!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Evviva! Evviva!",
+      "editionId": "mozart-evviva"
      }
     ]
    },
@@ -179,6 +247,18 @@ export const OPERAS: Opera[] = [
      {
       "title": "Voi che sapete",
       "kind": "Canzona · Act 2"
+     },
+     {
+      "title": "Basilio, in traccia tosto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Basilio, in traccia tosto",
+      "editionId": "mozart-basilio-in-traccia-tosto"
+     },
+     {
+      "title": "Evviva!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Evviva! Evviva!",
+      "editionId": "mozart-evviva"
      }
     ]
    },
@@ -223,7 +303,20 @@ export const OPERAS: Opera[] = [
     "voice": "Tenor",
     "desc": "Susanna's singing master, the Count's go-between with her, and a gossip.",
     "avatar": "hat",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Basilio, in traccia tosto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Basilio, in traccia tosto",
+      "editionId": "mozart-basilio-in-traccia-tosto"
+     },
+     {
+      "title": "Evviva!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Evviva! Evviva!",
+      "editionId": "mozart-evviva"
+     }
+    ]
    },
    {
     "id": "curzio",
@@ -1486,7 +1579,7 @@ export interface RunningNumber {
 }
 /** the instrumental numbers with music in the app: opera → the running order's title → edition */
 const INSTRUMENTAL: Record<string, Record<string, string>> = {
-  figaro: { Sinfonia: "mozart-figaro-sinfonia" },
+  figaro: { Sinfonia: "mozart-figaro-sinfonia", "Giovani liete": "mozart-giovani-liete", "Giovani liete (repeated)": "mozart-giovani-liete-reprise" },
 };
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {

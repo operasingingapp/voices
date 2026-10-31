@@ -256,6 +256,206 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-basilio-in-traccia-tosto": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 98 (about a minute, as in most recordings)",
+    },
+    notePlaceholder: "The Count is triumphant; Susanna is trapped",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 7 (vocal score pages 72-74) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-giovani-liete": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Chorus",
+    facts: {
+      key: "G major",
+      time: "Allegro in 6/8",
+      tempo: "♪. = 67 (♩ = 100; about 1:12, as in most recordings)",
+    },
+    notePlaceholder: "Bright and light: the villagers are strewing flowers",
+    about: (
+      <>
+        <p>
+          Score: No. 8 (pages 74-76) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-cos-e-questa-commedia": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 98 (about 1:25, as in most recordings)",
+    },
+    notePlaceholder: "Figaro is pushing; the Count is playing for time",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 8 (pages 76-79) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-giovani-liete-reprise": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Chorus",
+    facts: {
+      key: "G major",
+      time: "Allegro in 6/8",
+      tempo: "♩ = 107 (about 55 seconds, as in most recordings)",
+    },
+    notePlaceholder: "Bright and light, as before",
+    about: (
+      <>
+        <p>
+          Score: the reprise of No. 8 (pages 79-81) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-evviva": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 97 (about 1:10, as in most recordings)",
+    },
+    notePlaceholder: "Cheerful on the surface; Cherubino is crestfallen",
+    about: (
+      <>
+        <p>
+          Score: the recitative before No. 9 (pages 81-83) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-non-piu-andrai": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "C major",
+      time: "Allegro in 4/4 (felt in two)",
+      tempo: "♩ = 123 (about 3:45, as in most recordings): Mozart gives the word only",
+    },
+    notePlaceholder: "Mock-military: tease Cherubino, then march",
+    about: (
+      <>
+        <p>
+          Score: No. 9 (pages 84-89) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-porgi-amor": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Cavatina",
+    facts: {
+      key: "E♭ major",
+      time: "Larghetto in 2/4",
+      tempo: "♪ = 55 (about 3:40, as in most recordings): Mozart gives the word only",
+    },
+    notePlaceholder: "Long, even lines: grief held with dignity",
+    about: (
+      <>
+        <p>
+          Score: No. 10 (pages 90-91) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-vieni-cara-susanna": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature in the recitative; the closing Allegretto is in F major",
+      time: "4/4, with a Presto in 2/4 and an Allegretto in 3/4",
+      tempo: "Recitative ♩ = 103, Presto ♩ = 176, Allegretto ♩ = 130 (about 3:30 in all, as in most recordings)",
+    },
+    notePlaceholder: "Plotting together: quick, conversational, and Figaro sure of himself",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 10 (pages 92-100) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled, checked in several
+          rounds, then checked again by independent checkers against the print; their findings (chorus dynamics, reminder signs) were added.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-se-a-caso-madama": {
     portrait: "figaro:figaro",
     opera: "Le nozze di Figaro",

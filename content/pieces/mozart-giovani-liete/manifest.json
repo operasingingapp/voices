@@ -1,0 +1,156 @@
+{
+ "editionId": "mozart-giovani-liete",
+ "editionVersion": "1.0.0-klengel",
+ "title": "Giovani liete",
+ "subtitle": "Chorus No. 8 from Le nozze di Figaro, Act 1",
+ "kind": "chorus",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "soprano",
+   "name": "Chorus sopranos",
+   "voiceType": "Soprano",
+   "partKey": "soprano"
+  },
+  {
+   "id": "alto",
+   "name": "Chorus altos",
+   "voiceType": "Alto",
+   "partKey": "alto"
+  },
+  {
+   "id": "tenor",
+   "name": "Chorus tenors",
+   "voiceType": "Tenor",
+   "partKey": "tenor"
+  },
+  {
+   "id": "bass",
+   "name": "Chorus basses",
+   "voiceType": "Bass",
+   "partKey": "bass"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "soprano",
+   "label": "Chorus sopranos (Soprano)",
+   "shortLabel": "Chorus sopranos",
+   "kind": "voice",
+   "roleId": "soprano",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alto",
+   "label": "Chorus altos (Alto)",
+   "shortLabel": "Chorus altos",
+   "kind": "voice",
+   "roleId": "alto",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tenor",
+   "label": "Chorus tenors (Tenor)",
+   "shortLabel": "Chorus tenors",
+   "kind": "voice",
+   "roleId": "tenor",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "bass",
+   "label": "Chorus basses (Bass)",
+   "shortLabel": "Chorus basses",
+   "kind": "voice",
+   "roleId": "bass",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "40"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Breitkopf vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Breitkopf & Härtel vocal score (Edition Breitkopf 1716, about 1900), pages 74-76 (No. 8)",
+   "author": "Paul Klengel (1854–1935), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages (sung lines and piano each transcribed twice independently and reconciled), checked in several rounds, then checked again independently against the print."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

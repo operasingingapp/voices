@@ -70,6 +70,52 @@
     }
   },
   {
+    "editionId": "mozart-basilio-in-traccia-tosto",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-basilio-in-traccia-tosto@1.0.0-klengel#015725573a",
+    "title": "Basilio, in traccia tosto",
+    "subtitle": "The Count, Susanna, Basilio and Cherubino: recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "The Count",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 24,
+    "durationSec": 59,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 21,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-bravo-signor-padrone",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-bravo-signor-padrone@1.0.0-klengel#b25a762559",
@@ -127,6 +173,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 60,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-cos-e-questa-commedia",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-cos-e-questa-commedia@1.0.0-klengel#05aea100d4",
+    "title": "Cos'è questa commedia",
+    "subtitle": "The Count, Figaro, Susanna and chorus: recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "The Count",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "chorus",
+        "name": "Chorus",
+        "voiceType": "Soprano",
+        "partKey": "chorus"
+      }
+    ],
+    "measures": 35,
+    "durationSec": 86,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 24,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -284,6 +376,58 @@
     }
   },
   {
+    "editionId": "mozart-evviva",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-evviva@1.0.0-klengel#8689a2834b",
+    "title": "Evviva!",
+    "subtitle": "Recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      },
+      {
+        "id": "count",
+        "name": "The Count",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 28,
+    "durationSec": 69,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 29,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-figaro-sinfonia",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-figaro-sinfonia@1.0.0-klengel#9d9d6a4878",
@@ -300,6 +444,98 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 0,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-giovani-liete",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-giovani-liete@1.0.0-klengel#494e61bfa5",
+    "title": "Giovani liete",
+    "subtitle": "Chorus No. 8 from Le nozze di Figaro, Act 1",
+    "kind": "chorus",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "soprano",
+        "name": "Chorus sopranos",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      },
+      {
+        "id": "alto",
+        "name": "Chorus altos",
+        "voiceType": "Alto",
+        "partKey": "alto"
+      },
+      {
+        "id": "tenor",
+        "name": "Chorus tenors",
+        "voiceType": "Tenor",
+        "partKey": "tenor"
+      },
+      {
+        "id": "bass",
+        "name": "Chorus basses",
+        "voiceType": "Bass",
+        "partKey": "bass"
+      }
+    ],
+    "measures": 40,
+    "durationSec": 72,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-giovani-liete-reprise",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-giovani-liete-reprise@1.0.0-klengel#4aa706bc8f",
+    "title": "Giovani liete (repeated)",
+    "subtitle": "The chorus sung again, Le nozze di Figaro, Act 1",
+    "kind": "chorus",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "soprano",
+        "name": "Chorus sopranos",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      },
+      {
+        "id": "alto",
+        "name": "Chorus altos",
+        "voiceType": "Alto",
+        "partKey": "alto"
+      },
+      {
+        "id": "tenor",
+        "name": "Chorus tenors",
+        "voiceType": "Tenor",
+        "partKey": "tenor"
+      },
+      {
+        "id": "bass",
+        "name": "Chorus basses",
+        "voiceType": "Bass",
+        "partKey": "bass"
+      }
+    ],
+    "measures": 32,
+    "durationSec": 54,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 28,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -328,6 +564,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-non-piu-andrai",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-non-piu-andrai@1.0.0-klengel#08962759a3",
+    "title": "Non più andrai",
+    "subtitle": "Figaro's aria No. 9 from Le nozze di Figaro, Act 1",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 115,
+    "durationSec": 224,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 49,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -362,6 +626,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 32,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-porgi-amor",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-porgi-amor@1.0.0-klengel#2f459c9d9b",
+    "title": "Porgi, amor",
+    "subtitle": "The Countess's cavatina No. 10 from Le nozze di Figaro, Act 2",
+    "kind": "cavatina",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      }
+    ],
+    "measures": 51,
+    "durationSec": 223,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 9,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -464,6 +756,46 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-vieni-cara-susanna",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-vieni-cara-susanna@1.0.0-klengel#e3c0f0d118",
+    "title": "Vieni, cara Susanna",
+    "subtitle": "The Countess, Susanna and Figaro: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 99,
+    "durationSec": 208,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 69,
       "withAudio": 0,
       "reviewed": 0
     }

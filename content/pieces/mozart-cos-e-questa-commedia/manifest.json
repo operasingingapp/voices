@@ -1,0 +1,156 @@
+{
+ "editionId": "mozart-cos-e-questa-commedia",
+ "editionVersion": "1.0.0-klengel",
+ "title": "Cos'è questa commedia",
+ "subtitle": "The Count, Figaro, Susanna and chorus: recitative from Le nozze di Figaro, Act 1",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "count",
+   "name": "The Count",
+   "voiceType": "Baritone",
+   "partKey": "count"
+  },
+  {
+   "id": "figaro",
+   "name": "Figaro",
+   "voiceType": "Bass-baritone",
+   "partKey": "figaro"
+  },
+  {
+   "id": "susanna",
+   "name": "Susanna",
+   "voiceType": "Soprano",
+   "partKey": "susanna"
+  },
+  {
+   "id": "chorus",
+   "name": "Chorus",
+   "voiceType": "Soprano",
+   "partKey": "chorus"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "count",
+   "label": "The Count (Baritone)",
+   "shortLabel": "Count",
+   "kind": "voice",
+   "roleId": "count",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "figaro",
+   "label": "Figaro (Bass-baritone)",
+   "shortLabel": "Figaro",
+   "kind": "voice",
+   "roleId": "figaro",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "susanna",
+   "label": "Susanna (Soprano)",
+   "shortLabel": "Susanna",
+   "kind": "voice",
+   "roleId": "susanna",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus",
+   "label": "Chorus (Soprano)",
+   "shortLabel": "Chorus",
+   "kind": "voice",
+   "roleId": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "35"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Breitkopf vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Breitkopf & Härtel vocal score (Edition Breitkopf 1716, about 1900), pages 76-79",
+   "author": "Paul Klengel (1854–1935), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages (sung lines and piano each transcribed twice independently and reconciled), checked in several rounds, then checked again independently against the print."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
