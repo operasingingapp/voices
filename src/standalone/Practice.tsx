@@ -95,9 +95,10 @@ function lineClip(voice: VoiceManifest | null, id: string, original: string) {
   if (!voice) return null;
   const c = voice.clips[id] ?? Object.entries(voice.clips).find(([k, v]) => !k.endsWith("-slow") && !k.startsWith("join") && v.text === plainText(original))?.[1];
   if (!c) return null;
-  // the line reshaped like the music (scripts/voices.ts, shapeLine); the tortoise plays the same one slower
-  const file = c.sung?.file ?? c.file;
-  const words = c.sung?.words ?? c.words;
+  // always the line as the voice spoke it: never stretched to the music's rhythm (that sounds robotic); the tortoise
+  // plays the same recording slower
+  const file = c.file;
+  const words = c.words;
   return { normal: voiceUrl(file), slow: voiceUrl(file), words, slowWords: words };
 }
 const wordUrlIn = (voice: VoiceManifest | null, text: string) => (voice ? voiceUrl(voice.words[wordKey(text)]) : undefined);

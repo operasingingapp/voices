@@ -507,7 +507,11 @@ function shapeLine(src: string, out: string, times: [number, number][], spans: (
   return newTimes;
 }
 
+// Lines are never shaped to the music: stretched speech sounds robotic. The app plays every line and word exactly as
+// spoken. shapeAll is kept only for reference and does nothing.
+const SHAPE_LINES = false;
 function shapeAll(piece: string, voiceDir: string, data: { clips: Record<string, Made & { sung?: { file: string; hash: string; words: [number, number][] } }> }) {
+  if (!SHAPE_LINES) return;
   const lang = JSON.parse(readFileSync(join(ROOT, "data/content", piece, "language.json"), "utf8")) as { phrases: Phrase[] };
   const notes = noteTimes(piece);
   let made = 0;
