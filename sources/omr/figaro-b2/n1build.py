@@ -136,7 +136,12 @@ def serialize(m, evs):
                     fw = ET.SubElement(m, "forward")
                     ET.SubElement(fw, "duration").text = str(p.onset - cur)
                     cur = p.onset
-                m.append(p.el)
+                if p.onset < cur:   # under the last sounding note of this voice: step back to its beat
+                    bk = ET.SubElement(m, "backup"); ET.SubElement(bk, "duration").text = str(cur - p.onset)
+                    m.append(p.el)
+                    fw = ET.SubElement(m, "forward"); ET.SubElement(fw, "duration").text = str(cur - p.onset)
+                else:
+                    m.append(p.el)
             pending = []
         first = False
 

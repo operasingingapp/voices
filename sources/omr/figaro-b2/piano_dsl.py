@@ -7,7 +7,7 @@ def load(path):
     for line in open(path, encoding="utf-8"):
         line = line.strip()
         if not line or line.startswith("#"): continue
-        m = re.match(r"(\d+)\s+(RH|LH)([12]):\s*(.*)$", line)
+        m = re.match(r"(\d+)\s+(RH|LH)([1-4]):\s*(.*)$", line)
         if not m: raise SystemExit("bad piano line: " + line)
         D.setdefault(int(m.group(1)), {})[(m.group(2), int(m.group(3)))] = m.group(4).split()
     return D
@@ -85,8 +85,8 @@ def notes_for(tokens, staff, voice):
             nt = ET.Element("notations")
             if "~" in fl or ptie: ET.SubElement(nt, "tied", type="start")
             if k == 0:
-                if "(" in fl: ET.SubElement(nt, "slur", type="start", number="1")
-                if ")" in fl: ET.SubElement(nt, "slur", type="stop", number="1")
+                if "(" in fl: ET.SubElement(nt, "slur", type="start", number=str(6 + voice))
+                if ")" in fl: ET.SubElement(nt, "slur", type="stop", number=str(6 + voice))
                 if "!" in fl: ET.SubElement(nt, "fermata", type="upright")
                 art = [x for x, c in (("staccato", "*"), ("accent", ">")) if c in fl]
                 if art:

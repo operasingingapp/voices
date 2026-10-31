@@ -172,6 +172,7 @@ for m in r.findall("part")[-1].findall("measure"):
             kids = list(n); j = max(i for i, x in enumerate(kids) if x.tag in ("type", "dot", "voice")) + 1
             n.insert(j, a)
         state[key] = alt
+STAFF_OF = {}
 # slurs: a start that is never closed (or is reopened before closing) is dropped
 for part in r.findall("part"):
     open_ = {}
@@ -179,6 +180,7 @@ for part in r.findall("part"):
         for n in m.iter("note"):
             nt = n.find("notations")
             if nt is None: continue
+            STAFF_OF[nt] = n.findtext("staff")
             for s_ in nt.findall("slur"):
                 num = s_.get("number") or "1"
                 if s_.get("type") == "start":
@@ -186,6 +188,11 @@ for part in r.findall("part"):
                         old_n, old_s = open_[num]; old_n.remove(old_s)
                     open_[num] = (nt, s_)
                 elif s_.get("type") == "stop":
+                    if num not in open_:
+                        # a piano slur that starts in a rewritten bar (numbered by voice) and ends in a scan bar, or the reverse
+                        st = n.findtext("staff")
+                        alt = [k for k, (nt0, s0) in open_.items() if k != num and (k == "1" or int(k) >= 7) and nt0 in STAFF_OF and STAFF_OF[nt0] == st]
+                        if alt: num = alt[-1]; s_.set("number", num)
                     open_.pop(num, None)
     for nt_, s_ in open_.values(): nt_.remove(s_)
 # a rest marked as a whole-bar rest that does not fill the bar (two halves of a bar joined): an ordinary rest
