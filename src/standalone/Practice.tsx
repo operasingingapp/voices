@@ -2200,12 +2200,12 @@ function PracticeScreen({
               <span className="w-tools" role="group" aria-label="Show with the words">
                 {ens && (
                   // whose lines: everyone's (the whole scene) or only yours (to memorise)
-                  <span className="cp-seg w-seg" role="group" aria-label="Whose lines to show">
+                  <span className="w-seg" role="group" aria-label="Whose lines to show">
                     <button type="button" aria-pressed={!justMine} onClick={() => setJustMine(false)}>
                       Everyone
                     </button>
-                    <button type="button" aria-pressed={justMine} onClick={() => setJustMine(true)}>
-                      Only mine
+                    <button type="button" aria-pressed={justMine} onClick={() => setJustMine(true)} aria-label="Only my lines">
+                      Mine
                     </button>
                   </span>
                 )}

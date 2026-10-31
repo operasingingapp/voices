@@ -8132,27 +8132,57 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .words-view .w-grid:has(.w-line.script) .w-col-tr b {
   display: none;
 }
-/* Everyone / Only mine: a small two-way switch the size of the chips beside it */
-.w-seg {
+/* Everyone / Only mine: the same height, type and pill shape as the chips beside it; the chosen side is lit the same
+   way a chosen chip is */
+.w-tools {
+  align-items: center;
+  gap: 8px;
+}
+.words-view .w-tools .w-seg {
+  flex: none;
   display: inline-flex;
-  gap: 2px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 36px;
   padding: 3px;
+  gap: 0;
   border-radius: var(--radius-pill);
   background: var(--fog);
 }
-.w-seg button {
-  height: 26px;
+.words-view .w-tools .w-seg button {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
   padding: 0 12px;
   border: 0;
   border-radius: var(--radius-pill);
   background: transparent;
+  box-shadow: none;
   color: var(--ink-muted);
-  font: 500 13px/1 var(--font-sans);
+  font: 500 14px/1 var(--font-sans);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
   cursor: pointer;
 }
-.w-seg button:focus-visible {
+.words-view .w-tools .w-seg button:hover {
+  color: var(--ink);
+}
+.words-view .w-tools .w-seg button[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--now-mark) 14%, var(--canvas));
+  color: var(--ink);
+}
+.words-view .w-tools .w-seg button:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 1px;
+}
+@media (max-width: 640px) {
+  .words-view .w-tools .w-seg {
+    height: 34px;
+  }
+  .words-view .w-tools .w-seg button {
+    height: 28px;
+    padding: 0 10px;
+  }
 }
 /* Telling yours from theirs without fading theirs into illegibility (the other singer's line is the cue you listen
    for, so it must stay readable): yours carry three marks at once (a band in your colour, a solid bar in your
