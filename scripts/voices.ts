@@ -114,6 +114,9 @@ const config: Config = {
   ...(existsSync(CONFIG) ? JSON.parse(readFileSync(CONFIG, "utf8")) : {}),
 };
 if (arg("voice")) config.voiceId = arg("voice");
+if (arg("model")) config.modelId = arg("model");
+/** a voice given on the command line is used for every piece in this run, men's pieces included (for trying a voice out) */
+const VOICE_ARG = arg("voice");
 const KEY = process.env.ELEVENLABS_API_KEY ?? "";
 /** ffmpeg: the one bundled with the project (ffmpeg-static), else the system's */
 const FFMPEG: string = (() => {
@@ -571,8 +574,8 @@ async function main() {
     const men = male?.voiceId ? inLang.filter(hasMale) : [];
     if (men.length) {
       const keep = { voiceId: config.voiceId, voiceName: config.voiceName };
-      config.voiceId = male!.voiceId;
-      config.voiceName = male!.voiceName;
+      config.voiceId = VOICE_ARG || male!.voiceId;
+      config.voiceName = VOICE_ARG ? undefined : male!.voiceName;
       VOICE_IS_MALE = true;
       await runLanguage(lang, men);
       VOICE_IS_MALE = null;
