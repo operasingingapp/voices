@@ -161,6 +161,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Vieni, cara Susanna",
       "editionId": "mozart-vieni-cara-susanna"
+     },
+     {
+      "title": "Tutto ancor non ho perso",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Tutto ancor non ho perso",
+      "editionId": "mozart-tutto-ancor-non-ho-perso"
+     },
+     {
+      "title": "Via resti servita",
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Via resti servita",
+      "editionId": "mozart-via-resti-servita"
      }
     ]
    },
@@ -294,6 +306,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Ed aspettaste il giorno",
       "editionId": "mozart-ed-aspettaste-il-giorno"
+     },
+     {
+      "title": "Tutto ancor non ho perso",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Tutto ancor non ho perso",
+      "editionId": "mozart-tutto-ancor-non-ho-perso"
+     },
+     {
+      "title": "Via resti servita",
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Via resti servita",
+      "editionId": "mozart-via-resti-servita"
      }
     ]
    },

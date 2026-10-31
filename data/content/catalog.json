@@ -761,6 +761,74 @@
     }
   },
   {
+    "editionId": "mozart-tutto-ancor-non-ho-perso",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-tutto-ancor-non-ho-perso@1.0.0-klengel#580268a7e6",
+    "title": "Tutto ancor non ho perso",
+    "subtitle": "Marcellina and Susanna: recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 14,
+    "durationSec": 45,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 16,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-via-resti-servita",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-via-resti-servita@1.0.0-klengel#bccdf7a3a5",
+    "title": "Via resti servita",
+    "subtitle": "Marcellina and Susanna's duettino No. 5 from Le nozze di Figaro, Act 1",
+    "kind": "duettino",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      }
+    ],
+    "measures": 74,
+    "durationSec": 135,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 44,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-vieni-cara-susanna",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-vieni-cara-susanna@1.0.0-klengel#e3c0f0d118",

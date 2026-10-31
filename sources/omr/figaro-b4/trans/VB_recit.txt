@@ -1,0 +1,43 @@
+# sys00 starts bar 1
+1 M: A4:e "Tut-" A4:e "to_an-" D5:e "cor" D5:s "non" C#5:s "ho" D5:e "per-" D5:e "so:" r:e A4:e "mi"
+1 S: r:w
+2 M: C5:e "re-" C5:e "sta" C5:e "la" D5:e "spe-" B4:e "ran-" B4:e "za." r:e B4:s "Ma" B4:s "Su-"
+2 S: r:w
+# bar 3 has no closing barline at the end of sys00 (2 beats); its remaining 2 beats open sys01 and are numbered bar 4 per NUMBERING.md (3+3+2+2)
+3 M: B4:e "san-" C5:s "na" D5:s "si_a-" D5:e "van-" G4:e "za."
+3 S: r:h
+# sys01 starts bar 4
+4 M: r:e G4:e "Io" G4:e "vò" A4:e "pro-"
+4 S: r:h
+5 M: B4:e "var" B4:e "mi..." r:e B4:e "fin-" D5:e "giam" D5:e "di" D5:e "non" E5:e "ve-"
+5 S: r:w
+6 M: C5:e "der-" C5:e "la." r:e G4:e "E" G4:e "quel-" G4:e "la" C5:e "buo-" B4:e "na"
+6 S: r:w
+# sys02 starts bar 7
+7 M: C5:s "per-" C5:s "la" C5:s "la" C5:s "vor-" E5:e "reb-" D5:s "be" E5:s "spo-" C5:q "sar!" r:q
+7 S: r:h. r:s C5:s "Di" D5:s "me" E5:s "fa-"
+8 M: r:q r:e B4:s "Ma" B4:s "da" G#4:e "Fi-" G#4:s "ga-" A4:s "ro_al" B4:e "fi-" B4:e "ne"
+8 S: E5:e "vel-" B4:e "la." r:h.
+# sys03 starts bar 9
+# 9 M: "meglio" printed as one word without hyphen under B4:e + B4:s; split as me-/glio
+9 M: r:e B4:s "non" B4:s "può" B4:e "me-" B4:s "glio" C#5:s "spe-" D5:e "rar-" D5:e "si:" r:s D5:s "l'ar-" D5:s "gent" E5:s "fait"
+9 S: r:w
+10 M: C#5:q "tout." r:h.
+10 S: r:q r:e E5:e "Che" E5:e "lin-" A4:e "gua!" r:e E4:s "Man-" E4:s "co"
+# sys04 starts bar 11
+11 M: r:h r:q E5:e "Bra-" A4:e "va!"
+11 S: A4:e "ma-" A4:s "le," B4:s "ch'o-" C#5:s "gnun" C#5:s "sa" E5:s "quan-" E5:s "to" E5:e "va-" A4:e "le." r:q
+12 M: r:e A4:e "que-" B4:e "sto_è" C#5:e "giu-" B4:e "di-" B4:e "zio!" r:e B4:s "Con" B4:s "que-"
+12 S: r:w
+# bar 13 has no closing barline at the end of sys04 (2 beats); continuation opens sys05 and is numbered bar 14 per NUMBERING.md
+13 M: B4:e "gli_oc-" B4:s "chi" C#5:s "mo-" C#5:e "de-" A4:e "sti"
+13 S: r:h
+# sys05 starts bar 14
+# 14 M: printed "quell'a-ria": "quell'" under G#4, "a-" under A4:e
+14 M: r:e F#4:s "con" G#4:s "quell'" A4:e "a-" A4:s "ria" B4:s "pie-"
+14 S: r:h
+# 15 S: printed "Meglio" under B4:e and "è" under C#5:s
+15 M: G#4:e "to-" G#4:e "sa" r:e G#4:e "e" B4:e "po-" B4:e "i..." r:q
+15 S: r:h. B4:e "Meglio" C#5:s "è" D5:s "par-"
+16 M: r:q r:s C#5:s "Che" D#5:s "ca-" E5:s "ra" E5:e "spo-" B4:e "sa!" r:q
+16 S: C#5:q "tir!" r:h.

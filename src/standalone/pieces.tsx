@@ -481,6 +481,56 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-tutto-ancor-non-ho-perso": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 75 (about 45 seconds, as in the recordings by Gui, Harnoncourt and Jacobs)",
+    },
+    notePlaceholder: "Marcellina plots aloud; Susanna's asides cut in",
+    about: (
+      <>
+        <p>
+          Score: the recitative before No. 5 (vocal score pages 37-38) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings. Marcellina's French “l'argent fait tout” is as printed.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-via-resti-servita": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Duettino",
+    facts: {
+      key: "A major",
+      time: "Allegro in 4/4",
+      tempo: "♩ = 132 (about 2:15, as in the recordings by Gui, Harnoncourt and Jacobs): Mozart gives the word only",
+    },
+    notePlaceholder: "Exaggerated politeness: every curtsey is an insult",
+    about: (
+      <>
+        <p>
+          Score: No. 5 (pages 38-43) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings. The print has two slips that are kept as printed: “sa i” for “so i” (bar 19, Marcellina) and “Sibila” for “Sibilla” (bar 61, Susanna). Where the print gives a pickup note only to the German words, the Italian line rests, as printed.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-se-a-caso-madama": {
     portrait: "figaro:figaro",
     opera: "Le nozze di Figaro",
