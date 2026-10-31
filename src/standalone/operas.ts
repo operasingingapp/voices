@@ -35,7 +35,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Cinque, dieci, venti",
-      "kind": "Duet with Susanna · Act 1"
+      "kind": "Duet with Susanna · Act 1",
+      "editionId": "mozart-cinque-dieci-venti"
      },
      {
       "title": "Se vuol ballare",
@@ -48,6 +49,12 @@ export const OPERAS: Opera[] = [
      {
       "title": "Aprite un po' quegli occhi",
       "kind": "Aria · Act 4"
+     },
+     {
+      "title": "Cosa stai misurando",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Cosa stai misurando",
+      "editionId": "mozart-cosa-stai-misurando"
      }
     ]
    },
@@ -60,7 +67,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Cinque, dieci, venti",
-      "kind": "Duet with Figaro · Act 1"
+      "kind": "Duet with Figaro · Act 1",
+      "editionId": "mozart-cinque-dieci-venti"
      },
      {
       "title": "Venite, inginocchiatevi",
@@ -73,6 +81,12 @@ export const OPERAS: Opera[] = [
      {
       "title": "Deh vieni, non tardar",
       "kind": "Aria · Act 4"
+     },
+     {
+      "title": "Cosa stai misurando",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Cosa stai misurando",
+      "editionId": "mozart-cosa-stai-misurando"
      }
     ]
    },

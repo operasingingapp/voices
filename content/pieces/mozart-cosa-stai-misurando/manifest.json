@@ -1,0 +1,128 @@
+{
+ "editionId": "mozart-cosa-stai-misurando",
+ "editionVersion": "1.0.0-klengel",
+ "title": "Cosa stai misurando",
+ "subtitle": "Susanna and Figaro's recitative from Le nozze di Figaro, Act 1",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "figaro",
+   "name": "Figaro",
+   "voiceType": "Bass-baritone",
+   "partKey": "figaro"
+  },
+  {
+   "id": "susanna",
+   "name": "Susanna",
+   "voiceType": "Soprano",
+   "partKey": "susanna"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "susanna",
+   "label": "Susanna (Soprano)",
+   "shortLabel": "Susanna",
+   "kind": "voice",
+   "roleId": "susanna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "figaro",
+   "label": "Figaro (Bass-baritone)",
+   "shortLabel": "Figaro",
+   "kind": "voice",
+   "roleId": "figaro",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Cosa stai misurando · In questa stanza?",
+   "start": "1",
+   "end": "8"
+  },
+  {
+   "id": "b",
+   "label": "La ragione l'ho quì · Sei tu mio servo, o no?",
+   "start": "9",
+   "end": "14"
+  },
+  {
+   "id": "c",
+   "label": "Perch'io son la Susanna · Grazie, non tanti elogi",
+   "start": "15",
+   "end": "19"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), Act 1 scene 1",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Breitkopf vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Breitkopf & Härtel vocal score (Edition Breitkopf 1716, about 1900), pages 8-15, the recitative after No. 1 (bars 89-107, here numbered 1-19)",
+   "author": "Paul Klengel (1854–1935), piano reduction",
+   "licence": "Public domain",
+   "notes": "Read with Halbestunde by the user; the sung lines and words rewritten from the printed pages (two independent readings) and the piano corrected; checked bar by bar in four full passes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

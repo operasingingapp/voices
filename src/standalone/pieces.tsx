@@ -110,6 +110,54 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-cinque-dieci-venti": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Duettino",
+    facts: {
+      key: "G major",
+      time: "4/4",
+      tempo: "Allegro, played at ♩ = 138: Mozart gives the word only",
+    },
+    notePlaceholder: "Figaro counts and measures; Susanna wants him to look at her hat",
+    about: (
+      <>
+        <p>
+          Score: No. 1, bars 1–88, from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900),
+          public domain. Read into MusicXML from the scan by you; the two sung lines and their words were rewritten from the printed pages, and the piano
+          was checked bar by bar against them and corrected. Only the Italian words are kept. The words follow the engraving's spelling (pò, fè, quì,
+          capello).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-cosa-stai-misurando": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 100",
+    },
+    notePlaceholder: "Speak it first, then sing: let the words set the rhythm",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 1 (bars 89–107 of the vocal score, here numbered 1–19), from the same Breitkopf &amp; Härtel vocal score as the
+          duettino, read from the scan and corrected against the printed pages.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-figaro-sinfonia": {
     // no one sings it: the opera's own picture stands for it
     portrait: "figaro:figaro",

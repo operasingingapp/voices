@@ -70,6 +70,74 @@
     }
   },
   {
+    "editionId": "mozart-cinque-dieci-venti",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-cinque-dieci-venti@1.0.0-klengel#8208b97da9",
+    "title": "Cinque… dieci… venti…",
+    "subtitle": "Figaro and Susanna's duettino from Le nozze di Figaro, Act 1",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 88,
+    "durationSec": 153,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 60,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-cosa-stai-misurando",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-cosa-stai-misurando@1.0.0-klengel#81933006c8",
+    "title": "Cosa stai misurando",
+    "subtitle": "Susanna and Figaro's recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 19,
+    "durationSec": 46,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 19,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-der-holle-rache",
     "editionVersion": "1.0.0-musescore-3.6.2",
     "scoreVersionId": "mozart-der-holle-rache@1.0.0-musescore-3.6.2#c3ee43fa6d",
