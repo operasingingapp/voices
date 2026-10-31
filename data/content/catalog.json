@@ -243,6 +243,40 @@
     }
   },
   {
+    "editionId": "mozart-se-a-caso-madama",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-se-a-caso-madama@1.0.0-klengel#93248e673d",
+    "title": "Se a caso madama",
+    "subtitle": "Figaro and Susanna's duettino from Le nozze di Figaro, Act 1",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 144,
+    "durationSec": 149,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 33,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-se-vuol-ballare",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-se-vuol-ballare@1.0.0-klengel#43f580ecaa",

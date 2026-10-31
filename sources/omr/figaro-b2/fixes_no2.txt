@@ -2,7 +2,7 @@
 clef 1 2 0 G
 dyn 14 F 1.5 p
 dyn 17 F 1 f
-dyn 20 LH 0.5 p
+dyn 20 LH 1 p
 dyn 116 F 0.5 f
 dyn 120 F 1.5 p
 dyn 124 F 1 f
@@ -32,3 +32,16 @@ slurp 125 RH 0 G5 126 0 C5
 noslur 39 LH 1
 noslur 39 LH 1.75
 slurx 39 RH 0 D4 39 LH 1.75 C4
+noslur 124 LH 0
+noslur 124 LH 1.5
+slurp 124 LH 0 Bb3 124 1.5 F3
+nodyn 94 LH f
+noword 141 LH dim.
+nodyn 143 LH pp
+acc 36 F 1.5 flat
+acc 75 RH 1.5 natural A5
+acc 77 RH 1.5 natural A5
+acc 126 F 0 flat
+acc 131 F 0 flat
+acc 131 LH 0 flat E3
+acc 131 RH 0 natural A4

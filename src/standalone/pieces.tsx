@@ -158,6 +158,31 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-se-a-caso-madama": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Duettino",
+    facts: {
+      key: "B♭ major",
+      time: "Allegro in 2/4",
+      tempo: "Allegro ♩ = 116 (about 2:30, as in most recordings): Mozart gives the word only",
+    },
+    notePlaceholder: "Figaro is pleased with himself; Susanna lets the penny drop slowly",
+    about: (
+      <>
+        <p>
+          Score: No. 2 from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Read into MusicXML from the scan by you; both sung lines were written out twice independently from the printed pages, the piano corrected bar by
+          bar (bars 74–86, which the scan dropped, rewritten from the print), and the whole checked until a full round, an accidentals pass and two fresh
+          checkers found nothing. Only the Italian words are kept.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-se-vuol-ballare": {
     portrait: "figaro:figaro",
     opera: "Le nozze di Figaro",

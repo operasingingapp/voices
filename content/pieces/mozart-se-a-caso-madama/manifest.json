@@ -1,0 +1,128 @@
+{
+ "editionId": "mozart-se-a-caso-madama",
+ "editionVersion": "1.0.0-klengel",
+ "title": "Se a caso madama",
+ "subtitle": "Figaro and Susanna's duettino from Le nozze di Figaro, Act 1",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "susanna",
+   "name": "Susanna",
+   "voiceType": "Soprano",
+   "partKey": "susanna"
+  },
+  {
+   "id": "figaro",
+   "name": "Figaro",
+   "voiceType": "Bass-baritone",
+   "partKey": "figaro"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "susanna",
+   "label": "Susanna (Soprano)",
+   "shortLabel": "Susanna",
+   "kind": "voice",
+   "roleId": "susanna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "figaro",
+   "label": "Figaro (Bass-baritone)",
+   "shortLabel": "Figaro",
+   "kind": "voice",
+   "roleId": "figaro",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Se a caso madama · Figaro",
+   "start": "1",
+   "end": "43"
+  },
+  {
+   "id": "b",
+   "label": "Così se il mattino · Susanna",
+   "start": "44",
+   "end": "86"
+  },
+  {
+   "id": "c",
+   "label": "Susanna, pian pian · Udir bramo il resto",
+   "start": "87",
+   "end": "144"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786), Act 1",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Breitkopf vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Breitkopf & Härtel vocal score (Edition Breitkopf 1716, about 1900), pages 16-20 (No. 2)",
+   "author": "Paul Klengel (1854–1935), piano reduction",
+   "licence": "Public domain",
+   "notes": "Read with Halbestunde by the user; the sung lines written out twice independently from the printed pages and reconciled; the piano corrected and partly rewritten; checked bar by bar until a full round was clean, then by fresh checkers."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

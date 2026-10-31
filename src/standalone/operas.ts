@@ -56,6 +56,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Cosa stai misurando",
       "editionId": "mozart-cosa-stai-misurando"
+     },
+     {
+      "title": "Se a caso madama",
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Se a caso madama",
+      "editionId": "mozart-se-a-caso-madama"
      }
     ]
    },
@@ -88,6 +94,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Cosa stai misurando",
       "editionId": "mozart-cosa-stai-misurando"
+     },
+     {
+      "title": "Se a caso madama",
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Se a caso madama",
+      "editionId": "mozart-se-a-caso-madama"
      }
     ]
    },

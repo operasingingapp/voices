@@ -54,19 +54,18 @@ def notations(n):
     if nt is None: nt = ET.SubElement(n, "notations")
     return nt
 def add_dir(m, q, el, staff=None):
-    # insert a direction at onset q: put it before the first note at that onset in the first voice
+    """put a direction at onset q (in divisions): appended at the end of the bar, reaching q with backup/forward"""
     if staff: ET.SubElement(el, "staff").text = str(staff)
-    pos = 0; last = 0; idx = None
-    kids = list(m)
-    for i, c in enumerate(kids):
-        if c.tag == "backup": break
-        if c.tag == "forward": pos += int(c.findtext("duration")); continue
-        if c.tag == "note":
-            ch = c.find("chord") is not None
-            if not ch and pos >= q: idx = i; break
-            if not ch and c.find("grace") is None: pos += int(c.findtext("duration") or 0)
-    if idx is None: idx = len([c for c in kids if c.tag != "backup"]) if q == 0 else len(kids)
-    m.insert(idx, el)
+    pos = 0; last = 0
+    for c in m:
+        if c.tag == "backup": pos -= int(c.findtext("duration"))
+        elif c.tag == "forward": pos += int(c.findtext("duration"))
+        elif c.tag == "note" and c.find("chord") is None and c.find("grace") is None: pos += int(c.findtext("duration") or 0)
+    if pos > q:
+        b = ET.SubElement(m, "backup"); ET.SubElement(b, "duration").text = str(pos - q)
+    elif pos < q:
+        f = ET.SubElement(m, "forward"); ET.SubElement(f, "duration").text = str(q - pos)
+    m.append(el)
 SLURN = [2]
 for line in open(FX, encoding="utf-8"):
     line = line.strip()
@@ -83,9 +82,22 @@ for line in open(FX, encoding="utf-8"):
         dt = ET.SubElement(d, "direction-type")
         if op == "dyn": ET.SubElement(ET.SubElement(dt, "dynamics"), w[4])
         else: ET.SubElement(dt, "words").text = " ".join(w[4:])
-        if q:
-            ET.SubElement(d, "offset").text = "0"
         add_dir(m, q, d, st)
+    elif op == "acc":   # acc BAR PART ONSET SIGN: show a printed (reminder) accidental on that note
+        _, n1, q = at(int(w[1]), w[2], w[3])
+        if len(w) > 5:   # optional pitch, for a chord note: acc BAR PART ONSET SIGN STEPOCT
+            part, st = target(w[2]); _, ns = notes_at(part, st, int(w[1]))
+            n1 = [n for o, n in ns if o == q and n.find("pitch") is not None and n.findtext("pitch/step") + n.findtext("pitch/octave") == w[5]][0]
+        a = n1.find("accidental")
+        if a is None:
+            a = ET.Element("accidental"); kids = list(n1)
+            j = max(i for i, x in enumerate(kids) if x.tag in ("type", "dot", "voice")) + 1; n1.insert(j, a)
+        a.text = w[4]; n1.set("_keep", "1")
+    elif op == "noword":   # noword BAR PART TEXT
+        part, st = target(w[2]); m = meas(part, int(w[1]))
+        for d in m.findall("direction"):
+            if (d.findtext("direction-type/words") or "").strip() == " ".join(w[3:]) and (st is None or d.findtext("staff") in (str(st), None)):
+                m.remove(d); break
     elif op == "nodyn":
         b, pc, kind = int(w[1]), w[2], w[3]
         part, st = target(pc); m = meas(part, b)
