@@ -1,0 +1,18 @@
+word 195 RH 0 Andante
+word 195 LH 0 espress.
+untie 196 RH G 4
+untie 196 RH B 4
+untie 196 LH E 2
+untie 196 LH E 3
+slur 196 RH 0 196 2
+slur 196 LH 0 196 2
+dyn 197 RH 1 f
+tempo 185 84
+tempo 195 66
+nodyn 186 RH f
+nodyn 186 LH f
+dyn 186 LH 2.5 f
+nodyn 188 RH f
+nodyn 188 LH f
+dyn 188 RH 0.5 f
+final 198

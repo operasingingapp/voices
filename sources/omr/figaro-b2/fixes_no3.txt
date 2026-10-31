@@ -1,0 +1,24 @@
+# No. 3: corrections from check round 1
+clef 199 1 0 G
+clef 199 2 0 G
+stacc 227 LH 0
+dyn 235 RH 0 p
+word 199 RH 0 staccato
+word 203 RH 0 staccato
+word 262 RH 0 Presto
+word 298 RH 0 cresc.
+word 302 RH 0 Tempo I
+word 302 RH 0 staccato
+word 321 RH 0 Presto
+untie 280 RH A 4
+untie 280 RH C 5
+slur 280 RH 0 281 0
+untie 284 RH G 4
+untie 284 RH B 4
+slur 284 RH 0 285 0
+tempo 199 130
+tempo 262 176
+tempo 302 130
+tempo 321 176
+dbar 261
+final 329

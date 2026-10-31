@@ -158,6 +158,31 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-se-vuol-ballare": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Cavatina",
+    facts: {
+      key: "F major",
+      time: "Allegretto in 3/4, with two Presto sections in 2/4",
+      tempo: "Allegretto ♩ = 130, Presto ♩ = 176 (about 2:25, as in most recordings): Mozart gives the words only",
+    },
+    notePlaceholder: "Keep it light and mocking: the threat is in the words, not the volume",
+    about: (
+      <>
+        <p>
+          Score: No. 3 from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Read into MusicXML from the scan by you; the sung line was written out twice independently from the printed pages, the piano corrected bar by
+          bar, and the whole checked until a full round, an accidentals pass and two fresh checkers found nothing. Only the Italian words are kept, with the
+          engraving's spellings (quà, pugnendo, rovescierò).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-figaro-sinfonia": {
     // no one sings it: the opera's own picture stands for it
     portrait: "figaro:figaro",

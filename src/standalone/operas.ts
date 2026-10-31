@@ -40,7 +40,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Se vuol ballare",
-      "kind": "Cavatina · Act 1"
+      "kind": "Cavatina · Act 1",
+      "editionId": "mozart-se-vuol-ballare"
      },
      {
       "title": "Non più andrai",
