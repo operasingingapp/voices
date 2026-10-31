@@ -8208,3 +8208,13 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .words-view .w-line.script.mine .w-who {
   color: var(--ink);
 }
+
+/* a long line (a sentence of recitative, a run of repeats) is set smaller so it stays inside the words box */
+.now-it.long,
+.now-panel .now-it.long {
+  font-size: clamp(24px, 3vw, 32px);
+}
+.now-it.longer,
+.now-panel .now-it.longer {
+  font-size: clamp(20px, 2.3vw, 26px);
+}

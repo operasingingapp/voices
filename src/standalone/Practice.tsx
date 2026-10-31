@@ -256,6 +256,9 @@ function saveNotes(n: Note[]) {
   }
 }
 
+/** characters in a line, so a long one can be set smaller and still fit the words box */
+const lineLen = (ph: { words: { text: string }[] }) => ph.words.reduce((n, w) => n + w.text.length + 1, 0);
+
 export const Icon = {
   tip: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -2065,7 +2068,7 @@ function PracticeScreen({
                   </span>
                 </div>
               )}
-              <p className={`now-it${nowSyl ? " in-progress" : ""}`} lang={LANG}>
+              <p className={`now-it${nowSyl ? " in-progress" : ""}${lineLen(shown.ph) > 110 ? " longer" : lineLen(shown.ph) > 64 ? " long" : ""}`} lang={LANG}>
                 {lineWords(shown.ph, nowSyl, !playing ? litTip : null)}
               </p>
               <p className="now-ipa" lang="it-fonipa">
