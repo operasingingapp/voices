@@ -1978,13 +1978,19 @@ function PracticeScreen({
             </button>
           </div>
           {musicOn && (
-            <div className="cp-seg layout-switch" role="group" aria-label="How the music is laid out">
+            <div className="cp-seg view-switch layout-switch" role="group" aria-label="How the music is laid out">
               <button type="button" aria-pressed={!pageView} onClick={() => setPageView(false)} title="One line, scrolling sideways">
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 12h18M3 9h18M3 15h18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" fill="none" /></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" d="M2.5 8.5h14M2.5 12h14M2.5 15.5h14" />
+                  <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M18.5 8.5 22 12l-3.5 3.5" />
+                </svg>
                 <span className="label">Line</span>
               </button>
               <button type="button" aria-pressed={pageView} onClick={() => setPageView(true)} title="Page: systems one under another, scrolling down">
-                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 5h14M5 8h14M5 13h14M5 16h14M5 21h9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" fill="none" /></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4.5" y="2.5" width="15" height="19" rx="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+                  <path fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" d="M8 7.5h8M8 10h8M8 14.5h8M8 17h8" />
+                </svg>
                 <span className="label">Page</span>
               </button>
             </div>
