@@ -1,6 +1,8 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MutableRefObject, type ReactNode } from "react";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 import { buildLayout, type Lane, type ScoreLayout } from "./layout";
+import { loadVerovio, VrvScore } from "./vrv";
+import { engineFor } from "./engines";
 import type { Performance } from "../../shared/timeline";
 import type { CompiledEdition, Cut } from "../../shared/types";
 
@@ -98,6 +100,8 @@ interface Props {
   fadedXmlParts?: string[];
   /** false: the top staff (a sung line) stands on its own, and the system line at the left joins only the staves below it. */
   joinTopStaff?: boolean;
+  /** which engine draws the music: Verovio engraves as a printed edition does; OSMD for pieces not moved over yet */
+  engine?: "osmd" | "verovio";
 }
 
 // Sizes of the sung-text rows at zoom 1 (px); they scale with the zoom.
@@ -402,6 +406,9 @@ export function ScoreView(props: Props) {
   const litEls = useRef<Element[]>([]);
   const strip = !!props.strip;
   const osmdRef = useRef<OpenSheetMusicDisplay | null>(null);
+  const vrvRef = useRef<VrvScore | null>(null);
+  const [vrvFailed, setVrvFailed] = useState(false);
+  const useVrv = !vrvFailed && (props.engine ?? engineFor(props.edition.editionId)) === "verovio";
   const cursorEl = useRef<HTMLDivElement>(null);
   const markerEl = useRef<HTMLDivElement>(null);
   const measureEl = useRef<HTMLDivElement>(null);
@@ -453,6 +460,27 @@ export function ScoreView(props: Props) {
     let cancelled = false;
     const host = hostRef.current!;
     host.replaceChildren(); // a previous score's emptied page must not stay above the new one
+    if (useVrv) {
+      osmdRef.current = null;
+      vrvRef.current = null;
+      setLoaded(false);
+      const fonts = (document as Document & { fonts?: FontFaceSet }).fonts;
+      Promise.resolve(fonts ? fonts.load("20px 'Charis SIL'").catch(() => undefined) : undefined)
+        .then(() => loadVerovio())
+        .then((tk) => {
+          if (cancelled) return;
+          vrvRef.current = new VrvScore(tk, host, xml);
+          setLoaded(true);
+          setLoadTick((t) => t + 1);
+        })
+        // where the page may not run WebAssembly, the score is drawn by the old engine instead
+        .catch(() => !cancelled && setVrvFailed(true));
+      return () => {
+        cancelled = true;
+        vrvRef.current = null;
+        host.replaceChildren();
+      };
+    }
     const osmd = new OpenSheetMusicDisplay(host, {
       backend: "svg",
       autoResize: false,
@@ -465,7 +493,7 @@ export function ScoreView(props: Props) {
       drawPartAbbreviations: !strip,
       drawMeasureNumbers: true,
       measureNumberInterval: 1,
-      autoBeam: true,
+      autoBeam: false,
       autoGenerateMultipleRestMeasuresFromRestMeasures: false,
       pageFormat: "Endless",
       followCursor: false,
@@ -504,7 +532,7 @@ export function ScoreView(props: Props) {
       osmdRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [xml, strip]);
+  }, [xml, strip, useVrv]);
 
   // which pinned clef/key is in force at the left edge (none while the opening ones are still in view)
   useEffect(() => {
@@ -553,6 +581,34 @@ export function ScoreView(props: Props) {
   const rowSrc = hasLyrics ? props.lyricRows : props.bandRows;
   const rowsKey = `${rowSrc?.ipa ? "i" : ""}${rowSrc?.translation ? "t" : ""}`;
   useEffect(() => {
+    const vrv = vrvRef.current;
+    if (vrv && loaded && width) {
+      const rows = hasLyrics ? rowsHeight({ ipa: rowsKey.includes("i"), translation: rowsKey.includes("t") }) : 0;
+      const bandPx = hasBands ? 70 + (rowsKey.includes("t") ? 22 : 0) + (rowsKey.includes("i") ? 20 : 0) : 0;
+      try {
+        const drawn = vrv.render({
+          visibleParts: visibleXmlParts,
+          zoom,
+          width,
+          strip,
+          topPx: hasLyrics ? rows + 30 : hasBands ? bandPx + 40 : 40 * zoom,
+          systemGapPx: hasLyrics ? rows + 15 : hasBands ? bandPx + 100 : 90 * zoom,
+        });
+        if (hostRef.current) hostRef.current.style.color = props.ink ?? "";
+        litKey.current = "";
+        litEls.current = [];
+        const l = vrv.layout();
+        layoutRef.current = l;
+        setPinned(null);
+        if (strip && drawn && hostRef.current) l.ink = measureInk(hostRef.current, drawn);
+        lastSystem.current = null;
+        setLayout(l);
+        props.onLayout?.(l);
+      } catch (e) {
+        setError(`The score could not be displayed: ${(e as Error).message}`);
+      }
+      return;
+    }
     const osmd = osmdRef.current;
     // a new score (e.g. its parts put in another order) is still loading: it renders when it has
     if (!osmd || !loaded || !width || !osmd.Sheet) return;
@@ -639,13 +695,14 @@ export function ScoreView(props: Props) {
       }
       // the note sounding now, in colour, with a soft halo behind it
       const osmd = osmdRef.current;
+      const vrv = vrvRef.current;
       const sheet = sheetRef.current;
-      if (p.nowNoteParts && osmd && sheet) {
+      if (p.nowNoteParts && (osmd || vrv) && sheet) {
         let key = "";
         let els: Element[] = [];
         if (c && c.show) {
           const loc = p.perf.locate(c.q);
-          const found = findSoundingNote(osmd, loc.m, loc.q, p.nowNoteParts);
+          const found = vrv ? vrv.soundingNote(loc.m, loc.q, p.nowNoteParts) : findSoundingNote(osmd!, loc.m, loc.q, p.nowNoteParts);
           if (found) {
             key = found.key;
             if (key !== litKey.current) els = found.els;
@@ -658,7 +715,7 @@ export function ScoreView(props: Props) {
           litKey.current = key;
           const halo = haloEl.current;
           if (halo) {
-            const head = els[0]?.querySelector(".vf-notehead") ?? els[0];
+            const head = els[0]?.querySelector(".vf-notehead, .notehead") ?? els[0];
             if (head) {
               const r = head.getBoundingClientRect();
               const sr = sheet.getBoundingClientRect();

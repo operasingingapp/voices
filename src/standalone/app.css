@@ -8278,3 +8278,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   color: var(--ink);
   background: color-mix(in srgb, var(--accent, #6cc58f) 30%, transparent);
 }
+
+/* the music drawn by Verovio: its own colour follows the theme's ink */
+.vrv-score .definition-scale {
+  color: inherit;
+}
+.vrv-score .cp-now-note,
+.vrv-score .cp-now-note * {
+  color: var(--now-mark);
+}
