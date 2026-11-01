@@ -605,7 +605,11 @@ export function ScoreView(props: Props) {
         const l = vrv.layout();
         layoutRef.current = l;
         setPinned(strip && drawn ? buildPinnedVrv(drawn, props.ink) : null);
-        if (strip && drawn && hostRef.current) l.ink = measureInk(hostRef.current, drawn);
+        if (strip && drawn && hostRef.current) {
+          l.ink = measureInk(hostRef.current, drawn);
+          // the names' gutter left of the staves is part of the line: it is not trimmed away like blank margin
+          if (l.ink) l.ink.left = 0;
+        }
         lastSystem.current = null;
         setLayout(l);
         props.onLayout?.(l);
