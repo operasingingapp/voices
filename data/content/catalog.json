@@ -416,6 +416,40 @@
     }
   },
   {
+    "editionId": "mozart-esci-omai-garzon-malnato",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-esci-omai-garzon-malnato@1.0.0-klengel#dd9ab740d4",
+    "title": "Esci omai, garzon malnato",
+    "subtitle": "The Count and the Countess: opening of the Act 2 Finale, No. 15, from Le nozze di Figaro",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      }
+    ],
+    "measures": 125,
+    "durationSec": 227,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 74,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-evviva",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-evviva@1.0.0-klengel#8689a2834b",

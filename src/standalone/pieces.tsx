@@ -581,6 +581,31 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-esci-omai-garzon-malnato": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "E flat major",
+      time: "4/4",
+      tempo: "Allegro: played here at ♩ = 132 (about 4 minutes)",
+    },
+    notePlaceholder: "The key, the closet, and the Count's fury",
+    about: (
+      <>
+        <p>
+          Score: the opening section of the Act 2 Finale, No. 15, from “Esci omai, garzon malnato” to the Count going to open the closet (vocal score pages 141-147, bars 1-125), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by independent checkers, who found it clean. In bar 80 the print marks “Recitativo”: the Count reads the paper freely.
+          Only the Italian words are kept, with the engraving's spellings. The rest of the Finale follows section by section.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-quante-buffonerie": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

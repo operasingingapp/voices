@@ -248,6 +248,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Quante buffonerie!",
       "editionId": "mozart-quante-buffonerie"
+     },
+     {
+      "title": "Esci omai, garzon malnato",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Esci omai, garzon malnato",
+      "editionId": "mozart-esci-omai-garzon-malnato"
      }
     ]
    },
@@ -285,6 +291,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Quante buffonerie!",
       "editionId": "mozart-quante-buffonerie"
+     },
+     {
+      "title": "Esci omai, garzon malnato",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Esci omai, garzon malnato",
+      "editionId": "mozart-esci-omai-garzon-malnato"
      }
     ]
    },
