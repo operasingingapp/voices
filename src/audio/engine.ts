@@ -34,6 +34,56 @@ export interface SynthPort {
   follow?(t: number, s: number, f: number): void;
 }
 
+/** a note's velocity from its part's touch: an accompaniment stays under the voice, above a gentle ceiling its
+ * loudness grows only a third as fast (a score's forte is the orchestra's; one piano at forte under a singer only hammers) */
+export function effectiveVelocity(ev: { vel: number }, p: PlaybackPart | undefined): number {
+  let v = ev.vel * (p?.velocityScale ?? 1);
+  const ceil = p?.velocityCeiling;
+  if (ceil !== undefined && v > ceil) v = ceil + (v - ceil) / 3;
+  return Math.max(1, Math.min(127, Math.round(v)));
+}
+
+/** how far a sung line is played above the accompaniment sounding with it (velocity steps; about 4 dB on the piano) */
+export const LINE_ABOVE = 14;
+/** the loudest a sung line is pushed by the balance (a louder piano key turns hard) */
+const LINE_MAX = 108;
+
+/**
+ * Automatic balance between the sung lines and the piano. Every note of a sung line is played at least LINE_ABOVE
+ * velocity steps above the loudest accompaniment note struck from half a beat before it until it ends, so the
+ * line always sings out: over a soft accompaniment it stays gentle, over a full one it rises with it. Notes the
+ * score already marks louder keep their own level.
+ */
+export function balanceVelocities(perf: Performance, parts: Map<string, PlaybackPart>): Map<string, number> {
+  const out = new Map<string, number>();
+  const acc: { on: number; vel: number }[] = [];
+  for (const n of perf.notes) {
+    const p = parts.get(n.part);
+    const v = effectiveVelocity(n, p);
+    out.set(n.key, v);
+    if (p?.kind === "piano") acc.push({ on: n.onQ, vel: v });
+  }
+  acc.sort((a, b) => a.on - b.on);
+  const firstAtOrAfter = (q: number) => {
+    let lo = 0, hi = acc.length;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (acc[mid].on < q) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  };
+  for (const n of perf.notes) {
+    if (parts.get(n.part)?.kind !== "voice") continue;
+    let loud = 0;
+    for (let i = firstAtOrAfter(n.onQ - 0.5); i < acc.length && acc[i].on < n.offQ; i++) loud = Math.max(loud, acc[i].vel);
+    if (!loud) continue;
+    const own = out.get(n.key)!;
+    out.set(n.key, Math.max(own, Math.min(LINE_MAX, loud + LINE_ABOVE)));
+  }
+  return out;
+}
+
 export interface MixState {
   volume: number; // 0..1
   muted: boolean;
@@ -74,6 +124,12 @@ export class PlaybackEngine {
   private port: SynthPort;
   private perf?: Performance;
   private parts = new Map<string, PlaybackPart>();
+  /** each note's velocity after the part's touch and the automatic balance (see balanceVelocities) */
+  private vels = new Map<string, number>();
+  /** the velocity a note is played at */
+  velocityOf(ev: PerfNote): number {
+    return this.vels.get(ev.key) ?? effectiveVelocity(ev, this.parts.get(ev.part));
+  }
   private mix = new Map<string, MixState>();
   private _state: EngineState = "stopped";
   private cursorQ = 0;
@@ -109,6 +165,7 @@ export class PlaybackEngine {
     if (this._state === "playing") this.silence();
     this.perf = perf;
     this.parts = new Map(parts.map((p) => [p.key, p]));
+    this.vels = balanceVelocities(perf, this.parts);
     for (const p of parts) if (!this.mix.has(p.key)) this.mix.set(p.key, { volume: p.defaultVolume, muted: false, solo: false });
     this.cursorQ = Math.min(keepQ, perf.totalQ);
     this._state = this._state === "playing" ? "paused" : this._state;
@@ -395,12 +452,7 @@ export class PlaybackEngine {
   private startNote(ev: PerfNote, t: number, offQ: number, q: number) {
     const ch = this.channelOf(ev.part);
     const p = this.parts.get(ev.part);
-    // an accompaniment stays under the voice: above a gentle ceiling its loudness grows only a third as fast
-    // (a score's forte is the orchestra's; one piano at forte under a singer only hammers)
-    let v = ev.vel * (p?.velocityScale ?? 1);
-    const ceil = p?.velocityCeiling;
-    if (ceil !== undefined && v > ceil) v = ceil + (v - ceil) / 3;
-    const vel = Math.max(1, Math.min(127, Math.round(v)));
+    const vel = this.velocityOf(ev);
     const k = `${ch}:${ev.midi}`;
     this.sounding.set(k, (this.sounding.get(k) ?? 0) + 1);
     this.port.noteOn(ch, ev.midi, vel, t, ev.soundOffQ !== undefined && ev.soundOffQ > ev.offQ + 1e-6);
