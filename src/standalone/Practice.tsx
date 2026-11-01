@@ -1,4 +1,5 @@
 import { packedUrl, preloadVoicePacks } from "./voicePack";
+import { foldIpa, foldTranslation, trailingRepeat } from "./repeat";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as RPointerEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { Story, storyOf } from "./synopses";
@@ -990,6 +991,34 @@ function PracticeScreen({
   // the box keeps the height it had when the music started: a rest (three dots) or a short line never makes
   // the score below jump while you sing
   const lineCardRef = useRef<HTMLDivElement>(null);
+  // the sung line is kept on one line: set smaller until it fits (down to 70% of its size); a line still too long
+  // breaks into two even halves rather than one long line and a stray word
+  const itRef = useRef<HTMLParagraphElement>(null);
+  const itFit = useRef({ text: "", w: 0 });
+  const fitLine = useCallback(() => {
+    const el = itRef.current;
+    if (!el) return;
+    el.style.fontSize = "";
+    el.style.whiteSpace = "nowrap";
+    const base = parseFloat(getComputedStyle(el).fontSize);
+    const need = el.scrollWidth;
+    const have = el.clientWidth;
+    const size = need > have ? Math.floor(((base * have) / need) * 0.97) : base;
+    if (size >= base * 0.7) {
+      if (size < base) el.style.fontSize = `${size}px`;
+    } else el.style.whiteSpace = "";
+    itFit.current = { text: el.textContent ?? "", w: have };
+  }, []);
+  useLayoutEffect(() => {
+    const el = itRef.current;
+    if (el && (el.textContent !== itFit.current.text)) fitLine();
+  });
+  useEffect(() => {
+    const ro = new ResizeObserver(() => fitLine());
+    if (lineCardRef.current) ro.observe(lineCardRef.current);
+    document.fonts?.ready.then(() => fitLine());
+    return () => ro.disconnect();
+  }, [fitLine]);
   const [cardH, setCardH] = useState(0);
   useLayoutEffect(() => {
     if (live) setCardH(lineCardRef.current?.offsetHeight ?? 0);
@@ -1540,7 +1569,19 @@ function PracticeScreen({
       if (b && b.noteId === a.noteId && b.word === a.word + 1) joinAt.set(b.word, { left: i, right: i + 1 });
     });
     const joined = new Set([...joinAt.values()].flatMap((j) => [j.left, j.right]));
-    return ph.words.map((w, k) => {
+    // words sung again at the end of the line are shown once, followed by how many times
+    const rep = trailingRepeat(ph.words.map((w) => w.text));
+    const blockOf = (k: number) => (rep && k >= rep.head ? Math.floor((k - rep.head) / rep.len) : 0);
+    let rc = 0;
+    if (rep && prog) {
+      const now = syl.findIndex((r, i) => prog.now.has(i) && r.word >= rep.head);
+      if (now >= 0) rc = blockOf(syl[now].word);
+      else syl.forEach((r, i) => prog.done.has(i) && r.word >= rep.head && (rc = Math.max(rc, blockOf(r.word))));
+    }
+    const shownWords = rep ? ph.words.slice(0, rep.head + rep.len) : ph.words;
+    const out = shownWords.map((_, j) => {
+      const k = rep && j >= rep.head ? j + rc * rep.len : j;
+      const w = ph.words[k];
       const ranges: Deco[] = [];
       if (tip) for (const m of tips.marks.get(`${ph.id}:${k}`) ?? []) if (m.tip === tip) ranges.push({ from: m.from, to: m.to, cls: "w-mark anchor" });
       const mine = syl.map((r, i) => ({ r, i })).filter(({ r }) => r.word === k);
@@ -1560,9 +1601,9 @@ function PracticeScreen({
       const join = joinAt.get(k);
       const joinOn = !!prog && !!join && prog.now.has(join.left);
       return (
-        <span key={`${ph.id}:${k}`}>
-          {k > 0 &&
-            (join ? (
+        <span key={`${ph.id}:${j}`}>
+          {j > 0 &&
+            (join && !(rep && j === rep.head && rc > 0) ? (
               <span className={`w-join${joinOn ? " on" : ""}`} title="Sung together on one note">
                 {"\u203F"}
               </span>
@@ -1585,6 +1626,13 @@ function PracticeScreen({
         </span>
       );
     });
+    if (rep)
+      out.push(
+        <span key="rep" className={`w-rep${prog && rc > 0 ? " on" : ""}`} title={`Sung ${rep.times} times`}>
+          {prog && rc > 0 ? `${rc + 1}/${rep.times}` : `×${rep.times}`}
+        </span>,
+      );
+    return out;
   };
   const cardFor = (lineId: string, extra = "") =>
     openWord?.lineId === lineId ? (
@@ -2089,13 +2137,13 @@ function PracticeScreen({
                   </span>
                 </div>
               )}
-              <p className={`now-it${nowSyl ? " in-progress" : ""}${lineLen(shown.ph) > 110 ? " longer" : lineLen(shown.ph) > 64 ? " long" : ""}`} lang={LANG}>
+              <p ref={itRef} className={`now-it${nowSyl ? " in-progress" : ""}${lineLen(shown.ph) > 110 ? " longer" : lineLen(shown.ph) > 64 ? " long" : ""}`} lang={LANG}>
                 {lineWords(shown.ph, nowSyl, !playing ? litTip : null)}
               </p>
               <p className="now-ipa" lang="it-fonipa">
-                [{shown.ph.ipa}]
+                [{(() => { const r = trailingRepeat(shown.ph.words.map((w) => w.text)); return r ? foldIpa(shown.ph.ipa, r.times) : shown.ph.ipa; })()}]
               </p>
-              {showTr && <p className="now-tr">{curly(shown.ph.translation)}</p>}
+              {showTr && <p className="now-tr">{curly((() => { const r = trailingRepeat(shown.ph.words.map((w) => w.text)); return r ? foldTranslation(shown.ph.translation, r.times) : shown.ph.translation; })())}</p>}
               {musicOn && cardFor(shown.ph.id, "now-card-word")}
             </div>
             <button type="button" className="now-step" onClick={() => stepLine(1)} aria-label="Next line">
