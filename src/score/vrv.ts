@@ -21,6 +21,8 @@ export function loadVerovio(): Promise<Toolkit> {
 
 /** Verovio draws a staff space of 18 px at scale 100; the app's zoom 1 is 10 px, as with the old engine. */
 const PX_PER_SPACE_AT_100 = 18;
+/** width (px) of the names' column at the left of the single line */
+export const LANE_GUTTER_PX = 104;
 
 interface TimeEntry {
   qstamp: number;
@@ -90,7 +92,8 @@ export class VrvScore {
       adjustPageWidth: o.strip,
       pageMarginTop: Math.round(o.topPx * unitsPerPx),
       pageMarginBottom: 40,
-      pageMarginLeft: 30,
+      // the single line keeps a gutter at its left for the parts' names, beside their staves
+      pageMarginLeft: o.strip ? Math.round(LANE_GUTTER_PX * unitsPerPx) : 30,
       pageMarginRight: 30,
       spacingSystem: Math.max(6, Math.round(o.systemGapPx / (o.zoom * 10))),
       header: "none",
@@ -334,7 +337,7 @@ export function buildPinnedVrv(svg: SVGSVGElement, ink: string | undefined): { p
   const home = (k: number, kind: "clef" | "key") => marks.find((m) => m.staff === k && m.kind === kind && m.x < end)?.el.getBBox().x;
   const starts = [...new Set(marks.map((m) => Math.round(m.x)))].sort((a, b) => a - b);
   const defs = svg.querySelector("defs")?.outerHTML ?? "";
-  const w = end * scale;
+  const w = (end + ox) * scale;
   const h = (vb.height + 0) * scale;
   const panels: { fromX: number; html: string }[] = [];
   for (const sx of starts) {

@@ -328,14 +328,18 @@ function findSoundingNote(osmd: OpenSheetMusicDisplay, m: number, q: number, par
 }
 
 export function ScoreView(props: Props) {
+  const useVrvRef = useRef(false);
   // a part's name sits above its staff, clear of the clef (a treble clef rises about two staff spaces above the
   // top line; a staff space is 10 px at zoom 1), and never higher than the lowest ink of the part above
   const labelTop = (l: ScoreLayout["lanes"][number]) => {
+    // Verovio's line: the name stands in the gutter beside its staff, level with its middle, so it covers nothing
+    if (useVrvRef.current) return Math.round((l.top + l.bottom) / 2 - 12);
     const want = l.top - Math.round(2.1 * 10 * props.zoom) - 23;
     return Math.round(want);
   };
   const laneLabelEls = (layout: ScoreLayout) =>
-    props.laneLabels
+    // Verovio's page prints each part's name at the start of its staves, as a printed score does
+    props.laneLabels && !(useVrvRef.current && !props.strip)
       ? layout.lanes
           .filter((l) => props.laneLabels![l.partId])
           .map((l) =>
@@ -343,7 +347,7 @@ export function ScoreView(props: Props) {
               <button
                 key={`lbl-${l.partId}`}
                 type="button"
-                className="lane-label"
+                className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}`}
                 style={{ top: labelTop(l) }}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -358,7 +362,7 @@ export function ScoreView(props: Props) {
                 </svg>
               </button>
             ) : (
-              <span key={`lbl-${l.partId}`} className="lane-label" style={{ top: labelTop(l) }} aria-hidden="true">
+              <span key={`lbl-${l.partId}`} className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}`} style={{ top: labelTop(l) }} aria-hidden="true">
                 {props.laneLabels![l.partId]}
               </span>
             ),
@@ -409,6 +413,7 @@ export function ScoreView(props: Props) {
   const vrvRef = useRef<VrvScore | null>(null);
   const [vrvFailed, setVrvFailed] = useState(false);
   const useVrv = !vrvFailed && (props.engine ?? engineFor(props.edition.editionId)) === "verovio";
+  useVrvRef.current = useVrv;
   const cursorEl = useRef<HTMLDivElement>(null);
   const markerEl = useRef<HTMLDivElement>(null);
   const measureEl = useRef<HTMLDivElement>(null);
