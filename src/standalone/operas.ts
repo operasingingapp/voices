@@ -198,6 +198,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Susanna! Signore!",
       "editionId": "mozart-susanna-signore"
+     },
+     {
+      "title": "Taci, vien gente",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Taci, vien gente",
+      "editionId": "mozart-taci-vien-gente"
      }
     ]
    },
@@ -315,6 +321,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Susanna! Signore!",
       "editionId": "mozart-susanna-signore"
+     },
+     {
+      "title": "Taci, vien gente",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Taci, vien gente",
+      "editionId": "mozart-taci-vien-gente"
      }
     ]
    },
@@ -431,6 +443,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Evviva! Evviva!",
       "editionId": "mozart-evviva"
+     },
+     {
+      "title": "Taci, vien gente",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Taci, vien gente",
+      "editionId": "mozart-taci-vien-gente"
      }
     ]
    },

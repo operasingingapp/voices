@@ -1,0 +1,52 @@
+== bar 4 C: Y
+# G3 has a single flag (eighth); the "dot" after the 3rd note is a tiny speck in the wrong space, not an augmentation dot (X would need a 16th, which isn't printed).
+4 C: F#3:e "san-" F#3:e "na," F#3:e "tu" G3:e "mi" A3:e "sem-" A3:e "bri" r:e A3:s "a-" Bb3:s "gi-"
+== bar 7 S: own
+# A natural sign is printed before the first B ("ma-"), so Bn4 (as Y has), and the word is printed "quì" with a grave accent (as X has).
+7 S: G4:q "ma," r:e G4:e "se" Bn4:e "ma-" B4:e "i..." r:e B4:s "quì" B4:s "sor-"
+== bar 9 C: Y
+# "to,e" is printed under a single 16th note, so it is an elision and is joined with _ by convention.
+9 C: r:e G3:s "Un" G3:s "mo-" G3:e "men-" G3:s "to,_e" C4:s "ti" Bb3:e "la-" Bb3:e "scio," r:q
+== bar 10 C: own (X pitches)
+# Both "Due" and "pa-" are printed Bb3, each with its own flat; Y's Ab3 is wrong. The Count rests while Susanna sings (r:s + 3 sixteenths + 2 eighths), then r:e before "Due"; same total as X with the rests grouped normally.
+10 C: Bb3:e "o-" F3:e "di!" r:h r:e Bb3:s "Due" Bb3:s "pa-"
+== bar 12 C: own (X pitches, Y word)
+# "a" notehead sits on the top line (A3, printed natural) and "Lon-" sits above it (B3, printed natural); Y's B3 on "a" is wrong. "tore" (to+re) is printed under the 3rd G, so it is joined: "to_re".
+12 C: G3:e "ba-" G3:e "scia-" G3:e "to_re" An3:e "a" Bn3:e "Lon-" B3:e "dra_il" B3:s "rè" B3:s "mi" B3:s "di-" C4:s "chia-"
+== bar 14 C: Y
+# "de" is in the E3 space and "sti" in the G3 space (the space below the top line); no F3.
+14 C: E3:e "Fi-" E3:s "ga-" E3:s "ro" E3:e "de-" G3:e "sti-" G3:e "na-" G3:e "i." r:q
+== bar 28 O: X
+# Printed capital "E" without an accent ("E us-ci-to").
+28 O: r:h r:q r:e Bb3:e "E_us-"
+== bar 38 O: Y
+# "na,il" is printed under one eighth note, so it is an elision and is joined with _.
+38 O: r:q r:e A3:e "Su-" C#4:e "san-" C#4:e "na,_il" D4:e "ciel" E4:e "vi"
+== bar 45 C: X
+# After the bass clef, "Ve-" is in the E3 space, and "diam," "co-" "me" sit on the top line (A3), not B3.
+45 C: r:q r:e E3:e "Ve-" A3:e "diam," A3:e "co-" A3:e "me" G#3:e "mi"
+== bar 49 O: X
+# Printed "ma.." with two dots, set tight against "Sor-ti-te".
+49 O: A3:e "dir" A3:e "che_il" B3:e "con-" C#4:e "te" B3:e "v'a-" B3:s "ma.." r:s r:q
+== bar 53 S: X
+# Three notes carry "del suo amor": synalepha suo_a on the 2nd C#, "mor" on the E5 quarter (Y's "a_mor" splits one word onto one note).
+53 S: r:e C#5:s "del" C#5:s "suo_a-" E5:q "mor..." r:h
+== bar 62 O: X
+# Printed "quì" with a grave accent.
+62 O: Bb3:e "gia-" Bb3:e "va" Bb3:e "quì" D4:e "in-" Bb3:e "tor-" Bb3:e "no" r:e Bb3:s "per" Bb3:s "ent-"
+== bar 69 S: Y
+# "gliel'" is printed under D5 and "ha" under the following Eb5 (printed "gliel'ha", split at the apostrophe).
+69 S: r:h r:e C5:e "(Chi" Eb5:s "dia-" Eb5:s "vol" D5:s "gliel'" Eb5:s "ha"
+== piano bar 3: X
+# The A4 has a beamed up-stem (eighths A-C-Eb, a single beam, so no 16th) and a separate down-stem with an augmentation dot: second voice A4 dotted quarter. The LH is the same in X and Y.
+3 RH1: r:e dyn:p A4:e( C5:e Eb5:e) D4+A4+D5:h~
+3 RH2: r:e A4:q. r:h
+3 LH1: r:e Eb3+Eb4:e( C3+C4:e A2+A3:e) F#2+F#3:h~
+== piano bar 47: X
+# LH whole notes are E3 (space between the F3 and D3 lines) and E2 (first ledger below), each with a printed sharp: E#. This is a diminished-seventh chord E#-G#-B-D resolving to F#.
+47 RH1: D4+G#4+B4:w~
+47 LH1: E#2+E#3:w~
+== piano bar 48: own (RH as Y, LH as X)
+# Tied LH halves stay E#. In the RH quarter chord only C4 and F4 have sharps; the A4 has none, so A natural (F# minor).
+48 RH1: D4+G#4+B4:h C#4+F#4+A4:q r:q
+48 LH1: E#2+E#3:h F#2+F#3:q r:q

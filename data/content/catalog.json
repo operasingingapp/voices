@@ -923,7 +923,7 @@
   {
     "editionId": "mozart-susanna-signore",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-susanna-signore@1.0.0-klengel#4af1934d3d",
+    "scoreVersionId": "mozart-susanna-signore@1.0.0-klengel#252c5dc28f",
     "title": "Susanna! Signore!",
     "subtitle": "The Count, the Countess and Susanna: second section of the Act 2 Finale, No. 15, from Le nozze di Figaro",
     "kind": "finale",
@@ -950,12 +950,52 @@
       }
     ],
     "measures": 202,
-    "durationSec": 391,
+    "durationSec": 351,
     "hasRepeats": false,
     "keySignature": "B♭ major",
     "time": "3/8",
     "languageStatus": {
       "phrases": 102,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-taci-vien-gente",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-taci-vien-gente@1.0.0-klengel#b60f93af40",
+    "title": "Taci, vien gente",
+    "subtitle": "Susanna, the Count and Basilio: recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      }
+    ],
+    "measures": 83,
+    "durationSec": 246,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 62,
       "withAudio": 0,
       "reviewed": 0
     }

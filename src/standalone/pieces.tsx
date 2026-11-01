@@ -588,7 +588,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "3/8 (Molto Andante), then 4/4 (Allegro)",
-      tempo: "Molto Andante, played here at ♪ = 88; Allegro at ♩ = 126 (about 6 minutes)",
+      tempo: "Molto Andante at ♪ = 104, then Allegro at ♩ = 138, as the score changes tempo (about 5½ minutes)",
     },
     notePlaceholder: "Susanna steps out of the closet, and the Count must beg pardon",
     about: (
@@ -622,6 +622,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Written out from the printed pages: the sung lines and the piano each transcribed twice independently, every disagreement settled on the page by a separate judge, then
           checked bar by bar against the page by independent checkers, who found it clean. In bar 80 the print marks “Recitativo”: the Count reads the paper freely.
           Only the Italian words are kept, with the engraving's spellings. The rest of the Finale follows section by section.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-taci-vien-gente": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 81 (about 4 minutes)",
+    },
+    notePlaceholder: "The armchair, the dressing gown, and Basilio at the door",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 6, from “Taci, vien gente” to the Terzetto (vocal score pages 52-59, 83 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (quì, rè, sò). Cherubino hides here and does not sing.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
