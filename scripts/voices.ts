@@ -570,11 +570,13 @@ async function main() {
   const say = arg("say");
   if (say) {
     const voice = VOICE_ARG || config.male?.it?.voiceId || config.voiceId;
-    const sp = await speak(voice, say, false);
-    const slug = say.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+    const sp = await speak(voice, say, args.includes("--slow"));
+    const slug = say.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
     const dir = join(ROOT, "content/voice-trials", voice.toLowerCase());
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, `${slug}.mp3`), sp.audio); // exactly as ElevenLabs gave it
+    // when each character is spoken (for lining a line up with its notes)
+    writeFileSync(join(dir, `${slug}.json`), JSON.stringify({ text: say, chars: sp.chars, starts: sp.starts, ends: sp.ends }));
     console.log(`Said it with ${voice}: content/voice-trials/${voice.toLowerCase()}/${slug}.mp3`);
     return;
   }

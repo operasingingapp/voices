@@ -21,6 +21,10 @@ on:
         description: "Instead: one plain trial recording of this text (with the voice above). Optional."
         default: ""
         required: false
+      slow:
+        description: "With say: at the slow speed"
+        default: "no"
+        required: false
   push:
     branches: [main]
     paths:
@@ -55,12 +59,13 @@ jobs:
           REDO: ${{ inputs.redo || '' }}
           VOICE: ${{ inputs.voice || '' }}
           SAY: ${{ inputs.say || '' }}
+          SLOW: ${{ inputs.slow || 'no' }}
         run: |
           if [ -z "$ELEVENLABS_API_KEY" ]; then
             echo "::notice::Add the repository secret ELEVENLABS_API_KEY first (Settings → Secrets and variables → Actions). Nothing was made."
             exit 0
           fi
-          if [ -n "$SAY" ]; then npx tsx scripts/voices.ts --voice "$VOICE" --say "$SAY"; exit 0; fi
+          if [ -n "$SAY" ]; then npx tsx scripts/voices.ts --voice "$VOICE" --say "$SAY" $([ "$SLOW" = yes ] && echo --slow); exit 0; fi
           npx tsx scripts/voices.ts --piece "$PIECE" --redo "$REDO" --voice "$VOICE"
       - name: Save the new recordings
         run: |
