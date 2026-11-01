@@ -1004,9 +1004,10 @@ function PracticeScreen({
     const need = el.scrollWidth;
     const have = el.clientWidth;
     const size = need > have ? Math.floor(((base * have) / need) * 0.97) : base;
-    if (size >= base * 0.7) {
-      if (size < base) el.style.fontSize = `${size}px`;
-    } else el.style.whiteSpace = "";
+    if (size >= base * 0.7 && size < base) el.style.fontSize = `${size}px`;
+    // never forced onto one line: should the measure be off (a font still loading), the line wraps in even halves
+    // rather than running out of the box
+    el.style.whiteSpace = "";
     itFit.current = { text: el.textContent ?? "", w: have };
   }, []);
   useLayoutEffect(() => {
@@ -1017,7 +1018,12 @@ function PracticeScreen({
     const ro = new ResizeObserver(() => fitLine());
     if (lineCardRef.current) ro.observe(lineCardRef.current);
     document.fonts?.ready.then(() => fitLine());
-    return () => ro.disconnect();
+    const onFonts = () => fitLine();
+    document.fonts?.addEventListener?.("loadingdone", onFonts);
+    return () => {
+      ro.disconnect();
+      document.fonts?.removeEventListener?.("loadingdone", onFonts);
+    };
   }, [fitLine]);
   const [cardH, setCardH] = useState(0);
   useLayoutEffect(() => {

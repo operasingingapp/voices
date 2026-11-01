@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MutableRefObject, type ReactNode } from "react";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 import { buildLayout, type Lane, type ScoreLayout } from "./layout";
-import { loadVerovio, VrvScore } from "./vrv";
+import { buildPinnedVrv, loadVerovio, VrvScore } from "./vrv";
 import { engineFor } from "./engines";
 import type { Performance } from "../../shared/timeline";
 import type { CompiledEdition, Cut } from "../../shared/types";
@@ -599,7 +599,7 @@ export function ScoreView(props: Props) {
         litEls.current = [];
         const l = vrv.layout();
         layoutRef.current = l;
-        setPinned(null);
+        setPinned(strip && drawn ? buildPinnedVrv(drawn, props.ink) : null);
         if (strip && drawn && hostRef.current) l.ink = measureInk(hostRef.current, drawn);
         lastSystem.current = null;
         setLayout(l);

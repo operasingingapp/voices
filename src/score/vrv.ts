@@ -98,6 +98,8 @@ export class VrvScore {
       mnumInterval: 1,
       lyricSize: 4.2,
       lyricTopMinMargin: 3,
+      lyricWordSpace: 2.4,
+      lyricHyphenLength: 0.9,
       font: "Leipzig",
       svgCss: "g.verse text{font-family:'Charis SIL',Charter,Georgia,serif} g.dir text,g.tempo text,g.dynam text,g.mNum text{font-family:'Charis SIL',Charter,Georgia,serif}",
     };
@@ -286,4 +288,69 @@ export class VrvScore {
     }
     return null;
   }
+}
+
+/**
+ * The single line scrolls its clef and key signature away; as a printed system repeats them, they stay pinned at the
+ * left edge. One panel per clef/key setting: the panel shown is the last whose place has scrolled past the edge.
+ * Same shape as the OSMD panels (positions in drawing units; scale = px per unit).
+ */
+export function buildPinnedVrv(svg: SVGSVGElement, ink: string | undefined): { panels: { fromX: number; html: string }[]; width: number; vbH: number; scale: number } | null {
+  const inner = svg.querySelector<SVGSVGElement>("svg.definition-scale");
+  const margin = inner?.querySelector<SVGGElement>("g.page-margin");
+  const vb = inner?.viewBox.baseVal;
+  if (!inner || !margin || !vb || !vb.width) return null;
+  const scale = inner.getBoundingClientRect().width / vb.width;
+  const t = /translate\(\s*([-\d.]+)[ ,]+([-\d.]+)/.exec(margin.getAttribute("transform") ?? "");
+  const ox = t ? Number(t[1]) : 0;
+  const oy = t ? Number(t[2]) : 0;
+  const m0 = margin.querySelector<SVGGElement>("g.measure");
+  if (!m0) return null;
+  const staves0 = [...m0.querySelectorAll<SVGGElement>(":scope > g.staff")];
+  // the panel ends after the widest opening clef + key signature
+  let end = 0;
+  for (const st of staves0)
+    for (const el of st.querySelectorAll<SVGGraphicsElement>(":scope > g.clef, :scope > g.keySig")) {
+      const b = el.getBBox();
+      end = Math.max(end, b.x + b.width);
+    }
+  if (!end) return null;
+  end += 120;
+  const lines = staves0.map((st) => [...st.querySelectorAll(":scope > path")].map((p) => p.outerHTML).join("")).join("");
+  const system = m0.closest("g.system");
+  const connectors = system
+    ? [...system.querySelectorAll<SVGGraphicsElement>(":scope > g.grpSym, :scope > path, :scope > g.barLine")]
+        .filter((c) => c.getBBox().x < end)
+        .map((c) => c.outerHTML)
+        .join("")
+    : "";
+  // every clef and key signature in the piece, per staff (by its place among the staves of its bar)
+  const marks: { x: number; staff: number; kind: "clef" | "key"; el: SVGGraphicsElement }[] = [];
+  for (const m of margin.querySelectorAll<SVGGElement>("g.measure"))
+    [...m.querySelectorAll<SVGGElement>(":scope > g.staff")].forEach((st, k) => {
+      for (const el of st.querySelectorAll<SVGGraphicsElement>("g.clef, g.keySig"))
+        marks.push({ x: el.getBBox().x, staff: k, kind: el.classList.contains("clef") ? "clef" : "key", el });
+    });
+  const home = (k: number, kind: "clef" | "key") => marks.find((m) => m.staff === k && m.kind === kind && m.x < end)?.el.getBBox().x;
+  const starts = [...new Set(marks.map((m) => Math.round(m.x)))].sort((a, b) => a - b);
+  const defs = svg.querySelector("defs")?.outerHTML ?? "";
+  const w = end * scale;
+  const h = (vb.height + 0) * scale;
+  const panels: { fromX: number; html: string }[] = [];
+  for (const sx of starts) {
+    const parts = staves0.map((_, k) => {
+      const upto = marks.filter((m) => m.staff === k && Math.round(m.x) <= sx);
+      const pick = (kind: "clef" | "key") => [...upto].reverse().find((m) => m.kind === kind);
+      const place = (kind: "clef" | "key") => {
+        const mk = pick(kind);
+        const hx = home(k, kind);
+        if (!mk || hx === undefined) return "";
+        return `<g transform="translate(${(hx - mk.x).toFixed(1)},0)">${mk.el.outerHTML}</g>`;
+      };
+      return place("clef") + place("key");
+    });
+    const html = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${w.toFixed(1)}" height="${h.toFixed(1)}" viewBox="0 0 ${(end + ox).toFixed(0)} ${vb.height}" style="color:${ink ?? "currentColor"}">${defs}<g transform="translate(${ox},${oy})">${lines}${connectors}${parts.join("")}</g></svg>`;
+    if (!panels.length || panels[panels.length - 1].html !== html) panels.push({ fromX: sx + ox, html });
+  }
+  return { panels, width: (end + ox) * scale, vbH: vb.height, scale };
 }
