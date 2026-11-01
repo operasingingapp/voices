@@ -290,7 +290,9 @@ function parseScore(xml: string, manifest: Manifest, problems: string[]) {
       const expected = (time[0] * 4) / time[1];
       if (partIndex === 0) {
         info.durQ = durQ;
-        if (Math.abs(durQ - expected) > 1e-6) problems.push(`m. ${number}: notated length ${durQ} quarters, time signature expects ${expected}`);
+        // a pickup: the first bar, marked implicit, may be shorter than the time signature
+        const pickup = mi === 0 && mEl.getAttribute("implicit") === "yes" && durQ < expected;
+        if (!pickup && Math.abs(durQ - expected) > 1e-6) problems.push(`m. ${number}: notated length ${durQ} quarters, time signature expects ${expected}`);
         measures.push(info);
         startQ += durQ;
       } else if (Math.abs(info.durQ - durQ) > 1e-6) {

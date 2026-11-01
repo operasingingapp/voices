@@ -110,7 +110,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Venite, inginocchiatevi",
-      "kind": "Aria · Act 2"
+      "kind": "Aria · Act 2",
+      "editionId": "mozart-venite-inginocchiatevi"
      },
      {
       "title": "Sull'aria… che soave zeffiretto",
@@ -173,6 +174,24 @@ export const OPERAS: Opera[] = [
       "kind": "Duettino · Act 1",
       "id": "Act 1: Via resti servita",
       "editionId": "mozart-via-resti-servita"
+     },
+     {
+      "title": "Quanto duolmi, Susanna",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quanto duolmi, Susanna",
+      "editionId": "mozart-quanto-duolmi-susanna"
+     },
+     {
+      "title": "Bravo! Che bella voce!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Bravo! Che bella voce!",
+      "editionId": "mozart-bravo-che-bella-voce"
+     },
+     {
+      "title": "Quante buffonerie!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quante buffonerie!",
+      "editionId": "mozart-quante-buffonerie"
      }
     ]
    },
@@ -211,6 +230,24 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Vieni, cara Susanna",
       "editionId": "mozart-vieni-cara-susanna"
+     },
+     {
+      "title": "Quanto duolmi, Susanna",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quanto duolmi, Susanna",
+      "editionId": "mozart-quanto-duolmi-susanna"
+     },
+     {
+      "title": "Bravo! Che bella voce!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Bravo! Che bella voce!",
+      "editionId": "mozart-bravo-che-bella-voce"
+     },
+     {
+      "title": "Quante buffonerie!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quante buffonerie!",
+      "editionId": "mozart-quante-buffonerie"
      }
     ]
    },
@@ -242,6 +279,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Evviva! Evviva!",
       "editionId": "mozart-evviva"
+     },
+     {
+      "title": "Quante buffonerie!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quante buffonerie!",
+      "editionId": "mozart-quante-buffonerie"
      }
     ]
    },
@@ -258,7 +301,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Voi che sapete",
-      "kind": "Canzona · Act 2"
+      "kind": "Canzona · Act 2",
+      "editionId": "mozart-voi-che-sapete"
      },
      {
       "title": "Basilio, in traccia tosto",
@@ -271,6 +315,24 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Evviva! Evviva!",
       "editionId": "mozart-evviva"
+     },
+     {
+      "title": "Quanto duolmi, Susanna",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quanto duolmi, Susanna",
+      "editionId": "mozart-quanto-duolmi-susanna"
+     },
+     {
+      "title": "Bravo! Che bella voce!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Bravo! Che bella voce!",
+      "editionId": "mozart-bravo-che-bella-voce"
+     },
+     {
+      "title": "Quante buffonerie!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Quante buffonerie!",
+      "editionId": "mozart-quante-buffonerie"
      }
     ]
    },

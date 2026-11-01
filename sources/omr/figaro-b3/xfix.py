@@ -1,7 +1,12 @@
 """Small fixes on a delivered MusicXML. usage: xfix.py IN OUT FIXES.txt
 lines:  dyn PARTID BAR STAFF ONSET KIND        add a dynamic (onset in quarters)
         movedyn PARTID BAR KIND NEWONSET        move that dynamic in the bar to NEWONSET
-        acc PARTID BAR STAFF ONSET STEPOCT SIGN  show a printed accidental on that note"""
+        acc PARTID BAR STAFF ONSET STEPOCT SIGN  show a printed accidental on that note
+        wedge PARTID BAR STAFF ONSET TYPE       hairpin: TYPE crescendo | diminuendo | stop
+        final                                   light-heavy (final) barline at the end of every part
+        tie PARTID BAR STAFF ONSET STEPOCT      tie that note to the next note of the same pitch on that staff
+        slur PARTID BAR STAFF ONSET STEPOCT BAR2 ONSET2 STEPOCT2   a slur between two notes
+        grace PARTID BAR STAFF ONSET            grace note there: no slash, slurred to its main note"""
 import sys, xml.etree.ElementTree as ET
 from fractions import Fraction
 IN, OUT, FX = sys.argv[1:4]
@@ -51,6 +56,62 @@ for line in open(FX):
         for s in d.findall("staff"): d.remove(s)
         # clean any dangling backup/forward pair left around it is harmless (zero net); just re-place
         place(m, q, d, st)
+    elif op == "word":   # word PARTID BAR STAFF ONSET TEXT...
+        pid, b, st, on = w[1], int(w[2]), w[3], w[4]
+        m = meas(pid, b); q = int(Fraction(on) * divs(pid, b))
+        d = ET.Element("direction", placement="above"); dt = ET.SubElement(d, "direction-type")
+        ET.SubElement(dt, "words").text = " ".join(w[5:])
+        place(m, q, d, None if st == "-" else st)
+    elif op == "wedge":
+        pid, b, st, on, kind = w[1], int(w[2]), w[3], w[4], w[5]
+        m = meas(pid, b); q = int(Fraction(on) * divs(pid, b))
+        d = ET.Element("direction", placement="below"); ET.SubElement(ET.SubElement(d, "direction-type"), "wedge", type=kind)
+        place(m, q, d, st)
+    elif op == "final":
+        for pp in P.values():
+            m = pp.findall("measure")[-1]
+            for x in m.findall("barline"):
+                if x.get("location", "right") == "right": m.remove(x)
+            bl = ET.SubElement(m, "barline", location="right"); ET.SubElement(bl, "bar-style").text = "light-heavy"
+    elif op in ("tie", "slur", "grace"):
+        def find(pid, b, st, on, so):
+            m = meas(pid, b); q = int(Fraction(on) * divs(pid, b))
+            c = [n for o, n in notes(m)[0] if o == q and n.find("pitch") is not None and n.findtext("staff") == st
+                 and (so is None or n.findtext("pitch/step") + n.findtext("pitch/octave") == so)
+                 and (so is not None or n.find("grace") is not None)]
+            if not c: raise SystemExit(f"no {so} at {pid} {b} {on}")
+            return c[0]
+        def nots(n):
+            no = n.find("notations")
+            if no is None:
+                no = ET.Element("notations"); ks = list(n)
+                j = max(k for k, x in enumerate(ks) if x.tag in ("type", "dot", "accidental", "time-modification", "stem", "staff", "beam")) + 1
+                n.insert(j, no)
+            return no
+        def nextin(pid, b, st, after, pred):
+            seen = False
+            for mm in P[pid].findall("measure"):
+                if int(mm.get("number")) < b: continue
+                for o, n in notes(mm)[0]:
+                    if n is after: seen = True; continue
+                    if seen and n.findtext("staff") == st and n.find("pitch") is not None and pred(n): return n
+        if op == "tie":
+            pid, b, st, on, so = w[1:6]; b = int(b); n = find(pid, b, st, on, so)
+            m2 = nextin(pid, b, st, n, lambda x: x.findtext("pitch/step") + x.findtext("pitch/octave") == so and x.findtext("pitch/alter") == n.findtext("pitch/alter"))
+            for x, ty in ((n, "start"), (m2, "stop")):
+                if x.find(f"tie[@type='{ty}']") is None:
+                    ks = list(x); j = max(k for k, y in enumerate(ks) if y.tag in ("pitch", "duration")) + 1
+                    x.insert(j, ET.Element("tie", type=ty))
+                ET.SubElement(nots(x), "tied", type=ty)
+        else:
+            sn = 3 + (sum(1 for _ in r.iter("slur")) // 2) % 4
+            if op == "slur":
+                pid, b, st, on, so, b2, on2, so2 = w[1:9]; n = find(pid, int(b), st, on, so); n2 = find(pid, int(b2), st, on2, so2)
+            else:
+                pid, b, st, on = w[1:5]; n = find(pid, int(b), st, on, None)
+                g = n.find("grace"); g.attrib.pop("slash", None)
+                n2 = nextin(pid, int(b), st, n, lambda x: x.find("grace") is None)
+            ET.SubElement(nots(n), "slur", type="start", number=str(sn)); ET.SubElement(nots(n2), "slur", type="stop", number=str(sn))
     elif op == "acc":
         pid, b, st, on, so, sign = w[1], int(w[2]), w[3], w[4], w[5], w[6]
         m = meas(pid, b); q = None if on == "*" else int(Fraction(on) * divs(pid, b))

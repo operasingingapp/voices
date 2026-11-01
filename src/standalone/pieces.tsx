@@ -481,6 +481,131 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-quanto-duolmi-susanna": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 81 (about 1 minute 25 seconds, as in the recordings by Jacobs and Harnoncourt)",
+    },
+    notePlaceholder: "The Countess frets; Susanna brings Cherubino in",
+    about: (
+      <>
+        <p>
+          Score: the recitative before No. 11 (vocal score pages 101-103) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-voi-che-sapete": {
+    portrait: "figaro:cherubino",
+    opera: "Le nozze di Figaro",
+    kind: "Canzona",
+    facts: {
+      key: "B flat major",
+      time: "2/4",
+      tempo: "Andante con moto: played here at ♩ = 53 (about 3 minutes, as in the recordings by Jacobs and Harnoncourt)",
+    },
+    notePlaceholder: "Cherubino sings his song to the ladies",
+    about: (
+      <>
+        <p>
+          Score: No. 11 Canzona (vocal score pages 103-106) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-bravo-che-bella-voce": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 81 (about 1 minute 15 seconds, as in the recordings by Jacobs and Harnoncourt)",
+    },
+    notePlaceholder: "The ladies praise the song and start the disguise",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 11 (vocal score pages 106-108) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-venite-inginocchiatevi": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "G major",
+      time: "2/4",
+      tempo: "Allegretto: played here at ♩ = 84 (about 2 minutes 50 seconds, as in the recordings by Böhm, Jacobs and Harnoncourt)",
+    },
+    notePlaceholder: "Susanna dresses Cherubino as a girl",
+    about: (
+      <>
+        <p>
+          Score: No. 12 Aria (vocal score pages 109-113) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings. The opening upbeat counts as bar 1. In bar 40 the piano's C is printed without the sharp it has in bar 50; it is kept as printed.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-quante-buffonerie": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at ♩ = 83 (about 2 minutes 50 seconds, as in the recordings by Böhm, Harnoncourt and Jacobs)",
+    },
+    notePlaceholder: "The ribbon, the plaster, and the Count at the door",
+    about: (
+      <>
+        <p>
+          Score: the recitative after No. 12, up to the Count's entrance (vocal score pages 114-119) from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
+          checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
+          Only the Italian words are kept, with the engraving's spellings. In bar 54 the Count's “parlate?” is printed half a beat too long; it is read as eighths so the bar adds up.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-tutto-ancor-non-ho-perso": {
     portrait: "figaro:marcellina",
     opera: "Le nozze di Figaro",

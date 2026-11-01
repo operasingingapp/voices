@@ -116,6 +116,46 @@
     }
   },
   {
+    "editionId": "mozart-bravo-che-bella-voce",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-bravo-che-bella-voce@1.0.0-klengel#457c7a2b7f",
+    "title": "Bravo! Che bella voce!",
+    "subtitle": "The Countess, Susanna and Cherubino: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 25,
+    "durationSec": 74,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 31,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-bravo-signor-padrone",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-bravo-signor-padrone@1.0.0-klengel#b25a762559",
@@ -659,6 +699,92 @@
     }
   },
   {
+    "editionId": "mozart-quante-buffonerie",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-quante-buffonerie@1.0.0-klengel#605c0d221f",
+    "title": "Quante buffonerie!",
+    "subtitle": "The Countess, Susanna, Cherubino and the Count: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 59,
+    "durationSec": 171,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 63,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-quanto-duolmi-susanna",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-quanto-duolmi-susanna@1.0.0-klengel#ddf3dc2d06",
+    "title": "Quanto duolmi, Susanna",
+    "subtitle": "The Countess, Susanna and Cherubino: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 29,
+    "durationSec": 86,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 23,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-se-a-caso-madama",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-se-a-caso-madama@1.0.0-klengel#c87a741a99",
@@ -795,6 +921,34 @@
     }
   },
   {
+    "editionId": "mozart-venite-inginocchiatevi",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-venite-inginocchiatevi@1.0.0-klengel#9da7c08863",
+    "title": "Venite, inginocchiatevi",
+    "subtitle": "Susanna's aria No. 12 from Le nozze di Figaro, Act 2",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 119,
+    "durationSec": 169,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 35,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-via-resti-servita",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-via-resti-servita@1.0.0-klengel#bccdf7a3a5",
@@ -864,6 +1018,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 69,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-voi-che-sapete",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-voi-che-sapete@1.0.0-klengel#9161908a4e",
+    "title": "Voi che sapete",
+    "subtitle": "Cherubino's canzona No. 11 from Le nozze di Figaro, Act 2",
+    "kind": "canzona",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 79,
+    "durationSec": 179,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 17,
       "withAudio": 0,
       "reviewed": 0
     }
