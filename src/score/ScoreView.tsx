@@ -372,10 +372,25 @@ export function ScoreView(props: Props) {
     const bottom = next ? (lane.extBottom + next.extTop) / 2 : Math.min(layout.height, lane.extBottom + 10);
     return { top, height: bottom - top };
   };
+  /** page layout: a part's band in every system (from halfway to the part above to halfway to the part below) */
+  const pageBands = (layout: ScoreLayout, pid: string, kind: "tint" | "fade") => {
+    const out: { top: number; height: number }[] = [];
+    for (const lanes of layout.systemLanes.values()) {
+      const i = lanes.findIndex((l) => l.partId === pid);
+      if (i < 0) continue;
+      const lane = lanes[i];
+      const prev = lanes[i - 1];
+      const next = lanes[i + 1];
+      const top = prev ? (prev.extBottom + lane.extTop) / 2 : kind === "tint" ? Math.max(0, Math.min(lane.extTop, lane.top - 34) - 8) : lane.extTop - 8;
+      const bottom = next ? (lane.extBottom + next.extTop) / 2 : lane.extBottom + 10;
+      out.push({ top, height: bottom - top });
+    }
+    return out;
+  };
   const tintEls = (layout: ScoreLayout) =>
-    props.tintXmlParts?.map((pid) => {
-      const b = laneBand(layout, pid);
-      return b ? <div key={`tint-${pid}`} className="ov-you" style={{ position: "absolute", left: 0, top: b.top, width: "100%", height: b.height }} /> : null;
+    props.tintXmlParts?.flatMap((pid) => {
+      const bs = strip ? [laneBand(layout, pid)] : pageBands(layout, pid, "tint");
+      return bs.map((b, k) => (b ? <div key={`tint-${pid}-${k}`} className="ov-you" style={{ position: "absolute", left: 0, top: b.top, width: "100%", height: b.height }} /> : null));
     });
   const { xml, visibleXmlParts, zoom } = props;
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -1125,15 +1140,17 @@ export function ScoreView(props: Props) {
           {layout && tintEls(layout)}
           {layout && !(pinned && pinIdx >= 0) && laneLabelEls(layout)}
           {layout &&
-            props.fadedXmlParts?.map((pid) => {
+            props.fadedXmlParts?.flatMap((pid) => {
+              if (!strip)
+                return pageBands(layout, pid, "fade").map((b, k) => <div key={`${pid}-${k}`} className="ov-fade" style={{ left: 0, top: b.top, width: "100%", height: b.height }} />);
               const i = layout.lanes.findIndex((l) => l.partId === pid);
-              if (i < 0) return null;
+              if (i < 0) return [];
               const lane = layout.lanes[i];
               const prev = layout.lanes[i - 1];
               const next = layout.lanes[i + 1];
               const top = prev ? (prev.extBottom + lane.extTop) / 2 : 0;
               const bottom = next ? (lane.extBottom + next.extTop) / 2 : layout.height;
-              return <div key={pid} className="ov-fade" style={{ left: 0, top, width: "100%", height: bottom - top }} />;
+              return [<div key={pid} className="ov-fade" style={{ left: 0, top, width: "100%", height: bottom - top }} />];
             })}
           <div ref={haloEl} className="ov-halo" style={{ display: "none" }} />
           <div ref={measureEl} className="ov-measure-now" style={{ display: "none" }} />

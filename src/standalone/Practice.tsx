@@ -519,6 +519,8 @@ function PracticeScreen({
   const engine = pb.engine;
 
   const [pianoFaded, setPianoFaded] = useLocalSetting("p:pianoFaded", true);
+  // the music as one long line that scrolls sideways (default), or laid out in systems like a printed page
+  const [pageView, setPageView] = useLocalSetting("p:pageView", false);
   const [hearVoice, setHearVoice] = useLocalSetting("p:hearVoice", true);
   const [hearPiano, setHearPiano] = useLocalSetting("p:hearPiano", true);
   // an ensemble: each of the other singers' lines on its own (heard or not, how loud, on what, shown in the score or not),
@@ -1975,6 +1977,18 @@ function PracticeScreen({
               <span className="label">Words</span>
             </button>
           </div>
+          {musicOn && (
+            <div className="cp-seg layout-switch" role="group" aria-label="How the music is laid out">
+              <button type="button" aria-pressed={!pageView} onClick={() => setPageView(false)} title="One line, scrolling sideways">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 12h18M3 9h18M3 15h18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" fill="none" /></svg>
+                <span className="label">Line</span>
+              </button>
+              <button type="button" aria-pressed={pageView} onClick={() => setPageView(true)} title="Page: systems one under another, scrolling down">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 5h14M5 8h14M5 13h14M5 16h14M5 21h9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" fill="none" /></svg>
+                <span className="label">Page</span>
+              </button>
+            </div>
+          )}
         </div>
       </header>
 
@@ -2122,7 +2136,7 @@ function PracticeScreen({
           onFlag={() => setDrawer("notes")}
           onUserScroll={() => undefined}
           onLayout={onLayout}
-          strip
+          strip={!pageView}
           joinTopStaff={false}
           ink="#0b0b0b"
           fadedXmlParts={pianoFaded && !hiddenIds.includes(pianoPart.source.xmlPartId) ? [pianoPart.source.xmlPartId] : []}

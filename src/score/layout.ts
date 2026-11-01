@@ -53,6 +53,8 @@ export class ScoreLayout {
     readonly height: number,
     readonly skies: Map<number, SystemSky> = new Map(),
     readonly lanes: Lane[] = [],
+    /** every system's parts, top to bottom (the page layout; lanes is system 0's) */
+    readonly systemLanes: Map<number, Lane[]> = new Map(),
   ) {}
 
   /** What is actually drawn, top to bottom (px from the top of the sheet), measured after rendering. */
@@ -125,6 +127,7 @@ export function buildLayout(osmd: OpenSheetMusicDisplay): ScoreLayout {
   const sampling = (osmd.EngravingRules as unknown as { SamplingUnit?: number }).SamplingUnit ?? 3;
   const topStaff = new Map<number, { y: number; line: unknown }>();
   const lanes = new Map<string, Lane>();
+  const allLanes = new Map<number, Map<string, Lane>>();
   const measures = new Map<number, MeasureBox>();
   const systemIds = new Map<unknown, number>();
   const list = osmd.GraphicSheet?.MeasureList ?? [];
@@ -154,6 +157,18 @@ export function buildLayout(osmd: OpenSheetMusicDisplay): ScoreLayout {
       let skyMin = 0;
       if (sky) for (const v of sky) if (Number.isFinite(v) && v < skyMin) skyMin = v;
       const extTop = sl ? Math.min(top, (sl.AbsolutePosition.y + skyMin) * unit) : top;
+      if (partId) {
+        const per = allLanes.get(sid) ?? new Map<string, Lane>();
+        allLanes.set(sid, per);
+        const l2 = per.get(partId);
+        if (!l2) per.set(partId, { partId, top, bottom, extTop, extBottom: Math.max(ext, bottom) });
+        else {
+          l2.top = Math.min(l2.top, top);
+          l2.bottom = Math.max(l2.bottom, bottom);
+          l2.extTop = Math.min(l2.extTop, extTop);
+          l2.extBottom = Math.max(l2.extBottom, ext);
+        }
+      }
       if (partId && sid === 0) {
         const lane = lanes.get(partId);
         if (!lane) lanes.set(partId, { partId, top, bottom, extTop, extBottom: Math.max(ext, bottom) });
@@ -207,5 +222,6 @@ export function buildLayout(osmd: OpenSheetMusicDisplay): ScoreLayout {
     skies.set(sid, { x0: ox * unit, step: unit / sampling, y: line.SkyLine.map((v) => (oy + Math.min(0, v)) * unit) });
   }
   const svg = (osmd as unknown as { container: HTMLElement }).container?.querySelector("svg");
-  return new ScoreLayout(measures, systems, svg?.clientWidth ?? 0, svg?.clientHeight ?? 0, skies, [...lanes.values()].sort((a, b) => a.top - b.top));
+  return new ScoreLayout(measures, systems, svg?.clientWidth ?? 0, svg?.clientHeight ?? 0, skies, [...lanes.values()].sort((a, b) => a.top - b.top),
+    new Map([...allLanes].map(([sid, m]) => [sid, [...m.values()].sort((a, b) => a.top - b.top)])));
 }
