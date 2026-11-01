@@ -1610,7 +1610,7 @@ export function ProfilePage({ ctx }: { ctx: Ctx }) {
             </button>
           ))}
         </div>
-        <p className="st-note">{choice === "auto" ? `Automatic: ${AUTO_NOTE.charAt(0).toLowerCase()}${AUTO_NOTE.slice(1)}` : "Always the piano, a little above the accompaniment."}</p>
+        <p className="st-note">{choice === "auto" ? `Automatic: ${AUTO_NOTE.charAt(0).toLowerCase()}${AUTO_NOTE.slice(1)}` : "The same instrument for every role."}</p>
       </section>
 
       <section className="block" aria-labelledby="st-words">
