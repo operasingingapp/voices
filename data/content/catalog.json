@@ -921,6 +921,46 @@
     }
   },
   {
+    "editionId": "mozart-susanna-signore",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-susanna-signore@1.0.0-klengel#4af1934d3d",
+    "title": "Susanna! Signore!",
+    "subtitle": "The Count, the Countess and Susanna: second section of the Act 2 Finale, No. 15, from Le nozze di Figaro",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 202,
+    "durationSec": 391,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "3/8",
+    "languageStatus": {
+      "phrases": 102,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-tutto-ancor-non-ho-perso",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-tutto-ancor-non-ho-perso@1.0.0-klengel#580268a7e6",

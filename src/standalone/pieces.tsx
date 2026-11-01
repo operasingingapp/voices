@@ -581,6 +581,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-susanna-signore": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "B flat major",
+      time: "3/8 (Molto Andante), then 4/4 (Allegro)",
+      tempo: "Molto Andante, played here at ♪ = 88; Allegro at ♩ = 126 (about 6 minutes)",
+    },
+    notePlaceholder: "Susanna steps out of the closet, and the Count must beg pardon",
+    about: (
+      <>
+        <p>
+          Score: the second section of the Act 2 Finale, No. 15, from Susanna stepping out of the closet (“Susanna! Signore!”, Molto Andante) through the Allegro to Figaro's entrance (vocal score pages 147-159, 202 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each transcribed twice independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by independent checkers. Only the Italian words are kept, with the engraving's spellings (“credera” for crederà, “cos' è”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-esci-omai-garzon-malnato": {
     portrait: "figaro:count",
     opera: "Le nozze di Figaro",

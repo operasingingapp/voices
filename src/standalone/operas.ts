@@ -192,6 +192,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Quante buffonerie!",
       "editionId": "mozart-quante-buffonerie"
+     },
+     {
+      "title": "Susanna! Signore!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Susanna! Signore!",
+      "editionId": "mozart-susanna-signore"
      }
     ]
    },
@@ -254,6 +260,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Esci omai, garzon malnato",
       "editionId": "mozart-esci-omai-garzon-malnato"
+     },
+     {
+      "title": "Susanna! Signore!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Susanna! Signore!",
+      "editionId": "mozart-susanna-signore"
      }
     ]
    },
@@ -297,6 +309,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Esci omai, garzon malnato",
       "editionId": "mozart-esci-omai-garzon-malnato"
+     },
+     {
+      "title": "Susanna! Signore!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Susanna! Signore!",
+      "editionId": "mozart-susanna-signore"
      }
     ]
    },
