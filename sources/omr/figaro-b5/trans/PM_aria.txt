@@ -270,16 +270,16 @@
 93 RH1: D5:s G5:s( B5:s D6:s) D5:q~
 93 LH1: G3:s( B3:s G3:s B3:s) F#3+A3:s C4:s( A3:s F#3:s)
 94 RH1: D5:s G5:s( B5:s D6:s) word:cresc. D5:q~
-94 LH1: G3:s( B3:s G3:s B3:s) F#3+A3:s C4:s( A3:s F#3:s
+94 LH1: G3:s( B3:s G3:s B3:s) F#3+A3:s C4:s( A3:s F#3:s)
 # sys56 starts bar 95
 95 RH1: dyn:f D5:e dyn:p B3+D4:e G3+B3:e D5:e(
 95 LH1: G3+B3:e G2:e G2:e D4:e(
 96 RH1: G5:e B4:e C5:e E5:e)
 96 LH1: G4:e B3:e C4:e E4:e)
 97 RH1: D4:e.( E4:s D4:e D5:e)
-97 LH1: F#3+A3+C4:h(
+97 LH1: F#3+A3+C4:h
 98 RH1: E5:s( D5:s C5:s B4:s) A4:e D5:e
-98 LH1: G3+B3:e) r:e D3+F#3+C4:e r:e
+98 LH1: G3+B3:e r:e D3+F#3+C4:e r:e
 99 RH1: F#4+A4+C5:e( G4+B4:e) r:e D5:e(
 99 LH1: r:e G3:e G2:e D4:e(
 # sys57 starts bar 100
@@ -293,7 +293,7 @@
 103 LH1: G3+B3:e r:e r:e clef:G B4+D5:e*
 104 RH1: F#5:e* E5:e* D5:e* C5:e*
 104 LH1: A4+C5:e* G4+B4:e* F#4+A4:e* D#4+F#4:e*
-105 RH1: B4:e* C5:e* D5:e* E5:e*
+105 RH1: B4:e C5:e* D5:e* E5:e*
 105 RH2: r:e G4:q G4:e~
 105 LH1: E4+G4:e* clef:F E3:e* B2:e* C3:e*
 # sys58 starts bar 106
@@ -306,10 +306,10 @@
 107 LH1: G3+B3:e r:e r:e clef:G B4+D5:e*
 108 RH1: F#5:e* E5:e* D5:e* C5:e*
 108 LH1: A4+C5:e* G4+B4:e* F#4+A4:e* D#4+F#4:e*
-109 RH1: B4:e* C5:e* D5:e* E5:e*
+109 RH1: B4:e C5:e D5:e E5:e
 109 RH2: r:e G4:q G4:e~
 109 LH1: E4+G4:e* clef:F E3:e* B2:e* C3:e*
-110 RH1: A4:e* B4:e* C5:e* D5:e*
+110 RH1: A4:e B4:e C5:e D5:e
 110 RH2: G4:e G4:q( F#4:e)
 110 LH1: C4:e* B3:e* word:tr A3:e.( G3:x A3:x)
 110 LH2: D3:h

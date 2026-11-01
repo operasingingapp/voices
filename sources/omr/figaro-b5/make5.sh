@@ -18,15 +18,22 @@ t = ET.parse(f); r = t.getroot(); m = r.find('part').find('measure')
 # a short first bar (pickup) is marked implicit
 if 'aria' in f:
     for part in r.findall('part'): part.find('measure').set('implicit', 'yes')
-# printed "tr" words become trill marks on the next note of that staff
+# printed "tr" words become trill marks on the note that starts where the word stands, on that staff
 for part in r.findall('part'):
     for m in part.findall('measure'):
-        kids = list(m)
-        for i, d in enumerate(kids):
-            if d.tag != 'direction' or (d.findtext('direction-type/words') or '').strip() != 'tr': continue
-            st = d.findtext('staff')
-            nxt = next((n for n in kids[i+1:] if n.tag == 'note' and n.find('rest') is None and (st is None or n.findtext('staff') == st)), None)
-            if nxt is None: continue
+        pos = 0; last = 0; dirs = []; notes = []
+        for e in list(m):
+            if e.tag == 'backup': pos -= int(e.findtext('duration'))
+            elif e.tag == 'forward': pos += int(e.findtext('duration'))
+            elif e.tag == 'direction' and (e.findtext('direction-type/words') or '').strip() == 'tr': dirs.append((pos, e.findtext('staff'), e))
+            elif e.tag == 'note':
+                on = last if e.find('chord') is not None else pos
+                if e.find('chord') is None and e.find('grace') is None: last = pos; pos += int(e.findtext('duration'))
+                if e.find('rest') is None and e.find('grace') is None: notes.append((on, e))
+        for q, st, d in dirs:
+            cand = sorted([(on, n) for on, n in notes if on >= q and (st is None or n.findtext('staff') == st)], key=lambda x: x[0])
+            if not cand: continue
+            nxt = cand[0][1]
             no = nxt.find('notations')
             if no is None:
                 no = ET.Element('notations'); ks = list(nxt)
