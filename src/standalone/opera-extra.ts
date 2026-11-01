@@ -18,13 +18,18 @@ const PORTRAIT_ALT: Record<string, string> = {
   "figaro:countess": "The Countess in lilac silk with white sleeves, grey hair piled high, a white fan in her hand.",
   "figaro:count": "Count Almaviva in a plum coat and grey waistcoat with a white jabot, dark hair tied back.",
   "figaro:cherubino": "Cherubino in a mustard coat and brown breeches, light brown hair, a letter held to his chest.",
+  "figaro:marcellina": "Marcellina in a dark plum gown, grey hair pinned up, arms folded over a letter.",
+  "figaro:basilio": "Don Basilio in a long mustard coat, bald with a fringe of hair, a rolled sheet of music behind his back.",
+  "figaro:curzio": "Don Curzio in a black lawyer's gown with white bands and a grey wig, a red book under his arm.",
+  "figaro:barbarina": "Barbarina in an olive bodice, white blouse and ochre skirt, dark hair pinned up, a hand in her apron pocket.",
+  "figaro:antonio": "Antonio the gardener in an olive shirt and brown apron, grey hair, a red carnation in his hand.",
   "giovanni:dongiovanni": "Don Giovanni in a black coat over a dark red waistcoat, dark hair swept back, a hand at his chest.",
   "giovanni:leporello": "Leporello in a long brown coat and green waistcoat, a small book in his hand.",
   "giovanni:anna": "Donna Anna in a dark navy gown with white cuffs, black hair drawn back, a hand at her breast.",
   "giovanni:elvira": "Donna Elvira in a red dress under a teal cloak, auburn hair piled high, a hand at her heart.",
   "giovanni:zerlina": "Zerlina in a red bodice and white skirt, a long dark braid over her shoulder.",
   "giovanni:ottavio": "Don Ottavio in a pale blue coat and white stock, fair hair tied back, his hands clasped.",
-  "giovanni:masetto": "Masetto in a white shirt and red waistcoat, sleeves rolled up, arms crossed.",
+  "giovanni:masetto": "Masetto in a white shirt and dark blue waistcoat with a red sash, sleeves rolled up, arms crossed.",
   "giovanni:commendatore": "The Commendatore in a grey-blue coat over a white waistcoat, bald with a white beard, one hand held out.",
   "cosi:fiordiligi": "Fiordiligi in a teal bodice with white sleeves, dark hair pinned with pearls, a letter at her heart.",
   "cosi:dorabella": "Dorabella in a coral-red dress with white sleeves, auburn hair in soft waves, a folded fan in her hands.",
@@ -76,7 +81,6 @@ const COVER_ALT: Record<string, string> = {
 /** characters who are the same person in another opera, drawn once (Beaumarchais's Bartolo and Basilio) */
 const SAME_AS: Record<string, string> = {
   "figaro:bartolo": "barbiere:bartolob",
-  "figaro:basilio": "barbiere:basilio",
 };
 
 /** Portraits for the characters that have one (key: "opera:character"): a full portrait and a face crop for circles. */
