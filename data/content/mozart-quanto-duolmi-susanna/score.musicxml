@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="3.1">
   <work>
     <work-title>Le nozze di Figaro: Recitativo (Quanto duolmi, Susanna)</work-title>
@@ -4359,6 +4358,7 @@
         <voice>1</voice>
         <type>eighth</type>
         <staff>1</staff>
+        <beam number="1">begin</beam>
         <notations>
           <slur type="start" number="7" />
         </notations>
@@ -4372,6 +4372,7 @@
         <voice>1</voice>
         <type>eighth</type>
         <staff>1</staff>
+        <beam number="1">continue</beam>
       </note>
       <note>
         <chord />
@@ -4395,6 +4396,7 @@
         <voice>1</voice>
         <type>eighth</type>
         <staff>1</staff>
+        <beam number="1">end</beam>
       </note>
       <note>
         <chord />
@@ -4499,6 +4501,7 @@
         <voice>5</voice>
         <type>eighth</type>
         <staff>2</staff>
+        <beam number="1">begin</beam>
         <notations>
           <slur type="start" number="11" />
         </notations>
@@ -4523,6 +4526,7 @@
         <voice>5</voice>
         <type>eighth</type>
         <staff>2</staff>
+        <beam number="1">continue</beam>
       </note>
       <note>
         <chord />
@@ -4544,6 +4548,7 @@
         <voice>5</voice>
         <type>eighth</type>
         <staff>2</staff>
+        <beam number="1">end</beam>
       </note>
       <note>
         <chord />
