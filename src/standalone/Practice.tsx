@@ -1856,7 +1856,7 @@ function PracticeScreen({
      (the rest dims and does not respond), says what to do, and moves on when you have done it. At the end
      (or on skipping) everything goes back as it was.
      ------------------------------------------------------------------------------------------------ */
-  type GuideStep = { id: string; part: string; sel: string[]; title: string; text: string; done?: () => boolean; holeRight?: number; skipIf?: () => boolean };
+  type GuideStep = { id: string; part: string; sel: string[]; title: string; text: string; done?: () => boolean; holeRight?: number; skipIf?: () => boolean; /** menus or panels this step opens: lit with it, and left open; any other is closed when the step begins */ pops?: string };
   const [guide, setGuide] = useState<number>(() => {
     try {
       return localStorage.getItem(TIPS_KEY) ? -2 : -1;
@@ -1865,7 +1865,7 @@ function PracticeScreen({
     }
   });
   const [guideOk, setGuideOk] = useState(false);
-  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number } | null>(null);
+  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number; noteIds: string[] } | null>(null);
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   const steps: GuideStep[] = [
@@ -1880,11 +1880,11 @@ function PracticeScreen({
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
     { id: "more", part: "Practise", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
     { id: "slower", part: "Practise", sel: ['[aria-label="Slower"]'], title: "Slow it down", text: "Tap − to practise slower. The music keeps its pitch.", done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 1e-6 },
-    { id: "mute", part: "Practise", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute, and sing it yourself.", done: () => !hearVoice },
-    { id: "others", part: "Practise", sel: [".bar-others .part:first-child"], title: "Hear another singer", text: "The other roles are silent. Tap a face, then Play this line.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
-    { id: "arrange", part: "Practise", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange the lines", text: "Tap Arrange: for each line, its sound, whether it shows in the score, its volume and its order.", done: () => mixOpen },
-    { id: "hide", part: "Practise", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: "Hide a line", text: mixOpen ? "Tap an eye to hide that line from the score. Tap it again to bring it back." : "Open Arrange again, then tap an eye.", done: () => !!guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown },
-    { id: "notes", part: "Practise", sel: [".notes-btn", ".note-card"], title: "Write a note", text: noteEdit ? "Write your note and Save, or close the card." : notePick ? "Now tap the bar the note is for." : "Tap Notes, then tap a bar.", done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
+    { id: "mute", part: "Practise", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute, and sing it yourself.", done: () => !hearVoice },
+    { id: "others", part: "Practise", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: "Hear another singer", text: "The other roles are silent. Tap a face, then Play this line.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
+    { id: "arrange", part: "Practise", pops: ".mix-pop", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange the lines", text: "Tap Arrange: for each line, its sound, whether it shows in the score, its volume and its order.", done: () => mixOpen },
+    { id: "hide", part: "Practise", pops: ".mix-pop", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: "Hide a line", text: mixOpen ? "Tap an eye to hide that line from the score. Tap it again to bring it back." : "Open Arrange again, then tap an eye.", done: () => !!guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown },
+    { id: "notes", part: "Practise", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : "Tap Notes. Then you choose the bar.", done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
   const step = guide >= 0 ? steps[guide] : null;
@@ -1914,6 +1914,18 @@ function PracticeScreen({
       setLoop(null);
       setLoopHint(false);
     }
+    // each step starts clean: a menu or panel left open by an earlier step (Arrange, a face's menu, the note card)
+    // closes, unless this step is about it
+    if (guide >= 0) {
+      const pops = steps[guide]?.pops ?? "";
+      if (!pops.includes("mix-pop")) setMixOpen(false);
+      if (!pops.includes("face-menu")) setFaceMenu(null);
+      if (!pops.includes("hold-menu")) setHoldMenu(null);
+      if (steps[guide]?.id !== "notes") {
+        setNoteEdit(null);
+        setNotePick(false);
+      }
+    }
     // on a phone the practising controls live in the folded bar: keep it open from here on, even if "More controls" was passed over
     if (guide >= 0 && steps[guide]?.part === "Practise" && steps[guide]?.id !== "more" && !barOpen) setBarOpen(true);
     if (guide >= 0 && steps[guide]?.id === "edge" && !loop) {
@@ -1929,6 +1941,10 @@ function PracticeScreen({
     if (g) {
       setHearVoice(g.hearVoice);
       for (const [k, v] of Object.entries(g.shows)) setLine(k, { show: v });
+      // a note written to try it out goes again: only the notes you had before the tour stay
+      const kept = loadNotes().filter((n) => g.noteIds.includes(n.id));
+      setNotes(kept);
+      saveNotes(kept);
       setMixOpen(false);
       setNotePick(false);
       setNoteEdit(null);
@@ -1961,7 +1977,7 @@ function PracticeScreen({
     } catch {
       /* storage unavailable */
     }
-    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))), shows: Object.fromEntries(orderedIds.map((x) => [partByXml(x).key, showOf(partByXml(x))])), notes: notes.length };
+    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))), shows: Object.fromEntries(orderedIds.map((x) => [partByXml(x).key, showOf(partByXml(x))])), notes: notes.length, noteIds: notes.map((n) => n.id) };
     guideSkip.current = new Set(steps.filter((g) => g.skipIf?.()).map((g) => g.id));
     setLoop(null);
     setView("music");
@@ -1972,6 +1988,8 @@ function PracticeScreen({
     while (n < steps.length && steps[n].skipIf?.()) n++;
     // the passage repeats; leave it playing on a step that needs no sound, and close a word card left open
     setOpenWord(null);
+    // the last step done: put everything back now, so the closing card's "back as they were" is already true
+    if (n >= steps.length) putBack();
     setGuide(n < steps.length ? n : steps.length);
   };
   // moving through the steps by hand, either way (a step that does not apply here is passed over)
@@ -2036,7 +2054,7 @@ function PracticeScreen({
       let r: { left: number; top: number; width: number; height: number } = el.getBoundingClientRect();
       // a menu or panel opened from the lit control (your face's menu, Arrange, the note card) is part of the step:
       // the light takes it in, and the card moves out of its way
-      for (const pop of document.querySelectorAll(".face-menu, .hold-menu, .mix-pop, .note-card, .note-pick")) {
+      for (const pop of step.pops ? document.querySelectorAll(step.pops) : []) {
         if (!seen(pop)) continue;
         const pr = pop.getBoundingClientRect();
         const l = Math.min(r.left, pr.left), t = Math.min(r.top, pr.top);
@@ -2052,8 +2070,16 @@ function PracticeScreen({
       // no room above or below (a tall panel): the card goes beside the light, on the side with more room
       if (!below && !aboveOk) {
         const rightRoom = window.innerWidth - (hole.x + hole.w);
-        const side = rightRoom >= w + 24 ? hole.x + hole.w + 12 : hole.x - w - 12 >= 16 ? hole.x - w - 12 : left;
-        setGuideBox({ hole, left: side, top: 16, above: false, w });
+        if (rightRoom >= w + 24 || hole.x - w - 12 >= 16) {
+          setGuideBox({ hole, left: rightRoom >= w + 24 ? hole.x + hole.w + 12 : hole.x - w - 12, top: 16, above: false, w });
+          return;
+        }
+        // a panel filling the screen (Arrange on a phone): the card goes to the top or the bottom, wherever it
+        // leaves the control you are asked to tap uncovered
+        const tr = el.getBoundingClientRect();
+        const cardH = 190;
+        const atTop = tr.top > cardH + 24;
+        setGuideBox({ hole, left, top: atTop ? 12 : window.innerHeight - 12, above: !atTop, w });
         return;
       }
       setGuideBox({ hole, left, top: below ? hole.y + hole.h + 12 : hole.y - 12, above: !below, w });
@@ -2065,7 +2091,7 @@ function PracticeScreen({
       window.clearInterval(t);
       window.removeEventListener("resize", place);
     };
-  }, [guide, view, barOpen, !!loop, playing]);
+  }, [guide, view, barOpen, !!loop, playing, notePick, !!noteEdit, mixOpen, !!faceMenu]);
   // only the lit control (and the guide's card) answers while a step waits
   useEffect(() => {
     if (!step || !guideBox) return;
@@ -2118,7 +2144,7 @@ function PracticeScreen({
             <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={replayGuide}>
               Take the tour again
             </button>
-            <button type="button" className="cp-btn cp-btn--ink" onClick={() => endGuide(true)}>
+            <button type="button" className="cp-btn cp-btn--ink" onClick={() => endGuide(false)}>
               Start singing
             </button>
           </div>
@@ -3270,7 +3296,7 @@ function PracticeScreen({
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
       </footer>
 
-        {notePick && (
+        {notePick && guide < 0 && (
           <div className="note-pick" role="status">
             <span>Tap the bar your note is for</span>
             <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setNotePick(false)}>

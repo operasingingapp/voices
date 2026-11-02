@@ -8413,7 +8413,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* Notes: "tap the bar" hint, and the small card where a note is written, both above the bottom bar */
 .note-pick {
-  position: fixed; left: 50%; bottom: 112px; transform: translateX(-50%); z-index: 60;
+  position: fixed; left: 50%; top: 16px; transform: translateX(-50%); z-index: 60; white-space: nowrap;
   display: flex; align-items: center; gap: 12px; padding: 8px 8px 8px 16px;
   background: var(--ink); color: var(--canvas); border-radius: var(--radius-pill); font-size: 15px;
   box-shadow: 0 6px 24px rgb(0 0 0 / 0.18);
@@ -8477,3 +8477,45 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .checklist .ck .ck-scene, .checklist .ck.soon .ck-scene { width: 36px; padding: 0; }
   .checklist .ck .ck-scene .ck-scene-label { display: none; }
 }
+
+/* The opera's list of numbers looks like a character's list: every row on white with a thin neutral line,
+   no stripes and no pink for your pieces (your role's name in bold already says which are yours). */
+.num, .num:nth-child(odd), .num.ready, .num.yours, .num.yours.ready {
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+  border-radius: var(--radius-row);
+}
+.num { margin-bottom: 6px; }
+.num.soon { box-shadow: none; background: transparent; }
+
+/* Home, "Pick up where you left off": a calm card — no picture band, a small portrait beside the title, one
+   line of details, then the place you stopped and Continue. Both cards at the top share the same build. */
+.hm-continue .hm-band { display: none; }
+.hm-continue .hm-cont-id { display: flex; align-items: center; gap: 16px; margin: 14px 0 0; padding: 0; }
+.hm-continue .rc-face { position: static; width: 64px; height: 64px; min-width: 64px; margin: 0; box-shadow: none; transform: none; }
+.hm-continue .rc-text { min-width: 0; padding: 0; }
+.hm-continue .hm-title { margin: 0; font-size: clamp(20px, 1rem + 0.6vw, 26px); line-height: 1.2; text-wrap: balance; }
+.hm-continue .who-meta, .hm-card .pc-text > span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.4; color: var(--ink-muted); }
+.hm-continue .who-meta > span { white-space: nowrap; }
+.hm-continue .hm-cont-prog { margin-top: 18px; }
+.hm-continue, .hm-card { display: flex; flex-direction: column; }
+.hm-continue .hm-cont-act, .hm-card > .cp-btn { margin-top: auto; padding-top: 16px; align-self: flex-start; }
+.hm-card .hm-card-row { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
+.hm-card .pc-face { width: 64px; height: 64px; min-width: 64px; }
+.hm-card .pc-text b { display: block; font-size: clamp(18px, 0.95rem + 0.4vw, 22px); line-height: 1.25; font-weight: 500; }
+
+/* Home's two top cards, built the same way: label, a small portrait beside the title, one wrapping line of
+   details, then the action at the bottom left. No picture band, nothing cut off, no empty middle. */
+section.rc.hm-continue .rc-band.hm-band { display: none !important; }
+section.rc.hm-continue .rc-id.hm-cont-id { display: flex !important; align-items: center; gap: 16px; margin: 14px 0 0 !important; padding: 0 !important; }
+section.rc.hm-continue .rc-id .rc-face { position: static !important; width: 64px !important; height: 64px !important; min-width: 64px; margin: 0 !important; transform: none !important; box-shadow: none !important; border: 0 !important; }
+section.rc.hm-continue .rc-text { padding: 0 !important; min-width: 0; }
+section.rc.hm-continue .who-meta { display: block !important; white-space: normal !important; }
+section.rc.hm-continue .who-meta > span { white-space: normal !important; display: inline; }
+section.rc.hm-continue .hm-cont-act { display: flex !important; justify-content: flex-start !important; align-self: stretch; margin-top: 16px; }
+section.rc.hm-card > .cp-btn { align-self: flex-start; margin-top: 16px; }
+section.rc.hm-continue .hm-go, section.rc.hm-card > .cp-btn { min-height: 44px; height: 44px; padding: 0 20px; font-size: 15px; }
+.hm-top, .hm-grid { align-items: start; }
+section.rc.hm-continue .hm-cont-act .hm-go { margin-left: 0 !important; margin-right: auto !important; }
+section.rc.hm-continue { display: flex !important; flex-direction: column; align-items: stretch; } section.rc.hm-continue > * { grid-area: auto !important; justify-self: stretch !important; }
+section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
