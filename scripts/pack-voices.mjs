@@ -3,6 +3,8 @@
 // and <id>.json ({ "content/voice-bank/<id>/words/x.mp3": [offset, length] }).
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
+import { spawnSync } from "node:child_process";
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const bank = path.join(root, "content/voice-bank");
 const out = path.join(root, "src/standalone/voicepacks");
@@ -11,6 +13,23 @@ fs.mkdirSync(out, { recursive: true });
 // only the voices the app uses (voice.config.json), not voices recorded on trial
 const cfg = JSON.parse(fs.readFileSync(path.join(root, "voice.config.json"), "utf8"));
 const used = new Set([cfg.voiceId, ...Object.values(cfg.languages ?? {}).map((v) => v.voiceId), ...Object.values(cfg.male ?? {}).map((v) => v.voiceId)].filter(Boolean).map((v) => v.toLowerCase()));
+// Spoken lines are stored at 48 kbps mono (plenty for a speaking voice), half the size of the recordings as delivered:
+// the whole app must stay within the host's 256 MB per version. Encodings are cached by content; without ffmpeg the
+// recording is packed as it is.
+const cache = path.join(root, ".cache/voice48");
+fs.mkdirSync(cache, { recursive: true });
+const hasFfmpeg = spawnSync("ffmpeg", ["-version"]).status === 0;
+function small(file) {
+  const raw = fs.readFileSync(file);
+  if (!hasFfmpeg) return raw;
+  const key = crypto.createHash("sha1").update(raw).digest("hex");
+  const out = path.join(cache, key + ".mp3");
+  if (!fs.existsSync(out)) {
+    const r = spawnSync("ffmpeg", ["-v", "error", "-y", "-i", file, "-ac", "1", "-ar", "44100", "-b:a", "48k", "-map_metadata", "-1", "-id3v2_version", "0", "-write_xing", "0", out]);
+    if (r.status !== 0 || !fs.existsSync(out)) return raw;
+  }
+  return fs.readFileSync(out);
+}
 for (const id of fs.readdirSync(bank).sort().filter((d) => used.has(d))) {
   const parts = [];
   const index = {};
@@ -19,7 +38,7 @@ for (const id of fs.readdirSync(bank).sort().filter((d) => used.has(d))) {
     const dir = path.join(bank, id, sub);
     if (!fs.existsSync(dir)) continue;
     for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".mp3")).sort()) {
-      const b = fs.readFileSync(path.join(dir, f));
+      const b = small(path.join(dir, f));
       index[`content/voice-bank/${id}/${sub}/${f}`] = [off, b.length];
       parts.push(b);
       off += b.length;
@@ -34,7 +53,7 @@ for (const id of fs.readdirSync(bank).sort().filter((d) => used.has(d))) {
     for (const c of Object.values(clips)) {
       const f = c.file;   // the spoken line, never a music-shaped one
       if (!f || index[f] || !fs.existsSync(path.join(root, f))) continue;
-      const b = fs.readFileSync(path.join(root, f));
+      const b = small(path.join(root, f));
       index[f] = [off, b.length];
       parts.push(b);
       off += b.length;
