@@ -4,84 +4,8 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (quì, sò, sà beside sa, nò, si for sì, sù, giacche for giacchè, briaco, gittar, veggio, gito, poc' anzi, chi'l, cos' hai, all' erta, quest' è, sugello, sussurro, diventasti and fosti where the libretto has diventaste and foste, 'or ci forse sarà' where the libretto has 'ov'ei forse sarà', 'Perchè fare?' for 'Per che fare?'). The opening sir./rir. are the tied last syllables of desir and comparir carried over from the preceding section. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced (cosa, così, rinchiuso, l'usanza), gn and gli held double (siɲˈɲor, biʎˈʎet.to), nasal assimilation within words (ˈduŋ.kwe, riŋˈkju.zo, iɱˈva.no), z as [ts] (insolenza, pazienza, pazzo, zitto); sugello is sung with a double g (suggello), di' in 'di su' is the imperative of dire. Translation literal, for meaning.",
  "phrases": [
-  {
-   "id": "s1",
-   "role": "susanna",
-   "verse": 1,
-   "occurrence": 1,
-   "startMeasure": "1",
-   "original": "sir.",
-   "translation": "",
-   "ipa": "",
-   "words": [
-    [
-     "sir.",
-     "",
-     ""
-    ]
-   ],
-   "glossGroups": [],
-   "audio": {}
-  },
-  {
-   "id": "t1",
-   "role": "countess",
-   "verse": 1,
-   "occurrence": 1,
-   "startMeasure": "1",
-   "original": "sir.",
-   "translation": "",
-   "ipa": "",
-   "words": [
-    [
-     "sir.",
-     "",
-     ""
-    ]
-   ],
-   "glossGroups": [],
-   "audio": {}
-  },
-  {
-   "id": "c1",
-   "role": "count",
-   "verse": 1,
-   "occurrence": 1,
-   "startMeasure": "1",
-   "original": "rir.",
-   "translation": "",
-   "ipa": "",
-   "words": [
-    [
-     "rir.",
-     "",
-     ""
-    ]
-   ],
-   "glossGroups": [],
-   "audio": {}
-  },
-  {
-   "id": "f1",
-   "role": "figaro",
-   "verse": 1,
-   "occurrence": 1,
-   "startMeasure": "1",
-   "original": "sir.",
-   "translation": "",
-   "ipa": "",
-   "words": [
-    [
-     "sir.",
-     "",
-     ""
-    ]
-   ],
-   "glossGroups": [],
-   "audio": {}
-  },
   {
    "id": "a1",
    "role": "antonio",
@@ -89,18 +13,18 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "Ah! signor!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Ah! My lord!",
+   "ipa": "ˈa siɲˈɲor",
    "words": [
     [
      "Ah!",
-     "",
-     ""
+     "ah",
+     "ˈa"
     ],
     [
      "signor!",
-     "",
-     ""
+     "my lord",
+     "siɲˈɲor"
     ]
    ],
    "glossGroups": [],
@@ -113,13 +37,13 @@
    "occurrence": 1,
    "startMeasure": "5",
    "original": "signor!",
-   "translation": "",
-   "ipa": "",
+   "translation": "My lord!",
+   "ipa": "siɲˈɲor",
    "words": [
     [
      "signor!",
-     "",
-     ""
+     "my lord",
+     "siɲˈɲor"
     ]
    ],
    "glossGroups": [],
@@ -132,26 +56,35 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "Cosa è stato?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What has happened?",
+   "ipa": "ˈkɔ.za‿ɛ ˈsta.to",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "è",
-     "",
-     ""
+     "has",
+     "ɛ"
     ],
     [
      "stato?",
-     "",
-     ""
+     "happened",
+     "ˈsta.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "what has happened"
+    }
+   ],
    "audio": {}
   },
   {
@@ -161,38 +94,38 @@
    "occurrence": 1,
    "startMeasure": "7",
    "original": "Che insolenza! chi'l fece? chi fu?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What insolence! Who did it? Who was it?",
+   "ipa": "ke‿in.soˈlɛn.tsa kil ˈfe.tʃe ki ˈfu",
    "words": [
     [
      "Che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "insolenza!",
-     "",
-     ""
+     "insolence",
+     "in.soˈlɛn.tsa"
     ],
     [
      "chi'l",
-     "",
-     ""
+     "who it",
+     "kil"
     ],
     [
      "fece?",
-     "",
-     ""
+     "did",
+     "ˈfe.tʃe"
     ],
     [
      "chi",
-     "",
-     ""
+     "who",
+     "ki"
     ],
     [
      "fu?",
-     "",
-     ""
+     "was it",
+     "ˈfu"
     ]
    ],
    "glossGroups": [],
@@ -205,46 +138,62 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "Cosa dici, cos' hai, cosa è nato?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What are you saying, what is wrong with you, what has happened?",
+   "ipa": "ˈkɔ.za ˈdi.tʃi ˈkɔz ˈai ˈkɔ.za‿ɛ ˈna.to",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "dici,",
-     "",
-     ""
+     "are you saying",
+     "ˈdi.tʃi"
     ],
     [
      "cos'",
-     "",
-     ""
+     "what",
+     "ˈkɔz"
     ],
     [
      "hai,",
-     "",
-     ""
+     "you have",
+     "ˈai"
     ],
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "è",
-     "",
-     ""
+     "has",
+     "ɛ"
     ],
     [
      "nato?",
-     "",
-     ""
+     "happened",
+     "ˈna.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "what's wrong with you"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "what has happened"
+    }
+   ],
    "audio": {}
   },
   {
@@ -254,46 +203,62 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "Cosa dici, cos' hai, cosa è nato?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What are you saying, what is wrong with you, what has happened?",
+   "ipa": "ˈkɔ.za ˈdi.tʃi ˈkɔz ˈai ˈkɔ.za‿ɛ ˈna.to",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "dici,",
-     "",
-     ""
+     "are you saying",
+     "ˈdi.tʃi"
     ],
     [
      "cos'",
-     "",
-     ""
+     "what",
+     "ˈkɔz"
     ],
     [
      "hai,",
-     "",
-     ""
+     "you have",
+     "ˈai"
     ],
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "è",
-     "",
-     ""
+     "has",
+     "ɛ"
     ],
     [
      "nato?",
-     "",
-     ""
+     "happened",
+     "ˈna.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "what's wrong with you"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "what has happened"
+    }
+   ],
    "audio": {}
   },
   {
@@ -303,46 +268,62 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "Cosa dici, cos' hai, cosa è nato?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What are you saying, what is wrong with you, what has happened?",
+   "ipa": "ˈkɔ.za ˈdi.tʃi ˈkɔz ˈai ˈkɔ.za‿ɛ ˈna.to",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "dici,",
-     "",
-     ""
+     "are you saying",
+     "ˈdi.tʃi"
     ],
     [
      "cos'",
-     "",
-     ""
+     "what",
+     "ˈkɔz"
     ],
     [
      "hai,",
-     "",
-     ""
+     "you have",
+     "ˈai"
     ],
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "è",
-     "",
-     ""
+     "has",
+     "ɛ"
     ],
     [
      "nato?",
-     "",
-     ""
+     "happened",
+     "ˈna.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "what's wrong with you"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "what has happened"
+    }
+   ],
    "audio": {}
   },
   {
@@ -352,46 +333,62 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "Cosa dici, cos' hai, cosa è nato?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What are you saying, what is wrong with you, what has happened?",
+   "ipa": "ˈkɔ.za ˈdi.tʃi ˈkɔz ˈai ˈkɔ.za‿ɛ ˈna.to",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "dici,",
-     "",
-     ""
+     "are you saying",
+     "ˈdi.tʃi"
     ],
     [
      "cos'",
-     "",
-     ""
+     "what",
+     "ˈkɔz"
     ],
     [
      "hai,",
-     "",
-     ""
+     "you have",
+     "ˈai"
     ],
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "è",
-     "",
-     ""
+     "has",
+     "ɛ"
     ],
     [
      "nato?",
-     "",
-     ""
+     "happened",
+     "ˈna.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "what's wrong with you"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "what has happened"
+    }
+   ],
    "audio": {}
   },
   {
@@ -401,13 +398,13 @@
    "occurrence": 1,
    "startMeasure": "11",
    "original": "Ascoltate!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Listen!",
+   "ipa": "a.skolˈta.te",
    "words": [
     [
      "Ascoltate!",
-     "",
-     ""
+     "listen",
+     "a.skolˈta.te"
     ]
    ],
    "glossGroups": [],
@@ -420,31 +417,39 @@
    "occurrence": 1,
    "startMeasure": "12",
    "original": "via parla, di su,",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it,",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su,",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -454,31 +459,39 @@
    "occurrence": 1,
    "startMeasure": "12",
    "original": "via parla, di su,",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it,",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su,",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -488,31 +501,39 @@
    "occurrence": 1,
    "startMeasure": "12",
    "original": "via parla, di su,",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it,",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su,",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -522,31 +543,39 @@
    "occurrence": 1,
    "startMeasure": "12",
    "original": "via parla, di su,",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it,",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su,",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -556,13 +585,13 @@
    "occurrence": 1,
    "startMeasure": "13",
    "original": "ascoltate!",
-   "translation": "",
-   "ipa": "",
+   "translation": "listen!",
+   "ipa": "a.skolˈta.te",
    "words": [
     [
      "ascoltate!",
-     "",
-     ""
+     "listen",
+     "a.skolˈta.te"
     ]
    ],
    "glossGroups": [],
@@ -575,31 +604,39 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "via parla, di su.",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it.",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su.",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -609,31 +646,39 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "via parla, di su.",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it.",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su.",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -643,31 +688,39 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "via parla, di su.",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it.",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su.",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -677,31 +730,39 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "via parla, di su.",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, speak, out with it.",
+   "ipa": "ˈvi.a ˈpar.la ˈdi ˈsu",
    "words": [
     [
      "via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "parla,",
-     "",
-     ""
+     "speak",
+     "ˈpar.la"
     ],
     [
      "di",
-     "",
-     ""
+     "say",
+     "ˈdi"
     ],
     [
      "su.",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "out with it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -711,38 +772,38 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "Dal balcone che guarda in giardino",
-   "translation": "",
-   "ipa": "",
+   "translation": "From the balcony that looks onto the garden",
+   "ipa": "dal balˈko.ne ke ˈgwar.da‿in dʒarˈdi.no",
    "words": [
     [
      "Dal",
-     "",
-     ""
+     "from the",
+     "dal"
     ],
     [
      "balcone",
-     "",
-     ""
+     "balcony",
+     "balˈko.ne"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "guarda",
-     "",
-     ""
+     "looks",
+     "ˈgwar.da"
     ],
     [
      "in",
-     "",
-     ""
+     "onto",
+     "in"
     ],
     [
      "giardino",
-     "",
-     ""
+     "garden",
+     "dʒarˈdi.no"
     ]
    ],
    "glossGroups": [],
@@ -755,38 +816,38 @@
    "occurrence": 1,
    "startMeasure": "19",
    "original": "mille cose ogni dì gittar veggio,",
-   "translation": "",
-   "ipa": "",
+   "translation": "every day I see a thousand things thrown down,",
+   "ipa": "ˈmil.le ˈkɔ.ze‿ˈoɲ.ɲi ˈdi dʒitˈtar ˈved.dʒo",
    "words": [
     [
      "mille",
-     "",
-     ""
+     "a thousand",
+     "ˈmil.le"
     ],
     [
      "cose",
-     "",
-     ""
+     "things",
+     "ˈkɔ.ze"
     ],
     [
      "ogni",
-     "",
-     ""
+     "every",
+     "ˈoɲ.ɲi"
     ],
     [
      "dì",
-     "",
-     ""
+     "day",
+     "ˈdi"
     ],
     [
      "gittar",
-     "",
-     ""
+     "thrown",
+     "dʒitˈtar"
     ],
     [
      "veggio,",
-     "",
-     ""
+     "I see",
+     "ˈved.dʒo"
     ]
    ],
    "glossGroups": [],
@@ -799,46 +860,63 @@
    "occurrence": 1,
    "startMeasure": "21",
    "original": "e poc' anzi, può darsi di peggio,",
-   "translation": "",
-   "ipa": "",
+   "translation": "and just now, could anything be worse,",
+   "ipa": "e pɔk ˈan.tsi ˈpwɔ ˈdar.si di ˈpɛd.dʒo",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "poc'",
-     "",
-     ""
+     "a little",
+     "pɔk"
     ],
     [
      "anzi,",
-     "",
-     ""
+     "before",
+     "ˈan.tsi"
     ],
     [
      "può",
-     "",
-     ""
+     "can",
+     "ˈpwɔ"
     ],
     [
      "darsi",
-     "",
-     ""
+     "there be",
+     "ˈdar.si"
     ],
     [
      "di",
-     "",
-     ""
+     "than",
+     "di"
     ],
     [
      "peggio,",
-     "",
-     ""
+     "worse",
+     "ˈpɛd.dʒo"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "a little while ago"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "could anything be worse"
+    }
+   ],
    "audio": {}
   },
   {
@@ -848,46 +926,54 @@
    "occurrence": 1,
    "startMeasure": "23",
    "original": "vidi un uom, signor mio, gittar giù.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I saw a man, my lord, thrown down.",
+   "ipa": "ˈvi.di‿un ˈwɔm siɲˈɲor ˈmi.o dʒitˈtar ˈdʒu",
    "words": [
     [
      "vidi",
-     "",
-     ""
+     "I saw",
+     "ˈvi.di"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "uom,",
-     "",
-     ""
+     "man",
+     "ˈwɔm"
     ],
     [
      "signor",
-     "",
-     ""
+     "lord",
+     "siɲˈɲor"
     ],
     [
      "mio,",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ],
     [
      "gittar",
-     "",
-     ""
+     "thrown",
+     "dʒitˈtar"
     ],
     [
      "giù.",
-     "",
-     ""
+     "down",
+     "ˈdʒu"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "my lord"
+    }
+   ],
    "audio": {}
   },
   {
@@ -897,18 +983,18 @@
    "occurrence": 1,
    "startMeasure": "25",
    "original": "Dal balcone?",
-   "translation": "",
-   "ipa": "",
+   "translation": "From the balcony?",
+   "ipa": "dal balˈko.ne",
    "words": [
     [
      "Dal",
-     "",
-     ""
+     "from the",
+     "dal"
     ],
     [
      "balcone?",
-     "",
-     ""
+     "balcony",
+     "balˈko.ne"
     ]
    ],
    "glossGroups": [],
@@ -921,23 +1007,23 @@
    "occurrence": 1,
    "startMeasure": "26",
    "original": "Vedete i garofani!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Look at the carnations!",
+   "ipa": "veˈde.te i gaˈrɔ.fa.ni",
    "words": [
     [
      "Vedete",
-     "",
-     ""
+     "see",
+     "veˈde.te"
     ],
     [
      "i",
-     "",
-     ""
+     "the",
+     "i"
     ],
     [
      "garofani!",
-     "",
-     ""
+     "carnations",
+     "gaˈrɔ.fa.ni"
     ]
    ],
    "glossGroups": [],
@@ -950,18 +1036,18 @@
    "occurrence": 1,
    "startMeasure": "27",
    "original": "In giardino?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Into the garden?",
+   "ipa": "in dʒarˈdi.no",
    "words": [
     [
      "In",
-     "",
-     ""
+     "into",
+     "in"
     ],
     [
      "giardino?",
-     "",
-     ""
+     "garden",
+     "dʒarˈdi.no"
     ]
    ],
    "glossGroups": [],
@@ -974,26 +1060,34 @@
    "occurrence": 1,
    "startMeasure": "28",
    "original": "Figaro, all' erta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, look out!",
+   "ipa": "ˈfi.ga.ro‿all ˈɛr.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "all'",
-     "",
-     ""
+     "on the",
+     "all"
     ],
     [
      "erta!",
-     "",
-     ""
+     "watch",
+     "ˈɛr.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "look out"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1003,26 +1097,34 @@
    "occurrence": 1,
    "startMeasure": "28",
    "original": "Figaro, all' erta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, look out!",
+   "ipa": "ˈfi.ga.ro‿all ˈɛr.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "all'",
-     "",
-     ""
+     "on the",
+     "all"
     ],
     [
      "erta!",
-     "",
-     ""
+     "watch",
+     "ˈɛr.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "look out"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1032,13 +1134,13 @@
    "occurrence": 1,
    "startMeasure": "28",
    "original": "Si!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Yes!",
+   "ipa": "ˈsi",
    "words": [
     [
      "Si!",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
    "glossGroups": [],
@@ -1051,18 +1153,18 @@
    "occurrence": 1,
    "startMeasure": "29",
    "original": "Cosa sento?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What do I hear?",
+   "ipa": "ˈkɔ.za ˈsɛn.to",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "sento?",
-     "",
-     ""
+     "I hear",
+     "ˈsɛn.to"
     ]
    ],
    "glossGroups": [],
@@ -1075,23 +1177,23 @@
    "occurrence": 1,
    "startMeasure": "30",
    "original": "Costui ci sconcerta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "This fellow is upsetting us:",
+   "ipa": "koˈstui tʃi skonˈtʃɛr.ta",
    "words": [
     [
      "Costui",
-     "",
-     ""
+     "this fellow",
+     "koˈstui"
     ],
     [
      "ci",
-     "",
-     ""
+     "us",
+     "tʃi"
     ],
     [
      "sconcerta,",
-     "",
-     ""
+     "upsets",
+     "skonˈtʃɛr.ta"
     ]
    ],
    "glossGroups": [],
@@ -1104,23 +1206,23 @@
    "occurrence": 1,
    "startMeasure": "30",
    "original": "Costui ci sconcerta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "This fellow is upsetting us:",
+   "ipa": "koˈstui tʃi skonˈtʃɛr.ta",
    "words": [
     [
      "Costui",
-     "",
-     ""
+     "this fellow",
+     "koˈstui"
     ],
     [
      "ci",
-     "",
-     ""
+     "us",
+     "tʃi"
     ],
     [
      "sconcerta,",
-     "",
-     ""
+     "upsets",
+     "skonˈtʃɛr.ta"
     ]
    ],
    "glossGroups": [],
@@ -1133,23 +1235,23 @@
    "occurrence": 1,
    "startMeasure": "30",
    "original": "Costui ci sconcerta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "This fellow is upsetting us:",
+   "ipa": "koˈstui tʃi skonˈtʃɛr.ta",
    "words": [
     [
      "Costui",
-     "",
-     ""
+     "this fellow",
+     "koˈstui"
     ],
     [
      "ci",
-     "",
-     ""
+     "us",
+     "tʃi"
     ],
     [
      "sconcerta,",
-     "",
-     ""
+     "upsets",
+     "skonˈtʃɛr.ta"
     ]
    ],
    "glossGroups": [],
@@ -1162,43 +1264,43 @@
    "occurrence": 1,
    "startMeasure": "32",
    "original": "quel briaco che viene a far quì?",
-   "translation": "",
-   "ipa": "",
+   "translation": "what has that drunkard come here to do?",
+   "ipa": "kwel briˈa.ko ke ˈvjɛ.ne‿a ˈfar ˈkwi",
    "words": [
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "briaco",
-     "",
-     ""
+     "drunkard",
+     "briˈa.ko"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "viene",
-     "",
-     ""
+     "comes",
+     "ˈvjɛ.ne"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "far",
-     "",
-     ""
+     "do",
+     "ˈfar"
     ],
     [
      "quì?",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ]
    ],
    "glossGroups": [],
@@ -1211,43 +1313,43 @@
    "occurrence": 1,
    "startMeasure": "32",
    "original": "quel briaco che viene a far quì?",
-   "translation": "",
-   "ipa": "",
+   "translation": "what has that drunkard come here to do?",
+   "ipa": "kwel briˈa.ko ke ˈvjɛ.ne‿a ˈfar ˈkwi",
    "words": [
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "briaco",
-     "",
-     ""
+     "drunkard",
+     "briˈa.ko"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "viene",
-     "",
-     ""
+     "comes",
+     "ˈvjɛ.ne"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "far",
-     "",
-     ""
+     "do",
+     "ˈfar"
     ],
     [
      "quì?",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ]
    ],
    "glossGroups": [],
@@ -1260,43 +1362,43 @@
    "occurrence": 1,
    "startMeasure": "32",
    "original": "quel briaco che viene a far quì?",
-   "translation": "",
-   "ipa": "",
+   "translation": "what has that drunkard come here to do?",
+   "ipa": "kwel briˈa.ko ke ˈvjɛ.ne‿a ˈfar ˈkwi",
    "words": [
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "briaco",
-     "",
-     ""
+     "drunkard",
+     "briˈa.ko"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "viene",
-     "",
-     ""
+     "comes",
+     "ˈvjɛ.ne"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "far",
-     "",
-     ""
+     "do",
+     "ˈfar"
     ],
     [
      "quì?",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ]
    ],
    "glossGroups": [],
@@ -1309,56 +1411,65 @@
    "occurrence": 1,
    "startMeasure": "35",
    "original": "Dunque un uom ma dov' è dov' è gito?",
-   "translation": "",
-   "ipa": "",
+   "translation": "So, a man… but where, where has he gone?",
+   "ipa": "ˈduŋ.kwe‿un ˈwɔm ma dov ˈɛ dov ˈɛ ˈdʒi.to",
    "words": [
     [
      "Dunque",
-     "",
-     ""
+     "so",
+     "ˈduŋ.kwe"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "uom",
-     "",
-     ""
+     "man",
+     "ˈwɔm"
     ],
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "dov'",
-     "",
-     ""
+     "where",
+     "dov"
     ],
     [
      "è",
-     "",
-     ""
+     "is he",
+     "ˈɛ"
     ],
     [
      "dov'",
-     "",
-     ""
+     "where",
+     "dov"
     ],
     [
      "è",
-     "",
-     ""
+     "has he",
+     "ˈɛ"
     ],
     [
      "gito?",
-     "",
-     ""
+     "gone",
+     "ˈdʒi.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "where has he gone"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1368,38 +1479,38 @@
    "occurrence": 1,
    "startMeasure": "37",
    "original": "Ratto, ratto il birbone è fuggito",
-   "translation": "",
-   "ipa": "",
+   "translation": "In a flash the rascal ran off",
+   "ipa": "ˈrat.to ˈrat.to‿il birˈbo.ne‿ɛ fudˈdʒi.to",
    "words": [
     [
      "Ratto,",
-     "",
-     ""
+     "swiftly",
+     "ˈrat.to"
     ],
     [
      "ratto",
-     "",
-     ""
+     "swiftly",
+     "ˈrat.to"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "birbone",
-     "",
-     ""
+     "rascal",
+     "birˈbo.ne"
     ],
     [
      "è",
-     "",
-     ""
+     "has",
+     "ɛ"
     ],
     [
      "fuggito",
-     "",
-     ""
+     "fled",
+     "fudˈdʒi.to"
     ]
    ],
    "glossGroups": [],
@@ -1412,46 +1523,63 @@
    "occurrence": 1,
    "startMeasure": "39",
    "original": "e ad un tratto di vista m'uscì.",
-   "translation": "",
-   "ipa": "",
+   "translation": "and all at once was out of my sight.",
+   "ipa": "e‿ad un ˈtrat.to di ˈvi.sta muʃˈʃi",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "ad",
-     "",
-     ""
+     "in",
+     "ad"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "tratto",
-     "",
-     ""
+     "stroke",
+     "ˈtrat.to"
     ],
     [
      "di",
-     "",
-     ""
+     "from",
+     "di"
     ],
     [
      "vista",
-     "",
-     ""
+     "sight",
+     "ˈvi.sta"
     ],
     [
      "m'uscì.",
-     "",
-     ""
+     "went out of me",
+     "muʃˈʃi"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "all at once"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "vanished from my sight"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1461,28 +1589,28 @@
    "occurrence": 1,
    "startMeasure": "41",
    "original": "Sai, che il paggio...",
-   "translation": "",
-   "ipa": "",
+   "translation": "You know that the page…",
+   "ipa": "ˈsai ke‿il ˈpad.dʒo",
    "words": [
     [
      "Sai,",
-     "",
-     ""
+     "you know",
+     "ˈsai"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "paggio...",
-     "",
-     ""
+     "page",
+     "ˈpad.dʒo"
     ]
    ],
    "glossGroups": [],
@@ -1495,48 +1623,48 @@
    "occurrence": 1,
    "startMeasure": "42",
    "original": "Sò tutto, lo vidi. Ah! ah! ah! ah!",
-   "translation": "",
-   "ipa": "",
+   "translation": "I know everything, I saw him. Ha ha ha ha!",
+   "ipa": "ˈsɔ ˈtut.to lo ˈvi.di ˈa ˈa ˈa ˈa",
    "words": [
     [
      "Sò",
-     "",
-     ""
+     "I know",
+     "ˈsɔ"
     ],
     [
      "tutto,",
-     "",
-     ""
+     "everything",
+     "ˈtut.to"
     ],
     [
      "lo",
-     "",
-     ""
+     "him",
+     "lo"
     ],
     [
      "vidi.",
-     "",
-     ""
+     "I saw",
+     "ˈvi.di"
     ],
     [
      "Ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -1549,18 +1677,18 @@
    "occurrence": 1,
    "startMeasure": "44",
    "original": "Taci là!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Quiet there!",
+   "ipa": "ˈta.tʃi ˈla",
    "words": [
     [
      "Taci",
-     "",
-     ""
+     "be quiet",
+     "ˈta.tʃi"
     ],
     [
      "là!",
-     "",
-     ""
+     "there",
+     "ˈla"
     ]
    ],
    "glossGroups": [],
@@ -1573,28 +1701,28 @@
    "occurrence": 1,
    "startMeasure": "45",
    "original": "ah! ah! ah! ah!",
-   "translation": "",
-   "ipa": "",
+   "translation": "ha ha ha ha!",
+   "ipa": "ˈa ˈa ˈa ˈa",
    "words": [
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -1607,18 +1735,18 @@
    "occurrence": 1,
    "startMeasure": "46",
    "original": "Cosa ridi?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What are you laughing at?",
+   "ipa": "ˈkɔ.za ˈri.di",
    "words": [
     [
      "Cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "ridi?",
-     "",
-     ""
+     "are you laughing at",
+     "ˈri.di"
     ]
    ],
    "glossGroups": [],
@@ -1631,28 +1759,28 @@
    "occurrence": 1,
    "startMeasure": "47",
    "original": "ah! ah! ah! ah!",
-   "translation": "",
-   "ipa": "",
+   "translation": "ha ha ha ha!",
+   "ipa": "ˈa ˈa ˈa ˈa",
    "words": [
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ],
     [
      "ah!",
-     "",
-     ""
+     "ha",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -1665,18 +1793,18 @@
    "occurrence": 1,
    "startMeasure": "48",
    "original": "Taci là!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Quiet there!",
+   "ipa": "ˈta.tʃi ˈla",
    "words": [
     [
      "Taci",
-     "",
-     ""
+     "be quiet",
+     "ˈta.tʃi"
     ],
     [
      "là!",
-     "",
-     ""
+     "there",
+     "ˈla"
     ]
    ],
    "glossGroups": [],
@@ -1689,38 +1817,38 @@
    "occurrence": 1,
    "startMeasure": "48",
    "original": "cosa ridi? cosa ridi? cosa ridi?",
-   "translation": "",
-   "ipa": "",
+   "translation": "what are you laughing at? what are you laughing at? what are you laughing at?",
+   "ipa": "ˈkɔ.za ˈri.di ˈkɔ.za ˈri.di ˈkɔ.za ˈri.di",
    "words": [
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "ridi?",
-     "",
-     ""
+     "are you laughing at",
+     "ˈri.di"
     ],
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "ridi?",
-     "",
-     ""
+     "are you laughing at",
+     "ˈri.di"
     ],
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "ridi?",
-     "",
-     ""
+     "are you laughing at",
+     "ˈri.di"
     ]
    ],
    "glossGroups": [],
@@ -1733,18 +1861,18 @@
    "occurrence": 1,
    "startMeasure": "49",
    "original": "taci là!",
-   "translation": "",
-   "ipa": "",
+   "translation": "quiet there!",
+   "ipa": "ˈta.tʃi ˈla",
    "words": [
     [
      "taci",
-     "",
-     ""
+     "be quiet",
+     "ˈta.tʃi"
     ],
     [
      "là!",
-     "",
-     ""
+     "there",
+     "ˈla"
     ]
    ],
    "glossGroups": [],
@@ -1757,18 +1885,18 @@
    "occurrence": 1,
    "startMeasure": "50",
    "original": "taci là!",
-   "translation": "",
-   "ipa": "",
+   "translation": "quiet there!",
+   "ipa": "ˈta.tʃi ˈla",
    "words": [
     [
      "taci",
-     "",
-     ""
+     "be quiet",
+     "ˈta.tʃi"
     ],
     [
      "là!",
-     "",
-     ""
+     "there",
+     "ˈla"
     ]
    ],
    "glossGroups": [],
@@ -1781,46 +1909,56 @@
    "occurrence": 1,
    "startMeasure": "51",
    "original": "Tu sei cotto dal sorger del dì,",
-   "translation": "",
-   "ipa": "",
+   "translation": "You've been drunk since the crack of dawn,",
+   "ipa": "tu ˈsɛi ˈkɔt.to dal ˈsor.dʒer del ˈdi",
    "words": [
     [
      "Tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "sei",
-     "",
-     ""
+     "you are",
+     "ˈsɛi"
     ],
     [
      "cotto",
-     "",
-     ""
+     "drunk",
+     "ˈkɔt.to"
     ],
     [
      "dal",
-     "",
-     ""
+     "since the",
+     "dal"
     ],
     [
      "sorger",
-     "",
-     ""
+     "rising",
+     "ˈsor.dʒer"
     ],
     [
      "del",
-     "",
-     ""
+     "of the",
+     "del"
     ],
     [
      "dì,",
-     "",
-     ""
+     "day",
+     "ˈdi"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "since daybreak"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1830,46 +1968,56 @@
    "occurrence": 1,
    "startMeasure": "53",
    "original": "tu sei cotto dal sorger del dì?",
-   "translation": "",
-   "ipa": "",
+   "translation": "you've been drunk since the crack of dawn!",
+   "ipa": "tu ˈsɛi ˈkɔt.to dal ˈsor.dʒer del ˈdi",
    "words": [
     [
      "tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "sei",
-     "",
-     ""
+     "you are",
+     "ˈsɛi"
     ],
     [
      "cotto",
-     "",
-     ""
+     "drunk",
+     "ˈkɔt.to"
     ],
     [
      "dal",
-     "",
-     ""
+     "since the",
+     "dal"
     ],
     [
      "sorger",
-     "",
-     ""
+     "rising",
+     "ˈsor.dʒer"
     ],
     [
      "del",
-     "",
-     ""
+     "of the",
+     "del"
     ],
     [
      "dì?",
-     "",
-     ""
+     "day",
+     "ˈdi"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "since daybreak"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1879,23 +2027,23 @@
    "occurrence": 1,
    "startMeasure": "55",
    "original": "Or ripetimi, ripetimi:",
-   "translation": "",
-   "ipa": "",
+   "translation": "Now repeat to me, repeat to me:",
+   "ipa": "or riˈpɛ.ti.mi riˈpɛ.ti.mi",
    "words": [
     [
      "Or",
-     "",
-     ""
+     "now",
+     "or"
     ],
     [
      "ripetimi,",
-     "",
-     ""
+     "repeat to me",
+     "riˈpɛ.ti.mi"
     ],
     [
      "ripetimi:",
-     "",
-     ""
+     "repeat to me",
+     "riˈpɛ.ti.mi"
     ]
    ],
    "glossGroups": [],
@@ -1908,28 +2056,28 @@
    "occurrence": 1,
    "startMeasure": "58",
    "original": "un uom dal balcone?",
-   "translation": "",
-   "ipa": "",
+   "translation": "a man from the balcony?",
+   "ipa": "un ˈwɔm dal balˈko.ne",
    "words": [
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "uom",
-     "",
-     ""
+     "man",
+     "ˈwɔm"
     ],
     [
      "dal",
-     "",
-     ""
+     "from the",
+     "dal"
     ],
     [
      "balcone?",
-     "",
-     ""
+     "balcony",
+     "balˈko.ne"
     ]
    ],
    "glossGroups": [],
@@ -1942,18 +2090,18 @@
    "occurrence": 1,
    "startMeasure": "59",
    "original": "Dal balcone,",
-   "translation": "",
-   "ipa": "",
+   "translation": "From the balcony,",
+   "ipa": "dal balˈko.ne",
    "words": [
     [
      "Dal",
-     "",
-     ""
+     "from the",
+     "dal"
     ],
     [
      "balcone,",
-     "",
-     ""
+     "balcony",
+     "balˈko.ne"
     ]
    ],
    "glossGroups": [],
@@ -1966,18 +2114,18 @@
    "occurrence": 1,
    "startMeasure": "60",
    "original": "in giardino?",
-   "translation": "",
-   "ipa": "",
+   "translation": "into the garden?",
+   "ipa": "in dʒarˈdi.no",
    "words": [
     [
      "in",
-     "",
-     ""
+     "into",
+     "in"
     ],
     [
      "giardino?",
-     "",
-     ""
+     "garden",
+     "dʒarˈdi.no"
     ]
    ],
    "glossGroups": [],
@@ -1990,18 +2138,18 @@
    "occurrence": 1,
    "startMeasure": "61",
    "original": "in giardino.",
-   "translation": "",
-   "ipa": "",
+   "translation": "into the garden.",
+   "ipa": "in dʒarˈdi.no",
    "words": [
     [
      "in",
-     "",
-     ""
+     "into",
+     "in"
     ],
     [
      "giardino.",
-     "",
-     ""
+     "garden",
+     "dʒarˈdi.no"
     ]
    ],
    "glossGroups": [],
@@ -2014,51 +2162,63 @@
    "occurrence": 1,
    "startMeasure": "62",
    "original": "Ma signore, se in lui parla il vino!",
-   "translation": "",
-   "ipa": "",
+   "translation": "But, my lord, it's the wine talking in him!",
+   "ipa": "ma siɲˈɲo.re se‿in ˈlui ˈpar.la‿il ˈvi.no",
    "words": [
     [
      "Ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "signore,",
-     "",
-     ""
+     "my lord",
+     "siɲˈɲo.re"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "lui",
-     "",
-     ""
+     "him",
+     "ˈlui"
     ],
     [
      "parla",
-     "",
-     ""
+     "speaks",
+     "ˈpar.la"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "vino!",
-     "",
-     ""
+     "wine",
+     "ˈvi.no"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "it's the wine speaking in him"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2068,51 +2228,63 @@
    "occurrence": 1,
    "startMeasure": "62",
    "original": "Ma signore, se in lui parla il vino!",
-   "translation": "",
-   "ipa": "",
+   "translation": "But, my lord, it's the wine talking in him!",
+   "ipa": "ma siɲˈɲo.re se‿in ˈlui ˈpar.la‿il ˈvi.no",
    "words": [
     [
      "Ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "signore,",
-     "",
-     ""
+     "my lord",
+     "siɲˈɲo.re"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "lui",
-     "",
-     ""
+     "him",
+     "ˈlui"
     ],
     [
      "parla",
-     "",
-     ""
+     "speaks",
+     "ˈpar.la"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "vino!",
-     "",
-     ""
+     "wine",
+     "ˈvi.no"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "it's the wine speaking in him"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2122,51 +2294,63 @@
    "occurrence": 1,
    "startMeasure": "62",
    "original": "Ma signore, se in lui parla il vino!",
-   "translation": "",
-   "ipa": "",
+   "translation": "But, my lord, it's the wine talking in him!",
+   "ipa": "ma siɲˈɲo.re se‿in ˈlui ˈpar.la‿il ˈvi.no",
    "words": [
     [
      "Ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "signore,",
-     "",
-     ""
+     "my lord",
+     "siɲˈɲo.re"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "lui",
-     "",
-     ""
+     "him",
+     "ˈlui"
     ],
     [
      "parla",
-     "",
-     ""
+     "speaks",
+     "ˈpar.la"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "vino!",
-     "",
-     ""
+     "wine",
+     "ˈvi.no"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "it's the wine speaking in him"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2176,28 +2360,28 @@
    "occurrence": 1,
    "startMeasure": "65",
    "original": "Segui pure, segui pure:",
-   "translation": "",
-   "ipa": "",
+   "translation": "Go on, go on:",
+   "ipa": "ˈse.gwi ˈpu.re ˈse.gwi ˈpu.re",
    "words": [
     [
      "Segui",
-     "",
-     ""
+     "go on",
+     "ˈse.gwi"
     ],
     [
      "pure,",
-     "",
-     ""
+     "then",
+     "ˈpu.re"
     ],
     [
      "segui",
-     "",
-     ""
+     "go on",
+     "ˈse.gwi"
     ],
     [
      "pure:",
-     "",
-     ""
+     "then",
+     "ˈpu.re"
     ]
    ],
    "glossGroups": [],
@@ -2210,36 +2394,44 @@
    "occurrence": 1,
    "startMeasure": "68",
    "original": "nè in volto il vedesti?",
-   "translation": "",
-   "ipa": "",
+   "translation": "didn't you even see his face?",
+   "ipa": "ne‿in ˈvol.to‿il veˈde.sti",
    "words": [
     [
      "nè",
-     "",
-     ""
+     "not even",
+     "ne"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "volto",
-     "",
-     ""
+     "face",
+     "ˈvol.to"
     ],
     [
      "il",
-     "",
-     ""
+     "him",
+     "il"
     ],
     [
      "vedesti?",
-     "",
-     ""
+     "you saw",
+     "veˈde.sti"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "in the face"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2249,13 +2441,13 @@
    "occurrence": 1,
    "startMeasure": "69",
    "original": "Olà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Hey!",
+   "ipa": "oˈla",
    "words": [
     [
      "Olà!",
-     "",
-     ""
+     "hey there",
+     "oˈla"
     ]
    ],
    "glossGroups": [],
@@ -2268,23 +2460,23 @@
    "occurrence": 1,
    "startMeasure": "69",
    "original": "Nò, nol vidi,",
-   "translation": "",
-   "ipa": "",
+   "translation": "No, I didn't see him,",
+   "ipa": "ˈnɔ nol ˈvi.di",
    "words": [
     [
      "Nò,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ],
     [
      "nol",
-     "",
-     ""
+     "not him",
+     "nol"
     ],
     [
      "vidi,",
-     "",
-     ""
+     "I saw",
+     "ˈvi.di"
     ]
    ],
    "glossGroups": [],
@@ -2297,18 +2489,18 @@
    "occurrence": 1,
    "startMeasure": "70",
    "original": "Figaro, ascolta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, listen!",
+   "ipa": "ˈfi.ga.ro‿aˈskol.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "ascolta!",
-     "",
-     ""
+     "listen",
+     "aˈskol.ta"
     ]
    ],
    "glossGroups": [],
@@ -2321,13 +2513,13 @@
    "occurrence": 1,
    "startMeasure": "70",
    "original": "Olà,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Hey,",
+   "ipa": "oˈla",
    "words": [
     [
      "Olà,",
-     "",
-     ""
+     "hey there",
+     "oˈla"
     ]
    ],
    "glossGroups": [],
@@ -2340,18 +2532,18 @@
    "occurrence": 1,
    "startMeasure": "71",
    "original": "Figaro, ascolta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, listen!",
+   "ipa": "ˈfi.ga.ro‿aˈskol.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "ascolta!",
-     "",
-     ""
+     "listen",
+     "aˈskol.ta"
     ]
    ],
    "glossGroups": [],
@@ -2364,18 +2556,18 @@
    "occurrence": 1,
    "startMeasure": "71",
    "original": "Figaro, ascolta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, listen!",
+   "ipa": "ˈfi.ga.ro‿aˈskol.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "ascolta!",
-     "",
-     ""
+     "listen",
+     "aˈskol.ta"
     ]
    ],
    "glossGroups": [],
@@ -2388,13 +2580,13 @@
    "occurrence": 1,
    "startMeasure": "71",
    "original": "Si?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Yes?",
+   "ipa": "ˈsi",
    "words": [
     [
      "Si?",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
    "glossGroups": [],
@@ -2407,18 +2599,18 @@
    "occurrence": 1,
    "startMeasure": "71",
    "original": "nol vidi.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I didn't see him.",
+   "ipa": "nol ˈvi.di",
    "words": [
     [
      "nol",
-     "",
-     ""
+     "not him",
+     "nol"
     ],
     [
      "vidi.",
-     "",
-     ""
+     "I saw",
+     "ˈvi.di"
     ]
    ],
    "glossGroups": [],
@@ -2431,41 +2623,49 @@
    "occurrence": 1,
    "startMeasure": "72",
    "original": "Via piangione, sta zitto una volta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Come on, crybaby, be quiet for once!",
+   "ipa": "ˈvi.a pjanˈdʒo.ne ˈsta ˈtsit.to ˈu.na ˈvɔl.ta",
    "words": [
     [
      "Via",
-     "",
-     ""
+     "come on",
+     "ˈvi.a"
     ],
     [
      "piangione,",
-     "",
-     ""
+     "crybaby",
+     "pjanˈdʒo.ne"
     ],
     [
      "sta",
-     "",
-     ""
+     "be",
+     "ˈsta"
     ],
     [
      "zitto",
-     "",
-     ""
+     "quiet",
+     "ˈtsit.to"
     ],
     [
      "una",
-     "",
-     ""
+     "one",
+     "ˈu.na"
     ],
     [
      "volta!",
-     "",
-     ""
+     "time",
+     "ˈvɔl.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "for once"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2475,38 +2675,38 @@
    "occurrence": 1,
    "startMeasure": "74",
    "original": "per tre soldi far tanto tumulto,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Such an uproar over three pennies!",
+   "ipa": "per ˈtre ˈsɔl.di ˈfar ˈtan.to tuˈmul.to",
    "words": [
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "tre",
-     "",
-     ""
+     "three",
+     "ˈtre"
     ],
     [
      "soldi",
-     "",
-     ""
+     "pennies",
+     "ˈsɔl.di"
     ],
     [
      "far",
-     "",
-     ""
+     "make",
+     "ˈfar"
     ],
     [
      "tanto",
-     "",
-     ""
+     "so much",
+     "ˈtan.to"
     ],
     [
      "tumulto,",
-     "",
-     ""
+     "uproar",
+     "tuˈmul.to"
     ]
    ],
    "glossGroups": [],
@@ -2519,43 +2719,43 @@
    "occurrence": 1,
    "startMeasure": "76",
    "original": "giacche, il fatto non può stare occulto,",
-   "translation": "",
-   "ipa": "",
+   "translation": "since the fact cannot stay hidden,",
+   "ipa": "dʒakˈke‿il ˈfat.to non ˈpwɔ ˈsta.re okˈkul.to",
    "words": [
     [
      "giacche,",
-     "",
-     ""
+     "since",
+     "dʒakˈke"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "fatto",
-     "",
-     ""
+     "fact",
+     "ˈfat.to"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "può",
-     "",
-     ""
+     "can",
+     "ˈpwɔ"
     ],
     [
      "stare",
-     "",
-     ""
+     "stay",
+     "ˈsta.re"
     ],
     [
      "occulto,",
-     "",
-     ""
+     "hidden",
+     "okˈkul.to"
     ]
    ],
    "glossGroups": [],
@@ -2568,38 +2768,38 @@
    "occurrence": 1,
    "startMeasure": "78",
    "original": "sono io stesso saltato di lì,",
-   "translation": "",
-   "ipa": "",
+   "translation": "it was I myself who jumped from there,",
+   "ipa": "ˈso.no ˈi.o ˈstes.so salˈta.to di ˈli",
    "words": [
     [
      "sono",
-     "",
-     ""
+     "have",
+     "ˈso.no"
     ],
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "stesso",
-     "",
-     ""
+     "myself",
+     "ˈstes.so"
     ],
     [
      "saltato",
-     "",
-     ""
+     "jumped",
+     "salˈta.to"
     ],
     [
      "di",
-     "",
-     ""
+     "from",
+     "di"
     ],
     [
      "lì,",
-     "",
-     ""
+     "there",
+     "ˈli"
     ]
    ],
    "glossGroups": [],
@@ -2612,38 +2812,38 @@
    "occurrence": 1,
    "startMeasure": "80",
    "original": "sono io stesso saltato di lì.",
-   "translation": "",
-   "ipa": "",
+   "translation": "it was I myself who jumped from there.",
+   "ipa": "ˈso.no‿ˈi.o ˈstes.so salˈta.to di ˈli",
    "words": [
     [
      "sono",
-     "",
-     ""
+     "have",
+     "ˈso.no"
     ],
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "stesso",
-     "",
-     ""
+     "myself",
+     "ˈstes.so"
     ],
     [
      "saltato",
-     "",
-     ""
+     "jumped",
+     "salˈta.to"
     ],
     [
      "di",
-     "",
-     ""
+     "from",
+     "di"
     ],
     [
      "lì.",
-     "",
-     ""
+     "there",
+     "ˈli"
     ]
    ],
    "glossGroups": [],
@@ -2656,13 +2856,13 @@
    "occurrence": 1,
    "startMeasure": "82",
    "original": "Chi!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Who?",
+   "ipa": "ˈki",
    "words": [
     [
      "Chi!",
-     "",
-     ""
+     "who",
+     "ˈki"
     ]
    ],
    "glossGroups": [],
@@ -2675,18 +2875,18 @@
    "occurrence": 1,
    "startMeasure": "82",
    "original": "voi stesso?",
-   "translation": "",
-   "ipa": "",
+   "translation": "You yourself?",
+   "ipa": "ˈvoi ˈstes.so",
    "words": [
     [
      "voi",
-     "",
-     ""
+     "you",
+     "ˈvoi"
     ],
     [
      "stesso?",
-     "",
-     ""
+     "yourself",
+     "ˈstes.so"
     ]
    ],
    "glossGroups": [],
@@ -2699,28 +2899,28 @@
    "occurrence": 1,
    "startMeasure": "83",
    "original": "Che testa! che ingegno!",
-   "translation": "",
-   "ipa": "",
+   "translation": "What a head! What wit!",
+   "ipa": "ke ˈtɛ.sta ke‿inˈdʒeɲ.ɲo",
    "words": [
     [
      "Che",
-     "",
-     ""
+     "what a",
+     "ke"
     ],
     [
      "testa!",
-     "",
-     ""
+     "head",
+     "ˈtɛ.sta"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "ingegno!",
-     "",
-     ""
+     "wit",
+     "inˈdʒeɲ.ɲo"
     ]
    ],
    "glossGroups": [],
@@ -2733,28 +2933,28 @@
    "occurrence": 1,
    "startMeasure": "83",
    "original": "Che testa! che ingegno!",
-   "translation": "",
-   "ipa": "",
+   "translation": "What a head! What wit!",
+   "ipa": "ke ˈtɛ.sta ke‿inˈdʒeɲ.ɲo",
    "words": [
     [
      "Che",
-     "",
-     ""
+     "what a",
+     "ke"
     ],
     [
      "testa!",
-     "",
-     ""
+     "head",
+     "ˈtɛ.sta"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "ingegno!",
-     "",
-     ""
+     "wit",
+     "inˈdʒeɲ.ɲo"
     ]
    ],
    "glossGroups": [],
@@ -2767,21 +2967,29 @@
    "occurrence": 1,
    "startMeasure": "83",
    "original": "Che stupor!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Why so amazed?",
+   "ipa": "ke stuˈpor",
    "words": [
     [
      "Che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "stupor!",
-     "",
-     ""
+     "amazement",
+     "stuˈpor"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "why the amazement"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2791,13 +2999,13 @@
    "occurrence": 1,
    "startMeasure": "84",
    "original": "Chi!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Who?",
+   "ipa": "ˈki",
    "words": [
     [
      "Chi!",
-     "",
-     ""
+     "who",
+     "ˈki"
     ]
    ],
    "glossGroups": [],
@@ -2810,18 +3018,18 @@
    "occurrence": 1,
    "startMeasure": "84",
    "original": "voi stesso?",
-   "translation": "",
-   "ipa": "",
+   "translation": "You yourself?",
+   "ipa": "ˈvoi ˈstes.so",
    "words": [
     [
      "voi",
-     "",
-     ""
+     "you",
+     "ˈvoi"
     ],
     [
      "stesso?",
-     "",
-     ""
+     "yourself",
+     "ˈstes.so"
     ]
    ],
    "glossGroups": [],
@@ -2834,28 +3042,28 @@
    "occurrence": 1,
    "startMeasure": "85",
    "original": "che testa! che ingegno!",
-   "translation": "",
-   "ipa": "",
+   "translation": "what a head! What wit!",
+   "ipa": "ke ˈtɛ.sta ke‿inˈdʒeɲ.ɲo",
    "words": [
     [
      "che",
-     "",
-     ""
+     "what a",
+     "ke"
     ],
     [
      "testa!",
-     "",
-     ""
+     "head",
+     "ˈtɛ.sta"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "ingegno!",
-     "",
-     ""
+     "wit",
+     "inˈdʒeɲ.ɲo"
     ]
    ],
    "glossGroups": [],
@@ -2868,28 +3076,28 @@
    "occurrence": 1,
    "startMeasure": "85",
    "original": "che testa! che ingegno!",
-   "translation": "",
-   "ipa": "",
+   "translation": "what a head! What wit!",
+   "ipa": "ke ˈtɛ.sta ke‿inˈdʒeɲ.ɲo",
    "words": [
     [
      "che",
-     "",
-     ""
+     "what a",
+     "ke"
     ],
     [
      "testa!",
-     "",
-     ""
+     "head",
+     "ˈtɛ.sta"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "ingegno!",
-     "",
-     ""
+     "wit",
+     "inˈdʒeɲ.ɲo"
     ]
    ],
    "glossGroups": [],
@@ -2902,21 +3110,29 @@
    "occurrence": 1,
    "startMeasure": "85",
    "original": "che stupor!",
-   "translation": "",
-   "ipa": "",
+   "translation": "why so amazed?",
+   "ipa": "ke stuˈpor",
    "words": [
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "stupor!",
-     "",
-     ""
+     "amazement",
+     "stuˈpor"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "why the amazement"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2926,21 +3142,29 @@
    "occurrence": 1,
    "startMeasure": "86",
    "original": "che stupor!",
-   "translation": "",
-   "ipa": "",
+   "translation": "why so amazed?",
+   "ipa": "ke stuˈpor",
    "words": [
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "stupor!",
-     "",
-     ""
+     "amazement",
+     "stuˈpor"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "why the amazement"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2950,31 +3174,41 @@
    "occurrence": 1,
    "startMeasure": "87",
    "original": "Già creder nol posso.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I simply can't believe it.",
+   "ipa": "ˈdʒa ˈkre.der nol ˈpɔs.so",
    "words": [
     [
      "Già",
-     "",
-     ""
+     "really",
+     "ˈdʒa"
     ],
     [
      "creder",
-     "",
-     ""
+     "believe",
+     "ˈkre.der"
     ],
     [
      "nol",
-     "",
-     ""
+     "not it",
+     "nol"
     ],
     [
      "posso.",
-     "",
-     ""
+     "I can",
+     "ˈpɔs.so"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "I just can't believe it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -2984,36 +3218,44 @@
    "occurrence": 1,
    "startMeasure": "88",
    "original": "Come mai diventasti si grosso?",
-   "translation": "",
-   "ipa": "",
+   "translation": "How on earth did you get so big?",
+   "ipa": "ˈko.me ˈmai di.venˈta.sti ˈsi ˈgrɔs.so",
    "words": [
     [
      "Come",
-     "",
-     ""
+     "how",
+     "ˈko.me"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈmai"
     ],
     [
      "diventasti",
-     "",
-     ""
+     "did you become",
+     "di.venˈta.sti"
     ],
     [
      "si",
-     "",
-     ""
+     "so",
+     "ˈsi"
     ],
     [
      "grosso?",
-     "",
-     ""
+     "big",
+     "ˈgrɔs.so"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "how on earth"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3023,31 +3265,41 @@
    "occurrence": 1,
    "startMeasure": "90",
    "original": "Già creder nol posso,",
-   "translation": "",
-   "ipa": "",
+   "translation": "I simply can't believe it,",
+   "ipa": "ˈdʒa ˈkre.der nol ˈpɔs.so",
    "words": [
     [
      "Già",
-     "",
-     ""
+     "really",
+     "ˈdʒa"
     ],
     [
      "creder",
-     "",
-     ""
+     "believe",
+     "ˈkre.der"
     ],
     [
      "nol",
-     "",
-     ""
+     "not it",
+     "nol"
     ],
     [
      "posso,",
-     "",
-     ""
+     "I can",
+     "ˈpɔs.so"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "I just can't believe it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3057,18 +3309,18 @@
    "occurrence": 1,
    "startMeasure": "91",
    "original": "nol posso.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I can't.",
+   "ipa": "nol ˈpɔs.so",
    "words": [
     [
      "nol",
-     "",
-     ""
+     "not it",
+     "nol"
     ],
     [
      "posso.",
-     "",
-     ""
+     "I can",
+     "ˈpɔs.so"
     ]
    ],
    "glossGroups": [],
@@ -3081,38 +3333,38 @@
    "occurrence": 1,
    "startMeasure": "92",
    "original": "Dopo il salto non fosti così.",
-   "translation": "",
-   "ipa": "",
+   "translation": "After the jump you weren't like this.",
+   "ipa": "ˈdo.po‿il ˈsal.to non ˈfo.sti koˈzi",
    "words": [
     [
      "Dopo",
-     "",
-     ""
+     "after",
+     "ˈdo.po"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "salto",
-     "",
-     ""
+     "jump",
+     "ˈsal.to"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "fosti",
-     "",
-     ""
+     "you were",
+     "ˈfo.sti"
     ],
     [
      "così.",
-     "",
-     ""
+     "like this",
+     "koˈzi"
     ]
    ],
    "glossGroups": [],
@@ -3125,33 +3377,33 @@
    "occurrence": 1,
    "startMeasure": "94",
    "original": "A chi salta succede così.",
-   "translation": "",
-   "ipa": "",
+   "translation": "That's what happens to someone who jumps.",
+   "ipa": "a ki ˈsal.ta sutˈtʃɛ.de koˈzi",
    "words": [
     [
      "A",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "chi",
-     "",
-     ""
+     "whoever",
+     "ki"
     ],
     [
      "salta",
-     "",
-     ""
+     "jumps",
+     "ˈsal.ta"
     ],
     [
      "succede",
-     "",
-     ""
+     "it happens",
+     "sutˈtʃɛ.de"
     ],
     [
      "così.",
-     "",
-     ""
+     "like that",
+     "koˈzi"
     ]
    ],
    "glossGroups": [],
@@ -3164,21 +3416,29 @@
    "occurrence": 1,
    "startMeasure": "96",
    "original": "Chi'l direbbe?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Who would have said it?",
+   "ipa": "kil diˈreb.be",
    "words": [
     [
      "Chi'l",
-     "",
-     ""
+     "who it",
+     "kil"
     ],
     [
      "direbbe?",
-     "",
-     ""
+     "would say",
+     "diˈreb.be"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "who would have thought it"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3188,28 +3448,28 @@
    "occurrence": 1,
    "startMeasure": "97",
    "original": "Ed insiste quel pazzo?",
-   "translation": "",
-   "ipa": "",
+   "translation": "And does that madman insist?",
+   "ipa": "ed inˈsi.ste kwel ˈpat.tso",
    "words": [
     [
      "Ed",
-     "",
-     ""
+     "and",
+     "ed"
     ],
     [
      "insiste",
-     "",
-     ""
+     "insists",
+     "inˈsi.ste"
     ],
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "pazzo?",
-     "",
-     ""
+     "madman",
+     "ˈpat.tso"
     ]
    ],
    "glossGroups": [],
@@ -3222,28 +3482,28 @@
    "occurrence": 1,
    "startMeasure": "97",
    "original": "Ed insiste quel pazzo?",
-   "translation": "",
-   "ipa": "",
+   "translation": "And does that madman insist?",
+   "ipa": "ed inˈsi.ste kwel ˈpat.tso",
    "words": [
     [
      "Ed",
-     "",
-     ""
+     "and",
+     "ed"
     ],
     [
      "insiste",
-     "",
-     ""
+     "insists",
+     "inˈsi.ste"
     ],
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "pazzo?",
-     "",
-     ""
+     "madman",
+     "ˈpat.tso"
     ]
    ],
    "glossGroups": [],
@@ -3256,23 +3516,23 @@
    "occurrence": 1,
    "startMeasure": "98",
    "original": "Tu che dici?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What do you say?",
+   "ipa": "tu ke ˈdi.tʃi",
    "words": [
     [
      "Tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "dici?",
-     "",
-     ""
+     "say",
+     "ˈdi.tʃi"
     ]
    ],
    "glossGroups": [],
@@ -3285,33 +3545,33 @@
    "occurrence": 1,
    "startMeasure": "99",
    "original": "A me parve il ragazzo?",
-   "translation": "",
-   "ipa": "",
+   "translation": "It looked to me like the boy?",
+   "ipa": "a ˈme ˈpar.ve‿il raˈgat.tso",
    "words": [
     [
      "A",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "parve",
-     "",
-     ""
+     "it seemed",
+     "ˈpar.ve"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "ragazzo?",
-     "",
-     ""
+     "boy",
+     "raˈgat.tso"
     ]
    ],
    "glossGroups": [],
@@ -3324,13 +3584,13 @@
    "occurrence": 1,
    "startMeasure": "100",
    "original": "Cherubin?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Cherubino?",
+   "ipa": "ke.ruˈbin",
    "words": [
     [
      "Cherubin?",
-     "",
-     ""
+     "Cherubino",
+     "ke.ruˈbin"
     ]
    ],
    "glossGroups": [],
@@ -3343,18 +3603,18 @@
    "occurrence": 1,
    "startMeasure": "101",
    "original": "Maledetto! maledetto!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Curses! Curses!",
+   "ipa": "ma.leˈdet.to ma.leˈdet.to",
    "words": [
     [
      "Maledetto!",
-     "",
-     ""
+     "cursed",
+     "ma.leˈdet.to"
     ],
     [
      "maledetto!",
-     "",
-     ""
+     "cursed",
+     "ma.leˈdet.to"
     ]
    ],
    "glossGroups": [],
@@ -3367,18 +3627,18 @@
    "occurrence": 1,
    "startMeasure": "101",
    "original": "Maledetto! maledetto!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Curses! Curses!",
+   "ipa": "ma.leˈdet.to ma.leˈdet.to",
    "words": [
     [
      "Maledetto!",
-     "",
-     ""
+     "cursed",
+     "ma.leˈdet.to"
     ],
     [
      "maledetto!",
-     "",
-     ""
+     "cursed",
+     "ma.leˈdet.to"
     ]
    ],
    "glossGroups": [],
@@ -3390,62 +3650,84 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "103",
-   "original": "Esso appunto, esso appunto, da Siviglia a cavallo quì giunto,",
-   "translation": "",
-   "ipa": "",
+   "original": "Esso appunto, esso appunto,",
+   "translation": "Him, exactly, him exactly,",
+   "ipa": "ˈes.so‿apˈpun.to ˈes.so‿apˈpun.to",
    "words": [
     [
      "Esso",
-     "",
-     ""
+     "he",
+     "ˈes.so"
     ],
     [
      "appunto,",
-     "",
-     ""
+     "exactly",
+     "apˈpun.to"
     ],
     [
      "esso",
-     "",
-     ""
+     "he",
+     "ˈes.so"
     ],
     [
      "appunto,",
-     "",
-     ""
-    ],
-    [
-     "da",
-     "",
-     ""
-    ],
-    [
-     "Siviglia",
-     "",
-     ""
-    ],
-    [
-     "a",
-     "",
-     ""
-    ],
-    [
-     "cavallo",
-     "",
-     ""
-    ],
-    [
-     "quì",
-     "",
-     ""
-    ],
-    [
-     "giunto,",
-     "",
-     ""
+     "exactly",
+     "apˈpun.to"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f22_2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "da Siviglia a cavallo quì giunto,",
+   "translation": "who came here on horseback from Seville,",
+   "ipa": "da siˈviʎ.ʎa‿a kaˈval.lo ˈkwi ˈdʒun.to",
+   "words": [
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "Siviglia",
+     "Seville",
+     "siˈviʎ.ʎa"
+    ],
+    [
+     "a",
+     "on",
+     "a"
+    ],
+    [
+     "cavallo",
+     "horse",
+     "kaˈval.lo"
+    ],
+    [
+     "quì",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "giunto,",
+     "arrived",
+     "ˈdʒun.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "on horseback"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3455,38 +3737,38 @@
    "occurrence": 1,
    "startMeasure": "107",
    "original": "da Siviglia or ci forse sarà.",
-   "translation": "",
-   "ipa": "",
+   "translation": "and is perhaps back in Seville by now.",
+   "ipa": "da siˈviʎ.ʎa‿or tʃi ˈfor.se saˈra",
    "words": [
     [
      "da",
-     "",
-     ""
+     "from",
+     "da"
     ],
     [
      "Siviglia",
-     "",
-     ""
+     "Seville",
+     "siˈviʎ.ʎa"
     ],
     [
      "or",
-     "",
-     ""
+     "now",
+     "or"
     ],
     [
      "ci",
-     "",
-     ""
+     "there",
+     "tʃi"
     ],
     [
      "forse",
-     "",
-     ""
+     "perhaps",
+     "ˈfor.se"
     ],
     [
      "sarà.",
-     "",
-     ""
+     "will be",
+     "saˈra"
     ]
    ],
    "glossGroups": [],
@@ -3499,43 +3781,43 @@
    "occurrence": 1,
    "startMeasure": "109",
    "original": "Questo no, questo no, che il cavallo",
-   "translation": "",
-   "ipa": "",
+   "translation": "Not that, not that, for the horse",
+   "ipa": "ˈkwe.sto ˈnɔ ˈkwe.sto ˈnɔ ke‿il kaˈval.lo",
    "words": [
     [
      "Questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "no,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "no,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ],
     [
      "che",
-     "",
-     ""
+     "for",
+     "ke"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "cavallo",
-     "",
-     ""
+     "horse",
+     "kaˈval.lo"
     ]
    ],
    "glossGroups": [],
@@ -3548,38 +3830,38 @@
    "occurrence": 1,
    "startMeasure": "111",
    "original": "io non vidi saltare di là.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I did not see jump down from there.",
+   "ipa": "ˈi.o non ˈvi.di salˈta.re di ˈla",
    "words": [
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "vidi",
-     "",
-     ""
+     "I saw",
+     "ˈvi.di"
     ],
     [
      "saltare",
-     "",
-     ""
+     "jump",
+     "salˈta.re"
     ],
     [
      "di",
-     "",
-     ""
+     "from",
+     "di"
     ],
     [
      "là.",
-     "",
-     ""
+     "there",
+     "ˈla"
     ]
    ],
    "glossGroups": [],
@@ -3592,18 +3874,18 @@
    "occurrence": 1,
    "startMeasure": "113",
    "original": "Che pazienza!",
-   "translation": "",
-   "ipa": "",
+   "translation": "What patience it takes!",
+   "ipa": "ke paˈtsjɛn.tsa",
    "words": [
     [
      "Che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "pazienza!",
-     "",
-     ""
+     "patience",
+     "paˈtsjɛn.tsa"
     ]
    ],
    "glossGroups": [],
@@ -3616,21 +3898,29 @@
    "occurrence": 1,
    "startMeasure": "114",
    "original": "Come mai.",
-   "translation": "",
-   "ipa": "",
+   "translation": "How on earth",
+   "ipa": "ˈko.me ˈmai",
    "words": [
     [
      "Come",
-     "",
-     ""
+     "how",
+     "ˈko.me"
     ],
     [
      "mai.",
-     "",
-     ""
+     "ever",
+     "ˈmai"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "how on earth"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3640,21 +3930,29 @@
    "occurrence": 1,
    "startMeasure": "114",
    "original": "Come mai.",
-   "translation": "",
-   "ipa": "",
+   "translation": "How on earth",
+   "ipa": "ˈko.me ˈmai",
    "words": [
     [
      "Come",
-     "",
-     ""
+     "how",
+     "ˈko.me"
     ],
     [
      "mai.",
-     "",
-     ""
+     "ever",
+     "ˈmai"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "how on earth"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3664,23 +3962,23 @@
    "occurrence": 1,
    "startMeasure": "115",
    "original": "finiam questo ballo!",
-   "translation": "",
-   "ipa": "",
+   "translation": "let's end this farce!",
+   "ipa": "fiˈnjam ˈkwe.sto ˈbal.lo",
    "words": [
     [
      "finiam",
-     "",
-     ""
+     "let's end",
+     "fiˈnjam"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "ballo!",
-     "",
-     ""
+     "dance",
+     "ˈbal.lo"
     ]
    ],
    "glossGroups": [],
@@ -3693,23 +3991,23 @@
    "occurrence": 1,
    "startMeasure": "116",
    "original": "giusto ciel, finirà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "just heaven, will it end!",
+   "ipa": "ˈdʒu.sto ˈtʃɛl fi.niˈra",
    "words": [
     [
      "giusto",
-     "",
-     ""
+     "just",
+     "ˈdʒu.sto"
     ],
     [
      "ciel,",
-     "",
-     ""
+     "heaven",
+     "ˈtʃɛl"
     ],
     [
      "finirà!",
-     "",
-     ""
+     "will it end",
+     "fi.niˈra"
     ]
    ],
    "glossGroups": [],
@@ -3722,23 +4020,23 @@
    "occurrence": 1,
    "startMeasure": "116",
    "original": "giusto ciel, finirà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "just heaven, will it end!",
+   "ipa": "ˈdʒu.sto ˈtʃɛl fi.niˈra",
    "words": [
     [
      "giusto",
-     "",
-     ""
+     "just",
+     "ˈdʒu.sto"
     ],
     [
      "ciel,",
-     "",
-     ""
+     "heaven",
+     "ˈtʃɛl"
     ],
     [
      "finirà!",
-     "",
-     ""
+     "will it end",
+     "fi.niˈra"
     ]
    ],
    "glossGroups": [],
@@ -3751,18 +4049,18 @@
    "occurrence": 1,
    "startMeasure": "117",
    "original": "Dunque tu?",
-   "translation": "",
-   "ipa": "",
+   "translation": "So you…?",
+   "ipa": "ˈduŋ.kwe tu",
    "words": [
     [
      "Dunque",
-     "",
-     ""
+     "so",
+     "ˈduŋ.kwe"
     ],
     [
      "tu?",
-     "",
-     ""
+     "you",
+     "tu"
     ]
    ],
    "glossGroups": [],
@@ -3775,18 +4073,18 @@
    "occurrence": 1,
    "startMeasure": "118",
    "original": "Saltai giù...",
-   "translation": "",
-   "ipa": "",
+   "translation": "I jumped down…",
+   "ipa": "salˈtai ˈdʒu",
    "words": [
     [
      "Saltai",
-     "",
-     ""
+     "I jumped",
+     "salˈtai"
     ],
     [
      "giù...",
-     "",
-     ""
+     "down",
+     "ˈdʒu"
     ]
    ],
    "glossGroups": [],
@@ -3799,18 +4097,18 @@
    "occurrence": 1,
    "startMeasure": "119",
    "original": "ma perchè?",
-   "translation": "",
-   "ipa": "",
+   "translation": "but why?",
+   "ipa": "ma perˈke",
    "words": [
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "perchè?",
-     "",
-     ""
+     "why",
+     "perˈke"
     ]
    ],
    "glossGroups": [],
@@ -3823,18 +4121,18 @@
    "occurrence": 1,
    "startMeasure": "120",
    "original": "il timor...",
-   "translation": "",
-   "ipa": "",
+   "translation": "the fear…",
+   "ipa": "il tiˈmor",
    "words": [
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "timor...",
-     "",
-     ""
+     "fear",
+     "tiˈmor"
     ]
    ],
    "glossGroups": [],
@@ -3847,18 +4145,18 @@
    "occurrence": 1,
    "startMeasure": "121",
    "original": "che timor?",
-   "translation": "",
-   "ipa": "",
+   "translation": "what fear?",
+   "ipa": "ke tiˈmor",
    "words": [
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "timor?",
-     "",
-     ""
+     "fear",
+     "tiˈmor"
     ]
    ],
    "glossGroups": [],
@@ -3871,18 +4169,18 @@
    "occurrence": 1,
    "startMeasure": "122",
    "original": "là rinchiuso,",
-   "translation": "",
-   "ipa": "",
+   "translation": "shut in there,",
+   "ipa": "ˈla riŋˈkju.zo",
    "words": [
     [
      "là",
-     "",
-     ""
+     "there",
+     "ˈla"
     ],
     [
      "rinchiuso,",
-     "",
-     ""
+     "shut in",
+     "riŋˈkju.zo"
     ]
    ],
    "glossGroups": [],
@@ -3895,28 +4193,28 @@
    "occurrence": 1,
    "startMeasure": "123",
    "original": "aspettando quel caro visetto...",
-   "translation": "",
-   "ipa": "",
+   "translation": "waiting for that dear little face…",
+   "ipa": "a.spetˈtan.do kwel ˈka.ro viˈzet.to",
    "words": [
     [
      "aspettando",
-     "",
-     ""
+     "waiting for",
+     "a.spetˈtan.do"
     ],
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "caro",
-     "",
-     ""
+     "dear",
+     "ˈka.ro"
     ],
     [
      "visetto...",
-     "",
-     ""
+     "little face",
+     "viˈzet.to"
     ]
    ],
    "glossGroups": [],
@@ -3929,41 +4227,49 @@
    "occurrence": 1,
    "startMeasure": "125",
    "original": "tippe, tappe un sussurro fuor d'uso...",
-   "translation": "",
-   "ipa": "",
+   "translation": "tip, tap, an unusual whispering…",
+   "ipa": "ˈtip.pe ˈtap.pe‿un susˈsur.ro ˈfwɔr ˈdu.zo",
    "words": [
     [
      "tippe,",
-     "",
-     ""
+     "tip",
+     "ˈtip.pe"
     ],
     [
      "tappe",
-     "",
-     ""
+     "tap",
+     "ˈtap.pe"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "sussurro",
-     "",
-     ""
+     "whispering",
+     "susˈsur.ro"
     ],
     [
      "fuor",
-     "",
-     ""
+     "out",
+     "ˈfwɔr"
     ],
     [
      "d'uso...",
-     "",
-     ""
+     "of the usual",
+     "ˈdu.zo"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "out of the ordinary"
+    }
+   ],
    "audio": {}
   },
   {
@@ -3973,18 +4279,18 @@
    "occurrence": 1,
    "startMeasure": "128",
    "original": "voi gridaste...",
-   "translation": "",
-   "ipa": "",
+   "translation": "you shouted…",
+   "ipa": "ˈvoi griˈda.ste",
    "words": [
     [
      "voi",
-     "",
-     ""
+     "you",
+     "ˈvoi"
     ],
     [
      "gridaste...",
-     "",
-     ""
+     "shouted",
+     "griˈda.ste"
     ]
    ],
    "glossGroups": [],
@@ -3997,23 +4303,23 @@
    "occurrence": 1,
    "startMeasure": "129",
    "original": "lo scritto biglietto...",
-   "translation": "",
-   "ipa": "",
+   "translation": "the written note…",
+   "ipa": "lo ˈskrit.to biʎˈʎet.to",
    "words": [
     [
      "lo",
-     "",
-     ""
+     "the",
+     "lo"
     ],
     [
      "scritto",
-     "",
-     ""
+     "written",
+     "ˈskrit.to"
     ],
     [
      "biglietto...",
-     "",
-     ""
+     "note",
+     "biʎˈʎet.to"
     ]
    ],
    "glossGroups": [],
@@ -4026,18 +4332,18 @@
    "occurrence": 1,
    "startMeasure": "132",
    "original": "saltai giù",
-   "translation": "",
-   "ipa": "",
+   "translation": "I jumped down",
+   "ipa": "salˈtai ˈdʒu",
    "words": [
     [
      "saltai",
-     "",
-     ""
+     "I jumped",
+     "salˈtai"
     ],
     [
      "giù",
-     "",
-     ""
+     "down",
+     "ˈdʒu"
     ]
    ],
    "glossGroups": [],
@@ -4050,23 +4356,23 @@
    "occurrence": 1,
    "startMeasure": "133",
    "original": "dal terrore confuso,",
-   "translation": "",
-   "ipa": "",
+   "translation": "confused with terror,",
+   "ipa": "dal terˈro.re koɱˈfu.zo",
    "words": [
     [
      "dal",
-     "",
-     ""
+     "by the",
+     "dal"
     ],
     [
      "terrore",
-     "",
-     ""
+     "terror",
+     "terˈro.re"
     ],
     [
      "confuso,",
-     "",
-     ""
+     "confused",
+     "koɱˈfu.zo"
     ]
    ],
    "glossGroups": [],
@@ -4079,46 +4385,54 @@
    "occurrence": 1,
    "startMeasure": "136",
    "original": "e stravolto m'ho un nervo del piè.",
-   "translation": "",
-   "ipa": "",
+   "translation": "and I've twisted a tendon in my foot.",
+   "ipa": "e straˈvɔl.to ˈmɔ‿un ˈnɛr.vo del ˈpjɛ",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "stravolto",
-     "",
-     ""
+     "twisted",
+     "straˈvɔl.to"
     ],
     [
      "m'ho",
-     "",
-     ""
+     "I have (for me)",
+     "ˈmɔ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "nervo",
-     "",
-     ""
+     "tendon",
+     "ˈnɛr.vo"
     ],
     [
      "del",
-     "",
-     ""
+     "of the",
+     "del"
     ],
     [
      "piè.",
-     "",
-     ""
+     "foot",
+     "ˈpjɛ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "I've twisted"
+    }
+   ],
    "audio": {}
   },
   {
@@ -4128,43 +4442,43 @@
    "occurrence": 1,
    "startMeasure": "143",
    "original": "Vostre dunque saran queste carte, che perdeste...",
-   "translation": "",
-   "ipa": "",
+   "translation": "So these papers will be yours, which you lost…",
+   "ipa": "ˈvo.stre ˈduŋ.kwe saˈran ˈkwe.ste ˈkar.te ke perˈde.ste",
    "words": [
     [
      "Vostre",
-     "",
-     ""
+     "yours",
+     "ˈvo.stre"
     ],
     [
      "dunque",
-     "",
-     ""
+     "so",
+     "ˈduŋ.kwe"
     ],
     [
      "saran",
-     "",
-     ""
+     "must be",
+     "saˈran"
     ],
     [
      "queste",
-     "",
-     ""
+     "these",
+     "ˈkwe.ste"
     ],
     [
      "carte,",
-     "",
-     ""
+     "papers",
+     "ˈkar.te"
     ],
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "perdeste...",
-     "",
-     ""
+     "you lost",
+     "perˈde.ste"
     ]
    ],
    "glossGroups": [],
@@ -4177,28 +4491,28 @@
    "occurrence": 1,
    "startMeasure": "145",
    "original": "Olà, porgile a me!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Hey, hand them to me!",
+   "ipa": "oˈla ˈpɔr.dʒi.le‿a ˈme",
    "words": [
     [
      "Olà,",
-     "",
-     ""
+     "hey there",
+     "oˈla"
     ],
     [
      "porgile",
-     "",
-     ""
+     "hand them",
+     "ˈpɔr.dʒi.le"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "me!",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
    "glossGroups": [],
@@ -4211,38 +4525,38 @@
    "occurrence": 1,
    "startMeasure": "147",
    "original": "Sono in trappola, sono in trappola.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I'm caught in a trap, I'm caught in a trap.",
+   "ipa": "ˈso.no‿in ˈtrap.po.la ˈso.no‿in ˈtrap.po.la",
    "words": [
     [
      "Sono",
-     "",
-     ""
+     "I am",
+     "ˈso.no"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "trappola,",
-     "",
-     ""
+     "trap",
+     "ˈtrap.po.la"
     ],
     [
      "sono",
-     "",
-     ""
+     "I am",
+     "ˈso.no"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "trappola.",
-     "",
-     ""
+     "trap",
+     "ˈtrap.po.la"
     ]
    ],
    "glossGroups": [],
@@ -4255,41 +4569,56 @@
    "occurrence": 1,
    "startMeasure": "149",
    "original": "Figaro, all' erta! Figaro, all' erta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, look out! Figaro, look out!",
+   "ipa": "ˈfi.ga.ro‿all ˈɛr.ta ˈfi.ga.ro‿all ˈɛr.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "all'",
-     "",
-     ""
+     "on the",
+     "all"
     ],
     [
      "erta!",
-     "",
-     ""
+     "watch",
+     "ˈɛr.ta"
     ],
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "all'",
-     "",
-     ""
+     "on the",
+     "all"
     ],
     [
      "erta!",
-     "",
-     ""
+     "watch",
+     "ˈɛr.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "look out"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "look out"
+    }
+   ],
    "audio": {}
   },
   {
@@ -4299,41 +4628,56 @@
    "occurrence": 1,
    "startMeasure": "149",
    "original": "Figaro, all' erta! Figaro, all' erta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Figaro, look out! Figaro, look out!",
+   "ipa": "ˈfi.ga.ro‿all ˈɛr.ta ˈfi.ga.ro‿all ˈɛr.ta",
    "words": [
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "all'",
-     "",
-     ""
+     "on the",
+     "all"
     ],
     [
      "erta!",
-     "",
-     ""
+     "watch",
+     "ˈɛr.ta"
     ],
     [
      "Figaro,",
-     "",
-     ""
+     "Figaro",
+     "ˈfi.ga.ro"
     ],
     [
      "all'",
-     "",
-     ""
+     "on the",
+     "all"
     ],
     [
      "erta!",
-     "",
-     ""
+     "watch",
+     "ˈɛr.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "look out"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "look out"
+    }
+   ],
    "audio": {}
   },
   {
@@ -4343,26 +4687,34 @@
    "occurrence": 1,
    "startMeasure": "152",
    "original": "Dite un po',",
-   "translation": "",
-   "ipa": "",
+   "translation": "Just tell me,",
+   "ipa": "ˈdi.te‿un ˈpɔ",
    "words": [
     [
      "Dite",
-     "",
-     ""
+     "tell",
+     "ˈdi.te"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "po',",
-     "",
-     ""
+     "little",
+     "ˈpɔ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "a little, just"
+    }
+   ],
    "audio": {}
   },
   {
@@ -4372,28 +4724,28 @@
    "occurrence": 1,
    "startMeasure": "154",
    "original": "questo foglio cos' è?",
-   "translation": "",
-   "ipa": "",
+   "translation": "what is this sheet of paper?",
+   "ipa": "ˈkwe.sto ˈfɔʎ.ʎo ˈkɔz ˈɛ",
    "words": [
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "foglio",
-     "",
-     ""
+     "sheet",
+     "ˈfɔʎ.ʎo"
     ],
     [
      "cos'",
-     "",
-     ""
+     "what",
+     "ˈkɔz"
     ],
     [
      "è?",
-     "",
-     ""
+     "is",
+     "ˈɛ"
     ]
    ],
    "glossGroups": [],
@@ -4406,18 +4758,18 @@
    "occurrence": 1,
    "startMeasure": "156",
    "original": "Tosto, tosto,",
-   "translation": "",
-   "ipa": "",
+   "translation": "At once, at once,",
+   "ipa": "ˈtɔ.sto ˈtɔ.sto",
    "words": [
     [
      "Tosto,",
-     "",
-     ""
+     "right away",
+     "ˈtɔ.sto"
     ],
     [
      "tosto,",
-     "",
-     ""
+     "right away",
+     "ˈtɔ.sto"
     ]
    ],
    "glossGroups": [],
@@ -4430,23 +4782,23 @@
    "occurrence": 1,
    "startMeasure": "157",
    "original": "n'ho tante, aspettate!",
-   "translation": "",
-   "ipa": "",
+   "translation": "I have so many of them, wait!",
+   "ipa": "ˈnɔ ˈtan.te a.spetˈta.te",
    "words": [
     [
      "n'ho",
-     "",
-     ""
+     "I have (of them)",
+     "ˈnɔ"
     ],
     [
      "tante,",
-     "",
-     ""
+     "so many",
+     "ˈtan.te"
     ],
     [
      "aspettate!",
-     "",
-     ""
+     "wait",
+     "a.spetˈta.te"
     ]
    ],
    "glossGroups": [],
@@ -4459,38 +4811,38 @@
    "occurrence": 1,
    "startMeasure": "159",
    "original": "Sarà forse il sommario dei debiti?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Could it be the list of his debts?",
+   "ipa": "saˈra ˈfor.se‿il somˈma.rjo dei ˈde.bi.ti",
    "words": [
     [
      "Sarà",
-     "",
-     ""
+     "will it be",
+     "saˈra"
     ],
     [
      "forse",
-     "",
-     ""
+     "perhaps",
+     "ˈfor.se"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "sommario",
-     "",
-     ""
+     "summary",
+     "somˈma.rjo"
     ],
     [
      "dei",
-     "",
-     ""
+     "of the",
+     "dei"
     ],
     [
      "debiti?",
-     "",
-     ""
+     "debts",
+     "ˈde.bi.ti"
     ]
    ],
    "glossGroups": [],
@@ -4503,33 +4855,33 @@
    "occurrence": 1,
    "startMeasure": "161",
    "original": "Nò, la lista degli osti.",
-   "translation": "",
-   "ipa": "",
+   "translation": "No, the list of innkeepers.",
+   "ipa": "ˈnɔ la ˈli.sta ˈdeʎ.ʎi‿ˈɔ.sti",
    "words": [
     [
      "Nò,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "lista",
-     "",
-     ""
+     "list",
+     "ˈli.sta"
     ],
     [
      "degli",
-     "",
-     ""
+     "of the",
+     "ˈdeʎ.ʎi"
     ],
     [
      "osti.",
-     "",
-     ""
+     "innkeepers",
+     "ˈɔ.sti"
     ]
    ],
    "glossGroups": [],
@@ -4542,13 +4894,13 @@
    "occurrence": 1,
    "startMeasure": "163",
    "original": "Parlate!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Speak!",
+   "ipa": "parˈla.te",
    "words": [
     [
      "Parlate!",
-     "",
-     ""
+     "speak",
+     "parˈla.te"
     ]
    ],
    "glossGroups": [],
@@ -4561,23 +4913,23 @@
    "occurrence": 1,
    "startMeasure": "164",
    "original": "e tu lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "and you, let him be,",
+   "ipa": "e tu ˈlaʃ.ʃa.lo",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4590,13 +4942,13 @@
    "occurrence": 1,
    "startMeasure": "166",
    "original": "Lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "Lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4609,18 +4961,18 @@
    "occurrence": 1,
    "startMeasure": "166",
    "original": "e parti;",
-   "translation": "",
-   "ipa": "",
+   "translation": "and go away;",
+   "ipa": "e ˈpar.ti",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "parti;",
-     "",
-     ""
+     "go",
+     "ˈpar.ti"
     ]
    ],
    "glossGroups": [],
@@ -4633,13 +4985,13 @@
    "occurrence": 1,
    "startMeasure": "166",
    "original": "Lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "Lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4652,18 +5004,18 @@
    "occurrence": 1,
    "startMeasure": "166",
    "original": "e parti;",
-   "translation": "",
-   "ipa": "",
+   "translation": "and go away;",
+   "ipa": "e ˈpar.ti",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "parti;",
-     "",
-     ""
+     "go",
+     "ˈpar.ti"
     ]
    ],
    "glossGroups": [],
@@ -4676,13 +5028,13 @@
    "occurrence": 1,
    "startMeasure": "166",
    "original": "Lasciami,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Let me be,",
+   "ipa": "ˈlaʃ.ʃa.mi",
    "words": [
     [
      "Lasciami,",
-     "",
-     ""
+     "leave me",
+     "ˈlaʃ.ʃa.mi"
     ]
    ],
    "glossGroups": [],
@@ -4695,18 +5047,18 @@
    "occurrence": 1,
    "startMeasure": "166",
    "original": "e parti!",
-   "translation": "",
-   "ipa": "",
+   "translation": "and go away!",
+   "ipa": "e ˈpar.ti",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "parti!",
-     "",
-     ""
+     "go",
+     "ˈpar.ti"
     ]
    ],
    "glossGroups": [],
@@ -4719,46 +5071,55 @@
    "occurrence": 1,
    "startMeasure": "167",
    "original": "Parto si, ma se torno a trovarti...",
-   "translation": "",
-   "ipa": "",
+   "translation": "I'm going, yes, but if I find you here again…",
+   "ipa": "ˈpar.to ˈsi ma se ˈtor.no‿a troˈvar.ti",
    "words": [
     [
      "Parto",
-     "",
-     ""
+     "I'm going",
+     "ˈpar.to"
     ],
     [
      "si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ],
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "torno",
-     "",
-     ""
+     "I come back",
+     "ˈtor.no"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "trovarti...",
-     "",
-     ""
+     "to find you",
+     "troˈvar.ti"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "I find you again"
+    }
+   ],
    "audio": {}
   },
   {
@@ -4768,13 +5129,13 @@
    "occurrence": 1,
    "startMeasure": "169",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4787,13 +5148,13 @@
    "occurrence": 1,
    "startMeasure": "169",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4806,13 +5167,13 @@
    "occurrence": 1,
    "startMeasure": "169",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4825,38 +5186,38 @@
    "occurrence": 1,
    "startMeasure": "169",
    "original": "Vanne, vanne, non temo di te.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Off with you, off with you, I'm not afraid of you.",
+   "ipa": "ˈvan.ne ˈvan.ne non ˈtɛ.mo di ˈte",
    "words": [
     [
      "Vanne,",
-     "",
-     ""
+     "go away",
+     "ˈvan.ne"
     ],
     [
      "vanne,",
-     "",
-     ""
+     "go away",
+     "ˈvan.ne"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "temo",
-     "",
-     ""
+     "I fear",
+     "ˈtɛ.mo"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "te.",
-     "",
-     ""
+     "you",
+     "ˈte"
     ]
    ],
    "glossGroups": [],
@@ -4869,13 +5230,13 @@
    "occurrence": 1,
    "startMeasure": "171",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4888,13 +5249,13 @@
    "occurrence": 1,
    "startMeasure": "171",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4907,13 +5268,13 @@
    "occurrence": 1,
    "startMeasure": "171",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -4926,46 +5287,55 @@
    "occurrence": 1,
    "startMeasure": "171",
    "original": "Parto si, ma se torno a trovarti...",
-   "translation": "",
-   "ipa": "",
+   "translation": "I'm going, yes, but if I find you here again…",
+   "ipa": "ˈpar.to ˈsi ma se ˈtor.no‿a troˈvar.ti",
    "words": [
     [
      "Parto",
-     "",
-     ""
+     "I'm going",
+     "ˈpar.to"
     ],
     [
      "si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ],
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "torno",
-     "",
-     ""
+     "I come back",
+     "ˈtor.no"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "trovarti...",
-     "",
-     ""
+     "to find you",
+     "troˈvar.ti"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "I find you again"
+    }
+   ],
    "audio": {}
   },
   {
@@ -4975,38 +5345,38 @@
    "occurrence": 1,
    "startMeasure": "172",
    "original": "Vanne, vanne, non temo di te.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Off with you, off with you, I'm not afraid of you.",
+   "ipa": "ˈvan.ne ˈvan.ne non ˈtɛ.mo di ˈte",
    "words": [
     [
      "Vanne,",
-     "",
-     ""
+     "go away",
+     "ˈvan.ne"
     ],
     [
      "vanne,",
-     "",
-     ""
+     "go away",
+     "ˈvan.ne"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "temo",
-     "",
-     ""
+     "I fear",
+     "ˈtɛ.mo"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "te.",
-     "",
-     ""
+     "you",
+     "ˈte"
     ]
    ],
    "glossGroups": [],
@@ -5019,13 +5389,13 @@
    "occurrence": 1,
    "startMeasure": "173",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -5038,18 +5408,18 @@
    "occurrence": 1,
    "startMeasure": "173",
    "original": "e parti!",
-   "translation": "",
-   "ipa": "",
+   "translation": "and go away!",
+   "ipa": "e ˈpar.ti",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "parti!",
-     "",
-     ""
+     "go",
+     "ˈpar.ti"
     ]
    ],
    "glossGroups": [],
@@ -5062,13 +5432,13 @@
    "occurrence": 1,
    "startMeasure": "173",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -5081,18 +5451,18 @@
    "occurrence": 1,
    "startMeasure": "173",
    "original": "e parti!",
-   "translation": "",
-   "ipa": "",
+   "translation": "and go away!",
+   "ipa": "e ˈpar.ti",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "parti!",
-     "",
-     ""
+     "go",
+     "ˈpar.ti"
     ]
    ],
    "glossGroups": [],
@@ -5105,13 +5475,13 @@
    "occurrence": 1,
    "startMeasure": "173",
    "original": "lascialo,",
-   "translation": "",
-   "ipa": "",
+   "translation": "let him be,",
+   "ipa": "ˈlaʃ.ʃa.lo",
    "words": [
     [
      "lascialo,",
-     "",
-     ""
+     "leave him",
+     "ˈlaʃ.ʃa.lo"
     ]
    ],
    "glossGroups": [],
@@ -5124,18 +5494,18 @@
    "occurrence": 1,
    "startMeasure": "173",
    "original": "e parti!",
-   "translation": "",
-   "ipa": "",
+   "translation": "and go away!",
+   "ipa": "e ˈpar.ti",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "parti!",
-     "",
-     ""
+     "go",
+     "ˈpar.ti"
     ]
    ],
    "glossGroups": [],
@@ -5148,13 +5518,13 @@
    "occurrence": 1,
    "startMeasure": "177",
    "original": "Dunque?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Well then?",
+   "ipa": "ˈduŋ.kwe",
    "words": [
     [
      "Dunque?",
-     "",
-     ""
+     "well then",
+     "ˈduŋ.kwe"
     ]
    ],
    "glossGroups": [],
@@ -5167,38 +5537,38 @@
    "occurrence": 1,
    "startMeasure": "178",
    "original": "O ciel! la patente del paggio!",
-   "translation": "",
-   "ipa": "",
+   "translation": "O heavens! The page's commission!",
+   "ipa": "ˈo ˈtʃɛl la paˈtɛn.te del ˈpad.dʒo",
    "words": [
     [
      "O",
-     "",
-     ""
+     "O",
+     "ˈo"
     ],
     [
      "ciel!",
-     "",
-     ""
+     "heaven",
+     "ˈtʃɛl"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "patente",
-     "",
-     ""
+     "commission",
+     "paˈtɛn.te"
     ],
     [
      "del",
-     "",
-     ""
+     "of the",
+     "del"
     ],
     [
      "paggio!",
-     "",
-     ""
+     "page",
+     "ˈpad.dʒo"
     ]
    ],
    "glossGroups": [],
@@ -5211,13 +5581,13 @@
    "occurrence": 1,
    "startMeasure": "179",
    "original": "dunque?",
-   "translation": "",
-   "ipa": "",
+   "translation": "well then?",
+   "ipa": "ˈduŋ.kwe",
    "words": [
     [
      "dunque?",
-     "",
-     ""
+     "well then",
+     "ˈduŋ.kwe"
     ]
    ],
    "glossGroups": [],
@@ -5230,31 +5600,39 @@
    "occurrence": 1,
    "startMeasure": "180",
    "original": "Giusti Dei! la patente!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Merciful gods! The commission!",
+   "ipa": "ˈdʒu.sti ˈdɛi la paˈtɛn.te",
    "words": [
     [
      "Giusti",
-     "",
-     ""
+     "just",
+     "ˈdʒu.sti"
     ],
     [
      "Dei!",
-     "",
-     ""
+     "gods",
+     "ˈdɛi"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "patente!",
-     "",
-     ""
+     "commission",
+     "paˈtɛn.te"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "merciful gods"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5264,13 +5642,13 @@
    "occurrence": 1,
    "startMeasure": "180",
    "original": "coraggio!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Courage!",
+   "ipa": "koˈrad.dʒo",
    "words": [
     [
      "coraggio!",
-     "",
-     ""
+     "courage",
+     "koˈrad.dʒo"
     ]
    ],
    "glossGroups": [],
@@ -5283,41 +5661,56 @@
    "occurrence": 1,
    "startMeasure": "182",
    "original": "O che testa! o che testa!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Oh, what a head! Oh, what a head!",
+   "ipa": "ˈo ke ˈtɛ.sta ˈo ke ˈtɛ.sta",
    "words": [
     [
      "O",
-     "",
-     ""
+     "oh",
+     "ˈo"
     ],
     [
      "che",
-     "",
-     ""
+     "what a",
+     "ke"
     ],
     [
      "testa!",
-     "",
-     ""
+     "head",
+     "ˈtɛ.sta"
     ],
     [
      "o",
-     "",
-     ""
+     "oh",
+     "ˈo"
     ],
     [
      "che",
-     "",
-     ""
+     "what a",
+     "ke"
     ],
     [
      "testa!",
-     "",
-     ""
+     "head",
+     "ˈtɛ.sta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "how stupid of me"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "how stupid of me"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5327,66 +5720,74 @@
    "occurrence": 1,
    "startMeasure": "186",
    "original": "quest' è la patente, che poc' anzi il fanciullo mi diè;",
-   "translation": "",
-   "ipa": "",
+   "translation": "this is the commission which the boy gave me a little while ago;",
+   "ipa": "kwest ˈɛ la paˈtɛn.te ke pɔk ˈan.tsi‿il fanˈtʃul.lo mi ˈdjɛ",
    "words": [
     [
      "quest'",
-     "",
-     ""
+     "this",
+     "kwest"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ˈɛ"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "patente,",
-     "",
-     ""
+     "commission",
+     "paˈtɛn.te"
     ],
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "poc'",
-     "",
-     ""
+     "a little",
+     "pɔk"
     ],
     [
      "anzi",
-     "",
-     ""
+     "before",
+     "ˈan.tsi"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "fanciullo",
-     "",
-     ""
+     "boy",
+     "fanˈtʃul.lo"
     ],
     [
      "mi",
-     "",
-     ""
+     "to me",
+     "mi"
     ],
     [
      "diè;",
-     "",
-     ""
+     "gave",
+     "ˈdjɛ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "a little while ago"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5396,21 +5797,29 @@
    "occurrence": 1,
    "startMeasure": "190",
    "original": "Perchè fare?",
-   "translation": "",
-   "ipa": "",
+   "translation": "For what purpose?",
+   "ipa": "perˈke ˈfa.re",
    "words": [
     [
      "Perchè",
-     "",
-     ""
+     "for what",
+     "perˈke"
     ],
     [
      "fare?",
-     "",
-     ""
+     "to do",
+     "ˈfa.re"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "to do what"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5420,18 +5829,18 @@
    "occurrence": 1,
    "startMeasure": "192",
    "original": "vi manca...",
-   "translation": "",
-   "ipa": "",
+   "translation": "it's missing…",
+   "ipa": "vi ˈmaŋ.ka",
    "words": [
     [
      "vi",
-     "",
-     ""
+     "from it",
+     "vi"
     ],
     [
      "manca...",
-     "",
-     ""
+     "is missing",
+     "ˈmaŋ.ka"
     ]
    ],
    "glossGroups": [],
@@ -5444,18 +5853,18 @@
    "occurrence": 1,
    "startMeasure": "194",
    "original": "vi manca?",
-   "translation": "",
-   "ipa": "",
+   "translation": "it's missing?",
+   "ipa": "vi ˈmaŋ.ka",
    "words": [
     [
      "vi",
-     "",
-     ""
+     "from it",
+     "vi"
     ],
     [
      "manca?",
-     "",
-     ""
+     "is missing",
+     "ˈmaŋ.ka"
     ]
    ],
    "glossGroups": [],
@@ -5468,18 +5877,18 @@
    "occurrence": 1,
    "startMeasure": "195",
    "original": "Il sugello.",
-   "translation": "",
-   "ipa": "",
+   "translation": "The seal.",
+   "ipa": "il sudˈdʒɛl.lo",
    "words": [
     [
      "Il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "sugello.",
-     "",
-     ""
+     "seal",
+     "sudˈdʒɛl.lo"
     ]
    ],
    "glossGroups": [],
@@ -5492,18 +5901,18 @@
    "occurrence": 1,
    "startMeasure": "196",
    "original": "Il sugello.",
-   "translation": "",
-   "ipa": "",
+   "translation": "The seal.",
+   "ipa": "il sudˈdʒɛl.lo",
    "words": [
     [
      "Il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "sugello.",
-     "",
-     ""
+     "seal",
+     "sudˈdʒɛl.lo"
     ]
    ],
    "glossGroups": [],
@@ -5516,13 +5925,13 @@
    "occurrence": 1,
    "startMeasure": "196",
    "original": "rispondi!",
-   "translation": "",
-   "ipa": "",
+   "translation": "answer!",
+   "ipa": "riˈspon.di",
    "words": [
     [
      "rispondi!",
-     "",
-     ""
+     "answer",
+     "riˈspon.di"
     ]
    ],
    "glossGroups": [],
@@ -5535,18 +5944,18 @@
    "occurrence": 1,
    "startMeasure": "198",
    "original": "è l'usanza...",
-   "translation": "",
-   "ipa": "",
+   "translation": "it's the custom…",
+   "ipa": "ɛ luˈzan.tsa",
    "words": [
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "l'usanza...",
-     "",
-     ""
+     "the custom",
+     "luˈzan.tsa"
     ]
    ],
    "glossGroups": [],
@@ -5559,31 +5968,39 @@
    "occurrence": 1,
    "startMeasure": "200",
    "original": "sù via, ti confondi?",
-   "translation": "",
-   "ipa": "",
+   "translation": "come on, are you getting muddled?",
+   "ipa": "ˈsu ˈvi.a ti koɱˈfon.di",
    "words": [
     [
      "sù",
-     "",
-     ""
+     "up",
+     "ˈsu"
     ],
     [
      "via,",
-     "",
-     ""
+     "come",
+     "ˈvi.a"
     ],
     [
      "ti",
-     "",
-     ""
+     "yourself",
+     "ti"
     ],
     [
      "confondi?",
-     "",
-     ""
+     "get muddled",
+     "koɱˈfon.di"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "come on"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5593,38 +6010,38 @@
    "occurrence": 1,
    "startMeasure": "202",
    "original": "è l'usanza, di porvi il sugello.",
-   "translation": "",
-   "ipa": "",
+   "translation": "it's the custom to put the seal on it.",
+   "ipa": "ɛ luˈzan.tsa di ˈpor.vi‿il sudˈdʒɛl.lo",
    "words": [
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "l'usanza,",
-     "",
-     ""
+     "the custom",
+     "luˈzan.tsa"
     ],
     [
      "di",
-     "",
-     ""
+     "to",
+     "di"
     ],
     [
      "porvi",
-     "",
-     ""
+     "to put on it",
+     "ˈpor.vi"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "sugello.",
-     "",
-     ""
+     "seal",
+     "sudˈdʒɛl.lo"
     ]
    ],
    "glossGroups": [],
@@ -5637,41 +6054,51 @@
    "occurrence": 1,
    "startMeasure": "206",
    "original": "Questo birbo mi toglie il cervello,",
-   "translation": "",
-   "ipa": "",
+   "translation": "This rascal is driving me out of my mind,",
+   "ipa": "ˈkwe.sto ˈbir.bo mi ˈtɔʎ.ʎe‿il tʃerˈvɛl.lo",
    "words": [
     [
      "Questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "birbo",
-     "",
-     ""
+     "rascal",
+     "ˈbir.bo"
     ],
     [
      "mi",
-     "",
-     ""
+     "from me",
+     "mi"
     ],
     [
      "toglie",
-     "",
-     ""
+     "takes away",
+     "ˈtɔʎ.ʎe"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "cervello,",
-     "",
-     ""
+     "brain",
+     "tʃerˈvɛl.lo"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "drives me out of my mind"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5681,38 +6108,38 @@
    "occurrence": 1,
    "startMeasure": "208",
    "original": "Se mi salvo da questa tempesta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "If I escape from this storm,",
+   "ipa": "se mi ˈsal.vo da ˈkwe.sta temˈpɛ.sta",
    "words": [
     [
      "Se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "mi",
-     "",
-     ""
+     "myself",
+     "mi"
     ],
     [
      "salvo",
-     "",
-     ""
+     "save",
+     "ˈsal.vo"
     ],
     [
      "da",
-     "",
-     ""
+     "from",
+     "da"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "tempesta,",
-     "",
-     ""
+     "storm",
+     "temˈpɛ.sta"
     ]
    ],
    "glossGroups": [],
@@ -5724,72 +6151,95 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "209",
-   "original": "Se mi salvo da questa tempesta, più non avvi naufragio per me,",
-   "translation": "",
-   "ipa": "",
+   "original": "Se mi salvo da questa tempesta,",
+   "translation": "If I escape from this storm,",
+   "ipa": "se mi ˈsal.vo da ˈkwe.sta temˈpɛ.sta",
    "words": [
     [
      "Se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "mi",
-     "",
-     ""
+     "myself",
+     "mi"
     ],
     [
      "salvo",
-     "",
-     ""
+     "save",
+     "ˈsal.vo"
     ],
     [
      "da",
-     "",
-     ""
+     "from",
+     "da"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "tempesta,",
-     "",
-     ""
-    ],
-    [
-     "più",
-     "",
-     ""
-    ],
-    [
-     "non",
-     "",
-     ""
-    ],
-    [
-     "avvi",
-     "",
-     ""
-    ],
-    [
-     "naufragio",
-     "",
-     ""
-    ],
-    [
-     "per",
-     "",
-     ""
-    ],
-    [
-     "me,",
-     "",
-     ""
+     "storm",
+     "temˈpɛ.sta"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t26_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "211",
+   "original": "più non avvi naufragio per me,",
+   "translation": "there will be no more shipwreck for me,",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme",
+   "words": [
+    [
+     "più",
+     "no more",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "avvi",
+     "there is",
+     "ˈav.vi"
+    ],
+    [
+     "naufragio",
+     "shipwreck",
+     "nauˈfra.dʒo"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5799,38 +6249,38 @@
    "occurrence": 1,
    "startMeasure": "209",
    "original": "Sbuffa invano, e la terra calpesta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "He fumes in vain and stamps on the ground!",
+   "ipa": "ˈzbuf.fa‿iɱˈva.no‿e la ˈtɛr.ra kalˈpe.sta",
    "words": [
     [
      "Sbuffa",
-     "",
-     ""
+     "he fumes",
+     "ˈzbuf.fa"
     ],
     [
      "invano,",
-     "",
-     ""
+     "in vain",
+     "iɱˈva.no"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "terra",
-     "",
-     ""
+     "ground",
+     "ˈtɛr.ra"
     ],
     [
      "calpesta!",
-     "",
-     ""
+     "stamps on",
+     "kalˈpe.sta"
     ]
    ],
    "glossGroups": [],
@@ -5843,43 +6293,43 @@
    "occurrence": 1,
    "startMeasure": "210",
    "original": "tutto, tutto è un mistero per me,",
-   "translation": "",
-   "ipa": "",
+   "translation": "it is all, all a mystery to me,",
+   "ipa": "ˈtut.to ˈtut.to‿ɛ‿un miˈstɛ.ro per ˈme",
    "words": [
     [
      "tutto,",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "tutto",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "mistero",
-     "",
-     ""
+     "mystery",
+     "miˈstɛ.ro"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
    "glossGroups": [],
@@ -5892,41 +6342,52 @@
    "occurrence": 1,
    "startMeasure": "211",
    "original": "poverino ne sà men di me,",
-   "translation": "",
-   "ipa": "",
+   "translation": "poor fellow, he knows less about it than I do,",
+   "ipa": "po.veˈri.no ne ˈsa ˈmen di ˈme",
    "words": [
     [
      "poverino",
-     "",
-     ""
+     "poor fellow",
+     "po.veˈri.no"
     ],
     [
      "ne",
-     "",
-     ""
+     "of it",
+     "ne"
     ],
     [
      "sà",
-     "",
-     ""
+     "knows",
+     "ˈsa"
     ],
     [
      "men",
-     "",
-     ""
+     "less",
+     "ˈmen"
     ],
     [
      "di",
-     "",
-     ""
+     "than",
+     "di"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "knows less about it than I"
+    }
+   ],
    "audio": {}
   },
   {
@@ -5936,38 +6397,38 @@
    "occurrence": 1,
    "startMeasure": "214",
    "original": "se mi salvo da questa tempesta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "If I escape from this storm,",
+   "ipa": "se mi ˈsal.vo da ˈkwe.sta temˈpɛ.sta",
    "words": [
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "mi",
-     "",
-     ""
+     "myself",
+     "mi"
     ],
     [
      "salvo",
-     "",
-     ""
+     "save",
+     "ˈsal.vo"
     ],
     [
      "da",
-     "",
-     ""
+     "from",
+     "da"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "tempesta,",
-     "",
-     ""
+     "storm",
+     "temˈpɛ.sta"
     ]
    ],
    "glossGroups": [],
@@ -5980,38 +6441,38 @@
    "occurrence": 1,
    "startMeasure": "214",
    "original": "se mi salvo da questa tempesta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "If I escape from this storm,",
+   "ipa": "se mi ˈsal.vo da ˈkwe.sta temˈpɛ.sta",
    "words": [
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "mi",
-     "",
-     ""
+     "myself",
+     "mi"
     ],
     [
      "salvo",
-     "",
-     ""
+     "save",
+     "ˈsal.vo"
     ],
     [
      "da",
-     "",
-     ""
+     "from",
+     "da"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "tempesta,",
-     "",
-     ""
+     "storm",
+     "temˈpɛ.sta"
     ]
    ],
    "glossGroups": [],
@@ -6024,41 +6485,51 @@
    "occurrence": 1,
    "startMeasure": "214",
    "original": "questo birbo mi toglie il cervello",
-   "translation": "",
-   "ipa": "",
+   "translation": "this rascal is driving me out of my mind",
+   "ipa": "ˈkwe.sto ˈbir.bo mi ˈtɔʎ.ʎe‿il tʃerˈvɛl.lo",
    "words": [
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "birbo",
-     "",
-     ""
+     "rascal",
+     "ˈbir.bo"
     ],
     [
      "mi",
-     "",
-     ""
+     "from me",
+     "mi"
     ],
     [
      "toglie",
-     "",
-     ""
+     "takes away",
+     "ˈtɔʎ.ʎe"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "cervello",
-     "",
-     ""
+     "brain",
+     "tʃerˈvɛl.lo"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "drives me out of my mind"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6068,38 +6539,38 @@
    "occurrence": 1,
    "startMeasure": "214",
    "original": "sbuffa invano, e la terra calpesta,",
-   "translation": "",
-   "ipa": "",
+   "translation": "he fumes in vain and stamps on the ground,",
+   "ipa": "ˈzbuf.fa‿iɱˈva.no‿e la ˈtɛr.ra kalˈpe.sta",
    "words": [
     [
      "sbuffa",
-     "",
-     ""
+     "he fumes",
+     "ˈzbuf.fa"
     ],
     [
      "invano,",
-     "",
-     ""
+     "in vain",
+     "iɱˈva.no"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "terra",
-     "",
-     ""
+     "ground",
+     "ˈtɛr.ra"
     ],
     [
      "calpesta,",
-     "",
-     ""
+     "stamps on",
+     "kalˈpe.sta"
     ]
    ],
    "glossGroups": [],
@@ -6112,46 +6583,55 @@
    "occurrence": 1,
    "startMeasure": "218",
    "original": "più non avvi naufragio per me, no,",
-   "translation": "",
-   "ipa": "",
+   "translation": "there will be no more shipwreck for me, no,",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme ˈnɔ",
    "words": [
     [
      "più",
-     "",
-     ""
+     "no more",
+     "ˈpju"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avvi",
-     "",
-     ""
+     "there is",
+     "ˈav.vi"
     ],
     [
      "naufragio",
-     "",
-     ""
+     "shipwreck",
+     "nauˈfra.dʒo"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "no,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6161,46 +6641,55 @@
    "occurrence": 1,
    "startMeasure": "218",
    "original": "più non avvi naufragio per me, no,",
-   "translation": "",
-   "ipa": "",
+   "translation": "there will be no more shipwreck for me, no,",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme ˈnɔ",
    "words": [
     [
      "più",
-     "",
-     ""
+     "no more",
+     "ˈpju"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avvi",
-     "",
-     ""
+     "there is",
+     "ˈav.vi"
     ],
     [
      "naufragio",
-     "",
-     ""
+     "shipwreck",
+     "nauˈfra.dʒo"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "no,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6210,48 +6699,48 @@
    "occurrence": 1,
    "startMeasure": "218",
    "original": "tutto, tutto è un mistero per me, si,",
-   "translation": "",
-   "ipa": "",
+   "translation": "it is all, all a mystery to me, yes,",
+   "ipa": "ˈtut.to ˈtut.to‿ɛ‿un miˈstɛ.ro per ˈme ˈsi",
    "words": [
     [
      "tutto,",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "tutto",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "mistero",
-     "",
-     ""
+     "mystery",
+     "miˈstɛ.ro"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
    "glossGroups": [],
@@ -6264,46 +6753,57 @@
    "occurrence": 1,
    "startMeasure": "218",
    "original": "poverino ne sà men di me, si,",
-   "translation": "",
-   "ipa": "",
+   "translation": "poor fellow, he knows less about it than I do, yes,",
+   "ipa": "po.veˈri.no ne ˈsa ˈmen di ˈme ˈsi",
    "words": [
     [
      "poverino",
-     "",
-     ""
+     "poor fellow",
+     "po.veˈri.no"
     ],
     [
      "ne",
-     "",
-     ""
+     "of it",
+     "ne"
     ],
     [
      "sà",
-     "",
-     ""
+     "knows",
+     "ˈsa"
     ],
     [
      "men",
-     "",
-     ""
+     "less",
+     "ˈmen"
     ],
     [
      "di",
-     "",
-     ""
+     "than",
+     "di"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "knows less about it than I"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6313,46 +6813,55 @@
    "occurrence": 1,
    "startMeasure": "222",
    "original": "più non avvi naufragio per me, no,",
-   "translation": "",
-   "ipa": "",
+   "translation": "there will be no more shipwreck for me, no,",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme ˈnɔ",
    "words": [
     [
      "più",
-     "",
-     ""
+     "no more",
+     "ˈpju"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avvi",
-     "",
-     ""
+     "there is",
+     "ˈav.vi"
     ],
     [
      "naufragio",
-     "",
-     ""
+     "shipwreck",
+     "nauˈfra.dʒo"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "no,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6362,46 +6871,55 @@
    "occurrence": 1,
    "startMeasure": "222",
    "original": "più non avvi naufragio per me, no,",
-   "translation": "",
-   "ipa": "",
+   "translation": "there will be no more shipwreck for me, no,",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme ˈnɔ",
    "words": [
     [
      "più",
-     "",
-     ""
+     "no more",
+     "ˈpju"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avvi",
-     "",
-     ""
+     "there is",
+     "ˈav.vi"
     ],
     [
      "naufragio",
-     "",
-     ""
+     "shipwreck",
+     "nauˈfra.dʒo"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "no,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6411,48 +6929,48 @@
    "occurrence": 1,
    "startMeasure": "222",
    "original": "tutto, tutto è un mistero per me, si,",
-   "translation": "",
-   "ipa": "",
+   "translation": "it is all, all a mystery to me, yes,",
+   "ipa": "ˈtut.to ˈtut.to‿ɛ‿un miˈstɛ.ro per ˈme ˈsi",
    "words": [
     [
      "tutto,",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "tutto",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "mistero",
-     "",
-     ""
+     "mystery",
+     "miˈstɛ.ro"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
    "glossGroups": [],
@@ -6465,46 +6983,57 @@
    "occurrence": 1,
    "startMeasure": "222",
    "original": "poverino ne sa men di me, si,",
-   "translation": "",
-   "ipa": "",
+   "translation": "poor fellow, he knows less about it than I do, yes,",
+   "ipa": "po.veˈri.no ne ˈsa ˈmen di ˈme ˈsi",
    "words": [
     [
      "poverino",
-     "",
-     ""
+     "poor fellow",
+     "po.veˈri.no"
     ],
     [
      "ne",
-     "",
-     ""
+     "of it",
+     "ne"
     ],
     [
      "sa",
-     "",
-     ""
+     "knows",
+     "ˈsa"
     ],
     [
      "men",
-     "",
-     ""
+     "less",
+     "ˈmen"
     ],
     [
      "di",
-     "",
-     ""
+     "than",
+     "di"
     ],
     [
      "me,",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "knows less about it than I"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6514,41 +7043,50 @@
    "occurrence": 1,
    "startMeasure": "226",
    "original": "più non avvi naufragio per me.",
-   "translation": "",
-   "ipa": "",
+   "translation": "there will be no more shipwreck for me.",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme",
    "words": [
     [
      "più",
-     "",
-     ""
+     "no more",
+     "ˈpju"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avvi",
-     "",
-     ""
+     "there is",
+     "ˈav.vi"
     ],
     [
      "naufragio",
-     "",
-     ""
+     "shipwreck",
+     "nauˈfra.dʒo"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me.",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6558,41 +7096,50 @@
    "occurrence": 1,
    "startMeasure": "226",
    "original": "più non avvi naufragio per me.",
-   "translation": "",
-   "ipa": "",
+   "translation": "there will be no more shipwreck for me.",
+   "ipa": "ˈpju non ˈav.vi nauˈfra.dʒo per ˈme",
    "words": [
     [
      "più",
-     "",
-     ""
+     "no more",
+     "ˈpju"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avvi",
-     "",
-     ""
+     "there is",
+     "ˈav.vi"
     ],
     [
      "naufragio",
-     "",
-     ""
+     "shipwreck",
+     "nauˈfra.dʒo"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me.",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there is no more"
+    }
+   ],
    "audio": {}
   },
   {
@@ -6602,43 +7149,43 @@
    "occurrence": 1,
    "startMeasure": "226",
    "original": "tutto tutto è un mistero per me.",
-   "translation": "",
-   "ipa": "",
+   "translation": "it is all, all a mystery to me.",
+   "ipa": "ˈtut.to ˈtut.to‿ɛ‿un miˈstɛ.ro per ˈme",
    "words": [
     [
      "tutto",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "tutto",
-     "",
-     ""
+     "all",
+     "ˈtut.to"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "mistero",
-     "",
-     ""
+     "mystery",
+     "miˈstɛ.ro"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "me.",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
    "glossGroups": [],
@@ -6651,41 +7198,52 @@
    "occurrence": 1,
    "startMeasure": "226",
    "original": "poverino ne sà men di me.",
-   "translation": "",
-   "ipa": "",
+   "translation": "poor fellow, he knows less about it than I do.",
+   "ipa": "po.veˈri.no ne ˈsa ˈmen di ˈme",
    "words": [
     [
      "poverino",
-     "",
-     ""
+     "poor fellow",
+     "po.veˈri.no"
     ],
     [
      "ne",
-     "",
-     ""
+     "of it",
+     "ne"
     ],
     [
      "sà",
-     "",
-     ""
+     "knows",
+     "ˈsa"
     ],
     [
      "men",
-     "",
-     ""
+     "less",
+     "ˈmen"
     ],
     [
      "di",
-     "",
-     ""
+     "than",
+     "di"
     ],
     [
      "me.",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "knows less about it than I"
+    }
+   ],
    "audio": {}
   }
  ]

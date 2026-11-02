@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (cadea, all' incognito and una nipote where the libretto has a un incognito and la nipote, desio, in van, vo', quest' anima where the libretto has quest'alma, 'che un ben ch'io desio' in the reprise, 'Ah che lasciarti' in the second statement). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced (causa, ricusa, desio), gn and gli held double (iŋˈkɔɲ.ɲi.to, ˈvɔʎ.ʎo), nasal assimilation within words (aŋˈkor, iɱ.fe.li.tʃiˈta), z as [ts] (sentenza, speranza); mentr'io is sung in two syllables (menˈtrio). Translation literal, for meaning.",
  "phrases": [
   {
    "id": "c1",
@@ -13,33 +13,33 @@
    "occurrence": 1,
    "startMeasure": "1",
    "original": "Hai già vinta la causa!",
-   "translation": "",
-   "ipa": "",
+   "translation": "You've already won the case!",
+   "ipa": "ˈai ˈdʒa ˈvin.ta la ˈkau.za",
    "words": [
     [
      "Hai",
-     "",
-     ""
+     "you have",
+     "ˈai"
     ],
     [
      "già",
-     "",
-     ""
+     "already",
+     "ˈdʒa"
     ],
     [
      "vinta",
-     "",
-     ""
+     "won",
+     "ˈvin.ta"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "causa!",
-     "",
-     ""
+     "lawsuit",
+     "ˈkau.za"
     ]
    ],
    "glossGroups": [],
@@ -52,18 +52,18 @@
    "occurrence": 1,
    "startMeasure": "2",
    "original": "cosa sento!",
-   "translation": "",
-   "ipa": "",
+   "translation": "What do I hear!",
+   "ipa": "ˈkɔ.za ˈsɛn.to",
    "words": [
     [
      "cosa",
-     "",
-     ""
+     "what",
+     "ˈkɔ.za"
     ],
     [
      "sento!",
-     "",
-     ""
+     "I hear",
+     "ˈsɛn.to"
     ]
    ],
    "glossGroups": [],
@@ -76,31 +76,41 @@
    "occurrence": 1,
    "startMeasure": "3",
    "original": "in qual laccio cadea?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What snare was I falling into?",
+   "ipa": "in kwal ˈlat.tʃo kaˈdɛ.a",
    "words": [
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "qual",
-     "",
-     ""
+     "what",
+     "kwal"
     ],
     [
      "laccio",
-     "",
-     ""
+     "snare",
+     "ˈlat.tʃo"
     ],
     [
      "cadea?",
-     "",
-     ""
+     "was I falling",
+     "kaˈdɛ.a"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "into what snare was I falling"
+    }
+   ],
    "audio": {}
   },
   {
@@ -110,13 +120,13 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "Perfidi!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Traitors!",
+   "ipa": "ˈpɛr.fi.di",
    "words": [
     [
      "Perfidi!",
-     "",
-     ""
+     "traitors",
+     "ˈpɛr.fi.di"
     ]
    ],
    "glossGroups": [],
@@ -129,18 +139,18 @@
    "occurrence": 1,
    "startMeasure": "7",
    "original": "io voglio...",
-   "translation": "",
-   "ipa": "",
+   "translation": "I want…",
+   "ipa": "ˈi.o ˈvɔʎ.ʎo",
    "words": [
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "voglio...",
-     "",
-     ""
+     "I want",
+     "ˈvɔʎ.ʎo"
     ]
    ],
    "glossGroups": [],
@@ -153,41 +163,50 @@
    "occurrence": 1,
    "startMeasure": "8",
    "original": "io voglio di tal modo punirvi,",
-   "translation": "",
-   "ipa": "",
+   "translation": "I want to punish you in such a way…",
+   "ipa": "ˈi.o ˈvɔʎ.ʎo di tal ˈmɔ.do puˈnir.vi",
    "words": [
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "voglio",
-     "",
-     ""
+     "I want",
+     "ˈvɔʎ.ʎo"
     ],
     [
      "di",
-     "",
-     ""
+     "in",
+     "di"
     ],
     [
      "tal",
-     "",
-     ""
+     "such",
+     "tal"
     ],
     [
      "modo",
-     "",
-     ""
+     "way",
+     "ˈmɔ.do"
     ],
     [
      "punirvi,",
-     "",
-     ""
+     "to punish you",
+     "puˈnir.vi"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "in such a way"
+    }
+   ],
    "audio": {}
   },
   {
@@ -197,41 +216,50 @@
    "occurrence": 1,
    "startMeasure": "10",
    "original": "a piacer mio la sentenza sarà...",
-   "translation": "",
-   "ipa": "",
+   "translation": "the verdict will be as I please…",
+   "ipa": "a pjaˈtʃer ˈmi.o la senˈtɛn.tsa saˈra",
    "words": [
     [
      "a",
-     "",
-     ""
+     "at",
+     "a"
     ],
     [
      "piacer",
-     "",
-     ""
+     "pleasure",
+     "pjaˈtʃer"
     ],
     [
      "mio",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "sentenza",
-     "",
-     ""
+     "verdict",
+     "senˈtɛn.tsa"
     ],
     [
      "sarà...",
-     "",
-     ""
+     "will be",
+     "saˈra"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "as I please"
+    }
+   ],
    "audio": {}
   },
   {
@@ -241,23 +269,23 @@
    "occurrence": 1,
    "startMeasure": "15",
    "original": "Ma s'ei pagasse",
-   "translation": "",
-   "ipa": "",
+   "translation": "But what if he paid",
+   "ipa": "ma ˈsɛi paˈgas.se",
    "words": [
     [
      "Ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "s'ei",
-     "",
-     ""
+     "if he",
+     "ˈsɛi"
     ],
     [
      "pagasse",
-     "",
-     ""
+     "should pay",
+     "paˈgas.se"
     ]
    ],
    "glossGroups": [],
@@ -270,23 +298,23 @@
    "occurrence": 1,
    "startMeasure": "16",
    "original": "la vecchia pretendente?",
-   "translation": "",
-   "ipa": "",
+   "translation": "the old claimant?",
+   "ipa": "la ˈvɛk.kja pre.tenˈdɛn.te",
    "words": [
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "vecchia",
-     "",
-     ""
+     "old",
+     "ˈvɛk.kja"
     ],
     [
      "pretendente?",
-     "",
-     ""
+     "claimant",
+     "pre.tenˈdɛn.te"
     ]
    ],
    "glossGroups": [],
@@ -299,13 +327,13 @@
    "occurrence": 1,
    "startMeasure": "18",
    "original": "pagarla!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Pay her!",
+   "ipa": "paˈgar.la",
    "words": [
     [
      "pagarla!",
-     "",
-     ""
+     "pay her",
+     "paˈgar.la"
     ]
    ],
    "glossGroups": [],
@@ -318,26 +346,35 @@
    "occurrence": 1,
    "startMeasure": "19",
    "original": "in qual maniera?",
-   "translation": "",
-   "ipa": "",
+   "translation": "How?",
+   "ipa": "in kwal maˈnjɛ.ra",
    "words": [
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "qual",
-     "",
-     ""
+     "what",
+     "kwal"
     ],
     [
      "maniera?",
-     "",
-     ""
+     "way",
+     "maˈnjɛ.ra"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "how"
+    }
+   ],
    "audio": {}
   },
   {
@@ -346,87 +383,123 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "21",
-   "original": "E poi v'è Antonio, che all' incognito Figaro ricusa di dare una nipote in matrimonio.",
-   "translation": "",
-   "ipa": "",
+   "original": "E poi v'è Antonio,",
+   "translation": "And then there is Antonio,",
+   "ipa": "e ˈpɔi ˈvɛ‿anˈtɔ.njo",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔi"
     ],
     [
      "v'è",
-     "",
-     ""
+     "there is",
+     "ˈvɛ"
     ],
     [
      "Antonio,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "all'",
-     "",
-     ""
-    ],
-    [
-     "incognito",
-     "",
-     ""
-    ],
-    [
-     "Figaro",
-     "",
-     ""
-    ],
-    [
-     "ricusa",
-     "",
-     ""
-    ],
-    [
-     "di",
-     "",
-     ""
-    ],
-    [
-     "dare",
-     "",
-     ""
-    ],
-    [
-     "una",
-     "",
-     ""
-    ],
-    [
-     "nipote",
-     "",
-     ""
-    ],
-    [
-     "in",
-     "",
-     ""
-    ],
-    [
-     "matrimonio.",
-     "",
-     ""
+     "Antonio",
+     "anˈtɔ.njo"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c12_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "che all' incognito Figaro ricusa",
+   "translation": "who refuses Figaro, a man of unknown birth,",
+   "ipa": "ke‿all iŋˈkɔɲ.ɲi.to ˈfi.ga.ro riˈku.za",
+   "words": [
+    [
+     "che",
+     "who",
+     "ke"
+    ],
+    [
+     "all'",
+     "to the",
+     "all"
+    ],
+    [
+     "incognito",
+     "unknown",
+     "iŋˈkɔɲ.ɲi.to"
+    ],
+    [
+     "Figaro",
+     "Figaro",
+     "ˈfi.ga.ro"
+    ],
+    [
+     "ricusa",
+     "refuses",
+     "riˈku.za"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c12_3",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "di dare una nipote in matrimonio.",
+   "translation": "a niece of his in marriage.",
+   "ipa": "di ˈda.re‿ˈu.na niˈpo.te‿in ma.triˈmɔ.njo",
+   "words": [
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "dare",
+     "to give",
+     "ˈda.re"
+    ],
+    [
+     "una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "nipote",
+     "niece",
+     "niˈpo.te"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "matrimonio.",
+     "marriage",
+     "ma.triˈmɔ.njo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "in marriage"
+    }
+   ],
    "audio": {}
   },
   {
@@ -436,33 +509,33 @@
    "occurrence": 1,
    "startMeasure": "28",
    "original": "Coltivando l'orgoglio di questo mentecatto...",
-   "translation": "",
-   "ipa": "",
+   "translation": "By nursing the pride of this half-wit…",
+   "ipa": "kol.tiˈvan.do lorˈgoʎ.ʎo di ˈkwe.sto men.teˈkat.to",
    "words": [
     [
      "Coltivando",
-     "",
-     ""
+     "by nursing",
+     "kol.tiˈvan.do"
     ],
     [
      "l'orgoglio",
-     "",
-     ""
+     "the pride",
+     "lorˈgoʎ.ʎo"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "mentecatto...",
-     "",
-     ""
+     "half-wit",
+     "men.teˈkat.to"
     ]
    ],
    "glossGroups": [],
@@ -475,33 +548,33 @@
    "occurrence": 1,
    "startMeasure": "34",
    "original": "tutto giova a un raggiro...",
-   "translation": "",
-   "ipa": "",
+   "translation": "everything serves a scheme…",
+   "ipa": "ˈtut.to ˈdʒɔ.va‿a‿un radˈdʒi.ro",
    "words": [
     [
      "tutto",
-     "",
-     ""
+     "everything",
+     "ˈtut.to"
     ],
     [
      "giova",
-     "",
-     ""
+     "helps",
+     "ˈdʒɔ.va"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "raggiro...",
-     "",
-     ""
+     "scheme",
+     "radˈdʒi.ro"
     ]
    ],
    "glossGroups": [],
@@ -514,31 +587,41 @@
    "occurrence": 1,
    "startMeasure": "39",
    "original": "il colpo è fatto.",
-   "translation": "",
-   "ipa": "",
+   "translation": "the blow is struck.",
+   "ipa": "il ˈkol.po‿ɛ ˈfat.to",
    "words": [
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "colpo",
-     "",
-     ""
+     "blow",
+     "ˈkol.po"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "fatto.",
-     "",
-     ""
+     "done",
+     "ˈfat.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "the deed is done"
+    }
+   ],
    "audio": {}
   },
   {
@@ -548,23 +631,23 @@
    "occurrence": 1,
    "startMeasure": "44",
    "original": "Vedrò, mentr'io sospiro,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Shall I see, while I sigh,",
+   "ipa": "veˈdrɔ menˈtrio soˈspi.ro",
    "words": [
     [
      "Vedrò,",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ],
     [
      "mentr'io",
-     "",
-     ""
+     "while I",
+     "menˈtrio"
     ],
     [
      "sospiro,",
-     "",
-     ""
+     "sigh",
+     "soˈspi.ro"
     ]
    ],
    "glossGroups": [],
@@ -577,28 +660,28 @@
    "occurrence": 1,
    "startMeasure": "46",
    "original": "felice un servo mio!",
-   "translation": "",
-   "ipa": "",
+   "translation": "a servant of mine happy!",
+   "ipa": "feˈli.tʃe‿un ˈsɛr.vo ˈmi.o",
    "words": [
     [
      "felice",
-     "",
-     ""
+     "happy",
+     "feˈli.tʃe"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "servo",
-     "",
-     ""
+     "servant",
+     "ˈsɛr.vo"
     ],
     [
      "mio!",
-     "",
-     ""
+     "of mine",
+     "ˈmi.o"
     ]
    ],
    "glossGroups": [],
@@ -611,46 +694,54 @@
    "occurrence": 1,
    "startMeasure": "51",
    "original": "E un ben che in van desio,",
-   "translation": "",
-   "ipa": "",
+   "translation": "And a treasure which I long for in vain",
+   "ipa": "e‿un ˈbɛn ke‿in ˈvan deˈzi.o",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "ben",
-     "",
-     ""
+     "treasure",
+     "ˈbɛn"
     ],
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "van",
-     "",
-     ""
+     "vain",
+     "ˈvan"
     ],
     [
      "desio,",
-     "",
-     ""
+     "I desire",
+     "deˈzi.o"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "in vain"
+    }
+   ],
    "audio": {}
   },
   {
@@ -660,23 +751,23 @@
    "occurrence": 1,
    "startMeasure": "54",
    "original": "ei posseder dovrà?",
-   "translation": "",
-   "ipa": "",
+   "translation": "is he to possess?",
+   "ipa": "ˈɛi pos.seˈder doˈvra",
    "words": [
     [
      "ei",
-     "",
-     ""
+     "he",
+     "ˈɛi"
     ],
     [
      "posseder",
-     "",
-     ""
+     "possess",
+     "pos.seˈder"
     ],
     [
      "dovrà?",
-     "",
-     ""
+     "is to",
+     "doˈvra"
     ]
    ],
    "glossGroups": [],
@@ -689,31 +780,40 @@
    "occurrence": 1,
    "startMeasure": "55",
    "original": "Vedrò per man d'amore",
-   "translation": "",
-   "ipa": "",
+   "translation": "Shall I see, by the hand of love,",
+   "ipa": "veˈdrɔ per ˈman daˈmo.re",
    "words": [
     [
      "Vedrò",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ],
     [
      "per",
-     "",
-     ""
+     "by",
+     "per"
     ],
     [
      "man",
-     "",
-     ""
+     "hand",
+     "ˈman"
     ],
     [
      "d'amore",
-     "",
-     ""
+     "of love",
+     "daˈmo.re"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "by love's hand"
+    }
+   ],
    "audio": {}
   },
   {
@@ -723,33 +823,33 @@
    "occurrence": 1,
    "startMeasure": "57",
    "original": "unita a un vile oggetto",
-   "translation": "",
-   "ipa": "",
+   "translation": "joined to a base creature",
+   "ipa": "uˈni.ta‿a‿un ˈvi.le‿odˈdʒɛt.to",
    "words": [
     [
      "unita",
-     "",
-     ""
+     "joined",
+     "uˈni.ta"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "vile",
-     "",
-     ""
+     "base",
+     "ˈvi.le"
     ],
     [
      "oggetto",
-     "",
-     ""
+     "creature",
+     "odˈdʒɛt.to"
     ]
    ],
    "glossGroups": [],
@@ -762,38 +862,38 @@
    "occurrence": 1,
    "startMeasure": "59",
    "original": "chi in me destò un affetto",
-   "translation": "",
-   "ipa": "",
+   "translation": "her who awakened in me a feeling",
+   "ipa": "ki‿in ˈme deˈstɔ‿un afˈfɛt.to",
    "words": [
     [
      "chi",
-     "",
-     ""
+     "she who",
+     "ki"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "destò",
-     "",
-     ""
+     "awakened",
+     "deˈstɔ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "affetto",
-     "",
-     ""
+     "feeling",
+     "afˈfɛt.to"
     ]
    ],
    "glossGroups": [],
@@ -806,38 +906,38 @@
    "occurrence": 1,
    "startMeasure": "61",
    "original": "che per me poi non ha,",
-   "translation": "",
-   "ipa": "",
+   "translation": "which she does not then have for me,",
+   "ipa": "ke per ˈme ˈpɔi non ˈa",
    "words": [
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔi"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "ha,",
-     "",
-     ""
+     "has",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -850,38 +950,38 @@
    "occurrence": 1,
    "startMeasure": "63",
    "original": "che per me poi non ha.",
-   "translation": "",
-   "ipa": "",
+   "translation": "which she does not then have for me.",
+   "ipa": "ke per ˈme ˈpɔi non ˈa",
    "words": [
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔi"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "ha.",
-     "",
-     ""
+     "has",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -894,43 +994,43 @@
    "occurrence": 1,
    "startMeasure": "65",
    "original": "Vedrò, mentr'io sospiro, felice un servo mio,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Shall I see, while I sigh, a servant of mine happy,",
+   "ipa": "veˈdrɔ menˈtrio soˈspi.ro feˈli.tʃe‿un ˈsɛr.vo ˈmi.o",
    "words": [
     [
      "Vedrò,",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ],
     [
      "mentr'io",
-     "",
-     ""
+     "while I",
+     "menˈtrio"
     ],
     [
      "sospiro,",
-     "",
-     ""
+     "sigh",
+     "soˈspi.ro"
     ],
     [
      "felice",
-     "",
-     ""
+     "happy",
+     "feˈli.tʃe"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "servo",
-     "",
-     ""
+     "servant",
+     "ˈsɛr.vo"
     ],
     [
      "mio,",
-     "",
-     ""
+     "of mine",
+     "ˈmi.o"
     ]
    ],
    "glossGroups": [],
@@ -943,53 +1043,53 @@
    "occurrence": 1,
    "startMeasure": "69",
    "original": "vedrò, che un ben ch'io desio, ei posseder dovrà,",
-   "translation": "",
-   "ipa": "",
+   "translation": "shall I see that a treasure I long for he is to possess,",
+   "ipa": "veˈdrɔ ke‿un ˈbɛn ˈkjo deˈzi.o ˈɛi pos.seˈder doˈvra",
    "words": [
     [
      "vedrò,",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "ben",
-     "",
-     ""
+     "treasure",
+     "ˈbɛn"
     ],
     [
      "ch'io",
-     "",
-     ""
+     "that I",
+     "ˈkjo"
     ],
     [
      "desio,",
-     "",
-     ""
+     "I desire",
+     "deˈzi.o"
     ],
     [
      "ei",
-     "",
-     ""
+     "he",
+     "ˈɛi"
     ],
     [
      "posseder",
-     "",
-     ""
+     "possess",
+     "pos.seˈder"
     ],
     [
      "dovrà,",
-     "",
-     ""
+     "is to",
+     "doˈvra"
     ]
    ],
    "glossGroups": [],
@@ -1002,31 +1102,40 @@
    "occurrence": 1,
    "startMeasure": "73",
    "original": "vedrò per man d'amore",
-   "translation": "",
-   "ipa": "",
+   "translation": "shall I see, by the hand of love,",
+   "ipa": "veˈdrɔ per ˈman daˈmo.re",
    "words": [
     [
      "vedrò",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ],
     [
      "per",
-     "",
-     ""
+     "by",
+     "per"
     ],
     [
      "man",
-     "",
-     ""
+     "hand",
+     "ˈman"
     ],
     [
      "d'amore",
-     "",
-     ""
+     "of love",
+     "daˈmo.re"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "by love's hand"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1036,33 +1145,33 @@
    "occurrence": 1,
    "startMeasure": "75",
    "original": "unita a un vile oggetto,",
-   "translation": "",
-   "ipa": "",
+   "translation": "joined to a base creature",
+   "ipa": "uˈni.ta‿a‿un ˈvi.le‿odˈdʒɛt.to",
    "words": [
     [
      "unita",
-     "",
-     ""
+     "joined",
+     "uˈni.ta"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "vile",
-     "",
-     ""
+     "base",
+     "ˈvi.le"
     ],
     [
      "oggetto,",
-     "",
-     ""
+     "creature",
+     "odˈdʒɛt.to"
     ]
    ],
    "glossGroups": [],
@@ -1075,38 +1184,38 @@
    "occurrence": 1,
    "startMeasure": "77",
    "original": "chi in me destò un affetto",
-   "translation": "",
-   "ipa": "",
+   "translation": "her who awakened in me a feeling",
+   "ipa": "ki‿in ˈme deˈstɔ‿un afˈfɛt.to",
    "words": [
     [
      "chi",
-     "",
-     ""
+     "she who",
+     "ki"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "destò",
-     "",
-     ""
+     "awakened",
+     "deˈstɔ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "affetto",
-     "",
-     ""
+     "feeling",
+     "afˈfɛt.to"
     ]
    ],
    "glossGroups": [],
@@ -1119,38 +1228,38 @@
    "occurrence": 1,
    "startMeasure": "79",
    "original": "che per me poi non ha,",
-   "translation": "",
-   "ipa": "",
+   "translation": "which she does not then have for me,",
+   "ipa": "ke per ˈme ˈpɔi non ˈa",
    "words": [
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔi"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "ha,",
-     "",
-     ""
+     "has",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -1163,38 +1272,38 @@
    "occurrence": 1,
    "startMeasure": "81",
    "original": "che per me poi non ha,",
-   "translation": "",
-   "ipa": "",
+   "translation": "which she does not then have for me,",
+   "ipa": "ke per ˈme ˈpɔi non ˈa",
    "words": [
     [
      "che",
-     "",
-     ""
+     "which",
+     "ke"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔi"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "ha,",
-     "",
-     ""
+     "has",
+     "ˈa"
     ]
    ],
    "glossGroups": [],
@@ -1207,13 +1316,13 @@
    "occurrence": 1,
    "startMeasure": "83",
    "original": "vedrò?",
-   "translation": "",
-   "ipa": "",
+   "translation": "shall I see it?",
+   "ipa": "veˈdrɔ",
    "words": [
     [
      "vedrò?",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ]
    ],
    "glossGroups": [],
@@ -1226,13 +1335,13 @@
    "occurrence": 1,
    "startMeasure": "84",
    "original": "vedrò?",
-   "translation": "",
-   "ipa": "",
+   "translation": "shall I see it?",
+   "ipa": "veˈdrɔ",
    "words": [
     [
      "vedrò?",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ]
    ],
    "glossGroups": [],
@@ -1245,13 +1354,13 @@
    "occurrence": 1,
    "startMeasure": "85",
    "original": "vedrò?",
-   "translation": "",
-   "ipa": "",
+   "translation": "shall I see it?",
+   "ipa": "veˈdrɔ",
    "words": [
     [
      "vedrò?",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ]
    ],
    "glossGroups": [],
@@ -1264,13 +1373,13 @@
    "occurrence": 1,
    "startMeasure": "86",
    "original": "vedrò?",
-   "translation": "",
-   "ipa": "",
+   "translation": "shall I see it?",
+   "ipa": "veˈdrɔ",
    "words": [
     [
      "vedrò?",
-     "",
-     ""
+     "shall I see",
+     "veˈdrɔ"
     ]
    ],
    "glossGroups": [],
@@ -1283,18 +1392,18 @@
    "occurrence": 1,
    "startMeasure": "87",
    "original": "Ah no!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Ah, no!",
+   "ipa": "ˈa ˈnɔ",
    "words": [
     [
      "Ah",
-     "",
-     ""
+     "ah",
+     "ˈa"
     ],
     [
      "no!",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ]
    ],
    "glossGroups": [],
@@ -1307,23 +1416,23 @@
    "occurrence": 1,
    "startMeasure": "88",
    "original": "lasciarti in pace",
-   "translation": "",
-   "ipa": "",
+   "translation": "to leave you in peace",
+   "ipa": "laʃˈʃar.ti‿in ˈpa.tʃe",
    "words": [
     [
      "lasciarti",
-     "",
-     ""
+     "to leave you",
+     "laʃˈʃar.ti"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "pace",
-     "",
-     ""
+     "peace",
+     "ˈpa.tʃe"
     ]
    ],
    "glossGroups": [],
@@ -1336,31 +1445,39 @@
    "occurrence": 1,
    "startMeasure": "89",
    "original": "non vo' questo contento,",
-   "translation": "",
-   "ipa": "",
+   "translation": "I won't allow this happiness;",
+   "ipa": "non ˈvɔ ˈkwe.sto konˈtɛn.to",
    "words": [
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "vo'",
-     "",
-     ""
+     "I want",
+     "ˈvɔ"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "contento,",
-     "",
-     ""
+     "satisfaction",
+     "konˈtɛn.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I don't want"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1370,28 +1487,28 @@
    "occurrence": 1,
    "startMeasure": "92",
    "original": "tu non nascesti, audace,",
-   "translation": "",
-   "ipa": "",
+   "translation": "you were not born, bold man,",
+   "ipa": "tu non naʃˈʃe.sti‿auˈda.tʃe",
    "words": [
     [
      "tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "nascesti,",
-     "",
-     ""
+     "you were born",
+     "naʃˈʃe.sti"
     ],
     [
      "audace,",
-     "",
-     ""
+     "bold man",
+     "auˈda.tʃe"
     ]
    ],
    "glossGroups": [],
@@ -1404,28 +1521,28 @@
    "occurrence": 1,
    "startMeasure": "95",
    "original": "tu non nascesti, audace,",
-   "translation": "",
-   "ipa": "",
+   "translation": "you were not born, bold man,",
+   "ipa": "tu non naʃˈʃe.sti‿auˈda.tʃe",
    "words": [
     [
      "tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "nascesti,",
-     "",
-     ""
+     "you were born",
+     "naʃˈʃe.sti"
     ],
     [
      "audace,",
-     "",
-     ""
+     "bold man",
+     "auˈda.tʃe"
     ]
    ],
    "glossGroups": [],
@@ -1438,33 +1555,33 @@
    "occurrence": 1,
    "startMeasure": "97",
    "original": "per dare a me tormento,",
-   "translation": "",
-   "ipa": "",
+   "translation": "to give me torment,",
+   "ipa": "per ˈda.re‿a ˈme torˈmen.to",
    "words": [
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "dare",
-     "",
-     ""
+     "give",
+     "ˈda.re"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "tormento,",
-     "",
-     ""
+     "torment",
+     "torˈmen.to"
     ]
    ],
    "glossGroups": [],
@@ -1477,58 +1594,58 @@
    "occurrence": 1,
    "startMeasure": "100",
    "original": "e forse ancor per ridere, per ridere di mia infelicità.",
-   "translation": "",
-   "ipa": "",
+   "translation": "and perhaps even to laugh, to laugh at my unhappiness.",
+   "ipa": "e ˈfor.se‿aŋˈkor per ˈri.de.re per ˈri.de.re di ˈmi.a‿iɱ.fe.li.tʃiˈta",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "forse",
-     "",
-     ""
+     "perhaps",
+     "ˈfor.se"
     ],
     [
      "ancor",
-     "",
-     ""
+     "even",
+     "aŋˈkor"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "ridere,",
-     "",
-     ""
+     "laugh",
+     "ˈri.de.re"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "ridere",
-     "",
-     ""
+     "laugh",
+     "ˈri.de.re"
     ],
     [
      "di",
-     "",
-     ""
+     "at",
+     "di"
     ],
     [
      "mia",
-     "",
-     ""
+     "my",
+     "ˈmi.a"
     ],
     [
      "infelicità.",
-     "",
-     ""
+     "unhappiness",
+     "iɱ.fe.li.tʃiˈta"
     ]
    ],
    "glossGroups": [],
@@ -1541,28 +1658,28 @@
    "occurrence": 1,
    "startMeasure": "107",
    "original": "Già la speranza sola",
-   "translation": "",
-   "ipa": "",
+   "translation": "Already the hope alone",
+   "ipa": "ˈdʒa la speˈran.tsa ˈso.la",
    "words": [
     [
      "Già",
-     "",
-     ""
+     "already",
+     "ˈdʒa"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "speranza",
-     "",
-     ""
+     "hope",
+     "speˈran.tsa"
     ],
     [
      "sola",
-     "",
-     ""
+     "alone",
+     "ˈso.la"
     ]
    ],
    "glossGroups": [],
@@ -1575,23 +1692,23 @@
    "occurrence": 1,
    "startMeasure": "109",
    "original": "delle vendette mie",
-   "translation": "",
-   "ipa": "",
+   "translation": "of my vengeance",
+   "ipa": "ˈdel.le venˈdet.te ˈmi.e",
    "words": [
     [
      "delle",
-     "",
-     ""
+     "of the",
+     "ˈdel.le"
     ],
     [
      "vendette",
-     "",
-     ""
+     "vengeance",
+     "venˈdet.te"
     ],
     [
      "mie",
-     "",
-     ""
+     "my",
+     "ˈmi.e"
     ]
    ],
    "glossGroups": [],
@@ -1603,77 +1720,109 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "110",
-   "original": "quest' anima consola, e giubilar mi fa, e giubilar, e giubilar mi fa.",
-   "translation": "",
-   "ipa": "",
+   "original": "quest' anima consola, e giubilar mi fa,",
+   "translation": "comforts this soul and makes me rejoice,",
+   "ipa": "kwest ˈa.ni.ma konˈso.la e dʒu.biˈlar mi ˈfa",
    "words": [
     [
      "quest'",
-     "",
-     ""
+     "this",
+     "kwest"
     ],
     [
      "anima",
-     "",
-     ""
+     "soul",
+     "ˈa.ni.ma"
     ],
     [
      "consola,",
-     "",
-     ""
+     "consoles",
+     "konˈso.la"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa,",
-     "",
-     ""
-    ],
+     "makes",
+     "ˈfa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "makes me rejoice"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c45_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "114",
+   "original": "e giubilar, e giubilar mi fa.",
+   "translation": "and rejoice, and makes me rejoice.",
+   "ipa": "e dʒu.biˈlar e dʒu.biˈlar mi ˈfa",
+   "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar,",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa.",
-     "",
-     ""
+     "makes",
+     "ˈfa"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "makes me rejoice"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1683,33 +1832,33 @@
    "occurrence": 1,
    "startMeasure": "117",
    "original": "Ah che lasciarti in pace",
-   "translation": "",
-   "ipa": "",
+   "translation": "Ah, (no,) to leave you in peace",
+   "ipa": "ˈa ke laʃˈʃar.ti‿in ˈpa.tʃe",
    "words": [
     [
      "Ah",
-     "",
-     ""
+     "ah",
+     "ˈa"
     ],
     [
      "che",
-     "",
-     ""
+     "(no,) that",
+     "ke"
     ],
     [
      "lasciarti",
-     "",
-     ""
+     "to leave you",
+     "laʃˈʃar.ti"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "pace",
-     "",
-     ""
+     "peace",
+     "ˈpa.tʃe"
     ]
    ],
    "glossGroups": [],
@@ -1722,31 +1871,39 @@
    "occurrence": 1,
    "startMeasure": "119",
    "original": "non vo' questo contento,",
-   "translation": "",
-   "ipa": "",
+   "translation": "I won't allow this happiness;",
+   "ipa": "non ˈvɔ ˈkwe.sto konˈtɛn.to",
    "words": [
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "vo'",
-     "",
-     ""
+     "I want",
+     "ˈvɔ"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "contento,",
-     "",
-     ""
+     "satisfaction",
+     "konˈtɛn.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I don't want"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1756,28 +1913,28 @@
    "occurrence": 1,
    "startMeasure": "122",
    "original": "tu non nascesti, audace,",
-   "translation": "",
-   "ipa": "",
+   "translation": "you were not born, bold man,",
+   "ipa": "tu non naʃˈʃe.sti‿auˈda.tʃe",
    "words": [
     [
      "tu",
-     "",
-     ""
+     "you",
+     "tu"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "nascesti,",
-     "",
-     ""
+     "you were born",
+     "naʃˈʃe.sti"
     ],
     [
      "audace,",
-     "",
-     ""
+     "bold man",
+     "auˈda.tʃe"
     ]
    ],
    "glossGroups": [],
@@ -1790,33 +1947,33 @@
    "occurrence": 1,
    "startMeasure": "124",
    "original": "per dare a me tormento,",
-   "translation": "",
-   "ipa": "",
+   "translation": "to give me torment,",
+   "ipa": "per ˈda.re‿a ˈme torˈmen.to",
    "words": [
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "dare",
-     "",
-     ""
+     "give",
+     "ˈda.re"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "tormento,",
-     "",
-     ""
+     "torment",
+     "torˈmen.to"
     ]
    ],
    "glossGroups": [],
@@ -1829,58 +1986,58 @@
    "occurrence": 1,
    "startMeasure": "127",
    "original": "e forse ancor per ridere, per ridere di mia infelicità.",
-   "translation": "",
-   "ipa": "",
+   "translation": "and perhaps even to laugh, to laugh at my unhappiness.",
+   "ipa": "e ˈfor.se‿aŋˈkor per ˈri.de.re per ˈri.de.re di ˈmi.a‿iɱ.fe.li.tʃiˈta",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "forse",
-     "",
-     ""
+     "perhaps",
+     "ˈfor.se"
     ],
     [
      "ancor",
-     "",
-     ""
+     "even",
+     "aŋˈkor"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "ridere,",
-     "",
-     ""
+     "laugh",
+     "ˈri.de.re"
     ],
     [
      "per",
-     "",
-     ""
+     "to",
+     "per"
     ],
     [
      "ridere",
-     "",
-     ""
+     "laugh",
+     "ˈri.de.re"
     ],
     [
      "di",
-     "",
-     ""
+     "at",
+     "di"
     ],
     [
      "mia",
-     "",
-     ""
+     "my",
+     "ˈmi.a"
     ],
     [
      "infelicità.",
-     "",
-     ""
+     "unhappiness",
+     "iɱ.fe.li.tʃiˈta"
     ]
    ],
    "glossGroups": [],
@@ -1893,28 +2050,28 @@
    "occurrence": 1,
    "startMeasure": "134",
    "original": "Già la speranza sola",
-   "translation": "",
-   "ipa": "",
+   "translation": "Already the hope alone",
+   "ipa": "ˈdʒa la speˈran.tsa ˈso.la",
    "words": [
     [
      "Già",
-     "",
-     ""
+     "already",
+     "ˈdʒa"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "speranza",
-     "",
-     ""
+     "hope",
+     "speˈran.tsa"
     ],
     [
      "sola",
-     "",
-     ""
+     "alone",
+     "ˈso.la"
     ]
    ],
    "glossGroups": [],
@@ -1927,23 +2084,23 @@
    "occurrence": 1,
    "startMeasure": "136",
    "original": "delle vendette mie,",
-   "translation": "",
-   "ipa": "",
+   "translation": "of my vengeance",
+   "ipa": "ˈdel.le venˈdet.te ˈmi.e",
    "words": [
     [
      "delle",
-     "",
-     ""
+     "of the",
+     "ˈdel.le"
     ],
     [
      "vendette",
-     "",
-     ""
+     "vengeance",
+     "venˈdet.te"
     ],
     [
      "mie,",
-     "",
-     ""
+     "my",
+     "ˈmi.e"
     ]
    ],
    "glossGroups": [],
@@ -1955,142 +2112,228 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "137",
-   "original": "quest' anima consola, e giubilar mi fa, e giubilar, e giubilar mi fa, e giubilar, e giubilar, mi fa, giubilar mi fa, e giubilar mi fa.",
-   "translation": "",
-   "ipa": "",
+   "original": "quest' anima consola, e giubilar mi fa,",
+   "translation": "comforts this soul and makes me rejoice,",
+   "ipa": "kwest ˈa.ni.ma konˈso.la e dʒu.biˈlar mi ˈfa",
    "words": [
     [
      "quest'",
-     "",
-     ""
+     "this",
+     "kwest"
     ],
     [
      "anima",
-     "",
-     ""
+     "soul",
+     "ˈa.ni.ma"
     ],
     [
      "consola,",
-     "",
-     ""
+     "consoles",
+     "konˈso.la"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa,",
-     "",
-     ""
-    ],
+     "makes",
+     "ˈfa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "makes me rejoice"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c53_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "141",
+   "original": "e giubilar, e giubilar mi fa,",
+   "translation": "and rejoice, and makes me rejoice,",
+   "ipa": "e dʒu.biˈlar e dʒu.biˈlar mi ˈfa",
+   "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar,",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa,",
-     "",
-     ""
-    ],
+     "makes",
+     "ˈfa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "makes me rejoice"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c53_3",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "144",
+   "original": "e giubilar, e giubilar, mi fa,",
+   "translation": "and rejoice, and rejoice, makes me,",
+   "ipa": "e dʒu.biˈlar e dʒu.biˈlar mi ˈfa",
+   "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar,",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar,",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa,",
-     "",
-     ""
-    ],
+     "makes",
+     "ˈfa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "makes me rejoice"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c53_4",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "152",
+   "original": "giubilar mi fa, e giubilar mi fa.",
+   "translation": "makes me rejoice, and makes me rejoice.",
+   "ipa": "dʒu.biˈlar mi ˈfa e dʒu.biˈlar mi ˈfa",
+   "words": [
     [
      "giubilar",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa,",
-     "",
-     ""
+     "makes",
+     "ˈfa"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "giubilar",
-     "",
-     ""
+     "rejoice",
+     "dʒu.biˈlar"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "fa.",
-     "",
-     ""
+     "makes",
+     "ˈfa"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "makes me rejoice"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "makes me rejoice"
+    }
+   ],
    "audio": {}
   }
  ]

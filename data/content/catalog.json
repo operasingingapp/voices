@@ -70,6 +70,92 @@
     }
   },
   {
+    "editionId": "mozart-ah-signor-signor",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-ah-signor-signor@1.0.0-klengel#e5abeb0f42",
+    "title": "Ah! signor, signor!",
+    "subtitle": "Finale of Act 2 (No. 15), section 4: Antonio and the broken carnations",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "antonio",
+        "name": "Antonio",
+        "voiceType": "Bass",
+        "partKey": "antonio"
+      }
+    ],
+    "measures": 230,
+    "durationSec": 458,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 196,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-aprite-presto-aprite",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-aprite-presto-aprite@1.0.0-klengel#8cfa45a372",
+    "title": "Aprite, presto, aprite",
+    "subtitle": "Susanna and Cherubino: duettino from Le nozze di Figaro, Act 2 (No. 14)",
+    "kind": "duettino",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 44,
+    "durationSec": 73,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 25,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-basilio-in-traccia-tosto",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-basilio-in-traccia-tosto@1.0.0-klengel#38857b8b20",
@@ -428,6 +514,68 @@
     }
   },
   {
+    "editionId": "mozart-dunque-voi-non-aprite",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-dunque-voi-non-aprite@1.0.0-klengel#853227f082",
+    "title": "Dunque voi non aprite?",
+    "subtitle": "The Count and the Countess: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 21,
+    "durationSec": 50,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 14,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-e-susanna-non-vien",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-e-susanna-non-vien@1.0.0-klengel#676bab141b",
+    "title": "E Susanna non vien!",
+    "subtitle": "The Countess's recitative before Dove sono, Le nozze di Figaro, Act 3",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      }
+    ],
+    "measures": 25,
+    "durationSec": 82,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 15,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ed-aspettaste-il-giorno",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-ed-aspettaste-il-giorno@1.0.0-klengel#aabdc18dd4",
@@ -663,7 +811,7 @@
   {
     "editionId": "mozart-hai-gia-vinta",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-hai-gia-vinta@1.0.0-klengel#9fa2093280",
+    "scoreVersionId": "mozart-hai-gia-vinta@1.0.0-klengel#9ec07c10b1",
     "title": "Hai già vinta la causa!",
     "subtitle": "The Count: recitative and aria from Le nozze di Figaro, Act 3 (No. 17)",
     "kind": "aria",
@@ -683,7 +831,7 @@
     "keySignature": "C major",
     "time": "4/4",
     "languageStatus": {
-      "phrases": 53,
+      "phrases": 59,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1178,6 +1326,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 16,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-tutto-e-come-il-lasciai",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-tutto-e-come-il-lasciai@1.0.0-klengel#c02455cbd3",
+    "title": "Tutto è come il lasciai",
+    "subtitle": "The Count and the Countess: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 29,
+    "durationSec": 70,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 27,
       "withAudio": 0,
       "reviewed": 0
     }

@@ -240,6 +240,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Ah! signor, signor!",
       "editionId": "mozart-ah-signor-signor"
+     },
+     {
+      "title": "Aprite, presto, aprite",
+      "kind": "Duettino · Act 2",
+      "id": "Act 2: Aprite, presto, aprite",
+      "editionId": "mozart-aprite-presto-aprite"
+     },
+     {
+      "title": "Oh guarda il demonietto!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Oh guarda il demonietto!",
+      "editionId": "mozart-oh-guarda-il-demonietto"
      }
     ]
    },
@@ -320,6 +332,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Ah! signor, signor!",
       "editionId": "mozart-ah-signor-signor"
+     },
+     {
+      "title": "Dunque voi non aprite?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Dunque voi non aprite?",
+      "editionId": "mozart-dunque-voi-non-aprite"
+     },
+     {
+      "title": "Tutto è come il lasciai",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Tutto è come il lasciai",
+      "editionId": "mozart-tutto-e-come-il-lasciai"
      }
     ]
    },
@@ -405,6 +429,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Ah! signor, signor!",
       "editionId": "mozart-ah-signor-signor"
+     },
+     {
+      "title": "Dunque voi non aprite?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Dunque voi non aprite?",
+      "editionId": "mozart-dunque-voi-non-aprite"
+     },
+     {
+      "title": "Tutto è come il lasciai",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Tutto è come il lasciai",
+      "editionId": "mozart-tutto-e-come-il-lasciai"
      }
     ]
    },
@@ -454,6 +490,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Quante buffonerie!",
       "editionId": "mozart-quante-buffonerie"
+     },
+     {
+      "title": "Aprite, presto, aprite",
+      "kind": "Duettino · Act 2",
+      "id": "Act 2: Aprite, presto, aprite",
+      "editionId": "mozart-aprite-presto-aprite"
      }
     ]
    },
@@ -559,7 +601,14 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "The Count's gardener, Susanna's uncle and Barbarina's father.",
     "avatar": "cap",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Ah! signor, signor!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! signor, signor!",
+      "editionId": "mozart-ah-signor-signor"
+     }
+    ]
    }
   ]
  },
@@ -590,12 +639,6 @@ export const OPERAS: Opera[] = [
      {
       "title": "Deh, vieni alla finestra",
       "kind": "Canzonetta · Act 2"
-     },
-     {
-      "title": "Ah! signor, signor!",
-      "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! signor, signor!",
-      "editionId": "mozart-ah-signor-signor"
      }
     ]
    },

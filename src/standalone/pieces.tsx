@@ -725,6 +725,102 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-dunque-voi-non-aprite": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free (about 1 minute)",
+    },
+    notePlaceholder: "The Count decides to break the closet door open himself",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Dunque voi non aprite?” before No. 14 (vocal score pages 132-133, 21 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-aprite-presto-aprite": {
+    portrait: "figaro:cherubino",
+    opera: "Le nozze di Figaro",
+    kind: "Duettino",
+    facts: {
+      key: "G major",
+      time: "4/4",
+      tempo: "Allegro assai at ♩ = 144 (about 1 minute)",
+    },
+    notePlaceholder: "Susanna frees Cherubino, who jumps out of the window",
+    about: (
+      <>
+        <p>
+          Score: No. 14, the duettino “Aprite, presto, aprite” (vocal score pages 134-137, 44 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-oh-guarda-il-demonietto": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free (under a minute)",
+    },
+    notePlaceholder: "Susanna watches Cherubino run off and hides in the closet herself",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Oh guarda il demonietto!” after No. 14 (vocal score pages 137, 7 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-tutto-e-come-il-lasciai": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free (about 1 minute)",
+    },
+    notePlaceholder: "The Countess confesses that Cherubino is in the closet",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Tutto è come il lasciai” before the Act 2 Finale (vocal score pages 138-140, 29 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-esci-omai-garzon-malnato": {
     portrait: "figaro:count",
     opera: "Le nozze di Figaro",
