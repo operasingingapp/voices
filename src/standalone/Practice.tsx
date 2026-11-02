@@ -949,7 +949,9 @@ function PracticeScreen({
   const [speakingId, setSpeakingId] = useState<string | null>(null);
   const [speakingWord, setSpeakingWord] = useState<string | null>(null);
   const [notes, setNotes] = useState<Note[]>(loadNotes);
-  const [noteDraft, setNoteDraft] = useState("");
+  // adding a note: tap Notes, then tap the bar; the small note card opens right there (also for a note's tag on the score)
+  const [notePick, setNotePick] = useState(false);
+  const [noteEdit, setNoteEdit] = useState<null | { id: string | null; m: number; q: number; body: string; mark?: MarkId }>(null);
   const [notesMsg, setNotesMsg] = useState("");
   const [, setVoicesTick] = useState(0);
   const layoutRef = useRef<ScoreLayout | null>(null);
@@ -1353,6 +1355,11 @@ function PracticeScreen({
   const [loopPick, setLoopPick] = useState<null | { first: PerfMeasure | null }>(null);
   useBackToClose(!!loopPick, () => setLoopPick(null));
   const onTap = (pos: { m: number; q: number }) => {
+    if (notePick) {
+      setNotePick(false);
+      setNoteEdit({ id: null, m: pos.m, q: Math.round(pos.q * 2) / 2, body: "" });
+      return;
+    }
     const occs = perf.occurrences(pos.m);
     if (!occs.length) return;
     const pm = occs[0];
@@ -2322,13 +2329,16 @@ function PracticeScreen({
           marker={markerRef}
           scrollTarget={playing ? "cursor" : "none"}
           loop={loop}
-          selection={loopPick?.first ? { startM: loopPick.first.m, endM: loopPick.first.m } : null}
+          selection={noteEdit ? { startM: noteEdit.m, endM: noteEdit.m } : loopPick?.first ? { startM: loopPick.first.m, endM: loopPick.first.m } : null}
           cuts={[]}
           flags={flags}
           onTap={onTap}
           onRange={onRange}
           onLoopEdge={onLoopEdge}
-          onFlag={() => setDrawer("notes")}
+          onFlag={(f) => {
+            const n = notes.find((x) => x.id === f.id);
+            if (n) setNoteEdit({ id: n.id, m: n.m, q: n.q, body: n.mark && MARKS.find((x) => x.id === n.mark)?.label === n.body ? "" : n.body, mark: n.mark });
+          }}
           onUserScroll={() => undefined}
           onLayout={onLayout}
           strip={!pageView}
@@ -2917,8 +2927,13 @@ function PracticeScreen({
           <button
             type="button"
             className="cp-btn part-fade mix-btn notes-btn"
-            aria-label={notes.length ? `Notes: ${notes.length} in this piece. Add or read them` : "Notes: add a note or a mark to this bar"}
-            onClick={() => setDrawer(drawer === "notes" ? null : "notes")}
+            aria-pressed={notePick}
+            aria-label={notePick ? "Cancel adding a note" : "Add a note: then tap the bar it belongs to"}
+            onClick={() => {
+              setDrawer(null);
+              setNoteEdit(null);
+              setNotePick(!notePick);
+            }}
           >
             {Icon.note}
             <span>Notes{notes.length ? ` \u00b7 ${notes.length}` : ""}</span>
@@ -3224,16 +3239,106 @@ function PracticeScreen({
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
       </footer>
 
+        {notePick && (
+          <div className="note-pick" role="status">
+            <span>Tap the bar your note is for</span>
+            <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setNotePick(false)}>
+              Cancel
+            </button>
+          </div>
+        )}
+        {noteEdit &&
+          (() => {
+            const ed = noteEdit;
+            const close = () => setNoteEdit(null);
+            const save = () => {
+              const mk = MARKS.find((x) => x.id === ed.mark);
+              const body = ed.body.trim() || mk?.label || "";
+              if (!body) return close();
+              const n: Note = { id: ed.id ?? crypto.randomUUID(), m: ed.m, q: ed.q, body, at: new Date().toISOString(), ...(ed.mark ? { mark: ed.mark } : {}) };
+              const next = [...notes.filter((x) => x.id !== n.id), n].sort((a, b) => a.m - b.m || a.q - b.q);
+              setNotes(next);
+              saveNotes(next);
+              close();
+            };
+            return (
+              <div className="note-card" role="dialog" aria-label={`Note for bar ${edition.measures[ed.m].number}`}>
+                <div className="note-card-head">
+                  <b>Bar {edition.measures[ed.m].number}</b>
+                  <button type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close" onClick={close}>
+                    {Icon.close}
+                  </button>
+                </div>
+                <div className="notes-mark-row">
+                  {MARKS.map((mk) => (
+                    <button
+                      key={mk.id}
+                      type="button"
+                      className="notes-mark"
+                      aria-pressed={ed.mark === mk.id}
+                      onClick={() => setNoteEdit({ ...ed, mark: ed.mark === mk.id ? undefined : mk.id })}
+                    >
+                      <span className="notes-mark-sign" aria-hidden="true">{mk.sign}</span>
+                      {mk.label}
+                    </button>
+                  ))}
+                </div>
+                <textarea
+                  autoFocus
+                  value={ed.body}
+                  placeholder={ed.mark ? "Add words (optional)" : "Your note"}
+                  onChange={(e) => setNoteEdit({ ...ed, body: e.target.value })}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) save();
+                    if (e.key === "Escape") close();
+                  }}
+                />
+                <div className="note-card-actions">
+                  {ed.id && (
+                    <button
+                      type="button"
+                      className="cp-btn cp-btn--ghost"
+                      onClick={() => {
+                        const next = notes.filter((x) => x.id !== ed.id);
+                        setNotes(next);
+                        saveNotes(next);
+                        close();
+                      }}
+                    >
+                      Delete
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    className="cp-btn cp-btn--ghost"
+                    onClick={() => {
+                      close();
+                      setDrawer("notes");
+                    }}
+                  >
+                    All notes
+                  </button>
+                  <button type="button" className="cp-btn cp-btn--ink" disabled={!ed.body.trim() && !ed.mark} onClick={save}>
+                    Save
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
         {drawer && (
           <aside className="p-drawer" aria-label="Lines, notes and about">
             <div className="p-drawer-head">
+              {drawer === "notes" ? (
+                <h2 className="notes-title">Your notes{notes.length ? ` · ${notes.length}` : ""}</h2>
+              ) : (
               <div className="cp-seg" role="tablist" aria-label="Panel">
-                {((context ? ["context", "tips", "notes", "about"] : ["tips", "notes", "about"]) as Drawer[]).filter((d) => d !== "tips" || hasTips).map((d) => (
+                {((context ? ["context", "tips", "about"] : ["tips", "about"]) as Drawer[]).filter((d) => d !== "tips" || hasTips).map((d) => (
                   <button key={d} type="button" role="tab" aria-selected={drawer === d} onClick={() => setDrawer(d)}>
                     {d === "context" ? "The scene" : d === "tips" ? "Pronunciation" : d === "notes" ? `Notes${notes.length ? ` · ${notes.length}` : ""}` : "About"}
                   </button>
                 ))}
               </div>
+              )}
               <button type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close the panel" onClick={() => setDrawer(null)}>
                 {Icon.close}
               </button>
@@ -3310,53 +3415,17 @@ function PracticeScreen({
               )}
               {drawer === "notes" && (
                 <>
-                  <section className="cp-field cp-field--note">
-                    <p className="cp-eyebrow">
-                      New note at bar {loc.number}, beat {beat}
-                    </p>
-                    <form
-                      className="notes-form"
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        if (!noteDraft.trim()) return;
-                        const n: Note = { id: crypto.randomUUID(), m: loc.m, q: Math.round(loc.q * 2) / 2, body: noteDraft.trim(), at: new Date().toISOString() };
-                        const next = [...notes, n].sort((a, b) => a.m - b.m || a.q - b.q);
-                        setNotes(next);
-                        saveNotes(next);
-                        setNoteDraft("");
-                      }}
-                    >
-                      <label className="cp-sr" htmlFor="note-input">
-                        Note
-                      </label>
-                      <textarea id="note-input" value={noteDraft} onChange={(e) => setNoteDraft(e.target.value)} placeholder={info.notePlaceholder} />
-                      <button type="submit" className="cp-btn cp-btn--ink">
-                        Save note
-                      </button>
-                    </form>
-                  </section>
-                  <section className="cp-field notes-marks" aria-label="Quick marks">
-                    <p className="cp-eyebrow">Or mark bar {loc.number}</p>
-                    <div className="notes-mark-row">
-                      {MARKS.map((mk) => (
-                        <button
-                          key={mk.id}
-                          type="button"
-                          className="notes-mark"
-                          onClick={() => {
-                            const n: Note = { id: crypto.randomUUID(), m: loc.m, q: Math.round(loc.q * 2) / 2, body: mk.label, at: new Date().toISOString(), mark: mk.id };
-                            const next = [...notes, n].sort((a, b) => a.m - b.m || a.q - b.q);
-                            setNotes(next);
-                            saveNotes(next);
-                          }}
-                        >
-                          <span className="notes-mark-sign" aria-hidden="true">{mk.sign}</span>
-                          {mk.label}
-                        </button>
-                      ))}
-                    </div>
-                  </section>
-                  {notes.length === 0 && <p className="wc-note">Notes and marks show above their bar in the score. Tap a bar first to choose where.</p>}
+                  <button
+                    type="button"
+                    className="cp-btn cp-btn--ink notes-add"
+                    onClick={() => {
+                      setDrawer(null);
+                      setNotePick(true);
+                    }}
+                  >
+                    {Icon.note} Add a note
+                  </button>
+                  {notes.length === 0 && <p className="wc-note">No notes yet. Tap Add a note, then the bar it belongs to.</p>}
                   {notes.map((n) => (
                     <article key={n.id} className="cp-note" style={{ maxWidth: "none" }}>
                       <div className="cp-note__head">
@@ -3374,12 +3443,12 @@ function PracticeScreen({
                         className="cp-btn cp-btn--ghost"
                         style={{ justifySelf: "start" }}
                         onClick={() => {
-                          const next = notes.filter((x) => x.id !== n.id);
-                          setNotes(next);
-                          saveNotes(next);
+                          setDrawer(null);
+                          goTo(perf.occurrences(n.m)[0].startQ + n.q);
+                          setNoteEdit({ id: n.id, m: n.m, q: n.q, body: n.mark && MARKS.find((x) => x.id === n.mark)?.label === n.body ? "" : n.body, mark: n.mark });
                         }}
                       >
-                        Delete
+                        Edit
                       </button>
                     </article>
                   ))}

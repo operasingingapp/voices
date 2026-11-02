@@ -260,7 +260,7 @@ textarea {
   width: min(420px, 100%);
   background: var(--paper);
   padding: 2.2rem 2rem 1.6rem;
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 1px 0 var(--stand-deep), 0 18px 40px -24px rgba(30, 36, 48, 0.45);
 }
 .login-panel.wide {
@@ -331,7 +331,7 @@ textarea {
   padding: 0;
   margin: 0;
   background: var(--paper);
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 18px 40px -30px rgba(30, 36, 48, 0.5);
 }
 .indice-row {
@@ -430,7 +430,7 @@ textarea {
   gap: 1rem;
   padding: 1.1rem 1.3rem;
   background: var(--paper);
-  border-radius: 10px;
+  border-radius: 6px;
   margin-bottom: 0.7rem;
 }
 .prod-name {
@@ -470,7 +470,7 @@ textarea {
 }
 .prod-section {
   background: var(--paper);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 0.2rem 1.4rem 1.4rem;
   margin-top: 1.4rem;
 }
@@ -693,7 +693,7 @@ textarea {
   gap: 0.8rem;
   justify-self: end;
   padding: 0.3rem 0.8rem 0.3rem 0.6rem;
-  border-radius: 10px;
+  border-radius: 6px;
   background: var(--paper);
   border-left: 6px solid var(--graphite);
   min-width: 250px;
@@ -1018,7 +1018,7 @@ textarea {
   padding: 0.5rem 0.7rem;
   background: var(--ink);
   color: var(--paper);
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 14px 30px -16px rgba(0, 0, 0, 0.6);
   max-width: calc(100% - 2rem);
 }

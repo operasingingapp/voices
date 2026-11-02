@@ -1131,7 +1131,7 @@ export function ScoreView(props: Props) {
                   key={`${f.kind}-${f.id}`}
                   type="button"
                   className={`ov-flag ov-${f.kind}`}
-                  style={{ left: pt.x - 4, top: f.kind === "cue" ? sys.extentBottom + 2 : f.kind === "note" ? sys.top - 30 : sys.top - 50 - stackIndex * 24 }}
+                  style={{ left: pt.x - 4, top: f.kind === "cue" ? sys.extentBottom + 2 : f.kind === "note" ? sys.top - 58 : sys.top - 50 - stackIndex * 24 }}
                   onClick={(e) => {
                     e.stopPropagation();
                     props.onFlag?.(f);
