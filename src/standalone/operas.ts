@@ -93,6 +93,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Vieni, cara Susanna",
       "editionId": "mozart-vieni-cara-susanna"
+     },
+     {
+      "title": "Signori, di fuori son già i suonatori",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Signori, di fuori son già i suonatori",
+      "editionId": "mozart-signori-di-fuori"
      }
     ]
    },
@@ -216,6 +222,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 3",
       "id": "Act 3: Crudel! perché finora",
       "editionId": "mozart-crudel-perche-finora"
+     },
+     {
+      "title": "Signori, di fuori son già i suonatori",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Signori, di fuori son già i suonatori",
+      "editionId": "mozart-signori-di-fuori"
      }
     ]
    },
@@ -284,6 +296,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Susanna! Signore!",
       "editionId": "mozart-susanna-signore"
+     },
+     {
+      "title": "Signori, di fuori son già i suonatori",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Signori, di fuori son già i suonatori",
+      "editionId": "mozart-signori-di-fuori"
      }
     ]
    },
@@ -351,6 +369,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 3",
       "id": "Act 3: Crudel! perché finora",
       "editionId": "mozart-crudel-perche-finora"
+     },
+     {
+      "title": "Signori, di fuori son già i suonatori",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Signori, di fuori son già i suonatori",
+      "editionId": "mozart-signori-di-fuori"
      }
     ]
    },

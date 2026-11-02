@@ -55,7 +55,8 @@ def notes_for(tokens, staff, voice):
                     out.append((pos, n))
                 pos += dur // 2
             continue
-        grace = tok.startswith("g:")
+        grace = tok.startswith("g:") or tok.startswith("G:")
+        noslash = tok.startswith("G:")
         if grace: tok = tok[2:]
         pitches, rest = tok.split(":", 1)
         m = re.match(r"([whqesx])(\.?)(3?)([~*>!()ta]*)$", rest)
@@ -67,7 +68,7 @@ def notes_for(tokens, staff, voice):
         for k, p in enumerate(pitches.split("+")):
             ptie = p.endswith("~"); p = p.rstrip("~")
             n = ET.Element("note")
-            if grace: ET.SubElement(n, "grace", slash="yes")
+            if grace: ET.SubElement(n, "grace", **({} if noslash else {"slash": "yes"}))
             if k > 0: ET.SubElement(n, "chord")
             if p == "s": n.set("print-object", "no"); ET.SubElement(n, "rest")
             elif p == "r": ET.SubElement(n, "rest")

@@ -629,6 +629,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-signori-di-fuori": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "G major (Allegro con spirito), then C major (Andante)",
+      time: "3/8, then 2/4",
+      tempo: "Allegro con spirito at ♩ = 150, then Andante at ♩ = 72, as the score changes tempo (about 4 minutes)",
+    },
+    notePlaceholder: "Figaro bursts in to fetch everyone for the wedding",
+    about: (
+      <>
+        <p>
+          Score: the third section of the Act 2 Finale, No. 15, from Figaro's entrance “Signori, di fuori son già i suonatori” through the Andante to the first chord of the Allegro molto (vocal score pages 159-169, 140 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (quì, sò, gia).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-susanna-signore": {
     portrait: "figaro:susanna",
     opera: "Le nozze di Figaro",

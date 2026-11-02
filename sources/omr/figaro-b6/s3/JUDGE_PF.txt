@@ -1,0 +1,112 @@
+# JUDGE_PF - independent print check of the piano disputes (Breitkopf vocal score, pp.181-188).
+# Dynamics: measured on the system image as the glyph centre against the RH bottom line and the LH top line.
+# About halfway (within ~6% of the gap) -> the hand with a note struck there; both -> RH.
+# Naturals: "n" is written only where a natural sign is printed; later notes in the bar carry it as plain sounding pitch.
+== bar 1: own
+# f (rows 1039-1069) and p (1047-1068) sit well below the middle of the gap (RH line 998, LH line 1088; gaps 41 vs 19), so both go to the LH. f is at the first LH chord, p at the second eighth. X put both in the RH; Y put f in the RH.
+1 RH1: D4+D5:q r:e r:e C5+C6:e C5+C6:e
+1 LH1: dyn:f Bb2+F3:e dyn:p F3:e F3:e F3:e A3+F4:e A3+F4:e
+== bar 14: own
+# The upper LH arc runs from the stem-up G3 dotted quarter to the G3 eighth, so it is a tie. A separate slur below covers G3-F#3-G3. Y's reading is right but he never closes that slur.
+14 RH1: C#5:h.
+14 RH2: G4:e( F#4:e G4:e word:cresc. Bb4:e A4:e G4:e)
+14 LH1: G3:q.~ G3:e( F#3:e G3:e)
+14 LH2: Eb3:h.
+== bar 45: own
+# The f and p sit halfway (centre 899 against a midpoint of 900.5; gaps 26 vs 28). f is over the first chord, which both hands strike, so it goes to the RH. p is over the LH's 2nd eighth (x 329-347), where the RH only holds its note, so it goes to the LH. X's fp and Y's p before the rest are both wrong.
+45 RH1: dyn:f G4+G5:q. r:e G4+G5:e G4+G5:e
+45 LH1: Eb3+Bb3:e dyn:p Bb3:e Bb3:e Bb3:e Eb3+Bb3:e Eb3+Bb3:e
+== bar 47: own
+# This bar is laid out the same as bar 45: f/p are halfway (gaps 26 vs 28). f goes to the RH because both hands strike there, and p goes to the LH 2nd eighth (x 851-876).
+47 RH1: dyn:f G4+G5:q. r:e G4+G5:e G4+G5:e
+47 LH1: Eb3+Bb3:e dyn:p Bb3:e Bb3:e Bb3:e Eb3+Bb3:e Eb3+Bb3:e
+== bar 52: Y
+# p (rows 891-913) sits nearer the RH staff (gaps 27 vs 44), so it goes to the RH only.
+52 RH1: r:q r:e dyn:p Eb5+G5:e Eb5+G5:e Eb5+G5:e
+52 LH1: r:q r:e Eb3+Bb3:q.
+== bar 54: own
+# A natural sign is printed before the first B4+D5 chord, so that note is Bn4 and the next two chords carry it as B4. The LH eighth sits on the 2nd ledger line above the bass staff (C4 is the 1st ledger), so it is Eb4. Otherwise this is Y's reading.
+54 RH1: Bn4+D5:e B4+D5:e B4+D5:e A4+Eb5:e* A4+Eb5:e( A4+C5:e)
+54 LH1: Bb3:q.( C4:q Eb4:e)
+54 LH2: F3:q. F#3:q.
+== bar 56: Y
+# p (rows 899-920) is nearer the RH (gaps 31 vs 41). Even if it counts as halfway, both hands strike there, so it still goes to the RH. LH has no p.
+56 RH1: r:q r:e dyn:p Eb5+G5:e Eb5+G5:e Eb5+G5:e
+56 LH1: r:q r:e Eb3+Bb3:q.
+== bar 58: own
+# This bar matches bar 54: the natural sign on the first B means Bn4, and the LH eighth on the 2nd ledger line is Eb4. The lower LH voice is F3 F3 with no sharp.
+58 RH1: Bn4+D5:e B4+D5:e B4+D5:e A4+Eb5:e* A4+Eb5:e( A4+C5:e)
+58 LH1: Bb3:q.( C4:q Eb4:e)
+58 LH2: F3:q. F3:q.
+== bar 61: Y
+# One f only (rows 714-744; gaps 29 vs 22, centre 3.5px off the midpoint), so it is about halfway. Both hands strike their first chord there, so it goes to the RH. The RH chord has 4 heads: Eb4 G4 Bb4 Eb5.
+61 RH1: dyn:f Eb4+G4+Bb4+Eb5:h. Eb4+Eb5:e Eb4+Eb5:e
+61 LH1: Eb2+Eb3:h. Eb3+G3:e F3+Ab3:e
+== bar 72: Y
+# The LH bottom note Bb2 is a stemless whole note, and the stem-up D3+F3 half is a separate chord over it.
+72 RH1: r:e Bb4:e( Bb5:e Bb4:e Bb5:e Bb4:e Bb5:e Bb4:e)
+72 LH1: D3+F3:h F3+Ab3:h)
+72 LH2: Bb2:w
+== bar 74: Y
+# This bar matches bar 72: a Bb2 whole note under D3+F3 half and F3+Ab3 half.
+74 RH1: r:e Bb4:e( Bb5:e Bb4:e Bb5:e Bb4:e Bb5:e Bb4:e)
+74 LH1: D3+F3:h F3+Ab3:h)
+74 LH2: Bb2:w
+== bar 77: Y
+# The single f is halfway (rows 763-792, midpoint 775.5). Both hands strike on beat 1, so it goes to the RH.
+77 RH1: dyn:f Bb4+Bb5:q Bb4+Bb5:h Bb4+Bb5:e Bb4+Bb5:e
+77 LH1: Bb2+D3:h. Bb3+D4:e C4+Eb4:e
+== bar 80: Y
+# The single f is halfway (rows 761-791, midpoint 775.5). Both hands strike on beat 1, so it goes to the RH. The first RH chord has 4 heads: Bb4 D5 F5 Bb5.
+80 RH1: dyn:f Bb4+D5+F5+Bb5:q Bb4+Bb5:h Bb4+Bb5:e Bb4+Bb5:e
+80 LH1: Bb2+Bb3:h. Bb3+D4:e C4+Eb4:e
+== bar 84: own
+# f (rows 358-388) almost touches the LH top line (396), with gaps of 26 to the RH and 8 to the LH, so it goes to the LH only. Natural signs are printed on the RH E4 (2nd group, 1st note), on the E5, and on the LH 2nd half note (E3). The last RH E4 has no sign.
+84 RH1: r:e D4:e D5:e D4:e r:e En4:e En5:e E4:e
+84 LH1: dyn:f D3:h En3:h
+== bar 85: own
+# Read fresh: the RH is F4/F5 eighths. The LH has F2+F3 dotted half. A natural sign is printed before the first eighth chord: the box centres on the A3 line, with heads on A3 and F3, so it is F3+An3. The second chord is G3+Bb3. p sits just above the LH staff (gaps 33 vs 8), before the LH eighths. This is X's reading plus the natural.
+85 RH1: r:e F4:e F5:e F4:e F5:e F4:e F5:e F4:e
+85 LH1: F2+F3:h. dyn:p F3+An3:e G3+Bb3:e
+== bar 86: own
+# The RH upper notes are on the top line (head rows 267-282, line 274.5), so they are F5 and Y's G5 is wrong. The LH 1st chord has a printed natural (An3+C4); the later A3s in the bar carry it.
+86 RH1: F5:e F4:e F5:e F4:e F5:e F4:e F5:e F4:e
+86 LH1: An3+C4:q F3+A3:e G3+Bb3:e A3+C4:q G3+Bb3:e A3+C4:e
+== bar 87: own
+# The RH is F5/F4, as X has it. A natural sign is printed on the LH 2nd chord (An3+C4).
+87 RH1: F5:e F4:e F5:e F4:e F5:e F4:e F5:e F4:e
+87 LH1: Bb3+D4:q An3+C4:q Bb3+D4:q G3+Bb3:q
+== bar 88: own
+# The RH is F5/F4. The RH lower voice is a dotted half on the A4 space with a printed natural (An4), not B4. The LH dotted half is F2+F3 (lower head in the space below the G2 line). The 1st eighth chord has a natural on A3. The f (bottom about 6px above the LH line) and the p (rows 366-388) both sit just over the LH staff, so they go to the LH only.
+88 RH1: F5:e F4:e F5:e F4:e F5:e F4:e F5:e F4:e
+88 RH2: An4:h. r:q
+88 LH1: dyn:f F2+F3:h. dyn:p F3+An3:e G3+Bb3:e
+== bar 89: own
+# This bar matches bar 86: F5/F4 in the RH, and a natural on the LH 1st chord.
+89 RH1: F5:e F4:e F5:e F4:e F5:e F4:e F5:e F4:e
+89 LH1: An3+C4:q F3+A3:e G3+Bb3:e A3+C4:q G3+Bb3:e A3+C4:e
+== bar 90: own
+# This bar matches bar 87: F5/F4 in the RH, and a natural on the LH 2nd chord.
+90 RH1: F5:e F4:e F5:e F4:e F5:e F4:e F5:e F4:e
+90 LH1: Bb3+D4:q An3+C4:q Bb3+D4:q G3+Bb3:q
+== bar 92: own
+# f (rows 362-392; gaps 10.5 RH vs 16.5 LH) is RH-side or halfway. Both hands strike there, so it goes to the RH, as Y has it. A natural sign is printed on the A5 of the 1st chord (An5), and the 2nd chord carries it.
+92 RH1: dyn:f C5+F5+An5:q C5+F5+A5:q F5+Bb5+D6:q F5+Bb5+D6:q
+92 LH1: F2:e F3:e F2:e F3:e F2:e F3:e F2:e F3:e
+== bar 93: own
+# The p (rows 358-379) hangs just under the RH staff (gap 6.5 RH vs 29 LH), at the RH F5, so it goes to the RH only. The RH 1st chord has a natural on the A5 ledger note (heads C6/A5/F5), and the LH A3+C4 half has a natural on A3.
+93 RH1: F5+An5+C6:q r:q dyn:p F5:q.( G5:s3 F5:s3 Eb5:s3
+93 LH1: F2:q r:q An3+C4:h(
+== bar 99: own
+# f (rows 351-380) is nearer the RH (gaps 7.5 vs 22), so it goes to the RH only. The LH 2nd chord has printed naturals on both heads (An2+An3).
+99 RH1: dyn:f D5:e F4:e D5:e F4:e C5:e F4:e D5:e F4:e
+99 LH1: Bb2+Bb3:h( An2+An3:q Bb2+Bb3:q)
+== bar 102: own
+# p (rows 686-708) sits just under the RH staff (gaps 8 vs 55), so it goes to the RH only, as X has it. Both quarters have printed naturals (An4, An3). The slurs from bar 101 end over the An4 stem / An3 head (x~985), not on the F5/F4 (heads x~915-945), so the slur ends on the quarter.
+102 RH1: F5:h. dyn:p An4:q)
+102 LH1: F4:h. An3:q)
+== bar 105: own
+# Two RH voices: G5 half stem-up, and Eb5 stem-down with the augmentation dot in the Eb5 space (a dotted half). Then A5 on the 1st ledger line with a printed natural, and a D5+Bb5 quarter on one stem. This is Y's reading plus the natural.
+105 RH1: G5:h( An5:q Bb5:q)
+105 RH2: Eb5:h. D5:q
+105 LH1: Eb3:h( C3:q Bb2:q)

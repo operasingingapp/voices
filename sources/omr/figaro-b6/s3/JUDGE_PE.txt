@@ -1,0 +1,76 @@
+# JUDGE_PE - independent print check of the piano disputes (Breitkopf PV, pp.173-180).
+# Dynamics: a dynamic between the staves goes to the hand whose staff it sits nearer to vertically (measured on the
+# 300 dpi system image: glyph centre against the RH bottom line and the LH top line). If it sits about halfway, it goes to
+# the hand that has a note struck at that point; if both do, RH. Naturals are written as the plain sounding pitch
+# (E5, F3), since P6 has no 'n' token for the piano.
+== bar 1: Y
+# p is printed right of the A3 notehead, under the 2nd eighth A5 (p centre x~327, A3 x~290, A5 x~337). It sits beside the RH's A3, so it goes to the RH, before the A5. LH as both readings have it.
+1 RH1: A3:e dyn:p A5:e A5:e A5:e A5:e3( Bb5:e3 A5:e3 G5:e3 F5:e3 E5:e3)
+1 LH1: r:h A3:h~
+1 LH2: A2:h( C#3:h)
+== bar 11: Y
+# The LH upper half note on beat 3 is on the 2nd line of the bass staff, so it is F3, not D3. p sits under the first F4 (after the Bb3), just below the RH staff.
+11 RH1: Bb3:e dyn:p F4:e F4:e F4:e F4:e3( G4:e3 F4:e3 Eb4:e3 D4:e3 C4:e3)
+11 LH1: r:h F3:h~
+11 LH2: Bb2:h( A2:h)
+== bar 12: Y
+# The upper whole note is F3 (2nd line). It is not tied into bar 13: the line to its right is the staff line, and sys119 starts with no incoming tie.
+12 RH1: Bb3:e F5:e F5:e F5:e F5:e3( G5:e3 F5:e3 Eb5:e3 D5:e3 C5:e3)
+12 LH1: F3:w
+12 LH2: Bb2:h( A2:h)
+== bar 13: Y
+# The upper whole note is F3 (2nd line, notehead rows 816-830 on line 823). A tie arc runs to the F3 whole note of bar 14.
+13 RH1: Bb4:e F4:e F4:e F4:e F4:e3( G4:e3 F4:e3 Eb4:e3 D4:e3 C4:e3)
+13 LH1: F3:w~
+13 LH2: Bb2:h( A2:h)
+== bar 14: own
+# There is no slur over the bar-14 triplets, which is X's RH. The upper whole note is F3, tied from bar 13, which is Y's LH (X's D3 is wrong). The F5s sit on the top line (rows 693-702, line 700).
+14 RH1: Bb3:e F5:e F5:e F5:e F5:e3 G5:e3 F5:e3 Eb5:e3 D5:e3 C5:e3
+14 LH1: F3:w
+14 LH2: Bb2:h( A2:h)
+== bar 23: X
+# The 12 eighths are beamed in threes (implicit triplets). cresc. begins under the 3rd group (D5 Bb4 G4), not at the start of the bar.
+23 RH1: D5:e3 Bb4:e3 D4:e3 D5:e3 Bb4:e3 D4:e3 word:cresc. D5:e3 Bb4:e3 G4:e3 D5:e3 Bb4:e3 G4:e3
+23 LH1: Bb2+D3:q Bb2+Bb3:q G3+Bb3:q G3+Bb3:q
+== bar 25: X
+# p hangs just under the RH staff, left of the beat-1 LH chord. It is much nearer the RH staff than the LH staff (the LH notes are above their staff, but the p is about 80 px (zoomed) from the RH line and 220 px from the LH line).
+25 RH1: dyn:p Bb4:q D5:x( C5:x Bb4:e.) r:q F5:x( Eb5:x D5:e.)
+25 LH1: Bb3+D4:e F4:e Bb3+D4:e F4:e Bb3+D4:e F4:e Bb3+D4:e F4:e
+== bar 48: X
+# The RH slur goes from G4 (2nd line) to Bb4 (middle line), and the LH slur from G3 (top space) to Bb3 (above the staff). Neither ends on D. The p sits halfway and both hands strike there, so it goes to the RH.
+48 RH1: G5+Bb5+D6:q r:q dyn:p G4:q( Bb4:q)
+48 LH1: G3:q r:q G3:q( Bb3:q)
+== bar 62: Y
+# The 7th RH note sits on the A5 ledger line, so it is A5, not Bb5. The LH 8th note is F3 with a printed cautionary natural (after F#3 in bar 61). It is written plain F3, which is the same pitch Y gives.
+62 RH1: C5:e3( D5:e3 C5:e3) G5:e3( A5:e3 G5:e3) A5:e3 G5:e3 F5:e3 E5:e3 D5:e3 C5:e3
+62 LH1: C3:e3 E3:e3 Bb3:e3 C3:e3 E3:e3 Bb3:e3 C3:e3 F3:e3 A3:e3 C3:e3 F3:e3 A3:e3
+== bar 73: X
+# The p centre (y 363.5) is about at the midpoint (365.7) between the RH bottom line (333) and the LH top line (398.5), a little nearer the RH. Both hands strike there, so it goes to the RH. The natural on the first E5 is written as plain E5.
+73 RH1: dyn:p E5:e3( D5:e3 E5:e3) G5:e3 F5:e3 E5:e3 E5:e3( D5:e3 E5:e3) G5:e3 F5:e3 E5:e3
+73 LH1: F3:e3 G3:e3 Bb3:e3 F3:e3 G3:e3 Bb3:e3 F3:e3 G3:e3 Bb3:e3 F3:e3 G3:e3 Bb3:e3
+== bar 79: Y
+# The p (rows 363-384, bowl centre ~369) is nearer the RH staff (bottom line 346) than the LH staff (top line 416). Even taken as halfway, both hands strike the beat-3 chord, so it goes to the RH. The chords are G4+Bb4 and E3+C4 (C4 on its ledger line).
+79 RH1: r:h dyn:p G4+Bb4:q r:q
+79 LH1: r:h E3+C4:q r:q
+== bar 82: X
+# The p (rows 349-371; the bowl, rows 350-363, is centred at the midpoint 356 between the RH line at 325 and the LH line at 387) sits halfway. It stands before beat 1, where both hands strike, so it goes to the RH. This is a close call: the whole glyph's centre (360) is 4 px nearer the LH.
+82 RH1: dyn:p F4:q r:e r:e F4:e* F4:e*
+82 LH1: F3:e* F3:e* F3:e* F3:e* D3+F3:e* D3+F3:e*
+== bar 104: own
+# RH: the first chord is E4+E5, both with naturals (written E4/E5). Chords 2-4 are C5+C6 only. Chords 5 and 6 each carry an extra notehead on the A5-C6 ledger space, set left of the stem as a second against C6: Bb5. So the RH has Bb5 in chords 5-6 only, as Y reads.
+# f (rows 367-396, centre ~381) is clearly below the midpoint (371) between the RH line (340) and the LH line (402.5), right beside the LH's Bb3. It goes to the LH only, not to both hands (Y) and not to the RH (X).
+# p (bowl centre ~375) sits about halfway, under RH chord 2. The LH has a rest there, so it goes to the RH. The LH has a natural on E3 at beat 5 (written E3).
+104 RH1: E4+E5:e dyn:p C5+C6:e C5+C6:e C5+C6:e C5+Bb5+C6:e C5+Bb5+C6:e
+104 LH1: dyn:f C3+Bb3:e r:e r:e r:e E3+G3:e E3+G3:e
+== bar 105: Y
+# All six RH chords show the second notehead (Bb5) beside C6, so they are C5+Bb5+C6. The LH has a natural on E3 at its first chord (written plain E3). cresc. sits halfway with both hands striking, so it goes to the RH.
+105 RH1: word:cresc. C5+Bb5+C6:e C5+Bb5+C6:e C5+Bb5+C6:e C5+Bb5+C6:e C5+Bb5+C6:e C5+Bb5+C6:e
+105 LH1: C3+E3:e D3+F3:e E3+G3:e C3+E3:e D3+F3:e E3+G3:e
+== bar 110: own
+# f (centre ~920) and p (centre ~924) both sit halfway between the RH line (879) and the LH line (968.5); the midpoint is 923.75. f is under beat 1, where both hands strike, so it goes to the RH. p is under the 2nd eighth (x~350). There the LH strikes an F3 (x~345) and the RH only holds its quarter, so p goes to the LH, before its 2nd F3. Neither X (p before the RH C chords) nor Y (p before the RH rest) has this.
+110 RH1: dyn:f F5:q r:e r:e C4+C5:e C4+C5:e
+110 LH1: F3+A3:e dyn:p F3:e F3:e F3:e A2+F3:e A2+F3:e
+== bar 112: own
+# Same layout as bar 110. f (centre ~920) sits halfway at beat 1, where both hands strike, so it goes to the RH. p (rows 915-936) sits halfway under the LH's 2nd eighth F3 (x~955) while the RH holds D4+D5, so it goes to the LH.
+112 RH1: dyn:f D4+D5:q r:e r:e C4+C5:e C4+C5:e
+112 LH1: Bb2+F3:e dyn:p F3:e F3:e F3:e A2+F3:e A2+F3:e

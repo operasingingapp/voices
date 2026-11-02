@@ -1,0 +1,92 @@
+CHECK OF s3.xml (Figaro Act 2 Finale, "Signori, di fuori son gia i suonatori", section bars 1-140)
+against the Breitkopf vocal score, pp. 159-169 (sys71-sys101, pg-19..pg-29).
+I compared every bar and part: pitches, rhythm, rests, ties, displayed accidentals, lyrics,
+dynamics, articulations, ornaments, piano slurs, clefs, key, time and tempo marks.
+Beats: 3/8 section counted in eighths (beat 1-3). 2/4 section counted in quarters (beat 1-2).
+Crops are in /tmp/claude-0/-home-claude/3ebe1904-2cd5-5bf6-b252-ae0b967f4c22/scratchpad/freshS3/
+
+REAL DIFFERENCES
+
+1. Bar 5, P4 Figaro, beat 2 (B3), lyric.
+   print: "gno-ri," (Si-gno-ri; the dot of the i is visible, the letter is partly blotted)
+   file:  "re,"
+   crop: z71b.png, z71c.png
+
+2. Bar 17, P5 piano RH, beat 1, chord A4/C5.
+   print: courtesy natural in front of C5
+   file:  C5 has no displayed accidental
+   crop: z73a.png
+
+3. Vocal dynamics for bars 56-65. The file has no dynamics on any vocal part (P1-P4).
+   print (each mark sits on the note named):
+     bar 56 beat 3: f  Susanna (B4 "com'"), Contessa (G4 "com'"), Figaro (G3 "com'")
+     bar 58 beat 3: p  Conte (C3 "con")
+     bar 59 beat 1: p  Susanna (C5), Contessa (A4), Figaro (C3)
+     bar 62 beat 3: f  Susanna (B4), Contessa (G4), Figaro (G3)
+     bar 64 beat 3: p  Conte (C3 "con")
+     bar 65 beat 1: p  Susanna (C5), Contessa (A4), Figaro (C3)
+   file:  none
+   crops: z79a.png, c80L.png, c80R.png, c81L.png
+
+4. Vocal dynamics for bars 126-138. Again the file has none on P1-P4.
+   print:
+     bar 126 beat 2: f  Susanna (G5 "deh"), Contessa (E5 "deh"), Conte (C4 "Mar")
+     bar 127 beat 2: f  Figaro (A3 "con")
+     bar 128 beat 2: p  Susanna, Contessa, Conte, Figaro
+     bar 134 beat 2: f  Susanna, Contessa, Conte
+     bar 135 beat 2: f  Figaro
+     bar 136 beat 2: p  Susanna, Contessa, Conte, Figaro
+     bar 138 beat 2: f  Susanna, Contessa, Conte, Figaro
+   file:  none
+   crops: c97L.png, c97R.png, c99R.png, c100L.png, c100R.png
+
+5. "sotto voce" vocal markings. The file contains no "sotto voce" text.
+   print: bar 42 beat 3: Susanna, Contessa, Figaro "sotto voce"
+          bar 44 beat 3: Conte "sotto voce (da se)"
+          bar 122 beat 2: Susanna, Contessa, Figaro "sotto voce"
+   file:  none
+   crops: c77R.png, c78L.png, c96L.png
+
+6. Bars 75-78, P5 piano RH: trills are missing. In the matching passage, bars 118-121, the file
+   does have trills.
+   print: "tr" on bar 75 beat 2 (D5 16th); bar 76 beat 1 (E5) and beat 2 (F5);
+          bar 77 beat 1 (G5) and beat 2 (F5); bar 78 beat 1 (E5) and beat 2 (D5). That is 7 trills.
+   file:  no trill-mark on any of these notes
+   crops: c83L.png, c83R.png, z75tr.png, c84L.png
+
+7. Bars 80, 81 and 82, P5 piano RH, rhythm of the turn figures.
+   This affects bar 80 beat 2 (F5 E5 D5), bar 81 beat 2 (G5 F5 E5), bar 82 beat 1 (F5 E5 D5)
+   and bar 82 beat 2 (D6 C6 B5).
+   print: 64th, 64th, dotted 16th. The first two notes have 4 beams and there is a dot after the third note.
+          In bars 80 and 81 an eighth rest follows.
+   file:  32nd, 32nd, undotted 16th (1/8+1/8+1/4 of a quarter). The total length is the same, the rhythm is not.
+   crops: z84a.png (bar 80; a pixel profile shows 4 beams on the first two stems), z85a.png (bar 82)
+
+8. Bar 113, P5 piano RH, beat 1, third 16th (chord D5/F5).
+   print: courtesy natural in front of F5 ("Fl.Ob.")
+   file:  F5 has no displayed accidental. The Susanna F5 in the same bar does have its natural.
+   crop: z113.png
+
+9. Bar 140, all parts, time signature.
+   print: common-time symbol "C"
+   file:  <time> 4/4 without symbol="common", so it displays as "4/4"
+   crop: c101L.png
+
+UNSURE
+
+- Bar 55, P1 Conte, beat 2 lyric. The file has "qui", while bars 47, 51, 61 and 67 have "quì".
+  In the print the letters of bar 55 are damaged: a stray mark sits above the u and the i has no clear dot.
+  It is probably the same accented word as in the other bars (crop z79d.png, bottom line).
+- Bar 41, P5 LH, grace notes after the trill (D3 E3). The file has 32nd graces with slash="yes".
+  The print shows two unslashed grace 16ths, with a small slur from the graces to the next bar,
+  and the file has no such slur (z77c.png). The trill on E3 in bar 40 is in the file. The wavy
+  extension line that runs through bar 41 is not encoded.
+- Bar 1, P5: the file has an empty <words/> direction carrying <sound tempo="150"/>. It is invisible
+  and harmless, but redundant.
+- Bar 103, P4 Figaro: "gia" without an accent matches the print, which also has no accent here
+  (bar 99 has "già"). This is not an error in the file.
+- I read vocal and piano pitches by eye on every system, and measured them with pixels wherever
+  the eye reading was uncertain. All of them matched the file except the items above. I found no
+  other differences in rhythm, rests, ties, slurs, staccatos, fermatas (bar 70), clef changes,
+  key/time changes (bars 1, 71, 140) or tempo marks (Allegro con spirito, Andante, Allegro molto).
+  The lyrics "pif-fe-ri u-di-te" (bars 15-16) and "Tu c'in-ten-di?" (bars 86-87) match the print.
