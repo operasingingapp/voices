@@ -804,7 +804,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E flat major",
       time: "4/4",
-      tempo: "Allegro assai at ♩ = 132, then Più Allegro at ♩ = 152 and Prestissimo at ♩ = 176 (about 5 minutes)",
+      tempo: "Allegro assai at ♩ = 168, then Più Allegro at ♩ = 192 and Prestissimo at ♩ = 232 (about 4 minutes)",
     },
     notePlaceholder: "Marcellina, Bartolo and Basilio arrive to claim Figaro's promise of marriage",
     about: (

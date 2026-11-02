@@ -4,7 +4,11 @@
  * when the voice's pack is already loaded (preloadVoicePacks warms them), otherwise once it has been fetched.
  */
 const indexes = import.meta.glob("./voicepacks/*.json", { eager: true, import: "default" }) as Record<string, Record<string, [number, number]>>;
-const bins = import.meta.glob("./voicepacks/*.mp3", { query: "?url", import: "default", eager: true }) as Record<string, string>;
+// The packs themselves live in the artifact's file store (uploaded beside the app, outside its size limit), at
+// full quality; voiceblobs.json maps each pack to its stored address.
+import blobMap from "./voiceblobs.json";
+const bins: Record<string, string> = {};
+for (const [name, v] of Object.entries(blobMap as Record<string, { url: string }>)) bins[`./voicepacks/${name}`] = v.url;
 
 const where = new Map<string, { pack: string; off: number; len: number }>();
 for (const [p, idx] of Object.entries(indexes)) {
@@ -33,6 +37,10 @@ function loadPack(pack: string): Promise<ArrayBuffer> {
 export function preloadVoicePacks() {
   for (const pack of Object.keys(bins)) loadPack(pack).catch(() => undefined);
 }
+/** packs that have no stored address yet are skipped (their words are simply silent until uploaded) */
+function hasBin(pack: string) {
+  return pack in bins;
+}
 function clipUrl(file: string, buf: ArrayBuffer) {
   const w = where.get(file)!;
   let u = urls.get(file);
@@ -47,7 +55,7 @@ export function resolveAudio(u: string): string | Promise<string> {
   if (!u.startsWith("pack:")) return u;
   const file = u.slice(5);
   const w = where.get(file);
-  if (!w) return u;
+  if (!w || !hasBin(w.pack)) return u;
   const buf = ready.get(w.pack);
   if (buf) return clipUrl(file, buf);
   return loadPack(w.pack).then((b) => clipUrl(file, b));
