@@ -1873,6 +1873,8 @@ function PracticeScreen({
      (or on skipping) everything goes back as it was.
      ------------------------------------------------------------------------------------------------ */
   type GuideStep = { id: string; part: string; sel: string[]; title: string; text: string; done?: () => boolean; holeRight?: number; skipIf?: () => boolean; /** menus or panels this step opens: lit with it, and left open; any other is closed when the step begins */ pops?: string; /** said once the step is done, while you see or hear what changed */ after?: string; /** how long that moment lasts (ms) */ dwell?: number };
+  // a step that changes half-way (the guide muted, then brought back) re-reads itself
+  const [, forceGuide] = useState(0);
   const [guide, setGuide] = useState<number>(() => {
     try {
       return localStorage.getItem(TIPS_KEY) ? -2 : -1;
@@ -1881,11 +1883,11 @@ function PracticeScreen({
     }
   });
   const [guideOk, setGuideOk] = useState(false);
-  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number; noteIds: string[]; lineSets: Record<string, LineSet>; pianoFaded: boolean; hearPiano: boolean } | null>(null);
+  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number; noteIds: string[]; lineSets: Record<string, LineSet>; pianoFaded: boolean; hearPiano: boolean; vol: { voice: number; piano: number } } | null>(null);
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   // what has happened during the current step: music heard, a loop gone round, the line or a word spoken, a line hidden
-  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: 0 });
+  const gTrack = useRef({ mutedSeen: false, played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: 0 });
   const steps: GuideStep[] = [
     { id: "listen", part: "Listen", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Press play and listen", text: "The lit word follows the music. Press pause when you’re ready.", done: () => gTrack.current.played && !playing },
     { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
@@ -1896,11 +1898,14 @@ function PracticeScreen({
     { id: "unloop", part: "Work on a passage", sel: [".bar-loop"], title: "Stop looping", text: "Tap Loop again. The music carries on from there, through the whole piece.", after: "Back to the whole piece. Leave it playing.", dwell: 2500, done: () => !loop },
     { id: "more", part: "Work on a passage", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them. The music keeps playing.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
     { id: "slower", part: "Work on a passage", sel: ['[aria-label="Slower"]:not([disabled])', '[aria-label="Slower"]'], title: "Make it easier", text: "Tap − to slow it down while it plays.", after: "Slower, at the same pitch. Tap − again for slower still, + to speed up.", dwell: 5000, done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 0.01 },
-    { id: "mute", part: "Work on a passage", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: "Sing it yourself", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute.", after: "Your line is silent now: sing into the gap. Tap your face again any time to bring the guide back.", dwell: 6000, done: () => !hearVoice },
-    { id: "others", part: "Work on a passage", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: "Add another singer", text: "The other roles are silent until you want them. Tap a face, then Play this line.", after: "Now they sing with you. Hold a face to choose their sound.", dwell: 5000, done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
+    gTrack.current.mutedSeen
+      ? { id: "mute", part: "Work on a passage", pops: ".face-menu", sel: faceMenu ? [".face-menu .fm-hear"] : [".bar-parts > .part:first-child"], title: "Bring the guide back", text: faceMenu ? "Tap “Play my line”." : "Sing a little into the gap. Then tap your face to bring your line back.", after: "Your line is back on the piano. Mute it whenever you want to sing alone.", dwell: 3000, done: () => hearVoice }
+      : { id: "mute", part: "Work on a passage", pops: ".face-menu", sel: faceMenu ? [".face-menu .fm-hear"] : [".bar-parts > .part:first-child"], title: "Sing it yourself", text: faceMenu ? "Tap “Mute: I sing it”." : "Your line plays softly on the piano as a guide. To sing it yourself, tap your face.", done: () => false },
+    { id: "others", part: "Work on a passage", pops: ".face-menu", sel: faceMenu ? [".face-menu .fm-hear"] : [".bar-others .part:first-child"], title: "Add another singer", text: faceMenu ? "Tap “Play this line”." : "The other roles are silent until you want them. Tap a face to add one.", after: "Now they sing with you. Hold a face to choose their sound.", dwell: 5000, done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
     { id: "words", part: "Your score", sel: gTrack.current.sawWords ? [".view-switch button:first-child"] : [".view-switch button:nth-child(2)"], title: gTrack.current.sawWords ? "Read, then come back" : "The whole text", text: gTrack.current.sawWords ? "Every line, with its translation. Take your time; tap Music when you’re done." : "Tap Words to see every line of the piece with its translation.", done: () => gTrack.current.sawWords && view === "music" },
     { id: "arrange", part: "Your score", pops: ".mix-pop", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange", text: "Tap Arrange: each line’s sound, volume and order, and what shows in the score.", done: () => mixOpen },
-    { id: "hide", part: "Your score", pops: ".mix-pop", sel: [".mix-line:has(.part-face.piano) .mix-toggles button:nth-child(2)", ".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: "Read only the voices", text: !mixOpen ? "Open Arrange again, then tap the piano’s eye." : "Tap the piano’s eye.", after: "The piano part has left the score; it still plays. Tap the eye again any time to bring it back.", dwell: 5000, done: () => !showOf(pianoPart) },
+    { id: "volume", part: "Your score", pops: ".mix-pop", sel: mixOpen ? [".mix-line:has(.part-face.piano) .mix-line-vol"] : [".mix-btn:not(.notes-btn)"], title: "Balance the piano", text: mixOpen ? "The music is playing. Drag the piano’s slider left to make it softer." : "Tap Arrange again.", after: "Softer piano, same voices. Every line has its own slider.", dwell: 4000, done: () => !!guideStart.current && Math.abs(vol.piano - guideStart.current.vol.piano) >= 10 },
+    { id: "hide", part: "Your score", pops: ".mix-pop", sel: mixOpen ? [".mix-line:has(.part-face.piano) .mix-toggles button:nth-child(2)"] : [".mix-btn:not(.notes-btn)"], title: "Read only the voices", text: mixOpen ? "Tap the eye on the piano’s row." : "Tap Arrange again.", after: "The piano part has left the score; it still plays. Tap its eye again any time to bring it back.", dwell: 5000, done: () => !showOf(pianoPart) },
     { id: "notes", part: "Your score", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : "Tap Notes, then choose a bar.", after: "Your note sits over its bar. Tap it any time to change it.", dwell: 3500, done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
   ];
   const step = guide >= 0 ? steps[guide] : null;
@@ -1922,13 +1927,17 @@ function PracticeScreen({
     if (speakingWord) t.wordSpoke = true;
     if (noteEdit) t.noteOpened = true;
     if (view === "words") t.sawWords = true;
+    if (steps[guide]?.id === "mute" && !hearVoice && !t.mutedSeen) {
+      t.mutedSeen = true;
+      forceGuide((x) => x + 1);
+    }
     if (guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown) t.hidOnce = true;
     if (guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 0.01) t.slowOnce = true;
     if (guideStart.current && hearVoice !== guideStart.current.hearVoice) t.muteOnce = true;
     if (otherVoices.some((p) => lineSets[p.key]?.hear === true)) t.otherOnce = true;
   });
   useEffect(() => {
-    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: q };
+    gTrack.current = { mutedSeen: false, played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: q };
     guideQ.current = guide >= 0 ? q : null;
     // the loop is set: put the strip away so the bar is clear for playing
     if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
@@ -1937,7 +1946,9 @@ function PracticeScreen({
     if (guide >= 0 && steps[guide]?.id === "loop") setView("music");
     // making it yours starts quiet: the loop and the music stop
     // your score: the music rests while you read and arrange
-    if (guide >= 0 && steps[guide]?.part === "Your score" && engine?.state === "playing") engine.pause();
+    if (guide >= 0 && steps[guide]?.part === "Your score" && steps[guide]?.id !== "volume" && engine?.state === "playing") engine.pause();
+    // balancing the piano is done by ear: the music plays while you drag
+    if (guide >= 0 && steps[guide]?.id === "volume" && engine && engine.state !== "playing") void play();
     // each step starts clean: a menu or panel left open by an earlier step (Arrange, a face's menu, the note card)
     // closes, unless this step is about it
     if (guide >= 0) {
@@ -1967,6 +1978,7 @@ function PracticeScreen({
       setLineSets(g.lineSets);
       setPianoFaded(g.pianoFaded);
       setHearPiano(g.hearPiano);
+      setVol(g.vol);
       // a note written to try it out goes again: only the notes you had before the tour stay
       const kept = loadNotes().filter((n) => g.noteIds.includes(n.id));
       setNotes(kept);
@@ -2003,7 +2015,7 @@ function PracticeScreen({
     } catch {
       /* storage unavailable */
     }
-    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map(() => true)), shows: {}, notes: notes.length, noteIds: notes.map((n) => n.id), lineSets, pianoFaded, hearPiano };
+    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map(() => true)), shows: {}, notes: notes.length, noteIds: notes.map((n) => n.id), lineSets, pianoFaded, hearPiano, vol };
     // every tour starts from the same picture, aria or ensemble: every line and the piano shown in the score (the
     // piano faded, as usual), your line playing softly on the piano, the other singers silent, the piano playing,
     // full speed. What you had is kept and comes back at the end.
@@ -2104,7 +2116,8 @@ function PracticeScreen({
       // a menu or panel opened from the lit control (your face's menu, Arrange, the note card) is part of the step:
       // the light takes it in, and the card moves out of its way
       for (const pop of st.pops ? document.querySelectorAll(st.pops) : []) {
-        if (!seen(pop)) continue;
+        // a control inside the menu is lit on its own: the light goes on just that button
+        if (!seen(pop) || pop.contains(el)) continue;
         const pr = pop.getBoundingClientRect();
         const l = Math.min(r.left, pr.left), t = Math.min(r.top, pr.top);
         r = { left: l, top: t, width: Math.max(r.left + r.width, pr.right) - l, height: Math.max(r.top + r.height, pr.bottom) - t };
@@ -2142,7 +2155,7 @@ function PracticeScreen({
       // above the bar instead, over the lower score, so the words stay in sight
       const pbar = document.querySelector(".p-bar");
       const overBar = pbar ? Math.min(pbar.getBoundingClientRect().top, hole.y) - 8 : 0;
-      if (window.innerWidth <= 640 && pbar && pbar.contains(el) && overBar > 220) {
+      if (window.innerWidth <= 640 && pbar && (pbar.contains(el) || !!el.closest(".face-menu")) && !el.closest(".mix-pop") && overBar > 220) {
         setGuideBox({ hole, left: centred, top: overBar, above: true, w });
         return;
       }
@@ -2162,7 +2175,7 @@ function PracticeScreen({
   // Scrolling and reading stay free; the card (End tour) always answers.
   useEffect(() => {
     if (!step) return;
-    const usesPop = step.id === "mute" || step.id === "others" || step.id === "notes" || step.id === "word";
+    const usesPop = step.id === "notes";
     const allowed = (t: EventTarget | null) => {
       if (!(t instanceof Node)) return false;
       const n = t instanceof Element ? t : t.parentElement;
@@ -2522,7 +2535,7 @@ function PracticeScreen({
                 {name}
                 {mine && <em className="mix-you">you</em>}
               </p>
-              <button type="button" role="menuitem" onClick={done(() => (mine ? setHearVoice(!on) : isPiano ? setHearPiano(!on) : setLine(p.key, { hear: !on })))}>
+              <button type="button" role="menuitem" className="fm-hear" onClick={done(() => (mine ? setHearVoice(!on) : isPiano ? setHearPiano(!on) : setLine(p.key, { hear: !on })))}>
                 {on ? Icon.muted : Icon.speaker}
                 <span>{on ? (mine ? "Mute: I sing it" : isPiano ? "Mute the piano" : "Mute: sung live") : isPiano ? "Play the piano" : mine ? "Play my line" : "Play this line"}</span>
               </button>
@@ -2581,7 +2594,7 @@ function PracticeScreen({
                 {Icon.eyeOff}
                 <span>Hide in the score</span>
               </button>
-              <button type="button" role="menuitem" onClick={done(() => setHear(p, !on))}>
+              <button type="button" role="menuitem" className="fm-hear" onClick={done(() => setHear(p, !on))}>
                 {on ? Icon.muted : Icon.speaker}
                 <span>{on ? (p.kind === "piano" ? "Mute the piano" : "Mute: sung live") : "Play this line"}</span>
               </button>
