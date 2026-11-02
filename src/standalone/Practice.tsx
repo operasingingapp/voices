@@ -207,6 +207,77 @@ interface Note {
   q: number;
   body: string;
   at: string;
+  /** a singer's mark instead of (or as well as) words: shown on the score by its sign */
+  mark?: MarkId;
+}
+/** The marks singers pencil into scores most: one tap puts one on the bar you are on. */
+type MarkId = "breath" | "slow" | "push" | "look" | "careful";
+const MARKS: { id: MarkId; sign: string; label: string }[] = [
+  { id: "breath", sign: "\u2019", label: "Breathe" },
+  { id: "slow", sign: "\u2193", label: "Don\u2019t rush" },
+  { id: "push", sign: "\u2192", label: "Move on" },
+  { id: "look", sign: "\u25c9", label: "Look up" },
+  { id: "careful", sign: "!", label: "Careful" },
+];
+/** what a note shows on the score: its mark's sign and name, or the start of its words */
+const noteLabel = (n: Note) => {
+  const mk = MARKS.find((x) => x.id === n.mark);
+  if (mk) return `${mk.sign} ${n.body && n.body !== mk.label ? n.body : mk.label}`.slice(0, 26);
+  return n.body.length > 24 ? `${n.body.slice(0, 23)}\u2026` : n.body;
+};
+/** every piece's notes on this device (each piece and role keeps its own list) */
+const NOTE_KEY_RE = /^cp:(.+:notes|babbino:notes)$/;
+function allNotes(): Record<string, Note[]> {
+  const out: Record<string, Note[]> = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k || !NOTE_KEY_RE.test(k)) continue;
+      const v = JSON.parse(localStorage.getItem(k) ?? "[]");
+      if (Array.isArray(v) && v.length) out[k] = v;
+    }
+  } catch {
+    /* storage unavailable */
+  }
+  return out;
+}
+/** add notes from an export file; a note already here (same id) is kept as it is. Returns how many were added. */
+function mergeNotes(file: unknown): number {
+  const f = file as { app?: string; notes?: Record<string, Note[]> };
+  if (!f || f.app !== "sottovoce-notes" || typeof f.notes !== "object") throw new Error("not a notes file");
+  let added = 0;
+  for (const [k, list] of Object.entries(f.notes ?? {})) {
+    if (!NOTE_KEY_RE.test(k) || !Array.isArray(list)) continue;
+    let cur: Note[] = [];
+    try {
+      cur = JSON.parse(localStorage.getItem(k) ?? "[]");
+    } catch {
+      cur = [];
+    }
+    const have = new Set(cur.map((n) => n.id));
+    for (const n of list) {
+      if (!n || typeof n.id !== "string" || typeof n.m !== "number" || typeof n.q !== "number" || have.has(n.id)) continue;
+      cur.push({ id: n.id, m: n.m, q: n.q, body: String(n.body ?? ""), at: String(n.at ?? new Date().toISOString()), ...(n.mark ? { mark: n.mark } : {}) });
+      added++;
+    }
+    cur.sort((a, b) => a.m - b.m || a.q - b.q);
+    localStorage.setItem(k, JSON.stringify(cur));
+  }
+  return added;
+}
+/** offer the file to save: through the app's own download prompt when the page runs inside Claude, else a plain download link */
+async function saveFile(filename: string, text: string) {
+  const w = window as unknown as { claude?: { use: (n: string) => Promise<{ save: (o: { filename: string; data: Blob }) => Promise<unknown> } | null> } };
+  const dl = w.claude ? await w.claude.use("downloads").catch(() => null) : null;
+  const blob = new Blob([text], { type: "application/json" });
+  if (dl) return dl.save({ filename, data: blob });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
 }
 let NOTES_KEY = "cp:babbino:notes";
 
@@ -879,6 +950,7 @@ function PracticeScreen({
   const [speakingWord, setSpeakingWord] = useState<string | null>(null);
   const [notes, setNotes] = useState<Note[]>(loadNotes);
   const [noteDraft, setNoteDraft] = useState("");
+  const [notesMsg, setNotesMsg] = useState("");
   const [, setVoicesTick] = useState(0);
   const layoutRef = useRef<ScoreLayout | null>(null);
 
@@ -1486,7 +1558,13 @@ function PracticeScreen({
   const cursorRef = useRef<() => CursorReading | null>(() => null);
   cursorRef.current = () => (engine ? { q: engine.displayQ(), show: true, playing: engine.state === "playing", label: engine.state === "playing" ? "Playing" : "You are here" } : null);
   const markerRef = useRef<() => MarkerReading | null>(() => null);
-  const flags: Flag[] = notes.map((n) => ({ id: n.id, m: n.m, q: n.q, kind: "note", label: n.body }));
+  // one flag per bar: the first note's label, and how many more there are (the panel lists them all)
+  const flags: Flag[] = notes
+    .filter((n, i) => notes.findIndex((x) => x.m === n.m) === i)
+    .map((n) => {
+      const more = notes.filter((x) => x.m === n.m).length - 1;
+      return { id: n.id, m: n.m, q: n.q, kind: "note", label: more ? `${noteLabel(n)}  +${more}` : noteLabel(n) };
+    });
 
   const loc = perf.locate(q);
   const bi = beatInfo(edition.measures[loc.m].time);
@@ -2835,6 +2913,16 @@ function PracticeScreen({
             {Icon.sliders}
             <span>Arrange</span>
           </button>
+          {/* your notes and marks: opens the panel at the bar you are on */}
+          <button
+            type="button"
+            className="cp-btn part-fade mix-btn notes-btn"
+            aria-label={notes.length ? `Notes: ${notes.length} in this piece. Add or read them` : "Notes: add a note or a mark to this bar"}
+            onClick={() => setDrawer(drawer === "notes" ? null : "notes")}
+          >
+            {Icon.note}
+            <span>Notes{notes.length ? ` \u00b7 ${notes.length}` : ""}</span>
+          </button>
           </div>
           {mixOpen && <button type="button" className="mix-scrim" aria-label="Close Arrange" tabIndex={-1} onClick={() => setMixOpen(false)} />}
           {mixOpen && (
@@ -3247,7 +3335,28 @@ function PracticeScreen({
                       </button>
                     </form>
                   </section>
-                  {notes.length === 0 && <p className="wc-note">Notes are saved on this device. Tap a bar first to choose where.</p>}
+                  <section className="cp-field notes-marks" aria-label="Quick marks">
+                    <p className="cp-eyebrow">Or mark bar {loc.number}</p>
+                    <div className="notes-mark-row">
+                      {MARKS.map((mk) => (
+                        <button
+                          key={mk.id}
+                          type="button"
+                          className="notes-mark"
+                          onClick={() => {
+                            const n: Note = { id: crypto.randomUUID(), m: loc.m, q: Math.round(loc.q * 2) / 2, body: mk.label, at: new Date().toISOString(), mark: mk.id };
+                            const next = [...notes, n].sort((a, b) => a.m - b.m || a.q - b.q);
+                            setNotes(next);
+                            saveNotes(next);
+                          }}
+                        >
+                          <span className="notes-mark-sign" aria-hidden="true">{mk.sign}</span>
+                          {mk.label}
+                        </button>
+                      ))}
+                    </div>
+                  </section>
+                  {notes.length === 0 && <p className="wc-note">Notes and marks show above their bar in the score. Tap a bar first to choose where.</p>}
                   {notes.map((n) => (
                     <article key={n.id} className="cp-note" style={{ maxWidth: "none" }}>
                       <div className="cp-note__head">
@@ -3256,7 +3365,10 @@ function PracticeScreen({
                         </button>
                         <span>{new Date(n.at).toLocaleDateString()}</span>
                       </div>
-                      <p>{n.body}</p>
+                      <p>
+                        {MARKS.find((x) => x.id === n.mark) && <span className="notes-mark-sign">{MARKS.find((x) => x.id === n.mark)!.sign} </span>}
+                        {n.body}
+                      </p>
                       <button
                         type="button"
                         className="cp-btn cp-btn--ghost"
@@ -3271,6 +3383,48 @@ function PracticeScreen({
                       </button>
                     </article>
                   ))}
+                  <section className="notes-backup" aria-label="Keep your notes safe">
+                    <p className="cp-eyebrow">Keep them safe</p>
+                    <p className="wc-note">Notes live in this browser only. Save a copy now and then, and open it on another device to bring them over.</p>
+                    <div className="notes-backup-row">
+                      <button
+                        type="button"
+                        className="cp-btn cp-btn--ghost"
+                        onClick={async () => {
+                          const data = { app: "sottovoce-notes", version: 1, savedAt: new Date().toISOString(), notes: allNotes() };
+                          try {
+                            await saveFile(`sottovoce-notes-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(data, null, 1));
+                            setNotesMsg("");
+                          } catch {
+                            setNotesMsg("The copy was not saved.");
+                          }
+                        }}
+                      >
+                        Save a copy of all notes
+                      </button>
+                      <label className="cp-btn cp-btn--ghost notes-open">
+                        Open a copy
+                        <input
+                          type="file"
+                          accept="application/json,.json"
+                          onChange={async (e) => {
+                            const f = e.target.files?.[0];
+                            e.target.value = "";
+                            if (!f) return;
+                            try {
+                              const added = mergeNotes(JSON.parse(await f.text()));
+                              const mine = loadNotes();
+                              setNotes(mine);
+                              setNotesMsg(added ? `${added} note${added === 1 ? "" : "s"} added.` : "Nothing new: these notes are already here.");
+                            } catch {
+                              setNotesMsg("That file is not a copy of Sottovoce notes.");
+                            }
+                          }}
+                        />
+                      </label>
+                    </div>
+                    {notesMsg && <p className="wc-note" role="status">{notesMsg}</p>}
+                  </section>
                 </>
               )}
               {drawer === "about" && (
