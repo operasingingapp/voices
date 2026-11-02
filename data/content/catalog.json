@@ -124,7 +124,7 @@
   {
     "editionId": "mozart-aprite-presto-aprite",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-aprite-presto-aprite@1.0.0-klengel#8cfa45a372",
+    "scoreVersionId": "mozart-aprite-presto-aprite@1.0.0-klengel#c90dbd6d7f",
     "title": "Aprite, presto, aprite",
     "subtitle": "Susanna and Cherubino: duettino from Le nozze di Figaro, Act 2 (No. 14)",
     "kind": "duettino",
@@ -150,7 +150,7 @@
     "keySignature": "G major",
     "time": "4/4",
     "languageStatus": {
-      "phrases": 25,
+      "phrases": 33,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -516,7 +516,7 @@
   {
     "editionId": "mozart-dunque-voi-non-aprite",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-dunque-voi-non-aprite@1.0.0-klengel#853227f082",
+    "scoreVersionId": "mozart-dunque-voi-non-aprite@1.0.0-klengel#c48b2bee77",
     "title": "Dunque voi non aprite?",
     "subtitle": "The Count and the Countess: recitative from Le nozze di Figaro, Act 2",
     "kind": "recitative",
@@ -542,7 +542,7 @@
     "keySignature": "C major",
     "time": "4/4",
     "languageStatus": {
-      "phrases": 14,
+      "phrases": 18,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -916,6 +916,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 36,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-oh-guarda-il-demonietto",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-oh-guarda-il-demonietto@1.0.0-klengel#4c7218b923",
+    "title": "Oh guarda il demonietto!",
+    "subtitle": "Susanna: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 7,
+    "durationSec": 17,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 5,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1333,7 +1361,7 @@
   {
     "editionId": "mozart-tutto-e-come-il-lasciai",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-tutto-e-come-il-lasciai@1.0.0-klengel#c02455cbd3",
+    "scoreVersionId": "mozart-tutto-e-come-il-lasciai@1.0.0-klengel#5cfee59ccb",
     "title": "Tutto è come il lasciai",
     "subtitle": "The Count and the Countess: recitative from Le nozze di Figaro, Act 2",
     "kind": "recitative",
@@ -1359,7 +1387,7 @@
     "keySignature": "C major",
     "time": "4/4",
     "languageStatus": {
-      "phrases": 27,
+      "phrases": 29,
       "withAudio": 0,
       "reviewed": 0
     }

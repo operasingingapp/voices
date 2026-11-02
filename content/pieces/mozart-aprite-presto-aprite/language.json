@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (quà, quì beside Qui, là, fà, po', Tropp', Oimè, foco, pria, da for dà in 'da proprio nel giardino', Dei with a capital). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced (Susanna), così with [s] as in the model; Oimè, Ei and mai each fall on one note but are written with both vowels (o.iˈmɛ, ˈɛ.i, ˈma.i), while Dei, lei and volerei take two notes (ˈdɛ.i, ˈlɛ.i, vo.leˈrɛ.i). Translation literal, for meaning.",
  "phrases": [
   {
    "id": "s1",
@@ -12,112 +12,183 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "5",
-   "original": "Aprite presto, aprite, aprite, è la Susanna, sortite, sortite, sortite, via sortite, andate via di quà, andate via di quà!",
-   "translation": "",
-   "ipa": "",
+   "original": "Aprite presto, aprite,",
+   "translation": "Open quickly, open,",
+   "ipa": "aˈpri.te ˈprɛ.sto‿aˈpri.te",
    "words": [
     [
      "Aprite",
-     "",
-     ""
+     "open",
+     "aˈpri.te"
     ],
     [
      "presto,",
-     "",
-     ""
+     "quickly",
+     "ˈprɛ.sto"
     ],
     [
      "aprite,",
-     "",
-     ""
-    ],
-    [
-     "aprite,",
-     "",
-     ""
-    ],
-    [
-     "è",
-     "",
-     ""
-    ],
-    [
-     "la",
-     "",
-     ""
-    ],
-    [
-     "Susanna,",
-     "",
-     ""
-    ],
-    [
-     "sortite,",
-     "",
-     ""
-    ],
-    [
-     "sortite,",
-     "",
-     ""
-    ],
-    [
-     "sortite,",
-     "",
-     ""
-    ],
-    [
-     "via",
-     "",
-     ""
-    ],
-    [
-     "sortite,",
-     "",
-     ""
-    ],
-    [
-     "andate",
-     "",
-     ""
-    ],
-    [
-     "via",
-     "",
-     ""
-    ],
-    [
-     "di",
-     "",
-     ""
-    ],
-    [
-     "quà,",
-     "",
-     ""
-    ],
-    [
-     "andate",
-     "",
-     ""
-    ],
-    [
-     "via",
-     "",
-     ""
-    ],
-    [
-     "di",
-     "",
-     ""
-    ],
-    [
-     "quà!",
-     "",
-     ""
+     "open",
+     "aˈpri.te"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s1_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "aprite, è la Susanna, sortite, sortite,",
+   "translation": "open, it's Susanna; come out, come out,",
+   "ipa": "aˈpri.te‿ɛ la suˈzan.na sorˈti.te sorˈti.te",
+   "words": [
+    [
+     "aprite,",
+     "open",
+     "aˈpri.te"
+    ],
+    [
+     "è",
+     "it is",
+     "ɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "Susanna,",
+     "Susanna",
+     "suˈzan.na"
+    ],
+    [
+     "sortite,",
+     "come out",
+     "sorˈti.te"
+    ],
+    [
+     "sortite,",
+     "come out",
+     "sorˈti.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s1_3",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "sortite, via sortite,",
+   "translation": "come out, come on, out,",
+   "ipa": "sorˈti.te ˈvi.a sorˈti.te",
+   "words": [
+    [
+     "sortite,",
+     "come out",
+     "sorˈti.te"
+    ],
+    [
+     "via",
+     "come on",
+     "ˈvi.a"
+    ],
+    [
+     "sortite,",
+     "come out",
+     "sorˈti.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s1_4",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "andate via di quà, andate via di quà!",
+   "translation": "get away from here, get away from here!",
+   "ipa": "anˈda.te ˈvi.a di ˈkwa anˈda.te ˈvi.a di ˈkwa",
+   "words": [
+    [
+     "andate",
+     "go",
+     "anˈda.te"
+    ],
+    [
+     "via",
+     "away",
+     "ˈvi.a"
+    ],
+    [
+     "di",
+     "from",
+     "di"
+    ],
+    [
+     "quà,",
+     "here",
+     "ˈkwa"
+    ],
+    [
+     "andate",
+     "go",
+     "anˈda.te"
+    ],
+    [
+     "via",
+     "away",
+     "ˈvi.a"
+    ],
+    [
+     "di",
+     "from",
+     "di"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "go away"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "from here"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "go away"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "from here"
+    }
+   ],
    "audio": {}
   },
   {
@@ -127,43 +198,43 @@
    "occurrence": 1,
    "startMeasure": "11",
    "original": "Oimè! che scena orribile! che gran fatalità!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Alas! What a horrible scene! What a great disaster!",
+   "ipa": "o.iˈmɛ ke ˈʃɛ.na‿orˈri.bi.le ke ˈgran fa.ta.liˈta",
    "words": [
     [
      "Oimè!",
-     "",
-     ""
+     "alas",
+     "o.iˈmɛ"
     ],
     [
      "che",
-     "",
-     ""
+     "what (a)",
+     "ke"
     ],
     [
      "scena",
-     "",
-     ""
+     "scene",
+     "ˈʃɛ.na"
     ],
     [
      "orribile!",
-     "",
-     ""
+     "horrible",
+     "orˈri.bi.le"
     ],
     [
      "che",
-     "",
-     ""
+     "what (a)",
+     "ke"
     ],
     [
      "gran",
-     "",
-     ""
+     "great",
+     "ˈgran"
     ],
     [
      "fatalità!",
-     "",
-     ""
+     "disaster",
+     "fa.ta.liˈta"
     ]
    ],
    "glossGroups": [],
@@ -176,31 +247,46 @@
    "occurrence": 1,
    "startMeasure": "13",
    "original": "di quà, di là!",
-   "translation": "",
-   "ipa": "",
+   "translation": "This way, that way!",
+   "ipa": "di ˈkwa di ˈla",
    "words": [
     [
      "di",
-     "",
-     ""
+     "from, by",
+     "di"
     ],
     [
      "quà,",
-     "",
-     ""
+     "here",
+     "ˈkwa"
     ],
     [
      "di",
-     "",
-     ""
+     "from, by",
+     "di"
     ],
     [
      "là!",
-     "",
-     ""
+     "there",
+     "ˈla"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "this way"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "that way"
+    }
+   ],
    "audio": {}
   },
   {
@@ -210,23 +296,23 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "che gran fatalità!",
-   "translation": "",
-   "ipa": "",
+   "translation": "What a great disaster!",
+   "ipa": "ke ˈgran fa.ta.liˈta",
    "words": [
     [
      "che",
-     "",
-     ""
+     "what (a)",
+     "ke"
     ],
     [
      "gran",
-     "",
-     ""
+     "great",
+     "ˈgran"
     ],
     [
      "fatalità!",
-     "",
-     ""
+     "disaster",
+     "fa.ta.liˈta"
     ]
    ],
    "glossGroups": [],
@@ -238,157 +324,258 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "15",
-   "original": "Le porte son serrate, le porte son serrate, che mai sarà, che mai sarà, che mai sarà, che mai sarà, che mai sarà, che mai sarà, che mai sarà?",
-   "translation": "",
-   "ipa": "",
+   "original": "Le porte son serrate, le porte son serrate,",
+   "translation": "The doors are locked, the doors are locked,",
+   "ipa": "le ˈpɔr.te son serˈra.te le ˈpɔr.te son serˈra.te",
    "words": [
     [
      "Le",
-     "",
-     ""
+     "the",
+     "le"
     ],
     [
      "porte",
-     "",
-     ""
+     "doors",
+     "ˈpɔr.te"
     ],
     [
      "son",
-     "",
-     ""
+     "are",
+     "son"
     ],
     [
      "serrate,",
-     "",
-     ""
+     "locked",
+     "serˈra.te"
     ],
     [
      "le",
-     "",
-     ""
+     "the",
+     "le"
     ],
     [
      "porte",
-     "",
-     ""
+     "doors",
+     "ˈpɔr.te"
     ],
     [
      "son",
-     "",
-     ""
+     "are",
+     "son"
     ],
     [
      "serrate,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "mai",
-     "",
-     ""
-    ],
-    [
-     "sarà?",
-     "",
-     ""
+     "locked",
+     "serˈra.te"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s3_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "che mai sarà, che mai sarà,",
+   "translation": "whatever will happen, whatever will happen,",
+   "ipa": "ke ˈma.i saˈra ke ˈma.i saˈra",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà,",
+     "will happen",
+     "saˈra"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà,",
+     "will happen",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "whatever will happen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s3_3",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "che mai sarà, che mai sarà,",
+   "translation": "whatever will happen, whatever will happen,",
+   "ipa": "ke ˈma.i saˈra ke ˈma.i saˈra",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà,",
+     "will happen",
+     "saˈra"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà,",
+     "will happen",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "whatever will happen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s3_4",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "che mai sarà, che mai sarà, che mai sarà?",
+   "translation": "whatever will happen, whatever will happen, whatever will happen?",
+   "ipa": "ke ˈma.i saˈra ke ˈma.i saˈra ke ˈma.i saˈra",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà,",
+     "will happen",
+     "saˈra"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà,",
+     "will happen",
+     "saˈra"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈma.i"
+    ],
+    [
+     "sarà?",
+     "will happen",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "whatever will happen"
+    }
+   ],
    "audio": {}
   },
   {
@@ -397,137 +584,224 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "16",
-   "original": "Le porte son serrate, che mai sarà, che mai sarà, che mai sarà, che mai sarà, che mai sarà, che mai sarà, che mai sarà?",
-   "translation": "",
-   "ipa": "",
+   "original": "Le porte son serrate, che mai sarà,",
+   "translation": "The doors are locked, whatever will happen,",
+   "ipa": "le ˈpɔr.te son serˈra.te ke ˈma.i saˈra",
    "words": [
     [
      "Le",
-     "",
-     ""
+     "the",
+     "le"
     ],
     [
      "porte",
-     "",
-     ""
+     "doors",
+     "ˈpɔr.te"
     ],
     [
      "son",
-     "",
-     ""
+     "are",
+     "son"
     ],
     [
      "serrate,",
-     "",
-     ""
+     "locked",
+     "serˈra.te"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà,",
-     "",
-     ""
-    ],
+     "will happen",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "whatever will happen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c3_2",
+   "role": "cherubino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "che mai sarà, che mai sarà,",
+   "translation": "whatever will happen, whatever will happen,",
+   "ipa": "ke ˈma.i saˈra ke ˈma.i saˈra",
+   "words": [
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà,",
-     "",
-     ""
+     "will happen",
+     "saˈra"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà,",
-     "",
-     ""
-    ],
+     "will happen",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "whatever will happen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c3_3",
+   "role": "cherubino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "che mai sarà, che mai sarà, che mai sarà, che mai sarà?",
+   "translation": "whatever will happen, whatever will happen, whatever will happen, whatever will happen?",
+   "ipa": "ke ˈma.i saˈra ke ˈma.i saˈra ke ˈma.i saˈra ke ˈma.i saˈra",
+   "words": [
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà,",
-     "",
-     ""
+     "will happen",
+     "saˈra"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà,",
-     "",
-     ""
+     "will happen",
+     "saˈra"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà,",
-     "",
-     ""
+     "will happen",
+     "saˈra"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "mai",
-     "",
-     ""
+     "ever",
+     "ˈma.i"
     ],
     [
      "sarà?",
-     "",
-     ""
+     "will happen",
+     "saˈra"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "whatever will happen"
+    },
+    {
+     "words": [
+      9,
+      10,
+      11
+     ],
+     "gloss": "whatever will happen"
+    }
+   ],
    "audio": {}
   },
   {
@@ -537,31 +811,40 @@
    "occurrence": 1,
    "startMeasure": "22",
    "original": "Qui perdersi non giova.",
-   "translation": "",
-   "ipa": "",
+   "translation": "It's no use losing our heads here.",
+   "ipa": "ˈkwi ˈpɛr.der.si non ˈdʒɔ.va",
    "words": [
     [
      "Qui",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ],
     [
      "perdersi",
-     "",
-     ""
+     "losing oneself",
+     "ˈpɛr.der.si"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "giova.",
-     "",
-     ""
+     "helps",
+     "ˈdʒɔ.va"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "it's no use panicking"
+    }
+   ],
    "audio": {}
   },
   {
@@ -571,28 +854,28 @@
    "occurrence": 1,
    "startMeasure": "23",
    "original": "V'uccide, se vi trova!",
-   "translation": "",
-   "ipa": "",
+   "translation": "He'll kill you if he finds you!",
+   "ipa": "vutˈtʃi.de se vi ˈtrɔ.va",
    "words": [
     [
      "V'uccide,",
-     "",
-     ""
+     "he'll kill you",
+     "vutˈtʃi.de"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "vi",
-     "",
-     ""
+     "you",
+     "vi"
     ],
     [
      "trova!",
-     "",
-     ""
+     "finds",
+     "ˈtrɔ.va"
     ]
    ],
    "glossGroups": [],
@@ -605,36 +888,44 @@
    "occurrence": 1,
    "startMeasure": "25",
    "original": "Veggiamo un po' quì fuori,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Let's have a look out here,",
+   "ipa": "vedˈdʒa.mo un ˈpɔ ˈkwi ˈfwɔ.ri",
    "words": [
     [
      "Veggiamo",
-     "",
-     ""
+     "let's see",
+     "vedˈdʒa.mo"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "po'",
-     "",
-     ""
+     "little",
+     "ˈpɔ"
     ],
     [
      "quì",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ],
     [
      "fuori,",
-     "",
-     ""
+     "outside",
+     "ˈfwɔ.ri"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "a bit"
+    }
+   ],
    "audio": {}
   },
   {
@@ -644,28 +935,28 @@
    "occurrence": 1,
    "startMeasure": "27",
    "original": "da proprio nel giardino.",
-   "translation": "",
-   "ipa": "",
+   "translation": "it looks right onto the garden.",
+   "ipa": "ˈda ˈprɔ.prjo nel dʒarˈdi.no",
    "words": [
     [
      "da",
-     "",
-     ""
+     "gives, looks out",
+     "ˈda"
     ],
     [
      "proprio",
-     "",
-     ""
+     "right",
+     "ˈprɔ.prjo"
     ],
     [
      "nel",
-     "",
-     ""
+     "onto the",
+     "nel"
     ],
     [
      "giardino.",
-     "",
-     ""
+     "garden",
+     "dʒarˈdi.no"
     ]
    ],
    "glossGroups": [],
@@ -678,18 +969,18 @@
    "occurrence": 1,
    "startMeasure": "28",
    "original": "Fermate, Cherubino!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Stop, Cherubino!",
+   "ipa": "ferˈma.te ke.ruˈbi.no",
    "words": [
     [
      "Fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "Cherubino!",
-     "",
-     ""
+     "Cherubino",
+     "ke.ruˈbi.no"
     ]
    ],
    "glossGroups": [],
@@ -702,31 +993,39 @@
    "occurrence": 1,
    "startMeasure": "29",
    "original": "fermate, fermate, per pietà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Stop, stop, for pity's sake!",
+   "ipa": "ferˈma.te ferˈma.te per pjeˈta",
    "words": [
     [
      "fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "pietà!",
-     "",
-     ""
+     "pity",
+     "pjeˈta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "for pity's sake"
+    }
+   ],
    "audio": {}
   },
   {
@@ -736,31 +1035,40 @@
    "occurrence": 1,
    "startMeasure": "31",
    "original": "Quì perdersi non giova,",
-   "translation": "",
-   "ipa": "",
+   "translation": "It's no use losing our heads here,",
+   "ipa": "ˈkwi ˈpɛr.der.si non ˈdʒɔ.va",
    "words": [
     [
      "Quì",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ],
     [
      "perdersi",
-     "",
-     ""
+     "losing oneself",
+     "ˈpɛr.der.si"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "giova,",
-     "",
-     ""
+     "helps",
+     "ˈdʒɔ.va"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "it's no use panicking"
+    }
+   ],
    "audio": {}
   },
   {
@@ -770,18 +1078,18 @@
    "occurrence": 1,
    "startMeasure": "32",
    "original": "Fermate, Cherubino!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Stop, Cherubino!",
+   "ipa": "ferˈma.te ke.ruˈbi.no",
    "words": [
     [
      "Fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "Cherubino!",
-     "",
-     ""
+     "Cherubino",
+     "ke.ruˈbi.no"
     ]
    ],
    "glossGroups": [],
@@ -794,28 +1102,28 @@
    "occurrence": 1,
    "startMeasure": "33",
    "original": "m'uccide, se mi trova.",
-   "translation": "",
-   "ipa": "",
+   "translation": "he'll kill me if he finds me.",
+   "ipa": "mutˈtʃi.de se mi ˈtrɔ.va",
    "words": [
     [
      "m'uccide,",
-     "",
-     ""
+     "he'll kill me",
+     "mutˈtʃi.de"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "trova.",
-     "",
-     ""
+     "finds",
+     "ˈtrɔ.va"
     ]
    ],
    "glossGroups": [],
@@ -828,51 +1136,59 @@
    "occurrence": 1,
    "startMeasure": "34",
    "original": "Tropp' alto per un salto, fermate, per pietà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Too high for a jump; stop, for pity's sake!",
+   "ipa": "ˈtrɔpp ˈal.to per un ˈsal.to ferˈma.te per pjeˈta",
    "words": [
     [
      "Tropp'",
-     "",
-     ""
+     "too",
+     "ˈtrɔpp"
     ],
     [
      "alto",
-     "",
-     ""
+     "high",
+     "ˈal.to"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "salto,",
-     "",
-     ""
+     "jump",
+     "ˈsal.to"
     ],
     [
      "fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "pietà!",
-     "",
-     ""
+     "pity",
+     "pjeˈta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "for pity's sake"
+    }
+   ],
    "audio": {}
   },
   {
@@ -882,13 +1198,13 @@
    "occurrence": 1,
    "startMeasure": "35",
    "original": "Lasciami,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Let me go,",
+   "ipa": "ˈlaʃ.ʃa.mi",
    "words": [
     [
      "Lasciami,",
-     "",
-     ""
+     "let me go",
+     "ˈlaʃ.ʃa.mi"
     ]
    ],
    "glossGroups": [],
@@ -901,13 +1217,13 @@
    "occurrence": 1,
    "startMeasure": "36",
    "original": "lasciami!",
-   "translation": "",
-   "ipa": "",
+   "translation": "let me go!",
+   "ipa": "ˈlaʃ.ʃa.mi",
    "words": [
     [
      "lasciami!",
-     "",
-     ""
+     "let me go",
+     "ˈlaʃ.ʃa.mi"
     ]
    ],
    "glossGroups": [],
@@ -920,41 +1236,50 @@
    "occurrence": 1,
    "startMeasure": "36",
    "original": "pria di nuocerle nel foco volerei!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Rather than harm her, I would leap into the fire!",
+   "ipa": "ˈpri.a di ˈnwɔ.tʃer.le nel ˈfɔ.ko vo.leˈrɛ.i",
    "words": [
     [
      "pria",
-     "",
-     ""
+     "before",
+     "ˈpri.a"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "nuocerle",
-     "",
-     ""
+     "harming her",
+     "ˈnwɔ.tʃer.le"
     ],
     [
      "nel",
-     "",
-     ""
+     "into the",
+     "nel"
     ],
     [
      "foco",
-     "",
-     ""
+     "fire",
+     "ˈfɔ.ko"
     ],
     [
      "volerei!",
-     "",
-     ""
+     "I would fly",
+     "vo.leˈrɛ.i"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "rather than harm her"
+    }
+   ],
    "audio": {}
   },
   {
@@ -964,28 +1289,28 @@
    "occurrence": 1,
    "startMeasure": "38",
    "original": "abbraccio te per lei,",
-   "translation": "",
-   "ipa": "",
+   "translation": "I embrace you for her,",
+   "ipa": "abˈbrat.tʃo ˈte per ˈlɛ.i",
    "words": [
     [
      "abbraccio",
-     "",
-     ""
+     "I embrace",
+     "abˈbrat.tʃo"
     ],
     [
      "te",
-     "",
-     ""
+     "you",
+     "ˈte"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "lei,",
-     "",
-     ""
+     "her",
+     "ˈlɛ.i"
     ]
    ],
    "glossGroups": [],
@@ -998,13 +1323,13 @@
    "occurrence": 1,
    "startMeasure": "39",
    "original": "addio!",
-   "translation": "",
-   "ipa": "",
+   "translation": "farewell!",
+   "ipa": "adˈdi.o",
    "words": [
     [
      "addio!",
-     "",
-     ""
+     "farewell",
+     "adˈdi.o"
     ]
    ],
    "glossGroups": [],
@@ -1017,26 +1342,35 @@
    "occurrence": 1,
    "startMeasure": "40",
    "original": "così si fà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "this is how it's done!",
+   "ipa": "koˈsi si ˈfa",
    "words": [
     [
      "così",
-     "",
-     ""
+     "thus",
+     "koˈsi"
     ],
     [
      "si",
-     "",
-     ""
+     "one",
+     "si"
     ],
     [
      "fà!",
-     "",
-     ""
+     "does",
+     "ˈfa"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "that's how it's done"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1046,38 +1380,38 @@
    "occurrence": 1,
    "startMeasure": "41",
    "original": "Ei va a perire, o Dei!",
-   "translation": "",
-   "ipa": "",
+   "translation": "He's going to his death, O gods!",
+   "ipa": "ˈɛ.i ˈva‿a peˈri.re‿o ˈdɛ.i",
    "words": [
     [
      "Ei",
-     "",
-     ""
+     "he",
+     "ˈɛ.i"
     ],
     [
      "va",
-     "",
-     ""
+     "goes",
+     "ˈva"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "perire,",
-     "",
-     ""
+     "perish",
+     "peˈri.re"
     ],
     [
      "o",
-     "",
-     ""
+     "O",
+     "o"
     ],
     [
      "Dei!",
-     "",
-     ""
+     "gods",
+     "ˈdɛ.i"
     ]
    ],
    "glossGroups": [],
@@ -1090,26 +1424,34 @@
    "occurrence": 1,
    "startMeasure": "42",
    "original": "fermate, per pietà!",
-   "translation": "",
-   "ipa": "",
+   "translation": "stop, for pity's sake!",
+   "ipa": "ferˈma.te per pjeˈta",
    "words": [
     [
      "fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "pietà!",
-     "",
-     ""
+     "pity",
+     "pjeˈta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "for pity's sake"
+    }
+   ],
    "audio": {}
   },
   {
@@ -1119,18 +1461,18 @@
    "occurrence": 1,
    "startMeasure": "43",
    "original": "Fermate, fermate!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Stop, stop!",
+   "ipa": "ferˈma.te ferˈma.te",
    "words": [
     [
      "Fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "fermate!",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ]
    ],
    "glossGroups": [],

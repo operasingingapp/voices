@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (deggio, Si for sì, E for è in 'E un fanciullo', fanciul, loco, onde; 'E mi farà destino' is printed without the libretto's il before destino). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced (chiuso, Susanna); lasciai is set on three notes (laʃˈʃa.i), Ahimè on two (a.iˈmɛ). Translation literal, for meaning.",
  "phrases": [
   {
    "id": "c1",
@@ -13,33 +13,33 @@
    "occurrence": 1,
    "startMeasure": "1",
    "original": "Tutto è come il lasciai:",
-   "translation": "",
-   "ipa": "",
+   "translation": "Everything is as I left it:",
+   "ipa": "ˈtut.to‿ɛ ˈko.me‿il laʃˈʃa.i",
    "words": [
     [
      "Tutto",
-     "",
-     ""
+     "everything",
+     "ˈtut.to"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "come",
-     "",
-     ""
+     "as",
+     "ˈko.me"
     ],
     [
      "il",
-     "",
-     ""
+     "it",
+     "il"
     ],
     [
      "lasciai:",
-     "",
-     ""
+     "I left",
+     "laʃˈʃa.i"
     ]
    ],
    "glossGroups": [],
@@ -52,43 +52,43 @@
    "occurrence": 1,
    "startMeasure": "1",
    "original": "volete dunque aprir voi stessa, o deggio?",
-   "translation": "",
-   "ipa": "",
+   "translation": "will you open it yourself, then, or must I?",
+   "ipa": "voˈle.te ˈduŋ.kwe aˈprir ˈvo.i ˈstes.sa o ˈded.dʒo",
    "words": [
     [
      "volete",
-     "",
-     ""
+     "you want",
+     "voˈle.te"
     ],
     [
      "dunque",
-     "",
-     ""
+     "then",
+     "ˈduŋ.kwe"
     ],
     [
      "aprir",
-     "",
-     ""
+     "to open",
+     "aˈprir"
     ],
     [
      "voi",
-     "",
-     ""
+     "you",
+     "ˈvo.i"
     ],
     [
      "stessa,",
-     "",
-     ""
+     "yourself",
+     "ˈstes.sa"
     ],
     [
      "o",
-     "",
-     ""
+     "or",
+     "o"
     ],
     [
      "deggio?",
-     "",
-     ""
+     "must I",
+     "ˈded.dʒo"
     ]
    ],
    "glossGroups": [],
@@ -101,41 +101,49 @@
    "occurrence": 1,
    "startMeasure": "3",
    "original": "Ahimè! fermate, e ascoltatemi un poco:",
-   "translation": "",
-   "ipa": "",
+   "translation": "Alas! Stop, and listen to me a moment:",
+   "ipa": "a.iˈmɛ ferˈma.te e‿a.skolˈta.te.mi‿un ˈpɔ.ko",
    "words": [
     [
      "Ahimè!",
-     "",
-     ""
+     "alas",
+     "a.iˈmɛ"
     ],
     [
      "fermate,",
-     "",
-     ""
+     "stop",
+     "ferˈma.te"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "ascoltatemi",
-     "",
-     ""
+     "listen to me",
+     "a.skolˈta.te.mi"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "poco:",
-     "",
-     ""
+     "little",
+     "ˈpɔ.ko"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "a moment"
+    }
+   ],
    "audio": {}
   },
   {
@@ -145,46 +153,55 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "mi credete capace di mancar al dover?",
-   "translation": "",
-   "ipa": "",
+   "translation": "do you think me capable of failing in my duty?",
+   "ipa": "mi kreˈde.te kaˈpa.tʃe di maŋˈkar al doˈver",
    "words": [
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "credete",
-     "",
-     ""
+     "you believe",
+     "kreˈde.te"
     ],
     [
      "capace",
-     "",
-     ""
+     "capable",
+     "kaˈpa.tʃe"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "mancar",
-     "",
-     ""
+     "failing",
+     "maŋˈkar"
     ],
     [
      "al",
-     "",
-     ""
+     "in the",
+     "al"
     ],
     [
      "dover?",
-     "",
-     ""
+     "duty",
+     "doˈver"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "failing in my duty"
+    }
+   ],
    "audio": {}
   },
   {
@@ -194,26 +211,35 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "Come vi piace,",
-   "translation": "",
-   "ipa": "",
+   "translation": "As you please,",
+   "ipa": "ˈko.me vi ˈpja.tʃe",
    "words": [
     [
      "Come",
-     "",
-     ""
+     "as",
+     "ˈko.me"
     ],
     [
      "vi",
-     "",
-     ""
+     "to you",
+     "vi"
     ],
     [
      "piace,",
-     "",
-     ""
+     "it pleases",
+     "ˈpja.tʃe"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "as you please"
+    }
+   ],
    "audio": {}
   },
   {
@@ -223,43 +249,43 @@
    "occurrence": 1,
    "startMeasure": "7",
    "original": "entro quel gabinetto chi v'è chiuso vedrò.",
-   "translation": "",
-   "ipa": "",
+   "translation": "I'll see who is shut inside that closet.",
+   "ipa": "ˈen.tro kwel ga.biˈnet.to ki ˈvɛ ˈkju.zo veˈdrɔ",
    "words": [
     [
      "entro",
-     "",
-     ""
+     "inside",
+     "ˈen.tro"
     ],
     [
      "quel",
-     "",
-     ""
+     "that",
+     "kwel"
     ],
     [
      "gabinetto",
-     "",
-     ""
+     "closet",
+     "ga.biˈnet.to"
     ],
     [
      "chi",
-     "",
-     ""
+     "who",
+     "ki"
     ],
     [
      "v'è",
-     "",
-     ""
+     "there is",
+     "ˈvɛ"
     ],
     [
      "chiuso",
-     "",
-     ""
+     "shut in",
+     "ˈkju.zo"
     ],
     [
      "vedrò.",
-     "",
-     ""
+     "I will see",
+     "veˈdrɔ"
     ]
    ],
    "glossGroups": [],
@@ -272,38 +298,38 @@
    "occurrence": 1,
    "startMeasure": "8",
    "original": "Si, lo vedrete, ma uditemi tranquillo.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Yes, you shall see him, but hear me out calmly.",
+   "ipa": "ˈsi lo veˈdre.te ma‿uˈdi.te.mi traŋˈkwil.lo",
    "words": [
     [
      "Si,",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ],
     [
      "lo",
-     "",
-     ""
+     "him",
+     "lo"
     ],
     [
      "vedrete,",
-     "",
-     ""
+     "you will see",
+     "veˈdre.te"
     ],
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "uditemi",
-     "",
-     ""
+     "hear me",
+     "uˈdi.te.mi"
     ],
     [
      "tranquillo.",
-     "",
-     ""
+     "calmly",
+     "traŋˈkwil.lo"
     ]
    ],
    "glossGroups": [],
@@ -316,28 +342,28 @@
    "occurrence": 1,
    "startMeasure": "10",
    "original": "Non è dunque Susanna?",
-   "translation": "",
-   "ipa": "",
+   "translation": "So it isn't Susanna?",
+   "ipa": "non ɛ ˈduŋ.kwe suˈzan.na",
    "words": [
     [
      "Non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "dunque",
-     "",
-     ""
+     "then",
+     "ˈduŋ.kwe"
     ],
     [
      "Susanna?",
-     "",
-     ""
+     "Susanna",
+     "suˈzan.na"
     ]
    ],
    "glossGroups": [],
@@ -349,82 +375,105 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "11",
-   "original": "No, ma invece è un oggetto, che ragion di sospetto non vi deve lasciar:",
-   "translation": "",
-   "ipa": "",
+   "original": "No, ma invece è un oggetto,",
+   "translation": "No, but instead it's someone",
+   "ipa": "ˈnɔ ma‿inˈve.tʃe‿ɛ‿un odˈdʒɛt.to",
    "words": [
     [
      "No,",
-     "",
-     ""
+     "no",
+     "ˈnɔ"
     ],
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "invece",
-     "",
-     ""
+     "instead",
+     "inˈve.tʃe"
     ],
     [
      "è",
-     "",
-     ""
+     "it is",
+     "ɛ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "oggetto,",
-     "",
-     ""
-    ],
-    [
-     "che",
-     "",
-     ""
-    ],
-    [
-     "ragion",
-     "",
-     ""
-    ],
-    [
-     "di",
-     "",
-     ""
-    ],
-    [
-     "sospetto",
-     "",
-     ""
-    ],
-    [
-     "non",
-     "",
-     ""
-    ],
-    [
-     "vi",
-     "",
-     ""
-    ],
-    [
-     "deve",
-     "",
-     ""
-    ],
-    [
-     "lasciar:",
-     "",
-     ""
+     "object, person",
+     "odˈdʒɛt.to"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t4_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "che ragion di sospetto non vi deve lasciar:",
+   "translation": "who should give you no cause for suspicion:",
+   "ipa": "ke raˈdʒon di soˈspɛt.to non vi ˈde.ve laʃˈʃar",
+   "words": [
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "ragion",
+     "reason",
+     "raˈdʒon"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "sospetto",
+     "suspicion",
+     "soˈspɛt.to"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vi",
+     "to you",
+     "vi"
+    ],
+    [
+     "deve",
+     "must",
+     "ˈde.ve"
+    ],
+    [
+     "lasciar:",
+     "leave",
+     "laʃˈʃar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "grounds for suspicion"
+    }
+   ],
    "audio": {}
   },
   {
@@ -434,23 +483,23 @@
    "occurrence": 1,
    "startMeasure": "13",
    "original": "per questa sera...",
-   "translation": "",
-   "ipa": "",
+   "translation": "for this evening…",
+   "ipa": "per ˈkwe.sta ˈse.ra",
    "words": [
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "sera...",
-     "",
-     ""
+     "evening",
+     "ˈse.ra"
     ]
    ],
    "glossGroups": [],
@@ -463,23 +512,23 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "una burla innocente...",
-   "translation": "",
-   "ipa": "",
+   "translation": "an innocent joke…",
+   "ipa": "ˈu.na ˈbur.la‿in.noˈtʃɛn.te",
    "words": [
     [
      "una",
-     "",
-     ""
+     "a",
+     "ˈu.na"
     ],
     [
      "burla",
-     "",
-     ""
+     "joke, prank",
+     "ˈbur.la"
     ],
     [
      "innocente...",
-     "",
-     ""
+     "innocent",
+     "in.noˈtʃɛn.te"
     ]
    ],
    "glossGroups": [],
@@ -492,61 +541,71 @@
    "occurrence": 1,
    "startMeasure": "15",
    "original": "di far si disponeva ed io vi giuro che l'onor...",
-   "translation": "",
-   "ipa": "",
+   "translation": "was being got ready, and I swear to you that my honour…",
+   "ipa": "di ˈfar si di.spoˈne.va ed ˈi.o vi ˈdʒu.ro ke loˈnor",
    "words": [
     [
      "di",
-     "",
-     ""
+     "to",
+     "di"
     ],
     [
      "far",
-     "",
-     ""
+     "do, play",
+     "ˈfar"
     ],
     [
      "si",
-     "",
-     ""
+     "itself",
+     "si"
     ],
     [
      "disponeva",
-     "",
-     ""
+     "was being arranged",
+     "di.spoˈne.va"
     ],
     [
      "ed",
-     "",
-     ""
+     "and",
+     "ed"
     ],
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "vi",
-     "",
-     ""
+     "to you",
+     "vi"
     ],
     [
      "giuro",
-     "",
-     ""
+     "swear",
+     "ˈdʒu.ro"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "l'onor...",
-     "",
-     ""
+     "the honour",
+     "loˈnor"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "was being got ready"
+    }
+   ],
    "audio": {}
   },
   {
@@ -556,23 +615,23 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "Chi è dunque?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Who is it, then?",
+   "ipa": "ki‿ˈɛ ˈduŋ.kwe",
    "words": [
     [
      "Chi",
-     "",
-     ""
+     "who",
+     "ki"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ˈɛ"
     ],
     [
      "dunque?",
-     "",
-     ""
+     "then",
+     "ˈduŋ.kwe"
     ]
    ],
    "glossGroups": [],
@@ -585,13 +644,13 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "l'onestà...",
-   "translation": "",
-   "ipa": "",
+   "translation": "my virtue…",
+   "ipa": "lo.neˈsta",
    "words": [
     [
      "l'onestà...",
-     "",
-     ""
+     "the virtue",
+     "lo.neˈsta"
     ]
    ],
    "glossGroups": [],
@@ -604,13 +663,13 @@
    "occurrence": 1,
    "startMeasure": "18",
    "original": "dite...",
-   "translation": "",
-   "ipa": "",
+   "translation": "Tell me…",
+   "ipa": "ˈdi.te",
    "words": [
     [
      "dite...",
-     "",
-     ""
+     "say",
+     "ˈdi.te"
     ]
    ],
    "glossGroups": [],
@@ -623,13 +682,13 @@
    "occurrence": 1,
    "startMeasure": "18",
    "original": "l'ucciderò",
-   "translation": "",
-   "ipa": "",
+   "translation": "I'll kill him",
+   "ipa": "lut.tʃi.deˈrɔ",
    "words": [
     [
      "l'ucciderò",
-     "",
-     ""
+     "I'll kill him",
+     "lut.tʃi.deˈrɔ"
     ]
    ],
    "glossGroups": [],
@@ -642,36 +701,45 @@
    "occurrence": 1,
    "startMeasure": "19",
    "original": "Sentite... ah non ho cor!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Listen… ah, I haven't the heart!",
+   "ipa": "senˈti.te ˈa non ɔ ˈkɔr",
    "words": [
     [
      "Sentite...",
-     "",
-     ""
+     "listen",
+     "senˈti.te"
     ],
     [
      "ah",
-     "",
-     ""
+     "ah",
+     "ˈa"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "ho",
-     "",
-     ""
+     "I have",
+     "ɔ"
     ],
     [
      "cor!",
-     "",
-     ""
+     "heart",
+     "ˈkɔr"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "I haven't the courage"
+    }
+   ],
    "audio": {}
   },
   {
@@ -681,13 +749,13 @@
    "occurrence": 1,
    "startMeasure": "20",
    "original": "Parlate,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Speak,",
+   "ipa": "parˈla.te",
    "words": [
     [
      "Parlate,",
-     "",
-     ""
+     "speak",
+     "parˈla.te"
     ]
    ],
    "glossGroups": [],
@@ -700,23 +768,23 @@
    "occurrence": 1,
    "startMeasure": "20",
    "original": "E un fanciullo...",
-   "translation": "",
-   "ipa": "",
+   "translation": "It's a boy…",
+   "ipa": "ɛ‿un fanˈtʃul.lo",
    "words": [
     [
      "E",
-     "",
-     ""
+     "it is",
+     "ɛ"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "fanciullo...",
-     "",
-     ""
+     "boy",
+     "fanˈtʃul.lo"
     ]
    ],
    "glossGroups": [],
@@ -729,18 +797,18 @@
    "occurrence": 1,
    "startMeasure": "21",
    "original": "un fanciul?",
-   "translation": "",
-   "ipa": "",
+   "translation": "A boy?",
+   "ipa": "un fanˈtʃul",
    "words": [
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "fanciul?",
-     "",
-     ""
+     "boy",
+     "fanˈtʃul"
     ]
    ],
    "glossGroups": [],
@@ -753,61 +821,70 @@
    "occurrence": 1,
    "startMeasure": "22",
    "original": "E mi farà destino ritrovar questo paggio in ogni loco!",
-   "translation": "",
-   "ipa": "",
+   "translation": "And will fate have me find this page again everywhere I go!",
+   "ipa": "e mi faˈra deˈsti.no ri.troˈvar ˈkwe.sto ˈpad.dʒo‿in ˈoɲ.ɲi ˈlɔ.ko",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "farà",
-     "",
-     ""
+     "will make",
+     "faˈra"
     ],
     [
      "destino",
-     "",
-     ""
+     "fate",
+     "deˈsti.no"
     ],
     [
      "ritrovar",
-     "",
-     ""
+     "find again",
+     "ri.troˈvar"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "paggio",
-     "",
-     ""
+     "page",
+     "ˈpad.dʒo"
     ],
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "ogni",
-     "",
-     ""
+     "every",
+     "ˈoɲ.ɲi"
     ],
     [
      "loco!",
-     "",
-     ""
+     "place",
+     "ˈlɔ.ko"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "everywhere"
+    }
+   ],
    "audio": {}
   },
   {
@@ -817,13 +894,13 @@
    "occurrence": 1,
    "startMeasure": "22",
    "original": "Si...",
-   "translation": "",
-   "ipa": "",
+   "translation": "Yes…",
+   "ipa": "ˈsi",
    "words": [
     [
      "Si...",
-     "",
-     ""
+     "yes",
+     "ˈsi"
     ]
    ],
    "glossGroups": [],
@@ -836,13 +913,13 @@
    "occurrence": 1,
    "startMeasure": "22",
    "original": "Cherubino...",
-   "translation": "",
-   "ipa": "",
+   "translation": "Cherubino…",
+   "ipa": "ke.ruˈbi.no",
    "words": [
     [
      "Cherubino...",
-     "",
-     ""
+     "Cherubino",
+     "ke.ruˈbi.no"
     ]
    ],
    "glossGroups": [],
@@ -855,13 +932,13 @@
    "occurrence": 1,
    "startMeasure": "25",
    "original": "Come?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What?",
+   "ipa": "ˈko.me",
    "words": [
     [
      "Come?",
-     "",
-     ""
+     "what, how",
+     "ˈko.me"
     ]
    ],
    "glossGroups": [],
@@ -874,26 +951,35 @@
    "occurrence": 1,
    "startMeasure": "25",
    "original": "non è partito?",
-   "translation": "",
-   "ipa": "",
+   "translation": "hasn't he left?",
+   "ipa": "non ɛ parˈti.to",
    "words": [
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "partito?",
-     "",
-     ""
+     "left",
+     "parˈti.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "hasn't he left"
+    }
+   ],
    "audio": {}
   },
   {
@@ -903,13 +989,13 @@
    "occurrence": 1,
    "startMeasure": "25",
    "original": "scellerati!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Villains!",
+   "ipa": "ʃel.leˈra.ti",
    "words": [
     [
      "scellerati!",
-     "",
-     ""
+     "villains",
+     "ʃel.leˈra.ti"
     ]
    ],
    "glossGroups": [],
@@ -921,77 +1007,99 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "26",
-   "original": "ecco i dubbi spiegati, ecco l'imbroglio, ecco il raggiro onde m'avverte il foglio.",
-   "translation": "",
-   "ipa": "",
+   "original": "ecco i dubbi spiegati, ecco l'imbroglio,",
+   "translation": "there my doubts are explained, there's the intrigue,",
+   "ipa": "ˈɛk.ko‿i ˈdub.bi spjeˈga.ti ˈɛk.ko limˈbrɔʎ.ʎo",
    "words": [
     [
      "ecco",
-     "",
-     ""
+     "here are",
+     "ˈɛk.ko"
     ],
     [
      "i",
-     "",
-     ""
+     "the",
+     "i"
     ],
     [
      "dubbi",
-     "",
-     ""
+     "doubts",
+     "ˈdub.bi"
     ],
     [
      "spiegati,",
-     "",
-     ""
+     "explained",
+     "spjeˈga.ti"
     ],
     [
      "ecco",
-     "",
-     ""
+     "here is",
+     "ˈɛk.ko"
     ],
     [
      "l'imbroglio,",
-     "",
-     ""
-    ],
-    [
-     "ecco",
-     "",
-     ""
-    ],
-    [
-     "il",
-     "",
-     ""
-    ],
-    [
-     "raggiro",
-     "",
-     ""
-    ],
-    [
-     "onde",
-     "",
-     ""
-    ],
-    [
-     "m'avverte",
-     "",
-     ""
-    ],
-    [
-     "il",
-     "",
-     ""
-    ],
-    [
-     "foglio.",
-     "",
-     ""
+     "the intrigue",
+     "limˈbrɔʎ.ʎo"
     ]
    ],
    "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c15_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "ecco il raggiro onde m'avverte il foglio.",
+   "translation": "there's the plot the letter warns me of.",
+   "ipa": "ˈɛk.ko‿il radˈdʒi.ro ˈon.de mavˈvɛr.te‿il ˈfɔʎ.ʎo",
+   "words": [
+    [
+     "ecco",
+     "here is",
+     "ˈɛk.ko"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "raggiro",
+     "plot, trick",
+     "radˈdʒi.ro"
+    ],
+    [
+     "onde",
+     "of which",
+     "ˈon.de"
+    ],
+    [
+     "m'avverte",
+     "warns me",
+     "mavˈvɛr.te"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "foglio.",
+     "letter",
+     "ˈfɔʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "which warns me of"
+    }
+   ],
    "audio": {}
   }
  ]

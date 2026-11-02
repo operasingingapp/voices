@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (quì, perdiamci, entriam). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ, s voiced before voiced consonants (smargiasso); poi falls on one note but is written with both vowels (ˈpɔ.i). Translation literal, for meaning.",
  "phrases": [
   {
    "id": "s1",
@@ -13,38 +13,38 @@
    "occurrence": 1,
    "startMeasure": "1",
    "original": "Oh guarda il demonietto come fugge!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Oh, look at the little devil, how he runs!",
+   "ipa": "ˈɔ ˈgwar.da‿il de.moˈnjet.to ˈko.me ˈfud.dʒe",
    "words": [
     [
      "Oh",
-     "",
-     ""
+     "oh",
+     "ˈɔ"
     ],
     [
      "guarda",
-     "",
-     ""
+     "look at",
+     "ˈgwar.da"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "demonietto",
-     "",
-     ""
+     "little devil",
+     "de.moˈnjet.to"
     ],
     [
      "come",
-     "",
-     ""
+     "how",
+     "ˈko.me"
     ],
     [
      "fugge!",
-     "",
-     ""
+     "he runs away",
+     "ˈfud.dʒe"
     ]
    ],
    "glossGroups": [],
@@ -57,33 +57,33 @@
    "occurrence": 1,
    "startMeasure": "2",
    "original": "è già un miglio lontano,",
-   "translation": "",
-   "ipa": "",
+   "translation": "he's already a mile away,",
+   "ipa": "ɛ ˈdʒa‿un ˈmiʎ.ʎo lonˈta.no",
    "words": [
     [
      "è",
-     "",
-     ""
+     "he is",
+     "ɛ"
     ],
     [
      "già",
-     "",
-     ""
+     "already",
+     "ˈdʒa"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "miglio",
-     "",
-     ""
+     "mile",
+     "ˈmiʎ.ʎo"
     ],
     [
      "lontano,",
-     "",
-     ""
+     "far, away",
+     "lonˈta.no"
     ]
    ],
    "glossGroups": [],
@@ -96,31 +96,40 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "ma non perdiamci invano:",
-   "translation": "",
-   "ipa": "",
+   "translation": "but let's not waste our time:",
+   "ipa": "ma non perˈdjam.tʃi‿iɱˈva.no",
    "words": [
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "perdiamci",
-     "",
-     ""
+     "let's lose ourselves",
+     "perˈdjam.tʃi"
     ],
     [
      "invano:",
-     "",
-     ""
+     "in vain",
+     "iɱˈva.no"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "let's not waste time"
+    }
+   ],
    "audio": {}
   },
   {
@@ -130,23 +139,23 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "entriam nel gabinetto:",
-   "translation": "",
-   "ipa": "",
+   "translation": "let's go into the closet:",
+   "ipa": "enˈtrjam nel ga.biˈnet.to",
    "words": [
     [
      "entriam",
-     "",
-     ""
+     "let's go in",
+     "enˈtrjam"
     ],
     [
      "nel",
-     "",
-     ""
+     "into the",
+     "nel"
     ],
     [
      "gabinetto:",
-     "",
-     ""
+     "closet",
+     "ga.biˈnet.to"
     ]
    ],
    "glossGroups": [],
@@ -159,43 +168,43 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "venga poi lo smargiasso: io quì l'aspetto.",
-   "translation": "",
-   "ipa": "",
+   "translation": "then let the braggart come: I'll wait for him here.",
+   "ipa": "ˈvɛn.ga ˈpɔ.i lo zmarˈdʒas.so ˈi.o ˈkwi laˈspɛt.to",
    "words": [
     [
      "venga",
-     "",
-     ""
+     "let him come",
+     "ˈvɛn.ga"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔ.i"
     ],
     [
      "lo",
-     "",
-     ""
+     "the",
+     "lo"
     ],
     [
      "smargiasso:",
-     "",
-     ""
+     "braggart",
+     "zmarˈdʒas.so"
     ],
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "quì",
-     "",
-     ""
+     "here",
+     "ˈkwi"
     ],
     [
      "l'aspetto.",
-     "",
-     ""
+     "await him",
+     "laˈspɛt.to"
     ]
    ],
    "glossGroups": [],
