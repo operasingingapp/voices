@@ -111,6 +111,24 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "E perchè fosti meco",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: E perchè fosti meco",
+      "editionId": "mozart-e-perche-fosti-meco"
+     },
+     {
+      "title": "È decisa la lite",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: È decisa la lite",
+      "editionId": "mozart-e-decisa-la-lite"
+     },
+     {
+      "title": "Eccovi, o caro amico",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eccovi, o caro amico",
+      "editionId": "mozart-eccovi-o-caro-amico"
      }
     ]
    },
@@ -270,6 +288,24 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "Che imbarazzo è mai questo!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Che imbarazzo è mai questo!",
+      "editionId": "mozart-che-imbarazzo"
+     },
+     {
+      "title": "E perchè fosti meco",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: E perchè fosti meco",
+      "editionId": "mozart-e-perche-fosti-meco"
+     },
+     {
+      "title": "Eccovi, o caro amico",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eccovi, o caro amico",
+      "editionId": "mozart-eccovi-o-caro-amico"
      }
     ]
    },
@@ -380,6 +416,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "Che imbarazzo è mai questo!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Che imbarazzo è mai questo!",
+      "editionId": "mozart-che-imbarazzo"
      }
     ]
    },
@@ -495,6 +537,24 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "Che imbarazzo è mai questo!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Che imbarazzo è mai questo!",
+      "editionId": "mozart-che-imbarazzo"
+     },
+     {
+      "title": "E perchè fosti meco",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: E perchè fosti meco",
+      "editionId": "mozart-e-perche-fosti-meco"
+     },
+     {
+      "title": "È decisa la lite",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: È decisa la lite",
+      "editionId": "mozart-e-decisa-la-lite"
      }
     ]
    },
@@ -550,6 +610,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duettino · Act 2",
       "id": "Act 2: Aprite, presto, aprite",
       "editionId": "mozart-aprite-presto-aprite"
+     },
+     {
+      "title": "Andiam, andiam, bel paggio",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Andiam, andiam, bel paggio",
+      "editionId": "mozart-andiam-bel-paggio"
      }
     ]
    },
@@ -576,6 +642,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "È decisa la lite",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: È decisa la lite",
+      "editionId": "mozart-e-decisa-la-lite"
+     },
+     {
+      "title": "Eccovi, o caro amico",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eccovi, o caro amico",
+      "editionId": "mozart-eccovi-o-caro-amico"
      }
     ]
    },
@@ -609,6 +687,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "È decisa la lite",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: È decisa la lite",
+      "editionId": "mozart-e-decisa-la-lite"
+     },
+     {
+      "title": "Eccovi, o caro amico",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eccovi, o caro amico",
+      "editionId": "mozart-eccovi-o-caro-amico"
      }
     ]
    },
@@ -657,7 +747,14 @@ export const OPERAS: Opera[] = [
     "voice": "Tenor",
     "desc": "The judge who hears Marcellina's case against Figaro.",
     "avatar": "short",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "È decisa la lite",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: È decisa la lite",
+      "editionId": "mozart-e-decisa-la-lite"
+     }
+    ]
    },
    {
     "id": "barbarina",
@@ -665,7 +762,14 @@ export const OPERAS: Opera[] = [
     "voice": "Soprano",
     "desc": "The gardener's young daughter, Susanna's cousin, sweet on Cherubino; the Count has been flirting with her.",
     "avatar": "long",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Andiam, andiam, bel paggio",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Andiam, andiam, bel paggio",
+      "editionId": "mozart-andiam-bel-paggio"
+     }
+    ]
    },
    {
     "id": "antonio",

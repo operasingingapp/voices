@@ -111,6 +111,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-e-perche-fosti-meco": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "The Count asks why Susanna was so cold that morning",
+    about: (
+      <>
+        <p>
+          Score: the recitative “E perchè fosti meco” (vocal score pages 214-215, 18 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-hai-gia-vinta": {
     portrait: "figaro:count",
     opera: "Le nozze di Figaro",
@@ -125,6 +149,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       <>
         <p>
           Score: No. 17, the Count's recitative “Hai già vinta la causa!” and aria “Vedrò, mentr'io sospiro” (vocal score pages 216-223, 160 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-che-imbarazzo": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "The Count puzzles over the day; Susanna comes to him",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Che imbarazzo è mai questo!” (vocal score pages 205-209, 48 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
           Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
@@ -151,6 +199,78 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Score: No. 16, the Duet “Crudel! perchè finora” (vocal score pages 210-214, 72 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain. The piano was read once from the page and once from a scan, every disagreement settled on the page.
           Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (perchè, gioja, si for sì).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-e-decisa-la-lite": {
+    portrait: "figaro:curzio",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "The judge rules that Figaro must pay or marry Marcellina",
+    about: (
+      <>
+        <p>
+          Score: the recitative “È decisa la lite” (vocal score pages 224-227, 38 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-eccovi-o-caro-amico": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free, then Andante a tempo at ♩ = 72",
+    },
+    notePlaceholder: "Bartolo agrees to marry Marcellina at last",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Eccovi, o caro amico” (vocal score pages 245-246, 19 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-andiam-bel-paggio": {
+    portrait: "figaro:barbarina",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Barbarina takes Cherubino home to dress him as a village girl",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Andiam, andiam, bel paggio” (vocal score pages 247-248, 16 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
