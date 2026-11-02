@@ -115,6 +115,28 @@ export class VrvScore {
       this.times = this.tk.renderToTimemap({ includeMeasures: true, includeRests: true }) as TimeEntry[];
     } else this.tk.redoLayout();
     this.host.innerHTML = this.tk.renderToSVG(1);
+    // a page line holds at least three bars (fewer reads as rushing): while a line other than the last holds fewer,
+    // the music is engraved a step smaller, down to under half its size
+    if (!o.strip) {
+      let s = scale;
+      const floor = Math.round(scale * 0.45);
+      for (let k = 0; k < 9; k++) {
+        const sys = [...this.host.querySelectorAll("g.system")];
+        const thin = sys.slice(0, -1).some((g) => g.querySelectorAll("g.measure").length < 3);
+        if (!thin || s <= floor) break;
+        s = Math.max(floor, Math.round(s * 0.9));
+        const upp = 100 / s;
+        this.tk.setOptions({
+          ...options,
+          scale: s,
+          pageWidth: Math.max(800, Math.round(o.width * upp)),
+          pageMarginTop: Math.round(o.topPx * upp),
+          spacingSystem: Math.max(6, Math.round(o.systemGapPx / ((o.zoom * s) / scale) / 10)),
+        });
+        this.tk.redoLayout();
+        this.host.innerHTML = this.tk.renderToSVG(1);
+      }
+    }
     const svg = this.host.querySelector("svg");
     if (svg) svg.classList.add("vrv-score");
     this.indexOnsets();
