@@ -50,6 +50,8 @@ interface Config {
   maxCharsPerRun: number;
   /** lines read differently from the automatic shaping: the written line → exactly what the voice is given */
   sayAs?: Record<string, string>;
+  /** how a single word is spelled for the voice when it is said alone (e.g. "cinque": "Cìnque." for the stress) */
+  wordAs?: Record<string, string>;
   /** a voice to look up by name in the Italian voice library, when voiceId is empty (e.g. "Serena") */
   voiceSearch?: string;
   /** the voice for each language other than Italian, by language code */
@@ -237,7 +239,7 @@ function clipsFor(piece: string, voiceDir: string): { lines: Clip[]; words: Clip
       const t = bare(w.text);
       // an elided word ("vo'") never stands alone: it is heard in its join
       if (!t || /'$/.test(t)) continue;
-      words.push({ key: `w:${t.toLowerCase()}`, kind: "word", text: `${t}.`, file: "" });
+      words.push({ key: `w:${t.toLowerCase()}`, kind: "word", text: config.wordAs?.[t.toLowerCase()] ?? `${t}.`, file: "" });
     }
   }
   return { lines, words };
