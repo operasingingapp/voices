@@ -811,14 +811,14 @@ function PracticeScreen({
   const voiceTypeOf = (p: CompiledEdition["parts"][number]) => edition.roles.find((r) => r.partKey === p.key)?.voiceType ?? "";
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
-  const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol", { voice: 80, piano: 80 });
+  const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol2", { voice: 60, piano: 80 });
   const hearOf = (p: CompiledEdition["parts"][number]) =>
-    p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? true);
+    p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? false);
   const setHear = (p: CompiledEdition["parts"][number], x: boolean) =>
     p === voicePart ? setHearVoice(x) : p.kind === "piano" ? setHearPiano(x) : setLine(p.key, { hear: x });
 
   // "auto" (the default) picks by the role's voice; a choice that no longer exists (the violin) does too
-  const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound", "auto");
+  const [lineChoice, setLineSound] = useLocalSetting<LineChoice>("p:lineSound2", "piano");
   const lineSound: LineInstrument = resolveLine(lineChoice, roleVoiceType, sungOf(voicePart.key));
   // the spoken voice (while we compare voices, more than one may be bundled)
   const [voiceSel, setVoiceSel] = useLocalSetting<string>("p:voice", defaultVoiceId);
@@ -928,7 +928,7 @@ function PracticeScreen({
     engine.setMix(pianoPart.key, { muted: !hearPiano, solo: false, volume: volGain(vol.piano, pianoPart.defaultVolume) });
     for (const p of otherVoices) {
       const ls = lineSets[p.key] ?? {};
-      engine.setMix(p.key, { muted: !(ls.hear ?? true), solo: false, volume: volGain(ls.vol ?? 70, p.defaultVolume) });
+      engine.setMix(p.key, { muted: !(ls.hear ?? false), solo: false, volume: volGain(ls.vol ?? 70, p.defaultVolume) });
     }
   }, [engine, hearVoice, hearPiano, vol, lineSets]);
   // the sung line's lowest and highest notes, so an instrument can take it an octave down when needed
@@ -1789,6 +1789,7 @@ function PracticeScreen({
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
     { id: "more", part: "Sing", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
     { id: "mute", part: "Sing", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Tap your face, then Mute. Now you sing it.", done: () => !hearVoice },
+    { id: "others", part: "Sing", sel: [".bar-others .part:first-child"], title: "Add another singer", text: "The other roles are silent. Tap a face, then Play this line. Hold a face to choose piano or another sound.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
     { id: "piano", part: "Sing", sel: [".piano-group .pg-btn:nth-child(2)"], title: pianoShownNow ? "Hide the piano part" : "Show the piano part", text: pianoShownNow ? "Tap the eye to see only the voices." : "Tap the eye to add the piano to the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
@@ -2269,7 +2270,7 @@ function PracticeScreen({
           const p = isPiano ? pianoPart : voiceParts.find((x) => x.key === faceMenu.key);
           if (!p) return null;
           const mine = p === voicePart;
-          const on = mine ? hearVoice : isPiano ? hearPiano : (lineSets[p.key]?.hear ?? true);
+          const on = mine ? hearVoice : isPiano ? hearPiano : (lineSets[p.key]?.hear ?? false);
           const shown = showOf(p);
           const faded = isPiano ? pianoFaded : !!lineSets[p.key]?.fade;
           const name = isPiano ? "Piano" : mine ? roleName : p.shortLabel;
@@ -2775,7 +2776,7 @@ function PracticeScreen({
             .map(partByXml)
             .filter((p) => otherVoices.includes(p))
             .map((p) => {
-              const on = lineSets[p.key]?.hear ?? true;
+              const on = lineSets[p.key]?.hear ?? false;
               return (
                 <button
                   key={p.key}
@@ -3008,12 +3009,12 @@ function PracticeScreen({
                   </div>
                 </div>
               )}
-              {(vol.voice !== 80 || vol.piano !== 80 || Object.keys(lineSets).length > 0 || order.length > 0) && (
+              {(vol.voice !== 60 || vol.piano !== 80 || Object.keys(lineSets).length > 0 || order.length > 0) && (
                 <button
                   type="button"
                   className="mix-reset"
                   onClick={() => {
-                    setVol({ voice: 80, piano: 80 });
+                    setVol({ voice: 60, piano: 80 });
                     setLineSets({});
                     setOrder([]);
                   }}

@@ -16,24 +16,23 @@ export const LINE_SOUNDS: { id: LineInstrument; label: string }[] = [
   { id: "clarinet", label: "Clarinet" },
   { id: "flute", label: "Flute" },
   { id: "english-horn", label: "English horn" },
-  { id: "bassoon", label: "Bassoon" },
 ];
 
 /**
  * The automatic choice: a wind instrument singing in the voice's own range. Flute for sopranos (clear and sweet at the top), English horn
- * for mezzos and contraltos, clarinet for tenors (the bassoon is thin at a tenor's top), bassoon for
- * baritones and basses (a contrabassoon would sound an octave lower and blur the pitch).
+ * for mezzos and contraltos, clarinet for tenors (the bassoon is thin at a tenor's top), piano for
+ * baritones and basses (the bassoon was not clear enough, above all in ensembles).
  */
 export function autoInstrument(voiceType: string): LineInstrument {
   const v = voiceType.toLowerCase();
   if (v.startsWith("mezzo") || v.startsWith("contralto") || v.startsWith("alto")) return "english-horn";
   if (v.startsWith("soprano")) return "flute";
   if (v.startsWith("tenor")) return "clarinet";
-  if (v.startsWith("bari") || v.startsWith("bass")) return "bassoon";
+  if (v.startsWith("bari") || v.startsWith("bass")) return "piano";
   return "piano";
 }
 
-export const AUTO_NOTE = "Flute for sopranos, English horn for mezzos and contraltos, clarinet for tenors, bassoon for baritones and basses.";
+export const AUTO_NOTE = "Flute for sopranos, English horn for mezzos and contraltos, clarinet for tenors, piano for baritones and basses.";
 
 /** the instrument a choice means; `sung`: this line has a recorded singer (then "Automatic" is the singer) */
 export function resolveLine(choice: string, voiceType: string, sung = false): LineInstrument {

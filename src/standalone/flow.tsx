@@ -1586,7 +1586,7 @@ function Toggle({ on, onChange, label, hint }: { on: boolean; onChange: (v: bool
 
 /** Settings: how practice sounds and looks by default, and the data kept on this device. */
 export function ProfilePage({ ctx }: { ctx: Ctx }) {
-  const [line, setLine] = useStored<LineChoice>("p:lineSound", "auto");
+  const [line, setLine] = useStored<LineChoice>("p:lineSound2", "piano");
   const [ipa, setIpa] = useStored("p:ipa", false);
   const [tr, setTr] = useStored("p:tr", true);
   const [tips, setTips] = useStored("p:tipsBar", true);
