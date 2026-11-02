@@ -1,0 +1,658 @@
+{
+ "editionId": "mozart-queste-sono-madama",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (Madame for Madama; narrate mi printed as two words for narratemi; si for sì; loco for luogo; ch'han for che hanno). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced, nasal assimilation across words; io, mio, voi, dio are sung with the final vowel as a separate syllable (ˈi.o, ˈmi.o, ˈvo.i); ha is [a]. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "r1",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Queste sono, Madame,",
+   "translation": "These, Madam,",
+   "ipa": "ˈkwes.te ˈso.no maˈda.me",
+   "words": [
+    [
+     "Queste",
+     "these",
+     "ˈkwes.te"
+    ],
+    [
+     "sono,",
+     "are",
+     "ˈso.no"
+    ],
+    [
+     "Madame,",
+     "Madam",
+     "maˈda.me"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r1_2",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "le ragazze del loco che il poco",
+   "translation": "are the girls of the village, who the little",
+   "ipa": "le raˈgat.tse del ˈlɔ.ko ke‿il ˈpɔ.ko",
+   "words": [
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "ragazze",
+     "girls",
+     "raˈgat.tse"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "loco",
+     "place, village",
+     "ˈlɔ.ko"
+    ],
+    [
+     "che",
+     "who",
+     "ke"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "poco",
+     "little",
+     "ˈpɔ.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r1_3",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "ch'han vi vengono ad offrire,",
+   "translation": "they have come to offer you,",
+   "ipa": "ˈkan vi ˈvɛn.go.no‿ad ofˈfri.re",
+   "words": [
+    [
+     "ch'han",
+     "that they have",
+     "ˈkan"
+    ],
+    [
+     "vi",
+     "to you",
+     "vi"
+    ],
+    [
+     "vengono",
+     "come",
+     "ˈvɛn.go.no"
+    ],
+    [
+     "ad",
+     "to",
+     "ad"
+    ],
+    [
+     "offrire,",
+     "offer",
+     "ofˈfri.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "come to offer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1_4",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "e vi chiedon perdon del loro ardire.",
+   "translation": "and they ask your pardon for their boldness.",
+   "ipa": "e vi ˈkjɛ.don perˈdon del ˈlo.ro‿arˈdi.re",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "vi",
+     "of you",
+     "vi"
+    ],
+    [
+     "chiedon",
+     "ask",
+     "ˈkjɛ.don"
+    ],
+    [
+     "perdon",
+     "pardon",
+     "perˈdon"
+    ],
+    [
+     "del",
+     "for the",
+     "del"
+    ],
+    [
+     "loro",
+     "their",
+     "ˈlo.ro"
+    ],
+    [
+     "ardire.",
+     "boldness",
+     "arˈdi.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "ask your pardon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t1",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "O brave!",
+   "translation": "Oh, well done!",
+   "ipa": "o ˈbra.ve",
+   "words": [
+    [
+     "O",
+     "oh",
+     "o"
+    ],
+    [
+     "brave!",
+     "good girls",
+     "ˈbra.ve"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "vi ringrazio.",
+   "translation": "I thank you.",
+   "ipa": "vi rinˈgrat.tsjo",
+   "words": [
+    [
+     "vi",
+     "you",
+     "vi"
+    ],
+    [
+     "ringrazio.",
+     "I thank",
+     "rinˈgrat.tsjo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s1",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Come sono vezzose.",
+   "translation": "How charming they are.",
+   "ipa": "ˈko.me ˈso.no vetˈtso.ze",
+   "words": [
+    [
+     "Come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "sono",
+     "they are",
+     "ˈso.no"
+    ],
+    [
+     "vezzose.",
+     "charming",
+     "vetˈtso.ze"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t3",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "E chi è, narrate mi,",
+   "translation": "And who, tell me,",
+   "ipa": "e ˈki ˈɛ narˈra.te mi",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "chi",
+     "who",
+     "ˈki"
+    ],
+    [
+     "è,",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "narrate",
+     "tell",
+     "narˈra.te"
+    ],
+    [
+     "mi,",
+     "me",
+     "mi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "tell me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t3_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "quell' amabil fanciulla ch'ha l'aria si modesta?",
+   "translation": "is that lovely girl who looks so modest?",
+   "ipa": "kwel aˈma.bil fanˈtʃul.la ˈka ˈla.rja ˈsi moˈdɛs.ta",
+   "words": [
+    [
+     "quell'",
+     "that",
+     "kwel"
+    ],
+    [
+     "amabil",
+     "lovely",
+     "aˈma.bil"
+    ],
+    [
+     "fanciulla",
+     "girl",
+     "fanˈtʃul.la"
+    ],
+    [
+     "ch'ha",
+     "who has",
+     "ˈka"
+    ],
+    [
+     "l'aria",
+     "the air",
+     "ˈla.rja"
+    ],
+    [
+     "si",
+     "so",
+     "ˈsi"
+    ],
+    [
+     "modesta?",
+     "modest",
+     "moˈdɛs.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "who has the look"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Ell' è una mia cugina e per le nozze è venuta stasera.",
+   "translation": "She is a cousin of mine, and she came this evening for the wedding.",
+   "ipa": "ɛl ˈɛ‿ˈu.na ˈmi.a kuˈdʒi.na e per le ˈnɔt.tse ɛ veˈnu.ta staˈse.ra",
+   "words": [
+    [
+     "Ell'",
+     "she",
+     "ɛl"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "cugina",
+     "cousin",
+     "kuˈdʒi.na"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "nozze",
+     "wedding",
+     "ˈnɔt.tse"
+    ],
+    [
+     "è",
+     "has",
+     "ɛ"
+    ],
+    [
+     "venuta",
+     "come",
+     "veˈnu.ta"
+    ],
+    [
+     "stasera.",
+     "this evening",
+     "staˈse.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      9,
+      10
+     ],
+     "gloss": "has come"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t4",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Onoriamo la bella forestiera, venite qui",
+   "translation": "Let us honour the lovely stranger: come here,",
+   "ipa": "o.noˈrja.mo la ˈbɛl.la fo.resˈtjɛ.ra veˈni.te ˈkwi",
+   "words": [
+    [
+     "Onoriamo",
+     "let us honour",
+     "o.noˈrja.mo"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "bella",
+     "lovely",
+     "ˈbɛl.la"
+    ],
+    [
+     "forestiera,",
+     "stranger",
+     "fo.resˈtjɛ.ra"
+    ],
+    [
+     "venite",
+     "come",
+     "veˈni.te"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t5",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "datemi i vostri fiori.",
+   "translation": "give me your flowers.",
+   "ipa": "ˈda.te.mi‿i ˈvɔs.tri ˈfjo.ri",
+   "words": [
+    [
+     "datemi",
+     "give me",
+     "ˈda.te.mi"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "vostri",
+     "your",
+     "ˈvɔs.tri"
+    ],
+    [
+     "fiori.",
+     "flowers",
+     "ˈfjo.ri"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t6",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Come arrossi!",
+   "translation": "How you blush!",
+   "ipa": "ˈko.me‿arˈros.si",
+   "words": [
+    [
+     "Come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "arrossi!",
+     "you blush",
+     "arˈros.si"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t7",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Susanna, e non ti pare che somigli ad alcuno?",
+   "translation": "Susanna, don't you think she looks like someone?",
+   "ipa": "suˈzan.na e ˈnon ti ˈpa.re ke soˈmiʎ.ʎi‿ad alˈku.no",
+   "words": [
+    [
+     "Susanna,",
+     "Susanna",
+     "suˈzan.na"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "non",
+     "not",
+     "ˈnon"
+    ],
+    [
+     "ti",
+     "to you",
+     "ti"
+    ],
+    [
+     "pare",
+     "seems",
+     "ˈpa.re"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "somigli",
+     "she resembles",
+     "soˈmiʎ.ʎi"
+    ],
+    [
+     "ad",
+     "to",
+     "ad"
+    ],
+    [
+     "alcuno?",
+     "someone",
+     "alˈku.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "it seems to you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Al naturale.",
+   "translation": "To the life.",
+   "ipa": "al na.tuˈra.le",
+   "words": [
+    [
+     "Al",
+     "to the",
+     "al"
+    ],
+    [
+     "naturale.",
+     "natural",
+     "na.tuˈra.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "to the life"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

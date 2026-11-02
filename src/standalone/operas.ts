@@ -135,6 +135,12 @@ export const OPERAS: Opera[] = [
       "kind": "Sestetto · Act 3",
       "id": "Act 3: Riconosci in questo amplesso",
       "editionId": "mozart-riconosci-in-questo-amplesso"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    },
@@ -318,6 +324,36 @@ export const OPERAS: Opera[] = [
       "kind": "Sestetto · Act 3",
       "id": "Act 3: Riconosci in questo amplesso",
       "editionId": "mozart-riconosci-in-questo-amplesso"
+     },
+     {
+      "title": "Cosa mi narri?",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Cosa mi narri?",
+      "editionId": "mozart-cosa-mi-narri"
+     },
+     {
+      "title": "Sull’aria",
+      "kind": "Duettino · Act 3",
+      "id": "Act 3: Sull’aria",
+      "editionId": "mozart-sullaria"
+     },
+     {
+      "title": "Piegato è il foglio",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Piegato è il foglio",
+      "editionId": "mozart-piegato-e-il-foglio"
+     },
+     {
+      "title": "Queste sono, Madama",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Queste sono, Madama",
+      "editionId": "mozart-queste-sono-madama"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    },
@@ -434,6 +470,36 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Che imbarazzo è mai questo!",
       "editionId": "mozart-che-imbarazzo"
+     },
+     {
+      "title": "Cosa mi narri?",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Cosa mi narri?",
+      "editionId": "mozart-cosa-mi-narri"
+     },
+     {
+      "title": "Sull’aria",
+      "kind": "Duettino · Act 3",
+      "id": "Act 3: Sull’aria",
+      "editionId": "mozart-sullaria"
+     },
+     {
+      "title": "Piegato è il foglio",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Piegato è il foglio",
+      "editionId": "mozart-piegato-e-il-foglio"
+     },
+     {
+      "title": "Queste sono, Madama",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Queste sono, Madama",
+      "editionId": "mozart-queste-sono-madama"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    },
@@ -573,6 +639,18 @@ export const OPERAS: Opera[] = [
       "kind": "Sestetto · Act 3",
       "id": "Act 3: Riconosci in questo amplesso",
       "editionId": "mozart-riconosci-in-questo-amplesso"
+     },
+     {
+      "title": "Io vi dico, signor",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Io vi dico, signor",
+      "editionId": "mozart-io-vi-dico-signor"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    },
@@ -634,6 +712,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Andiam, andiam, bel paggio",
       "editionId": "mozart-andiam-bel-paggio"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    },
@@ -804,6 +888,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Andiam, andiam, bel paggio",
       "editionId": "mozart-andiam-bel-paggio"
+     },
+     {
+      "title": "Queste sono, Madama",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Queste sono, Madama",
+      "editionId": "mozart-queste-sono-madama"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    },
@@ -819,6 +915,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Ah! signor, signor!",
       "editionId": "mozart-ah-signor-signor"
+     },
+     {
+      "title": "Io vi dico, signor",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Io vi dico, signor",
+      "editionId": "mozart-io-vi-dico-signor"
+     },
+     {
+      "title": "Eh, cospettate!",
+      "kind": "Recitative · Act 3",
+      "id": "Act 3: Eh, cospettate!",
+      "editionId": "mozart-eh-cospettate"
      }
     ]
    }
@@ -2059,7 +2167,7 @@ export interface RunningNumber {
 }
 /** the instrumental numbers with music in the app: opera → the running order's title → edition */
 const INSTRUMENTAL: Record<string, Record<string, string>> = {
-  figaro: { Sinfonia: "mozart-figaro-sinfonia", "Giovani liete": "mozart-giovani-liete", "Giovani liete (repeated)": "mozart-giovani-liete-reprise" },
+  figaro: { Sinfonia: "mozart-figaro-sinfonia", "Giovani liete": "mozart-giovani-liete", "Giovani liete (repeated)": "mozart-giovani-liete-reprise", "Ricevete, o padroncina": "mozart-ricevete-o-padroncina" },
 };
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {

@@ -311,6 +311,174 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-io-vi-dico-signor": {
+    portrait: "figaro:antonio",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Antonio tells the Count that Cherubino is still in the castle, dressed as a girl",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Io vi dico, signor” (vocal score pages 254-255, 12 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-cosa-mi-narri": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Susanna reports the Count’s anger; the Countess decides to write him a note",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Cosa mi narri?” (vocal score pages 255-256, 13 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-sullaria": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Duettino",
+    facts: {
+      key: "B flat major",
+      time: "6/8",
+      tempo: "Allegretto at ♩. = 52 (about 3 minutes)",
+    },
+    notePlaceholder: "The Countess dictates a letter inviting the Count to the garden; Susanna writes it (No. 20)",
+    about: (
+      <>
+        <p>
+          Score: the duettino “Sull’aria” (vocal score pages 257-259, 62 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-piegato-e-il-foglio": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "The letter is folded and sealed with a pin",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Piegato è il foglio” (vocal score pages 259-260, 11 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ricevete-o-padroncina": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Chorus",
+    facts: {
+      key: "G major",
+      time: "6/8",
+      tempo: "Grazioso at ♩. = 56 (about 1 minute)",
+    },
+    notePlaceholder: "The village girls bring flowers to the Countess (No. 21)",
+    about: (
+      <>
+        <p>
+          Score: the chorus “Ricevete, o padroncina” (vocal score pages 260-262, 37 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-queste-sono-madama": {
+    portrait: "figaro:barbarina",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Barbarina presents the girls; the Countess notices one shy “girl”",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Queste sono, Madama” (vocal score pages 262-263, 17 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-eh-cospettate": {
+    portrait: "figaro:antonio",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Antonio unmasks Cherubino; Barbarina asks to marry him",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Eh, cospettate!” (vocal score pages 264-270, 60 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

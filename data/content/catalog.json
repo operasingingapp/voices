@@ -458,6 +458,40 @@
     }
   },
   {
+    "editionId": "mozart-cosa-mi-narri",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-cosa-mi-narri@1.0.0-klengel#9c97f054f0",
+    "title": "Cosa mi narri?",
+    "subtitle": "Susanna and the Countess: recitative from Le nozze di Figaro, Act 3",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      }
+    ],
+    "measures": 13,
+    "durationSec": 29,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 11,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-cosa-sento",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-cosa-sento@1.0.0-klengel#1781654a29",
@@ -856,6 +890,70 @@
     }
   },
   {
+    "editionId": "mozart-eh-cospettate",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-eh-cospettate@1.0.0-klengel#dfa52b3fb0",
+    "title": "Eh, cospettate!",
+    "subtitle": "Antonio, the Count, Figaro, the Countess, Susanna, Barbarina and Cherubino: recitative from Le nozze di Figaro, Act 3",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      },
+      {
+        "id": "barbarina",
+        "name": "Barbarina",
+        "voiceType": "Soprano",
+        "partKey": "barbarina"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "antonio",
+        "name": "Antonio",
+        "voiceType": "Bass",
+        "partKey": "antonio"
+      }
+    ],
+    "measures": 60,
+    "durationSec": 132,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 59,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-esci-omai-garzon-malnato",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-esci-omai-garzon-malnato@1.0.0-klengel#30373e5d0b",
@@ -1083,6 +1181,40 @@
     }
   },
   {
+    "editionId": "mozart-io-vi-dico-signor",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-io-vi-dico-signor@1.0.0-klengel#391c441b81",
+    "title": "Io vi dico, signor",
+    "subtitle": "Antonio and the Count: recitative from Le nozze di Figaro, Act 3",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "antonio",
+        "name": "Antonio",
+        "voiceType": "Bass",
+        "partKey": "antonio"
+      }
+    ],
+    "measures": 12,
+    "durationSec": 27,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-la-vendetta",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-la-vendetta@1.0.0-klengel#54e1dab951",
@@ -1229,6 +1361,40 @@
     }
   },
   {
+    "editionId": "mozart-piegato-e-il-foglio",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-piegato-e-il-foglio@1.0.0-klengel#d1d4b09e86",
+    "title": "Piegato è il foglio",
+    "subtitle": "Susanna and the Countess: recitative from Le nozze di Figaro, Act 3",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      }
+    ],
+    "measures": 11,
+    "durationSec": 24,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 9,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-porgi-amor",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-porgi-amor@1.0.0-klengel#952b34123e",
@@ -1338,6 +1504,80 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 27,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-queste-sono-madama",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-queste-sono-madama@1.0.0-klengel#c26943535e",
+    "title": "Queste sono, Madama",
+    "subtitle": "Barbarina, the Countess and Susanna: recitative from Le nozze di Figaro, Act 3",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "barbarina",
+        "name": "Barbarina",
+        "voiceType": "Soprano",
+        "partKey": "barbarina"
+      }
+    ],
+    "measures": 17,
+    "durationSec": 38,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 15,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-ricevete-o-padroncina",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-ricevete-o-padroncina@1.0.0-klengel#4fc07add63",
+    "title": "Ricevete, o padroncina",
+    "subtitle": "Chorus of village girls: chorus from Le nozze di Figaro, Act 3",
+    "kind": "chorus",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "soprano-1",
+        "name": "Chorus Soprano I",
+        "voiceType": "Soprano",
+        "partKey": "soprano-1"
+      },
+      {
+        "id": "soprano-2",
+        "name": "Chorus Soprano II",
+        "voiceType": "Soprano",
+        "partKey": "soprano-2"
+      }
+    ],
+    "measures": 37,
+    "durationSec": 79,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 10,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1544,6 +1784,40 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-sullaria",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-sullaria@1.0.0-klengel#1eb59d7522",
+    "title": "Sull’aria",
+    "subtitle": "The Countess and Susanna: duettino from Le nozze di Figaro, Act 3",
+    "kind": "duettino",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      }
+    ],
+    "measures": 62,
+    "durationSec": 143,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 27,
       "withAudio": 0,
       "reviewed": 0
     }
