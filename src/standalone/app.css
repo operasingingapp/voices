@@ -8301,3 +8301,28 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .lane-label.lane-label--side svg {
   flex: none;
 }
+
+/* Verovio's line: a singer's face in the gutter instead of the name, so nothing reaches the clef */
+.lane-label.lane-label--side.has-face {
+  padding: 2px 2px 2px 2px;
+  gap: 0;
+}
+.lane-face {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--fog);
+  flex: none;
+}
+.lane-face.is-you {
+  box-shadow: 0 0 0 2px var(--now-mark, #2e7d4f);
+}
+.lane-face img,
+.lane-face svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

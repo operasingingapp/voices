@@ -2192,6 +2192,12 @@ function PracticeScreen({
           perf={perf}
           visibleXmlParts={hiddenIds.length ? orderedIds.filter((x) => !hiddenIds.includes(x)) : null}
           laneLabels={Object.fromEntries(orderedIds.map((x) => [x, lineName(partByXml(x)) + (x === voicePart.source.xmlPartId ? " · you" : "")]))}
+          laneFaces={Object.fromEntries(
+            orderedIds
+              .filter((x) => partByXml(x).kind !== "piano" && partByXml(x).roleId)
+              .map((x) => [x, <RoleFace k={`${info.portrait.split(":")[0]}:${partByXml(x).roleId}`} />]),
+          )}
+          laneYou={voicePart.source.xmlPartId}
           onLaneLabel={(xid, el) => {
             const r = el.getBoundingClientRect();
             setLaneMenu((m) => (m?.xid === xid ? null : { xid, left: r.left, top: r.bottom + 6 }));

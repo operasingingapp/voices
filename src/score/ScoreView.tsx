@@ -90,6 +90,10 @@ interface Props {
   ink?: string;
   /** strip: a name over each part's staff (xml part id → name), kept in view at the left while the score scrolls */
   laneLabels?: Record<string, string>;
+  /** in Verovio's line, a part's face stands in the gutter instead of its name (the name stays as the tooltip) */
+  laneFaces?: Record<string, React.ReactNode>;
+  /** the part sung by you: its face gets a ring */
+  laneYou?: string;
   /** tapping a part's name (strip): e.g. a menu to move or hide that part */
   onLaneLabel?: (partId: string, el: HTMLElement) => void;
   /** parts given a soft tint across the score (xml part ids): the line you sing, easy to find */
@@ -347,8 +351,8 @@ export function ScoreView(props: Props) {
               <button
                 key={`lbl-${l.partId}`}
                 type="button"
-                className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}`}
-                style={{ top: labelTop(l) }}
+                className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}${useVrvRef.current && props.laneFaces?.[l.partId] ? " has-face" : ""}`}
+                style={{ top: labelTop(l) - (useVrvRef.current && props.laneFaces?.[l.partId] ? 4 : 0) }}
                 onClick={(e) => {
                   e.stopPropagation();
                   props.onLaneLabel!(l.partId, e.currentTarget);
@@ -356,7 +360,13 @@ export function ScoreView(props: Props) {
                 onPointerUp={(e) => e.stopPropagation()}
                 aria-label={`${props.laneLabels![l.partId]}: move, hide or mute this line`}
               >
-                {props.laneLabels![l.partId]}
+                {useVrvRef.current && props.laneFaces?.[l.partId] ? (
+                  <span className={`lane-face${props.laneYou === l.partId ? " is-you" : ""}`} title={props.laneLabels![l.partId]}>
+                    {props.laneFaces[l.partId]}
+                  </span>
+                ) : (
+                  props.laneLabels![l.partId]
+                )}
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2.2" />
                 </svg>
