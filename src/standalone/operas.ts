@@ -129,6 +129,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eccovi, o caro amico",
       "editionId": "mozart-eccovi-o-caro-amico"
+     },
+     {
+      "title": "Riconosci in questo amplesso",
+      "kind": "Sestetto · Act 3",
+      "id": "Act 3: Riconosci in questo amplesso",
+      "editionId": "mozart-riconosci-in-questo-amplesso"
      }
     ]
    },
@@ -306,6 +312,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eccovi, o caro amico",
       "editionId": "mozart-eccovi-o-caro-amico"
+     },
+     {
+      "title": "Riconosci in questo amplesso",
+      "kind": "Sestetto · Act 3",
+      "id": "Act 3: Riconosci in questo amplesso",
+      "editionId": "mozart-riconosci-in-questo-amplesso"
      }
     ]
    },
@@ -555,6 +567,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: È decisa la lite",
       "editionId": "mozart-e-decisa-la-lite"
+     },
+     {
+      "title": "Riconosci in questo amplesso",
+      "kind": "Sestetto · Act 3",
+      "id": "Act 3: Riconosci in questo amplesso",
+      "editionId": "mozart-riconosci-in-questo-amplesso"
      }
     ]
    },
@@ -654,6 +672,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eccovi, o caro amico",
       "editionId": "mozart-eccovi-o-caro-amico"
+     },
+     {
+      "title": "Riconosci in questo amplesso",
+      "kind": "Sestetto · Act 3",
+      "id": "Act 3: Riconosci in questo amplesso",
+      "editionId": "mozart-riconosci-in-questo-amplesso"
      }
     ]
    },
@@ -699,6 +723,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eccovi, o caro amico",
       "editionId": "mozart-eccovi-o-caro-amico"
+     },
+     {
+      "title": "Riconosci in questo amplesso",
+      "kind": "Sestetto · Act 3",
+      "id": "Act 3: Riconosci in questo amplesso",
+      "editionId": "mozart-riconosci-in-questo-amplesso"
      }
     ]
    },
@@ -753,6 +783,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: È decisa la lite",
       "editionId": "mozart-e-decisa-la-lite"
+     },
+     {
+      "title": "Riconosci in questo amplesso",
+      "kind": "Sestetto · Act 3",
+      "id": "Act 3: Riconosci in questo amplesso",
+      "editionId": "mozart-riconosci-in-questo-amplesso"
      }
     ]
    },

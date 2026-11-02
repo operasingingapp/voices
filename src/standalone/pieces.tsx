@@ -287,6 +287,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-riconosci-in-questo-amplesso": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Sestetto",
+    facts: {
+      key: "F major",
+      time: "4/4",
+      tempo: "Allegro moderato at ♩ = 126 (about 5 minutes)",
+    },
+    notePlaceholder: "Marcellina and Bartolo turn out to be Figaro's parents",
+    about: (
+      <>
+        <p>
+          Score: No. 18, the sextet “Riconosci in questo amplesso” (vocal score pages 228-244, 140 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
