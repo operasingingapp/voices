@@ -105,6 +105,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Ah! signor, signor!",
       "editionId": "mozart-ah-signor-signor"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },
@@ -258,6 +264,12 @@ export const OPERAS: Opera[] = [
       "kind": "Terzetto · Act 2",
       "id": "Act 2: Susanna, or via, sortite",
       "editionId": "mozart-susanna-or-via-sortite"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },
@@ -362,6 +374,12 @@ export const OPERAS: Opera[] = [
       "kind": "Terzetto · Act 2",
       "id": "Act 2: Susanna, or via, sortite",
       "editionId": "mozart-susanna-or-via-sortite"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },
@@ -471,6 +489,12 @@ export const OPERAS: Opera[] = [
       "kind": "Terzetto · Act 2",
       "id": "Act 2: Susanna, or via, sortite",
       "editionId": "mozart-susanna-or-via-sortite"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },
@@ -546,6 +570,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Ed aspettaste il giorno",
       "editionId": "mozart-ed-aspettaste-il-giorno"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },
@@ -573,6 +603,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duettino · Act 1",
       "id": "Act 1: Via resti servita",
       "editionId": "mozart-via-resti-servita"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },
@@ -606,6 +642,12 @@ export const OPERAS: Opera[] = [
       "kind": "Terzetto · Act 1",
       "id": "Act 1: Cosa sento!",
       "editionId": "mozart-cosa-sento"
+     },
+     {
+      "title": "Voi, signor, che giusto siete",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Voi, signor, che giusto siete",
+      "editionId": "mozart-voi-signor-che-giusto-siete"
      }
     ]
    },

@@ -677,6 +677,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-voi-signor-che-giusto-siete": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "E flat major",
+      time: "4/4",
+      tempo: "Allegro assai at ♩ = 132, then Più Allegro at ♩ = 152 and Prestissimo at ♩ = 176 (about 5 minutes)",
+    },
+    notePlaceholder: "Marcellina, Bartolo and Basilio arrive to claim Figaro's promise of marriage",
+    about: (
+      <>
+        <p>
+          Score: the fifth and last section of the Act 2 Finale, No. 15, from the entrance of Marcellina, Bartolo and Basilio “Voi, signor, che giusto siete” to the end of the act (vocal score pages 186-204, 243 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-signori-di-fuori": {
     portrait: "figaro:figaro",
     opera: "Le nozze di Figaro",
