@@ -8186,11 +8186,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   }
 }
 /* Telling yours from theirs without fading theirs into illegibility (the other singer's line is the cue you listen
-   for, so it must stay readable): yours carry three marks at once (a band in your colour, a solid bar in your
-   colour at its edge, and the strongest ink); theirs sit on white, in a grey that still reads easily. */
+   for, so it must stay readable): yours sit on a soft band in your colour, in the strongest ink and a touch heavier;
+   theirs sit on white, in a grey that still reads easily. No accent bar at the edge: the text itself does the telling. */
 .words-view .w-line.script.mine {
   background: var(--tone-soft, #f1e9fb);
-  box-shadow: inset 4px 0 0 var(--you, #7c5cbf);
 }
 .words-view .w-line.script.mine:hover {
   background: color-mix(in srgb, var(--tone-strong, #e2d4f5) 45%, var(--tone-soft, #f1e9fb));
@@ -8367,3 +8366,15 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* Arrange: the speaker (mute) and the eye (show in the score) side by side */
 .mix-toggles { display: flex; align-items: center; gap: 2px; }
 @media (max-width: 640px) { .practice .mix-pop .mix-line .mix-toggles { grid-area: m; justify-self: end; } }
+
+/* Words: your speeches carry your role's name and a small "you", in the same style as Arrange */
+.w-who-you {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--ink-muted);
+}

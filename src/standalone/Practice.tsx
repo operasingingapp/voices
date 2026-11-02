@@ -2549,7 +2549,10 @@ function PracticeScreen({
                           <span className="w-who-face" aria-hidden="true">
                             <RoleFace k={`${info.portrait.split(":")[0]}:${role}`} />
                           </span>
-                          <span className="w-who-name">{mine ? "You" : singer}</span>
+                          <span className="w-who-name">
+                            {singer}
+                            {mine && <em className="w-who-you">you</em>}
+                          </span>
                         </span>
                       )}
                     </span>
