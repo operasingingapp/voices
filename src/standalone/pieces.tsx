@@ -479,6 +479,102 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ecco-la-marcia": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "C major",
+      time: "4/4 (Marcia), 2/4, 3/4 (Andante), 4/4, 2/4",
+      tempo: "Marcia ♩ = 100, Allegretto ♩ = 120, Andante ♩ = 72 (about 9 minutes)",
+    },
+    notePlaceholder: "The double wedding procession; the Count pricks his finger on Susanna’s note (No. 22)",
+    about: (
+      <>
+        <p>
+          Score: the finale “Ecco la marcia” (vocal score pages 270-281, 229 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-lho-perduta": {
+    portrait: "figaro:barbarina",
+    opera: "Le nozze di Figaro",
+    kind: "Cavatina",
+    facts: {
+      key: "F minor",
+      time: "6/8",
+      tempo: "Andante ♩. = 50 (about 2 minutes)",
+    },
+    notePlaceholder: "Barbarina has lost the pin she was to take to Susanna (No. 23)",
+    about: (
+      <>
+        <p>
+          Score: the cavatina “L’ho perduta” (vocal score pages 282-283, 36 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-barbarina-coshai": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Figaro learns of the pin and thinks Susanna is deceiving him",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Barbarina, cos’hai?” (vocal score pages 283-288, 50 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-presto-avvertiam-susanna": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Marcellina decides to warn Susanna",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Presto avvertiam Susanna” (vocal score pages 288, 11 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

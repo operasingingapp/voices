@@ -141,6 +141,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "Ecco la marcia",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ecco la marcia",
+      "editionId": "mozart-ecco-la-marcia"
+     },
+     {
+      "title": "Barbarina, cos’hai?",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Barbarina, cos’hai?",
+      "editionId": "mozart-barbarina-coshai"
      }
     ]
    },
@@ -354,6 +366,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "Ecco la marcia",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ecco la marcia",
+      "editionId": "mozart-ecco-la-marcia"
      }
     ]
    },
@@ -500,6 +518,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "Ecco la marcia",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ecco la marcia",
+      "editionId": "mozart-ecco-la-marcia"
      }
     ]
    },
@@ -651,6 +675,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "Ecco la marcia",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ecco la marcia",
+      "editionId": "mozart-ecco-la-marcia"
      }
     ]
    },
@@ -813,6 +843,18 @@ export const OPERAS: Opera[] = [
       "kind": "Sestetto · Act 3",
       "id": "Act 3: Riconosci in questo amplesso",
       "editionId": "mozart-riconosci-in-questo-amplesso"
+     },
+     {
+      "title": "Barbarina, cos’hai?",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Barbarina, cos’hai?",
+      "editionId": "mozart-barbarina-coshai"
+     },
+     {
+      "title": "Presto avvertiam Susanna",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Presto avvertiam Susanna",
+      "editionId": "mozart-presto-avvertiam-susanna"
      }
     ]
    },
@@ -900,6 +942,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "L’ho perduta",
+      "kind": "Cavatina · Act 4",
+      "id": "Act 4: L’ho perduta",
+      "editionId": "mozart-lho-perduta"
+     },
+     {
+      "title": "Barbarina, cos’hai?",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Barbarina, cos’hai?",
+      "editionId": "mozart-barbarina-coshai"
      }
     ]
    },

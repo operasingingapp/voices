@@ -190,6 +190,46 @@
     }
   },
   {
+    "editionId": "mozart-barbarina-coshai",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-barbarina-coshai@1.0.0-klengel#644ef599c0",
+    "title": "Barbarina, cos’hai?",
+    "subtitle": "Figaro, Barbarina and Marcellina: recitative from Le nozze di Figaro, Act 4",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "barbarina",
+        "name": "Barbarina",
+        "voiceType": "Soprano",
+        "partKey": "barbarina"
+      },
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 50,
+    "durationSec": 111,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 52,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-basilio-in-traccia-tosto",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-basilio-in-traccia-tosto@1.0.0-klengel#38857b8b20",
@@ -810,6 +850,76 @@
     }
   },
   {
+    "editionId": "mozart-ecco-la-marcia",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-ecco-la-marcia@1.0.0-klengel#5460eb0b61",
+    "title": "Ecco la marcia",
+    "subtitle": "Figaro, Susanna, the Count, the Countess and chorus: finale from Le nozze di Figaro, Act 3",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "coro-soprano",
+        "name": "Chorus Sopranos",
+        "voiceType": "Soprano",
+        "partKey": "coro-soprano"
+      },
+      {
+        "id": "coro-alto",
+        "name": "Chorus Altos",
+        "voiceType": "Alto",
+        "partKey": "coro-alto"
+      },
+      {
+        "id": "coro-tenor",
+        "name": "Chorus Tenors",
+        "voiceType": "Tenor",
+        "partKey": "coro-tenor"
+      },
+      {
+        "id": "coro-bass",
+        "name": "Chorus Basses",
+        "voiceType": "Bass",
+        "partKey": "coro-bass"
+      }
+    ],
+    "measures": 229,
+    "durationSec": 393,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 97,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-eccovi-o-caro-amico",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-eccovi-o-caro-amico@1.0.0-klengel#643b080dfe",
@@ -1243,6 +1353,34 @@
     }
   },
   {
+    "editionId": "mozart-lho-perduta",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-lho-perduta@1.0.0-klengel#fd605fb8cf",
+    "title": "L’ho perduta",
+    "subtitle": "Barbarina: cavatina from Le nozze di Figaro, Act 4",
+    "kind": "cavatina",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "barbarina",
+        "name": "Barbarina",
+        "voiceType": "Soprano",
+        "partKey": "barbarina"
+      }
+    ],
+    "measures": 36,
+    "durationSec": 86,
+    "hasRepeats": false,
+    "keySignature": "A♭ major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-non-piu-andrai",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-non-piu-andrai@1.0.0-klengel#6c7a5e300a",
@@ -1418,6 +1556,34 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 9,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-presto-avvertiam-susanna",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-presto-avvertiam-susanna@1.0.0-klengel#81acf11496",
+    "title": "Presto avvertiam Susanna",
+    "subtitle": "Marcellina: recitative from Le nozze di Figaro, Act 4",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      }
+    ],
+    "measures": 11,
+    "durationSec": 24,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 8,
       "withAudio": 0,
       "reviewed": 0
     }
