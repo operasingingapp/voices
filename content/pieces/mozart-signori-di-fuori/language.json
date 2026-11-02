@@ -98,9 +98,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "14",
-   "original": "i pifferi udite, tra canti, tra balli de' vostri vassalli, corriamo, voliamo le nozze a compir, corriamo, voliamo le nozze a compir.",
-   "translation": "you hear the pipes; amid songs, amid dances of your vassals, let's run, let's fly to accomplish the wedding, let's run, let's fly to accomplish the wedding.",
-   "ipa": "i ˈpif.fe.ri‿uˈdi.te tra ˈkan.ti tra ˈbal.li de ˈvɔ.stri vasˈsal.li korˈrja.mo voˈlja.mo le ˈnɔt.tse‿a komˈpir korˈrja.mo voˈlja.mo le ˈnɔt.tse‿a komˈpir",
+   "original": "i pifferi udite, tra canti,",
+   "translation": "you hear the pipes; amid songs,",
+   "ipa": "i ˈpif.fe.ri‿uˈdi.te tra ˈkan.ti",
    "words": [
     [
      "i",
@@ -126,7 +126,21 @@
      "canti,",
      "songs",
      "ˈkan.ti"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f3_2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "tra balli de' vostri vassalli, corriamo,",
+   "translation": "amid dances of your vassals, let's run,",
+   "ipa": "tra ˈbal.li de ˈvɔ.stri vasˈsal.li korˈrja.mo",
+   "words": [
     [
      "tra",
      "amid",
@@ -156,7 +170,21 @@
      "corriamo,",
      "let's run",
      "korˈrja.mo"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f3_3",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "voliamo le nozze a compir,",
+   "translation": "let's fly to accomplish the wedding,",
+   "ipa": "voˈlja.mo le ˈnɔt.tse‿a komˈpir",
+   "words": [
     [
      "voliamo",
      "let's fly",
@@ -181,7 +209,31 @@
      "compir,",
      "accomplish",
      "komˈpir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "to hold the wedding"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f3_4",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "corriamo, voliamo le nozze a compir.",
+   "translation": "let's run, let's fly to accomplish the wedding.",
+   "ipa": "korˈrja.mo voˈlja.mo le ˈnɔt.tse‿a komˈpir",
+   "words": [
     [
      "corriamo,",
      "let's run",
@@ -216,19 +268,10 @@
    "glossGroups": [
     {
      "words": [
-      12,
-      13,
-      14,
-      15
-     ],
-     "gloss": "to hold the wedding"
-    },
-    {
-     "words": [
-      18,
-      19,
-      20,
-      21
+      2,
+      3,
+      4,
+      5
      ],
      "gloss": "to hold the wedding"
     }
@@ -319,9 +362,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "33",
-   "original": "Pian, piano men fretta, un dubbio toglietemi in pria di partir, in pria di partir.",
-   "translation": "Gently, gently, not so fast: clear up a doubt for me before you leave, before you leave.",
-   "ipa": "ˈpjam ˈpja.no ˈmeɱ ˈfret.ta un ˈdub.bjo toʎˈʎe.te.mi‿im ˈprja di parˈtir im ˈprja di parˈtir",
+   "original": "Pian, piano men fretta,",
+   "translation": "Gently, gently, not so fast:",
+   "ipa": "ˈpjam ˈpja.no ˈmeɱ ˈfret.ta",
    "words": [
     [
      "Pian,",
@@ -342,7 +385,36 @@
      "fretta,",
      "haste",
      "ˈfret.ta"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "gently"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "not so fast"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c2_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "36",
+   "original": "un dubbio toglietemi in pria di partir,",
+   "translation": "clear up a doubt for me before you leave,",
+   "ipa": "un ˈdub.bjo toʎˈʎe.te.mi‿im ˈprja di parˈtir",
+   "words": [
     [
      "un",
      "a",
@@ -377,7 +449,30 @@
      "partir,",
      "leaving",
      "parˈtir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "before"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c2_3",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "40",
+   "original": "in pria di partir.",
+   "translation": "before you leave.",
+   "ipa": "im ˈprja di parˈtir",
+   "words": [
     [
      "in",
      "in",
@@ -403,30 +498,8 @@
     {
      "words": [
       0,
-      1
-     ],
-     "gloss": "gently"
-    },
-    {
-     "words": [
-      2,
-      3
-     ],
-     "gloss": "not so fast"
-    },
-    {
-     "words": [
-      7,
-      8,
-      9
-     ],
-     "gloss": "before"
-    },
-    {
-     "words": [
-      11,
-      12,
-      13
+      1,
+      2
      ],
      "gloss": "before"
     }
@@ -468,7 +541,7 @@
    "audio": {}
   },
   {
-   "id": "c1",
+   "id": "t1",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -541,9 +614,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "44",
-   "original": "Con arte le carte convien quì scoprir, con arte le carte convien quì scoprir, con arte le carte convien quì scoprir,",
-   "translation": "With skill I must lay the cards on the table here, with skill I must lay the cards on the table here, with skill I must lay the cards on the table here,",
-   "ipa": "kon ˈar.te le ˈkar.te koɱˈvjɛŋ ˈkwi skoˈprir kon ˈar.te le ˈkar.te koɱˈvjɛŋ ˈkwi skoˈprir kon ˈar.te le ˈkar.te koɱˈvjɛŋ ˈkwi skoˈprir",
+   "original": "Con arte le carte convien quì scoprir,",
+   "translation": "With skill I must lay the cards on the table here,",
+   "ipa": "kon ˈar.te le ˈkar.te koɱˈvjɛŋ ˈkwi skoˈprir",
    "words": [
     [
      "Con",
@@ -579,42 +652,39 @@
      "scoprir,",
      "to uncover",
      "skoˈprir"
-    ],
-    [
-     "con",
-     "with",
-     "kon"
-    ],
-    [
-     "arte",
-     "skill",
-     "ˈar.te"
-    ],
-    [
-     "le",
-     "the",
-     "le"
-    ],
-    [
-     "carte",
-     "cards",
-     "ˈkar.te"
-    ],
-    [
-     "convien",
-     "it is best",
-     "koɱˈvjɛn"
-    ],
-    [
-     "quì",
-     "here",
-     "ˈkwi"
-    ],
-    [
-     "scoprir,",
-     "to uncover",
-     "skoˈprir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "skillfully"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "I must show my hand here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c3_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "con arte le carte convien quì scoprir,",
+   "translation": "with skill I must lay the cards on the table here,",
+   "ipa": "kon ˈar.te le ˈkar.te koɱˈvjɛŋ ˈkwi skoˈprir",
+   "words": [
     [
      "con",
      "with",
@@ -668,38 +738,71 @@
       6
      ],
      "gloss": "I must show my hand here"
-    },
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c3_3",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "con arte le carte convien quì scoprir,",
+   "translation": "with skill I must lay the cards on the table here,",
+   "ipa": "kon ˈar.te le ˈkar.te koɱˈvjɛŋ ˈkwi skoˈprir",
+   "words": [
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "arte",
+     "skill",
+     "ˈar.te"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "carte",
+     "cards",
+     "ˈkar.te"
+    ],
+    [
+     "convien",
+     "it is best",
+     "koɱˈvjɛn"
+    ],
+    [
+     "quì",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "scoprir,",
+     "to uncover",
+     "skoˈprir"
+    ]
+   ],
+   "glossGroups": [
     {
      "words": [
-      7,
-      8
+      0,
+      1
      ],
      "gloss": "skillfully"
     },
     {
      "words": [
-      9,
-      10,
-      11,
-      12,
-      13
-     ],
-     "gloss": "I must show my hand here"
-    },
-    {
-     "words": [
-      14,
-      15
-     ],
-     "gloss": "skillfully"
-    },
-    {
-     "words": [
-      16,
-      17,
-      18,
-      19,
-      20
+      2,
+      3,
+      4,
+      5,
+      6
      ],
      "gloss": "I must show my hand here"
     }
@@ -751,7 +854,7 @@
    "audio": {}
   },
   {
-   "id": "c2",
+   "id": "t2",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -873,7 +976,7 @@
    "audio": {}
   },
   {
-   "id": "c3",
+   "id": "t3",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -946,9 +1049,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "53",
-   "original": "la cosa è scabrosa, com' ha da finir, com' ha da finir, com' ha da finir, com' ha da finir?",
-   "translation": "the matter is a thorny one, how is it going to end, how is it going to end, how is it going to end, how is it going to end?",
-   "ipa": "la ˈkɔ.za‿ˈɛ skaˈbro.za ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir",
+   "original": "la cosa è scabrosa, com' ha da finir,",
+   "translation": "the matter is a thorny one, how is it going to end,",
+   "ipa": "la ˈkɔ.za‿ˈɛ skaˈbro.za ˈkom ˈa da fiˈnir",
    "words": [
     [
      "la",
@@ -989,66 +1092,6 @@
      "finir,",
      "end",
      "fiˈnir"
-    ],
-    [
-     "com'",
-     "how",
-     "ˈkom"
-    ],
-    [
-     "ha",
-     "has",
-     "ˈa"
-    ],
-    [
-     "da",
-     "to",
-     "da"
-    ],
-    [
-     "finir,",
-     "end",
-     "fiˈnir"
-    ],
-    [
-     "com'",
-     "how",
-     "ˈkom"
-    ],
-    [
-     "ha",
-     "has",
-     "ˈa"
-    ],
-    [
-     "da",
-     "to",
-     "da"
-    ],
-    [
-     "finir,",
-     "end",
-     "fiˈnir"
-    ],
-    [
-     "com'",
-     "how",
-     "ˈkom"
-    ],
-    [
-     "ha",
-     "has",
-     "ˈa"
-    ],
-    [
-     "da",
-     "to",
-     "da"
-    ],
-    [
-     "finir?",
-     "end",
-     "fiˈnir"
     ]
    ],
    "glossGroups": [
@@ -1058,33 +1101,6 @@
       5,
       6,
       7
-     ],
-     "gloss": "how will it end"
-    },
-    {
-     "words": [
-      8,
-      9,
-      10,
-      11
-     ],
-     "gloss": "how will it end"
-    },
-    {
-     "words": [
-      12,
-      13,
-      14,
-      15
-     ],
-     "gloss": "how will it end"
-    },
-    {
-     "words": [
-      16,
-      17,
-      18,
-      19
      ],
      "gloss": "how will it end"
     }
@@ -1092,55 +1108,15 @@
    "audio": {}
   },
   {
-   "id": "c4",
-   "role": "countess",
+   "id": "s4_2",
+   "role": "susanna",
    "verse": 1,
    "occurrence": 1,
-   "startMeasure": "53",
-   "original": "la cosa è scabrosa, com' ha da finir, com' ha da finir, com' ha da finir, com' ha da finir?",
-   "translation": "the matter is a thorny one, how is it going to end, how is it going to end, how is it going to end, how is it going to end?",
-   "ipa": "la ˈkɔ.za‿ˈɛ skaˈbro.za ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir",
+   "startMeasure": "59",
+   "original": "com' ha da finir, com' ha da finir, com' ha da finir?",
+   "translation": "how is it going to end, how is it going to end, how is it going to end?",
+   "ipa": "ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir",
    "words": [
-    [
-     "la",
-     "the",
-     "la"
-    ],
-    [
-     "cosa",
-     "matter",
-     "ˈkɔ.za"
-    ],
-    [
-     "è",
-     "is",
-     "ˈɛ"
-    ],
-    [
-     "scabrosa,",
-     "thorny",
-     "skaˈbro.za"
-    ],
-    [
-     "com'",
-     "how",
-     "ˈkom"
-    ],
-    [
-     "ha",
-     "has",
-     "ˈa"
-    ],
-    [
-     "da",
-     "to",
-     "da"
-    ],
-    [
-     "finir,",
-     "end",
-     "fiˈnir"
-    ],
     [
      "com'",
      "how",
@@ -1205,6 +1181,15 @@
    "glossGroups": [
     {
      "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "how will it end"
+    },
+    {
+     "words": [
       4,
       5,
       6,
@@ -1220,22 +1205,170 @@
       11
      ],
      "gloss": "how will it end"
-    },
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t4",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "la cosa è scabrosa, com' ha da finir,",
+   "translation": "the matter is a thorny one, how is it going to end,",
+   "ipa": "la ˈkɔ.za‿ˈɛ skaˈbro.za ˈkom ˈa da fiˈnir",
+   "words": [
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "cosa",
+     "matter",
+     "ˈkɔ.za"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "scabrosa,",
+     "thorny",
+     "skaˈbro.za"
+    ],
+    [
+     "com'",
+     "how",
+     "ˈkom"
+    ],
+    [
+     "ha",
+     "has",
+     "ˈa"
+    ],
+    [
+     "da",
+     "to",
+     "da"
+    ],
+    [
+     "finir,",
+     "end",
+     "fiˈnir"
+    ]
+   ],
+   "glossGroups": [
     {
      "words": [
-      12,
-      13,
-      14,
-      15
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "how will it end"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t4_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "59",
+   "original": "com' ha da finir, com' ha da finir, com' ha da finir?",
+   "translation": "how is it going to end, how is it going to end, how is it going to end?",
+   "ipa": "ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir",
+   "words": [
+    [
+     "com'",
+     "how",
+     "ˈkom"
+    ],
+    [
+     "ha",
+     "has",
+     "ˈa"
+    ],
+    [
+     "da",
+     "to",
+     "da"
+    ],
+    [
+     "finir,",
+     "end",
+     "fiˈnir"
+    ],
+    [
+     "com'",
+     "how",
+     "ˈkom"
+    ],
+    [
+     "ha",
+     "has",
+     "ˈa"
+    ],
+    [
+     "da",
+     "to",
+     "da"
+    ],
+    [
+     "finir,",
+     "end",
+     "fiˈnir"
+    ],
+    [
+     "com'",
+     "how",
+     "ˈkom"
+    ],
+    [
+     "ha",
+     "has",
+     "ˈa"
+    ],
+    [
+     "da",
+     "to",
+     "da"
+    ],
+    [
+     "finir?",
+     "end",
+     "fiˈnir"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
      ],
      "gloss": "how will it end"
     },
     {
      "words": [
-      16,
-      17,
-      18,
-      19
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "how will it end"
+    },
+    {
+     "words": [
+      8,
+      9,
+      10,
+      11
      ],
      "gloss": "how will it end"
     }
@@ -1248,9 +1381,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "53",
-   "original": "la cosa è scabrosa, com' ha da finir, com' ha da finir, com' ha da finir, com' ha da finir?",
-   "translation": "the matter is a thorny one, how is it going to end, how is it going to end, how is it going to end, how is it going to end?",
-   "ipa": "la ˈkɔ.za‿ˈɛ skaˈbro.za ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir",
+   "original": "la cosa è scabrosa, com' ha da finir,",
+   "translation": "the matter is a thorny one, how is it going to end,",
+   "ipa": "la ˈkɔ.za‿ˈɛ skaˈbro.za ˈkom ˈa da fiˈnir",
    "words": [
     [
      "la",
@@ -1291,7 +1424,31 @@
      "finir,",
      "end",
      "fiˈnir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "how will it end"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f8_2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "59",
+   "original": "com' ha da finir, com' ha da finir, com' ha da finir?",
+   "translation": "how is it going to end, how is it going to end, how is it going to end?",
+   "ipa": "ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir ˈkom ˈa da fiˈnir",
+   "words": [
     [
      "com'",
      "how",
@@ -1356,6 +1513,15 @@
    "glossGroups": [
     {
      "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "how will it end"
+    },
+    {
+     "words": [
       4,
       5,
       6,
@@ -1369,24 +1535,6 @@
       9,
       10,
       11
-     ],
-     "gloss": "how will it end"
-    },
-    {
-     "words": [
-      12,
-      13,
-      14,
-      15
-     ],
-     "gloss": "how will it end"
-    },
-    {
-     "words": [
-      16,
-      17,
-      18,
-      19
      ],
      "gloss": "how will it end"
     }
@@ -1673,7 +1821,7 @@
    "audio": {}
   },
   {
-   "id": "c5",
+   "id": "t5",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1824,7 +1972,7 @@
    "audio": {}
   },
   {
-   "id": "c6",
+   "id": "t6",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1980,7 +2128,7 @@
    "audio": {}
   },
   {
-   "id": "c7",
+   "id": "t7",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2076,7 +2224,7 @@
    "audio": {}
   },
   {
-   "id": "c8",
+   "id": "t8",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2182,9 +2330,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "92",
-   "original": "Cerchi invan difesa e scusa, il tuo ceffo già t'accusa, vedo ben che vuoi mentir.",
-   "translation": "In vain you look for a defense and an excuse; your face already accuses you, I see well that you want to lie.",
-   "ipa": "ˈtʃer.ki‿iɱˈvan diˈfe.za‿e ˈsku.za il ˈtu.o ˈtʃɛf.fo ˈdʒa takˈku.za ˈve.do ˈbɛŋ ke ˈvwɔ.i menˈtir",
+   "original": "Cerchi invan difesa e scusa,",
+   "translation": "In vain you look for a defense and an excuse;",
+   "ipa": "ˈtʃer.ki‿iɱˈvan diˈfe.za‿e ˈsku.za",
    "words": [
     [
      "Cerchi",
@@ -2210,7 +2358,21 @@
      "scusa,",
      "excuse",
      "ˈsku.za"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c10_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "94",
+   "original": "il tuo ceffo già t'accusa, vedo ben che vuoi mentir.",
+   "translation": "your face already accuses you, I see well that you want to lie.",
+   "ipa": "il ˈtu.o ˈtʃɛf.fo ˈdʒa takˈku.za ˈve.do ˈbɛŋ ke ˈvwɔ.i menˈtir",
+   "words": [
     [
      "il",
      "the",
@@ -2320,9 +2482,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "100",
-   "original": "Il talento aguzzi invano, palesato abbiam l'arcano, non v'è nulla da ridir.",
-   "translation": "You sharpen your wits in vain: we have revealed the secret, there is nothing to object.",
-   "ipa": "il taˈlɛn.to‿aˈɡut.tsi‿iɱˈva.no pa.leˈza.to‿abˈbjam larˈka.no noɱ ˈvɛ ˈnul.la da riˈdir",
+   "original": "Il talento aguzzi invano,",
+   "translation": "You sharpen your wits in vain:",
+   "ipa": "il taˈlɛn.to‿aˈɡut.tsi‿iɱˈva.no",
    "words": [
     [
      "Il",
@@ -2343,7 +2505,30 @@
      "invano,",
      "in vain",
      "iɱˈva.no"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "you sharpen your wits"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s9_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "102",
+   "original": "palesato abbiam l'arcano, non v'è nulla da ridir.",
+   "translation": "we have revealed the secret, there is nothing to object.",
+   "ipa": "pa.leˈza.to‿abˈbjam larˈka.no noɱ ˈvɛ ˈnul.la da riˈdir",
+   "words": [
     [
      "palesato",
      "revealed",
@@ -2388,18 +2573,10 @@
    "glossGroups": [
     {
      "words": [
-      0,
-      1,
-      2
-     ],
-     "gloss": "you sharpen your wits"
-    },
-    {
-     "words": [
-      8,
-      9,
-      10,
-      11
+      4,
+      5,
+      6,
+      7
      ],
      "gloss": "there is nothing to object"
     }
@@ -2407,14 +2584,14 @@
    "audio": {}
   },
   {
-   "id": "c9",
+   "id": "t9",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "100",
-   "original": "Il talento aguzzi invano, palesato abbiam l'arcano, non v'è nulla da ridir.",
-   "translation": "You sharpen your wits in vain: we have revealed the secret, there is nothing to object.",
-   "ipa": "il taˈlɛn.to‿aˈɡut.tsi‿iɱˈva.no pa.leˈza.to‿abˈbjam larˈka.no noɱ ˈvɛ ˈnul.la da riˈdir",
+   "original": "Il talento aguzzi invano,",
+   "translation": "You sharpen your wits in vain:",
+   "ipa": "il taˈlɛn.to‿aˈɡut.tsi‿iɱˈva.no",
    "words": [
     [
      "Il",
@@ -2435,7 +2612,30 @@
      "invano,",
      "in vain",
      "iɱˈva.no"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "you sharpen your wits"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t9_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "102",
+   "original": "palesato abbiam l'arcano, non v'è nulla da ridir.",
+   "translation": "we have revealed the secret, there is nothing to object.",
+   "ipa": "pa.leˈza.to‿abˈbjam larˈka.no noɱ ˈvɛ ˈnul.la da riˈdir",
+   "words": [
     [
      "palesato",
      "revealed",
@@ -2480,18 +2680,10 @@
    "glossGroups": [
     {
      "words": [
-      0,
-      1,
-      2
-     ],
-     "gloss": "you sharpen your wits"
-    },
-    {
-     "words": [
-      8,
-      9,
-      10,
-      11
+      4,
+      5,
+      6,
+      7
      ],
      "gloss": "there is nothing to object"
     }
@@ -2649,9 +2841,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "110",
-   "original": "Eh via chetati, balordo, eh via chetati, balordo; la burletta ha da finir, la burletta ha da finir.",
-   "translation": "Come on, be quiet, you fool, come on, be quiet, you fool; the farce has to end, the farce has to end.",
-   "ipa": "ˈɛ ˈvi.a ˈke.ta.ti baˈlor.do ˈɛ ˈvi.a ˈke.ta.ti baˈlor.do la burˈlet.ta‿ˈa da fiˈnir la burˈlet.ta‿ˈa da fiˈnir",
+   "original": "Eh via chetati, balordo, eh via chetati, balordo;",
+   "translation": "Come on, be quiet, you fool, come on, be quiet, you fool;",
+   "ipa": "ˈɛ ˈvi.a ˈke.ta.ti baˈlor.do ˈɛ ˈvi.a ˈke.ta.ti baˈlor.do",
    "words": [
     [
      "Eh",
@@ -2692,7 +2884,36 @@
      "balordo;",
      "fool",
      "baˈlor.do"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "come on"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "come on"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s10_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "112",
+   "original": "la burletta ha da finir, la burletta ha da finir.",
+   "translation": "the farce has to end, the farce has to end.",
+   "ipa": "la burˈlet.ta‿ˈa da fiˈnir la burˈlet.ta‿ˈa da fiˈnir",
+   "words": [
     [
      "la",
      "the",
@@ -2747,31 +2968,17 @@
    "glossGroups": [
     {
      "words": [
-      0,
-      1
-     ],
-     "gloss": "come on"
-    },
-    {
-     "words": [
-      4,
-      5
-     ],
-     "gloss": "come on"
-    },
-    {
-     "words": [
-      10,
-      11,
-      12
+      2,
+      3,
+      4
      ],
      "gloss": "has to end"
     },
     {
      "words": [
-      15,
-      16,
-      17
+      7,
+      8,
+      9
      ],
      "gloss": "has to end"
     }
@@ -2779,14 +2986,14 @@
    "audio": {}
   },
   {
-   "id": "c10",
+   "id": "t10",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "111",
-   "original": "Eh via chetati, balordo; la burletta ha da finir, la burletta ha da finir.",
-   "translation": "Come on, be quiet, you fool; the farce has to end, the farce has to end.",
-   "ipa": "ˈɛ ˈvi.a ˈke.ta.ti baˈlor.do la burˈlet.ta‿ˈa da fiˈnir la burˈlet.ta‿ˈa da fiˈnir",
+   "original": "Eh via chetati, balordo;",
+   "translation": "Come on, be quiet, you fool;",
+   "ipa": "ˈɛ ˈvi.a ˈke.ta.ti baˈlor.do",
    "words": [
     [
      "Eh",
@@ -2807,7 +3014,29 @@
      "balordo;",
      "fool",
      "baˈlor.do"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "come on"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t10_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "112",
+   "original": "la burletta ha da finir, la burletta ha da finir.",
+   "translation": "the farce has to end, the farce has to end.",
+   "ipa": "la burˈlet.ta‿ˈa da fiˈnir la burˈlet.ta‿ˈa da fiˈnir",
+   "words": [
     [
      "la",
      "the",
@@ -2862,24 +3091,17 @@
    "glossGroups": [
     {
      "words": [
-      0,
-      1
-     ],
-     "gloss": "come on"
-    },
-    {
-     "words": [
-      6,
-      7,
-      8
+      2,
+      3,
+      4
      ],
      "gloss": "has to end"
     },
     {
      "words": [
-      11,
-      12,
-      13
+      7,
+      8,
+      9
      ],
      "gloss": "has to end"
     }
@@ -2892,9 +3114,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "114",
-   "original": "Per finir la lietamente, e all' usanza teatrale, un' azion matrimoniale le faremo ora seguir. Deh signor, nol contrastate, consolate i miei desir,",
-   "translation": "To end it happily, and in the theatrical custom, we will now follow it with a wedding ceremony. Please, my lord, do not oppose it, grant my wishes,",
-   "ipa": "per fiˈnir la lje.taˈmen.te e‿al luˈzan.tsa te.aˈtra.le un atˈtsjom ma.tri.moˈnja.le le faˈre.mo‿ˈo.ra seˈɡwir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "original": "Per finir la lietamente, e all' usanza teatrale,",
+   "translation": "To end it happily, and in the theatrical custom,",
+   "ipa": "per fiˈnir la lje.taˈmen.te e‿al luˈzan.tsa te.aˈtra.le",
    "words": [
     [
      "Per",
@@ -2935,7 +3157,21 @@
      "teatrale,",
      "theatrical",
      "te.aˈtra.le"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f21_2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "118",
+   "original": "un' azion matrimoniale le faremo ora seguir.",
+   "translation": "we will now follow it with a wedding ceremony.",
+   "ipa": "un atˈtsjom ma.tri.moˈnja.le le faˈre.mo‿ˈo.ra seˈɡwir",
+   "words": [
     [
      "un'",
      "a",
@@ -2970,7 +3206,31 @@
      "seguir.",
      "follow",
      "seˈɡwir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "we will now have follow it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f21_3",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "122",
+   "original": "Deh signor, nol contrastate, consolate i miei desir,",
+   "translation": "Please, my lord, do not oppose it, grant my wishes,",
+   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "words": [
     [
      "Deh",
      "please",
@@ -3015,17 +3275,8 @@
    "glossGroups": [
     {
      "words": [
-      11,
-      12,
-      13,
-      14
-     ],
-     "gloss": "we will now have follow it"
-    },
-    {
-     "words": [
-      17,
-      18
+      2,
+      3
      ],
      "gloss": "don't oppose it"
     }
@@ -3038,9 +3289,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "122",
-   "original": "Deh signor, nol contrastate, consolate i miei desir, deh signor, nol contrastate, consolate i miei desir, deh signor, nol contrastate, consolate i miei desir, deh signor, nol contrastate, consolate i miei desir, consolate i miei desir.",
-   "translation": "Please, my lord, do not oppose it, grant my wishes, please, my lord, do not oppose it, grant my wishes, please, my lord, do not oppose it, grant my wishes, please, my lord, do not oppose it, grant my wishes, grant my wishes.",
-   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "original": "Deh signor, nol contrastate, consolate i miei desir,",
+   "translation": "Please, my lord, do not oppose it, grant my wishes,",
+   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir",
    "words": [
     [
      "Deh",
@@ -3081,146 +3332,6 @@
      "desir,",
      "wishes",
      "deˈzir"
-    ],
-    [
-     "deh",
-     "please",
-     "ˈdɛ"
-    ],
-    [
-     "signor,",
-     "Signor",
-     "siɲˈɲor"
-    ],
-    [
-     "nol",
-     "not it",
-     "nol"
-    ],
-    [
-     "contrastate,",
-     "oppose",
-     "kon.traˈsta.te"
-    ],
-    [
-     "consolate",
-     "grant",
-     "kon.soˈla.te"
-    ],
-    [
-     "i",
-     "the",
-     "i"
-    ],
-    [
-     "miei",
-     "my",
-     "ˈmjɛ.i"
-    ],
-    [
-     "desir,",
-     "wishes",
-     "deˈzir"
-    ],
-    [
-     "deh",
-     "please",
-     "ˈdɛ"
-    ],
-    [
-     "signor,",
-     "Signor",
-     "siɲˈɲor"
-    ],
-    [
-     "nol",
-     "not it",
-     "nol"
-    ],
-    [
-     "contrastate,",
-     "oppose",
-     "kon.traˈsta.te"
-    ],
-    [
-     "consolate",
-     "grant",
-     "kon.soˈla.te"
-    ],
-    [
-     "i",
-     "the",
-     "i"
-    ],
-    [
-     "miei",
-     "my",
-     "ˈmjɛ.i"
-    ],
-    [
-     "desir,",
-     "wishes",
-     "deˈzir"
-    ],
-    [
-     "deh",
-     "please",
-     "ˈdɛ"
-    ],
-    [
-     "signor,",
-     "Signor",
-     "siɲˈɲor"
-    ],
-    [
-     "nol",
-     "not it",
-     "nol"
-    ],
-    [
-     "contrastate,",
-     "oppose",
-     "kon.traˈsta.te"
-    ],
-    [
-     "consolate",
-     "grant",
-     "kon.soˈla.te"
-    ],
-    [
-     "i",
-     "the",
-     "i"
-    ],
-    [
-     "miei",
-     "my",
-     "ˈmjɛ.i"
-    ],
-    [
-     "desir,",
-     "wishes",
-     "deˈzir"
-    ],
-    [
-     "consolate",
-     "grant",
-     "kon.soˈla.te"
-    ],
-    [
-     "i",
-     "the",
-     "i"
-    ],
-    [
-     "miei",
-     "my",
-     "ˈmjɛ.i"
-    ],
-    [
-     "desir.",
-     "wishes",
-     "deˈzir"
     ]
    ],
    "glossGroups": [
@@ -3228,27 +3339,6 @@
      "words": [
       2,
       3
-     ],
-     "gloss": "don't oppose it"
-    },
-    {
-     "words": [
-      10,
-      11
-     ],
-     "gloss": "don't oppose it"
-    },
-    {
-     "words": [
-      18,
-      19
-     ],
-     "gloss": "don't oppose it"
-    },
-    {
-     "words": [
-      26,
-      27
      ],
      "gloss": "don't oppose it"
     }
@@ -3256,14 +3346,248 @@
    "audio": {}
   },
   {
-   "id": "c11",
+   "id": "s11_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "126",
+   "original": "deh signor, nol contrastate,",
+   "translation": "please, my lord, do not oppose it,",
+   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te",
+   "words": [
+    [
+     "deh",
+     "please",
+     "ˈdɛ"
+    ],
+    [
+     "signor,",
+     "Signor",
+     "siɲˈɲor"
+    ],
+    [
+     "nol",
+     "not it",
+     "nol"
+    ],
+    [
+     "contrastate,",
+     "oppose",
+     "kon.traˈsta.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s11_3",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "128",
+   "original": "consolate i miei desir, deh signor,",
+   "translation": "grant my wishes, please, my lord,",
+   "ipa": "kon.soˈla.te‿i ˈmjɛ.i deˈzir ˈdɛ siɲˈɲor",
+   "words": [
+    [
+     "consolate",
+     "grant",
+     "kon.soˈla.te"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "miei",
+     "my",
+     "ˈmjɛ.i"
+    ],
+    [
+     "desir,",
+     "wishes",
+     "deˈzir"
+    ],
+    [
+     "deh",
+     "please",
+     "ˈdɛ"
+    ],
+    [
+     "signor,",
+     "Signor",
+     "siɲˈɲor"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s11_4",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "131",
+   "original": "nol contrastate, consolate i miei desir, deh signor,",
+   "translation": "do not oppose it, grant my wishes, please, my lord,",
+   "ipa": "nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir ˈdɛ siɲˈɲor",
+   "words": [
+    [
+     "nol",
+     "not it",
+     "nol"
+    ],
+    [
+     "contrastate,",
+     "oppose",
+     "kon.traˈsta.te"
+    ],
+    [
+     "consolate",
+     "grant",
+     "kon.soˈla.te"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "miei",
+     "my",
+     "ˈmjɛ.i"
+    ],
+    [
+     "desir,",
+     "wishes",
+     "deˈzir"
+    ],
+    [
+     "deh",
+     "please",
+     "ˈdɛ"
+    ],
+    [
+     "signor,",
+     "Signor",
+     "siɲˈɲor"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s11_5",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "135",
+   "original": "nol contrastate, consolate i miei desir,",
+   "translation": "do not oppose it, grant my wishes,",
+   "ipa": "nol kon.traˈsta.te kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "words": [
+    [
+     "nol",
+     "not it",
+     "nol"
+    ],
+    [
+     "contrastate,",
+     "oppose",
+     "kon.traˈsta.te"
+    ],
+    [
+     "consolate",
+     "grant",
+     "kon.soˈla.te"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "miei",
+     "my",
+     "ˈmjɛ.i"
+    ],
+    [
+     "desir,",
+     "wishes",
+     "deˈzir"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s11_6",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "138",
+   "original": "consolate i miei desir.",
+   "translation": "grant my wishes.",
+   "ipa": "kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "words": [
+    [
+     "consolate",
+     "grant",
+     "kon.soˈla.te"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "miei",
+     "my",
+     "ˈmjɛ.i"
+    ],
+    [
+     "desir.",
+     "wishes",
+     "deˈzir"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t11",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "122",
-   "original": "Deh signor, nol contrastate, consolate i lor desir, deh signor, nol contrastate, consolate i lor desir, deh signor, nol contrastate, consolate i lor desir, deh signor, nol contrastate, consolate i lor desir, consolate i lor desir.",
-   "translation": "Please, my lord, do not oppose it, grant their wishes, please, my lord, do not oppose it, grant their wishes, please, my lord, do not oppose it, grant their wishes, please, my lord, do not oppose it, grant their wishes, grant their wishes.",
-   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir kon.soˈla.te‿i ˈlor deˈzir",
+   "original": "Deh signor, nol contrastate, consolate i lor desir,",
+   "translation": "Please, my lord, do not oppose it, grant their wishes,",
+   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir",
    "words": [
     [
      "Deh",
@@ -3304,7 +3628,29 @@
      "desir,",
      "wishes",
      "deˈzir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t11_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "126",
+   "original": "deh signor, nol contrastate,",
+   "translation": "please, my lord, do not oppose it,",
+   "ipa": "ˈdɛ siɲˈɲor nol kon.traˈsta.te",
+   "words": [
     [
      "deh",
      "please",
@@ -3315,6 +3661,82 @@
      "Signor",
      "siɲˈɲor"
     ],
+    [
+     "nol",
+     "not it",
+     "nol"
+    ],
+    [
+     "contrastate,",
+     "oppose",
+     "kon.traˈsta.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t11_3",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "128",
+   "original": "consolate i lor desir, deh signor,",
+   "translation": "grant their wishes, please, my lord,",
+   "ipa": "kon.soˈla.te‿i ˈlor deˈzir ˈdɛ siɲˈɲor",
+   "words": [
+    [
+     "consolate",
+     "grant",
+     "kon.soˈla.te"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "lor",
+     "their",
+     "ˈlor"
+    ],
+    [
+     "desir,",
+     "wishes",
+     "deˈzir"
+    ],
+    [
+     "deh",
+     "please",
+     "ˈdɛ"
+    ],
+    [
+     "signor,",
+     "Signor",
+     "siɲˈɲor"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t11_4",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "131",
+   "original": "nol contrastate, consolate i lor desir, deh signor,",
+   "translation": "do not oppose it, grant their wishes, please, my lord,",
+   "ipa": "nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir ˈdɛ siɲˈɲor",
+   "words": [
     [
      "nol",
      "not it",
@@ -3354,7 +3776,29 @@
      "signor,",
      "Signor",
      "siɲˈɲor"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t11_5",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "135",
+   "original": "nol contrastate, consolate i lor desir,",
+   "translation": "do not oppose it, grant their wishes,",
+   "ipa": "nol kon.traˈsta.te kon.soˈla.te‿i ˈlor deˈzir",
+   "words": [
     [
      "nol",
      "not it",
@@ -3384,47 +3828,29 @@
      "desir,",
      "wishes",
      "deˈzir"
-    ],
-    [
-     "deh",
-     "please",
-     "ˈdɛ"
-    ],
-    [
-     "signor,",
-     "Signor",
-     "siɲˈɲor"
-    ],
-    [
-     "nol",
-     "not it",
-     "nol"
-    ],
-    [
-     "contrastate,",
-     "oppose",
-     "kon.traˈsta.te"
-    ],
-    [
-     "consolate",
-     "grant",
-     "kon.soˈla.te"
-    ],
-    [
-     "i",
-     "the",
-     "i"
-    ],
-    [
-     "lor",
-     "their",
-     "ˈlor"
-    ],
-    [
-     "desir,",
-     "wishes",
-     "deˈzir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "don't oppose it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t11_6",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "138",
+   "original": "consolate i lor desir.",
+   "translation": "grant their wishes.",
+   "ipa": "kon.soˈla.te‿i ˈlor deˈzir",
+   "words": [
     [
      "consolate",
      "grant",
@@ -3446,36 +3872,7 @@
      "deˈzir"
     ]
    ],
-   "glossGroups": [
-    {
-     "words": [
-      2,
-      3
-     ],
-     "gloss": "don't oppose it"
-    },
-    {
-     "words": [
-      10,
-      11
-     ],
-     "gloss": "don't oppose it"
-    },
-    {
-     "words": [
-      18,
-      19
-     ],
-     "gloss": "don't oppose it"
-    },
-    {
-     "words": [
-      26,
-      27
-     ],
-     "gloss": "don't oppose it"
-    }
-   ],
+   "glossGroups": [],
    "audio": {}
   },
   {
@@ -3484,9 +3881,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "126",
-   "original": "Marcellina! Marcellina! quanto tardi a comparir! Marcellina! Marcellina!",
-   "translation": "Marcellina! Marcellina! How long you take to appear! Marcellina! Marcellina!",
-   "ipa": "mar.tʃelˈli.na mar.tʃelˈli.na ˈkwan.to ˈtar.di‿a kom.paˈrir mar.tʃelˈli.na mar.tʃelˈli.na",
+   "original": "Marcellina! Marcellina!",
+   "translation": "Marcellina! Marcellina!",
+   "ipa": "mar.tʃelˈli.na mar.tʃelˈli.na",
    "words": [
     [
      "Marcellina!",
@@ -3497,7 +3894,21 @@
      "Marcellina!",
      "Marcellina",
      "mar.tʃelˈli.na"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c13_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "128",
+   "original": "quanto tardi a comparir! Marcellina! Marcellina!",
+   "translation": "How long you take to appear! Marcellina! Marcellina!",
+   "ipa": "ˈkwan.to ˈtar.di‿a kom.paˈrir mar.tʃelˈli.na mar.tʃelˈli.na",
+   "words": [
     [
      "quanto",
      "how much",
@@ -3532,10 +3943,10 @@
    "glossGroups": [
     {
      "words": [
+      0,
+      1,
       2,
-      3,
-      4,
-      5
+      3
      ],
      "gloss": "how long you take to appear"
     }
@@ -3707,9 +4118,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "134",
-   "original": "Marcellina, Marcellina, quanto tardi a comparir, quanto tardi a comparir.",
-   "translation": "Marcellina, Marcellina, how long you take to appear, how long you take to appear.",
-   "ipa": "mar.tʃelˈli.na mar.tʃelˈli.na ˈkwan.to ˈtar.di‿a kom.paˈrir ˈkwan.to ˈtar.di‿a kom.paˈrir",
+   "original": "Marcellina, Marcellina, quanto tardi a comparir,",
+   "translation": "Marcellina, Marcellina, how long you take to appear,",
+   "ipa": "mar.tʃelˈli.na mar.tʃelˈli.na ˈkwan.to ˈtar.di‿a kom.paˈrir",
    "words": [
     [
      "Marcellina,",
@@ -3740,7 +4151,31 @@
      "comparir,",
      "appear",
      "kom.paˈrir"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "how long you take to appear"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c15_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "138",
+   "original": "quanto tardi a comparir.",
+   "translation": "how long you take to appear.",
+   "ipa": "ˈkwan.to ˈtar.di‿a kom.paˈrir",
+   "words": [
     [
      "quanto",
      "how much",
@@ -3765,19 +4200,10 @@
    "glossGroups": [
     {
      "words": [
+      0,
+      1,
       2,
-      3,
-      4,
-      5
-     ],
-     "gloss": "how long you take to appear"
-    },
-    {
-     "words": [
-      6,
-      7,
-      8,
-      9
+      3
      ],
      "gloss": "how long you take to appear"
     }
@@ -3790,9 +4216,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "135",
-   "original": "consolate, consolate i miei desir, consolate i miei desir.",
-   "translation": "grant, grant my wishes, grant my wishes.",
-   "ipa": "kon.soˈla.te kon.soˈla.te‿i ˈmjɛ.i deˈzir kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "original": "consolate, consolate i miei desir,",
+   "translation": "grant, grant my wishes,",
+   "ipa": "kon.soˈla.te kon.soˈla.te‿i ˈmjɛ.i deˈzir",
    "words": [
     [
      "consolate,",
@@ -3818,7 +4244,21 @@
      "desir,",
      "wishes",
      "deˈzir"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f25_2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "138",
+   "original": "consolate i miei desir.",
+   "translation": "grant my wishes.",
+   "ipa": "kon.soˈla.te‿i ˈmjɛ.i deˈzir",
+   "words": [
     [
      "consolate",
      "grant",

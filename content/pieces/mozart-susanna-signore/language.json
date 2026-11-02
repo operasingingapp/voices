@@ -117,9 +117,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "12",
-   "original": "quel paggio malnato vedetelo quà quel paggio malnato vedetelo quà.",
-   "translation": "that ill-born page, see him here, that ill-born page, see him here.",
-   "ipa": "kwel ˈpad.dʒo malˈna.to veˈde.te.lo ˈkwa kwel ˈpad.dʒo malˈna.to veˈde.te.lo ˈkwa",
+   "original": "quel paggio malnato vedetelo quà",
+   "translation": "that ill-born page, see him here,",
+   "ipa": "kwel ˈpad.dʒo malˈna.to veˈde.te.lo ˈkwa",
    "words": [
     [
      "quel",
@@ -145,7 +145,21 @@
      "quà",
      "here",
      "ˈkwa"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s4_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "quel paggio malnato vedetelo quà.",
+   "translation": "that ill-born page, see him here.",
+   "ipa": "kwel ˈpad.dʒo malˈna.to veˈde.te.lo ˈkwa",
+   "words": [
     [
      "quel",
      "that",
@@ -200,7 +214,7 @@
    "audio": {}
   },
   {
-   "id": "c1",
+   "id": "t1",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -328,9 +342,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "24",
-   "original": "Confusa han la testa, non san come va, confusa han la testa, non san come va, confusa han la testa, non san come va.",
-   "translation": "Their heads are muddled, they don't know what's happening, their heads are muddled, they don't know what's happening, their heads are muddled, they don't know what's happening.",
-   "ipa": "koɱˈfu.za‿an la ˈtɛ.sta non saŋ ˈko.me ˈva koɱˈfu.za‿an la ˈtɛ.sta non saŋ ˈko.me ˈva koɱˈfu.za‿an la ˈtɛ.sta non saŋ ˈko.me ˈva",
+   "original": "Confusa han la testa,",
+   "translation": "Their heads are muddled,",
+   "ipa": "koɱˈfu.za‿an la ˈtɛ.sta",
    "words": [
     [
      "Confusa",
@@ -351,7 +365,31 @@
      "testa,",
      "head",
      "ˈtɛ.sta"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "they're in a muddle"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s5_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "non san come va, confusa han la testa,",
+   "translation": "they don't know what's happening, their heads are muddled,",
+   "ipa": "non saŋ ˈko.me ˈva koɱˈfu.za‿an la ˈtɛ.sta",
+   "words": [
     [
      "non",
      "not",
@@ -391,7 +429,40 @@
      "testa,",
      "head",
      "ˈtɛ.sta"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "don't know what's going on"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "they're in a muddle"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s5_3",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "non san come va, confusa han la testa, non san come va.",
+   "translation": "they don't know what's happening, their heads are muddled, they don't know what's happening.",
+   "ipa": "non saŋ ˈko.me ˈva koɱˈfu.za‿an la ˈtɛ.sta non saŋ ˈko.me ˈva",
+   "words": [
     [
      "non",
      "not",
@@ -461,7 +532,7 @@
       2,
       3
      ],
-     "gloss": "they're in a muddle"
+     "gloss": "don't know what's going on"
     },
     {
      "words": [
@@ -470,7 +541,7 @@
       6,
       7
      ],
-     "gloss": "don't know what's going on"
+     "gloss": "they're in a muddle"
     },
     {
      "words": [
@@ -479,40 +550,13 @@
       10,
       11
      ],
-     "gloss": "they're in a muddle"
-    },
-    {
-     "words": [
-      12,
-      13,
-      14,
-      15
-     ],
-     "gloss": "don't know what's going on"
-    },
-    {
-     "words": [
-      16,
-      17,
-      18,
-      19
-     ],
-     "gloss": "they're in a muddle"
-    },
-    {
-     "words": [
-      20,
-      21,
-      22,
-      23
-     ],
      "gloss": "don't know what's going on"
     }
    ],
    "audio": {}
   },
   {
-   "id": "c2",
+   "id": "t2",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -913,7 +957,7 @@
    "audio": {}
   },
   {
-   "id": "c3",
+   "id": "t3",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -932,7 +976,7 @@
    "audio": {}
   },
   {
-   "id": "c4",
+   "id": "t4",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -964,7 +1008,7 @@
    "audio": {}
   },
   {
-   "id": "c5",
+   "id": "t5",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -988,7 +1032,7 @@
    "audio": {}
   },
   {
-   "id": "c6",
+   "id": "t6",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1352,9 +1396,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "66",
-   "original": "Le vostre follie non mertan pietà, le vostre follie non mertan pietà.",
-   "translation": "Your follies deserve no pity, your follies deserve no pity.",
-   "ipa": "le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta",
+   "original": "Le vostre follie non mertan pietà,",
+   "translation": "Your follies deserve no pity,",
+   "ipa": "le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta",
    "words": [
     [
      "Le",
@@ -1385,7 +1429,21 @@
      "pietà,",
      "pity",
      "pjeˈta"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s13_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "le vostre follie non mertan pietà.",
+   "translation": "your follies deserve no pity.",
+   "ipa": "le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta",
+   "words": [
     [
      "le",
      "the",
@@ -1421,14 +1479,14 @@
    "audio": {}
   },
   {
-   "id": "c7",
+   "id": "t7",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "66",
-   "original": "Le vostre follie non mertan pietà, le vostre follie non mertan pietà.",
-   "translation": "Your follies deserve no pity, your follies deserve no pity.",
-   "ipa": "le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta",
+   "original": "Le vostre follie non mertan pietà,",
+   "translation": "Your follies deserve no pity,",
+   "ipa": "le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta",
    "words": [
     [
      "Le",
@@ -1459,7 +1517,21 @@
      "pietà,",
      "pity",
      "pjeˈta"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t7_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "le vostre follie non mertan pietà.",
+   "translation": "your follies deserve no pity.",
+   "ipa": "le ˈvɔ.stre folˈli.e nom ˈmɛr.tam pjeˈta",
+   "words": [
     [
      "le",
      "the",
@@ -1519,7 +1591,7 @@
    "audio": {}
   },
   {
-   "id": "c8",
+   "id": "t8",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1567,7 +1639,7 @@
    "audio": {}
   },
   {
-   "id": "c9",
+   "id": "t9",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1586,7 +1658,7 @@
    "audio": {}
   },
   {
-   "id": "c10",
+   "id": "t10",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1615,7 +1687,7 @@
    "audio": {}
   },
   {
-   "id": "c11",
+   "id": "t11",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1707,9 +1779,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "82",
-   "original": "Così si condanna chi può sospettar, così si condanna chi può sospettar.",
-   "translation": "That's how anyone who suspects is condemned, that's how anyone who suspects is condemned.",
-   "ipa": "koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar",
+   "original": "Così si condanna chi può sospettar,",
+   "translation": "That's how anyone who suspects is condemned,",
+   "ipa": "koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar",
    "words": [
     [
      "Così",
@@ -1740,7 +1812,29 @@
      "sospettar,",
      "suspect",
      "sos.petˈtar"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "is condemned"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s14_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "84",
+   "original": "così si condanna chi può sospettar.",
+   "translation": "that's how anyone who suspects is condemned.",
+   "ipa": "koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar",
+   "words": [
     [
      "così",
      "thus",
@@ -1779,19 +1873,12 @@
       2
      ],
      "gloss": "is condemned"
-    },
-    {
-     "words": [
-      7,
-      8
-     ],
-     "gloss": "is condemned"
     }
    ],
    "audio": {}
   },
   {
-   "id": "c12",
+   "id": "t12",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1820,7 +1907,7 @@
    "audio": {}
   },
   {
-   "id": "c13",
+   "id": "t13",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1862,7 +1949,7 @@
    "audio": {}
   },
   {
-   "id": "c14",
+   "id": "t14",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1964,9 +2051,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "97",
-   "original": "Così si condanna chi può sospettar, così si condanna chi può sospettar.",
-   "translation": "That's how anyone who suspects is condemned, that's how anyone who suspects is condemned.",
-   "ipa": "koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar",
+   "original": "Così si condanna chi può sospettar,",
+   "translation": "That's how anyone who suspects is condemned,",
+   "ipa": "koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar",
    "words": [
     [
      "Così",
@@ -1997,7 +2084,29 @@
      "sospettar,",
      "suspect",
      "sos.petˈtar"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "is condemned"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s15_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "così si condanna chi può sospettar.",
+   "translation": "that's how anyone who suspects is condemned.",
+   "ipa": "koˈsi si konˈdan.na ki ˈpwɔ sos.petˈtar",
+   "words": [
     [
      "così",
      "thus",
@@ -2034,13 +2143,6 @@
      "words": [
       1,
       2
-     ],
-     "gloss": "is condemned"
-    },
-    {
-     "words": [
-      7,
-      8
      ],
      "gloss": "is condemned"
     }
@@ -2086,7 +2188,7 @@
    "audio": {}
   },
   {
-   "id": "c15",
+   "id": "t15",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2105,7 +2207,7 @@
    "audio": {}
   },
   {
-   "id": "c16",
+   "id": "t16",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2147,7 +2249,7 @@
    "audio": {}
   },
   {
-   "id": "c17",
+   "id": "t17",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2181,7 +2283,7 @@
    "audio": {}
   },
   {
-   "id": "c18",
+   "id": "t18",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2210,7 +2312,7 @@
    "audio": {}
   },
   {
-   "id": "c19",
+   "id": "t19",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2298,9 +2400,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "117",
-   "original": "Confuso, pentito, è troppo punito, è troppo punito, abbiate pietà, abbiate, abbiate pietà.",
-   "translation": "Confused, repentant, he is punished too much, he is punished too much, have pity, have, have pity.",
-   "ipa": "koɱˈfu.zo penˈti.to ˈɛ ˈtrɔp.po puˈni.to ˈɛ ˈtrɔp.po puˈni.to abˈbja.te pjeˈta abˈbja.te abˈbja.te pjeˈta",
+   "original": "Confuso, pentito, è troppo punito, è troppo punito,",
+   "translation": "Confused, repentant, he is punished too much, he is punished too much,",
+   "ipa": "koɱˈfu.zo penˈti.to ˈɛ ˈtrɔp.po puˈni.to ˈɛ ˈtrɔp.po puˈni.to",
    "words": [
     [
      "Confuso,",
@@ -2341,7 +2443,21 @@
      "punito,",
      "punished",
      "puˈni.to"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s17_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "123",
+   "original": "abbiate pietà, abbiate, abbiate pietà.",
+   "translation": "have pity, have, have pity.",
+   "ipa": "abˈbja.te pjeˈta abˈbja.te abˈbja.te pjeˈta",
+   "words": [
     [
      "abbiate",
      "have",
@@ -2371,15 +2487,15 @@
    "glossGroups": [
     {
      "words": [
-      8,
-      9
+      0,
+      1
      ],
      "gloss": "have pity"
     },
     {
      "words": [
-      11,
-      12
+      3,
+      4
      ],
      "gloss": "have pity"
     }
@@ -2416,7 +2532,7 @@
    "audio": {}
   },
   {
-   "id": "c20",
+   "id": "t20",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2435,7 +2551,7 @@
    "audio": {}
   },
   {
-   "id": "c21",
+   "id": "t21",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2478,9 +2594,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "121",
-   "original": "son troppo punito, abbiate pietà, abbiate, abbiate pietà.",
-   "translation": "I'm punished too much, have pity, have, have pity.",
-   "ipa": "son ˈtrɔp.po puˈni.to abˈbja.te pjeˈta abˈbja.te abˈbja.te pjeˈta",
+   "original": "son troppo punito, abbiate pietà,",
+   "translation": "I'm punished too much, have pity,",
+   "ipa": "son ˈtrɔp.po puˈni.to abˈbja.te pjeˈta",
    "words": [
     [
      "son",
@@ -2506,7 +2622,29 @@
      "pietà,",
      "pity",
      "pjeˈta"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "have pity"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c28_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "125",
+   "original": "abbiate, abbiate pietà.",
+   "translation": "have, have pity.",
+   "ipa": "abˈbja.te abˈbja.te pjeˈta",
+   "words": [
     [
      "abbiate,",
      "have",
@@ -2526,15 +2664,8 @@
    "glossGroups": [
     {
      "words": [
-      3,
-      4
-     ],
-     "gloss": "have pity"
-    },
-    {
-     "words": [
-      6,
-      7
+      1,
+      2
      ],
      "gloss": "have pity"
     }
@@ -2542,14 +2673,14 @@
    "audio": {}
   },
   {
-   "id": "c22",
+   "id": "t22",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "121",
-   "original": "soffrir si gran torto quest' alma non sà, ah! nò quest' alma non sà.",
-   "translation": "This soul cannot bear to suffer so great a wrong, ah! no, this soul cannot.",
-   "ipa": "sofˈfrir ˈsi ˈɡran ˈtɔr.to kwest ˈal.ma non ˈsa ˈa ˈnɔ kwest ˈal.ma non ˈsa",
+   "original": "soffrir si gran torto quest' alma non sà,",
+   "translation": "This soul cannot bear to suffer so great a wrong,",
+   "ipa": "sofˈfrir ˈsi ˈɡran ˈtɔr.to kwest ˈal.ma non ˈsa",
    "words": [
     [
      "soffrir",
@@ -2590,7 +2721,38 @@
      "sà,",
      "can",
      "ˈsa"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "to suffer so great a wrong"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "cannot"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t22_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "125",
+   "original": "ah! nò quest' alma non sà.",
+   "translation": "ah! no, this soul cannot.",
+   "ipa": "ˈa ˈnɔ kwest ˈal.ma non ˈsa",
+   "words": [
     [
      "ah!",
      "ah",
@@ -2625,24 +2787,8 @@
    "glossGroups": [
     {
      "words": [
-      0,
-      1,
-      2,
-      3
-     ],
-     "gloss": "to suffer so great a wrong"
-    },
-    {
-     "words": [
-      6,
-      7
-     ],
-     "gloss": "cannot"
-    },
-    {
-     "words": [
-      12,
-      13
+      4,
+      5
      ],
      "gloss": "cannot"
     }
@@ -2684,7 +2830,7 @@
    "audio": {}
   },
   {
-   "id": "c23",
+   "id": "t23",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2752,7 +2898,7 @@
    "audio": {}
   },
   {
-   "id": "c24",
+   "id": "t24",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2897,7 +3043,7 @@
    "audio": {}
   },
   {
-   "id": "c25",
+   "id": "t25",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3032,9 +3178,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "142",
-   "original": "Perdono non merta chi agli altri nol da, perdono non merta chi agli altri nol da.",
-   "translation": "He who doesn't grant pardon to others doesn't deserve it, he who doesn't grant pardon to others doesn't deserve it.",
-   "ipa": "perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda",
+   "original": "Perdono non merta chi agli altri nol da,",
+   "translation": "He who doesn't grant pardon to others doesn't deserve it,",
+   "ipa": "perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda",
    "words": [
     [
      "Perdono",
@@ -3075,46 +3221,6 @@
      "da,",
      "gives",
      "ˈda"
-    ],
-    [
-     "perdono",
-     "pardon",
-     "perˈdo.no"
-    ],
-    [
-     "non",
-     "not",
-     "non"
-    ],
-    [
-     "merta",
-     "deserves",
-     "ˈmɛr.ta"
-    ],
-    [
-     "chi",
-     "who",
-     "ki"
-    ],
-    [
-     "agli",
-     "to the",
-     "ˈaʎ.ʎi"
-    ],
-    [
-     "altri",
-     "others",
-     "ˈal.tri"
-    ],
-    [
-     "nol",
-     "not it",
-     "nol"
-    ],
-    [
-     "da.",
-     "gives",
-     "ˈda"
     ]
    ],
    "glossGroups": [
@@ -3125,16 +3231,6 @@
       5,
       6,
       7
-     ],
-     "gloss": "who doesn't grant it to others"
-    },
-    {
-     "words": [
-      11,
-      12,
-      13,
-      14,
-      15
      ],
      "gloss": "who doesn't grant it to others"
     }
@@ -3142,55 +3238,15 @@
    "audio": {}
   },
   {
-   "id": "c26",
-   "role": "countess",
+   "id": "s19_2",
+   "role": "susanna",
    "verse": 1,
    "occurrence": 1,
-   "startMeasure": "142",
-   "original": "Perdono non merta chi agli altri nol da, perdono non merta chi agli altri nol da.",
-   "translation": "He who doesn't grant pardon to others doesn't deserve it, he who doesn't grant pardon to others doesn't deserve it.",
-   "ipa": "perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda",
+   "startMeasure": "144",
+   "original": "perdono non merta chi agli altri nol da.",
+   "translation": "he who doesn't grant pardon to others doesn't deserve it.",
+   "ipa": "perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda",
    "words": [
-    [
-     "Perdono",
-     "pardon",
-     "perˈdo.no"
-    ],
-    [
-     "non",
-     "not",
-     "non"
-    ],
-    [
-     "merta",
-     "deserves",
-     "ˈmɛr.ta"
-    ],
-    [
-     "chi",
-     "who",
-     "ki"
-    ],
-    [
-     "agli",
-     "to the",
-     "ˈaʎ.ʎi"
-    ],
-    [
-     "altri",
-     "others",
-     "ˈal.tri"
-    ],
-    [
-     "nol",
-     "not it",
-     "nol"
-    ],
-    [
-     "da,",
-     "gives",
-     "ˈda"
-    ],
     [
      "perdono",
      "pardon",
@@ -3242,14 +3298,134 @@
       7
      ],
      "gloss": "who doesn't grant it to others"
-    },
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t26",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "142",
+   "original": "Perdono non merta chi agli altri nol da,",
+   "translation": "He who doesn't grant pardon to others doesn't deserve it,",
+   "ipa": "perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda",
+   "words": [
+    [
+     "Perdono",
+     "pardon",
+     "perˈdo.no"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "merta",
+     "deserves",
+     "ˈmɛr.ta"
+    ],
+    [
+     "chi",
+     "who",
+     "ki"
+    ],
+    [
+     "agli",
+     "to the",
+     "ˈaʎ.ʎi"
+    ],
+    [
+     "altri",
+     "others",
+     "ˈal.tri"
+    ],
+    [
+     "nol",
+     "not it",
+     "nol"
+    ],
+    [
+     "da,",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
     {
      "words": [
-      11,
-      12,
-      13,
-      14,
-      15
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "who doesn't grant it to others"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t26_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "144",
+   "original": "perdono non merta chi agli altri nol da.",
+   "translation": "he who doesn't grant pardon to others doesn't deserve it.",
+   "ipa": "perˈdo.no nom ˈmɛr.ta ki‿ˈaʎ.ʎi‿ˈal.tri nol ˈda",
+   "words": [
+    [
+     "perdono",
+     "pardon",
+     "perˈdo.no"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "merta",
+     "deserves",
+     "ˈmɛr.ta"
+    ],
+    [
+     "chi",
+     "who",
+     "ki"
+    ],
+    [
+     "agli",
+     "to the",
+     "ˈaʎ.ʎi"
+    ],
+    [
+     "altri",
+     "others",
+     "ˈal.tri"
+    ],
+    [
+     "nol",
+     "not it",
+     "nol"
+    ],
+    [
+     "da.",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6,
+      7
      ],
      "gloss": "who doesn't grant it to others"
     }
@@ -3377,7 +3553,7 @@
    "audio": {}
   },
   {
-   "id": "c27",
+   "id": "t27",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3406,7 +3582,7 @@
    "audio": {}
   },
   {
-   "id": "c28",
+   "id": "t28",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3449,7 +3625,7 @@
    "audio": {}
   },
   {
-   "id": "c29",
+   "id": "t29",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3556,9 +3732,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "166",
-   "original": "vedrete, che ognora si cade poi là, girate, volgete, volgete, girate, vedrete, che ognora sì cade poi là.",
-   "translation": "you'll see that in the end one always lands there; twist and turn, turn and twist, you'll see that in the end one always lands there.",
-   "ipa": "veˈdre.te ke‿oɲˈɲo.ra si ˈka.de ˈpɔi ˈla dʒiˈra.te volˈdʒe.te volˈdʒe.te dʒiˈra.te veˈdre.te ke‿oɲˈɲo.ra si ˈka.de ˈpɔi ˈla",
+   "original": "vedrete, che ognora si cade poi là, girate, volgete,",
+   "translation": "you'll see that in the end one always lands there; twist and turn,",
+   "ipa": "veˈdre.te ke‿oɲˈɲo.ra si ˈka.de ˈpɔi ˈla dʒiˈra.te volˈdʒe.te",
    "words": [
     [
      "vedrete,",
@@ -3604,7 +3780,21 @@
      "volgete,",
      "twist",
      "volˈdʒe.te"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s22_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "169",
+   "original": "volgete, girate, vedrete, che ognora sì cade poi là.",
+   "translation": "turn and twist, you'll see that in the end one always lands there.",
+   "ipa": "volˈdʒe.te dʒiˈra.te veˈdre.te ke‿oɲˈɲo.ra si ˈka.de ˈpɔi ˈla",
+   "words": [
     [
      "volgete,",
      "twist",
@@ -3674,7 +3864,7 @@
    "audio": {}
   },
   {
-   "id": "c30",
+   "id": "t30",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3712,7 +3902,7 @@
    "audio": {}
   },
   {
-   "id": "c31",
+   "id": "t31",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3847,7 +4037,7 @@
    "audio": {}
   },
   {
-   "id": "c32",
+   "id": "t32",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -3964,7 +4154,7 @@
    "audio": {}
   },
   {
-   "id": "c33",
+   "id": "t33",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -4013,9 +4203,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "189",
-   "original": "quest' alma a conoscervi apprender potrà, a conoscervi apprender potrà, a conoscervi apprender potrà.",
-   "translation": "this soul will learn to know you, will learn to know you, will learn to know you.",
-   "ipa": "ˈkwest ˈal.ma‿a ko.noʃˈʃer.vi apˈprɛn.der poˈtra a ko.noʃˈʃer.vi apˈprɛn.der poˈtra a ko.noʃˈʃer.vi apˈprɛn.der poˈtra",
+   "original": "quest' alma a conoscervi apprender potrà,",
+   "translation": "this soul will learn to know you,",
+   "ipa": "ˈkwest ˈal.ma‿a ko.noʃˈʃer.vi apˈprɛn.der poˈtra",
    "words": [
     [
      "quest'",
@@ -4046,7 +4236,21 @@
      "potrà,",
      "will be able",
      "poˈtra"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c43_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "195",
+   "original": "a conoscervi apprender potrà,",
+   "translation": "will learn to know you,",
+   "ipa": "a ko.noʃˈʃer.vi apˈprɛn.der poˈtra",
+   "words": [
     [
      "a",
      "to",
@@ -4066,7 +4270,21 @@
      "potrà,",
      "will be able",
      "poˈtra"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c43_3",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "198",
+   "original": "a conoscervi apprender potrà.",
+   "translation": "will learn to know you.",
+   "ipa": "a ko.noʃˈʃer.vi apˈprɛn.der poˈtra",
+   "words": [
     [
      "a",
      "to",
@@ -4092,14 +4310,14 @@
    "audio": {}
   },
   {
-   "id": "c34",
+   "id": "t34",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "189",
-   "original": "quest' alma a conoscermi apprender potrà, a conoscermi apprender potrà, a conoscermi apprender potrà.",
-   "translation": "this soul will learn to know me, will learn to know me, will learn to know me.",
-   "ipa": "ˈkwest ˈal.ma‿a ko.noʃˈʃer.mi apˈprɛn.der poˈtra a ko.noʃˈʃer.mi apˈprɛn.der poˈtra a ko.noʃˈʃer.mi apˈprɛn.der poˈtra",
+   "original": "quest' alma a conoscermi apprender potrà,",
+   "translation": "this soul will learn to know me,",
+   "ipa": "ˈkwest ˈal.ma‿a ko.noʃˈʃer.mi apˈprɛn.der poˈtra",
    "words": [
     [
      "quest'",
@@ -4130,7 +4348,21 @@
      "potrà,",
      "will be able",
      "poˈtra"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t34_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "195",
+   "original": "a conoscermi apprender potrà,",
+   "translation": "will learn to know me,",
+   "ipa": "a ko.noʃˈʃer.mi apˈprɛn.der poˈtra",
+   "words": [
     [
      "a",
      "to",
@@ -4150,7 +4382,21 @@
      "potrà,",
      "will be able",
      "poˈtra"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t34_3",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "198",
+   "original": "a conoscermi apprender potrà.",
+   "translation": "will learn to know me.",
+   "ipa": "a ko.noʃˈʃer.mi apˈprɛn.der poˈtra",
+   "words": [
     [
      "a",
      "to",
@@ -4181,9 +4427,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "191",
-   "original": "quest' alma a conoscerla apprender potrà, a conoscerla apprender potrà, a conoscerla apprender potrà.",
-   "translation": "this soul will learn to know her, will learn to know her, will learn to know her.",
-   "ipa": "ˈkwest ˈal.ma‿a ko.noʃˈʃer.la apˈprɛn.der poˈtra a ko.noʃˈʃer.la apˈprɛn.der poˈtra a ko.noʃˈʃer.la apˈprɛn.der poˈtra",
+   "original": "quest' alma a conoscerla apprender potrà,",
+   "translation": "this soul will learn to know her,",
+   "ipa": "ˈkwest ˈal.ma‿a ko.noʃˈʃer.la apˈprɛn.der poˈtra",
    "words": [
     [
      "quest'",
@@ -4214,7 +4460,21 @@
      "potrà,",
      "will be able",
      "poˈtra"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s25_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "195",
+   "original": "a conoscerla apprender potrà,",
+   "translation": "will learn to know her,",
+   "ipa": "a ko.noʃˈʃer.la apˈprɛn.der poˈtra",
+   "words": [
     [
      "a",
      "to",
@@ -4234,7 +4494,21 @@
      "potrà,",
      "will be able",
      "poˈtra"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s25_3",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "198",
+   "original": "a conoscerla apprender potrà.",
+   "translation": "will learn to know her.",
+   "ipa": "a ko.noʃˈʃer.la apˈprɛn.der poˈtra",
+   "words": [
     [
      "a",
      "to",

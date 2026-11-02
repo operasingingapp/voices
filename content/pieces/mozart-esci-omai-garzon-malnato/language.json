@@ -56,7 +56,7 @@
    "audio": {}
   },
   {
-   "id": "c1",
+   "id": "t1",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -80,7 +80,7 @@
    "audio": {}
   },
   {
-   "id": "c2",
+   "id": "t2",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -104,7 +104,7 @@
    "audio": {}
   },
   {
-   "id": "c3",
+   "id": "t3",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -158,7 +158,7 @@
    "audio": {}
   },
   {
-   "id": "c4",
+   "id": "t4",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -212,7 +212,7 @@
    "audio": {}
   },
   {
-   "id": "c5",
+   "id": "t5",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -334,7 +334,7 @@
    "audio": {}
   },
   {
-   "id": "c6",
+   "id": "t6",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -382,7 +382,7 @@
    "audio": {}
   },
   {
-   "id": "c7",
+   "id": "t7",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -468,7 +468,7 @@
    "audio": {}
   },
   {
-   "id": "c8",
+   "id": "t8",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -507,7 +507,7 @@
    "audio": {}
   },
   {
-   "id": "c9",
+   "id": "t9",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -531,7 +531,7 @@
    "audio": {}
   },
   {
-   "id": "c10",
+   "id": "t10",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -580,7 +580,7 @@
    "audio": {}
   },
   {
-   "id": "c11",
+   "id": "t11",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -618,7 +618,7 @@
    "audio": {}
   },
   {
-   "id": "c12",
+   "id": "t12",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -733,7 +733,7 @@
    "audio": {}
   },
   {
-   "id": "c13",
+   "id": "t13",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -844,7 +844,7 @@
    "audio": {}
   },
   {
-   "id": "c14",
+   "id": "t14",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -926,7 +926,7 @@
    "audio": {}
   },
   {
-   "id": "c15",
+   "id": "t15",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -998,7 +998,7 @@
    "audio": {}
   },
   {
-   "id": "c16",
+   "id": "t16",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1080,7 +1080,7 @@
    "audio": {}
   },
   {
-   "id": "c17",
+   "id": "t17",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1104,9 +1104,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "47",
-   "original": "mi vo' tosto vendicar, mi vo' tosto vendicar, mi vo' tosto vendicar.",
-   "translation": "I want to take revenge at once, I want to take revenge at once, I want to take revenge at once.",
-   "ipa": "mi ˈvɔ ˈtos.to ven.diˈkar mi ˈvɔ ˈtos.to ven.diˈkar mi ˈvɔ ˈtos.to ven.diˈkar",
+   "original": "mi vo' tosto vendicar,",
+   "translation": "I want to take revenge at once,",
+   "ipa": "mi ˈvɔ ˈtos.to ven.diˈkar",
    "words": [
     [
      "mi",
@@ -1127,7 +1127,30 @@
      "vendicar,",
      "avenge",
      "ven.diˈkar"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      3
+     ],
+     "gloss": "I want to avenge myself"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c16_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "mi vo' tosto vendicar, mi vo' tosto vendicar.",
+   "translation": "I want to take revenge at once, I want to take revenge at once.",
+   "ipa": "mi ˈvɔ ˈtos.to ven.diˈkar mi ˈvɔ ˈtos.to ven.diˈkar",
+   "words": [
     [
      "mi",
      "myself",
@@ -1185,27 +1208,19 @@
       7
      ],
      "gloss": "I want to avenge myself"
-    },
-    {
-     "words": [
-      8,
-      9,
-      11
-     ],
-     "gloss": "I want to avenge myself"
     }
    ],
    "audio": {}
   },
   {
-   "id": "c18",
+   "id": "t18",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "47",
-   "original": "m'oltraggiate a dubitar, m'oltraggiate a dubitar, m'oltraggiate a dubitar.",
-   "translation": "you insult me by doubting, you insult me by doubting, you insult me by doubting.",
-   "ipa": "mol.tradˈdʒa.te‿a du.biˈtar mol.tradˈdʒa.te‿a du.biˈtar mol.tradˈdʒa.te‿a du.biˈtar",
+   "original": "m'oltraggiate a dubitar,",
+   "translation": "you insult me by doubting,",
+   "ipa": "mol.tradˈdʒa.te‿a du.biˈtar",
    "words": [
     [
      "m'oltraggiate",
@@ -1221,7 +1236,21 @@
      "dubitar,",
      "doubting",
      "du.biˈtar"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t18_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "m'oltraggiate a dubitar, m'oltraggiate a dubitar.",
+   "translation": "you insult me by doubting, you insult me by doubting.",
+   "ipa": "mol.tradˈdʒa.te‿a du.biˈtar mol.tradˈdʒa.te‿a du.biˈtar",
+   "words": [
     [
      "m'oltraggiate",
      "you insult me",
@@ -1293,7 +1322,7 @@
    "audio": {}
   },
   {
-   "id": "c19",
+   "id": "t19",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1358,7 +1387,7 @@
    "audio": {}
   },
   {
-   "id": "c20",
+   "id": "t20",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1387,7 +1416,7 @@
    "audio": {}
   },
   {
-   "id": "c21",
+   "id": "t21",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1445,9 +1474,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "64",
-   "original": "Va lontan dagli occhi miei! un' infida un' empia sei, e mi cerchi d'infamar,",
-   "translation": "Get out of my sight! You are a faithless, a wicked woman, and you seek to disgrace me,",
-   "ipa": "ˈva lonˈtan ˈdaʎ.ʎi‿ˈɔk.ki ˈmjɛ.i un iɱˈfi.da‿un ˈɛm.pja ˈsɛ.i e mi ˈtʃer.ki diɱ.faˈmar",
+   "original": "Va lontan dagli occhi miei!",
+   "translation": "Get out of my sight!",
+   "ipa": "ˈva lonˈtan ˈdaʎ.ʎi‿ˈɔk.ki ˈmjɛ.i",
    "words": [
     [
      "Va",
@@ -1473,7 +1502,32 @@
      "miei!",
      "my",
      "ˈmjɛ.i"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "get out of my sight"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c20_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "un' infida un' empia sei, e mi cerchi d'infamar,",
+   "translation": "You are a faithless, a wicked woman, and you seek to disgrace me,",
+   "ipa": "un iɱˈfi.da‿un ˈɛm.pja ˈsɛ.i e mi ˈtʃer.ki diɱ.faˈmar",
+   "words": [
     [
      "un'",
      "a",
@@ -1520,18 +1574,7 @@
      "diɱ.faˈmar"
     ]
    ],
-   "glossGroups": [
-    {
-     "words": [
-      0,
-      1,
-      2,
-      3,
-      4
-     ],
-     "gloss": "get out of my sight"
-    }
-   ],
+   "glossGroups": [],
    "audio": {}
   },
   {
@@ -1569,7 +1612,7 @@
    "audio": {}
   },
   {
-   "id": "c22",
+   "id": "t22",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1588,7 +1631,7 @@
    "audio": {}
   },
   {
-   "id": "c23",
+   "id": "t23",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1631,7 +1674,7 @@
    "audio": {}
   },
   {
-   "id": "c24",
+   "id": "t24",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1674,7 +1717,7 @@
    "audio": {}
   },
   {
-   "id": "c25",
+   "id": "t25",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1693,7 +1736,7 @@
    "audio": {}
   },
   {
-   "id": "c26",
+   "id": "t26",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1788,7 +1831,7 @@
    "audio": {}
   },
   {
-   "id": "c27",
+   "id": "t27",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1846,7 +1889,7 @@
    "audio": {}
   },
   {
-   "id": "c28",
+   "id": "t28",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -1947,7 +1990,7 @@
    "audio": {}
   },
   {
-   "id": "c29",
+   "id": "t29",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2044,7 +2087,7 @@
    "audio": {}
   },
   {
-   "id": "c30",
+   "id": "t30",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2116,7 +2159,7 @@
    "audio": {}
   },
   {
-   "id": "c31",
+   "id": "t31",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2178,7 +2221,7 @@
    "audio": {}
   },
   {
-   "id": "c32",
+   "id": "t32",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2226,7 +2269,7 @@
    "audio": {}
   },
   {
-   "id": "c33",
+   "id": "t33",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2284,7 +2327,7 @@
    "audio": {}
   },
   {
-   "id": "c34",
+   "id": "t34",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2385,7 +2428,7 @@
    "audio": {}
   },
   {
-   "id": "c35",
+   "id": "t35",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
@@ -2448,9 +2491,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "111",
-   "original": "ria cagion del mio penar, ria cagion del mio penar, ria cagion del mio penar, del mio penar.",
-   "translation": "wicked cause of my suffering, wicked cause of my suffering, wicked cause of my suffering, of my suffering.",
-   "ipa": "ˈri.a kaˈdʒon del ˈmi.o peˈnar ˈri.a kaˈdʒon del ˈmi.o peˈnar ˈri.a kaˈdʒon del ˈmi.o peˈnar del ˈmi.o peˈnar",
+   "original": "ria cagion del mio penar, ria cagion del mio penar,",
+   "translation": "wicked cause of my suffering, wicked cause of my suffering,",
+   "ipa": "ˈri.a kaˈdʒon del ˈmi.o peˈnar ˈri.a kaˈdʒon del ˈmi.o peˈnar",
    "words": [
     [
      "ria",
@@ -2501,7 +2544,21 @@
      "penar,",
      "suffering",
      "peˈnar"
-    ],
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c36_2",
+   "role": "count",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "ria cagion del mio penar, del mio penar.",
+   "translation": "wicked cause of my suffering, of my suffering.",
+   "ipa": "ˈri.a kaˈdʒon del ˈmi.o peˈnar del ˈmi.o peˈnar",
+   "words": [
     [
      "ria",
      "wicked",
@@ -2547,14 +2604,14 @@
    "audio": {}
   },
   {
-   "id": "c36",
+   "id": "t36",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "111",
-   "original": "qualche eccesso gli fa far, qualche eccesso gli fa far qualche eccesso gli fa far, qualche eccesso gli fa far.",
-   "translation": "makes him commit some excess, makes him commit some excess, makes him commit some excess, makes him commit some excess.",
-   "ipa": "ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar",
+   "original": "qualche eccesso gli fa far,",
+   "translation": "makes him commit some excess,",
+   "ipa": "ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar",
    "words": [
     [
      "qualche",
@@ -2580,7 +2637,30 @@
      "far,",
      "do",
      "ˈfar"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "makes him do"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t36_2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "113",
+   "original": "qualche eccesso gli fa far qualche eccesso gli fa far,",
+   "translation": "makes him commit some excess, makes him commit some excess,",
+   "ipa": "ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar",
+   "words": [
     [
      "qualche",
      "some",
@@ -2630,7 +2710,38 @@
      "far,",
      "do",
      "ˈfar"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "makes him do"
+    },
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "makes him do"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t36_3",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "117",
+   "original": "qualche eccesso gli fa far.",
+   "translation": "makes him commit some excess.",
+   "ipa": "ˈkwal.ke‿etˈtʃɛs.so ʎi ˈfa ˈfar",
+   "words": [
     [
      "qualche",
      "some",
@@ -2665,30 +2776,6 @@
       4
      ],
      "gloss": "makes him do"
-    },
-    {
-     "words": [
-      7,
-      8,
-      9
-     ],
-     "gloss": "makes him do"
-    },
-    {
-     "words": [
-      12,
-      13,
-      14
-     ],
-     "gloss": "makes him do"
-    },
-    {
-     "words": [
-      17,
-      18,
-      19
-     ],
-     "gloss": "makes him do"
     }
    ],
    "audio": {}
@@ -2713,7 +2800,7 @@
    "audio": {}
   },
   {
-   "id": "c37",
+   "id": "t37",
    "role": "countess",
    "verse": 1,
    "occurrence": 1,
