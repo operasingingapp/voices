@@ -976,7 +976,8 @@ function PracticeScreen({
   const fit = natural && stageH ? (stageH - 24 - CROP_PAD) / Math.max(natural, STANDARD_LINE_H) : Infinity;
   // with the line box hidden and the bar folded there is far more height: the music grows a little into it, but
   // not to poster size (a phone shows too few bars, an iPad's notes look shouted)
-  const roomCap = typeof window !== "undefined" && window.innerWidth < 700 ? 0.65 : 0.8;
+  // a tablet held upright has height to spare: the line may grow a little more there
+  const roomCap = typeof window === "undefined" ? 0.8 : window.innerWidth < 700 ? 0.65 : window.innerHeight > window.innerWidth * 1.15 ? 0.95 : 0.8;
   const fitZoom = Math.max(0.55, Math.min(MAX_ZOOM, roomCap, Math.floor(fit * 40) / 40));
   // while the music plays the size holds (redrawing then would compete with the sound): opening the full bar
   // over a playing piece on a phone leaves the music as it is until you pause
@@ -3286,7 +3287,8 @@ function PracticeScreen({
                 <textarea
                   autoFocus
                   value={ed.body}
-                  placeholder={ed.mark ? "Add words (optional)" : "Your note"}
+                  placeholder=""
+                  aria-label="Your note"
                   onChange={(e) => setNoteEdit({ ...ed, body: e.target.value })}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) save();

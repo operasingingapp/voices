@@ -1131,7 +1131,12 @@ export function ScoreView(props: Props) {
                   key={`${f.kind}-${f.id}`}
                   type="button"
                   className={`ov-flag ov-${f.kind}`}
-                  style={{ left: pt.x - 4, top: f.kind === "cue" ? sys.extentBottom + 2 : f.kind === "note" ? sys.top - 58 : sys.top - 50 - stackIndex * 24 }}
+                  style={(() => {
+                    // a note sits exactly over its bar: from the bar's left edge, no wider than the bar, just above what is drawn there
+                    const box = f.kind === "note" ? layout.measures.get(f.m) : undefined;
+                    if (box) return { left: box.x + 2, maxWidth: Math.max(box.w - 4, 44), top: Math.min(box.top - 30, box.extentTop - 22) };
+                    return { left: pt.x - 4, top: f.kind === "cue" ? sys.extentBottom + 2 : sys.top - 50 - stackIndex * 24 };
+                  })()}
                   onClick={(e) => {
                     e.stopPropagation();
                     props.onFlag?.(f);

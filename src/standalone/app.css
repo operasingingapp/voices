@@ -1228,7 +1228,7 @@ p {
   grid-template-rows: auto minmax(0, 1fr);
 }
 .page {
-  max-width: 1100px;
+  max-width: 1280px;
   padding-top: 32px;
 }
 .topbar {
@@ -8397,17 +8397,18 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .practice .score-overlay .ov-flag { pointer-events: auto !important; cursor: pointer; }
 .practice .ov-flag.ov-note {
   z-index: 90;
-  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 0;
-  border-radius: 4px;
-  padding: 2px 8px;
-  background: var(--peach, #ffd9c2);
-  color: #161616;
-  font-weight: 600;
   white-space: nowrap;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+  min-height: 0;
+  height: 18px;
+  padding: 0 6px;
+  border: 1px solid color-mix(in srgb, #e8a07a 55%, transparent);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--peach, #ffd9c2) 70%, var(--canvas, #fff));
+  color: color-mix(in srgb, var(--ink, #161616) 85%, transparent);
+  font: 500 11px/16px var(--sans, system-ui);
+  box-shadow: none;
 }
 
 /* Notes: "tap the bar" hint, and the small card where a note is written, both above the bottom bar */
@@ -8433,3 +8434,17 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .notes-mark[aria-pressed="true"] { background: var(--ink); color: var(--canvas); }
 .notes-title { margin: 0; font-size: 18px; font-weight: 600; }
 .notes-add { justify-self: start; display: inline-flex; align-items: center; gap: 8px; }
+
+/* Responsive: the piece's title must stay readable on every device.
+   Tablet upright (and small laptops): the Music/Words and Line/Page switches show icons only, so the title has room.
+   Phone: the title takes a row of its own under the buttons, where it shows in full. */
+@media (min-width: 641px) and (max-width: 960px) {
+  .practice > .p-head .view-switch button { width: 44px; padding: 0; justify-content: center; }
+  .practice > .p-head .view-switch button .label { display: none; }
+}
+@media (max-width: 640px) {
+  .practice > .p-head.p-head { flex-wrap: wrap; row-gap: 4px; }
+  .practice > .p-head.p-head .p-title { order: 10; flex: 1 0 100%; margin-left: 0; padding: 0 4px; }
+  .practice > .p-head.p-head .p-title h1 { white-space: normal; overflow: visible; }
+  .practice > .p-head.p-head .p-tools { margin-left: auto; }
+}
