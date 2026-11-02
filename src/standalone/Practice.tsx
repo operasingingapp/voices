@@ -1865,7 +1865,7 @@ function PracticeScreen({
     }
   });
   const [guideOk, setGuideOk] = useState(false);
-  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number; noteIds: string[] } | null>(null);
+  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number; noteIds: string[]; lineSets: Record<string, LineSet>; pianoFaded: boolean; hearPiano: boolean } | null>(null);
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   // what has happened during the current step: music heard, a loop gone round, the line or a word spoken, a line hidden
@@ -1885,7 +1885,7 @@ function PracticeScreen({
     { id: "mute", part: "Practise", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: gTrack.current.muteOnce ? "Hear your line again" : "Mute your line", text: gTrack.current.muteOnce ? "Tap your face, then Play my line." : "Your line plays softly on the piano as a guide. Tap your face, then Mute, to sing it alone.", done: () => !!guideStart.current && gTrack.current.muteOnce && hearVoice === guideStart.current.hearVoice },
     { id: "others", part: "Practise", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: gTrack.current.otherOnce ? "Silence it again" : "Hear another singer", text: gTrack.current.otherOnce ? "Tap the same face, then Mute." : "The other roles are silent. Tap a face, then Play this line.", done: () => gTrack.current.otherOnce && !otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
     { id: "arrange", part: "Practise", pops: ".mix-pop", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange the lines", text: "Tap Arrange: for each line, its sound, whether it shows in the score, its volume and its order.", done: () => mixOpen },
-    { id: "hide", part: "Practise", pops: ".mix-pop", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: gTrack.current.hidOnce ? "Bring it back" : "Hide a line", text: !mixOpen ? "Open Arrange again, then tap an eye." : gTrack.current.hidOnce ? "Tap the same eye again: the line comes back." : "Tap an eye: that line leaves the score (it still plays). Handy for reading only your part.", done: () => !!guideStart.current && gTrack.current.hidOnce && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) === guideStart.current.shown },
+    { id: "hide", part: "Practise", pops: ".mix-pop", sel: [".mix-line:has(.part-face.piano) .mix-toggles button:nth-child(2)", ".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: gTrack.current.hidOnce ? "Bring it back" : "Hide the piano part", text: !mixOpen ? "Open Arrange again, then tap the piano’s eye." : gTrack.current.hidOnce ? "Tap the same eye again: the piano part comes back." : "Tap the piano’s eye: its part leaves the score and you read only the voices. It keeps playing.", done: () => !!guideStart.current && gTrack.current.hidOnce && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) === guideStart.current.shown },
     { id: "notes", part: "Practise", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : "Tap Notes. Then you choose the bar.", done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
@@ -1948,7 +1948,9 @@ function PracticeScreen({
     setOpenWord(null);
     if (g) {
       setHearVoice(g.hearVoice);
-      for (const [k, v] of Object.entries(g.shows)) setLine(k, { show: v });
+      setLineSets(g.lineSets);
+      setPianoFaded(g.pianoFaded);
+      setHearPiano(g.hearPiano);
       // a note written to try it out goes again: only the notes you had before the tour stay
       const kept = loadNotes().filter((n) => g.noteIds.includes(n.id));
       setNotes(kept);
@@ -1985,7 +1987,15 @@ function PracticeScreen({
     } catch {
       /* storage unavailable */
     }
-    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))), shows: Object.fromEntries(orderedIds.map((x) => [partByXml(x).key, showOf(partByXml(x))])), notes: notes.length, noteIds: notes.map((n) => n.id) };
+    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map(() => true)), shows: {}, notes: notes.length, noteIds: notes.map((n) => n.id), lineSets, pianoFaded, hearPiano };
+    // every tour starts from the same picture, aria or ensemble: every line and the piano shown in the score (the
+    // piano faded, as usual), your line playing softly on the piano, the other singers silent, the piano playing,
+    // full speed. What you had is kept and comes back at the end.
+    setLineSets(Object.fromEntries(orderedIds.map((x) => [partByXml(x).key, { show: true }])));
+    setPianoFaded(true);
+    setHearPiano(true);
+    setHearVoice(true);
+    engine?.setTempoFactor(1);
     guideSkip.current = new Set(steps.filter((g) => g.skipIf?.()).map((g) => g.id));
     setLoop(null);
     setView("music");
