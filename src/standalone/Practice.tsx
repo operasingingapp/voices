@@ -1869,7 +1869,7 @@ function PracticeScreen({
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   // what has happened during the current step: music heard, a loop gone round, the line or a word spoken, a line hidden
-  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, lastQ: 0 });
+  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, lastQ: 0 });
   const steps: GuideStep[] = [
     { id: "listen", part: "Listen", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Press play and listen", text: "The lit word follows the music. Press pause when you’re ready.", done: () => gTrack.current.played && !playing },
     { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
@@ -1881,15 +1881,18 @@ function PracticeScreen({
     { id: "edge", part: "Loop", sel: [".ov-lh-e", ".ov-lh-s"], holeRight: 140, title: "Add bars", text: "Drag a purple edge outwards to take in more bars.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
     { id: "more", part: "Practise", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
-    { id: "slower", part: "Practise", sel: ['[aria-label="Slower"]'], title: "Slow it down", text: "Tap − to practise slower. The music keeps its pitch.", done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 1e-6 },
-    { id: "mute", part: "Practise", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute, and sing it yourself.", done: () => !hearVoice },
-    { id: "others", part: "Practise", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: "Hear another singer", text: "The other roles are silent. Tap a face, then Play this line.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
+    { id: "slower", part: "Practise", sel: gTrack.current.slowOnce ? ['[aria-label="Faster"]'] : ['[aria-label="Slower"]'], title: gTrack.current.slowOnce ? "Back to speed" : "Slow it down", text: gTrack.current.slowOnce ? "Tap + until it reads 100% again." : "Tap − once. The music slows down and keeps its pitch.", done: () => !!guideStart.current && gTrack.current.slowOnce && (engine?.tempo ?? 1) >= guideStart.current.tempo - 0.01 },
+    { id: "mute", part: "Practise", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: gTrack.current.muteOnce ? "Hear your line again" : "Mute your line", text: gTrack.current.muteOnce ? "Tap your face, then Play my line." : "Your line plays softly on the piano as a guide. Tap your face, then Mute, to sing it alone.", done: () => !!guideStart.current && gTrack.current.muteOnce && hearVoice === guideStart.current.hearVoice },
+    { id: "others", part: "Practise", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: gTrack.current.otherOnce ? "Silence it again" : "Hear another singer", text: gTrack.current.otherOnce ? "Tap the same face, then Mute." : "The other roles are silent. Tap a face, then Play this line.", done: () => gTrack.current.otherOnce && !otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
     { id: "arrange", part: "Practise", pops: ".mix-pop", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange the lines", text: "Tap Arrange: for each line, its sound, whether it shows in the score, its volume and its order.", done: () => mixOpen },
     { id: "hide", part: "Practise", pops: ".mix-pop", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: gTrack.current.hidOnce ? "Bring it back" : "Hide a line", text: !mixOpen ? "Open Arrange again, then tap an eye." : gTrack.current.hidOnce ? "Tap the same eye again: the line comes back." : "Tap an eye: that line leaves the score (it still plays). Handy for reading only your part.", done: () => !!guideStart.current && gTrack.current.hidOnce && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) === guideStart.current.shown },
     { id: "notes", part: "Practise", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : "Tap Notes. Then you choose the bar.", done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
   const step = guide >= 0 ? steps[guide] : null;
+  // the step as it reads now (a step can change half-way: slower, then back to speed), for code that runs on a timer
+  const stepNow = useRef(step);
+  stepNow.current = step;
   // where the music stood when a step began (a step done by moving through the piece compares with it)
   const guideQ = useRef<number | null>(null);
   // what has happened during this step: music heard, a loop gone round, the line or a word spoken
@@ -1905,9 +1908,12 @@ function PracticeScreen({
     if (speakingWord) t.wordSpoke = true;
     if (noteEdit) t.noteOpened = true;
     if (guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown) t.hidOnce = true;
+    if (guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 0.01) t.slowOnce = true;
+    if (guideStart.current && hearVoice !== guideStart.current.hearVoice) t.muteOnce = true;
+    if (otherVoices.some((p) => lineSets[p.key]?.hear === true)) t.otherOnce = true;
   });
   useEffect(() => {
-    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, lastQ: q };
+    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, lastQ: q };
     guideQ.current = guide >= 0 ? q : null;
     // the loop is set: put the strip away so the bar is clear for playing
     if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
@@ -2052,7 +2058,8 @@ function PracticeScreen({
         const b = e.getBoundingClientRect();
         return b.left >= 8 && b.right <= window.innerWidth - 8 && b.bottom > 0 && b.top < window.innerHeight;
       };
-      const cands = step.sel.map((q) => document.querySelector(q)).filter(seen);
+      const st = stepNow.current ?? step;
+      const cands = st.sel.flatMap((q) => [...document.querySelectorAll(q)]).filter(seen);
       const el = cands.find(onScreen) ?? cands[0];
       if (!el) {
         const w = Math.min(340, window.innerWidth - 32);
@@ -2062,7 +2069,7 @@ function PracticeScreen({
       let r: { left: number; top: number; width: number; height: number } = el.getBoundingClientRect();
       // a menu or panel opened from the lit control (your face's menu, Arrange, the note card) is part of the step:
       // the light takes it in, and the card moves out of its way
-      for (const pop of step.pops ? document.querySelectorAll(step.pops) : []) {
+      for (const pop of st.pops ? document.querySelectorAll(st.pops) : []) {
         if (!seen(pop)) continue;
         const pr = pop.getBoundingClientRect();
         const l = Math.min(r.left, pr.left), t = Math.min(r.top, pr.top);
@@ -2070,7 +2077,7 @@ function PracticeScreen({
       }
       const pad = 6;
       // room to drag: to the right of an end edge, to the left of a start edge
-      const extra = step.holeRight ?? 0;
+      const extra = st.holeRight ?? 0;
       const leftward = el.classList.contains("ov-lh-s");
       const hx = Math.max(4, r.left - pad - (leftward ? extra : 0));
       const hole = { x: hx, y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8 - hx, r.width + pad * 2 + extra), h: Math.min(window.innerHeight - 8, r.height + pad * 2) };
@@ -2103,7 +2110,7 @@ function PracticeScreen({
       window.clearInterval(t);
       window.removeEventListener("resize", place);
     };
-  }, [guide, view, barOpen, !!loop, playing, notePick, !!noteEdit, mixOpen, !!faceMenu]);
+  }, [guide, view, barOpen, !!loop, playing, notePick, !!noteEdit, mixOpen, !!faceMenu, step?.title, step?.sel.join(",")]);
   // only the lit control (and the guide's card) answers while a step waits
   useEffect(() => {
     if (!step || !guideBox) return;
@@ -2444,7 +2451,7 @@ function PracticeScreen({
               </p>
               <button type="button" role="menuitem" onClick={done(() => (mine ? setHearVoice(!on) : isPiano ? setHearPiano(!on) : setLine(p.key, { hear: !on })))}>
                 {on ? Icon.muted : Icon.speaker}
-                <span>{on ? (mine ? "Mute: I sing it" : isPiano ? "Mute the piano" : "Mute: sung live") : isPiano ? "Play the piano" : "Play this line"}</span>
+                <span>{on ? (mine ? "Mute: I sing it" : isPiano ? "Mute the piano" : "Mute: sung live") : isPiano ? "Play the piano" : mine ? "Play my line" : "Play this line"}</span>
               </button>
               <div className="face-menu-look" role="group" aria-label="In the score">
                 <button type="button" role="menuitemradio" aria-checked={look === "show"} onClick={done(() => setLook("show"))}>
