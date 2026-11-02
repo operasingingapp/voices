@@ -8523,3 +8523,7 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
 /* the guide no longer darkens anything: a ring round the control, and the card at the top */
 .guide-scrim { pointer-events: none; }
 .guide-hole { box-shadow: none !important; pointer-events: none; }
+
+/* a tap outside the step: the lit control gives a small nudge */
+.guide-hole.nudge::before { animation: guide-nudge 0.5s ease-out 1; }
+@keyframes guide-nudge { 0%, 100% { transform: scale(1); } 30% { transform: scale(1.08); } 60% { transform: scale(0.97); } }

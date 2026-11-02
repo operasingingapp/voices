@@ -2073,6 +2073,8 @@ function PracticeScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [guideOk, guide]);
   // where the lit control is, and where the card goes
+  // the control the current step lights, the only one that answers while the step waits
+  const litEl = useRef<HTMLElement | null>(null);
   const [guideBox, setGuideBoxRaw] = useState<{ hole: { x: number; y: number; w: number; h: number }; left: number; top: number; above: boolean; w: number } | null>(null);
   // the light is re-measured every 300 ms; only a real move re-draws the screen (a fresh object each time would
   // re-render the whole practice page, score included, three times a second)
@@ -2092,6 +2094,7 @@ function PracticeScreen({
       const st = stepNow.current ?? step;
       const cands = st.sel.flatMap((q) => [...document.querySelectorAll(q)]).filter(seen);
       const el = cands.find(onScreen) ?? cands[0];
+      litEl.current = el ?? null;
       if (!el) {
         const w = Math.min(340, window.innerWidth - 32);
         setGuideBox({ hole: { x: -9999, y: -9999, w: 0, h: 0 }, left: (window.innerWidth - w) / 2, top: window.innerHeight / 2 - 100, above: false, w });
@@ -2155,9 +2158,51 @@ function PracticeScreen({
     };
   }, [guide, view, barOpen, !!loop, playing, notePick, !!noteEdit, mixOpen, !!faceMenu, step?.title, step?.sel.join(",")]);
   // only the lit control (and the guide's card) answers while a step waits
+  // the step is the one thing to do: a tap anywhere else does nothing, and the lit control gives a nudge instead.
+  // Scrolling and reading stay free; the card (End tour) always answers.
   useEffect(() => {
-    // nothing is blocked any more: the screen stays fully usable while the guide points the way
-  }, [step, guideBox]);
+    if (!step) return;
+    const usesPop = step.id === "mute" || step.id === "others" || step.id === "notes" || step.id === "word";
+    const allowed = (t: EventTarget | null) => {
+      if (!(t instanceof Node)) return false;
+      const n = t instanceof Element ? t : t.parentElement;
+      if (!n) return false;
+      if (n.closest(".tip")) return true;
+      if (litEl.current && litEl.current.contains(n)) return true;
+      if (usesPop && step.pops && n.closest(step.pops)) return true;
+      return false;
+    };
+    const nudge = () => {
+      const h = document.querySelector(".guide-hole");
+      if (!h) return;
+      h.classList.remove("nudge");
+      void (h as HTMLElement).offsetWidth;
+      h.classList.add("nudge");
+    };
+    const stop = (e: Event) => {
+      if (allowed(e.target)) return;
+      e.stopPropagation();
+      // a press only reaches the app's own handlers, so stopping it is enough and the page still scrolls; a click, and
+      // a press on a slider or a menu, are stopped for good
+      const native = (e.target as Element | null)?.closest?.("input, select, textarea, label");
+      if (e.type === "click" || e.type === "dblclick" || e.type === "contextmenu" || native) e.preventDefault();
+      if (e.type === "pointerdown") nudge();
+    };
+    const key = (e: KeyboardEvent) => {
+      // typing a note, and Tab / Escape, are left alone; the practice shortcuts wait for the tour
+      if (e.key === "Tab" || e.key === "Escape" || allowed(e.target)) return;
+      if ((e.target as Element | null)?.closest?.("textarea, input")) return;
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    const evs = ["pointerdown", "mousedown", "touchstart", "click", "dblclick", "contextmenu"] as const;
+    for (const t of evs) document.addEventListener(t, stop, { capture: true, passive: false });
+    document.addEventListener("keydown", key, true);
+    return () => {
+      for (const t of evs) document.removeEventListener(t, stop, { capture: true });
+      document.removeEventListener("keydown", key, true);
+    };
+  }, [step]);
   const guideUi =
     guide === -1 && pb.status === "ready" ? (
       <div className="guide-intro" role="dialog" aria-modal="true" aria-labelledby="guide-h">
