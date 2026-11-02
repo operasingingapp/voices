@@ -111,6 +111,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-hai-gia-vinta": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "C major (recitative), then D major (aria)",
+      time: "4/4, then cut time (2/2)",
+      tempo: "Maestoso, Presto, Andante and Allegro in the recitative; Allegro maestoso at ♩ = 132, then Allegro assai at ♩ = 152 (about 5 minutes)",
+    },
+    notePlaceholder: "The Count realises he may have been tricked, and vows revenge",
+    about: (
+      <>
+        <p>
+          Score: No. 17, the Count's recitative “Hai già vinta la causa!” and aria “Vedrò, mentr'io sospiro” (vocal score pages 216-223, 160 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-crudel-perche-finora": {
     portrait: "figaro:susanna",
     opera: "Le nozze di Figaro",
@@ -621,6 +645,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Written out from the printed pages: the sung lines and the piano each transcribed twice independently and reconciled on the page, then
           checked by independent checkers until a full round was clean, followed by accidentals, slur and singer passes and a fresh final check.
           Only the Italian words are kept, with the engraving's spellings. The opening upbeat counts as bar 1. In bar 40 the piano's C is printed without the sharp it has in bar 50; it is kept as printed.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-signor-signor": {
+    portrait: "figaro:antonio",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "F major (Allegro molto), then B flat major (Andante)",
+      time: "4/4, then 6/8",
+      tempo: "Allegro molto at ♩ = 160, then Andante at ♩ = 66 (about 6 minutes)",
+    },
+    notePlaceholder: "Antonio storms in: someone jumped from the window onto his carnations",
+    about: (
+      <>
+        <p>
+          Score: the fourth section of the Act 2 Finale, No. 15, from Antonio's entrance “Ah! signor, signor!” through the Andante in 6/8 (vocal score pages 169-186, 230 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for

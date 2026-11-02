@@ -99,6 +99,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Signori, di fuori son già i suonatori",
       "editionId": "mozart-signori-di-fuori"
+     },
+     {
+      "title": "Ah! signor, signor!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! signor, signor!",
+      "editionId": "mozart-ah-signor-signor"
      }
     ]
    },
@@ -228,6 +234,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Signori, di fuori son già i suonatori",
       "editionId": "mozart-signori-di-fuori"
+     },
+     {
+      "title": "Ah! signor, signor!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! signor, signor!",
+      "editionId": "mozart-ah-signor-signor"
      }
     ]
    },
@@ -302,6 +314,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Signori, di fuori son già i suonatori",
       "editionId": "mozart-signori-di-fuori"
+     },
+     {
+      "title": "Ah! signor, signor!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! signor, signor!",
+      "editionId": "mozart-ah-signor-signor"
      }
     ]
    },
@@ -375,6 +393,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Signori, di fuori son già i suonatori",
       "editionId": "mozart-signori-di-fuori"
+     },
+     {
+      "title": "Hai già vinta la causa!",
+      "kind": "Aria · Act 3",
+      "id": "Act 3: Hai già vinta la causa!",
+      "editionId": "mozart-hai-gia-vinta"
+     },
+     {
+      "title": "Ah! signor, signor!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! signor, signor!",
+      "editionId": "mozart-ah-signor-signor"
      }
     ]
    },
@@ -560,6 +590,12 @@ export const OPERAS: Opera[] = [
      {
       "title": "Deh, vieni alla finestra",
       "kind": "Canzonetta · Act 2"
+     },
+     {
+      "title": "Ah! signor, signor!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! signor, signor!",
+      "editionId": "mozart-ah-signor-signor"
      }
     ]
    },

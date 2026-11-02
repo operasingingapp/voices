@@ -402,7 +402,7 @@
   {
     "editionId": "mozart-dove-sono",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-dove-sono@1.0.0-klengel#a7777946e8",
+    "scoreVersionId": "mozart-dove-sono@1.0.0-klengel#01cb211beb",
     "title": "Dove sono",
     "subtitle": "The Countess's aria from Le nozze di Figaro, Act 3",
     "kind": "aria",
@@ -417,7 +417,7 @@
       }
     ],
     "measures": 110,
-    "durationSec": 217,
+    "durationSec": 209,
     "hasRepeats": false,
     "keySignature": "C major",
     "time": "2/4",
@@ -656,6 +656,34 @@
     "time": "6/8",
     "languageStatus": {
       "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-hai-gia-vinta",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-hai-gia-vinta@1.0.0-klengel#9fa2093280",
+    "title": "Hai già vinta la causa!",
+    "subtitle": "The Count: recitative and aria from Le nozze di Figaro, Act 3 (No. 17)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 160,
+    "durationSec": 283,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 53,
       "withAudio": 0,
       "reviewed": 0
     }
