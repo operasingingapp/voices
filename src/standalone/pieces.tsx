@@ -111,6 +111,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-crudel-perche-finora": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Duet",
+    facts: {
+      key: "A minor, then A major from bar 29",
+      time: "4/4",
+      tempo: "Andante: played here at ♩ = 66 (about 3½ minutes)",
+    },
+    notePlaceholder: "Susanna promises the Count a meeting in the garden",
+    about: (
+      <>
+        <p>
+          Score: No. 16, the Duet “Crudel! perchè finora” (vocal score pages 210-214, 72 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain. The piano was read once from the page and once from a scan, every disagreement settled on the page.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (perchè, gioja, si for sì).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

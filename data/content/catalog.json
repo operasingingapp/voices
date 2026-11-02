@@ -338,6 +338,40 @@
     }
   },
   {
+    "editionId": "mozart-crudel-perche-finora",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-crudel-perche-finora@1.0.0-klengel#c4a41d5518",
+    "title": "Crudel! perché finora",
+    "subtitle": "The Count and Susanna: duet from Le nozze di Figaro, Act 3 (No. 16)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 72,
+    "durationSec": 262,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 49,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-der-holle-rache",
     "editionVersion": "1.0.0-musescore-3.6.2",
     "scoreVersionId": "mozart-der-holle-rache@1.0.0-musescore-3.6.2#c3ee43fa6d",

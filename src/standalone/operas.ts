@@ -210,6 +210,12 @@ export const OPERAS: Opera[] = [
       "kind": "Terzetto · Act 1",
       "id": "Act 1: Cosa sento!",
       "editionId": "mozart-cosa-sento"
+     },
+     {
+      "title": "Crudel! perché finora",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Crudel! perché finora",
+      "editionId": "mozart-crudel-perche-finora"
      }
     ]
    },
@@ -339,6 +345,12 @@ export const OPERAS: Opera[] = [
       "kind": "Terzetto · Act 1",
       "id": "Act 1: Cosa sento!",
       "editionId": "mozart-cosa-sento"
+     },
+     {
+      "title": "Crudel! perché finora",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Crudel! perché finora",
+      "editionId": "mozart-crudel-perche-finora"
      }
     ]
    },

@@ -1,0 +1,70 @@
+CHECK No. 16 Duetto "Crudel! perche finora" -- d16_cur.xml vs Breitkopf pp. 210-214 (sys020-sys037)
+Checked every bar 1-72 in all parts (P1 Susanna, P2 Il Conte, P3 Piano RH/LH): pitches, rhythm, rests, ties,
+displayed accidentals, lyrics, dynamics, fermatas, staccatos, trills, piano slurs, key/time/tempo.
+Beats are counted 1-4. Every item below was confirmed on a zoomed crop of the print.
+
+REAL DIFFERENCES
+
+1. Bar 1, all parts, time signature.
+   print: common-time symbol C.
+   file:  <time> 4/4 with no symbol="common", so it shows as numerals 4/4.
+
+2. Bar 4 -> 5, P3 LH, beat 4.
+   print: a slur from the E3 quarter (bar 4, beat 4) to the F3 whole note in bar 5 (different pitches, so a slur, not a tie).
+   file:  no slur on the bar-4 E3 or the bar-5 F3.
+
+3. Bar 12, P3 RH lower voice, beat 1.
+   print: the slur starts on the E4 quarter at beat 1 (the note tied from bar 11) and ends on the D4+F#4 chord at beat 4.
+   file:  the slur starts one note later, on the F4 dotted eighth at beat 2 (slur 8 start).
+
+4. Bar 25, P3 LH lower voice, beat 1 (D3-F3-A3 half-note chord).
+   print: no accidental on F3.
+   file:  F3 has <accidental>natural</accidental>, an extra displayed natural. Key is A minor, and no F# comes earlier in the bar.
+
+5. Bar 29, P3 RH, beat 1.5 (first chord C#4+E4).
+   print: "fp" followed by a small ">" (short decrescendo hairpin or accent) under the chord.
+   file:  fp only; no wedge or accent.
+
+6. Bar 42, P2 (Conte), around beats 2-3 (above "ver-ra-").
+   print: the expression word "dolce" above the Conte staff.
+   file:  missing. The file has no "dolce" anywhere.
+
+7. Bar 48, P2 (Conte), beat 1.5 (above "non man-").
+   print: "dolce" above the Conte staff.
+   file:  missing.
+
+8. Bars 48-50, P3 RH, piano slur.
+   print: the slur starts on the C#5+E5 quarter at bar 48, beat 2. It runs over bar 49, continues across the system break,
+          and ends on the first chord of bar 51. This is the same layout as the slur over bars 42-45.
+   file:  no RH slur in bars 48-49. The slur only starts at bar 50, beat 3 (A4+D#5+A5) and ends at bar 51, beat 1.
+
+9. Bar 57, P3 RH lower voice, beat 1.
+   print: E4 is a DOTTED quarter, with its own stem down and a dot in the F4 space. The upper voice has A4+C#4 as a
+          quarter, then G#4+B3 as an eighth, then E4 as an eighth.
+   file:  v2 has C#4+E4 as a plain quarter (beats 1-2), then B3 as an eighth and an eighth rest. E4 ends at beat 2
+          instead of beat 2.5.
+
+10. Bar 69, P3 LH, beat 3.
+   print: E4 (a filled quarter, stem down, plus a hollow half, stem up, at the same pitch on the second ledger line).
+          The slur to bar 70 starts from the E4 half.
+   file:  D4 (v5 D4 half, v6 D4 quarter).
+
+11. Bar 69, P3 LH lower voice, beat 4.
+   print: D4 quarter (head between the C4 and E4 ledger lines).
+   file:  C#4 quarter (v6).
+
+UNSURE
+
+- Bar 10, P3 RH, beat 2: the G4 half (upper voice) and the G4 quarter (lower voice) are a unison. The print shows a single
+  natural sign; the file puts a natural on both notes, which renders two naturals. This is a layout matter more than a
+  musical one.
+- Bar 42, P3 LH, beat 1: there is a small dot below the first A3+C#4+E4 chord, near its stem, and none above the opening
+  A2+A3. It may be a staccato or a speck. Bar 48 has no dot in the same spot. The file has no staccato on either.
+- Bar 45, P2: there is an ink blot or handwritten mark above the F#3 quarter on "no?". It looks like a defect in the scan,
+  not a printed note. The file is correct to ignore it.
+- Bar 29: whether the ">" after fp is meant as a decrescendo hairpin or as an accent (item 5).
+- Bars 36, 38, 40 and 48: some RH notes are flute or bassoon cue notes ("Fl." / "Fag."), for example the A4 eighth in
+  bar 36, beat 2.5, and A5 in bar 40 and bar 48. They may be cue-size in the print. The file has them as normal notes,
+  which is acceptable.
+- Bars 22 and 54, P1: the print reads "ro," and "ro." with no accent (elsewhere it prints "rò"). The file copies the print.
+  This is not an error in the file, but the editor may want "rò".

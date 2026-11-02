@@ -1,0 +1,30 @@
+== bar 7 C: Y
+# The last eighth note (stem down, under "cru-") has its head centred on the top line of the bass staff, so it is A3. It is not B3, which would sit in the space above that line, like the "per-" note at the end of bar 6.
+7 C: C4:q "chè?" r:q r:q r:e A3:e "cru-"
+== bar 10 C: Y
+# The head is in the space between the 2nd and 3rd lines, so it is E3. The print shows two quarter rests and then an eighth rest before Susanna's treble-clef "Si-". There is no half rest. The Count is silent for all of beat 4 (the eighth rest plus Susanna's eighth), so his part is three quarter rests.
+10 C: E3:q "sì?" r:q r:q r:q
+== bar 11 S: Y
+# The four notes of bars 11-12 that follow "don-" (G4 eighth, G4 eighth, C5 eighth, C5 dotted half) carry "na o-gno-ra". A slur under the G4-C5 pair at the start of bar 12 makes it a two-note melisma on one syllable, and "gno" is printed directly under that G4. So "o" cannot have its own note. It elides with "na" on the last eighth of bar 11, where "o" is printed squeezed in just after "na".
+11 S: G4:q "gnor," r:e G4:e "la" G4:q. "don-" G4:e "na_o-"
+== bar 12 S: Y
+# The G4 and C5 eighths are beamed and slurred, and "gno-" is printed under the G4. The C5 dotted half takes "ra" (see bar 11).
+12 S: G4:e "gno-" C5:e C5:h. "ra"
+== bar 16 C: Y
+# After the two C4 eighths ("ra-" "i?") the print shows a quarter rest, a quarter rest and an eighth rest, then Susanna's "Se". There is no half rest. The Count is silent for all of beat 4.
+16 C: C4:e "ra-" C4:e "i?" r:q r:q r:q
+== bar 20 C: Y
+# The layout is the same as bar 16: two C4 eighths, a quarter rest, a quarter rest and an eighth rest, then Susanna's "No,". There is no half rest, and the Count is silent for beat 4.
+20 C: C4:e "ra-" C4:e "i?" r:q r:q r:q
+== bar 22 S: Y
+# After the A4 quarter "ro," the print shows a quarter rest, a quarter rest and an eighth rest, then the Count's bass-clef "Ver-". There is no half rest, and Susanna is silent for beat 4.
+22 S: A4:q "ro," r:q r:q r:q
+== bar 39 S: Y
+# The print has "pia-cea", the words "piace a" run together under the single C#5 eighth. Five eighths (A4 B4 C#5 D5 E5) carry "Se pia- ce+a voi, ver-", so the vowels e+a are sung on one note. By the convention for two vowels on one note, they are joined with "_". Bar 17 prints the same words as "pia-ce a".
+39 S: r:q r:e A4:e "Se" B4:e "pia-" C#5:e "ce_a" D5:e "voi," E5:e "ver-"
+== bar 46 S: Y
+# The notes are as both readings give them: F#5 quarter, then three slurred eighth pairs E5-D5, C#5-E5 and D5-B4. "se" goes on E5, "pia-" on C#5 and the printed "cea" on the D5-B4 pair. As in bar 39, "piace a" puts two vowels on one note, so the token is "ce_a".
+46 S: F#5:q E5:e "se" D5:e C#5:e "pia-" E5:e D5:e "ce_a" B4:e
+== bar 51 C: Y
+# Pixel check: the staff lines are at y=267/283/299/315/331, so the top line (A3) is at 267 and the first ledger line (C4) at 251. The notehead spans y=234-249 (centre about 242) and sits on top of the ledger line rather than being crossed by it. That is the space above C4, so the note is D4, not C#4.
+51 C: r:q D4:q "si?" r:h
