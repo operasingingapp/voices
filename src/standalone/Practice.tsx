@@ -647,6 +647,25 @@ function PracticeScreen({
     setLineSets(next);
   };
   const lineName = (p: CompiledEdition["parts"][number]) => (p.kind === "piano" ? "Piano" : p.shortLabel);
+  // beside the staves in the line view: each part's abbreviation, as a printed score has it (Sus., Cont., Fig.)
+  const laneAbbr = useMemo(() => {
+    const out: Record<string, string> = {};
+    try {
+      const doc = new DOMParser().parseFromString(displayXml, "application/xml");
+      for (const sp of Array.from(doc.getElementsByTagName("score-part"))) {
+        const id = sp.getAttribute("id") ?? "";
+        const ab = sp.getElementsByTagName("part-abbreviation")[0]?.textContent?.trim();
+        const nm = sp.getElementsByTagName("part-name")[0]?.textContent?.trim() ?? "";
+        const p = edition.parts.find((x) => x.source.xmlPartId === id);
+        const base = p?.kind === "piano" ? "Pno." : ab && ab.length <= 6 ? ab : (p?.shortLabel ?? nm).replace(/^(Il|La|Lo|Don|Donna|The)\s+/i, "").slice(0, 4) + ".";
+        if (id) out[id] = base;
+      }
+    } catch {
+      /* names stay */
+    }
+    return out;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const shownXml = useMemo(() => (orderedIds.join() === xmlOrder.join() ? displayXml : reorderXml(displayXml, orderedIds)), [orderedIds]);
   const moveLine = (i: number, dir: -1 | 1) => {
     const next = [...orderedIds];
@@ -695,7 +714,7 @@ function PracticeScreen({
   useEffect(() => {
     if (!faceMenu) return;
     const down = (e: PointerEvent) => {
-      if (!(e.target as HTMLElement).closest(".face-menu, .bar-parts .part")) setFaceMenu(null);
+      if (!(e.target as HTMLElement).closest(".face-menu, .bar-parts .part, .pg-piano")) setFaceMenu(null);
     };
     const key = (e: KeyboardEvent) => e.key === "Escape" && setFaceMenu(null);
     window.addEventListener("pointerdown", down);
@@ -2212,11 +2231,7 @@ function PracticeScreen({
           perf={perf}
           visibleXmlParts={hiddenIds.length ? orderedIds.filter((x) => !hiddenIds.includes(x)) : null}
           laneLabels={Object.fromEntries(orderedIds.map((x) => [x, lineName(partByXml(x)) + (x === voicePart.source.xmlPartId ? " · you" : "")]))}
-          laneFaces={Object.fromEntries(
-            orderedIds
-              .filter((x) => partByXml(x).kind !== "piano" && partByXml(x).roleId)
-              .map((x) => [x, <RoleFace k={`${info.portrait.split(":")[0]}:${partByXml(x).roleId}`} />]),
-          )}
+          laneFaces={laneAbbr}
           laneYou={voicePart.source.xmlPartId}
           onLaneLabel={(xid, el) => {
             const r = el.getBoundingClientRect();
@@ -2250,13 +2265,21 @@ function PracticeScreen({
 
       {faceMenu &&
         (() => {
-          const p = voiceParts.find((x) => x.key === faceMenu.key);
+          const isPiano = faceMenu.key === pianoPart.key;
+          const p = isPiano ? pianoPart : voiceParts.find((x) => x.key === faceMenu.key);
           if (!p) return null;
           const mine = p === voicePart;
-          const on = mine ? hearVoice : (lineSets[p.key]?.hear ?? true);
+          const on = mine ? hearVoice : isPiano ? hearPiano : (lineSets[p.key]?.hear ?? true);
           const shown = showOf(p);
-          const faded = !!lineSets[p.key]?.fade;
-          const name = mine ? roleName : p.shortLabel;
+          const faded = isPiano ? pianoFaded : !!lineSets[p.key]?.fade;
+          const name = isPiano ? "Piano" : mine ? roleName : p.shortLabel;
+          const setLook = (look: "show" | "fade" | "hide") => {
+            if (look === "hide") return setLine(p.key, { show: false });
+            if (isPiano) {
+              setLine(p.key, { show: true });
+              setPianoFaded(look === "fade");
+            } else setLine(p.key, { show: true, fade: look === "fade" });
+          };
           const done = (f: () => void) => () => {
             f();
             setFaceMenu(null);
@@ -2268,16 +2291,16 @@ function PracticeScreen({
                 {name}
                 {mine && <em className="mix-you">you</em>}
               </p>
-              <button type="button" role="menuitem" onClick={done(() => (mine ? setHearVoice(!on) : setLine(p.key, { hear: !on })))}>
+              <button type="button" role="menuitem" onClick={done(() => (mine ? setHearVoice(!on) : isPiano ? setHearPiano(!on) : setLine(p.key, { hear: !on })))}>
                 {on ? Icon.muted : Icon.speaker}
-                <span>{on ? (mine ? "Mute: I sing it" : "Mute: sung live") : "Play this line"}</span>
+                <span>{on ? (mine ? "Mute: I sing it" : isPiano ? "Mute the piano" : "Mute: sung live") : isPiano ? "Play the piano" : "Play this line"}</span>
               </button>
               <div className="face-menu-look" role="group" aria-label="In the score">
-                <button type="button" role="menuitemradio" aria-checked={look === "show"} onClick={done(() => setLine(p.key, { show: true, fade: false }))}>
+                <button type="button" role="menuitemradio" aria-checked={look === "show"} onClick={done(() => setLook("show"))}>
                   {Icon.eye}
                   <span>Show</span>
                 </button>
-                <button type="button" role="menuitemradio" aria-checked={look === "fade"} onClick={done(() => setLine(p.key, { show: true, fade: true }))}>
+                <button type="button" role="menuitemradio" aria-checked={look === "fade"} onClick={done(() => setLook("fade"))}>
                   {Icon.fade}
                   <span>Fade</span>
                 </button>
@@ -2286,7 +2309,7 @@ function PracticeScreen({
                   role="menuitemradio"
                   aria-checked={look === "hide"}
                   disabled={mine || (shown && hiddenIds.length >= orderedIds.length - 1)}
-                  onClick={done(() => setLine(p.key, { show: false }))}
+                  onClick={done(() => setLook("hide"))}
                 >
                   {Icon.eyeOff}
                   <span>Hide</span>
@@ -2782,43 +2805,18 @@ function PracticeScreen({
             const shownP = showOf(pianoPart);
             return (
               <div className="piano-group" role="group" aria-label="Piano">
-                {/* the piano itself is the sound switch: lit when it plays, struck through when muted */}
+                {/* the piano: one button, like the singers' faces; a tap opens the same menu (sound; shown, faded or hidden) */}
                 <button
                   type="button"
                   className="pg-btn pg-piano"
                   aria-pressed={hearPiano}
-                  onClick={() => setHearPiano(!hearPiano)}
-                  aria-label={hearPiano ? "The piano plays. Mute it" : "The piano is muted. Play it"}
-                  title={hearPiano ? "Piano: plays" : "Piano: muted"}
+                  aria-haspopup="menu"
+                  onClick={(e) => openFaceMenu(pianoPart.key, e.currentTarget)}
+                  aria-label={`Piano: ${hearPiano ? "plays" : "muted"}${musicOn ? `, ${!shownP ? "hidden" : pianoFaded ? "faded" : "shown"} in the score` : ""}`}
+                  title={`Piano: ${hearPiano ? "plays" : "muted"}${musicOn ? `, ${!shownP ? "hidden" : pianoFaded ? "faded" : "shown"}` : ""}`}
                 >
-                  {Icon.piano}
+                  {hearPiano ? Icon.piano : Icon.muted}
                 </button>
-                {musicOn && (
-                  <>
-                    <button
-                      type="button"
-                      className="pg-btn"
-                      aria-pressed={shownP}
-                      disabled={shownP && hiddenIds.length >= orderedIds.length - 1}
-                      onClick={() => setLine(pianoPart.key, { show: !shownP })}
-                      aria-label={shownP ? "The piano is shown in the score. Hide it" : "The piano is hidden in the score. Show it"}
-                      title={shownP ? "Piano in the score: shown" : "Piano in the score: hidden"}
-                    >
-                      {shownP ? Icon.eye : Icon.eyeOff}
-                    </button>
-                    <button
-                      type="button"
-                      className="pg-btn"
-                      aria-pressed={pianoFaded}
-                      disabled={!shownP}
-                      onClick={() => setPianoFaded(!pianoFaded)}
-                      aria-label={pianoFaded ? "The piano is faded in the score. Show it clearly" : "Fade the piano in the score"}
-                      title={pianoFaded ? "Piano faded" : "Piano clear"}
-                    >
-                      {Icon.fade}
-                    </button>
-                  </>
-                )}
               </div>
             );
           })()}

@@ -8350,3 +8350,16 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   background: color-mix(in srgb, var(--now-mark, #2e7d4f) 16%, transparent);
   color: var(--ink);
 }
+
+/* the line view's gutter: the part's abbreviation, as printed at the start of a staff */
+.lane-label.lane-label--side.has-abbr {
+  padding: 0 2px 0 8px;
+}
+.lane-abbr {
+  font: italic 500 13px/1 var(--font-serif, Georgia, serif);
+  letter-spacing: 0.01em;
+}
+.lane-abbr.is-you {
+  color: var(--now-mark, #2e7d4f);
+  font-weight: 700;
+}

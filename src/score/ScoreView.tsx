@@ -351,8 +351,8 @@ export function ScoreView(props: Props) {
               <button
                 key={`lbl-${l.partId}`}
                 type="button"
-                className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}${useVrvRef.current && props.laneFaces?.[l.partId] ? " has-face" : ""}`}
-                style={{ top: labelTop(l) - (useVrvRef.current && props.laneFaces?.[l.partId] ? 4 : 0) }}
+                className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}${useVrvRef.current && props.laneFaces?.[l.partId] ? (typeof props.laneFaces[l.partId] === "string" ? " has-abbr" : " has-face") : ""}`}
+                style={{ top: labelTop(l) - (useVrvRef.current && props.laneFaces?.[l.partId] && typeof props.laneFaces[l.partId] !== "string" ? 4 : 0) }}
                 onClick={(e) => {
                   e.stopPropagation();
                   props.onLaneLabel!(l.partId, e.currentTarget);
@@ -361,9 +361,15 @@ export function ScoreView(props: Props) {
                 aria-label={`${props.laneLabels![l.partId]}: move, hide or mute this line`}
               >
                 {useVrvRef.current && props.laneFaces?.[l.partId] ? (
-                  <span className={`lane-face${props.laneYou === l.partId ? " is-you" : ""}`} title={props.laneLabels![l.partId]}>
-                    {props.laneFaces[l.partId]}
-                  </span>
+                  typeof props.laneFaces[l.partId] === "string" ? (
+                    <span className={`lane-abbr${props.laneYou === l.partId ? " is-you" : ""}`} title={props.laneLabels![l.partId]}>
+                      {props.laneFaces[l.partId]}
+                    </span>
+                  ) : (
+                    <span className={`lane-face${props.laneYou === l.partId ? " is-you" : ""}`} title={props.laneLabels![l.partId]}>
+                      {props.laneFaces[l.partId]}
+                    </span>
+                  )
                 ) : (
                   props.laneLabels![l.partId]
                 )}
