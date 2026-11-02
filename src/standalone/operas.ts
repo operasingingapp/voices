@@ -1,4 +1,5 @@
 import { SCENES, type Scene } from "./scenes";
+import catalog from "../../data/content/catalog.json";
 
 /** Well-known operas, their main characters and the arias and ensembles they sing. A first pass from the scores' titles, to be checked. */
 export type AvatarKind = "short" | "cap" | "bun" | "long" | "curls" | "hood" | "beard" | "hat" | "crown";
@@ -599,8 +600,8 @@ export const OPERAS: Opera[] = [
       "editionId": "mozart-signori-di-fuori"
      },
      {
-      "title": "Hai già vinta la causa!",
-      "kind": "Aria · Act 3",
+      "title": "Hai già vinta la causa!… Vedrò, mentr'io sospiro",
+      "kind": "Recitative and aria · Act 3",
       "id": "Act 3: Hai già vinta la causa!",
       "editionId": "mozart-hai-gia-vinta"
      },
@@ -2150,8 +2151,8 @@ export const OPERAS: Opera[] = [
 
 /** a first-pass title → the running order's title, where the two differ */
 const ALIAS: Record<string, string> = {
+  "Sull’aria": "Che soave zeffiretto",
   "Sull'aria… che soave zeffiretto": "Che soave zeffiretto",
-  "Hai già vinta la causa… Vedrò mentr'io sospiro": "Vedrò, mentr'io sospiro",
   "Mi tradì quell'alma ingrata": "In quali eccessi… Mi tradì",
   "Pa-pa-pa": "Bald prangt, den Morgen zu verkünden",
   "Vecchia zimarra, senti": "Vecchia zimarra",
@@ -2182,20 +2183,41 @@ export const FIRST_PASS_KEYS: Record<string, string[]> = {};
 /** first-pass pieces that could not be placed in the running order (should stay empty) */
 export const UNPLACED: string[] = [];
 
+/** who sings in each piece with music in the app (the score's roles), so a number one singer has music for can be
+ * offered to everyone else who sings in that music */
+const EDITION_ROLES = new Map((catalog as { editionId: string; roles: { id: string }[] }[]).map((e) => [e.editionId, new Set(e.roles.map((r) => r.id))]));
 for (const opera of OPERAS) {
   const scenes = SCENES[opera.id] ?? [];
+  // every number's music, whoever's list it came from
+  const musicOf = new Map<Scene, Piece>();
+  for (const ch of opera.chars) {
+    const sung = scenes.filter((s) => s.who.includes(ch.id));
+    const taken = new Set<Scene>();
+    for (const p of [...ch.pieces].sort((x, y) => (y.editionId ? 1 : 0) - (x.editionId ? 1 : 0))) {
+      const s = matchScene(p.title, sung);
+      if (!s || taken.has(s)) continue;
+      taken.add(s);
+      if (p.editionId && !musicOf.has(s)) musicOf.set(s, p);
+    }
+  }
   for (const ch of opera.chars) {
     const first = ch.pieces;
     FIRST_PASS_KEYS[`${opera.id}:${ch.id}`] = first.map((p) => p.id ?? p.title);
     const sung = scenes.filter((s) => s.who.includes(ch.id));
     const claimed = new Map<Scene, Piece>();
-    for (const p of first) {
+    // a piece with music to practise claims its number before a first-pass entry without any
+    for (const p of [...first].sort((x, y) => (y.editionId ? 1 : 0) - (x.editionId ? 1 : 0))) {
       const s = matchScene(p.title, sung);
       if (!s || claimed.has(s)) UNPLACED.push(`${opera.id}:${ch.id} ${p.title}`);
       else claimed.set(s, p);
     }
     ch.pieces = sung.map((s) => {
-      const old = claimed.get(s);
+      let old = claimed.get(s);
+      // no music in this singer's own list, but the number is in the app from someone else's, with this singer's part in it
+      if (!old?.editionId) {
+        const other = musicOf.get(s);
+        if (other?.editionId && EDITION_ROLES.get(other.editionId)?.has(ch.id)) old = { ...other, id: old ? (old.id ?? old.title) : `${actOf(s.act)}: ${s.title}`, when: old?.when, context: old?.context };
+      }
       const act = actOf(s.act);
       return {
         title: old?.editionId ? old.title : s.title,

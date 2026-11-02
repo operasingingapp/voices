@@ -1894,7 +1894,7 @@ function PracticeScreen({
     { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], holeRight: 140, title: "Choose the bars", text: "Drag a purple edge outwards to take in more bars.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
     { id: "playloop", part: "Work on a passage", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play the loop", text: "Press play and listen for it to come round.", after: "It repeats until you stop it. Leave it playing.", dwell: 3000, done: () => gTrack.current.wrapped },
     { id: "more", part: "Work on a passage", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them. The loop keeps playing.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
-    { id: "slower", part: "Work on a passage", sel: ['[aria-label="Slower"]:not([disabled])', '[aria-label="Slower"]'], title: "Make it easier", text: "Tap − while it plays.", after: "Slower, at the same pitch. Tap − again for slower still, + to speed up.", dwell: 5000, done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 0.01 },
+    { id: "slower", part: "Work on a passage", sel: ['[aria-label="Slower"]:not([disabled])', '[aria-label="Slower"]'], title: "Make it easier", text: "Tap − to slow it down. The loop keeps playing.", after: "Slower, at the same pitch. Tap − again for slower still, + to speed up.", dwell: 5000, done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 0.01 },
     { id: "mute", part: "Work on a passage", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: "Sing it yourself", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute.", after: "Your line is silent now: sing into the gap. Tap your face again any time to bring the guide back.", dwell: 6000, done: () => !hearVoice },
     { id: "others", part: "Work on a passage", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: "Add another singer", text: "The other roles are silent until you want them. Tap a face, then Play this line.", after: "Now they sing with you. Hold a face to choose their sound.", dwell: 5000, done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
     { id: "unloop", part: "Work on a passage", sel: [".bar-loop"], title: "Stop looping", text: "Tap Loop again when you’ve had enough. The music carries on from there.", after: "Back to the whole piece.", dwell: 2500, done: () => !loop },
@@ -2063,6 +2063,8 @@ function PracticeScreen({
   });
   useEffect(() => {
     if (!guideOk) return;
+    // the piano gone from the score: Arrange closes so you see the score without it while the card explains
+    if (steps[guide]?.id === "hide") setMixOpen(false);
     const t = window.setTimeout(() => {
       setGuideOk(false);
       advance(guide);
@@ -2133,6 +2135,14 @@ function PracticeScreen({
       // the card rests at the top of the screen, clear of the music and the words; only when the control it points
       // at is up there too does it sit just under that control instead
       const centred = Math.max(16, (window.innerWidth - w) / 2);
+      // on a phone the top of the screen is the line of words; a control down in the practice bar gets its card just
+      // above the bar instead, over the lower score, so the words stay in sight
+      const pbar = document.querySelector(".p-bar");
+      const overBar = pbar ? Math.min(pbar.getBoundingClientRect().top, hole.y) - 8 : 0;
+      if (window.innerWidth <= 640 && pbar && pbar.contains(el) && overBar > 220) {
+        setGuideBox({ hole, left: centred, top: overBar, above: true, w });
+        return;
+      }
       if (hole.y > 210) setGuideBox({ hole, left: centred, top: 12, above: false, w });
       else setGuideBox({ hole, left, top: hole.y + hole.h + 12, above: false, w });
     };
