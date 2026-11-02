@@ -8467,3 +8467,13 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 
 /* the piece rows: a quiet neutral hairline instead of the green outline */
 .checklist > .ck.ready { box-shadow: inset 0 0 0 1px var(--fog-strong); }
+
+/* the scene button says "Scene" again, with its arrow (a bare arrow did not say what it opens) */
+.checklist .ck .ck-scene, .checklist .ck.soon .ck-scene {
+  width: auto; height: 36px; padding: 0 10px 0 14px; gap: 4px; border-radius: var(--radius-pill);
+}
+.checklist .ck .ck-scene .ck-scene-label { display: inline; font-size: 14px; }
+@media (max-width: 360px) {
+  .checklist .ck .ck-scene, .checklist .ck.soon .ck-scene { width: 36px; padding: 0; }
+  .checklist .ck .ck-scene .ck-scene-label { display: none; }
+}
