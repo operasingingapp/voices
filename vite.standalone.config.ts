@@ -46,7 +46,20 @@ export default defineConfig({
     assetsInlineLimit: (file: string) => !/\.(js|webp|jpe?g|png|avif|mp3|mp4|musicxml)$/.test(file),
     rollupOptions: {
       input: "standalone.html",
-      output: { entryFileNames: "assets/app-[hash:8].js", chunkFileNames: "assets/[name]-[hash:8].js", assetFileNames: (a) => ((a.names?.[0] ?? a.name ?? "").endsWith(".musicxml") ? "assets/[name]-[hash:8].xml" : "assets/[name]-[hash:8][extname]") },
+      output: {
+        // the pieces' data is large: keep it out of the app's own file, in a few chunks of a few MB each (a published
+        // file may be at most 16 MB)
+        manualChunks(id: string) {
+          const m = id.match(/data\/content\/([^/]+)\/(edition|language)\.json/);
+          if (m) {
+            let h = 0;
+            for (const c of m[1]) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+            return m[2] === "edition" ? `editions${h % 6}` : "languages";
+          }
+          if (/voicepacks\/|\/voice\/[^/]+\/manifest\.json/.test(id)) return "voicedata";
+          return undefined;
+        },
+        entryFileNames: "assets/app-[hash:8].js", chunkFileNames: "assets/[name]-[hash:8].js", assetFileNames: (a) => ((a.names?.[0] ?? a.name ?? "").endsWith(".musicxml") ? "assets/[name]-[hash:8].xml" : "assets/[name]-[hash:8][extname]") },
     },
   },
 });
