@@ -3270,20 +3270,6 @@ function PracticeScreen({
                     {Icon.close}
                   </button>
                 </div>
-                <div className="notes-mark-row">
-                  {MARKS.map((mk) => (
-                    <button
-                      key={mk.id}
-                      type="button"
-                      className="notes-mark"
-                      aria-pressed={ed.mark === mk.id}
-                      onClick={() => setNoteEdit({ ...ed, mark: ed.mark === mk.id ? undefined : mk.id })}
-                    >
-                      <span className="notes-mark-sign" aria-hidden="true">{mk.sign}</span>
-                      {mk.label}
-                    </button>
-                  ))}
-                </div>
                 <textarea
                   autoFocus
                   value={ed.body}
@@ -3320,7 +3306,7 @@ function PracticeScreen({
                   >
                     All notes
                   </button>
-                  <button type="button" className="cp-btn cp-btn--ink" disabled={!ed.body.trim() && !ed.mark} onClick={save}>
+                  <button type="button" className="cp-btn cp-btn--ink" disabled={!ed.body.trim()} onClick={save}>
                     Save
                   </button>
                 </div>
