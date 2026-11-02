@@ -8326,3 +8326,27 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   object-fit: cover;
   display: block;
 }
+
+/* the singer's menu from the bar's faces: sound, and how the line shows in the score */
+.lane-menu.face-menu {
+  position: fixed;
+  min-width: 220px;
+}
+.face-menu-look {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 4px 0 2px;
+}
+.face-menu-look button {
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  padding: 8px 4px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.face-menu-look button[aria-checked="true"] {
+  background: color-mix(in srgb, var(--now-mark, #2e7d4f) 16%, transparent);
+  color: var(--ink);
+}

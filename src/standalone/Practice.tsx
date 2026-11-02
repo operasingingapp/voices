@@ -527,7 +527,7 @@ function PracticeScreen({
   // an ensemble: each of the other singers' lines on its own (heard or not, how loud, on what, shown in the score or not),
   // the score's parts in the order you choose, and whose words the line card and the words view show
   const ens = edition.roles.length > 1;
-  type LineSet = { hear?: boolean; vol?: number; inst?: LineChoice; show?: boolean };
+  type LineSet = { hear?: boolean; vol?: number; inst?: LineChoice; show?: boolean; fade?: boolean };
   const [lineSets, setLineSets] = useLocalSetting<Record<string, LineSet>>(`p:lines:${pieceId}`, {});
   const setLine = (key: string, patch: LineSet) => setLineSets({ ...lineSets, [key]: { ...lineSets[key], ...patch } });
   const [order, setOrder] = useLocalSetting<string[]>(`p:order:${pieceId}`, []);
@@ -689,6 +689,26 @@ function PracticeScreen({
   };
   // a menu on a staff's name in the score
   const [laneMenu, setLaneMenu] = useState<{ xid: string; left: number; top: number } | null>(null);
+  // a singer's face in the bar: tapped, it opens a small menu (sound on/off; in the score clear, faded or hidden)
+  const [faceMenu, setFaceMenu] = useState<{ key: string; left: number; bottom: number } | null>(null);
+  useBackToClose(!!faceMenu, () => setFaceMenu(null));
+  useEffect(() => {
+    if (!faceMenu) return;
+    const down = (e: PointerEvent) => {
+      if (!(e.target as HTMLElement).closest(".face-menu, .bar-parts .part")) setFaceMenu(null);
+    };
+    const key = (e: KeyboardEvent) => e.key === "Escape" && setFaceMenu(null);
+    window.addEventListener("pointerdown", down);
+    window.addEventListener("keydown", key);
+    return () => {
+      window.removeEventListener("pointerdown", down);
+      window.removeEventListener("keydown", key);
+    };
+  }, [faceMenu]);
+  const openFaceMenu = (key: string, el: HTMLElement) => {
+    const r = el.getBoundingClientRect();
+    setFaceMenu((m) => (m?.key === key ? null : { key, left: Math.max(8, Math.min(r.left, window.innerWidth - 240)), bottom: window.innerHeight - r.top + 8 }));
+  };
   useBackToClose(!!laneMenu, () => setLaneMenu(null));
   useEffect(() => {
     if (!laneMenu) return;
@@ -1749,7 +1769,7 @@ function PracticeScreen({
     { id: "edge", part: "Loop", sel: [".ov-lh-e"], holeRight: 140, title: "Add bars", text: "Drag the purple edge to the right.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
     { id: "more", part: "Sing", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
-    { id: "mute", part: "Sing", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Tap your face. Now you sing it.", done: () => !hearVoice },
+    { id: "mute", part: "Sing", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Tap your face, then Mute. Now you sing it.", done: () => !hearVoice },
     { id: "piano", part: "Sing", sel: [".piano-group .pg-btn:nth-child(2)"], title: pianoShownNow ? "Hide the piano part" : "Show the piano part", text: pianoShownNow ? "Tap the eye to see only the voices." : "Tap the eye to add the piano to the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
@@ -2220,11 +2240,61 @@ function PracticeScreen({
           strip={!pageView}
           joinTopStaff={false}
           ink="#0b0b0b"
-          fadedXmlParts={pianoFaded && !hiddenIds.includes(pianoPart.source.xmlPartId) ? [pianoPart.source.xmlPartId] : []}
+          fadedXmlParts={[
+            ...(pianoFaded && !hiddenIds.includes(pianoPart.source.xmlPartId) ? [pianoPart.source.xmlPartId] : []),
+            ...voiceParts.filter((p) => lineSets[p.key]?.fade && showOf(p)).map((p) => p.source.xmlPartId),
+          ]}
           nowNoteParts={pianoFaded ? [voicePart.source.xmlPartId] : [voicePart.source.xmlPartId, pianoPart.source.xmlPartId]}
         />
       </main>
 
+      {faceMenu &&
+        (() => {
+          const p = voiceParts.find((x) => x.key === faceMenu.key);
+          if (!p) return null;
+          const mine = p === voicePart;
+          const on = mine ? hearVoice : (lineSets[p.key]?.hear ?? true);
+          const shown = showOf(p);
+          const faded = !!lineSets[p.key]?.fade;
+          const name = mine ? roleName : p.shortLabel;
+          const done = (f: () => void) => () => {
+            f();
+            setFaceMenu(null);
+          };
+          const look = !shown ? "hide" : faded ? "fade" : "show";
+          return (
+            <div className="lane-menu face-menu" role="menu" aria-label={name} style={{ left: faceMenu.left, bottom: faceMenu.bottom, top: "auto" }}>
+              <p className="lane-menu-title">
+                {name}
+                {mine && <em className="mix-you">you</em>}
+              </p>
+              <button type="button" role="menuitem" onClick={done(() => (mine ? setHearVoice(!on) : setLine(p.key, { hear: !on })))}>
+                {on ? Icon.muted : Icon.speaker}
+                <span>{on ? (mine ? "Mute: I sing it" : "Mute: sung live") : "Play this line"}</span>
+              </button>
+              <div className="face-menu-look" role="group" aria-label="In the score">
+                <button type="button" role="menuitemradio" aria-checked={look === "show"} onClick={done(() => setLine(p.key, { show: true, fade: false }))}>
+                  {Icon.eye}
+                  <span>Show</span>
+                </button>
+                <button type="button" role="menuitemradio" aria-checked={look === "fade"} onClick={done(() => setLine(p.key, { show: true, fade: true }))}>
+                  {Icon.fade}
+                  <span>Fade</span>
+                </button>
+                <button
+                  type="button"
+                  role="menuitemradio"
+                  aria-checked={look === "hide"}
+                  disabled={mine || (shown && hiddenIds.length >= orderedIds.length - 1)}
+                  onClick={done(() => setLine(p.key, { show: false }))}
+                >
+                  {Icon.eyeOff}
+                  <span>Hide</span>
+                </button>
+              </div>
+            </div>
+          );
+        })()}
       {laneMenu &&
         (() => {
           const i = orderedIds.indexOf(laneMenu.xid);
@@ -2659,7 +2729,8 @@ function PracticeScreen({
             type="button"
             className="part"
             aria-pressed={hearVoice}
-            onClick={() => setHearVoice(!hearVoice)}
+            aria-haspopup="menu"
+            onClick={(e) => openFaceMenu(voicePart.key, e.currentTarget)}
             {...holdHandlers(voicePart, roleName)}
             aria-label={hearVoice ? `${roleName}'s line plays. Mute it to sing it yourself` : `${roleName}'s line is muted. Play it`}
             title={`${roleName} (you): ${hearVoice ? "plays" : "muted, you sing"}`}
@@ -2688,7 +2759,8 @@ function PracticeScreen({
                   type="button"
                   className="part"
                   aria-pressed={on}
-                  onClick={() => setLine(p.key, { hear: !on })}
+                  aria-haspopup="menu"
+                  onClick={(e) => openFaceMenu(p.key, e.currentTarget)}
                   {...holdHandlers(p, p.shortLabel)}
                   aria-label={`${p.shortLabel}'s line ${on ? "plays. Mute it" : "is muted. Play it"}`}
                   title={`${p.shortLabel}: ${on ? "plays" : "muted, sung live"}`}
