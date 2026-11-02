@@ -1876,7 +1876,7 @@ function PracticeScreen({
     { id: "words", part: "The words", sel: [".view-switch button:nth-child(2)"], title: "See the whole text", text: "Tap Words for the full text and translation.", done: () => view === "words" },
     { id: "music", part: "The words", sel: [".view-switch button:first-child"], title: "Back to the score", text: "Tap Music.", done: () => view === "music" },
     { id: "loop", part: "Loop", sel: [".bar-loop"], title: "Loop a bar", text: "Tap loop. The bar you’re on will repeat.", done: () => !!loop },
-    { id: "edge", part: "Loop", sel: [".ov-lh-e"], holeRight: 140, title: "Add bars", text: "Drag the purple edge to the right.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
+    { id: "edge", part: "Loop", sel: [".ov-lh-e", ".ov-lh-s"], holeRight: 140, title: "Add bars", text: "Drag a purple edge outwards to take in more bars.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
     { id: "more", part: "Practise", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
     { id: "slower", part: "Practise", sel: ['[aria-label="Slower"]'], title: "Slow it down", text: "Tap − to practise slower. The music keeps its pitch.", done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 1e-6 },
@@ -2045,7 +2045,13 @@ function PracticeScreen({
     }
     const place = () => {
       const seen = (e: Element | null): e is HTMLElement => !!e && (e as HTMLElement).getClientRects().length > 0 && getComputedStyle(e).display !== "none" && getComputedStyle(e).visibility !== "hidden";
-      const el = step.sel.map((q) => document.querySelector(q)).find(seen);
+      // a control the guide points at must be on the screen with room to use it (a loop edge at the very edge of a phone is not)
+      const onScreen = (e: Element) => {
+        const b = e.getBoundingClientRect();
+        return b.left >= 8 && b.right <= window.innerWidth - 8 && b.bottom > 0 && b.top < window.innerHeight;
+      };
+      const cands = step.sel.map((q) => document.querySelector(q)).filter(seen);
+      const el = cands.find(onScreen) ?? cands[0];
       if (!el) {
         const w = Math.min(340, window.innerWidth - 32);
         setGuideBox({ hole: { x: -9999, y: -9999, w: 0, h: 0 }, left: (window.innerWidth - w) / 2, top: window.innerHeight / 2 - 100, above: false, w });
@@ -2061,7 +2067,11 @@ function PracticeScreen({
         r = { left: l, top: t, width: Math.max(r.left + r.width, pr.right) - l, height: Math.max(r.top + r.height, pr.bottom) - t };
       }
       const pad = 6;
-      const hole = { x: Math.max(4, r.left - pad), y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8 - Math.max(4, r.left - pad), r.width + pad * 2 + (step.holeRight ?? 0)), h: Math.min(window.innerHeight - 8, r.height + pad * 2) };
+      // room to drag: to the right of an end edge, to the left of a start edge
+      const extra = step.holeRight ?? 0;
+      const leftward = el.classList.contains("ov-lh-s");
+      const hx = Math.max(4, r.left - pad - (leftward ? extra : 0));
+      const hole = { x: hx, y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8 - hx, r.width + pad * 2 + extra), h: Math.min(window.innerHeight - 8, r.height + pad * 2) };
       const w = Math.min(340, window.innerWidth - 32);
       const cx = hole.x + hole.w / 2;
       const left = Math.max(16, Math.min(cx - w / 2, window.innerWidth - 16 - w));
@@ -2174,13 +2184,6 @@ function PracticeScreen({
           <div className="tip-actions">
             <button type="button" className="cp-btn cp-btn--ghost tip-skip" onClick={() => endGuide(true)}>
               End tour
-            </button>
-            <button type="button" className="cp-icon-btn tip-nav" onClick={() => goBackStep(guide)} disabled={firstStep(guide)} aria-label="Previous step">
-              {Icon.left}
-            </button>
-            <button type="button" className="cp-btn tip-next" onClick={() => nextStep()}>
-              {guide === lastStep ? "Finish" : "Next"}
-              {Icon.right}
             </button>
           </div>
         </div>
