@@ -118,7 +118,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (recitative), then D major (aria)",
       time: "4/4, then cut time (2/2)",
-      tempo: "Maestoso, Presto, Andante and Allegro in the recitative; Allegro maestoso at ♩ = 132, then Allegro assai at ♩ = 152 (about 5 minutes)",
+      tempo: "Maestoso, Presto, Andante and Allegro in the recitative, taken freely; Allegro maestoso at ♩ = 132, then Allegro assai at ♩ = 152 (about 5 minutes)",
     },
     notePlaceholder: "The Count realises he may have been tricked, and vows revenge",
     about: (
