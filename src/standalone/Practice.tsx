@@ -1887,13 +1887,13 @@ function PracticeScreen({
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   // what has happened during the current step: music heard, a loop gone round, the line or a word spoken, a line hidden
-  const gTrack = useRef({ mutedSeen: false, played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: 0 });
+  const gTrack = useRef<{ handleLet: boolean; loopAt: number | null; [k: string]: unknown } & Record<string, any>>({ handleLet: false, loopAt: null, mutedSeen: false, played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: 0 });
   const steps: GuideStep[] = [
     { id: "listen", part: "Listen", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Press play and listen", text: "The lit word follows the music. Press pause when you’re ready.", done: () => gTrack.current.played && !playing },
     { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
     { id: "word", part: "The words", sel: [".word-card .wc-actions .cp-btn--ink", ".now-it"], title: "Hear a word", text: openWord ? "Tap Hear the word." : "Tap any word in the line.", done: () => gTrack.current.wordSpoke && !speakingWord },
     { id: "loop", part: "Work on a passage", sel: [".bar-loop"], title: "Loop a passage", text: "Tap Loop. The bar you’re on is marked and will repeat.", done: () => !!loop },
-    { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], title: "Choose the bars", text: "Drag the lit purple handle outwards, along the music, to take in more bars.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
+    { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], title: "Choose the bars", text: "Drag the lit purple handle outwards, along the music, to take in more bars.", done: () => gTrack.current.handleLet && !gTrack.current.holding && !!loop && gTrack.current.loopAt !== null && loop.endQ - loop.startQ > gTrack.current.loopAt + 1e-6 },
     { id: "playloop", part: "Work on a passage", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play the loop", text: "Press play and listen for it to come round.", after: "It repeats until you stop it. Leave it playing.", dwell: 3000, done: () => gTrack.current.wrapped },
     { id: "unloop", part: "Work on a passage", sel: [".bar-loop"], title: "Stop looping", text: "Tap Loop again. The music carries on from there, through the whole piece.", after: "Back to the whole piece. Leave it playing.", dwell: 2500, done: () => !loop },
     { id: "more", part: "Work on a passage", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them. The music keeps playing.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
@@ -1937,7 +1937,7 @@ function PracticeScreen({
     if (otherVoices.some((p) => lineSets[p.key]?.hear === true)) t.otherOnce = true;
   });
   useEffect(() => {
-    gTrack.current = { mutedSeen: false, played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: q };
+    gTrack.current = { handleLet: false, loopAt: loop ? loop.endQ - loop.startQ : null, mutedSeen: false, played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, slowOnce: false, muteOnce: false, otherOnce: false, sawWords: false, lastQ: q };
     guideQ.current = guide >= 0 ? q : null;
     // the loop is set: put the strip away so the bar is clear for playing
     if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
@@ -1966,6 +1966,7 @@ function PracticeScreen({
     if (guide >= 0 && steps[guide]?.id === "edge" && !loop) {
       const pm = barAt(Math.max(0, q));
       setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
+      gTrack.current.loopAt = pm.durQ;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [guide]);
@@ -2171,6 +2172,34 @@ function PracticeScreen({
     };
   }, [guide, view, barOpen, !!loop, playing, notePick, !!noteEdit, mixOpen, !!faceMenu, step?.title, step?.sel.join(",")]);
   // only the lit control (and the guide's card) answers while a step waits
+  // the loop step is done when a handle has been dragged and let go (not while it is still moving)
+  useEffect(() => {
+    if (step?.id !== "edge") return;
+    let held = false;
+    const down = (e: PointerEvent) => {
+      if ((e.target as Element | null)?.closest?.(".ov-lh")) {
+        held = true;
+        gTrack.current.holding = true;
+      }
+    };
+    const up = () => {
+      if (!held) return;
+      held = false;
+      window.setTimeout(() => {
+        gTrack.current.holding = false;
+        gTrack.current.handleLet = true;
+        forceGuide((x) => x + 1);
+      }, 60);
+    };
+    document.addEventListener("pointerdown", down, true);
+    window.addEventListener("pointerup", up, true);
+    window.addEventListener("pointercancel", up, true);
+    return () => {
+      document.removeEventListener("pointerdown", down, true);
+      window.removeEventListener("pointerup", up, true);
+      window.removeEventListener("pointercancel", up, true);
+    };
+  }, [step?.id]);
   // the step is the one thing to do: a tap anywhere else does nothing, and the lit control gives a nudge instead.
   // Scrolling and reading stay free; the card (End tour) always answers.
   useEffect(() => {

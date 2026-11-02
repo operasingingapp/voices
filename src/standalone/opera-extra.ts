@@ -67,7 +67,7 @@ const PORTRAIT_ALT: Record<string, string> = {
   "schicchi:lauretta": "Lauretta in a red dress with a white shawl, dark hair tied with a white ribbon, hands at her throat.",
 };
 const COVER_ALT: Record<string, string> = {
-  figaro: "Figaro and Susanna among the Countess with her fan, the Count and Cherubino.",
+  figaro: "The Countess whispers to Susanna, who holds up a white mask for the Count to kiss as he leans in.",
   giovanni: "Don Giovanni in his cloak among Donna Anna, Donna Elvira and Zerlina.",
   cosi: "Fiordiligi and Dorabella between their officers, with Don Alfonso and Despina looking on.",
   zauberfloete: "The Queen of the Night reaches over Pamina, while Tamino holds the flute.",
