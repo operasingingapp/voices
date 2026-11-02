@@ -725,6 +725,54 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-che-novita": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free (about 1 minute)",
+    },
+    notePlaceholder: "The Count finds the closet locked and grows suspicious",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Che novità!” (Scena V) before No. 13 (vocal score pages 119-122, 28 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-susanna-or-via-sortite": {
+    portrait: "figaro:countess",
+    opera: "Le nozze di Figaro",
+    kind: "Terzetto",
+    facts: {
+      key: "C major",
+      time: "3/4",
+      tempo: "Allegro spirituoso at ♩ = 144 (about 4 minutes)",
+    },
+    notePlaceholder: "The Count orders “Susanna” out of the closet; the Countess forbids it",
+    about: (
+      <>
+        <p>
+          Score: No. 13, the terzetto “Susanna, or via, sortite” (vocal score pages 123-131, 146 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dunque-voi-non-aprite": {
     portrait: "figaro:count",
     opera: "Le nozze di Figaro",

@@ -252,6 +252,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Oh guarda il demonietto!",
       "editionId": "mozart-oh-guarda-il-demonietto"
+     },
+     {
+      "title": "Susanna, or via, sortite",
+      "kind": "Terzetto · Act 2",
+      "id": "Act 2: Susanna, or via, sortite",
+      "editionId": "mozart-susanna-or-via-sortite"
      }
     ]
    },
@@ -344,6 +350,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Tutto è come il lasciai",
       "editionId": "mozart-tutto-e-come-il-lasciai"
+     },
+     {
+      "title": "Che novità!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Che novità!",
+      "editionId": "mozart-che-novita"
+     },
+     {
+      "title": "Susanna, or via, sortite",
+      "kind": "Terzetto · Act 2",
+      "id": "Act 2: Susanna, or via, sortite",
+      "editionId": "mozart-susanna-or-via-sortite"
      }
     ]
    },
@@ -441,6 +459,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 2",
       "id": "Act 2: Tutto è come il lasciai",
       "editionId": "mozart-tutto-e-come-il-lasciai"
+     },
+     {
+      "title": "Che novità!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Che novità!",
+      "editionId": "mozart-che-novita"
+     },
+     {
+      "title": "Susanna, or via, sortite",
+      "kind": "Terzetto · Act 2",
+      "id": "Act 2: Susanna, or via, sortite",
+      "editionId": "mozart-susanna-or-via-sortite"
      }
     ]
    },

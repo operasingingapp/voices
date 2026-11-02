@@ -270,6 +270,40 @@
     }
   },
   {
+    "editionId": "mozart-che-novita",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-che-novita@1.0.0-klengel#9e49b96c9b",
+    "title": "Che novità!",
+    "subtitle": "The Count and the Countess: recitative from Le nozze di Figaro, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 28,
+    "durationSec": 67,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 33,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-cinque-dieci-venti",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-cinque-dieci-venti@1.0.0-klengel#1738b259bf",
@@ -1240,6 +1274,46 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-susanna-or-via-sortite",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-susanna-or-via-sortite@1.0.0-klengel#11556e5a20",
+    "title": "Susanna, or via, sortite",
+    "subtitle": "The Count, the Countess and Susanna: terzetto from Le nozze di Figaro, Act 2 (No. 13)",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 146,
+    "durationSec": 183,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 86,
       "withAudio": 0,
       "reviewed": 0
     }
