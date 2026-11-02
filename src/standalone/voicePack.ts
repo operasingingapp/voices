@@ -33,9 +33,15 @@ function loadPack(pack: string): Promise<ArrayBuffer> {
   }
   return p;
 }
-/** fetch the packs (call when a piece opens, so a tap on a word can play at once) */
-export function preloadVoicePacks() {
-  for (const pack of Object.keys(bins)) loadPack(pack).catch(() => undefined);
+/** fetch only the packs that hold these recordings (the piece on screen), so a tap on a word can play at once.
+    Fetching every voice's packs (well over 100 MB) on each piece used to hold up the piano and the music. */
+export function preloadVoicePacks(files: string[]) {
+  const packs = new Set<string>();
+  for (const f of files) {
+    const w = where.get(f);
+    if (w && hasBin(w.pack)) packs.add(w.pack);
+  }
+  for (const pack of packs) loadPack(pack).catch(() => undefined);
 }
 /** packs that have no stored address yet are skipped (their words are simply silent until uploaded) */
 function hasBin(pack: string) {

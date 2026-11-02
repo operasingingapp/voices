@@ -8465,43 +8465,5 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 }
 .op-head .op-yours { font-size: clamp(14px, 0.75rem + 0.2vw, 17px); }
 
-/* The list of pieces: one quiet list, not a stack of outlined boxes. Hairlines between rows, a small square tick,
-   the title in ink, and a play button drawn in ink that fills in when the row is under your finger or pointer. */
-.checklist { gap: 0; counter-reset: ck; border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); }
-.checklist > .ck,
-.checklist > .ck.ready,
-.checklist > .ck.soon {
-  min-height: 64px;
-  padding: 10px 8px 10px 4px;
-  gap: 14px;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-  transition: background-color 120ms ease;
-}
-.checklist > .ck.ready:hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
-.checklist > .ck .ck-box {
-  width: 22px; height: 22px; min-width: 22px;
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 28%, transparent);
-  background: transparent;
-}
-.checklist > .ck .ck-box svg { width: 14px; height: 14px; opacity: 0; }
-.checklist > .ck .ck-box:hover svg { opacity: 0.35; }
-.checklist > .ck.done .ck-box { background: var(--ink); box-shadow: none; color: var(--canvas); }
-.checklist > .ck.done .ck-box svg { opacity: 1; }
-.checklist > .ck .ck-text b { font-size: 17px; font-weight: 500; letter-spacing: -0.005em; }
-.checklist > .ck .ck-text > span { font-size: 13px; letter-spacing: 0.01em; }
-.checklist > .ck.done .ck-text b { color: var(--ink-muted); }
-.checklist > .ck .ck-scene { height: 32px; padding: 0 6px 0 10px; box-shadow: none; font-size: 13px; }
-.checklist > .ck .ck-scene:hover { background: color-mix(in srgb, var(--ink) 5%, transparent); }
-.checklist > .ck .ck-play {
-  width: 38px; height: 38px;
-  background: transparent;
-  color: var(--ink);
-  box-shadow: inset 0 0 0 1.5px var(--ink);
-}
-.checklist > .ck .ck-play svg { width: 15px; height: 15px; margin-left: 2px; }
-.checklist > .ck.ready:hover .ck-play,
-.checklist > .ck .ck-play:focus-visible { background: var(--ink); color: var(--canvas); }
+/* the piece rows: a quiet neutral hairline instead of the green outline */
+.checklist > .ck.ready { box-shadow: inset 0 0 0 1px var(--fog-strong); }

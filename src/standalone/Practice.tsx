@@ -1243,7 +1243,12 @@ function PracticeScreen({
     setSpeakingWord((k) => (k === key ? null : k));
   };
   useEffect(() => () => stopSpeaking(), []);
-  useEffect(() => preloadVoicePacks(), []);
+  // this piece's recordings only, a moment after the page opens, so the piano and the score come first
+  useEffect(() => {
+    const files = voices.flatMap((m) => Object.values((m as unknown as { clips?: Record<string, { file?: string }> }).clips ?? {}).map((c) => c.file ?? ""));
+    const t = window.setTimeout(() => preloadVoicePacks(files.filter(Boolean)), 2500);
+    return () => window.clearTimeout(t);
+  }, []);
 
   const play = async () => {
     if (!engine || !pb.port) return;
@@ -2028,13 +2033,29 @@ function PracticeScreen({
         setGuideBox({ hole: { x: -9999, y: -9999, w: 0, h: 0 }, left: (window.innerWidth - w) / 2, top: window.innerHeight / 2 - 100, above: false, w });
         return;
       }
-      const r = el.getBoundingClientRect();
+      let r: { left: number; top: number; width: number; height: number } = el.getBoundingClientRect();
+      // a menu or panel opened from the lit control (your face's menu, Arrange, the note card) is part of the step:
+      // the light takes it in, and the card moves out of its way
+      for (const pop of document.querySelectorAll(".face-menu, .hold-menu, .mix-pop, .note-card, .note-pick")) {
+        if (!seen(pop)) continue;
+        const pr = pop.getBoundingClientRect();
+        const l = Math.min(r.left, pr.left), t = Math.min(r.top, pr.top);
+        r = { left: l, top: t, width: Math.max(r.left + r.width, pr.right) - l, height: Math.max(r.top + r.height, pr.bottom) - t };
+      }
       const pad = 6;
       const hole = { x: Math.max(4, r.left - pad), y: Math.max(4, r.top - pad), w: Math.min(window.innerWidth - 8 - Math.max(4, r.left - pad), r.width + pad * 2 + (step.holeRight ?? 0)), h: Math.min(window.innerHeight - 8, r.height + pad * 2) };
       const w = Math.min(340, window.innerWidth - 32);
       const cx = hole.x + hole.w / 2;
       const left = Math.max(16, Math.min(cx - w / 2, window.innerWidth - 16 - w));
       const below = hole.y + hole.h + 210 < window.innerHeight;
+      const aboveOk = hole.y - 12 > 200;
+      // no room above or below (a tall panel): the card goes beside the light, on the side with more room
+      if (!below && !aboveOk) {
+        const rightRoom = window.innerWidth - (hole.x + hole.w);
+        const side = rightRoom >= w + 24 ? hole.x + hole.w + 12 : hole.x - w - 12 >= 16 ? hole.x - w - 12 : left;
+        setGuideBox({ hole, left: side, top: 16, above: false, w });
+        return;
+      }
       setGuideBox({ hole, left, top: below ? hole.y + hole.h + 12 : hole.y - 12, above: !below, w });
     };
     place();
@@ -2050,7 +2071,7 @@ function PracticeScreen({
     if (!step || !guideBox) return;
     const block = (e: Event) => {
       const t = e.target as HTMLElement;
-      if (t.closest(".tip, .word-card, .ov-lh")) return;
+      if (t.closest(".tip, .word-card, .ov-lh, .face-menu, .hold-menu, .mix-pop, .note-card, .note-pick")) return;
       const pe = e as PointerEvent;
       const { x, y, w, h } = guideBox.hole;
       if (pe.clientX >= x && pe.clientX <= x + w && pe.clientY >= y && pe.clientY <= y + h) return;
