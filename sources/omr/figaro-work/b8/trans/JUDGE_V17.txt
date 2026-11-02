@@ -1,0 +1,33 @@
+== bar 4 C: Y
+# both eighth noteheads sit in the space just below the top line of the bass staff (G3), not on the top line (A3); no accidentals
+4 C: G3:e "de-" G3:e "a?" r:q r:h!
+== bar 11 C: X
+# zoomed: after "rà" there are two clear dots and a third merged into the following dash-like smudge; it is an ellipsis, not a single period
+11 C: B3:q "ten-" B3:e "za" C#4:e "sa-" A3:q "rà..." r:q
+== bar 16 C: Y
+# a natural sign is printed before the first G3 (it carries through the bar, so the second G3 has no "n")
+16 C: Gn3:e "gas-" G3:e "se" r:q r:e G3:e "la" A3:s "vec-" A3:s "chia" A3:s "pre-" E3:s "ten-"
+== bar 21 C: Y
+# a natural sign is printed on the first C4. There are 6 syllables (E poi v'è An-to-nio) on 5 eighths. The vowel elision is è+A, so "v'è_An-" goes on the third note (C4), and "poi" goes alone on B3
+21 C: r:e Cn4:e "E" B3:e "poi" C4:e "v'è_An-" A3:e "to-" A3:e "nio," r:e A3:s "che_all'" A3:s "in-"
+== bar 64 C: X
+# a natural sign is clearly printed before the G3 on "me"
+64 C: A3:q "per" Gn3:q "me" F#3:q "poi" Fn3:q "non"
+== bar 95 C: X
+# a natural sign is printed before the half-note G3 (space below the top line)
+95 C: Gn3:h "tu" E3:q. "non" E3:e "na-"
+== bar 104 C: Y
+# zoomed: there are two arcs, an inner tie from the D4 half to the D4 eighth and an outer slur over the group. "in" is the first syllable of the split word in-fe-li-ci-tà, so it takes a hyphen
+104 C: D4:h~ "mia_in-" D4:e B3:e G3:e "fe-" E3:e
+== bar 123 C: Y
+# pixel check: staff lines at y=222/240/257/275/293. The sharped half note's head lies between the D3 and B2 lines, so it is C#3. The second half note's head lies between the B2 and G2 lines, so it is A2
+123 C: C#3:h "sce-" A2:h "sti,_au-"
+== bar 131 C: Y
+# same as bar 104: an inner tie D4 half to D4 eighth, plus an outer slur; hyphen printed after "in"
+131 C: D4:h~ "mia_in-" D4:e B3:e G3:e "fe-" E3:e
+== bar 149 C: Y
+# an arc joins the D4 half to the following D4 eighth (same pitch), so it is a tie; a separate slur covers the eighths
+149 C: D4:h~ "lar," D4:e A3:e F#3:e D3:e
+== bar 151 C: X
+# no Italian syllable is printed under the D4 half (only the German "und"); the Italian "e" comes later, under the second note of bar 153
+151 C: D3:h "fa," D4:h

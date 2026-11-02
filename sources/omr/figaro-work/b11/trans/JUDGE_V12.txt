@@ -1,0 +1,27 @@
+== bar 3 C: X | Y | X
+# "las-cia - te,": a hyphen is printed between "cia" and "te", so "cia-".
+3 C: r:e Bb3:e "Eb-" Bb3:e "ben" C4:e "las-" A3:e "cia-" A3:e "te," r:e A3:s "l'a-" A3:s "pri-"
+== bar 4 C: X | Y | X
+# 3rd note (16th on the C ledger line, "za") has no accidental; the sharp on the first C of the bar carries -> C#4.
+4 C: C#4:e "rem" Bn3:s "sen-" C#4:s "za" A3:e "chia-" A3:e "vi:" r:q E4:q "ehi"
+== bar 6 C: X | Y | Y
+# Conte silent until the printed eighth rest + F#3 eighth "È" at the end; X's line only adds up to 3.75 beats.
+6 C: r:h. r:e F#3:e "È"
+== bar 6 T: X | Y | Y
+# 5th note "da-" has a single flag (eighth), the first four are 16ths; with it the bar adds up to 4/4.
+6 T: C#5:s "ta-" C#5:s "glio" C#5:s "d'u-" C#5:s "na" C#5:e "da-" B4:s "ma" A4:s "l'o-" D5:e "no-" D5:e "re?" r:q
+== bar 7 C: X | Y | X
+# "io sba-": noteheads sit just above the first ledger line (D4), not on it.
+7 C: A3:e "ve-" A3:e "ro," r:e D4:e "io" D4:e "sba-" A3:e "glio..." r:e A3:s "pos-" A3:s "so"
+== bar 9 C: X | Y | X
+# Printed "an_dar io" (hyphen an-dar, then a space before "io"): "dar" and "io" are separate syllables.
+9 C: F#3:e "cun" F#3:e "di" F#3:e "no-" G3:e "stra" A3:e "gen-" A3:e "te," r:s A3:s "an-" A3:s "dar" D4:s "io"
+== bar 11 C: X | Y | X
+# "At-ten-de - te": hyphen printed after "de" (under the B3 quarter), so "de-".
+11 C: G3:e "ren-" G3:e "te." r:e G3:s "At-" G3:s "ten-" B3:q "de-" A3:e "te" B3:e "pur"
+== bar 17 C: X | Y | X
+# Printed "ec- co_vi il": elision tie joins "co" and "vi" (on B3 16th), "il" alone on the C4 16th.
+17 C: A3:e "vre-" A3:e "te," r:e E3:e "ma-" A3:e "da-" A3:e "ma," A3:e "ec-" B3:s "co_vi" C4:s "il"
+== bar 19 C: X | Y | X
+# "Su-" notehead sits on the 2nd line of the bass staff (F3), same as "rà"; rest values equivalent, X kept.
+19 C: r:q r:e F3:e "Su-" A3:e "san-" A3:e "na" G3:e "sta-" F3:e "rà"

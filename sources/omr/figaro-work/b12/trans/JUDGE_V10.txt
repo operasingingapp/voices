@@ -1,0 +1,33 @@
+== bar 1 C: Y
+# Pixel check on p.119: "Che no-vi-" noteheads are centred on the 2nd bass line (F3), a third below the Bb3 of "tà!".
+1 C: r:s F3:s "Che" F3:s "no-" F3:s "vi-" Bb3:q "tà!" r:e Bb3:s "non" Bb3:s "fu" Bb3:e "mai" C4:s "vo-" D4:s "stra_u-"
+== bar 2 C: Y
+# "der-vi_in" sit in the top space (G3), "stan-za." in the space below the middle line (E3); they are clearly lower than the C4s and not A3.
+2 C: C4:e "san-" C4:e "za" r:e C4:s "di" C4:s "rin-" C4:e "chiu-" G3:s "der-" G3:s "vi_in" E3:e "stan-" E3:e "za."
+== bar 5 T: X
+# Printed "e - ra" with a hyphen (one word "era"); pitches Bb4 D5 Bb4 Bb4 Bb4 Bb4 confirmed.
+5 T: r:q r:e Bb4:s "Cer-" D5:s "te" Bb4:e "ro-" Bb4:e "be;" r:e Bb4:s "e-" Bb4:s "ra"
+== bar 7 T: Y
+# Shared staff: after "da-ta" the Conte takes over; no rest for the Contessa is printed, so the remaining 3 beats are written in metric grouping (q + h).
+7 T: A4:e "da-" A4:e "ta" r:q r:h
+== bar 9 C: Y
+# Same situation: the Contessa enters on beat 2, no Conte rests printed; metric grouping q + h.
+9 C: A3:e "fo-" A3:e "glio." r:q r:h
+== bar 10 T: Y
+# Her notes fill beats 1-2; the printed eighth rest on beat 3 belongs to the Conte's entry ("Cos'"), so beats 3-4 are a plain half rest.
+10 T: A4:s "Fi-" A4:s "ga-" A4:s "ro" Bb4:s "gli" C5:e "scris-" C5:e "se." r:h
+== bar 13 C: X
+# Close call. Print reads "Con vien che abbia te i": "che" stands under the 3rd A3 and "abbia" is set as one block under the first F#3 (no hyphen between "ab" and "bia"); followed the printed placement.
+13 C: r:q r:s A3:s "Con-" A3:s "vien" A3:s "che" F#3:e "ab_bia-" F#3:e "te_i" F#3:s "gran" F#3:s "pen-" F#3:s "sie-" G3:s "ri_in"
+== bar 13 T: Y
+# Conte enters after "nien-te."; no Contessa rest printed; metric grouping q + h.
+13 T: D5:e "nien-" A4:e "te." r:q r:h
+== bar 17 T: Y
+# Zoomed: "si." has a plain i-dot, no grave accent.
+17 T: r:q r:e D5:e "Ah" B4:q "si." r:e D5:e "Su-"
+== bar 20 C: OWN
+# Contessa takes over after "stan-za?" (C4 G3 confirmed); no Conte rests printed. X imports her 16th rest, Y orders h before q; metric grouping is q + h.
+20 C: C4:e "stan-" G3:e "za?" r:q r:h
+== bar 25 C: OWN
+# Printed "alt - ro." (hyphen after "alt"), so X's syllables; A3 A3 confirmed. Rests unprinted (Contessa enters on beat 2): metric grouping q + h.
+25 C: A3:e "alt-" A3:e "ro." r:q r:h

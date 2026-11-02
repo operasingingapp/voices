@@ -1,0 +1,189 @@
+# JUDGE_P16: No. 16 Duetto "Crudel! perchè finora", piano disputes, judged from the print (sys020-sys037, pages 210-214).
+# Staff-line pixel positions were measured for every between-staves dynamic. "Halfway" means the glyph centre is within
+# about 6 px of the midpoint of a gap of 80-105 px.
+== bar 3: Y
+# Pixel check: the "p Str." glyph spans y=517-545 (centre 531). The RH bottom line is at 489 and the LH top line at 573, so the midpoint is 531: exactly halfway. Both hands have a note on beat 1, so the dynamic goes to RH. The notes are the same in X and Y.
+3 RH1: dyn:p E4+A4:q r:e E4+G#4:e E4+A4:q E4+B4:q
+3 LH1: C4:q r:e B3+D4:e C4:q G#3+B3:q
+== bar 4: X
+# The sfp is printed twice: once above the RH staff on the C5 half note, and once between the staves at beat 4 by the LH E3. So both hands get one. The RH splits into two stem directions: the upper C5 half is tied to bar 5's C5, and the lower voice has a printed quarter rest, then G#4 slurred to bar 5's A4. LH E3 is slurred to bar 5's F3 (a different pitch). Y's RH2 adds up to only a half note.
+4 RH1: C5:q B4:q dyn:sfp C5:h~
+4 RH2: E4:q E4:q r:q G#4:q(
+4 LH1: A3:q E3+G#3:q r:q dyn:sfp E3:q(
+== bar 11: own
+# Pixel check: p spans y=462-501 (centre ~481). The gap runs from 438 to 517 with its midpoint at 477.5, so this is halfway. Both hands have notes, so the p goes to RH. The RH arc starts from the lower note only (E4) and ends on the E4 that starts the lower voice of bar 12 (pitch checked: bottom line). That makes it a tie on E4 only, not a slur and not a tie on the whole chord. The LH slur runs from C4 over B3 to Bb3, as in X.
+11 RH1: dyn:p E4~+G4:w
+11 LH1: C3+C4:h( B2+B3:q Bb2+Bb3:q)
+== bar 13: X
+# The RH has a stem-up half chord E4+C5, then F4+B4, joined by a slur from E4 to F4 underneath. The middle G4 is a separate whole notehead set off to the left of the stem, so it is a second voice. No tie is printed.
+13 RH1: E4+C5:h( F4+B4:h)
+13 RH2: G4:w
+13 LH1: G2+G3:w
+== bar 23: X
+# The fp is printed separately under each staff. RH: under the G#4+G#5 chord (after the eighth rest). LH: under B2+D3 on beat 3. Slurs: Bb-A pair and G#-A pair in RH, and one slur over all four LH chords.
+23 RH1: r:e Bb4+Bb5:e( A4+A5:e) A4+A5:e r:e dyn:fp G#4+G#5:e( A4+A5:e) A4+A5:e
+23 LH1: D3+F3:q( C3+E3:q dyn:fp B2+D3:q C3+E3:q)
+== bar 24: X
+# Same layout as bar 23.
+24 RH1: r:e Bb4+Bb5:e( A4+A5:e) A4+A5:e r:e dyn:fp G#4+G#5:e( A4+A5:e) A4+A5:e
+24 LH1: D3+F3:q( C3+E3:q dyn:fp B2+D3:q C3+E3:q)
+== bar 25: own
+# RH: an eighth rest, then a beamed group of three (B5 with a printed natural, B4, B4), then a beamed group of four (B4 B4 C5 A4). The slur runs from B5 to the first B4. The small arc between the 2nd and 3rd B4 is a tie. The long slur starts on the B4 after the tied one (the 2nd note of the four-group) and ends on A4. X starts it one note too early, on the tied B4.
+# Stem-down F#4 quarter on beat 4 (written with one rest). LH: the arpeggiated D3+F3+A3 half and the D#3 half both have stems down. The F#3 quarter has its stem up and is slurred to A3 and C4. Y's RH2 and LH2 do not add up to 4/4.
+25 RH1: r:e Bn5:e( B4:e) B4:e~ B4:e B4:e( C5:e A4:e)
+25 RH2: r:h. F#4:q
+25 LH1: r:h F#3:q( A3:e C4:e)
+25 LH2: D3+F3+A3:h D#3:h
+== bar 26: X
+# The C5+E5 dotted eighth is slurred to the A4+C5 sixteenth. The final A4+C5 has an arc to bar 27's G#4+B4, a different pitch, so it is a slur and not a tie.
+26 RH1: E4+G#4:q C5+E5:e.( A4+C5:s) G#4+B4:q A4+C5:q(
+26 LH1: E3+B3:q E3+E4:q E3+E4:q E3+E4:q
+== bar 29: own
+# RH as in X: "fp>" sits just below the RH staff (centre ~560; RH 518, LH 630) at the first chord after the eighth rest. There is no ff (Y is wrong). The small ">" after fp is a hairpin and has no token. Slurs: chord 1 to 2, and chords 4 to 7.
+# LH: the long arc from the A3 whole note ends on the first A3 eighth of bar 30. That is the same pitch, so it is a tie (as in Y).
+29 RH1: r:e dyn:fp C#4+E4:e( E4+C#5:e) E4+C#5:e E4+C#5:e( D4+B4:e C#4+A4:e E4+G#4:e)
+29 LH1: A3:w~
+29 LH2: A3:h A2:h
+== bar 30: own
+# RH second half: the upper voice is two stem-up F#4 quarters, the second tied into bar 31. The lower voice is beamed stem-down eighths F#4 E4 D4 C#4 under a slur (D4 shares the F#4 head). X swapped these two voices, and Y's RH2 had no rest.
+# "cresc." is nearer RH. LH: the first A3 receives the tie from bar 29. A small slur joins the 2nd A3 to the D4, and a slur runs from D4 (5th eighth) to A#3.
+30 RH1: E4+G#4:e( D4+F#4:e) word:cresc. F#4:e F#4:e F#4:q F#4:q~
+30 RH2: r:h F#4:e( E4:e D4:e C#4:e)
+30 LH1: A3:e A3:e( D4:e) D4:e D4:e( C#4:e B3:e A#3:e)
+30 LH2: D3:h F#3:h
+== bar 31: own
+# Pixel check: p spans y=564-592 (centre 578). RH bottom is 336, LH top 630, midpoint 483, so it is clearly nearer LH and sits right over the LH B3. A natural is printed before the G of the G+E5 chord, so the note is Gn4 (the key signature has G#).
+# Slurs: F#4-B4, and Gn4+E5 to F#4+D5. No slur is printed on the last pair here, unlike bar 56. Stem-down D4 quarter on beat 1 and F#4 quarter on beat 4.
+31 RH1: F#4:e( B4:e) D4+B4:e E4+C#5:e Gn4+E5:e( F#4+D5:e) E4+C#5:e D4+B4:e
+31 RH2: D4:q r:h F#4:q
+31 LH1: dyn:p B3:h. r:q
+31 LH2: D3:h B2:h
+== bar 36: own
+# RH as in X. The A4 eighth is slurred to F#4, a staccato dot sits on the 2nd F#4, the 3rd F#4 is slurred to G#4, and the lower voice is D4 dotted quarter plus E4. There is no cresc. (Y). LH as in X, but the stem-down D3 half carries an arc to bar 37's C#3 (pitch checked). It is a slur, not Y's tie.
+36 RH1: C#4+A4:q r:e A4:e( F#4:e) F#4:e* F#4:e( G#4:e)
+36 RH2: r:h D4:q. E4:e
+36 LH1: A2:h A3:q.( B3:e)
+36 LH2: r:h D3:h(
+== bar 38: X
+# The upper A4+C#5 quarter (stem up) is slurred to the A4 eighth. The E4 quarter has its stem down, with a printed quarter rest after it in the lower voice. The rest is as in bar 36. No slur or tie is printed on the LH D3.
+38 RH1: A4+C#5:q( A4:e) A4:e( F#4:e) F#4:e* F#4:e( G#4:e)
+38 RH2: E4:q r:q D4:q. E4:e
+38 LH1: A2+A3:h A3:q.( B3:e)
+38 LH2: r:h D3:h
+== bar 40: own
+# Voices as in X. Upper: A4+C#5 quarter slurred to A4, then the A4+A5 eighth (one stem), then a stem-up D5 dotted quarter and E5. Lower (beamed down): F#4+F#5 x3 (staccato on the 2nd), with a slur from the 3rd to G#4+G#5.
+# The arc from A5 ends on the beat-3 chord, so the slur closes on D5, not on E5 as in X.
+40 RH1: A4+C#5:q( A4:e) A4+A5:e( D5:q.) E5:e
+40 RH2: E4:q r:q F#4+F#5:e F#4+F#5:e* F#4+F#5:e( G#4+G#5:e)
+40 LH1: A2+A3:h A3:q.( B3:e)
+40 LH2: r:h D3:h
+== bar 41: own
+# RH as in X: one long slur from A4+E5+A5 to E5+E6. LH: a long slur from C#4 to E3+G#3, as in X. The small arc between the beat-2 A3 and the A3 of the beat-3 chord joins the same pitch, so it is a tie, as in Y.
+41 RH1: A4+E5+A5:q.( B4+B5:s C#5+C#6:s D5+D6:e C#5+C#6:e D5+D6:e E5+E6:e)
+41 LH1: C#4:q( A3:q~ F#3+A3:q E3+G#3:q)
+41 LH2: C#3:h B2:h
+== bar 42: own
+# The beat-1 octave is C#5+C#6 (zoom: the top head sits on the 2nd ledger line and the lower head in the space below D5), as in Y. The A4+D#5 half starts one long slur that runs over bars 43-44 to the first chord of bar 45. It is not a tie (Y). LH as in X.
+42 RH1: C#5+C#6:q r:q A4+D#5:h(
+42 LH1: A2+A3:e A3+C#4+E4:e A3+C#4+E4:e A3+C#4+E4:e F#2+F#3:e* F#3+A3:e( A3+D#4:e F#3+A3:e)
+== bar 43: own
+# The RH sits inside the long slur from bar 42 to bar 45: no slur ends or starts here (X), and no tie (Y). LH as in X.
+43 RH1: G#4+E5:h A4+D#5:h
+43 LH1: E2+E3:e* G#3+B3:e( B3+E4:e G#3+B3:e) F#2+F#3:e* F#3+A3:e( A3+D#4:e F#3+A3:e)
+== bar 44: own
+# Same as bar 43: the long slur continues to bar 45, and there is no tie.
+44 RH1: G#4+E5:h A4+D#5:h
+44 LH1: E2+E3:e* G#3+B3:e( B3+E4:e G#3+B3:e) F#2+F#3:e* F#3+A3:e( A3+D#4:e F#3+A3:e)
+== bar 45: own
+# Pixel check: f spans y=503-540 (centre 521). RH bottom is 485, LH top 574, midpoint 529.5, so the f is halfway or slightly nearer RH. Both hands have notes on beat 2, so it goes to RH. p spans 495-522 (centre ~509), clearly nearer RH, and is printed once, so it goes to RH only.
+# A natural is printed on D5, giving Dn5. The D5+F#5 half has arcs above and below running to the identical D5+F#5 at the start of bar 46, so these are ties. LH: E4+G#4 (key signature G#; no natural is printed). X wrote G4.
+45 RH1: G#4+E5:q) dyn:f A4+Dn5:q* dyn:p D5+F#5:h~
+45 LH1: E2+E3:q F#4:e. E4+G#4:s D4+F#4:e. C#4+E4:s B3+D4:e. A3+C#4:s
+== bar 46: own
+# The D5+F#5 chord receives the ties from bar 45 and starts a new slur that ends on the B4 eighth. X closed a slur here instead. Voices are as in X. Upper: chord, then E5 D5 | C#5 E5 D5 B4. Lower: B4 quarter, then A4 C#5 F#4+B4 and D4 (the D4 is beamed across to the LH area). LH as in X: B3 quarter, E4 half, then nothing over the stem-down A3 and D3.
+46 RH1: D5+F#5:q( E5:e D5:e C#5:e E5:e D5:e B4:e)
+46 RH2: r:q B4:q A4:e C#5:e F#4+B4:e D4:e
+46 LH1: B3:q E4:h r:q
+46 LH2: G#3:h A3:q D3:q
+== bar 47: own
+# The RH slur from the A4 dotted half crosses the barline and ends on bar 48's A4 eighth, as X's own bar 48 "A4:e)" shows. So it stays open here. Everything else is as in X.
+47 RH1: A4:h.( C#5:e B4:e
+47 RH2: r:h. G#4:q
+47 LH1: C#4:e( E4:e C#4:e E4:e C#4:e E4:e D4:e E4:e)
+47 LH2: E3:q E3:q E3:q E3:q
+== bar 51: own
+# Pixel check: f spans y=557-590 (centre ~573). RH bottom is 529, LH top 629, midpoint 579, so it is halfway or slightly nearer RH. Both hands have notes on beat 2, so it goes to RH (as in Y). No p is printed in this bar (X is wrong).
+# A natural is printed on D5, giving Dn5. The D5+F#5 half is tied to bar 52's D5+F#5 (arcs above and below). LH: E4+G#4, as in Y.
+51 RH1: G#4+E5+G#5:q) dyn:f A4+Dn5:q* D5+F#5:h~
+51 LH1: E2+E3:q F#4:e. E4+G#4:s D4+F#4:e. C#4+E4:s B3+D4:e. A3+C#4:s
+== bar 52: own
+# Same as bar 46: the tied chord starts the slur that ends on B4.
+52 RH1: D5+F#5:q( E5:e D5:e C#5:e E5:e D5:e B4:e)
+52 RH2: r:q B4:q A4:e C#5:e F#4+B4:e D4:e
+52 LH1: B3:q E4:h r:q
+52 LH2: G#3:h A3:q D3:q
+== bar 53: X
+# Here the RH slur from A4 ends on the B4 eighth inside the bar (unlike bar 47). The stem-down G#4 is on beat 4.
+53 RH1: A4:h.( C#5:e B4:e)
+53 RH2: r:h. G#4:q
+53 LH1: C#4:e( E4:e C#4:e E4:e C#4:e E4:e D4:e E4:e)
+53 LH2: E3:q E3:q E3:q E3:q
+== bar 55: own
+# RH: same voicing as bar 30. Two upper F#4 quarters (the second tied into bar 56, a single tie arc) over lower beamed F#4 E4 D4 C#4 under a slur. LH: no tie or slur comes in from bar 54 (checked), so X's "A3:e)" is wrong. The small slur joins A3 (2nd) to D4, and the slur runs from D4 (5th) to A#3.
+55 RH1: E4+G#4:e( D4+F#4:e) word:cresc. F#4:e F#4:e F#4:q F#4:q~
+55 RH2: r:h F#4:e( E4:e D4:e C#4:e)
+55 LH1: A3:e A3:e( D4:e) D4:e D4:e( C#4:e B3:e A#3:e)
+55 LH2: D3:h F#3:h
+== bar 56: own
+# Pixel check: p spans y=695-724, with its body at 695-714. RH bottom is 651, LH top 757, midpoint 704, so it is halfway. Both hands have notes on beat 1, so it goes to RH (as in X and Y).
+# A natural is printed on G, giving Gn4. Slurs: F#4-B4, Gn4+E5 to F#4+D5, and E4+C#5 to D4+B4 (printed here). The chord is E4+C#5 only: the F#4 under it is the stem-down quarter of the lower voice (Y merged them).
+56 RH1: dyn:p F#4:e( B4:e) D4+B4:e E4+C#5:e Gn4+E5:e( F#4+D5:e) E4+C#5:e( D4+B4:e)
+56 RH2: D4:q r:h F#4:q
+56 LH1: B3:h. r:q
+56 LH2: D3:h B2:h
+== bar 58: X
+# The sfp is printed twice: above the RH staff at the C#5 dotted quarter, and below the LH staff at the stem-down G#3. Slurs: A4-E4; C#5 to G#4; C#4 to A3 (eighths 2-4) and B3 D4 B3 in the LH upper voice; G#3-E3 in the lower voice. The LH quarter rest on beat 2 is printed.
+58 RH1: A4:e( E4:e) dyn:sfp C#5:q.( D5:e B4:e G#4:e)
+58 LH1: A3:e C#4:e( E4:e A3:e) r:e B3:e( D4:e B3:e)
+58 LH2: A3:q r:q dyn:sfp G#3:q( E3:q)
+== bar 59: X
+# Same as bar 58.
+59 RH1: A4:e( E4:e) dyn:sfp C#5:q.( D5:e B4:e G#4:e)
+59 LH1: A3:e C#4:e( E4:e A3:e) r:e B3:e( D4:e B3:e)
+59 LH2: A3:q r:q dyn:sfp G#3:q( E3:q)
+== bar 61: X
+# sf spans y≈550-587, just above the LH top line (590), clearly nearer LH (RH bottom 517). p spans ≈540-563, which is halfway, and at beat 4 only RH has a new note, so it goes to RH. The slurs are printed: C#5+E5 to B4+D5, the pair of eighths, and LH A3 to D4. The stem-down E4 half is a second RH voice.
+61 RH1: C#5+E5:q( B4+D5:h) dyn:p A4+C#5:e( G#4+B4:e)
+61 RH2: E4:h r:h
+61 LH1: dyn:sf A2+A3:q( B2+B3:e. C#3+C#4:s D3+D4:h)
+== bar 63: X
+# Same as bar 61. The sf sits beside the LH A3 under "Tutti", nearer LH, so it does not go to RH (Y is wrong). No tie runs into bar 64.
+63 RH1: C#5+E5:q( B4+D5:h) dyn:p A4+C#5:e( G#4+B4:e)
+63 RH2: E4:h r:h
+63 LH1: dyn:sf A2+A3:q( B2+B3:e. C#3+C#4:s D3+D4:h)
+== bar 68: X
+# The LH chords have two heads each (C#4+E4, A3+C#4, B3+D4, G#3+B3), checked against the ledger lines. Y's third heads do not exist. The E3 whole note is a separate voice, and one slur covers the four chords.
+68 RH1: C#5+E5:e C#5+E5:e A4+C#5:e A4+C#5:e B4+D5:e B4+D5:e G#4+B4:e G#4+B4:e
+68 LH1: C#4+E4:q( A3+C#4:q B3+D4:q G#3+B3:q)
+68 LH2: E3:w
+== bar 69: own
+# Pixel check: f spans y=715-755 (centre 735). RH bottom is 690, LH top 774, midpoint 732, so it is halfway. Both hands have notes on beat 1, so it goes to RH. Notes, slurs and voices are as in X.
+# RH: A4 staccato, slur E5 to C#5+C#6, slur D6 to G#5. LH: upper D4 half (stem up) slurred into bar 70. Lower: A3+C#4 dotted quarter, C#4, D4, C#4 (stems down).
+69 RH1: dyn:f A4:e* E5:e( C#5+C#6:q.) D5+D6:e( B4+B5:e G#4+G#5:e)
+69 LH1: r:h D4:h(
+69 LH2: A3+C#4:q. C#4:e D4:q C#4:q
+== bar 70: X
+# RH: A4+A5 with staccato, slur E4 to C#5, slur D5 to G#4. LH: the C#4+E4 eighth ends the slur from bar 69. Then two eighth rests and C#3, then the stem-up E3 half (slurred into bar 71). The lower voice shares the E3 head as a stem-down quarter, then D3.
+70 RH1: A4+A5:e* E4:e( C#5:q.) D5:e( B4:e G#4:e)
+70 LH1: C#4+E4:e) r:e r:e C#3:e E3:h(
+70 LH2: r:h E3:q D3:q
+== bar 71: X
+# The 4th RH note is F#5 (its head is on the top line), not G#5 (Y). Slurs: A4-A5 and B4-F#5. "tr" sits over the G#4+B4 eighth, and the slur runs G#4 to B4. The LH slur from bar 70 ends on C#3+E3.
+71 RH1: A4:e( A5:e) B4:e( F#5:e) A4:q G#4+B4:et( A4:s B4:s)
+71 LH1: C#3+E3:q) D3+F#3:q E3+C#4:q E3+B3:q
+== bar 72: X
+# The first LH chord has two heads: A3+C#4.
+72 RH1: A4:q E4:q C#4+E4+A4:q r:q
+72 LH1: A3+C#4:q E3:q A2:q r:q
+# SUMMARY: 35 bars. X 15 (4,13,23,24,26,38,53,58,59,61,63,68,70,71,72), Y 1 (3), own 19 (11,25,29,30,31,36,40,41,42,43,44,45,46,47,51,52,55,56,69).
+# Side effects outside the dispute list (not edited): bar 12 RH2 should start "E4:q" with no ")" (it is the target of the bar-11 tie). Bar 37 LH2 receives the slur from bar 36's D3.

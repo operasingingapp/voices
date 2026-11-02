@@ -1,0 +1,39 @@
+== bar 6 C: X
+# Half rest, D3 dotted quarter, D3 eighth (middle line). Print has "tosto" under the dotted quarter and "an" under the eighth, with no hyphen in "tosto". But bars 6-7 have 4 notes for "tosto andate" (to-sto-an-da-te), so the dotted quarter cannot carry two syllables. The stressed "to" falls on the dotted quarter, "sto" elides with "an" on the eighth, and "da" "te" fall on the two quarters of bar 7. "tosto" was printed whole for lack of space, so it is split here.
+6 C: r:h D3:q. "to-" D3:e "sto_an-"
+== bar 27 C: X
+# Half rest and quarter rest (both printed), then Ab3 eighth (top line, flat printed) and F3 eighth. Print reads "Tostoan-da": "Tosto" under the Ab and "an" under the F. Bar 28 carries "da" (C4 half) and "te," (C4 dotted quarter), so the two eighths take To | sto_an, the same setting as bar 6. Capital T as printed.
+27 C: r:h r:q Ab3:e "To-" F3:e "sto_an-"
+== bar 33 O: X
+# Printed "per - do-na-te": a hyphen follows "per" under the C5 dotted half (sounding C4), and "do" is under the Bb (sounding Bb3). "per" is the first syllable of "perdonate", so it needs the trailing hyphen.
+33 O: C4:h. "per-" Bb3:q "do-"
+== bar 65 S: X
+# A4 q, A4 q, quarter rest, A4 e, A4 e. Print reads "chein-so-len-za": the hyphen after "in" shows that "in" begins "insolenza", so the elided token keeps a trailing hyphen.
+65 S: A4:q "veg-" A4:q "gio!" r:q A4:e "che_in-" A4:e "so-"
+== bar 92 S: X
+# On the shared Bas./S. staff Basilio's two A4 quarters and the quarter rest come first, then Susanna's two F5 eighths. Printed "Èun' in-si-dia": "Èun'" is set close under the first F with a space before it, and "in" carries the hyphen to "si" under the second F. Three written syllables fall on two notes. The print groups È with un', and "in-" begins the word "insidia", so the elision is È_un' on the first note and "in-" on the second.
+92 S: r:h r:q F5:e "È_un'" F5:e "in-"
+== bar 121 C: X
+# Shared staff in a recitative: Basilio's A4 quarter "che?", then a quarter rest with a fermata, then a bass clef and the Count's three F3 eighths (4th line) "Da tua cu-". For the Count only the fermata quarter rest is printed. The first quarter (taken by Basilio's note) and one eighth rest are NOT printed, but they are needed to fill 4/4, with the eighth rest before the three eighths. Y loses the printed fermata on beat 2, so X is kept.
+121 C: r:q r:q! r:e F3:e "Da" F3:e "tua" F3:e "cu-"
+== bar 127 C: X
+# Eighth rest, four Bb3 sixteenths (space above top line), C4 sixteenth (on 1st ledger), D4 sixteenth (above ledger), D4 eighth, A3 eighth (top line), quarter rest. Total 4/4. Printed "io, dal muso in-sos-pet-ti-to,": "in" has a hyphen to "sos" (insospettito), so the elided token is "so_in-".
+127 C: r:e Bb3:s "io," Bb3:s "dal" Bb3:s "mu-" Bb3:s "so_in-" C4:s "sos-" D4:s "pet-" D4:e "ti-" A3:e "to," r:q
+== bar 145 O: X
+# Treble clef, sounding an octave lower: C5 half (C4), D5 dotted quarter (D4), D5 eighth (D4). Printed "meg-lio an-co-ra!": "meg-lio" has a hyphen, not an elision. There are 4 notes for meg | lio_an | co | ra (bar 146 has the two Eb quarters), so the eighth carries "lio_an-".
+145 O: C4:h "Ah!" D4:q. "meg-" D4:e "lio_an-"
+== bar 150 S: X
+# Eb5 dotted quarter (top space), A4 eighth, A4 quarter, A4 quarter. In the zoom the accent is over the u: the engraver printed "pùo" (a misprint of "può"; the later page 69 has "può"). The task says to keep the accent as printed, so it stays "pùo".
+150 S: Eb5:q. "der" A4:e "non" A4:q "pùo" A4:q "di"
+== bar 172 O: Y
+# Treble clef: the first half note sits on the 4th line (D5, sounding D4); the second is in the 3rd space (C5, sounding C4). "non" and "c'è al -" as printed.
+172 O: D4:h "non" C4:h "c'è_al-"
+== bar 195 O: Y
+# Same as bar 172: first half on 4th line = D5 (sounding D4), second in 3rd space = C5 (sounding C4).
+195 O: D4:h "non" C4:h "c'è_al-"
+== bar 197 O: Y
+# G4 quarter (2nd line, sounding G3), quarter rest, A4 quarter (2nd space, sounding A3), quarter rest. No natural sign is printed before the A in this bar. The Ab in bar 196 does not carry over the barline, so the pitch is plain A3, with no printed natural.
+197 O: G3:q "no-" r:q A3:q "vi-" r:q
+== bar 200 O: Y
+# Same as bar 197: G4 q, quarter rest, A4 q, quarter rest (sounding G3, A3). Zoom shows no natural sign printed before the A.
+200 O: G3:q "no-" r:q A3:q "vi-" r:q

@@ -1,0 +1,169 @@
+== bar 74: X
+# what you saw: page 127 system 1 really holds five bars (70-74). Bar 74 is its last bar (RH C4+E4 quarter, LH C3 quarter, two rests each); bar 75 is the first bar of system 2 (f Tutti). A's 74 and 75 are two separate bars, so B dropped one bar here.
+74 RH1: C4+E4:q r:q r:q
+74 LH1: C3:q r:q r:q
+== bar 75: X
+# what you saw: f Tutti; RH E4+G4+C5 quarter tied to dotted eighth, C5 16th, C5 eighth with tr, B4 C5 16ths, under a slur; LH C3+G3+C4 half (C3 2nd space, G3 top space, C4 ledger), then C4+E4 quarter
+75 RH1: dyn:f E4+G4+C5:q~ E4+G4+C5:e. C5:s C5:et( B4:s C5:s)
+75 LH1: dyn:f C3+G3+C4:h C4+E4:q
+== bar 77: X
+# what you saw: Y's "e(t" token is malformed. The p between the staves is written in both hands, as A does throughout. The rest matches.
+77 RH1: dyn:p B4+D5:q~ B4+D5:e. B4+D5:s B4+D5:et( C5:s D5:s)
+77 LH1: dyn:p G3:h G3:q
+== bar 78: OWN
+# what you saw: RH is one voice, every eighth on a single stem: C5+E5 chord, then octaves C4+C5, D4+D5, E4+E5, F4+F5, G4+G5 (as in bar 79). Not two voices. cresc. starts under the F octave.
+78 RH1: C5+E5:e C4+C5:e D4+D5:e E4+E5:e word:cresc. F4+F5:e G4+G5:e
+78 LH1: C4:e C3:e D3:e E3:e F3:e G3:e
+== bar 80: X
+# what you saw: The only difference is the p between the staves. Written in both hands as elsewhere; the notes agree.
+80 RH1: dyn:p C5+C6:e G5:e E5:e G5:e E5:e C5:e
+80 LH1: dyn:p C4:e G3:e E3:e G3:e E3:e C3:e
+== bar 82: X
+# what you saw: The only difference is f between the staves (written in both hands). LH fingered tremolo G2|G3 as a dotted half.
+82 RH1: dyn:f D5+G5+B5:q D5+G5+B5:q E5+G5+C6:q
+82 LH1: dyn:f trem1:G2|G3:h.
+== bar 84: X
+# what you saw: RH Eb4+Ab4+C5 dotted half (flats on E and A). LH dotted half on the top line with a flat = Ab3, not Eb3. The arcs into bar 85 are slurs, because the pitches change.
+84 RH1: dyn:p Eb4+Ab4+C5:h.(
+84 LH1: dyn:p Ab3:h.(
+== bar 85: X
+# what you saw: RH chord Eb4+G4+Bb4: flats on the bottom line and the middle line, and the dots sit in the F4/A4/C5 spaces. LH Eb3. Slurs end here.
+85 RH1: Eb4+G4+Bb4:h.)
+85 LH1: Eb3:h.)
+== bar 90: X
+# what you saw: RH notes are on the F5 line, the D5 line (flat) and the A4 space (flat), so Ab4+Db5+F5, not A4+C5+Eb5. LH F3 dotted half.
+90 RH1: Ab4+Db5+F5:h.(
+90 LH1: F3:h.(
+== bar 93: OWN
+# what you saw: The RH C5 arc leads across the system break into an incoming arc that ends on bar 94's C5 (a separate C5-B4 slur follows), so it is a tie (Y). LH lower G3 dotted half has no tie out (no arc at the end of bar 93 or at the start of system 2) (X).
+93 RH1: C5:h.~
+93 RH2: G4:h F#4:q
+93 LH1: Eb4:q C4:q Eb4:q)
+93 LH2: G3:h.
+== bar 94: Y
+# what you saw: RH: incoming tie on C5, then a slur C5-B4, then G4. LH upper: D4 half, then a natural-sign quarter above the E4 ledger = F4 (pixel check: head centre is half a space above the E4 ledger), not E4. LH G3 is tied to bar 95.
+94 RH1: C5:q( B4:q) G4:q
+94 RH2: G4:h s:q
+94 LH1: D4:h( F4:q
+94 LH2: G3:h.~
+== bar 95: OWN
+# what you saw: Like bar 93. Eb5 is tied into bar 96 (Y), and the LH lower G3 has no tie out (X).
+95 RH1: Eb5:h.~
+95 RH2: G4:h F#4:q
+95 LH1: Eb4:q C4:q Eb4:q)
+95 LH2: G3:h.
+== bar 96: Y
+# what you saw: Incoming tie on Eb5, slur Eb5-D5, G4. LH upper G4 (on the 3rd ledger), then a natural-sign note between the E4 and G4 ledgers = F4.
+96 RH1: Eb5:q( D5:q) G4:q
+96 RH2: G4:h s:q
+96 LH1: G3:q G4:q( F4:q
+96 LH2: G3:h.~
+== bar 98: X
+# what you saw: Two RH voices. G5 has its own up-stem (a quarter) slurred to an F5 up-stem quarter. Below it, Eb5-C5 eighths beamed down, then a B4 quarter with a down-stem. Then an eighth rest and a B4+F5 flagged eighth.
+98 RH1: G5:q( F5:q) r:e B4+F5:e
+98 RH2: Eb5:e C5:e B4:q s:q
+98 LH1: G3:q dyn:sf Ab4:q( F4:q
+98 LH2: G3:h.
+== bar 99: X
+# what you saw: LH lower F3+D4 is a dotted half (the dot is printed after D4, partly hidden by the quarter D4). It is not a half plus a hidden rest.
+99 RH1: B4+Ab5:e B4+Ab5:q B4+Ab5:q B4+Ab5:e
+99 LH1: D4:q B3:q F3:q)
+99 LH2: F3+D4:h.
+== bar 102: X
+# what you saw: The only difference is the f between the staves (written in both hands). LH chords checked: natural F3+G3+D4, then E3+G3+C4; dotted eighth rest, p, E3 16th.
+102 RH1: dyn:f G5:e.( A5:x B5:x C6:q) r:q
+102 RH2: B4:q C5:e C5:e C5:e C5:e
+102 LH1: dyn:f F3+G3+D4:q( E3+G3+C4:q) r:e. dyn:p E3:s
+== bar 105: X
+# what you saw: LH (treble clef) D4+A4+C5 half, slurred to a quarter. Pixel check of the quarter: C5 space, G4 line, E4 line = E4+G4+C5, not F#4+A4+C5.
+105 RH1: F#5:e F#5:e F#5:e F#5:e A5:s( G5:s F#5:s G5:s)
+105 LH1: D4+A4+C5:h( E4+G4+C5:q)
+== bar 106: OWN
+# what you saw: Same as bar 105. Half D4+A4+C5 (no F#4 head). The quarter is E4+G4+C5 (pixel check: heads centred on the G4 line and the E4 line, not the A4 space), with a slur.
+106 RH1: F#5:e F#5:e F#5:e F#5:e A5:s( G5:s F#5:s G5:s)
+106 LH1: D4+A4+C5:h( E4+G4+C5:q)
+== bar 109: X
+# what you saw: The only difference is the f between the staves (written in both hands). Notes agree: A3+C4 quarter, E4 half on its ledger, lower voice A3-G3 slurred.
+109 RH1: dyn:f E5:e A5:s E5:s C6:e A5+C6:e A5+C6:e A5+C6:e
+109 LH1: dyn:f A3+C4:q E4:h
+109 LH2: s:q A3:q( G3:q)
+== bar 113: X
+# what you saw: The LH upper note on beat 3 has a flat and sits on the top line A3 = Ab3, not Bb3.
+113 RH1: dyn:f E5+A5:s( G5:s F5:s G5:s) dyn:p D5+F5:e D5+F5:e D5+F5:e D5+F5:e
+113 LH1: dyn:f A3:h dyn:p Ab3:q
+113 LH2: C3:q( D3:q C3:q)
+== bar 114: Y
+# what you saw: The last RH D5+F5 eighth carries two arcs (above and below) to the identical D5+F5 chord at the start of bar 115, so it is a tie. f is printed between the staves at beat 1, so it goes in both hands.
+114 RH1: dyn:f D5+F5:e D5+F5:q D5+F5:q D5+F5:e~
+114 LH1: dyn:f B2+G3:q.( C3+Ab3:e B2+G3:e C3+Ab3:e)
+== bar 116: X
+# what you saw: The only difference is the p between the staves (written in both hands). LH G3+D4+F4 confirmed.
+116 RH1: dyn:p B4:h.(
+116 LH1: dyn:p G3+D4+F4:h.(
+== bar 117: X
+# what you saw: Pixel check of the LH chord: heads on the E4 ledger, the C4 ledger and the A3 top line = A3+C4+E4, not G3.
+117 RH1: C5:q) r:q r:q
+117 LH1: A3+C4+E4:q) r:q r:q
+== bar 118: X
+# what you saw: The LH upper head is between the E4 and G4 ledger positions = F4 (two ledgers below it), and the lower head is on the F3 line. F3+F4, not D4.
+118 RH1: C5+A5:q r:q r:q
+118 LH1: F3+F4:q r:q r:q
+== bar 119: X
+# what you saw: CLOSE CALL. LH dotted-half chord: G3 in its space, and the upper two hollow heads are crossed by the C4 and E4 ledger lines (heads centred on the ledgers), so C4 and E4. The dots sit in the D4/F4 spaces, which is normal for notes on lines. RH full-bar rest.
+119 RH1: r:h.
+119 LH1: G3+C4+E4:h.(
+== bar 124: OWN
+# what you saw: The LH half note sits on the 2nd ledger = E4 (X), not C4. f Tutti is printed between the staves at beat 1, so it goes in both hands (X had it only in LH, Y only in RH).
+124 RH1: dyn:f C5:e E5:s A5:s C6:e A5+C6:e A5+C6:e A5+C6:e
+124 LH1: dyn:f A2+C3+E3+A3:q E4:h
+124 LH2: s:q A3:q( G3:q)
+== bar 128: X
+# what you saw: Same as bar 113. The flat note on the A3 line = Ab3.
+128 RH1: dyn:f E5+A5:s( G5:s F5:s G5:s) dyn:p D5+F5:e D5+F5:e D5+F5:e D5+F5:e
+128 LH1: dyn:f A3:h dyn:p Ab3:q
+128 LH2: C3:q( D3:q C3:q)
+== bar 129: Y
+# what you saw: Same as bar 114. The last D5+F5 is tied (two arcs) to the same chord in bar 130.
+129 RH1: D5+F5:e D5+F5:q D5+F5:q D5+F5:e~
+129 LH1: dyn:f B2+G3:q.( C3+Ab3:e B2+G3:e C3+Ab3:e)
+== bar 131: X
+# what you saw: The only difference is the p between the staves (written in both hands).
+131 RH1: dyn:p B4:h.(
+131 LH1: dyn:p G3+D4+F4:h.(
+== bar 132: X
+# what you saw: Pixel check: heads centred on the E4 ledger, the C4 ledger and the A3 line = A3+C4+E4.
+132 RH1: C5:q) r:q r:q
+132 LH1: A3+C4+E4:q) r:q r:q
+== bar 133: X
+# what you saw: Pixel check: the upper head is centred between the E4 and G4 ledger positions = F4; the lower is on the F3 line.
+133 RH1: C5+A5:q r:q r:q
+133 LH1: F3+F4:q r:q r:q
+== bar 134: X
+# what you saw: The only difference is the pp between the staves (written in both hands). LH G3+E4 on one stem.
+134 RH1: dyn:pp C5+G5:h.(
+134 LH1: dyn:pp G3+E4:h.(
+== bar 136: X
+# what you saw: Pixel check: heads on the E4 ledger, the C4 ledger and the A3 line = A3+C4+E4.
+136 RH1: C5:q r:q r:q
+136 LH1: A3+C4+E4:q r:q r:q
+== bar 137: X
+# what you saw: Pixel check: F4 (above the E4 ledger) + F3 (on its line).
+137 RH1: C5+A5:q r:q r:q
+137 LH1: F3+F4:q r:q r:q
+== bar 138: OWN
+# what you saw: LH E4 (up-stem) and G3 (down-stem) are two voices (X), and G3 is tied to the G3 of bar 139. There is NO slur above the LH E4 (checked above the staff), so E4 gets no "(". Note: both readings have ")" on LH1 in bar 139, which no slur now opens; the bar-139 LH1 ")" should be dropped. RH C5+G5 is slurred to B4 in bar 139.
+138 RH1: C5+G5:h.(
+138 LH1: E4:h.
+138 LH2: G3:h.~
+== bar 142: X
+# what you saw: Pixel check. RH: natural sign plus heads in the C5 space, the E5 space and the G5 space = C5+E5+G5. LH: natural sign, heads on the E4 ledger, the C4 ledger and the G3 space, all on one stem = G3+C4+E4. Not a G7 chord.
+142 RH1: C5+E5+G5:h.(
+142 LH1: G3+C4+E4:h.(
+== bar 144: X
+# what you saw: The arcs from RH F5+G5 go to E5+G5 in bar 145 (a pitch change), so they are a slur, not a tie. LH clef change to G, then B3+D4+G4 (pixel check).
+144 RH1: C5:q r:q F5+G5:q(
+144 LH1: C4+E4:q r:q clef:G B3+D4+G4:q(
+== bar 145: X
+# what you saw: Pixel check. RH beat 1: G5 (space above F5) + E5 (space) = E5+G5. LH beat 1 (treble): G4 line, E4 line, C4 ledger = C4+E4+G4. Then the F clef, f Tutti and G2+G3.
+145 RH1: E5+G5:q) r:q dyn:f D5+G5+B5:q
+145 LH1: C4+E4+G4:q) r:q clef:F dyn:f G2+G3:q

@@ -1,0 +1,54 @@
+== bar 8 C: Y
+# After "vo'!" the print has a quarter rest and an eighth rest; the eighth rest stands right before the Contessa's "Fer-" and is hers. Conte rest for beats 2-3 written q + q.
+8 C: C4:q "vo'!" r:q r:q
+== bar 14 T: Y
+# Same layout (quarter rest, then eighth rest before the Conte's "E"); Contessa rests beats 2-3: q + q.
+14 T: B4:q "può." r:q r:q
+== bar 18 T: Y
+# Beat 1 is the Conte's "chi?"; then a printed quarter rest and dotted-eighth rest before "Lo" (D5 16th). Y mirrors the print.
+18 T: r:q r:q r:e. D5:s "Lo"
+== bar 28 T: Y
+# "stà." D5 quarter, printed quarter rest, then an eighth rest before the Conte's "Chia-"; Contessa rests q + q.
+28 T: D5:q "stà." r:q r:q
+== bar 32 C: X
+# G3 then F#3 (sharp printed), eighth rest, "chia-" on the same F3 position without a new accidental: the sharp holds, F#3.
+32 C: G3:q "ra," F#3:q r:e F#3:e "chia-"
+== bar 32 T: X
+# Bb4 on the middle line, then "sa," and "brut-" one step lower, in the space = A4 (not F4).
+32 T: Bb4:q "co-" A4:q "sa," r:e A4:e "brut-"
+== bar 41 C: X
+# Half note "man-" sits on the top bass line (A3); the quarter "te" is in the space above (B3).
+41 C: A3:h "man-" B3:q "te"
+== bar 42 C: X
+# Same pattern as bar 41: half on the top line A3, quarter above B3.
+42 C: A3:h "quì" B3:q "sa-"
+== bar 43 C: X
+# Dotted half "rà," on the top line: A3.
+43 C: A3:h. "rà,"
+== bar 52 C: X
+# Half note "quì" (p) and quarter "sa-" both on the top line: A3, A3.
+52 C: A3:h "quì" A3:q "sa-"
+== bar 73 C: Y
+# Printed "par-la-te al - me-no": a hyphen follows "te al", so the elided syllable continues to "me-".
+73 C: G3:q "Dun-" G3:e "que" G3:e "par-" G3:e "la-" G3:e "te_al-"
+== bar 83 T: Y
+# G5 "ce-", G4 "te!", then only an eighth rest, which precedes the Conte's "Con-"; the Contessa's beat 3 is a quarter rest.
+83 T: G5:q "ce-" G4:q "te!" r:q
+== bar 84 C: X
+# Half note with flat on the top line (Ab3); the quarter "te" is on the same line, flat still in force: Ab3.
+84 C: Ab3:h "sor-" Ab3:q "te"
+== bar 90 S: Y
+# Flat printed before the first D5 (no key signature); no natural follows, so all D5s in the bar are Db5.
+90 S: Db5:e. "or-" Db5:s "di-" Db5:q "ne," r:e Db5:e "quì"
+== bar 107 S: Y
+# Sharp on the half note F5 only; the quarter "quì" is on the same top line with no natural: F#5.
+107 S: F#5:h "rà," F#5:q "quì"
+== bar 118 C: X
+# Two quarter rests, then "schi-" centred on the 2nd line from the top of the bass staff: F3.
+118 C: r:q r:q F3:q "schi-"
+== bar 121 C: Y
+# Pixel check: the fermata half note is centred on the top bass line (no line above it): A3; "giu-" E3 in the space below the F3 line.
+121 C: A3:h! "tà," r:e E3:e "giu-"
+== bar 124 S: Y
+# "cie-" E5 in the top space; "lo!" in the space between the G4 and B4 lines: A4.
+124 S: E5:q "cie-" A4:q "lo!" r:q

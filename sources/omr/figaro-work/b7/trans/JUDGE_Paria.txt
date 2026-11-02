@@ -1,0 +1,286 @@
+# JUDGE_Paria.txt - No. 6 Aria "Non so piu cosa son", piano, disputed bars only (Breitkopf pp. 48-51)
+# Key Eb major, 4/4.
+# Dynamics method: vertical distance of the mark's bounding box to each hand's staff, also counting
+# that hand's notes/stems/beams/fermatas lying directly above/below the mark; if halfway -> hand with a
+# note at that spot, both -> RH. Dyn tokens are placed before the note they apply to (after a leading rest).
+# Two LH voices in the Allegro accompaniment: the first note of each eighth group carries a second, upward
+# stem (quarter or hollow half), printed throughout; rests in that voice are not printed (needed fill only).
+# REMARK (Adagio): the word "Adagio" is printed above the last beat of bar 91 (sys18_page51, first bar of the
+# system: it starts at x=576, over the vocal A-natural pickup eighth after the fermata) and its tail runs across
+# the barline (x=664-668) into the start of bar 92. So it is printed in bar 91 and takes effect from that pickup.
+
+== bar 1: own
+# X's two LH voices are right (beat 1 and 3 Eb3 has a second, up stem; LH2 rests not printed, needed fill). The p (y525-555) sits almost halfway, touching the LH beat-1 up-stem; RH has a rest there -> LH (Y's placement).
+1 RH1: r:e Eb4:e( G4:e Eb4:e) r:e Eb4:e( G4:e Eb4:e)
+1 LH1: dyn:p Eb3:e G3:e( Bb3:e G3:e) Eb3:e G3:e( Bb3:e G3:e)
+1 LH2: Eb3:q r:q Eb3:q r:q
+
+== bar 2: X
+# Up stems on beat-1 and beat-3 Eb3 are printed, so the second LH voice is real (rests in LH2 not printed, needed fill).
+2 RH1: r:e Eb4:e( G4:e Eb4:e) r:e Eb4:e( G4:e Eb4:e)
+2 LH1: Eb3:e G3:e( Bb3:e G3:e) Eb3:e G3:e( C4:e G3:e)
+2 LH2: Eb3:q r:q Eb3:q r:q
+
+== bar 3: own
+# f (y508-546) is nearer the RH staff (16 vs 32 px) -> RH, placed before the first note Eb4; p (y543-572) sits 6 px above the LH staff -> LH (X). LH: hollow half F3 with up stem + up-stem quarter F3 on beat 3 = second voice (X). LH2 final rest not printed, needed fill.
+3 RH1: r:e dyn:f Eb4:e( Ab4:e Eb4:e) r:e Eb4:e( Ab4:e Eb4:e)
+3 LH1: F3:e Ab3:e( C4:e Ab3:e) dyn:p F3:e Ab3:e( C4:e Ab3:e)
+3 LH2: F3:h F3:q r:q
+
+== bar 4: X
+# Up stems on beats 1 and 3 printed -> two LH voices; LH2 rests not printed, needed fill.
+4 RH1: r:e Eb4:e( Ab4:e Eb4:e) r:e Eb4:e( Ab4:e Eb4:e)
+4 LH1: F3:e Ab3:e( C4:e Ab3:e) F3:e Ab3:e( C4:e Ab3:e)
+4 LH2: F3:q r:q F3:q r:q
+
+== bar 5: own
+# f (dRH 27, dLH 17) and p (dRH 32, dLH 20) are both nearer the LH (Y's placement); X's second voice (hollow half Bb2 + quarter Bb2, up stems) is printed. LH2 rest not printed, needed fill.
+5 RH1: r:e D4:e( F4:e D4:e) r:e D4:e( F4:e D4:e)
+5 LH1: dyn:f Bb2:e F3:e( Ab3:e F3:e) dyn:p Bb2:e F3:e( Ab3:e F3:e)
+5 LH2: Bb2:h Bb2:q r:q
+
+== bar 6: X
+# Up stems on Eb3 and D3 printed -> two LH voices; LH2 rests not printed, needed fill.
+6 RH1: r:e Eb4:e( G4:e Eb4:e) r:e F4:e( Ab4:e F4:e)
+6 LH1: Eb3:e G3:e( Bb3:e G3:e) D3:e Ab3:e( Bb3:e Ab3:e)
+6 LH2: Eb3:q r:q D3:q r:q
+
+== bar 7: X
+# Up stems on Eb3 and Bb2 printed -> two LH voices; LH2 rests not printed, needed fill.
+7 RH1: r:e Eb4:e( G4:e Eb4:e) r:e D4:e( F4:e D4:e)
+7 LH1: Eb3:e G3:e( Bb3:e G3:e) Bb2:e Ab3:e( Bb3:e Ab3:e)
+7 LH2: Eb3:q r:q Bb2:q r:q
+
+== bar 8: X
+# Up stems on Eb3 and D3 printed -> two LH voices; LH2 rests not printed, needed fill.
+8 RH1: r:e Eb4:e( G4:e Eb4:e) r:e F4:e( Ab4:e F4:e)
+8 LH1: Eb3:e G3:e( Bb3:e G3:e) D3:e Ab3:e( Bb3:e Ab3:e)
+8 LH2: Eb3:q r:q D3:q r:q
+
+== bar 9: own
+# X's content (beat-1 Eb3 has a second, up stem). Chords checked: G3+Bb3+Eb4 and F3+Ab3+D4, 3 heads each; mf sits on the LH chord -> LH. LH2 fill reduced to one unprinted rest (r:h.) instead of X's two.
+9 RH1: r:e Eb4:e( G4:e Eb4:e) Eb5:e( Bb4:e F5:e Bb4:e)
+9 LH1: Eb3:e G3:e( Bb3:e G3:e) dyn:mf G3+Bb3+Eb4:q( F3+Ab3+D4:q)
+9 LH2: Eb3:q r:h.
+
+== bar 17: Y
+# A natural is printed on the RH B and on the LH A -> Bn4, An3 (G#3 sharp printed; Bb3 flat is a courtesy, no token change). cresc. (y383-403) has the LH slur 4 px and the LH D4 head 13 px directly below vs the RH slur 9 px / RH notes ~21 px above -> LH.
+17 RH1: Bb4:e( F4:e Bn4:e F4:e C5:e F4:e D5:e F4:e)
+17 LH1: word:cresc. D4:q( G#3:q An3:q Bb3:q)
+
+== bar 31: own
+# RH: two separate slurs are printed (C4->Db4 in bar 31, Db4->C4 in bar 32) -> X. LH: natural printed only on the beat-1 E (En3); the beat-3 E has no sign (sounds E natural -> E3). Up stems on beats 1 and 3 -> two voices (X); LH2 rests not printed, needed fill.
+31 RH1: C4+C5:h.( Db4+Db5:q)
+31 LH1: En3:e G3:e( Bb3:e G3:e) E3:e G3:e( Bb3:e G3:e)
+31 LH2: En3:q r:q E3:q r:q
+
+== bar 32: own
+# RH as X (new slur starts on Db4+Db5). LH: natural printed on the first A only -> An3, the second A unsigned -> A3. Up stems on the Eb3s -> two voices (X); LH2 rests not printed, needed fill.
+32 RH1: Db4+Db5:q( C4+C5:q) r:h
+32 LH1: Eb3:e Gb3:e( An3:e Gb3:e) Eb3:e F3:e( A3:e F3:e)
+32 LH2: Eb3:q r:q Eb3:q r:q
+
+== bar 33: X
+# Up stems on D3 and Eb3 printed -> two LH voices; LH2 rests not printed, needed fill.
+33 RH1: F4+F5:h.( G4+G5:q)
+33 LH1: D3:e F3:e( Bb3:e F3:e) Eb3:e G3:e( Bb3:e G3:e)
+33 LH2: D3:q r:q Eb3:q r:q
+
+== bar 34: X
+# D3 and G2 both carry a short up stem (zoomed) -> two LH voices; LH2 rests not printed, needed fill.
+34 RH1: G4+G5:q( F4+F5:q Eb4+Eb5:q D4+D5:q)
+34 LH1: D3:e F3:e( Bb3:e F3:e) G2:e G3:e( Bb3:e G3:e)
+34 LH2: D3:q r:q G2:q r:q
+
+== bar 35: own
+# RH: natural printed on the last A -> An4 (Y). LH: up stems on Eb3 and F3 -> two voices (X); LH2 rests not printed, needed fill.
+35 RH1: C4+C5:q( Eb4+Eb5:h An4:q)
+35 LH1: Eb3:e G3:e( C4:e G3:e) F3:e C4:e( Eb4:e C4:e)
+35 LH2: Eb3:q r:q F3:q r:q
+
+== bar 36: own
+# RH2 eighth groups each carry a slur (X). cresc. (y417-438, dLH 24 vs dRH 59) sits above the LH Ab3 half -> LH (Y). RH2 rests are printed.
+36 RH1: Bb4:w~
+36 RH2: r:e D4:e( F4:e D4:e) r:e D4:e( F4:e D4:e)
+36 LH1: Bb3:h( word:cresc. Ab3:h
+
+== bar 37: own
+# RH2 slurs printed on both groups (X). p (y419-448, 14 px above LH staff) -> LH before F3 (Y).
+37 RH1: Bb4:h Bb4:h
+37 RH2: r:e Eb4:e( G4:e Eb4:e) r:e D4:e( Ab4:e D4:e)
+37 LH1: G3:h dyn:p F3:h)
+
+== bar 38: X
+# Up stems on Eb3 and G3 printed -> two LH voices; LH2 rests not printed, needed fill.
+38 RH1: r:e Eb4:e( G4:e Eb4:e) r:e Eb4:e( G4:e Eb4:e)
+38 LH1: Eb3:e G3:e( Bb3:e G3:e) G3:e Bb3:e( Eb4:e Bb3:e)
+38 LH2: Eb3:q r:q G3:q r:q
+
+== bar 39: own
+# X's content: hollow half F3 + quarter F3 with up stems = second voice; f (dRH 28/dLH 39) and p (dRH 30/dLH 44) -> RH. Only change: dyn tokens moved after the rests onto the first notes. LH2 rest not printed, needed fill.
+39 RH1: r:e dyn:f Eb4:e( Ab4:e Eb4:e) r:e dyn:p Eb4:e( Ab4:e Eb4:e)
+39 LH1: F3:e Ab3:e( C4:e Ab3:e) F3:e Ab3:e( C4:e Ab3:e)
+39 LH2: F3:h F3:q r:q
+
+== bar 40: X
+# Up stems on C3 and Ab2 printed (zoomed) -> two LH voices; LH2 rests not printed, needed fill.
+40 RH1: r:e F4:e( Ab4:e F4:e) r:e F4:e( Ab4:e F4:e)
+40 LH1: C3:e Eb3:e( Ab3:e Eb3:e) Ab2:e C3:e( Eb3:e C3:e)
+40 LH2: C3:q r:q Ab2:q r:q
+
+== bar 41: own
+# f (dRH 24/dLH 21) and p (dRH 30/dLH 24) sit at or just below halfway; RH has rests at both spots and LH has notes -> LH (neither reading). Second voice: hollow half Bb2 + quarter Bb2 with up stems (X); LH2 rest not printed, needed fill.
+41 RH1: r:e F4:e( Ab4:e F4:e) r:e F4:e( Ab4:e F4:e)
+41 LH1: dyn:f Bb2:e D3:e( F3:e D3:e) dyn:p Bb2:e D3:e( F3:e D3:e)
+41 LH2: Bb2:h Bb2:q r:q
+
+== bar 42: X
+# Up stems printed -> two LH voices; LH2 rests not printed, needed fill.
+42 RH1: r:e Eb4:e( G4:e Eb4:e) r:e F4:e( Ab4:e F4:e)
+42 LH1: Eb3:e G3:e( Bb3:e G3:e) D3:e Ab3:e( Bb3:e Ab3:e)
+42 LH2: Eb3:q r:q D3:q r:q
+
+== bar 43: X
+# Up stems printed -> two LH voices; LH2 rests not printed, needed fill.
+43 RH1: r:e Eb4:e( G4:e Eb4:e) r:e D4:e( F4:e D4:e)
+43 LH1: Eb3:e G3:e( Bb3:e G3:e) Bb2:e Ab3:e( Bb3:e Ab3:e)
+43 LH2: Eb3:q r:q Bb2:q r:q
+
+== bar 44: X
+# Up stems printed -> two LH voices; LH2 rests not printed, needed fill.
+44 RH1: r:e Eb4:e( G4:e Eb4:e) r:e F4:e( Ab4:e F4:e)
+44 LH1: Eb3:e G3:e( Bb3:e G3:e) D3:e Ab3:e( Bb3:e Ab3:e)
+44 LH2: Eb3:q r:q D3:q r:q
+
+== bar 45: own
+# Same as bar 9: X's content (beat-1 Eb3 up stem printed; mf sits directly on the LH chord -> LH), LH2 fill reduced to one unprinted rest.
+45 RH1: r:e Eb4:e( G4:e Eb4:e) Eb5:e( Bb4:e F5:e Bb4:e)
+45 LH1: Eb3:e G3:e( Bb3:e G3:e) dyn:mf G3+Bb3+Eb4:q( F3+Ab3+D4:q)
+45 LH2: Eb3:q r:h.
+
+== bar 52: X
+# Filled head (up stem, left of stem) sits in the E5 space = Eb5; hollow pair (down stem, right of stem) on D5 and B4 lines. The printed flat's bowl is centred on the D5 line (y~434), not on the E5 space (y~424) -> Bb4+Db5 half. RH2 leading rest not printed, needed fill.
+52 RH1: r:q Eb4:q( Eb5:q Eb4:q)
+52 RH2: r:h Bb4+Db5:h
+52 LH1: Eb3:e( G3:e Bb3:e G3:e Eb3:e G3:e Bb3:e G3:e)
+
+== bar 56: own
+# RH as X: the hollow G5+Bb5 half has the up stem (voice 1); C5/C6 quarters have down stems (voice 2); RH1 leading rest not printed, needed fill. LH: natural printed on the first E only -> En3, later Es unsigned E3 (still natural; Y's Eb3 is wrong).
+56 RH1: r:h G5+Bb5:h
+56 RH2: r:q C5:q( C6:q C5:q)
+56 LH1: C3:e( En3:e G3:e E3:e C3:e E3:e G3:e E3:e)
+
+== bar 58: own
+# RH: the hollow E5+G5 half has the up stem (voice 1, as X), with a natural printed on the E -> En5 (Y); RH1 leading rest not printed, needed fill. C6 is on the 2nd ledger. LH: the third note sits in the B3 space above the staff with no ledger -> Bb3, not C4 (Y).
+58 RH1: r:h En5+G5:h
+58 RH2: r:q C5:q( C6:q C5:q)
+58 LH1: C3:e( G3:e Bb3:e G3:e C3:e G3:e Bb3:e G3:e)
+
+== bar 61: X
+# One beam joins four eighths (Ab4+F5, Ab5, F5+Ab5*, F5+Ab5*), then an unbeamed quarter F5+Ab5 without staccato, then a quarter rest. fp sits directly under the RH beam -> RH.
+61 RH1: dyn:fp Ab4+F5:e( Ab5:e) F5+Ab5:e* F5+Ab5:e* F5+Ab5:q r:q
+61 LH1: Bb2:q D3+Ab3+Bb3:q> D3+Ab3+Bb3:q D3+Ab3+Bb3:q
+
+== bar 63: X
+# Same as bar 61 (zoomed): four beamed eighths, the last two staccato, then a quarter.
+63 RH1: dyn:fp Ab4+F5:e( Ab5:e) F5+Ab5:e* F5+Ab5:e* F5+Ab5:q r:q
+63 LH1: Bb2:q D3+Ab3+Bb3:q> D3+Ab3+Bb3:q D3+Ab3+Bb3:q
+
+== bar 65: Y
+# Heads counted: RH Ab4+F5+Ab5 (3), LH Bb2+F3+Ab3+Bb3 (4, Ab3 offset); fermata over each half chord. f (y386-420) touches both the RH stem end and the LH fermata but is nearer the RH staff (11 vs 42 px), and both hands have a note there -> RH only. p (y392-420; dRH 17, dLH 42) -> RH only.
+65 RH1: dyn:f Ab4+F5+Ab5:h! r:q dyn:p C5+Eb5:q(
+65 LH1: Bb2+F3+Ab3+Bb3:h! r:q C4+Eb4:q(
+
+== bar 67: own
+# cresc. (y395-416) is near halfway by staff (4 px toward RH), with the LH slur 7 px and the LH F3+Ab3 chord directly below; at its start the RH has a rest and the LH has a note -> LH only (X wrote it in both hands).
+67 RH1: r:e D4+F4:e r:e Eb4+G4:e r:e F4+Ab4:e r:e G4+Bb4:e
+67 LH1: D3+F3:q( Eb3+G3:q word:cresc. F3+Ab3:q G3+Bb3:q)
+
+== bar 68: Y
+# LH beat 2: lower head in the A2 space (y~510) -> Ab2+Ab3 (octave), not Bb2. f (y394-431; dRH 26, dLH 19) sits over that LH chord with an RH rest above -> LH only. RH chords counted: Ab4+C5, F4+Bb4+D5, G4+Bb4+Eb5, Ab4+Bb4+D5+F5 (Ab4 offset).
+68 RH1: r:e Ab4+C5:e r:e F4+Bb4+D5:e r:e G4+Bb4+Eb5:e r:e Ab4+Bb4+D5+F5:e
+68 LH1: Ab3+C4:q dyn:f Ab2+Ab3:q G2+G3:q F2+F3:q
+
+== bar 69: X
+# RH half chord has 4 hollow heads (pixel check: G4, Bb4, Eb5, G5). Fermata over the half rest in both hands.
+69 RH1: G4+Bb4+Eb5+G5:h r:h!
+69 LH1: Eb2+Eb3:h r:h!
+
+== bar 70: Y
+# p (y419-445) sits 5 px above the LH staff -> LH only.
+70 RH1: r:q Eb4+C5:q r:q C5+Eb5:q
+70 LH1: dyn:p Ab2+Ab3:q r:q Ab2+Ab3:q r:q
+
+== bar 73: own
+# The LH is one voice: Eb3+G3 half (one up stem; the Eb3 is tied in from bar 72) and F3+Ab3 half (one up stem), ending the slur from bar 72. No stems go the other way, so neither X's half-plus-rest nor Y's whole Eb3 second voice is printed.
+73 RH1: r:e Bb3:e( Eb4:e Bb3:e) r:e Bb3:e( D4:e Bb3:e)
+73 LH1: Eb3+G3:h F3+Ab3:h)
+
+== bar 75: own
+# Same as bar 73: one LH voice of two half chords, both with up stems.
+75 RH1: r:e Bb3:e( Eb4:e Bb3:e) r:e Bb3:e( D4:e Bb3:e)
+75 LH1: Eb3+G3:h F3+Ab3:h)
+
+== bar 76: own
+# LH: a stemless hollow whole chord Eb3+G3 (2 heads); the first eighth's up stem attaches to the hollow G3 head (shared head), then 7 more eighths under one slur. So two voices (X's idea), but the whole chord includes G3 (X had Eb3 only; Y lost the whole notes).
+76 RH1: Bb4:q.( G4:e) Eb5:q.( C5:e)
+76 LH1: G3:e( Bb3:e Eb4:e Bb3:e Ab3:e C4:e Eb4:e C4:e)
+76 LH2: Eb3+G3:w
+
+== bar 77: own
+# As bar 76: hollow whole Eb3+G3; the first eighth G3 shares the hollow G3 head.
+77 RH1: Bb4:q.( G4:e) F4:q.( Ab4:e)
+77 LH1: G3:e( Bb3:e Eb4:e Bb3:e Ab3:e Bb3:e D4:e Bb3:e)
+77 LH2: Eb3+G3:w
+
+== bar 78: own
+# As bar 76.
+78 RH1: G4:q.( Bb4:e) Eb5:q.( C5:e)
+78 LH1: G3:e( Bb3:e Eb4:e Bb3:e Ab3:e C4:e Eb4:e C4:e)
+78 LH2: Eb3+G3:w
+
+== bar 79: own
+# As bar 76.
+79 RH1: Bb4:q.( G4:e) F4:q.( Ab4:e)
+79 LH1: G3:e( Bb3:e Eb4:e Bb3:e Ab3:e Bb3:e D4:e Bb3:e)
+79 LH2: Eb3+G3:w
+
+== bar 84: own
+# Fermatas are printed over the beat-3 quarter rests in both hands, not over the half chords (X). f (y400-437) sits just under the RH stem end, nearer the RH; p (y395-424; dRH 20, dLH 48) is nearer the RH -> RH only (Y). Heads: RH Bb4+Eb5+G5+Bb5 (4), LH Eb3+G3+Bb3 (3).
+84 RH1: dyn:f Bb4+Eb5+G5+Bb5:h r:q! dyn:p C5+Eb5:q(
+84 LH1: Eb3+G3+Bb3:h r:q! C4+Eb4:q(
+
+== bar 86: own
+# cresc. (y378-399; dRH 17, dLH 37) is nearer the RH staff, with RH and LH notes about equally near and both hands having notes under it -> RH only (as Y). It starts over the beat-3 F4+Ab4 eighth (x604), so the token goes before that note, not before the rest.
+86 RH1: r:e D4+F4:e r:e Eb4+G4:e r:e word:cresc. F4+Ab4:e r:e G4+Bb4:e
+86 LH1: D3+F3:q( Eb3+G3:q F3+Ab3:q G3+Bb3:q)
+
+== bar 87: Y
+# LH beat 2 is Ab2+Ab3 (lower head in the A2 space), not Bb2. f (y377-414, about halfway) sits right above that LH chord, with an RH rest at that spot -> LH only.
+87 RH1: r:e Ab4+C5:e r:e F4+Bb4+D5:e r:e G4+Bb4+Eb5:e r:e Ab4+Bb4+D5+F5:e
+87 LH1: Ab3+C4:q dyn:f Ab2+Ab3:q G2+G3:q F2+F3:q
+
+== bar 88: X
+# RH half chord has 4 hollow heads (pixel check: G4, Bb4, Eb5, G5); fermata over the half rest in both hands.
+88 RH1: G4+Bb4+Eb5+G5:h r:h!
+88 LH1: Eb2+Eb3:h r:h!
+
+== bar 89: Y
+# p (y384-413) is exactly halfway (23/23 px); the RH has a rest and the LH a chord at that spot -> LH only.
+89 RH1: r:q Eb4+C5:q r:q C5+Eb5:q
+89 LH1: dyn:p Ab2+Ab3:q r:q Ab2+Ab3:q r:q
+
+== bar 97: Y
+# Natural printed on the RH B -> Bn4. Chords counted: D4+F4+B4, C4+Eb4+C5, Ab4+D5. f (y391-428) has the LH F3 up-stem touching it from below and only the RH staff above, and the RH has a rest at beat 3 -> LH only.
+97 RH1: D4+F4+Bn4:q( C4+Eb4+C5:q) r:q Ab4+D5:q
+97 LH1: Ab2+Ab3:q) r:q dyn:f F2+F3:q r:q
+
+== bar 98: own
+# A tie is printed under the chords joining Bb4 (half) to Bb4 (quarter), and a separate slur over them joins D5 to Eb5 (neither reading had the tie). p (y390-417) is wedged between the RH stem end and the LH fermata, nearer the RH staff (16 vs 37), and both hands have a note there -> RH only (Y). LH G2+G3 tied with two curves (both notes).
+98 RH1: dyn:p Bb4~+D5:h!( Bb4+Eb5:q) r:q!
+98 LH1: G2+G3:h!~ G2+G3:q r:q!
+
+== bar 99: Y
+# f (about halfway by staff, 18/26 px) has the RH chord's stem end touching its top -> RH only. Heads: Ab4+C5+F5 (3) and Ab4+D5+F5+Bb5 (4, Bb5 on a ledger).
+99 RH1: dyn:f Ab4+C5+F5:q r:q Ab4+D5+F5+Bb5:q r:q
+99 LH1: Ab2+Ab3:q r:q Bb2+Bb3:q r:q

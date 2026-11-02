@@ -1,0 +1,356 @@
+# JUDGE_P19: No. 19 Recit. ed Aria "E Susanna non vien! ... Dove sono", piano part, disputed bars only.
+# Dynamics: placed by vertical position between the RH bottom line and the LH top line. Within about +-10% of the
+# midpoint counts as halfway, and then the hand with a note at that moment gets it (RH if both do).
+# Second-voice gaps that are not printed are written as hidden s:DUR rests.
+# Page 254 (sys029) is cut at the bottom: the lowest LH ledger notes and the LH triplet sign/slur in bar 132 are
+# partly lost. They are read from the RH, which is printed the same way, and from what is still visible.
+
+== bar 1: own
+# The f and the p both sit about halfway between the staves (p is +7% toward LH), and both hands have notes there, so both go to RH only. RH lower voice G4 F#4 G4 has staccato dots under a slur, stems down. Its unprinted gap is hidden.
+1 RH1: dyn:f C4+G4+C5:h r:e dyn:p C5+E5:q C5+E5:e
+1 RH2: s:h s:e G4:e*( F#4:e* G4:e*)
+1 LH1: E2+E3:h r:e C4:e*( A3:e* G3:e*)
+
+== bar 4: X
+# The slur runs from the G4+B4 quarter to the last 32nd chord, so Y's tie is wrong (the pitches change). The 32nd chords are B4+D5, A4+C5, G4+B4, A4+C5.
+4 RH1: r:h r:e G4+B4:q( B4+D5:x A4+C5:x G4+B4:x A4+C5:x)
+4 LH1: r:h r:e G3:e G3:e G3:e
+
+== bar 6: own
+# This is X, but the second-voice gap before the stem-down C5 eighth is not printed, so it becomes hidden s rests. The slur runs from B4+G5 to the 32nds.
+6 RH1: r:h r:e B4+G5:q( B5:x A5:x G5:x A5:x)
+6 RH2: s:h s:e s:q C5:e
+6 LH1: r:h r:e G3:e G3:e G3:e
+
+== bar 8: own
+# The f sits just under the RH flag and is far from the LH staff, so it goes to RH only. The 32nd G4 keeps the sharp printed earlier in the bar, so it is G#4. In the LH, C4 shares the stem-down beam stem with E3, giving the chord E3+C4 (Y has this right), and a slur starts on E3 and runs into the next bar. The upper LH voice is B3 quarter + hidden s:e.
+8 RH1: r:e. dyn:f D5+G5+B5:s D5+G5+B5:q r:e D4+G#4:q B4:x( A4:x G#4:x A4:x
+8 RH2: s:h s:e s:q E4:e
+8 LH1: r:e. F3+F4:s F3+F4:q r:e B3:q s:e
+8 LH2: s:h s:e E3:e( F3:e E3+C4:e
+
+== bar 10: own
+# This is X's reading, but the second LH chord's G3 keeps the sharp printed earlier in the bar, so it is G#3 (as Y has it). Both pairs are slurred.
+10 RH1: r:e dyn:p B4+D5:e( D5+B5:e) B4+D5:e( D5+B5:q) r:q
+10 LH1: r:q G#3+F4:q( G#3+E4:q) r:q
+
+== bar 14: own
+# The dynamic is printed fp (Y's mp is wrong). Its centre is 17% below the midpoint between the staves, so it is nearer the LH staff and goes to LH. The slur from bar 13 ends on E5+G5.
+14 RH1: E5+G5:q) r:q C#4+E4:h~
+14 LH1: C#3+A3:q r:q dyn:fp A2+G3:h~
+
+== bar 15: own
+# The lowest note of the chord is Bb3 (a flat on the B under the C4 ledger), so X's Bb3+E4+G4 is right. The fp nearly touches the LH top line (+28%), so it goes to LH.
+15 RH1: C#4+E4:q Bb3+E4+G4:h.~
+15 LH1: A2+G3:q dyn:fp C#3:h.~
+
+== bar 16: own
+# E4+G4 is a dotted quarter, stem up. The lower voice is the tied Bb3 quarter, then A3 (on the second ledger) as an eighth with a flag. The curve Bb3-A3 is a slur, not a tie. The rest of the lower voice is hidden.
+16 RH1: E4+G4:q. r:e r:h
+16 RH2: Bb3:q( A3:e) s:e s:h
+16 LH1: C#3:q. r:e r:h
+
+== bar 17: X
+# The f under the RH staff is much nearer to RH, so it goes to RH.
+17 RH1: r:e. dyn:f A4+D5+F5:s A4+D5+F5:e. A4+D5+F5+A5:s A4+D5+F5+A5:q r:q
+17 LH1: r:e. D3+D4:s D3+D4:e. D3+D4:s D3+D4:q r:q
+
+== bar 19: X
+# The f under the RH staff is nearer to RH.
+19 RH1: r:e. dyn:f G#4+B4+D5:s G#4+B4+D5:q r:e. B4+D5+G#5:s B4+D5+G#5:q
+19 LH1: r:e. E3+E4:s E3+E4:q r:e. E3+E4:s E3+E4:q
+
+== bar 21: X
+# The p is printed. It sits about halfway (-5%) and both hands have notes, so it goes to RH.
+21 RH1: r:q dyn:p F4+G#4+D5:e* F4+A4+D5:e* F4+B4+D5:e* r:e r:q
+21 LH1: r:q B3:e* A3:e* G#3:e* r:e r:q
+
+== bar 22: X
+# The f is printed exactly halfway and both hands have notes, so it goes to RH.
+22 RH1: r:q dyn:f B4+D5+B5:e* A4+D5+A5:e* B4+D5+G#5:e* r:e r:q
+22 LH1: r:q G#2+G#3:e* F#2+F#3:e* E2+E3:e* r:e r:q
+
+== bar 23: X
+# The f at beat 1 sits about halfway. The RH has a rest there and the LH has the A2+A3 half, so it goes to LH.
+23 RH1: r:q r:e E4:s A4:s C5:e. A4+C5:s B4+E5:e. B4+E5:s
+23 LH1: dyn:f A2+A3:h A3+E4:e. A3+E4:s G3+E4:e. G3+E4:s
+
+== bar 25: own
+# The curves from the half chords to the quarter chords join different pitches (A4-G#4, D#4-E4, A3-B3, F3-E3), so they are slurs, not ties (Y's ties are wrong). The D#4 is tied over from bar 24 and keeps its sharp. The bass clef for the RH is printed at the end of the bar (X has it, Y does not).
+25 RH1: D#4+A4:h( E4+G#4:q) r:q clef:F
+25 LH1: F3+A3:h( E3+B3:q) r:q
+
+== bar 26: own
+# The p sits halfway (+8.5%). The RH has an eighth rest at that moment and the LH has C3, so it goes to LH.
+26 RH1: r:e E3+G3+C4:e r:e F3+A3+D4:e
+26 LH1: dyn:p C3:e r:e F2:e r:e
+
+== bar 27: own
+# This is X's reading. G3 is a separate dotted quarter (its own stem and a dot), and its last eighth is not printed, so it is hidden.
+27 RH1: E3+C4:e( D3+B3:e E3+C4:e) clef:G D5:e(
+27 RH2: G3:q. s:e
+27 LH1: G2:e r:e C3:e B3:e(
+
+== bar 29: own
+# This is X's reading. G3 under the C4 ledger is a separate dotted quarter, not part of the C4+E4 chord. Its unprinted end is hidden.
+29 RH1: C4+E4:e( B3+D4:e C4+E4:e) F5:e(
+29 RH2: G3:q. s:e
+29 LH1: G2:e r:e C3:e D4:e(
+
+== bar 33: own
+# The grace note is a slashed eighth G4. The curve from the G5 quarter to the next G5 joins the same pitch, so it is a tie. Then G5(16th) A5 G5(32nds) are slurred, and G5 F5 E5 D5 (32nds) are slurred. "dolce" is printed under the RH staff.
+33 RH1: word:dolce g:G4:e G5:q~ G5:s( A5:x G5:x) G5:x( F5:x E5:x D5:x)
+33 LH1: G3:e C4+E4:e G3:e B3+D4:e
+
+== bar 35: own
+# The eighth after the treble clef is G4+D5 (G4 on line 2), so Y's F4 is wrong. G3 is a dotted quarter in its own voice. Its gap is hidden.
+35 RH1: E3+C4:e( D3+B3:e E3+C4:e) clef:G G4+D5:e(
+35 RH2: G3:q. s:e
+35 LH1: G2:e r:e C3:e B3:e(
+
+== bar 37: own
+# The last eighth is G4+F5. The lower curve ties G4 to the G4 of bar 38, and the upper curve slurs F5 to G5. The first three chords are slurred, over a separate G3 dotted quarter.
+37 RH1: C4+E4:e( B3+D4:e C4+E4:e) G4~+F5:e(
+37 RH2: G3:q. s:e
+37 LH1: G2:e r:e C3:e D4:e(
+
+== bar 40: own
+# This is X's reading. F4 has its own stem down (a quarter), and the lower voice then has a D4 eighth with a flag. A4+C5 / G4+D5 / F4+G4 are the upper beamed and slurred voice. The leading rest of the lower voice is hidden. The LH A3-B3 is a slur, not a tie.
+40 RH1: r:e A4+C5:e( G4+D5:e F4+G4:e)
+40 RH2: s:e F4:q D4:e
+40 LH1: A3:q( B3:q)
+
+== bar 43: X
+# The first LH chord has two noteheads, C3+E3.
+43 RH1: C4:e* E4+G4:e* C4+E4:e* r:e
+43 LH1: C3+E3:e* C3:e* C3+G3:e* r:e
+
+== bar 45: own
+# X's voices are right. The lower dotted quarters G4 and G3 end on an unprinted eighth, which is hidden.
+45 RH1: E5:s( F#5:s G5:s E5:s) D5:e r:e
+45 RH2: G4:q. s:e
+45 LH1: C4:s( D4:s E4:s C4:s) B3:e r:e
+45 LH2: G3:q. s:e
+
+== bar 49: X
+# The dynamic is printed fp (not pp). It is halfway (+7%) and both hands have notes, so it goes to RH.
+49 RH1: dyn:fp C4+Eb4+F4:s C4+Eb4+F4:s C4+Eb4+F4:s C4+Eb4+F4:s C4+Eb4+F4:s C4+Eb4+F4:s C4+Eb4+F4:s C4+Eb4+F4:s
+49 LH1: A2+A3:e A3:e A3:e A3:e
+
+== bar 52: own
+# The first chord has a single sharp, on F, so it is D4+F#4 (as Y has it). A slur runs from that chord to A4. Natural signs are printed before B4 in the RH and B3 in the LH, so these are Bn. The third lower chord is F#4+A4 (the sharp carries through the bar). The lower voice starts after an unprinted eighth.
+52 RH1: D4+F#4:s.( A4:x) D5:q D5:e
+52 RH2: s:e A4+C5:e( G4+Bn4:e F#4+A4:e)
+52 LH1: A3:e F#3+A3:e( G3+Bn3:e A3+C4:e)
+52 LH2: D3:h
+
+== bar 63: own
+# This bar is printed the same as bar 27: G3 is a separate dotted quarter (hidden end), the chords are slurred, then the treble clef and a D5 slurred into bar 64.
+63 RH1: E3+C4:e( D3+B3:e E3+C4:e) clef:G D5:e(
+63 RH2: G3:q. s:e
+63 LH1: G2:e r:e C3:e B3:e(
+
+== bar 64: X
+# The second chord is A3+D4+F4 (D4 in the space under E4, A3 on the ledger), not C4.
+64 RH1: E5:e) G3+C4+E4:e r:e A3+D4+F4:e
+64 LH1: C4:e) r:e F3:e r:e
+
+== bar 65: own
+# Y is missing this bar. It is printed as in bar 29: G3 is a separate dotted quarter (hidden end).
+65 RH1: C4+E4:e( B3+D4:e C4+E4:e) F5:e(
+65 RH2: G3:q. s:e
+65 LH1: G2:e r:e C3:e D4:e(
+
+== bar 66: X
+# Y is missing this bar. X matches the print.
+66 RH1: G5:e) E4+G4:e r:e C4+G4:e
+66 LH1: C4+E4:e) r:e E3:e r:e
+
+== bar 67: X
+# Y is missing this bar. X matches the print.
+67 RH1: r:e B3+F4+G4:e r:e D4+F4+G4:e
+67 LH1: D3:e r:e B2:e r:e
+
+== bar 68: X
+# Y is missing this bar. X matches the print.
+68 RH1: r:e C4+E4+G4:e r:e A3+D4+F4:e
+68 LH1: C3:e r:e F3:e r:e
+
+== bar 69: own
+# Y is missing this bar. It is printed as in bar 33: the G5 quarter is tied to the following G5.
+69 RH1: word:dolce g:G4:e G5:q~ G5:s( A5:x G5:x) G5:x( F5:x E5:x D5:x)
+69 LH1: G3:e C4+E4:e G3:e B3+D4:e
+
+== bar 70: X
+# Y is missing this bar. X matches the print.
+70 RH1: C5:e clef:F E3+G3+C4:e r:e F3+A3+D4:e
+70 LH1: C3:e r:e F2:e r:e
+
+== bar 71: own
+# This is X's reading (as bar 35), with the G3 voice's unprinted end hidden.
+71 RH1: E3+C4:e( D3+B3:e E3+C4:e) clef:G G4+D5:e(
+71 RH2: G3:q. s:e
+71 LH1: G2:e r:e C3:e B3:e(
+
+== bar 73: own
+# As in bar 37: G4 is tied to the G4 of bar 74, F5 is slurred onward, and the G3 voice has a hidden end.
+73 RH1: C4+E4:e( B3+D4:e C4+E4:e) G4~+F5:e(
+73 RH2: G3:q. s:e
+73 LH1: G2:e r:e C3:e D4:e(
+
+== bar 75: own
+# Only E4 is tied, to the E4 of bar 76's E4+A4+C5. B4 and E5 are not tied, so Y's whole-chord tie is wrong.
+75 RH1: r:e D4+F4+A4:e r:e E4~+B4+E5:e
+75 LH1: F3:e r:e G3:e r:e
+
+== bar 76: own
+# The sf is about halfway (-4%) and both hands have notes, so it goes to RH (X has it in LH). Slurs, fermatas (above the RH, below the LH) and the dotted quarters follow X.
+76 RH1: E4+A4+C5:e( dyn:sf D4+F4+G4:q.!)
+76 LH1: A3:e( B3:q.!)
+
+== bar 82: own
+# The first chord is A3+D4 (not C4). The slur from bar 81 ends on F4. The lower voice is D4 slurred to B3 (no natural printed here), after a hidden half rest.
+82 RH1: A3+D4:h F4:h)
+82 RH2: s:h D4:q( B3:q)
+82 LH1: F2+F3:h( G2+G3:h)
+
+== bar 83: own
+# The stem-down chord C4+E4 is a half note with one stem, slurred to G3+Bb3. The slur ends inside this bar. A new slur starts in bar 84.
+83 RH1: C4+E4:h( G3+Bb3:h)
+83 LH1: C3:w
+
+== bar 84: own
+# A new slur runs from A3+D4 to F4. The lower voice is D4 slurred to B3, which has a printed natural.
+84 RH1: A3+D4:h( F4:h)
+84 RH2: s:h D4:q( Bn3:q)
+84 LH1: F2+F3:h( G2+G3:h)
+
+== bar 85: own
+# The LH has two voices: eighths with stems up, and quarters C3 E3 D3 C3 with stems down (shared noteheads), with a slur under E3-C3. So the 5th and 7th eighths are F3 and E3, not chords. The RH G4 dotted half starts after a hidden quarter.
+85 RH1: C4+E4:q C5:q( B4+D5:q C5+E5:q)
+85 RH2: s:q G4:h.
+85 LH1: C3:e G3:e E3:e G3:e F3:e G3:e E3:e G3:e
+85 LH2: C3:q E3:q( D3:q C3:q)
+
+== bar 86: own
+# The RH has three layers: G5 quarter + F5 half + C5+E5 quarter chord (one stem, slurred from G5); a D5 dotted half with its own stem; and a stemless G4 whole note. The chord C5+E5 is kept as printed.
+86 RH1: G5:q( F5:h C5+E5:q)
+86 RH2: D5:h. s:q
+86 RH3: G4:w
+86 LH1: D3:e G3:e D3:e G3:e D3:e G3:e C3:e G3:e
+86 LH2: B2:h.( C3:q)
+
+== bar 88: X
+# The f (-9%) and the sf are nearer to RH. A wavy arpeggio line is printed before the 4-note chord C5+E5+G5+C6 (4 dots).
+88 RH1: dyn:f C5:q r:q dyn:sf C5+E5+G5+C6:q.a G5+B5:s F5+A5:s
+88 LH1: C4+E4:e C4:e C3:e C4:e C3:e C4:e C3:e C4:e
+
+== bar 89: own
+# One p is printed (-10%, about halfway) and both hands have notes, so it goes to RH only, before the first 16th. The RH needs r:s (missing in Y). No staccato on the first A5 or F4.
+89 RH1: E5+G5:q r:s dyn:p E5:s( F5:s G5:s A5:e) A5:e* A5:e* A5:e*
+89 LH1: C3:q r:s C4:s( D4:s E4:s F4:e) F4:e* F4:e* F4:e*
+
+== bar 93: own
+# The f is exactly halfway and sits at beat 2, where the RH has a quarter rest and the LH has C3, so it goes to LH. The sf is near RH, with an arpeggio.
+93 RH1: E4+C5:q r:q dyn:sf C5+E5+G5+C6:q.a G5+B5:s F5+A5:s
+93 LH1: C3:e C4:e dyn:f C3:e C4:e C3:e C4:e C3:e C4:e
+
+== bar 94: own
+# One p is printed (-7%, about halfway) and both hands have notes, so it goes to RH only. No "cresc." is printed (Y is wrong).
+94 RH1: E5+G5:q r:s dyn:p E5:s( F5:s G5:s A5:e) A5:e* A5:e* A5:e*
+94 LH1: C3:q r:s C4:s( D4:s E4:s F4:e) F4:e* F4:e* F4:e*
+
+== bar 96: X
+# No "dim." is printed in this bar.
+96 RH1: E4+C5:e r:e E4+G4:e r:e E4+G4+C5:e r:e G4+C5+E5:e r:e
+96 LH1: C3:e C4:e C3:e C4:e C3:e C4:e C3:e C4:e
+
+== bar 98: own
+# The slur is E4-G4-E4 (not a tie). The beat 3-4 upper voice is the melody C4 (shared notehead) -> D4. The B3 notehead belongs to the stem-down eighths C4 G3 B3 G3. The slur starts at C4 and ends on G4 in bar 99. The lower voice's first half is hidden.
+98 RH1: E4+C5:e E4:e( G4:e E4:e) C4:q( D4:q
+98 RH2: s:h C4:e G3:e B3:e G3:e
+98 LH1: C3:q r:q r:q G2:q
+
+== bar 99: own
+# The upper voice is the single line Eb4 G4 C4 D4. The second notehead at each of these points (C4, Eb4, B3) belongs to the stem-down arpeggio. The slur from bar 98 ends on G4, and a new slur starts on C4 and runs to the end of bar 100.
+99 RH1: Eb4:q G4:q) C4:q( D4:q
+99 RH2: C4:e G3:e Eb4:e G3:e C4:e G3:e B3:e G3:e
+99 LH1: C3:h. G2:q
+
+== bar 100: own
+# The upper line is Eb4 G4(half) Eb4, and the slur ends on the last Eb4. C4 belongs to the stem-down eighths.
+100 RH1: Eb4:q G4:h Eb4:q)
+100 RH2: C4:e G3:e Eb4:e G3:e Eb4:e G3:e C4:e G3:e
+100 LH1: C3:w
+
+== bar 102: own
+# A3+D4, then F4 half (not G4), with the slur from bar 101 ending on F4. The lower voice is D4 slurred to B3, which has a printed natural. The LH is F2+F3 slurred to G2+G3 (Y's F2+G3 is wrong).
+102 RH1: A3+D4:h F4:h)
+102 RH2: s:h D4:q( Bn3:q)
+102 LH1: F2+F3:h( G2+G3:h)
+
+== bar 103: own
+# Printed as in bar 83: one stem-down C4+E4 half slurred to G3+Bb3, with the slur closed in this bar.
+103 RH1: C4+E4:h( G3+Bb3:h)
+103 LH1: C3:w
+
+== bar 104: own
+# A3+D4 (zoomed: D4, not C4). The slur runs from A3+D4 to the F4 half (not G4). The lower voice is D4 to B3, which has a printed natural. The LH curve is a slur, not a tie.
+104 RH1: A3+D4:h( F4:h)
+104 RH2: s:h D4:q( Bn3:q)
+104 LH1: F2+F3:h( G2+G3:h)
+
+== bar 108: X
+# No "cresc." is printed in this bar.
+108 RH1: r:q E4+G4+C5:q E4+G4+C5:q E4+G4+C5:q
+108 LH1: r:q C3+G3+C4:q C3+G3+C4:q C3+G3+C4:q
+
+== bar 114: own
+# Y is missing this bar. The upper curve slurs G5 to F#5. The lower curve joins A4 to the A4 of bar 115 (same pitch), so it is a tie on A4.
+114 RH1: r:h A4~+E5+G5:h(
+114 LH1: r:h A2+A3:q( C#3+C#4:q
+
+== bar 115: own
+# Y is missing this bar. A natural is printed on F5 of the half chord. The upper curve slurs F5 to E5, and the lower curve ties G4 to the G4 of bar 116.
+115 RH1: A4+D5+F#5:e) r:e r:q G4~+D5+Fn5:h(
+115 LH1: D3+D4:e) r:e r:q G2+G3:q( B2+B3:q
+
+== bar 116: X
+# Y is missing this bar. X matches the print. The tie into G4 needs no token on the arrival note.
+116 RH1: G4+C5+E5:e) r:e D5+F5:e r:e C5+E5:e r:e B4+D5:e r:e
+116 LH1: C3+C4:e) r:e F3:e r:e G3:e r:e G2:e r:e
+
+== bar 117: X
+# Y is missing this bar. The chord is G3+C4+E4 (3 noteheads, two ledgers).
+117 RH1: C5:e G3+C4+E4:e G3+C4+E4:e G3+C4+E4:e G3+C4+E4:e G3+C4+E4:e G3+C4+E4:e G3+C4+E4:e
+117 LH1: C3:q r:q r:h
+
+== bar 118: X
+# Y is missing this bar. The chord is A3+C4+D4 (zoomed).
+118 RH1: r:e A3+C4+D4:e A3+C4+D4:e A3+C4+D4:e A3+C4+D4:e A3+C4+D4:e A3+C4+D4:e A3+C4+D4:e
+118 LH1: F2:q r:q r:h
+
+== bar 119: X
+# Y is missing this bar. The chord is G3+B3+D4+F4 (4 noteheads).
+119 RH1: r:e G3+B3+D4+F4:e G3+B3+D4+F4:e G3+B3+D4+F4:e G3+B3+D4+F4:e G3+B3+D4+F4:e G3+B3+D4+F4:e G3+B3+D4+F4:e
+119 LH1: G2:q r:q r:h
+
+== bar 124: X
+# Both fp marks are printed close to the LH staff (the first beside the LH barline, the second +18%), so they go to LH. The LH C2 is near the cut bottom edge of page 254 but is readable.
+124 RH1: E3+G3+C4:e E3+G3+C4:e E3+G3+C4:e E3+G3+C4:e C4+E4:e C4+E4:e C4+E4:e C4+E4:e
+124 LH1: dyn:fp C2:e C3:e C3:e C3:e dyn:fp A2:e A3:e A3:e A3:e
+
+== bar 126: X
+# Half notes joined by two beams are printed: 16th tremolos. "cresc." is under the RH at the second tremolo.
+126 RH1: trem2:E4|C4:h word:cresc. trem2:F5+A5|C5:h
+126 LH1: A2:e A3:e A2:e A3:e F2:e F3:e F2:e F3:e
+
+== bar 127: X
+# Printed as 16th tremolos (two beams between half notes).
+127 RH1: trem2:E5+G5|C5:h trem2:G5+B5|D5:h
+127 LH1: G2:e G3:e G2:e G3:e G2:e G3:e G2:e G3:e
+
+== bar 132: X
+# G A B are 16th triplets with the "3" and a slur. The LH triplet sign/slur is partly cut off at the bottom of page 254, so it is read the same as the RH.
+132 RH1: C5:q r:e G4:s3( A4:s3 B4:s3) C5:e G4:e C5:e G4:e
+132 LH1: C3:q r:e G2:s3( A2:s3 B2:s3) C3:e G2:e C3:e G2:e

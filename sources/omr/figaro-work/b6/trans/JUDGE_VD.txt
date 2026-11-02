@@ -1,0 +1,78 @@
+== bar 4 F: X
+# "fo,io" is printed under the single F#3 16th: two vowels on one note = elision, joined with _ ("fo,_io"). "già" has a clear grave accent.
+4 F: E3:e. "cef-" F#3:s "fo,_io" G3:e "già" A3:e "non"
+== bar 8 F: X
+# Same elision "fo,_io" on the F#3 16th. At 300 dpi "gia" here is printed WITHOUT an accent (unlike bar 4), so "gia" as printed.
+8 F: E3:e. "cef-" F#3:s "fo,_io" G3:e "gia" A3:e "non"
+== bar 12 F: Y
+# The 16th notehead sits on the middle line, at the same height as the dotted eighth (D3); nothing on the B2 line.
+12 F: r:q D3:e. "Nien-" D3:s "te,"
+== bar 14 F: Y
+# Same figure as bar 12: both noteheads on the middle line = D3.
+14 F: r:q D3:e. "non" D3:s "ac-"
+== bar 18 S: X
+# A natural sign is printed before the first F5 16th, so "Fn5". The later F5s carry it without a printed sign, so they are plain F5.
+18 S: D5:e "nir," Fn5:s "la" E5:s "bur-" F5:s "let-" E5:s "ta_ha" F5:s "da" E5:s "fi-"
+== bar 26 F: X
+# The print reads "re - mo o - ra se -": "mo o" sits under the second E3 (faremo + ora), so two vowels on one note = "mo_o-".
+26 F: E3:e "re-" E3:e "mo_o-" D3:e "ra" D3:e "se-"
+== bar 28 S: Y
+# The 16th after the dotted A4 sits on the middle line = B4 (not G4 in the second space).
+28 S: A4:e. "gnor," B4:s "nol" C5:e "con-" D5:e "tra-"
+== bar 34 F: X
+# The G3 is a plain eighth with no dot, and the low G2 has a single flag (eighth): four plain eighths.
+34 F: D3:e "la-" C3:e "te_i" G3:e "miei" G2:e "de-"
+== bar 34 S: X
+# "de-" is printed under the first note of the slurred 32nd pair (F5); D5 is a melisma note with no syllable.
+34 S: B4:e "la-" C5:e "te_i" E5:e. "miei" F5:x "de-" D5:x
+== bar 34 T: X
+# "de-" is printed under the first 32nd (D5); B4 is a melisma note with no syllable.
+34 T: F4:e "la-" E4:e "te_i" C5:e. "lor" D5:x "de-" B4:x
+== bar 36 F: Y
+# Measured noteheads against the staff lines: 1 on the F3 line, 2 in the G3 space, 3 and 4 on the A3 top line, 5 and 6 above the staff (B3).
+36 F: r:e F3:s "deh" G3:s "si-" A3:s "gnor," A3:s "nol" B3:s "con-" B3:s "tra-"
+== bar 36 S: Y
+# The 16th after the dotted A4 is on the middle line = B4.
+36 S: A4:e. "gnor," B4:s "nol" C5:e "con-" D5:e "tra-"
+== bar 38 F: Y
+# Measured pitches: F3, G3, A3, A3, B3, B3 (the same shape as bar 36).
+38 F: r:e F3:s "con-" G3:s "so-" A3:s "la-" A3:s "te_i" B3:s "miei" B3:s "de-"
+== bar 42 S: X
+# "de-" is under the first 32nd (F5); D5 is a melisma note with no syllable.
+42 S: B4:e "la-" C5:e "te_i" E5:e. "miei" F5:x "de-" D5:x
+== bar 42 T: X
+# "de-" is under the first 32nd (D5); B4 is a melisma note with no syllable.
+42 T: F4:e "la-" E4:e "te_i" C5:e. "lor" D5:x "de-" B4:x
+== bar 72 A: Y
+# At 300 dpi the i of "Si!" has a round dot, with no grave accent printed.
+72 A: r:q C4:q "Si!" r:h
+== bar 74 C: own
+# A natural is printed only before the first B3; the second B3 carries it through the bar with no printed sign, so it is plain B3.
+74 C: Bn3:q "sen-" B3:q "to?" r:h
+== bar 74 T: X
+# A natural is printed before the B4 eighth (key: one flat).
+74 T: r:h r:q r:e Bn4:e "Co-"
+== bar 75 S: own
+# A natural is printed before the dotted-quarter B4 only; the following B4 eighth carries it with no printed sign, so it is plain B4.
+75 S: F5:h "stui" Bn4:q. "ci" B4:e "scon-"
+== bar 75 T: X
+# A natural is printed again before the B4 half note in this new bar.
+75 T: Bn4:h "stui" F4:q. "ci" F4:e "scon-"
+== bar 82 A: own
+# A natural is printed only before the first B3 (quarter); the other five B3s carry it with no printed sign.
+82 A: Bn3:q "rat-" B3:e "to_il" B3:e "bir-" B3:q "bo-" B3:e "ne_è" B3:e "fug-"
+== bar 84 A: own
+# A natural is printed only before the first B3; the next two B3s carry it. The small mark near "sta" is a print speck, not an accent.
+84 A: Bn3:q "trat-" B3:e "to" B3:e "di" A3:q "vi-" A3:e "sta" A3:e "m'u-"
+== bar 93 C: X
+# A natural is printed before the single B3.
+93 C: Bn3:q "là!" r:q F#3:q. "ta-" F#3:e "ci"
+== bar 94 A: own
+# A natural is printed only before the first B3; the second B3 carries it with no printed sign.
+94 A: Bn3:q "ri-" B3:q "di?" F#3:q. "co-" F#3:e "sa"
+== bar 95 C: X
+# A natural is printed before the single B3.
+95 C: Bn3:q "là!" r:q r:h
+== bar 99 F: X
+# At 300 dpi the mark over the i is a slanted grave stroke, unlike the round dots on "ri" and "ti" in the same line, so "dì?".
+99 F: C3:q "dì?" r:q r:h

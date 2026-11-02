@@ -1,0 +1,16 @@
+== bar 6: X
+# The dynamic under the whole-note chord D4+A4+C5 is "fp".
+6 RH1: dyn:fp D4+A4+C5:w
+6 LH1: F#2+F#3:w
+== bar 10: X
+# This is the first bar of page 215. RH: E4 (bottom line) + B3 (below the C4 ledger) quarter, tied in from bar 9, then a quarter rest and a half rest. LH: G#3 + G#2 quarter (tied, sharp carried), then rests.
+10 RH1: B3+E4:q r:q r:h
+10 LH1: G#2+G#3:q r:q r:h
+== bar 12: X
+# The bar runs across the system break: a half rest at the end of sys1, then at the start of sys2 the E4+A4+C5 quarter chord and a quarter rest. Y has only the second half.
+12 RH1: r:h E4+A4+C5:q r:q
+12 LH1: r:h A2+A3:q r:q
+== bar 15: Y
+# The first chord has sharps on F4 and D5 (F#4+B4+D#5). The last chord (f) is F4 space + A4 + D5 line with no new accidentals, so the F# and D# from earlier in the bar carry: F#4+A4+D#5 (B7 over B bass).
+15 RH1: F#4+B4+D#5:h r:q dyn:f F#4+A4+D#5:q
+15 LH1: A2+A3:h r:q B1+B2:q

@@ -1,0 +1,32 @@
+FRESH CHECK - s1.xml bars 63-125 (Act 2 Finale No. 15, Il Conte / La Contessa / Piano)
+Printed pages 144-147 (pg-04 .. pg-07). Page 147 system 2 ends at bar 125 (then Molto Andante 3/8, outside range).
+
+Bar map used (verified against renderings ren1 s1-p05/p06):
+  p.144 sys2 = 62-66, sys3 = 67-71, sys4 = 72-76
+  p.145 sys1 = 77-80 (Recitativo at 80), sys2 = 81-86, sys3 = 87-91, sys4 = 92-96
+  p.146 sys1 = 97-101, sys2 = 102-106, sys3 = 107-110, sys4 = 111-114
+  p.147 sys1 = 115-119, sys2 = 120-125
+
+Method: dump.py of every bar plus an extra pass over XML dynamics, words, articulations, accidentals, tremolos,
+fermatas and lyric elisions, compared with zoomed crops (2x-5x) of the 300 dpi pages. I counted pitches on the staff
+lines for every doubtful chord, e.g. bar 63 RH/LH, 69 RH, 70-71 RH tremolos, 72-76 RH inner voice, 79-80 RH/LH,
+80 Conte, 86 LH, 91 Conte, 119 LH tremolo.
+
+Checked and in agreement (summary):
+- Conte: all pitches and rhythms; E natural in 69, A natural in 80, the fermata on Eb4 in 80. Lyrics, including the
+  elisions gli|oc (65), da|un' (67), go|in (80), ra|e (91, 108), and the accent on più.
+- Contessa: all pitches and rhythms, A natural in 79, the eighth-note slurs in 86/90/103/107, the fermata in 125.
+  Lyrics, including "sì..." (accent confirmed when zoomed), che|ec elisions, "far" without a comma in 115 and with
+  one in 113/117.
+- Piano: chords, inner voices (72-77), tremolos (70-71, 117-120), 16th-note triplets (96-99), grace notes (85, 89,
+  102, 106), the tie on Bb3 (83-84, 87-88, 104-105), staccatos (63, 96-99), fermatas (63, 80, 125), accidentals
+  (63 E nat, 69 E nat, 70 Db, 71 Db/E nat, 72-75 E nat, 79-80 A nat, 125 A nat).
+- Dynamics: f 63; fp 64-68; cresc. 69, 71; p 70, 72, 76, 83, 114, 116, 121; f 75, 77, 79, 81, 113, 115, 119;
+  f/p in 96-99. All present at the printed beat.
+
+Real differences: none.
+
+Unsure: none.
+
+Bars checked: 63 (63-125), all staves.
+CLEAN

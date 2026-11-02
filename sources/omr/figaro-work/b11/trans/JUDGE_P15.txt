@@ -1,0 +1,12 @@
+== bar 3: X | Y | X
+# Dynamic under the RH whole chord is clearly "fp".
+3 RH1: dyn:fp C4+G4+Bb4:w~
+3 LH1: E2+E3:w~
+== bar 4: X | (missing) | X
+# Tied C4+G4+Bb4 / E2+E3 halves, then C4+F4+A4 / F2+F3 quarters and quarter rests.
+4 RH1: C4+G4+Bb4:h C4+F4+A4:q r:q
+4 LH1: E2+E3:h F2+F3:q r:q
+== bar 16: X | (missing) | X
+# Half rest, E4+A4 / C#2+C#3 (sharps on both, C#2 on the 2nd ledger below) quarter, quarter rest.
+16 RH1: r:h E4+A4:q r:q
+16 LH1: r:h C#2+C#3:q r:q

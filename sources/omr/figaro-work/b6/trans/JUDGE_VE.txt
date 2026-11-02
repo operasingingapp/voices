@@ -1,0 +1,35 @@
+# JUDGE_VE - independent print check of the sung-line disputes (Breitkopf PV, pp.173-180).
+# Systems were located with the "# sysNNN starts bar N" comments in VE_A_aligned.txt. Syllables are given as printed under each note.
+== bar 13 C: X
+# sys119 bar 1: the Gf. staff has only a whole rest. "Si?" comes in the next bar.
+13 C: r:w
+== bar 14 C: X
+# sys119 bar 2: F3 quarter (2nd line) "Si?", quarter rest, half rest.
+14 C: F3:q "Si?" r:q r:h
+== bar 20 F: X
+# "stare" is printed as one word under the 5th note, and "oc-" starts under the 6th. No re+oc elision is printed under one note.
+20 F: F3:q "fat-" F3:e "to" F3:e "non" F3:q "può" F3:e "stare" F3:e "oc-"
+== bar 21 F: X
+# "sono" is printed under the 4th note and "io" under the 5th. Under "sono" there is only a speck, no ‿ joining no+io under one note.
+21 F: G3:q "cul-" G3:q "to," r:q G3:e "sono" G3:e "io"
+== bar 49 F: own
+# Rhythm as X. The 3rd note has a single flag (an eighth), so the 2nd note is a plain eighth. The speck right of it is not a dot (it is in the space below the line, irregular). As printed, "viglia" (no hyphen, following "Si-" in bar 48) is under the 1st note and "a" alone is under the 2nd. Neither reading's "vi-" / "glia_a" is printed.
+49 F: D3:q "viglia" D3:e "a" D3:e "ca-" C3:q "val-" C3:e "lo" C3:e "quì"
+== bar 50 F: X
+# The two eighths after the quarter rest are in the top space of the bass staff, so they are G3, not E3.
+50 F: Bb2:q "giun-" Bb2:q "to," r:q G3:e "da" G3:e "Si-"
+== bar 55 A: X
+# A baseline dot, the same size as the period in "rà." (bar 52), is printed touching the e of "re", so "re." is as printed. The text makes no sense with a period (the line goes on "di là"), so it may be an ink speck. Pitches and rhythm agree in both readings.
+55 A: E3:q "vi-" E3:e "di" E3:e "sal-" D3:q "ta-" D3:e "re." D3:e "di"
+== bar 95 C: X
+# "te un" stands under the Bb3 eighth, and a hyphen is printed between "un" and "po'". So the note carries "te_un-".
+95 C: r:q r:e F3:q "Di-" Bb3:e "te_un-"
+== bar 96 C: X
+# After "po" there is the apostrophe (top, rows 461-470) and then a single comma at the baseline. There is no semicolon dot at x-height, so the text is "po',".
+96 C: A3:q "po'," r:e r:q r:e
+== bar 99 F: X
+# The first two noteheads (rows 134-148) are centred on the F3 line (141). The eighth (rows 141-155) is in the E space, so it is Eb3. The arc joins the two F3s (a tie).
+99 F: F3:q.~ "To-" F3:q Eb3:e "sto,"
+== bar 100 F: X
+# Both noteheads (rows 147-162) are centred on the D3 line (154), so they are D3, not Eb3.
+100 F: D3:q "to-" D3:e "sto," r:e r:e C4:e "n'ho"

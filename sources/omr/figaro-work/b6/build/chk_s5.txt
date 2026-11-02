@@ -1,0 +1,65 @@
+Independent check: s5.xml (Finale section 5, "Voi, signor, che giusto siete"), 243 bars, against Breitkopf pp. 186-204
+=========================================================================================================================
+
+Bar map (section bar -> printed page/system):
+  p186: 1-5 | 6-10      p187: 11-15 | 16-20 | 21-25        p188: 26-30 | 31-35 | 36-39 | 40-45
+  p189: 46-50 | 51-54 | 55-58 | 59-65                         p190: 66-71 | 72-77 | 78-83
+  p191: 84-89 | 90-97   p192: 98-102 | 103-107               p193: 108-112 | 113-117
+  p194: 118-122 | 123-129                                     p195: 130-136 | 137-142
+  p196: 143-148 | 149-154    p197: 155-160 | 161-165         p198: 166-170 | 171-175
+  p199: 176-180 | 181-185    p200: 186-191 | 192-196         p201: 197-201 | 202-206
+  p202: 207-210 | 211-216 (Prestissimo at bar 211 beat 3)    p203: 217-222 | 223-228
+  p204: 229-233 | 234-237 | 238-243 (final double bar)
+Tempo words: Allegro assai bar 1, Più Allegro bar 87, Prestissimo bar 211 beat 3 (all present in file).
+
+REAL DIFFERENCES
+----------------
+1. Vocal dynamics and "sotto voce": the print has them at the voice staves, but the file has none on any vocal part.
+   (The only direction words on vocal parts are the three tempo words.) Each item below was checked on a zoomed crop.
+   print / file (file: nothing at any of these places):
+     bar 9   b3      Conte p ("da se")
+     bar 10  b4      Contessa p
+     bar 11  b3/b1   Susanna p (b3), Figaro p (b1)
+     bar 87  b1      Susanna f, Contessa f, Figaro f
+     bar 90  b1      Marcellina p, Basilio p, Conte p, Bartolo p
+     bar 93  b1      Susanna f, Contessa f, Figaro f
+     bar 96  b1      Marcellina p, Basilio p, Conte p, Bartolo p
+     bar 98  b4      Susanna f, Contessa f
+     bar 99  b1      Figaro f
+     bar 100 b1      Marcellina f, Basilio f, Conte f, Bartolo f
+     bar 125 b1      "sotto voce" Marcellina, Basilio, Conte, Bartolo
+     bar 128 b3      "sotto voce" Susanna
+     bar 129 b3      "sotto voce" Contessa, Figaro
+     bar 138 b3      Susanna f, Contessa f, Figaro f
+     bar 140 b3      Susanna f, Contessa f, Figaro f
+     bar 142 b3      Susanna p, Contessa p, Figaro p
+     bar 145 b3      Susanna p
+     bar 146 b1      Contessa p, Figaro p
+     bar 153 b4      Marcellina p, Basilio p, Conte p, Bartolo p
+     bar 158 b3      sf in all seven voices
+     bar 159 b1      p in all seven voices
+     bar 161 b3      Susanna f, Contessa f
+     bar 162 b1/b3   Figaro f (b1); Marcellina, Basilio, Conte, Bartolo f (b3)
+     bar 180 b1      Marcellina p, Basilio p, Conte p, Bartolo p
+     bar 183 b3      "sotto voce" Susanna, Figaro
+     bar 184 b3      "sotto voce" Contessa
+     bar 195 b1      Contessa f, Figaro f
+     bar 196 b1      Susanna f, Marcellina f, Basilio f, Conte f, Bartolo f
+
+UNSURE / MINOR
+--------------
+- Barlines: the file has no <barline> elements. The print has a double bar before bar 87 (Più Allegro),
+  a double bar inside bar 211 at beat 3 (Prestissimo), and the final double bar after bar 243. Sections s2-s4
+  have no barline elements either, so this may be the project's convention.
+- Bar 138 Figaro: the print shows the second note (Bb3) without its eighth-note flag, which looks like a
+  dotted quarter plus a quarter. That would overfill the bar, so the file's Bb3 dotted quarter plus Bb3 eighth
+  is the right reading. This is not an error in the file.
+
+CHECKED AND MATCHING
+--------------------
+All 243 bars, all 8 parts, matching the print: pitches (with key signature and accidentals; Basilio written an
+octave below the treble-clef print), rhythms, rests, ties, vocal slurs, piano slurs and staccatos (bars 62-64 LH),
+triplets, the common-time symbol, the three tempo words, every vocal syllable (spelling, accents quì/è/È/Più,
+apostrophes dell', punctuation). Where a staff has no Italian printed, the words come from the staff with the
+same rhythm, and they fit. All piano dynamics also match (f/p/sf/fp/cresc.).
+Real differences: 1 (missing vocal dynamics and "sotto voce", 28 places). Not CLEAN only because of item 1.

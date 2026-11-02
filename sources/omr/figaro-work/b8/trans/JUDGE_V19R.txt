@@ -1,0 +1,24 @@
+== bar 1 M: X
+# The print has "Ec-co-vi,o ca-ro" with "vi,o" under one sixteenth. Two syllables on one note are joined with "_".
+1 M: C5:e "Ec-" C5:s "co-" C5:s "vi,_o" C5:e "ca-" F5:e "ro_a-" F5:e "mi-" C5:e "co," r:s C5:s "il" C5:s "dol-" C5:s "ce"
+== bar 3 B: Y
+# Zoomed: the last word is printed "miò", with a grave accent on the o.
+3 B: A3:e "lia-" A3:s "mo" Bb3:s "di" C4:s "fat-" C4:s "ti" C4:s "si" D4:s "ri-" Bb3:e "mo-" Bb3:e "ti," Bb3:e "e-" C4:s "gli_è" D4:s "miò"
+== bar 4 B: OWN
+# Notes (both agree): D4 e, A3 e, r:e, A3 e, F#3 e, F#3 s, G3 s, A3 e, A3 e. Nine syllables on eight notes. Each syllable sits centred on its notehead: "fi-" on D4, then "glio,mia" printed run together after it, ahead of the rest, then "con-" A3, "sor-" F#3 e, "te" F#3 s, "voi" G3 s, "sie-" A3, "te," A3. So "glio,mia" share the second note (Y's placement). As an elision it is joined with "_". X moves every syllable after "glio" one note to the right of the print.
+4 B: D4:e "fi-" A3:e "glio,_mia" r:e A3:e "con-" F#3:e "sor-" F#3:s "te" G3:s "voi" A3:e "sie-" A3:e "te,"
+== bar 12 S: Y
+# "avven-" is printed as one unbroken word under the last sixteenth (D5), with "tu-ra" on the next bar's first two notes. It is kept as printed.
+12 S: r:q r:s Bb4:s "Vo-" Bb4:s "lia-" Bb4:s "mo_ad" Bb4:s "in-" A4:s "for-" Bb4:e "mar" Bb4:e "d'o-" C5:s "gni" D5:s "avven-"
+== bar 17 B: Y
+# Zoomed, on all four staves (Andante a tempo): "E schiatti il si-gnor", a plain capital E with no accent ("E" = "and").
+17 B: r:q r:e. D4:s "E" C4:e. "schiat-" C4:s "ti_il" C4:e. "si-" C4:s "gnor"
+== bar 17 F: Y
+# The same: plain "E".
+17 F: r:q r:e. Bb3:s "E" F3:e. "schiat-" F3:s "ti_il" F#3:e. "si-" F#3:s "gnor"
+== bar 17 M: Y
+# The same: plain "E".
+17 M: F5:e "I-" D5:e "o!" r:e. Bb4:s "E" A4:e. "schiat-" A4:s "ti_il" A4:e. "si-" A4:s "gnor"
+== bar 17 S: Y
+# The same: plain "E".
+17 S: r:q r:e. Bb4:s "E" Eb5:e. "schiat-" Eb5:s "ti_il" Eb5:e. "si-" Eb5:s "gnor"

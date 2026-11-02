@@ -1,0 +1,98 @@
+== bar 1: X | Y | X
+# RH G4 B4 G4 under a slur (no tie), D5 half; lower r:e F#4 G4 A4 in beats 3-4; LH upper D4 q slurred to C4 e. Y's second voices are 2 beats short.
+1 RH1: dyn:pp r:e G4:e( B4:e G4:e) D5:h~
+1 RH2: s:h r:e F#4:e( G4:e A4:e)
+1 LH1: s:h s:e D4:q( C4:e)
+1 LH2: G2+G3:q r:q r:e D3:e( E3:e F#3:e)
+== bar 5: X | Y | X
+# Same figure as bar 1 (slur 2nd-4th eighth, not a tie); Y's second voices underfull.
+5 RH1: G4:e G4:e( B4:e G4:e) D5:h~
+5 RH2: s:h r:e F#4:e( G4:e A4:e)
+5 LH1: s:h s:e D4:q( C4:e)
+5 LH2: G2+G3:q r:q r:e D3:e( E3:e F#3:e)
+== bar 6: X | Y | OWN
+# First RH eighth is a B4+D5 chord on one up-stem: no down-stem and no lower-voice rest, so no separate B4 quarter (X wrong); Y's RH2 is 2 beats short. Slur over G4 B4 G4.
+6 RH1: B4+D5:e G4:e( B4:e G4:e) D5:h~
+6 RH2: s:h r:e F#4:e( G4:e A4:e)
+6 LH1: G3+B3:q r:q r:e D3+D4:e( E3+C#4:e F#3+C4:e)
+== bar 11: X | Y | X
+# B3+G4 flagged eighth, then G4 B4 G4 slurred; LH G2 alone + D4 q / C4 e above D3 E3 F#3.
+11 RH1: B3+G4:e G4:e( B4:e G4:e) D5:h~
+11 RH2: s:h r:e F#4:e( G4:e A4:e)
+11 LH1: s:h s:e D4:q( C4:e)
+11 LH2: G2:q r:q r:e D3:e( E3:e F#3:e)
+== bar 13: X | Y | X
+# B4+D5 chord has a down-stem (B4 quarter + quarter rest below); C#5 half is slurred to the D5 of bar 14 (different pitch, not a tie).
+13 RH1: D5:e G4:e( B4:e G4:e) C#5:h(
+13 RH2: B4:q r:q r:e G4:e( E4:e G4:e)
+13 LH1: s:h s:e A3:q A3:e~
+13 LH2: G3+B3:q r:q r:e E3:e( G3:e E3:e)
+== bar 14: X | Y | X
+# D5 receives the slur from C#5; D5 F#5 D5 slurred; G#5 half slurred on to bar 15; lower F#4 q / r:e D5 B4 D5; LH A3 tied in from bar 13.
+14 RH1: D5:e) D5:e( F#5:e D5:e) G#5:h(
+14 RH2: F#4:q r:q r:e D5:e( B4:e D5:e)
+14 LH1: s:h s:e E3:q E3:e~
+14 LH2: D3+A3:q r:q r:e B2:e( D3:e B2:e)
+== bar 22: X | Y | X
+# D4 D4 F#4 D4 (slur 2nd-4th), A4 half; lower r:e C#4 D4 E4; LH D3, upper A3 q slurred to G3 e (no tie).
+22 RH1: D4:e D4:e( F#4:e D4:e) A4:h~
+22 RH2: s:h r:e C#4:e( D4:e E4:e)
+22 LH1: s:h s:e A3:q( G3:e)
+22 LH2: D3:q r:q r:e A2:e( B2:e C#3:e)
+== bar 24: X | Y | X
+# Slurs as X: D4 F#4 D4, and A4 quarter -> A#4 eighth; LH upper D3 e slurred to E3 q over D3 C#3 C3.
+24 RH1: A4:e D4:e( F#4:e D4:e) A4:e A4:q( A#4:e)
+24 RH2: D4:e r:e r:q r:e F#4:e( G4:e E4:e)
+24 LH1: s:h s:e D3:e( E3:q)
+24 LH2: D3+F#3:q r:q r:e D3:e( C#3:e C3:e)
+== bar 25: X | Y | OWN
+# Sharp printed on the first lower-voice D (D#4); it carries through the bar to every D4 in the RH (both upper-voice D's and the D in beats 3-4) - B major chord. X has no sharps, Y only in RH2.
+25 RH1: B4:e D#4:e( F#4:e D#4:e) B4:h~
+25 RH2: D#4:e r:e r:q r:e D#4:e( E4:e F#4:e)
+25 LH1: s:h s:e B3:q( A3:e)
+25 LH2: B2+F#3:q r:q r:e B2:e( C#3:e D#3:e)
+== bar 26: X | Y | X
+# G4+B4 chord with down-stem (G4 quarter + rest); C4 q slurred to B3 e (no tie).
+26 RH1: B4:e E4:e( G4:e E4:e) C5:h~
+26 RH2: G4:q r:q r:e E4:e( F#4:e G4:e)
+26 LH1: s:h s:e C4:q( B3:e)
+26 LH2: E3+G3:q r:q r:e C3:e( D3:e E3:e)
+== bar 29: X | Y | X
+# E5 over C5 (down-stem quarter), A4 C5 A4 slurred, F5 natural half; LH upper F4(natural) q slurred to E4 e over F3(natural) G3 A3.
+29 RH1: E5:e A4:e( C5:e A4:e) F5:h~
+29 RH2: C5:q r:q r:e A4:e( B4:e C5:e)
+29 LH1: s:h s:e F4:q( E4:e)
+29 LH2: A3:q r:q r:e F3:e( G3:e A3:e)
+== bar 32: X | Y | X
+# Arc joins C3 dotted half to C#3 quarter: different pitches, so a slur, not a tie.
+32 RH1: A4+C5:e A4+C5:e G#4+B4:e G#4+B4:e A4+C5:e A4+C5:e G4+B4:e G4+B4:e
+32 LH1: C3:h.( C#3:q)
+== bar 33: X | Y | X
+# F#4+A4 chord, then F#4 A4 F#4 under a slur (no tie); LH D4 q slurred to C4 e.
+33 RH1: F#4+A4:e F#4:e( A4:e F#4:e) D5:h~
+33 RH2: s:h r:e F#4:e( G4:e A4:e)
+33 LH1: s:h s:e D4:q( C4:e)
+33 LH2: D3:q r:q r:e D3:e( E3:e F#3:e)
+== bar 34: X | Y | X
+# B4+D5 chord with down-stem and quarter rest below (B4 quarter); slurs as X; D4 -> C4 is a slur.
+34 RH1: D5:e G4:e( B4:e G4:e) D5:h~
+34 RH2: B4:q r:q r:e F#4:e( G4:e A4:e)
+34 LH1: s:h s:e D4:q( C4:e)
+34 LH2: G3+B3:q r:q r:e D3:e( E3:e F#3:e)
+== bar 38: X | Y | X
+# RH lower Bb4 quarter (no printed rest beat 2), G4 dotted quarter, F4(natural) eighth; LH G3 half tied into the beat-3 G3 under C4 D4 Eb4 B3(natural) / G3 F3 Eb3 D3 with a slur. Y's LH2 is 2 beats short.
+38 RH1: D5:e G4:e G4:e G4:e A4:e( B4:e C5:e D5:e)
+38 RH2: Bb4:q s:q G4:q. F4:e
+38 LH1: Bb3:e Bb3:e Bb3:e Bb3:e C4:e( D4:e Eb4:e B3:e)
+38 LH2: G3:h~ G3:e F3:e Eb3:e D3:e
+== bar 39: X | Y | X
+# LH beat 4 is a single D4 (one head above the C4 ledger), no F#4; F#3 half in the lower voice; slur C4 A3 G3.
+39 RH1: Eb5:h~ Eb5:e( D5:e A5:e C5:e)
+39 RH2: Eb4:e G4:e F#4:e G4:e A4:h
+39 LH1: C3+C4:e C4:e( A3:e G3:e) r:q D4:q
+39 LH2: s:h F#3:h
+== bar 41: X | Y | X
+# LH first eighth chord is D3+D4 only (no F#4); RH G4 B4 G4 slurred.
+41 RH1: B3+G4:e G4:e( B4:e G4:e) D5:h~
+41 RH2: s:h r:e F#4:e( G4:e A4:e)
+41 LH1: G3:q r:q r:e D3+D4:e( E3+C#4:e F#3+C4:e)

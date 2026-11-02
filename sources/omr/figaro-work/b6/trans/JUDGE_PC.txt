@@ -1,0 +1,135 @@
+# JUDGE_PC - independent print check of the piano disputes (Breitkopf PV, pp.157-164).
+# How dynamics were placed: a dynamic printed between the staves goes to the hand it sits nearer to vertically.
+# If it sits about halfway, it goes to the hand that has a note at that point (the other hand has a rest there).
+== bar 1: X
+# LH first eighth is on the F3 line (the G3 of beat 3 is a step higher, in the space). RH last note B natural is written B4 (Bn4 is not a valid token).
+1 RH1: Ab5:e( F5:e D5:q) F5:e( D5:e B4:q)
+1 LH1: F3:e( D4:e Ab3:e D4:e) G3:e( F4:e D4:e F4:e)
+== bar 6: X
+# p is directly under the RH's first F4 eighth. The LH has a quarter rest there and its E4 eighths come later.
+6 RH1: C5+F5+A5:q dyn:p F4:e F4:e F4+G4:e F4+G4:e F4+A4:e F4+A4:e
+6 LH1: F2+F3:q r:q E4:e E4:e Eb4:e Eb4:e
+== bar 27: Y
+# cresc. starts under the first F4. The dynamic token goes before the note it applies to (X put it after the F4). LH checked: whole notes Bb3+D4 and F3 quarters.
+27 RH1: word:cresc. F4:e( Bb4:e D5:h Bb4:e F4:e)
+27 LH1: Bb3+D4:w
+27 LH2: F3:q r:q F3:q r:q
+== bar 33: X
+# p hangs just below the RH staff under the D5+F5 chord, clearly nearer the RH than the LH.
+33 RH1: dyn:p D5+F5:h( C5+Eb5:h)
+33 LH1: F3:e D4:e F4:e D4:e F3:e C4:e Eb4:e C4:e
+== bar 50: own
+# Beaming: the beam nearest the noteheads joins only notes 1-2, and the two outer beams run across all three notes, so the rhythm is 32nd, 32nd, 16th (=1/8). It is not a triplet (X) and not 16th-32nd-32nd (Y).
+50 RH1: G4:q dyn:f G5+B5:x( C#6:x D6:s)
+50 LH1: G3:q r:e
+== bar 51: own
+# Same figure as bar 50: 32nd, 32nd, 16th.
+51 RH1: F#5+A5:q G5+B5:x( C#6:x D6:s)
+51 LH1: D3+D4:q r:e
+== bar 54: own
+# Same figure as bar 50: 32nd, 32nd, 16th.
+54 RH1: D6:e D5:e dyn:f G5+B5:x( C#6:x D6:s)
+54 LH1: D4+F#4:q r:e
+== bar 55: own
+# Same figure as bar 50: 32nd, 32nd, 16th.
+55 RH1: F#5+A5:q G5+B5:x( C#6:x D6:s)
+55 LH1: D3+D4:q r:e
+== bar 62: X
+# The print has one 8th rest, then E5 (lower voice) with the G5 16ths above it at beat 3. There is one f, between the staves, closer to the RH.
+62 RH1: G4+B4:e) r:e dyn:f G5:s G5:s
+62 RH2: r:q E5:e
+62 LH1: G3:e B3:e C4:e
+== bar 63: X
+# There is one p at beat 1 and one f at beat 3, both between the staves and near the RH. They are not duplicated in the LH.
+63 RH1: G5:q G5:s G5:s
+63 RH2: dyn:p D5:e B4:e dyn:f E5:e
+63 LH1: B3:e G3:e C4:e
+== bar 64: X
+# Same as bar 63.
+64 RH1: G5:q G5:s G5:s
+64 RH2: dyn:p D5:e B4:e dyn:f E5:e
+64 LH1: B3:e G3:e C4:e
+== bar 65: X
+# Same as bar 63.
+65 RH1: G5:q G5:e
+65 RH2: dyn:p D5:e B4:e dyn:f E5:e
+65 LH1: B3:e G3:e C4:e
+== bar 66: X
+# p is just under the RH chord at beat 1, nearer the RH staff.
+66 RH1: dyn:p D5+G5:e G5+B5:s D5:s G5+B5:s D5:s
+66 LH1: B3:e B2+B3:e B2+B3:e
+== bar 67: Y
+# cresc. is printed at the end of the bar, over the third LH eighth, not at beat 1.
+67 RH1: G5+B5:s D5:s G5+B5:s D5:s G5+B5:s D5:s
+67 LH1: B2+B3:e B2+B3:e word:cresc. B2+B3:e
+== bar 82: X
+# The curve runs from the lower RH note G4 to the G4 of bar 83 (G4+C#5), so it is a tie. The LH E3 is also tied to the E3 of bar 83. There is a trill sign (tr~~) on the LH E3 that the token format cannot show.
+82 RH1: D5:q.
+82 RH2: G4:q.~
+82 LH1: E3:q.~
+== bar 92: Y
+# The chord is C4+Eb4+F4 with a flat on Eb only. No natural is printed on the F (first space), so the key signature makes it F#4.
+92 RH1: C4+Eb4+F#4:q.(
+92 LH1: G2+G3:q.~
+== bar 96: Y
+# Same chord as bar 92: flat on Eb, no natural on F, so F#4.
+96 RH1: C4+Eb4+F#4:q.(
+96 LH1: G2+G3:q.~
+== bar 98: X
+# f is above the second LH eighth (beat 2), not the first. The singers' f is also at the second eighth.
+98 RH1: B3+D4+G4:e D4+G4+B4:e D4+G4+B4:e
+98 LH1: G2+G3:e dyn:f G3:e G3:e
+== bar 101: X
+# p is at beat 1, slightly nearer the LH staff (just above the LH C3).
+101 RH1: E4+A4+C5:q r:e
+101 LH1: dyn:p C3:q r:e
+== bar 104: X
+# f is above the second LH eighth (G2), at beat 2, matching bar 98 and the singers' f.
+104 RH1: D4+G4+B4:e D4+G4+B4:e D4+G4+B4:e
+104 LH1: G3:e dyn:f G2:e G3:e
+== bar 107: X
+# p is at beat 1, just above the LH staff, clearly nearer the LH.
+107 RH1: E4+A4+C5:q r:e
+107 LH1: dyn:p C3:q r:e
+== bar 113: X
+# p is printed directly above the LH G4 (after the LH's change to treble clef), nearer the LH staff. LH beat 1 checked: C2 (on the 2nd ledger line) + C3.
+113 RH1: dyn:f C4:q E5:e.( D5:s)
+113 LH1: C2+C3:q clef:G dyn:p G4:e.( F4:s)
+== bar 122: Y
+# The print has 64ths: two full-size 64ths F5 E5 (4 beams) and a dotted 16th D5 (2 beams). The closest notation that keeps the 1/8 total is 32nd 32nd 16th. They are real notes, not grace notes.
+122 RH1: D5+F5:q F5:x( E5:x D5:s) r:e
+122 LH1: C3:x F3:x G3:x B3:x C3:x F3:x G3:x B3:x C3:x F3:x G3:x B3:x C3:x F3:x G3:x B3:x
+== bar 123: Y
+# Same 64th figure as bar 122 (64th 64th dotted-16th), written as 32nd 32nd 16th.
+123 RH1: E5+G5:q G5:x( F5:x E5:s) r:e
+123 LH1: C3:x E3:x G3:x C4:x C3:x E3:x G3:x C4:x C3:x E3:x G3:x C4:x C3:x E3:x G3:x C4:x
+== bar 124: own
+# Both RH figures are 64th 64th dotted-16th (written as 32nd 32nd 16th, as Y does). cresc. is at beat 2, low between the staves just above the third LH group, so it goes in the LH (as X does).
+124 RH1: F5+A5:q F5:x( E5:x D5:s) D6:x( C6:x B5:s)
+124 LH1: C3:x F3:x A3:x C4:x C3:x F3:x A3:x C4:x word:cresc. C3:x D3:x F3:x G3:x C3:x D3:x F3:x G3:x
+== bar 125: Y
+# The first RH 16th chord has only three heads: C5, E5 and C6 (on the 2nd ledger line). G5 enters only from the second chord on.
+125 RH1: C5+E5+C6:s C5+E5+G5+C6:e C5+E5+G5+C6:s C5+F#5+C6:s C5+F#5+C6:s C5+F#5+C6:s C5+F#5+C6:s
+125 LH1: dyn:f C3:s C4:s C3:s C4:s A2:s A3:s A2:s A3:s
+== bar 126: X
+# "p Str." is under the RH B5 dotted 16th. The LH has only an 8th rest there, so the p goes with the RH note. The 16th groups have no printed "3" but are triplets (2 beams, 3 notes each).
+126 RH1: D5+G5+B5:s3 D6:s3 B5:s3 G5:s3 D5:s3 B4:s3 G4:e dyn:p B5:s.( A5:x)
+126 LH1: G2+G3:e G2+B2+D3+G3:e G2+B2+D3+G3:e r:e clef:G
+== bar 130: X
+# Same layout as bar 126: p goes with the RH B5. The LH only has a rest there.
+130 RH1: D5+F#5+A5:s3 A5:s3 F#5:s3 D5:s3 A4:s3 F#4:s3 D4:e dyn:p B5:s.( A5:x)
+130 LH1: D3+D4:e D3+F#3+A3:e D3+F#3+A3:e r:e clef:G
+== bar 134: X
+# sf sits just under the RH staff, at the D6 dotted eighth. It is nearer the RH than the LH run.
+134 RH1: D5+F#5+A5:e r:e dyn:sf D6:e.( C6:s)
+134 LH1: D3+D4:e r:e clef:G D4:x( F#4:x A4:x F#4:x D4:x F#4:x A4:x F#4:x)
+== bar 136: X
+# Each upper-voice 32nd group (3 beams) starts on the bass-note head, which carries both an up stem and a down stem. So the first 32nd is a note (B3/G3/C4/F#3), not a rest. Slurs are over groups 1-2 and over groups 3-4.
+136 RH1: G5:s r:s G5:x( A5:x B5:x C6:x dyn:sfp D6:e. C6:s)
+136 LH1: B3:x( D4:x G4:x D4:x G3:x D4:x G4:x D4:x) C4:x( D4:x F#4:x D4:x F#3:x D4:x A4:x D4:x)
+136 LH2: B3:e* G3:e* C4:e* F#3:e*
+== bar 137: own
+# Group 1 starts on the shared G3 head (X). Group 2, G3 A3 B3 C4, has no upper slur. The upper slur runs from D4 (on the D4 head the 32nds share with the lower dotted 8th) to the last F#4 (Y). The long curve under the staff, from the group-2 G3 to the lower-voice C4, is kept as the LH2 slur D4( C4).
+137 RH1: B5:e* G5:e* C6:e* F#5:e*
+137 LH1: G3:x( D4:x G4:x D4:x) G3:x A3:x B3:x C4:x D4:x( F#4:x A4:x F#4:x D4:x F#4:x C4:x F#4:x)
+137 LH2: G3:s r:s r:e dyn:sfp D4:e.( C4:s)

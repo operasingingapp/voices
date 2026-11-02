@@ -1,0 +1,30 @@
+== bar 10 T: X
+# Only one sharp is printed (before the first 16th G4). The next two G4 16ths have no accidental, so the sharp carries through the bar: G#4 G#4 G#4.
+10 T: D5:q "c'è?" r:q r:e B4:e "can-" G#4:s "gian-" G#4:s "do_i" G#4:s "miei" A4:s "ve-"
+== bar 19 T: X
+# At zoom, the mark after "a" is a small blob on the baseline with no descending tail, unlike the comma after "tà," in the same bar. Read as a period.
+19 T: G#4:q "tà," r:s G#4:s "di" G#4:s "ge-" A4:s "lo-" B4:e "si-" B4:e "a." r:e B4:e "di"
+== bar 39 T: X
+# "men-zo" continues as "gner," in the next bar. The word is split, so "zo" takes a hyphen.
+39 T: A4:e "lab-" D5:s. "bro" C5:x B4:e "men-" E5:s. "zo-" D5:x
+== bar 41 T: X
+# Two arcs are printed. The inner, short arc joins the E5 quarter notehead to the E5 16th, which is a tie (same pitch). The outer, longer arc is the slur over the E5-D5 group.
+41 T: E5:q~ "lab-" E5:s D5:s F5:s "bro" D5:s
+== bar 46 T: Y
+# Over "ti" the real i-dot sits at normal height, matching the i-dot in "pian". The extra speck is higher and to the left, so the two marks are not a level pair of equal dots as a diaeresis would be. Read as plain "ti", with the speck taken as a print flaw.
+46 T: D5:s "mai," C5:s B4:s "se_in" A4:s D5:s "pian-" C5:s Bb4:s "ti_e_in" A4:s
+== bar 75 T: X
+# "men-zo" continues as "gner!" in the next bar. The word is split, so "zo" takes a hyphen.
+75 T: A4:e "lab-" D5:s. "bro" C5:x B4:e "men-" E5:s. "zo-" D5:x
+== bar 79 T: Y
+# Beamed eighths C5-B4, then a quarter on the middle line, which is B4, not C5. "za" sits under that quarter.
+79 T: C5:e "stan-" B4:e B4:q "za" r:q G4:e "nel" G4:e "lan-"
+== bar 100 T: X
+# The inner short arc runs from the Eb5 half-note head to the first Eb5 eighth (the flat carries), so it is a tie. The longer arc above it is the slur over the melisma.
+100 T: Eb5:h~ "man-" Eb5:e F5:s Eb5:s D5:e C5:e "do_o-"
+== bar 111 T: X
+# An arc runs across the barline from the G5 half note to the G5 eighth at the start of bar 112, so it is a tie. A separate slur then covers G5-E5.
+111 T: A5:q Ab5:q G5:h~
+== bar 115 T: X
+# Same as bar 111. An arc runs across the barline from the G5 half note to the G5 eighth in the next bar, so it is a tie. A separate slur then covers G5-E5.
+115 T: A5:q Ab5:q G5:h~

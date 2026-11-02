@@ -1,0 +1,81 @@
+# Question 1, bar numbering. The voice readings' 38 bars are right. The piano reading counted 39 because it split bar 23. Page 226 sys1 ends with a 2-beat fragment (Marcellina "Co-sa?", Bartolo "La"; piano: half rests only). Page 226 sys2 starts with the other 2 beats (Bartolo "pro-va?", Don Curzio "Il te-sti-"; piano: an fp half chord C4+F4+An4 over Eb2+Eb3, tied on). Together they make ONE bar, bar 23. The piano reading counted the fragment as a whole-bar rest (its bar 23 r:w) and the sys2 half as the start of a separate bar (its bar 24, read as a whole note). It then added the following bars as 25-39 (one too many). Piano reading bar n (n >= 24) = real bar n-1 from bar 25 on. Its bars 24+25 together hold real bars 23 (second half) and 24. Bars 23-38 are written out below in the correct numbering. Bars 3 and 8 also run across system breaks; both readings already count each as one bar.
+== bar 3: X
+# The bar runs across the system break (page 224 sys1 to sys2). A p half chord C4+G4+C5 over E2+E3 at the end of sys1, tied to the same half chord at the start of sys2, which is tied on into bar 4.
+3 RH1: dyn:p C4+G4+C5:h~ C4+G4+C5:h~
+3 LH1: E2+E3:h~ E2+E3:h~
+== bar 8: X
+# The bar runs across the system break (page 224 sys3 to sys4). Zoomed: an f chord Bb3 (flat, below the ledger) + F4 + Bb4 (flat) quarter, then a quarter rest (sys3), then a half rest (sys4). LH: D3+D2. The f is printed between the staves, so it goes in the RH.
+8 RH1: dyn:f Bb3+F4+Bb4:q r:q r:h
+8 LH1: D2+D3:q r:q r:h
+== bar 12: X
+# An "f" is printed under the second chord, Bb3+Eb4+G4.
+12 RH1: Bb3+F4+Ab4:h dyn:f Bb3+Eb4+G4:q r:q
+12 LH1: D2+D3:h Eb2+Eb3:q r:q
+== bar 17: X
+# Zoomed: G4 (2nd line), Eb4 (bottom line, flat) and a note below the C4 ledger with its own flat, Bb3. It is not B natural.
+17 RH1: dyn:fp Bb3+Eb4+G4:w
+17 LH1: Db2+Db3:w
+== bar 23: OWN
+# Piano reading bars 23+24 = one real bar 23. Sys1 (page 226): half rest in both staves. Sys2: fp half chord C4 (ledger) + F4 + A4 with a printed natural on A4, tied into bar 24. LH Eb3+Eb2 (flats), tied. In the disputed "bar 24", X's whole note is wrong: the sys2 chord is a half note (Y's h~).
+23 RH1: r:h dyn:fp C4+F4+An4:h~
+23 LH1: r:h Eb2+Eb3:h~
+== bar 24: OWN
+# Piano reading bar 25. A whole chord, tied on.
+24 RH1: C4+F4+A4:w~
+24 LH1: Eb2+Eb3:w~
+== bar 25: OWN
+# Piano reading bar 26. A half chord tied in, then an fp chord with a sharp on F (C4+F#4+A4), tied on. LH Eb to D.
+25 RH1: C4+F4+A4:h dyn:fp C4+F#4+A4:h~
+25 LH1: Eb2+Eb3:h D2+D3:h~
+== bar 26: OWN
+# Piano reading bar 27 (page 226 sys3 bar 1).
+26 RH1: C4+F#4+A4:w~
+26 LH1: D2+D3:w~
+== bar 27: OWN
+# Piano reading bar 28.
+27 RH1: C4+F#4+A4:w~
+27 LH1: D2+D3:w~
+== bar 28: OWN
+# Piano reading bar 29. No tie out.
+28 RH1: C4+F#4+A4:w
+28 LH1: D2+D3:w
+== bar 29: X
+# The disputed "bar 30" of the piano readings is real bar 29 (page 226 sys4 bar 1). An "f" is printed just under the second RH chord A3+E4+A4, between the staves, so it goes in the RH (Y left it out).
+29 RH1: D4+G4:q r:q dyn:f A3+E4+A4:q r:q
+29 LH1: Bb1+Bb2:q r:q C#2+C#3:q r:q
+== bar 30: OWN
+# Piano reading bar 31.
+30 RH1: r:w
+30 LH1: r:w
+== bar 31: OWN
+# Piano reading bar 32 (page 227 sys1 bar 1).
+31 RH1: r:w
+31 LH1: r:w
+== bar 32: Y
+# The disputed "bar 33". Zoomed: the heads are F4 (space below the G4 line), D4 (below the bottom line) and A3 (on the 2nd ledger below). The sharp is level with F4, so the chord is A3+D4+F#4 (D7 over C), not C4+F4+A#4. LH: C3+C2, each with a printed natural.
+32 RH1: A3+D4+F#4:w
+32 LH1: Cn2+Cn3:w
+== bar 33: X
+# The disputed "bar 34". The dynamic is "fp" (not ppp). A4 whole note over a C4/D4 second, tied on.
+33 RH1: dyn:fp C4+D4+A4:w~
+33 LH1: F#2+F#3:w~
+== bar 34: OWN
+# Piano reading bar 35.
+34 RH1: C4+D4+A4:h Bb3+D4+G4:q r:q
+34 LH1: F#2+F#3:h G2+G3:q r:q
+== bar 35: OWN
+# Piano reading bar 36 (page 227 sys3 bar 1).
+35 RH1: r:w
+35 LH1: r:w
+== bar 36: X
+# The disputed "bar 37". Zoomed: C5 (3rd space), F4 (1st space) and C4 (ledger), whole notes tied on, marked "fp" (not ff). LH A3+A2.
+36 RH1: dyn:fp C4+F4+C5:w~
+36 LH1: A2+A3:w~
+== bar 37: OWN
+# Piano reading bar 38 (page 227 sys4 bar 1). A half chord tied in, then Bb4 (flat) + F4 + D4 quarter, then a quarter rest. LH A to Bb (flats).
+37 RH1: C4+F4+C5:h D4+F4+Bb4:q r:q
+37 LH1: A2+A3:h Bb2+Bb3:q r:q
+== bar 38: X
+# The disputed "bar 39", the final bar. A half rest and a quarter rest, then an f chord G3+C4+E4 over C3+C2 before the final double bar. The f sits between the staves, so it goes in the RH.
+38 RH1: r:h r:q dyn:f G3+C4+E4:q
+38 LH1: r:h r:q C2+C3:q

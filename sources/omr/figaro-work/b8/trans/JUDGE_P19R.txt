@@ -1,0 +1,32 @@
+== bar 5: X
+# The bar runs across the system break (page 245 sys2 to sys3). D4+A4+C5 half over F#2+F#3 at the end of sys2, tied to the same half chord at the start of sys3.
+5 RH1: D4+A4+C5:h~ D4+A4+C5:h
+5 LH1: F#2+F#3:h~ F#2+F#3:h
+== bar 7: OWN
+# Zoomed: a quarter rest, then an f quarter chord G4+Bb4 (flat)+D5. Then the fp half chord: G4 (2nd line), Bb4 (middle line, flat carried) and C5 printed to the right of the Bb4 head (a second), tied on. That is C7 over E, not F4+A4+C5 (X). Y has the right chord but leaves out the f.
+7 RH1: r:q dyn:f G4+Bb4+D5:q dyn:fp G4+Bb4+C5:h~
+7 LH1: r:q F2+F3:q E2+E3:h~
+== bar 9: X
+# G4+Bb4+C5 half, tied in from bar 8 (where a courtesy flat is printed), then an F4+A4+C5 quarter and a quarter rest. LH E3+E2 half, then F3+F2 quarter.
+9 RH1: G4+Bb4+C5:h F4+A4+C5:q r:q
+9 LH1: E2+E3:h F2+F3:q r:q
+== bar 12: X
+# An f chord Bb3 (flat) + F4 + Bb4 (flat) quarter, then rests. LH D3+D2.
+12 RH1: dyn:f Bb3+F4+Bb4:q r:q r:h
+12 LH1: D2+D3:q r:q r:h
+== bar 13: X
+# A p whole note D4+A4 over F#2+F#3.
+13 RH1: dyn:p D4+A4:w
+13 LH1: F#2+F#3:w
+== bar 14: X
+# D4+G4+Bb4 (flat) quarter over G2+G3, then rests.
+14 RH1: D4+G4+Bb4:q r:q r:h
+14 LH1: G2+G3:q r:q r:h
+== bar 15: X
+# Pixel check: C4 on the ledger, Eb4 on the bottom line (flat), and F4 displaced to the right (a second above Eb4). Marked p. LH: F3 (2nd line) and A2 (bottom space).
+15 RH1: dyn:p C4+Eb4+F4:w
+15 LH1: A2+F3:w
+== bar 16: X
+# Zoomed: F4, D4 and Bb3 (flat, below the C4 ledger) quarter, then a quarter rest and a half rest. LH F3 + Bb2 (flat). Y's empty bar is wrong.
+16 RH1: Bb3+D4+F4:q r:q r:h
+16 LH1: Bb2+F3:q r:q r:h

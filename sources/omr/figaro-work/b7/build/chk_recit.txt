@@ -1,0 +1,37 @@
+FRESHCHECK - recit_cur.xml (Recitativo "Taci, vien gente", printed pp. 52-59), bars 1-83, all parts
+Method: dump.py + own XML dump (accidentals shown, ties, dynamics, lyrics incl. elisions) compared note by note
+against system crops sys20-sys51; every item below confirmed on a 2-4x zoomed crop.
+(P3 Basilio compared at print pitch = file + 1 octave.)
+
+REAL DIFFERENCES
+Missing printed accidentals (courtesy naturals; pitches in file are right, the sign is absent):
+ 1. Bar 7,  Susanna, beat 2.5 ("ma-"): scan: natural on B4 / file: B4 with no accidental.
+ 2. Bar 12, Conte, beat 2.5 ("a"): scan: natural on A3 / file: A3 with no accidental.
+ 3. Bar 12, Conte, beat 3 ("Lon-"): scan: natural on B3 / file: B3 with no accidental.
+ 4. Bar 13, Conte, beat 4 ("me-"): scan: natural on E3 / file: E3 with no accidental.
+ 5. Bar 32, Susanna, beat 1 ("so-"): scan: natural on B4 / file: B4 with no accidental.
+ 6. Bar 32, Piano RH, beat 1 (fp chord D4 F4 B4): scan: natural on B4 / file: no accidental.
+ 7. Bar 40, Susanna, beat 3 ("de-"): scan: natural on C5 / file: C5 with no accidental.
+ 8. Bar 52, Piano LH, beat 3 (half G2/G3): scan: naturals on both G's / file: no accidentals.
+ 9. Bar 55, Basilio, beat 3 ("-de"): scan: natural on C5 (file C4) / file: no accidental.
+10. Bar 55, Piano RH upper voice, beat 3 (half C5): scan: natural on C5 / file: no accidental.
+11. Bar 57, Piano LH, beat 1 (whole F2/F3): scan: naturals on both F's / file: no accidentals.
+12. Bar 64, Basilio, beat 2.75 ("con"): scan: natural on B4 (file B3) / file: no accidental.
+13. Bar 67, Basilio, beat 1.5 ("-za,"): scan: natural on C5 (file C4) / file: no accidental.
+14. Bar 74, Basilio, beat 2.75 ("s'ac-"): scan: natural on B4 (file B3) / file: no accidental.
+Missing hairpins (the file has no wedges at all):
+15. Bar 3, Piano, beat 1.5-2.5 (after p, between the staves): scan: crescendo hairpin / file: none.
+16. Bar 37, Piano, beat 2-4 (after p, under RH): scan: crescendo hairpin / file: none.
+
+Everything else matches: all pitches, durations, rests, onsets, inner voice (bar 3 RH A4 dotted quarter),
+chords, ties, staccato (bar 11), dynamics (f, p, fp), clefs, and every syllable incl. accents,
+apostrophes, punctuation and elisions.
+
+UNSURE / LAYOUT-DEPENDENT (not counted above)
+- The print repeats the accidental on a tied-over chord at the start of a new system: bar 4 LH F#,
+  bar 7 RH Bb, bar 22 LH F#, bar 24 LH C# (2nd half), bar 29 RH Bb (2nd half), bar 56 LH F# (2nd half),
+  bar 72 LH F#, bar 74 LH F#, bar 81 RH Bb. The file has no sign on these tied notes. They come from
+  the print's system breaks, so they may count as layout.
+
+Bars checked: 83 (all 4 parts). Not CLEAN: 14 missing courtesy accidentals + 2 missing crescendo hairpins.
+No wrong pitches, rhythms or lyrics found.

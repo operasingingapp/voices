@@ -1,0 +1,32 @@
+== bar 1: X
+# An "f" is printed under the first RH chord, between the staves. It goes in the RH.
+1 RH1: dyn:f A3+D4+A4:q r:q r:h
+1 LH1: F#2+F#3:q r:q r:h
+== bar 6: X
+# The dynamic under the beat-3 chord is a single "p", not "pp".
+6 RH1: r:h dyn:p D4+G4+B4:q r:q
+6 LH1: r:h G2+G3:q r:q
+== bar 7: X
+# Zoomed: the half chord has three notes, B3 (below the C4 ledger), F#4 (sharp, bottom space) and B4 (middle line). It is marked "fp". Y missed B3 and read "pp".
+7 RH1: r:h dyn:fp B3+F#4+B4:h~
+7 LH1: r:h D#2+D#3:h~
+== bar 8: X
+# The same three-note chord as bar 7, a whole note tied on into bar 9.
+8 RH1: B3+F#4+B4:w~
+8 LH1: D#2+D#3:w~
+== bar 13: Y
+# Zoomed: only one sharp is printed before the first chord. It is about 3 staff spaces tall and centred on the C5 space. The chord is E4 (bottom line), A4, C#5. The beat-4 chord repeats it with no accidentals (C# carries). With an A# the A-bass chord on beat 4 would be A, E, A#, C#.
+13 RH1: dyn:f E4+A4+C#5:q r:q r:q dyn:f E4+A4+C#5:q
+13 LH1: G2+G3:q r:q r:q A2+A3:q
+== bar 28: Y
+# The second chord is G4 (2nd line), Eb4 (bottom line, flat) and a note hanging below the C4 ledger line, which is B3. It is flat from the Bb3 of the first chord earlier in the bar. There is no C4.
+28 RH1: Bb3+F4+Ab4:h Bb3+Eb4+G4:q r:q
+28 LH1: D2+D3:h Eb2+Eb3:q r:q
+== bar 37: OWN
+# The bar runs across the system break (page 208 sys3 to sys4). RH: C4 (ledger), F4 and A4, with a natural printed before the A in both halves. The second half's natural is a courtesy at the new system. The chord is marked fp, and the half notes are tied across the break. LH: Eb3+Eb2 halves, tied. X has the notes right but leaves out the printed naturals.
+37 RH1: dyn:fp C4+F4+An4:h~ C4+F4+An4:h
+37 LH1: Eb2+Eb3:h~ Eb2+Eb3:h
+== bar 46: X
+# The bar runs across the system break (page 209 sys3 to sys4). First half: B3+E4+G4 half, tied in from bar 45 (G# from bar 44, carried by the ties). LH D3+D2. Second half: A3 (2nd ledger below) + E4 + A4 quarter, then a quarter rest. LH C3+C2 quarter, then a quarter rest. The short dash after the LH rest is a speck on the staff line, not a rest.
+46 RH1: B3+E4+G#4:h A3+E4+A4:q r:q
+46 LH1: D2+D3:h C2+C3:q r:q

@@ -1,0 +1,20 @@
+# JUDGE_VG - print check of the sung-line disputes (Breitkopf vocal score, pp.189-196, bars 1-109).
+# Naturals: "n" is written only where a natural sign is printed; later notes in the bar carry it as plain sounding pitch.
+== bar 11 F: X
+# p.189 sys169 bar 2: all four noteheads (two quarters and the two eighths "è un bir-") sit on the middle line of the bass staff, so they are D3. None is on the 2nd line (Bb2). 4/4 adds up.
+11 F: D3:q "ban-" D3:q "te," r:q D3:e "è_un" D3:e "bir-"
+== bar 23 O: X
+# p.190 sys171 bar 3: "qui per te - sti -" is printed with no accent on qui. The four quarters are in the top space (E5, so Eb), sounding Eb4.
+23 O: Eb4:q "qui" Eb4:q "per" Eb4:q "te-" Eb4:q "sti-"
+== bar 26 O: Y
+# p.190 sys172 bar 2: "nar." is in the space between the 3rd and 4th lines of the treble staff (C5), one step above the preceding Bb4 "da-". It sounds as C4. Then two quarter rests, and Figaro takes the bar in bass clef.
+26 O: C4:q "nar." r:q r:h
+== bar 32 C: OWN
+# p.190 sys173 bar 5: a natural is printed only before the first D ("dre-"), on the middle line. The second D ("mo,") has no sign, so the natural carries over and it is written plain. Then a half rest.
+32 C: Dn3:q "dre-" D3:q "mo," r:h
+== bar 37 C: Y
+# p.190 sys174 bar 5: G3 (top space) and natural B3 (above the staff). The text is printed as the whole word "tutto" under the G and "in" under the B, with no hyphen. Copied as printed. Close call: musically this is tut-to_in.
+37 C: r:h G3:q "tutto" Bn3:q "in"
+== bar 81 M: Y
+# p.194 sys182 bar 4: the whole note "che" sits on the 2nd line from the bottom (G4). Bar 80's "Qual-" is on the middle line (Bb4).
+81 M: G4:w "che"

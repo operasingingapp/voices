@@ -1,0 +1,89 @@
+Independent check of s4.xml (Finale "Ah! signor, signor!", section bars 1-230) against the Breitkopf vocal score, pp. 169-186.
+Every item below was confirmed on a zoomed crop of the print (crops are in the scratchpad folder freshS4/).
+Beats: 4/4 bars count in quarters (beat 1-4). 6/8 bars count in eighths (e1-e6).
+
+REAL DIFFERENCES
+
+1. Bar 166, La Contessa, e6 ("e"):
+   print: E4 with a natural sign (E natural)
+   file:  Eb4 (alter -1)
+
+2. Bars 30, 32, 69, 70, 101, 221, 222, 225, 226, vocal dynamics. The file has none of these:
+   - bar 30, Susanna e8 (F5 "Co-"): p.  La Contessa e8 (B4 "Co-"): p.  Figaro e8 (D3 "Co-"): p.
+   - bar 32, beat 4 ("quel"): f in Susanna (E5), La Contessa (C5) and Figaro (C4).
+   - bar 69, Susanna e8 (F4 "O-"): p.
+   - bar 70, La Contessa e8 (F4 "O-"): p.
+   - bar 101, beat 3 ("Ma-"): p in Susanna (D5) and La Contessa (A4).
+   - bar 221, e4 ("no," / "si,"): f in Susanna, La Contessa, Il Conte and Figaro.
+   - bar 222, e4 ("più" / "tut-" / "po-"): p in Susanna, La Contessa, Il Conte and Figaro.
+   - bar 225, e4: f in Susanna, La Contessa, Il Conte and Figaro.
+   - bar 226, e4: p in Susanna, La Contessa, Il Conte and Figaro.
+   file: no <dynamics> in any vocal part.
+
+3. Bars 201, 223 and 227, piano: the "arc mark with an accidental above the chord".
+   What the print has: a short slur from the 5th to the 6th eighth chord. The accidental under the arc
+   belongs to the 6th chord (the arc's apex touches the flat's stem). It is neither a turn nor a fermata,
+   because there is no dot and no turn sign. Bar 224 has the same slur on e5-e6 without an accidental,
+   and the file has that one.
+   - bar 201, LH e5 C3+G3 -> e6 C3+Gb3 (the flat is on Gb3).
+     print: slur e5-e6.  file: no slur. The Gb3 itself is correct.
+   - bar 223, RH e5 Db5+E5 -> e6 C5+Eb5 (the flat is on Eb5).
+     print: slur e5-e6.  file: no slur. The Eb5 itself is correct.
+   - bar 227, RH: same as bar 223.
+     print: slur e5-e6.  file: no slur.
+
+4. Bar 87, Figaro, beat 1 (E3 "-por!"):
+   print: courtesy natural on E3.  file: no accidental shown.
+
+5. Bar 87, piano:
+   - RH beat 2, third note of the G5-F5-E5 figure: print has a courtesy natural on E5.
+   - LH e2, upper note E4: print has a courtesy natural.
+   file: no accidental on either.
+
+6. Bar 110, piano, beat 3:
+   print: courtesy natural on RH F4 (half note) and on LH F3 (half note).
+   file: no accidental on either.
+
+7. Bars 114 and 116, piano RH, beat 3 (half-note chord D5+A5+Bb5):
+   print: a flat and a natural before the A5/Bb5 second (flat on Bb5, natural on A5).
+   file: no accidentals on that chord in either bar.
+
+8. Bar 119, piano LH, beat 3, 2nd triplet note (F3 in C3-F3-A3):
+   print: courtesy natural on F3.  file: no accidental.
+
+9. Bar 130, piano RH, beat 1, first note E5:
+   print: courtesy natural on E5.  file: no accidental.
+
+10. Bar 184, Figaro, e1 (Eb3 "o"):
+    print: courtesy flat on Eb3.  file: no accidental shown.
+
+11. Bar 184, piano LH, e1, dotted-half chord Eb3(+G3):
+    print: courtesy flat on Eb3.  file: no accidental on the v6 Eb3.
+
+12. Bars 62, 63 and 64, piano LH, beat 4, 2nd note (B2 in the A2-B2-C#3 triplet):
+    print: no accidentals in the beat-4 triplet. The natural and sharp appear only in the beat-3 triplet.
+    file: natural displayed on that B2 in all three bars (extra accidental).
+
+UNSURE
+
+- Bar 184, piano LH, upper voice. The file has G3 dotted quarter tied to G3 eighth, then F#3, G3 (with a slur)
+  over a v6 Eb3 dotted half. The print shows a dotted-half chord Eb3+G3 with an arc to the G3 eighth.
+  The file's reading (tie plus slur) is plausible, but the exact voicing and duration of the upper G3
+  could not be settled from the print.
+- Piano bar 1 carries an empty <words/> direction with <sound tempo="160">. It prints nothing, but it is
+  an empty element. "Allegro molto" and "Andante" are attached to the Il Conte part, not to the top staff.
+  This is placement only.
+- Courtesy accidentals were checked by eye on every system and by a script flagging altered pitches in the
+  previous two bars. A very small printed courtesy sign elsewhere could still have been missed.
+
+CHECKED AND MATCHING (no difference found)
+- Key, time and tempo: F major with the "C" common-time sign (file has symbol="common"). Andante,
+  6/8, B flat major at bar 139. "Allegro molto" at bar 1.
+- Words: "a piacere" (Figaro bar 136), "colla voce" (piano bar 137), and all piano "cresc." marks.
+- Piano dynamics: all match (f/p pairs, fp at bar 89, etc.).
+- Trills: piano RH bars 57 and 67.
+- Fermatas: bar 230, all four singers and both piano staves.
+- Staccatos: bars 103, 135, 139-142, 223-224 and 227-228.
+- Pitches, rhythms, rests (whole-bar rests are full-bar whole rests), ties and Italian lyrics in all
+  bars, apart from the items above. Antonio is compared by singer name throughout.
+- Bar 224, Figaro "sa" (no accent): matches the print. Bars 220 and 228 print "sà".

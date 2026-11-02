@@ -1,0 +1,146 @@
+# RECIT_C "Quante buffonerie!" - piano, 4/4, no key signature
+# sys61 starts bar 1
+1 RH1: dyn:f D4+G4+D5:q r:q r:h
+1 LH1: B1+B2:q r:q r:h
+2 RH1: r:h r:q dyn:p C4+G4+C5:q~
+2 LH1: r:h r:q E2+E3:q~
+3 RH1: C4+G4+C5:w~
+3 LH1: E2+E3:w~
+# sys62 starts bar 4
+# bar 4: only C4 and G4 tied on into bar 5 (C5 moves to Bb4)
+4 RH1: C4~+G4~+C5:w
+4 LH1: E2+E3:w~
+5 RH1: C4+G4+Bb4:w
+5 LH1: E2+E3:w
+6 RH1: C4+F4+A4:q r:q r:h
+6 LH1: F2+F3:q r:q r:h
+# sys63 starts bar 7
+7 RH1: r:w
+7 LH1: r:w
+8 RH1: r:w
+8 LH1: r:w
+9 RH1: Bb3+F4+Bb4:q r:q r:h
+9 LH1: D2+D3:q r:q r:h
+# sys64 starts bar 10
+10 RH1: r:w
+10 LH1: r:w
+11 RH1: D4+A4:q r:q r:h
+11 LH1: F#2+F#3:q r:q r:h
+12 RH1: r:w
+12 LH1: r:w
+# sys65 starts bar 13
+13 RH1: r:w
+13 LH1: r:w
+# bars 14-15: B3 and F#4 tied on, B4 not tied (B4 moves to A4 in bar 16)
+14 RH1: r:h dyn:fp B3~+F#4~+B4:h
+14 LH1: r:h D#2+D#3:h~
+15 RH1: B3~+F#4~+B4:w
+15 LH1: D#2+D#3:w~
+# sys66 starts bar 16
+16 RH1: B3+F#4+A4:w
+16 LH1: D#2+D#3:w
+17 RH1: B3+E4+G4:q r:q r:h
+17 LH1: E2+E3:q r:q r:h
+18 RH1: r:w
+18 LH1: r:w
+# sys67 starts bar 19
+19 RH1: r:h D4+A4:q r:q
+19 LH1: r:h F#2+F#3:q r:q
+20 RH1: r:w
+20 LH1: r:w
+21 RH1: D4+G4+B4:h~ D4+G4+B4:h~
+21 LH1: G2+G3:h~ G2+G3:h~
+# sys68 starts inside bar 21
+22 RH1: D4+G4+B4:w~
+22 LH1: G2+G3:w
+23 RH1: D4+G4+B4:h C4+G4+C5:q r:q
+23 LH1: F2+F3:h E2+E3:q r:q
+# sys69 starts bar 24
+24 RH1: r:w
+24 LH1: r:w
+25 RH1: r:w
+25 LH1: r:w
+# sys70 starts bar 26
+26 RH1: dyn:fp C4+G4+Bb4:w~
+26 LH1: E2+E3:w~
+27 RH1: C4+G4+Bb4:w~
+27 LH1: E2+E3:w~
+# sys71 starts bar 28
+28 RH1: C4+G4+Bb4:h C4+F4+A4:q r:q
+28 LH1: E2+E3:h F2+F3:q r:q
+29 RH1: r:w
+29 LH1: r:w
+# sys72 starts bar 30
+30 RH1: r:w
+30 LH1: r:w
+31 RH1: r:w
+31 LH1: r:w
+# bar 32: tie arcs are printed from every note to the system end, but in bar 33 only A4 and C5 continue
+# (Eb4 -> D4, F -> F#), so only A4 and C5 are written as tied
+32 RH1: dyn:fp Eb4+A4~+C5~:w
+32 LH1: F2+F3:w
+# sys73 starts bar 33
+33 RH1: D4+A4+C5:w~
+33 LH1: F#2+F#3:w~
+34 RH1: D4+A4+C5:w
+34 LH1: F#2+F#3:w
+35 RH1: D4+G4+Bb4:q r:q r:h
+35 LH1: G2+G3:q r:q r:h
+# sys74 starts inside bar 35
+36 RH1: r:w
+36 LH1: r:w
+37 RH1: dyn:fp D4+G4+B4:w
+37 LH1: F2+F3:w
+# sys75 starts bar 38
+38 RH1: C4+G4+C5:q r:q r:h
+38 LH1: Eb2+Eb3:q r:q r:h
+39 RH1: r:h dyn:fp Db4+G4+Bb4:h~
+39 LH1: r:h E2+E3:h~
+40 RH1: Db4+G4+Bb4:w~
+40 LH1: E2+E3:w~
+# sys76 starts bar 41
+41 RH1: Db4+G4+Bb4:h C4+F4+Ab4:q r:q
+41 LH1: E2+E3:h F2+F3:q r:q
+42 RH1: r:h dyn:f Eb4+Bb4:q r:q
+42 LH1: r:h G2+G3:q r:q
+# sys77 starts bar 43
+43 RH1: r:h r:q dyn:fp Eb4+Bb4+Db5:q~
+43 LH1: r:h r:q G2+G3:q~
+44 RH1: Eb4+Bb4+Db5:w
+44 LH1: G2+G3:w
+# sys78 starts bar 45
+45 RH1: Eb4+Ab4+C5:q r:q r:h
+45 LH1: Ab2+Ab3:q r:q r:h
+46 RH1: r:w
+46 LH1: r:w
+47 RH1: dyn:fp Bb3+F4+Ab4:h~ Bb3+F4+Ab4:h~
+47 LH1: D2+D3:h~ D2+D3:h~
+# sys78b starts inside bar 47
+48 RH1: Bb3+F4+Ab4:w
+48 LH1: D2+D3:w
+49 RH1: dyn:fp D4+G4:w~
+49 LH1: B1+B2:w~
+# sys79 starts bar 50
+50 RH1: D4+G4:q r:q r:h
+50 LH1: B1+B2:q r:q r:h
+51 RH1: r:w
+51 LH1: r:w
+52 RH1: r:w
+52 LH1: r:w
+# sys80 starts bar 53
+53 RH1: r:w
+53 LH1: r:w
+54 RH1: dyn:fp C4+G4+C5:q r:q r:h
+54 LH1: Eb2+Eb3:q r:q r:h
+# sys81 starts bar 55
+55 RH1: r:w
+55 LH1: r:w
+56 RH1: r:h dyn:fp D4+A4+C5:h~
+56 LH1: r:h F#2+F#3:h~
+57 RH1: D4+A4+C5:h~ D4+A4+C5:h
+57 LH1: F#2+F#3:h~ F#2+F#3:h
+# sys82 starts inside bar 57
+58 RH1: D4+G4+Bb4:q r:q r:h
+58 LH1: G2+G3:q r:q r:h
+59 RH1: r:q dyn:f E4+G4+A4+C#5:q D4+F4+A4+D5:h
+59 LH1: r:q A2+A3:q D2+D3:h

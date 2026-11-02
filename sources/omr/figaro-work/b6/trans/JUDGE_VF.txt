@@ -1,0 +1,48 @@
+== bar 11 S: Y
+# Natural printed only before the first E (quarter); the eighth E has no sign (the natural carries, so no "n"). 6/8: q+e+q+e = 6/8.
+11 S: En5:q "ten-" E5:e "te!" r:q r:e
+== bar 12 F: Y
+# Natural printed only before the first E (quarter, "O"); the eighth E ("che") has no sign. 6/8 adds up.
+12 F: r:q r:e En3:q "O" E3:e "che"
+== bar 13 F: X
+# Arc runs from the first F notehead straight to the second F notehead (equal pitch, both stems down, hugging the heads): a tie. No syllable under the 2nd F ("te - - sta!" hyphens run across it), so it is a held note. 6/8 adds up.
+13 F: F3:q.~ "te-" F3:q F3:e "sta!"
+== bar 14 F: X
+# Same figure as bar 13: arc from Eb head to Eb head, equal pitch; the extender line "o ____" spans both notes; then "che" on the eighth. A tie, so the note is held, not sung again. 6/8 adds up.
+14 F: Eb3:q.~ "o" Eb3:q Eb3:e "che"
+== bar 29 F: Y
+# Natural printed only before the quarter B; the eighth B ("za...") has no sign. 6/8 adds up.
+29 F: Bn3:q "san-" B3:e "za..." r:q r:e
+== bar 30 C: Y
+# Natural printed only before the first B ("sù"); the second B ("via,") has no sign. 6/8 adds up.
+30 C: r:e r:e Bn3:e "sù" B3:e "via," A3:e "ti" G3:e "con-"
+== bar 60 A: X
+# Bar 60 (sys157, p.185, last 6/8 bar) prints only S, Gn., Gf. and F. staves, and the fermata is printed over their rests. Antonio has no staff on this system, so no fermata is printed for him.
+60 A: r:h.
+== bar 60 B: X
+# Same as bar 60 A: Bartolo has no staff on sys157, so no fermata is printed for him.
+60 B: r:h.
+== bar 60 M: X
+# Same as bar 60 A: Marcellina has no staff on sys157, so no fermata is printed for her.
+60 M: r:h.
+== bar 60 O: X
+# Same as bar 60 A: Basilio has no staff on sys157, so no fermata is printed for him.
+60 O: r:h.
+== bar 74 S: Y
+# The first notehead is centred on the top staff line (the line passes through the middle of the head; checked at pixel level): F5, not G5. 4/4 adds up.
+74 S: F5:q "me-" D5:q "dio" Bb4:q "ri-" Ab4:q "tro-"
+== bar 76 S: Y
+# One natural printed, before the eighth A ("dio"); the following A dotted quarter and A eighth have no sign. 4/4: q.+e+q.+e.
+76 S: Eb5:q. "me-" An4:e "dio" A4:q. "ri-" A4:e "tro-"
+== bar 84 F: Y
+# Natural printed only before the first E ("go-"); the second E has no sign. "no a" is printed under the single 4th note, so it is an elision: "no_a". 4/4 adds up.
+84 F: D3:q "mai" D3:q "ven-" En3:q "go-" E3:q "no_a"
+== bar 92 C: Y
+# Natural printed only before the first A ("gnun"); the second A ("quel") has no sign. "gnun" ends o-gnun, so it has no hyphen. 4/4 adds up.
+92 C: An3:q "gnun" A3:q "quel" D4:q "che" D4:q "gli"
+== bar 97 M: Y
+# Natural printed only before the first A eighth ("ten-"); the second A ("do") has no sign. "pretendo" is printed as one word across three notes, so it is split pre-/ten-/do. "cheil" is printed under one note, so it is the elision "che_il". Eight eighths = 4/4.
+97 M: D5:e "trat-" D5:e "to," Bb4:e "e" Bb4:e "pre-" An4:e "ten-" A4:e "do" Bb4:e "che_il" Bb4:e "con-"
+== bar 100 T: Y
+# Natural printed only before the first A ("Co-"); the second A ("me?") has no sign. q+q+h = 4/4.
+100 T: An4:q "Co-" A4:q "me?" r:h

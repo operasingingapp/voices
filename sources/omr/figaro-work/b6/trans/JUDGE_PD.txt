@@ -1,0 +1,100 @@
+# JUDGE_PD - independent print check of the piano disputes (Breitkopf PV, pp.165-172).
+# Dynamics: glyph centre measured on the system image against the RH bottom line and the LH top line. Within about 5 px
+# of the midpoint counts as halfway; then it goes to the hand striking there (both strike -> RH).
+# Naturals: written with "n" where a natural sign is printed (task rule); later notes in the same bar are plain sounding pitch.
+== bar 1: own
+# The LH is already in treble clef at the end of the previous system (p.164), so there is no clef:G change here (Y is right). The f (rows 384-414, centre 399) is about halfway (RH line 352, LH line 438, midpoint 395), a little nearer the LH. It sits under the RH 32nd rest and beside the LH G chord, so it goes to the LH (X and Y both put it in the RH).
+1 RH1: r:x D5:x( G5:x D5:x B4:x D5:x G5:x D5:x) B4:x( D5:x G5:x D5:x B4:x D5:x G5:x D5:x)
+1 LH1: dyn:f B3+D4+G4:e r:e clef:F B3+D4:e G3+D4:e
+== bar 15: own
+# Sharps are printed on both A3 and F4 in the first lower chord, so it is A#3 all bar (Y). The slurs from the previous system (RH from D4, LH from B2) end on the first G4 and G3 (X's ")").
+15 RH1: G4:e) B3+G4:s* A#3+F#4:s* B3+G4:s* A#3+F#4:s* B3+G4:s* A#3+F#4:s*
+15 LH1: G3:e) G2:s G3:s G2:s G3:s G2:s G3:s
+== bar 16: Y
+# Sharps are printed on F4 and A4 in the second sixteenth chord: F#4+A#4.
+16 RH1: B3+G4:e G4+B4:s* F#4+A#4:s* G4+B4:s* F#4+A#4:s* G4+B4:s* F#4+A#4:s*
+16 LH1: G2:s G3:s G2:s G3:s G2:s G3:s G2:s G3:s
+== bar 17: X
+# "cresc." begins under the first chord of beat 2 (B4+D5), not under the third one.
+17 RH1: G4+B4:e B4+D5:s A#4+C#5:s word:cresc. B4+D5:s A#4+C#5:s B4+D5:s A#4+C#5:s
+17 LH1: G2:s G3:s G2:s G3:s G2:s G3:s G2:s G3:s
+== bar 29: own
+# Beat 1 RH is two up-stem chords on one beam (F4+C5 and E4+G4) with a slur below them. The only down-stem note is the beat-2 G4 quarter (Y). The LH has a slur from C4 to E3 (X). No tie leaves the C3 half note, and bar 30 starts with no tie (X's ~ is wrong).
+29 RH1: F4+C5:e( E4+G4:e) C5:e( B4:e)
+29 RH2: r:q G4:q
+29 LH1: C4:q( E3:q)
+29 LH2: C3:h
+== bar 31: Y
+# There is only one f, at rows ~885-905 (RH line 862, LH line 963). It is clearly nearer the RH, so the LH gets no f. No tie leaves the last LH C3.
+31 RH1: C5:q dyn:f E5+G5:e E5+G5:e
+31 RH2: F4:e( E4:e) r:q
+31 LH1: C4:q C4:e( B3:e)
+31 LH2: C3:q C3:e C3:e
+== bar 33: Y
+# The p (rows 908-930, centre 919) is below the midpoint 912.5 (RH 862 / LH 963), with gaps of 46 px above and 33 px below. It is nearer the LH and sits over the LH F3 staccato eighth.
+33 RH1: F5:e( E5:e) A4+D5:s A4+D5:s r:s G4+C5:s
+33 RH2: C5:q r:q
+33 LH1: C4:e( G3:e) dyn:p F3:e* E3:e*
+33 LH2: C3:q r:q
+== bar 34: X
+# The mfp (rows 885-924, centre 904.5) is halfway (RH 858 / LH 948, midpoint 903). Both hands strike there (RH C5+E5, LH G3), so it goes to the RH. A slur runs from C5+E5 over to B4+D5 (X). Here the lower voice is G4 and F4 eighths, slurred.
+34 RH1: F4+G4+B4:s F4+G4+B4:s r:s E4+G4+C5:s dyn:mfp C5+E5:e.( D5+F5:x B4+D5:x)
+34 RH2: r:q G4:e( F4:e)
+34 LH1: D3:e* C3:e* G3:e* G2:e*
+== bar 39: Y
+# There is only one f (rows 880-920, centre 900; RH 863 / LH 966, midpoint 914.5). It is nearer the RH, so the LH gets no f.
+39 RH1: C5:q dyn:f E5+G5:e E5+G5:e
+39 RH2: F4:e( E4:e) r:q
+39 LH1: C4:q C4:e( B3:e)
+39 LH2: C3:h
+== bar 42: own
+# The mfp (centre ~920; RH 872 / LH 964, midpoint 918) is halfway. Both hands strike there, so it goes to the RH (X), and the upper slur runs from C5+E5 to B4+D5 (X). Unlike bar 34, the lower voice here is G4 dotted eighth + F4 sixteenth (augmentation dot and sixteenth beam stub printed) with no slur. X and Y both misread it.
+42 RH1: F4+G4+B4:s F4+G4+B4:s r:s E4+G4+C5:s dyn:mfp C5+E5:e.( D5+F5:x B4+D5:x)
+42 RH2: r:q G4:e. F4:s
+42 LH1: D3:e* C3:e* G3:e* G2:e*
+== bar 43: own
+# The single f (rows ~900-927; RH 872 / LH 964) is nearer the RH, so the RH only gets it (Y). A slur is printed under G4-C5-E5, from G4 to E5 (X).
+43 RH1: dyn:f E4+C5:s* G4:s( C5:s E5:s) C5+G5:s* C5+G5:s* r:s C5+A5:s*
+43 LH1: C3:e* r:e E2+E3:e* F2+F3:e*
+== bar 56: Y
+# The f (rows 850-880, centre 865; RH 840 / LH 885, midpoint 862.5) is halfway. Both hands strike at beat 2, so it goes to the RH only.
+56 RH1: E4+G4:q dyn:f C5+E5+G5:q C5+F5+A5:q C5+F5+A5:q
+56 LH1: C3:e C4:e C3:e C4:e A2:e A3:e F2:e F3:e
+== bar 57: Y
+# The p (bowl rows 858-871, centre ~864.5; midpoint 862.5) is halfway. Both hands strike at beat 2, so it goes to the RH only.
+57 RH1: C5+E5+G5:q dyn:p E4+G4:q F4+A4:q F4+A4:q
+57 LH1: C3:e C4:e C3:e C4:e C3:e C4:e C3:e C4:e
+== bar 58: Y
+# This is the same as bar 56. The f (rows 850-880) is halfway and both hands strike, so it goes to the RH only.
+58 RH1: E4+G4:q dyn:f C5+E5+G5:q C5+F5+A5:q C5+F5+A5:q
+58 LH1: C3:e C4:e C3:e C4:e A2:e A3:e F2:e F3:e
+== bar 74: own
+# The f (rows 616-645, centre 630.5; RH 604 / LH 652, midpoint 628) is halfway. Both hands strike at beat 1, so it goes to the RH only (Y). A natural is printed on the first B4, so it is written Bn4. The LH has 12 beamed eighths with no "3": triplets.
+74 RH1: dyn:f F4+Bn4:q F4+B4:h( F4+B4+D5:q)
+74 LH1: D3:e3 E3:e3 F3:e3 D3:e3 E3:e3 F3:e3 D3:e3 E3:e3 F3:e3 D3:e3 E3:e3 F3:e3
+== bar 79: own
+# The p (bowl centre 628.5; midpoint 629) is at beat 2, under the RH's first triplet G4, above the LH quarter rest. It goes to the RH (Y). Naturals are printed on the B4 of the RH chord and on the B3 of the LH chord. The slurs are printed below each triplet.
+79 RH1: G4+Bn4+D5+G5:q dyn:p G4:e3( A4:e3 G4:e3) G4:e3( A4:e3 G4:e3) G4:e3( A4:e3 G4:e3)
+79 LH1: G3:q r:q Bn3+D4:q G3:q
+== bar 88: own
+# The f (rows 449-477, centre 463; RH 442 / LH 491, midpoint 466.5) is halfway. Both hands strike, so it goes to the RH only (Y). A treble clef is printed at the end of the bar before the barline (Y's clef:G). Naturals are printed on the RH's first B4 (3rd triplet note) and the LH's first B3.
+88 RH1: G5:q G5:h G5:q
+88 RH2: dyn:f D5:e3 C5:e3 Bn4:e3 D5:e3 C5:e3 B4:e3 D5:e3 C5:e3 B4:e3 D5:e3 C5:e3 B4:e3
+88 LH1: Bn3:e3 A3:e3 G3:e3 B3:e3 A3:e3 G3:e3 B3:e3 A3:e3 G3:e3 B3:e3 A3:e3 G3:e3 clef:G
+== bar 90: own
+# This is the same as bar 88. The f (rows ~475-503; RH 470 / LH 515, midpoint 492.5) is halfway or nearer the RH, so it goes to the RH only. There is a treble clef at the end of the bar. Naturals are printed on the RH's first B4 and the LH's first B3.
+90 RH1: G5:q G5:h G5:q
+90 RH2: dyn:f D5:e3 C5:e3 Bn4:e3 D5:e3 C5:e3 B4:e3 D5:e3 C5:e3 B4:e3 D5:e3 C5:e3 B4:e3
+90 LH1: Bn3:e3 A3:e3 G3:e3 B3:e3 A3:e3 G3:e3 B3:e3 A3:e3 G3:e3 B3:e3 A3:e3 G3:e3 clef:G
+== bar 92: own
+# The f (rows ~481-510, centre ~495.5; midpoint 492.5) is halfway. Both hands strike, so it goes to the RH only (Y). A natural is printed on the LH's first B2. The RH chord is C5+F#5+C6 (sharp printed).
+92 RH1: dyn:f C5+F#5+C6:q C5+F#5+C6:h C5+F#5+C6:q
+92 LH1: A2:e3 Bn2:e3 C3:e3 A2:e3 B2:e3 C3:e3 A2:e3 B2:e3 C3:e3 A2:e3 B2:e3 C3:e3
+== bar 99: Y
+# The f (rows ~329-359, centre ~344; RH 315 / LH 364, midpoint 339.5) is close to halfway, before the beat-2 chords where both hands strike, so it goes to the RH only.
+99 RH1: C4:q dyn:f C5+F5+A5:q C5+E5+G5:q C5+F5+A5:q
+99 LH1: C3:q C2+C3:q C2+C3:q C2+C3:q
+== bar 101: own
+# No accidental is printed, so the B is Bb (key of F) in both hands (Y). A "tr" is printed over the RH eighth Bb3 (X's t). It is followed by A3 and Bb3 sixteenths, with a slur from the first Bb3 to the last.
+101 RH1: C5+E5+G5:q r:q C4:q Bb3:et( A3:s Bb3:s)
+101 LH1: C2+C3:q r:q C3:q Bb2:q

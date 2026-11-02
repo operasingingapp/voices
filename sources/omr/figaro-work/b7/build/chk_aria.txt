@@ -1,0 +1,62 @@
+CHECK: aria_cur.xml (No. 6 Aria "Non so piu", 100 bars) against Breitkopf vocal score, pp. 48-51
+Every bar of both parts was checked against the system crops (sys00-sys19). Each item below was confirmed on a zoomed crop.
+Beats are counted from 1. "RH" = piano staff 1 and "LH" = piano staff 2.
+
+REAL DIFFERENCES
+
+1. Bar 17, P2 Piano LH, beat 4 (Bb3, the last quarter)
+   print: courtesy flat on Bb3 (after the A natural / G sharp earlier in the bar)
+   file:  Bb3 has no displayed accidental
+
+2. Bar 22, P1 Cherubino, beat 2 (Eb5 half note, "a")
+   print: courtesy flat on Eb5 (E natural in bar 21)
+   file:  Eb5 has no displayed accidental
+
+3. Bar 22, P2 Piano RH, beat 2 (chord C5/Eb5, lower voice)
+   print: courtesy flat on Eb5 (E natural in bar 21)
+   file:  Eb5 has no displayed accidental
+
+4. Bar 28, P2 Piano LH, beat 1 (Eb3 quarter)
+   print: courtesy flat on Eb3 (E natural in bar 27)
+   file:  Eb3 has no displayed accidental
+
+5. Bar 32, P2 Piano LH, beat 1 (Eb3, first eighth and the quarter that shares its notehead)
+   print: courtesy flat on Eb3 (E natural in bar 31)
+   file:  Eb3 has no displayed accidental
+
+6. Bar 36, P2 Piano LH, beat 3 (Ab3 half note)
+   print: courtesy flat on Ab3
+   file:  Ab3 has no displayed accidental
+
+7. Bar 92, P1 Cherubino, beat 1 (Ab4 quarter, "se")
+   print: courtesy flat on Ab4 (A natural on "E" at the end of bar 91)
+   file:  Ab4 has no displayed accidental
+
+8. Bar 3, P2 Piano, beat 1 (dynamic f)
+   print: f stands at the very start of the bar, over the LH half note F3, as in the parallel bar 39
+   file:  f is offset to beat 1.5 (offset 0.5, staff 1); bar 39 has it at beat 1
+
+UNSURE
+
+- Tempo marks: "Allegro vivace" (bar 1), "Adagio" (bar 92, beat 1) and "Tempo I" (bar 96) are present
+  only as <words> in P2 Piano, with no staff and no <sound tempo>. The print places them above the
+  system, over the vocal staff. Adagio is printed over the second half of bar 91; the file has it at
+  bar 92, which agrees with "applied from bar 92". There are no playback tempo values in the file.
+- Bar 51, LH: in the print the slur over the eighths seems to start on the 2nd eighth (G3); the file
+  starts it on beat 1 (Eb3). In bars 52-54 the print starts the slur on beat 1, as the file does.
+- Bar 98, RH: the print has a tie Bb4-Bb4 (below) and a slur D5-Eb5 (above). The file has the tie
+  plus a slur numbered 7, both attached to the Bb4 notes. In chord terms this is equivalent, but it
+  may render as a second arc on the tie.
+- Bar 77, voice: the print has "all" with no apostrophe ("ac-qua, all om-bra"). The file copies this
+  ("qua,_all"); the correct form is "all'".
+- Filler rests are visible in the file but not printed: RH upper-voice quarter rest at beat 1 in
+  bars 18 and 21; half rests in the second voice in bars 52-55; RH extra rests in bars 56-59 and 80.
+  The file has no rests with print-object="no".
+- Positions of cresc. differ by up to half a beat (bar 36 printed about beat 2.5, file beat 3;
+  bar 67 file beat 3 versus bar 86 file beat 3.5). These are layout differences only.
+
+Checked and matching (summary): every pitch, octave, rhythm, rest and tie in both parts; every other
+displayed accidental (all file accidentals are printed); every Italian syllable, hyphen, elision and
+comma (for example "fo-co,_o-ra" in bar 4 and "fo-co_o-ra" in bar 40, both as printed); fermatas in
+bars 65, 69, 84, 88, 91 and 98; fp in bars 61 and 63; accents and staccatos in bars 55, 61 and 63;
+all other dynamics; and piano slurs in all other bars.

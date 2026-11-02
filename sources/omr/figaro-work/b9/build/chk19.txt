@@ -1,0 +1,101 @@
+CHECK REPORT  No. 19 Recitativo ed Aria "E Susanna non vien! ... Dove sono"
+File:  /home/claude/ext/figaro/b9/build/d19.xml (135 bars, P1 La Contessa, P2 Piano)
+Print: Breitkopf vocal score pp. 248-254 (sys000-sys029, pg-01..pg-07)
+Method: own full dump (accidentals, ties, slurs, dynamics, words, ornaments, clefs, rests,
+visibility) compared bar by bar with system crops; every item below was confirmed on a zoomed crop
+(crops in /tmp/claude-0/-home-claude/3ebe1904-2cd5-5bf6-b252-ae0b967f4c22/scratchpad/fresh19/).
+
+REAL DIFFERENCES
+
+1. Bar 1 (and bar 77), both parts, time signature.
+   print: common-time sign "C" on all three staves (bar 1 and again at the Allegro, bar 77).
+   file:  <time> 4/4 with no symbol="common" in bar 1 and bar 77 (renders as 4/4 numerals).
+
+2. Bar 9, P1 voice, beat 3 (above "Ma che mal").
+   print: expression word "(deciso)" above the voice staff.
+   file:  no words direction; "deciso" is missing.
+
+3. Bar 9, P2 RH (staff 1), beats 3-4.
+   print: only the D5/F5 quarter and one quarter rest in the second half of the bar.
+   file:  voice 2 also has a VISIBLE half rest at beat 3 (s1v2 2:r/2, not print-object="no"), so an unprinted rest shows.
+
+4. Bar 12, P2 LH, beat 4.
+   print: courtesy natural on G3 of the G3/E4 quarter chord (after G#3 in bar 10).
+   file:  G3 has no <accidental>.
+
+5. Bar 16, P2 RH lower voice and LH, beat 1 (first bar of system sys005).
+   print: flat repeated on the tied-over Bb3 (RH) and sharp repeated on the tied-over C#3 (LH).
+   file:  Bb3 and C#3 in bar 16 carry no <accidental>.
+
+6. Bar 20, P2 RH and LH, beat 1.75 (the 16th-note chords after the dotted-eighth rests).
+   print: no staccato dots.
+   file:  <staccato/> on RH D5 16th and on LH G#2 16th.
+
+7. Bar 44, P1 voice, whole bar.
+   print: whole-bar rest (centred semibreve rest).
+   file:  a plain half rest (type half, no measure="yes"); other empty bars use whole-bar rests.
+
+8. Bar 47, P2 RH upper voice, beat 2.5.
+   print: courtesy natural on the F5 eighth (after F#5 in bars 44-45).
+   file:  F5 has no <accidental>.
+
+9. Bar 48, P2 RH voice 2 and LH voice 6, beat 2.5.
+   print: one eighth rest per staff.
+   file:  extra VISIBLE eighth rests in s1v2 (3/2:r) and s2v6 (3/2:r); the same rests are hidden in the parallel bar 45.
+
+10. Bar 52, P2, beats 1.5-2 (between the staves, under the RH beamed chords).
+    print: a diminuendo hairpin (>).
+    file:  no <wedge> anywhere in the score.
+
+11. Bar 54, P2 LH, beat 2.5 (last eighth G2).
+    print: courtesy natural on G2 (after G#3 in bar 53).
+    file:  G2 has no <accidental>.
+
+12. Bar 58, P2 LH, beat 2.5 (last eighth G2), the same passage again.
+    print: courtesy natural on G2.
+    file:  G2 has no <accidental>.
+
+13. Bar 81, P2 RH, beat 3 (G3/E4 half chord).
+    print: natural on E4 (after Eb4 in bar 80).
+    file:  E4 has no <accidental>.
+
+14. Bar 101, P2 RH, beat 3 (G3/Bb3/E4 half chord).
+    print: flat on Bb3 AND natural on E4 (after Eb4 in bar 100).
+    file:  only the flat; E4 has no <accidental>.
+
+15. Bar 107, P2 RH voice 2, beat 3.
+    print: one half rest.
+    file:  both s1v1 and s1v2 have a visible half rest at beat 3 (a duplicate rest).
+
+16. Bar 113, P2 LH voice 6, beat 3.
+    print: one half rest.
+    file:  both s2v5 and s2v6 have a visible half rest at beat 3 (a duplicate rest).
+
+17. Bar 128, P1 voice, beat 2 (after "cor!").
+    print: stage direction "(Parte)" in the lyric line.
+    file:  not present.
+
+UNSURE
+
+- Bar 8/9 "Allegretto": in the print the word stands above the end of bar 8 (over "so!" and the
+  piano 32nd-note figure, before the barline). The file puts it at bar 9, beat 1. It is probably a
+  placement choice, but it could be meant to start at bar 8, beat 3.
+- Bar 26: the heading "Aria" above "Andantino" is not in the file. It is a section title rather
+  than a tempo mark.
+- Bar 76, voice: there is a small dot after the C5 eighth on "gner!". The bar adds up only if it is
+  a plain eighth (as in the file), so the dot is taken to be an ink speck.
+- Bar 33/69 grace note (G4) before the Ob. G5: the small note is read as G4 (as in the file). The
+  print shows it as a small slashed eighth.
+- Dynamics placed on the other staff (for example bar 93 "f" put on staff 2 at beat 1, while the
+  print has it between the staves at about beat 1.5): the position differs a little but the mark
+  is the same.
+- Bottom of page 254: the last system (bars 129-135) is complete with its final barline. Only the
+  lowest ledger-line LH notes (C2 in bars 134-135) lie near the cut edge; they read as C2, as in
+  the file.
+
+Checked and matching (no difference found): all pitches and rhythms in both parts, the key (C, no
+change), 2/4 at bar 26 and 4/4 at bar 77, the tempo words Andante / Andantino / Allegro, all lyric
+syllables, elisions, accents and punctuation, every printed dynamic (f, p, fp, sf, cresc., dolce),
+fermatas (bars 61, 76, 77), the trill on bar 123, the arpeggios in bars 88, 93 and 128, the
+tremolos in bars 126-127, the triplets in bar 132, piano clef changes (bars 25, 27, 34, 35, 61, 63,
+70, 71 and the others) and piano slurs. No vocal dynamics are printed and none are in the file.

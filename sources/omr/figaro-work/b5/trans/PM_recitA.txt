@@ -1,0 +1,73 @@
+# = PB (PA identical except bar 22 C5 tie: C5 moves to Bb4, so not tied)
+# RECIT_A "Quanto duolmi, Susanna" - piano, 4/4, no key signature
+# sys00 starts bar 1
+1 RH1: dyn:f D4+G4+D5:q r:q r:h
+1 LH1: B1+B2:q r:q r:h
+2 RH1: r:w
+2 LH1: r:w
+3 RH1: r:w
+3 LH1: r:w
+# sys01 starts bar 4
+4 RH1: dyn:p C4+G4+C5:q r:q r:h
+4 LH1: E2+E3:q r:q r:h
+# bar 5: decrescendo hairpin under the RH eighths
+5 RH1: r:e E4:e( D4+G#4:e C4+A4:e B3+E4+B4:h~)
+5 RH2: r:e E4:q. r:h
+5 LH1: r:e C3+C4:e( B2+B3:e A2+A3:e G#2+G#3:h~)
+6 RH1: B3+E4+B4:w
+6 LH1: G#2+G#3:w
+# sys02 starts bar 7
+7 RH1: C4+E4+A4:w
+7 LH1: A2+A3:w
+8 RH1: dyn:fp C#4+E4+A4:w~
+8 LH1: G2+G3:w~
+9 RH1: C#4+E4+A4:h D4+A4:q r:q
+9 LH1: G2+G3:h F#2+F#3:q r:q
+# sys03 starts bar 10
+10 RH1: r:w
+10 LH1: r:w
+11 RH1: D4+G4+B4:q r:q r:h
+11 LH1: G2+G3:q r:q r:h
+# sys04 starts bar 12
+12 RH1: r:h dyn:fp D4+G4+B4:h~
+12 LH1: r:h F2+F3:h~
+13 RH1: D4+G4+B4:h C4+G4+C5:q r:q
+13 LH1: F2+F3:h Eb2+Eb3:q r:q
+14 RH1: dyn:fp Eb4+Bb4:h~ Eb4+Bb4:h~
+14 LH1: G2+G3:h~ G2+G3:h~
+# sys05 starts inside bar 14
+15 RH1: Eb4+Bb4:q r:q r:h
+15 LH1: G2+G3:q r:q r:h
+16 RH1: r:w
+16 LH1: r:w
+17 RH1: r:w
+17 LH1: r:w
+# sys06 starts bar 18
+18 RH1: r:w
+18 LH1: r:w
+19 RH1: r:w
+19 LH1: r:w
+20 RH1: r:w
+20 LH1: r:w
+# sys07 starts bar 21
+21 RH1: r:h dyn:fp C4+G4+C5:h~
+21 LH1: r:h E2+E3:h~
+# bar 22: only C4 and G4 are tied on into bar 23 (C5 is not)
+22 RH1: C4~+G4~+C5:w
+22 LH1: E2+E3:w~
+23 RH1: C4+G4+Bb4:w
+23 LH1: E2+E3:w
+# sys08 starts bar 24
+24 RH1: C4+F4+A4:q r:q r:h
+24 LH1: F2+F3:q r:q r:h
+25 RH1: r:h Bb3+F4+Bb4:q r:q
+25 LH1: r:h D2+D3:q r:q
+26 RH1: r:w
+26 LH1: r:w
+# sys09 starts bar 27
+27 RH1: r:w
+27 LH1: r:w
+28 RH1: r:h Bb3+Eb4+G4:q r:q
+28 LH1: r:h Eb2+Eb3:q r:q
+29 RH1: r:q dyn:f C4+Eb4+F4+A4:q Bb3+D4+F4+Bb4:h
+29 LH1: r:q F2+F3:q Bb1+Bb2:h

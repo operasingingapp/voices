@@ -1,0 +1,54 @@
+== bar 1 T: Y
+# The B is printed with a natural on the dotted quarter; the eighth after it has no accidental, so the natural still applies.
+1 T: Ab5:h "più" Bn4:q. "cre-" Bn4:e "de-"
+== bar 6 S: Y
+# The print reads "te,cheo". "te," sits under the first A; "cheo" is centred under the second A, a normal vowel elision.
+6 S: r:q r:e F4:e "ve-" G4:q "dre-" A4:e "te," A4:e "che_o-"
+== bar 10 S: Y
+# The print reads "te,che o". "te," is centred on the first D, and "che o" is centred on the second D (same layout as bar 6).
+10 S: Bb4:e "ra-" Bb4:e "te," r:e Bb4:e "ve-" F5:q "dre-" D5:e "te," D5:e "che_o-"
+== bar 11 S: Y
+# The i carries an accent (a teardrop with a tail). Bar 7's plain "si" has only a round dot.
+11 S: C5:q "gno-" G5:e "ra" G5:e "sì" F5:q "ca-" A4:e "de" A4:e "poi"
+== bar 32 T: Y
+# D and Db are under slurs and continue the melisma from bar 31. "scer" is under the first C and "mi ap" under the second C. The Count's "scervi ap" is aligned the same way above.
+32 T: D5:q Db5:q C5:q "scer-" C5:q "mi_ap-"
+== bar 47 F: Y
+# The type is smudged. The glyph is as wide as an "e", not an "i", but has a stray dot. Read as "re,", which matches the libretto "Signore". Low confidence.
+47 F: D4:e "gno-" B3:e "re," D4:e "di"
+== bar 69 F: Y
+# All three noteheads sit in the space above the first ledger line, so all three are D4.
+69 F: D4:e "noz-" D4:e "ze_a" D4:e "com-"
+== bar 73 C: Y
+# The "Figaro" label sits over the third note ("La"), so the Count sings "fret-ta..." on the first two G3s.
+73 C: G3:e "fret-" G3:e "ta..." r:e
+== bar 73 F: Y
+# Figaro enters on the third eighth with "La", where his label is printed.
+73 F: r:q G3:e "La"
+== bar 88 T: Y
+# No accidental is printed; the key is G major, so the note is F#.
+88 T: F#4:q. "ha"
+== bar 89 T: Y
+# No accidentals are printed; the key is G major, so both notes are F#.
+89 T: F#4:q "da" F#4:e "fi-"
+== bar 97 C: Y
+# The type is damaged ("qiii"). The only mark is a small round dot, not the larger teardrop grave printed in bars 93, 103 and 109. Read as plain "qui". Low confidence.
+97 C: A3:e "vien" F#3:e "qui" D3:e "sco-"
+== bar 103 C: X
+# A clear grave accent is printed over the i.
+103 C: D3:e "vien" D3:e "quì" D3:e "sco-"
+== bar 109 C: X
+# A clear grave accent is printed over the i.
+109 C: D3:e "vien" D3:e "quì" D3:e "sco-"
+== bar 110 S: Y
+# The notehead is on the second line of the treble staff, which is G4.
+110 S: G4:q "nir?" r:e
+== bar 128 T: Y
+# This is a shared staff with no printed rests. Susanna's two 16ths ("si-lio?") fill the gap, then the "Gräfin" label. Merged into r:e, as the Count and Susanna lines do.
+128 T: r:e B4:s "per" C5:s "re-" D5:s "car-" D5:s "lo..." r:e
+== bar 131 T: Y
+# This is a shared staff with no printed rests. Susanna's six 16ths fill the gap, and the "Gräfin" label stands over the last two A4s. Merged into r:q r:e.
+131 T: r:q r:e A4:s "che" A4:s "sta-"
+== bar 137 C: X
+# The apostrophe is clearly printed: "t'ac-".
+137 C: B3:e "cef-" G3:e "fo" C4:e. "già" F#3:s "t'ac-"

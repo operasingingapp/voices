@@ -1,0 +1,68 @@
+# JUDGE_PH - print check of the piano disputes (Breitkopf vocal score, pp.197-204, bars 1-89).
+# Dynamics: the task rule applies. A dynamic printed between the piano staves goes in the RH only, at the beat where the glyph stands.
+== bar 3: X
+# p.197 sys1 bar 3: arcs run from both heads of the G4+G5 half to the G4+G5 quarter at the start of bar 4. These are ties, the same as the ties from bar 1 to 2 and from bar 2 to 3.
+3 RH1: F4+F5:q F#4+F#5:q G4+G5:h~
+3 LH1: Bb2+Eb3+G3+Bb3:w
+== bar 4: OWN
+# LH beat 3: three half-note heads on lines B2, D3 and F3 (Bb2+D3+F3). There is no C3 or Eb3 head; the pixel profile matches the Bb2 head of beat 1 exactly. The chord has an up stem and a down stem, and ties lead from all three heads into bar 5. There the F3 is the up-stem quarter and Bb2+D3 is the down-stem half, so F3 goes in LH1 and Bb2+D3 in LH2. sf is printed between the staves at beat 3, so it goes in the RH (as X). X's notes are right; only the voicing is changed.
+4 RH1: G4+G5:q Eb4+Eb5:q dyn:sf Ab4+Ab5:h~
+4 LH1: Eb3:q( G3:q) F3:h~
+4 LH2: Bb2:h Bb2+D3:h~
+== bar 5: OWN
+# LH beat 1: the filled up-stem quarter is on the F3 line (not G3), over hollow D3+Bb2 halves with a down stem. Beat 2 is Ab3 (top line). Beat 3 is one down-stem half chord with heads in the G3 and Eb3 spaces and on the B2 line: Bb2+Eb3+G3. X's notes are right. p is printed between the staves just after the beat-1 chord, so it moves to the RH. Close call: the glyph sits halfway between beats 1 and 2, displaced by the LH stem; it is kept at beat 1, where the voices have p.
+5 RH1: dyn:p Ab4+Ab5:q( F4+F5:q Eb4+Eb5:q G4+G5:q)
+5 LH1: F3:q( Ab3:q) Bb2+Eb3+G3:h
+5 LH2: Bb2+D3:h s:h
+== bar 11: X
+# p.197 sys2 last bar: the rising LH eighths start in the C3 space (between the D3 and B2 lines) and end on a ledger-line C4: C3 D3 Eb3 F3 G3 Ab3 Bb3 C4.
+11 RH1: G5+C6+Eb6:e Eb5:e G5+C6+Eb6:e Eb5:e G5+C6+Eb6:e Eb5:e G5+C6+Eb6:e Eb5:e
+11 LH1: C3:e D3:e Eb3:e F3:e G3:e Ab3:e Bb3:e C4:e
+== bar 20: X
+# p.198 sys2 bar 4: laid out the same as bar 11; the first eighth is in the C3 space.
+20 RH1: G5+C6+Eb6:e Eb5:e G5+C6+Eb6:e Eb5:e G5+C6+Eb6:e Eb5:e G5+C6+Eb6:e Eb5:e
+20 LH1: C3:e D3:e Eb3:e F3:e G3:e Ab3:e Bb3:e C4:e
+== bar 24: X
+# p.199 sys1 bar 3: the beat-3 and beat-4 chords have only two heads, one on the 1st ledger line (Ab5) and one above the 2nd ledger line (D6). There is no head in the space between them (Bb5).
+24 RH1: C6+Eb6:e F5:e C6+Eb6:e F5:e Ab5+D6:e F5:e Ab5+D6:e F5:e
+24 LH1: Ab2+Ab3:h Bb2+Bb3:h
+== bar 25: OWN
+# p.199 sys1 bar 4: "p Str." is printed between the staves, right of the LH beat-1 chord and just before the RH Bb5 eighth (beat 2). It goes in the RH at beat 2. X put it at LH beat 1 and Y at LH beat 3. Notes as both readings.
+25 RH1: G5+Eb6:q dyn:p Bb5:e( Ab5:e G5:q) r:q
+25 LH1: Eb2+Eb3:q r:q G3+Bb3+Eb4:q r:q
+== bar 33: X
+# p.200 sys1 bar 2: the half note sits above the 1st ledger line (the ledger touches its bottom), so it is Bb5, not Ab5. A slur runs from Bb5 to the G5 quarter, and a separate tie runs from that G5 to bar 34's G5.
+33 RH1: G4:q Bb5:h( G5:q)~
+33 LH1: Eb2+Eb3:q r:q G3+Bb3+Eb4:q r:q
+== bar 47: X
+# p.201 sys1 last bar: the low LH eighths are in the C3 space (between the D3 and B2 lines), alternating with the ledger-line C4.
+47 RH1: G5+Eb6:e Eb5:e G5+Eb6:e Eb5:e G5+Eb6:e Eb5:e G5+Eb6:e Eb5:e
+47 LH1: Eb3+G3:q r:q C3:e C4:e C3:e C4:e
+== bar 48: X
+# p.201 sys2 bar 1: the beat-3 and beat-4 chords are Ab5 (on the 1st ledger line) + D6 (above the 2nd ledger line). There is no Bb5 head.
+48 RH1: C6+Eb6:e F5:e C6+Eb6:e F5:e Ab5+D6:e F5:e Ab5+D6:e F5:e
+48 LH1: Ab2:e Ab3:e Ab2:e Ab3:e Bb2:e Bb3:e Bb2:e Bb3:e
+== bar 55: X
+# p.202 sys1 bar 3: laid out like bar 47; the low eighths are C3.
+55 RH1: G5+Eb6:e Eb5:e G5+Eb6:e Eb5:e G5+Eb6:e Eb5:e G5+Eb6:e Eb5:e
+55 LH1: Eb3+G3:q r:q C3:e C4:e C3:e C4:e
+== bar 56: X
+# p.202 sys1 bar 4: laid out like bar 48; the chords are Ab5+D6 with no Bb5.
+56 RH1: C6+Eb6:e F5:e C6+Eb6:e F5:e Ab5+D6:e F5:e Ab5+D6:e F5:e
+56 LH1: Ab2:e Ab3:e Ab2:e Ab3:e Bb2:e Bb3:e Bb2:e Bb3:e
+== bar 57: OWN
+# p.202, beats 1-2 at the end of sys1 and beats 3-4 (Prestissimo) at the start of sys2. sf stands between the staves at beat 3, left of the RH eighth rest and level with the LH G1+G2 half. Between-staff dynamics go in the RH, so sf goes at beat 3 before the rest. X put it in the LH; Y put it one eighth late, before the G3. Close call: OWN versus Y is only an eighth's placement.
+57 RH1: G5+Eb6:q r:q dyn:sf r:e G3:e G4:e G3:e
+57 LH1: Eb2+Eb3:q r:q G1+G2:h~
+== bar 59: Y
+# p.202 sys2 bar 3: "cresc." is printed between the staves at beat 1, so it goes in the RH.
+59 RH1: word:cresc. A4:e A3:e Bb4:e Bb3:e C5:e C4:e D5:e D4:e
+59 LH1: A1+A2:q Bb1+Bb2:q C2+C3:q D2+D3:q
+== bar 65: Y
+# p.203 sys1 bar 3: sf is printed between the staves at beat 3, under the RH G4 quarter and level with the LH G1+G2 half. Both hands strike there, and between-staff dynamics go in the RH, so it goes before the G4.
+65 RH1: Eb5:e G5:e Eb5:e Bb4:e dyn:sf G4:q G4:e G3:e
+65 LH1: Eb2+Eb3:q r:q G1+G2:h~
+== bar 67: Y
+# p.203 sys1 bar 5: "cresc." is printed between the staves at beat 1, so it goes in the RH (as in bar 59).
+67 RH1: word:cresc. A4:e A3:e Bb4:e Bb3:e C5:e C4:e D5:e D4:e
+67 LH1: A1+A2:q Bb1+Bb2:q C2+C3:q D2+D3:q

@@ -1,0 +1,8 @@
+== bar 5: X | Y | X
+# f printed between the staves at the beat-1 chords (E4+A4+E5 / C#3+A3+C#4); X keeps it, Y drops it.
+5 RH1: dyn:f E4+A4+E5:q r:q r:h
+5 LH1: C#3+A3+C#4:q r:q r:h
+== bar 6: X | Y | X
+# RH half chord has three heads: E4 (line), A4 (space), C#5 (space with sharp).
+6 RH1: dyn:p E4+A4+C#5:h D4+A4+D5:q r:q
+6 LH1: G2+G3:h F#2+F#3:q r:q

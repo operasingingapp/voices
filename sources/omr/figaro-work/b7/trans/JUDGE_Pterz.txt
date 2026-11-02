@@ -1,0 +1,306 @@
+# JUDGE_Pterz: piano disputes, No. 7 Terzetto (Bb major, 4/4). Bar numbers as in DISPUTE_Pterz.txt.
+# Dynamics: measured against the staff lines (RH bottom line vs LH top line); within ~10% of the midpoint = halfway.
+# Chords with a tie on one note and a slur on another (bars 155-158): the tied pitch carries ~ inside the chord.
+== bar 1: X
+# f sits just above the LH beam, well below the RH staff -> LH.
+1 RH1: F4:w
+1 LH1: dyn:f trem2:F2|F3:h trem2:F2|F3:h
+== bar 16: Y
+# p is halfway between the staves (centre 403 vs midpoint 399), both hands have notes -> RH only.
+16 RH1: dyn:p F4+D5+F5:h( A4+C5+Eb5:h)
+16 LH1: Bb3:h( F#3:h)
+== bar 37: X
+# First RH note sits above the A5 ledger line = Bb5 (not C6); sf is under that note and slightly nearer RH -> RH1.
+37 RH1: dyn:sf Bb5:e( G5:e) En5:h.(
+37 RH2: r:q Bb4:e G4:e C5:e G4:e Db5:e G4:e
+37 LH1: En3:e r:e Db4:q( C4:q Bb3:q
+== bar 43: Y
+# The curve joins F4 to the F4 that starts bar 44: a tie.
+43 RH1: F4:w~
+43 LH1: F3+An3:e( C4:e F3+A3:e C4:e F3+A3:e C4:e F3+A3:e C4:e)
+== bar 51: Y
+# Second RH chord has two heads only: G5 (below the first ledger line) and C#6; no A5.
+51 RH1: r:q A5+C6:q r:q G5+C#6:q
+51 LH1: r:e G3:e( A3:e F3:e) r:e A3:e( Bb3:e G3:e)
+51 LH2: F3:h Eb3:h
+== bar 52: own
+# Chord 2 is Fn5+Bn5 (both naturals printed; lower head on the top line), as Y reads. cresc. sits nearer the RH
+# staff and starts under chord 2. The LH lower voice has quarter stems on every beat (D3, G3, C3, F3), as Y reads.
+52 RH1: F#5+D6:q( word:cresc. Fn5+Bn5:q En5+C6:q Eb5+A5:q)
+52 LH1: F#3:e( A3:e G3:e Fn3:e En3:e G3:e F3:e Eb3:e)
+52 LH2: D3:q G3:q C3:q F3:q
+== bar 53: own
+# p is nearer the RH staff (centre 687 vs midpoint 705), so it goes to RH, before the first RH note (beat 2).
+# The last LH eighth has no printed natural -> E3.
+53 RH1: r:q dyn:p D5+Bb5:q r:q En5+G5:q
+53 LH1: D3:e* G3:e* F3:e* G3:e* En3:e* F3:e* D3:e* E3:e*
+53 LH2: Bb2:q r:q C3:q r:q
+== bar 54: own
+# sfp is just under the RH staff, below chord 2 -> RH. The C# carries through the bar, so the last chord is G5+C#6 (X).
+# A slur under the LH lower voice joins F3 to Eb3 (Y).
+54 RH1: F5+A5:q( dyn:sfp G5+C#6:h) G5+C#6:q
+54 LH1: F3:e( F#3:e G3:e A3:e Bb3:e A3:e Bb3:e G3:e)
+54 LH2: F3:q( Eb3:h.)
+== bar 55: own
+# Same as bar 52: Fn5+Bn5, cresc. nearer RH (centre 680 vs midpoint 705) starting under chord 2, lower-voice quarters.
+55 RH1: F#5+D6:q( word:cresc. Fn5+Bn5:q En5+C6:q Eb5+A5:q)
+55 LH1: F#3:e( A3:e G3:e Fn3:e En3:e G3:e F3:e Eb3:e)
+55 LH2: D3:q G3:q C3:q F3:q
+== bar 56: own
+# p is nearer RH (centre 685 vs 705) -> RH, before the first note. The third LH eighth is D3 (X). The last E has no natural.
+56 RH1: r:q dyn:p D5+Bb5:q r:q En5+G5:q
+56 LH1: D3:e* G3:e* D3:e* G3:e* En3:e* F3:e* D3:e* E3:e*
+56 LH2: Bb2:q r:q C3:q r:q
+== bar 65: Y
+# cresc. starts directly under the first RH note A5.
+65 RH1: word:cresc. A5:q( C5+F5:q) r:q C5+F5+A5:q
+65 LH1: F3+A3:e C4:e F3+A3:e C4:e Eb3+F3+A3:e C4:e Eb3+F3+A3:e C4:e
+== bar 66: Y
+# f (centre 411) and p (centre 418) are both halfway (midpoint 415), and both hands have notes there -> RH.
+66 RH1: dyn:f trem2:D5+F#5|A4:h dyn:p trem2:D5+G5|Bb4:h
+66 LH1: D3+F#3+A3+C4:q D3+C4:q Bb2+Bb3:q G2+G3:q
+== bar 67: X
+# cresc. is halfway -> RH. It starts after the beat-2 LH chord, so it goes before the second tremolo.
+67 RH1: trem2:D5+F#5|A4:h word:cresc. trem2:D5+G5|Bb4:h
+67 LH1: D2+D3:q D3+C4:q Bb2+Bb3:q G2+G3:q
+== bar 70: Y
+# The curve joins Eb4 to the Eb4 that starts bar 71: a tie.
+70 RH1: dyn:p Eb4:w~
+70 LH1: Eb3+G3:e( Bb3:e Eb3+G3:e Bb3:e Eb3+G3:e Bb3:e Eb3+G3:e Bb3:e)
+== bar 79: own
+# cresc. is just under the RH staff and starts under chord 2 (X). The LH has down-stemmed lower-voice quarters
+# C3, F3, Bb2, Eb3 under the eighths (Y).
+79 RH1: En5+C6:q( word:cresc. Eb5+A5:q D5+Bb5:q Db5+G5:q)
+79 LH1: En3:e( G3:e F3:e Eb3:e D3:e F3:e Eb3:e Db3:e)
+79 LH2: C3:q F3:q Bb2:q Eb3:q
+== bar 81: own
+# The first RH chord is Eb5+G5 (X), with no slur printed to chord 2. A slur under the LH lower voice joins Eb3 to Db3
+# (different pitches, so not a tie).
+81 RH1: Eb5+G5:q dyn:sfp F5+Bn5:h.
+81 LH1: Eb3:e( En3:e F3:e G3:e Ab3:e G3:e Ab3:e F3:e)
+81 LH2: Eb3:q( Db3:h.)
+== bar 82: own
+# Same as bar 79: cresc. under RH chord 2, LH lower-voice quarters.
+82 RH1: En5+C6:q( word:cresc. Eb5+A5:q D5+Bb5:q Db5+G5:q)
+82 LH1: En3:e( G3:e F3:e Eb3:e D3:e F3:e Eb3:e Db3:e)
+82 LH2: C3:q F3:q Bb2:q Eb3:q
+== bar 91: X
+# No natural before the second RH half note -> Bb4.
+91 RH1: C5:h( Bb4:h)
+91 RH2: G4:w
+91 LH1: C4:w~
+91 LH2: Eb3:h( En3:h)
+== bar 94: Y
+# The fifth RH note is centred on the first ledger line -> A5.
+94 RH1: word:cresc. A4:e r:e C5:e r:e A5:e r:e A4:e r:e
+94 LH1: Eb4:e D4:e C4:e D4:e Eb4:e D4:e Eb4:e C4:e
+94 LH2: F3:q r:q r:h
+== bar 98: Y
+# The first LH tremolo chord has two heads only (F3, A3); no Eb3.
+98 RH1: dyn:f F5:q C5+Eb5+F5+A5:q D5+F5+Bb5:q D5+F5+Bb5:q
+98 LH1: trem2:F3+A3|C4:h trem2:F3+Bb3|D4:h
+== bar 99: Y
+# Same: F3+A3 only.
+99 RH1: C5+Eb5+F5+A5:q C5+Eb5+F5+A5:q D5+F5+Bb5:q D5+F5+Bb5:q
+99 LH1: trem2:F3+A3|C4:h trem2:F3+Bb3|D4:h
+== bar 101: own
+# Only ties, no slur over them; the slur starts on the sixteenth A. f (centre 730) and p (738) are below the midpoint
+# (716), nearer the LH staff -> LH only.
+101 RH1: Bb3:h~ Bb3:q. A3:s( Bb3:s
+101 LH1: dyn:f Bb2:h~ Bb2:q. dyn:p A2:s( Bb2:s
+== bar 105: own
+# Only ties, no slur. f is exactly halfway (876 vs 876) with notes in both hands -> RH. p (centre 899) is nearer LH -> LH.
+105 RH1: dyn:f D4+Bb4:h~ D4+Bb4:q. A3:s( Bb3:s
+105 LH1: Bb2+Bb3:h~ Bb2+Bb3:q. dyn:p A2:s( Bb2:s
+== bar 111: X
+# The last RH note is in the space above the top line -> G5.
+111 RH1: Bb4:e r:e D5:e r:e Bb5:e r:e G5:e r:e
+111 LH1: Bb3+D4:q) r:q r:h
+== bar 122: Y
+# The RH slur runs on to D4 in bar 123. LH: the stem-up F3 half note is tied to F3 in bar 123 (upper voice); the
+# stem-down sixteenths form the lower voice, with a slur that runs on into bar 123.
+122 RH1: r:h dyn:p D4:s( Eb4:s F4:s Eb4:s D4:s Eb4:s F4:s Eb4:s
+122 LH1: r:h F3:h~
+122 LH2: r:h Bb2:s( C3:s D3:s C3:s Bb2:s C3:s D3:s C3:s
+== bar 126: Y
+# F4 (RH) and Bb3 (LH) half notes are each tied to the same pitch in bar 127. The LH sixteenths are stem-down (lower voice).
+126 RH1: r:h Bb4:s( C5:s D5:s C5:s Bb4:s C5:s D5:s C5:s
+126 RH2: r:h F4:h~
+126 LH1: r:h Bb3:h~
+126 LH2: r:h D3:s( Eb3:s F3:s Eb3:s D3:s Eb3:s F3:s Eb3:s
+== bar 135: Y
+# The LH upper Eb3 is a stemless whole note tied into the next bar; C3 to Bb2 are stem-down halves with a slur.
+135 RH1: Eb4:h( D4:h)
+135 RH2: G3:w
+135 LH1: Eb3:w~
+135 LH2: C3:h( Bb2:h)
+== bar 140: X
+# Last bar of sys79: no tie curve leaves F4 or F3 at the end of the system.
+140 RH1: F4:w
+140 RH2: C4:q C4:q r:h
+140 LH1: F3:w
+140 LH2: A2:q A2:q r:h
+== bar 143: Y
+# Ties from F4 and F3 into the F4 and F3 whole notes of the next bar.
+143 RH1: F4:w~
+143 RH2: Eb4:h( D4:h)
+143 LH1: F3:w~
+143 LH2: C3:h( Bb2:h)
+== bar 147: own
+# Only ties, no slur. pp (centre 616) is below the midpoint (600), nearer the LH staff -> LH only.
+147 RH1: Bb3:h~ Bb3:q. A3:s( Bb3:s
+147 LH1: dyn:pp Bb2:h~ Bb2:q. A2:s( Bb2:s
+== bar 155: X
+# Second LH chord: the upper curve ties Bb3 and the lower curve slurs D3 to Eb3 of bar 156, so it is written as a slur.
+155 RH1: Bb4:q F4:e( G4:e) Ab4:e( G4:e Ab4:e F4:e)
+155 LH1: Bb3+D4:h D3+F3+Bb3~:h(
+== bar 156: own
+# The first LH chord is Eb3+Bb3 (Y); it ends the slur from bar 155. The second chord again carries tie and slur
+# curves into bar 157.
+156 RH1: word:cresc. G4:e( F4:e G4:e Eb4:e) Ab4:e( G4:e Ab4:e F4:e)
+156 LH1: Eb3+Bb3:h) D3+F3+Bb3~:h(
+== bar 157: own
+# The first chord ends the slur from bar 156. The second chord is En3+G3+C4 (three heads; no Bb3), with a tie (C4)
+# and a slur (E3 to F3) into bar 158.
+157 RH1: G4:e( F4:e G4:e Eb4:e) Bb4:e( An4:e Bb4:e G4:e)
+157 LH1: Eb3+Bb3:h) En3+G3+C4~:h(
+== bar 158: X
+# Second chord: En3+G3+C4, with curves into bar 159.
+158 RH1: A4:e( G4:e A4:e F4:e) dyn:f Bb4:e( A4:e Bb4:e G4:e)
+158 LH1: F3+C4:h) En3+G3+C4~:h(
+== bar 159: own
+# The first LH chord ends the slur from bar 158 (X). The beat-3 chord has three heads: F3, A3, C4 on the ledger
+# line; no Eb4 (Y).
+159 RH1: A4:q dyn:p F4:e F4:e F4:e( G4:e F4:e G4:e
+159 LH1: F3+C4:q) r:q F3+A3+C4:q r:q
+== bar 160: Y
+# The beat-3 chord is F3+A3+C4 (three heads).
+160 RH1: F4:e G4:e F4:e G4:e F4:e Eb4:e D4:e C4:e)
+160 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 161: Y
+# The beat-3 chord is F3+A3+C4.
+161 RH1: D4:q F4:q word:cresc. F5:e( G5:e F5:e G5:e
+161 LH1: F3+Bb3:q r:q F3+A3+C4:q r:q
+== bar 162: Y
+# The beat-3 chord is F3+A3+C4.
+162 RH1: F5:e G5:e F5:e G5:e F5:e Eb5:e D5:e C5:e)
+162 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 163: Y
+# The beat-3 chord is F3+A3+C4.
+163 RH1: Bb4:q F5:q dyn:f F4:e( G4:e F4:e G4:e
+163 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 164: Y
+# The beat-3 chord is F3+A3+C4.
+164 RH1: F4:e G4:e F4:e G4:e F4:e Eb4:e D4:e C4:e)
+164 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 165: Y
+# The beat-3 chord is F3+A3+C4. The next bar, 166, does have the four-note chord with Eb4.
+165 RH1: D4:q F4:q F5:e( G5:e F5:e G5:e
+165 LH1: F3+Bb3:q r:q F3+A3+C4:q r:q
+== bar 167: own
+# The long slur from bar 165 ends on Bb4, and a new slur runs from Bb5 to F5 (X). p is halfway/nearer RH
+# (centre 777 vs midpoint 789) with notes in both hands -> RH (Y).
+167 RH1: dyn:p Bb4:e) Bb5:e( D6:e C6:e Bb5:e A5:e G5:e F5:e)
+167 LH1: Bb3+D4:e( F4:e Bb3+D4:e F4:e Bb3+D4:e F4:e Bb3+D4:e F4:e)
+== bar 172: Y
+# The first RH chord has heads on the top line and the D5 line -> D5+F5.
+172 RH1: r:q D5+F5:q r:q C5+F#5:q
+172 LH1: r:e C4:e( D4:e Bb3:e) r:e D4:e( Eb4:e C4:e)
+172 LH2: Bb3:h Ab3:h
+== bar 173: own
+# cresc. is clearly in the RH half of the gap (centre 878 vs midpoint 920) and starts under chord 2. LH: upper-voice
+# eighths from Bn3/A3 (beamed), lower voice with down-stemmed quarters G3, C4, F3, Bb3 (stems on beats 2 and 4
+# hang from the C4 and Bb3 eighth heads).
+173 RH1: Bn4+G5:q( word:cresc. Bb4+En5:q A4+F5:q Ab4+D5:q)
+173 LH1: Bn3:e( D4:e C4:e Bb3:e A3:e C4:e Bb3:e Ab3:e)
+173 LH2: G3:q C4:q F3:q Bb3:q
+== bar 174: Y
+# p is nearer RH (centre 896 vs 920) -> RH, before the first RH note. The LH beam starts on the chord (no eighth
+# rest); the natural is printed before A3.
+174 RH1: r:q dyn:p G4+Eb5:q r:q A4:q
+174 LH1: G3:e* C4:e* Bb3:e* C4:e* An3:e* Bb3:e* G3:e* A3:e*
+174 LH2: Eb3:q r:q F3:q r:q
+== bar 175: X
+# The first RH note is on the middle line -> Bb4.
+175 RH1: Bb4:q D5+F5:h( C5+Eb5:q)
+175 LH1: Bb3:h( F#3+A3:h)
+== bar 181: X
+# Read fresh: RH stem-up halves C5+Eb5 slurred to Bb4+D5, over a G4 whole note; LH Eb3 slurred to En3 (natural printed).
+181 RH1: C5+Eb5:h( Bb4+D5:h)
+181 RH2: G4:w
+181 LH1: Eb3:h( En3:h)
+== bar 182: Y
+# The beat-3 chord is F3+A3+C4.
+182 RH1: A4+C5:q F4:e* F4:e* F4:e( G4:e F4:e G4:e
+182 LH1: F3:q r:q F3+A3+C4:q r:q
+== bar 183: Y
+# The beat-3 chord is F3+A3+C4.
+183 RH1: F4:e G4:e F4:e G4:e F4:e Eb4:e D4:e C4:e)
+183 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 184: Y
+# The beat-3 chord is F3+A3+C4.
+184 RH1: D4:q F4:q word:cresc. F5:e( G5:e F5:e G5:e
+184 LH1: F3+Bb3:q r:q F3+A3+C4:q r:q
+== bar 185: own
+# The beat-1 chord has two heads only, F3+Bb3 (X); the beat-3 chord is F3+A3+C4 (Y).
+185 RH1: F5:e G5:e F5:e G5:e F5:e Eb5:e D5:e C5:e)
+185 LH1: F3+Bb3:q r:q F3+A3+C4:q r:q
+== bar 186: Y
+# The beat-3 chord is F3+A3+C4.
+186 RH1: Bb4:q F5:q dyn:f F4:e( G4:e F4:e G4:e
+186 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 187: Y
+# The beat-3 chord is F3+A3+C4.
+187 RH1: F4:e G4:e F4:e G4:e F4:e Eb4:e D4:e C4:e)
+187 LH1: F3+Bb3+D4:q r:q F3+A3+C4:q r:q
+== bar 188: Y
+# The beat-3 chord is F3+A3+C4.
+188 RH1: D4:q F4:q F5:e( G5:e F5:e G5:e
+188 LH1: F3+Bb3:q r:q F3+A3+C4:q r:q
+== bar 190: own
+# The slur from bar 188 ends on C5 at the end of bar 189, so Bb4 here is unslurred, and a new slur runs from Bb5 to F5
+# (X). p is nearer RH (centre 879 vs midpoint 894) -> RH (Y).
+190 RH1: dyn:p Bb4:e Bb5:e( D6:e C6:e Bb5:e A5:e G5:e F5:e)
+190 LH1: Bb3+D4:e( F4:e Bb3+D4:e F4:e Bb3+D4:e F4:e Bb3+D4:e F4:e)
+== bar 195: Y
+# The first RH chord is D5+F5 (heads on the top line and the D5 line).
+195 RH1: r:q D5+F5:q r:q C5+F#5:q
+195 LH1: r:e C4:e( D4:e Bb3:e) r:e D4:e( Eb4:e C4:e)
+195 LH2: Bb3:h Ab3:h
+== bar 196: own
+# As bar 173: cresc. is nearer RH and starts under chord 2; LH lower-voice quarters G3, C4, F3, Bb3.
+196 RH1: Bn4+G5:q( word:cresc. Bb4+En5:q A4+F5:q Ab4+D5:q)
+196 LH1: Bn3:e( D4:e C4:e Bb3:e A3:e C4:e Bb3:e Ab3:e)
+196 LH2: G3:q C4:q F3:q Bb3:q
+== bar 197: own
+# p is nearer RH -> RH, before the first RH note (Y). The LH voices are as Y reads, but no natural is printed before
+# the beat-3 A here -> A3, not An3.
+197 RH1: r:q dyn:p G4+Eb5:q r:q A4+C5:q
+197 LH1: G3:e* C4:e* Bb3:e* C4:e* A3:e* Bb3:e* G3:e* A3:e*
+197 LH2: Eb3:q r:q F3:q r:q
+== bar 199: own
+# As bar 173: cresc. sits just under the RH staff (nearer RH) and starts under chord 2; LH lower-voice quarters.
+199 RH1: Bn4+G5:q( word:cresc. Bb4+En5:q A4+F5:q Ab4+D5:q)
+199 LH1: Bn3:e( D4:e C4:e Bb3:e A3:e C4:e Bb3:e Ab3:e)
+199 LH2: G3:q C4:q F3:q Bb3:q
+== bar 200: own
+# As bar 197: p goes to RH before the first RH note; no natural is printed on the beat-3 A.
+200 RH1: r:q dyn:p G4+Eb5:q r:q A4+C5:q
+200 LH1: G3:e* C4:e* Bb3:e* C4:e* A3:e* Bb3:e* G3:e* A3:e*
+200 LH2: Eb3:q r:q F3:q r:q
+== bar 207: Y
+# Only the lower Bb4 is tied (curve below into the Bb4 half of bar 208); D5 is struck again in bar 208. There is no slur.
+207 RH1: D5:w
+207 RH2: Bb4:w~
+207 LH1: Bb3:e( C4:e D4:e C4:e Bb3:e A3:e G3:e F3:e
+== bar 211: own
+# Chord 1 is Bb4+D5; chord 2 is D5+Bb5 (the upper head is above the A5 ledger line, not A5). The only curve is a
+# tie from Bb5 to the Bb5 half of bar 212; D5 is not tied and there is no slur. Split into two voices so that only
+# Bb5 is tied.
+211 RH1: dyn:f D5:h Bb5:h~
+211 RH2: Bb4:h D5:h
+211 LH1: Bb3:e( C4:e D4:e C4:e Bb3:e A3:e G3:e F3:e
+== bar 220: Y
+# pp is nearer the RH staff (centre 757 vs midpoint 772) -> RH only.
+220 RH1: dyn:pp F5+D6:q r:q F5+D6:q r:q
+220 LH1: Bb2+D3+F3+Bb3:q r:q Bb2+D3+F3+Bb3:q r:q

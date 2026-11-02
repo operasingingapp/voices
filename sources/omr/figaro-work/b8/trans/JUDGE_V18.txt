@@ -1,0 +1,105 @@
+== bar 8 F: X
+# Bass clef: G3 G3 in top space, C4 on the ledger line above, last eighth in the second space from the top = E3 (not C3).
+8 F: G3:q "fa-" G3:q "te" C4:q. "più_ar-" E3:e "ros-"
+== bar 16 C: Y
+# Lyric "meglio è assai di quà par-" over 6 eighths: "me" on note 1, "glio è as" on note 2 (the word "assai" starts under note 2), "sai" under note 3. The elision is glio_è_as, so "as_sai" (X) is wrong.
+16 C: r:q Bb2:e "me-" Bb2:e "glio_è_as-" Bn2:e "sai" B2:e "di" B2:e "quà" B2:e "par-"
+== bar 17 M: Y
+# The half note sits in the top space of the treble staff = E5. The quarter is on the top line = F5.
+17 M: r:q E5:h "Fi-" F5:q "glio_a-"
+== bar 19 B: X
+# Bartolo sings only "ma-to!" (two F3 eighths). Figaro takes over the staff and no rest is printed for Bartolo. Both readings last 3 beats; r:q r:h is the normal way to write rests from beat 2.
+19 B: F3:e "ma-" F3:e "to!" r:q r:h
+== bar 20 M: Y
+# Same as bar 17: the half note is in the top space = E5.
+20 M: r:q E5:h "fi-" F5:q "glio_a-"
+== bar 22 B: X
+# As in bar 19: Figaro continues on the shared staff with no printed rests for Bartolo. Written r:q r:h.
+22 B: F3:e "ma-" F3:e "to!" r:q r:h
+== bar 22 C: Y
+# Same text layout as bar 16: "glio è as" under the 2nd C4, "sai" under the 3rd C4.
+22 C: r:q C4:e "me-" C4:e "glio_è_as-" C4:e "sai" C4:e "di" A3:e "quà" F3:e "par-"
+== bar 23 B: Y
+# The dotted quarter and the following eighth are both on the second line from the top (F3). Measured: same height.
+23 B: r:h F3:q. "fi-" F3:e "glio_a-"
+== bar 28 S: X
+# Printed "quì" with a grave accent.
+28 S: r:q G4:e "mil-" A4:e "le" Bn4:e "dop-" C5:e "pie" D5:e "son" B4:e "quì"
+== bar 30 S: X
+# A natural is printed only on the slurred quarter. The eighth "ven-" has no accidental, so it is B4 (natural carried through the bar, written without n).
+30 S: C5:e "gar" Bn4:q B4:e "ven-" B4:q. "go" D5:e "per"
+== bar 32 S: Y
+# E5, then D5 (slurred), then the eighth "lo in" on the fourth line = D5 (same height as the D5 quarter before it). The last note "ber-" is C5.
+32 S: E5:e "por-" D5:q D5:e "lo_in" D5:q. "li-" C5:e "ber-"
+== bar 39 C: X
+# A natural is printed only on "là". Later B3s have no sign: written B3.
+39 C: Bn3:q "là," B3:e "os-" B3:e "ser-" C4:e "va-" C4:e "te_un" C4:e "po-" C4:e "co"
+== bar 45 F: X
+# A natural is printed on the dotted eighth "No,". The sixteenth "t'ar-" has no sign: B3.
+45 F: r:h r:q Bn3:e. "No," B3:s "t'ar-"
+== bar 45 S: X
+# A natural sign is printed in front of the E5 quarter "ni-".
+45 S: En5:q "ni-" C5:q "quo!" r:h
+== bar 47 F: X
+# A natural is printed only on the dotted quarter "No,". The eighth has no sign.
+47 F: r:h Bn3:q. "No," B3:e "t'ar-"
+== bar 53 S: X
+# A natural is printed only on the first note "que-". "sta!" has no sign.
+53 S: Bn4:q "que-" B4:q "sta!" r:h
+== bar 55 C: X
+# A natural is printed only on the dotted eighth "sma-". The sixteenth "nio" has no sign.
+55 C: r:q D4:e. "Fre-" D4:s "mo," Bn3:e. "sma-" B3:s "nio" G3:e. "dal" G3:s "fu-"
+== bar 57 C: X
+# A natural is printed only on "sti-". "no" has no sign.
+57 C: r:q D4:e. "il" D4:s "de-" Bn3:e. "sti-" B3:s "no" G3:e. "me" G3:s "la"
+== bar 57 S: X
+# A natural is printed only on "ro-". "re," has no sign.
+57 S: Bn4:q "ro-" B4:q "re," r:h
+== bar 61 C: Y
+# Close call. There is a small speck above the e of "de" that looks like a print blemish, not a clear accent. The same word is "de-" in bar 57, and Italian "destino" has no accent. Pitches A3 A3 G3 G3 G3 G3 agree.
+61 C: r:q A3:e. "il" A3:s "de-" G3:e. "sti-" G3:s "no" G3:e. "me" G3:s "la"
+== bar 61 S: X
+# A natural is printed only on "vec-". The following B4s have no sign.
+61 S: r:q C5:e. "u-" C5:s "na" Bn4:e. "vec-" B4:s "chia" B4:e. "me" B4:s "la"
+== bar 65 S: X
+# Same as bar 61: one natural on "vec-" only.
+65 S: r:q C5:e. "u-" C5:s "na" Bn4:e. "vec-" B4:s "chia" B4:e. "me" B4:s "la"
+== bar 71 M: Y
+# Printed "e" with no accent (even though the Italian word is "è").
+71 M: G4:q "fa," r:e C5:e "e" D5:q "quel" r:e Bn4:e "che"
+== bar 78 M: X
+# Close call. A slur joins C5-D5, but the printed syllables start under each note: "ma" under C5, "dre" under D5, "ab" under E5, "brac" under F5. There is no elision. Bar 76 sets "sua ma-dre ab-brac-" one syllable per note in the same way.
+78 M: A4:q "rà," r:e C5:e "sua" C5:e "ma-" D5:e "dre" E5:e "ab-" F5:e "brac-"
+== bar 84 C: OWN
+# The natural is printed only on the first "sua" (beat 2.5). The last eighth "sua" is on the same staff position with no accidental. The natural lasts to the end of the bar, so the pitch is B natural, written B3 (not Bb3 as in X; no printed sign, so not Bn3 as in Y).
+84 C: r:q r:e Bn3:e "sua" C4:e "ma-" C4:e "dre!" r:e B3:e "sua"
+== bar 93 C: OWN
+# Same as bar 84: one printed natural only. The last "suo" is B natural carried through the bar, written B3.
+93 C: r:q r:e Bn3:e "suo" C4:e "pa-" C4:e "dre!" r:e B3:e "suo"
+== bar 105 C: X
+# A3 on the top line, then F3 on the second line, then a quarter rest and an eighth rest. The eighth "di" is on the second line = F3 (not D3).
+105 C: A3:q "men-" F3:q "to" r:q r:e F3:e "di"
+== bar 109 S: Y
+# The last note hangs just below the C4 ledger line = B3, which is Bb3 by the key signature.
+109 S: Bb4:e "pe-" A4:e G4:e F4:e E4:e "na" D4:e C4:e "re-" Bb3:e
+== bar 119 S: Y
+# The dotted quarter is on the second line (G4) with a natural printed before it, cancelling the G#4 of the bar before. It is not E4.
+119 S: F4:h "si-" Gn4:q. "ster" G4:e "or"
+== bar 123 M: Y
+# C4 half note on the ledger line below the staff, then the dotted quarter on the bottom line = E4.
+123 M: C4:h "si-" E4:q. "ster" Bb4:e "or"
+== bar 124 C: X
+# All six notes are on the line next to the clef dots (F3); line positions measured from the staff lines.
+124 C: F3:q "men-" F3:e. "to" F3:s "di" F3:q "que-" F3:e. "sto" F3:s "tor-"
+== bar 125 C: X
+# F3 G3 A3 F3 D3 E3 F3 D3, a third above Y. Same staff-line measurement as bar 124.
+125 C: F3:e "men-" G3:e A3:e "to" F3:e "quest'" D3:e "a-" E3:e F3:e "ni-" D3:e "ma_ap-"
+== bar 126 C: X
+# The first note is on the fourth line (Bb2), not the bottom line (G2). Notes: Bb2 C3 D3 Bb2 C3 D3 E3 C3.
+126 C: Bb2:e "pe-" C3:e D3:e "na" Bb2:e "re-" C3:e "si-" D3:e E3:e "ster" C3:e "or"
+== bar 133 C: X
+# Measured staff lines: Bb2 (fourth line), C3, D3 (middle line), Bb2, then C3 quarter and C3 C3 eighths. No Italian text is printed under the Graf staff. Don Curzio's staff above has the same rhythm (eighth pair slurred, eighth, eighth, quarter, eighth, eighth), so his words "pe-na re-si-ster or" are used.
+133 C: Bb2:e "pe-" C3:e D3:e "na" Bb2:e "re-" C3:q "si-" C3:e "ster" C3:e "or"
+== bar 135 C: X
+# Same as bar 133: the same notes, and the words taken from Don Curzio's staff, which has the same rhythm.
+135 C: Bb2:e "pe-" C3:e D3:e "na" Bb2:e "re-" C3:q "si-" C3:e "ster" C3:e "or"

@@ -1,0 +1,43 @@
+# Bar count: the voice readings' 38 bars are right. The piano reading's 39 is wrong (see JUDGE_P18R.txt). Bars 3, 8 and 23 each run across a system break and count as one bar.
+== bar 4 F: Y
+# Figaro has C3 e, C3 e ("mo-ro.") and Marcellina sings the rest of the bar. Figaro's silence from beat 2 is r:q r:h (no half rest starting on beat 2).
+4 F: C3:e "mo-" C3:e "ro." r:q r:h
+== bar 5 M: X
+# The print has "ch'a - do-ro": "ch'a" is the first syllable of "ch'adoro" and a hyphen follows it.
+5 M: Bb4:e "rò" Bb4:e "d'un" Bb4:e "uom" C5:e "ch'a-" A4:e "do-" A4:e "ro." r:q
+== bar 8 C: X
+# The bar runs across the system break (page 224 sys3 to sys4). The second half has Bb3 e "Cur-", F3 e "zio.", a printed eighth rest, and Don Curzio's "Bon-" on the last eighth. The Count is silent for beat 4: r:q.
+8 C: Bb3:q "sar," Bb3:e "bra-" Bb3:s "vo," Bb3:s "Don" Bb3:e "Cur-" F3:e "zio." r:q
+== bar 9 U: Y
+# Six eighths D D C D Bb Bb (treble, sounding an octave lower). Under them "tà", "di", "sua", "Eccel-", "len-", "za." are each centred on a notehead: "sua" under the C, and "Eccel" printed as one group under the 4th note (D).
+9 U: D4:e "tà" D4:e "di" C4:e "sua" D4:e "Eccel-" Bb3:e "len-" Bb3:e "za." r:q
+== bar 13 U: X
+# The print has "pa-gar-la,o spo-sar-la" with "la,o" on one sixteenth. Two syllables on one note are joined with "_".
+13 U: r:q r:e Bb3:s "O" Bb3:s "pa-" Bb3:e "gar-" Bb3:s "la,_o" Eb4:s "spo-" Eb4:e "sar-" Bb3:e "la,"
+== bar 16 F: X
+# Zoomed: the last sixteenth "pa-" has its head on the top line of the bass staff with a flat, so it is Ab3. Bb3 would sit in the space above, like the first note of bar 17.
+16 F: Eb3:e "sen-" Eb3:s "za" F3:s "l'as-" G3:e "sen-" G3:e "so" G3:e "de'" G3:e "miei" G3:s "no-" G3:s "bi-" G3:s "li" Ab3:s "pa-"
+== bar 17 F: X
+# Figaro has Bb3 e, Bb3 e ("ren-ti...") and the Count enters after an eighth rest. Figaro's silence from beat 2 is r:q r:h.
+17 F: Bb3:e "ren-" Bb3:e "ti..." r:q r:h
+== bar 23 B: Y
+# The bar runs across the system break (page 226 sys1 to sys2). Sys1 half: Marcellina F5 e, C5 e ("Co-sa?"), then Bartolo's printed eighth rest and C4 e "La" (beat 1.5). Sys2 half: Bartolo A3 e "pro-" (printed natural) and A3 e "va?", then Don Curzio from beat 3 (r:s + three sixteenths). So "La" falls on beat 1.5, not 3.5 as in X.
+23 B: r:q r:e C4:e "La" An3:e "pro-" A3:e "va?" r:q
+== bar 30 F: OWN
+# Notes: A3 e, A3 A3 A3 E3 E3 sixteenths, F3 sixteenth with a printed natural ("ro-"), G3 e, G3 s, G3 s. Then one printed eighth rest and Marcellina's two sixteenths "U-na" (treble). Figaro is silent for beat 4: r:q. Y has the natural but splits the rest. X leaves out the printed natural.
+30 F: A3:e "brac-" A3:s "cio" A3:s "im-" A3:s "pres-" E3:s "so" E3:s "ge-" Fn3:s "ro-" G3:e "gli-" G3:s "fi-" G3:s "co." r:q
+== bar 31 M: X
+# "spa-to-la" is one word, so "to" is followed by a hyphen: "to-".
+31 M: G4:e "spa-" G4:s "to-" G4:s "la_im-" C#5:s "pres-" C#5:s "sa_al" D5:s "brac-" E5:s "cio" E5:e "de-" G4:e "stro?" r:q
+== bar 34 B: Y
+# Bartolo has A3 quarter "Chi?" and a printed eighth rest. Then Marcellina (D5 s, D5 s, Bb4 e, Bb4 s) runs to beat 2.75, where Bartolo's sixteenths "Ei la-dri ti ra-" begin. Bartolo's silence, aligned to the beat: r:q (beat 2) r:e r:s. X's r:q starts at 1.5 and crosses a beat.
+34 B: A3:q "Chi?" r:q r:e r:s G3:s "Ei" G3:s "la-" G3:s "dri" G3:s "ti" A3:s "ra-"
+== bar 36 B: Y
+# Bartolo has C4 e, C4 e ("ma-dre."), then a printed eighth rest. Figaro's "Ba-li-a..." (C4 A3 A3 eighths) runs from beat 1.5 to 3. Bartolo re-enters on beat 3 with A3 e "No,", r:s, C4 s "tua". The mark before "No," is a caesura "//" above the staff, not a natural, so the note is plain A3. Beat-aligned rests: r:e r:e r:q. X puts a half rest on beat 2.
+36 B: C4:e "ma-" C4:e "dre." r:e r:e r:q A3:e "No," r:s C4:s "tua"
+== bar 37 U: OWN
+# Question 2. "Don Curzio e Il Conte" share one staff after a change to treble clef, in two voices. Pixel check: staff lines F5=2289, D5=2307, B4=2325, G4=2343, E4=2361. Upper voice, stems up: F5 eighth "Sua", then D5, D5 ("ma-dre?"). Lower voice, stems down: A4 (head about 2334) eighth, then Bb4 (printed flat), Bb4. Don Curzio is named first and gets the upper (stem-up) voice. Timing: Bartolo C4 e, F3 e, a printed eighth rest, "Sua" on beat 1.5, "ma-" 2, "dre?" 2.5, an eighth rest, then Figaro's two sixteenths "Co-sa" on beat 3.5. Curzio is a tenor in treble clef, sounding an octave lower: F4 D4 D4.
+37 U: r:q r:e F4:e "Sua" D4:e "ma-" D4:e "dre?" r:q
+== bar 37 C: OWN
+# Question 2. The Count has the stem-down voice on the same staff. This treble clef is the tenor's clef: everywhere else the Count is in bass clef, and in bar 33, when he sings alone right after Curzio, the engraver changes back to bass clef. Here the staff is shared, so he is printed in the tenor's octave-transposing treble, and his notes sound an octave lower too: A3 Bb3 Bb3. Read literally (A4 Bb4), the baritone would sit above the tenor, and A4 is out of character for him. Sounding A3/Bb3 fits the piano: "Sua" goes against an F major chord with A2+A3 in the bass (F4 over A3), and "madre?" against Bb2+Bb3 with D4+F4+Bb4, where the Count doubles the bass Bb3 under Curzio's D4.
+37 C: r:q r:e A3:e "Sua" Bb3:e "ma-" Bb3:e "dre?" r:q
