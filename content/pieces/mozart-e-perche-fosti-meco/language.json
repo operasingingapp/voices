@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (perchè, si for sì, poì, senz' altro, Cos' è); poì is sung po-i on two notes with the normal stress on po. IPA follows sung Italian conventions: stressed syllable marked, elisions joined with ‿ only where the score sets two words on one note, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
  "phrases": [
   {
    "id": "c1",
@@ -13,43 +13,43 @@
    "occurrence": 1,
    "startMeasure": "1",
    "original": "E perchè fosti meco stamattina si austera?",
-   "translation": "",
-   "ipa": "",
+   "translation": "And why were you so stern with me this morning?",
+   "ipa": "e perˈke ˈfo.sti ˈme.ko sta.matˈti.na ˈsi auˈstɛ.ra",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "perchè",
-     "",
-     ""
+     "why",
+     "perˈke"
     ],
     [
      "fosti",
-     "",
-     ""
+     "you were",
+     "ˈfo.sti"
     ],
     [
      "meco",
-     "",
-     ""
+     "with me",
+     "ˈme.ko"
     ],
     [
      "stamattina",
-     "",
-     ""
+     "this morning",
+     "sta.matˈti.na"
     ],
     [
      "si",
-     "",
-     ""
+     "so",
+     "ˈsi"
     ],
     [
      "austera?",
-     "",
-     ""
+     "stern",
+     "auˈstɛ.ra"
     ]
    ],
    "glossGroups": [],
@@ -62,28 +62,28 @@
    "occurrence": 1,
    "startMeasure": "2",
    "original": "Col paggio ch'ivi c'era.",
-   "translation": "",
-   "ipa": "",
+   "translation": "With the page who was there.",
+   "ipa": "kol ˈpad.dʒo ˈki.vi ˈtʃɛ.ra",
    "words": [
     [
      "Col",
-     "",
-     ""
+     "with the",
+     "kol"
     ],
     [
      "paggio",
-     "",
-     ""
+     "page",
+     "ˈpad.dʒo"
     ],
     [
      "ch'ivi",
-     "",
-     ""
+     "who there",
+     "ˈki.vi"
     ],
     [
      "c'era.",
-     "",
-     ""
+     "was",
+     "ˈtʃɛ.ra"
     ]
    ],
    "glossGroups": [],
@@ -96,51 +96,59 @@
    "occurrence": 1,
    "startMeasure": "3",
    "original": "Ed a Basilio, che per me ti parlò",
-   "translation": "",
-   "ipa": "",
+   "translation": "And to Basilio, who spoke to you on my behalf…",
+   "ipa": "ed a baˈzi.ljo ke per ˈme ti parˈlɔ",
    "words": [
     [
      "Ed",
-     "",
-     ""
+     "and",
+     "ed"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "Basilio,",
-     "",
-     ""
+     "Basilio",
+     "baˈzi.ljo"
     ],
     [
      "che",
-     "",
-     ""
+     "who",
+     "ke"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "ti",
-     "",
-     ""
+     "to you",
+     "ti"
     ],
     [
      "parlò",
-     "",
-     ""
+     "spoke",
+     "parˈlɔ"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "on my behalf"
+    }
+   ],
    "audio": {}
   },
   {
@@ -150,48 +158,48 @@
    "occurrence": 1,
    "startMeasure": "5",
    "original": "Ma qual bisogno abbiam noi che un Basilio...",
-   "translation": "",
-   "ipa": "",
+   "translation": "But what need have we of a Basilio…",
+   "ipa": "ma kwal biˈzoɲ.ɲo‿abˈbjam ˈno.i ke‿un baˈzi.ljo",
    "words": [
     [
      "Ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "qual",
-     "",
-     ""
+     "what",
+     "kwal"
     ],
     [
      "bisogno",
-     "",
-     ""
+     "need",
+     "biˈzoɲ.ɲo"
     ],
     [
      "abbiam",
-     "",
-     ""
+     "have",
+     "abˈbjam"
     ],
     [
      "noi",
-     "",
-     ""
+     "we",
+     "ˈno.i"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "Basilio...",
-     "",
-     ""
+     "Basilio",
+     "baˈzi.ljo"
     ]
    ],
    "glossGroups": [],
@@ -204,28 +212,28 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "È vero, è vero,",
-   "translation": "",
-   "ipa": "",
+   "translation": "That's true, that's true,",
+   "ipa": "ɛ ˈve.ro ɛ ˈve.ro",
    "words": [
     [
      "È",
-     "",
-     ""
+     "it is",
+     "ɛ"
     ],
     [
      "vero,",
-     "",
-     ""
+     "true",
+     "ˈve.ro"
     ],
     [
      "è",
-     "",
-     ""
+     "it is",
+     "ɛ"
     ],
     [
      "vero,",
-     "",
-     ""
+     "true",
+     "ˈve.ro"
     ]
    ],
    "glossGroups": [],
@@ -238,28 +246,28 @@
    "occurrence": 1,
    "startMeasure": "7",
    "original": "e mi prometti poì...",
-   "translation": "",
-   "ipa": "",
+   "translation": "and you promise me, then…",
+   "ipa": "e mi proˈmet.ti ˈpɔ.i",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "prometti",
-     "",
-     ""
+     "you promise",
+     "proˈmet.ti"
     ],
     [
      "poì...",
-     "",
-     ""
+     "then",
+     "ˈpɔ.i"
     ]
    ],
    "glossGroups": [],
@@ -272,38 +280,38 @@
    "occurrence": 1,
    "startMeasure": "8",
    "original": "se tu manchi, o cor mio",
-   "translation": "",
-   "ipa": "",
+   "translation": "if you fail me, oh my heart…",
+   "ipa": "se ˈtu ˈman.ki‿o ˈkɔr ˈmi.o",
    "words": [
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "tu",
-     "",
-     ""
+     "you",
+     "ˈtu"
     ],
     [
      "manchi,",
-     "",
-     ""
+     "fail",
+     "ˈman.ki"
     ],
     [
      "o",
-     "",
-     ""
+     "oh",
+     "o"
     ],
     [
      "cor",
-     "",
-     ""
+     "heart",
+     "ˈkɔr"
     ],
     [
      "mio",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ]
    ],
    "glossGroups": [],
@@ -316,38 +324,38 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "ma la contessa attenderà il vasetto.",
-   "translation": "",
-   "ipa": "",
+   "translation": "But the Countess will be waiting for the little flask.",
+   "ipa": "ma la konˈtes.sa at.ten.deˈra‿il vaˈzet.to",
    "words": [
     [
      "ma",
-     "",
-     ""
+     "but",
+     "ma"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "contessa",
-     "",
-     ""
+     "Countess",
+     "konˈtes.sa"
     ],
     [
      "attenderà",
-     "",
-     ""
+     "will wait for",
+     "at.ten.deˈra"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "vasetto.",
-     "",
-     ""
+     "little flask",
+     "vaˈzet.to"
     ]
    ],
    "glossGroups": [],
@@ -359,64 +367,78 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "10",
-   "original": "Eh, fu un pretesto, parlato io non avrei senza di questo.",
-   "translation": "",
-   "ipa": "",
+   "original": "Eh, fu un pretesto,",
+   "translation": "Oh, that was a pretext;",
+   "ipa": "ɛ ˈfu‿un preˈtɛ.sto",
    "words": [
     [
      "Eh,",
-     "",
-     ""
+     "oh",
+     "ɛ"
     ],
     [
      "fu",
-     "",
-     ""
+     "it was",
+     "ˈfu"
     ],
     [
      "un",
-     "",
-     ""
+     "a",
+     "un"
     ],
     [
      "pretesto,",
-     "",
-     ""
-    ],
+     "pretext",
+     "preˈtɛ.sto"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s3_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "parlato io non avrei senza di questo.",
+   "translation": "I wouldn't have spoken without it.",
+   "ipa": "parˈla.to‿ˈi.o non aˈvrɛ.i ˈsɛn.tsa di ˈkwe.sto",
+   "words": [
     [
      "parlato",
-     "",
-     ""
+     "spoken",
+     "parˈla.to"
     ],
     [
      "io",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "avrei",
-     "",
-     ""
+     "would have",
+     "aˈvrɛ.i"
     ],
     [
      "senza",
-     "",
-     ""
+     "without",
+     "ˈsɛn.tsa"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "questo.",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ]
    ],
    "glossGroups": [],
@@ -429,13 +451,13 @@
    "occurrence": 1,
    "startMeasure": "12",
    "original": "Carissima!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Dearest!",
+   "ipa": "kaˈris.si.ma",
    "words": [
     [
      "Carissima!",
-     "",
-     ""
+     "dearest",
+     "kaˈris.si.ma"
     ]
    ],
    "glossGroups": [],
@@ -448,21 +470,29 @@
    "occurrence": 1,
    "startMeasure": "13",
    "original": "Vien gente.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Someone's coming.",
+   "ipa": "ˈvjɛn ˈdʒɛn.te",
    "words": [
     [
      "Vien",
-     "",
-     ""
+     "comes",
+     "ˈvjɛn"
     ],
     [
      "gente.",
-     "",
-     ""
+     "people",
+     "ˈdʒɛn.te"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "someone's coming"
+    }
+   ],
    "audio": {}
   },
   {
@@ -472,31 +502,39 @@
    "occurrence": 1,
    "startMeasure": "13",
    "original": "È mia senz' altro.",
-   "translation": "",
-   "ipa": "",
+   "translation": "She's mine, no doubt about it.",
+   "ipa": "ɛ ˈmi.a sents ˈal.tro",
    "words": [
     [
      "È",
-     "",
-     ""
+     "she is",
+     "ɛ"
     ],
     [
      "mia",
-     "",
-     ""
+     "mine",
+     "ˈmi.a"
     ],
     [
      "senz'",
-     "",
-     ""
+     "without",
+     "sents"
     ],
     [
      "altro.",
-     "",
-     ""
+     "other",
+     "ˈal.tro"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "without doubt"
+    }
+   ],
    "audio": {}
   },
   {
@@ -506,41 +544,50 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "Forbitevi la bocca, o signor scaltro.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Wipe your mouth, you sly gentleman.",
+   "ipa": "forˈbi.te.vi la ˈbok.ka o siɲˈɲor ˈskal.tro",
    "words": [
     [
      "Forbitevi",
-     "",
-     ""
+     "wipe",
+     "forˈbi.te.vi"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "bocca,",
-     "",
-     ""
+     "mouth",
+     "ˈbok.ka"
     ],
     [
      "o",
-     "",
-     ""
+     "oh",
+     "o"
     ],
     [
      "signor",
-     "",
-     ""
+     "sir",
+     "siɲˈɲor"
     ],
     [
      "scaltro.",
-     "",
-     ""
+     "sly",
+     "ˈskal.tro"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "forget it (wipe your mouth)"
+    }
+   ],
    "audio": {}
   },
   {
@@ -550,13 +597,13 @@
    "occurrence": 1,
    "startMeasure": "16",
    "original": "Taci!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Hush!",
+   "ipa": "ˈta.tʃi",
    "words": [
     [
      "Taci!",
-     "",
-     ""
+     "be quiet",
+     "ˈta.tʃi"
     ]
    ],
    "glossGroups": [],
@@ -569,28 +616,28 @@
    "occurrence": 1,
    "startMeasure": "16",
    "original": "Ehi Susanna, ove vai?",
-   "translation": "",
-   "ipa": "",
+   "translation": "Hey, Susanna, where are you going?",
+   "ipa": "ˈɛ.i suˈzan.na‿ˈo.ve ˈva.i",
    "words": [
     [
      "Ehi",
-     "",
-     ""
+     "hey",
+     "ˈɛ.i"
     ],
     [
      "Susanna,",
-     "",
-     ""
+     "Susanna",
+     "suˈzan.na"
     ],
     [
      "ove",
-     "",
-     ""
+     "where",
+     "ˈo.ve"
     ],
     [
      "vai?",
-     "",
-     ""
+     "you go",
+     "ˈva.i"
     ]
    ],
    "glossGroups": [],
@@ -603,43 +650,43 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "senza avvocato hai già vinta la causa.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Without a lawyer you have already won the case.",
+   "ipa": "ˈsɛn.tsa‿av.voˈka.to ˈa.i ˈdʒa ˈvin.ta la ˈkau.za",
    "words": [
     [
      "senza",
-     "",
-     ""
+     "without",
+     "ˈsɛn.tsa"
     ],
     [
      "avvocato",
-     "",
-     ""
+     "lawyer",
+     "av.voˈka.to"
     ],
     [
      "hai",
-     "",
-     ""
+     "you have",
+     "ˈa.i"
     ],
     [
      "già",
-     "",
-     ""
+     "already",
+     "ˈdʒa"
     ],
     [
      "vinta",
-     "",
-     ""
+     "won",
+     "ˈvin.ta"
     ],
     [
      "la",
-     "",
-     ""
+     "the",
+     "la"
     ],
     [
      "causa.",
-     "",
-     ""
+     "case",
+     "ˈkau.za"
     ]
    ],
    "glossGroups": [],
@@ -652,26 +699,35 @@
    "occurrence": 1,
    "startMeasure": "18",
    "original": "Cos' è nato?",
-   "translation": "",
-   "ipa": "",
+   "translation": "What has happened?",
+   "ipa": "kɔz ɛ ˈna.to",
    "words": [
     [
      "Cos'",
-     "",
-     ""
+     "what",
+     "kɔz"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "nato?",
-     "",
-     ""
+     "born, happened",
+     "ˈna.to"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "what has happened"
+    }
+   ],
    "audio": {}
   }
  ]

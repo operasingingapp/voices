@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (dell' antico, si for sì, miò, gittate, ch'io); miò is sung as mio. IPA follows sung Italian conventions: stressed syllable marked, elisions joined with ‿ only where the score sets two (or three) words on one note, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
  "phrases": [
   {
    "id": "m1",
@@ -12,64 +12,78 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "1",
-   "original": "Eccovi, o caro amico, il dolce frutto dell' antico amor nostro.",
-   "translation": "",
-   "ipa": "",
+   "original": "Eccovi, o caro amico,",
+   "translation": "Here, my dear friend,",
+   "ipa": "ˈɛk.ko.vi‿o ˈka.ro‿aˈmi.ko",
    "words": [
     [
      "Eccovi,",
-     "",
-     ""
+     "here is for you",
+     "ˈɛk.ko.vi"
     ],
     [
      "o",
-     "",
-     ""
+     "oh",
+     "o"
     ],
     [
      "caro",
-     "",
-     ""
+     "dear",
+     "ˈka.ro"
     ],
     [
      "amico,",
-     "",
-     ""
-    ],
+     "friend",
+     "aˈmi.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m1_2",
+   "role": "marcellina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "il dolce frutto dell' antico amor nostro.",
+   "translation": "is the sweet fruit of our old love.",
+   "ipa": "il ˈdol.tʃe ˈfrut.to dell anˈti.ko‿aˈmor ˈnɔ.stro",
+   "words": [
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "dolce",
-     "",
-     ""
+     "sweet",
+     "ˈdol.tʃe"
     ],
     [
      "frutto",
-     "",
-     ""
+     "fruit",
+     "ˈfrut.to"
     ],
     [
      "dell'",
-     "",
-     ""
+     "of the",
+     "dell"
     ],
     [
      "antico",
-     "",
-     ""
+     "old",
+     "anˈti.ko"
     ],
     [
      "amor",
-     "",
-     ""
+     "love",
+     "aˈmor"
     ],
     [
      "nostro.",
-     "",
-     ""
+     "our",
+     "ˈnɔ.stro"
     ]
    ],
    "glossGroups": [],
@@ -81,114 +95,142 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "2",
-   "original": "Or non parliamo di fatti si rimoti, egli è miò figlio, mia consorte voi siete, e le nozze farem quando volete.",
-   "translation": "",
-   "ipa": "",
+   "original": "Or non parliamo di fatti si rimoti,",
+   "translation": "Let's not talk now about things so far in the past.",
+   "ipa": "or non parˈlja.mo di ˈfat.ti ˈsi riˈmɔ.ti",
    "words": [
     [
      "Or",
-     "",
-     ""
+     "now",
+     "or"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "parliamo",
-     "",
-     ""
+     "let's speak",
+     "parˈlja.mo"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "fatti",
-     "",
-     ""
+     "events",
+     "ˈfat.ti"
     ],
     [
      "si",
-     "",
-     ""
+     "so",
+     "ˈsi"
     ],
     [
      "rimoti,",
-     "",
-     ""
-    ],
+     "remote",
+     "riˈmɔ.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "b1_2",
+   "role": "bartolo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "egli è miò figlio, mia consorte voi siete,",
+   "translation": "He is my son, you are my wife,",
+   "ipa": "ˈeʎ.ʎi‿ɛ ˈmi.o ˈfiʎ.ʎo‿ˈmi.a konˈsɔr.te ˈvo.i ˈsjɛ.te",
+   "words": [
     [
      "egli",
-     "",
-     ""
+     "he",
+     "ˈeʎ.ʎi"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "miò",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ],
     [
      "figlio,",
-     "",
-     ""
+     "son",
+     "ˈfiʎ.ʎo"
     ],
     [
      "mia",
-     "",
-     ""
+     "my",
+     "ˈmi.a"
     ],
     [
      "consorte",
-     "",
-     ""
+     "wife",
+     "konˈsɔr.te"
     ],
     [
      "voi",
-     "",
-     ""
+     "you",
+     "ˈvo.i"
     ],
     [
      "siete,",
-     "",
-     ""
-    ],
+     "are",
+     "ˈsjɛ.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "b1_3",
+   "role": "bartolo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "e le nozze farem quando volete.",
+   "translation": "and we'll hold the wedding whenever you like.",
+   "ipa": "e le ˈnɔt.tse faˈrem ˈkwan.do voˈle.te",
+   "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "le",
-     "",
-     ""
+     "the",
+     "le"
     ],
     [
      "nozze",
-     "",
-     ""
+     "wedding",
+     "ˈnɔt.tse"
     ],
     [
      "farem",
-     "",
-     ""
+     "we'll make",
+     "faˈrem"
     ],
     [
      "quando",
-     "",
-     ""
+     "when",
+     "ˈkwan.do"
     ],
     [
      "volete.",
-     "",
-     ""
+     "you wish",
+     "voˈle.te"
     ]
    ],
    "glossGroups": [],
@@ -201,28 +243,28 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "Oggi le doppie saranno,",
-   "translation": "",
-   "ipa": "",
+   "translation": "Today it will be a double one;",
+   "ipa": "ˈɔd.dʒi le ˈdop.pje saˈran.no",
    "words": [
     [
      "Oggi",
-     "",
-     ""
+     "today",
+     "ˈɔd.dʒi"
     ],
     [
      "le",
-     "",
-     ""
+     "the",
+     "le"
     ],
     [
      "doppie",
-     "",
-     ""
+     "double (weddings)",
+     "ˈdop.pje"
     ],
     [
      "saranno,",
-     "",
-     ""
+     "will be",
+     "saˈran.no"
     ]
    ],
    "glossGroups": [],
@@ -234,84 +276,98 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "7",
-   "original": "prendi, questo è il biglietto del denar che a me devi, ed è tua dote.",
-   "translation": "",
-   "ipa": "",
+   "original": "prendi, questo è il biglietto del denar che a me devi,",
+   "translation": "take this; it's the note for the money you owe me,",
+   "ipa": "ˈprɛn.di ˈkwe.sto‿ɛ‿il biʎˈʎet.to del deˈnar ke‿a ˈme ˈde.vi",
    "words": [
     [
      "prendi,",
-     "",
-     ""
+     "take",
+     "ˈprɛn.di"
     ],
     [
      "questo",
-     "",
-     ""
+     "this",
+     "ˈkwe.sto"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "biglietto",
-     "",
-     ""
+     "note",
+     "biʎˈʎet.to"
     ],
     [
      "del",
-     "",
-     ""
+     "of the",
+     "del"
     ],
     [
      "denar",
-     "",
-     ""
+     "money",
+     "deˈnar"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "devi,",
-     "",
-     ""
-    ],
+     "you owe",
+     "ˈde.vi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m3_2",
+   "role": "marcellina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "ed è tua dote.",
+   "translation": "and it's your dowry.",
+   "ipa": "ed ɛ ˈtu.a ˈdɔ.te",
+   "words": [
     [
      "ed",
-     "",
-     ""
+     "and",
+     "ed"
     ],
     [
      "è",
-     "",
-     ""
+     "it is",
+     "ɛ"
     ],
     [
      "tua",
-     "",
-     ""
+     "your",
+     "ˈtu.a"
     ],
     [
      "dote.",
-     "",
-     ""
+     "dowry",
+     "ˈdɔ.te"
     ]
    ],
    "glossGroups": [],
@@ -324,28 +380,28 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "Prendi ancor questa borsa.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Take this purse as well.",
+   "ipa": "ˈprɛn.di‿anˈkor ˈkwe.sta ˈbor.sa",
    "words": [
     [
      "Prendi",
-     "",
-     ""
+     "take",
+     "ˈprɛn.di"
     ],
     [
      "ancor",
-     "",
-     ""
+     "also",
+     "anˈkor"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "borsa.",
-     "",
-     ""
+     "purse",
+     "ˈbor.sa"
     ]
    ],
    "glossGroups": [],
@@ -358,23 +414,23 @@
    "occurrence": 1,
    "startMeasure": "10",
    "original": "E questa ancora.",
-   "translation": "",
-   "ipa": "",
+   "translation": "And this one too.",
+   "ipa": "e ˈkwe.sta‿anˈko.ra",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "questa",
-     "",
-     ""
+     "this",
+     "ˈkwe.sta"
     ],
     [
      "ancora.",
-     "",
-     ""
+     "too",
+     "anˈko.ra"
     ]
    ],
    "glossGroups": [],
@@ -387,38 +443,38 @@
    "occurrence": 1,
    "startMeasure": "11",
    "original": "Bravi, gittate pur, ch'io piglio ognora.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Bravo, keep throwing, I'll keep catching.",
+   "ipa": "ˈbra.vi dʒitˈta.te ˈpur ˈkjo ˈpiʎ.ʎo‿oɲˈɲo.ra",
    "words": [
     [
      "Bravi,",
-     "",
-     ""
+     "well done",
+     "ˈbra.vi"
     ],
     [
      "gittate",
-     "",
-     ""
+     "throw",
+     "dʒitˈta.te"
     ],
     [
      "pur,",
-     "",
-     ""
+     "just, go on",
+     "ˈpur"
     ],
     [
      "ch'io",
-     "",
-     ""
+     "for I",
+     "ˈkjo"
     ],
     [
      "piglio",
-     "",
-     ""
+     "take",
+     "ˈpiʎ.ʎo"
     ],
     [
      "ognora.",
-     "",
-     ""
+     "always",
+     "oɲˈɲo.ra"
     ]
    ],
    "glossGroups": [],
@@ -430,54 +486,68 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "12",
-   "original": "Voliamo ad informar d'ogni avventura Madama e nostro zio.",
-   "translation": "",
-   "ipa": "",
+   "original": "Voliamo ad informar d'ogni",
+   "translation": "Let's fly to tell my lady and our uncle",
+   "ipa": "voˈlja.mo‿ad in.forˈmar ˈdoɲ.ɲi",
    "words": [
     [
      "Voliamo",
-     "",
-     ""
+     "let's fly",
+     "voˈlja.mo"
     ],
     [
      "ad",
-     "",
-     ""
+     "to",
+     "ad"
     ],
     [
      "informar",
-     "",
-     ""
+     "inform",
+     "in.forˈmar"
     ],
     [
      "d'ogni",
-     "",
-     ""
-    ],
+     "of every",
+     "ˈdoɲ.ɲi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s2_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "avventura Madama e nostro zio.",
+   "translation": "about everything that has happened.",
+   "ipa": "av.venˈtu.ra maˈda.ma‿e ˈnɔ.stro ˈtsi.o",
+   "words": [
     [
      "avventura",
-     "",
-     ""
+     "happening",
+     "av.venˈtu.ra"
     ],
     [
      "Madama",
-     "",
-     ""
+     "my lady",
+     "maˈda.ma"
     ],
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "nostro",
-     "",
-     ""
+     "our",
+     "ˈnɔ.stro"
     ],
     [
      "zio.",
-     "",
-     ""
+     "uncle",
+     "ˈtsi.o"
     ]
    ],
    "glossGroups": [],
@@ -490,46 +560,56 @@
    "occurrence": 1,
    "startMeasure": "14",
    "original": "Chi è al par di me contenta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Who is as happy as I am!",
+   "ipa": "ˈki‿ɛ‿al ˈpar di ˈme konˈtɛn.ta",
    "words": [
     [
      "Chi",
-     "",
-     ""
+     "who",
+     "ˈki"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "al",
-     "",
-     ""
+     "at the",
+     "al"
     ],
     [
      "par",
-     "",
-     ""
+     "level",
+     "ˈpar"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "contenta!",
-     "",
-     ""
+     "happy",
+     "konˈtɛn.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "as much as I"
+    }
+   ],
    "audio": {}
   },
   {
@@ -539,46 +619,56 @@
    "occurrence": 1,
    "startMeasure": "15",
    "original": "chi è al par di me contenta!",
-   "translation": "",
-   "ipa": "",
+   "translation": "who is as happy as I am!",
+   "ipa": "ˈki‿ɛ‿al ˈpar di ˈme konˈtɛn.ta",
    "words": [
     [
      "chi",
-     "",
-     ""
+     "who",
+     "ˈki"
     ],
     [
      "è",
-     "",
-     ""
+     "is",
+     "ɛ"
     ],
     [
      "al",
-     "",
-     ""
+     "at the",
+     "al"
     ],
     [
      "par",
-     "",
-     ""
+     "level",
+     "ˈpar"
     ],
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "me",
-     "",
-     ""
+     "me",
+     "ˈme"
     ],
     [
      "contenta!",
-     "",
-     ""
+     "happy",
+     "konˈtɛn.ta"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "as much as I"
+    }
+   ],
    "audio": {}
   },
   {
@@ -588,13 +678,13 @@
    "occurrence": 1,
    "startMeasure": "16",
    "original": "Io!",
-   "translation": "",
-   "ipa": "",
+   "translation": "I am!",
+   "ipa": "ˈi.o",
    "words": [
     [
      "Io!",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ]
    ],
    "glossGroups": [],
@@ -607,13 +697,13 @@
    "occurrence": 1,
    "startMeasure": "16",
    "original": "Io!",
-   "translation": "",
-   "ipa": "",
+   "translation": "I am!",
+   "ipa": "ˈi.o",
    "words": [
     [
      "Io!",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ]
    ],
    "glossGroups": [],
@@ -626,51 +716,60 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "E schiatti il signor conte al gusto mio.",
-   "translation": "",
-   "ipa": "",
+   "translation": "And let the Count burst with rage, for all I care.",
+   "ipa": "e ˈskjat.ti‿il siɲˈɲor ˈkon.te al ˈgu.sto ˈmi.o",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "schiatti",
-     "",
-     ""
+     "may burst",
+     "ˈskjat.ti"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "signor",
-     "",
-     ""
+     "lord",
+     "siɲˈɲor"
     ],
     [
      "conte",
-     "",
-     ""
+     "Count",
+     "ˈkon.te"
     ],
     [
      "al",
-     "",
-     ""
+     "to the",
+     "al"
     ],
     [
      "gusto",
-     "",
-     ""
+     "pleasure",
+     "ˈgu.sto"
     ],
     [
      "mio.",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "to my delight"
+    }
+   ],
    "audio": {}
   },
   {
@@ -680,13 +779,13 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "Io!",
-   "translation": "",
-   "ipa": "",
+   "translation": "I am!",
+   "ipa": "ˈi.o",
    "words": [
     [
      "Io!",
-     "",
-     ""
+     "I",
+     "ˈi.o"
     ]
    ],
    "glossGroups": [],
@@ -699,51 +798,60 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "E schiatti il signor conte al gusto mio.",
-   "translation": "",
-   "ipa": "",
+   "translation": "And let the Count burst with rage, for all I care.",
+   "ipa": "e ˈskjat.ti‿il siɲˈɲor ˈkon.te al ˈgu.sto ˈmi.o",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "schiatti",
-     "",
-     ""
+     "may burst",
+     "ˈskjat.ti"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "signor",
-     "",
-     ""
+     "lord",
+     "siɲˈɲor"
     ],
     [
      "conte",
-     "",
-     ""
+     "Count",
+     "ˈkon.te"
     ],
     [
      "al",
-     "",
-     ""
+     "to the",
+     "al"
     ],
     [
      "gusto",
-     "",
-     ""
+     "pleasure",
+     "ˈgu.sto"
     ],
     [
      "mio.",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "to my delight"
+    }
+   ],
    "audio": {}
   },
   {
@@ -753,51 +861,60 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "E schiatti il signor conte al gusto mio.",
-   "translation": "",
-   "ipa": "",
+   "translation": "And let the Count burst with rage, for all I care.",
+   "ipa": "e ˈskjat.ti‿il siɲˈɲor ˈkon.te al ˈgu.sto ˈmi.o",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "schiatti",
-     "",
-     ""
+     "may burst",
+     "ˈskjat.ti"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "signor",
-     "",
-     ""
+     "lord",
+     "siɲˈɲor"
     ],
     [
      "conte",
-     "",
-     ""
+     "Count",
+     "ˈkon.te"
     ],
     [
      "al",
-     "",
-     ""
+     "to the",
+     "al"
     ],
     [
      "gusto",
-     "",
-     ""
+     "pleasure",
+     "ˈgu.sto"
     ],
     [
      "mio.",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "to my delight"
+    }
+   ],
    "audio": {}
   },
   {
@@ -807,51 +924,60 @@
    "occurrence": 1,
    "startMeasure": "17",
    "original": "E schiatti il signor conte al gusto mio.",
-   "translation": "",
-   "ipa": "",
+   "translation": "And let the Count burst with rage, for all I care.",
+   "ipa": "e ˈskjat.ti‿il siɲˈɲor ˈkon.te al ˈgu.sto ˈmi.o",
    "words": [
     [
      "E",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "schiatti",
-     "",
-     ""
+     "may burst",
+     "ˈskjat.ti"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "signor",
-     "",
-     ""
+     "lord",
+     "siɲˈɲor"
     ],
     [
      "conte",
-     "",
-     ""
+     "Count",
+     "ˈkon.te"
     ],
     [
      "al",
-     "",
-     ""
+     "to the",
+     "al"
     ],
     [
      "gusto",
-     "",
-     ""
+     "pleasure",
+     "ˈgu.sto"
     ],
     [
      "mio.",
-     "",
-     ""
+     "my",
+     "ˈmi.o"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "to my delight"
+    }
+   ],
    "audio": {}
   }
  ]

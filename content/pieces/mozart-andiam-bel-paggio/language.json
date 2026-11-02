@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "",
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (v'è, maraviglia, insiem, andrem, de' fiori, Cherubin); the second andiam is sung an-di-am on three notes, and v'è is the exclamation ve' (look!). IPA follows sung Italian conventions: stressed syllable marked, elisions joined with ‿ only where the score sets two words on one note, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
  "phrases": [
   {
    "id": "r1",
@@ -12,119 +12,170 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "1",
-   "original": "Andiam, andiam, bel paggio, in casa mia tutte ritroverai le più belle ragazze del castello, di tutte sarai tu certo più bello.",
-   "translation": "",
-   "ipa": "",
+   "original": "Andiam, andiam, bel paggio,",
+   "translation": "Come on, come on, pretty page;",
+   "ipa": "anˈdjam an.diˈam bɛl ˈpad.dʒo",
    "words": [
     [
      "Andiam,",
-     "",
-     ""
+     "let's go",
+     "anˈdjam"
     ],
     [
      "andiam,",
-     "",
-     ""
+     "let's go",
+     "an.diˈam"
     ],
     [
      "bel",
-     "",
-     ""
+     "pretty",
+     "bɛl"
     ],
     [
      "paggio,",
-     "",
-     ""
-    ],
+     "page",
+     "ˈpad.dʒo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r1_2",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "in casa mia tutte ritroverai le",
+   "translation": "at my house you'll find all the",
+   "ipa": "in ˈka.za ˈmi.a ˈtut.te ri.tro.veˈra.i le",
+   "words": [
     [
      "in",
-     "",
-     ""
+     "in",
+     "in"
     ],
     [
      "casa",
-     "",
-     ""
+     "house",
+     "ˈka.za"
     ],
     [
      "mia",
-     "",
-     ""
+     "my",
+     "ˈmi.a"
     ],
     [
      "tutte",
-     "",
-     ""
+     "all",
+     "ˈtut.te"
     ],
     [
      "ritroverai",
-     "",
-     ""
+     "you will find",
+     "ri.tro.veˈra.i"
     ],
     [
      "le",
-     "",
-     ""
-    ],
+     "the",
+     "le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "at my house"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1_3",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "più belle ragazze del castello,",
+   "translation": "prettiest girls in the castle,",
+   "ipa": "ˈpju ˈbɛl.le raˈgat.tse del kaˈstɛl.lo",
+   "words": [
     [
      "più",
-     "",
-     ""
+     "most",
+     "ˈpju"
     ],
     [
      "belle",
-     "",
-     ""
+     "beautiful",
+     "ˈbɛl.le"
     ],
     [
      "ragazze",
-     "",
-     ""
+     "girls",
+     "raˈgat.tse"
     ],
     [
      "del",
-     "",
-     ""
+     "of the",
+     "del"
     ],
     [
      "castello,",
-     "",
-     ""
-    ],
+     "castle",
+     "kaˈstɛl.lo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r1_4",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "di tutte sarai tu certo più bello.",
+   "translation": "and you'll surely be prettier than all of them.",
+   "ipa": "di ˈtut.te saˈra.i ˈtu ˈtʃɛr.to ˈpju ˈbɛl.lo",
+   "words": [
     [
      "di",
-     "",
-     ""
+     "of",
+     "di"
     ],
     [
      "tutte",
-     "",
-     ""
+     "all",
+     "ˈtut.te"
     ],
     [
      "sarai",
-     "",
-     ""
+     "will be",
+     "saˈra.i"
     ],
     [
      "tu",
-     "",
-     ""
+     "you",
+     "ˈtu"
     ],
     [
      "certo",
-     "",
-     ""
+     "surely",
+     "ˈtʃɛr.to"
     ],
     [
      "più",
-     "",
-     ""
+     "more",
+     "ˈpju"
     ],
     [
      "bello.",
-     "",
-     ""
+     "beautiful",
+     "ˈbɛl.lo"
     ]
    ],
    "glossGroups": [],
@@ -137,48 +188,48 @@
    "occurrence": 1,
    "startMeasure": "6",
    "original": "Ah! se il conte mi trova! misero me!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Ah, if the Count finds me! Poor me!",
+   "ipa": "a se‿il ˈkon.te mi ˈtrɔ.va ˈmi.ze.ro ˈme",
    "words": [
     [
      "Ah!",
-     "",
-     ""
+     "ah",
+     "a"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "il",
-     "",
-     ""
+     "the",
+     "il"
     ],
     [
      "conte",
-     "",
-     ""
+     "Count",
+     "ˈkon.te"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "trova!",
-     "",
-     ""
+     "finds",
+     "ˈtrɔ.va"
     ],
     [
      "misero",
-     "",
-     ""
+     "wretched",
+     "ˈmi.ze.ro"
     ],
     [
      "me!",
-     "",
-     ""
+     "me",
+     "ˈme"
     ]
    ],
    "glossGroups": [],
@@ -191,53 +242,53 @@
    "occurrence": 1,
    "startMeasure": "7",
    "original": "Tu sai che partito ei mi crede per Siviglia.",
-   "translation": "",
-   "ipa": "",
+   "translation": "You know he thinks I've left for Seville.",
+   "ipa": "ˈtu ˈsa.i ke parˈti.to‿ˈe.i mi ˈkre.de per siˈviʎ.ʎa",
    "words": [
     [
      "Tu",
-     "",
-     ""
+     "you",
+     "ˈtu"
     ],
     [
      "sai",
-     "",
-     ""
+     "know",
+     "ˈsa.i"
     ],
     [
      "che",
-     "",
-     ""
+     "that",
+     "ke"
     ],
     [
      "partito",
-     "",
-     ""
+     "departed",
+     "parˈti.to"
     ],
     [
      "ei",
-     "",
-     ""
+     "he",
+     "ˈe.i"
     ],
     [
      "mi",
-     "",
-     ""
+     "me",
+     "mi"
     ],
     [
      "crede",
-     "",
-     ""
+     "believes",
+     "ˈkre.de"
     ],
     [
      "per",
-     "",
-     ""
+     "for",
+     "per"
     ],
     [
      "Siviglia.",
-     "",
-     ""
+     "Seville",
+     "siˈviʎ.ʎa"
     ]
    ],
    "glossGroups": [],
@@ -250,28 +301,28 @@
    "occurrence": 1,
    "startMeasure": "9",
    "original": "O v'è che maraviglia!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Oh, look, what a marvel!",
+   "ipa": "o ˈve ke ma.raˈviʎ.ʎa",
    "words": [
     [
      "O",
-     "",
-     ""
+     "oh",
+     "o"
     ],
     [
      "v'è",
-     "",
-     ""
+     "look (ve')",
+     "ˈve"
     ],
     [
      "che",
-     "",
-     ""
+     "what",
+     "ke"
     ],
     [
      "maraviglia!",
-     "",
-     ""
+     "marvel",
+     "ma.raˈviʎ.ʎa"
     ]
    ],
    "glossGroups": [],
@@ -284,48 +335,48 @@
    "occurrence": 1,
    "startMeasure": "10",
    "original": "e se ti trova, non sarà cosa nuova.",
-   "translation": "",
-   "ipa": "",
+   "translation": "And if he finds you, it won't be anything new.",
+   "ipa": "e se ti ˈtrɔ.va non saˈra ˈkɔ.za ˈnwɔ.va",
    "words": [
     [
      "e",
-     "",
-     ""
+     "and",
+     "e"
     ],
     [
      "se",
-     "",
-     ""
+     "if",
+     "se"
     ],
     [
      "ti",
-     "",
-     ""
+     "you",
+     "ti"
     ],
     [
      "trova,",
-     "",
-     ""
+     "he finds",
+     "ˈtrɔ.va"
     ],
     [
      "non",
-     "",
-     ""
+     "not",
+     "non"
     ],
     [
      "sarà",
-     "",
-     ""
+     "will be",
+     "saˈra"
     ],
     [
      "cosa",
-     "",
-     ""
+     "thing",
+     "ˈkɔ.za"
     ],
     [
      "nuova.",
-     "",
-     ""
+     "new",
+     "ˈnwɔ.va"
     ]
    ],
    "glossGroups": [],
@@ -338,13 +389,13 @@
    "occurrence": 1,
    "startMeasure": "11",
    "original": "Odi!",
-   "translation": "",
-   "ipa": "",
+   "translation": "Listen!",
+   "ipa": "ˈɔ.di",
    "words": [
     [
      "Odi!",
-     "",
-     ""
+     "listen",
+     "ˈɔ.di"
     ]
    ],
    "glossGroups": [],
@@ -356,79 +407,107 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "11",
-   "original": "vogliamo vestirti come noi, tutte insiem andrem poi a presentar de' fiori a Madamina,",
-   "translation": "",
-   "ipa": "",
+   "original": "vogliamo vestirti come noi,",
+   "translation": "we want to dress you like us girls;",
+   "ipa": "voʎˈʎa.mo vesˈtir.ti ˈko.me ˈno.i",
    "words": [
     [
      "vogliamo",
-     "",
-     ""
+     "we want",
+     "voʎˈʎa.mo"
     ],
     [
      "vestirti",
-     "",
-     ""
+     "to dress you",
+     "vesˈtir.ti"
     ],
     [
      "come",
-     "",
-     ""
+     "like",
+     "ˈko.me"
     ],
     [
      "noi,",
-     "",
-     ""
-    ],
+     "us",
+     "ˈno.i"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r5_2",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "tutte insiem andrem poi a",
+   "translation": "then we'll all go together to",
+   "ipa": "ˈtut.te‿inˈsjɛm anˈdrem ˈpɔ.i a",
+   "words": [
     [
      "tutte",
-     "",
-     ""
+     "all",
+     "ˈtut.te"
     ],
     [
      "insiem",
-     "",
-     ""
+     "together",
+     "inˈsjɛm"
     ],
     [
      "andrem",
-     "",
-     ""
+     "we'll go",
+     "anˈdrem"
     ],
     [
      "poi",
-     "",
-     ""
+     "then",
+     "ˈpɔ.i"
     ],
     [
      "a",
-     "",
-     ""
-    ],
+     "to",
+     "a"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r5_3",
+   "role": "barbarina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "presentar de' fiori a Madamina,",
+   "translation": "present flowers to my lady.",
+   "ipa": "pre.zenˈtar de ˈfjo.ri‿a ma.daˈmi.na",
+   "words": [
     [
      "presentar",
-     "",
-     ""
+     "present",
+     "pre.zenˈtar"
     ],
     [
      "de'",
-     "",
-     ""
+     "some",
+     "de"
     ],
     [
      "fiori",
-     "",
-     ""
+     "flowers",
+     "ˈfjo.ri"
     ],
     [
      "a",
-     "",
-     ""
+     "to",
+     "a"
     ],
     [
      "Madamina,",
-     "",
-     ""
+     "my lady",
+     "ma.daˈmi.na"
     ]
    ],
    "glossGroups": [],
@@ -441,36 +520,44 @@
    "occurrence": 1,
    "startMeasure": "15",
    "original": "fidati, o Cherubin di Barbarina.",
-   "translation": "",
-   "ipa": "",
+   "translation": "Trust Barbarina, oh Cherubino.",
+   "ipa": "ˈfi.da.ti‿o ke.ruˈbin di bar.baˈri.na",
    "words": [
     [
      "fidati,",
-     "",
-     ""
+     "trust",
+     "ˈfi.da.ti"
     ],
     [
      "o",
-     "",
-     ""
+     "oh",
+     "o"
     ],
     [
      "Cherubin",
-     "",
-     ""
+     "Cherubino",
+     "ke.ruˈbin"
     ],
     [
      "di",
-     "",
-     ""
+     "in",
+     "di"
     ],
     [
      "Barbarina.",
-     "",
-     ""
+     "Barbarina",
+     "bar.baˈri.na"
     ]
    ],
-   "glossGroups": [],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      3
+     ],
+     "gloss": "trust in"
+    }
+   ],
    "audio": {}
   }
  ]
