@@ -1104,7 +1104,7 @@ p {
 @media (max-width: 640px) {
   .ready-card {
     gap: 14px;
-    border-radius: 28px;
+    border-radius: 10px;
     padding: 12px 18px 12px 12px;
   }
 }
@@ -1426,7 +1426,7 @@ p {
   flex-direction: column;
   gap: 10px;
   padding: 28px;
-  border-radius: 36px;
+  border-radius: 12px;
   background: var(--tone-soft);
 }
 .op-head h1 {
@@ -1678,7 +1678,7 @@ p {
 .ob-preview {
   width: min(540px, 100%);
   margin-top: 16px;
-  border-radius: 24px;
+  border-radius: 10px;
   overflow: hidden;
   background: var(--canvas);
   box-shadow: 0 0 0 1px var(--fog-strong), 0 24px 48px -32px rgb(11 11 11 / 0.3);
@@ -2422,7 +2422,7 @@ button.ck-text:focus-visible {
     gap: 18px 12px;
   }
   .sc-pic {
-    border-radius: 16px;
+    border-radius: 8px;
   }
   .sc-text b {
     font-size: 16px;
@@ -2703,7 +2703,7 @@ span.ck-text {
   column-gap: 14px;
   row-gap: 0;
   padding: 10px 12px 12px;
-  border-radius: 14px;
+  border-radius: 8px;
   text-align: left;
 }
 .words-view .w-line + .w-line {
@@ -2873,7 +2873,7 @@ span.ck-text {
 .line-card {
   margin: 0 auto;
   padding: 8px 10px 14px;
-  border-radius: 24px;
+  border-radius: 10px;
   background: var(--line-bg, var(--now-soft));
 }
 .now-bar {
@@ -3288,7 +3288,7 @@ span.ck-text {
   width: 100%;
   padding: 12px 14px;
   border: 0;
-  border-radius: 14px;
+  border-radius: 8px;
   background: var(--fog);
   color: var(--ink);
   font: inherit;
@@ -3338,7 +3338,7 @@ span.ck-text {
   gap: 4px 8px;
   margin-top: 10px;
   padding: 4px 6px 4px 12px;
-  border-radius: 14px;
+  border-radius: 8px;
   background: var(--tip-bg);
   min-height: 44px;
 }
@@ -4344,7 +4344,7 @@ span.ck-text {
   max-width: 680px;
   margin: 0 auto;
   padding: 14px 14px 0;
-  border-radius: 26px;
+  border-radius: 10px;
   background: var(--canvas);
   box-shadow: 0 0 0 1px var(--fog), 0 18px 40px -22px rgba(40, 40, 70, 0.28);
   overflow: hidden;
@@ -4352,7 +4352,7 @@ span.ck-text {
 }
 .obp-card {
   padding: 8px 10px 14px;
-  border-radius: 18px;
+  border-radius: 8px;
   background: var(--sky-soft);
   color: var(--on-pastel);
   text-align: center;
@@ -4437,7 +4437,7 @@ span.ck-text {
 @media (max-width: 640px) {
   .ob-welcome .ob-preview {
     padding: 10px 8px 0;
-    border-radius: 20px;
+    border-radius: 8px;
   }
 }
 @media (max-width: 640px) {
@@ -4939,7 +4939,7 @@ span.ck-text {
 }
 .now-panel.minimal .line-card {
   padding: 4px 10px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 .now-panel.minimal .now-bar,
 .now-panel.minimal .now-ipa,
@@ -5696,7 +5696,7 @@ button.lane-label:hover {
   display: grid;
   min-width: 230px;
   padding: 8px;
-  border-radius: 18px;
+  border-radius: 8px;
   background: var(--canvas);
   box-shadow: var(--shadow-float);
 }
@@ -5711,7 +5711,7 @@ button.lane-label:hover {
   min-height: 44px;
   padding: 0 12px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   background: transparent;
   color: var(--ink);
   font: 500 15px/1.2 var(--font-sans);
@@ -5770,7 +5770,7 @@ button.lane-label:hover {
   margin-top: -2px;
   padding: 0;
   border: 0;
-  border-radius: 10px;
+  border-radius: 6px;
   background: transparent;
   color: var(--ink-muted);
   cursor: grab;
@@ -5898,7 +5898,7 @@ button.lane-label:hover {
   gap: 8px;
   min-height: 52px;
   padding: 2px 4px 2px 0;
-  border-radius: 14px;
+  border-radius: 8px;
 }
 .mix-line .part-face {
   width: 36px;
@@ -5970,7 +5970,7 @@ button.lane-label:hover {
   grid-template-columns: 28px 38px minmax(0, 1fr);
   gap: 10px;
   padding: 8px 6px 8px 0;
-  border-radius: 16px;
+  border-radius: 8px;
   position: relative;
 }
 @media (max-width: 1279px) {
@@ -7519,7 +7519,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .card-fold:hover { background: var(--fog); }
 .practice > .card-strip {
   grid-area: 2 / 1; z-index: 12; display: flex; align-items: center; gap: 10px; min-width: 0;
-  margin: 6px max(16px, var(--edge, 16px)) 0; padding: 0 8px 0 18px; height: 48px; border: 0; border-radius: 16px;
+  margin: 6px max(16px, var(--edge, 16px)) 0; padding: 0 8px 0 18px; height: 48px; border: 0; border-radius: 8px;
   background: var(--canvas); box-shadow: inset 0 0 0 1px var(--line, rgba(0, 0, 0, 0.08)); color: var(--ink); text-align: left;
 }
 .card-strip .cs-text { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 400 19px/1.2 var(--font-serif, Georgia, serif); }
@@ -8014,12 +8014,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 }
 .words-view .w-line.script.speech-start {
   margin-top: 14px;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .words-view .w-line.script.speech-end {
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .words-view .w-line.script.mine {
   background: color-mix(in srgb, var(--tone-soft, #f3e8ff) 70%, transparent);
@@ -8342,7 +8342,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   gap: 2px;
   justify-content: center;
   padding: 8px 4px;
-  border-radius: 10px;
+  border-radius: 6px;
   font-size: 12px;
 }
 .face-menu-look button[aria-checked="true"] {
