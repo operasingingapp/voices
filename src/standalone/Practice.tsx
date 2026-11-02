@@ -897,6 +897,16 @@ function PracticeScreen({
     const ms = edition.notes.filter((n) => n.part === voicePart.key).map((n) => n.midi);
     return [Math.min(...ms), Math.max(...ms)];
   }, []);
+  // sounds still arriving (recorded singers, instruments for the sung lines): play waits for them, so the
+  // music never starts after the moving line
+  const pendingLoads = useRef(new Set<Promise<unknown>>());
+  const track = <T,>(pr: Promise<T>): Promise<T> => {
+    const done = pr.catch(() => undefined);
+    pendingLoads.current.add(done);
+    void done.finally(() => pendingLoads.current.delete(done));
+    return pr;
+  };
+  const [preparing, setPreparing] = useState(false);
   // the recorded singers, placed on this performance's timeline (before their instruments are chosen below)
   useEffect(() => {
     const port = pb.port;
@@ -913,7 +923,7 @@ function PracticeScreen({
           .sort((a, b) => a[0] - b[0]);
         return { tempo: rec.tempo, url: rec.url, map: { perf: pts.map((x) => x[0]), audio: pts.map((x) => x[1]), ends: pts.map((x) => x[2]) } };
       });
-      port.setRecording(p.channel, placed).catch(() => undefined);
+      track(port.setRecording(p.channel, placed)).catch(() => undefined);
     }
   }, [pb.port, perf]);
   // leaving the piece: its singers go too
@@ -926,8 +936,7 @@ function PracticeScreen({
     if (!port?.setInstrument) return;
     let alive = true;
     setSoundLoading(lineSound !== "piano");
-    port
-      .setInstrument(voicePart.channel, lineSound, voiceRange)
+    track(port.setInstrument(voicePart.channel, lineSound, voiceRange))
       .catch(() => undefined)
       .finally(() => alive && setSoundLoading(false));
     return () => {
@@ -948,7 +957,7 @@ function PracticeScreen({
     if (!port?.setInstrument) return;
     for (const p of otherVoices) {
       const ms = edition.notes.filter((n) => n.part === p.key).map((n) => n.midi);
-      port.setInstrument(p.channel, instOf(p), [Math.min(...ms), Math.max(...ms)]).catch(() => undefined);
+      track(port.setInstrument(p.channel, instOf(p), [Math.min(...ms), Math.max(...ms)])).catch(() => undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pb.port, instKey]);
@@ -1127,6 +1136,12 @@ function PracticeScreen({
     stopSpeaking();
     setSpeakingId(null);
     await pb.port.resume();
+    // wait (at most 20 s) for the voices still loading, so the count-in and the line start with the sound
+    if (pendingLoads.current.size) {
+      setPreparing(true);
+      await Promise.race([Promise.all([...pendingLoads.current]), new Promise((r) => setTimeout(r, 20000))]);
+      setPreparing(false);
+    }
     // the screen first takes its playing shape (words-only card, folded bar on a phone: the music is redrawn
     // larger), then the music starts, so that redrawing never competes with the sound for the processor
     setStarting(true);
@@ -1684,7 +1699,7 @@ function PracticeScreen({
     box.scrollTo({ top: Math.max(0, el.offsetTop - box.clientHeight * 0.3), behavior: playing ? "smooth" : "auto" });
   }, [activeKey, view, playing]);
 
-  const status = countLeft ? `Count-in ${countLeft}` : pb.status === "loading" ? "Loading the piano…" : null;
+  const status = countLeft ? `Count-in ${countLeft}` : pb.status === "loading" ? "Loading the piano…" : preparing ? "Loading the voices…" : null;
   const qNow = Math.max(0, q);
   const tf = engine?.tempo ?? 1;
   // a rest while playing: how many beats until your next line (the panel counts you in on the last three)
