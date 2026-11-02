@@ -8519,3 +8519,7 @@ section.rc.hm-continue .hm-go, section.rc.hm-card > .cp-btn { min-height: 44px; 
 section.rc.hm-continue .hm-cont-act .hm-go { margin-left: 0 !important; margin-right: auto !important; }
 section.rc.hm-continue { display: flex !important; flex-direction: column; align-items: stretch; } section.rc.hm-continue > * { grid-area: auto !important; justify-self: stretch !important; }
 section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
+
+/* the guide no longer darkens anything: a ring round the control, and the card at the top */
+.guide-scrim { pointer-events: none; }
+.guide-hole { box-shadow: none !important; pointer-events: none; }
