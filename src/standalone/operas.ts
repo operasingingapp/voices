@@ -204,6 +204,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Taci, vien gente",
       "editionId": "mozart-taci-vien-gente"
+     },
+     {
+      "title": "Cosa sento!",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: Cosa sento!",
+      "editionId": "mozart-cosa-sento"
      }
     ]
    },
@@ -327,6 +333,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Taci, vien gente",
       "editionId": "mozart-taci-vien-gente"
+     },
+     {
+      "title": "Cosa sento!",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: Cosa sento!",
+      "editionId": "mozart-cosa-sento"
      }
     ]
    },
@@ -339,7 +351,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Non so più cosa son",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "editionId": "mozart-non-so-piu"
      },
      {
       "title": "Voi che sapete",
@@ -449,6 +462,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Taci, vien gente",
       "editionId": "mozart-taci-vien-gente"
+     },
+     {
+      "title": "Cosa sento!",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: Cosa sento!",
+      "editionId": "mozart-cosa-sento"
      }
     ]
    },

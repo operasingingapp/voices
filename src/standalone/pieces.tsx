@@ -506,6 +506,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-non-so-piu": {
+    portrait: "figaro:cherubino",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "E flat major",
+      time: "4/4",
+      tempo: "Allegro vivace: played here at ♩ = 152, with the Adagio (bars 92-95) at ♩ = 50 (about 3 minutes)",
+    },
+    notePlaceholder: "Cherubino can't stop talking about love",
+    about: (
+      <>
+        <p>
+          Score: No. 6, Cherubino's aria “Non so più cosa son, cosa faccio” (vocal score pages 48-51, 100 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (sò).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-voi-che-sapete": {
     portrait: "figaro:cherubino",
     opera: "Le nozze di Figaro",
@@ -622,6 +646,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Written out from the printed pages: the sung lines and the piano each transcribed twice independently, every disagreement settled on the page by a separate judge, then
           checked bar by bar against the page by independent checkers, who found it clean. In bar 80 the print marks “Recitativo”: the Count reads the paper freely.
           Only the Italian words are kept, with the engraving's spellings. The rest of the Finale follows section by section.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-cosa-sento": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Terzetto",
+    facts: {
+      key: "B flat major",
+      time: "4/4",
+      tempo: "Allegro assai: played here at ♩ = 152, with the Count's recitative (bars 121-128) at ♩ = 80 (about 4½ minutes)",
+    },
+    notePlaceholder: "The Count steps out from behind the chair",
+    about: (
+      <>
+        <p>
+          Score: No. 7, the Terzetto “Cosa sento!” (vocal score pages 60-71, 221 bars), from Paul Klengel's piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain. In bars 121-128 the Count tells his story in recitative, then the Allegro assai returns.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (quì, ajutarti, jer).
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for

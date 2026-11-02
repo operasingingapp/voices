@@ -264,6 +264,46 @@
     }
   },
   {
+    "editionId": "mozart-cosa-sento",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-cosa-sento@1.0.0-klengel#dd963a8859",
+    "title": "Cosa sento!",
+    "subtitle": "The Count, Basilio and Susanna: terzetto from Le nozze di Figaro, Act 1 (No. 7)",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 221,
+    "durationSec": 360,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 184,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-cosa-stai-misurando",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-cosa-stai-misurando@1.0.0-klengel#1fdf6dd357",
@@ -666,6 +706,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 49,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-non-so-piu",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-non-so-piu@1.0.0-klengel#590c63cce6",
+    "title": "Non so più cosa son, cosa faccio",
+    "subtitle": "Cherubino's aria from Le nozze di Figaro, Act 1 (No. 6)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 100,
+    "durationSec": 171,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 34,
       "withAudio": 0,
       "reviewed": 0
     }
