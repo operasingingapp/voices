@@ -1868,6 +1868,8 @@ function PracticeScreen({
   const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number; noteIds: string[] } | null>(null);
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
+  // what has happened during the current step: music heard, a loop gone round, the line or a word spoken, a line hidden
+  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, lastQ: 0 });
   const steps: GuideStep[] = [
     { id: "listen", part: "Listen", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Press play and listen", text: "The lit word follows the music. Press pause when you’re ready.", done: () => gTrack.current.played && !playing },
     { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
@@ -1883,7 +1885,7 @@ function PracticeScreen({
     { id: "mute", part: "Practise", pops: ".face-menu", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute, and sing it yourself.", done: () => !hearVoice },
     { id: "others", part: "Practise", pops: ".face-menu, .hold-menu", sel: [".bar-others .part:first-child"], title: "Hear another singer", text: "The other roles are silent. Tap a face, then Play this line.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
     { id: "arrange", part: "Practise", pops: ".mix-pop", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange the lines", text: "Tap Arrange: for each line, its sound, whether it shows in the score, its volume and its order.", done: () => mixOpen },
-    { id: "hide", part: "Practise", pops: ".mix-pop", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: "Hide a line", text: mixOpen ? "Tap an eye to hide that line from the score. Tap it again to bring it back." : "Open Arrange again, then tap an eye.", done: () => !!guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown },
+    { id: "hide", part: "Practise", pops: ".mix-pop", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: gTrack.current.hidOnce ? "Bring it back" : "Hide a line", text: !mixOpen ? "Open Arrange again, then tap an eye." : gTrack.current.hidOnce ? "Tap the same eye again: the line comes back." : "Tap an eye: that line leaves the score (it still plays). Handy for reading only your part.", done: () => !!guideStart.current && gTrack.current.hidOnce && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) === guideStart.current.shown },
     { id: "notes", part: "Practise", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : "Tap Notes. Then you choose the bar.", done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
@@ -1893,7 +1895,6 @@ function PracticeScreen({
   // what has happened during this step: music heard, a loop gone round, the line or a word spoken
   // steps that do not apply on this screen, settled when the tour starts (for the count)
   const guideSkip = useRef<Set<string>>(new Set());
-  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, lastQ: 0 });
   useEffect(() => {
     if (guide < 0) return;
     const t = gTrack.current;
@@ -1903,9 +1904,10 @@ function PracticeScreen({
     if (speakingId) t.spoke = true;
     if (speakingWord) t.wordSpoke = true;
     if (noteEdit) t.noteOpened = true;
+    if (guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown) t.hidOnce = true;
   });
   useEffect(() => {
-    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, lastQ: q };
+    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, hidOnce: false, lastQ: q };
     guideQ.current = guide >= 0 ? q : null;
     // the loop is set: put the strip away so the bar is clear for playing
     if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
