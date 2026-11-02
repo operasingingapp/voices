@@ -1893,7 +1893,7 @@ function PracticeScreen({
     { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
     { id: "word", part: "The words", sel: [".word-card .wc-actions .cp-btn--ink", ".now-it"], title: "Hear a word", text: openWord ? "Tap Hear the word." : "Tap any word in the line.", done: () => gTrack.current.wordSpoke && !speakingWord },
     { id: "loop", part: "Work on a passage", sel: [".bar-loop"], title: "Loop a passage", text: "Tap Loop. The bar you’re on is marked and will repeat.", done: () => !!loop },
-    { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], holeRight: 140, title: "Choose the bars", text: "Drag a purple edge outwards to take in more bars.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
+    { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], title: "Choose the bars", text: "Drag the lit purple handle outwards, along the music, to take in more bars.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
     { id: "playloop", part: "Work on a passage", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play the loop", text: "Press play and listen for it to come round.", after: "It repeats until you stop it. Leave it playing.", dwell: 3000, done: () => gTrack.current.wrapped },
     { id: "unloop", part: "Work on a passage", sel: [".bar-loop"], title: "Stop looping", text: "Tap Loop again. The music carries on from there, through the whole piece.", after: "Back to the whole piece. Leave it playing.", dwell: 2500, done: () => !loop },
     { id: "more", part: "Work on a passage", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them. The music keeps playing.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
@@ -2183,6 +2183,8 @@ function PracticeScreen({
       if (n.closest(".tip")) return true;
       if (litEl.current && litEl.current.contains(n)) return true;
       if (usesPop && step.pops && n.closest(step.pops)) return true;
+      // the loop is stretched by either of its handles
+      if (step.id === "edge" && n.closest(".ov-lh")) return true;
       return false;
     };
     const nudge = () => {
