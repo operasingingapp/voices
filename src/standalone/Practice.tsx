@@ -1860,7 +1860,7 @@ function PracticeScreen({
     }
   });
   const [guideOk, setGuideOk] = useState(false);
-  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null } | null>(null);
+  const guideStart = useRef<{ idx: number; pianoShown: boolean; hearVoice: boolean; loop: typeof loop; view: View; tempo: number; hadLoop: string | null; shown: string; shows: Record<string, boolean>; notes: number } | null>(null);
   const pianoShownNow = showOf(pianoPart);
   const firstBar = perf.measures[0];
   const steps: GuideStep[] = [
@@ -1873,10 +1873,13 @@ function PracticeScreen({
     { id: "loop", part: "Loop", sel: [".bar-loop"], title: "Loop a bar", text: "Tap loop. The bar you’re on will repeat.", done: () => !!loop },
     { id: "edge", part: "Loop", sel: [".ov-lh-e"], holeRight: 140, title: "Add bars", text: "Drag the purple edge to the right.", done: () => !!loop && loop.endQ - loop.startQ > (barAt(loop.startQ).durQ ?? firstBar.durQ) + 1e-6 },
     { id: "playloop", part: "Loop", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Hear the loop", text: "Press play. Pause once you’ve heard it repeat.", done: () => gTrack.current.wrapped && !playing },
-    { id: "more", part: "Sing", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
-    { id: "mute", part: "Sing", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Tap your face, then Mute. Now you sing it.", done: () => !hearVoice },
-    { id: "others", part: "Sing", sel: [".bar-others .part:first-child"], title: "Add another singer", text: "The other roles are silent. Tap a face, then Play this line. Hold a face to choose piano or another sound.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
-    { id: "piano", part: "Sing", sel: [".piano-group .pg-btn:nth-child(2)"], title: pianoShownNow ? "Hide the piano part" : "Show the piano part", text: pianoShownNow ? "Tap the eye to see only the voices." : "Tap the eye to add the piano to the score.", done: () => !!guideStart.current && pianoShownNow !== guideStart.current.pianoShown },
+    { id: "more", part: "Practise", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
+    { id: "slower", part: "Practise", sel: ['[aria-label="Slower"]'], title: "Slow it down", text: "Tap − to practise slower. The music keeps its pitch.", done: () => !!guideStart.current && (engine?.tempo ?? 1) < guideStart.current.tempo - 1e-6 },
+    { id: "mute", part: "Practise", sel: [".bar-parts > .part:first-child"], title: "Mute your line", text: "Your line plays softly on the piano as a guide. Tap your face, then Mute, and sing it yourself.", done: () => !hearVoice },
+    { id: "others", part: "Practise", sel: [".bar-others .part:first-child"], title: "Hear another singer", text: "The other roles are silent. Tap a face, then Play this line.", done: () => otherVoices.some((p) => lineSets[p.key]?.hear === true), skipIf: () => otherVoices.length === 0 },
+    { id: "arrange", part: "Practise", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange the lines", text: "Tap Arrange: for each line, its sound, whether it shows in the score, its volume and its order.", done: () => mixOpen },
+    { id: "hide", part: "Practise", sel: [".mix-toggles button:nth-child(2)", ".mix-btn:not(.notes-btn)"], title: "Hide a line", text: mixOpen ? "Tap an eye to hide that line from the score. Tap it again to bring it back." : "Open Arrange again, then tap an eye.", done: () => !!guideStart.current && JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))) !== guideStart.current.shown },
+    { id: "notes", part: "Practise", sel: [".notes-btn", ".note-card"], title: "Write a note", text: noteEdit ? "Write your note and Save, or close the card." : notePick ? "Now tap the bar the note is for." : "Tap Notes, then tap a bar.", done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
     { id: "sing", part: "Sing", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Sing along", text: "Press play and sing your line. Pause when you’re done.", done: () => gTrack.current.played && !playing },
   ];
   const step = guide >= 0 ? steps[guide] : null;
@@ -1885,7 +1888,7 @@ function PracticeScreen({
   // what has happened during this step: music heard, a loop gone round, the line or a word spoken
   // steps that do not apply on this screen, settled when the tour starts (for the count)
   const guideSkip = useRef<Set<string>>(new Set());
-  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, lastQ: 0 });
+  const gTrack = useRef({ played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, lastQ: 0 });
   useEffect(() => {
     if (guide < 0) return;
     const t = gTrack.current;
@@ -1894,17 +1897,20 @@ function PracticeScreen({
     t.lastQ = q;
     if (speakingId) t.spoke = true;
     if (speakingWord) t.wordSpoke = true;
+    if (noteEdit) t.noteOpened = true;
   });
   useEffect(() => {
-    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, lastQ: q };
+    gTrack.current = { played: false, wrapped: false, spoke: false, wordSpoke: false, noteOpened: false, lastQ: q };
     guideQ.current = guide >= 0 ? q : null;
     // the loop is set: put the strip away so the bar is clear for playing
     if (guide >= 0 && steps[guide]?.id === "playloop") setLoopHint(false);
     // the loop part is over: the singing steps play the music straight on, without the loop
-    if (guide >= 0 && steps[guide]?.part === "Sing" && loop) {
+    if (guide >= 0 && (steps[guide]?.part === "Practise" || steps[guide]?.part === "Sing") && loop) {
       setLoop(null);
       setLoopHint(false);
     }
+    // on a phone the practising controls live in the folded bar: keep it open from here on, even if "More controls" was passed over
+    if (guide >= 0 && steps[guide]?.part === "Practise" && steps[guide]?.id !== "more" && !barOpen) setBarOpen(true);
     if (guide >= 0 && steps[guide]?.id === "edge" && !loop) {
       const pm = barAt(Math.max(0, q));
       setLoop({ startQ: pm.startQ, endQ: pm.startQ + pm.durQ });
@@ -1917,7 +1923,10 @@ function PracticeScreen({
     setOpenWord(null);
     if (g) {
       setHearVoice(g.hearVoice);
-      setLine(pianoPart.key, { show: g.pianoShown });
+      for (const [k, v] of Object.entries(g.shows)) setLine(k, { show: v });
+      setMixOpen(false);
+      setNotePick(false);
+      setNoteEdit(null);
       setView(g.view);
       engine?.setTempoFactor(g.tempo);
       setLoop(g.loop);
@@ -1947,7 +1956,7 @@ function PracticeScreen({
     } catch {
       /* storage unavailable */
     }
-    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop };
+    guideStart.current = { idx: current.idx, pianoShown: pianoShownNow, hearVoice, loop, view, tempo: engine?.tempo ?? 1, hadLoop, shown: JSON.stringify(orderedIds.map((x) => showOf(partByXml(x)))), shows: Object.fromEntries(orderedIds.map((x) => [partByXml(x).key, showOf(partByXml(x))])), notes: notes.length };
     guideSkip.current = new Set(steps.filter((g) => g.skipIf?.()).map((g) => g.id));
     setLoop(null);
     setView("music");

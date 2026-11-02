@@ -8393,7 +8393,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .notes-open input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
 
 /* your notes on the score: above the pinned clef, a quiet tag in your notes' colour */
-.practice .score-overlay { z-index: 6; }
 .practice .score-overlay .ov-flag { pointer-events: auto !important; cursor: pointer; }
 .practice .ov-flag.ov-note {
   z-index: 90;
@@ -8407,7 +8406,8 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   border-radius: 3px;
   background: color-mix(in srgb, var(--peach, #ffd9c2) 70%, var(--canvas, #fff));
   color: color-mix(in srgb, var(--ink, #161616) 85%, transparent);
-  font: 500 11px/16px var(--sans, system-ui);
+  font: 500 15px/16px "Caveat", "Segoe Print", cursive;
+  letter-spacing: 0.01em;
   box-shadow: none;
 }
 
@@ -8448,3 +8448,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .practice > .p-head.p-head .p-title h1 { white-space: normal; overflow: visible; }
   .practice > .p-head.p-head .p-tools { margin-left: auto; }
 }
+
+/* your notes are in your own hand: the note card writes in the same handwriting as the tag on the score */
+.note-card textarea { font-family: "Caveat", "Segoe Print", cursive; font-size: 22px; line-height: 1.25; }
+.cp-note p { font-family: "Caveat", "Segoe Print", cursive; font-size: 20px; line-height: 1.3; }
