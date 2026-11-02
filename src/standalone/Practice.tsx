@@ -2860,7 +2860,7 @@ function PracticeScreen({
                   )}
                   <div className="mix-sing mix-order">
                     <div className="mix-order-head">
-                      <span className="mix-sub">Each line: order, volume and instrument</span>
+                      <span className="mix-sub">Each line: sound, show, volume, instrument and order</span>
                       <div className="cp-seg" role="group" aria-label="Order of the lines">
                         <button type="button" aria-pressed={scoreOrder} onClick={() => setOrder([])}>
                           As in the score
@@ -2916,9 +2916,23 @@ function PracticeScreen({
                           {name}
                           {isYou && <em className="mix-you">you</em>}
                         </b>
-                        <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setHear(p, !on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted: sung live"}>
-                          {on ? Icon.speaker : Icon.muted}
-                        </button>
+                        <span className="mix-toggles">
+                          <button type="button" className="mix-mini" aria-pressed={on} onClick={() => setHear(p, !on)} aria-label={on ? `Mute ${name}` : `Play ${name}`} title={on ? "Plays" : "Muted: sung live"}>
+                            {on ? Icon.speaker : Icon.muted}
+                          </button>
+                          {/* show or hide the line in the score, as the face menu does */}
+                          <button
+                            type="button"
+                            className="mix-mini"
+                            aria-pressed={showOf(p)}
+                            disabled={showOf(p) && hiddenIds.length >= orderedIds.length - 1}
+                            onClick={() => setLine(p.key, { show: !showOf(p) })}
+                            aria-label={showOf(p) ? `Hide ${name} in the score` : `Show ${name} in the score`}
+                            title={showOf(p) ? "Shown in the score" : "Hidden in the score"}
+                          >
+                            {showOf(p) ? Icon.eye : Icon.eyeOff}
+                          </button>
+                        </span>
                         <input
                           type="range"
                           className="cp-slider mix-line-vol"
@@ -2965,26 +2979,6 @@ function PracticeScreen({
                       </div>
                     );
                   })}
-                  </div>
-                  <div className="mix-sing">
-                    <span className="mix-sub">Show in the score</span>
-                    <div className="cp-seg mix-names" role="group" aria-label="Who is shown in the score">
-                      {orderedIds.map(partByXml).map((p) => {
-                        const on = showOf(p);
-                        return (
-                          <button
-                            key={p.key}
-                            type="button"
-                            aria-pressed={on}
-                            disabled={on && hiddenIds.length >= orderedIds.length - 1}
-                            onClick={() => setLine(p.key, { show: !on })}
-                          >
-                            {on ? Icon.eye : Icon.eyeOff}
-                            {lineName(p)}
-                          </button>
-                        );
-                      })}
-                    </div>
                   </div>
                   {soundLoading && <p className="mix-note">Loading the instruments…</p>}
                 </>

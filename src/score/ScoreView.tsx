@@ -1002,7 +1002,7 @@ export function ScoreView(props: Props) {
         className={strip ? "strip-row" : "sheet-row"}
         style={strip && crop ? ({ marginTop: -crop.top, "--ink-left": `${Math.round(layout?.ink?.left ?? 10)}px` } as CSSProperties) : undefined}
       >
-      {strip && pinned && pinIdx >= 0 && (
+      {strip && pinned && pinIdx >= 0 && pinIdx < pinned.panels.length && (
         <div className="pin-clef" style={{ width: pinned.width, marginRight: -pinned.width, height: layout?.height }} aria-hidden="true">
           <div dangerouslySetInnerHTML={{ __html: pinned.panels[pinIdx].html }} />
           {layout && tintEls(layout)}
@@ -1220,7 +1220,7 @@ export function ScoreView(props: Props) {
             })()}
           {layout && hasLyrics && renderSungText(layout)}
           {layout && tintEls(layout)}
-          {layout && !(pinned && pinIdx >= 0) && laneLabelEls(layout)}
+          {layout && !(pinned && pinIdx >= 0 && pinIdx < pinned.panels.length) && laneLabelEls(layout)}
           {layout &&
             props.fadedXmlParts?.flatMap((pid) => {
               if (!strip)

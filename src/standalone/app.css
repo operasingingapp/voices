@@ -5893,7 +5893,7 @@ button.lane-label:hover {
 .mix-line {
   position: relative;
   display: grid;
-  grid-template-columns: 24px 36px minmax(84px, 120px) 34px minmax(80px, 1fr) 132px 72px;
+  grid-template-columns: 24px 36px minmax(84px, 120px) 72px minmax(80px, 1fr) 132px 72px;
   align-items: center;
   gap: 8px;
   min-height: 52px;
@@ -5947,7 +5947,7 @@ button.lane-label:hover {
 /* phones: the row folds in two (name and controls, then volume and instrument) */
 @media (max-width: 640px) {
   .mix-line {
-    grid-template-columns: 22px 32px minmax(0, 1fr) 34px 72px;
+    grid-template-columns: 22px 32px minmax(0, 1fr) 72px 72px;
     grid-template-areas: "h f n m a" "h v v i i";
     row-gap: 2px;
     padding: 6px 0;
@@ -5955,7 +5955,7 @@ button.lane-label:hover {
   .mix-line .mix-handle { grid-area: h; }
   .mix-line .part-face { grid-area: f; width: 32px; height: 32px; }
   .mix-line .mix-line-name { grid-area: n; }
-  .mix-line > .mix-mini { grid-area: m; }
+  .mix-line > .mix-mini, .mix-line > .mix-toggles { grid-area: m; }
   .mix-line .mix-arrows { grid-area: a; }
   .mix-line .mix-line-vol { grid-area: v; }
   .mix-line .mix-line-inst { grid-area: i; }
@@ -8363,3 +8363,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   color: var(--now-mark, #2e7d4f);
   font-weight: 700;
 }
+
+/* Arrange: the speaker (mute) and the eye (show in the score) side by side */
+.mix-toggles { display: flex; align-items: center; gap: 2px; }
+@media (max-width: 640px) { .practice .mix-pop .mix-line .mix-toggles { grid-area: m; justify-self: end; } }
