@@ -5,14 +5,18 @@
 import type { ReactNode } from "react";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 
-const editions = import.meta.glob(["../../data/content/*/edition.json", "!../../data/content/cp-fx-*/**"], { eager: true, import: "default" }) as Record<
+// Each piece's data loads only when the piece opens (one small file per piece), so the app starts at once however
+// many pieces it holds.
+const editions = import.meta.glob(["../../data/content/*/edition.json", "!../../data/content/cp-fx-*/**"], { import: "default" }) as Record<
   string,
-  CompiledEdition
+  () => Promise<CompiledEdition>
 >;
-const languages = import.meta.glob(["../../data/content/*/language.json", "!../../data/content/cp-fx-*/**"], { eager: true, import: "default" }) as Record<
+const languages = import.meta.glob(["../../data/content/*/language.json", "!../../data/content/cp-fx-*/**"], { import: "default" }) as Record<
   string,
-  CompiledLanguage
+  () => Promise<CompiledLanguage>
 >;
+const editionData = new Map<string, CompiledEdition>();
+const languageData = new Map<string, CompiledLanguage>();
 // the scores are separate files, fetched when a piece opens (bundled in, they made the app too large to publish)
 const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**"], {
   query: "?url",
@@ -22,19 +26,23 @@ const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../
 const scoreText = new Map<string, string>();
 const scoreLoading = new Map<string, Promise<void>>();
 /** true when the piece's score is loaded and pieceData() can be used */
-export const scoreReady = (id: string) => scoreText.has(id);
-/** load the piece's score (once) */
+export const scoreReady = (id: string) => scoreText.has(id) && editionData.has(id) && languageData.has(id);
+/** load the piece's score, data and words (once) */
 export function loadScore(id: string): Promise<void> {
-  if (scoreText.has(id)) return Promise.resolve();
+  if (scoreReady(id)) return Promise.resolve();
   let p = scoreLoading.get(id);
   if (!p) {
     const url = scoreUrls[`../../data/content/${id}/score.musicxml`];
-    p = fetch(url)
+    const ed = editions[`../../data/content/${id}/edition.json`]?.().then((e) => void editionData.set(id, e));
+    const la = languages[`../../data/content/${id}/language.json`]?.().then((l) => void languageData.set(id, l));
+    const sc = fetch(url)
       .then((r) => {
         if (!r.ok) throw new Error(`score ${id}: ${r.status}`);
         return r.text();
       })
-      .then((t) => void scoreText.set(id, t))
+      .then((t) => void scoreText.set(id, t));
+    p = Promise.all([sc, ed, la])
+      .then(() => undefined)
       .catch((e) => {
         scoreLoading.delete(id);
         throw e;
@@ -1300,11 +1308,14 @@ export function hasPiece(id: string | undefined): id is string {
   return !!id && !!PIECE_INFO[id] && !!byId(editions, id, "edition.json");
 }
 
+/** the piece's title once its data has loaded */
+export const pieceTitle = (id: string) => editionData.get(id)?.title;
+
 export function pieceData(id: string): PieceData {
   return {
     id,
-    edition: byId(editions, id, "edition.json") as CompiledEdition,
-    language: byId(languages, id, "language.json") as CompiledLanguage,
+    edition: editionData.get(id) as CompiledEdition,
+    language: languageData.get(id) as CompiledLanguage,
     scoreXml: scoreText.get(id) ?? "",
     info: PIECE_INFO[id],
   };

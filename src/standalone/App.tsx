@@ -23,7 +23,7 @@ import {
 import { FIRST_PASS_KEYS, OPERAS, RUNNING, V2_KEYS } from "./operas";
 import { Practice } from "./Practice";
 import { Listen } from "./Listen";
-import { hasPiece, loadScore, pieceData, scoreReady } from "./pieces";
+import { hasPiece, loadScore, pieceTitle, scoreReady } from "./pieces";
 
 const K = {
   place: "cp:place",
@@ -142,7 +142,7 @@ function titleOf(place: Place): string {
     case "home":
       return `Home${tail}`;
     case "listen":
-      return `${hasPiece(place.edition) ? pieceData(place.edition).edition.title : "Listen"}${tail}`;
+      return `${(hasPiece(place.edition) && pieceTitle(place.edition)) || "Listen"}${tail}`;
     default:
       return "Sottovoce";
   }

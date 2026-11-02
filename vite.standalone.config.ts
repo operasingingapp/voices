@@ -47,15 +47,8 @@ export default defineConfig({
     rollupOptions: {
       input: "standalone.html",
       output: {
-        // the pieces' data is large: keep it out of the app's own file, in a few chunks of a few MB each (a published
-        // file may be at most 16 MB)
+        // each piece's data is its own small file (loaded when the piece opens); the voices' indexes stay together
         manualChunks(id: string) {
-          const m = id.match(/data\/content\/([^/]+)\/(edition|language)\.json/);
-          if (m) {
-            let h = 0;
-            for (const c of m[1]) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-            return m[2] === "edition" ? `editions${h % 6}` : "languages";
-          }
           if (/voicepacks\/|\/voice\/[^/]+\/manifest\.json/.test(id)) return "voicedata";
           return undefined;
         },
