@@ -3319,7 +3319,7 @@ function PracticeScreen({
                     </p>
                   )}
                   <p>
-                    Oboe, clarinet, bassoon and flute for the sung line: the{" "}
+                    Flute, clarinet, English horn, bassoon and oboe for the sung line: the{" "}
                     <a href="https://theremin.music.uiowa.edu/MIS.html" target="_blank" rel="noreferrer">
                       University of Iowa Musical Instrument Samples
                     </a>

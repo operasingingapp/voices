@@ -84,14 +84,16 @@ export type LineInstrument =
   | "singer";
 const LINE_SOUND: Record<
   Exclude<LineInstrument, "piano" | "singer">,
-  { release: number; dbPerStep: number }
+  { release: number; dbPerStep: number; levelDb: number; presenceDb: number }
 > = {
-  // a held, singing tone: let it go like a breath, not a damper
-  oboe: { release: 0.07, dbPerStep: 0.12 },
-  clarinet: { release: 0.08, dbPerStep: 0.12 },
-  flute: { release: 0.08, dbPerStep: 0.12 },
-  "english-horn": { release: 0.08, dbPerStep: 0.12 },
-  bassoon: { release: 0.08, dbPerStep: 0.12 },
+  // a held, singing tone: let it go like a breath, not a damper. The low instruments sit in the piano's own
+  // register and have little edge, so they play louder and with more presence (a lift around 2.5 kHz) to be heard
+  // in an ensemble.
+  oboe: { release: 0.07, dbPerStep: 0.12, levelDb: 0, presenceDb: 1 },
+  clarinet: { release: 0.08, dbPerStep: 0.12, levelDb: 1, presenceDb: 2 },
+  flute: { release: 0.08, dbPerStep: 0.12, levelDb: 2, presenceDb: 2 },
+  "english-horn": { release: 0.08, dbPerStep: 0.12, levelDb: 4, presenceDb: 4 },
+  bassoon: { release: 0.08, dbPerStep: 0.12, levelDb: 6, presenceDb: 5 },
 };
 const isLineKit = (
   id: string,
@@ -584,6 +586,7 @@ export class SamplerPort implements SynthPort {
     const sg = this.singers.get(ch);
     if (sg && kit !== "singer") this.stopSinger(sg, this.ctx.currentTime);
     this.channelKit.set(ch, kit);
+    this.updateMix();
     this.channelShift.set(ch, 0);
     this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
@@ -859,10 +862,45 @@ export class SamplerPort implements SynthPort {
     let g = this.channels.get(ch);
     if (!g) {
       g = this.ctx.createGain();
-      g.connect(this.master);
+      // each channel: its level, a tone shaper, and its place left to right (as singers stand on a stage)
+      const eq = this.ctx.createBiquadFilter();
+      eq.type = "peaking";
+      eq.gain.value = 0;
+      const pan = this.ctx.createStereoPanner();
+      g.connect(eq).connect(pan).connect(this.master);
       this.channels.set(ch, g);
+      this.channelTone.set(ch, { eq, pan });
+      this.updateMix();
     }
     return g;
+  }
+
+  private channelTone = new Map<number, { eq: BiquadFilterNode; pan: StereoPannerNode }>();
+  /**
+   * The sung lines played on instruments get presence and their own place in the stereo picture, and the piano
+   * makes a little room in the middle register where the bassoon and English horn sing, so every line stays clear.
+   */
+  private updateMix() {
+    const voices = [...this.channelKit.entries()]
+      .filter(([, k]) => k !== "piano")
+      .map(([c]) => c)
+      .sort((a, b) => a - b);
+    const low = [...this.channelKit.values()].some((k) => k === "bassoon" || k === "english-horn");
+    for (const [c, t] of this.channelTone) {
+      const kit = this.channelKit.get(c) ?? "piano";
+      const i = voices.indexOf(c);
+      const n = voices.length;
+      t.pan.pan.value = i < 0 || n < 2 ? 0 : -0.45 + (0.9 * i) / (n - 1);
+      if (kit !== "piano" && kit !== "singer") {
+        t.eq.frequency.value = 2500;
+        t.eq.Q.value = 0.9;
+        t.eq.gain.value = LINE_SOUND[kit].presenceDb;
+      } else if (kit === "piano" && i < 0 && low) {
+        t.eq.frequency.value = 400;
+        t.eq.Q.value = 0.8;
+        t.eq.gain.value = -3;
+      } else t.eq.gain.value = 0;
+    }
   }
 
   /**
@@ -931,7 +969,7 @@ export class SamplerPort implements SynthPort {
     for (const x of list)
       if (Math.abs(x.midi - midi) < Math.abs(best.midi - midi)) best = x;
     const db =
-      (Math.max(1, Math.min(127, vel)) - 64) * LINE_SOUND[kit].dbPerStep;
+      (Math.max(1, Math.min(127, vel)) - 64) * LINE_SOUND[kit].dbPerStep + LINE_SOUND[kit].levelDb;
     return {
       sample: best,
       gain: 10 ** (db / 20),
