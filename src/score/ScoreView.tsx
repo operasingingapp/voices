@@ -102,6 +102,8 @@ interface Props {
   nowNoteParts?: string[];
   /** Parts drawn faded (still on the line, but quiet to the eye). */
   fadedXmlParts?: string[];
+  /** Of the faded parts, those faded only lightly (the other singers: still easy to read for cues). */
+  softFadedXmlParts?: string[];
   /** false: the top staff (a sung line) stands on its own, and the system line at the left joins only the staves below it. */
   joinTopStaff?: boolean;
   /** which engine draws the music: Verovio engraves as a printed edition does; OSMD for pieces not moved over yet */
@@ -1019,7 +1021,7 @@ export function ScoreView(props: Props) {
               const next = layout.lanes[i + 1];
               const top = prev ? (prev.extBottom + lane.extTop) / 2 : 0;
               const bottom = next ? (lane.extBottom + next.extTop) / 2 : layout.height;
-              return <div key={pid} className="ov-fade" style={{ position: "absolute", left: 0, top, width: "100%", height: bottom - top }} />;
+              return <div key={pid} className={`ov-fade${props.softFadedXmlParts?.includes(pid) ? " soft" : ""}`} style={{ position: "absolute", left: 0, top, width: "100%", height: bottom - top }} />;
             })}
         </div>
       )}
@@ -1232,7 +1234,7 @@ export function ScoreView(props: Props) {
           {layout &&
             props.fadedXmlParts?.flatMap((pid) => {
               if (!strip)
-                return pageBands(layout, pid, "fade").map((b, k) => <div key={`${pid}-${k}`} className="ov-fade" style={{ left: 0, top: b.top, width: "100%", height: b.height }} />);
+                return pageBands(layout, pid, "fade").map((b, k) => <div key={`${pid}-${k}`} className={`ov-fade${props.softFadedXmlParts?.includes(pid) ? " soft" : ""}`} style={{ left: 0, top: b.top, width: "100%", height: b.height }} />);
               const i = layout.lanes.findIndex((l) => l.partId === pid);
               if (i < 0) return [];
               const lane = layout.lanes[i];
@@ -1240,7 +1242,7 @@ export function ScoreView(props: Props) {
               const next = layout.lanes[i + 1];
               const top = prev ? (prev.extBottom + lane.extTop) / 2 : 0;
               const bottom = next ? (lane.extBottom + next.extTop) / 2 : layout.height;
-              return [<div key={pid} className="ov-fade" style={{ left: 0, top, width: "100%", height: bottom - top }} />];
+              return [<div key={pid} className={`ov-fade${props.softFadedXmlParts?.includes(pid) ? " soft" : ""}`} style={{ left: 0, top, width: "100%", height: bottom - top }} />];
             })}
           <div ref={haloEl} className="ov-halo" style={{ display: "none" }} />
           <div ref={measureEl} className="ov-measure-now" style={{ display: "none" }} />

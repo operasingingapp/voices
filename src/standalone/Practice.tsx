@@ -2532,8 +2532,9 @@ function PracticeScreen({
           ink="#0b0b0b"
           fadedXmlParts={[
             ...(pianoFaded && !hiddenIds.includes(pianoPart.source.xmlPartId) ? [pianoPart.source.xmlPartId] : []),
-            ...voiceParts.filter((p) => lineSets[p.key]?.fade && showOf(p)).map((p) => p.source.xmlPartId),
+            ...voiceParts.filter((p) => p !== voicePart && (lineSets[p.key]?.fade ?? true) && showOf(p)).map((p) => p.source.xmlPartId),
           ]}
+          softFadedXmlParts={voiceParts.filter((p) => p !== voicePart).map((p) => p.source.xmlPartId)}
           nowNoteParts={pianoFaded ? [voicePart.source.xmlPartId] : [voicePart.source.xmlPartId, pianoPart.source.xmlPartId]}
         />
       </main>
@@ -2546,7 +2547,7 @@ function PracticeScreen({
           const mine = p === voicePart;
           const on = mine ? hearVoice : isPiano ? hearPiano : (lineSets[p.key]?.hear ?? false);
           const shown = showOf(p);
-          const faded = isPiano ? pianoFaded : !!lineSets[p.key]?.fade;
+          const faded = isPiano ? pianoFaded : mine ? !!lineSets[p.key]?.fade : (lineSets[p.key]?.fade ?? true);
           const name = isPiano ? "Piano" : mine ? roleName : p.shortLabel;
           const setLook = (look: "show" | "fade" | "hide") => {
             if (look === "hide") return setLine(p.key, { show: false });

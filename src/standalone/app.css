@@ -617,6 +617,10 @@ p {
   opacity: 0.9;
   transition: opacity var(--duration-settle) var(--ease-standard);
 }
+/* the other singers: quieter than your line, still easy to read for your cues */
+.ov-fade.soft {
+  opacity: 0.6;
+}
 
 /* the words view: the whole text, the line being sung followed in the middle */
 .words-view {
