@@ -166,6 +166,9 @@ function measureInk(host: HTMLElement, svg: SVGSVGElement): { top: number; botto
   let bottom = -Infinity;
   let left = Infinity;
   for (const el of svg.querySelectorAll("path, text, rect, line, ellipse, circle, polygon")) {
+    // glyph definitions are never drawn where they stand; Safari still gives them a box (huge, at the origin),
+    // which would frame the single line thousands of pixels off and leave it blank
+    if (el.closest("defs, symbol, clipPath, mask, marker, pattern")) continue;
     const b = (el as SVGGraphicsElement).getBoundingClientRect();
     if (b.width === 0 && b.height === 0) continue;
     const fill = el.getAttribute("fill");
