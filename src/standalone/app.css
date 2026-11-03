@@ -8548,3 +8548,8 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
   .practice .p-bar .bar-parts.many .bar-others.more-l { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); }
   .practice .p-bar .bar-parts.many .bar-others.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); }
 }
+
+/* the singer's name in the words margin never runs into the speaker button: it stops at its column with "…" */
+.words-view .w-line.script > .w-gut { min-width: 0; max-width: 100%; overflow: hidden; }
+.words-view .w-line.script .w-who { max-width: 100%; }
+.words-view .w-line.script .w-who-name { min-width: 0; max-width: 100%; flex: 0 1 auto; display: block; }
