@@ -671,6 +671,126 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-tutto-e-disposto": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "Recitative in C, aria in E flat major",
+      time: "4/4",
+      tempo: "Recitative (Andante from bar 3), aria Moderato at ♩ = 116 (about 6 minutes)",
+    },
+    notePlaceholder: "Figaro, sure Susanna is betraying him, warns all men about women",
+    about: (
+      <>
+        <p>
+          Score: No. 26, Figaro’s recitative and aria “Tutto è disposto … Aprite un po' quegli occhi” (vocal score pages 304-311, 111 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-signora-ella-mi-disse": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "The women arrive in each other's clothes; Figaro watches",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Signora! ella mi disse” (vocal score pages 312-313, 21 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-giunse-alfin-il-momento": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "Recitative in C, aria in F major",
+      time: "4/4, aria 6/8",
+      tempo: "Recitative Allegro vivace assai, aria Andante at ♩. = 44 (about 5 minutes)",
+    },
+    notePlaceholder: "Susanna, knowing Figaro listens, sings of longing for her lover",
+    about: (
+      <>
+        <p>
+          Score: No. 27, Susanna’s recitative and aria “Giunse alfin il momento … Deh vieni, non tardar” (vocal score pages 314-317, 75 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-perfida-e-in-quella-forma": {
+    portrait: "figaro:cherubino",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Figaro despairs; Cherubino comes looking for Barbarina",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Perfida! e in quella forma” (vocal score pages 317-318, 12 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-va-la-vecchia-pedante": {
+    portrait: "figaro:cherubino",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Cherubino rushes in: the Count has dismissed him",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Va là, vecchia pedante” (vocal score pages 43-47, 42 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

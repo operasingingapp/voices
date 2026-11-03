@@ -1263,6 +1263,34 @@
     }
   },
   {
+    "editionId": "mozart-giunse-alfin-il-momento",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-giunse-alfin-il-momento@1.0.0-klengel#8e5560dc6b",
+    "title": "Giunse alfin il momento… Deh vieni, non tardar",
+    "subtitle": "Susanna: recitative and aria from Le nozze di Figaro, Act 4 (No. 27)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      }
+    ],
+    "measures": 75,
+    "durationSec": 188,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 19,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-hai-diavoli-nel-corpo",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-hai-diavoli-nel-corpo@1.0.0-klengel#570249890c",
@@ -1630,6 +1658,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 39,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-perfida-e-in-quella-forma",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-perfida-e-in-quella-forma@1.0.0-klengel#62380db3d1",
+    "title": "Perfida! e in quella forma",
+    "subtitle": "Figaro, Cherubino and the Countess: recitative from Le nozze di Figaro, Act 4",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      }
+    ],
+    "measures": 12,
+    "durationSec": 27,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 10,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2005,6 +2073,52 @@
     }
   },
   {
+    "editionId": "mozart-signora-ella-mi-disse",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-signora-ella-mi-disse@1.0.0-klengel#a20af6fe84",
+    "title": "Signora! ella mi disse",
+    "subtitle": "Susanna, Marcellina, the Countess and Figaro: recitative from Le nozze di Figaro, Act 4",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      },
+      {
+        "id": "countess",
+        "name": "Countess Almaviva",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 21,
+    "durationSec": 47,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 17,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-signori-di-fuori",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-signori-di-fuori@1.0.0-klengel#52f69d6cc0",
@@ -2308,6 +2422,68 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 29,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-tutto-e-disposto",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-tutto-e-disposto@1.0.0-klengel#b9ec7dd9ad",
+    "title": "Tutto è disposto… Aprite un po' quegli occhi",
+    "subtitle": "Figaro: recitative and aria from Le nozze di Figaro, Act 4 (No. 26)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 111,
+    "durationSec": 257,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 60,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-va-la-vecchia-pedante",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-va-la-vecchia-pedante@1.0.0-klengel#d865faa7d9",
+    "title": "Va là, vecchia pedante",
+    "subtitle": "Susanna and Cherubino: recitative from Le nozze di Figaro, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      }
+    ],
+    "measures": 42,
+    "durationSec": 93,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 38,
       "withAudio": 0,
       "reviewed": 0
     }

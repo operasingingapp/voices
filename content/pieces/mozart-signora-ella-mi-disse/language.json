@@ -1,0 +1,756 @@
+{
+ "editionId": "mozart-signora-ella-mi-disse",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1786). Words follow the engraving's spelling (verravi, po, quì, u mida = umida, il grande istante, pini, mezz' ora, Resta ci = Restaci, buon' ora, mercè, de'). IPA follows sung Italian conventions: stressed syllable marked, elisions joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced; verravi is sung as verravvi (verˈrav.vi), dee (must) is ˈde.e, mercè is closed (merˈtʃe, like fè). Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "s1",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Signora! ella mi disse che Figaro verravi.",
+   "translation": "My lady! she told me that Figaro would come here.",
+   "ipa": "siɲˈɲo.ra ˈel.la mi ˈdis.se ke ˈfi.ga.ro verˈrav.vi",
+   "words": [
+    [
+     "Signora!",
+     "my lady",
+     "siɲˈɲo.ra"
+    ],
+    [
+     "ella",
+     "she",
+     "ˈel.la"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "disse",
+     "told",
+     "ˈdis.se"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "Figaro",
+     "Figaro",
+     "ˈfi.ga.ro"
+    ],
+    [
+     "verravi.",
+     "would come here",
+     "verˈrav.vi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m1",
+   "role": "marcellina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Anzi è venuto.",
+   "translation": "In fact, he has come.",
+   "ipa": "ˈan.tsi‿ɛ veˈnu.to",
+   "words": [
+    [
+     "Anzi",
+     "in fact",
+     "ˈan.tsi"
+    ],
+    [
+     "è",
+     "has",
+     "ɛ"
+    ],
+    [
+     "venuto.",
+     "come",
+     "veˈnu.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "has come"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m2",
+   "role": "marcellina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Abbassa un po la voce.",
+   "translation": "Lower your voice a little.",
+   "ipa": "abˈbas.sa‿un ˈpɔ la ˈvo.tʃe",
+   "words": [
+    [
+     "Abbassa",
+     "lower",
+     "abˈbas.sa"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "po",
+     "little",
+     "ˈpɔ"
+    ],
+    [
+     "la",
+     "your",
+     "la"
+    ],
+    [
+     "voce.",
+     "voice",
+     "ˈvo.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "a little"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Dunque un ci ascolta, l'altro dee venir a cercarmi.",
+   "translation": "So one is listening to us, the other must come to look for me.",
+   "ipa": "ˈduŋ.kwe‿un tʃi‿asˈkol.ta ˈlal.tro ˈde.e veˈnir a tʃerˈkar.mi",
+   "words": [
+    [
+     "Dunque",
+     "so",
+     "ˈduŋ.kwe"
+    ],
+    [
+     "un",
+     "one",
+     "un"
+    ],
+    [
+     "ci",
+     "us",
+     "tʃi"
+    ],
+    [
+     "ascolta,",
+     "listens",
+     "asˈkol.ta"
+    ],
+    [
+     "l'altro",
+     "the other",
+     "ˈlal.tro"
+    ],
+    [
+     "dee",
+     "must",
+     "ˈde.e"
+    ],
+    [
+     "venir",
+     "come",
+     "veˈnir"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "cercarmi.",
+     "look for me",
+     "tʃerˈkar.mi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s3",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Incominciam.",
+   "translation": "Let's begin.",
+   "ipa": "iŋ.ko.minˈtʃam",
+   "words": [
+    [
+     "Incominciam.",
+     "let's begin",
+     "iŋ.ko.minˈtʃam"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m3",
+   "role": "marcellina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Io voglio quì celarmi",
+   "translation": "I want to hide here",
+   "ipa": "ˈi.o ˈvɔʎ.ʎo ˈkwi tʃeˈlar.mi",
+   "words": [
+    [
+     "Io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "voglio",
+     "want",
+     "ˈvɔʎ.ʎo"
+    ],
+    [
+     "quì",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "celarmi",
+     "hide myself",
+     "tʃeˈlar.mi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s4",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Madama, voi tremate, avreste freddo?",
+   "translation": "Madam, you are trembling: would you be cold?",
+   "ipa": "maˈda.ma ˈvoi treˈma.te aˈvres.te ˈfred.do",
+   "words": [
+    [
+     "Madama,",
+     "madam",
+     "maˈda.ma"
+    ],
+    [
+     "voi",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "tremate,",
+     "are trembling",
+     "treˈma.te"
+    ],
+    [
+     "avreste",
+     "would you have",
+     "aˈvres.te"
+    ],
+    [
+     "freddo?",
+     "cold",
+     "ˈfred.do"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "would you be cold"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t1",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Parmi u mida la notte;",
+   "translation": "The night seems damp to me;",
+   "ipa": "ˈpar.mi‿ˈu.mi.da la ˈnɔt.te",
+   "words": [
+    [
+     "Parmi",
+     "seems to me",
+     "ˈpar.mi"
+    ],
+    [
+     "u",
+     "damp",
+     "ˈu"
+    ],
+    [
+     "mida",
+     "damp",
+     "mi.da"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "notte;",
+     "night",
+     "ˈnɔt.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "damp"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "t2",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "io mi ritiro.",
+   "translation": "I'll withdraw.",
+   "ipa": "ˈi.o mi riˈti.ro",
+   "words": [
+    [
+     "io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "mi",
+     "myself",
+     "mi"
+    ],
+    [
+     "ritiro.",
+     "withdraw",
+     "riˈti.ro"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f1",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Eccoci della crisi il grande istante",
+   "translation": "Here we are at the great moment of the crisis",
+   "ipa": "ˈɛk.ko.tʃi ˈdel.la ˈkri.zi‿il ˈgran.de‿isˈtan.te",
+   "words": [
+    [
+     "Eccoci",
+     "here we are",
+     "ˈɛk.ko.tʃi"
+    ],
+    [
+     "della",
+     "of the",
+     "ˈdel.la"
+    ],
+    [
+     "crisi",
+     "crisis",
+     "ˈkri.zi"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "grande",
+     "great",
+     "ˈgran.de"
+    ],
+    [
+     "istante",
+     "instant",
+     "isˈtan.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s5",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Io sotto questi pini, se madama il permette,",
+   "translation": "I, under these pines, if madam permits it,",
+   "ipa": "ˈi.o ˈsot.to ˈkwes.ti ˈpi.ni se maˈda.ma‿il perˈmet.te",
+   "words": [
+    [
+     "Io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "sotto",
+     "under",
+     "ˈsot.to"
+    ],
+    [
+     "questi",
+     "these",
+     "ˈkwes.ti"
+    ],
+    [
+     "pini,",
+     "pines",
+     "ˈpi.ni"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "madama",
+     "madam",
+     "maˈda.ma"
+    ],
+    [
+     "il",
+     "it",
+     "il"
+    ],
+    [
+     "permette,",
+     "permits",
+     "perˈmet.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s5_2",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "resto a prendere il fresco una mezz' ora.",
+   "translation": "will stay to take the cool air for half an hour.",
+   "ipa": "ˈrɛs.to‿a ˈprɛn.de.re‿il ˈfres.ko‿ˈu.na ˈmɛddz‿ˈo.ra",
+   "words": [
+    [
+     "resto",
+     "will stay",
+     "ˈrɛs.to"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "prendere",
+     "take",
+     "ˈprɛn.de.re"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "fresco",
+     "cool air",
+     "ˈfres.ko"
+    ],
+    [
+     "una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "mezz'",
+     "half",
+     "ˈmɛddz"
+    ],
+    [
+     "ora.",
+     "hour",
+     "ˈo.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "take the cool air"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "half an hour"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Il fresco, il fresco!",
+   "translation": "The cool air, the cool air!",
+   "ipa": "il ˈfres.ko il ˈfres.ko",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "fresco,",
+     "cool air",
+     "ˈfres.ko"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "fresco!",
+     "cool air",
+     "ˈfres.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "t3",
+   "role": "countess",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Resta ci in buon' ora.",
+   "translation": "Stay here, by all means.",
+   "ipa": "ˈrɛs.ta tʃi‿in bwɔn‿ˈo.ra",
+   "words": [
+    [
+     "Resta",
+     "stay",
+     "ˈrɛs.ta"
+    ],
+    [
+     "ci",
+     "here",
+     "tʃi"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "buon'",
+     "good",
+     "bwɔn"
+    ],
+    [
+     "ora.",
+     "hour",
+     "ˈo.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "stay here"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "by all means"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s6",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Il birbo è in sentinella.",
+   "translation": "The rascal is on watch.",
+   "ipa": "il ˈbir.bo‿ɛ‿in sen.tiˈnɛl.la",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "birbo",
+     "rascal",
+     "ˈbir.bo"
+    ],
+    [
+     "è",
+     "is",
+     "ɛ"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "sentinella.",
+     "sentry",
+     "sen.tiˈnɛl.la"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "on watch"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s7",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Divertiamci anche noi,",
+   "translation": "Let's have some fun too,",
+   "ipa": "di.verˈtjam.tʃi‿ˈaŋ.ke ˈnoi",
+   "words": [
+    [
+     "Divertiamci",
+     "let's have fun",
+     "di.verˈtjam.tʃi"
+    ],
+    [
+     "anche",
+     "also",
+     "ˈaŋ.ke"
+    ],
+    [
+     "noi,",
+     "we",
+     "ˈnoi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s8",
+   "role": "susanna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "diamogli la mercè de' dubbi suoi.",
+   "translation": "let's give him the reward for his doubts.",
+   "ipa": "ˈdja.moʎ.ʎi la merˈtʃe de ˈdub.bi ˈswɔi",
+   "words": [
+    [
+     "diamogli",
+     "let's give him",
+     "ˈdja.moʎ.ʎi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mercè",
+     "reward",
+     "merˈtʃe"
+    ],
+    [
+     "de'",
+     "for the",
+     "de"
+    ],
+    [
+     "dubbi",
+     "doubts",
+     "ˈdub.bi"
+    ],
+    [
+     "suoi.",
+     "his",
+     "ˈswɔi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

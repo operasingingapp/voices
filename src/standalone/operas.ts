@@ -160,6 +160,24 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Nel padiglione a manca",
       "editionId": "mozart-nel-padiglione-a-manca"
+     },
+     {
+      "title": "Tutto è disposto… Aprite un po' quegli occhi",
+      "kind": "Aria · Act 4",
+      "id": "Act 4: Tutto è disposto… Aprite un po' quegli occhi",
+      "editionId": "mozart-tutto-e-disposto"
+     },
+     {
+      "title": "Signora! ella mi disse",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Signora! ella mi disse",
+      "editionId": "mozart-signora-ella-mi-disse"
+     },
+     {
+      "title": "Perfida! e in quella forma",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Perfida! e in quella forma",
+      "editionId": "mozart-perfida-e-in-quella-forma"
      }
     ]
    },
@@ -379,6 +397,24 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 3",
       "id": "Act 3: Ecco la marcia",
       "editionId": "mozart-ecco-la-marcia"
+     },
+     {
+      "title": "Signora! ella mi disse",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Signora! ella mi disse",
+      "editionId": "mozart-signora-ella-mi-disse"
+     },
+     {
+      "title": "Giunse alfin il momento… Deh vieni, non tardar",
+      "kind": "Aria · Act 4",
+      "id": "Act 4: Giunse alfin il momento… Deh vieni, non tardar",
+      "editionId": "mozart-giunse-alfin-il-momento"
+     },
+     {
+      "title": "Va là, vecchia pedante",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Va là, vecchia pedante",
+      "editionId": "mozart-va-la-vecchia-pedante"
      }
     ]
    },
@@ -531,6 +567,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 3",
       "id": "Act 3: Ecco la marcia",
       "editionId": "mozart-ecco-la-marcia"
+     },
+     {
+      "title": "Signora! ella mi disse",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Signora! ella mi disse",
+      "editionId": "mozart-signora-ella-mi-disse"
+     },
+     {
+      "title": "Perfida! e in quella forma",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Perfida! e in quella forma",
+      "editionId": "mozart-perfida-e-in-quella-forma"
      }
     ]
    },
@@ -755,6 +803,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "Perfida! e in quella forma",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Perfida! e in quella forma",
+      "editionId": "mozart-perfida-e-in-quella-forma"
+     },
+     {
+      "title": "Va là, vecchia pedante",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Va là, vecchia pedante",
+      "editionId": "mozart-va-la-vecchia-pedante"
      }
     ]
    },
@@ -880,6 +940,12 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 4",
       "id": "Act 4: Il capro e la capretta",
       "editionId": "mozart-il-capro-e-la-capretta"
+     },
+     {
+      "title": "Signora! ella mi disse",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Signora! ella mi disse",
+      "editionId": "mozart-signora-ella-mi-disse"
      }
     ]
    },
@@ -2504,7 +2570,7 @@ const V2_NEW = new Set([
   "Va' là, vecchia pedante",
   "Taci, vien gente",
   "Basilio, in traccia tosto",
-  "Perfida! E in quella forma",
+  "Perfida! e in quella forma",
   "Quanto duolmi, Susanna",
   "Bravo! Che bella voce!",
   "Dunque voi non aprite?",
@@ -2532,7 +2598,7 @@ const V2_ADDED: Record<string, string[]> = {
   "Ancora un passo or via… Quanto cielo! Quanto mar!": ["sharpless", "pinkerton"],
   "The relatives bargain": ["schicchi"],
   "Addio, fiorito asil": ["sharpless"],
-  "Signora, ella mi disse": ["figaro"],
+  "Signora! ella mi disse": ["figaro"],
 };
 const V2_REMOVED: Record<string, string[]> = {
   "Bel conforto al mietitore… Quanto è bella": ["adina"],
