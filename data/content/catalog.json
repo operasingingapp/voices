@@ -1663,6 +1663,46 @@
     }
   },
   {
+    "editionId": "mozart-pace-pace",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-pace-pace@1.0.0-klengel#3c5a339c1c",
+    "title": "Pace, pace, mio dolce tesoro!",
+    "subtitle": "Finale of Act 4 (No. 28), section 4: Figaro and Susanna make peace",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      }
+    ],
+    "measures": 60,
+    "durationSec": 120,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 46,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-partito-e-alfin-l-audace",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-partito-e-alfin-l-audace@1.0.0-klengel#f25767ad4d",

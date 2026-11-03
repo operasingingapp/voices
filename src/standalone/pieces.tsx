@@ -863,6 +863,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-pace-pace": {
+    portrait: "figaro:susanna",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "B flat major",
+      time: "6/8",
+      tempo: "Andante at ♩. = 60 (about 2 minutes)",
+    },
+    notePlaceholder: "Figaro and Susanna make peace, then stage a love scene for the Count",
+    about: (
+      <>
+        <p>
+          Score: the Act 4 finale (No. 28), section 4, “Pace, pace, mio dolce tesoro!” (vocal score pages 345-348, 60 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

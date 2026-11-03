@@ -196,6 +196,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Tutto è tranquillo e placido",
       "editionId": "mozart-tutto-e-tranquillo"
+     },
+     {
+      "title": "Pace, pace, mio dolce tesoro!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pace, pace, mio dolce tesoro!",
+      "editionId": "mozart-pace-pace"
      }
     ]
    },
@@ -451,6 +457,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Tutto è tranquillo e placido",
       "editionId": "mozart-tutto-e-tranquillo"
+     },
+     {
+      "title": "Pace, pace, mio dolce tesoro!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pace, pace, mio dolce tesoro!",
+      "editionId": "mozart-pace-pace"
      }
     ]
    },
@@ -796,6 +808,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Partito è alfin l'audace",
       "editionId": "mozart-partito-e-alfin-l-audace"
+     },
+     {
+      "title": "Pace, pace, mio dolce tesoro!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pace, pace, mio dolce tesoro!",
+      "editionId": "mozart-pace-pace"
      }
     ]
    },
