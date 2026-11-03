@@ -1,0 +1,24 @@
+# Check 5: sections, titles, singers, cast, piece lists (app-boheme.md vs Ricordi vs, plate 99000)
+
+Checked on the page images: every section joint (pp. 19-20, 32-33, 48-49, 53-54, 63-64, 69, 74-75, 77-78, 82-83, 99-100, 102-103, 110-111, 129-130, 139-140, 144-146, 166-169, 176-179, 191-192, 198-199, 205-206, 209-210, 222-223, 227-228, 231-232, 247, 257-258, 261, 269, 273-274), the first sung words of every section, singer labels and clefs for the small roles, and the stage directions behind each "on stage" field. The per-character lists were re-derived from the "sings" fields.
+
+Result: 2 problems.
+
+## Problems
+
+1. **S6 title is not the first sung word (p. 64 sys 1 bar 1).** The first sung note in S6 is Mimì's "Ah!" (sorpresa), printed in bar 1 at (30), "AND.no AFFETTUOSO". Rodolfo's "Che gelida manina" comes in only in bar 3. The draft's own joint note says so, but the title ignores it. The rule is "title = first sung words, combined title A… B where B is the set piece", and S21 follows it ("Vai?… Donde lieta uscì", where Rodolfo's "Va-i?" comes before Mimì's piece on p. 206). By that rule S6 should be "Ah!… Che gelida manina". The other fix is to give the owner a deliberate exception with a note. The W-1 and character-list entries would change to match.
+
+2. **The S21/S22 joint cuts a word (p. 209 sys 3).** S21 ends at sys 3 bar 1 and S22 starts at bar 2 (29). Mimì's "addio senza ran-cor....." puts the syllable "-cor" (a dotted crotchet, tied, under a "(corta)" fermata) on the first beat of the (29) bar. So the last syllable of her piece falls in S22, and S21 ends on "ran-". The draft points this out ("Mimì's last syllable falls on its first beat") but leaves it as is. Rodolfo's "Dunque" enters on beat 3 of the same bar, so no barline gives a clean joint. Fix: say that the joint falls inside the (29) bar. S21 runs through Mimì's "-cor" on beats 1-2, and S22 starts on Rodolfo's upbeat "Dunque" on beat 3. If the app can only cut at barlines, end S21 after the (29) bar so that Mimì's piece is complete. The overlap with Rodolfo's first three syllables is then the smaller harm.
+
+## Verified correct (no action)
+- Running order: every other start and end matches the print (page, system, bar, figure, tempo words, joint wording), with no gaps or overlaps. This covers p. 53 sys 4 last bar into p. 54; p. 103, which has no joint (S11 runs straight through (10)); p. 140 sys 1 (piano tail of the waltz) and sys 2 ("strillando, quasi a piacere"); p. 145 sys 2 bar 3 ("ALL.º alla MARCIA" after Schaunard's "Vediam!......" in bar 2); p. 198 sys 4 last bar (Rodolfo's upbeat "Mi-", "tristamente"); pp. 228-231 (AND.no MOSSO after the double bar at the end of p. 227; S25 starts at sys 3 with "Che ora si-a?" over the held chord, then "mosso"); p. 247 sys 3 bar 4 (Marcello's "Mu-", with "si spalanca l'uscio" over bar 3).
+- Titles match the print: "Si. Mi chiamano Mimì" (p. 69, printed "Si.", noted in W-2), "Al Quartiere Latin ci attende Momus.", "Non sono in vena.", "Si può?..", "Chi guardi?…", "Sa dirmi, scusi, qual'è l'osteria" (p. 177, "qual'è" as printed), "In un coupè?" (Marcello sings before Rodolfo, p. 223), "Aranci, datteri!" (Venditori, ahead of the crowd's "Ah!", p. 83), "Caro!" (p. 146), "Musetta!" and the rest.
+- "Sings" and "on stage" fields: all correct, including Marcello offstage in S9, Musetta offstage in S16, Sergente silent but on stage in S16 (enters p. 173, first sings p. 177), Alcindoro silent in S15 (returns p. 166), Colline absent in S29 (returns p. 276), and Rodolfo and Mimì on stage in S27.
+- Cast: complete. Every individually labelled singer is either listed or noted as a small solo (UN VENDITORE AMBULANTE, RAGAZZO SOLO). The clefs fit the voice types given (Benoit and Alcindoro bass clef; Parpignol tenor-treble; Sergente "Passi!" and Doganiere "Vengo!" bass clef).
+- Character lists: all 11 follow exactly from the running order.
+
+## Unsure
+- p. 53 sys 4, last bar: this bar holds the fermata pause that ends S4 ("Vien presto!" has died away) plus the piano's pp upbeat. Giving the whole bar to S5 is defensible. But the joint text calls "the double bar into 2/4" the joint, and that double bar falls after this bar, so the wording is slightly loose.
+- p. 169: the "l" of "le guardie" is damaged in the print (the map read it as "ie"). Under magnification it has the height of an "l", so "le" in the title is probably right and no misprint note is needed.
+- p. 179: S18 starts at sys 3 bar 1, in the middle of the Campanelle music. Marcello's "Mi-" comes only in bar 3. The draft's wording ("starts at his entrance", with "esce dal Cabaré" over bar 1) is accurate, but bars 1-2 of S18 are really the tail of S17's bell music.
+- Small-role voice types: Sergente and Doganiere sing only a few low notes, so "Bass" (rather than baritone) cannot be decided from this score. The notes that Benoit and Alcindoro are "sometimes sung by a tenor" do not come from the score.
