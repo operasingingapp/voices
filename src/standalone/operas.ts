@@ -154,6 +154,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Barbarina, cos’hai?",
       "editionId": "mozart-barbarina-coshai"
+     },
+     {
+      "title": "Nel padiglione a manca",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Nel padiglione a manca",
+      "editionId": "mozart-nel-padiglione-a-manca"
      }
     ]
    },
@@ -793,6 +799,18 @@ export const OPERAS: Opera[] = [
       "kind": "Sestetto · Act 3",
       "id": "Act 3: Riconosci in questo amplesso",
       "editionId": "mozart-riconosci-in-questo-amplesso"
+     },
+     {
+      "title": "Nel padiglione a manca",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Nel padiglione a manca",
+      "editionId": "mozart-nel-padiglione-a-manca"
+     },
+     {
+      "title": "Hai diavoli nel corpo?",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Hai diavoli nel corpo?",
+      "editionId": "mozart-hai-diavoli-nel-corpo"
      }
     ]
    },
@@ -856,6 +874,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Presto avvertiam Susanna",
       "editionId": "mozart-presto-avvertiam-susanna"
+     },
+     {
+      "title": "Il capro e la capretta",
+      "kind": "Aria · Act 4",
+      "id": "Act 4: Il capro e la capretta",
+      "editionId": "mozart-il-capro-e-la-capretta"
      }
     ]
    },
@@ -895,6 +919,24 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Voi, signor, che giusto siete",
       "editionId": "mozart-voi-signor-che-giusto-siete"
+     },
+     {
+      "title": "Nel padiglione a manca",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Nel padiglione a manca",
+      "editionId": "mozart-nel-padiglione-a-manca"
+     },
+     {
+      "title": "Hai diavoli nel corpo?",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Hai diavoli nel corpo?",
+      "editionId": "mozart-hai-diavoli-nel-corpo"
+     },
+     {
+      "title": "In quegl'anni",
+      "kind": "Aria · Act 4",
+      "id": "Act 4: In quegl'anni",
+      "editionId": "mozart-in-quegli-anni"
      }
     ]
    },
@@ -955,6 +997,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Barbarina, cos’hai?",
       "editionId": "mozart-barbarina-coshai"
+     },
+     {
+      "title": "Nel padiglione a manca",
+      "kind": "Recitative · Act 4",
+      "id": "Act 4: Nel padiglione a manca",
+      "editionId": "mozart-nel-padiglione-a-manca"
      }
     ]
    },
@@ -2300,7 +2348,7 @@ const V2_NEW = new Set([
   "Eccovi, o caro amico",
   "Cosa mi narri!",
   "Signor… se trattenete",
-  "Ha i diavoli nel corpo",
+  "Hai diavoli nel corpo?",
   "Oh guarda il demonietto!",
   "Piegato è il foglio",
   "Susanna! Signore!",

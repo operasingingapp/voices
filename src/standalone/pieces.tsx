@@ -575,6 +575,102 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-il-capro-e-la-capretta": {
+    portrait: "figaro:marcellina",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "G major",
+      time: "3/4, then 4/4 from bar 54",
+      tempo: "Tempo di Menuetto at ♩ = 112, Allegro at ♩ = 132 (about 4½ minutes)",
+    },
+    notePlaceholder: "Marcellina stands up for women: only men are cruel to their mates",
+    about: (
+      <>
+        <p>
+          Score: No. 24, Marcellina’s aria “Il capro e la capretta” (vocal score pages 289-293, 94 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-nel-padiglione-a-manca": {
+    portrait: "figaro:barbarina",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Barbarina looks for the pavilion; Figaro gathers his witnesses",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Nel padiglione a manca” (vocal score pages 293-296, 31 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-hai-diavoli-nel-corpo": {
+    portrait: "figaro:basilio",
+    opera: "Le nozze di Figaro",
+    kind: "Recitative",
+    facts: {
+      key: "C major (no key signature)",
+      time: "4/4",
+      tempo: "Recitative, free",
+    },
+    notePlaceholder: "Basilio explains to Bartolo why Figaro is in such a state",
+    about: (
+      <>
+        <p>
+          Score: the recitative “Hai diavoli nel corpo?” (vocal score pages 296-297, 13 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-in-quegli-anni": {
+    portrait: "figaro:basilio",
+    opera: "Le nozze di Figaro",
+    kind: "Aria",
+    facts: {
+      key: "B flat major",
+      time: "4/4, 3/4 from bar 42, 4/4 from bar 102",
+      tempo: "Andante at ♩ = 72, Tempo di Menuetto at ♩ = 112, Allegro at ♩ = 132 (about 4 minutes)",
+    },
+    notePlaceholder: "Basilio’s fable of the ass’s skin: never cross the powerful",
+    about: (
+      <>
+        <p>
+          Score: No. 25, Don Basilio’s aria “In quegl'anni” (vocal score pages 298-304, 138 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

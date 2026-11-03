@@ -420,7 +420,7 @@
   {
     "editionId": "mozart-cinque-dieci-venti",
     "editionVersion": "1.0.0-klengel",
-    "scoreVersionId": "mozart-cinque-dieci-venti@1.0.0-klengel#1738b259bf",
+    "scoreVersionId": "mozart-cinque-dieci-venti@1.0.0-klengel#dc9bc92b34",
     "title": "Cinque… dieci… venti…",
     "subtitle": "Figaro and Susanna's duettino from Le nozze di Figaro, Act 1",
     "kind": "duet",
@@ -1263,6 +1263,40 @@
     }
   },
   {
+    "editionId": "mozart-hai-diavoli-nel-corpo",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-hai-diavoli-nel-corpo@1.0.0-klengel#570249890c",
+    "title": "Hai diavoli nel corpo?",
+    "subtitle": "Basilio and Bartolo: recitative from Le nozze di Figaro, Act 4",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      },
+      {
+        "id": "bartolo",
+        "name": "Bartolo",
+        "voiceType": "Bass",
+        "partKey": "bartolo"
+      }
+    ],
+    "measures": 13,
+    "durationSec": 29,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-hai-gia-vinta",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-hai-gia-vinta@1.0.0-klengel#84fa42bc2a",
@@ -1286,6 +1320,62 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 59,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-il-capro-e-la-capretta",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-il-capro-e-la-capretta@1.0.0-klengel#2a1b6db13f",
+    "title": "Il capro e la capretta",
+    "subtitle": "Marcellina: aria from Le nozze di Figaro, Act 4 (No. 24)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "marcellina",
+        "name": "Marcellina",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "marcellina"
+      }
+    ],
+    "measures": 94,
+    "durationSec": 158,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 18,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-in-quegli-anni",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-in-quegli-anni@1.0.0-klengel#60af8e0d02",
+    "title": "In quegl'anni",
+    "subtitle": "Don Basilio: aria from Le nozze di Figaro, Act 4 (No. 25)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      }
+    ],
+    "measures": 138,
+    "durationSec": 300,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 58,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1376,6 +1466,52 @@
     "time": "6/8",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-nel-padiglione-a-manca",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-nel-padiglione-a-manca@1.0.0-klengel#8079dbad4f",
+    "title": "Nel padiglione a manca",
+    "subtitle": "Barbarina, Figaro, Basilio and Bartolo: recitative from Le nozze di Figaro, Act 4",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "barbarina",
+        "name": "Barbarina",
+        "voiceType": "Soprano",
+        "partKey": "barbarina"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      },
+      {
+        "id": "basilio",
+        "name": "Don Basilio",
+        "voiceType": "Tenor",
+        "partKey": "basilio"
+      },
+      {
+        "id": "bartolo",
+        "name": "Bartolo",
+        "voiceType": "Bass",
+        "partKey": "bartolo"
+      }
+    ],
+    "measures": 31,
+    "durationSec": 69,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 27,
       "withAudio": 0,
       "reviewed": 0
     }
