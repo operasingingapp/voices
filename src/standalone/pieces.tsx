@@ -294,7 +294,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "4/4",
-      tempo: "Allegro moderato at ♩ = 126 (about 5 minutes)",
+      tempo: "Allegro moderato at ♩ = 132 (about 4 minutes)",
     },
     notePlaceholder: "Marcellina and Bartolo turn out to be Figaro's parents",
     about: (
@@ -510,7 +510,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F minor",
       time: "6/8",
-      tempo: "Andante ♩. = 50 (about 2 minutes)",
+      tempo: "Andante ♩. = 40 (about 2 minutes)",
     },
     notePlaceholder: "Barbarina has lost the pin she was to take to Susanna (No. 23)",
     about: (
@@ -654,7 +654,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "4/4, 3/4 from bar 42, 4/4 from bar 102",
-      tempo: "Andante at ♩ = 72, Tempo di Menuetto at ♩ = 112, Allegro at ♩ = 132 (about 4 minutes)",
+      tempo: "Andante at ♩ = 80, Tempo di Menuetto at ♩ = 126, Allegro at ♩ = 144 (about 4½ minutes)",
     },
     notePlaceholder: "Basilio’s fable of the ass’s skin: never cross the powerful",
     about: (
@@ -726,7 +726,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "Recitative in C, aria in F major",
       time: "4/4, aria 6/8",
-      tempo: "Recitative Allegro vivace assai, aria Andante at ♩. = 44 (about 5 minutes)",
+      tempo: "Recitative Allegro vivace assai, aria Andante at ♩. = 35 (about 4 minutes)",
     },
     notePlaceholder: "Susanna, knowing Figaro listens, sings of longing for her lover",
     about: (
@@ -798,7 +798,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major",
       time: "4/4",
-      tempo: "Andante at ♩ = 72 (about 3 minutes)",
+      tempo: "Andante at ♩ = 80 (about 2½ minutes)",
     },
     notePlaceholder: "Cherubino flirts with the Countess, thinking she is Susanna",
     about: (
@@ -822,13 +822,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "4/4",
-      tempo: "Con un poco più di moto at ♩ = 92 (about 3 minutes)",
+      tempo: "Con un poco più di moto at ♩ = 100 (about 2½ minutes)",
     },
     notePlaceholder: "The Count woos his own wife, thinking she is Susanna",
     about: (
       <>
         <p>
           Score: the Act 4 finale (No. 28), section 2, “Partito è alfin l'audace” (vocal score pages 329-337, 58 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-tutto-e-tranquillo": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "E flat major",
+      time: "3/4",
+      tempo: "Larghetto at ♩ = 63, then Allegro molto at ♩ = 192 (about 3 minutes)",
+    },
+    notePlaceholder: "Figaro knows Susanna's voice and pretends to woo ‘the Countess’",
+    about: (
+      <>
+        <p>
+          Score: the Act 4 finale (No. 28), section 3, “Tutto è tranquillo e placido” (vocal score pages 337-344, 166 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
           Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
@@ -846,7 +870,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "Andantino in 2/4, then Allegro in 4/4",
-      tempo: "Andantino ♩ = 60, Allegro ♩ = 144: the engraving's numbers, Mozart gives words only",
+      tempo: "Andantino ♩ = 44, Allegro ♩ = 120 (about 4 minutes): the engraving gave ♩ = 60 and 144, Mozart gives words only",
     },
     notePlaceholder: "Take time on “Dove sono”, breathe after “piacer”",
     about: (
@@ -1340,7 +1364,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major (Allegro molto), then B flat major (Andante)",
       time: "4/4, then 6/8",
-      tempo: "Allegro molto at ♩ = 160, then Andante at ♩ = 66 (about 6 minutes)",
+      tempo: "Allegro molto at ♩ = 184, then Andante at ♩ = 84 (about 6½ minutes)",
     },
     notePlaceholder: "Antonio storms in: someone jumped from the window onto his carnations",
     about: (
@@ -1364,7 +1388,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E flat major",
       time: "4/4",
-      tempo: "Allegro assai at ♩ = 168, then Più Allegro at ♩ = 192 and Prestissimo at ♩ = 232 (about 4 minutes)",
+      tempo: "Allegro assai at ♩ = 152, then Più Allegro at ♩ = 200 and Prestissimo at ♩ = 240 (about 5 minutes)",
     },
     notePlaceholder: "Marcellina, Bartolo and Basilio arrive to claim Figaro's promise of marriage",
     about: (
@@ -1412,7 +1436,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "3/8 (Molto Andante), then 4/4 (Allegro)",
-      tempo: "Molto Andante at ♪ = 104, then Allegro at ♩ = 138, as the score changes tempo (about 5½ minutes)",
+      tempo: "Molto Andante at ♪ = 104, then Allegro at ♩ = 160, as the score changes tempo (about 5 minutes)",
     },
     notePlaceholder: "Susanna steps out of the closet, and the Count must beg pardon",
     about: (
@@ -1508,7 +1532,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "4/4",
-      tempo: "Allegro assai at ♩ = 144 (about 1 minute)",
+      tempo: "Allegro assai at ♩ = 160 (about 1 minute)",
     },
     notePlaceholder: "Susanna frees Cherubino, who jumps out of the window",
     about: (
@@ -1580,7 +1604,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E flat major",
       time: "4/4",
-      tempo: "Allegro: played here at ♩ = 132 (about 4 minutes)",
+      tempo: "Allegro: played here at ♩ = 152 (about 3½ minutes)",
     },
     notePlaceholder: "The key, the closet, and the Count's fury",
     about: (
@@ -1605,7 +1629,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "4/4",
-      tempo: "Allegro assai: played here at ♩ = 152, with the Count's recitative (bars 121-128) at ♩ = 80 (about 4½ minutes)",
+      tempo: "Allegro assai: played here at ♩ = 176, with the Count's recitative (bars 121-128) at ♩ = 80 (about 5 minutes)",
     },
     notePlaceholder: "The Count steps out from behind the chair",
     about: (
@@ -1629,7 +1653,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at ♩ = 81 (about 4 minutes)",
+      tempo: "Free, as recitative is sung: played here at ♩ = 100 (about 3½ minutes)",
     },
     notePlaceholder: "The armchair, the dressing gown, and Basilio at the door",
     about: (

@@ -190,6 +190,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Partito è alfin l'audace",
       "editionId": "mozart-partito-e-alfin-l-audace"
+     },
+     {
+      "title": "Tutto è tranquillo e placido",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Tutto è tranquillo e placido",
+      "editionId": "mozart-tutto-e-tranquillo"
      }
     ]
    },
@@ -439,6 +445,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Partito è alfin l'audace",
       "editionId": "mozart-partito-e-alfin-l-audace"
+     },
+     {
+      "title": "Tutto è tranquillo e placido",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Tutto è tranquillo e placido",
+      "editionId": "mozart-tutto-e-tranquillo"
      }
     ]
    },
