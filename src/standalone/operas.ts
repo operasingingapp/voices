@@ -202,6 +202,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Pace, pace, mio dolce tesoro!",
       "editionId": "mozart-pace-pace"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -463,6 +469,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Pace, pace, mio dolce tesoro!",
       "editionId": "mozart-pace-pace"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -639,6 +651,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Partito è alfin l'audace",
       "editionId": "mozart-partito-e-alfin-l-audace"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -814,6 +832,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Pace, pace, mio dolce tesoro!",
       "editionId": "mozart-pace-pace"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -899,6 +923,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Pian pianin, le andrò più presso",
       "editionId": "mozart-pian-pianin"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -955,6 +985,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Hai diavoli nel corpo?",
       "editionId": "mozart-hai-diavoli-nel-corpo"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -1030,6 +1066,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Signora! ella mi disse",
       "editionId": "mozart-signora-ella-mi-disse"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -1087,6 +1129,12 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 4",
       "id": "Act 4: In quegl'anni",
       "editionId": "mozart-in-quegli-anni"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -1108,6 +1156,12 @@ export const OPERAS: Opera[] = [
       "kind": "Sestetto · Act 3",
       "id": "Act 3: Riconosci in questo amplesso",
       "editionId": "mozart-riconosci-in-questo-amplesso"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -1153,6 +1207,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Nel padiglione a manca",
       "editionId": "mozart-nel-padiglione-a-manca"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    },
@@ -1180,6 +1240,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 3",
       "id": "Act 3: Eh, cospettate!",
       "editionId": "mozart-eh-cospettate"
+     },
+     {
+      "title": "Questo giorno di tormenti",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Questo giorno di tormenti",
+      "editionId": "mozart-questo-giorno-di-tormenti"
      }
     ]
    }

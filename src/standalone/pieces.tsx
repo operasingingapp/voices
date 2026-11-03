@@ -887,6 +887,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-questo-giorno-di-tormenti": {
+    portrait: "figaro:figaro",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "D major",
+      time: "4/4",
+      tempo: "Allegro assai at ♩ = 160 (about 2 minutes)",
+    },
+    notePlaceholder: "All celebrate: only love can end this mad day",
+    about: (
+      <>
+        <p>
+          Score: the Act 4 finale (No. 28), section 6, “Questo giorno di tormenti” (vocal score pages 356-362, 74 bars, to the end of the opera), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain. The print sets the eleven singers on five shared staves; here each has their own line with the notes of their staff.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
