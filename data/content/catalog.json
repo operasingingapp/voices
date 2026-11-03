@@ -1663,6 +1663,52 @@
     }
   },
   {
+    "editionId": "mozart-partito-e-alfin-l-audace",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-partito-e-alfin-l-audace@1.0.0-klengel#69a9dfe673",
+    "title": "Partito è alfin l'audace",
+    "subtitle": "Finale of Act 4 (No. 28), section 2: the Count woos his own wife",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 58,
+    "durationSec": 151,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 63,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-perfida-e-in-quella-forma",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-perfida-e-in-quella-forma@1.0.0-klengel#62380db3d1",
@@ -1698,6 +1744,58 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-pian-pianin",
+    "editionVersion": "1.0.0-klengel",
+    "scoreVersionId": "mozart-pian-pianin@1.0.0-klengel#91525c8ee6",
+    "title": "Pian pianin, le andrò più presso",
+    "subtitle": "Finale of Act 4 (No. 28), section 1: Cherubino and the disguised Countess",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "cherubino",
+        "name": "Cherubino",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "cherubino"
+      },
+      {
+        "id": "countess",
+        "name": "The Countess",
+        "voiceType": "Soprano",
+        "partKey": "countess"
+      },
+      {
+        "id": "count",
+        "name": "Count Almaviva",
+        "voiceType": "Baritone",
+        "partKey": "count"
+      },
+      {
+        "id": "susanna",
+        "name": "Susanna",
+        "voiceType": "Soprano",
+        "partKey": "susanna"
+      },
+      {
+        "id": "figaro",
+        "name": "Figaro",
+        "voiceType": "Bass-baritone",
+        "partKey": "figaro"
+      }
+    ],
+    "measures": 50,
+    "durationSec": 167,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 89,
       "withAudio": 0,
       "reviewed": 0
     }

@@ -791,6 +791,54 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-pian-pianin": {
+    portrait: "figaro:cherubino",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "D major",
+      time: "4/4",
+      tempo: "Andante at ♩ = 72 (about 3 minutes)",
+    },
+    notePlaceholder: "Cherubino flirts with the Countess, thinking she is Susanna",
+    about: (
+      <>
+        <p>
+          Score: the Act 4 finale (No. 28), section 1, “Pian pianin, le andrò più presso” (vocal score pages 318-328, 50 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-partito-e-alfin-l-audace": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "G major",
+      time: "4/4",
+      tempo: "Con un poco più di moto at ♩ = 92 (about 3 minutes)",
+    },
+    notePlaceholder: "The Count woos his own wife, thinking she is Susanna",
+    about: (
+      <>
+        <p>
+          Score: the Act 4 finale (No. 28), section 2, “Partito è alfin l'audace” (vocal score pages 329-337, 58 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

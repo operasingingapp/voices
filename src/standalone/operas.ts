@@ -178,6 +178,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Perfida! e in quella forma",
       "editionId": "mozart-perfida-e-in-quella-forma"
+     },
+     {
+      "title": "Pian pianin, le andrò più presso",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pian pianin, le andrò più presso",
+      "editionId": "mozart-pian-pianin"
+     },
+     {
+      "title": "Partito è alfin l'audace",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Partito è alfin l'audace",
+      "editionId": "mozart-partito-e-alfin-l-audace"
      }
     ]
    },
@@ -415,6 +427,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Va là, vecchia pedante",
       "editionId": "mozart-va-la-vecchia-pedante"
+     },
+     {
+      "title": "Pian pianin, le andrò più presso",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pian pianin, le andrò più presso",
+      "editionId": "mozart-pian-pianin"
+     },
+     {
+      "title": "Partito è alfin l'audace",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Partito è alfin l'audace",
+      "editionId": "mozart-partito-e-alfin-l-audace"
      }
     ]
    },
@@ -579,6 +603,18 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 4",
       "id": "Act 4: Perfida! e in quella forma",
       "editionId": "mozart-perfida-e-in-quella-forma"
+     },
+     {
+      "title": "Pian pianin, le andrò più presso",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pian pianin, le andrò più presso",
+      "editionId": "mozart-pian-pianin"
+     },
+     {
+      "title": "Partito è alfin l'audace",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Partito è alfin l'audace",
+      "editionId": "mozart-partito-e-alfin-l-audace"
      }
     ]
    },
@@ -736,6 +772,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 3",
       "id": "Act 3: Ecco la marcia",
       "editionId": "mozart-ecco-la-marcia"
+     },
+     {
+      "title": "Pian pianin, le andrò più presso",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pian pianin, le andrò più presso",
+      "editionId": "mozart-pian-pianin"
+     },
+     {
+      "title": "Partito è alfin l'audace",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Partito è alfin l'audace",
+      "editionId": "mozart-partito-e-alfin-l-audace"
      }
     ]
    },
@@ -815,6 +863,12 @@ export const OPERAS: Opera[] = [
       "kind": "Recitative · Act 1",
       "id": "Act 1: Va là, vecchia pedante",
       "editionId": "mozart-va-la-vecchia-pedante"
+     },
+     {
+      "title": "Pian pianin, le andrò più presso",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Pian pianin, le andrò più presso",
+      "editionId": "mozart-pian-pianin"
      }
     ]
    },

@@ -1,0 +1,176 @@
+{
+ "editionId": "mozart-pian-pianin",
+ "editionVersion": "1.0.0-klengel",
+ "title": "Pian pianin, le andrò più presso",
+ "subtitle": "Finale of Act 4 (No. 28), section 1: Cherubino and the disguised Countess",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "cherubino",
+   "name": "Cherubino",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "cherubino"
+  },
+  {
+   "id": "countess",
+   "name": "The Countess",
+   "voiceType": "Soprano",
+   "partKey": "countess"
+  },
+  {
+   "id": "count",
+   "name": "Count Almaviva",
+   "voiceType": "Baritone",
+   "partKey": "count"
+  },
+  {
+   "id": "susanna",
+   "name": "Susanna",
+   "voiceType": "Soprano",
+   "partKey": "susanna"
+  },
+  {
+   "id": "figaro",
+   "name": "Figaro",
+   "voiceType": "Bass-baritone",
+   "partKey": "figaro"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "cherubino",
+   "label": "Cherubino (Mezzo-soprano)",
+   "shortLabel": "Cherubino",
+   "kind": "voice",
+   "roleId": "cherubino",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "countess",
+   "label": "The Countess (Soprano)",
+   "shortLabel": "Countess",
+   "kind": "voice",
+   "roleId": "countess",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "count",
+   "label": "Count Almaviva (Baritone)",
+   "shortLabel": "Count",
+   "kind": "voice",
+   "roleId": "count",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "susanna",
+   "label": "Susanna (Soprano)",
+   "shortLabel": "Susanna",
+   "kind": "voice",
+   "roleId": "susanna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "figaro",
+   "label": "Figaro (Bass-baritone)",
+   "shortLabel": "Figaro",
+   "kind": "voice",
+   "roleId": "figaro",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "50"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Le nozze di Figaro, K. 492 (1786)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Le nozze di Figaro (1786)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Breitkopf vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Breitkopf & Härtel vocal score (Edition Breitkopf 1716, about 1900), pages 318-328",
+   "author": "Paul Klengel (1854–1935), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently (the piano's second reading from a scan where one was supplied), disagreements settled on the page by a separate judge, then checked bar by bar by an independent checker and corrected."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
