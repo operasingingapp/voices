@@ -198,7 +198,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "A minor, then A major from bar 29",
       time: "4/4",
-      tempo: "Andante: played here at ♩ = 66 (about 3½ minutes)",
+      tempo: "Andante: played here at ♩ = 104 (about 3 minutes)",
     },
     notePlaceholder: "Susanna promises the Count a meeting in the garden",
     about: (
