@@ -263,35 +263,38 @@ export const SYNOPSES: Record<string, Act[]> = {
   boheme: [
     {
       title: "Act 1",
-      where: "A garret in the Latin Quarter of Paris, Christmas Eve",
+      where: "A garret in the Latin Quarter, Christmas Eve",
       paras: [
-        "The poet Rodolfo and the painter Marcello, freezing, burn Rodolfo's play to keep warm, and the philosopher Colline joins them. The musician Schaunard arrives with food, wood and money, and they plan Christmas Eve at the Café Momus. The landlord Benoît comes for the rent; they ply him with wine, get him boasting of his flirtations, and throw him out in mock outrage. The friends set off, Rodolfo staying behind to finish an article.",
-        "There is a knock: their neighbour Mimì, whose candle has blown out on the stairs. She drops her key and they search for it in the dark; their hands meet (“Che gelida manina”). She tells him about her simple life embroidering flowers (“Sì, mi chiamano Mimì”). His friends call up from the street, and Rodolfo and Mimì, in love (“O soave fanciulla”), go out to join them.",
+        "Rodolfo and Marcello are too cold to work: Marcello's hands are numb over his painting of the Red Sea, and the fireplace is cold. Rodolfo feeds it his play, first one act, then another, then the rest at once, while the philosopher Colline, back from a pawnshop that takes no pledges on Christmas Eve, joins them at the fire. Then two shop boys arrive with wood, food, wine and cigars, and Schaunard the musician throws down silver coins: an Englishman hired him to play until a parrot died, and he hurried things along with a sprig of parsley. Nobody listens to the story. Schaunard puts the food away in the cupboard for leaner days: on Christmas Eve they will drink at home and dine out.",
+        "The landlord Benoit knocks for the rent. The friends pour him wine, get him boasting of a flirtation at the Mabille dance hall, and then throw him out in mock outrage at a married man's morals. The others leave for the Café Momus; Rodolfo stays five minutes to finish an article.",
+        "Their neighbour Mimì knocks: her candle has gone out. Breathless from the stairs, she faints, comes round, leaves, and comes back for the key she has dropped; both candles blow out, and in the dark Rodolfo finds the key and pockets it. Their hands meet. He tells her he is a poet (“Che gelida manina”); she tells him she embroiders flowers on linen and silk and lives alone under the roofs (“Si. Mi chiamano Mimì”). The friends shout up from the courtyard; in the moonlight Rodolfo and Mimì declare their love (“O soave fanciulla”) and go out arm in arm to join them.",
       ],
     },
     {
       title: "Act 2",
-      where: "The Latin Quarter and the Café Momus",
+      where: "The Latin Quarter and the Café Momus, the same evening",
       paras: [
-        "In the Christmas Eve crowd, among the street sellers and the toy-seller Parpignol, Rodolfo buys Mimì a bonnet and introduces her to his friends at the Café Momus. Marcello's old love Musetta sweeps in with her rich, elderly admirer Alcindoro and sets out to win Marcello back with a waltz about how men look at her (“Quando m'en vo”).",
-        "She sends Alcindoro off to buy her new shoes and falls into Marcello's arms. A military band passes; the friends march off behind it with the crowd, leaving Alcindoro the bill.",
+        "The square is packed with shoppers, street sellers and children. Schaunard buys a horn and a pipe, Colline has his old coat mended and finds a rare book, and Rodolfo buys Mimì a pink bonnet. At a table outside the Café Momus Rodolfo introduces her to his friends; the toy seller Parpignol passes with a cart of toys and a crowd of children behind him, and the friends order supper.",
+        "Musetta arrives with Alcindoro, a pompous old gentleman, and does all she can to make Marcello look at her, until she sings a waltz straight at him about the effect she has on men (“Quando me'n vo'”). Pretending her shoe pinches, she sends Alcindoro off to buy her another pair and falls into Marcello's arms.",
+        "The bill comes and the friends' pockets are empty. As a military tattoo marches through the square Musetta has the two bills put together for the absent Alcindoro to pay; Marcello and Colline carry her, one shoe off, behind the band, and Alcindoro comes back with the new shoes to find only the bill.",
       ],
     },
     {
       title: "Act 3",
-      where: "A toll gate on the edge of Paris, February",
+      where: "A toll gate on the edge of Paris, a snowy dawn at the end of February",
       paras: [
-        "At dawn customs men let in the farm women, while from the tavern Musetta's voice is heard among the revellers. Mimì, coughing, finds Marcello, who lives at the inn with Musetta, and tells him Rodolfo's jealousy is tearing them apart.",
-        "Rodolfo comes out and tells Marcello he wants to leave her, blaming her flirting; pressed, he admits the real reason: Mimì is gravely ill and he is too poor to care for her. Mimì, hidden, hears everything, and her coughing gives her away. Hearing Musetta laugh inside, Marcello runs back into the tavern.",
-        "Mimì says goodbye without bitterness (“Donde lieta uscì”): he may keep the bonnet. She and Rodolfo agree to stay together until the spring, while Marcello and Musetta quarrel and part.",
+        "Customs men let in street sweepers, milk women and farm women; from the tavern by the gate come drinking songs and Musetta's voice. Mimì arrives coughing and sends for Marcello, who now lives at the tavern with Musetta at the innkeeper's expense: she teaches the travellers singing and he paints soldiers on the front of the inn. She cannot go in: Rodolfo, asleep inside, is so jealous that they cannot go on together, and she begs Marcello to help them part.",
+        "Rodolfo comes out, and she hides. He tells Marcello he wants to leave Mimì because she is a flirt; pressed, he admits the truth: she is gravely ill, his cold room is making her worse, and love is not enough to save her. Her coughing gives her away. Marcello runs back inside when he hears Musetta laughing inside.",
+        "Mimì says goodbye without bitterness and asks Rodolfo to gather up her few things for the porter to collect, but to keep the bonnet if he likes (“Donde lieta uscì”). Remembering what they will lose, they decide to stay together until the spring, while Marcello and Musetta come out quarrelling, trade insults and part.",
       ],
     },
     {
       title: "Act 4",
-      where: "The garret, months later",
+      where: "The garret, some time later",
       paras: [
-        "Rodolfo and Marcello, both apart from their lovers, try to work and cannot. Colline and Schaunard bring a meagre supper, and the four clown about with a mock dance and duel, until Musetta rushes in: Mimì is with her, too weak to climb the stairs, and wanted to see Rodolfo before she dies. Musetta gives Marcello her earrings to sell for medicine and goes with him to fetch a muff, and Colline goes to pawn his coat (“Vecchia zimarra”).",
-        "Alone, Mimì and Rodolfo remember the night they met. The others return; Musetta gives Mimì the muff and prays. Mimì drifts away, and the friends realise she has died before Rodolfo does.",
+        "Rodolfo and Marcello pretend to work. Rodolfo says he has seen Musetta riding in a carriage, Marcello that he has seen Mimì, and each pretends not to care; then they give up and think of the women they have lost (“O Mimì tu più non torni”). Schaunard and Colline bring bread and a herring, and the four turn supper into a mock banquet, a dance and a duel with the fire irons.",
+        "Musetta bursts in: Mimì is on the stairs, too weak to climb them. She has run away from her viscount and wanted to die near Rodolfo. There is nothing in the house; Musetta gives Marcello her earrings to sell for medicine and a doctor, and goes with him to buy Mimì a muff for her cold hands. Colline says goodbye to his old coat before taking it to the pawnshop (“Vecchia zimarra”), and takes Schaunard with him to leave the lovers alone.",
+        "Mimì and Rodolfo remember the night they met (“Sono andati?”). The others come back; Mimì takes the muff, thinking it is from Rodolfo, and drifts off to sleep while Musetta prays. Schaunard sees that she has died; Rodolfo is the last to understand.",
       ],
     },
   ],

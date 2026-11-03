@@ -136,7 +136,7 @@ export const STORIES: Record<string, string> = {
   carmen:
     "In Seville the soldier Don José abandons his duty and his sweetheart Micaëla for Carmen and joins her smugglers. When Carmen tires of him and turns to the bullfighter Escamillo, José, desperate and jealous, kills her outside the bullring.",
   boheme:
-    "In a Paris garret the poet Rodolfo falls in love with his neighbour Mimì, while the painter Marcello fights and makes up with Musetta. Poverty and jealousy part Rodolfo and Mimì, and they are together again only as she dies.",
+    "Paris, the Latin Quarter. Four penniless friends share a freezing garret: Rodolfo the poet, Marcello the painter, Schaunard the musician and Colline the philosopher. On Christmas Eve Rodolfo stays behind to finish an article, and his neighbour Mimì knocks to ask for a light; before the night is out they are in love. At the Café Momus that night Marcello's old flame Musetta, who arrives with the pompous old Alcindoro, wins Marcello back and leaves Alcindoro to pay the bill. By February Rodolfo's jealousy hides a worse fear: Mimì is gravely ill and he is too poor to care for her. They agree to part when the spring comes. Some time later, back in the garret, Musetta brings Mimì in, dying; she wanted to be with Rodolfo at the end, and she dies there among the friends.",
   tosca:
     "Rome, 1800. The singer Floria Tosca's lover, the painter Cavaradossi, hides an escaped political prisoner. The police chief Scarpia tortures Cavaradossi and demands Tosca as the price of his life; she kills Scarpia, but the promised mock execution is real, and she leaps from the castle walls.",
   butterfly:

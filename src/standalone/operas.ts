@@ -1797,20 +1797,53 @@ export const OPERAS: Opera[] = [
     "id": "rodolfo",
     "name": "Rodolfo",
     "voice": "Tenor",
-    "desc": "A poet.",
+    "desc": "A poet, who shares the garret with his three friends.",
     "avatar": "curls",
     "pieces": [
      {
       "title": "Che gelida manina",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key"
      },
      {
       "title": "O soave fanciulla",
-      "kind": "Duet with Mimì · Act 1"
+      "kind": "Duet with Mimì · Act 1",
+      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight"
      },
      {
       "title": "O Mimì, tu più non torni",
-      "kind": "Duet with Marcello · Act 4"
+      "kind": "Duet with Marcello · Act 4",
+      "when": "Act 4, back in the garret; both men have just pretended not to care about the women they lost"
+     },
+     {
+      "title": "Si. Mi chiamano Mimì",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Si. Mi chiamano Mimì",
+      "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)"
+     },
+     {
+      "title": "Quando me'n vo'",
+      "kind": "Waltz and ensemble · Act 2",
+      "id": "Act 2: Quando me'n vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     },
+     {
+      "title": "Vai?… Donde lieta uscì",
+      "kind": "Aria · Act 3",
+      "id": "Act 3: Vai?… Donde lieta uscì",
+      "when": "Act 3, Mimì has overheard that she is dying, and Marcello has gone back into the tavern"
+     },
+     {
+      "title": "Dunque è proprio finita!… Addio dolce svegliare",
+      "kind": "Quartet · Act 3",
+      "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
+     },
+     {
+      "title": "Sono andati?",
+      "kind": "Duet · Act 4",
+      "id": "Act 4: Sono andati?",
+      "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
      }
     ]
    },
@@ -1818,33 +1851,47 @@ export const OPERAS: Opera[] = [
     "id": "mimi",
     "name": "Mimì",
     "voice": "Soprano",
-    "desc": "A seamstress, Rodolfo's neighbour.",
+    "desc": "Rodolfo's neighbour, who embroiders flowers on linen and silk for a living; her real name is Lucia.",
     "avatar": "long",
     "pieces": [
      {
       "title": "Sì, mi chiamano Mimì",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)"
      },
      {
       "title": "O soave fanciulla",
-      "kind": "Duet with Rodolfo · Act 1"
+      "kind": "Duet with Rodolfo · Act 1",
+      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight"
      },
      {
       "title": "Donde lieta uscì",
-      "kind": "Aria · Act 3"
-     }
-    ]
-   },
-   {
-    "id": "musetta",
-    "name": "Musetta",
-    "voice": "Soprano",
-    "desc": "A singer, Marcello's on-and-off love.",
-    "avatar": "hat",
-    "pieces": [
+      "kind": "Aria · Act 3",
+      "when": "Act 3, Mimì has overheard that she is dying, and Marcello has gone back into the tavern"
+     },
      {
-      "title": "Quando m'en vo'",
-      "kind": "Waltz · Act 2"
+      "title": "Ah!… Che gelida manina",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Ah!… Che gelida manina",
+      "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key"
+     },
+     {
+      "title": "Quando me'n vo'",
+      "kind": "Waltz and ensemble · Act 2",
+      "id": "Act 2: Quando me'n vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     },
+     {
+      "title": "Dunque è proprio finita!… Addio dolce svegliare",
+      "kind": "Quartet · Act 3",
+      "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
+     },
+     {
+      "title": "Sono andati?",
+      "kind": "Duet · Act 4",
+      "id": "Act 4: Sono andati?",
+      "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
      }
     ]
    },
@@ -1852,12 +1899,72 @@ export const OPERAS: Opera[] = [
     "id": "marcello",
     "name": "Marcello",
     "voice": "Baritone",
-    "desc": "A painter.",
+    "desc": "A painter, Rodolfo's closest friend, still in love with Musetta.",
     "avatar": "short",
     "pieces": [
      {
       "title": "O Mimì, tu più non torni",
-      "kind": "Duet with Rodolfo · Act 4"
+      "kind": "Duet with Rodolfo · Act 4",
+      "when": "Act 4, back in the garret; both men have just pretended not to care about the women they lost"
+     },
+     {
+      "title": "O soave fanciulla",
+      "kind": "Duet · Act 1",
+      "id": "Act 1: O soave fanciulla",
+      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight"
+     },
+     {
+      "title": "Quando me'n vo'",
+      "kind": "Waltz and ensemble · Act 2",
+      "id": "Act 2: Quando me'n vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     },
+     {
+      "title": "Dunque è proprio finita!… Addio dolce svegliare",
+      "kind": "Quartet · Act 3",
+      "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
+     }
+    ]
+   },
+   {
+    "id": "musetta",
+    "name": "Musetta",
+    "voice": "Soprano",
+    "desc": "Marcello's old flame, a flirt who still loves him.",
+    "avatar": "hat",
+    "pieces": [
+     {
+      "title": "Quando m'en vo'",
+      "kind": "Waltz · Act 2",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     },
+     {
+      "title": "Dunque è proprio finita!… Addio dolce svegliare",
+      "kind": "Quartet · Act 3",
+      "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
+     }
+    ]
+   },
+   {
+    "id": "schaunard",
+    "name": "Schaunard",
+    "voice": "Baritone",
+    "desc": "A musician, the friend who comes home with money.",
+    "avatar": "hat",
+    "pieces": [
+     {
+      "title": "Quando me'n vo'",
+      "kind": "Waltz and ensemble · Act 2",
+      "id": "Act 2: Quando me'n vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     },
+     {
+      "title": "Vecchia zimarra",
+      "kind": "Aria · Act 4",
+      "id": "Act 4: Vecchia zimarra",
+      "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì"
      }
     ]
    },
@@ -1865,14 +1972,68 @@ export const OPERAS: Opera[] = [
     "id": "colline",
     "name": "Colline",
     "voice": "Bass",
-    "desc": "A philosopher.",
+    "desc": "A philosopher, the friend with a coat full of books.",
     "avatar": "beard",
     "pieces": [
      {
       "title": "Vecchia zimarra, senti",
-      "kind": "Aria · Act 4"
+      "kind": "Aria · Act 4",
+      "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì"
+     },
+     {
+      "title": "Quando me'n vo'",
+      "kind": "Waltz and ensemble · Act 2",
+      "id": "Act 2: Quando me'n vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
      }
     ]
+   },
+   {
+    "id": "benoit",
+    "name": "Benoit",
+    "voice": "Bass",
+    "desc": "The friends' landlord, who comes for the rent.",
+    "avatar": "beard",
+    "pieces": []
+   },
+   {
+    "id": "alcindoro",
+    "name": "Alcindoro",
+    "voice": "Bass",
+    "desc": "Musetta's pompous elderly admirer.",
+    "avatar": "hat",
+    "pieces": [
+     {
+      "title": "Quando me'n vo'",
+      "kind": "Waltz and ensemble · Act 2",
+      "id": "Act 2: Quando me'n vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     }
+    ]
+   },
+   {
+    "id": "parpignol",
+    "name": "Parpignol",
+    "voice": "Tenor",
+    "desc": "A toy seller who wheels his cart through the Latin Quarter on Christmas Eve.",
+    "avatar": "cap",
+    "pieces": []
+   },
+   {
+    "id": "sergente",
+    "name": "Sergente",
+    "voice": "Bass",
+    "desc": "The sergeant of the customs post at the toll gate. (His few low notes would suit a bass or a baritone.)",
+    "avatar": "cap",
+    "pieces": []
+   },
+   {
+    "id": "doganiere",
+    "name": "Doganiere",
+    "voice": "Bass",
+    "desc": "A customs officer at the toll gate. (His few low notes would suit a bass or a baritone.)",
+    "avatar": "cap",
+    "pieces": []
    }
   ]
  },
@@ -2204,6 +2365,11 @@ const ALIAS: Record<string, string> = {
   "Mi tradì quell'alma ingrata": "In quali eccessi… Mi tradì",
   "Pa-pa-pa": "Bald prangt, den Morgen zu verkünden",
   "Vecchia zimarra, senti": "Vecchia zimarra",
+  "Che gelida manina": "Ah!… Che gelida manina",
+  "Sì, mi chiamano Mimì": "Si. Mi chiamano Mimì",
+  "Quando m'en vo'": "Quando me'n vo'",
+  "Donde lieta uscì": "Vai?… Donde lieta uscì",
+  "O Mimì, tu più non torni": "O Mimì tu più non torni",
   "Tre sbirri, una carrozza… Te Deum": "Va, Tosca!… Te Deum",
   "Ha più forte sapore": "Tosca è un buon falco… Ha più forte sapore",
   "Tu, tu, piccolo iddio": "Con onor muore… Tu, piccolo iddio",
@@ -2407,3 +2573,15 @@ const FIGARO_V2: Record<string, string[]> = {
   "figaro:bartolo": ["La vendetta", "Act 2: Esci omai, garzon malnato", "Act 3: Riconosci in questo amplesso", "Act 4: Nel padiglione a manca"],
 };
 Object.assign(V2_KEYS, FIGARO_V2);
+
+// La bohème's running order has since been rebuilt from the vocal score section by section, so its old lists are
+// kept as they were (the five characters the app had then) rather than rebuilt from today's running order
+const BOHEME_V2: Record<string, string[]> = {
+  "boheme:rodolfo": ["Act 1: Questo Mar Rosso", "Act 1: Schaunard's windfall", "Act 1: Benoît's visit", "Che gelida manina", "O soave fanciulla", "Act 2: Aranci, datteri!", "Act 2: Ensemble and retreat", "Act 3: Marcello, finalmente!… Mimì è tanto malata", "Act 3: Addio, dolce svegliare", "O Mimì, tu più non torni", "Act 4: Clowning", "Act 4: Musetta brings Mimì", "Act 4: Sono andati?", "Act 4: Finale"],
+  "boheme:mimi": ["Act 1: Chi è là?… Che gelida manina", "Sì, mi chiamano Mimì", "O soave fanciulla", "Act 2: Aranci, datteri!", "Act 2: Ensemble and retreat", "Act 3: Mimì?!… Speravo di trovarvi qui", "Act 3: Marcello, finalmente!… Mimì è tanto malata", "Donde lieta uscì", "Act 3: Addio, dolce svegliare", "Act 4: Musetta brings Mimì", "Act 4: Sono andati?", "Act 4: Finale"],
+  "boheme:musetta": ["Quando m'en vo'", "Act 2: Ensemble and retreat", "Act 3: Addio, dolce svegliare", "Act 4: Musetta brings Mimì", "Act 4: Finale"],
+  "boheme:marcello": ["Act 1: Questo Mar Rosso", "Act 1: Schaunard's windfall", "Act 1: Benoît's visit", "Act 2: Aranci, datteri!", "Act 2: Quando m'en vo", "Act 2: Ensemble and retreat", "Act 3: Mimì?!… Speravo di trovarvi qui", "Act 3: Marcello, finalmente!… Mimì è tanto malata", "Act 3: Addio, dolce svegliare", "O Mimì, tu più non torni", "Act 4: Clowning", "Act 4: Musetta brings Mimì", "Act 4: Finale"],
+  "boheme:colline": ["Act 1: Questo Mar Rosso", "Act 1: Schaunard's windfall", "Act 1: Benoît's visit", "Act 2: Aranci, datteri!", "Act 2: Ensemble and retreat", "Act 4: Clowning", "Act 4: Musetta brings Mimì", "Vecchia zimarra, senti", "Act 4: Finale"],
+};
+Object.assign(V2_KEYS, BOHEME_V2);
+for (const id of ["schaunard", "benoit", "alcindoro", "parpignol", "sergente", "doganiere"]) V2_KEYS[`boheme:${id}`] = [];
