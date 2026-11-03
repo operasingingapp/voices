@@ -1,6 +1,6 @@
 # Spoken Italian for every piece, made with ElevenLabs (scripts/voices.ts).
-# Needs the repository secret ELEVENLABS_API_KEY. Runs ONLY by hand (Actions → Generate voices → Run workflow), so no
-# recording is ever made, and no credit spent, without the owner's go-ahead. New recordings are committed back.
+# Needs the repository secret ELEVENLABS_API_KEY. Runs by hand (Actions → Generate voices → Run workflow),
+# and by itself when a piece's words or the voice settings change. New recordings are committed back.
 name: Generate voices
 
 on:
@@ -25,6 +25,11 @@ on:
         description: "With say: at the slow speed"
         default: "no"
         required: false
+  push:
+    branches: [main]
+    paths:
+      - "data/content/*/language.json"
+      - "voice.config.json"
 
 permissions:
   contents: write
