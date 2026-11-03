@@ -250,32 +250,52 @@ export const ARCS: Record<string, ArcStep[]> = {
 
   // ---------------- La bohème ----------------
   "boheme:rodolfo": [
-    { act: "Act 1", text: "The poet burns his manuscript for warmth, stays behind to write, and meets his neighbour Mimì; their hands meet in the dark (“Che gelida manina”)." },
-    { act: "Act 2", text: "He brings Mimì to the Café Momus and buys her a bonnet." },
-    { act: "Act 3", text: "He tells Marcello the truth: Mimì is gravely ill and he is too poor to help her. Mimì overhears, and they agree to part in the spring." },
-    { act: "Act 4", text: "Alone in the garret he cannot forget her. She is brought back to die, and they remember the night they met." },
+    { act: "Act 1", text: "Freezing in the garret, he burns his own play for warmth, drinks the wine Schaunard's money buys, joins in teasing the landlord, then stays behind to write. His neighbour Mimì knocks for a light; he pockets her lost key so as to go on searching with her in the dark, tells her who he is (“Che gelida manina”), and they fall in love in the moonlight (“O soave fanciulla”)." },
+    { act: "Act 2", text: "He buys Mimì a pink bonnet in the Christmas crowd, is a little jealous when she looks at the students, and presents her proudly to his friends at the Café Momus. Watching Musetta's antics, he tells Mimì he would never forgive such behaviour, and at the end he marches off with her behind the band." },
+    { act: "Act 3", text: "After walking out on Mimì in the night, he tells Marcello at the toll gate that he wants to leave her because she is a flirt; pressed, he admits the truth: she is dying, and his poverty is killing her. Discovering that she has heard, he tries to take it back; she says goodbye, and they agree to stay together until the spring." },
+    { act: "Act 4", text: "Alone again, he pretends not to care that Mimì has been seen riding in a carriage dressed like a queen, then broods over the bonnet she left (“O Mimì tu più non torni”). When Musetta brings Mimì back dying, he lays her on his bed; alone with her he gives back the bonnet and remembers how they met (“Sono andati?”). He is the last to realise that she has died." },
   ],
   "boheme:mimi": [
-    { act: "Act 1", text: "Mimì knocks for a light, loses her key, and tells Rodolfo about her life embroidering flowers (“Sì, mi chiamano Mimì”)." },
-    { act: "Act 2", text: "At the Café Momus she meets Rodolfo's friends." },
-    { act: "Act 3", text: "Coughing, she tells Marcello of Rodolfo's jealousy, overhears that she is dying, and bids Rodolfo a gentle farewell (“Donde lieta uscì”)." },
-    { act: "Act 4", text: "Brought back to the garret by Musetta, she dies peacefully beside Rodolfo." },
-  ],
-  "boheme:musetta": [
-    { act: "Act 2", text: "Musetta sweeps into the Café Momus with a rich admirer and wins Marcello back with her waltz (“Quando m'en vo”), leaving the admirer the bill." },
-    { act: "Act 3", text: "She quarrels loudly with Marcello outside the inn." },
-    { act: "Act 4", text: "She brings the dying Mimì to the garret, gives Marcello her earrings to sell for medicine, fetches a muff for Mimì's hands, and prays for her." },
+    { act: "Act 1", text: "Her candle out, she knocks at her neighbour's door, faints, and comes back for the key she has dropped. In the dark the poet takes her hand; she tells him she embroiders flowers and lives alone under the roofs (“Si. Mi chiamano Mimì”), and in the moonlight she falls in love (“O soave fanciulla”) and goes out with him to meet his friends." },
+    { act: "Act 2", text: "Rodolfo buys her a pink bonnet and introduces her to his friends at the Café Momus. She sees at once that Musetta is still in love with Marcello and pities her, and tells Rodolfo she loves him and is all his." },
+    { act: "Act 3", text: "Coughing, she finds Marcello at the toll gate and begs him to help her and Rodolfo part, because his jealousy makes their life impossible. Hidden, she hears Rodolfo confess that she is dying. She says goodbye without bitterness, telling him he may keep the bonnet if he likes (“Donde lieta uscì”), but they decide to stay together until the spring." },
+    { act: "Act 4", text: "Dying, she has run away from her viscount; Musetta finds her in the street and, at her wish, brings her back to Rodolfo's garret. Left alone with him, she remembers their first night (“Sono andati?”). When the others return she takes Musetta's muff, believing it is Rodolfo's gift, and falls asleep for the last time." },
   ],
   "boheme:marcello": [
-    { act: "Act 1", text: "The painter freezes in the garret with Rodolfo and heads off to the Café Momus with his friends." },
-    { act: "Act 2", text: "Musetta's waltz is aimed at him, and he gives in." },
-    { act: "Act 3", text: "Mimì confides in him, and he hears from Rodolfo how ill she is." },
-    { act: "Act 4", text: "Pining for Musetta, he helps care for Mimì in her last hour." },
+    { act: "Act 1", text: "The painter is too cold to paint his Red Sea, jokes about Musetta's icy heart, leads the teasing of the landlord, and goes ahead to the Café Momus, calling back up that Rodolfo has found poetry." },
+    { act: "Act 2", text: "Bitter about love, he sees Musetta arrive with an old admirer and pretends not to care, describing her to Mimì as a bird of prey that feeds on hearts. Her waltz (“Quando me'n vo'”) is aimed at him and he cannot resist; once she has sent the old man away he takes her in his arms and carries her off behind the band." },
+    { act: "Act 3", text: "Now living at the tavern by the toll gate with Musetta, he hears Mimì's despair over Rodolfo's jealousy, then Rodolfo's confession that she is dying. Catching Musetta flirting with a customer, he quarrels with her and they part with insults." },
+    { act: "Act 4", text: "Missing Musetta, he cannot paint anything but her face (“O Mimì tu più non torni”), then fools about with the others until Musetta brings Mimì in. He sells Musetta's earrings, brings back medicine, has seen the doctor and hurried him along, and is the one who embraces Rodolfo when Mimì has died." },
+  ],
+  "boheme:musetta": [
+    { act: "Act 2", text: "She arrives at the Café Momus with her elderly admirer Alcindoro, makes a scene to catch Marcello's eye, and sings him her waltz (“Quando me'n vo'”). Pretending her shoe hurts, she sends Alcindoro off for a new pair, falls into Marcello's arms, leaves Alcindoro both bills, and is carried off behind the band." },
+    { act: "Act 3", text: "Her voice is heard from the tavern at dawn, singing that pleasure is in the glass and love on young lips; Marcello says she teaches singing to the travellers. Caught flirting by Marcello, she insists on her freedom and storms off after a shouting match." },
+    { act: "Act 4", text: "Finding Mimì dying in the street, she brings her back to Rodolfo's garret, gives Marcello her earrings to sell for medicine, and buys Mimì the muff she longs for. While the medicine warms she prays to the Madonna to spare Mimì." },
+  ],
+  "boheme:schaunard": [
+    { act: "Act 1", text: "He comes home in triumph with money, food and firewood, earned from an English lord by poisoning a parrot on the first floor with parsley, and decides the friends will drink at home and dine out. He helps keep the landlord's glass filled, then proposes the Café Momus." },
+    { act: "Act 2", text: "He buys a horn and a pipe in the Christmas crowd, orders supper in style because there is a lady at the table, and enjoys the comedy of Musetta and Marcello, until his money turns out to be gone. He marches off behind the band blowing his horn." },
+    { act: "Act 4", text: "He brings home four rolls for a mock banquet and fights a mock duel with Colline. When Mimì is brought in, he sees she has not long to live, leaves the lovers alone, and is the first to see that she has died." },
   ],
   "boheme:colline": [
-    { act: "Act 1", text: "The philosopher joins the friends' Christmas Eve feast and helps get rid of the landlord." },
-    { act: "Act 2", text: "He joins his friends at the Café Momus on Christmas Eve, and marches off with them behind the military band." },
-    { act: "Act 4", text: "To pay for Mimì's medicine he says goodbye to his old coat (“Vecchia zimarra”) and goes to sell it." },
+    { act: "Act 1", text: "The philosopher comes in frozen, angrily throwing down the bundle of books he could not pawn (no pledges are taken on Christmas Eve), warms himself at the fire of Rodolfo's play, joins in throwing out the landlord, and is told to get a shave before going out. He falls down the dark stairs on the way." },
+    { act: "Act 2", text: "He buys a second-hand coat, has the mender stitch it, stuffs its pockets with books, and finds a rare Runic grammar. At the Café Momus he admits Mimì to the company in mock Latin and watches Musetta's performance, preferring his pipe and a Greek text to a woman like Musetta. At the end he helps carry Musetta off behind the band." },
+    { act: "Act 4", text: "He brings a herring to the mock banquet and duels with Schaunard using the fire tongs. When Mimì is brought in dying, he takes off his old coat to pawn it for her (“Vecchia zimarra”), and comes back with the money too late." },
+  ],
+  "boheme:benoit": [
+    { act: "Act 1", text: "The landlord comes for the rent, accepts a glass or two, and is flattered into boasting of his flirtations; then the tenants pretend to be shocked at a married man's morals and throw him out with the rent still unpaid." },
+  ],
+  "boheme:alcindoro": [
+    { act: "Act 2", text: "Musetta's elderly admirer trails after her through the crowd, puffing and cross, and is embarrassed by her scenes at the Café Momus. Sent running for a new pair of shoes, he comes back to find her gone and the friends' bill waiting for him, and collapses into a chair." },
+  ],
+  "boheme:parpignol": [
+    { act: "Act 2", text: "The toy seller's cries are heard in the distance, then he wheels his cart of toys into the square with the children dancing after him, and leads them away again." },
+  ],
+  "boheme:sergente": [
+    { act: "Act 3", text: "At dawn the sergeant has the toll gate opened for the day's traffic, shows Mimì the tavern where the painter works, and waves the travellers through." },
+  ],
+  "boheme:doganiere": [
+    { act: "Act 3", text: "Woken by the street sweepers banging on the gate, the customs officer lets them in, announces the milk women, and checks a basket for duty: empty." },
   ],
 
   // ---------------- Tosca ----------------
