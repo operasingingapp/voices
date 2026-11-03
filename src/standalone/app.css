@@ -8527,3 +8527,20 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
 /* a tap outside the step: the lit control gives a small nudge */
 .guide-hole.nudge::before { animation: guide-nudge 0.5s ease-out 1; }
 @keyframes guide-nudge { 0%, 100% { transform: scale(1); } 30% { transform: scale(1.08); } 60% { transform: scale(0.97); } }
+
+/* wider screens too: with many singers (a finale has eleven) the other faces scroll sideways inside their pill,
+   a soft edge on the side where more wait; your face, the piano and Arrange stay put */
+@media (min-width: 641px) {
+  .practice .p-bar .bar-parts.many { flex: 0 1 auto; min-width: 0; }
+  .practice .p-bar .bar-parts.many .bar-mix { display: flex; align-items: center; gap: 4px; flex: 1 1 auto; min-width: 0; }
+  .practice .p-bar .bar-parts.many .bar-others {
+    display: flex; align-items: center; gap: 4px; flex: 0 1 auto; min-width: 0;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: none;
+  }
+  .practice .p-bar .bar-parts.many .bar-others::-webkit-scrollbar { display: none; }
+  .practice .p-bar .bar-parts.many .bar-others > .part { flex: none; scroll-snap-align: start; }
+  .practice .p-bar .bar-parts.many .bar-mix > :not(.bar-others) { flex: none; }
+  .practice .p-bar .bar-parts.many .bar-others.more-r { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); }
+  .practice .p-bar .bar-parts.many .bar-others.more-l { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); }
+  .practice .p-bar .bar-parts.many .bar-others.more-l.more-r { -webkit-mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); }
+}

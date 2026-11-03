@@ -3048,7 +3048,17 @@ function PracticeScreen({
           {/* the others, the piano and Arrange: one row of its own on phone (elsewhere it simply flows on) */}
           <div className="bar-mix">
           {/* the other singers: with many voices they scroll sideways, a soft edge showing there are more */}
-          <div className={`bar-others${othersMore}`} ref={othersRef} onScroll={othersEdges}>
+          <div
+            className={`bar-others${othersMore}`}
+            ref={othersRef}
+            onScroll={othersEdges}
+            onWheel={(e) => {
+              // a mouse wheel turns the row of faces sideways when they do not all fit
+              const el = e.currentTarget;
+              if (el.scrollWidth <= el.clientWidth + 2 || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+              el.scrollLeft += e.deltaY;
+            }}
+          >
           {orderedIds
             .map(partByXml)
             .filter((p) => otherVoices.includes(p))
