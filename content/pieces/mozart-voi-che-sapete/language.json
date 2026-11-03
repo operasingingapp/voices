@@ -667,9 +667,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "56",
-   "original": "non trovo pace notte nè di, ma pur mi piace languir così.",
-   "translation": "I find no peace by night or day, and yet I like to languish so.",
-   "ipa": "non ˈtrɔ.vo ˈpa.tʃe ˈnɔt.te ne ˈdi ma ˈpur mi ˈpja.tʃe laŋˈɡwir koˈsi",
+   "original": "non trovo pace notte nè di,",
+   "translation": "I find no peace by night or day,",
+   "ipa": "non ˈtrɔ.vo ˈpa.tʃe ˈnɔt.te ne ˈdi",
    "words": [
     [
      "non",
@@ -700,7 +700,30 @@
      "di,",
      "day",
      "ˈdi"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "neither night nor day"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "h13_2",
+   "role": "cherubino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "ma pur mi piace languir così.",
+   "translation": "and yet I like to languish so.",
+   "ipa": "ma ˈpur mi ˈpja.tʃe laŋˈɡwir koˈsi",
+   "words": [
     [
      "ma",
      "but",
@@ -735,23 +758,15 @@
    "glossGroups": [
     {
      "words": [
-      3,
-      4,
-      5
-     ],
-     "gloss": "neither night nor day"
-    },
-    {
-     "words": [
-      6,
-      7
+      0,
+      1
      ],
      "gloss": "and yet"
     },
     {
      "words": [
-      8,
-      9
+      2,
+      3
      ],
      "gloss": "I like"
     }

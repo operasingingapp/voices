@@ -715,9 +715,9 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "72",
-   "original": "Susanna, pian pian, pian pian, pian pian, pian pian, pian pian...",
-   "translation": "Susanna, gently, gently, gently, gently…",
-   "ipa": "suˈzan.na ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan",
+   "original": "Susanna, pian pian, pian pian,",
+   "translation": "Susanna, gently, gently,",
+   "ipa": "suˈzan.na ˈpjan ˈpjan ˈpjan ˈpjan",
    "words": [
     [
      "Susanna,",
@@ -743,7 +743,36 @@
      "pian,",
      "softly",
      "ˈpjan"
-    ],
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "gently, gently"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "gently, gently"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f9b_2",
+   "role": "figaro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "77",
+   "original": "pian pian, pian pian, pian pian...",
+   "translation": "gently, gently, gently…",
+   "ipa": "ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan ˈpjan",
+   "words": [
     [
      "pian",
      "softly",
@@ -778,36 +807,22 @@
    "glossGroups": [
     {
      "words": [
-      1,
-      2
+      0,
+      1
      ],
      "gloss": "gently, gently"
     },
     {
      "words": [
-      3,
-      4
+      2,
+      3
      ],
      "gloss": "gently, gently"
     },
     {
      "words": [
-      5,
-      6
-     ],
-     "gloss": "gently, gently"
-    },
-    {
-     "words": [
-      7,
-      8
-     ],
-     "gloss": "gently, gently"
-    },
-    {
-     "words": [
-      9,
-      10
+      4,
+      5
      ],
      "gloss": "gently, gently"
     }
