@@ -870,7 +870,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "6/8",
-      tempo: "Andante at ♩. = 66 (about 2 minutes; set from studio recordings)",
+      tempo: "Andante at ♩. = 64, the same simple Andante 6/8 as “Vostre dunque saran queste carte” in the Act 2 finale (about 2 minutes)",
     },
     notePlaceholder: "Figaro and Susanna make peace, then stage a love scene for the Count",
     about: (
@@ -1436,7 +1436,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major (Allegro molto), then B flat major (Andante)",
       time: "4/4, then 6/8",
-      tempo: "Allegro molto at ♩ = 202, then Andante at ♩. = 61 (about 5½ minutes; set from studio recordings)",
+      tempo: "Allegro molto at ♩ = 202, then Andante at ♩. = 64, the same simple Andante 6/8 as “Pace, pace” in the Act 4 finale (about 5½ minutes; set from studio recordings)",
     },
     notePlaceholder: "Antonio storms in: someone jumped from the window onto his carnations",
     about: (
