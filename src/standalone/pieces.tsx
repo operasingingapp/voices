@@ -911,6 +911,30 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-gente-gente-all-armi": {
+    portrait: "figaro:count",
+    opera: "Le nozze di Figaro",
+    kind: "Finale",
+    facts: {
+      key: "G major",
+      time: "4/4",
+      tempo: "Allegro assai at ♩ = 152, then Andante (“Contessa, perdono”) at ♩ = 58 (about 4½ minutes)",
+    },
+    notePlaceholder: "The Count is caught out: “Contessa, perdono”",
+    about: (
+      <>
+        <p>
+          Score: the Act 4 finale (No. 28), section 5, “Gente, gente, all'armi!” with the Andante “Contessa, perdono” (vocal score pages 348-356, 113 bars), from Paul Klengel’s piano reduction in the Breitkopf &amp; Härtel vocal score (Edition Breitkopf 1716, about 1900), public domain. Where the print sets several singers on one staff, each named singer here has their own line with the notes of that staff.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-dove-sono": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

@@ -208,6 +208,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -475,6 +481,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -657,6 +669,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -838,6 +856,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -929,6 +953,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -991,6 +1021,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -1072,6 +1108,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -1135,6 +1177,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -1162,6 +1210,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -1213,6 +1267,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    },
@@ -1246,6 +1306,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 4",
       "id": "Act 4: Questo giorno di tormenti",
       "editionId": "mozart-questo-giorno-di-tormenti"
+     },
+     {
+      "title": "Gente, gente, all'armi!",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Gente, gente, all'armi!",
+      "editionId": "mozart-gente-gente-all-armi"
      }
     ]
    }
