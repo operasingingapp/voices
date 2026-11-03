@@ -885,7 +885,7 @@ function PracticeScreen({
   const voiceTypeOf = (p: CompiledEdition["parts"][number]) => edition.roles.find((r) => r.partKey === p.key)?.voiceType ?? "";
   const [countIn, setCountIn] = useLocalSetting("p:countin", true);
   // how loud each part is (80 = normal), and what the sung line is played on
-  const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol2", { voice: 60, piano: 80 });
+  const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol3", { voice: 80, piano: 60 });
   const hearOf = (p: CompiledEdition["parts"][number]) =>
     p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? false);
   const setHear = (p: CompiledEdition["parts"][number], x: boolean) =>
@@ -1019,7 +1019,7 @@ function PracticeScreen({
     engine.setMix(pianoPart.key, { muted: !hearPiano, solo: false, volume: volGain(vol.piano, pianoPart.defaultVolume) });
     for (const p of otherVoices) {
       const ls = lineSets[p.key] ?? {};
-      engine.setMix(p.key, { muted: !(ls.hear ?? false), solo: false, volume: volGain(ls.vol ?? 70, p.defaultVolume) });
+      engine.setMix(p.key, { muted: !(ls.hear ?? false), solo: false, volume: volGain(ls.vol ?? 80, p.defaultVolume) });
     }
   }, [engine, hearVoice, hearPiano, vol, lineSets]);
   // the sung line's lowest and highest notes, so an instrument can take it an octave down when needed
@@ -3184,7 +3184,7 @@ function PracticeScreen({
                     const isYou = p === voicePart;
                     const ls = lineSets[p.key] ?? {};
                     const on = hearOf(p);
-                    const v = isYou ? vol.voice : isPiano ? vol.piano : (ls.vol ?? 70);
+                    const v = isYou ? vol.voice : isPiano ? vol.piano : (ls.vol ?? 80);
                     const name = lineName(p);
                     const inst = isYou ? lineSound : instOf(p);
                     const dragging = drag?.from === i;
@@ -3305,12 +3305,12 @@ function PracticeScreen({
                   </div>
                 </div>
               )}
-              {(vol.voice !== 60 || vol.piano !== 80 || Object.keys(lineSets).length > 0 || order.length > 0) && (
+              {(vol.voice !== 80 || vol.piano !== 60 || Object.keys(lineSets).length > 0 || order.length > 0) && (
                 <button
                   type="button"
                   className="mix-reset"
                   onClick={() => {
-                    setVol({ voice: 60, piano: 80 });
+                    setVol({ voice: 80, piano: 60 });
                     setLineSets({});
                     setOrder([]);
                   }}
