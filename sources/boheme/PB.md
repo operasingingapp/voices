@@ -33,3 +33,6 @@ Write your result to the file named in your task, nothing else except optional #
 
 MARKS (added later): hairpins `hp:<` / `hp:>` where they start and `hp:end` where they stop (same line); `^` = marcato
 (tall wedge), `-` = tenuto; expression/tempo words as `word:a_tempo` (underscores for spaces).
+TIES ON ONE NOTE OF A CHORD: put ~ right after that pitch inside the chord: `Db4~+F4+Bb4:h.` ties only the D-flat
+(a ~ after the duration ties every note of the chord).
+DOUBLE SHARP / DOUBLE FLAT: write ## / bb (F##4, Bbb3), never x.

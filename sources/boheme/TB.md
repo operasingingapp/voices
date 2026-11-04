@@ -55,3 +55,4 @@ hairpins `hp:<` / `hp:>` where they start and `hp:end` where they stop; articula
 `*` staccato, `>` accent, `^` marcato, `-` tenuto; expression/tempo words printed by the staff as `word:a_tempo`
 (underscores for spaces). Pitch is ABSOLUTE (sounding): a bare letter means a natural; write flats/sharps from the key
 signature explicitly (Bb4 in B-flat major).
+DOUBLE SHARP / DOUBLE FLAT: write ## / bb (F##4, Bbb3), never x.
