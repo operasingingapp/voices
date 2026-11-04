@@ -36,3 +36,4 @@ MARKS (added later): hairpins `hp:<` / `hp:>` where they start and `hp:end` wher
 TIES ON ONE NOTE OF A CHORD: put ~ right after that pitch inside the chord: `Db4~+F4+Bb4:h.` ties only the D-flat
 (a ~ after the duration ties every note of the chord).
 DOUBLE SHARP / DOUBLE FLAT: write ## / bb (F##4, Bbb3), never x.
+MORDENT (pralltriller, short wavy sign above a note): suffix m after the duration (A4:em).
