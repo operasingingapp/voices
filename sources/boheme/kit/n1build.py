@@ -160,7 +160,7 @@ def tok_note(tok, voice, staff=1):
     if grace:
         tok = tok[2:]
     p, d = tok.split(":", 1)
-    fm = re.search(r"[~*>^-]*$", d); fl = fm.group(0); d = d[:fm.start()]
+    fm = re.search(r"[~*>^v-]*$", d); fl = fm.group(0); d = d[:fm.start()]
     tie = "~" in fl
     tupm = re.search(r"\{(\d+):(\d+)\}$", d)
     tup = (int(tupm.group(1)), int(tupm.group(2))) if tupm else None
@@ -200,7 +200,7 @@ def tok_note(tok, voice, staff=1):
         ET.SubElement(tm, "actual-notes").text = str(tup[0])
         ET.SubElement(tm, "normal-notes").text = str(tup[1])
     ET.SubElement(n, "staff").text = str(staff)
-    art = [x for x, c in (("staccato", "*"), ("accent", ">"), ("strong-accent", "^"), ("tenuto", "-")) if c in fl]
+    art = [x for x, c in (("staccato", "*"), ("accent", ">"), ("strong-accent", "^"), ("tenuto", "-"), ("staccatissimo", "v")) if c in fl]
     if tie or (art and p != "r"):
         nt = ET.SubElement(n, "notations")
         if tie: ET.SubElement(nt, "tied", type="start")

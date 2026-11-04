@@ -56,3 +56,4 @@ hairpins `hp:<` / `hp:>` where they start and `hp:end` where they stop; articula
 (underscores for spaces). Pitch is ABSOLUTE (sounding): a bare letter means a natural; write flats/sharps from the key
 signature explicitly (Bb4 in B-flat major).
 DOUBLE SHARP / DOUBLE FLAT: write ## / bb (F##4, Bbb3), never x.
+STACCATISSIMO (small filled wedge over/under a note, ▼): suffix v. MARCATO (larger open ^ or v sign) stays ^. Accent (>) stays >.

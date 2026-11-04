@@ -12,7 +12,7 @@ Your job is only the MARKS, for EVERY staff (each singer and both piano hands), 
    in the first bar, hp:end in the bar where it stops). Every hp:< / hp:> needs its hp:end, in the same line (same bar
    line code: same singer, or same hand and number, e.g. RH1). Between the piano staves: both hands.
 3. Articulations, as suffixes after the duration (before any ( or ) ): `*` staccato, `>` accent, `^` marcato (the
-   tall ^ or v wedge), `-` tenuto (the short dash). Several may combine (`*-` = portato). Sung notes too.
+   larger OPEN ^ or v sign), `v` staccatissimo (the small FILLED wedge, ▼), `-` tenuto (the short dash). Several may combine (`*-` = portato). Sung notes too.
    Piano: `a` arpeggio (wavy line before a chord), `!` fermata.
 4. Expression and tempo words printed in the music (not stage directions): cresc., cres., dim., rall., rit.,
    allarg., a tempo, col canto, a piacere, sostenuto, string., dolce, ruvido, marcato, leggero, sempre..., etc. as

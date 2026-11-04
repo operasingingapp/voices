@@ -40,7 +40,7 @@ def notes_for(tokens, staff, voice):
             # fingered tremolo: tremN:A|B:DUR  (N = beams, 1 = eighths, 2 = sixteenths); A and B may be chords (+)
             mt = re.match(r"trem(\d):([^|]+)\|([^:]+):(.+)$", tok)
             beams, A_, B_, rest_ = mt.group(1), mt.group(2), mt.group(3), mt.group(4)
-            m2 = re.match(r"([whqesx])(\.?)([~()\[\]*>^!-]*)$", rest_)
+            m2 = re.match(r"([whqesx])(\.?)([~()\[\]*>^!v-]*)$", rest_)
             tfl = m2.group(3)
             typ, dur = TYPES[m2.group(1)]
             if m2.group(2): dur += dur // 2
@@ -68,7 +68,7 @@ def notes_for(tokens, staff, voice):
                     if k == 0 and side == "start" and "[" in tfl: ET.SubElement(ntt, "slur", type="start", number=str(12 + voice))
                     if k == 0 and side == "stop" and "]" in tfl: ET.SubElement(ntt, "slur", type="stop", number=str(12 + voice))
                     if k == 0 and side == "start" and side == "start":
-                        art = [x for x, c in (("staccato", "*"), ("accent", ">"), ("strong-accent", "^"), ("tenuto", "-")) if c in tfl]
+                        art = [x for x, c in (("staccato", "*"), ("accent", ">"), ("strong-accent", "^"), ("tenuto", "-"), ("staccatissimo", "v")) if c in tfl]
                         if art:
                             a_ = ET.SubElement(ntt, "articulations")
                             for x in art: ET.SubElement(a_, x)
@@ -83,7 +83,7 @@ def notes_for(tokens, staff, voice):
         noslash = tok.startswith("G:")
         if grace: tok = tok[2:]
         pitches, rest = tok.split(":", 1)
-        m = re.match(r"([whqesxy])(\.{0,2})(3?)(?:\{(\d+):(\d+)\})?([~*^>!()\[\]tam-]*)$", rest)
+        m = re.match(r"([whqesxy])(\.{0,2})(3?)(?:\{(\d+):(\d+)\})?([~*^>!()\[\]tamv-]*)$", rest)
         if not m: raise SystemExit("bad token " + tok)
         typ, dur = TYPES[m.group(1)]
         if m.group(2): dur += dur // 2 + (dur // 4 if len(m.group(2)) == 2 else 0)
