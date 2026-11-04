@@ -1,0 +1,199 @@
+{
+ "editionId": "puccini-si-puo",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Si può?..",
+ "subtitle": "Benoit, Marcello, Schaunard, Colline and Rodolfo: the landlord's visit, La bohème, Act 1",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "schaunard",
+   "name": "Schaunard",
+   "voiceType": "Baritone",
+   "partKey": "schaunard"
+  },
+  {
+   "id": "colline",
+   "name": "Colline",
+   "voiceType": "Bass",
+   "partKey": "colline"
+  },
+  {
+   "id": "benoit",
+   "name": "Benoit",
+   "voiceType": "Bass",
+   "partKey": "benoit"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "schaunard",
+   "label": "Schaunard (Baritone)",
+   "shortLabel": "Schaunard",
+   "kind": "voice",
+   "roleId": "schaunard",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "colline",
+   "label": "Colline (Bass)",
+   "shortLabel": "Colline",
+   "kind": "voice",
+   "roleId": "colline",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "benoit",
+   "label": "Benoit (Bass)",
+   "shortLabel": "Benoit",
+   "kind": "voice",
+   "roleId": "benoit",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Si può?.. Benoit! (Allegro vivo)",
+   "start": "1",
+   "end": "30"
+  },
+  {
+   "id": "b",
+   "label": "Alla sua salute! (Andantino mosso, G♭ major)",
+   "start": "31",
+   "end": "66"
+  },
+  {
+   "id": "c",
+   "label": "Dica: quant'anni ha (Andantino, E major)",
+   "start": "67",
+   "end": "89"
+  },
+  {
+   "id": "d",
+   "label": "Ei gongolava arzillo (Lo stesso movimento, Più mosso)",
+   "start": "90",
+   "end": "121"
+  },
+  {
+   "id": "e",
+   "label": "mia moglie… Via di qua! (Lento, Allegro, to the end)",
+   "start": "122",
+   "end": "160"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 1",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 33-48 (from page 33 system 1 bar 3 to the end of page 48, 160 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Tempo from the printed metronome marks; where none is printed, a value chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -1,0 +1,1118 @@
+# S3a reader A. Singers: B=Benoit, M=Marcello, S=Schaunard, C=Colline, R=Rodolfo
+# page 033 system 1 starts bar 1 (system 1 is piano only; chunk starts at its bar 3)
+# bar 1: double bar, 2/4, key F major (1 flat), piano f
+1 B: r:h
+1 M: r:h
+1 S: r:h
+1 C: r:h
+1 R: r:h
+2 B: r:h
+2 M: r:h
+2 S: r:h
+2 C: r:h
+2 R: r:h
+3 B: r:h
+3 M: r:h
+3 S: r:h
+3 C: r:h
+3 R: r:h
+# page 033 system 2 starts bar 4
+# bar 4: Benoit "a piacere", (internamente) offstage, two knocks on the door
+# JUDGE bar 4 B: X - equivalent spelling: B natural printed (natural sign); Bn3 = B3 in this absolute format, kept X
+# MARKS bar 4 B: word:a_piacere
+4 B: word:a_piacere r:q r:e. Bn3:s "Si"
+4 M: r:h
+4 S: r:h
+4 C: r:h
+4 R: r:h
+# bar 5: Marcello "a piacere"
+# JUDGE bar 5 B: X - equivalent spelling: B natural printed (natural sign); Bn3 = B3 in this absolute format, kept X
+5 B: Bn3:e "può?.." r:e r:q
+# JUDGE bar 5 M: X - equivalent spelling: B natural printed (natural sign); Bn3 = B3 in this absolute format, kept X
+# MARKS bar 5 M: word:a_piacere
+5 M: word:a_piacere r:q r:e Bn3:s "Chi" Bn3:s "è"
+5 S: r:h
+5 C: r:h
+5 R: r:h
+# bar 6: Benoit "a piacere"
+# JUDGE bar 6 B: X - equivalent spelling: B natural printed (natural sign); Bn3 = B3 in this absolute format, kept X
+# MARKS bar 6 B: word:a_piacere
+6 B: r:q r:e word:a_piacere Bn3:s "Be-" Bn3:s "no-"
+# JUDGE bar 6 M: X - equivalent spelling: B natural printed (natural sign); Bn3 = B3 in this absolute format, kept X
+6 M: Bn3:e "là?" r:e r:q
+6 S: r:h
+6 C: r:h
+6 R: r:h
+# bar 6 B: printed "Beno" spans both 16ths, then "- it!" in bar 7; split as Be-/no-
+# bar 7: double bar, ALL.o VIVO, dotted-quarter = 152, 6/8, key signature cancelled (C major/no accidentals); figure (17)
+7 B: E3:e "it!" r:e r:e r:q r:e
+7 M: r:h.
+7 S: r:h.
+7 C: r:h.
+7 R: r:h.
+# page 033 system 3 starts bar 8
+8 B: r:h.
+8 M: r:h.
+8 S: r:h.
+8 C: r:h.
+8 R: r:h.
+9 B: r:h.
+9 M: r:e A3:e "Il" B3:e "pa-" C4:e "dro-" B3:e "ne" A3:e "di"
+9 S: r:h.
+9 C: r:h.
+9 R: r:h.
+10 B: r:h.
+10 M: C4:e "ca-" C4:e "sa!" r:e r:q r:e
+10 S: r:h.
+10 C: r:h.
+10 R: r:h.
+11 B: r:h.
+11 M: r:h.
+11 S: r:q r:e C3:e "U-" D3:e "scio" Eb3:e "sul"
+11 C: r:h.
+11 R: r:h.
+# page 034 system 1 starts bar 12 (6/8, no key signature)
+12 B: r:h.
+12 M: r:h.
+12 S: C3:e "mu-" C3:e "so!" r:e r:q r:e
+12 C: r:h.
+12 R: r:h.
+# bar 13: Colline (gridando verso la porta)
+13 B: r:h.
+13 M: r:h.
+13 S: r:h.
+13 C: r:q r:e C4:e "Non" D4:e "c'è" Eb4:e "nes-"
+13 R: r:h.
+14 B: r:h.
+14 M: r:h.
+14 S: r:h.
+14 C: C4:e "su-" C4:e "no!" r:e r:q r:e
+14 R: r:h.
+15 B: r:h.
+15 M: r:h.
+15 S: r:h.
+15 C: r:h.
+15 R: r:h.
+16 B: r:h.
+16 M: r:h.
+16 S: r:q r:e r:q G3:e "È"
+16 C: r:h.
+16 R: r:h.
+# page 034 system 2 starts bar 17
+17 B: r:h.
+17 M: r:h.
+17 S: C4:e "chiu-" C4:e "so!" r:e r:q r:e
+17 C: r:h.
+17 R: r:h.
+# bar 18: fermata over S whole-bar rest and over B first rest; Benoit (interno) offstage
+18 B: r:q! r:e C4:e "U-" C4:e "na" C4:e "pa-"
+18 M: r:h.
+18 S: r:h.!
+18 C: r:h.
+18 R: r:h.
+19 B: C4:q "ro-" C4:e "la." r:q r:e
+19 M: r:h.
+19 S: r:h.
+19 C: r:h.
+19 R: r:h.
+20 B: r:h.
+20 M: r:h.
+20 S: r:h.
+20 C: r:h.
+20 R: r:h.
+21 B: r:h.
+21 M: r:h.
+21 S: r:h.
+21 C: r:h.
+21 R: r:h.
+# page 034 system 3 starts bar 22
+22 B: r:h.
+22 M: r:h.
+22 S: r:h.
+22 C: r:h.
+22 R: r:h.
+# bar 23: fermata over S first rest
+23 B: r:h.
+23 M: r:h.
+# JUDGE bar 23 S: X - fermata sits between the quarter and eighth rests, same layout as bar 18 B (both readers r:q! there); kept on the quarter rest
+23 S: r:q! r:e Eb3:e "So-" Eb3:e "la!" r:e
+23 C: r:h.
+23 R: r:h.
+24 B: r:h.
+24 M: r:h.
+24 S: r:h.
+24 C: r:h.
+24 R: r:h.
+25 B: r:h.
+25 M: r:h.
+25 S: r:h.
+25 C: r:h.
+25 R: r:h.
+26 B: r:h.
+26 M: r:h.
+26 S: r:h.
+26 C: r:h.
+26 R: r:h.
+# page 034 system 4 starts bar 27 (4 bars only on this system)
+27 B: r:h.
+27 M: r:h.
+27 S: r:h.
+27 C: r:h.
+27 R: r:h.
+28 B: r:h.
+28 M: r:h.
+28 S: r:h.
+28 C: r:h.
+28 R: r:h.
+# bar 29: "a piacere" (Marcello and Benoit); Benoit enters (entra sorridente)
+# MARKS bar 29 B: word:a_piacere
+29 B: r:q word:a_piacere Eb3:e "Af-" Eb3:e "fit-" Eb3:e "to!" r:e
+# MARKS bar 29 M: word:a_piacere
+29 M: r:q r:e r:q r:s word:a_piacere Eb3:s "O-"
+29 S: r:h.
+29 C: r:h.
+29 R: r:h.
+# bar 30: Marcello p; printed text "Date una": "te" under the 2nd note, "una" whole under the 3rd note (sense: Da-te_u-na, continues "se-dia" p.35); end of bar 30: double bar, key change to 6 flats (see p.35)
+30 B: r:h.
+# MARKS bar 30 M: dyn:p
+30 M: Eb4:q "là!" r:e dyn:p Ab3:e "Da-" Bb3:e "te" Cb4:e "una"
+30 S: r:h.
+30 C: r:h.
+30 R: r:h.
+# page 035 system 1 starts bar 31
+# bar 31: ANDANTINO MOSSO, dotted-quarter = 100; key 6 flats (Gb major / Eb minor); 6/8 continues; figure (18) in the piano. Rodolfo in treble clef: written an octave higher than sounding pitches given here
+31 B: r:h.
+31 M: Bb3:q. "se-" Gb3:q "dia." r:e
+31 S: r:h.
+31 C: r:h.
+31 R: r:h.
+# bar 32: Rodolfo p
+32 B: r:h.
+32 M: r:h.
+32 S: r:h.
+32 C: r:h.
+# JUDGE bar 32 R: Y - noteheads centred on the 4th line (D5 printed, Db by key) = Db4 sounding, not Eb
+# MARKS bar 32 R: dyn:p
+32 R: r:q r:e dyn:p Db4:e "Pre-" Db4:e "sto." r:e
+# bar 33: Benoit p (schermendosi); printed "Non oc-corre... vor - re - i..."
+# MARKS bar 33 B: dyn:p
+33 B: r:e dyn:p Bb3:e "Non" Bb3:e "oc-" Bb3:e "cor-" Bb3:e "re..." r:s Bb3:s "vor-"
+33 M: r:h.
+33 S: r:h.
+33 C: r:h.
+33 R: r:h.
+# bar 34: Marcello p (offre a Benoit un bicchiere); Schaunard p, printed "Seg-ga."
+34 B: Cb4:e "re-" Cb4:e "i..." r:e r:q r:e
+# MARKS bar 34 M: dyn:p
+34 M: r:q r:e r:q dyn:p Db4:e "Vuol"
+# MARKS bar 34 S: dyn:p
+34 S: r:q r:e dyn:p Cb4:e "Seg-" Cb4:e "ga." r:e
+34 C: r:h.
+34 R: r:h.
+# page 035 system 2 starts bar 35
+35 B: r:q r:e Db4:e "Gra-" Db4:e "zie!" r:e
+35 M: Bb3:e "be-" Bb3:e "re?" r:e r:q r:e
+35 S: r:h.
+35 C: r:h.
+35 R: r:q r:e r:q Eb4:e "Toc-"
+# bar 36: Colline p, printed "Tocchiamo!" on 3 notes; (tutti bevono) over bar 38
+36 B: r:h.
+36 M: r:h.
+36 S: r:h.
+# MARKS bar 36 C: dyn:p
+36 C: r:q dyn:p Cb4:e "Toc-" Db3:e "chia-" Db3:e "mo!" r:e
+36 R: Cb4:e "chia-" Cb4:e "mo." r:e r:q r:e
+37 B: r:h.
+37 M: r:h.
+37 S: r:h.
+37 C: r:h.
+37 R: r:h.
+38 B: r:h.
+38 M: r:h.
+38 S: r:h.
+38 C: r:h.
+38 R: r:h.
+# page 036 system 1 starts bar 39
+39 B: r:h.
+39 M: r:h.
+39 S: r:h.
+39 C: r:h.
+39 R: r:h.
+# bar 40: printed "Tocchiam!" (R) and "Be-va!" (S); Benoit printed "Quest'è" centred under the two eighths
+# JUDGE bar 40 B: Y - zoom: first note in the F3-D3 space (Eb3), second in the G3 space (Gb3); "Quest'è" printed as one word, no hyphen after Quest'
+40 B: r:q r:e r:e Eb3:e "Quest'" Gb3:e "è"
+40 M: r:h.
+40 S: Ab3:e "Be-" Ab3:e "va!" r:e r:q r:e
+40 C: r:h.
+40 R: r:q Db4:e "Toc-" Eb4:q "chiam!" r:e
+# JUDGE bar 41 B: Y - first quarter on the F3 line = F3, not Eb3
+41 B: F3:q "l'ul-" Ab3:e "ti-" Bb3:q "mo" Cn4:e "tri-"
+41 M: r:h.
+41 S: r:h.
+41 C: r:h.
+41 R: r:h.
+# bar 42: Benoit duplet (2) over the first dotted-quarter beat
+42 B: Db4:e{2:3} "me-" Ab3:e{2:3} "stre..." r:q r:e
+42 M: r:h.
+42 S: r:h.
+42 C: r:h.
+42 R: r:h.
+# page 036 system 2 starts bar 43; Marcello (ingenuamente)
+43 B: r:h.
+43 M: F3:q "N'ho" Gb3:e "pia-" Ab3:q "ce-" Ab3:e "re."
+43 S: r:h.
+43 C: r:h.
+43 R: r:h.
+# bar 44: Schaunard (interrompendolo)
+44 B: r:q An3:e "E" Bn3:q "quin-" En3:e "di..."
+44 M: r:h.
+44 S: r:q r:e r:q En3:e "An-"
+44 C: r:h.
+44 R: r:h.
+# bar 45: printed "ra un" under one note (elision)
+45 B: r:h.
+45 M: r:h.
+45 S: En3:q "co-" An3:e "ra_un" Bn3:q "sor-" En3:e "so."
+45 C: r:h.
+45 R: r:h.
+# bar 46: Rodolfo (alzandosi), written G4 natural in treble clef
+46 B: An3:e{2:3} "Gra-" Bn3:e{2:3} "zie!" r:q r:e
+46 M: r:h.
+46 S: r:h.
+46 C: r:h.
+# JUDGE bar 46 R: Y - "Toc-" notehead on the middle line of the treble staff (B4 printed, natural) = Bn3 sounding
+46 R: r:q r:e r:q Bn3:e "Toc-"
+# page 037 system 1 starts bar 47 (Benoit has no staff on this system: rests). R written C#5. Colline: F3 printed with a (courtesy) natural
+47 B: r:h.
+47 M: r:h.
+47 S: r:h.
+# JUDGE bar 47 C: Y - notes on the D3 line and in the E3 space (both with naturals) = Dn3 En3
+47 C: r:q Dn3:e "Toc-" En3:e "chiam!" r:e r:e
+47 R: C#4:e "chiam!" r:e r:e r:q r:e
+# bar 48: R, M, S, C all mf, same line in octaves (R written an octave higher); slur over bars 48-49; M and C (alzandosi)
+48 B: r:h.
+# MARKS bar 48 M: dyn:mf
+48 M: dyn:mf Ab3:q "Al-" Gb3:e "la" Eb3:q "sua" Gb3:e "sa-"
+# MARKS bar 48 S: dyn:mf
+48 S: dyn:mf Ab3:q "Al-" Gb3:e "la" Eb3:q "sua" Gb3:e "sa-"
+# MARKS bar 48 C: dyn:mf
+48 C: dyn:mf Ab3:q "Al-" Gb3:e "la" Eb3:q "sua" Gb3:e "sa-"
+# MARKS bar 48 R: dyn:mf
+48 R: dyn:mf Ab4:q "Al-" Gb4:e "la" Eb4:q "sua" Gb4:e "sa-"
+# bar 49: slur F-Eb (melisma) on "lu-"
+49 B: r:h.
+49 M: F3:e "lu-" Eb3:e Db3:e "te!" r:q r:e
+49 S: F3:e "lu-" Eb3:e Db3:e "te!" r:q r:e
+49 C: F3:e "lu-" Eb3:e Db3:e "te!" r:q r:e
+49 R: F4:e "lu-" Eb4:e Db4:e "te!" r:q r:e
+# page 037 system 2 starts bar 50 (only Benoit has a staff on systems 2-3)
+50 B: r:h.
+50 M: r:h.
+50 S: r:h.
+50 C: r:h.
+50 R: r:h.
+51 B: r:h.
+51 M: r:h.
+51 S: r:h.
+51 C: r:h.
+51 R: r:h.
+# bar 52: Benoit (riprendendo con Marcello)
+52 B: r:q r:e r:q Gb3:e "A"
+52 M: r:h.
+52 S: r:h.
+52 C: r:h.
+52 R: r:h.
+# page 037 system 3 starts bar 53; Benoit continues "A lei ne vengo..."
+53 B: F3:q "lei" Bb3:e "ne" Cn4:e "ven-" Cn4:e "go" F3:e "per-"
+53 M: r:h.
+53 S: r:h.
+53 C: r:h.
+53 R: r:h.
+54 B: F3:q "chè_il" Bb3:e "tri-" Cn4:q "me-" F3:e "stre"
+54 M: r:h.
+54 S: r:h.
+54 C: r:h.
+54 R: r:h.
+# bar 55: Benoit duplet (2), crescendo hairpin, pp
+# MARKS bar 55 B: hp:< on the held C, hp:end at the bar line (the pp printed after it goes on bar 56)
+55 B: Bb3:e{2:3} "scor-" Cn4:e{2:3}~ "so...." hp:< Cn4:q. hp:end
+55 M: r:h.
+55 S: r:h.
+55 C: r:h.
+55 R: r:h.
+# bar 56: rit.; fermata after the last note (over the barline/last eighth)
+# JUDGE bar 56 B: X - staccato dots printed over "mi" and "pro-"
+# MARKS bar 56 B: dyn:pp (printed at the end of bar 55, after the hairpin) word:rit.
+56 B: dyn:pp Db4:e* "mi" r:e word:rit. Cn4:e* "pro-" Bb3:q "mi-" Bb3:e! "se..."
+56 M: r:h.
+56 S: r:h.
+56 C: r:h.
+56 R: r:h.
+# page 038 system 1 starts bar 57; "a tempo" (piano); Marcello p (mostrando a Benoit gli scudi che sono sul tavolo)
+57 B: r:h.
+# MARKS bar 57 M: dyn:p
+57 M: r:q dyn:p Db4:e "Pro-" Eb4:q "mi-" Ab3:e "si_ed"
+57 S: r:h.
+57 C: r:h.
+57 R: r:h.
+58 B: r:h.
+58 M: Ab3:q "or" Db4:e "man-" Eb4:q "ten-" Ab3:e "go."
+58 S: r:h.
+58 C: r:h.
+58 R: r:h.
+59 B: r:h.
+59 M: r:h.
+59 S: r:h.
+59 C: r:h.
+59 R: r:h.
+# bar 60: Rodolfo pp (con stupore, piano a Marcello); written G4 natural, A4 flat in treble
+60 B: r:h.
+60 M: r:h.
+60 S: r:h.
+60 C: r:h.
+# MARKS bar 60 R: dyn:pp
+60 R: r:q dyn:pp Gn3:e "Che" Ab3:q "fai!?" r:e
+# page 038 system 2 starts bar 61; Schaunard (piano a Marcello); stringendo (piano)
+61 B: r:h.
+61 M: r:h.
+61 S: r:q Gn3:e "Sei" Ab3:e "paz-" Ab3:e "zo?" r:e
+61 C: r:h.
+61 R: r:h.
+62 B: r:h.
+62 M: r:h.
+62 S: r:h.
+62 C: r:h.
+62 R: r:h.
+# bar 63: double bar, 9/8 (one bar); Marcello "sempre in tempo" (a Benoit, senza badare ai due); end of bar: double bar, 6/8
+# JUDGE bar 63 B: X - same full 9/8 bar rest either way; kept X spelling
+63 B: r:h. r:q.
+# JUDGE bar 63 M: X - "Or" sits in the space above the C4 ledger with no ledger through it = Dn4 (natural printed), not E4
+# MARKS bar 63 M: word:sempre_in_tempo
+63 M: r:q word:sempre_in_tempo G#3:e "Ha" C#4:e "vi-" C#4:e "sto?" r:e Dn4:q. "Or"
+# JUDGE bar 63 S: X - same full 9/8 bar rest either way; kept X spelling
+63 S: r:h. r:q.
+# JUDGE bar 63 C: X - same full 9/8 bar rest either way; kept X spelling
+63 C: r:h. r:q.
+# JUDGE bar 63 R: X - same full 9/8 bar rest either way; kept X spelling
+63 R: r:h. r:q.
+# page 038 system 3 starts bar 64 (6/8)
+64 B: r:h.
+64 M: D#4:q. "via" C#4:e "re-" D#4:e "sti_un" En4:e "mo-"
+64 S: r:h.
+64 C: r:h.
+64 R: r:h.
+# bar 65: rall:...... (to end of bar 66)
+65 B: r:h.
+# MARKS bar 65 M: word:rall. (printed rall: with dots to end of bar 66)
+65 M: word:rall. Bn3:q. "men-" C#4:q "to" C#4:e "in"
+65 S: r:h.
+65 C: r:h.
+65 R: r:h.
+# bar 66: end: double bar, key change to 4 sharps (E major), 3/4
+66 B: r:h.
+66 M: Bn3:q "no-" G#3:e "stra" An3:q "com-" Bn3:e "pa-"
+66 S: r:h.
+66 C: r:h.
+66 R: r:h.
+# page 039 system 1 starts bar 67: ANDANTINO, quarter = 56; key 4 sharps (E major); 3/4; figure (19) (piano). Marcello "-gnia." printed under both E3 eighths (word written on the first)
+67 B: r:h.
+67 M: En3:e "gnia." En3:e r:q r:q
+67 S: r:h.
+67 C: r:h.
+67 R: r:h.
+# bar 68: rall:........ (piano)
+68 B: r:h.
+68 M: r:h.
+68 S: r:h.
+68 C: r:h.
+68 R: r:h.
+# bar 69: "Appena Meno" (voice and piano); Marcello "con marcata intenzione" (appoggiando i gomiti sulla tavola); slur F#3-G#3 and slur over the bar
+69 B: r:h.
+# JUDGE bar 69 M: Y - "quant'anni" printed as one word: no hyphen after quant'
+# MARKS bar 69 M: word:Appena_Meno word:con_marcata_intenzione
+69 M: word:Appena_Meno word:con_marcata_intenzione F#3:q "Di-" G#3:e "ca:" A3:e "quant'" B3:e "an-" C#4:e "ni"
+69 S: r:h.
+69 C: r:h.
+69 R: r:h.
+70 B: r:h.
+70 M: G#3:q~ "ha......" G#3:e r:e r:q
+70 S: r:h.
+70 C: r:h.
+70 R: r:h.
+# page 039 system 2 starts bar 71
+71 B: r:h.
+71 M: F#3:q "ca-" G#3:e "ro" A3:e "si-" B3:e "gnor" C#4:s "Be-" C#4:s "no-"
+71 S: r:h.
+71 C: r:h.
+71 R: r:h.
+# bar 72: Benoit "parlato": two 16th triplets (3) [C#4 G#3 16th-rest] [G#3 G#3 G#3] then G#3 eighth; printed "Gl'anni? Per carita!" (no accent visible on carita)
+# JUDGE bar 72 B: X - print reads "carita!" without accent here; spelling kept as printed
+# MARKS bar 72 B: word:parlato
+72 B: r:q word:parlato C#4:s3 "Gl'an-" G#3:s3 "ni?" r:s3 G#3:s3 "Per" G#3:s3 "ca-" G#3:s3 "ri-" G#3:e "ta!" r:e
+72 M: G#3:q~ "it?......" G#3:e r:e r:q
+72 S: r:h.
+72 C: r:h.
+72 R: r:h.
+# bar 73: Rodolfo p, staccato eighths, written an octave higher (treble)
+73 B: r:h.
+73 M: r:h.
+73 S: r:h.
+73 C: r:h.
+# MARKS bar 73 R: dyn:p
+73 R: r:e dyn:p E4:e* "Su_e" D#4:e* "giù" C#4:e* "la" B3:e* "no-" A3:e* "stra_e-"
+# page 039 system 3 starts bar 74; Benoit "parlato" (quasi parlato, protestando), same rhythm as bar 72
+# MARKS bar 74 B: word:parlato
+74 B: r:q word:parlato C#4:s3 "Di" G#3:s3 "più," r:s3 G#3:s3 "mol-" G#3:s3 "to" G#3:s3 "di" G#3:e "più." r:e
+74 M: r:h.
+74 S: r:h.
+74 C: r:h.
+74 R: G#3:q "tà." r:q r:q
+# bar 75: Colline staccato eighths
+75 B: r:h.
+75 M: r:h.
+75 S: r:h.
+75 C: r:e F#3:e* "Ha" G#3:e* "det-" A3:e* "to" B3:e* "su" C#4:e* "e"
+75 R: r:h.
+# bar 76: Marcello (abbassando la voce e con tono di furberia); second 16th has a sharp: read B#3 (unsure)
+76 B: r:h.
+# JUDGE bar 76 M: X - "tra" in the space above the top line with a sharp = B#3, no C4 ledger
+76 M: r:q r:q r:e G#3:s "L'al-" B#3:s "tra"
+76 S: r:h.
+76 C: G#3:q "giù." r:q r:q
+76 R: r:h.
+# page 040 system 1 starts bar 77 (Marcello only; others rest)
+77 B: r:h.
+77 M: F#3:e "se-" F#3:q "ra" F#3:s "al" F#3:s "Ma-" A#3:e* "bil..." F#3:e* "l'han"
+77 S: r:h.
+77 C: r:h.
+77 R: r:h.
+# bar 78: last 16th A#3 printed with a sharp
+78 B: r:h.
+78 M: G#3:e "col-" G#3:e "to" r:e G#3:s "in" G#3:s "pec-" B3:e "ca-" C#4:s "to" A#3:s "d'a-"
+78 S: r:h.
+78 C: r:h.
+78 R: r:h.
+# page 040 system 2 starts bar 79; Benoit "parlato" (inquieto): note on the middle line read D#3 (key); Marcello p, slur from "al" over the barline
+# MARKS bar 79 B: word:parlato
+79 B: r:q word:parlato D#3:e "Io!?" r:e r:q
+# JUDGE bar 79 M: Y - "mor!" sits above the C4 ledger = D#4 (key); no slur marks on sung lines
+# MARKS bar 79 M: dyn:p
+79 M: D#4:q "mor!" r:q r:e dyn:p E3:s "al" F#3:s "Ma-"
+79 S: r:h.
+79 C: r:h.
+79 R: r:h.
+80 B: r:h.
+# JUDGE bar 80 M: Y - "bil..." on the D3 line = D#3 (key); no slur marks on sung lines
+80 M: D#3:q "bil..." r:e D#3:s "l'al-" D#3:s "tra" E3:e "se-" E3:s "ra" F#3:s "l'han"
+80 S: r:h.
+80 C: r:h.
+80 R: r:h.
+# page 040 system 3 starts bar 81; Marcello "f parlato", accents on "Neghi!"; "col-to." on the middle line = D#3 (key)
+81 B: r:h.
+# JUDGE bar 81 M: Y - same notes as X; Y without slur marks (sung lines carry no slurs)
+# MARKS bar 81 M: dyn:f word:parlato
+81 M: D#3:q "col-" D#3:e "to." r:e dyn:f word:parlato G#3:s> "Ne-" G#3:s> "ghi!" r:e
+81 S: r:h.
+81 C: r:h.
+81 R: r:h.
+# bar 82: Benoit f; Marcello (lusingandolo)
+# JUDGE bar 82 B: X - noteheads on the top line (A3), not in the space below
+# MARKS bar 82 B: dyn:f
+82 B: r:e. dyn:f A3:s "Un" A3:e "ca-" A3:e "so." r:q
+82 M: r:q r:q r:e E3:s "Bel-" C#3:s "la"
+82 S: r:h.
+82 C: r:h.
+82 R: r:h.
+# bar 83: Marcello (gli batte una mano sulla spalla); Schaunard (mezzo brillo, subito), "Bric-" continues on p.41
+# JUDGE bar 83 B: X - "mol-to" noteheads on the F3 line = F#3, not E3
+83 B: r:e. C#4:s "Ah!" F#3:e "mol-" F#3:e "to." r:q
+83 M: A3:e "don-" A3:e "na!" r:q r:q
+83 S: r:q r:q r:e. B3:s "Bric-"
+83 C: r:h.
+83 R: r:h.
+# ---- end of m1/trans/VM_S3a.txt (bars 1-83)
+# S3b reader A, pages 41-48. Bar 1 = first bar of p. 41. Rodolfo written in treble clef: sounding pitch written (8vb).
+# page 041 system 1 starts bar 84
+# bar 84: 3/4, 4 sharps (E major) continuing; p (piano)
+84 R: r:e. G#3:s "Bric-" G#3:e "co-" G#3:e "ne!" r:q
+84 M: r:h.
+# JUDGE bar 84 S: Y - first note is on the 2nd ledger line above the bass staff = E4 (not F#4); X underlay kept
+84 S: E4:e "co-" G#3:e "ne!" r:q r:q
+84 C: r:q r:q r:e F#3:s "Se-" D#4:s "dut-"
+84 B: r:h.
+85 R: r:q r:e. F#3:s "Bric-" B3:e "co-" B3:e "ne!"
+85 M: r:h.
+# JUDGE bar 85 S: X - heads on the F3 line = F#3
+85 S: r:e. F#3:s "Bric-" F#3:e "co-" F#3:e "ne!" r:q
+85 C: g:D#4:e C#4:e "to-" B3:e "re!" r:q r:q
+85 B: r:h.
+# bar 86: Marcello (magnificando)
+86 R: r:h.
+86 M: r:e F#3:s "U-" F#3:s "na" G#3:e "quer-" A3:e "cia!..." r:e C#4:s "un" C#4:s "can-"
+86 S: r:h.
+86 C: r:h.
+86 B: r:h.
+# page 041 system 2 starts bar 87
+# bar 87: Benoit p (ridendo); his two "Eh!" notes are printed WITHOUT noteheads (stem + flag only, parlato-like); pitch G#3 is only where the head would sit (stem top in the G3 space)
+87 R: r:q D#4:e "L'uo-" D#4:s "mo_ha" D#4:s "buon" D#4:e "gu-" G#3:e "sto."
+# JUDGE bar 87 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+87 M: G#3:e "no-" G#3:e "ne!.." r:q r:q
+87 S: r:h.
+87 C: r:h.
+# JUDGE bar 87 B: Y - both "Eh!" printed without noteheads -> pitch X
+# MARKS bar 87 B: p
+87 B: dyn:p r:q X:e "Eh!" r:e X:e "Eh!" r:e
+88 R: r:h.
+# JUDGE bar 88 M: Y - first note on 2nd ledger line = E4, second just above 1st ledger = D#4
+88 M: r:e E4:e "il" D#4:e "crin" C#4:e "ric-" B3:e "ciu-" A#3:e "to_e"
+88 S: r:h.
+88 C: r:h.
+88 B: r:h.
+# bar 89: Marcello p, rall. (slur Ab3-Bb3-C4); end of bar: double bar, key change to 5 flats, 6/8 follows
+89 R: r:h.
+# JUDGE bar 89 M: OWN - first note sits just above the C4 ledger = D#4 (Y); Ab3 and Bb3 carry the same single eighth flag as the other eighths, bar = 6 eighths (X rhythm)
+# MARKS bar 89 M: p, rall.
+89 M: D#4:e> "ful-" G#3:e "vo." r:e dyn:p word:rall. Ab3:e "Ei" Bb3:e "gon-" Cn4:e "go-"
+89 S: r:e. D#3:s "Bric-" G#3:e "con!" r:e r:q
+89 C: r:h.
+89 B: r:h.
+# page 042 system 1 starts bar 90
+# bar 90: double bar before; LO STESSO MOVIMENTO, quarter = dotted quarter; 6/8; 5 flats (Db major / Bb minor); figure (20) at the piano; "Sostenendo" over Benoit's staff
+90 R: r:h.
+# JUDGE bar 90 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+90 M: Db4:q. "la-" Db4:q "va" Db4:e "ar-"
+90 S: r:h.
+90 C: r:h.
+# MARKS bar 90 B: Sostenendo
+90 B: word:Sostenendo r:h.
+91 R: r:h.
+91 M: C4:e "zil-" Bb3:e Ab3:e "lo," C4:q "pet-" Ab3:e "to-"
+91 S: r:h.
+91 C: r:h.
+91 B: r:h.
+# bar 92: Benoit (ringalluzzito)
+92 R: r:h.
+92 M: Bb3:q "ru-" Bb3:e "to." r:q r:e
+92 S: r:h.
+92 C: r:h.
+92 B: r:q r:e r:q Bb3:e "Son"
+# page 042 system 2 starts bar 93
+93 R: r:h.
+93 M: r:h.
+93 S: r:h.
+93 C: r:h.
+93 B: Gb3:q "vec-" Gb3:e "chio," r:e Gb3:e "ma" Ab3:e "ro-"
+# bar 94: stringendo (Rodolfo and Benoit staves); Rodolfo (con ironica gravita) p; Schaunard p; Colline p
+# MARKS bar 94 R: p, stringendo
+94 R: dyn:p word:stringendo Eb4:e "Ei" Db4:e "gon-" C4:e "go-" Bb3:q "la" Db4:e "va_ar-"
+94 M: r:h.
+# MARKS bar 94 S: p
+94 S: dyn:p Eb4:e "Ei" Db4:e "gon-" C4:e "go-" Bb3:q "la" Db4:e "va_ar-"
+# MARKS bar 94 C: p
+94 C: dyn:p Eb4:e "Ei" Db4:e "gon-" C4:e "go-" Bb3:q "la" Db4:e "va_ar-"
+# MARKS bar 94 B: stringendo
+94 B: word:stringendo F3:q "bu-" F3:e "sto." r:q r:e
+95 R: C4:e "zu-" Bb3:e Ab3:e "to_e" C4:q "pet-" Gb4:e "to-"
+95 M: r:h.
+95 S: C4:e "zu-" Bb3:e Ab3:e "to_e" C4:q "pet-" C4:e "to-"
+95 C: C4:e "zu-" Bb3:e Ab3:e "to_e" C4:q "pet-" Ab3:e "to-"
+95 B: r:h.
+# page 043 system 1 starts bar 96
+# bar 97: "string. e cres." (printed under Rodolfo's staff and over the piano)
+96 R: F4:e "ril-" Eb4:e Db4:e "lo." r:q r:e
+96 M: r:q Ab3:e "E_a" Bb3:q "lui" Db4:e "ce-"
+96 S: Db4:e "ril-" Ab3:e F3:e "lo." r:q r:e
+96 C: Db3:q "ril-" Db3:e "lo." r:q r:e
+96 B: r:h.
+97 R: r:h.
+# MARKS bar 97 M: string. e cres.
+97 M: word:string._e_cres. C4:q "dea," C4:e "la" C4:q "fem-" C4:e "mi-"
+97 S: r:h.
+97 C: r:h.
+97 B: r:h.
+98 R: r:h.
+98 M: g:Bb3:s g:C4:s Bb3:e "nil....." Ab3:e Gb3:e "vir-" F3:e "tù." r:e r:e
+98 S: r:h.
+98 C: r:h.
+98 B: r:h.
+# page 043 system 2 starts bar 99
+# bar 99: PIU MOSSO (voice and piano); still 6/8, 5 flats; Benoit (in piena confidenza)
+99 R: r:h.
+99 M: r:h.
+99 S: r:h.
+99 C: r:h.
+99 B: Eb3:e "Ti-" Eb3:e "mi-" Ab3:e "do_in" Bb3:q "gio-" Eb3:e "ven-"
+100 R: r:h.
+100 M: r:h.
+100 S: r:h.
+100 C: r:h.
+100 B: Eb3:e "tù" r:e r:e r:q r:e
+# bar 101: duplet bracket "2" over the first two eighths
+101 R: r:h.
+101 M: r:h.
+101 S: r:h.
+101 C: r:h.
+101 B: Eb3:e{2:3} "o-" Eb3:e{2:3} "ra...." Eb3:q Eb3:e "me"
+102 R: r:h.
+102 M: r:h.
+102 S: r:h.
+102 C: r:h.
+102 B: Eb3:q "ne" Eb3:e "ri-" Ab3:q "pa-" Ab3:e "go!.."
+# bar 103: Benoit (parlato). Only "r:q + one eighth WITHOUT notehead" is printed (head position = Eb3 space). The word "Si" is under that eighth; "sa," is printed further right, beyond a dotted vertical line, under EMPTY staff (no note, no rest). The closing r:q. is NOT printed: added only to complete the 6/8 bar (the piano bar is complete).
+103 R: r:h.
+103 M: r:h.
+103 S: r:h.
+103 C: r:h.
+# JUDGE bar 103 B: OWN - only one headless eighth is printed, "Si sa," both stand under it (pitch X, words joined); rest of bar empty, r:q. added to fill 6/8
+103 B: r:q X:e "Si_sa," r:q.
+# page 043 system 3 starts bar 104
+104 R: r:h.
+104 M: r:h.
+104 S: r:h.
+104 C: r:h.
+# JUDGE bar 104 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+104 B: r:e C3:e "è_u-" F3:e "no" Gn3:q "sva-" C3:e "go"
+# bar 105: duplet bracket "2" over the first two eighths; arc Gn3(e)-Gn3(q) read as slur (new syllable "don" under the quarter); word placement in bars 22-23 is tight, syllables assigned to nearest notes
+105 R: r:h.
+105 M: r:h.
+105 S: r:h.
+105 C: r:h.
+# JUDGE bar 105 B: Y - "qual-" F3, "che..." Gn3 tied (arc joins equal pitches) to Gn3 quarter, "don-" under the last Gn3 eighth; leading hyphens dropped
+105 B: F3:e{2:3} "qual-" Gn3:e{2:3}~ "che..." Gn3:q Gn3:e "don-"
+106 R: r:h.
+106 M: r:h.
+106 S: r:h.
+106 C: r:h.
+# JUDGE bar 106 B: Y - "net-" Ab3, "ta_al-" Bn3, "le-" C4 (follows from bar 22 alignment); leading hyphens dropped
+106 B: Ab3:q "net-" Bn3:e "ta_al-" C4:q. "le-"
+107 R: r:h.
+107 M: r:h.
+107 S: r:h.
+107 C: r:h.
+# JUDGE bar 107 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+107 B: C4:e "gra..." r:e r:e r:q r:e
+# bar 108: Benoit (accenna a forme accentuate); end of bar: double bar, 9/8 follows (key stays 5 flats)
+108 R: r:h.
+108 M: r:h.
+108 S: r:h.
+108 C: r:h.
+# JUDGE bar 108 B: X - second note on the 1st ledger line = C4 (no accidental, C is not flat in 5 flats); print "po'..." has three dots
+108 B: r:q Bn3:e "e_un" C4:e "po'..." r:e r:e
+# page 044 system 1 starts bar 109
+# bar 109: 9/8 (5 flats); Benoit f on Eb4 (accent)
+# JUDGE bar 109 R: X - singer silent (no staff on p.44); a single full-bar rest is enough
+109 R: r:h. r:q.
+# JUDGE bar 109 M: X - singer silent (no staff on p.44); a single full-bar rest is enough
+109 M: r:h. r:q.
+# JUDGE bar 109 S: X - singer silent (no staff on p.44); a single full-bar rest is enough
+109 S: r:h. r:q.
+# JUDGE bar 109 C: X - singer silent (no staff on p.44); a single full-bar rest is enough
+109 C: r:h. r:q.
+# MARKS bar 109 B: f
+109 B: r:q r:e r:q r:e dyn:f Eb4:q.> "Non"
+# bar 110: double bar, PIU MOSSO, 6/8; Benoit p. Words "di-co una": "co" printed under the C4 eighth, "una" printed as one block under the A3 quarter (elision co_u/na possible)
+110 R: r:h.
+110 M: r:h.
+110 S: r:h.
+110 C: r:h.
+# JUDGE bar 110 B: OWN - 3rd/4th notes on the top line A3 with no accidental = Ab3 (Y); "co" under C4 eighth, "una" under the quarter, "ba-" under the last eighth (X), "una" written u_na (two syllables, one note)
+# MARKS bar 110 B: p
+110 B: dyn:p C4:q "di-" C4:e "co" Ab3:q "u_na" Ab3:e "ba-"
+111 R: r:h.
+111 M: r:h.
+111 S: r:h.
+111 C: r:h.
+# JUDGE bar 111 B: X - print: "ba-" ends bar 27, so "le-" F3 q, "na_o" F3 e, "un" Eb3, "map-" Bb2, "pa-" Eb3
+111 B: F3:q "le-" F3:e "na_o" Eb3:e "un" Bb2:e "map-" Eb3:e "pa-"
+112 R: r:h.
+112 M: r:h.
+112 S: r:h.
+112 C: r:h.
+# JUDGE bar 112 B: X - print: "mon-" F3 q, "do_o" F3 e, "un" Eb3, "vi-" Bb2, "so" Eb3
+112 B: F3:q "mon-" F3:e "do_o" Eb3:e "un" Bb2:e "vi-" Eb3:e "so"
+# page 044 system 2 starts bar 113
+# bar 113: rall. (at the 4th eighth)
+113 R: r:h.
+113 M: r:h.
+113 S: r:h.
+113 C: r:h.
+# JUDGE bar 113 B: X - pixel check: natural note in the G3 space (Gn3), low note in the C3 space (C3); An3 only in bar 31
+# MARKS bar 113 B: rall.
+113 B: F3:e "ton-" F3:e "do" F3:e "da" word:rall. Gn3:e "lu-" C3:e Gn3:e "na"
+# bar 114: fermata marked "corta" over the An3; p at "ma"
+114 R: r:h.
+114 M: r:h.
+114 S: r:h.
+114 C: r:h.
+# JUDGE bar 114 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 114 B: corta (fermata), p
+114 B: word:corta An3:q.! "pie-" F3:e "na," r:e dyn:p F3:e "ma"
+# bar 115: Sostenuto (voice and piano); Gb3 printed with a (cautionary) flat
+115 R: r:h.
+115 M: r:h.
+115 S: r:h.
+115 C: r:h.
+# JUDGE bar 115 B: X - flat note in the G3 space = Gb3; Eb3 in the E3 space. Bar split is the same in both files (q e q e)
+# MARKS bar 115 B: Sostenuto
+115 B: word:Sostenuto Gb3:q "ma-" Gb3:e "gra," Eb3:q "pro-" Eb3:e "prio"
+# bar 116: Benoit (parlato); accents on "no," and "poi"
+116 R: r:h.
+116 M: r:h.
+116 S: r:h.
+116 C: r:h.
+# JUDGE bar 116 B: X - all three repeated notes in the G3 space = Gb3; "poi" above the top line = Bb3
+116 B: Gb3:e "ma-" Gb3:e "gra," r:e Gb3:e> "no," r:e Bb3:e> "poi"
+# page 044 system 3 starts bar 117
+# bar 117: a tempo (voice and piano); accent on "no!"
+117 R: r:h.
+117 M: r:h.
+117 S: r:h.
+117 C: r:h.
+# JUDGE bar 117 B: X - "no!" head in the E3 space (between F3 and D3 lines) = Eb3
+# MARKS bar 117 B: a tempo
+117 B: word:a_tempo Eb3:e> "no!" r:e r:e r:q r:e
+# bar 118: f
+118 R: r:h.
+118 M: r:h.
+118 S: r:h.
+118 C: r:h.
+# JUDGE bar 118 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 118 B: f
+118 B: r:q r:e dyn:f Ab3:e "Le" Ab3:e "don-" Ab3:e "ne"
+# bar 119: p
+119 R: r:h.
+119 M: r:h.
+119 S: r:h.
+119 C: r:h.
+# JUDGE bar 119 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 119 B: p
+119 B: dyn:p Db4:e "ma-" Db4:e "gre" Db4:e "son" C4:q "grat-" C4:e "ta-"
+# bar 120: poco rall. (dotted line continues through bar 38)
+120 R: r:h.
+120 M: r:h.
+120 S: r:h.
+120 C: r:h.
+# JUDGE bar 120 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 120 B: poco rall.
+120 B: Bb3:q. "ca-" word:poco_rall. Ab3:q "pi" Ab3:e "e"
+121 R: r:h.
+121 M: r:h.
+121 S: r:h.
+121 C: r:h.
+# JUDGE bar 121 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+121 B: Gb3:q "spes-" F3:e "so" Eb3:q "so-" Ab3:e "pra-"
+# page 044 system 4 starts bar 122
+# bar 122: fermata over the eighth rest after "pi..."; LENTO printed over "e son" (2nd half of the bar); end of bar: double bar, key signature cancelled (no key), 2/4 follows
+122 R: r:h.
+122 M: r:h.
+122 S: r:h.
+122 C: r:h.
+# JUDGE bar 122 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# FIX bar 122 F: LENTO printed above the C#3 pair
+122 B: Ab3:e "ca-" Db3:e "pi..." r:e! r:e word:Lento C#3:e "e" C#3:e "son"
+# bar 123: 2/4, no key (C major); slur D3 -> A3 (A3 printed with a natural)
+123 R: r:h
+123 M: r:h
+123 S: r:h
+123 C: r:h
+# JUDGE bar 123 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines) (A3 = An3)
+123 B: D3:q "pie-" A3:e. "ne" A3:s "di"
+124 R: r:h
+124 M: r:h
+124 S: r:h
+124 C: r:h
+# JUDGE bar 124 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+124 B: G#3:e "do-" E3:e "glie," r:e E3:s "per" E3:s "e-"
+# bar 125: slur E3 -> B3, fermata on B3; ff on "mia"; end of bar: double bar, key change to 2 sharps
+125 R: r:h
+125 M: r:h
+125 S: r:h
+125 C: r:h
+# JUDGE bar 125 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 125 B: ff
+125 B: E3:q "sem-" B3:e! "pio:" r:s dyn:ff B3:s "mia"
+# page 045 system 1 starts bar 126
+# bar 126: ALLEGRO, quarter = 152 (voice and piano); 2 sharps (D major); 2/4; figure (21) at the piano
+126 R: r:h
+126 M: r:h
+126 S: r:h
+126 C: r:h
+126 B: A#3:e "mo-" F#3:e "glie..." r:q
+127 R: r:h
+127 M: r:h
+127 S: r:h
+127 C: r:h
+127 B: r:h
+128 R: r:h
+128 M: r:h
+128 S: r:h
+128 C: r:h
+128 B: r:h
+# page 045 system 2 starts bar 129
+# bar 129: Marcello "con forza"; stage direction (da un pugno sulla tavola e si alza: gli altri lo imitano: Benoit li guarda sbalordito)
+129 R: r:h
+# MARKS bar 129 M: con forza
+129 M: r:q r:e word:con_forza F#3:e "Que-"
+129 S: r:h
+129 C: r:h
+129 B: r:h
+# bar 130: Sostenuto; accents on every Marcello note bars 47-49
+130 R: r:h
+# JUDGE bar 130 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 130 M: Sostenuto
+130 M: word:Sostenuto B3:q> "st'uo-" D4:q> "mo_ha"
+130 S: r:h
+130 C: r:h
+130 B: r:h
+131 R: r:h
+# JUDGE bar 131 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+131 M: C#4:q> "mo-" B3:e.> "glie" B3:s "e"
+131 S: r:h
+131 C: r:h
+131 B: r:h
+132 R: r:h
+# JUDGE bar 132 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+132 M: A3:q> "scon-" B3:q> "cie"
+132 S: r:h
+132 C: r:h
+132 B: r:h
+# page 045 system 3 starts bar 133
+# bar 133: Marcello triplet (bracket 3) on the first three eighths, all accented; Schaunard and Colline f, accent on "ror!"; Rodolfo "con forza"
+# MARKS bar 133 R: con forza
+133 R: r:q r:e word:con_forza A3:e "E_am-"
+# JUDGE bar 133 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+133 M: C#4:e3> "vo-" B3:e3> "glie_ha" A3:e3> "nel" B3:e> "cor!" r:e
+# MARKS bar 133 S: f
+133 S: r:e. dyn:f F#3:s "Or-" B3:e> "ror!" r:e
+# MARKS bar 133 C: f
+133 C: r:e. dyn:f F#3:s "Or-" B3:e> "ror!" r:e
+133 B: r:h
+# bar 134: Sostenuto (Rodolfo and piano); every Rodolfo note bars 51-53 accented except the 16ths
+# JUDGE bar 134 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 134 R: Sostenuto
+134 R: word:Sostenuto D4:q> "mor-" F#4:q> "ba,e_ap-"
+134 M: r:h
+134 S: r:h
+134 C: r:h
+134 B: r:h
+# JUDGE bar 135 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+135 R: E4:q> "pe-" D4:e.> "sta" D4:s "la"
+135 M: r:h
+135 S: r:h
+135 C: r:h
+135 B: r:h
+# JUDGE bar 136 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+136 R: C#4:q> "no-" D4:e.> "stra" D4:s "o-"
+136 M: r:h
+136 S: r:h
+136 C: r:h
+136 B: r:h
+# page 046 system 1 starts bar 137
+# bar 137: Rodolfo triplet (3) on the first three eighths, all four notes accented; Schaunard/Colline accent on "Fuor!"; Marcello p, grace note (small 16th) F#4 before "Si_ab-"; stage direction (Benoit, allibito, si alza e tenta inutilmente di parlare)
+# JUDGE bar 137 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+137 R: E4:e3> "ne-" D4:e3> "sta" C#4:e3> "ma-" D4:e> "gion!" r:e
+# MARKS bar 137 M: p
+137 M: r:q r:e. dyn:p g:F#4:s F#3:s "Si_ab-"
+137 S: r:q D4:e> "Fuor!" r:e
+137 C: r:q D4:e> "Fuor!" r:e
+137 B: r:h
+# bar 138: stringendo (Marcello and piano); slur over Marcello's phrase bars 54-56
+138 R: r:h
+# JUDGE bar 138 M: X - second 16th centred on the 2nd ledger line = E4
+# MARKS bar 138 M: stringendo
+138 M: word:stringendo C#4:e. "bru-" E4:s "ci" B3:e. "del-" D4:s "lo"
+138 S: r:h
+138 C: r:h
+138 B: r:h
+139 R: r:h
+# JUDGE bar 139 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+139 M: F#3:e. "zuc-" A3:s "che-" D3:e "ro!" r:e
+139 S: r:h
+139 C: r:h
+139 B: r:h
+140 R: r:h
+140 M: r:h
+140 S: r:h
+# JUDGE bar 140 C: X - last 16th sits above the C4 ledger = D4
+140 C: C#4:e. "Si" F#3:s "di-" B3:e. "scac-" D4:s "ci_il"
+140 B: r:h
+141 R: r:h
+141 M: r:h
+141 S: r:q r:e. D4:s "È"
+# JUDGE bar 141 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+141 C: F#3:e. "re-" A3:s "pro-" D3:q "bo!"
+141 B: r:h
+# page 046 system 2 starts bar 142
+# bar 142: stage direction (circondano Benoit, e lo spingono poco a poco verso la porta); Benoit (gridando). Benoit's line is back on its own staff here.
+142 R: r:h
+142 M: r:q r:e. E4:s "Si-"
+# JUDGE bar 142 S: Y - first note centred on the C4 ledger line = C#4; leading hyphens dropped
+142 S: C#4:e. "la" B3:s "mo-" A3:e. "ra-" G3:s "le_of-"
+142 C: r:h
+142 B: r:e. D4:s "Io" C#4:e "di..." r:e
+# bar 143: Marcello accents on "len-" and "zio!"; Schaunard slur F#3-E3
+143 R: r:h
+# JUDGE bar 143 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+143 M: D4:e> "len-" A3:e> "zio!" r:q
+# JUDGE bar 143 S: OWN - print "of-fe - sa": "fe" is followed by a hyphen; no slur marks in sung lines
+143 S: F#3:e. "fe-" E3:s D3:e "sa" r:e
+143 C: r:q r:e. A3:s "Si-"
+143 B: r:e. C#4:s "io" B3:e "di..." r:e
+# bar 144: Colline accents; G#3 sharp printed
+144 R: r:q r:e. E4:s "Si-"
+144 M: r:h
+144 S: r:q B3:e. "che" E3:s "vi"
+# JUDGE bar 144 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+144 C: G#3:e> "len-" E3:e> "zio!" r:q
+144 B: r:h
+# bar 145: Rodolfo and Schaunard accents
+# JUDGE bar 145 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+145 R: C#4:e> "len-" A3:e> "zio!" r:q
+145 M: r:h
+# JUDGE bar 145 S: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+145 S: E3:e> "scac-" A3:e> "cia!" r:q
+145 C: r:h
+145 B: r:h
+# page 047 system 1 starts bar 146
+# bar 146: Benoit (sempre più sbalordito); no Rodolfo staff in this system
+146 R: r:h
+146 M: r:h
+146 S: r:h
+146 C: r:h
+146 B: r:q B3:e. "Miei" D4:s "si-"
+# bar 147: Marcello, Schaunard, Colline identical: triplet bracket (3) over "len-zio!" + eighth rest, accents on the two D3; Benoit triplet (3) over F#3 F#3 + eighth rest
+147 R: r:h
+# JUDGE bar 147 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+147 M: r:e. A3:s "Si-" D3:e3> "len-" D3:e3> "zio!" r:e3
+# JUDGE bar 147 S: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+147 S: r:e. A3:s "Si-" D3:e3> "len-" D3:e3> "zio!" r:e3
+# JUDGE bar 147 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+147 C: r:e. A3:s "Si-" D3:e3> "len-" D3:e3> "zio!" r:e3
+# JUDGE bar 147 B: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+147 B: F#3:e3 "gno-" F#3:e3 "ri..." r:e3 r:q
+148 R: r:h
+148 M: r:q B3:e. "Via," D4:s "si-"
+148 S: r:q B3:e. "Via," D4:s "si-"
+148 C: r:q B3:e. "Via," D4:s "si-"
+148 B: r:h
+# bar 149: slur F#3-A3 on "gno-"
+149 R: r:h
+# JUDGE bar 149 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+149 M: F#3:e. "gno-" A3:s D3:e "re!" r:e
+# JUDGE bar 149 S: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+149 S: F#3:e. "gno-" A3:s D3:e "re!" r:e
+# JUDGE bar 149 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+149 C: F#3:e. "gno-" A3:s D3:e "re!" r:e
+149 B: r:h
+# page 047 system 2 starts bar 150
+# bar 150: Sostenuto; all four f, accents; stage direction (spingendo Benoit fuori della porta). Benoit has no staff from here on.
+# MARKS bar 150 R: f, Sostenuto
+150 R: dyn:f word:Sostenuto G4:q> "Via" F#4:q> "di"
+# MARKS bar 150 M: f
+150 M: dyn:f D4:q> "Via" D4:q> "di"
+# MARKS bar 150 S: f
+150 S: dyn:f B3:q> "Via" A3:q> "di"
+# MARKS bar 150 C: f
+150 C: dyn:f B3:q> "Via" A3:q> "di"
+150 B: r:h
+# bar 151: a tempo; marcato (^) on the half notes, written >; "qua!" followed by a dotted extension line to bar 70
+# JUDGE bar 151 R: X - dots after "qua!" are the extender line, not punctuation
+# MARKS bar 151 R: marcato (was >), a tempo
+151 R: word:a_tempo A4:h^~ "qua!"
+# JUDGE bar 151 M: X - dots after "qua!" are the extender line, not punctuation
+# MARKS bar 151 M: marcato (was >)
+151 M: F#4:h^~ "qua!"
+# JUDGE bar 151 S: X - dots after "qua!" are the extender line, not punctuation
+# MARKS bar 151 S: marcato (was >)
+151 S: D4:h^~ "qua!"
+# JUDGE bar 151 C: X - dots after "qua!" are the extender line, not punctuation
+# MARKS bar 151 C: marcato (was >)
+151 C: D4:h^~ "qua!"
+151 B: r:h
+152 R: A4:h~
+152 M: F#4:h~
+152 S: D4:h~
+152 C: D4:h~
+152 B: r:h
+153 R: A4:e r:e r:q
+153 M: F#4:e r:e r:q
+153 S: D4:e r:e r:q
+153 C: D4:e r:e r:q
+153 B: r:h
+# page 048 system 1 starts bar 154
+# bar 154: Meno (voices and piano); stage direction (Tutti suna porta guardando verso il pianerottolo della scala) [printed "suna"]
+# MARKS bar 154 R: Meno
+# FIX bar 154 G: word:Meno removed from the sung line (kept on the piano)
+154 R: r:h
+154 M: r:h
+154 S: r:h
+154 C: r:h
+154 B: r:h
+# bar 155: all four p; the four sing the same line in unison (Rodolfo written an octave higher)
+# JUDGE bar 155 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 155 R: p
+155 R: dyn:p D4:q "...E" C#4:e. "buo-" C#4:s "na"
+# JUDGE bar 155 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 155 M: p
+155 M: dyn:p D4:q "...E" C#4:e. "buo-" C#4:s "na"
+# JUDGE bar 155 S: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 155 S: p
+155 S: dyn:p D4:q "...E" C#4:e. "buo-" C#4:s "na"
+# JUDGE bar 155 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 155 C: p
+155 C: dyn:p D4:q "...E" C#4:e. "buo-" C#4:s "na"
+155 B: r:h
+# JUDGE bar 156 R: X - 2nd/3rd heads in the space below the middle line (written A4) = A3 sounding
+156 R: B3:q "se-" A3:e. "ra" A3:s "a"
+# JUDGE bar 156 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+156 M: B3:q "se-" A3:e. "ra" A3:s "a"
+# JUDGE bar 156 S: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+156 S: B3:q "se-" A3:e. "ra" A3:s "a"
+# JUDGE bar 156 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+156 C: B3:q "se-" A3:e. "ra" A3:s "a"
+156 B: r:h
+# bar 157: rall. (all four voices, dotted line)
+# JUDGE bar 157 R: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 157 R: rall. (printed rall:)
+157 R: word:rall. G3:e. "vo-" F#3:s "stra" E3:e. "si-" A3:s "gno-"
+# JUDGE bar 157 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 157 M: rall. (printed rall:)
+157 M: word:rall. G3:e. "vo-" F#3:s "stra" E3:e. "si-" A3:s "gno-"
+# JUDGE bar 157 S: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 157 S: rall. (printed rall:)
+157 S: word:rall. G3:e. "vo-" F#3:s "stra" E3:e. "si-" A3:s "gno-"
+# JUDGE bar 157 C: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+# MARKS bar 157 C: rall. (printed rall:)
+157 C: word:rall. G3:e. "vo-" F#3:s "stra" E3:e. "si-" A3:s "gno-"
+157 B: r:h
+# page 048 system 2 starts bar 158
+# bar 158: a tempo, deciso (over Rodolfo and piano); stage direction (ritornando nel mezzo della scena); all four (ridendo). The laughing "Ah! ah! ah!" (bar 75 triplet, bracket 3, under a slur) and "ah!" (bar 76) are printed WITHOUT noteheads (stem + flag only); pitches given are only where a head would sit: Rodolfo stem top at E5 written (= E4 sounding), Marcello/Schaunard/Colline at G3.
+# JUDGE bar 158 R: Y - laughs printed without noteheads -> X
+# MARKS bar 158 R: a tempo, deciso
+158 R: A3:q "ri....." word:a_tempo,_deciso X:e3 "Ah!" X:e3 "ah!" X:e3 "ah!"
+# JUDGE bar 158 M: Y - laughs printed without noteheads -> X
+158 M: A3:q "ri....." X:e3 "Ah!" X:e3 "ah!" X:e3 "ah!"
+# JUDGE bar 158 S: Y - laughs printed without noteheads -> X
+158 S: A3:q "ri....." X:e3 "Ah!" X:e3 "ah!" X:e3 "ah!"
+# JUDGE bar 158 C: Y - laughs printed without noteheads -> X
+158 C: A3:q "ri....." X:e3 "Ah!" X:e3 "ah!" X:e3 "ah!"
+158 B: r:h
+# bar 159: Marcello two triplets (bracket 3, slurred); his first eighth ("ah!") is headless, the other five have heads (A3)
+# JUDGE bar 159 R: Y - "ah!" printed without notehead -> X
+159 R: X:e "ah!" r:e r:q
+# JUDGE bar 159 M: Y - first "ah!" headless -> X; leading hyphens dropped
+159 M: X:e3 "ah!" A3:e3 "Ho" A3:e3 "pa-" A3:e3 "ga-" A3:e3 "to_il" A3:e3 "tri-"
+# JUDGE bar 159 S: Y - "ah!" printed without notehead -> X
+159 S: X:e "ah!" r:e r:q
+# JUDGE bar 159 C: Y - "ah!" printed without notehead -> X
+159 C: X:e "ah!" r:e r:q
+159 B: r:h
+# bar 160: Marcello triplet (bracket 3) with accents, slur, then quarter rest with fermata, (chiude l'uscio); fermata on the whole-bar rest for R, S, C; end of bar: double bar, key change to 1 sharp (naturals cancel C# and F#, then F#)
+160 R: r:h!
+# JUDGE bar 160 M: X - same notes; differs only by leading hyphens/slur marks (TB.md: hyphen only after a syllable, no slurs in sung lines)
+160 M: D4:e3> "me-" D4:e3> "stre!" r:e3 r:q!
+160 S: r:h!
+160 C: r:h!
+# JUDGE bar 160 B: X - Benoit has no staff here; no fermata printed for him
+160 B: r:h
+# ---- end of m1/trans/VM_S3b.txt (bars 84-160)

@@ -103,17 +103,26 @@ for k, (mi, on, e) in enumerate(seq):
     n = e.el
     if not any(x.get("type") == "start" for x in n.findall("tie")):
         continue
+    # the first later onset that has this pitch in this staff; there, prefer the note in the same voice
+    # (when two voices sound the same note, the tie belongs to its own voice)
+    cands, first = [], None
     for mj, on2, e2 in seq[k + 1:]:
         if mj > mi + 2: break
-        if (mj, on2) <= (mi, on) or e2.staff != e.staff: continue
-        if pitch(e2.el) == pitch(n):
+        if (mj, on2) <= (mi, on) or e2.staff != e.staff or pitch(e2.el) != pitch(n): continue
+        if first is None: first = (mj, on2)
+        if (mj, on2) != first: break
+        cands.append(e2)
+    if cands:
+        free = [c for c in cands if not any(x.get("type") == "stop" for x in c.el.findall("tie"))] or cands
+        same = [c for c in free if c.voice == e.voice]
+        e2 = (same or free)[0]
+        if True:
             if not any(x.get("type") == "stop" for x in e2.el.findall("tie")):
                 kids = list(e2.el); d_ = e2.el.find("duration")
                 e2.el.insert(kids.index(d_) + 1 if d_ is not None else 0, ET.Element("tie", type="stop"))
                 nt_ = e2.el.find("notations")
                 if nt_ is None: nt_ = ET.SubElement(e2.el, "notations")
                 nt_.insert(0, ET.Element("tied", type="stop"))
-            break
 
 # <tie> (sound) must agree with <tied> (drawing) on every note
 for n in r.iter("note"):

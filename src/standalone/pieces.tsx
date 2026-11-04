@@ -146,6 +146,59 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-legna": {
+    portrait: "boheme:schaunard",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "D major (2 sharps); E♭ major (3 flats) from bar 56 (“Qua.”, “E mi presento”); D major again from bar 97 (“Il Costituzional!”); F major (1 flat) from bar 141 (Allegretto mosso, “Quando un’olezzo di frittelle”)",
+      time: "6/8; 2/4 from bar 116 (“Che il diavolo vi porti”); 2/8 from bar 141 (Allegretto mosso); 3/4 from bar 171 (Moderato, “Un po’ di religione”); 6/8 from bar 176 (Tempo I)",
+      tempo: "Allegretto mosso ♪ = 132 is the only printed metronome mark; the other values are chosen, as no number is printed: Allegro ♩. = 108 (the beat of “Questo Mar Rosso” kept: its last bar is this Allegro’s first); Meno ♩. = 96 (a tenth slower, to the nearest metronome mark); 2/4 from bar 116 ♩ = 96 (the beat kept); Poco meno ♩ = 92 (a little slower again); Allegretto mosso ♪ = 132 (printed); Moderato ♩ = 66 (the printed ♪ = 132 kept); I.º Tempo (Allegro brillante) ♩. = 108 (the opening Allegro’s value, to which it returns)",
+    },
+    notePlaceholder: "Schaunard comes home rich and tells how he earned it; nobody listens",
+    about: (
+      <>
+        <p>
+          Score: “Legna!”, Schaunard’s windfall, Act 1 (vocal score pages 20-33, from the bar after figure (10) to page 33 system 1 bar 2, 183 bars), from
+          Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the
+          piano each read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the
+          Italian words are kept, with the print's spellings; the shouted notes, printed without noteheads, keep their words. Schaunard’s printed alternative
+          small notes (ossia) in bar 117 are not shown. The only printed metronome mark is the Allegretto mosso’s ♪ = 132; the other tempos are chosen as
+          stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-si-puo": {
+    portrait: "boheme:benoit",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "F major (1 flat) for the knock at the door; C major (no key signature) from bar 7 (Allegro vivo); G♭ major (6 flats) from bar 31 (Andantino mosso); E major (4 sharps) from bar 67 (Andantino); D♭ major (5 flats) from bar 90 (Lo stesso movimento); C major from bar 123; D major (2 sharps) from bar 126 (Allegro)",
+      time: "2/4; 6/8 from bar 7 (with single bars of 9/8 at 63 and 109); 3/4 from bar 67; 6/8 from bar 90; 2/4 from bar 123",
+      tempo: "Printed metronome marks: Allegro vivo ♩. = 152, Andantino mosso ♩. = 100, Andantino ♩ = 56, Lo stesso movimento ♩ = ♩. (so ♩. = 56), Allegro ♩ = 152. Chosen, as no number is printed: bars 1-6 ♩ = 108 (the Tempo I of “Legna!” carried on, its beat kept into the 2/4); “Appena meno” (bar 69) left as a nuance, ♩ = 56 kept; Più mosso ♩. = 63, and from bar 110 ♩. = 69 (each a tenth faster, to the nearest metronome mark); Lento ♩. = 52, then ♩ = 52 in the 2/4 (just under the printed Andantino ♩ = 56, the beat kept); Meno (bar 154) ♩ = 138 (a tenth slower)",
+    },
+    notePlaceholder: "The landlord comes for the rent and leaves without it",
+    about: (
+      <>
+        <p>
+          Score: “Si può?..”, Benoit’s visit, Act 1 (vocal score pages 33-48, from page 33 system 1 bar 3 to the end of page 48, 160 bars), from Carlo
+          Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano
+          each read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian
+          words are kept, with the print's spellings. The tempos are the printed metronome marks; where none is printed, a value is chosen as stated under
+          Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

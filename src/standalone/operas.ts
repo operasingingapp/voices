@@ -2138,6 +2138,18 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Questo Mar Rosso",
       "editionId": "puccini-questo-mar-rosso"
+     },
+     {
+      "title": "Legna!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Legna!",
+      "editionId": "puccini-legna"
+     },
+     {
+      "title": "Si può?..",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Si può?..",
+      "editionId": "puccini-si-puo"
      }
     ]
    },
@@ -2230,6 +2242,18 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Questo Mar Rosso",
       "editionId": "puccini-questo-mar-rosso"
+     },
+     {
+      "title": "Legna!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Legna!",
+      "editionId": "puccini-legna"
+     },
+     {
+      "title": "Si può?..",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Si può?..",
+      "editionId": "puccini-si-puo"
      }
     ]
    },
@@ -2277,6 +2301,18 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
+     },
+     {
+      "title": "Legna!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Legna!",
+      "editionId": "puccini-legna"
+     },
+     {
+      "title": "Si può?..",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Si può?..",
+      "editionId": "puccini-si-puo"
      }
     ]
    },
@@ -2309,6 +2345,18 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Questo Mar Rosso",
       "editionId": "puccini-questo-mar-rosso"
+     },
+     {
+      "title": "Legna!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Legna!",
+      "editionId": "puccini-legna"
+     },
+     {
+      "title": "Si può?..",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Si può?..",
+      "editionId": "puccini-si-puo"
      }
     ]
    },
@@ -2318,7 +2366,14 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "The friends' landlord, who comes for the rent.",
     "avatar": "beard",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Si può?..",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Si può?..",
+      "editionId": "puccini-si-puo"
+     }
+    ]
    },
    {
     "id": "alcindoro",
