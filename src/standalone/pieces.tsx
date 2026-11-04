@@ -95,6 +95,31 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-al-quartiere-latin": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "G major, then G♭ major (6 flats) from “Io resto”",
+      time: "2/4, then 6/8 (Andantino), then 3/8 (Allegro vivo)",
+      tempo: "Allegretto ♩ = 116; Andantino ♩. = 92; Allegro vivo ♩. = 108 (printed metronome marks)",
+    },
+    notePlaceholder: "Rodolfo stays to finish his article; the friends grope their way down the dark stairs",
+    about: (
+      <>
+        <p>
+          Score: “Al Quartiere Latin ci attende Momus”, Act 1 (vocal score pages 49-53, from figure 22, 79 bars), from Carlo Carignani’s piano reduction in the
+          G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently, every
+          disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept, with the print's
+          spellings. The tempos are the printed metronome marks.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

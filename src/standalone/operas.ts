@@ -2126,6 +2126,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 4",
       "id": "Act 4: Sono andati?",
       "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
+     },
+     {
+      "title": "Al Quartiere Latin ci attende Momus.",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Al Quartiere Latin ci attende Momus.",
+      "editionId": "puccini-al-quartiere-latin"
      }
     ]
    },
@@ -2206,6 +2212,12 @@ export const OPERAS: Opera[] = [
       "kind": "Quartet · Act 3",
       "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
+     },
+     {
+      "title": "Al Quartiere Latin ci attende Momus.",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Al Quartiere Latin ci attende Momus.",
+      "editionId": "puccini-al-quartiere-latin"
      }
     ]
    },
@@ -2247,6 +2259,12 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 4",
       "id": "Act 4: Vecchia zimarra",
       "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì"
+     },
+     {
+      "title": "Al Quartiere Latin ci attende Momus.",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Al Quartiere Latin ci attende Momus.",
+      "editionId": "puccini-al-quartiere-latin"
      }
     ]
    },
@@ -2267,6 +2285,12 @@ export const OPERAS: Opera[] = [
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
       "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+     },
+     {
+      "title": "Al Quartiere Latin ci attende Momus.",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Al Quartiere Latin ci attende Momus.",
+      "editionId": "puccini-al-quartiere-latin"
      }
     ]
    },

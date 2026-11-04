@@ -3031,6 +3031,52 @@
     }
   },
   {
+    "editionId": "puccini-al-quartiere-latin",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-al-quartiere-latin@1.0.0-carignani#8e2cd9aaec",
+    "title": "Al Quartiere Latin ci attende Momus",
+    "subtitle": "Rodolfo, Marcello, Schaunard and Colline: scene from La bohème, Act 1",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 79,
+    "durationSec": 70,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 32,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-o-mio-babbino-caro",
     "editionVersion": "1.0.0-cafe-puccini-2023-01-08",
     "scoreVersionId": "puccini-o-mio-babbino-caro@1.0.0-cafe-puccini-2023-01-08#5286b569b1",
