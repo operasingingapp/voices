@@ -143,11 +143,28 @@ interface Voice {
   release: number; // seconds (time constant) the sound takes to die away when the note ends
 }
 
-/** iPhone/iPad: play as media (not "ambient"), so the music sounds even with the silent switch on. */
-let unlocked = false;
+/**
+ * iPhone/iPad: play as media (not "ambient"), so the music sounds even with the silent switch on. Done on EVERY
+ * press of play, not once: after the phone is locked or another app took the sound, iOS falls back to "ambient"
+ * (the silent switch mutes the music again) until a media element plays once more inside a tap.
+ */
+let silentEl: HTMLAudioElement | null = null;
 function unlockMediaPlayback() {
-  if (unlocked) return;
-  unlocked = true;
+  try {
+    const nav = navigator as Navigator & { audioSession?: { type: string } };
+    if (nav.audioSession && nav.audioSession.type !== "playback") nav.audioSession.type = "playback";
+  } catch {
+    /* not supported */
+  }
+  if (silentEl) {
+    try {
+      silentEl.currentTime = 0;
+      void silentEl.play().catch(() => undefined);
+    } catch {
+      /* media element not available */
+    }
+    return;
+  }
   try {
     const nav = navigator as Navigator & { audioSession?: { type: string } };
     if (nav.audioSession) nav.audioSession.type = "playback";
@@ -180,6 +197,7 @@ function unlockMediaPlayback() {
     );
     el.setAttribute("playsinline", "");
     el.volume = 0.01;
+    silentEl = el;
     void el.play().catch(() => undefined);
   } catch {
     /* media element not available */
@@ -832,9 +850,21 @@ export class SamplerPort implements SynthPort {
     );
   }
 
+  /**
+   * Wake the sound for a press of play. On iPhone a context left "interrupted" (phone locked, a call, another
+   * app's sound) can keep its resume() pending for ever, which used to leave play doing nothing: never wait
+   * more than a moment, and ask a second time if the first did not take.
+   */
   async resume() {
     unlockMediaPlayback();
-    if (this.ctx.state !== "running") await this.ctx.resume();
+    if (this.ctx.state === "running") return;
+    const wake = () =>
+      Promise.race([
+        this.ctx.resume().catch(() => undefined),
+        new Promise<void>((r) => setTimeout(r, 1200)),
+      ]);
+    await wake();
+    if ((this.ctx.state as string) !== "running") await wake();
   }
 
   currentTime() {
