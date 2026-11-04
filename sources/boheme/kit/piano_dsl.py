@@ -83,10 +83,10 @@ def notes_for(tokens, staff, voice):
         noslash = tok.startswith("G:")
         if grace: tok = tok[2:]
         pitches, rest = tok.split(":", 1)
-        m = re.match(r"([whqesxy])(\.?)(3?)(?:\{(\d+):(\d+)\})?([~*^>!()\[\]tam-]*)$", rest)
+        m = re.match(r"([whqesxy])(\.{0,2})(3?)(?:\{(\d+):(\d+)\})?([~*^>!()\[\]tam-]*)$", rest)
         if not m: raise SystemExit("bad token " + tok)
         typ, dur = TYPES[m.group(1)]
-        if m.group(2): dur += dur // 2
+        if m.group(2): dur += dur // 2 + (dur // 4 if len(m.group(2)) == 2 else 0)
         tup = (3, 2) if m.group(3) else ((int(m.group(4)), int(m.group(5))) if m.group(4) else None)
         if tup: dur = dur * tup[1] // tup[0]
         fl = m.group(6)
@@ -108,7 +108,7 @@ def notes_for(tokens, staff, voice):
             if "~" in fl or ptie: ET.SubElement(n, "tie", type="start")
             ET.SubElement(n, "voice").text = str(voice)
             ET.SubElement(n, "type").text = typ
-            if m.group(2): ET.SubElement(n, "dot")
+            for _ in m.group(2): ET.SubElement(n, "dot")
             if tup:
                 tm = ET.SubElement(n, "time-modification"); ET.SubElement(tm, "actual-notes").text = str(tup[0]); ET.SubElement(tm, "normal-notes").text = str(tup[1])
             ET.SubElement(n, "staff").text = str(staff)
