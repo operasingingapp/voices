@@ -315,6 +315,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-o-soave-fanciulla": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Duet",
+    facts: {
+      key: "A major (3 sharps) for bars 1-23; C major (no sharps or flats) from bar 24 (Calmo) to the end",
+      time: "4/4 (C), with a single bar of 2/4 at 16",
+      tempo: "Printed metronome marks: Largo sostenuto ♩ = 58 (bar 1) and ♩ = 58 again at bar 31 (“Dammi il braccio”). Chosen, as no number is printed: Sempre più sostenuto (bar 17) ♩ = 52 (the Largo’s 58 held back by about a tenth, to the nearest metronome mark, as “ever more held back” asks); Calmo (bar 24) ♩ = 52 (the same pace kept: the conversation stays calm, and the printed ♩ = 58 at bar 31 marks the return to the first tempo). The fermatas of bar 16, the Sostenendo, poco stent., rit., col canto, poco affrett., a tempo, rall., Sost., allargando and molto rall. marks are left as nuances, the beat kept",
+    },
+    notePlaceholder: "Rodolfo sees Mimì in the moonlight; she asks to come to the Momus; they leave arm in arm singing “Amor!”",
+    about: (
+      <>
+        <p>
+          “O soave fanciulla”, the love duet that closes Act 1. Rodolfo turns from the window and sees Mimì in the moonlight; she draws back from his
+          kiss, reminds him that his friends are waiting and asks to come too. They leave arm in arm for the Café Momus and sing their last “Amor!”
+          from outside. Marcello, already in the street, is heard far off in bars 2-3 (“trovò la poesia”), ending the friends’ “Momus” chorus.
+        </p>
+        <p>
+          Score: vocal score pages 78-82 (from figure (41), Largo sostenuto, to the end of Act 1, 44 bars), from Carlo Carignani’s piano reduction in
+          the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently,
+          every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept,
+          with the print’s spellings. The print has no optional notes: Rodolfo ends on E and Mimì on the high C. The printed metronome marks are the
+          Largo sostenuto’s ♩ = 58 and the ♩ = 58 of bar 31; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

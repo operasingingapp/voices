@@ -2091,7 +2091,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O soave fanciulla",
       "kind": "Duet with Mimì · Act 1",
-      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight"
+      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight",
+      "editionId": "puccini-o-soave-fanciulla"
      },
      {
       "title": "O Mimì, tu più non torni",
@@ -2183,7 +2184,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O soave fanciulla",
       "kind": "Duet with Rodolfo · Act 1",
-      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight"
+      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight",
+      "editionId": "puccini-o-soave-fanciulla"
      },
      {
       "title": "Donde lieta uscì",
@@ -2245,7 +2247,8 @@ export const OPERAS: Opera[] = [
       "title": "O soave fanciulla",
       "kind": "Duet · Act 1",
       "id": "Act 1: O soave fanciulla",
-      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight"
+      "when": "Act 1, the friends have gone; Rodolfo turns from the window and sees Mimì in the moonlight",
+      "editionId": "puccini-o-soave-fanciulla"
      },
      {
       "title": "Quando me'n vo'",

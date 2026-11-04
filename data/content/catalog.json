@@ -3305,6 +3305,46 @@
     }
   },
   {
+    "editionId": "puccini-o-soave-fanciulla",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-o-soave-fanciulla@1.0.0-carignani#8ac231e2ce",
+    "title": "O soave fanciulla",
+    "subtitle": "Rodolfo and Mimì, with Marcello offstage: the love duet that ends Act 1 of La bohème",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      }
+    ],
+    "measures": 44,
+    "durationSec": 187,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 31,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-questo-mar-rosso",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-questo-mar-rosso@1.0.0-carignani#896b35225b",

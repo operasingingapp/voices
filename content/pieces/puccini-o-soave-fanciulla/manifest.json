@@ -1,0 +1,153 @@
+{
+ "editionId": "puccini-o-soave-fanciulla",
+ "editionVersion": "1.0.0-carignani",
+ "title": "O soave fanciulla",
+ "subtitle": "Rodolfo and Mimì, with Marcello offstage: the love duet that ends Act 1 of La bohème",
+ "kind": "duet",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "O soave fanciulla (Largo sostenuto, A major)",
+   "start": "1",
+   "end": "16"
+  },
+  {
+   "id": "b",
+   "label": "Sei mia! V'aspettan gli amici (Sempre più sostenuto)",
+   "start": "17",
+   "end": "23"
+  },
+  {
+   "id": "c",
+   "label": "Che?.. Mimì! (Calmo, C major)",
+   "start": "24",
+   "end": "30"
+  },
+  {
+   "id": "d",
+   "label": "Dammi il braccio: Amor! from outside (to the end of Act 1)",
+   "start": "31",
+   "end": "44"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 1",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 78-82 (from figure (41), Largo sostenuto, to the end of Act 1, 44 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Tempo from the printed metronome marks; where none is printed, a value chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
