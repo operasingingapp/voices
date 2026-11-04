@@ -1,0 +1,873 @@
+{
+ "editionId": "puccini-ehi-rodolfo",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Luigi Illica and Giuseppe Giacosa (1896). Words follow the Ricordi vocal score's spelling and punctuation (Non senti?!, Poetucolo!, Momus,..., and the print's runs of dots after tue, tosto, via and poesia). Schaunard, Colline and Marcello sing the same “Momus” lines; Marcello goes on alone with “trovò la poesia!”. IPA follows sung Italian conventions: stressed syllable marked, words sung on one note joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "s1",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Ehi! Rodolfo!",
+   "translation": "Hey! Rodolfo!",
+   "ipa": "ˈɛi roˈdɔl.fo",
+   "words": [
+    [
+     "Ehi!",
+     "hey",
+     "ˈɛi"
+    ],
+    [
+     "Rodolfo!",
+     "Rodolfo",
+     "roˈdɔl.fo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c1",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Rodolfo!",
+   "translation": "Rodolfo!",
+   "ipa": "roˈdɔl.fo",
+   "words": [
+    [
+     "Rodolfo!",
+     "Rodolfo",
+     "roˈdɔl.fo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m1",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Olà. Non senti?!",
+   "translation": "Hey there! Can't you hear?!",
+   "ipa": "oˈla non ˈsɛn.ti",
+   "words": [
+    [
+     "Olà.",
+     "hey there",
+     "oˈla"
+    ],
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "senti?!",
+     "you hear",
+     "ˈsɛn.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "can't you hear"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m2",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Lumaca!",
+   "translation": "Snail!",
+   "ipa": "luˈma.ka",
+   "words": [
+    [
+     "Lumaca!",
+     "snail",
+     "luˈma.ka"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c2",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Poetucolo!",
+   "translation": "Poetaster!",
+   "ipa": "po.eˈtu.ko.lo",
+   "words": [
+    [
+     "Poetucolo!",
+     "poetaster",
+     "po.eˈtu.ko.lo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s2",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Accidenti al pigro!",
+   "translation": "Damn the lazybones!",
+   "ipa": "at.tʃiˈdɛn.ti‿al ˈpi.gro",
+   "words": [
+    [
+     "Accidenti",
+     "damn",
+     "at.tʃiˈdɛn.ti"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "pigro!",
+     "lazybones",
+     "ˈpi.gro"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "damn the lazybones"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Scrivo ancor tre righe a volo.",
+   "translation": "I'm writing three more lines, quickly.",
+   "ipa": "ˈskri.vo‿anˈkor ˈtre ˈri.ge‿a ˈvo.lo",
+   "words": [
+    [
+     "Scrivo",
+     "I write",
+     "ˈskri.vo"
+    ],
+    [
+     "ancor",
+     "still",
+     "anˈkor"
+    ],
+    [
+     "tre",
+     "three",
+     "ˈtre"
+    ],
+    [
+     "righe",
+     "lines",
+     "ˈri.ge"
+    ],
+    [
+     "a",
+     "at",
+     "a"
+    ],
+    [
+     "volo.",
+     "flight",
+     "ˈvo.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "three more"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "in a hurry"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i1",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Chi son?",
+   "translation": "Who are they?",
+   "ipa": "ki ˈson",
+   "words": [
+    [
+     "Chi",
+     "who",
+     "ki"
+    ],
+    [
+     "son?",
+     "are they",
+     "ˈson"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Amici.",
+   "translation": "Friends.",
+   "ipa": "aˈmi.tʃi",
+   "words": [
+    [
+     "Amici.",
+     "friends",
+     "aˈmi.tʃi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s3",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Sentirai le tue........",
+   "translation": "You'll hear what's coming to you...",
+   "ipa": "sen.tiˈrai le ˈtu.e",
+   "words": [
+    [
+     "Sentirai",
+     "you will hear",
+     "sen.tiˈrai"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "tue........",
+     "yours",
+     "ˈtu.e"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "you'll get an earful"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m3",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Che te ne fai lì solo?",
+   "translation": "What are you doing there alone?",
+   "ipa": "ke te ne ˈfai ˈli ˈso.lo",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "te",
+     "for yourself",
+     "te"
+    ],
+    [
+     "ne",
+     "of it",
+     "ne"
+    ],
+    [
+     "fai",
+     "you do",
+     "ˈfai"
+    ],
+    [
+     "lì",
+     "there",
+     "ˈli"
+    ],
+    [
+     "solo?",
+     "alone",
+     "ˈso.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "what are you doing"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Non son solo. Siamo in due.",
+   "translation": "I'm not alone. There are two of us.",
+   "ipa": "non ˈson ˈso.lo ˈsja.mo‿in ˈdu.e",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "son",
+     "I am",
+     "ˈson"
+    ],
+    [
+     "solo.",
+     "alone",
+     "ˈso.lo"
+    ],
+    [
+     "Siamo",
+     "we are",
+     "ˈsja.mo"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "due.",
+     "two",
+     "ˈdu.e"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "there are two of us"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r4",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Andate da Momus,...",
+   "translation": "Go on to the Momus,",
+   "ipa": "anˈda.te da ˈmɔ.mus",
+   "words": [
+    [
+     "Andate",
+     "go",
+     "anˈda.te"
+    ],
+    [
+     "da",
+     "to",
+     "da"
+    ],
+    [
+     "Momus,...",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "to the Café Momus"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r5",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "tenete il posto, ci saremo tosto.....",
+   "translation": "keep a place, we'll be there soon.",
+   "ipa": "teˈne.te‿il ˈpɔ.sto tʃi saˈre.mo ˈtɔ.sto",
+   "words": [
+    [
+     "tenete",
+     "keep",
+     "teˈne.te"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "posto,",
+     "place",
+     "ˈpɔ.sto"
+    ],
+    [
+     "ci",
+     "there",
+     "tʃi"
+    ],
+    [
+     "saremo",
+     "we will be",
+     "saˈre.mo"
+    ],
+    [
+     "tosto.....",
+     "soon",
+     "ˈtɔ.sto"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "keep a place"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "we'll be there"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m4",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Momus, Momus, Momus,",
+   "translation": "Momus, Momus, Momus,",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s4",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Momus, Momus, Momus,",
+   "translation": "Momus, Momus, Momus,",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c3",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Momus, Momus, Momus,",
+   "translation": "Momus, Momus, Momus,",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m5",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "zitti e discreti andiamocene via..........",
+   "translation": "quietly and discreetly, let's go away",
+   "ipa": "ˈtsit.ti‿e diˈskrɛ.ti‿an.djaˈmo.tʃe.ne ˈvi.a",
+   "words": [
+    [
+     "zitti",
+     "quiet",
+     "ˈtsit.ti"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "discreti",
+     "discreet",
+     "diˈskrɛ.ti"
+    ],
+    [
+     "andiamocene",
+     "let's go off",
+     "an.djaˈmo.tʃe.ne"
+    ],
+    [
+     "via..........",
+     "away",
+     "ˈvi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "let's be off"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s5",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "zitti e discreti andiamocene via.",
+   "translation": "quietly and discreetly, let's go away.",
+   "ipa": "ˈtsit.ti‿e diˈskrɛ.ti‿an.djaˈmo.tʃe.ne ˈvi.a",
+   "words": [
+    [
+     "zitti",
+     "quiet",
+     "ˈtsit.ti"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "discreti",
+     "discreet",
+     "diˈskrɛ.ti"
+    ],
+    [
+     "andiamocene",
+     "let's go off",
+     "an.djaˈmo.tʃe.ne"
+    ],
+    [
+     "via.",
+     "away",
+     "ˈvi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "let's be off"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c4",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "zitti e discreti andiamocene via.",
+   "translation": "quietly and discreetly, let's go away.",
+   "ipa": "ˈtsit.ti‿e diˈskrɛ.ti‿an.djaˈmo.tʃe.ne ˈvi.a",
+   "words": [
+    [
+     "zitti",
+     "quiet",
+     "ˈtsit.ti"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "discreti",
+     "discreet",
+     "diˈskrɛ.ti"
+    ],
+    [
+     "andiamocene",
+     "let's go off",
+     "an.djaˈmo.tʃe.ne"
+    ],
+    [
+     "via.",
+     "away",
+     "ˈvi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "let's be off"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "s6",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Momus, Momus,",
+   "translation": "Momus, Momus,",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c5",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Momus, Momus,",
+   "translation": "Momus, Momus,",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m6",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "trovò la poesia!...............................",
+   "translation": "he has found poetry!",
+   "ipa": "troˈvɔ la po.eˈzi.a",
+   "words": [
+    [
+     "trovò",
+     "found",
+     "troˈvɔ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "poesia!...............................",
+     "poetry",
+     "po.eˈzi.a"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s7",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Momus, Momus, Momus!",
+   "translation": "Momus, Momus, Momus!",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus!",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c6",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Momus, Momus, Momus!",
+   "translation": "Momus, Momus, Momus!",
+   "ipa": "ˈmɔ.mus ˈmɔ.mus ˈmɔ.mus",
+   "words": [
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus,",
+     "Momus",
+     "ˈmɔ.mus"
+    ],
+    [
+     "Momus!",
+     "Momus",
+     "ˈmɔ.mus"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

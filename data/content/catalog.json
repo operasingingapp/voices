@@ -3079,7 +3079,7 @@
   {
     "editionId": "puccini-che-gelida-manina",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-che-gelida-manina@1.0.0-carignani#c1b3ef3406",
+    "scoreVersionId": "puccini-che-gelida-manina@1.0.0-carignani#2209785d6b",
     "title": "Che gelida manina",
     "subtitle": "Rodolfo's aria, La bohème, Act 1",
     "kind": "aria",
@@ -3106,6 +3106,58 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 26,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-ehi-rodolfo",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-ehi-rodolfo@1.0.0-carignani#6fe11e0a25",
+    "title": "Ehi! Rodolfo!",
+    "subtitle": "Schaunard, Colline, Marcello, Rodolfo and Mimì: the friends call from the courtyard, La bohème, Act 1",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      }
+    ],
+    "measures": 28,
+    "durationSec": 34,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 25,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -3157,9 +3209,43 @@
     }
   },
   {
+    "editionId": "puccini-mi-chiamano-mimi",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-mi-chiamano-mimi@1.0.0-carignani#3c8f3da403",
+    "title": "Mi chiamano Mimì",
+    "subtitle": "Mimì's aria, La bohème, Act 1",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      }
+    ],
+    "measures": 71,
+    "durationSec": 227,
+    "hasRepeats": false,
+    "keySignature": "A♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-non-sono-in-vena",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-non-sono-in-vena@1.0.0-carignani#64244fd2e8",
+    "scoreVersionId": "puccini-non-sono-in-vena@1.0.0-carignani#03bf88f067",
     "title": "Non sono in vena",
     "subtitle": "Rodolfo and Mimì: her first knock at the door, La bohème, Act 1",
     "kind": "scene",

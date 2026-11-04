@@ -2102,7 +2102,8 @@ export const OPERAS: Opera[] = [
       "title": "Si. Mi chiamano Mimì",
       "kind": "Aria · Act 1",
       "id": "Act 1: Si. Mi chiamano Mimì",
-      "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)"
+      "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)",
+      "editionId": "puccini-mi-chiamano-mimi"
      },
      {
       "title": "Quando me'n vo'",
@@ -2157,6 +2158,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Non sono in vena.",
       "editionId": "puccini-non-sono-in-vena"
+     },
+     {
+      "title": "Ehi! Rodolfo!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Ehi! Rodolfo!",
+      "editionId": "puccini-ehi-rodolfo"
      }
     ]
    },
@@ -2170,7 +2177,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sì, mi chiamano Mimì",
       "kind": "Aria · Act 1",
-      "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)"
+      "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)",
+      "editionId": "puccini-mi-chiamano-mimi"
      },
      {
       "title": "O soave fanciulla",
@@ -2212,6 +2220,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Non sono in vena.",
       "editionId": "puccini-non-sono-in-vena"
+     },
+     {
+      "title": "Ehi! Rodolfo!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Ehi! Rodolfo!",
+      "editionId": "puccini-ehi-rodolfo"
      }
     ]
    },
@@ -2268,6 +2282,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Si può?..",
       "editionId": "puccini-si-puo"
+     },
+     {
+      "title": "Ehi! Rodolfo!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Ehi! Rodolfo!",
+      "editionId": "puccini-ehi-rodolfo"
      }
     ]
    },
@@ -2327,6 +2347,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Si può?..",
       "editionId": "puccini-si-puo"
+     },
+     {
+      "title": "Ehi! Rodolfo!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Ehi! Rodolfo!",
+      "editionId": "puccini-ehi-rodolfo"
      }
     ]
    },
@@ -2371,6 +2397,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Si può?..",
       "editionId": "puccini-si-puo"
+     },
+     {
+      "title": "Ehi! Rodolfo!",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Ehi! Rodolfo!",
+      "editionId": "puccini-ehi-rodolfo"
      }
     ]
    },

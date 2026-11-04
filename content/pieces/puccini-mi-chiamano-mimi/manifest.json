@@ -1,0 +1,151 @@
+{
+ "editionId": "puccini-mi-chiamano-mimi",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Mi chiamano Mimì",
+ "subtitle": "Mimì's aria, La bohème, Act 1",
+ "kind": "aria",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Si. Mi chiamano Mimì (Andante lento, D major)",
+   "start": "1",
+   "end": "14"
+  },
+  {
+   "id": "b",
+   "label": "Mi piaccion quelle cose (Andante calmo)",
+   "start": "15",
+   "end": "25"
+  },
+  {
+   "id": "c",
+   "label": "Mi chiamano Mimì, il perchè non so (Lentamente)",
+   "start": "26",
+   "end": "30"
+  },
+  {
+   "id": "d",
+   "label": "Sola mi fo il pranzo da me stessa (Allegretto moderato)",
+   "start": "31",
+   "end": "48"
+  },
+  {
+   "id": "e",
+   "label": "Ma quando vien lo sgelo (Andante molto sostenuto)",
+   "start": "49",
+   "end": "59"
+  },
+  {
+   "id": "f",
+   "label": "Germoglia in un vaso una rosa (I° tempo, Andante agitando appena)",
+   "start": "60",
+   "end": "64"
+  },
+  {
+   "id": "g",
+   "label": "Ma i fior ch'io faccio, ahimè! (I tempo, ma calmo, to the end)",
+   "start": "65",
+   "end": "71"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 1",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 69-74 (from page 69 system 3 bar 3, figure (35), to the end of page 74, 71 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Tempo from the printed metronome marks; where none is printed, a value chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

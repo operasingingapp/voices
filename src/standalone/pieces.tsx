@@ -256,6 +256,65 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-mi-chiamano-mimi": {
+    portrait: "boheme:mimi",
+    opera: "La bohème",
+    kind: "Aria",
+    facts: {
+      key: "4 flats (A♭ major, where “Che gelida manina” ends) for bar 1; D major (2 sharps) from bar 2 (Andante lento)",
+      time: "4/4 (C) for bar 1; 2/4 from bar 2; 4/4 from bar 15 (Andante calmo), with a single bar of 2/4 at 20; 2/4 from bar 26 (Lentamente) through the Allegretto moderato; 4/4 from bar 49 (Andante molto sostenuto), with a single bar of 2/4 at 65",
+      tempo: "Printed metronome marks: Andante lento ♩ = 40 (bar 2), Andante calmo ♩ = 54 (bar 15) and Allegretto moderato ♩ = 144 (bar 31). Chosen, as no number is printed: bar 1 ♩ = 52 (the Andante lento ♩ = 52 of “Che gelida manina” carried on, as nothing new is printed over Mimì’s “Si. Mi”); Lentamente (bar 26) ♩ = 40 (the printed Andante lento of bar 2, whose “Mi chiamano Mimì” it brings back); Andante molto sostenuto (bar 49) ♩ = 46 (the Andante calmo’s 54 held back by about a sixth, to the nearest metronome mark); I° tempo, Andante agitando appena (bar 60) and I tempo, ma calmo (bar 66) ♩ = 54 (read as the Andante calmo, the aria’s first 4/4 tempo, whose music bar 66 brings back from bar 21). The a piacere, col canto, rall., rit., allarg., a tempo and Sostenendo marks, and the free cadenza of bar 70 (senza rigore di tempo), are left as nuances, the beat kept",
+    },
+    notePlaceholder: "Mimì tells Rodolfo who she is: her embroidered flowers, her little white room, the first sun of spring",
+    about: (
+      <>
+        <p>
+          “Mi chiamano Mimì”, Mimì’s aria, Act 1: her answer to “Che gelida manina”. Rodolfo has one word in it, his “Sì.” in bar 25.
+        </p>
+        <p>
+          Score: vocal score pages 69-74 (from page 69 system 3 bar 3, figure (35), Mimì’s “Si. Mi”, to the end of page 74, 71 bars), from Carlo
+          Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the
+          piano each read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only
+          the Italian words are kept, with the print’s spellings (“Si.” without its accent at the start). The free cadenza of bar 70 is written with
+          scaled tuplets so that it fits the bar. The printed metronome marks are the Andante lento’s ♩ = 40, the Andante calmo’s ♩ = 54 and the
+          Allegretto moderato’s ♩ = 144; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-ehi-rodolfo": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "D major (2 sharps)",
+      time: "2/4",
+      tempo: "Printed metronome mark: Allegretto come prima ♩ = 100 (bar 3). Chosen, as no number is printed: bars 1-2 (a piacere, the piano col canto) ♩ = 100, the Allegretto that follows, so the calls from the courtyard keep its pulse. The a tempo and perdendosi marks are left as nuances, the beat kept",
+    },
+    notePlaceholder: "The friends call from the courtyard; Rodolfo answers from the window; Mimì asks “Chi son?”",
+    about: (
+      <>
+        <p>
+          “Ehi! Rodolfo!”, Act 1: Schaunard, Colline and Marcello call up from the courtyard; Rodolfo opens the window, says he has three lines left to
+          write and that he is not alone, and sends them on to the Café Momus; Mimì asks “Chi son?”. They go off singing “Momus, Momus”.
+        </p>
+        <p>
+          Score: vocal score pages 75-77 (from figure (39) to the end of page 77, 28 bars), from Carlo Carignani’s piano reduction in the G. Ricordi
+          &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently, every
+          disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept, with the
+          print’s spellings. The printed metronome mark is the Allegretto come prima’s ♩ = 100; the a piacere opening is chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
