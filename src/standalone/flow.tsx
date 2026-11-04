@@ -436,7 +436,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           // the lit role only: the piece last practised in it, and a way straight back to where you stopped
           const lp = lit ? lastPracticedIn(ctx, opera, ch) : null;
           return (
-            <div key={`${opera.id}:${ch.id}`} role="listitem" className="rail-item">
+            <div key={`${opera.id}:${ch.id}`} role="listitem" className={`rail-item${lp ? " has-last" : ""}`}>
             <button
               type="button"
               className="rail-role"
@@ -462,16 +462,17 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
               </span>
             </button>
             {lp && (
-              <div className="rail-last">
-                <span className="rail-last-label">Last practiced</span>
-                <span className="rail-last-title" lang={opera.lang} title={lp.piece.title}>
-                  {lp.piece.title}
-                </span>
-                <button type="button" className="rail-last-go" aria-label={`Continue ${lp.piece.title}`} onClick={() => openPiece(ctx, lp, "resume")}>
+              <button type="button" className="rail-last" aria-label={`Continue ${lp.piece.title}`} title={lp.piece.title} onClick={() => openPiece(ctx, lp, "resume")}>
+                <span className="rail-last-play" aria-hidden="true">
                   <Play />
-                  <span>Continue</span>
-                </button>
-              </div>
+                </span>
+                <span className="rail-last-text">
+                  <span className="rail-last-label">Continue</span>
+                  <span className="rail-last-title" lang={opera.lang}>
+                    {lp.piece.title}
+                  </span>
+                </span>
+              </button>
             )}
             </div>
           );

@@ -8554,58 +8554,63 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
 .words-view .w-line.script .w-who { max-width: 100%; }
 .words-view .w-line.script .w-who-name { min-width: 0; max-width: 100%; flex: 0 1 auto; display: block; }
 
-/* the rail: under the lit role only, the piece last practised in it and a quiet way back to it */
-.rail-item { display: grid; justify-items: center; width: 100%; min-width: 0; }
+/* the rail: the lit role's tile grows a second row, the piece last practised in it, behind a hairline */
+.rail-item { display: grid; width: 100%; min-width: 0; container-type: inline-size; }
+.rail-item.has-last {
+  border-radius: var(--radius-card);
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+}
+.rail-item.has-last > .rail-role[aria-current="page"] { background: transparent; box-shadow: none; }
 .rail-last {
-  box-sizing: border-box;
   display: grid;
   justify-items: center;
-  gap: 2px;
-  width: 100%;
-  max-width: 88px;
+  gap: 4px;
   min-width: 0;
-  padding: 6px 0 8px;
+  margin: 0 6px;
+  padding: 8px 0 10px;
+  border: 0;
+  border-top: 1px solid var(--fog-strong);
+  background: transparent;
+  color: var(--ink);
   text-align: center;
+  cursor: pointer;
 }
-.rail-last-label { color: var(--ink-muted); font: 400 11px/1.25 var(--font-sans); }
+.rail-last-play {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--now);
+  color: var(--on-pastel);
+  transition: transform var(--duration-move) var(--ease-standard);
+}
+.rail-last-play svg { width: 11px; height: 11px; margin-left: 1px; }
+.rail-last:hover .rail-last-play { transform: scale(1.08); }
+.rail-last:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 8px; }
+.rail-last-text { display: grid; min-width: 0; max-width: 100%; }
+.rail-last-label { display: none; color: var(--ink-muted); font: 400 12px/1.2 var(--font-sans); }
 .rail-last-title {
-  max-width: 100%;
   overflow: hidden;
   color: var(--ink);
-  font: 500 12px/1.3 var(--font-sans);
+  font: 500 11px/1.3 var(--font-sans);
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.rail-last-go {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  min-height: 32px;
-  margin-top: 4px;
-  padding: 0 10px 0 8px;
-  border: 0;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  box-shadow: inset 0 0 0 1px var(--fog-strong);
-  color: var(--ink);
-  font: 600 12px/1 var(--font-sans);
-  cursor: pointer;
-  transition: background-color var(--duration-move) var(--ease-standard);
-}
-.rail-last-go svg { width: 12px; height: 12px; flex: none; }
-.rail-last-go:hover { background: var(--canvas); }
-.rail-last-go:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-/* wherever the role cards are wide (the desktop sidebar, a full-width phone menu), it lines up under the
-   role's name: the label, the piece on one line, then the way back. Keyed to the card's own width, not the screen's. */
-.rail-item { container-type: inline-size; }
+/* wide role cards (the desktop sidebar): one row, the play button in the portrait's column, the piece beside it */
 @container (min-width: 200px) {
   .rail-last {
+    grid-template-columns: 56px minmax(0, 1fr);
     justify-items: start;
-    max-width: none;
-    padding: var(--space-1) var(--space-3) var(--space-2) calc(var(--space-3) * 2 + 56px);
+    align-items: center;
+    column-gap: var(--space-3);
+    margin: 0 var(--space-3);
+    padding: var(--space-2) 0 var(--space-3);
     text-align: left;
   }
-  .rail-last-label { font-size: 12px; }
+  .rail-last-play { justify-self: center; width: 32px; height: 32px; }
+  .rail-last-play svg { width: 12px; height: 12px; }
+  .rail-last-label { display: block; }
   .rail-last-title { font-size: 14px; }
-  .rail-last-go { min-height: 36px; margin-top: 6px; padding: 0 14px 0 12px; font-size: 13px; }
 }
