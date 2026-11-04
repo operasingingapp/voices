@@ -12,7 +12,9 @@ printed name over each entry says who). Give each singer their own line in every
 SINGER codes:
   R = Rodolfo   M = Marcello   C = Colline   S = Schaunard   B = Benoît   I = Mimì   U = Musetta   A = Alcindoro
   P = Parpignol   G = Sergente   D = Doganiere
-  Chorus (Coro): one line per printed chorus staff, K1 (top staff) K2 K3 K4; say in a remark which voices it is.
+  Chorus (Coro): codes by VOICE GROUP, constant through a scene (NOT by staff position, which changes per system). Act 2:
+  K1, K2 Venditori basses (two staves); K3 La Folla sopranos (K3b a printed second soprano voice); K4 La Folla tenors;
+  K5 Monelli; K6 Dal Caffè tenors; K7 Dal Caffè basses; other groups K8, K9 ... named in a header remark.
 Rodolfo, Parpignol and tenor chorus lines printed in treble clef sound an octave lower: write the sounding pitch.
 
 YOUR CHUNK is named in your task (pages and the exact first and last bar). Number its bars from 1 (bar 1 = the first

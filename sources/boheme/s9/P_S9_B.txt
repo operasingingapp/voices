@@ -1,0 +1,181 @@
+# S9 reader B. Piano. Key A major (3 sharps), C (4/4) at start.
+# page 078 system 1 starts bar 1
+# bar 1: (41) LARGO SOSTENUTO, quarter = 58; C; 3 sharps; pp
+# bar 1: cross-staff chords: each RH chord continues on the bass staff on the same stem (stems up, one arpeggio line through both staves); the bass-staff notes of these chords are written as LH1, the tremolo bass as LH2
+1 RH1: dyn:pp C#4+E4+A4:q.a G#4:e C#4+F#4:qa A4:q
+1 LH1: A3:q.a G#3:e F#3+A3:qa A3:q
+1 LH2: g:E1+E2:e( trem3:E2|C#3:h) trem3:E2|C#3:h
+# bars 1-3 LH: every tremolo also has a slur arc from its lower to its upper note (not encodable inside a trem token)
+2 RH1: E4+G#4:ea- D#4+F#4:e- C#4+E4:q-~ C#4+E4:e D#4+F#4:e( E4+G#4:e3 F#4+A4:e3 G#4+B4:e3
+2 RH2: G#3:ha~ G#3:e r:e r:q
+2 LH1: g:C#1+C#2:e( trem3:C#2|G#2:h) trem3:C#2|G#2:h
+3 RH1: A4+C#5:q.a G#4+B4:e F#4+A4:q A4+C#5:q)
+3 RH2: C#4:h.a D#4:q
+3 LH1: g:A1+A2:e( trem3:A2|E3:h.) trem3:B2+F#3|A3:q
+# page 078 system 2 starts bar 4
+# bar 4 beat 4: the 32nd run starts on the bass staff (E3 G#3 B3) with stems up into the RH beam: written in RH1 (cross-staff). Lower RH voice E4 / C#5+E4 tied into bar 5 (C#5 tie goes to the RH1 chord of bar 5)
+4 RH1: E4+G#4+B4:ea-( B3+E4+G#4:ea- G#3+B3+E4:qa-~ G#3+B3+E4:e) r:e r:x hp:< E3:x( G#3:x B3:x E4:x G#4:x C#5:x D#5:x hp:end
+4 RH2: s:h. s:e E4:s~ C#5+E4:x~ C#5+E4:x~
+4 LH1: g:E1+E2:e( trem3:E2|B2:h) trem3:E2|B2:h
+5 RH1: C#5+E5:q.) B4+D#5:e A4+C#5:q C#5+E5:q
+5 RH2: E4:w
+5 LH1: trem3:C#2|G#2:h trem3:F#2|C#3:h
+6 RH1: B4+D#5:e- A4+C#5:e- G#4+B4:e- r:s dyn:f G#3:sv hp:< B3:sv E4:sv G#4:sv B4:sv C#5:sv D#5:sv E5:sv F#5:sv hp:end
+6 RH2: E4:q~ E4:e s:e s:h
+6 LH1: g:G#1+G#2:e( trem3:G#2|E3:h) trem3:G#2|E3:h
+# bar 6: G#3 and B3 of the run are on the treble staff with ledger lines; D5 in the run has no accidental, D# from the start of the bar applies
+# page 078 system 3 starts bar 7
+7 RH1: G#4+G#5:q.^ G#4+F#5:e>~ G#4+F#5:e E4+E5:e> C#4+C#5:e..> E4+E5:x>
+7 LH1: g:E1+E2:e>( hp:< trem3:E3+G#3+B3|E4:h) g:C#2+C#3:e>( trem3:C#3+F#3|A#3:h) hp:end
+8 RH1: trem3:B4+D#5+F#5|F#4:h trem3:D#5+F#5|B4:q trem3:F#5|D#5:q
+8 LH1: dyn:ff word:cres._molto hp:< B1+F#2+B2:qa B2+D#3+F#3+B3:qa F#3+B3+D#4+F#4:qa B3+D#4+F#4+B4:qa hp:end
+# bar 8 RH: each tremolo carries a slur arc from its first to its second element
+9 RH1: A5+A6:q.( G#5+G#6:e F#5+F#6:q A5+A6:q)
+9 LH1: dyn:fff word:largamente_sostenuto A1+A2:e> E3+A3:x( C#4:x E3+A3:x C#4:x trem3:E3+A3|C#4:q) C#2+C#3:e> E3+A3:x( C#4:x E3+A3:x C#4:x trem3:E3+A3|C#4:q)
+# page 079 system 1 starts bar 10
+# bar 10 LH: first group = B1+B2 eighth then 32nds; beats 3-4 = E2+E3 eighth then 32nds; trem3 = eighth + two-stroke beam (32nd tremolo)
+10 RH1: G#5+G#6:e-( F#5+F#6:e- hp:> E5+E6:q-~ E5+E6:e3) hp:end dyn:p word:espressivo B4+B5:e3- B4+B5:e3- B4+B5:e3- C#5+C#6:e3- g:E6:e[ D5+D6:e3-]
+10 LH1: B1+B2:e> E3+G#3:x( D4:x E3+G#3:x D4:x trem3:E3+G#3|D4:q) E2+E3:e- F#3:x( A3:x F#3:x A3:x trem3:G#3|B3:q)
+# bar 10 RH: grace E6 (single small eighth with stroke) before the last chord, slurred to it
+11 RH1: C#5+E5+C#6:q3( B4+B5:e3 word:dim. A4+A5:q3 G#4+G#5:e3 F#4+C#5+F#5:q3 G#4+G#5:e3 A4+C#5+A5:q3 C#5+D#5+A5+C#6:e3)
+11 LH1: A2+A3:s{6:4}( E3:s{6:4} A3:s{6:4} C#4:s{6:4} A3:s{6:4} E3:s{6:4}) F#2+F#3:s{6:4}( A3:s{6:4} C#4:s{6:4} F#4:s{6:4} C#4:s{6:4} A3:s{6:4}) D#3:s{6:4}( A3:s{6:4} C#4:s{6:4} F#4:s{6:4} C#4:s{6:4} A3:s{6:4}) B2:s{6:4}( F#3:s{6:4} A3:s{6:4} D#4:s{6:4} A3:s{6:4} F#3:s{6:4})
+# page 079 system 2 starts bar 12
+# bar 12: beats 2-4 descending sextuplets beamed in the RH, their lower notes written on the bass staff ("m.s."): written in RH1 (cross-staff). LH G#4 eighth + printed 16th rest; the remaining 16th of beat 2 and beats 3-4 of the LH are hidden (s:)
+12 RH1: hp:> B4+E5+G#5+B5:q( E5:s{6:4}) B4:s{6:4}( G#4:s{6:4} E4:s{6:4} B3:s{6:4} G#3:s{6:4}) B4:s{6:4}( G#4:s{6:4} E4:s{6:4} B3:s{6:4} G#3:s{6:4} E3:s{6:4}) E4:s{6:4}( B3:s{6:4} G#3:s{6:4} E3:s{6:4} B2:s{6:4} E2:s{6:4}) hp:end
+12 LH1: E2:s{6:4}( B2:s{6:4} E3:s{6:4} G#3:s{6:4} B3:s{6:4} E4:s{6:4} G#4:e) r:s s:s s:h
+# bar 13: Sostenendo (piano and voice), ppp; natural signs on the D's (cautionary)
+13 RH1: E5+E6:q( D5+D6:q3 C#5+C#6:e3 E5+E6:h~
+13 LH1: dyn:ppp word:Sostenendo C#2+C#3:e3 E3:q3-~ E3:e3* E3:q3- B1+B2:e3 E3:q3-~ E3:e3* E3:q3-
+# page 079 system 3 starts bar 14
+14 RH1: E5+E6:e E5+E6:e E5+E6:q3 C#5+C#6:e3 hp:< E5+E6:h~
+14 RH2: F#3+F#4:h G#3+G#4:q. A3+A4:e hp:end
+14 LH1: A1+A2:e3 E3:q3-~ E3:e3* E3:q3- E1+E2:e3 E3:q3-~ E3:e3* E3:q3-
+# bar 15: "poco stent." in the RH; f between the staves at the start of the bar
+15 RH1: dyn:f E5+E6:e3-) E5+E6:e3- E5+E6:e3- E5+E6:e3- D5+D6:e3- C#5+C#6:e3- E5+E6:q s:q
+15 RH2: word:poco_stent. A#3+A#4:h F#3+F#4:q hp:> F#3+F#4:q3( F##3+F##4:e3
+15 LH1: F#1+F#2:e3 E3:q3-~ E3:e3* E3:q3- B1+B2:e3 E3:q3-~ E3:e3* E3:q3-
+# bar 16: time 2/4 (double bar before); fermata on the closing eighth rests; double bar after, back to C
+16 RH1: G#3+G#4:q~ G#3+G#4:e) hp:end r:e!
+16 LH1: E1+E2:e3 E3:q3~ E3:e r:e!
+# page 080 system 1 starts bar 17
+# bar 17: time 4/4 again (C printed after the double bar at the end of bar 16)
+# bar 17: (42) SEMPRE PIU' SOSTENUTO; C, 3 sharps; ppp. The triplet chords (each beat: eighth rest + two triplet eighths) start on the bass staff marked "m.d.": written in RH2 (the beat-1 eighth rest is printed on the bass staff)
+17 RH1: E5+A5+C#6+E6:w
+17 RH2: dyn:ppp r:e3 E3+C#4:e3 A3+E4:e3 r:e3 C#4+A4:e3 E4+C#5:e3 r:e3 A4+E5:e3 C#5+A5:e3 r:e3 E5+C#6:e3 A5+E6:e3
+17 LH1: A1+A2:w
+# bar 18: LH beat 2-4 chord marked "m.s." with sf, followed by a > hairpin
+18 RH1: E#5+A5+C#6+E#6:w
+18 LH1: G1+G2:w
+18 LH2: r:q dyn:sf hp:> A3+C#4+E#4:h. hp:end
+# page 080 system 2 starts bar 19
+19 RH1: dyn:ppp F#5+A#5+C#6+F#6:w
+19 LH1: F#1+F#2:w
+# bar 20: slur from the first RH chord to the second; LH chords arpeggiated
+20 RH1: G5+Bb5+D6+G6:h( G#5+Bb5+D6+G#6:h)
+20 LH1: E2+Bb2+G3:ha E2+Bb2+G#3:ha
+# page 080 system 3 starts bar 21
+# bar 21: ppp armonioso. The staccato run starts on the bass staff (A3 single 16th, then C#4 beamed with the treble notes): written in RH2 (cross-staff). LH: the Eb2 16th is tied over to the Eb2 of the dotted-half chord (tie spans the intervening notes); A2 16th tied to the A2 of the eighth chord; slurs/ties from the eighth chord into the dotted half (A2 and F#3)
+21 RH1: A5+C#6+F#6+A6:w
+21 RH2: r:e. A3:s* C#4:s*( F#4:s* A4:s* C#5:s* F#5:s* A5:s* C#6:s* F#6:s* A6:e*) r:e
+21 LH1: dyn:ppp word:armonioso Eb2:s~ A2:s~ A2~+F#3~:e Eb2+A2+F#3:h.
+# bar 22: pppp; the RH whole chord tied (all four notes) to the eighth chord of bar 23. Lower quarters marked "m.d." with tenuto, the first one (F#3+D4) on one stem across the staves: written in RH2. LH whole chord arpeggiated, tied to bar 23
+22 RH1: A5+D6+F#6+A6:w~
+22 RH2: dyn:pppp r:q F#3+D4:q- A3+F#4:q- D4+A4:q-
+22 LH1: D2+D3:wa~
+# bar 23: "col canto"; rit. in the voice; double bar at the end, key change to C major (naturals)
+23 RH1: A5+D6+F#6+A6:e r:e r:q r:h
+23 RH2: F#4+D5:e s:e s:q s:h
+23 LH1: D2+D3:e word:col_canto r:e r:q r:h
+# page 081 system 1 starts bar 24
+# bar 24: (43) CALMO; key C major (no sharps); C; pp; "espress." with a short > hairpin over the RH; a long > hairpin between the staves. One arpeggio line with a bracket runs through both staves (RH D4 and the LH chord). LH G2 preceded by a grace G1 (small eighth) slurred to it; G2 tied into bar 25
+24 RH1: r:s word:espress. A4:s( D5:e~ D5:h A4:q3 F4:e3
+24 RH2: dyn:pp hp:> D4:wa hp:end
+24 LH1: F3+A3:wa
+24 LH2: g:G1:e( G2:wa)~
+# bar 25: "poco affrett." over beats 1-2 (the long RH slur from bar 24 ends on the tied G4), "a tempo" at beat 2.5. Lower RH G3+Bb3 slurred to A3; < hairpin under beats 3-4. The beat-3/4 RH slur continues into bar 26
+25 RH1: E4:e3 F4:e3 G4:e3~ G4:e) C#4:e r:e. C#5:s( D5:s E5:s F5:s B5:s)
+25 RH2: hp:> G3+Bb3:q( A3:e) hp:end r:e hp:< D4:e( E4:e F4:e B4:e) hp:end
+25 LH1: C#3:e3( D3:e3 E3:e3 F3:h.)
+25 LH2: G2:w
+# page 081 system 2 starts bar 26
+# bar 26: arpeggio through both staves. LH upper voice (stems up, on the bass staff ledger lines) C4 half slurred to D4 half; a straight line leads from that D4 to the RH F4 of bar 27. RH: > hairpin beats 1-3, <> hairpin beats 3-4
+26 RH1: A5:ea( G5:e~ G5:e) r:e r:e E5:e( G5:q3 E5:e3
+26 RH2: hp:> G4+E5:ha hp:end hp:< G4:h hp:> hp:end
+26 LH1: C4:h( D4:h)
+26 LH2: G2+E3:wa
+# bar 27: RH lower F4 half then C4 half (stem up); LH A3 half (stem up) at beat 3; < hairpin then a long > hairpin from beat 3 into bar 29
+27 RH1: D5:q C5:q~ C5:e) F#4:e( G4:e A4:e
+27 RH2: hp:< F4:h hp:end hp:> C4:h
+27 LH1: r:h A3:h
+27 LH2: G2+E3:w
+# bar 28: "rit: molto" over the RH, "rall. e dim. molto" between the staves; slur F#5-B5 (B5 above a ledger)
+28 RH1: word:rit._molto B4:q C5:q F#5:q( B5:q)
+28 RH2: C4+F#4:w
+28 LH1: word:rall._e_dim._molto G2+Eb3:w
+# bar 29: pppp; arpeggio through both staves; RH lower F4 (natural sign) tied h~q~e; LH chord tied likewise; slur from bar 27 ends on the G5 eighth
+29 RH1: A5:ha G5:q~ G5:e) r:e
+29 RH2: hp:end dyn:pppp Fn4:ha~ F4:q~ F4:e r:e
+29 LH1: G2+D3+B3:ha~ G2+D3+B3:q~ G2+D3+B3:e r:e
+# page 081 system 3 starts bar 30
+# bar 30: RH whole rest with fermata; LH G3 quarter with fermata tied into bar 31; pp with > hairpin to the double bar
+30 RH1: r:w!
+30 LH1: dyn:pp hp:> r:h r:q G3:q!~ hp:end
+# bar 31: double bar before; quarter = 58; pp dolciss.
+31 RH1: r:h r:q A4:q(
+31 RH2: dyn:pp word:dolciss. s:h r:e E4+G4:q E4+G4:e
+31 LH1: G3:w
+# bar 32: LH upper G3 eighth tied to dotted half; LH lower staccato D2+D3 and G1+G2 eighths; slur D5-C5-B4 (continues to the next page)
+32 RH1: B4:h) D5:q( C5:e B4:e
+32 RH2: r:e F4+G4:q F4+G4:q F4+G4:q F4+G4:e
+32 LH1: r:e G3:e~ G3:h.
+32 LH2: D2+D3:e* r:e r:q G1+G2:e* r:e r:q
+# page 082 system 1 starts bar 33
+# bar 33: "Sost." (piano, between the staves, and over R); < hairpin under the RH beats 3-4. RH upper slur from bar 32 ends on the A4; B4-C5 slurred; slur from E5 into bar 34. Lower RH E4+G4 tied to the E4+G4 eighth (two tie arcs)
+33 RH1: A4:q.) B4:e( C5:q.) E5:e(
+33 RH2: r:e E4+G4:q.~ E4+G4:e hp:< E4+G4:q. hp:end
+33 LH1: word:Sost. r:e G3:e~ G3:h.
+33 LH2: C2+C3:e* r:e r:q G1+G2:e r:e r:q
+# bar 34: upper slur E5-G5 ends on the G5; a slur A4-B4 and a long slur over A4..D5 to bar 35; lower F4+G4 (second cluster on one stem) tied to the eighth; > hairpin under beats 3-4
+34 RH1: G5:q.) A4:e( B4:q C5:e D5:e)
+34 RH2: r:e F4+G4:q.~ F4+G4:e hp:> F4+G4:q. hp:end
+34 LH1: r:e G3:e~ G3:h.
+34 LH2: C2+C3:e* r:e r:q G1+G2:e r:e r:q
+# bar 35: tenuto line over the C5+E5 chord; the second lower E4+G4 chord marked "m.s." (left hand) but printed on the treble staff stem down: written in RH2
+35 RH1: E5:q. D5+G5:e( C5+E5:q.-) B4+C5:e
+35 RH2: r:e E4+G4:q r:e r:e E4+G4:q.
+35 LH1: r:e G3:e~ G3:h.
+35 LH2: C2+C3:e* r:e r:q G1+G2:e r:e r:q
+# bar 36: tenuto line over F5; G4 eighth shared by both RH voices (stem up and stem down); lower slur G4-F4; upper slur over G4..B4. LH: no rests printed in either voice (hidden s:)
+36 RH1: F5:q.- G4:e( D5:e D5:e C5:e B4:e)
+36 RH2: A4:q. G4:e( F4:h)
+36 LH1: s:e B3+F4:q. s:e G3:q.
+36 LH2: D2+D3:e* s:e s:q G1+G2:e s:e s:q
+# page 082 system 2 starts bar 37
+# bar 37: the RH chord C4+E4 at beat 2.5 shares one stem with the bass-staff G3 (cross-staff chord): C4+E4 written in RH1, G3 in LH1 (remark). Ties A4 and E4; slurs over and under the RH tied notes
+37 RH1: A4:q~( A4:e) r:e r:e C4+E4:q* r:e
+37 RH2: E4:q~ E4:e s:e s:h
+37 LH1: s:e G3:q. s:e G3:q s:e
+37 LH2: C2+C3:e s:e s:q G1+G2:e* r:e r:q
+# bar 38: ppp; RH chord arpeggiated, tied to the eighth chord (four tie arcs); staccato run. LH beamed eighths add a note each time, ties per note
+38 RH1: dyn:ppp A4+C5+F5+A5:qa~ A4+C5+F5+A5:e C4:e* F4:e* A4:e* C5:e* F5:e*
+38 LH1: F2:e~ F2~+C3:e~ F2~+C3~+A3:e~ F2+C3+A3:e~ F2+C3+A3:h
+# bar 39: allargando; all notes staccato; LH whole chord with a bracket (arpeggio-like bracket, not wavy)
+39 RH1: A5:e* word:allargando A3:e* C4:e* F4:e* A4:e* C5:e* F5:e* A5:e*
+39 LH1: C2+A2+F3:w
+# page 082 system 3 starts bar 40
+# bar 40: pppp; "due Ped." under the LH; LH whole chord with a bracket, tied through bars 40-43 (ties per note)
+40 RH1: C6:e r:e r:q C6+E6+G6+C7:h~
+40 LH1: C2+G2+E3:w~
+# bar 41: "molto rall. e dim."; the beat-3 chord E5+G5 is marked "m.s." (left hand) but printed stem down on the treble staff: written in RH2; staccato dots
+41 RH1: C6+E6+G6+C7:w~
+41 RH2: r:h E5+G5:q* G4+E5:q*
+41 LH1: word:molto_rall._e_dim. C2+G2+E3:w~
+42 RH1: C6+E6+G6+C7:w~
+42 RH2: E4+C5:h* E4+G4:q* G3+E4:q*
+42 LH1: C2+G2+E3:w~
+43 RH1: C6+E6+G6+C7:w~
+43 RH2: E3+C4:h* r:h
+43 LH1: C2+G2+E3:e r:e r:q C1+C2:e* r:e r:q
+# bar 44: last bar, final double bar; Ped. release (asterisk)
+44 RH1: C6+E6+G6+C7:e r:e r:q r:h
+44 LH1: C1+C2:e* r:e r:q r:h

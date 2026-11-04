@@ -21,7 +21,7 @@ V = {}
 for line in open(VO, encoding="utf-8"):
     line = line.strip()
     if not line or line.startswith("#"): continue
-    mt = re.match(r"(\d+)\s+([A-Z]\d?):\s*(.*)$", line)
+    mt = re.match(r"(\d+)\s+([A-Z]\d?[a-z]?):\s*(.*)$", line)
     V[(int(mt.group(1)), mt.group(2))] = parse_line(mt.group(3))
 D = {}
 for line in open(PI, encoding="utf-8"):
@@ -107,7 +107,14 @@ for b in bars:
                 mid = {"F": "D3", "C": "C4"}.get(cl[0], "B4")
                 if cl[0] == "G" and len(cl) > 2: mid = "B3"
                 tok = mid[0] + "n" + mid[1:] + tok[1:]
+            chordp = []
+            if "+" in tok.split(":")[0]:  # a chorus staff in two parts: a chord, the words on its first note
+                ps, rest_ = tok.split(":", 1); ps = ps.split("+"); tok = ps[0] + ":" + rest_
+                chordp = [x + ":" + rest_ for x in ps[1:]]
             n, d = tok_note(tok, 1)
+            for ci, ct in enumerate(chordp):
+                cn, _ = tok_note(ct, 1); cn.insert(0, ET.Element("chord"))
+                evs.append(Ev(cn, pos, kk + (ci + 1) * 1e-3))
             if shout:
                 n.attrib.pop("_alter", None); n.set("_alter", "0"); n.set("_shout", "1")
                 nh = ET.Element("notehead"); nh.text = "x"

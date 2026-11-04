@@ -26,11 +26,18 @@ for part in r.findall("part"):
     # ties on the sung lines: the next sung note takes the stop
     if pid in VOICE_IDS:
         notes = [n for n in part.iter("note") if n.find("pitch") is not None and n.find("grace") is None]
-        for i, n in enumerate(notes):
-            if any(x.get("type") == "start" for x in n.findall("tie")):
-                nxt = notes[i + 1]
-                if pitch(nxt) != pitch(n):
-                    problems.append(f"{pid}: tie from {pitch(n)} to {pitch(nxt)}")
+        # a chorus staff in two parts sings chords: group each note with the chord notes after it
+        groups = []
+        for n in notes:
+            if n.find("chord") is not None and groups: groups[-1].append(n)
+            else: groups.append([n])
+        for gi, g in enumerate(groups):
+            for n in g:
+                if not any(x.get("type") == "start" for x in n.findall("tie")): continue
+                cand = [x for x in (groups[gi + 1] if gi + 1 < len(groups) else []) if pitch(x) == pitch(n)]
+                if not cand:
+                    problems.append(f"{pid}: tie from {pitch(n)} has no same-pitch note after it"); continue
+                nxt = cand[0]
                 if not any(x.get("type") == "stop" for x in nxt.findall("tie")):
                     kids = list(nxt)
                     j = kids.index(nxt.find("duration")) + 1
@@ -41,7 +48,7 @@ for part in r.findall("part"):
                     nt.insert(0, ET.Element("tied", type="stop"))
     # melismas: a slur from the sung syllable over the notes that carry no new syllable (as printed)
     if pid in VOICE_IDS:
-        seq = [n for n in part.iter("note") if n.find("grace") is None]
+        seq = [n for n in part.iter("note") if n.find("grace") is None and n.find("chord") is None]
         i = 0
         while i < len(seq):
             n = seq[i]

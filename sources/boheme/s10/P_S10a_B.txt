@@ -1,0 +1,194 @@
+# S10a reader B, piano. Act 2 (QUADRO SECONDO) pages 83-88. Key F major (1 flat), 2/8 throughout unless remarked.
+# Throughout pp. 83 sys1-3 the RH-staff chords carry stems both up and down (two beams, "m.s." = both hands share the
+# chord on the treble staff); written as one chord in RH1; the LH staff is empty there (full-bar rests written).
+# page 083 system 1 starts bar 1
+# bar 1: quarter = 112, ALL.o FOCOSO (in due), 2/8, F major (1 flat); fff marcatissimo; "m.s." under the RH staff
+1 RH1: dyn:fff word:marcatissimo F4+A4+C5:e> E4+G4+Bb4:e>
+1 LH1: r:q
+2 RH1: D4+F4+A4:e> C4+E4+G4:e>
+2 LH1: r:q
+3 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+3 LH1: r:q
+4 RH1: F4+A4+C5:e> G4+Bb4+D5:s> A4+C5+E5:s>
+4 LH1: r:q
+5 RH1: Bb4+D5+F5:e> A4+C5+E5:s> G4+Bb4+D5:s>
+5 LH1: r:q
+6 RH1: F4+A4+C5:e> E4+G4+Bb4:e>
+6 LH1: r:q
+# page 083 system 2 starts bar 7
+7 RH1: D4+F4+A4:e> C4+E4+G4:e>
+7 LH1: r:q
+8 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+8 LH1: r:q
+9 RH1: F4+A4+C5:e> G4+Bb4+D5:s> A4+C5+E5:s>
+9 LH1: r:q
+10 RH1: Bb4+D5+F5:e> A4+C5+E5:s> G4+Bb4+D5:s>
+10 LH1: r:q
+11 RH1: F4+A4+C5:e> E4+G4+Bb4:s> D4+F4+A4:s>
+11 LH1: r:q
+# bar 12: sf, crescendo hairpin under bars 12-13
+12 RH1: dyn:sf hp:< C4+E4+G4:e^ Bb3+D4+F4:s> C4+E4+G4:s>
+12 LH1: r:q
+13 RH1: D4+F4+A4:s> F4+A4+C5:s> G4+Bb4+D5:e^ hp:end
+13 LH1: r:q
+# page 083 system 3 starts bar 14
+14 RH1: hp:< C4+E4+G4:e^ Bb3+D4+F4:s> C4+E4+G4:s>
+14 LH1: r:q
+15 RH1: D4+F4+A4:s> F4+A4+C5:s> G4+Bb4+D5:e^ hp:end
+15 LH1: r:q
+16 RH1: hp:< C4+E4+G4:e> D4+F4+A4:e>
+16 LH1: r:q
+17 RH1: D4+F4+A4:s> F4+A4+C5:s> G4+Bb4+D5:e^
+17 LH1: r:q
+18 RH1: A4+C5+E5:e^ Bb4+D5+F5:e^ hp:end
+18 LH1: r:q
+# bar 19: figure (1), ff. RH: chord C6-E6-G6 (on ledger lines) beamed to G5 with two extra strokes between = fingered tremolo (3 strokes), G5 tied into bar 20
+19 RH1: dyn:ff trem3:C6+E6+G6|G5~:q>
+19 LH1: dyn:ff C4:e> G3:s* G3:s*
+20 RH1: G5+C6+E6+G6:e r:e
+20 LH1: C4:e> G3:s* G3:s*
+# page 084 system 1 starts bar 21
+21 RH1: Bn3+D4+F4:q>
+21 LH1: A3:s* A3:s* G3:s* F3:s*
+# bar 22: same fingered tremolo as bar 19, with a slur from the chord to G5 ("()" pair slur); G5 tied into bar 23
+22 RH1: trem3:C6+E6+G6|G5~:q>()
+22 LH1: C4:e> G3:s* G3:s*
+23 RH1: G5+C6+E6+G6:e r:e
+23 LH1: C4:e> G3:s* G3:s*
+24 RH1: Bn3+D4+F4:q>
+24 LH1: A3:s* A3:s* G3:s* F3:s*
+# bar 25: f at the second chord, crescendo hairpin from there to the end of bar 26
+25 RH1: G5+C6+E6+G6:e* dyn:f hp:< E4+G4+C5:e>
+25 LH1: C4:e* Bb2+Bb3:e>
+26 RH1: F4+Bb4+D5:e> F4+Bb4+D5+F5:e> hp:end
+26 LH1: A2+A3:e> G2+G3:e>
+# page 084 system 2 starts bar 27
+# bar 27: crescendo hairpin within the bar
+27 RH1: hp:< G4+Bb4+D5+G5:e> C5+E5+G5+C6:e> hp:end
+27 LH1: E2+E3:e> C2+C3:e>
+# bar 28: (Si alza il sipario); crescendo hairpin from the chord to the end of bar 30
+28 RH1: r:e hp:< C4+E4+G4+C5:e>
+28 LH1: r:e Bb2+Bb3:e>
+29 RH1: D4+F4+Bb4+D5:e> F4+Bb4+D5+F5:e>
+29 LH1: A2+A3:e> G2+G3:e>
+30 RH1: G4+Bb4+D5+G5:e> C5+E5+G5+C6:e> hp:end
+30 LH1: E2+E3:e> C2+C3:e>
+# bar 31: crescendo hairpin from the chord to the end of bar 33
+31 RH1: r:e hp:< C4+E4+G4+C5:e>
+31 LH1: r:e Bb2+Bb3:e>
+32 RH1: D4+F4+Bb4+D5:e> F4+Bb4+D5+F5:e>
+32 LH1: A2+A3:e> G2+G3:e>
+33 RH1: G4+Bb4+D5+G5:e> C5+E5+G5+C6:e> hp:end
+33 LH1: E2+E3:e> C2+C3:e>
+# page 085 system 1 starts bar 34
+# bar 34: crescendo hairpin through bar 35
+34 RH1: hp:< D5+F5+Bb5+D6:e> F5+Bb5+D6+F6:e>
+34 LH1: Bb1+Bb2:e> G1+G2:e>
+35 RH1: G5+Bb5+D6+G6:e> C6+E6+G6+C7:e> hp:end
+35 LH1: E1+E2:e> C1+C2:e>
+# bar 36: "VUOTA" printed over the empty bar (whole-bar rests in both staves and in all voices)
+36 RH1: r:q
+36 LH1: r:q
+# bar 37: figure (2), ff
+37 RH1: dyn:ff F4+A4+C5:e> E4+G4+Bb4:e>
+37 LH1: F2+C3:e> G2+C3:e>
+38 RH1: D4+F4+A4:e> C4+E4+G4:e>
+38 LH1: A2+C3:e> Bb2+C3:e>
+39 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+39 LH1: A2+C3:e> G2+C3:e>
+# page 085 system 2 starts bar 40
+# bar 40: crescendo hairpin within the bar; bar 41: diminuendo hairpin within the bar
+40 RH1: hp:< F4+A4+C5:e> Bb4+D5:s> C5+E5:s> hp:end
+40 LH1: F2+C3:e> E2+C3:e>
+41 RH1: hp:> D5+F5:e> C5+E5:s> Bb4+D5:s> hp:end
+41 LH1: D2+C3:e> E2+C3:e>
+42 RH1: A4+C5:e> E4+G4+Bb4:e>
+42 LH1: F2+C3:e> G2+C3:e>
+43 RH1: D4+F4+A4:e> C4+E4+G4:e>
+43 LH1: A2+C3:e> Bb2+C3:e>
+44 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+44 LH1: A2+C3:e> G2+C3:e>
+# bar 45: crescendo hairpin within the bar
+45 RH1: hp:< F4+A4+C5:e> Bb4+D5:s> C5+E5:s> hp:end
+45 LH1: F2+C3:e> E2+C3:e>
+# page 086 system 1 starts bar 46
+# bar 46: diminuendo hairpin within the bar
+46 RH1: hp:> D5+F5:e> C5+E5:s> Bb4+D5:s> hp:end
+46 LH1: D2+C3:e> E2+C3:e>
+47 RH1: A4+C5:e> Bb4:s> A4:s>
+47 LH1: F2+C3:e> G2+C3:s> A2+C3:s>
+48 RH1: G4:e^ F4:s> G4:s>
+48 LH1: Bb2+C3:e^ A2+C3:s> G2+C3:s>
+49 RH1: A4:s> C5:s> G4+Bb4+D5:e^
+49 LH1: F2+C3:e> E2+C3:e>
+50 RH1: G4:e^ F4:s> G4:s>
+50 LH1: Bb2+C3:e^ A2+C3:s> G2+C3:s>
+# page 086 system 2 starts bar 51
+51 RH1: A4:s> C5:s> G4+Bb4+D5:e^
+51 LH1: F2+C3:e> E2+C3:e>
+# bar 52: crescendo hairpin from the second chord to bar 55
+52 RH1: C4+E4+G4:e> hp:< D4+F4+A4:e>
+52 LH1: Bb2+C3:e> A2+C3:e>
+53 RH1: E4+G4+Bb4:e> F4+A4+C5:s> G4+Bb4+D5:s>
+53 LH1: G2+C3:e> F2+C3:e>
+54 RH1: A4+C5+E5:e> Bb4+D5+F5:e>
+54 LH1: E2+C3:e> D2+C3:e>
+# bar 55: ff at the second RH chord (arpeggiated); LH clef change to treble (G clef) after the first eighth
+55 RH1: C5+E5+G5:e> hp:end dyn:ff G5+Bb5+D6:ea>
+55 LH1: C2+C3:e> clef:G G4:s* G4:s*
+56 RH1: C6+E6+G6:ea> G5+Bb5+D6:ea>
+56 LH1: C5:e> G4:s* G4:s*
+# page 087 system 1 starts bar 57. LH in treble clef at the start (from bar 55), clef change to bass (F) at the end of bar 57
+57 RH1: A5+C6+E6:ea> F5+A5+C6:ea>
+57 LH1: A4:s* A4:s* G4:s* F4:s* clef:F
+58 RH1: C5+E5+G5:ea> G4+Bb4+D5:ea>
+58 LH1: C4:e> G3:s* G3:s*
+59 RH1: C5+E5+G5:ea> G4+Bb4+D5:ea>
+59 LH1: C4:e> G3:s* G3:s*
+60 RH1: A4:s* A4:s* G4:s* F4:s*
+60 LH1: A3:s* A3:s* G3:s* F3:s*
+# bar 61: ff at the second eighth (both hands)
+61 RH1: C5:e> dyn:ff C4+E4+G4+C5:e>
+61 LH1: C4:e> Bb2+Bb3:e>
+# page 087 system 2 starts bar 62
+62 RH1: D4+F4+Bb4+D5:e> F4+Bb4+D5+F5:e>
+62 LH1: A2+A3:e> G2+G3:e>
+# bar 63: second RH chord read C5+E5+G5+Bb5+C6 (a notehead between the A5 ledger and the C6 ledger, beside the C6 head) - unsure, could be C5+E5+G5+C6 as in bar 27
+63 RH1: G4+Bb4+D5+G5:e> C5+E5+G5+Bb5+C6:e>
+63 LH1: E2+E3:e> C2+C3:e>
+# bar 64: figure (3); sf, diminuendo hairpin from bar 64 into bar 66; Eb4+Eb5 tied over bars 64-66 (ties printed above and below)
+64 RH1: dyn:sf hp:> Eb4+Eb5:q>~
+64 LH1: r:q
+65 RH1: Eb4+Eb5:q~
+65 LH1: r:q
+66 RH1: Eb4+Eb5:q hp:end
+66 LH1: r:q
+# bar 67: p; both RH chords arpeggiated
+67 RH1: dyn:p Ab4+C5+Eb5:ea G4+Bb4+Db5:ea
+67 LH1: dyn:p Ab2+Eb3:e Bb2+Eb3:e
+# page 088 system 1 starts bar 68 (RH chords in bars 68-70 arpeggiated)
+68 RH1: F4+Ab4+C5:ea Eb4+G4+Bb4:ea
+68 LH1: C3+Eb3:e Db3+Eb3:e
+69 RH1: F4+Ab4+C5:ea G4+Bb4+Db5:ea
+69 LH1: C3+Eb3:e Bb2+Eb3:e
+# bar 70: crescendo hairpin; bar 71: diminuendo hairpin
+70 RH1: hp:< Ab4+C5+Eb5:ea F5:s G5:s hp:end
+70 LH1: Ab2+Eb3:e G2+Eb3:e
+71 RH1: hp:> F5+Ab5:e G5:s F5:s hp:end
+71 LH1: F2+Eb3:e G2+Eb3:e
+72 RH1: C5+Eb5:e Db5:s C5:s
+72 LH1: Ab2+Eb3:e Bb2+Eb3:s C3+Eb3:s
+# page 088 system 2 starts bar 73
+# bar 73: crescendo hairpin through bar 74 (bars 75-76 likewise)
+73 RH1: hp:< G4+Bb4:e Ab4:s Bb4:s
+73 LH1: Db3+Eb3:e C3+Eb3:s Bb2+Eb3:s
+74 RH1: C5:s Eb5:s Db5+F5:e^ hp:end
+74 LH1: Ab2+Eb3:e G2+Eb3:e^
+75 RH1: hp:< G4+Bb4:e Ab4:s Bb4:s
+75 LH1: Db3+Eb3:e C3+Eb3:s Bb2+Eb3:s
+76 RH1: C5:s Eb5:s Db5+F5:e^ hp:end
+76 LH1: Ab2+Eb3:e G2+Eb3:e^
+77 RH1: G4+Bb4:e Ab4+C5:e
+77 LH1: Db3+Eb3:e C3+Eb3:e
+78 RH1: Bb4+Db5:s Eb5:s F5:e
+78 LH1: Bb2+Eb3:e Ab2+Eb3:e

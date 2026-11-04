@@ -1,0 +1,206 @@
+# S9 "O soave fanciulla", pages 78-82, reader A. Sung lines: R = Rodolfo (treble-8 clef, written an octave higher: sounding pitch written here),
+# I = Mimi, M = Marcello (offstage, bass clef). Marcello sings only bars 2-3.
+# page 078 system 1 starts bar 1
+# bar 1: LARGO SOST.to, quarter = 58, C (4/4), A major (3 sharps); R p dolciss.
+# bar 1 R: beat 3 is a triplet (eighth rest + two A eighths), beat 4 a triplet A-B-C# (the "3"s are printed over the middle notes).
+# JUDGE bar 1 R: OWN - lyrics measured under the notes: "O" A1, "soa" A2 (melisma over A3), "ve" B3, "fan" C#4 ("ciul" sits under the first G# of bar 2); triplets r-A-A | A-B-C# as both
+1 R: r:h dyn:p word:dolciss. r:e3 A3:e3 "O" A3:e3 "soa-" A3:e3 B3:e3 "ve" C#4:e3 "fan-"
+1 I: r:w
+1 M: r:w
+# bar 2 M: "(molto lontano, ma quasi gridando)" - Marcello offstage.
+# JUDGE bar 2 R: OWN - "ciul" centred under the first G#, "la," under the second (tied) G#
+2 R: G#3:q "ciul-" G#3:q~ "la," G#3:e r:e G#3:e3 "o" A3:e3 "dol-" B3:e3 "ce"
+2 I: r:w
+# MARKS bar 2 M: hp:> (decrescendo hairpin above the staff from the dotted E, ends in bar 3)
+2 M: r:e. G#3:s "tro-" E4:s "vò" F#4:s "la" E4:s "po-" C#4:s "e-" E4:e "si-" hp:> E4:q.~ "a"
+# bar 3 R: breath mark (comma) after the first quarter.
+3 R: C#4:q, "vi-" C#4:e "so" C#4:e "di" C#4:e "mi-" C#4:e "te" C#4:e "cir-" D#4:e "con-"
+3 I: r:w
+# MARKS bar 3 M: hp:end of the hairpin from bar 2
+3 M: E4:q~ hp:end E4:e r:e r:h
+# page 078 system 2 starts bar 4
+4 R: E4:s- "fu-" D#4:s- "so_al-" C#4:s- "ba" D#4:s- "lu-" B3:h~ "nar," B3:e r:e
+4 I: r:w
+4 M: r:w
+5 R: r:q r:e hp:< E4:e "in" E4:q "te," E4:q "rav-"
+5 I: r:w
+5 M: r:w
+# JUDGE bar 6 R: OWN - the < hairpin from bar 5 ends at the E eighth ("so" tie); the second < starts on "il"
+6 R: E4:q "vi-" E4:q~ "so" hp:end E4:e r:s hp:< B3:s "il" C#4:s "so-" D#4:s "gno" E4:s "ch'io" F#4:s "vor-"
+6 I: r:w
+6 M: r:w
+# page 078 system 3 starts bar 7
+# JUDGE bar 7 R: X - the second < hairpin of bar 6 ends at the barline
+7 R: hp:end G#4:q. "re-" F#4:e "i" F#4:e "sem-" E4:e C#4:e..> "pre" E4:x "so-"
+7 I: r:w
+7 M: r:w
+# JUDGE bar 8 R: Y - whole note sits ON the top line (F5 written) = F#4 sounding (pixel check; E5 space is empty); < hairpin starts at the whole note
+8 R: hp:< F#4:w "gnar!"
+8 I: r:w
+8 M: r:w
+# bar 9: Mimi enters ("assai commossa"); both f con anima.
+9 R: hp:end dyn:f word:con_anima A4:q. "Fre-" G#4:e "mon" F#4:q "già" A4:q "nel-"
+9 I: dyn:f word:con_anima A5:q. "Ah!" G#5:e "tu" F#5:q "sol" A5:q "co-"
+9 M: r:w
+# page 079 system 1 starts bar 10
+# bar 10 R: grace note E (small eighth with stroke) before the D.
+# JUDGE bar 10 R: OWN - "cez" under the beamed B (slurred B-C#), "ze" + "e" (of estreme) under the D after the grace: elided "ze_e-"
+10 R: G#4:e- "l'a-" F#4:e- "ni-" E4:q~ "ma" E4:e3 B3:e3 "le" B3:e3 "dol-" B3:e3 "cez-" C#4:e3 g:E4:e D4:e3 "ze_e-"
+# JUDGE bar 10 I: X - dots after "mor!" are the extender line, not punctuation
+10 I: G#5:e- "man-" F#5:e- "di,_a-" E5:q~ "mor!" E5:e r:e r:q
+10 M: r:w
+# bar 11 I: the quarter rest is part of the first triplet.
+# JUDGE bar 11 R: OWN - "stre-" under the C# quarter, "me," under the A eighth (Y); the long hairpin below is a > belonging to the piano RH (dim.), not a vocal <
+11 R: C#4:q3 "stre-" B3:e3 A3:e "me," r:e r:h
+11 I: r:q3 B4:e3 "tu" A4:q3 "sol" G#4:e3 "co-" F#4:q3 "man-" G#4:e3 A4:q3 "di," C#5:e3 "a-"
+11 M: r:w
+# page 079 system 2 starts bar 12
+12 R: r:w
+# JUDGE bar 12 I: X - extender dots not encoded
+12 I: B4:q "mo-" E4:q~ "re!" E4:e r:e r:q
+12 M: r:w
+# bar 13: Sostenendo; R pp ("cingendo colle braccia Mimi"); D natural printed.
+# JUDGE bar 13 R: OWN - rhythm Y: E q, triplet D(q3)-C#(e3) with "3" over them, triplet E(q3)-E(e3), last E a quarter tied to bar 14; Sostenendo (top of system) kept from X
+13 R: dyn:pp word:Sostenendo E4:q "Fre-" D4:q3 "mon" C#4:e3 "nel-" E4:q3 "l'a-" E4:e3 "ni-" E4:q~ "ma"
+13 I: r:w
+13 M: r:w
+# page 079 system 3 starts bar 14
+# JUDGE bar 14 R: Y - last E is tied (arc to the first E of bar 15, "me......." extender continues); extender dots not encoded
+14 R: E4:e E4:e "dol-" E4:q3 "cez-" C#4:e3 "ze_e-" E4:q "stre-" E4:q~ "me"
+14 I: dyn:p word:mormorato F#4:e3 "Oh!" F#4:e3 "co-" F#4:e3 "me" F#4:q3 "dol-" F#4:e3 "ci" G#4:q3 "scen-" G#4:e3 "do-" G#4:e "no" A4:e "le"
+14 M: r:w
+# bar 15: poco stent. (piano); last beat: triplet eighth, eighth rest, F double-sharp.
+# JUDGE bar 15 R: OWN - first E is the tied note (no syllable): syllables as Y ("fre" on the 2nd E ... "ze_e-" C#, "stre-" E quarter, "me," F#); hairpin/p placement as X
+15 R: dyn:f E4:e3 E4:e3 "fre-" E4:e3 "mon" E4:e3 "dol-" D4:e3 "cez-" C#4:e3 "ze_e-" hp:> E4:q "stre-" F#3:e3 "me," hp:end r:e3 dyn:p F##3:e3 "nel"
+# JUDGE bar 15 I: X - no natural on the 2nd/3rd A: A#4 carries through the bar; > hairpin ends before the triplet rest
+15 I: A#4:q3 "sue" A#4:e3 "lu-" A#4:q3 "sin-" C#5:e3 "ghe_al" hp:> F#4:q "co-" F#4:e3 "re..." hp:end r:e3 dyn:p F##4:e3 "tu"
+15 M: r:w
+# bar 16: 2/4 (double bars before and after; C again from bar 17). Beat 2 is a triplet: eighth, dotted eighth (fermata), sixteenth.
+16 R: G#3:q3 "ba-" E4:e3 "cio" E4:e3 "fre-" D4:e.3! "me" C#4:s3 "a-"
+16 I: G#4:q3 "sol" E5:e3 "co-" E5:e3 "man-" D5:e.3! "di," C#5:s3 "a-"
+16 M: r:h
+# page 080 system 1 starts bar 17
+# bar 17: SEMPRE PIU SOSTENUTO, C, A major. Rodolfo "(bacia Mimi)".
+# JUDGE bar 17 R: Y - hairpin is a decrescendo (open at the left, closing before the eighth)
+17 R: hp:> E4:h~ "mor!" hp:end E4:e r:e r:q
+# JUDGE bar 17 I: Y - hairpin is a decrescendo (open at the left, closing before the eighth)
+17 I: hp:> E5:h~ "mor!" hp:end E5:e r:e r:q
+17 M: r:w
+# bar 18: Mimi "(svincolandosi)": E#5 accented, then two 32nds.
+18 R: r:h r:q r:e word:dolcissimo E#4:e "Sei"
+18 I: r:q E#5:e> "No," r:s E#4:x "per" E#4:x "pie-" E#4:e "tà!" r:e r:q
+18 M: r:w
+# page 080 system 2 starts bar 19
+# JUDGE bar 19 R: X - extender dots not encoded
+19 R: F#4:q "mi-" F#4:q~ "a!" F#4:e r:e r:q
+19 I: r:h r:e F#4:e "V'a-" F#4:e3 "spet-" F#4:e3 "tan" F#4:e3 "gli_a-"
+19 M: r:w
+# bar 20: Mimi G natural printed.
+20 R: r:h G#3:e "Già" G#3:e "mi" G#3:e "man-" G#3:e "di"
+20 I: G4:q "mi-" G4:q "ci..." r:h
+20 M: r:w
+# page 080 system 3 starts bar 21
+21 R: A3:q "vi-" A3:q "a?" r:h
+21 I: r:h r:e C#5:s "Vor-" A4:s "rei" F#4:s "dir..." r:s A4:s "ma" C#5:s "non"
+21 M: r:w
+# FIX bar 22 R: the D quarter is tied to the D eighth
+22 R: r:q D4:q~ "Di'..." D4:e r:e r:q
+22 I: D5:e "o-" D5:e "so..." r:q r:h
+22 M: r:w
+# bar 23: rit: (Mimi), col canto (piano); last note F natural; double bar, key change to C major after the bar.
+23 R: r:w
+# JUDGE bar 23 I: OWN - "nis-" head sits on the D5 line like its neighbours; the rectangular blob above it is a print defect (no second-chord layout) = D5 (Y); last 16th: natural + head ON the top line = F5 (X)
+23 I: r:q word:rit. D5:e. "Se" D5:s "ve-" D5:q "nis-" D5:e. "si" F5:s "con"
+23 M: r:w
+# page 081 system 1 starts bar 24
+# bar 24: (43) CALMO, C, C major. R F natural accented "(sorpreso)".
+# JUDGE bar 24 R: X - F natural written as bare F4 (absolute pitch format)
+24 R: r:q F4:e> "Che?.." r:s A3:s "Mi-" A3:e "mì!" r:e r:q
+24 I: A4:q "voi?" r:q r:h
+24 M: r:w
+# bar 25: poco affrett. / a tempo (piano); R "(insinuante)".
+25 R: r:q r:e A3:e "Sa-" A3:e "reb-" A3:e "be" A3:e "co-" B3:e "sì"
+25 I: r:w
+25 M: r:w
+# page 081 system 2 starts bar 26
+26 R: G3:s "dol-" G3:s "ce" G3:s "re-" G3:s "star" G3:q "qui." r:e G3:e "C'è" G3:e "fred-" G3:e "do"
+26 I: r:w
+26 M: r:w
+27 R: G3:q "fuo-" G3:q "ri..." r:h
+27 I: r:w
+27 M: r:w
+# bar 28: rall:... rit: molto... over Mimi ("con grande abbandono").
+28 R: r:w
+# JUDGE bar 28 I: X - "rall:.....rit: molto" printed together over bar 28
+28 I: r:q word:rall._rit._molto C5:e "Vi" C5:e "sta-" C5:q. "rò" B4:e "vi-"
+28 M: r:w
+29 R: r:h r:q r:e G3:s "E_al" A3:s "ri-"
+# JUDGE bar 29 I: X - no new word at bar 29 (rit: molto belongs to the bar-28 text)
+29 I: A4:h "ci-" G4:q "na!..." r:q
+29 M: r:w
+# page 081 system 3 starts bar 30
+# bar 30: fermata on Mimi's last quarter rest and on Rodolfo's half rest; double bar.
+30 R: B3:e "tor-" B3:e "no?.." r:q r:h!
+30 I: r:q r:e. B4:s "Cu-" D5:e "rio-" D5:e "so!.." r:q!
+30 M: r:w
+# bar 31: quarter = 58. R p dolciss. The word "mia" is printed under two notes (A, A): split here as "mi-" "a".
+# JUDGE bar 31 R: Y - print has "mia" as one word under the first A; "pic-" under the second A (text measured)
+31 R: r:q dyn:p word:dolciss. G3:e "Dam-" G3:e "mi_il" G3:e "brac-" G3:e "cio," A3:e "mia" A3:e "pic-"
+31 I: r:w
+31 M: r:w
+# bar 32 R: the middle B is printed as a quarter (stem, no flag), which overfills the bar by an eighth; the alignment with Mimi
+#   (third B under Mimi's beat-2 eighth rest) shows it lasts an eighth: written B3:e. Slur from the 2nd to the 3rd B.
+# JUDGE bar 32 R: OWN - PRINTED: flagged eighth, unflagged quarter, flagged eighth, 8th rest, half rest = 4.5 beats. Alignment with Mimi (3rd B under her beat-2 eighth rest, R rest under her beat-2.5 16th) shows three equal eighths: the middle "quarter" is read as an eighth (X rhythm, one change). Arc 2nd-3rd B joins equal pitches = tie; syllables "ci-" "na" (Y)
+32 R: B3:e "ci-" B3:e~ "na...." B3:e r:e r:h
+32 I: r:q r:e B4:s "Ob-" B4:s "be-" D5:q "di-" C5:e "sco," B4:e "si-"
+32 M: r:w
+# page 082 system 1 starts bar 33
+# bar 33: Sost.
+# JUDGE bar 33 R: X - pp printed under the G (after the rests)
+33 R: r:q r:e dyn:pp word:Sost. G4:e "Che" E4:q. "m'a-" C4:e "mi"
+33 I: A4:q~ "gnor!....." A4:e r:e r:h
+33 M: r:w
+# JUDGE bar 34 R: X - extender dots count only
+34 R: F4:q~ "dì........" F4:e r:e r:h
+34 I: r:q r:e G4:e "Io" D5:q "t'a-" C5:e B4:e
+34 M: r:w
+35 R: r:w
+35 I: A4:q~ "mo!......" A4:e r:e r:h
+35 M: r:w
+36 R: r:w
+36 I: r:w
+36 M: r:w
+# page 082 system 2 starts bar 37
+# bar 37: both "(di fuori)" - offstage.
+37 R: r:q r:e G4:e "A-" E4:q. "mor!" C4:e "A-"
+37 I: r:q r:e G5:e "A-" E5:q. "mor!" C5:e "A-"
+37 M: r:w
+# JUDGE bar 38 R: X - whole F tied to the bar-39 F (arc joins equal pitches)
+38 R: F4:w~ "mor!......"
+# JUDGE bar 38 I: X - whole note on the first ledger line = A5, tied (arc to equal pitch) to the bar-39 A5
+38 I: A5:w~ "mor!......"
+38 M: r:w
+# bar 39: allargando (piano)
+39 R: F4:h. F4:q "A-"
+39 I: A5:h. A5:q "A-"
+39 M: r:w
+# page 082 system 3 starts bar 40
+# JUDGE bar 40 R: X - extender dots only; no ossia printed
+40 R: dyn:pp word:perdendosi E4:w~ "mor!......"
+# JUDGE bar 40 I: X - extender dots only; no ossia printed for either singer (Mimi C6, Rodolfo E5 written = E4)
+40 I: dyn:pp word:perdendosi C6:w~ "mor!......"
+40 M: r:w
+41 R: E4:q~ E4:e r:e r:h
+41 I: C6:q~ C6:e r:e r:h
+41 M: r:w
+# bar 41: "(cala il sipario)"
+42 R: r:w
+42 I: r:w
+42 M: r:w
+43 R: r:w
+43 I: r:w
+43 M: r:w
+# bar 44: final double bar, end of Act 1.
+44 R: r:w
+44 I: r:w
+44 M: r:w

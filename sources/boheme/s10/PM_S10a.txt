@@ -1,0 +1,220 @@
+# MERGED (judge) S10a piano. Base = reader X; "# JUDGE bar N RH|LH: X|Y|OWN - reason" before each settled line.
+# Dynamics printed between the staves go to both hands; not added to the LH where its staff is empty/resting (bar 1 fff, bar 12 sf, bar 64 sf).
+# Checked, both readers agree and kept: bar 63 2nd chord C5+E5+G5+Bb5+C6 (zoom: Bb5 and C6 printed side by side above the A5 ledger, unlike bars 27/30/33); bars 19/22 trem3 with G5 tie, "()" pair slur only in bar 22; bars 1-18 m.s. chords as one RH chord line.
+# S10a reader A, piano. Act 2 (QUADRO SECONDO) "Aranci, datteri", pages 83-88.
+# page 083 system 1 starts bar 1
+# bar 1: QUADRO SECONDO; quarter = 112, ALL.o FOCOSO (in due); 2/8; key 1 flat (F major); fff marcatissimo; "m.s." printed under the RH chords (left hand helps on the upper staff); LH staff empty bars 1-18
+1 RH1: dyn:fff word:marcatissimo F4+A4+C5:e> E4+G4+Bb4:e>
+1 LH1: r:q
+2 RH1: D4+F4+A4:e> C4+E4+G4:e>
+2 LH1: r:q
+3 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+3 LH1: r:q
+4 RH1: F4+A4+C5:e> G4+Bb4+D5:s> A4+C5+E5:s>
+4 LH1: r:q
+5 RH1: Bb4+D5+F5:e> A4+C5+E5:s> G4+Bb4+D5:s>
+5 LH1: r:q
+6 RH1: F4+A4+C5:e> E4+G4+Bb4:e>
+6 LH1: r:q
+# page 083 system 2 starts bar 7
+7 RH1: D4+F4+A4:e> C4+E4+G4:e>
+7 LH1: r:q
+8 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+8 LH1: r:q
+9 RH1: F4+A4+C5:e> G4+Bb4+D5:s> A4+C5+E5:s>
+9 LH1: r:q
+10 RH1: Bb4+D5+F5:e> A4+C5+E5:s> G4+Bb4+D5:s>
+10 LH1: r:q
+11 RH1: F4+A4+C5:e> E4+G4+Bb4:s> D4+F4+A4:s>
+11 LH1: r:q
+# bars 12-13: the RH chords carry stems both up and down (two beams, same rhythm: the hands share the chords); written as one chord line
+12 RH1: dyn:sf hp:< C4+E4+G4:e^ Bb3+D4+F4:s> C4+E4+G4:s>
+12 LH1: r:q
+13 RH1: D4+F4+A4:s> F4+A4+C5:s> G4+Bb4+D5:e^ hp:end
+13 LH1: r:q
+# page 083 system 3 starts bar 14
+14 RH1: hp:< C4+E4+G4:e^ Bb3+D4+F4:s> C4+E4+G4:s>
+14 LH1: r:q
+15 RH1: D4+F4+A4:s> F4+A4+C5:s> G4+Bb4+D5:e^ hp:end
+15 LH1: r:q
+16 RH1: hp:< C4+E4+G4:e> D4+F4+A4:e>
+16 LH1: r:q
+# JUDGE bar 17 RH: X - zoomed: lowest head of the 1st chord sits on the bottom line (E4), chord E4+G4+Bb4 (rising sequence C-E-G, D-F-A, E-G-Bb, F-A-C, G-Bb-D); Y D4+F4+A4
+17 RH1: E4+G4+Bb4:s> F4+A4+C5:s> G4+Bb4+D5:e^
+17 LH1: r:q
+18 RH1: A4+C5+E5:e^ Bb4+D5+F5:e^ hp:end
+18 LH1: r:q
+# bar 19: figure (1); ff. RH: chord C6+E6+G6 and G5 joined by one beam + two loose strokes (fingered tremolo, 3 strokes) filling the bar; the G5 is tied to the G5 of the bar-20 chord
+# JUDGE bar 19 RH: Y - ff printed between the staves at bar 19: goes to both hands (X had it in the LH only)
+19 RH1: dyn:ff trem3:C6+E6+G6|G5~:q>
+19 LH1: dyn:ff C4:e> G3:s* G3:s*
+20 RH1: G5+C6+E6+G6:e r:e
+20 LH1: C4:e> G3:s* G3:s*
+# page 084 system 1 starts bar 21
+21 RH1: Bn3+D4+F4:q>
+21 LH1: A3:s* A3:s* G3:s* F3:s*
+# bar 22: same fingered tremolo as bar 19, here with a short slur from the chord to the G5 (pair slur) and the G5 tied to the G5 of the bar-23 chord
+22 RH1: trem3:C6+E6+G6|G5~:q>()
+22 LH1: C4:e> G3:s* G3:s*
+23 RH1: G5+C6+E6+G6:e r:e
+23 LH1: C4:e> G3:s* G3:s*
+24 RH1: Bn3+D4+F4:q>
+24 LH1: A3:s* A3:s* G3:s* F3:s*
+25 RH1: G5+C6+E6+G6:e* dyn:f hp:< E4+G4+C5:e>
+# JUDGE bar 25 LH: OWN - f printed between the staves at the 2nd eighth: both hands (X=Y had it in the RH only)
+# MARKS bar 25 LH1: added hp:< (between staves, as RH) - hairpin printed between the staves goes to both hands
+25 LH1: C4:e* dyn:f hp:< Bb2+Bb3:e>
+26 RH1: F4+Bb4+D5:e> F4+Bb4+D5+F5:e> hp:end
+# MARKS bar 26 LH1: added hp:end - hairpin printed between the staves goes to both hands
+26 LH1: A2+A3:e> G2+G3:e> hp:end
+# page 084 system 2 starts bar 27
+27 RH1: hp:< G4+Bb4+D5+G5:e> C5+E5+G5+C6:e> hp:end
+# MARKS bar 27 LH1: added hp:< ... hp:end - hairpin printed between the staves goes to both hands
+27 LH1: hp:< E2+E3:e> C2+C3:e> hp:end
+# bar 28: "(Si alza il sipario)" printed above the piano
+28 RH1: r:e hp:< C4+E4+G4+C5:e>
+# MARKS bar 28 LH1: added hp:< - hairpin printed between the staves goes to both hands
+28 LH1: r:e hp:< Bb2+Bb3:e>
+29 RH1: D4+F4+Bb4+D5:e> F4+Bb4+D5+F5:e>
+29 LH1: A2+A3:e> G2+G3:e>
+30 RH1: G4+Bb4+D5+G5:e> C5+E5+G5+C6:e> hp:end
+# MARKS bar 30 LH1: added hp:end - hairpin printed between the staves goes to both hands
+30 LH1: E2+E3:e> C2+C3:e> hp:end
+31 RH1: r:e hp:< C4+E4+G4+C5:e>
+# MARKS bar 31 LH1: added hp:< - hairpin printed between the staves goes to both hands
+31 LH1: r:e hp:< Bb2+Bb3:e>
+32 RH1: D4+F4+Bb4+D5:e> F4+Bb4+D5+F5:e>
+32 LH1: A2+A3:e> G2+G3:e>
+33 RH1: G4+Bb4+D5+G5:e> C5+E5+G5+C6:e> hp:end
+# MARKS bar 33 LH1: added hp:end - hairpin printed between the staves goes to both hands
+33 LH1: E2+E3:e> C2+C3:e> hp:end
+# page 085 system 1 starts bar 34
+34 RH1: hp:< D5+F5+Bb5+D6:e> F5+Bb5+D6+F6:e>
+# MARKS bar 34 LH1: added hp:< - hairpin printed between the staves goes to both hands
+34 LH1: hp:< Bb1+Bb2:e> G1+G2:e>
+35 RH1: G5+Bb5+D6+G6:e> C6+E6+G6+C7:e> hp:end
+# MARKS bar 35 LH1: added hp:end - hairpin printed between the staves goes to both hands
+35 LH1: E1+E2:e> C1+C2:e> hp:end
+# bar 36: "VUOTA" printed in the piano and over the chorus: empty bar, rests in all staves
+36 RH1: r:q
+36 LH1: r:q
+# bar 37: figure (2); ff
+37 RH1: dyn:ff F4+A4+C5:e> E4+G4+Bb4:e>
+# JUDGE bar 37 LH: OWN - ff between the staves: both hands (X=Y RH only)
+37 LH1: dyn:ff F2+C3:e> G2+C3:e>
+38 RH1: D4+F4+A4:e> C4+E4+G4:e>
+38 LH1: A2+C3:e> Bb2+C3:e>
+39 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+39 LH1: A2+C3:e> G2+C3:e>
+# page 085 system 2 starts bar 40
+40 RH1: hp:< F4+A4+C5:e> Bb4+D5:s> C5+E5:s> hp:end
+# MARKS bar 40 LH1: added hp:< ... hp:end - hairpin printed between the staves goes to both hands
+40 LH1: hp:< F2+C3:e> E2+C3:e> hp:end
+41 RH1: hp:> D5+F5:e> C5+E5:s> Bb4+D5:s> hp:end
+# MARKS bar 41 LH1: added hp:> ... hp:end - hairpin printed between the staves goes to both hands
+41 LH1: hp:> D2+C3:e> E2+C3:e> hp:end
+42 RH1: A4+C5:e> E4+G4+Bb4:e>
+42 LH1: F2+C3:e> G2+C3:e>
+43 RH1: D4+F4+A4:e> C4+E4+G4:e>
+43 LH1: A2+C3:e> Bb2+C3:e>
+44 RH1: D4+F4+A4:e> E4+G4+Bb4:e>
+44 LH1: A2+C3:e> G2+C3:e>
+45 RH1: hp:< F4+A4+C5:e> Bb4+D5:s> C5+E5:s> hp:end
+# MARKS bar 45 LH1: added hp:< ... hp:end - hairpin printed between the staves goes to both hands
+45 LH1: hp:< F2+C3:e> E2+C3:e> hp:end
+# page 086 system 1 starts bar 46
+46 RH1: hp:> D5+F5:e> C5+E5:s> Bb4+D5:s> hp:end
+# MARKS bar 46 LH1: added hp:> ... hp:end - hairpin printed between the staves goes to both hands
+46 LH1: hp:> D2+C3:e> E2+C3:e> hp:end
+47 RH1: A4+C5:e> Bb4:s> A4:s>
+47 LH1: F2+C3:e> G2+C3:s> A2+C3:s>
+48 RH1: G4:e^ F4:s> G4:s>
+48 LH1: Bb2+C3:e^ A2+C3:s> G2+C3:s>
+49 RH1: A4:s> C5:s> G4+Bb4+D5:e^
+49 LH1: F2+C3:e> E2+C3:e>
+50 RH1: G4:e^ F4:s> G4:s>
+50 LH1: Bb2+C3:e^ A2+C3:s> G2+C3:s>
+# page 086 system 2 starts bar 51
+51 RH1: A4:s> C5:s> G4+Bb4+D5:e^
+51 LH1: F2+C3:e> E2+C3:e>
+# JUDGE bar 52 RH: X - zoomed: the crescendo hairpin starts under the 1st chord of bar 52 (Y: 2nd chord)
+52 RH1: hp:< C4+E4+G4:e> D4+F4+A4:e>
+# MARKS bar 52 LH1: added hp:< - hairpin printed between the staves goes to both hands
+52 LH1: hp:< Bb2+C3:e> A2+C3:e>
+# JUDGE bar 53 RH: X - zoomed: double beam joins chords 1-2 (16ths), 3rd chord on the single beam (eighth): s s e (Y e s s)
+53 RH1: E4+G4+Bb4:s> F4+A4+C5:s> G4+Bb4+D5:e>
+53 LH1: G2+C3:e> F2+C3:e>
+54 RH1: A4+C5+E5:e> Bb4+D5+F5:e>
+54 LH1: E2+C3:e> D2+C3:e>
+# bar 55: ff between the staves at the 2nd eighth (end of the crescendo hairpin from bar 52); RH 2nd chord arpeggiated; LH clef change to treble after the first eighth
+# JUDGE bar 55 RH: X - Y wrote ">a" as "a>": same marks, suffix order only
+55 RH1: C5+E5+G5:e> hp:end dyn:ff G5+Bb5+D6:e>a
+# JUDGE bar 55 LH: OWN - ff between the staves at the 2nd eighth: both hands (X=Y RH only)
+# MARKS bar 55 LH1: added hp:end - hairpin printed between the staves goes to both hands
+55 LH1: C2+C3:e> hp:end clef:G dyn:ff G4:s* G4:s*
+# JUDGE bar 56 RH: X - suffix order only (Y "a>")
+56 RH1: C6+E6+G6:e>a G5+Bb5+D6:e>a
+56 LH1: C5:e> G4:s* G4:s*
+# page 087 system 1 starts bar 57 (LH still in treble clef at the start; clef change back to bass at the end of bar 57)
+# JUDGE bar 57 RH: X - suffix order only
+57 RH1: A5+C6+E6:e>a F5+A5+C6:e>a
+57 LH1: A4:s* A4:s* G4:s* F4:s* clef:F
+# JUDGE bar 58 RH: X - suffix order only
+58 RH1: C5+E5+G5:e>a G4+Bb4+D5:e>a
+58 LH1: C4:e> G3:s* G3:s*
+# JUDGE bar 59 RH: X - suffix order only
+59 RH1: C5+E5+G5:e>a G4+Bb4+D5:e>a
+59 LH1: C4:e> G3:s* G3:s*
+60 RH1: A4:s* A4:s* G4:s* F4:s*
+60 LH1: A3:s* A3:s* G3:s* F3:s*
+# bar 61: ff between the staves at the 2nd eighth
+61 RH1: C5:e> dyn:ff C4+E4+G4+C5:e>
+# JUDGE bar 61 LH: OWN - ff between the staves at the 2nd eighth (close to the LH chord): both hands (X=Y RH only)
+61 LH1: C4:e> dyn:ff Bb2+Bb3:e>
+# page 087 system 2 starts bar 62
+62 RH1: D4+F4+Bb4+D5:e> F4+Bb4+D5+F5:e>
+62 LH1: A2+A3:e> G2+G3:e>
+# bar 63: 2nd chord includes Bb5 (second Bb5-C6 printed side by side above the ledger line)
+63 RH1: G4+Bb4+D5+G5:e> C5+E5+G5+Bb5+C6:e>
+63 LH1: E2+E3:e> C2+C3:e>
+# bar 64: figure (3); sf; Eb4+Eb5 (one stem) tied through bars 64-66 (ties above and below); decrescendo hairpin bars 64-66
+64 RH1: dyn:sf hp:> Eb4+Eb5:q>~
+64 LH1: r:q
+65 RH1: Eb4+Eb5:q~
+65 LH1: r:q
+66 RH1: Eb4+Eb5:q hp:end
+66 LH1: r:q
+# bar 67: p; RH chords arpeggiated
+# JUDGE bar 67 RH: Y - p printed between the staves: both hands
+67 RH1: dyn:p Ab4+C5+Eb5:ea G4+Bb4+Db5:ea
+67 LH1: dyn:p Ab2+Eb3:e Bb2+Eb3:e
+# page 088 system 1 starts bar 68
+68 RH1: F4+Ab4+C5:ea Eb4+G4+Bb4:ea
+68 LH1: C3+Eb3:e Db3+Eb3:e
+69 RH1: F4+Ab4+C5:ea G4+Bb4+Db5:ea
+69 LH1: C3+Eb3:e Bb2+Eb3:e
+70 RH1: hp:< Ab4+C5+Eb5:ea F5:s G5:s hp:end
+# MARKS bar 70 LH1: added hp:< ... hp:end - hairpin printed between the staves goes to both hands
+70 LH1: hp:< Ab2+Eb3:e G2+Eb3:e hp:end
+71 RH1: hp:> F5+Ab5:e G5:s F5:s hp:end
+# MARKS bar 71 LH1: added hp:> ... hp:end - hairpin printed between the staves goes to both hands
+71 LH1: hp:> F2+Eb3:e G2+Eb3:e hp:end
+72 RH1: C5+Eb5:e Db5:s C5:s
+72 LH1: Ab2+Eb3:e Bb2+Eb3:s C3+Eb3:s
+# page 088 system 2 starts bar 73
+73 RH1: hp:< G4+Bb4:e Ab4:s Bb4:s
+# MARKS bar 73 LH1: added hp:< - hairpin printed between the staves goes to both hands
+73 LH1: hp:< Db3+Eb3:e C3+Eb3:s Bb2+Eb3:s
+74 RH1: C5:s Eb5:s Db5+F5:e^ hp:end
+# MARKS bar 74 LH1: added hp:end - hairpin printed between the staves goes to both hands
+74 LH1: Ab2+Eb3:e G2+Eb3:e^ hp:end
+75 RH1: hp:< G4+Bb4:e Ab4:s Bb4:s
+# MARKS bar 75 LH1: added hp:< - hairpin printed between the staves goes to both hands
+75 LH1: hp:< Db3+Eb3:e C3+Eb3:s Bb2+Eb3:s
+76 RH1: C5:s Eb5:s Db5+F5:e^ hp:end
+# MARKS bar 76 LH1: added hp:end - hairpin printed between the staves goes to both hands
+76 LH1: Ab2+Eb3:e G2+Eb3:e^ hp:end
+77 RH1: G4+Bb4:e Ab4+C5:e
+77 LH1: Db3+Eb3:e C3+Eb3:e
+78 RH1: Bb4+Db5:s Eb5:s F5:e
+78 LH1: Bb2+Eb3:e Ab2+Eb3:e
