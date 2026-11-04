@@ -955,6 +955,8 @@ function PracticeScreen({
   const [notes, setNotes] = useState<Note[]>(loadNotes);
   // adding a note: tap Notes, then tap the bar; the small note card opens right there (also for a note's tag on the score)
   const [notePick, setNotePick] = useState(false);
+  // the pencil opens a small menu: add a note, see them all, or get the score on paper with them
+  const [notesMenu, setNotesMenu] = useState(false);
   const [noteEdit, setNoteEdit] = useState<null | { id: string | null; m: number; q: number; body: string; mark?: MarkId }>(null);
   const [notesMsg, setNotesMsg] = useState("");
   // the score for print (Save as PDF), with your notes written on it: being made, or what became of it
@@ -1961,7 +1963,7 @@ function PracticeScreen({
     { id: "arrange", part: "Your score", pops: ".mix-pop", sel: [".mix-btn:not(.notes-btn)"], title: "Arrange", text: "Tap Arrange: each line’s sound, volume and order, and what shows in the score.", done: () => mixOpen },
     { id: "volume", part: "Your score", pops: ".mix-pop", sel: mixOpen ? [".mix-line:has(.part-face.piano) .mix-line-vol"] : [".mix-btn:not(.notes-btn)"], title: "Balance the piano", text: mixOpen ? "The music is playing. Drag the piano’s slider left to make it softer." : "Tap Arrange again.", after: "Softer piano, same voices. Every line has its own slider.", dwell: 4000, done: () => !!guideStart.current && Math.abs(vol.piano - guideStart.current.vol.piano) >= 10 },
     { id: "hide", part: "Your score", pops: ".mix-pop", sel: mixOpen ? [".mix-line:has(.part-face.piano) .mix-toggles button:nth-child(2)"] : [".mix-btn:not(.notes-btn)"], title: "Read only the voices", text: mixOpen ? "Tap the eye on the piano’s row." : "Tap Arrange again.", after: "The piano part has left the score; it still plays. Tap its eye again any time to bring it back.", dwell: 5000, done: () => !showOf(pianoPart) },
-    { id: "notes", part: "Your score", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : "Tap Notes, then choose a bar.", after: "Your note sits over its bar. Tap it any time to change it.", dwell: 3500, done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
+    { id: "notes", part: "Your score", pops: noteEdit ? ".note-card" : undefined, sel: noteEdit ? [".note-card"] : notePick ? [".score-scroll"] : notesMenu ? [".notes-menu .nm-item"] : [".notes-btn"], title: "Write a note", text: noteEdit ? "Write your note, then Save. Or close the card." : notePick ? "Now tap the bar your note is for." : notesMenu ? "Tap Add a note." : "Tap Notes, then Add a note.", after: "Your note sits over its bar. Tap it any time to change it.", dwell: 3500, done: () => !!guideStart.current && (notes.length > guideStart.current.notes || (!noteEdit && gTrack.current.noteOpened)) },
   ];
   const step = guide >= 0 ? steps[guide] : null;
   // the step as it reads now (a step can change half-way: slower, then back to speed), for code that runs on a timer
@@ -2225,7 +2227,7 @@ function PracticeScreen({
       window.clearInterval(t);
       window.removeEventListener("resize", place);
     };
-  }, [guide, view, barOpen, !!loop, playing, notePick, !!noteEdit, mixOpen, !!faceMenu, step?.title, step?.sel.join(",")]);
+  }, [guide, view, barOpen, !!loop, playing, notePick, notesMenu, !!noteEdit, mixOpen, !!faceMenu, step?.title, step?.sel.join(",")]);
   // only the lit control (and the guide's card) answers while a step waits
   // the loop step is done when a handle has been dragged and let go (not while it is still moving)
   useEffect(() => {
@@ -3179,18 +3181,90 @@ function PracticeScreen({
           <button
             type="button"
             className="cp-btn part-fade mix-btn notes-btn"
-            aria-pressed={notePick}
-            aria-label={notePick ? "Cancel adding a note" : "Add a note: then tap the bar it belongs to"}
+            aria-pressed={notePick || notesMenu}
+            aria-haspopup="menu"
+            aria-expanded={notesMenu}
+            aria-label={notePick ? "Cancel adding a note" : "Notes: add a note, see your notes, or download the score as PDF"}
             onClick={() => {
               setDrawer(null);
               setNoteEdit(null);
-              setNotePick(!notePick);
+              setMixOpen(false);
+              if (notePick) setNotePick(false);
+              else setNotesMenu(!notesMenu);
             }}
           >
             {Icon.note}
             <span>Notes{notes.length ? ` \u00b7 ${notes.length}` : ""}</span>
           </button>
           </div>
+          {notesMenu && <button type="button" className="mix-scrim" aria-label="Close" tabIndex={-1} onClick={() => setNotesMenu(false)} />}
+          {notesMenu && (
+            <div className="mix-pop notes-menu" role="menu" aria-label="Notes">
+              <div className="mix-head">
+                <p className="mix-title">Notes</p>
+                <button type="button" className="cp-btn cp-btn--ink mix-done" onClick={() => setNotesMenu(false)}>
+                  Done
+                </button>
+              </div>
+              <button
+                type="button"
+                role="menuitem"
+                className="nm-item"
+                onClick={() => {
+                  setNotesMenu(false);
+                  setNotePick(true);
+                }}
+              >
+                {Icon.note}
+                <span>
+                  <b>Add a note</b>
+                  <small>Then tap the bar it belongs to</small>
+                </span>
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                className="nm-item"
+                onClick={() => {
+                  setNotesMenu(false);
+                  setDrawer("notes");
+                }}
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+                <span>
+                  <b>All my notes{notes.length ? ` (${notes.length})` : ""}</b>
+                  <small>{notes.length ? "Read, change or save a copy" : "None yet for this piece"}</small>
+                </span>
+              </button>
+              <button type="button" role="menuitem" className="nm-item" onClick={printScore} disabled={printState === "busy"} aria-busy={printState === "busy"}>
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>
+                  <b>{printState === "busy" ? "Preparing the score…" : "Download score as PDF"}</b>
+                  <small>{notes.length ? `With your ${notes.length === 1 ? "note" : `${notes.length} notes and marks`} written in. Choose Save as PDF.` : "The whole score. Choose Save as PDF."}</small>
+                </span>
+              </button>
+              {printState === "blocked" && (
+                <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setPrintState(printDoc.current && openInTab(printDoc.current.html) ? "tab" : "noTab")}>
+                  Open it in a new tab
+                </button>
+              )}
+              {printState !== "idle" && printState !== "busy" && (
+                <p className="wc-note" role="status">
+                  {printState === "tab"
+                    ? "The score opened in a new tab. Print it there and choose Save as PDF."
+                    : printState === "blocked"
+                      ? "This page may not open the print window here. Open the score in a new tab and print it from there."
+                      : printState === "noTab"
+                        ? "This page may not open a new tab either. Open Sottovoce in its own browser tab, then try again."
+                        : "The score could not be prepared for print. Try again in a moment."}
+                </p>
+              )}
+            </div>
+          )}
           {mixOpen && <button type="button" className="mix-scrim" aria-label="Close Arrange" tabIndex={-1} onClick={() => setMixOpen(false)} />}
           {mixOpen && (
             <div className="mix-pop ens" role="dialog" aria-label="Arrange">
