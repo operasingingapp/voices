@@ -38,3 +38,4 @@ TIES ON ONE NOTE OF A CHORD: put ~ right after that pitch inside the chord: `Db4
 DOUBLE SHARP / DOUBLE FLAT: write ## / bb (F##4, Bbb3), never x.
 MORDENT (pralltriller, short wavy sign above a note): suffix m after the duration (A4:em).
 In a tremolo, tie one note of the second chord by putting ~ after that pitch: trem3:F2+A2|C3+A2~:h.
+NESTED SLUR (a short slur inside a longer one in the same voice, e.g. a grace-note slur): [ starts it, ] ends it.
