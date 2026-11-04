@@ -1,0 +1,1885 @@
+{
+ "editionId": "puccini-non-sono-in-vena",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Luigi Illica and Giuseppe Giacosa (1896). Words follow the Ricordi vocal score's spelling and punctuation (Chi è là!?, Vorrebbe?.., the print's runs of dots after respir, sarà and vicina, and Rodolfo's aside in brackets, “(Che bella bambina!)”). Rodolfo's “Ah!” when he finds the key is printed without a notehead and keeps its word. IPA follows sung Italian conventions: stressed syllable marked, words sung on one note joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "r1",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Non sono in vena.",
+   "translation": "I'm not in the mood.",
+   "ipa": "non ˈso.no‿in ˈve.na",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "sono",
+     "I am",
+     "ˈso.no"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "vena.",
+     "mood",
+     "ˈve.na"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "in the mood"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m1",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Scusi.",
+   "translation": "Excuse me.",
+   "ipa": "ˈsku.zi",
+   "words": [
+    [
+     "Scusi.",
+     "excuse me",
+     "ˈsku.zi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Chi è là!?",
+   "translation": "Who's there?",
+   "ipa": "ki‿ɛ ˈla",
+   "words": [
+    [
+     "Chi",
+     "who",
+     "ki"
+    ],
+    [
+     "è",
+     "is",
+     "ɛ"
+    ],
+    [
+     "là!?",
+     "there",
+     "ˈla"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "Una donna!",
+   "translation": "A woman!",
+   "ipa": "ˈu.na ˈdɔn.na",
+   "words": [
+    [
+     "Una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "donna!",
+     "woman",
+     "ˈdɔn.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m2",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Di grazia.",
+   "translation": "If you please.",
+   "ipa": "di ˈgrat.tsja",
+   "words": [
+    [
+     "Di",
+     "of",
+     "di"
+    ],
+    [
+     "grazia.",
+     "grace",
+     "ˈgrat.tsja"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "if you please"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m3",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "mi s'è spento il lume.",
+   "translation": "my light has gone out.",
+   "ipa": "mi sɛ ˈspɛn.to‿il ˈlu.me",
+   "words": [
+    [
+     "mi",
+     "for me",
+     "mi"
+    ],
+    [
+     "s'è",
+     "has",
+     "sɛ"
+    ],
+    [
+     "spento",
+     "gone out",
+     "ˈspɛn.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "lume.",
+     "light",
+     "ˈlu.me"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "has gone out"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r4",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Ecco.",
+   "translation": "There.",
+   "ipa": "ˈɛk.ko",
+   "words": [
+    [
+     "Ecco.",
+     "there you are",
+     "ˈɛk.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m4",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "Vorrebbe?..",
+   "translation": "Would you…?",
+   "ipa": "vorˈrɛb.be",
+   "words": [
+    [
+     "Vorrebbe?..",
+     "would you",
+     "vorˈrɛb.be"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m5",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "Non occorre.",
+   "translation": "There's no need.",
+   "ipa": "non okˈkor.re",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "occorre.",
+     "is needed",
+     "okˈkor.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "there's no need"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r5",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "S'accomodi un momento.",
+   "translation": "Come in for a moment.",
+   "ipa": "sakˈkɔ.mo.di‿un moˈmen.to",
+   "words": [
+    [
+     "S'accomodi",
+     "make yourself at home",
+     "sakˈkɔ.mo.di"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "momento.",
+     "moment",
+     "moˈmen.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r6",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "La prego, entri.",
+   "translation": "Please, come in.",
+   "ipa": "la ˈprɛ.go ˈen.tri",
+   "words": [
+    [
+     "La",
+     "you",
+     "la"
+    ],
+    [
+     "prego,",
+     "I beg",
+     "ˈprɛ.go"
+    ],
+    [
+     "entri.",
+     "come in",
+     "ˈen.tri"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "please"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r7",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Si sente male?",
+   "translation": "Do you feel ill?",
+   "ipa": "si ˈsen.te ˈma.le",
+   "words": [
+    [
+     "Si",
+     "yourself",
+     "si"
+    ],
+    [
+     "sente",
+     "feel",
+     "ˈsen.te"
+    ],
+    [
+     "male?",
+     "ill",
+     "ˈma.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "do you feel ill"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m6",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "No...",
+   "translation": "No...",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No...",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m7",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "nulla.",
+   "translation": "nothing.",
+   "ipa": "ˈnul.la",
+   "words": [
+    [
+     "nulla.",
+     "nothing",
+     "ˈnul.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r8",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "Impallidisce!",
+   "translation": "She's turning pale!",
+   "ipa": "im.pal.liˈdiʃ.ʃe",
+   "words": [
+    [
+     "Impallidisce!",
+     "she turns pale",
+     "im.pal.liˈdiʃ.ʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m8",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "Il respir....... Quelle scale...",
+   "translation": "My breath... Those stairs...",
+   "ipa": "il reˈspir ˈkwel.le ˈska.le",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "respir.......",
+     "breath",
+     "reˈspir"
+    ],
+    [
+     "Quelle",
+     "those",
+     "ˈkwel.le"
+    ],
+    [
+     "scale...",
+     "stairs",
+     "ˈska.le"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r9",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Ed ora come faccio?..",
+   "translation": "And now what do I do?",
+   "ipa": "ed ˈo.ra ˈko.me ˈfat.tʃo",
+   "words": [
+    [
+     "Ed",
+     "and",
+     "ed"
+    ],
+    [
+     "ora",
+     "now",
+     "ˈo.ra"
+    ],
+    [
+     "come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "faccio?..",
+     "I do",
+     "ˈfat.tʃo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r10",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "Così!",
+   "translation": "Like this!",
+   "ipa": "koˈzi",
+   "words": [
+    [
+     "Così!",
+     "like this",
+     "koˈzi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r11",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "Che viso d'ammalata.",
+   "translation": "What a sickly face.",
+   "ipa": "ke ˈvi.zo dam.maˈla.ta",
+   "words": [
+    [
+     "Che",
+     "what a",
+     "ke"
+    ],
+    [
+     "viso",
+     "face",
+     "ˈvi.zo"
+    ],
+    [
+     "d'ammalata.",
+     "of a sick woman",
+     "dam.maˈla.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r12",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "Si sente meglio?",
+   "translation": "Do you feel better?",
+   "ipa": "si ˈsen.te ˈmɛʎ.ʎo",
+   "words": [
+    [
+     "Si",
+     "yourself",
+     "si"
+    ],
+    [
+     "sente",
+     "feel",
+     "ˈsen.te"
+    ],
+    [
+     "meglio?",
+     "better",
+     "ˈmɛʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "do you feel"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m9",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "Sì.",
+   "translation": "Yes.",
+   "ipa": "ˈsi",
+   "words": [
+    [
+     "Sì.",
+     "yes",
+     "ˈsi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r13",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "Qui c'è tanto freddo. Segga vicino al fuoco...",
+   "translation": "It's so cold here. Sit near the fire...",
+   "ipa": "kwi ˈtʃɛ ˈtan.to ˈfred.do ˈseg.ga viˈtʃi.no‿al ˈfwɔ.ko",
+   "words": [
+    [
+     "Qui",
+     "here",
+     "kwi"
+    ],
+    [
+     "c'è",
+     "there is",
+     "ˈtʃɛ"
+    ],
+    [
+     "tanto",
+     "so much",
+     "ˈtan.to"
+    ],
+    [
+     "freddo.",
+     "cold",
+     "ˈfred.do"
+    ],
+    [
+     "Segga",
+     "sit",
+     "ˈseg.ga"
+    ],
+    [
+     "vicino",
+     "near",
+     "viˈtʃi.no"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "fuoco...",
+     "fire",
+     "ˈfwɔ.ko"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "it is so cold"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r14",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "Aspetti... un po' di vino...",
+   "translation": "Wait... a little wine...",
+   "ipa": "aˈspɛt.ti un ˈpɔ di ˈvi.no",
+   "words": [
+    [
+     "Aspetti...",
+     "wait",
+     "aˈspɛt.ti"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "po'",
+     "bit",
+     "ˈpɔ"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "vino...",
+     "wine",
+     "ˈvi.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "a little"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m10",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "Grazie.",
+   "translation": "Thank you.",
+   "ipa": "ˈgrat.tsje",
+   "words": [
+    [
+     "Grazie.",
+     "thanks",
+     "ˈgrat.tsje"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m11",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "57",
+   "original": "Poco, poco.",
+   "translation": "Just a little.",
+   "ipa": "ˈpɔ.ko ˈpɔ.ko",
+   "words": [
+    [
+     "Poco,",
+     "little",
+     "ˈpɔ.ko"
+    ],
+    [
+     "poco.",
+     "little",
+     "ˈpɔ.ko"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "just a little"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r15",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "57",
+   "original": "A lei.",
+   "translation": "Here you are.",
+   "ipa": "a ˈlɛi",
+   "words": [
+    [
+     "A",
+     "to",
+     "a"
+    ],
+    [
+     "lei.",
+     "you",
+     "ˈlɛi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "for you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r16",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "Così?",
+   "translation": "Like that?",
+   "ipa": "koˈzi",
+   "words": [
+    [
+     "Così?",
+     "like this",
+     "koˈzi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m12",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "59",
+   "original": "Grazie.",
+   "translation": "Thank you.",
+   "ipa": "ˈgrat.tsje",
+   "words": [
+    [
+     "Grazie.",
+     "thanks",
+     "ˈgrat.tsje"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r17",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "(Che bella bambina!)",
+   "translation": "(What a lovely girl!)",
+   "ipa": "ke ˈbɛl.la bamˈbi.na",
+   "words": [
+    [
+     "(Che",
+     "what a",
+     "ke"
+    ],
+    [
+     "bella",
+     "lovely",
+     "ˈbɛl.la"
+    ],
+    [
+     "bambina!)",
+     "girl",
+     "bamˈbi.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m13",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "61",
+   "original": "Ora permetta che accenda il lume. È tutto passato.",
+   "translation": "Now let me light my lamp. It's all over.",
+   "ipa": "ˈo.ra perˈmet.ta ke‿atˈtʃɛn.da il ˈlu.me‿ɛ ˈtut.to pasˈsa.to",
+   "words": [
+    [
+     "Ora",
+     "now",
+     "ˈo.ra"
+    ],
+    [
+     "permetta",
+     "allow",
+     "perˈmet.ta"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "accenda",
+     "I light",
+     "atˈtʃɛn.da"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "lume.",
+     "lamp",
+     "ˈlu.me"
+    ],
+    [
+     "È",
+     "it is",
+     "ɛ"
+    ],
+    [
+     "tutto",
+     "all",
+     "ˈtut.to"
+    ],
+    [
+     "passato.",
+     "passed",
+     "pasˈsa.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "allow me to light"
+    },
+    {
+     "words": [
+      7,
+      8
+     ],
+     "gloss": "all over"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r18",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "64",
+   "original": "Tanta fretta?",
+   "translation": "In such a hurry?",
+   "ipa": "ˈtan.ta ˈfret.ta",
+   "words": [
+    [
+     "Tanta",
+     "so much",
+     "ˈtan.ta"
+    ],
+    [
+     "fretta?",
+     "hurry",
+     "ˈfret.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m14",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "Sì.",
+   "translation": "Yes.",
+   "ipa": "ˈsi",
+   "words": [
+    [
+     "Sì.",
+     "yes",
+     "ˈsi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m15",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "69",
+   "original": "Grazie.",
+   "translation": "Thank you.",
+   "ipa": "ˈgrat.tsje",
+   "words": [
+    [
+     "Grazie.",
+     "thanks",
+     "ˈgrat.tsje"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m16",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "70",
+   "original": "Buona sera.",
+   "translation": "Good evening.",
+   "ipa": "ˈbwɔ.na ˈse.ra",
+   "words": [
+    [
+     "Buona",
+     "good",
+     "ˈbwɔ.na"
+    ],
+    [
+     "sera.",
+     "evening",
+     "ˈse.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "good evening"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r19",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "73",
+   "original": "Buona sera.",
+   "translation": "Good evening.",
+   "ipa": "ˈbwɔ.na ˈse.ra",
+   "words": [
+    [
+     "Buona",
+     "good",
+     "ˈbwɔ.na"
+    ],
+    [
+     "sera.",
+     "evening",
+     "ˈse.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "good evening"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m17",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "75",
+   "original": "Oh! sventata, sventata!",
+   "translation": "Oh! How silly of me, how silly!",
+   "ipa": "ɔ zvenˈta.ta zvenˈta.ta",
+   "words": [
+    [
+     "Oh!",
+     "oh",
+     "ɔ"
+    ],
+    [
+     "sventata,",
+     "scatterbrained",
+     "zvenˈta.ta"
+    ],
+    [
+     "sventata!",
+     "scatterbrained",
+     "zvenˈta.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m18",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "La chiave della stanza dove l'ho lasciata?",
+   "translation": "Where did I leave the key of my room?",
+   "ipa": "la ˈkja.ve ˈdel.la ˈstan.tsa ˈdo.ve lɔ laʃˈʃa.ta",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "chiave",
+     "key",
+     "ˈkja.ve"
+    ],
+    [
+     "della",
+     "of the",
+     "ˈdel.la"
+    ],
+    [
+     "stanza",
+     "room",
+     "ˈstan.tsa"
+    ],
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "l'ho",
+     "it I have",
+     "lɔ"
+    ],
+    [
+     "lasciata?",
+     "left",
+     "laʃˈʃa.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "have I left it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r20",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "84",
+   "original": "Non stia sull'uscio; il lume vacilla al vento.",
+   "translation": "Don't stand in the doorway; the lamp flickers in the wind.",
+   "ipa": "non ˈsti.a sulˈluʃ.ʃo il ˈlu.me vaˈtʃil.la al ˈvɛn.to",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "stia",
+     "stand",
+     "ˈsti.a"
+    ],
+    [
+     "sull'uscio;",
+     "on the doorway",
+     "sulˈluʃ.ʃo"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "lume",
+     "lamp",
+     "ˈlu.me"
+    ],
+    [
+     "vacilla",
+     "flickers",
+     "vaˈtʃil.la"
+    ],
+    [
+     "al",
+     "in the",
+     "al"
+    ],
+    [
+     "vento.",
+     "wind",
+     "ˈvɛn.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m19",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "91",
+   "original": "Oh Dio!",
+   "translation": "Oh God!",
+   "ipa": "ɔ ˈdi.o",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ɔ"
+    ],
+    [
+     "Dio!",
+     "God",
+     "ˈdi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m20",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "93",
+   "original": "torni ad accenderlo.",
+   "translation": "light it again.",
+   "ipa": "ˈtor.ni‿ad atˈtʃɛn.der.lo",
+   "words": [
+    [
+     "torni",
+     "go back",
+     "ˈtor.ni"
+    ],
+    [
+     "ad",
+     "to",
+     "ad"
+    ],
+    [
+     "accenderlo.",
+     "light it",
+     "atˈtʃɛn.der.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "light it again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r21",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "95",
+   "original": "Oh Dio!...",
+   "translation": "Oh God!",
+   "ipa": "ɔ ˈdi.o",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ɔ"
+    ],
+    [
+     "Dio!...",
+     "God",
+     "ˈdi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r22",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "97",
+   "original": "Anche il mio s'è spento!",
+   "translation": "Mine has gone out too!",
+   "ipa": "ˈaŋ.ke‿il ˈmi.o sɛ ˈspɛn.to",
+   "words": [
+    [
+     "Anche",
+     "also",
+     "ˈaŋ.ke"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "mine",
+     "ˈmi.o"
+    ],
+    [
+     "s'è",
+     "has",
+     "sɛ"
+    ],
+    [
+     "spento!",
+     "gone out",
+     "ˈspɛn.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "mine"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m21",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "a",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "a"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m22",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "100",
+   "original": "e la chiave ove sarà?..........",
+   "translation": "and the key, where can it be?",
+   "ipa": "e la ˈkja.ve‿ˈo.ve saˈra",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "chiave",
+     "key",
+     "ˈkja.ve"
+    ],
+    [
+     "ove",
+     "where",
+     "ˈo.ve"
+    ],
+    [
+     "sarà?..........",
+     "will it be",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "where can it be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r23",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "102",
+   "original": "Buio pesto!",
+   "translation": "Pitch dark!",
+   "ipa": "ˈbu.jo ˈpe.sto",
+   "words": [
+    [
+     "Buio",
+     "dark",
+     "ˈbu.jo"
+    ],
+    [
+     "pesto!",
+     "thick",
+     "ˈpe.sto"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "pitch dark"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m23",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "104",
+   "original": "Disgraziata!",
+   "translation": "Wretched me!",
+   "ipa": "diz.gratˈtsja.ta",
+   "words": [
+    [
+     "Disgraziata!",
+     "unlucky (woman)",
+     "diz.gratˈtsja.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r24",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "Ove sarà?...................",
+   "translation": "Where can it be?",
+   "ipa": "ˈo.ve saˈra",
+   "words": [
+    [
+     "Ove",
+     "where",
+     "ˈo.ve"
+    ],
+    [
+     "sarà?...................",
+     "will it be",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "where can it be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m24",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "108",
+   "original": "Importuna è la vicina...",
+   "translation": "Your neighbour is a nuisance...",
+   "ipa": "im.porˈtu.na‿ɛ la viˈtʃi.na",
+   "words": [
+    [
+     "Importuna",
+     "troublesome",
+     "im.porˈtu.na"
+    ],
+    [
+     "è",
+     "is",
+     "ɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "vicina...",
+     "neighbour (woman)",
+     "viˈtʃi.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r25",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "113",
+   "original": "Ma le pare?...",
+   "translation": "Not at all!",
+   "ipa": "ma le ˈpa.re",
+   "words": [
+    [
+     "Ma",
+     "but",
+     "ma"
+    ],
+    [
+     "le",
+     "to you",
+     "le"
+    ],
+    [
+     "pare?...",
+     "it seems",
+     "ˈpa.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "not at all"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m25",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "importuna è la vicina.................",
+   "translation": "your neighbour is a nuisance...",
+   "ipa": "im.porˈtu.na‿ɛ la viˈtʃi.na",
+   "words": [
+    [
+     "importuna",
+     "troublesome",
+     "im.porˈtu.na"
+    ],
+    [
+     "è",
+     "is",
+     "ɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "vicina.................",
+     "neighbour (woman)",
+     "viˈtʃi.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r26",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "119",
+   "original": "Cosa dice, ma le pare!",
+   "translation": "What are you saying? Not at all!",
+   "ipa": "ˈkɔ.za ˈdi.tʃe ma le ˈpa.re",
+   "words": [
+    [
+     "Cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "dice,",
+     "you say",
+     "ˈdi.tʃe"
+    ],
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "le",
+     "to you",
+     "le"
+    ],
+    [
+     "pare!",
+     "it seems",
+     "ˈpa.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "what are you saying"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "not at all"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m26",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "124",
+   "original": "Cerchi.",
+   "translation": "Look for it.",
+   "ipa": "ˈtʃer.ki",
+   "words": [
+    [
+     "Cerchi.",
+     "look",
+     "ˈtʃer.ki"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r27",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "126",
+   "original": "Cerco.",
+   "translation": "I'm looking.",
+   "ipa": "ˈtʃer.ko",
+   "words": [
+    [
+     "Cerco.",
+     "I am looking",
+     "ˈtʃer.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m27",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "130",
+   "original": "Ove sarà?..",
+   "translation": "Where can it be?",
+   "ipa": "ˈo.ve saˈra",
+   "words": [
+    [
+     "Ove",
+     "where",
+     "ˈo.ve"
+    ],
+    [
+     "sarà?..",
+     "will it be",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "where can it be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m28",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "132",
+   "original": "L'ha trovata?...",
+   "translation": "Have you found it?",
+   "ipa": "la troˈva.ta",
+   "words": [
+    [
+     "L'ha",
+     "it you have",
+     "la"
+    ],
+    [
+     "trovata?...",
+     "found",
+     "troˈva.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r28",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "132",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "a",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "a"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r29",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "134",
+   "original": "No!",
+   "translation": "No!",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m29",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "136",
+   "original": "Mi parve...",
+   "translation": "I thought...",
+   "ipa": "mi ˈpar.ve",
+   "words": [
+    [
+     "Mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "parve...",
+     "it seemed",
+     "ˈpar.ve"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I thought"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r30",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "137",
+   "original": "in verità!",
+   "translation": "truly!",
+   "ipa": "in ve.riˈta",
+   "words": [
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "verità!",
+     "truth",
+     "ve.riˈta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "truly"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m30",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "142",
+   "original": "Cerca?",
+   "translation": "Are you looking?",
+   "ipa": "ˈtʃer.ka",
+   "words": [
+    [
+     "Cerca?",
+     "you are looking",
+     "ˈtʃer.ka"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r31",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "144",
+   "original": "Cerco!",
+   "translation": "I'm looking!",
+   "ipa": "ˈtʃer.ko",
+   "words": [
+    [
+     "Cerco!",
+     "I am looking",
+     "ˈtʃer.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

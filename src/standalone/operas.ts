@@ -2150,6 +2150,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Si può?..",
       "editionId": "puccini-si-puo"
+     },
+     {
+      "title": "Non sono in vena.",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Non sono in vena.",
+      "editionId": "puccini-non-sono-in-vena"
      }
     ]
    },
@@ -2198,6 +2204,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 4",
       "id": "Act 4: Sono andati?",
       "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
+     },
+     {
+      "title": "Non sono in vena.",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Non sono in vena.",
+      "editionId": "puccini-non-sono-in-vena"
      }
     ]
    },

@@ -76,6 +76,10 @@ for part in r.findall("part"):
         for n in m.iter("note"):
             if n.find("pitch") is None:
                 continue
+            if n.findtext("notehead") == "x":  # a shouted note has no real pitch: never an accidental
+                a_ = n.find("accidental")
+                if a_ is not None: n.remove(a_)
+                continue
             st, o, alt = pitch(n)
             cur = state.get((st, o), ka[st])
             tied_in = any(x.get("type") == "stop" for x in n.findall("tie"))
@@ -99,23 +103,27 @@ for mi, m in enumerate(pno_part.findall("measure")):
         if e.is_note and e.el.find("pitch") is not None and not e.grace:
             seq.append((mi, e.onset, e))
 seq.sort(key=lambda x: (x[0], x[1]))
+MLEN = {}
+for mi_, m_ in enumerate(pno_part.findall("measure")):
+    MLEN[mi_] = max([e_.onset + int(e_.el.findtext("duration") or 0) for e_ in parse(m_) if e_.is_note and e_.el.find("grace") is None] or [0])
 for k, (mi, on, e) in enumerate(seq):
     n = e.el
     if not any(x.get("type") == "start" for x in n.findall("tie")):
         continue
     # the first later onset that has this pitch in this staff; there, prefer the note in the same voice
     # (when two voices sound the same note, the tie belongs to its own voice)
-    cands, first = [], None
-    for mj, on2, e2 in seq[k + 1:]:
-        if mj > mi + 2: break
-        if (mj, on2) <= (mi, on) or e2.staff != e.staff or pitch(e2.el) != pitch(n): continue
-        if first is None: first = (mj, on2)
-        if (mj, on2) != first: break
-        cands.append(e2)
+    # a tie goes to a note of the same pitch that starts exactly where this one ends (same voice first); failing that,
+    # the next one of this pitch in the same voice, then the first one in the staff (within two bars)
+    later = [(mj, on2, e2) for mj, on2, e2 in seq[k + 1:] if mj <= mi + 2 and (mj, on2) > (mi, on) and e2.staff == e.staff and pitch(e2.el) == pitch(n)]
+    end = on + int(n.findtext("duration") or 0)
+    at_end = [x[2] for x in later if (x[0] == mi and x[1] == end) or (x[0] == mi + 1 and x[1] == 0 and end >= MLEN[mi])]
+    same = [x[2] for x in later if x[2].voice == e.voice]
+    if at_end: cands = sorted(at_end, key=lambda c: c.voice != e.voice)
+    elif same: cands = [same[0]]
+    else: cands = [x[2] for x in later if (x[0], x[1]) == (later[0][0], later[0][1])] if later else []
     if cands:
         free = [c for c in cands if not any(x.get("type") == "stop" for x in c.el.findall("tie"))] or cands
-        same = [c for c in free if c.voice == e.voice]
-        e2 = (same or free)[0]
+        e2 = free[0]
         if True:
             if not any(x.get("type") == "stop" for x in e2.el.findall("tie")):
                 kids = list(e2.el); d_ = e2.el.find("duration")

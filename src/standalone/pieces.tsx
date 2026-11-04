@@ -199,6 +199,32 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-non-sono-in-vena": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "G♭ major (6 flats); B major (5 sharps) from bar 7 (figure 25); D major (2 sharps) from bar 18 (Lento, “Chi è là!?”); G major (1 sharp) from bar 45 (Andante moderato, figure 26); B♭ major (2 flats) from bar 76 (Un poco più mosso, “sventata”)",
+      time: "3/8 for the first bar; 2/4 from bar 2; 3/4 from bar 14; 4/4 (C) from bar 20; 3/4 from bar 25 (Allegro agitato); 2/4 from bar 38 (“Ed ora come faccio?”)",
+      tempo: "Printed metronome marks: Andante moderato ♩ = 88 (bar 45) and Un poco più mosso ♩ = 126 (bar 76). Chosen, as no number is printed: bar 1 ♩. = 108 (the Allegro vivo that ends “Al Quartiere Latin” carried on: this bar is its last); Allegretto (a tempo, bar 2, and again at figure 25) ♩ = 116 (the printed Allegretto of “Al Quartiere Latin”, to which the a tempo returns); Lento (bar 18) ♩ = 52 (the value of the Lento in “Si può?”); Allegro agitato (bar 25) ♩ = 126 (a tenth faster than the Allegretto, to the nearest metronome mark); Allegretto sostenuto (bar 40) ♩ = 104 (the Allegretto held back a tenth); Lento a piacere (bar 42) ♩ = 52 (the earlier Lento); I. Tempo (come prima, bar 67) ♩ = 88 (the Andante moderato it returns to). The a piacere bars, rall. and rit. are left as nuances, the beat kept",
+    },
+    notePlaceholder: "Mimì knocks for a light, faints, leaves, and comes back for her lost key; both candles go out",
+    about: (
+      <>
+        <p>
+          Score: “Non sono in vena”, Mimì’s first entrance, Act 1 (vocal score pages 53-63, from the last bar of page 53 to the end of page 63, 155 bars),
+          from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines
+          and the piano each read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected.
+          Only the Italian words are kept, with the print's spellings; Rodolfo’s “Ah!”, printed without a notehead, keeps its word. The only printed
+          metronome marks are the Andante moderato’s ♩ = 88 and the Un poco più mosso’s ♩ = 126; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
