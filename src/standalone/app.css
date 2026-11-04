@@ -8553,3 +8553,59 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
 .words-view .w-line.script > .w-gut { min-width: 0; max-width: 100%; overflow: hidden; }
 .words-view .w-line.script .w-who { max-width: 100%; }
 .words-view .w-line.script .w-who-name { min-width: 0; max-width: 100%; flex: 0 1 auto; display: block; }
+
+/* the rail: under the lit role only, the piece last practised in it and a quiet way back to it */
+.rail-item { display: grid; justify-items: center; width: 100%; min-width: 0; }
+.rail-last {
+  box-sizing: border-box;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  width: 100%;
+  max-width: 88px;
+  min-width: 0;
+  padding: 6px 0 8px;
+  text-align: center;
+}
+.rail-last-label { color: var(--ink-muted); font: 400 11px/1.25 var(--font-sans); }
+.rail-last-title {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--ink);
+  font: 500 12px/1.3 var(--font-sans);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rail-last-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px;
+  margin-top: 4px;
+  padding: 0 10px 0 8px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+  color: var(--ink);
+  font: 600 12px/1 var(--font-sans);
+  cursor: pointer;
+  transition: background-color var(--duration-move) var(--ease-standard);
+}
+.rail-last-go svg { width: 12px; height: 12px; flex: none; }
+.rail-last-go:hover { background: var(--canvas); }
+.rail-last-go:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* wherever the role cards are wide (the desktop sidebar, a full-width phone menu), it lines up under the
+   role's name: the label, the piece on one line, then the way back. Keyed to the card's own width, not the screen's. */
+.rail-item { container-type: inline-size; }
+@container (min-width: 200px) {
+  .rail-last {
+    justify-items: start;
+    max-width: none;
+    padding: var(--space-1) var(--space-3) var(--space-2) calc(var(--space-3) * 2 + 56px);
+    text-align: left;
+  }
+  .rail-last-label { font-size: 12px; }
+  .rail-last-title { font-size: 14px; }
+  .rail-last-go { min-height: 36px; margin-top: 6px; padding: 0 14px 0 12px; font-size: 13px; }
+}

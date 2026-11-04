@@ -433,11 +433,12 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
         {all.map(({ opera, ch }) => {
           const r = { opera: opera.id, character: ch.id };
           const lit = onRole(opera.id, ch.id);
+          // the lit role only: the piece last practised in it, and a way straight back to where you stopped
+          const lp = lit ? lastPracticedIn(ctx, opera, ch) : null;
           return (
+            <div key={`${opera.id}:${ch.id}`} role="listitem" className="rail-item">
             <button
-              key={`${opera.id}:${ch.id}`}
               type="button"
-              role="listitem"
               className="rail-role"
               aria-current={lit ? "page" : undefined}
               data-tone={voiceTone(ch.voice)}
@@ -460,6 +461,19 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
                 })()}
               </span>
             </button>
+            {lp && (
+              <div className="rail-last">
+                <span className="rail-last-label">Last practiced</span>
+                <span className="rail-last-title" lang={opera.lang} title={lp.piece.title}>
+                  {lp.piece.title}
+                </span>
+                <button type="button" className="rail-last-go" aria-label={`Continue ${lp.piece.title}`} onClick={() => openPiece(ctx, lp, "resume")}>
+                  <Play />
+                  <span>Continue</span>
+                </button>
+              </div>
+            )}
+            </div>
           );
         })}
         <button type="button" className="rail-add" aria-label="Add a role" title="Add a role" onClick={() => go({ screen: "explore", by: "voice" })}>
@@ -2394,6 +2408,24 @@ function savedPlaces(): Record<string, HomeRef> {
     /* storage unavailable */
   }
   return out;
+}
+/**
+ * The piece last practised in one role, for the rail: the practice screen's saved place in this role with
+ * the latest time (as Home's "Pick up where you left off" chooses across all roles), else the app's last
+ * piece if it belongs to this role. Nothing when the role has never been practised.
+ */
+function lastPracticedIn(ctx: Ctx, opera: Opera, ch: Character): HomeRef | null {
+  const recs = savedPlaces();
+  const pre = `${opera.id}:${ch.id}:`;
+  let best: HomeRef | null = null;
+  for (const k in recs) {
+    const r = recs[k];
+    if (k.startsWith(pre) && r.piece.editionId && r.t && (!best || r.t > (best.t ?? 0))) best = r;
+  }
+  if (best) return best;
+  const l = ctx.last;
+  const pc = l && l.opera === opera.id && l.character === ch.id ? ch.pieces[l.piece] : undefined;
+  return l && pc?.editionId ? (recs[pre + pieceKey(pc)] ?? { opera, ch, piece: pc, index: l.piece }) : null;
 }
 /** open a piece, telling the practice screen whether to resume (place, loop, speed, mix) or start clean */
 function openPiece(ctx: Ctx, r: HomeRef, mode: "resume" | "start") {
