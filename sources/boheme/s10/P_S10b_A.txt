@@ -1,0 +1,177 @@
+# S10b reader A, piano. Bars numbered from 1 = first bar of p.89.
+# page 089 system 1 starts bar 1
+# bar 1: 2/8, F major (1 flat), ALL.º FOCOSO continues
+1 RH1: Eb5+G5:e F5+Ab5:e
+1 LH1: G2+Eb3:e F2+Eb3:e
+2 RH1: dyn:ff G5+Bb5:e Bb3:s* Bb3:s*
+2 LH1: Eb2+Eb3:e Bb1+Bb2:e*
+# bar 2: ff printed between the staves (applies to both hands)
+3 RH1: Eb4:e> Bb3:s* Bb3:s*
+3 LH1: Eb2+Eb3:e* Bb2:e*
+4 RH1: C4:s* C4:s* Bb3:s* Ab3:s*
+4 LH1: Ab1+Ab2:e* C2+C3:e*
+5 RH1: Eb4:e> Bb3:s* Bb3:s*
+5 LH1: Eb2+Eb3:e* Bb1+Bb2:e*
+# bar 5: a short dashed line follows the Bb1 (low octave continuation?), ignored
+6 RH1: Eb4:e> Bb3:s* Bb3:s*
+6 LH1: Eb2+Eb3:e* Bb2:e*
+# page 089 system 2 starts bar 7
+7 RH1: C4:s* C4:s* Bb3:s* Ab3:s*
+7 LH1: Ab1+Ab2:e* C2+C3:e*
+8 RH1: Eb4:e* G4:s* Eb4:s*
+8 LH1: Eb2+Eb3:e* C3+C4:e*
+9 RH1: C4:e* Eb4:s* C4:s*
+9 LH1: Bb2+Bb3:e* Ab2+Ab3:e*
+10 RH1: Ab3:e* C4:s* Ab3:s*
+10 LH1: G2+G3:e* F2+F3:e*
+11 RH1: r:q
+11 LH1: F3:q>~
+11 LH2: Eb2+Eb3:e* D2+D3:e*
+# bars 11-13: RH staff empty (no rest printed)
+12 RH1: r:q
+12 LH1: F3:e F3:s> G3:s>
+12 LH2: C2+C3:e* Bb1+Bb2:e*
+13 RH1: r:q
+13 LH1: Ab3:s> Bb3:s> Bn3:s> C4:s>
+13 LH2: Ab1+Ab2:e* F1+F2:e*
+# page 090 system 1 starts bar 14
+# bar 14: rehearsal figure (4)
+14 RH1: Eb5:e> Bb4:s* Bb4:s*
+14 RH2: Db4:q^
+14 LH1: Eb1+Eb2:e* Bb1+Bb2:e*
+# bars 14-15, 17-18: RH lower-voice Db4 has a large open V (marcato) below
+15 RH1: Eb5:e> Bb4:s* Bb4:s*
+15 RH2: Db4:q^
+15 LH1: Eb2+Eb3:e* Bb2+Bb3:e*
+16 RH1: C5:s* C5:s* Bb4:s* Ab4:s*
+16 RH2: C4:e* Eb4:e*
+16 LH1: Ab1+Ab2:e* C2+C3:e*
+17 RH1: Eb5:e> Bb4:s* Bb4:s*
+17 RH2: Db4:q^
+17 LH1: Eb1+Eb2:e* Bb1+Bb2:e*
+18 RH1: Eb5:e> Bb4:s* Bb4:s*
+18 RH2: Db4:q^
+18 LH1: Eb2+Eb3:e* Bb2+Bb3:e*
+19 RH1: C5:s* C5:s* Bb4:s* Ab4:s*
+19 RH2: C4:e* r:e
+19 LH1: Ab1+Ab2:e* C2+C3:e*
+# page 090 system 2 starts bar 20
+20 RH1: Eb5:e* s:e
+20 RH2: Db4:e* s:e
+20 LH1: s:e dyn:p Bb2:s* Bb2:s*
+20 LH2: Eb2+Eb3:e* Bb1:e*
+# bar 20: nothing printed in the RH after the first eighth (no rests); p at the LH sixteenths
+21 RH1: r:q
+21 LH1: Eb3:e* Bb3:s* Bb3:s*
+21 LH2: Eb2:e* Bb2:e*
+# bar 21: RH staff empty (no rest printed)
+22 RH1: Eb4:e* Bb4:s* Bb4:s*
+22 LH1: Eb3:e* Bb3:e*
+23 RH1: Eb5:e* Bb5:s* Bb5:s*
+23 LH1: Eb4:e* r:e
+24 RH1: Eb7:e* Bb6:s* Bb6:s*
+24 LH1: r:q
+# bars 24-25: 8va line over the RH (sounding pitches written), starts bar 24, ends after the Eb in bar 25
+25 RH1: Eb7:e* r:e
+25 LH1: r:e Eb1+Eb2:e*
+# bar 25 ends with double bar: 4 flats, 3/4
+# page 090 system 3 starts bar 26
+# bar 26: 3/4, A-flat major (4 flats), LO STESSO MOVIMENTO, "legato e un poco sostenuto", p
+26 RH1: r:e dyn:p hp:< Eb4:e( F4:h)~ hp:end
+26 LH1: r:e Eb3+C4~:e( F3+C4:q F#3+C4:q
+26 LH2: Ab1+Ab2:h( An1+An2:q
+# bar 26 (and 28): a square bracket joins the RH Eb4 to the LH Eb3+C4 chord (vertical line with ticks across the staves)
+# bar 26: hairpin < printed between the staves from the Eb4 to the bar line
+27 RH1: hp:> F4:e( Db5:e C5:e Bb4:e) F4:s( Ab4:s G4:s Bb4:s) hp:end
+27 LH1: G3+Db4:e) r:e r:q s:q
+27 LH2: Bb1+Bb2:h) Eb3+G3+Db4:ea r:e
+# bar 27: hairpin > between the staves across the bar
+28 RH1: r:e hp:< Eb4:e( F4:h)~ hp:end
+28 LH1: r:e Eb3+C4~:e( F3+C4:q) F#3+C4~:e( G3+C4:e)
+28 LH2: Ab1+Ab2:h( An1+An2:q
+# bar 28: as bar 26 (bracket joining RH Eb4 and LH chord); in LH upper voice small slurs Eb3-F3 and F#3-G3, ties on C4; long bass slur continues to bar 29
+# page 091 system 1 starts bar 29
+29 RH1: hp:> F4:e( F5:e Eb5:e Db5:e) F4:s( Ab4:s G4:s Bb4:s) hp:end
+29 LH1: Ab3+Db4:e r:e r:q s:q
+29 LH2: Bb1+Bb2:h) Eb3+G3+Db4:ea r:e
+# bars 27 and 29: a small dot printed above the end of the sixteenth beam (near the bar line) - not transcribed
+30 RH1: r:e hp:< Ab4+C5+Eb5+Ab5:e( Bb4+Bb5:q F5+F6:q) hp:end
+30 LH1: Ab1+Ab2:e Ab3+Gb4~:e( Bb3+Gb4:q) C4+Gb4:q
+31 RH1: hp:> g:Eb6:s[ g:F6:s Eb5+F5~+Eb6:e]( Db5+F5+Db6:e Ab4+Ab5:e F4+F5:e)~ F4+F5:s C6:s( Gn5:s C6:s*) hp:end
+31 LH1: Db4+Ab4:q~ Db4+Ab4:e r:e Eb3+Gn3+Db4:e* r:e
+# bar 31: two small 16th grace notes (Eb6 F6, beamed) slurred to the first chord; long slur from that chord to the F4+F5 chord; tie on F5 between the first two chords
+# page 091 system 2 starts bar 32
+32 RH1: r:e hp:< Eb4:e( F4:h)~ hp:end
+32 LH1: r:e Eb3+C4~:e( F3+C4:q F#3+C4:q)(
+32 LH2: Ab1+Ab2:h( An1+An2:q
+# bar 32: bracket joining RH Eb4 and LH chord as in bar 26; slur Eb3..F#3, then slurs (one per note) from F#3+C4 to the next chord
+33 RH1: hp:< F4:e F#4:e( G4:h)~ hp:end
+33 LH1: G3+Db4:h) G#3+Dn4:q(
+33 LH2: Bb1+Bb2:h) Bn1+Bn2:q(
+34 RH1: G4:e dyn:f word:ril. G5:e> F5:e> Eb5:e> word:a_tempo g:Eb4:e( Dn5:s*) C5:s* Bb4:s* An4:s*
+34 LH1: An3+Eb4:e) s:e s:h
+34 LH2: C2+C3:h) An2+G3:q
+# bar 34: f ril. under the G5; "a tempo" under the sixteenths; grace note before Dn5 is a small slashed eighth (acciaccatura), read as Eb4 (unsure: glyph blurred), slurred to Dn5
+# page 092 system 1 starts bar 35
+35 RH1: Dn5:e* G4:e hp:> Bb4:q- g:An4:s[ g:Bb4:s An4:s]( G#4:s An4:s Dn4:s) hp:end
+35 RH2: s:q Eb4:e En4:e F#4:e r:e
+35 LH1: Dn4:q Dn4:q C4:q
+35 LH2: Bb1+Bb2:q C2+C3:q Dn2+Dn3:q
+# bar 35: brackets join RH notes to the LH upper voice (Dn4, Dn4) at beats 1 and 2 (LH upper-voice notes printed in the bass staff, stems up); RH: two small 16th grace notes An4 Bb4 slurred to An4; hairpin > from beat 2 to the bar line
+# page 092 system 1 bar 36
+36 RH1: dyn:p Bb3+Dn4+G4:e* r:e r:e Dn4:e* G4:e* Dn5:e*
+36 LH1: G1+G2:e Dn3:e* G3:e* r:e r:q
+# bar 36: the first chord is a cross-staff chord: one stem (flag up, staccato) joins RH Dn4+G4 to the Bb3 printed in the bass staff - assigned to the RH
+37 RH1: F4:e.( G4:s F4:e) C4:e* G4:e* Dn4:e*
+37 RH2: dyn:pp Ab3+C4:h( Bb3:e) r:e
+37 LH1: Bb2+F3:e* r:e r:q G2+Dn3:e* r:e
+# page 092 system 2 starts bar 38
+38 RH1: F4:e.>( G4:s F4:q)~ F4:e r:e
+38 RH2: Ab3+C4:h~ Ab3+C4:e r:e
+38 LH1: Bb2+F3:e* r:e r:e F2:e* Bb1:e* F2:e*
+39 RH1: F4:e.>( G4:s F4:e) C4:e* G4:e* Dn4:e*
+39 RH2: Ab3+C4:h( Bb3:e) r:e
+39 LH1: Bb2+F3:e* r:e r:q G2+Dn3:e* r:e
+40 RH1: F4:e.( G4:s F4:e) C4:e* G3+Eb4+F4:q-
+40 RH2: Ab3+C4:q~ Ab3+C4:e r:e s:q
+40 LH1: Bb2+F3:e* r:e r:q Eb2+Eb3:ea* r:e
+# page 093 system 1 starts bar 41
+41 RH1: r:e hp:< Eb4:e( F4:h)~ hp:end
+41 LH1: r:e Eb3+C4~:e( F3+C4:q) F#3+C4:q(
+41 LH2: Ab1+Ab2:h( An1+An2:q(
+# bar 41: bracket joins RH Eb4 to LH Eb3+C4 (as bar 26)
+42 RH1: hp:< F4:e F#4:e( G4:h)~ hp:end
+42 LH1: G3+Db4:h) G#3+Dn4:q(
+42 LH2: Bb1+Bb2:h) Bn1+Bn2:q(
+43 RH1: G4:e hp:< A#3+En4+G#4:e* Bn3+F4+An4:e* B#3+F#4+A#4:e* C#4+Gn4+Bn4:e* C##4+G#4+B#4:e* hp:end
+43 LH1: An3+Eb4:e) s:e s:h
+43 LH2: C2+C3:e) C#2+C#3:e* Dn2+Dn3:e* D#2+D#3:e* En2+En3:e* E#2+E#3:e*
+# bar 43 ends with double bar: key change to 4 sharps (E major); time stays 3/4
+# page 093 system 2 starts bar 44
+# bar 44: E major (4 sharps), 3/4; rehearsal figure (5); "p leggero" between the staves
+44 RH1: dyn:p E4+A4+C#5:e> r:s F#6:s( E5+A5+C#6:e*) F#6:e* E5+A5+C#6:e* F#6:e*
+44 LH1: F#2+F#3:e* r:e B1+B2:e* r:e F#2+F#3:e* r:e
+45 RH1: E5+A5+C#6:e. F#6:s( E5+A5+C#6:e*) F#6:e* E5+A5+C#6:e* F#6:e*
+45 LH1: B2+B3:e* r:e F#3+F#4:e* r:e B2+B3:e* r:e
+# bar 45: first chord dotted eighth beamed to the F#6 sixteenth
+46 RH1: dyn:f g:D#6:e( E5+A5+C#6:e*) E5+G#5+B5:e-~ hp:> E5+G#5+B5:e B4+E5+G#5:q- G#4+B4+E5:e* hp:end
+46 LH1: dyn:sf E1+B1+E2:h>~ E1+B1+E2:e r:e
+# bar 46: grace note a small slashed eighth (acciaccatura) slurred to the first chord; f below the RH; sf before the LH chord; the hairpin > runs from the third chord to the end of the bar
+# page 094 system 1 starts bar 47
+47 RH1: hp:> g:D#5:e( E4+A4+C#5:e*) E4+G#4+B4:e-~ E4+G#4+B4:e hp:end r:e r:q
+47 LH1: r:q r:e B3+E4+G#4:q- G#3+B3+E4:e*
+# bar 47: grace a small slashed eighth slurred to the first chord; tenuto on the second chord, tied to the third; hairpin > under the first three chords
+48 RH1: dyn:p E5+A5+C#6:e.> F#6:s( E5+A5+C#6:e*) F#6:e* E5+A5+C#6:e* F#6:e*
+48 LH1: r:e F#1+F#2:e* r:e B1+B2:e* r:e F#2+F#3:e*
+49 RH1: E5+A5+C#6:e.> F#6:s( E5+A5+C#6:e*) F#6:e* E5+A5+C#6:e* F#6:e*
+49 LH1: r:e B2+B3:e* r:e F#3+F#4:e* r:q
+# page 094 system 2 starts bar 50
+50 RH1: dyn:f g:D#6:e( E5+A5+C#6:e*) E5+G#5+B5:e-~ hp:> E5+G#5+B5:e B4+E5+G#5:q- G#4+B4+E5:e* hp:end
+50 LH1: dyn:sf E1+B1+E2:h>~ E1+B1+E2:e r:e
+# bar 50: as bar 46
+51 RH1: hp:> g:D#5:e( E4+A4+C#5:e*) E4+G#4+B4:e-~ E4+G#4+B4:e hp:end r:e r:q
+51 LH1: r:q r:e B3+E4+G#4:q- G#3+B3+E4:e*
+# bar 51: as bar 47
+52 RH1: dyn:p word:Sostenendo_un_poco g:G#5:e[ C#6+E6:e.]( B5+D#6:s A5+C#6:e*) B5+D#6:e* C#6+E6:e* A5+C#6:e*
+52 LH1: A1+A2:q* A3+C#4+E4:q* A1+A2:q*
+# bar 52: "p Sostenendo un poco" between the staves; grace (small slashed eighth) slurred to the first chord; long slur from the first chord to the third chord
