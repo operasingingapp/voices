@@ -46,6 +46,7 @@ def notes_for(tokens, staff, voice):
             if m2.group(2): dur += dur // 2
             for side, chord in (("start", A_), ("stop", B_)):
                 for k, p in enumerate(chord.split("+")):
+                    ptie_t = p.endswith("~"); p = p.rstrip("~")
                     n = ET.Element("note")
                     if k > 0: ET.SubElement(n, "chord")
                     mm = re.fullmatch(r"([A-G])(#|b|n|##|bb)?(\d)", p)
@@ -54,7 +55,7 @@ def notes_for(tokens, staff, voice):
                     if alt: ET.SubElement(pe, "alter").text = str(alt)
                     ET.SubElement(pe, "octave").text = mm.group(3)
                     ET.SubElement(n, "duration").text = str(dur // 2)
-                    tie_here = side == "stop" and "~" in tfl
+                    tie_here = side == "stop" and ("~" in tfl or ptie_t)
                     if tie_here: ET.SubElement(n, "tie", type="start")
                     ET.SubElement(n, "voice").text = str(voice); ET.SubElement(n, "type").text = typ
                     if m2.group(2): ET.SubElement(n, "dot")
@@ -74,7 +75,7 @@ def notes_for(tokens, staff, voice):
         noslash = tok.startswith("G:")
         if grace: tok = tok[2:]
         pitches, rest = tok.split(":", 1)
-        m = re.match(r"([whqesxy])(\.?)(3?)(?:\{(\d+):(\d+)\})?([~*^>!()ta-]*)$", rest)
+        m = re.match(r"([whqesxy])(\.?)(3?)(?:\{(\d+):(\d+)\})?([~*^>!()tam-]*)$", rest)
         if not m: raise SystemExit("bad token " + tok)
         typ, dur = TYPES[m.group(1)]
         if m.group(2): dur += dur // 2
@@ -111,6 +112,7 @@ def notes_for(tokens, staff, voice):
                 if "(" in fl: ET.SubElement(nt, "slur", type="start", number=str(6 + voice))
                 if "!" in fl: ET.SubElement(nt, "fermata", type="upright")
                 if "t" in fl: ET.SubElement(ET.SubElement(nt, "ornaments"), "trill-mark")
+                if "m" in fl: ET.SubElement(ET.SubElement(nt, "ornaments"), "inverted-mordent")
                 art = [x for x, c in (("staccato", "*"), ("strong-accent", "^"), ("accent", ">"), ("tenuto", "-")) if c in fl]
                 if art:
                     a = ET.SubElement(nt, "articulations")
