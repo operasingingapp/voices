@@ -1,0 +1,82 @@
+# S8 "Ehi! Rodolfo!" pages 75-77, piano. Reader A. 2/4, D major (2 sharps) throughout; bars 1-28.
+# page 075 system 1 starts bar 1
+# bar 1: "col canto" printed between the staves (singers a piacere)
+1 RH1: word:col_canto r:h
+1 LH1: r:h
+2 RH1: r:h
+2 LH1: r:h clef:G
+# bar 3: double bar before it; ALL.tto come prima, quarter = 100 (voice and piano)
+# bar 3 LH: treble clef (clef change printed at end of bar 2); triplet "3" over the 16th-rest/16th/8th/8th group
+3 RH1: r:h
+3 LH1: r:q dyn:p r:s3 D5:s3* D5:e3* C#5:e3*
+# bar 4 RH: two triplet groups ("3" printed over each): 16th rest + 16th + 8th + 8th, then three 8ths; all staccato
+4 RH1: r:s3 F#5+D6:s3* F#5+D6:e3* A5+E6:e3* D6+F#6:e3* E6+G6:e3* F#6+A6:e3*
+4 LH1: C5:h~
+# page 075 system 2 starts bar 5
+# bar 5 RH: printed as two groups of 8th + dotted 8th + 16th (would be 3/4 in 2/4); no "3" printed here, read as
+# implied triplets continuing bar 4 (values scaled {3:2}). Grace chord G6+B6 (slashed 8th) slurred to first chord.
+5 RH1: g:G6+B6:e( F#6+A6:e3*) E6+G6:e.3* D6+F#6:s3* D6+F#6:e3* A5+E6:e.3* F#5+D6:s3*
+5 LH1: C5:h~
+6 RH1: F#5+D6:e* r:e r:q
+6 LH1: C5:h~
+7 RH1: r:h
+7 LH1: C5:h~
+8 RH1: r:h
+8 LH1: C5:e r:e r:q clef:F
+# page 076 system 1 starts bar 9
+9 RH1: r:h
+9 LH1: r:h
+# bar 10 LH: "pp stacc."; the curve with "3" under the first three notes read as the triplet bracket (not a slur)
+10 RH1: r:h
+10 LH1: dyn:pp word:stacc. r:s3 G1+G2:s3* G1+G2:e3* F#1+F#2:e3* F1+F2:e* r:e
+11 RH1: r:h
+11 LH1: r:h
+# bar 12: one stem (flag up, in RH staff) joins C4 (RH staff) with E3+G3 (LH staff): cross-staff chord given to RH;
+# LH lower voice E1+E2 stem down. pp printed between the staves.
+12 RH1: r:q dyn:pp E3+G3+C4:e* r:e
+# MARKS bar 12 LH1: dyn:pp (pp printed between the staves)
+12 LH1: r:q dyn:pp E1+E2:e* r:e
+# page 076 system 2 starts bar 13
+13 RH1: r:h
+13 LH1: r:h
+14 RH1: r:h
+14 LH1: r:h
+# bars 15-16: decrescendo hairpin over the RH (start bar 15, end bar 16)
+15 RH1: hp:> B3:h>~
+15 LH1: r:h
+16 RH1: B3:h~ hp:end
+16 LH1: r:h
+# page 076 system 3 starts bar 17
+# bar 17: "pp a tempo" (piano); tie from bar 16 ends on the first B3
+17 RH1: B3:e r:e dyn:pp word:a_tempo D#4+E4+B4:e* r:e
+# MARKS bar 17 LH1: dyn:pp (pp a tempo printed between the staves)
+17 LH1: r:q dyn:pp G#3:e* r:e
+18 RH1: D4+F#4+C5:e* r:e r:q
+18 LH1: A3:e* r:e r:q
+19 RH1: r:q E#4+G#4+D5:e* r:e
+19 LH1: r:q B3:e* r:e
+# bar 20: rehearsal figure (40)
+20 RH1: F#4+A4+D5:e* r:e r:q
+# JUDGE bar 20 LH: Y - f printed in the LH staff just left of the 2nd note (D4), after the first C4; not between the staves, so LH only
+20 LH1: C4:e* dyn:f D4:e* E4:e* D4:e*
+# page 077 system 1 starts bar 21
+21 RH1: r:h
+21 LH1: hp:> C4:e* B3:e* A3:e* D3:e* hp:end
+22 RH1: dyn:pp D4+G4:e* r:e C4+E4+G4:e* r:e
+# MARKS bar 22 LH1: dyn:pp (pp printed between the staves)
+22 LH1: r:e dyn:pp B3:e* r:e A3:e*
+23 RH1: B3+D4+G4:e* r:e B3+D4+G4:e* r:e
+23 LH1: r:e G3:e* r:e F#3:e*
+24 RH1: D4+G4+B4:e* r:e E#4+B4+D5:e* r:e
+24 LH1: r:e E3:e* r:e G#3:e*
+# page 077 system 2 starts bar 25
+25 RH1: F#4+C5+D5:e* r:e r:q
+25 LH1: r:e A3:e* r:q
+26 RH1: r:q dyn:pp E#4+B4+D5:e* r:e
+# MARKS bar 26 LH1: dyn:pp (pp printed between the staves)
+26 LH1: r:q r:e dyn:pp G#3:e*
+27 RH1: F#4+C5+D5:e* r:e r:q
+27 LH1: r:e A3:e* r:q
+# bar 28: piano rests; double bar after it, then key change to A major (3 sharps) and C (4/4) for the next section
+28 RH1: r:h
+28 LH1: r:h

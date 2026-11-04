@@ -1,0 +1,226 @@
+# S7 sung lines, reader A. Bar 1 = p.69 sys 3 bar 3 (figure 35). Singers: I = Mimì, R = Rodolfo.
+# page 069 system 3 starts inside chunk at bar 1 (bar 1 = 3rd bar of the system); C, 4 flats
+# bar 1: Mimì "(sempre seduta)" con semplicità, p
+# JUDGE bar 1 I: Y - lyric printed "Si." without accent (plain i-dot, same as "Mi")
+1 I: r:h dyn:p word:con_semplicità E4:q "Si." r:e F#4:e "Mi"
+1 R: r:w
+# bar 1 end: double bar, 2 sharps (D major), 2/4
+# page 070 system 1 starts bar 2
+# bar 2: AND.te LENTO, quarter = 40, 2/4, D major; hairpin < over Bb4-E5 (slurred)
+2 I: G4:e "chia-" A4:e "ma-" hp:< Bb4:e "no" E5:e "Mi-" hp:end
+2 R: r:h
+3 I: D5:q "mì" F5:e. "ma_il" F5:s "mio"
+3 R: r:h
+# JUDGE bar 4 I: X - "me" and "è" printed together under the dotted E5 (elision), "Lu" under the E5 16th
+4 I: G#4:q "no-" E5:e. "me_è" E5:s "Lu-"
+4 R: r:h
+# JUDGE bar 5 I: X - "ci-" under E5, "a" under A4 with tie (arc below) to the second A4
+5 I: E5:e "ci-" A4:e~ "a" A4:e r:e
+5 R: r:h
+# page 070 system 2 starts bar 6
+6 I: r:e A4:e "La" A4:e "sto-" A4:e "ria"
+6 R: r:h
+7 I: A4:e "mia" A4:e "è" A4:e "bre-" A4:e~ "ve"
+7 R: r:h
+8 I: A4:e r:s A4:s "A" A4:e "te-" A4:e "la_o_a"
+8 R: r:h
+9 I: A4:e "se-" B4:s "ta" G4:s "ri-" E4:s "ca-" E4:s "mo_in" E4:s "ca-" E4:s "sa_e"
+9 R: r:h
+# page 070 system 3 starts bar 10
+# bar 10: fermata on the first eighth rest
+10 I: E4:e "fuo-" E4:e "ri..." r:e! r:e
+10 R: r:h
+11 I: G4:e "Son" A4:e "tran-" Bb4:e "quil-" E5:e "la_e"
+11 R: r:h
+12 I: D5:e "lie-" D5:s "ta" r:x D5:x "ed" F5:e. "è" G#4:s "mio"
+12 R: r:h
+13 I: G#4:e "sva-" G#4:s "go" G#4:s "far" G#4:e. "gi-" E5:s "gli_e"
+13 R: r:h
+# page 070 system 4 starts bar 14
+# bar 14: rall:........
+# JUDGE bar 14 I: X - "se....." printed under the first A4 eighth (3rd note), tied to the second
+14 I: word:rall. E5:s "ro-" A4:s A4:e~ "se" A4:e r:s A4:s "Mi"
+14 R: r:h
+# bar 14 end: double bar, C (4/4)
+# bar 15: AND.te CALMO, quarter = 54, C; dolcemente
+15 I: word:dolcemente A4:q "piac-" F#4:q "cion" E4:q "quel-" G4:q "le"
+15 R: r:w
+16 I: F#4:q "co-" A4:q "se" r:e3 B4:e3 "che_han" C#5:e3 "sì" D5:e3 "dol-" B4:e3 "ce" D5:e3 "ma-"
+16 R: r:w
+# page 071 system 1 starts bar 17
+# bar 17: breath mark (comma) after "a,"
+# JUDGE bar 17 I: Y - breath comma printed right after the 2nd note (C#5 eighth "a,")
+17 I: C#5:q "lì-" C#5:e, "a," C#5:e "che" D5:e "par-" E5:e "la-" F#5:e. "no" G#5:s "d'a-"
+17 R: r:w
+# bar 18: rit.
+18 I: E5:h "mor," F#5:q "di" word:rit. A5:e. "pri-" G#5:s "ma-"
+18 R: r:w
+# bar 19: hairpin > over the held E5
+# JUDGE bar 19 I: X - "re," printed under the E5 eighth (3rd note); the arc E5 16th-E5 eighth carries a new syllable so it is not a tie
+19 I: G#5:s "ve-" E5:s E5:e~ "re," hp:> E5:h~ E5:e hp:end r:e
+19 R: r:w
+# bar 19 end: double bar, 2/4
+# page 071 system 2 starts bar 20
+20 I: r:q r:e B4:e "che"
+20 R: r:h
+# bar 20 end: double bar, C
+21 I: B4:e "par-" B4:e "la-" B4:e "no" C#5:e "di" A4:e "so-" A4:e "gni_e" A4:e "di" B4:e "chi-"
+21 R: r:w
+22 I: F#4:q "me-" F#4:q~ "re," F#4:e r:e F#4:e "quel-" A4:e "le"
+22 R: r:w
+# page 071 system 3 starts bar 23 (Rodolfo's staff, labelled ROD., appears)
+# bar 23: fermata on D5 "se", hairpin > after it; grace notes B4-C#5 (small 16ths) before B4 "no"
+# FIX bar 23 I: decrescendo hairpin over the held D5 (beat 1), ends before C#5 (fresh check)
+23 I: E4:q "co-" hp:> D5:e! "se" hp:end C#5:e "che_han" g:B4:s g:C#5:s B4:e "no-" A4:e "me" E4:e. "po-" A4:s "e-"
+23 R: r:w
+# bar 24: a tempo
+24 I: word:a_tempo D4:q "si-" D4:q "a..." r:q r:e A4:s "Lei" A4:s "m'in-"
+24 R: r:w
+# bar 25: Rodolfo (commosso) "Sì." (treble-8 clef, written D4, sounding D3)
+25 I: D5:e "ten-" D5:e "de?" r:q r:h
+25 R: r:h D3:e "Sì." r:e r:q
+# bar 25 end: double bar, 2/4
+# page 071 system 4 starts bar 26
+# bar 26: LENTAMENTE, 2/4
+26 I: r:q r:e F#4:e "Mi"
+26 R: r:h
+27 I: G4:e "chia-" A4:e "ma-" Bb4:e "no" E5:e "Mi-"
+27 R: r:h
+28 I: D5:e "mì," r:e F5:e. "il" F5:s "per-"
+28 R: r:h
+29 I: G#4:e "chè" r:e r:e E5:e* "non"
+29 R: r:h
+30 I: A4:e* "so." r:e r:q
+30 R: r:h
+# bar 30 end: double bar
+# page 072 system 1 starts bar 31
+# bar 31: ALL.tto MODERATO, quarter = 144, 2/4; con semplicità
+31 I: word:con_semplicità A4:q "So-" B4:e "la" C#5:e "mi"
+31 R: r:h
+32 I: D5:q. "fo" C#5:e "il"
+32 R: r:h
+33 I: B4:e "pran-" C#5:e "zo" D5:e "da" E5:e "me"
+33 R: r:h
+34 I: A4:q "stes-" A4:e "sa." A4:e "Non"
+34 R: r:h
+# bar 35: two small 16th grace notes G4-A4 before G4
+35 I: g:G4:s g:A4:s G4:e "va-" F#4:e "do" G4:e "sem-" A4:e "pre_a"
+35 R: r:h
+# page 072 system 2 starts bar 36
+# bar 36: breath mark before "ma"; tenuto on D5; poco rall:.......
+# JUDGE bar 36 I: Y - breath comma printed after D4 "sa", before D5 "ma"
+36 I: F#4:e "mes-" D4:e, "sa" word:poco_rall. D5:q- "ma"
+36 R: r:h
+37 I: C#5:e "pre-" C#5:e "go_as-" B4:e "sai_il" B4:e "Si-"
+37 R: r:h
+# bar 38: a piacere (from the 3rd eighth)
+38 I: A4:e "gnor." r:e word:a_piacere A4:e "Vi-" A4:e "vo"
+38 R: r:h
+39 I: A4:q "so-" B4:e "la," C#5:e "so-"
+39 R: r:h
+# page 072 system 3 starts bar 40
+40 I: A4:q "let-" A4:e "ta," r:e
+40 R: r:h
+# bar 41: a tempo
+41 I: word:a_tempo A4:q "là_in" B4:e "u-" C#5:e "na"
+41 R: r:h
+42 I: D5:q. "bian-" C#5:e "ca"
+42 R: r:h
+43 I: B4:e "ca-" C#5:e D5:e "me-" E5:e
+43 R: r:h
+44 I: A4:q "ret-" A4:q "ta:"
+44 R: r:h
+# page 072 system 4 starts bar 45
+# bar 45: small slashed grace eighth A4 before G4
+45 I: g:A4:e G4:e "guar-" F#4:e G4:e "do" A4:e "sui"
+45 R: r:h
+# bar 46: poco rall:......
+46 I: F#4:e "tet-" D4:e "ti" word:poco_rall. D5:q "e_in"
+46 R: r:h
+47 I: C#5:q "cie-" B4:q
+47 R: r:h
+# bar 48: fermata over the final quarter rest
+48 I: A4:e "lo," r:e r:q!
+48 R: r:h
+# bar 48 end: double bar, C
+# page 073 system 1 starts bar 49
+# bar 49: AND.te MOLTO SOST.to, C; Mimì "(si alza)"; con molta anima. Small grace A4 (slashed eighth) before the last G4.
+49 I: word:con_molta_anima B4:h "ma" A4:e "quan-" G4:e "do" F#4:e "vien" g:A4:e G4:e "lo"
+49 R: r:w
+50 I: F#4:h "sge-" E4:h "lo"
+50 R: r:w
+# bar 51: small grace C#5 (slashed eighth) before B4
+51 I: D5:h "il" C#5:e "pri-" B4:e "mo" A4:e "so-" g:C#5:e B4:e "le_è"
+51 R: r:w
+# page 073 system 2 starts bar 52
+52 I: A4:h "mi-" G4:q~ "o" G4:e r:e
+52 R: r:w
+# bar 53: con grande espansione
+53 I: word:con_grande_espansione F#5:h "il" E5:q. "pri-" A5:e "mo"
+53 R: r:w
+# page 073 system 3 starts bar 54
+54 I: E5:q- "ba-" D5:q- "cio," B4:q- "del-" D5:q- "l'a-"
+54 R: r:w
+# bar 55: poco allarg.
+55 I: word:poco_allarg. F#5:h "pri-" E5:q. "le" A5:e> "è"
+55 R: r:w
+# bar 56: decrescendo hairpin over the bar
+56 I: hp:> E5:h "mi-" D5:q~ "o!" D5:e hp:end r:e
+56 R: r:w
+# page 073 system 4 starts bar 57
+# bar 57: a tempo; con espressione intensa
+57 I: word:a_tempo r:q word:con_espressione_intensa D5:q "il" G#4:q. "pri-" C#5:e "mo"
+57 R: r:w
+# bar 58: rall. molto
+58 I: word:rall._molto B4:h "so-" A4:q. "le" C#5:e> "è"
+58 R: r:w
+59 I: B4:h "mi-" A4:q~ "o!" A4:e r:s A4:s "Ger-"
+59 R: r:w
+# bar 59 end: thin double bar
+# page 074 system 1 starts bar 60
+# bar 60: I.o TEMPO AND.te agitando appena, C
+# JUDGE bar 60 I: Y - continuation syllable written without leading hyphen
+60 I: word:agitando_appena A4:q "mo-" F#4:e "glia_in" F#4:e "un" E4:q "va-" G4:e "so_u-" G4:e "na"
+60 R: r:w
+# bar 61: Sostenendo; eighth rest + 5 eighths as two triplets (rest = first triplet member)
+61 I: F#4:q "ro-" A4:q "sa..." word:Sostenendo r:e3 B4:e3 "Fo-" C#5:e3 "glia_a" D5:e3 "fo-" B4:e3 "glia" D5:e3 "la"
+61 R: r:w
+# page 074 system 2 starts bar 62
+62 I: C#5:q "spi-" C#5:q "o!" r:e E5:e "Co-" F#5:e. "sì" G#5:s "gen-"
+62 R: r:w
+# bar 63: allarg.; "ten." over the A5
+63 I: word:allarg. E5:q "til" E5:e "il" E5:e "pro-" F#5:q "fu-" word:ten. A5:e. "mo" G#5:s "d'un"
+63 R: r:w
+# bar 64: calmo come prima; accent on G#5; ties E5-E5-E5-E5; decrescendo hairpin under the line
+# JUDGE bar 64 I: OWN - all four arcs E5-E5 are ties; hairpin > starts under the E5 16th and ends before the last E5 eighth
+64 I: word:calmo_come_prima G#5:s> "fior!" hp:> E5:s~ E5:e~ E5:h~ hp:end E5:e r:e
+64 R: r:w
+# bar 64 end: double bar, 2/4
+# page 074 system 3 starts bar 65
+65 I: r:q r:e B4:e "Ma_i"
+65 R: r:h
+# bar 65 end: double bar, C
+# bar 66: I TEMPO, ma calmo; p
+# JUDGE bar 66 I: X - "I TEMPO, ma calmo" is a tempo heading: kept as remark
+66 I: dyn:p B4:q. "fior" C#5:e "ch'io" A4:q. "fac-" B4:e "cio,_ahi-"
+66 R: r:w
+# bar 67: poco rit:.....
+67 I: F#4:q~ "mè!" F#4:e r:e r:e word:poco_rit. F#4:e "i" F#4:e "fior" A4:e "ch'io"
+67 R: r:w
+# page 074 system 4 starts bar 68
+# bar 68: fermata on D5 "cio,"; decrescendo hairpin after it; small grace 16ths B4-C#5 before B4; breath mark after "mè,"
+# JUDGE bar 68 I: Y - breath comma after B4 "mè,"; "hanno" printed as one word under the E4 dotted eighth, "o" under the A4 16th
+68 I: E4:q "fac-" D5:e! "cio," hp:> C#5:e "ahi-" hp:end g:B4:s g:C#5:s B4:e, "mè," A4:e "non" E4:e. "hanno" A4:s "o-"
+68 R: r:w
+69 I: D4:q "do-" D4:e "re!" r:e r:h
+69 R: r:w
+# bar 70: "senza rigore di tempo con naturalezza" (quasi parlando). The bar has no barline at the end of system 4 and continues on system 5 to the barline before "na-re." (see piano remark). After the two quarter rests the voice sings over the piano fermata: printed rhythm = a 10-group (16th rest + 9 A4 16ths, bracket "10"), D5 8th, D5 8th, a 5-tuplet of A4 16ths ("5"), four F#4 16ths ("4"), F#4 8th, four F#4 16ths, F#4 dotted 16th, A4 32nd = 30 16ths printed. Written here scaled into the remaining half bar: every value carries {15:4} (the 5-tuplet notes {75:16}); the printed values are the ones before the braces.
+# bar 70 lyric "ra_a_im-" (one 16th) is my reading of the syllable spacing ("d'o-ra a importu-na-re"): unsure.
+# JUDGE bar 70 I: OWN - printed after the 2 quarter rests: bracketed 10-group (16th rest + 9 A4 16ths, nominal 10:8), D5 8th, D5 8th, 5-group A4 16ths (5:4), four F#4 16ths ("4" = grouping mark, plain), F#4 8th, four F#4 16ths, F#4 dotted 16th, A4 32nd = 7 nominal quarters in 2 quarters: everything scaled by 2/7 (Y scaling: tuplet 16ths s{35:8}, plain values {7:2}); rall. printed over "d'o-" (X); "d'o_ra a importu" read as d'o- / ra_a_im- / por- / tu-
+70 I: r:q r:q word:senza_rigore_di_tempo_con_naturalezza r:s{35:8} A4:s{35:8} "Al-" A4:s{35:8} "tro" A4:s{35:8} "di" A4:s{35:8} "me" A4:s{35:8} "non" A4:s{35:8} "le" A4:s{35:8} "sa-" A4:s{35:8} "prei" A4:s{35:8} "nar-" D5:e{7:2} "ra-" D5:e{7:2} "re:" A4:s{35:8} "so-" A4:s{35:8} "no" A4:s{35:8} "la" A4:s{35:8} "sua" A4:s{35:8} "vi-" F#4:s{7:2} "ci-" F#4:s{7:2} "na" F#4:s{7:2} "che" F#4:s{7:2} "la" F#4:e{7:2} "vien" F#4:s{7:2} "fuo-" F#4:s{7:2} "ri" word:rall. F#4:s{7:2} "d'o-" F#4:s{7:2} "ra_a_im-" F#4:s.{7:2} "por-" A4:x{7:2} "tu-"
+70 R: r:w
+# page 074 system 5 starts inside bar 70
+# bar 71: fermata on the half rest
+71 I: D4:e "na-" D4:e "re." r:q r:h!
+71 R: r:w
+# bar 71 end: double bar, 2/4

@@ -1,0 +1,73 @@
+# S8 "Ehi! Rodolfo!" pp. 75-77, reader B. 2/4, key D major (2 sharps) throughout; 28 bars.
+# page 075 system 1 starts bar 1
+# bar 1: "col canto" (piano), voices "a piacere"
+1 RH1: word:col_canto r:h
+1 LH1: r:h
+2 RH1: r:h
+2 LH1: r:h clef:G
+# bar 3: double bar before it; ALL.tto come prima, quarter = 100 (voice and piano)
+# bars 3-4: the rest before the first 16th is printed with a single hook (looks like an eighth rest) but the stub beam makes the first note a 16th: read as triplet r:s3 s3 e3 e3 (same figure in bar 10)
+3 RH1: r:h
+3 LH1: r:q dyn:p r:s3 D5:s3* D5:e3* C#5:e3*
+4 RH1: r:s3 F#5+D6:s3* F#5+D6:e3* A5+E6:e3* D6+F#6:e3* E6+G6:e3* F#6+A6:e3*
+4 LH1: Cn5:h~
+# page 075 system 2 starts bar 5
+# bar 5: acciaccatura chord G6+B6 slurred to the first chord. Each beat is printed e + e. + s (3/8 per beat, no 3 printed): read as unmarked triplets continuing bar 4, written e3 e.3 s3
+5 RH1: g:G6+B6:e( F#6+A6:e3*) E6+G6:e.3* D6+F#6:s3* D6+F#6:e3* A5+E6:e.3* F#5+D6:s3*
+5 LH1: Cn5:h~
+6 RH1: F#5+D6:e* r:e r:q
+6 LH1: Cn5:h~
+7 RH1: r:h
+7 LH1: Cn5:h~
+8 RH1: r:h
+8 LH1: Cn5:e r:e r:q clef:F
+# page 076 system 1 starts bar 9
+9 RH1: r:h
+9 LH1: r:h
+# bar 10: "pp stacc."; curved bracket with 3 under the triplet read as tuplet bracket (not a slur)
+10 RH1: r:h
+10 LH1: dyn:pp word:stacc. r:s3 G1+G2:s3* G1+G2:e3* F#1+F#2:e3* Fn1+Fn2:e* r:e
+11 RH1: r:h
+11 LH1: r:h
+# bar 12: cross-staff chord: E3+G3 printed in the LH staff but on the stem of the RH C4 (stem up, flag in RH staff) -> given to RH
+12 RH1: r:q dyn:pp E3+G3+Cn4:e* r:e
+12 LH1: r:q E1+E2:e* r:e
+# page 076 system 2 starts bar 13
+13 RH1: r:h
+13 LH1: r:h
+14 RH1: r:h
+14 LH1: r:h
+15 RH1: hp:> B3:h>~
+15 LH1: r:h
+16 RH1: B3:h~ hp:end
+16 LH1: r:h
+# page 076 system 3 starts bar 17
+# bar 17: "pp a tempo"
+17 RH1: B3:e r:e dyn:pp word:a_tempo D#4+E4+B4:e* r:e
+17 LH1: r:q G#3:e* r:e
+18 RH1: D4+F#4+Cn5:e* r:e r:q
+18 LH1: A3:e* r:e r:q
+19 RH1: r:q E#4+G#4+D5:e* r:e
+19 LH1: r:q B3:e* r:e
+# bar 20: figure (40); f printed between the staves just before the 2nd LH note
+20 RH1: F#4+A4+D5:e* r:e r:q
+20 LH1: Cn4:e* dyn:f D4:e* E4:e* D4:e*
+# page 077 system 1 starts bar 21
+21 RH1: r:h
+21 LH1: hp:> Cn4:e* B3:e* A3:e* D3:e* hp:end
+22 RH1: dyn:pp D4+G4:e* r:e Cn4+E4+G4:e* r:e
+22 LH1: r:e B3:e* r:e A3:e*
+23 RH1: B3+D4+G4:e* r:e B3+D4+G4:e* r:e
+23 LH1: r:e G3:e* r:e F#3:e*
+24 RH1: D4+G4+B4:e* r:e E#4+B4+D5:e* r:e
+24 LH1: r:e E3:e* r:e G#3:e*
+# page 077 system 2 starts bar 25
+25 RH1: F#4+Cn5+D5:e* r:e r:q
+25 LH1: r:e A3:e* r:q
+26 RH1: r:q dyn:pp E#4+B4+D5:e* r:e
+26 LH1: r:q r:e G#3:e*
+27 RH1: F#4+Cn5+D5:e* r:e r:q
+27 LH1: r:e A3:e* r:q
+28 RH1: r:h
+28 LH1: r:h
+# after bar 28: double bar, key change to A major (3 sharps), time C (4/4) for the next section (Largo sostenuto, p. 78)

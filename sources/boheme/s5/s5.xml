@@ -1559,6 +1559,9 @@
           <elision />
           <text>È</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -1577,6 +1580,9 @@
           <syllabic>begin</syllabic>
           <text>tut</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -9862,8 +9868,6 @@
         <voice>5</voice>
         <type>quarter</type>
         <staff>2</staff>
-        <notations>
-          </notations>
       </note>
       <backup>
         <duration>2520</duration>

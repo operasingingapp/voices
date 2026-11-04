@@ -4000,6 +4000,7 @@
         <staff>1</staff>
         <notations>
           <slur type="stop" number="1" />
+          <tuplet type="stop" bracket="no" />
         </notations>
       </note>
       <note>
@@ -4020,6 +4021,9 @@
           <syllabic>end</syllabic>
           <text>li</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4085,6 +4089,9 @@
           <syllabic>end</syllabic>
           <text>dri:gli</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4104,6 +4111,9 @@
           <syllabic>begin</syllabic>
           <text>oc</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4228,6 +4238,9 @@
           <syllabic>single</syllabic>
           <text>con</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4247,6 +4260,9 @@
           <syllabic>single</syllabic>
           <text>voi</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4488,6 +4504,9 @@
           <syllabic>single</syllabic>
           <text>i</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4506,6 +4525,9 @@
           <syllabic>single</syllabic>
           <text>bei</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -4907,6 +4929,9 @@
           <syllabic>end</syllabic>
           <text>to</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <direction placement="above">
         <direction-type>
@@ -4931,6 +4956,9 @@
           <syllabic>single</syllabic>
           <text>non</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -5279,6 +5307,9 @@
           <syllabic>single</syllabic>
           <text>la</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <direction placement="above">
         <direction-type>
@@ -5304,6 +5335,7 @@
         </lyric>
         <notations>
           <slur type="start" number="1" />
+          <tuplet type="start" bracket="no" show-number="actual" />
         </notations>
       </note>
       <note>
@@ -5488,6 +5520,9 @@
           <syllabic>single</syllabic>
           <text>che</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -5507,6 +5542,9 @@
           <syllabic>single</syllabic>
           <text>mi</text>
         </lyric>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -5926,6 +5964,9 @@
           <syllabic>single</syllabic>
           <text>Vi</text>
         </lyric>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -5948,6 +5989,7 @@
         </lyric>
         <notations>
           <slur type="start" number="1" />
+          <tuplet type="start" bracket="no" show-number="actual" />
         </notations>
       </note>
       <note>
@@ -6769,6 +6811,7 @@
         <staff>1</staff>
         <notations>
           <slur type="stop" number="1" />
+          <tuplet type="stop" bracket="no" />
         </notations>
       </note>
       <note>
@@ -6791,6 +6834,7 @@
         </lyric>
         <notations>
           <slur type="start" number="1" />
+          <tuplet type="start" bracket="no" show-number="actual" />
         </notations>
       </note>
       <note>
@@ -16963,6 +17007,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -16978,6 +17025,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -17334,6 +17384,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -17364,6 +17417,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -18109,6 +18165,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -18139,6 +18198,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -19056,6 +19118,7 @@
         <staff>1</staff>
         <notations>
           <tied type="start" />
+          <tuplet type="stop" bracket="no" />
         </notations>
       </note>
       <note>
@@ -19094,6 +19157,7 @@
         <beam number="1">begin</beam>
         <notations>
           <tied type="stop" />
+          <tuplet type="start" bracket="no" show-number="actual" />
         </notations>
       </note>
       <note>
@@ -19969,6 +20033,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <attributes>
         <clef number="2">
@@ -19990,6 +20057,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <grace slash="yes" />
@@ -22462,6 +22532,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -22493,6 +22566,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -22608,6 +22684,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="stop" bracket="no" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -22638,6 +22717,9 @@
           <normal-notes>2</normal-notes>
         </time-modification>
         <staff>1</staff>
+        <notations>
+          <tuplet type="start" bracket="no" show-number="actual" />
+        </notations>
       </note>
       <note>
         <chord />

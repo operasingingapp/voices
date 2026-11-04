@@ -32,6 +32,10 @@ for p in r.findall("part"):
                     close(); key = k; acc = 0
                     if k: span = BASE.get(n.findtext("type"), 0.5) * divs * k[1]
                 if not k: continue
+                if len(grp) == 1 and grp[0].findtext("type") != n.findtext("type"):
+                    # a long-short start (q3 e3, e3 s3) is a group of the shorter value: one beat, as printed
+                    a, b = BASE.get(grp[0].findtext("type"), 0), BASE.get(n.findtext("type"), 0)
+                    if a == 2 * b: span = b * divs * k[1]
                 grp.append(n); acc += int(n.findtext("duration") or 0)
                 if acc >= span - 1: close(); acc = 0
             close()
