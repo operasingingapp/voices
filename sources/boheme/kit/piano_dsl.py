@@ -123,7 +123,7 @@ def notes_for(tokens, staff, voice):
                 if "!" in fl: ET.SubElement(nt, "fermata", type="upright")
                 if "t" in fl: ET.SubElement(ET.SubElement(nt, "ornaments"), "trill-mark")
                 if "m" in fl: ET.SubElement(ET.SubElement(nt, "ornaments"), "inverted-mordent")
-                art = [x for x, c in (("staccato", "*"), ("strong-accent", "^"), ("accent", ">"), ("tenuto", "-")) if c in fl]
+                art = [x for x, c in (("staccato", "*"), ("strong-accent", "^"), ("accent", ">"), ("tenuto", "-"), ("staccatissimo", "v")) if c in fl]
                 if art:
                     a = ET.SubElement(nt, "articulations")
                     for x in art: ET.SubElement(a, x)

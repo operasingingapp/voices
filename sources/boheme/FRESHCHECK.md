@@ -24,7 +24,7 @@ looked at on a zoomed crop of the scan and are sure about.
 ## DO check, note by note, every bar in your range, every staff
 pitches (with key signature; accidentals last to the end of the bar), durations, dots, rests, which beat each note
 starts on (inner voices!), chord notes, ties (same pitch joined), triplets, grace notes, trills, tremolo strokes,
-staccato dots, tenuto, accents, marcato, arpeggios, dynamics on EVERY staff including the singers' (p, pp, f, ff, fp,
+staccato dots, staccatissimo (small FILLED wedge) vs marcato (larger OPEN ^ / v sign) — they are different signs —, tenuto, accents, arpeggios, dynamics on EVERY staff including the singers' (p, pp, f, ff, fp,
 sfp), hairpins (< >: start and end roughly right), expression/tempo words printed in the music (cresc., dim., rall.,
 a tempo, col canto, a piacere, dolce ...), clef changes, and (vocal) every syllable: spelling,
 accents (sì/si, è/e, pò, più), apostrophes, punctuation, which note it sits on.

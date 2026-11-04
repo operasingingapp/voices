@@ -1,5 +1,5 @@
 """Add <tuplet> start/stop to runs of triplet notes (time-modification 3:2), three by three per voice;
-the '3' is shown only in the bars listed (as printed), elsewhere the grouping is implied.
+the tuplet number is always shown (the Ricordi score prints it).
 usage: tup.py IN OUT [BAR,BAR...]"""
 import sys, xml.etree.ElementTree as ET
 IN, OUT = sys.argv[1:3]; show = set(sys.argv[3].split(",")) if len(sys.argv) > 3 else set()
@@ -23,7 +23,7 @@ for p in r.findall("part"):
                         if nt is None: nt = ET.SubElement(n, "notations")
                         if any(x.get("type") == ty for x in nt.findall("tuplet")): continue
                         tp = ET.SubElement(nt, "tuplet", type=ty, bracket="no")
-                        if ty == "start": tp.set("show-number", "actual" if (m.get("number") in show or key[0] != 3) else "none")
+                        if ty == "start": tp.set("show-number", "actual")  # Ricordi prints every tuplet number
                 grp.clear()
             for n in ns:
                 tm = n.find("time-modification")

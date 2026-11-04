@@ -51,7 +51,7 @@ def head(first, staves=None, clefs=(), b=None):
         _, n, d, f, w = sg[0]; prev = seg(b - 1) if b > SEG[0][0] else None
         if first or prev[3] != f: ET.SubElement(ET.SubElement(at, "key"), "fifths").text = str(f)
         if first or (prev[1], prev[2]) != (n, d):
-            t = ET.SubElement(at, "time"); ET.SubElement(t, "beats").text = str(n); ET.SubElement(t, "beat-type").text = str(d)
+            t = ET.SubElement(at, "time", **({"symbol": "common"} if (n, d) == (4, 4) else {})); ET.SubElement(t, "beats").text = str(n); ET.SubElement(t, "beat-type").text = str(d)
     if first:
         if staves: ET.SubElement(at, "staves").text = str(staves)
         for num, (s_, l_) in clefs:
