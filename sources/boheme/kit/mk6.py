@@ -21,7 +21,7 @@ V = {}
 for line in open(VO, encoding="utf-8"):
     line = line.strip()
     if not line or line.startswith("#"): continue
-    mt = re.match(r"(\d+)\s+([A-Z]):\s*(.*)$", line)
+    mt = re.match(r"(\d+)\s+([A-Z]\d?):\s*(.*)$", line)
     V[(int(mt.group(1)), mt.group(2))] = parse_line(mt.group(3))
 D = {}
 for line in open(PI, encoding="utf-8"):
@@ -33,9 +33,9 @@ bars = sorted(set(b for b, _ in V) | set(D))
 root = ET.Element("score-partwise", version="3.1")
 ET.SubElement(ET.SubElement(root, "work"), "work-title").text = TITLE
 ident = ET.SubElement(root, "identification")
-ET.SubElement(ident, "creator", type="composer").text = "Wolfgang Amadeus Mozart"
-ET.SubElement(ident, "creator", type="lyricist").text = "Lorenzo Da Ponte"
-ET.SubElement(ident, "rights").text = "Music and text public domain. Piano reduction by Paul Klengel (Breitkopf & Härtel, Edition Breitkopf 1716)."
+ET.SubElement(ident, "creator", type="composer").text = "Giacomo Puccini"
+ET.SubElement(ident, "creator", type="lyricist").text = "Luigi Illica and Giuseppe Giacosa"
+ET.SubElement(ident, "rights").text = "Music and text public domain. Vocal score, piano reduction by Carlo Carignani (G. Ricordi & C., Milan)."
 pl = ET.SubElement(root, "part-list")
 vids = [f"P{k+1}" for k in range(len(singers))]; pno = f"P{len(singers)+1}"
 for pid, (code, name, ab, clef) in zip(vids, singers):

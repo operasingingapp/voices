@@ -120,6 +120,32 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-questo-mar-rosso": {
+    portrait: "boheme:marcello",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "C major (no key signature); B♭ major (2 flats) from “Nei cieli bigi”; C major again from “Gran cor!”; G♭ major (6 flats) from “Pensier profondo”; the last bar is the D major (2 sharps) Allegro of the next scene",
+      time: "3/8; 6/8 from “Nei cieli bigi”; 3/8 from “Rodolfo, io voglio dirti” (with one bar of 2/8); 6/8 from “Aguzza l’ingegno”; 2/4 from “Quest’intermezzi”; Vivo 3/8, then 2/4, 3/4, 3/8 and 2/4; the last bar 6/8",
+      tempo: "Allegro vivace ♩. = 108 (printed metronome mark), kept by “Lo stesso movimento” in 6/8 and 3/8 and by “A tempo come prima”; from “Quest’intermezzi” 2/4 at ♩ = 108 (the piano keeps the 6/8 beat under the voices’ 2/4, so the bar keeps its length: ♩ = ♩.), kept by “Lo stesso movimento” in G♭; Vivo in 1 ♩. = 108 (no mark printed: the beat kept); 2/4 and 3/4 ♩ = 108; 3/8 ♩. = 108 (printed ♩ = ♩.); 2/4 ♩ = 108 (printed ♩. = ♩); the last bar, Allegro, ♩. = 108 (no mark printed)",
+    },
+    notePlaceholder: "Marcello paints with frozen hands; Rodolfo feeds his play to the fire, act by act",
+    about: (
+      <>
+        <p>
+          Score: “Questo Mar Rosso”, the opening of Act 1 (vocal score pages 1-20, from the first bar to figure (10), 335 bars), from Carlo Carignani’s piano
+          reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read
+          independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are
+          kept, with the print's spellings. Rodolfo’s printed alternative notes in bar 201 are not shown. The tempo is the printed metronome mark (♩. = 108)
+          carried through the printed “lo stesso movimento” and tempo equivalences.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

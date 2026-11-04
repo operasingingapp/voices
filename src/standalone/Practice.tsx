@@ -1614,7 +1614,9 @@ function PracticeScreen({
     engine.setTempoFactor(engine.tempo < 0.85 ? SUNG_TEMPOS[0] : 1);
   }, [engine, singing, tf0]);
   // the speed in the beat a singer feels; in 2/2 it is given in quarter notes, as the playback mark is (a half-note glyph is not in every font)
-  const shownQ = bi.unitQ === 2 ? 1 : bi.unitQ;
+  // a fast 3/8 is felt "in one" (Puccini's ALL.º VIVACE ♩. = 108): above 240 eighths a minute it is shown in dotted quarters
+  const oneInThree = bi.unitQ === 0.5 && bi.beats === 3 && perf.bpmAt(q) * 2 >= 240;
+  const shownQ = bi.unitQ === 2 ? 1 : oneInThree ? 1.5 : bi.unitQ;
   const beatSymbol = shownQ === 1.5 ? "♩." : shownQ === 0.5 ? "♪" : "♩";
   const beatBpm = Math.round((perf.bpmAt(q) / shownQ) * (engine?.tempo ?? 1));
   const deviceVoice = voiceInfo(false).kind === "device";

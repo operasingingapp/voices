@@ -247,9 +247,9 @@ def new_score():
     w = ET.SubElement(root, "work")
     ET.SubElement(w, "work-title").text = "Le nozze di Figaro: No. 1 Duettino and Recitativo"
     ident = ET.SubElement(root, "identification")
-    ET.SubElement(ident, "creator", type="composer").text = "Wolfgang Amadeus Mozart"
-    ET.SubElement(ident, "creator", type="lyricist").text = "Lorenzo Da Ponte"
-    ET.SubElement(ident, "rights").text = "Music and text public domain. Piano reduction by Paul Klengel (Breitkopf & Härtel, Edition Breitkopf 1716)."
+    ET.SubElement(ident, "creator", type="composer").text = "Giacomo Puccini"
+    ET.SubElement(ident, "creator", type="lyricist").text = "Luigi Illica and Giuseppe Giacosa"
+    ET.SubElement(ident, "rights").text = "Music and text public domain. Vocal score, piano reduction by Carlo Carignani (G. Ricordi & C., Milan)."
     pl = ET.SubElement(root, "part-list")
     for pid, name, ab in (("P1", "Susanna", "S."), ("P2", "Figaro", "F."), ("P3", "Piano", "Pno.")):
         sp = ET.SubElement(pl, "score-part", id=pid)

@@ -2132,6 +2132,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
+     },
+     {
+      "title": "Questo Mar Rosso",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Questo Mar Rosso",
+      "editionId": "puccini-questo-mar-rosso"
      }
     ]
    },
@@ -2218,6 +2224,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
+     },
+     {
+      "title": "Questo Mar Rosso",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Questo Mar Rosso",
+      "editionId": "puccini-questo-mar-rosso"
      }
     ]
    },
@@ -2291,6 +2303,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
+     },
+     {
+      "title": "Questo Mar Rosso",
+      "kind": "Scene · Act 1",
+      "id": "Act 1: Questo Mar Rosso",
+      "editionId": "puccini-questo-mar-rosso"
      }
     ]
    },

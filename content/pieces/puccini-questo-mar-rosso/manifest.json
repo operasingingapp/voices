@@ -1,0 +1,165 @@
+{
+ "editionId": "puccini-questo-mar-rosso",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Questo Mar Rosso",
+ "subtitle": "Marcello, Rodolfo and Colline: the opening scene of La bohème, Act 1",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "colline",
+   "name": "Colline",
+   "voiceType": "Bass",
+   "partKey": "colline"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "colline",
+   "label": "Colline (Bass)",
+   "shortLabel": "Colline",
+   "kind": "voice",
+   "roleId": "colline",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Questo Mar Rosso (Allegro vivace)",
+   "start": "1",
+   "end": "87"
+  },
+  {
+   "id": "b",
+   "label": "Nei cieli bigi (Lo stesso movimento)",
+   "start": "88",
+   "end": "197"
+  },
+  {
+   "id": "c",
+   "label": "Aguzza l'ingegno (6/8)",
+   "start": "198",
+   "end": "222"
+  },
+  {
+   "id": "d",
+   "label": "A te l'atto primo (C major)",
+   "start": "223",
+   "end": "246"
+  },
+  {
+   "id": "e",
+   "label": "Colline comes in: Già dell'Apocalisse",
+   "start": "247",
+   "end": "286"
+  },
+  {
+   "id": "f",
+   "label": "Pensier profondo (G♭ major, to the end)",
+   "start": "287",
+   "end": "335"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 1",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 1-20 (from the opera's first bar to figure (10), 335 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's printed alternative notes in bar 201 are not shown. Tempo from the printed metronome mark and the printed tempo equivalences."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

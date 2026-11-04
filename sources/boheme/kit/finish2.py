@@ -8,7 +8,7 @@ head = open(P).read().split("<score-partwise", 1)[0]
 t = ET.parse(P)
 r = t.getroot()
 SHARPS = ["F", "C", "G", "D", "A", "E", "B"]
-ACC = {1: "sharp", 0: "natural", -1: "flat"}
+ACC = {1: "sharp", 0: "natural", -1: "flat", 2: "double-sharp", -2: "flat-flat"}
 
 
 def keyalt(f):

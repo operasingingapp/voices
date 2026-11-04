@@ -3033,7 +3033,7 @@
   {
     "editionId": "puccini-al-quartiere-latin",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-al-quartiere-latin@1.0.0-carignani#8e2cd9aaec",
+    "scoreVersionId": "puccini-al-quartiere-latin@1.0.0-carignani#aef4ffafd8",
     "title": "Al Quartiere Latin ci attende Momus",
     "subtitle": "Rodolfo, Marcello, Schaunard and Colline: scene from La bohème, Act 1",
     "kind": "scene",
@@ -3101,6 +3101,46 @@
     "languageStatus": {
       "phrases": 12,
       "withAudio": 12,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-questo-mar-rosso",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-questo-mar-rosso@1.0.0-carignani#811be1ed6b",
+    "title": "Questo Mar Rosso",
+    "subtitle": "Marcello, Rodolfo and Colline: the opening scene of La bohème, Act 1",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 335,
+    "durationSec": 269,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "3/8",
+    "languageStatus": {
+      "phrases": 82,
+      "withAudio": 0,
       "reviewed": 0
     }
   }
