@@ -19,6 +19,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
+import { annotateXml, circled, engravePages, fontFaceCss, openInTab, printDocument, printHtml } from "../score/printScore";
 
 /*
  * The piece on screen. Only one practice screen is open at a time, so the piece's data lives here, set by
@@ -956,6 +957,52 @@ function PracticeScreen({
   const [notePick, setNotePick] = useState(false);
   const [noteEdit, setNoteEdit] = useState<null | { id: string | null; m: number; q: number; body: string; mark?: MarkId }>(null);
   const [notesMsg, setNotesMsg] = useState("");
+  // the score for print (Save as PDF), with your notes written on it: being made, or what became of it
+  const [printState, setPrintState] = useState<"idle" | "busy" | "tab" | "blocked" | "noTab" | "failed">("idle");
+  const printDoc = useRef<{ key: string; html: string } | null>(null);
+  const printScore = async () => {
+    if (printState === "busy") return;
+    setPrintState("busy");
+    try {
+      const mine = voicePart.source.xmlPartId;
+      // every part, as the printed vocal score has them (all the voices and the piano's two staves, whatever the
+      // screen hides), in the order you chose
+      const visible: string[] | null = null;
+      const sorted = [...notes].sort((a, b) => a.m - b.m || a.q - b.q);
+      const key = JSON.stringify([visible, orderedIds, sorted]);
+      if (printDoc.current?.key !== key) {
+        const list = sorted.map((n, i) => {
+          const meas = edition.measures[n.m];
+          const bi = beatInfo(meas?.time ?? [4, 4]);
+          const at = n.q / bi.unitQ;
+          const beat = Math.floor(at + 1e-6) + 1;
+          const part = at - (beat - 1);
+          const frac = part > 0.2 && part < 0.3 ? "¼" : part > 0.45 && part < 0.55 ? "½" : part > 0.7 && part < 0.8 ? "¾" : "";
+          const mk = MARKS.find((x) => x.id === n.mark);
+          return {
+            n: i + 1,
+            m: n.m,
+            q: n.q,
+            words: `${circled(i + 1)} ${noteLabel(n)}`,
+            where: `Bar ${meas?.number ?? n.m + 1}, beat ${beat}${frac}`,
+            // a mark with words of its own is named before them, unless the words already begin with its name
+            sign: mk ? `${mk.sign}${n.body === mk.label || n.body.toLowerCase().startsWith(mk.label.toLowerCase()) ? "" : ` ${mk.label}:`}` : undefined,
+            text: n.body,
+          };
+        });
+        const xml = annotateXml(shownXml, mine, list.filter((x) => edition.measures[x.m]));
+        const pages = await engravePages(xml, visible);
+        const rights = /<rights[^>]*>([^<]*)<\/rights>/.exec(displayXml)?.[1];
+        const credits = rights ? new DOMParser().parseFromString(`<r>${rights}</r>`, "application/xml").documentElement.textContent ?? "" : "";
+        const html = printHtml({ title: edition.title, running: `${roleName} · ${info.opera}`, credits, pages, notes: list, fontCss: fontFaceCss(["Charis SIL"]) });
+        printDoc.current = { key, html };
+      }
+      const how = await printDocument(printDoc.current.html);
+      setPrintState(how === "dialog" ? "idle" : how);
+    } catch {
+      setPrintState("failed");
+    }
+  };
   const [, setVoicesTick] = useState(0);
   const layoutRef = useRef<ScoreLayout | null>(null);
 
@@ -3447,6 +3494,17 @@ function PracticeScreen({
         {notePick && guide < 0 && (
           <div className="note-pick" role="status">
             <span>Tap the bar your note is for</span>
+            {/* your notes in a list, and the score to print with them */}
+            <button
+              type="button"
+              className="cp-btn cp-btn--ghost"
+              onClick={() => {
+                setNotePick(false);
+                setDrawer("notes");
+              }}
+            >
+              All notes
+            </button>
             <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setNotePick(false)}>
               Cancel
             </button>
@@ -3644,6 +3702,40 @@ function PracticeScreen({
                       </button>
                     </article>
                   ))}
+                  <section className="notes-backup notes-print" aria-label="Download the score">
+                    <p className="cp-eyebrow">On paper</p>
+                    <p className="wc-note">
+                      {notes.length
+                        ? `The whole score on A4 pages, with your ${notes.length === 1 ? "note" : `${notes.length} notes and marks`} written in at ${notes.length === 1 ? "its" : "their"} bar and listed in full at the end.`
+                        : "You have no notes for this piece yet, so the PDF is just the score."}{" "}
+                      In the print window, choose Save as PDF.
+                    </p>
+                    <div className="notes-backup-row">
+                      <button type="button" className="cp-btn cp-btn--ghost" onClick={printScore} disabled={printState === "busy"} aria-busy={printState === "busy"}>
+                        {printState === "busy" ? "Preparing the score…" : "Download score (PDF)"}
+                      </button>
+                      {printState === "blocked" && (
+                        <button
+                          type="button"
+                          className="cp-btn cp-btn--ghost"
+                          onClick={() => setPrintState(printDoc.current && openInTab(printDoc.current.html) ? "tab" : "noTab")}
+                        >
+                          Open it in a new tab
+                        </button>
+                      )}
+                    </div>
+                    {printState !== "idle" && printState !== "busy" && (
+                      <p className="wc-note" role="status">
+                        {printState === "tab"
+                          ? "The score opened in a new tab. Print it there and choose Save as PDF."
+                          : printState === "blocked"
+                            ? "This page may not open the print window here. Open the score in a new tab and print it from there."
+                            : printState === "noTab"
+                              ? "This page may not open a new tab either. Open Sottovoce in its own browser tab, then try again."
+                              : "The score could not be prepared for print. Try again in a moment."}
+                      </p>
+                    )}
+                  </section>
                   <section className="notes-backup" aria-label="Keep your notes safe">
                     <p className="cp-eyebrow">Keep them safe</p>
                     <p className="wc-note">Notes live in this browser only. Save a copy now and then, and open it on another device to bring them over.</p>

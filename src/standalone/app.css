@@ -8423,6 +8423,10 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   box-shadow: 0 6px 24px rgb(0 0 0 / 0.18);
 }
 .note-pick .cp-btn { color: var(--canvas); }
+@media (max-width: 480px) {
+  .note-pick { gap: 2px; padding-left: 14px; font-size: 14px; }
+  .note-pick .cp-btn { padding-inline: 10px; }
+}
 .note-card {
   position: fixed; left: 50%; bottom: 112px; transform: translateX(-50%); z-index: 60;
   width: min(440px, calc(100vw - 32px)); display: grid; gap: 10px; padding: 12px 14px 14px;

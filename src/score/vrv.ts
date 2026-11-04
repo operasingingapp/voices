@@ -8,15 +8,26 @@ import { ScoreLayout, type Lane, type MeasureBox, type SystemBox } from "./layou
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Toolkit = any;
 let toolkit: Promise<Toolkit> | null = null;
+let vrvModule: Promise<{ mod: any; esm: any }> | null = null;
+
+function loadModule() {
+  if (!vrvModule)
+    vrvModule = (async () => {
+      const [wasm, esm] = await Promise.all([import("verovio/wasm"), import("verovio/esm")]);
+      return { mod: await (wasm as any).default(), esm };
+    })();
+  return vrvModule;
+}
 
 export function loadVerovio(): Promise<Toolkit> {
-  if (!toolkit)
-    toolkit = (async () => {
-      const [wasm, esm] = await Promise.all([import("verovio/wasm"), import("verovio/esm")]);
-      const mod = await (wasm as any).default();
-      return new (esm as any).VerovioToolkit(mod);
-    })();
+  if (!toolkit) toolkit = loadModule().then(({ mod, esm }) => new esm.VerovioToolkit(mod));
   return toolkit;
+}
+
+/** a toolkit of its own (e.g. for printing), so the score on screen keeps what it has loaded */
+export async function newVerovioToolkit(): Promise<Toolkit> {
+  const { mod, esm } = await loadModule();
+  return new esm.VerovioToolkit(mod);
 }
 
 /** Verovio draws a staff space of 18 px at scale 100; the app's zoom 1 is 10 px, as with the old engine. */
@@ -32,7 +43,7 @@ interface TimeEntry {
 }
 
 /** The xml with only the parts shown; in the single line the part names are left out (names are drawn beside it). */
-function filterXml(xml: string, visible: string[] | null, hideNames: boolean): { xml: string; parts: { id: string; staves: number }[] } {
+export function filterXml(xml: string, visible: string[] | null, hideNames: boolean): { xml: string; parts: { id: string; staves: number }[] } {
   const doc = new DOMParser().parseFromString(xml, "application/xml");
   const root = doc.documentElement;
   const parts: { id: string; staves: number }[] = [];
