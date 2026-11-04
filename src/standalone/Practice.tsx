@@ -1122,7 +1122,13 @@ function PracticeScreen({
     [perf, phrases],
   );
   const currentQ = useCallback(() => (engine ? engine.displayQ() : 0), [engine]);
-  const q = useTicker(() => Math.round(currentQ() * 16) / 16, 80);
+  // the play position on a 1/16 grid, except near a line's start (a triplet or other off-grid onset): there it
+  // is the start itself, so rounding never puts it just before its own line ("Next line" would stick)
+  const q = useTicker(() => {
+    const r = currentQ();
+    const s = spans.find((x) => r >= x.startQ - 0.001 && r < x.startQ + 1 / 32);
+    return s ? s.startQ : Math.round(r * 16) / 16;
+  }, 80);
   const [starting, setStarting] = useState(false);
   const playing = engine?.state === "playing";
   // the screen's playing shape (also for the moment just before the music starts)

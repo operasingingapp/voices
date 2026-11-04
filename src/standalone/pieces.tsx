@@ -225,6 +225,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-che-gelida-manina": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Aria",
+    facts: {
+      key: "D♭ major (5 flats); A♭ major (4 flats) from bar 46 (Andante lento, “In povertà mia lieta”, figure 32)",
+      time: "2/4; 3/4 from bar 37 (Andante sostenuto, “chi son?”); 4/4 (C) from bar 46, with single bars of 2/4 at 61 and 70",
+      tempo: "Printed metronome marks: Andantino affettuoso ♩ = 58 (bar 1) and Andante lento ♩ = 52 (bar 46). Chosen, as no number is printed: Andante sostenuto (bar 37) ♩ = 54 (between the printed 58 before it and 52 after it, on the slower side, as Andante and sostenuto both hold back the Andantino). The rall., affrett., allarg., rit. and a tempo marks are left as nuances, the beat kept",
+    },
+    notePlaceholder: "Rodolfo holds Mimì’s cold hand in the dark and tells her who he is",
+    about: (
+      <>
+        <p>
+          “Che gelida manina”, Rodolfo’s aria, Act 1: one of the best-known tenor arias. The print gives an optional high C on “speranza” (bars 65-66) as an
+          alternative to the main line; the app shows the main line.
+        </p>
+        <p>
+          Score: vocal score pages 64-69 (from figure (30) to page 69 system 3 bar 2, “dir!”, 72 bars), from Carlo Carignani’s piano reduction in the
+          G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently, every
+          disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept, with the
+          print's spellings; Mimì’s “Ah!”, printed without a notehead, keeps its word. Rodolfo's printed alternative (the optional high C on 'speranza',
+          bars 65-66) is not shown. The printed metronome marks are the Andantino affettuoso’s ♩ = 58 and the Andante lento’s ♩ = 52; the Andante
+          sostenuto’s tempo is chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

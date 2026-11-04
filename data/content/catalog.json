@@ -3077,6 +3077,40 @@
     }
   },
   {
+    "editionId": "puccini-che-gelida-manina",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-che-gelida-manina@1.0.0-carignani#c1b3ef3406",
+    "title": "Che gelida manina",
+    "subtitle": "Rodolfo's aria, La bohème, Act 1",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      }
+    ],
+    "measures": 72,
+    "durationSec": 224,
+    "hasRepeats": false,
+    "keySignature": "D♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 26,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-legna",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-legna@1.0.0-carignani#97f3c829aa",

@@ -2085,7 +2085,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Che gelida manina",
       "kind": "Aria · Act 1",
-      "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key"
+      "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key",
+      "editionId": "puccini-che-gelida-manina"
      },
      {
       "title": "O soave fanciulla",
@@ -2185,7 +2186,8 @@ export const OPERAS: Opera[] = [
       "title": "Ah!… Che gelida manina",
       "kind": "Aria · Act 1",
       "id": "Act 1: Ah!… Che gelida manina",
-      "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key"
+      "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key",
+      "editionId": "puccini-che-gelida-manina"
      },
      {
       "title": "Quando me'n vo'",
