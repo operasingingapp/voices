@@ -20,7 +20,11 @@ Your job is only the MARKS, for EVERY staff (each singer and both piano hands), 
    at the top of a system go on the TOP sung line present (or the RH if no singer) in that bar. Keep the print's
    spelling (cres. vs cresc.). Do NOT add the big section tempo headings already given as remarks (ALLEGRO VIVACE
    etc.) and do NOT add metronome numbers, rehearsal figures, stage directions (italic in brackets), "m.s.", "m.d.".
-5. Replace any legacy `word:cresc.hairpin` with proper hp:< ... hp:end.
+5. PIANO SLURS AND TIES: compare every piano slur/tie with the page and make them match (this is the one kind of
+   existing mark you may change): long phrase slurs, short slurs, slurs from grace notes to their main note, slurs
+   over tremolo pairs ("()" on the trem token), ties incl. per-note chord ties; use [ ] for a slur nested inside
+   another in the same voice line. A slur cannot end on a rest.
+6. Replace any legacy `word:cresc.hairpin` with proper hp:< ... hp:end.
 
 How: page images /home/claude/ext/boheme/pages/p-NNN.png (~280 dpi; zoom: crop + resize 3-4x; for finer detail
 pdftoppm -r 400 -f N -l N /home/claude/ext/boheme/src/vs.pdf OUT -png). Scratch only in your /dev/shm folder.
