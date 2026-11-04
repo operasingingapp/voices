@@ -1941,8 +1941,39 @@ function portraitRoles(): { opera: Opera; ch: Character }[] {
  * without a seam; it pauses under the
  * pointer or keyboard focus, and stands still (scrollable by hand) for people who prefer less motion.
  */
-function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void }) {
+function CastReel({ onPick, still }: { onPick: (opera: Opera, ch: Character) => void; still?: boolean }) {
   const all = portraitRoles();
+  if (still) {
+    // the whole cast standing still, grouped by opera, to look through at leisure
+    const byOpera = OPERAS.map((opera) => ({ opera, list: all.filter((x) => x.opera === opera) })).filter((g) => g.list.length);
+    return (
+      <div className="reel-all" role="group" aria-label="All characters">
+        {byOpera.map(({ opera, list }) => (
+          <section key={opera.id} className="reel-all-group">
+            <h2 className="reel-all-head" lang={opera.lang}>
+              {opera.title} <small>{opera.composer}</small>
+            </h2>
+            <div className="reel-grid">
+              {list.map(({ ch }) => {
+                const art = PORTRAITS[`${opera.id}:${ch.id}`];
+                const ready = ch.pieces.some((p) => p.editionId);
+                return (
+                  <button key={ch.id} type="button" className="reel-card" data-tone={voiceTone(ch.voice)} style={toneStyle(opera.id, ch.id)} onClick={() => onPick(opera, ch)}>
+                    <span className="reel-pic">
+                      <img src={art.portrait} alt="" loading="lazy" decoding="async" draggable={false} />
+                      {ready && <span className="reel-ready">Ready to sing</span>}
+                    </span>
+                    <span className="reel-name">{ch.name}</span>
+                    <span className="reel-opera">{ch.voice}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
+    );
+  }
   const rows = [all.filter((_, i) => i % 2 === 0), all.filter((_, i) => i % 2 === 1)];
   return (
     <div className="reel" role="group" aria-label="Characters">
@@ -1984,8 +2015,36 @@ function CastReel({ onPick }: { onPick: (opera: Opera, ch: Character) => void })
  * The operas as a gallery like the characters': wide cover cards drifting slowly in two rows (operas with a cover
  * first; the rest show their initial on the opera's colour). A tap opens a short card about the opera.
  */
-function OperaReel({ onPick }: { onPick: (opera: Opera) => void }) {
+function OperaReel({ onPick, still }: { onPick: (opera: Opera) => void; still?: boolean }) {
   const all = [...OPERAS].sort((a, b) => Number(!!ART[b.id]) - Number(!!ART[a.id]));
+  if (still) {
+    return (
+      <div className="reel-all" role="group" aria-label="All operas">
+        <div className="reel-grid reel-grid--operas">
+          {all.map((o) => {
+            const art = ART[o.id];
+            const n = OPERAS.indexOf(o);
+            const ready = o.chars.some((ch) => ch.pieces.some((p) => p.editionId));
+            const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
+            return (
+              <button key={o.id} type="button" className="reel-card reel-card--opera" data-tone={OPERA_TONES[n % OPERA_TONES.length]} style={opToneStyle(o.id)} onClick={() => onPick(o)}>
+                <span className="reel-pic">
+                  {art ? <img src={art.cover} alt="" loading="lazy" decoding="async" draggable={false} /> : <span className="reel-letter" lang={o.lang}>{letter}</span>}
+                  {ready && <span className="reel-ready">Ready to sing</span>}
+                </span>
+                <span className="reel-name" lang={o.lang}>
+                  {o.title}
+                </span>
+                <span className="reel-opera reel-sub">
+                  {o.composer} · {o.year}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
   const rows = [all.filter((_, i) => i % 2 === 0), all.filter((_, i) => i % 2 === 1)];
   return (
     <div className="reel reel--operas" role="group" aria-label="Operas">
@@ -2196,6 +2255,22 @@ export function Onboarding({
   const [meet, setMeet] = useState<{ opera: Opera; ch: Character } | null>(null);
   // an opera tapped in its gallery: a short card about it first
   const [meetOp, setMeetOp] = useState<Opera | null>(null);
+  // the gallery drifts; "Show all" stands everything still in a list to look through (remembered on this device)
+  const [showAll, setShowAllState] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem("cp:welcomeAll") === "1";
+    } catch {
+      return false;
+    }
+  });
+  const setShowAll = (v: boolean) => {
+    setShowAllState(v);
+    try {
+      localStorage.setItem("cp:welcomeAll", v ? "1" : "0");
+    } catch {
+      /* no storage: the choice lasts this visit */
+    }
+  };
   // 1: the gallery of characters; 2: the list of operas (a quieter way in); 3: the chosen opera's cast.
   // A cast with no opera goes back to the gallery.
   const step = stepAsked === 3 ? (roles.length ? 3 : 1) : stepAsked;
@@ -2251,12 +2326,29 @@ export function Onboarding({
                 </button>
               ))}
             </div>
+            <button type="button" className="ob-showall" aria-pressed={showAll} onClick={() => setShowAll(!showAll)}>
+              {showAll ? (
+                <>
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path d="M4 9h16M4 15h16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                  </svg>
+                  Moving gallery
+                </>
+              ) : (
+                <>
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+                  </svg>
+                  Show all
+                </>
+              )}
+            </button>
           </div>
-          <div id="ob-choices" role="tabpanel" className="ob-choices">
+          <div id="ob-choices" role="tabpanel" className={`ob-choices${showAll ? " is-all" : ""}`}>
             {step === 1 ? (
-              <CastReel onPick={(opera, ch) => setMeet({ opera, ch })} />
+              <CastReel still={showAll} onPick={(opera, ch) => setMeet({ opera, ch })} />
             ) : (
-              <OperaReel onPick={(o) => setMeetOp(o)} />
+              <OperaReel still={showAll} onPick={(o) => setMeetOp(o)} />
             )}
           </div>
         </main>

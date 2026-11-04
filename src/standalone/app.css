@@ -8614,3 +8614,30 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
   .rail-last-label { display: block; }
   .rail-last-title { font-size: 14px; }
 }
+
+/* 27. Welcome: "Show all" stands the drifting gallery still as a list to look through (grouped by opera) */
+.ob-showall {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 40px; margin: 10px 0 0 10px; padding: 0 16px;
+  border: 0; border-radius: var(--radius-pill);
+  background: var(--fog); box-shadow: inset 0 0 0 1px var(--fog-strong);
+  color: var(--ink); font: inherit; font-size: 15px; font-weight: 500; cursor: pointer;
+  vertical-align: top;
+}
+.ob-showall:hover { background: var(--fog-strong); }
+.ob-showall:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.reel-all { width: 100%; box-sizing: border-box; padding: 4px var(--gutter, 24px) 32px; display: grid; gap: 28px; }
+.reel-all-group { display: grid; gap: 12px; }
+.reel-all-head { margin: 0; font-size: 20px; font-weight: 500; font-style: italic; }
+.reel-all-head small { font-style: normal; font-size: 14px; color: var(--ink-muted); margin-left: 6px; }
+.reel-grid { display: grid; gap: 22px 18px; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); }
+.reel-grid--operas { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.reel-grid .reel-card, .ob-welcome .reel-grid .reel-card, .ob-welcome .reel-grid .reel-card--opera { width: auto; margin-right: 0; }
+/* a finger resting on the moving gallery holds it still, as the pointer does */
+.reel:active .reel-row { animation-play-state: paused; }
+@media (max-width: 640px) {
+  .ob-showall { margin-left: 0; }
+  .reel-all { padding-inline: 16px; }
+  .reel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; }
+  .reel-grid--operas { grid-template-columns: minmax(0, 1fr); }
+}
