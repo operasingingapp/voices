@@ -2870,9 +2870,6 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
             <Play />
             <span>{last ? (barOf(last) ? `Continue at bar ${barOf(last)}` : "Continue") : "Start"}</span>
           </button>
-          <button type="button" className="cp-btn pv-btn-line" onClick={() => wordsFirst(hero, last ? "resume" : "start")}>
-            Words first
-          </button>
         </div>
       </div>
       <div className="pv-hero-pic" aria-hidden="true">
