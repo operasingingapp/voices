@@ -9043,3 +9043,112 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   line-height: 1.2;
   overflow-wrap: anywhere;
 }
+
+/* =====================================================================
+   34. Words view, ensemble rows in one rhythm
+   [ face + name ] [ bar ] [ speaker ] [ Italian ] | [ English ]
+   The bar number sits on the Italian baseline, the speaker is centred on
+   the first line of the Italian, the name never crowds the row
+   ===================================================================== */
+.words-view .w-grid:has(.w-line.script) {
+  --w-cols: 128px 34px 34px minmax(0, 1fr) minmax(0, 1fr);
+}
+.words-view .w-line.script {
+  align-items: baseline;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.words-view .w-line.script > .w-gut { grid-column: 1; grid-row: 1; align-self: start; }
+.words-view .w-line.script > .w-bar-col { grid-column: 2; grid-row: 1; }
+.words-view .w-line.script > .w-hear { grid-column: 3; grid-row: 1; }
+.words-view .w-line.script > .w-orig { grid-column: 4; grid-row: 1; }
+.words-view .w-line.script > .w-tr { grid-column: 5; grid-row: 1; }
+.words-view .w-cols:has(~ .w-line.script) .w-col-orig,
+.words-view .w-grid:has(.w-line.script) .w-cols .w-col-orig { grid-column: 4; }
+.words-view .w-grid:has(.w-line.script) .w-cols .w-col-tr { grid-column: 5; }
+
+/* who sings: face, then the name beside it (up to two lines), "you" under it */
+.words-view .w-line.script .w-gut {
+  padding-top: 2px;
+}
+.words-view .w-line.script .w-who {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 8px;
+  align-items: center;
+  font: 650 10.5px/1.25 var(--font-sans);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.words-view .w-line.script .w-who-face {
+  width: 28px;
+  height: 28px;
+}
+.words-view .w-line.script .w-who-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  white-space: normal;
+  overflow: hidden;
+}
+.words-view .w-line.script .w-who-you {
+  font: italic 500 11px/1.2 var(--font-sans);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-muted);
+}
+/* the bar: small, quiet, on the line's baseline */
+.words-view .w-line.script > .w-bar-col {
+  padding: 0;
+  font: 500 12px/1 var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in srgb, var(--ink) 45%, var(--canvas));
+  text-align: right;
+  padding-right: 6px;
+}
+.words-view .w-line.script.now > .w-bar-col {
+  color: var(--ink);
+  font-weight: 700;
+}
+.words-view .w-line.script.now > .w-bar-col::before {
+  display: none;
+}
+/* the speaker, centred on the first line of the Italian */
+.words-view .w-line.script > .w-hear {
+  align-self: start;
+  justify-self: center;
+  width: 30px;
+  height: 29px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+}
+.words-view .w-line.script > .w-hear svg {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 640px) {
+  .words-view .w-grid:has(.w-line.script) {
+    --w-cols: 32px 26px 28px minmax(0, 1fr);
+  }
+  .words-view .w-line.script > .w-gut { grid-row: 1 / span 2; }
+  .words-view .w-line.script > .w-tr {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .words-view .w-line.script .w-who {
+    grid-template-columns: 28px;
+  }
+  .words-view .w-line.script .w-who-name {
+    display: none;
+  }
+  .words-view .w-line.script > .w-bar-col {
+    font-size: 11px;
+    padding-right: 2px;
+  }
+  .words-view .w-line.script > .w-hear {
+    width: 26px;
+    height: 27px;
+  }
+}

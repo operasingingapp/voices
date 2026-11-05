@@ -2872,8 +2872,10 @@ function PracticeScreen({
                           </span>
                         </span>
                       )}
-                      <span className="w-bar">{edition.measures[perf.locate(sp.startQ).m].number}</span>
                     </span>
+                  ) : null}
+                  {allWords ? (
+                    <span className="w-bar w-bar-col">{edition.measures[perf.locate(sp.startQ).m].number}</span>
                   ) : (
                     <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
                       {edition.measures[perf.locate(sp.startQ).m].number}
