@@ -4,7 +4,7 @@
   "normalSpeed": 1,
   "slowSpeed": 0.7,
   "slowStretch": 1,
-  "stability": 0.5,
+  "stability": 0.65,
   "similarityBoost": 0.75,
   "maxCharsPerRun": 30000,
   "voiceName": "Manuela - Warm, Energetic and Swift",
@@ -33,5 +33,11 @@
   "wordAs": {
     "cinque": "Cìnque.",
     "quarantatre": "Quarantatrè."
-  }
+  },
+  "keepSettings": [
+    {
+      "modelId": "eleven_v4",
+      "stability": 0.5
+    }
+  ]
 }

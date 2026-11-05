@@ -8654,3 +8654,7 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
 .nm-item span { display: grid; gap: 2px; min-width: 0; }
 .nm-item b { font-weight: 500; font-size: 16px; }
 .nm-item small { color: var(--ink-muted); font-size: 13px; }
+/* 29. The note-picking pill also offers All notes and the PDF; on a narrow screen it may take two rows */
+.note-pick { flex-wrap: wrap; justify-content: center; max-width: calc(100vw - 32px); }
+.note-pick-msg { flex-basis: 100%; white-space: normal; font-size: 13px; padding: 2px 8px 6px; text-align: center; }
+@media (max-width: 480px) { .note-pick { border-radius: 22px; padding: 6px 8px; width: calc(100vw - 32px); box-sizing: border-box; } .note-pick .cp-btn { padding-inline: 12px; min-width: 0; } .note-pick > span:first-child { flex-basis: 100%; text-align: center; padding-top: 4px; } }

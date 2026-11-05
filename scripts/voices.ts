@@ -656,6 +656,15 @@ async function runLanguage(lang: string, todo: string[]) {
   const settings = JSON.stringify([config.voiceId, config.modelId, config.stability, config.similarityBoost, config.speakerBoost ?? true, "plain-42"]);
   const slowSettings = JSON.stringify([config.slowSpeed, config.slowStretch]);
   const hashOf = (c: Clip) => short(`${settings}|${c.slow ? slowSettings : config.normalSpeed}|${c.kind}|${c.text}`);
+  // recordings made with earlier settings that are kept as they are (voice.config.json "keepSettings", e.g. the
+  // Eleven v4 trial of "Mi chiamano Mimì" at stability 0.5): they count as up to date
+  const keptHashes = (c: Clip) =>
+    ((config as { keepSettings?: Partial<Config>[] }).keepSettings ?? []).map((k) => {
+      const o = { ...config, ...k };
+      const st = JSON.stringify([o.voiceId, o.modelId, o.stability, o.similarityBoost, o.speakerBoost ?? true, "plain-42"]);
+      return short(`${st}|${c.slow ? slowSettings : o.normalSpeed}|${c.kind}|${c.text}`);
+    });
+  const upToDate = (have: { hash: string } | undefined, c: Clip) => !!have && (have.hash === hashOf(c) || keptHashes(c).includes(have.hash));
 
   // the shared word bank
   const bankDir = `content/voice-bank/${voiceDir}`;
@@ -681,7 +690,7 @@ async function runLanguage(lang: string, todo: string[]) {
       const bankKey = `${c.kind}:${c.text}`;
       refs.push({ data, clipKey: c.key, bankKey });
       const have = bank[bankKey];
-      const fresh = have && have.hash === hashOf(c) && existsSync(join(ROOT, have.file));
+      const fresh = upToDate(have, c) && existsSync(join(ROOT, have.file));
       if ((fresh && !redo.has(c.key) && !redo.has(c.key.replace(/-slow$/, ""))) || queued.has(bankKey)) continue;
       queued.add(bankKey);
       jobs.push({ clip: c, done: (m) => (bank[bankKey] = m) });
@@ -695,7 +704,7 @@ async function runLanguage(lang: string, todo: string[]) {
     const word = key.slice(2);
     w.file = `${bankDir}/words/${slug(word)}.mp3`;
     const have = bank[word];
-    if (have && have.hash === hashOf(w) && existsSync(join(ROOT, have.file)) && !redo.has(key)) continue;
+    if (upToDate(have, w) && existsSync(join(ROOT, have!.file)) && !redo.has(key)) continue;
     jobs.push({ clip: w, done: (m) => (bank[word] = m) });
   }
 
