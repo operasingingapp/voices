@@ -1544,4 +1544,9 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
     inset: -8px -4px;
   }
   .words-view .w-hear::after { inset: -8px; }
+  /* the opera under a name (role page, sidebar): a link only 24px tall, its hit area taller */
+  .rp-opera { position: relative; }
+  .rp-opera::after { content: ""; position: absolute; inset: -8px -4px; }
+  /* in a role card the name sits just above: grow downwards, barely upwards */
+  .sd-panel > .rail .rail-opera::after, .shell > .rail .rail-opera::after { content: ""; position: absolute; inset: -3px -4px -10px; }
 }

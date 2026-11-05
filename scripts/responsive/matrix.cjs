@@ -104,9 +104,21 @@ async function act(page, a) {
 function inspect(screen) {
   const W = innerWidth, H = innerHeight;
   const out = [];
+  // what of an element can be seen: its box cut by every ancestor that clips (scroll areas, hidden labels)
   const vis = (e) => {
-    const r = e.getBoundingClientRect();
-    if (r.width < 1 || r.height < 1) return null;
+    const b = e.getBoundingClientRect();
+    if (b.width < 1 || b.height < 1) return null;
+    let l = b.left, t = b.top, rr = b.right, bb = b.bottom;
+    for (let p = e.parentElement; p && p !== document.body; p = p.parentElement) {
+      const ps = getComputedStyle(p);
+      if (ps.overflowX !== "visible" || ps.overflowY !== "visible" || ps.clip !== "auto" && ps.clip !== "") {
+        const q = p.getBoundingClientRect();
+        if (ps.overflowX !== "visible" || ps.clip !== "auto") { l = Math.max(l, q.left); rr = Math.min(rr, q.right); }
+        if (ps.overflowY !== "visible" || ps.clip !== "auto") { t = Math.max(t, q.top); bb = Math.min(bb, q.bottom); }
+      }
+    }
+    if (rr - l < 3 || bb - t < 3) return null;
+    const r = { left: l, top: t, right: rr, bottom: bb, width: rr - l, height: bb - t, full: b };
     const cs = getComputedStyle(e);
     if (cs.visibility === "hidden" || cs.opacity === "0") return null;
     for (let p = e; p; p = p.parentElement) if (getComputedStyle(p).display === "none") return null;
@@ -151,10 +163,13 @@ function inspect(screen) {
     for (const e of ctrls) {
       const r = vis(e);
       if (!r || r.right <= 0 || r.left >= W || r.bottom <= 0 || r.top >= H || e.closest('[inert], [aria-hidden="true"]')) continue;
-      if (e.closest("p, li > span, .story, .legal, .credits, .about-copy")) continue; // links inside running text
+      if (e.closest("p, li > span, .story, .legal, .credits, .about-copy, [data-dense]")) continue; // links inside running text; dense strips with a full list one tap away
       const after = getComputedStyle(e, "::after");
-      const grow = after.content !== "none" && after.position === "absolute" ? Math.max(0, -parseFloat(after.top) || 0) * 2 : 0;
-      if (r.width < 32 || r.height + grow < 32) small.push(`${name(e)} ${Math.round(r.width)}×${Math.round(r.height)}`);
+      const neg = (v) => Math.max(0, -parseFloat(v) || 0);
+      const growH = after.content !== "none" && after.position === "absolute" ? neg(after.top) + neg(after.bottom) : 0;
+      const growW = after.content !== "none" && after.position === "absolute" ? neg(after.left) + neg(after.right) : 0;
+      const fb = r.full;
+      if (fb.width + growW < 32 || fb.height + growH < 32) small.push(`${name(e)} ${Math.round(fb.width)}×${Math.round(fb.height)}`);
     }
     if (small.length) out.push({ kind: "small-tap-target", detail: small.slice(0, 8).join(" | ") + (small.length > 8 ? ` (+${small.length - 8})` : "") });
   }
@@ -165,6 +180,7 @@ function inspect(screen) {
     for (let j = i + 1; j < rs.length; j++) {
       const [a, ra] = rs[i], [b, rb] = rs[j];
       if (a.contains(b) || b.contains(a)) continue;
+      if (a.closest("[data-over]") || b.closest("[data-over]")) continue; // a link laid over its card on purpose
       // a layer meant to float over scrolling content (sticky tip, fixed bar) is not a clash
       const layer = (e) => { for (let p = e; p; p = p.parentElement) { const ps = getComputedStyle(p).position; if (ps === "sticky" || ps === "fixed") return p; } return null; };
       if (layer(a) !== layer(b)) continue;
@@ -188,7 +204,7 @@ function inspect(screen) {
     const cs = getComputedStyle(e);
     if (cs.overflowX !== "hidden" && cs.overflow !== "hidden") continue;
     if (cs.textOverflow === "ellipsis" || cs.webkitLineClamp !== "none" && cs.webkitLineClamp) continue;
-    if (e.scrollWidth > e.clientWidth + 3 && cs.whiteSpace !== "normal") cut.push(`${name(e)} (${e.scrollWidth}>${e.clientWidth})`);
+    if (e.clientWidth > 4 && e.scrollWidth > e.clientWidth + 3 && cs.whiteSpace !== "normal") cut.push(`${name(e)} (${e.scrollWidth}>${e.clientWidth})`);
   }
   if (cut.length) out.push({ kind: "text-cut", detail: cut.slice(0, 6).join(" | ") });
   // 7. the practice screen keeps a usable score and its transport

@@ -455,6 +455,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
             <button
               type="button"
               className="rail-opera"
+              data-over
               aria-current={place.screen === "opera" && (place as { opera?: string }).opera === opera.id ? "page" : undefined}
               aria-label={`Open the opera ${opera.title}`}
               onClick={() => go({ screen: "opera", opera: opera.id })}
@@ -3162,7 +3163,7 @@ function RoleProgress({ ctx, cur, recs, here }: { ctx: Ctx; cur: { opera: Opera;
           {list.map(({ act, items }, gi) => (
             <div key={gi} className="pv-act-row">
               <span className="pv-act-name">{act ? `Act ${act}` : list.length > 1 ? "Other" : "All"}</span>
-              <div className="pv-act-strip" role="list">
+              <div className="pv-act-strip" role="list" data-dense>
                 {items.map(({ p, i }) => {
                   const st = state(p);
                   return (

@@ -1207,6 +1207,23 @@ function PracticeScreen({
     else setCardH(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [live]);
+  // turned (or resized) while playing: the held height belonged to the old shape, so measure the card again
+  const liveRef = useRef(live);
+  liveRef.current = live;
+  useEffect(() => {
+    let raf = 0;
+    const onResize = () => {
+      if (!liveRef.current) return;
+      setCardH(0);
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => requestAnimationFrame(() => liveRef.current && setCardH(lineCardRef.current?.offsetHeight ?? 0)));
+    };
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
 
   const current = useMemo(() => {
     const cur = spans.findIndex((s) => q >= s.startQ - 1e-6 && q < s.endQ - 1e-6);
