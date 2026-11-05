@@ -2622,7 +2622,8 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
   const recent = Object.values(recs)
     .filter((r) => r.piece.editionId && r.t)
     .sort((a, b) => (b.t ?? 0) - (a.t ?? 0));
-  let last: HomeRef | null = recent[0] ?? null;
+  // the role chosen on the left comes first: its latest place, else the latest anywhere
+  let last: HomeRef | null = (cur && recent.find((r) => r.opera.id === cur.opera.id && r.ch.id === cur.ch.id)) || recent[0] || null;
   if (!last && ctx.last) {
     const q = resolve(ctx.last);
     const pc = q?.ch.pieces[ctx.last.piece];
@@ -2872,44 +2873,77 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
       <h1 className="sr-only">Home</h1>
       <div className="hm hm-simple">
         {resume}
-        {/* your roles, one row each: tap for its pieces */}
-        <section className="hm-sec hm-mine" aria-labelledby="hm-mine-h">
-          <h2 className="hm-h" id="hm-mine-h">
-            My roles
-          </h2>
-          <ul className="hm-mine-list">
-            {roles.map((r) => {
-              const pr = progressOf(ctx, r.opera, r.ch);
-              const ready = r.ch.pieces.filter((p) => p.editionId).length;
-              return (
-                <li key={`${r.opera.id}:${r.ch.id}`}>
-                  <button type="button" className="hm-mine-row" {...tone(r)} onClick={() => ctx.go({ screen: "role", opera: r.opera.id, character: r.ch.id })}>
-                    <span className="hm-mine-face" aria-hidden="true">
-                      <Face opera={r.opera} ch={r.ch} />
-                    </span>
-                    <span className="hm-mine-text">
-                      <b>{r.ch.name}</b>
-                      <small>
-                        <i lang={r.opera.lang}>{r.opera.title}</i> · {pr.set.size} of {r.ch.pieces.length} learned{ready < r.ch.pieces.length ? ` · ${ready} ready to sing` : ""}
-                      </small>
-                    </span>
-                    <span className="hm-mine-go" aria-hidden="true">›</span>
-                  </button>
-                </li>
-              );
-            })}
-            <li>
-              <button type="button" className="hm-mine-row hm-mine-add" onClick={() => ctx.go({ screen: "explore", by: "voice" })}>
-                <span className="hm-mine-face" aria-hidden="true">+</span>
-                <span className="hm-mine-text">
-                  <b>Add a role</b>
-                </span>
-              </button>
-            </li>
-          </ul>
-        </section>
+        {cur && <RoleProgress ctx={ctx} cur={cur} recs={recs} here={last && last.opera.id === cur.opera.id && last.ch.id === cur.ch.id ? last.index : -1} />}
       </div>
     </main>
+  );
+}
+
+/**
+ * The current role at a glance: how much of it is learned, and every piece in running order as one segment of a
+ * strip per act (learned, being practised, not started, or music not here yet). A tap on a segment opens the piece.
+ */
+function RoleProgress({ ctx, cur, recs, here }: { ctx: Ctx; cur: { opera: Opera; ch: Character }; recs: Record<string, HomeRef>; here: number }) {
+  const { opera, ch } = cur;
+  const pr = progressOf(ctx, opera, ch);
+  const rk = `${opera.id}:${ch.id}`;
+  const state = (p: Piece): PieceState => (pr.set.has(pieceKey(p)) ? "learned" : !p.editionId ? "soon" : recs[`${rk}:${pieceKey(p)}`]?.t ? "practising" : "new");
+  const acts = new Map<number, { p: Piece; i: number }[]>();
+  ch.pieces.forEach((p, i) => acts.set(actNo(p), [...(acts.get(actNo(p)) ?? []), { p, i }]));
+  const list = [...acts.entries()].sort((a, b) => (a[0] || 99) - (b[0] || 99));
+  const n = { learned: 0, practising: 0, new: 0, soon: 0 } as Record<PieceState, number>;
+  ch.pieces.forEach((p) => n[state(p)]++);
+  const ready = ch.pieces.length - n.soon;
+  const word: Record<PieceState, string> = { learned: "learned", practising: "practising", new: "not started", soon: "music not here yet" };
+  return (
+    <section className="hm-sec hm-prog" aria-labelledby="hm-prog-h" {...{ "data-tone": voiceTone(ch.voice) }} style={toneStyle(opera.id, ch.id)}>
+      <div className="hm-prog-head">
+        <h2 className="hm-h" id="hm-prog-h">
+          {ch.name} in <i lang={opera.lang}>{opera.title}</i>
+        </h2>
+        <button type="button" className="cp-btn cp-btn--ghost hm-prog-open" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
+          All pieces
+          <Chevron />
+        </button>
+      </div>
+      <p className="hm-prog-big">
+        <b>{pr.done}</b> of {ch.pieces.length} learned
+        <span>
+          {n.practising ? ` · ${n.practising} in progress` : ""}
+          {ready < ch.pieces.length ? ` · ${ready} with music so far` : ""}
+        </span>
+      </p>
+      <div className="hm-prog-acts">
+        {list.map(([act, items]) => (
+          <div key={act} className="hm-prog-act">
+            <span className="hm-prog-act-name">{act ? `Act ${act}` : "Other"}</span>
+            <div className="hm-prog-strip" role="list">
+              {items.map(({ p, i }) => {
+                const st = state(p);
+                return (
+                  <button
+                    key={i}
+                    type="button"
+                    role="listitem"
+                    className={`hm-seg ${st}${i === here ? " here" : ""}`}
+                    disabled={st === "soon"}
+                    title={`${p.title}: ${word[st]}`}
+                    aria-label={`${p.title}: ${word[st]}`}
+                    onClick={() => openPiece(ctx, { opera, ch, piece: p, index: i }, recs[`${rk}:${pieceKey(p)}`]?.t ? "resume" : "start")}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="hm-prog-key" aria-hidden="true">
+        <span><i className="hm-seg learned" /> learned</span>
+        <span><i className="hm-seg practising" /> in progress</span>
+        <span><i className="hm-seg new" /> not started</span>
+        <span><i className="hm-seg soon" /> music to come</span>
+      </p>
+    </section>
   );
 }
 

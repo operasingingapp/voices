@@ -8777,3 +8777,28 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .hm-simple { width: 100%; max-width: 860px; }
 .hm-simple > .hm-mine { order: 2; }
 .hm-after-sub { font-family: var(--font-sans); font-size: 13px; color: var(--ink-muted); }
+
+/* 31. Home: the current role's progress, one segment per piece, one strip per act */
+.hm-prog { display: grid; gap: 14px; }
+.hm-prog-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.hm-prog-head .hm-h { margin: 0; }
+.hm-prog-open { display: inline-flex; align-items: center; gap: 4px; }
+.hm-prog-big { margin: 0; font-size: 17px; color: var(--ink); }
+.hm-prog-big b { font-size: 28px; font-weight: 500; margin-right: 4px; }
+.hm-prog-big span { color: var(--ink-muted); font-size: 15px; }
+.hm-prog-acts { display: grid; gap: 10px; }
+.hm-prog-act { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 12px; }
+.hm-prog-act-name { font-size: 13px; color: var(--ink-muted); }
+.hm-prog-strip { display: flex; gap: 4px; }
+.hm-seg { flex: 1 1 0; min-width: 10px; height: 22px; border: 0; padding: 0; border-radius: 6px; cursor: pointer; background: var(--fog-strong); }
+.hm-seg.learned { background: var(--now, #2f7d4f); }
+.hm-seg.practising { background: color-mix(in srgb, var(--now, #2f7d4f) 40%, var(--canvas)); }
+.hm-seg.new { background: var(--canvas); box-shadow: inset 0 0 0 1.5px var(--fog-strong); }
+.hm-seg.soon { background: repeating-linear-gradient(135deg, var(--fog) 0 4px, transparent 4px 8px); box-shadow: inset 0 0 0 1px var(--fog-strong); cursor: default; }
+.hm-seg.here { outline: 2px solid var(--ink); outline-offset: 2px; }
+.hm-seg:not(:disabled):hover { filter: brightness(0.92); }
+.hm-seg:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.hm-prog-key { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 2px 0 0; font-size: 13px; color: var(--ink-muted); }
+.hm-prog-key span { display: inline-flex; align-items: center; gap: 6px; }
+.hm-prog-key .hm-seg { display: inline-block; width: 14px; min-width: 14px; height: 12px; flex: none; border-radius: 3px; cursor: default; }
+.hm-simple > .hm-prog { order: 2; }
