@@ -42,6 +42,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Recitativo</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -1840,6 +1846,12 @@
       </note>
     </measure>
     <measure number="38">
+      <direction placement="above">
+        <direction-type>
+          <words>(Recitativo)</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -12585,12 +12597,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <note>
         <rest />
         <duration>18</duration>
@@ -16269,11 +16275,6 @@
       </note>
     </measure>
     <measure number="37">
-      <direction placement="above">
-        <direction-type>
-          <words>Andante</words>
-        </direction-type>
-      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -16291,6 +16292,13 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
+      </direction>
+      <direction placement="above">
+        <direction-type>
+          <words>Andante</words>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="72" />
       </direction>
       <forward>
         <duration>12</duration>

@@ -391,7 +391,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "Begins in C major and moves through several keys, ending ready for Dove sono",
       time: "4/4",
-      tempo: "Andante at ♩ = 72, Allegretto at ♩ = 100, Andante at ♩ = 72 (about 1½ minutes)",
+      tempo: "Andante at ♩ = 60, Allegretto at ♩ = 100, Andante at ♩ = 60 (about 1½ minutes; set from studio recordings)",
     },
     notePlaceholder: "Speak it first, then sing: let the words set the rhythm",
     about: (
@@ -415,7 +415,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 40 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 45 seconds)",
     },
     notePlaceholder: "The Count asks why Susanna was so cold that morning",
     about: (
@@ -463,7 +463,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 2 minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 2 minutes)",
     },
     notePlaceholder: "The Count puzzles over the day; Susanna comes to him",
     about: (
@@ -511,7 +511,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 1½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¾ minutes)",
     },
     notePlaceholder: "The judge rules that Figaro must pay or marry Marcellina",
     about: (
@@ -535,7 +535,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Recitativo at ♩ = 104, then Andante a tempo at ♩ = 72 (about 45 seconds)",
+      tempo: "Recitativo at ♩ = 92, then Andante a tempo at ♩ = 72 (about 50 seconds)",
     },
     notePlaceholder: "Bartolo agrees to marry Marcellina at last",
     about: (
@@ -559,7 +559,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 35 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 40 seconds)",
     },
     notePlaceholder: "Barbarina takes Cherubino home to dress him as a village girl",
     about: (
@@ -583,7 +583,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "4/4",
-      tempo: "Allegro moderato at ♩ = 132 (about 4 minutes)",
+      tempo: "Allegro moderato at ♩ = 120 (about 4¾ minutes; set from studio recordings)",
     },
     notePlaceholder: "Marcellina and Bartolo turn out to be Figaro's parents",
     about: (
@@ -607,7 +607,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 30 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 30 seconds)",
     },
     notePlaceholder: "Antonio tells the Count that Cherubino is still in the castle, dressed as a girl",
     about: (
@@ -631,7 +631,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 30 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 35 seconds)",
     },
     notePlaceholder: "Susanna reports the Count’s anger; the Countess decides to write him a note",
     about: (
@@ -655,7 +655,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "6/8",
-      tempo: "Allegretto at ♩. = 52, then Recitativo at ♩ = 104 (about 2½ minutes)",
+      tempo: "Allegretto at ♩. = 48, then Recitativo at ♩ = 92 (about 2½ minutes; set from studio recordings)",
     },
     notePlaceholder: "The Countess dictates a letter inviting the Count to the garden; Susanna writes it (No. 20)",
     about: (
@@ -679,7 +679,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 25 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 30 seconds)",
     },
     notePlaceholder: "The letter is folded and sealed with a pin",
     about: (
@@ -727,7 +727,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 40 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 45 seconds)",
     },
     notePlaceholder: "Barbarina presents the girls; the Countess notices one shy “girl”",
     about: (
@@ -751,7 +751,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Recitativo at ♩ = 104, then Marcia at ♩ = 100 (about 2½ minutes)",
+      tempo: "Recitativo at ♩ = 92, then Marcia at ♩ = 112 (about 2½ minutes)",
     },
     notePlaceholder: "Antonio unmasks Cherubino; Barbarina asks to marry him",
     about: (
@@ -775,7 +775,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "4/4 (Marcia), 2/4, 3/4 (Andante), 4/4, 2/4",
-      tempo: "Marcia at ♩ = 100, then Allegretto at ♩ = 120, then Andante at ♩ = 72, then Recit. at ♩ = 104, then Allegretto at ♩ = 120 (about 6½ minutes)",
+      tempo: "Marcia at ♩ = 112, then Allegretto at ♩ = 112, then Andante at ♩ = 84, then Maestoso at ♩ = 100 and Recit. at ♩ = 92, then Allegretto at ♩ = 112 (about 6¼ minutes; set from Böhm’s recording, which times the sections separately)",
     },
     notePlaceholder: "The double wedding procession; the Count pricks his finger on Susanna’s note (No. 22)",
     about: (
@@ -799,7 +799,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F minor",
       time: "6/8",
-      tempo: "Andante ♩. = 40 (about 2 minutes)",
+      tempo: "Andante ♩. = 44 (about 1¾ minutes; set from studio recordings)",
     },
     notePlaceholder: "Barbarina has lost the pin she was to take to Susanna (No. 23)",
     about: (
@@ -823,7 +823,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 2 minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 2 minutes)",
     },
     notePlaceholder: "Figaro learns of the pin and thinks Susanna is deceiving him",
     about: (
@@ -847,7 +847,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 25 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 30 seconds)",
     },
     notePlaceholder: "Marcellina decides to warn Susanna",
     about: (
@@ -871,7 +871,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "3/4, then 4/4 from bar 54",
-      tempo: "Tempo di Menuetto at ♩ = 112, Allegro at ♩ = 132 (about 4½ minutes)",
+      tempo: "Tempo di Menuetto at ♩ = 100, Allegro at ♩ = 120 (about 3 minutes)",
     },
     notePlaceholder: "Marcellina stands up for women: only men are cruel to their mates",
     about: (
@@ -895,7 +895,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¼ minutes)",
     },
     notePlaceholder: "Barbarina looks for the pavilion; Figaro gathers his witnesses",
     about: (
@@ -919,7 +919,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 30 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 35 seconds)",
     },
     notePlaceholder: "Basilio explains to Bartolo why Figaro is in such a state",
     about: (
@@ -967,7 +967,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "Recitative in C, aria in E flat major",
       time: "4/4",
-      tempo: "Recitativo at ♩ = 104, then Andante at ♩ = 72, then Moderato at ♩ = 116 (about 4½ minutes)",
+      tempo: "Recitativo at ♩ = 92, then Andante at ♩ = 66, then Moderato at ♩ = 132 (about 4 minutes; set from studio recordings)",
     },
     notePlaceholder: "Figaro, sure Susanna is betraying him, warns all men about women",
     about: (
@@ -991,7 +991,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 50 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 55 seconds)",
     },
     notePlaceholder: "The women arrive in each other's clothes; Figaro watches",
     about: (
@@ -1015,7 +1015,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "Recitative in C, aria in F major",
       time: "4/4, aria 6/8",
-      tempo: "Recitative Allegro vivace assai at ♩ = 112, then the aria Andante at ♩. = 35 (about 4 minutes)",
+      tempo: "Recitative Allegro vivace assai at ♩ = 92 (the voice declaims freely: the studio recordings take this recitative slower still), then the aria Andante at ♩. = 31 (♪ = 92) (about 4¼ minutes; set from studio recordings)",
     },
     notePlaceholder: "Susanna, knowing Figaro listens, sings of longing for her lover",
     about: (
@@ -1039,7 +1039,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 30 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 30 seconds)",
     },
     notePlaceholder: "Figaro despairs; Cherubino comes looking for Barbarina",
     about: (
@@ -1063,7 +1063,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 1½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 2 minutes)",
     },
     notePlaceholder: "Cherubino rushes in: the Count has dismissed him",
     about: (
@@ -1087,7 +1087,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major",
       time: "4/4",
-      tempo: "Andante at ♩ = 80 (about 2½ minutes)",
+      tempo: "Andante at ♩ = 72 (about 2¾ minutes; set, with “Partito è alfin l’audace” and “Tutto è tranquillo”, from the Levine and Harnoncourt recordings)",
     },
     notePlaceholder: "Cherubino flirts with the Countess, thinking she is Susanna",
     about: (
@@ -1111,7 +1111,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "4/4",
-      tempo: "Con un poco più di moto at ♩ = 100 (about 2½ minutes)",
+      tempo: "Con un poco più di moto at ♩ = 88, a little more motion than the Andante ♩ = 72 before it (about 2¾ minutes)",
     },
     notePlaceholder: "The Count woos his own wife, thinking she is Susanna",
     about: (
@@ -1135,7 +1135,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E flat major",
       time: "3/4",
-      tempo: "Larghetto at ♩ = 63, then Allegro molto at ♩ = 192 (about 3 minutes)",
+      tempo: "Larghetto at ♩ = 56, then Allegro molto at ♩ = 176 (about 3¼ minutes)",
     },
     notePlaceholder: "Figaro knows Susanna's voice and pretends to woo ‘the Countess’",
     about: (
@@ -1280,7 +1280,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 45 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 50 seconds)",
     },
     notePlaceholder: "Speak it first, then sing: let the words set the rhythm",
     about: (
@@ -1303,7 +1303,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 1½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¾ minutes)",
     },
     notePlaceholder: "Speak it first, then sing: Susanna is telling, Figaro is finding out",
     about: (
@@ -1327,7 +1327,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104, slowing to ♩ = 66 at the end (about 40 seconds)",
+      tempo: "Moderato at ♩ = 96 (an accompanied recitative: a shade above the secco recitatives’ speaking pace), then Andante at ♩ = 66 from bar 11 (about 40 seconds)",
     },
     notePlaceholder: "Bitter and quick, then slower as the plan forms",
     about: (
@@ -1351,7 +1351,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 50 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about a minute)",
     },
     notePlaceholder: "Two old plotters: Marcellina eager, Bartolo savouring it",
     about: (
@@ -1401,7 +1401,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about a minute)",
     },
     notePlaceholder: "The Count is triumphant; Susanna is trapped",
     about: (
@@ -1451,7 +1451,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 1½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1½ minutes)",
     },
     notePlaceholder: "Figaro is pushing; the Count is playing for time",
     about: (
@@ -1501,7 +1501,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¼ minutes)",
     },
     notePlaceholder: "Cheerful on the surface; Cherubino is crestfallen",
     about: (
@@ -1576,7 +1576,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature in the recitative; the closing Allegretto is in F major",
       time: "4/4, with a Presto in 2/4 and an Allegretto in 3/4",
-      tempo: "Recitativo at ♩ = 104, then Presto at ♩ = 176, then Recitativo at ♩ = 104, then Allegretto at ♩ = 130 (about 3½ minutes)",
+      tempo: "Recitativo at ♩ = 92, then Presto at ♩ = 176, then recitative again at ♩ = 92, then Allegretto at ♩ = 130 (about 4 minutes)",
     },
     notePlaceholder: "Plotting together: quick, conversational, and Figaro sure of himself",
     about: (
@@ -1601,7 +1601,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¼ minutes)",
     },
     notePlaceholder: "The Countess frets; Susanna brings Cherubino in",
     about: (
@@ -1675,7 +1675,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about a minute)",
     },
     notePlaceholder: "The ladies praise the song and start the disguise",
     about: (
@@ -1773,7 +1773,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major (Allegro con spirito), then C major (Andante)",
       time: "3/8, then 2/4",
-      tempo: "Allegro con spirito at ♩. = 100, then Andante at ♩ = 72 (about 2½ minutes)",
+      tempo: "Allegro con spirito at ♩. = 80, then Andante at ♩ = 63 (about 3 minutes; set from the Böhm and Gardiner recordings, which time the two sections separately); the last bar, the first of “Ah signor”’s Allegro molto, at its ♩ = 202",
     },
     notePlaceholder: "Figaro bursts in to fetch everyone for the wedding",
     about: (
@@ -1797,7 +1797,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "3/8 (Molto Andante), then 4/4 (Allegro)",
-      tempo: "Molto Andante at ♪ = 104, then Allegro at ♩ = 160, as the score changes tempo (about 5 minutes)",
+      tempo: "Molto Andante at ♪ = 88, then Allegro at ♩ = 176, as the score changes tempo (about 5 minutes; set from the Böhm and Gardiner recordings, which time the two sections separately)",
     },
     notePlaceholder: "Susanna steps out of the closet, and the Count must beg pardon",
     about: (
@@ -1821,7 +1821,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¼ minutes)",
     },
     notePlaceholder: "The Count finds the closet locked and grows suspicious",
     about: (
@@ -1845,7 +1845,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "3/4",
-      tempo: "Allegro spirituoso at ♩ = 144 (about 4 minutes)",
+      tempo: "Allegro spirituoso at ♩ = 144, with the short Recit. (bars 121-123) at ♩ = 92 (about 3 minutes)",
     },
     notePlaceholder: "The Count orders “Susanna” out of the closet; the Countess forbids it",
     about: (
@@ -1869,7 +1869,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 50 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 55 seconds)",
     },
     notePlaceholder: "The Count decides to break the closet door open himself",
     about: (
@@ -1893,7 +1893,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "4/4",
-      tempo: "Allegro assai at ♩ = 170 (about a minute; set from studio recordings)",
+      tempo: "Allegro assai at ♩ = 160 (about a minute; set from studio recordings)",
     },
     notePlaceholder: "Susanna frees Cherubino, who jumps out of the window",
     about: (
@@ -1917,7 +1917,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 15 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 20 seconds)",
     },
     notePlaceholder: "Susanna watches Cherubino run off and hides in the closet herself",
     about: (
@@ -1941,7 +1941,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature)",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 1¼ minutes)",
     },
     notePlaceholder: "The Countess confesses that Cherubino is in the closet",
     about: (
@@ -1965,7 +1965,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E flat major",
       time: "4/4",
-      tempo: "Allegro at ♩ = 176 (about 3 minutes; set from studio recordings)",
+      tempo: "Allegro at ♩ = 176, with the one-bar Recitativo (bar 80) at ♩ = 92 (about 3 minutes; set from studio recordings)",
     },
     notePlaceholder: "The key, the closet, and the Count's fury",
     about: (
@@ -1990,7 +1990,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B flat major",
       time: "4/4",
-      tempo: "Allegro assai at ♩ = 200, then Recitativo at ♩ = 104, then in tempo at ♩ = 200 (about 4½ minutes; set from studio recordings)",
+      tempo: "Allegro assai at ♩ = 200, then Recitativo at ♩ = 92, then in tempo at ♩ = 200 (about 4½ minutes; set from studio recordings)",
     },
     notePlaceholder: "The Count steps out from behind the chair",
     about: (
@@ -2014,7 +2014,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 3 minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace, with the printed Andante of the piano’s run in bar 37 at ♩ = 72 (about 3½ minutes)",
     },
     notePlaceholder: "The armchair, the dressing gown, and Basilio at the door",
     about: (
@@ -2038,7 +2038,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 2½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 2½ minutes)",
     },
     notePlaceholder: "The ribbon, the plaster, and the Count at the door",
     about: (
@@ -2063,7 +2063,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104 (about 30 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, close to the studio recordings’ pace (about 35 seconds)",
     },
     notePlaceholder: "Marcellina plots aloud; Susanna's asides cut in",
     about: (

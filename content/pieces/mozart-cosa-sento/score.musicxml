@@ -2826,12 +2826,6 @@
       </note>
     </measure>
     <measure number="121">
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -2856,6 +2850,12 @@
           <fermata type="upright" />
         </notations>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <words>Recitativo</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>48</duration>

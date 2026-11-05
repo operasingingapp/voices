@@ -38,7 +38,7 @@
         <direction-type>
           <words>Andante</words>
         </direction-type>
-        <sound tempo="72" />
+        <sound tempo="60" />
       </direction>
       <note>
         <rest />
@@ -805,6 +805,12 @@
           <text>lo</text>
         </lyric>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegretto</words>
+        </direction-type>
+        <sound tempo="100" />
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -830,12 +836,6 @@
       </note>
     </measure>
     <measure number="9">
-      <direction placement="above">
-        <direction-type>
-          <words>Allegretto</words>
-        </direction-type>
-        <sound tempo="100" />
-      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -910,7 +910,7 @@
         <direction-type>
           <words>Andante</words>
         </direction-type>
-        <sound tempo="72" />
+        <sound tempo="60" />
       </direction>
       <note>
         <pitch>

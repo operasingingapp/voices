@@ -38,6 +38,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegro</words>
+        </direction-type>
+        <sound tempo="176" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -3260,6 +3266,12 @@
       </note>
     </measure>
     <measure number="80">
+      <direction placement="above">
+        <direction-type>
+          <words>Recitativo</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -3269,6 +3281,12 @@
       </note>
     </measure>
     <measure number="81">
+      <direction placement="above">
+        <direction-type>
+          <words>(a tempo)</words>
+        </direction-type>
+        <sound tempo="176" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -9952,12 +9970,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegro</words>
-        </direction-type>
-        <sound tempo="176" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -25931,11 +25943,6 @@
       </note>
     </measure>
     <measure number="80">
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-      </direction>
       <note>
         <pitch>
           <step>A</step>

@@ -34,6 +34,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Larghetto</words>
+        </direction-type>
+        <sound tempo="27.5" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -2176,12 +2182,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Larghetto</words>
-        </direction-type>
-        <sound tempo="27.5" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>

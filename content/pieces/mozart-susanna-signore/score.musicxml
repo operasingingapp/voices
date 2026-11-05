@@ -42,6 +42,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Molto Andante</words>
+        </direction-type>
+        <sound tempo="44" />
+      </direction>
       <note>
         <rest />
         <duration>36</duration>
@@ -2319,6 +2325,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegro</words>
+        </direction-type>
+        <sound tempo="176" />
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -20599,12 +20611,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Molto Andante</words>
-        </direction-type>
-        <sound tempo="52" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -27927,12 +27933,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegro</words>
-        </direction-type>
-        <sound tempo="160" />
-      </direction>
       <note>
         <pitch>
           <step>B</step>

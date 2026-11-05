@@ -58,6 +58,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegro assai</words>
+        </direction-type>
+        <sound tempo="205" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -1576,6 +1582,12 @@
       </note>
     </measure>
     <measure number="87">
+      <direction placement="above">
+        <direction-type>
+          <words>Più Allegro</words>
+        </direction-type>
+        <sound tempo="270" />
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -7636,6 +7648,12 @@
         <type>quarter</type>
         <staff>1</staff>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <words>Prestissimo</words>
+        </direction-type>
+        <sound tempo="324" />
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -30071,12 +30089,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegro assai</words>
-        </direction-type>
-        <sound tempo="205" />
-      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -32465,12 +32477,6 @@
       </note>
     </measure>
     <measure number="87">
-      <direction placement="above">
-        <direction-type>
-          <words>Più Allegro</words>
-        </direction-type>
-        <sound tempo="270" />
-      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -37021,13 +37027,6 @@
       <backup>
         <duration>48</duration>
       </backup>
-      <direction placement="above">
-        <direction-type>
-          <words>Prestissimo</words>
-        </direction-type>
-        <staff>1</staff>
-        <sound tempo="324" />
-      </direction>
       <forward>
         <duration>48</duration>
       </forward>
@@ -51036,12 +51035,6 @@
           </dynamics>
         </direction-type>
         <staff>1</staff>
-      </direction>
-      <direction placement="above">
-        <direction-type>
-          <words />
-        </direction-type>
-        <sound tempo="205" />
       </direction>
       <note>
         <pitch>

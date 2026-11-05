@@ -46,6 +46,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegro con spirito</words>
+        </direction-type>
+        <sound tempo="120" />
+      </direction>
       <note>
         <rest />
         <duration>72</duration>
@@ -1363,6 +1369,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Andante</words>
+        </direction-type>
+        <sound tempo="63" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -4080,6 +4092,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegro molto</words>
+        </direction-type>
+        <sound tempo="202" />
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -8126,12 +8144,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegro con spirito</words>
-        </direction-type>
-        <sound tempo="150" />
-      </direction>
       <note>
         <rest />
         <duration>72</duration>
@@ -9897,12 +9909,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Andante</words>
-        </direction-type>
-        <sound tempo="72" />
-      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -12146,12 +12152,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegro molto</words>
-        </direction-type>
-        <sound tempo="152" />
-      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -16946,12 +16946,6 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
-      </direction>
-      <direction placement="above">
-        <direction-type>
-          <words />
-        </direction-type>
-        <sound tempo="150" />
       </direction>
       <direction placement="below">
         <direction-type>

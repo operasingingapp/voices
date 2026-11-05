@@ -37,9 +37,9 @@
       </attributes>
       <direction placement="above">
         <direction-type>
-          <words />
+          <words>Moderato</words>
         </direction-type>
-        <sound tempo="104" />
+        <sound tempo="96" />
       </direction>
       <note>
         <rest />
@@ -839,12 +839,6 @@
       </note>
     </measure>
     <measure number="11">
-      <direction placement="above">
-        <direction-type>
-          <words />
-        </direction-type>
-        <sound tempo="66" />
-      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -1231,11 +1225,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Moderato</words>
-        </direction-type>
-      </direction>
       <direction>
         <direction-type>
           <dynamics>
@@ -3810,11 +3799,12 @@
       <backup>
         <duration>96</duration>
       </backup>
-      <direction placement="below">
+      <direction placement="above">
         <direction-type>
           <words>Andante</words>
         </direction-type>
         <staff>1</staff>
+        <sound tempo="66" />
       </direction>
       <direction placement="below">
         <direction-type>

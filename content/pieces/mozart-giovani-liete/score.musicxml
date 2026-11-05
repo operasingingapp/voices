@@ -46,6 +46,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegro</words>
+        </direction-type>
+        <sound tempo="110" />
+      </direction>
       <note>
         <rest />
         <duration>144</duration>
@@ -6649,12 +6655,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegro</words>
-        </direction-type>
-        <sound tempo="110" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>

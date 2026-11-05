@@ -42,6 +42,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Recitativo</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>192</duration>
@@ -868,6 +874,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Presto</words>
+        </direction-type>
+        <sound tempo="176" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -937,6 +949,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>(Recitativo)</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -2553,6 +2571,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegretto</words>
+        </direction-type>
+        <sound tempo="130" />
+      </direction>
       <note>
         <rest />
         <duration>144</duration>
@@ -13601,12 +13625,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -14860,12 +14878,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Presto</words>
-        </direction-type>
-        <sound tempo="176" />
-      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -15650,12 +15662,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -20694,12 +20700,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegretto</words>
-        </direction-type>
-        <sound tempo="130" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
