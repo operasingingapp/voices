@@ -2645,6 +2645,24 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
     if (ix >= 0) after = { opera: L.opera, ch: L.ch, piece: L.ch.pieces[ix], index: ix };
   }
   const hero = last ?? first;
+  // a learned piece not sung for the longest while (a week or more): worth singing again
+  type Review = HomeRef & { since: number };
+  let review = null as Review | null;
+  {
+    const at = getStored<Record<string, number>>("cp:learnedAt", {});
+    const WEEK = 7 * 864e5;
+    for (const r of roles) {
+      const S = progressOf(ctx, r.opera, r.ch).set;
+      const rk = roleKey({ opera: r.opera.id, character: r.ch.id });
+      r.ch.pieces.forEach((pc, i) => {
+        const k = pieceKey(pc);
+        if (!pc.editionId || !S.has(k)) return;
+        const sung = Math.max(at[`${rk}:${k}`] ?? 0, recs[`${r.opera.id}:${r.ch.id}:${k}`]?.t ?? 0);
+        if (!sung || Date.now() - sung < WEEK) return;
+        if (!review || sung < (review as Review).since) review = { opera: r.opera, ch: r.ch, piece: pc, index: i, since: sung };
+      });
+    }
+  }
   const others = recent.filter((r) => !last || recKey(r) !== recKey(last)).slice(0, 4);
   const groups = noteGroups(ctx);
   const tone = (c: { opera: Opera; ch: Character }) => ({ "data-tone": voiceTone(c.ch.voice), style: toneStyle(c.opera.id, c.ch.id) });
@@ -2711,6 +2729,19 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
           <Chevron />
         </button>
       )}
+      {review && ((rv: Review) => (
+        <button type="button" className="hm-after" onClick={() => openPiece(ctx, rv, "start")}>
+          <span className="hm-after-label">Time to review</span>
+          <span className="hm-after-title" lang={rv.opera.lang}>
+            {rv.piece.title}
+            <small className="hm-after-sub">
+              {" "}
+              · {rv.ch.name}, last sung {relTime(rv.since)}
+            </small>
+          </span>
+          <Chevron />
+        </button>
+      ))(review)}
     </section>
   );
 
@@ -2839,12 +2870,44 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
   return (
     <main className="screen-body gutter page hm-page">
       <h1 className="sr-only">Home</h1>
-      <div className={`hm${others.length ? " has-lately" : ""}`}>
+      <div className="hm hm-simple">
         {resume}
-        {lately}
-        {cur && <RoleMap ctx={ctx} roles={roles} cur={cur} recs={recs} hero={last} groups={groups} />}
-        {notesEl}
-        {moreEl}
+        {/* your roles, one row each: tap for its pieces */}
+        <section className="hm-sec hm-mine" aria-labelledby="hm-mine-h">
+          <h2 className="hm-h" id="hm-mine-h">
+            My roles
+          </h2>
+          <ul className="hm-mine-list">
+            {roles.map((r) => {
+              const pr = progressOf(ctx, r.opera, r.ch);
+              const ready = r.ch.pieces.filter((p) => p.editionId).length;
+              return (
+                <li key={`${r.opera.id}:${r.ch.id}`}>
+                  <button type="button" className="hm-mine-row" {...tone(r)} onClick={() => ctx.go({ screen: "role", opera: r.opera.id, character: r.ch.id })}>
+                    <span className="hm-mine-face" aria-hidden="true">
+                      <Face opera={r.opera} ch={r.ch} />
+                    </span>
+                    <span className="hm-mine-text">
+                      <b>{r.ch.name}</b>
+                      <small>
+                        <i lang={r.opera.lang}>{r.opera.title}</i> · {pr.set.size} of {r.ch.pieces.length} learned{ready < r.ch.pieces.length ? ` · ${ready} ready to sing` : ""}
+                      </small>
+                    </span>
+                    <span className="hm-mine-go" aria-hidden="true">›</span>
+                  </button>
+                </li>
+              );
+            })}
+            <li>
+              <button type="button" className="hm-mine-row hm-mine-add" onClick={() => ctx.go({ screen: "explore", by: "voice" })}>
+                <span className="hm-mine-face" aria-hidden="true">+</span>
+                <span className="hm-mine-text">
+                  <b>Add a role</b>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
   );
