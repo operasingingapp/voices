@@ -922,3 +922,16 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
 .pv-role-bar { position: relative; height: 4px; margin-top: 8px; border-radius: 2px; background: var(--fog-strong); overflow: hidden; }
 .pv-role-bar span { position: absolute; inset: 0 auto 0 0; background: var(--now-mark); border-radius: 2px; }
 .pv-role-count { font-size: 13px; color: var(--ink-muted); }
+
+/* Phone: the role head stacks (these come after the narrow-screen rules, so they win on a phone) */
+@media (max-width: 640px) {
+  .rp-head .rp-id { grid-template-columns: minmax(0, 1fr); row-gap: 14px; margin-top: 0; padding: 0; }
+  .rp-head .rp-face { width: 104px; height: 104px; margin: -60px 0 0 12px; }
+  .rp-head .rp-name { font-size: 46px; }
+  .rp-head .rp-in { display: block; margin-top: 6px; font-size: 21px; white-space: normal; }
+  .rp-head .rp-tools-below { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .rp-head .rp-tools-below .cp-btn { min-height: 44px; padding: 0 14px; font-size: 15px; }
+  .rp-head .rp-strip { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "bar" "go"; row-gap: 12px; margin-top: 20px; }
+  .rp-head .rp-strip-text { white-space: normal; }
+  .rp-head .rp-strip > .rp-go { justify-self: stretch; justify-content: center; max-width: none; min-height: 48px; }
+}
