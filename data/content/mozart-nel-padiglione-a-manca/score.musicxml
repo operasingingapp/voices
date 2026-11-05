@@ -50,7 +50,7 @@
         <direction-type>
           <words>Recitativo</words>
         </direction-type>
-        <sound tempo="104" />
+        <sound tempo="92" />
       </direction>
       <note>
         <rest />
@@ -5517,13 +5517,7 @@
       </note>
       <direction placement="below">
         <direction-type>
-          <words>cresc.</words>
-        </direction-type>
-        <staff>2</staff>
-      </direction>
-      <direction placement="below">
-        <direction-type>
-          <words>cresc.</words>
+          <wedge type="crescendo" number="1" />
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -5559,6 +5553,12 @@
         <type>quarter</type>
         <staff>1</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <wedge type="stop" number="1" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <backup>
         <duration>96</duration>
       </backup>

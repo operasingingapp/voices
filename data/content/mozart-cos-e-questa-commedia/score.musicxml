@@ -47,6 +47,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Recitativo</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>192</duration>
@@ -5434,12 +5440,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -5497,6 +5497,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -5629,6 +5637,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -5750,6 +5766,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -7299,6 +7323,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -7621,6 +7653,14 @@
         <type>half</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -8173,6 +8213,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>D</step>

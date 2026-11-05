@@ -38,7 +38,7 @@
         <direction-type>
           <words>Allegro vivace assai</words>
         </direction-type>
-        <sound tempo="112" />
+        <sound tempo="92" />
       </direction>
       <note>
         <rest />
@@ -1478,7 +1478,7 @@
         <direction-type>
           <words>Andante</words>
         </direction-type>
-        <sound tempo="52" />
+        <sound tempo="46" />
       </direction>
       <note>
         <rest />
@@ -16286,6 +16286,9 @@
         <staff>1</staff>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
+        <notations>
+          <slur type="stop" number="7" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -16309,6 +16312,9 @@
         <staff>1</staff>
         <beam number="1">continue</beam>
         <beam number="2">continue</beam>
+        <notations>
+          <slur type="start" number="7" />
+        </notations>
       </note>
       <note>
         <chord />
@@ -16403,7 +16409,6 @@
         <beam number="1">end</beam>
         <beam number="2">end</beam>
         <notations>
-          <slur type="stop" number="7" />
         </notations>
       </note>
       <note>
@@ -16501,6 +16506,9 @@
         <voice>1</voice>
         <type>eighth</type>
         <staff>1</staff>
+        <notations>
+          <slur type="stop" number="7" />
+        </notations>
       </note>
       <note>
         <chord />

@@ -66,7 +66,7 @@
         <direction-type>
           <words>Marcia</words>
         </direction-type>
-        <sound tempo="100" />
+        <sound tempo="112" />
       </direction>
       <note>
         <rest />
@@ -668,7 +668,7 @@
         <direction-type>
           <words>Allegretto</words>
         </direction-type>
-        <sound tempo="120" />
+        <sound tempo="112" />
       </direction>
       <note>
         <rest />
@@ -1319,7 +1319,7 @@
         <direction-type>
           <words>Andante</words>
         </direction-type>
-        <sound tempo="72" />
+        <sound tempo="84" />
       </direction>
       <note>
         <rest />
@@ -1776,7 +1776,7 @@
         <direction-type>
           <words>Recit.</words>
         </direction-type>
-        <sound tempo="104" />
+        <sound tempo="92" />
       </direction>
       <note>
         <rest />
@@ -1878,7 +1878,7 @@
         <direction-type>
           <words>Allegretto</words>
         </direction-type>
-        <sound tempo="120" />
+        <sound tempo="112" />
       </direction>
       <note>
         <rest />
@@ -30900,6 +30900,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <pp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -34972,7 +34980,7 @@
       </note>
       <direction placement="below">
         <direction-type>
-          <words>un_poco_cresc.</words>
+          <words>un poco cresc.</words>
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -35057,6 +35065,12 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <words>un poco cresc.</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -43666,6 +43680,14 @@
         </direction-type>
         <staff>2</staff>
       </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <note>
         <rest />
         <duration>24</duration>
@@ -44633,6 +44655,9 @@
         <staff>2</staff>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
+        <notations>
+          <slur type="start" number="11" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -44717,6 +44742,9 @@
         <staff>2</staff>
         <beam number="1">end</beam>
         <beam number="2">end</beam>
+        <notations>
+          <slur type="stop" number="11" />
+        </notations>
       </note>
     </measure>
     <measure number="67">
@@ -44817,6 +44845,9 @@
         <staff>2</staff>
         <beam number="1">begin</beam>
         <beam number="2">begin</beam>
+        <notations>
+          <slur type="start" number="11" />
+        </notations>
       </note>
       <note>
         <pitch>
@@ -44901,6 +44932,9 @@
         <staff>2</staff>
         <beam number="1">end</beam>
         <beam number="2">end</beam>
+        <notations>
+          <slur type="stop" number="11" />
+        </notations>
       </note>
     </measure>
     <measure number="68">
@@ -54495,6 +54529,14 @@
         <type>eighth</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -58606,6 +58648,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <rest />
         <duration>24</duration>
@@ -69912,6 +69962,14 @@
         <dot />
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -71407,6 +71465,14 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
       </direction>
       <note>
         <rest />
@@ -75381,6 +75447,14 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
       </direction>
       <note>
         <pitch>

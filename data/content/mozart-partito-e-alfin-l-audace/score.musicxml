@@ -50,7 +50,7 @@
         <direction-type>
           <words>Con un poco più di moto</words>
         </direction-type>
-        <sound tempo="100" />
+        <sound tempo="88" />
       </direction>
       <note>
         <rest />
@@ -19838,6 +19838,18 @@
           <slur type="start" number="7" />
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <words>cresc.</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <words>cresc.</words>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -19860,12 +19872,6 @@
         <staff>1</staff>
         <beam number="1">end</beam>
       </note>
-      <direction placement="below">
-        <direction-type>
-          <words>cresc.</words>
-        </direction-type>
-        <staff>2</staff>
-      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -24902,6 +24908,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <sf />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -24943,6 +24957,14 @@
           <slur type="stop" number="11" />
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -25358,6 +25380,14 @@
         <staff>2</staff>
         <beam number="1">begin</beam>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <sf />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -25388,6 +25418,15 @@
           <slur type="stop" number="11" />
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <offset>12</offset>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>D</step>

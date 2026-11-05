@@ -41,9 +41,9 @@
       </attributes>
       <direction placement="above">
         <direction-type>
-          <words />
+          <words>Recitativo</words>
         </direction-type>
-        <sound tempo="104" />
+        <sound tempo="92" />
       </direction>
       <note>
         <rest />
@@ -5969,11 +5969,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-      </direction>
       <direction>
         <direction-type>
           <dynamics>
@@ -6033,6 +6028,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -6136,6 +6139,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -7770,6 +7781,14 @@
         <type>half</type>
         <staff>2</staff>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -8487,6 +8506,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -8822,6 +8849,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>

@@ -54,7 +54,7 @@
         <direction-type>
           <words>Andante</words>
         </direction-type>
-        <sound tempo="80" />
+        <sound tempo="72" />
       </direction>
       <note>
         <rest />
@@ -9980,6 +9980,11 @@
         <voice>1</voice>
         <type>eighth</type>
         <staff>1</staff>
+        <notations>
+          <articulations>
+            <staccato />
+          </articulations>
+        </notations>
         <lyric number="1">
           <syllabic>begin</syllabic>
           <text>Con</text>
@@ -18306,6 +18311,15 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <offset>12</offset>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>

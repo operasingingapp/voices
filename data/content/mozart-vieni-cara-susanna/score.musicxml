@@ -42,6 +42,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Recitativo</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>192</duration>
@@ -868,6 +874,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Presto</words>
+        </direction-type>
+        <sound tempo="176" />
+      </direction>
       <note>
         <rest />
         <duration>96</duration>
@@ -937,6 +949,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>(Recitativo)</words>
+        </direction-type>
+        <sound tempo="92" />
+      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -2553,6 +2571,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction placement="above">
+        <direction-type>
+          <words>Allegretto</words>
+        </direction-type>
+        <sound tempo="130" />
+      </direction>
       <note>
         <rest />
         <duration>144</duration>
@@ -13601,12 +13625,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -13662,6 +13680,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -13918,6 +13944,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -14614,6 +14648,14 @@
         <type>half</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -14836,12 +14878,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Presto</words>
-        </direction-type>
-        <sound tempo="176" />
-      </direction>
       <note>
         <rest />
         <duration>48</duration>
@@ -14866,6 +14902,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -15328,6 +15372,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -15610,12 +15662,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Recitativo</words>
-        </direction-type>
-        <sound tempo="104" />
-      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -15801,6 +15847,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>D</step>
@@ -16350,6 +16404,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -16532,6 +16594,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -17740,6 +17810,14 @@
           <tied type="stop" />
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>D</step>
@@ -17921,6 +17999,14 @@
       <backup>
         <duration>192</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>D</step>
@@ -18567,6 +18653,14 @@
         <type>half</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -19975,6 +20069,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -20003,6 +20105,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -20216,6 +20326,14 @@
         <type>half</type>
         <staff>2</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -20582,12 +20700,6 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Allegretto</words>
-        </direction-type>
-        <sound tempo="130" />
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -20678,6 +20790,14 @@
       <backup>
         <duration>144</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>

@@ -38,7 +38,7 @@
         <direction-type>
           <words>Andante</words>
         </direction-type>
-        <sound tempo="60" />
+        <sound tempo="66" />
       </direction>
       <note>
         <rest />
@@ -1953,6 +1953,14 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
       </direction>
       <note>
         <rest />

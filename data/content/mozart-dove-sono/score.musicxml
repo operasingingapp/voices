@@ -6111,6 +6111,14 @@
         </direction-type>
         <staff>2</staff>
       </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <note>
         <rest />
         <duration>12</duration>
@@ -9579,6 +9587,14 @@
       <backup>
         <duration>48</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -10326,7 +10342,7 @@
         <duration>36</duration>
       </forward>
       <backup>
-        <duration>24</duration>
+        <duration>12</duration>
       </backup>
       <direction placement="below">
         <direction-type>
@@ -10335,7 +10351,7 @@
         <staff>1</staff>
       </direction>
       <forward>
-        <duration>24</duration>
+        <duration>12</duration>
       </forward>
     </measure>
     <measure number="28">
@@ -13782,6 +13798,14 @@
           <slur type="start" number="11" />
         </notations>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <sf />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -13954,6 +13978,14 @@
         <type>quarter</type>
         <staff>2</staff>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -15504,6 +15536,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -15559,6 +15599,14 @@
         <staff>2</staff>
         <beam number="1">end</beam>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <sf />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -15762,6 +15810,14 @@
         <type>16th</type>
         <staff>2</staff>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -16646,6 +16702,14 @@
         </direction-type>
         <staff>2</staff>
       </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <note>
         <rest />
         <duration>24</duration>
@@ -16813,6 +16877,14 @@
         <staff>2</staff>
         <beam number="1">end</beam>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <sf />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -17016,6 +17088,14 @@
         <type>16th</type>
         <staff>2</staff>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -22454,6 +22534,14 @@
         </direction-type>
         <staff>2</staff>
       </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -22593,6 +22681,14 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
       </direction>
       <note>
         <pitch>
@@ -23014,6 +23110,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -23058,6 +23162,14 @@
         <staff>2</staff>
         <beam number="1">end</beam>
       </note>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -23648,6 +23760,14 @@
       <backup>
         <duration>96</duration>
       </backup>
+      <direction placement="above">
+        <direction-type>
+          <dynamics>
+            <f />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>C</step>

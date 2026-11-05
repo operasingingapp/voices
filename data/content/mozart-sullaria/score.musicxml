@@ -42,7 +42,7 @@
         <direction-type>
           <words>Allegretto</words>
         </direction-type>
-        <sound tempo="78" />
+        <sound tempo="72" />
       </direction>
       <note>
         <rest />
@@ -2766,7 +2766,7 @@
         <direction-type>
           <words>Recitativo</words>
         </direction-type>
-        <sound tempo="104" />
+        <sound tempo="92" />
       </direction>
       <note>
         <pitch>
@@ -5735,6 +5735,14 @@
       <backup>
         <duration>72</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -15343,6 +15351,14 @@
           <slur type="stop" number="11" />
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>

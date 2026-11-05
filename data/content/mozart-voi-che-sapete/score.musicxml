@@ -36,7 +36,7 @@
       </attributes>
       <direction placement="above">
         <direction-type>
-          <words />
+          <words>Andante con moto</words>
         </direction-type>
         <sound tempo="53" />
       </direction>
@@ -2945,6 +2945,33 @@
       </note>
     </measure>
     <measure number="61">
+      <direction placement="above">
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="50.35" />
+      </direction>
+      <direction placement="above">
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>12</offset>
+        <sound tempo="47.7" />
+      </direction>
+      <direction placement="above">
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>24</offset>
+        <sound tempo="45.05" />
+      </direction>
+      <direction placement="above">
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>36</offset>
+        <sound tempo="42.4" />
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -2961,6 +2988,12 @@
       </note>
     </measure>
     <measure number="62">
+      <direction placement="above">
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="53" />
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -3811,11 +3844,6 @@
           <line>4</line>
         </clef>
       </attributes>
-      <direction placement="above">
-        <direction-type>
-          <words>Andante con moto</words>
-        </direction-type>
-      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -3877,6 +3905,14 @@
       <backup>
         <duration>48</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -13044,6 +13080,14 @@
       <backup>
         <duration>48</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -14748,6 +14792,14 @@
           </articulations>
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <fp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -15056,7 +15108,7 @@
       <direction placement="below">
         <direction-type>
           <dynamics>
-            <mfp />
+            <other-dynamics>mfp</other-dynamics>
           </dynamics>
         </direction-type>
         <staff>1</staff>
@@ -15168,6 +15220,14 @@
       <backup>
         <duration>48</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <other-dynamics>mfp</other-dynamics>
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <rest />
         <duration>6</duration>
@@ -16461,7 +16521,7 @@
     <measure number="62">
       <direction placement="below">
         <direction-type>
-          <words>a_tempo</words>
+          <words>a tempo</words>
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -16625,6 +16685,15 @@
       <backup>
         <duration>48</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <offset>6</offset>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>D</step>
