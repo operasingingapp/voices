@@ -9152,3 +9152,11 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
     height: 27px;
   }
 }
+
+/* 35. The view options (whose lines, IPA, English, Tips) sit at the right end of the header, whatever the columns */
+@media (min-width: 641px) {
+  .words-view .w-cols .w-tools {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}
