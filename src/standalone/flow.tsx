@@ -1106,20 +1106,34 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             {opera.title}
           </h1>
           {STORIES[opera.id] && (
-            // the opening of the story only: the whole plot is behind "The story"
-            <p className="oh-story">{(STORIES[opera.id].match(/^.*?[.!?](?=\s|$)/) ?? [STORIES[opera.id]])[0]}</p>
-          )}
-          <p className="oh-meta">
-            <span title={opera.composerFull}>{opera.composer}</span>
-            <span>libretto by {opera.librettist}</span>
-            <span>{opera.year}</span>
-            {lang && <span>in {lang}</span>}
-          </p>
-          {mineHere.length > 0 && (
-            <p className="oh-yours">
-              Your role: <b>{mineHere.map((c) => c.name).join(", ")}</b>
+            // the opening of the story, a couple of sentences: the whole plot is behind "The story"
+            <p className="oh-story">
+              {(() => {
+                const parts = STORIES[opera.id].match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? [STORIES[opera.id]];
+                let out = "";
+                for (const s of parts) {
+                  if (out && out.length + s.length > 380) break;
+                  out += s;
+                }
+                return out.trim();
+              })()}
             </p>
           )}
+          <ul className="oh-tags" aria-label="About this opera">
+            <li title={opera.composerFull}>
+              <span>Music</span> {opera.composer}
+            </li>
+            <li>
+              <span>Libretto</span> {opera.librettist}
+            </li>
+            <li>{opera.year}</li>
+            {lang && <li>{lang}</li>}
+            {mineHere.length > 0 && (
+              <li className="is-yours">
+                <span>Your role</span> {mineHere.map((c) => c.name).join(", ")}
+              </li>
+            )}
+          </ul>
           {SYNOPSES[opera.id] && (
             <button type="button" className="cp-btn pv-btn-line oh-story-btn" onClick={() => setStory(true)}>
               <BookIcon />

@@ -917,6 +917,15 @@ function PracticeScreen({
   // adding a note: tap Notes, then tap the bar; the small note card opens right there (also for a note's tag on the score)
   const [notePick, setNotePick] = useState(false);
   const [noteEdit, setNoteEdit] = useState<null | { id: string | null; m: number; q: number; body: string; mark?: MarkId }>(null);
+  // where the finger last touched the screen: a new note opens right there, on the score, like writing on the page
+  const lastTap = useRef<{ x: number; y: number } | null>(null);
+  useEffect(() => {
+    const on = (e: PointerEvent) => {
+      if (!(e.target as HTMLElement | null)?.closest?.(".note-card")) lastTap.current = { x: e.clientX, y: e.clientY };
+    };
+    window.addEventListener("pointerdown", on, true);
+    return () => window.removeEventListener("pointerdown", on, true);
+  }, []);
   const [notesMsg, setNotesMsg] = useState("");
   // the score for print (Save as PDF), with your notes written on it: being made, or what became of it
   const [printState, setPrintState] = useState<"idle" | "busy" | "tab" | "blocked" | "noTab" | "failed">("idle");
@@ -3558,7 +3567,22 @@ function PracticeScreen({
               close();
             };
             return (
-              <div className="note-card" role="dialog" aria-label={`Note for bar ${edition.measures[ed.m].number}`}>
+              <div
+                className={`note-card${lastTap.current ? " at-tap" : ""}`}
+                role="dialog"
+                aria-label={`Note for bar ${edition.measures[ed.m].number}`}
+                style={(() => {
+                  const t = lastTap.current;
+                  if (!t || typeof window === "undefined") return undefined;
+                  // a small sticky note just below the tap, kept inside the screen
+                  const w = Math.min(300, window.innerWidth - 24);
+                  const h = 210;
+                  const left = Math.max(12, Math.min(t.x - 24, window.innerWidth - w - 12));
+                  const below = t.y + 14;
+                  const top = below + h > window.innerHeight - 12 ? Math.max(12, t.y - h - 14) : below;
+                  return { left, top, width: w };
+                })()}
+              >
                 <div className="note-card-head">
                   <b>Bar {edition.measures[ed.m].number}</b>
                   <button type="button" className="cp-icon-btn cp-icon-btn--ghost" aria-label="Close" onClick={close}>

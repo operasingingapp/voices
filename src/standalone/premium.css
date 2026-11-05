@@ -841,3 +841,38 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
 @media (max-width: 640px) {
   .oh-text { grid-template-columns: minmax(0, 1fr); grid-template-areas: "eye" "title" "story" "meta" "yours" "btn"; }
 }
+
+/* The opera's head, one column under the banner: headline, a short opening of the story, tags, the story button */
+.oh-text,
+.oh-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 760px;
+}
+.oh-text > .oh-title { font-size: clamp(44px, 5.2vw, 76px); line-height: 0.98; text-wrap: balance; }
+.oh-text > .oh-story { -webkit-line-clamp: unset; display: block; max-width: 62ch; margin-top: 2px; font-size: 18px; line-height: 1.6; color: var(--on-pastel-muted); }
+.oh-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 0; padding: 0; list-style: none; }
+.oh-tags li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-height: 34px;
+  padding: 7px 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink);
+}
+.oh-tags li span { color: var(--ink-muted); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+.oh-tags li.is-yours { background: #e3efe6; box-shadow: none; }
+.oh-tags li.is-yours span { color: #2b5a40; }
+.oh-text > .oh-story-btn { margin-top: 10px; }
+.oh-cover { height: clamp(200px, 26vw, 320px); }
+@media (max-width: 640px) {
+  .oh-text > .oh-story { font-size: 16px; }
+  .oh-text > .oh-story-btn { align-self: stretch; justify-content: center; }
+}

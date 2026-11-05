@@ -9215,3 +9215,18 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   .shell > .rail .rail-opera[aria-current="page"] { color: var(--ink); }
   .shell > .rail .rail-opera:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
 }
+
+/* a new note opens where you tapped: a small sticky note on the score, in your handwriting */
+.note-card.at-tap {
+  transform: none;
+  bottom: auto;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  background: #fff6d6;
+  border: 1px solid #efe2b0;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(26, 24, 20, 0.08), 0 12px 30px rgba(26, 24, 20, 0.16);
+}
+.note-card.at-tap .note-card-head b { font: 500 12px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #6b5a2a; }
+.note-card.at-tap textarea { min-height: 84px; border: 0; padding: 4px 2px; background: transparent; resize: none; outline: none; }
+.note-card.at-tap .note-card-actions .cp-btn { min-height: 38px; padding: 0 12px; font-size: 14px; }
