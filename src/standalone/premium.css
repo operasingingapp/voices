@@ -1416,3 +1416,132 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
 @media (max-width: 640px) {
   .practice .p-bar.p-bar.p-bar .cp-speed .cp-tempo__value { min-width: 84px; }
 }
+
+/* =====================================================================
+   A phone turned sideways (short and wide): the music gets the height.
+   The header one slim row, the words box one row, and the timeline and the
+   playback buttons share the bottom row; the singers, Arrange, Notes, the
+   tempo and the count-in open from the arrow, in a card above the bar.
+   ===================================================================== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .practice:not(.listen) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+  }
+  .practice:not(.listen) > .p-head { grid-area: 1 / 1 / 2 / 3; }
+  .practice:not(.listen) > .now-panel,
+  .practice:not(.listen) > .card-strip { grid-area: 2 / 1 / 3 / 3; }
+  .practice:not(.listen) > .p-stage { grid-area: 3 / 1 / 4 / 3; }
+  .practice:not(.listen) > .words-view { grid-area: 2 / 1 / 4 / 3; }
+  .practice:not(.listen) > .p-timeline { grid-area: 4 / 1 / 5 / 2; align-self: center; padding-right: 8px; }
+  .practice:not(.listen) > .p-bar { grid-area: 4 / 2 / 5 / 3; }
+
+  /* header: 48px, the title on one line, its subtitle beside nothing (hidden) */
+  .practice .p-head.p-head { min-height: 0; height: 52px; padding-top: 4px; padding-bottom: 4px; gap: 8px; }
+  .practice .p-head .cp-icon-btn { width: 40px; height: 40px; min-width: 40px; min-height: 40px; }
+  .practice .p-head .p-title h1 { font-size: 21px; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .practice .p-head .p-sub { display: none; }
+  .practice .p-head .view-switch button { height: 36px; min-height: 36px; }
+
+  /* words box: one row — whose words · the line (and its English) · listen and options */
+  .practice .now-panel .line-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 6px;
+    padding: 2px 6px;
+    min-height: 0;
+  }
+  .practice .now-panel .now-bar { display: contents; }
+  .practice .now-panel .now-meta { grid-area: 1 / 1; margin: 0; }
+  .practice .now-panel .now-body { grid-area: 1 / 2; padding: 0; min-height: 0; }
+  .practice .now-panel .now-tools { grid-area: 1 / 3; margin: 0; }
+  .practice .now-panel.now-panel { padding: 2px 16px 4px; }
+  /* one steady height (the score must not jump line by line): the line in up to two rows, its English in one */
+  .practice .now-panel.now-panel .now-inner { height: 60px; min-height: 0; padding-block: 0; display: flex; flex-direction: column; justify-content: center; }
+  .practice .now-panel.now-panel:not(.no-ipa):not(.no-tr) .now-inner { height: 72px; }
+  .practice .now-panel .now-it {
+    font-size: 20px; line-height: 1.15; margin: 0; white-space: normal;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .practice .now-panel .now-tr,
+  .practice .now-panel .now-ipa { font-size: 13px; line-height: 1.25; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  .practice .now-panel .now-step { width: 36px; height: 36px; min-width: 36px; min-height: 36px; }
+  .practice .now-panel .card-fold { display: none; }
+
+  /* bottom row: the timeline keeps the tempo chip; the bar holds the transport and the arrow */
+  .practice:not(.listen) .tl-speed { display: block; position: relative; flex: none; }
+  .practice .tl-speed-chip {
+    display: inline-flex; align-items: center; gap: 5px; height: 36px; padding: 0 12px 0 10px; border: 0; border-radius: 18px;
+    background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .practice .tl-speed-pop {
+    position: absolute; right: 0; bottom: calc(100% + 8px); z-index: 30; display: flex; align-items: center; gap: 2px;
+    height: 52px; padding: 0 6px; border-radius: 12px; background: var(--canvas); white-space: nowrap;
+    box-shadow: 0 0 0 1px rgba(26, 24, 20, 0.08), 0 12px 32px -12px rgba(26, 24, 20, 0.32);
+  }
+  .practice .tl-speed-pop .cp-icon-btn { width: 44px; height: 44px; }
+  .practice .tl-speed-reset { height: 36px; margin-left: 4px; padding: 0 12px; border: 0; border-radius: 8px; background: var(--fog); color: var(--ink); font: 500 14px/1 var(--font-sans); }
+  .practice .tl-speed-reset:disabled { display: none; }
+  .practice:not(.listen) .p-bar.p-bar.p-bar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: auto;
+    min-height: 0;
+    padding: 6px 12px 6px 0;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+  .practice:not(.listen) .p-bar.p-bar.p-bar .bar-transport { display: flex; gap: 2px; margin: 0; }
+  .practice:not(.listen) .p-bar.p-bar.p-bar .bar-transport .cp-icon-btn { width: 44px; height: 44px; min-width: 44px; }
+  .practice:not(.listen) .p-bar.p-bar.p-bar .bar-more {
+    display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: var(--fog);
+  }
+  .practice:not(.listen) .p-bar .bar-more svg { transition: transform var(--duration-move) var(--ease-standard); }
+  .practice:not(.listen) .p-bar .bar-more.open svg { transform: rotate(180deg); }
+  /* folded: only the transport and the arrow */
+  .practice:not(.listen) .p-bar.p-bar.p-bar.folded > .bar-parts,
+  .practice:not(.listen) .p-bar.p-bar.p-bar.folded > .bar-right { display: none; }
+  /* open: everything else in one ivory card above the bar, at the right */
+  .practice:not(.listen) .p-bar.p-bar.p-bar:not(.folded) > .bar-parts,
+  .practice:not(.listen) .p-bar.p-bar.p-bar:not(.folded) > .bar-right {
+    position: absolute;
+    right: 12px;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 6px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+    border-radius: 12px;
+    background: var(--canvas);
+    box-shadow: 0 0 0 1px rgba(26, 24, 20, 0.08), 0 12px 32px -12px rgba(26, 24, 20, 0.32);
+  }
+  .practice:not(.listen) .p-bar.p-bar.p-bar:not(.folded) > .bar-right { bottom: calc(100% + 8px); }
+  .practice:not(.listen) .p-bar.p-bar.p-bar:not(.folded) > .bar-parts { bottom: calc(100% + 72px); }
+  .practice:not(.listen) .p-bar .bar-parts .part-text { display: none; }
+  /* the "tap a bar" pill sits above the bar's own row at the right, not over the middle */
+  .practice .p-bar > .note-pick { left: auto; right: 0; transform: none; bottom: calc(100% + 8px); }
+}
+
+/* Touch: small controls keep their look but get a finger-sized hit area (44px) around them */
+@media (pointer: coarse) {
+  /* (the line names are already placed absolutely, so their own box anchors the area) */
+  .words-view .w-hear,
+  .words-view .w-seg button,
+  .words-view .w-chip {
+    position: relative;
+  }
+  button.lane-label::after,
+  .words-view .w-hear::after,
+  .words-view .w-seg button::after,
+  .words-view .w-chip::after {
+    content: "";
+    position: absolute;
+    inset: -8px -4px;
+  }
+  .words-view .w-hear::after { inset: -8px; }
+}
