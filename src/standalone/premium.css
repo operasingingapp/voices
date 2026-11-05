@@ -813,3 +813,31 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
   .rp-strip > .rp-go { grid-area: go; }
   .rp-strip > :not(.rp-strip-text):not(.rp-go) { grid-area: bar; }
 }
+
+/* The opera's head, stacked: the cover as a wide banner, then the title on the left and the story, the details
+   and "The story" on the right; one column on a phone */
+.oh, .oh.has-art { grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
+.oh-cover { aspect-ratio: auto; height: clamp(220px, 30vw, 340px); }
+.oh-cover img { object-position: 50% 20%; }
+.oh-text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "eye eye" "title story" "title meta" "title yours" "title btn";
+  column-gap: 48px;
+  row-gap: 12px;
+  align-items: start;
+  padding: 0;
+}
+.oh-text > .oh-eyebrow { grid-area: eye; margin: 0; }
+.oh-text > .oh-title { grid-area: title; align-self: start; }
+.oh-text > .oh-story { grid-area: story; margin: 0; max-width: none; -webkit-line-clamp: 3; }
+.oh-text > .oh-meta { grid-area: meta; margin: 0; }
+.oh-text > .oh-yours { grid-area: yours; margin: 0; }
+.oh-text > .oh-story-btn { grid-area: btn; justify-self: start; margin-top: 6px; }
+@container (max-width: 700px) {
+  .oh-text { grid-template-columns: minmax(0, 1fr); grid-template-areas: "eye" "title" "story" "meta" "yours" "btn"; }
+}
+.op-page { container-type: inline-size; }
+@media (max-width: 640px) {
+  .oh-text { grid-template-columns: minmax(0, 1fr); grid-template-areas: "eye" "title" "story" "meta" "yours" "btn"; }
+}

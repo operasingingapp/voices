@@ -1101,7 +1101,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
           </figure>
         )}
         <div className="oh-text">
-          <p className="cp-eyebrow">{acts > 1 ? `Opera in ${NUMBER_WORDS[acts] ?? acts} acts` : "Opera"}</p>
+          <p className="cp-eyebrow oh-eyebrow">{acts > 1 ? `Opera in ${NUMBER_WORDS[acts] ?? acts} acts` : "Opera"}</p>
           <h1 className="oh-title" lang={opera.lang}>
             {opera.title}
           </h1>
