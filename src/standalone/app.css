@@ -457,7 +457,7 @@ p {
   box-shadow: inset 0 -2px 0 var(--pastel-fog-strong);
 }
 .now-word.now {
-  background: var(--now);
+  background: var(--lit);
 }
 .now-word.open {
   box-shadow: inset 0 -4px 0 var(--picked-strong);
@@ -743,7 +743,7 @@ p {
   background: var(--fog);
 }
 .w-gap.now {
-  background: var(--now);
+  background: var(--lit);
   color: var(--on-pastel);
 }
 
@@ -927,7 +927,7 @@ p {
   height: 36px;
   margin: -18px 0 0 -18px;
   border-radius: var(--radius-round);
-  background: var(--now);
+  background: var(--lit);
   mix-blend-mode: multiply;
   will-change: transform;
 }
@@ -968,7 +968,7 @@ p {
   font: 500 12px/1 var(--font-sans);
   letter-spacing: 0.04em;
   white-space: nowrap;
-  background: var(--now);
+  background: var(--lit);
   color: var(--on-pastel);
 }
 .ov-cursor[data-playing="false"] .cursor-label {
@@ -1505,7 +1505,7 @@ p {
   flex: none;
 }
 .num-go svg {
-  color: var(--now-mark);
+  color: var(--on-now);
 }
 
 /* =====================================================================
@@ -1700,7 +1700,7 @@ p {
   margin-left: 0.22em;
 }
 .obp-it span.on {
-  background: var(--now);
+  background: var(--lit);
 }
 .obp-ipa {
   font-family: var(--font-ipa);
@@ -1724,7 +1724,7 @@ p {
 }
 .obp-note.now {
   background: var(--now-mark);
-  box-shadow: 0 0 0 8px var(--now);
+  box-shadow: 0 0 0 8px var(--lit);
 }
 
 /* step 2: a clear list of choices */
@@ -2187,7 +2187,7 @@ button.ck-text:focus-visible {
   border: 0;
   border-radius: var(--radius-round);
   background: var(--now);
-  color: var(--on-pastel);
+  color: var(--on-now);
   cursor: pointer;
   transition: background-color var(--duration-quick) var(--ease-standard), transform var(--duration-quick) var(--ease-standard);
 }
@@ -3495,9 +3495,9 @@ span.ck-text {
 
 /* the syllable being sung, one note at a time: "bel", then "lo" */
 .syl-now {
-  background: var(--now);
+  background: var(--lit);
   border-radius: 4px;
-  box-shadow: 0 0 0 0.06em var(--now);
+  box-shadow: 0 0 0 0.06em var(--lit);
 }
 .now-word.sung {
   background: transparent;
@@ -3511,7 +3511,7 @@ span.ck-text {
   margin-left: 0;
 }
 .ob-welcome .obp-it .syl-now {
-  background: var(--now);
+  background: var(--lit);
   border-radius: 4px;
 }
 .ob-welcome .ob-preview {
@@ -3567,7 +3567,7 @@ span.ck-text {
   height: 34px;
   border-radius: 50%;
   background: var(--now);
-  color: var(--on-pastel);
+  color: var(--on-now);
 }
 .obp-play-icon svg {
   width: 18px;
@@ -4378,7 +4378,7 @@ span.ck-text {
   margin-left: 0.18em;
 }
 .ob-welcome .obp-it span.on {
-  background: var(--now);
+  background: var(--lit);
 }
 .ob-welcome .obp-ipa {
   margin: 4px 0 0;
@@ -4424,7 +4424,7 @@ span.ck-text {
   height: 30px;
   margin: -15px 0 0 -15px;
   border-radius: 50%;
-  background: var(--now);
+  background: var(--lit);
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -4709,7 +4709,7 @@ span.ck-text {
   background-position: 0 58%;
   padding-inline: 0.05em;
   margin-inline: -0.05em;
-  background-image: linear-gradient(var(--now), var(--now));
+  background-image: linear-gradient(var(--lit), var(--lit));
 }
 .now-it .syl-join,
 .w-it .syl-join {
@@ -7765,7 +7765,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .voice-chip { flex: none; }
 }
 /* 9. One primary button: the green of play (Done on the loop card was black) */
-.loop-pick .lp-btn.lp-done { background: var(--now); color: var(--on-pastel); }
+.loop-pick .lp-btn.lp-done { background: var(--now); color: var(--on-now); }
 /* 11. Tags are pills, like every other small label; "Your role" sits by the name, not in a column of its own */
 .cp-tag { border-radius: var(--radius-pill); padding: 3px 9px; font-size: 12px !important; line-height: 1.2 !important; }
 .vrole-text > b { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; }
@@ -7814,7 +7814,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .pc-faces { width: 104px; }
 .pc-face { box-shadow: 0 0 0 2px var(--canvas); }
 @media (max-width: 640px) { .pc-face { width: 40px; height: 40px; } .pc-face + .pc-face { margin-left: -14px; } }
-.pc-row .pc-play { background: var(--now) !important; color: var(--on-pastel); }
+.pc-row .pc-play { background: var(--now) !important; color: var(--on-now); }
 /* 21. The search box runs the full width of the page's content, edge to edge with the grid under it */
 .search-box { max-width: none; }
 /* 22. Your role on an opera's tile is a tag on its picture, so every tile is the same height */
@@ -8469,7 +8469,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   height: 28px;
   border-radius: 50%;
   background: var(--now);
-  color: var(--on-pastel);
+  color: var(--on-now);
   transition: transform var(--duration-move) var(--ease-standard);
 }
 .rail-last-play svg { width: 11px; height: 11px; margin-left: 1px; }
@@ -8791,8 +8791,8 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .hm-prog-act-name { font-size: 13px; color: var(--ink-muted); }
 .hm-prog-strip { display: flex; gap: 4px; }
 .hm-seg { flex: 1 1 0; min-width: 10px; height: 22px; border: 0; padding: 0; border-radius: 6px; cursor: pointer; background: var(--fog-strong); }
-.hm-seg.learned { background: var(--now, #2f7d4f); }
-.hm-seg.practising { background: color-mix(in srgb, var(--now, #2f7d4f) 40%, var(--canvas)); }
+.hm-seg.learned { background: var(--now-mark); }
+.hm-seg.practising { background: var(--now-pale); }
 .hm-seg.new { background: var(--canvas); box-shadow: inset 0 0 0 1.5px var(--fog-strong); }
 .hm-seg.soon { background: repeating-linear-gradient(135deg, var(--fog) 0 4px, transparent 4px 8px); box-shadow: inset 0 0 0 1px var(--fog-strong); cursor: default; }
 .hm-seg.here { outline: 2px solid var(--ink); outline-offset: 2px; }

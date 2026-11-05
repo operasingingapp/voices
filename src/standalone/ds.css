@@ -1,26 +1,44 @@
-/* Sottovoce app: design-system tokens (from the Sottovoce design system's tokens.json). */
+/* Sottovoce app: design-system tokens (from the Sottovoce design system's tokens.json).
+   Fonts shipped with the app, all under the SIL Open Font License 1.1: Jost (UI), Charis SIL (sung text and IPA),
+   Noto Music (symbols), Cormorant Garamond (display titles; licence text in fonts/CormorantGaramond-OFL.txt). */
 @font-face { font-family: "Jost"; src: url("./fonts/Jost-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Jost"; src: url("./fonts/Jost-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Jost"; src: url("./fonts/Jost-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Charis SIL"; src: url("./fonts/CharisSIL-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Charis SIL"; src: url("./fonts/CharisSIL-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Charis SIL"; src: url("./fonts/CharisSIL-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+/* Cormorant Garamond: the display serif, for big titles only (latin + latin-ext, 500, 500 italic, 600) */
+@font-face { font-family: "Cormorant Garamond"; src: url("./fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Cormorant Garamond"; src: url("./fonts/cormorant-garamond-latin-ext-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Cormorant Garamond"; src: url("./fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Cormorant Garamond"; src: url("./fonts/cormorant-garamond-latin-ext-500-italic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Cormorant Garamond"; src: url("./fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Cormorant Garamond"; src: url("./fonts/cormorant-garamond-latin-ext-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: "Noto Music"; src: url("./fonts/NotoMusic-Symbols.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
 :root {
-  --canvas: #ffffff;
-  --fog: #f1f2ef;
-  --fog-strong: #e4e6e1;
-  --ink: #0b0b0b;
-  --ink-muted: #5d5f5a;
-  --on-ink: #ffffff;
-  --notation: #0b0b0b;
-  --now: #b9f3cc;
-  --now-mark: #0b7a40;
-  --now-wash: #b9f3cc8c;
-  --now-strong: #9fe8b6;
-  --picked: #e6e8e3;
-  --picked-strong: #dadcd6;
-  --now-soft: #e4f5ea;
+  /* warm ivory paper; ink and muted ink keep >= 4.5:1 on canvas, rail and fog (muted on fog-strong is 4.2:1:
+     never set small muted text on fog-strong) */
+  --canvas: #fbfaf7;
+  --fog: #efece5;
+  --fog-strong: #e2ddd2;
+  --ink: #1a1814;
+  --ink-muted: #6b665d;
+  --on-ink: #fbfaf7;
+  --notation: #1a1814;
+  /* the main action of a place (Continue, play discs, the main button): deep green, ivory glyphs on it */
+  --now: #17402c;
+  --now-strong: #1f5139;
+  --on-now: #fbfaf7;
+  --now-mark: #1f6b45;
+  /* what is sounding: the lit word, the sung syllable, the bar under the playhead (a soft light green) */
+  --lit: #d6eedc;
+  --now-wash: #d6eedcb3;
+  /* progress: learned = now-mark, in progress = now-pale, to learn = fog-strong */
+  --now-pale: #a9d8b9;
+  --picked: #e6e2d8;
+  --picked-strong: #dbd6ca;
+  /* a toggle that is on: a pale green field with a now-mark dot */
+  --now-soft: #e3efe6;
   --you: var(--now-mark);
   --you-mark: #c8286f;
   --loop: #d8d1ff;
@@ -32,15 +50,15 @@
   --check-mark: #7d5c00;
   --note: #ffd2bc;
   --note-mark: #b6461a;
-  --on-pastel: #0b0b0b;
-  --on-pastel-muted: #43453f;
+  --on-pastel: #1a1814;
+  --on-pastel-muted: #4a463f;
   --on-pastel-inverse: #ffffff;
-  --pastel-fog: #0b0b0b14;
-  --pastel-fog-strong: #0b0b0b29;
-  --cut-hatch: #0b0b0b29;
+  --pastel-fog: #1a181414;
+  --pastel-fog-strong: #1a181429;
+  --cut-hatch: #1a181429;
   --alert: #d42a1c;
   --focus: var(--ink);
-  --shadow-float: 0 0 0 1px #0b0b0b0f, 0 12px 32px -14px #0b0b0b47;
+  --shadow-float: 0 0 0 1px #1a18140f, 0 12px 32px -14px #1a181447;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -50,12 +68,16 @@
   --space-7: 48px;
   --space-8: 64px;
   --space-9: 96px;
-  --rail: #f6f6f3;
-  --fog-soft: #f7f7f5;
-  --stripe: #f8f8f6;
-  --ink-ahead: #6f716c;
-  --notation-muted: #77776f;
-  --on-mark: #ffffff;
+  --rail: #f4f1ea;
+  --fog-soft: #f6f4ef;
+  --stripe: #f7f5f0;
+  --ink-ahead: #6b665d;
+  --notation-muted: #77726a;
+  /* a hairline that a secondary button draws round itself */
+  --hairline: rgba(26, 24, 20, 0.25);
+  /* the display serif: big titles only (sung text and IPA stay Charis SIL, the interface Jost) */
+  --font-display: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --on-mark: #fbfaf7;
   --tip-ink: #7d70d4;
   --tip-bg: #f4f1ff;
   --join: #ffc9cf;
@@ -74,18 +96,22 @@
   --tone-sky-soft: #e8f2ff; --tone-sky: #c4e3ff; --tone-sky-deep: #8fc1f1;
   --tone-mint-soft: #e5faec; --tone-mint: #b9f3cc; --tone-mint-deep: #82d9a2;
   --tone-butter-soft: #fff8d9; --tone-butter: #ffed94; --tone-butter-deep: #ead25c;
-  --shadow-raised: 0 1px 2px rgba(20, 24, 18, 0.08), 0 0 0 1px rgba(20, 24, 18, 0.04);
-  --shadow-raised-bar: 0 1px 2px rgba(20, 20, 40, 0.08);
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-card: 6px;
-  --radius-lg: 6px;
-  --radius-row: 6px;
-  --radius-xl: 6px;
-  --radius-2xl: 8px;
+  --shadow-raised: 0 1px 3px rgba(26, 24, 20, 0.12);
+  --shadow-raised-bar: 0 1px 2px rgba(26, 24, 20, 0.08);
+  /* corners: cards 12, buttons and chips 10, small tiles 8; faces and play discs stay round */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 12px;
+  --radius-row: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 14px;
+  --radius-tile: 8px;
   --rail-w: 300px;
   --radius-field: 0px;
-  --radius-pill: 999px;
+  /* was a capsule; buttons, chips and segmented tracks now share the 10px corner */
+  --radius-pill: 10px;
+  --radius-capsule: 999px;
   --radius-round: 50%;
   --touch: 48px;
   --touch-stand: 64px;
@@ -147,7 +173,7 @@
 .cp-btn:hover { background: var(--fog-strong); }
 .cp-btn:active { transform: scale(0.97); }
 /* the main action of a place: mint, never a black fill */
-.cp-btn--ink { background: var(--now); color: var(--on-pastel); }
+.cp-btn--ink { background: var(--now); color: var(--on-now); }
 .cp-btn--ink:hover { background: var(--now-strong); }
 .cp-btn[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
 .cp-btn[aria-pressed="true"]:hover { background: var(--picked-strong); }
@@ -176,7 +202,7 @@
 .cp-icon-btn:hover { background: var(--fog-strong); }
 .cp-icon-btn:active { transform: scale(0.94); }
 .cp-icon-btn:disabled { color: var(--notation-muted); cursor: default; transform: none; background: var(--fog); }
-.cp-icon-btn--ink { background: var(--now); color: var(--on-pastel); }
+.cp-icon-btn--ink { background: var(--now); color: var(--on-now); }
 .cp-icon-btn--ink:hover { background: var(--now-strong); }
 .cp-icon-btn[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
 .cp-icon-btn[aria-pressed="true"]:hover { background: var(--picked-strong); }
@@ -210,8 +236,8 @@
   box-shadow: inset 0 0 0 2px currentColor;
 }
 .cp-toggle:hover { background: var(--fog-strong); }
-.cp-toggle[aria-pressed="true"] { background: var(--picked); color: var(--on-pastel); }
-.cp-toggle[aria-pressed="true"]::before { background: var(--loop-mark); }
+.cp-toggle[aria-pressed="true"] { background: var(--now-soft); color: var(--on-pastel); }
+.cp-toggle[aria-pressed="true"]::before { background: var(--now-mark); box-shadow: inset 0 0 0 2px var(--now-mark); }
 .cp-toggle--loop[aria-pressed="true"] { background: var(--loop); color: var(--on-pastel); }
 .cp-toggle--together[aria-pressed="true"] { background: var(--together); color: var(--on-pastel); }
 .cp-toggle--you[aria-pressed="true"] { background: var(--you); color: var(--on-pastel); }
@@ -286,7 +312,7 @@
 }
 .cp-tag svg { width: 14px; height: 14px; }
 .cp-tag--ink { background: var(--canvas); color: var(--on-pastel); }
-.cp-tag--now { background: var(--now); color: var(--on-pastel); }
+.cp-tag--now { background: var(--canvas); color: var(--now-mark); }
 .cp-tag--you { background: var(--you); color: var(--on-pastel); }
 .cp-tag--loop { background: var(--loop); color: var(--on-pastel); }
 .cp-tag--together { background: var(--together); color: var(--on-pastel); }
@@ -303,7 +329,7 @@
   color: var(--ink);
   min-width: 0;
 }
-.cp-field--now { background: var(--now); }
+.cp-field--now { background: var(--lit); }
 .cp-field--you { background: var(--you); }
 .cp-field--loop { background: var(--loop); }
 .cp-field--together { background: var(--together); }
@@ -312,7 +338,7 @@
 .cp-eyebrow {
   margin: 0;
   font: 500 12px/1.2 var(--font-sans);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-muted);
 }
@@ -333,7 +359,7 @@
   font-variant-numeric: tabular-nums;
 }
 .cp-position[data-state="playing"] {
-  background: var(--now);
+  background: var(--lit);
   --ink: var(--on-pastel);
   --ink-muted: var(--on-pastel-muted);
   color: var(--on-pastel);
@@ -384,7 +410,7 @@
   max-width: 100%;
   transition: background-color var(--duration-move) var(--ease-standard);
 }
-.cp-lyric[data-state="sounding"] { background: var(--now); }
+.cp-lyric[data-state="sounding"] { background: var(--lit); }
 .cp-lyric__body { display: grid; gap: 2px; min-width: 0; padding-top: 2px; }
 .cp-lyric__line { margin: 0; font: 500 22px/1.25 var(--font-sans); }
 .cp-lyric__line .cp-w { padding: 0 2px; margin: 0 -2px; }
@@ -419,7 +445,7 @@
   min-width: 0;
 }
 .cp-strip--you { background: var(--you); }
-.cp-strip--now { background: var(--now); }
+.cp-strip--now { background: var(--lit); }
 .cp-strip__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
 .cp-strip__name { font: 500 17px/1.25 var(--font-sans); }
 .cp-strip__role { font: 400 13px/1.4 var(--font-sans); color: var(--ink-muted); }

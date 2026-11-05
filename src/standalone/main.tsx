@@ -3,6 +3,7 @@ import { setPortFactory } from "../audio/usePlayback";
 import { SamplerPort } from "../audio/samplerPort";
 import "./ds.css";
 import "./app.css";
+import "./premium.css";
 import "@fontsource/caveat/latin-500.css";
 import { App } from "./App";
 

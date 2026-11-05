@@ -141,6 +141,7 @@ server/              Express 5 + ws + node:sqlite: auth, productions, versions, 
 | GeneralUser GS (piano only) | 2.0.3, commit `684543d` | GeneralUser GS License v2.0 (use and modification in software allowed) | Cut down to Acoustic Grand Piano (2.2 MB) by `scripts/build-soundbank.ts`. Provenance record: `public/soundbank/counterpart-piano.licence.json`. **Caveat:** the author says the origin of some samples can't be confirmed with certainty, so review before commercial release. |
 | React 18, Express 5, ws 8, Vite 8, Vitest 5, Playwright 1.63 | | MIT / Apache-2.0 | |
 | Charis SIL, Atkinson Hyperlegible Next (via @fontsource) | | OFL-1.1 | Charis is used for libretto and IPA because of its full IPA coverage |
+| Cormorant Garamond (from @fontsource/cormorant-garamond) | 5.1.0 | OFL-1.1 | Display serif for big titles only (500, 500 italic, 600; latin + latin-ext woff2 in `src/standalone/fonts/`, licence text in `CormorantGaramond-OFL.txt`) |
 | eSpeak NG (espeakng-loader 0.2.4) | 1.52 | GPL-3.0 | Used **offline only** to create placeholder audio; not shipped with the app |
 
 **Substitutions.** None to the preferred components. SQLite comes from Node's built-in `node:sqlite`, so there are no native builds; it is still marked experimental in Node 22. Playback events are derived from MusicXML rather than a separate MIDI file, which the brief allows.
