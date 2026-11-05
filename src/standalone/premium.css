@@ -1627,3 +1627,83 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
   /* narrow: the dots take what is left between the selector and the tools */
   .now-panel .now-bar { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 6px; }
 }
+
+/* =====================================================================
+   Phone, controls open: four clear rows above the transport —
+     1  the other singers (the full width, scrolling when many) · the piano
+     2  the tempo, − ♩ = 120 +, the full width
+     3  Arrange · Notes · Count-in, three equal buttons
+     4  you · again · play · loop · close
+   ===================================================================== */
+@media (max-width: 640px) {
+  .practice .p-bar.p-bar.p-bar.p-bar { grid-template-columns: repeat(30, minmax(0, 1fr)); row-gap: 10px; --tr: 4; }
+  .practice .p-bar.p-bar.p-bar.p-bar.folded { --tr: 1; }
+  .practice .p-bar.p-bar.p-bar.p-bar > .bar-parts > .part:first-child { grid-column: 1 / 7; }
+  .practice .p-bar.p-bar.p-bar.p-bar .bar-again { grid-column: 7 / 13; }
+  .practice .p-bar.p-bar.p-bar.p-bar .bar-transport > [data-testid="play"],
+  .practice .p-bar.p-bar.p-bar.p-bar .bar-transport > [data-testid="pause"] { grid-column: 13 / 19; justify-self: center; }
+  .practice .p-bar.p-bar.p-bar.p-bar .bar-loop { grid-column: 19 / 25; }
+  .practice .p-bar.p-bar.p-bar.p-bar .bar-more { grid-column: 25 / 31; }
+
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) { row-gap: 10px; padding-top: 10px; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix,
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-right,
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-tempo { display: contents !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-tempo__beat { display: none !important; }
+  /* 1: the singers, then the piano */
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .bar-others {
+    display: flex; grid-row: 1; grid-column: 1 / 25; justify-self: stretch; align-items: center; gap: 8px; padding: 2px 4px;
+  }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .piano-group {
+    grid-row: 1; grid-column: 25 / 31; justify-self: center; padding: 0 !important; background: none !important;
+  }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded):has(.bar-others:empty) .bar-mix .piano-group { grid-column: 1 / 7; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .pg-btn { width: 48px !important; min-width: 48px !important; height: 48px !important; border-radius: 12px; background: var(--fog) !important; }
+  /* 2: the tempo, the full width */
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-speed {
+    display: flex !important; grid-row: 2; grid-column: 1 / 31; justify-self: stretch; align-items: center; justify-content: space-between;
+    height: 48px; padding: 0 4px !important; border-radius: 12px !important; background: var(--fog) !important;
+  }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-speed .cp-icon-btn { width: 48px; height: 48px; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-speed .cp-tempo__value { flex: 1; min-width: 0; }
+  /* 3: Arrange · Notes · Count-in, equal */
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn,
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin {
+    display: inline-flex !important; grid-row: 3; justify-self: stretch; align-items: center; justify-content: center; gap: 8px;
+    width: auto !important; min-width: 0 !important; height: 48px !important; margin: 0 4px !important; padding: 0 8px !important;
+    border-radius: 12px !important; background: var(--fog) !important; color: var(--ink); white-space: nowrap;
+  }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn:not(.notes-btn) { grid-column: 1 / 11; margin-left: 0 !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .notes-btn { grid-column: 11 / 21; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin { grid-column: 21 / 31; margin-right: 0 !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn span,
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin span { display: inline !important; overflow: hidden; text-overflow: ellipsis; font: 500 15px/1 var(--font-sans); }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn svg { width: 18px; height: 18px; flex: none; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin svg { display: none; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin[aria-pressed="true"],
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn[aria-pressed="true"] { background: var(--canvas) !important; box-shadow: 0 0 0 1px var(--hairline), 0 1px 3px rgba(26, 24, 20, 0.12); }
+  /* a hairline between the controls and the transport */
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) > .bar-parts > .part:first-child { margin-top: 4px; }
+
+  /* the words box: the count-in dots centred just above the line, clear of the singer's name */
+  .practice > .now-panel .line-card { position: relative; }
+  .practice > .now-panel .now-count { position: absolute; left: 50%; top: 54px; transform: translateX(-50%); min-height: 0; }
+}
+/* short phones (an iPhone SE): the same controls in two rows, so the music keeps its room —
+     singers · piano · count-in
+     Arrange · Notes · − ♩ = 130 +            */
+@media (max-width: 640px) and (max-height: 700px) {
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) { --tr: 3; row-gap: 8px; padding-top: 6px; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .bar-others { grid-column: 1 / 20; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .piano-group { grid-column: 20 / 25; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded):has(.bar-others:empty) .bar-mix .piano-group { grid-column: 1 / 6; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin { grid-row: 1; grid-column: 25 / 31; margin: 0 !important; padding: 0 !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin span { display: none !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin svg { display: block; width: 20px; height: 20px; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .countin { gap: 6px; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn { grid-row: 2; padding: 0 !important; margin: 0 4px 0 0 !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn:not(.notes-btn) { grid-column: 1 / 6; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .notes-btn { grid-column: 6 / 11; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn span { display: none !important; }
+  .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-speed { grid-row: 2; grid-column: 11 / 31; }
+}
