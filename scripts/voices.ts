@@ -677,8 +677,12 @@ async function runLanguage(lang: string, todo: string[]) {
   const wordsWanted = new Map<string, Clip>();
   const refs: { data: { clips: Record<string, Made> }; clipKey: string; bankKey: string }[] = [];
   const queued = new Set<string>();
+  // where each written word is heard inside a line: words and two-word joins are cut out of the lines
+  // (voice.config.json "cutWords", on by default) instead of being bought again
+  const lineWords = new Map<string, string[]>();
   for (const piece of todo) {
     const { lines, words } = clipsFor(piece, voiceDir);
+    for (const c of lines) if (c.kind === "line" && c.words) lineWords.set(`${c.kind}:${c.text}`, c.words);
     const mPath = join(ROOT, `content/pieces/${piece}/voice/${voiceDir}/manifest.json`);
     const data = existsSync(mPath) ? JSON.parse(readFileSync(mPath, "utf8")) : { clips: {} };
     data.voiceId = config.voiceId;
@@ -708,11 +712,29 @@ async function runLanguage(lang: string, todo: string[]) {
     jobs.push({ clip: w, done: (m) => (bank[word] = m) });
   }
 
+  const CUT = (config as { cutWords?: boolean }).cutWords !== false;
+  const key = (w: string) => bare(w).toLowerCase();
+  // every word and pair the lines (made before or in this run) hold
+  const heard = new Set<string>();
+  for (const ws of lineWords.values()) {
+    const ks = ws.map(key);
+    ks.forEach((k, i) => {
+      heard.add(k);
+      if (i + 1 < ks.length) heard.add(`${k} ${ks[i + 1]}`);
+    });
+  }
+  const target = (c: Clip) => key(c.text.replace(/[.]$/, ""));
+  const cuttable = (c: Clip) => CUT && (c.kind === "word" || c.kind === "join") && heard.has(target(c));
+  const toCut = jobs.filter((j) => cuttable(j.clip));
+  const toBuy = jobs.filter((j) => !cuttable(j.clip));
+  jobs.length = 0;
+  jobs.push(...toBuy);
   const chars = jobs.reduce((n, j) => n + j.clip.text.length, 0);
+  if (toCut.length) console.log(`  ${toCut.length} word(s) and join(s) will be cut from the lines (no credits).`);
   console.log(`${LANGUAGE_NAME[lang] ?? lang}: ${todo.length} piece(s), ${jobs.length} clip(s) to make, ${chars} characters (about ${chars} credits).`);
   for (const j of jobs.slice(0, DRY ? Infinity : 0)) console.log(`  ${j.clip.kind.padEnd(9)} ${j.clip.key.padEnd(18)} ${j.clip.text}`);
   if (DRY) return;
-  if (!jobs.length) {
+  if (!jobs.length && !toCut.length) {
     for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = { ...bank[r.bankKey], ...(r.data.clips[r.clipKey]?.sung ? { sung: r.data.clips[r.clipKey].sung } : {}) };
     manifests.forEach((m, i) => shapeAll(todo[i], voiceDir, m.data as never));
     for (const m of manifests) writeFileSync(m.path, JSON.stringify(m.data, null, 1));
@@ -736,6 +758,45 @@ async function runLanguage(lang: string, todo: string[]) {
     }
   };
   await Promise.all([worker(), worker()]);
+
+  // the words and joins, cut out of a line that holds them (the cleanest: the shortest such line)
+  for (const job of toCut) {
+    const c = job.clip;
+    const want = target(c).split(" ");
+    let best: { file: string; a: number; b: number; prevEnd: number; nextStart: number; len: number } | null = null;
+    for (const [bk, ws] of lineWords) {
+      const made = bank[bk];
+      if (!made?.words || !existsSync(join(ROOT, made.file))) continue;
+      const ks = ws.map(key);
+      for (let i = 0; i + want.length <= ks.length; i++) {
+        if (want.some((w, k) => ks[i + k] !== w)) continue;
+        const t0 = made.words[i];
+        const t1 = made.words[i + want.length - 1];
+        if (!t0 || !t1 || !isFinite(t0[0]) || !isFinite(t1[1]) || t1[1] - t0[0] < 0.12) continue;
+        const prevEnd = i > 0 && made.words[i - 1] && isFinite(made.words[i - 1][1]) ? made.words[i - 1][1] : 0;
+        const nx = made.words[i + want.length];
+        const nextStart = nx && isFinite(nx[0]) ? nx[0] : t1[1] + 0.4;
+        if (!best || ws.length < best.len) best = { file: made.file, a: t0[0], b: t1[1], prevEnd, nextStart, len: ws.length };
+      }
+    }
+    if (!best) {
+      // not found after all: bought
+      const sp = await speak(config.voiceId, c.text, false);
+      save(c.file, sp.audio);
+      job.done({ text: c.text, hash: hashOf(c), file: c.file });
+      console.log(`  made ${c.key}: ${c.text}`);
+      continue;
+    }
+    // a little air either side, never into the neighbouring words; soft edges
+    const from = Math.max(best.prevEnd, best.a - 0.05, 0);
+    const to = Math.min(best.nextStart, best.b + 0.1);
+    const out = join(ROOT, c.file);
+    mkdirSync(dirname(out), { recursive: true });
+    const d = to - from;
+    execFileSync(FFMPEG, ["-v", "error", "-y", "-ss", from.toFixed(3), "-t", d.toFixed(3), "-i", join(ROOT, best.file), "-af", `afade=t=in:d=0.015,afade=t=out:st=${Math.max(0, d - 0.04).toFixed(3)}:d=0.04,apad=pad_dur=0.12`, "-ar", "44100", "-b:a", "96k", out]);
+    job.done({ text: c.text, hash: hashOf(c), file: c.file });
+    console.log(`  cut ${c.key}: ${c.text}`);
+  }
 
   // each piece's manifest points at the shared recordings
   for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = { ...bank[r.bankKey], ...(r.data.clips[r.clipKey]?.sung ? { sung: r.data.clips[r.clipKey].sung } : {}) };
