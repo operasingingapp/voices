@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MutableRefObject, type ReactNode } from "react";
-import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
+import type { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 import { buildLayout, type Lane, type ScoreLayout } from "./layout";
 import { buildPinnedVrv, loadVerovio, VrvScore } from "./vrv";
 import { engineFor } from "./engines";
@@ -507,54 +507,62 @@ export function ScoreView(props: Props) {
         host.replaceChildren();
       };
     }
-    const osmd = new OpenSheetMusicDisplay(host, {
-      backend: "svg",
-      autoResize: false,
-      drawTitle: false,
-      drawSubtitle: false,
-      drawComposer: false,
-      drawLyricist: false,
-      drawCredits: false,
-      drawPartNames: !strip,
-      drawPartAbbreviations: !strip,
-      drawMeasureNumbers: true,
-      measureNumberInterval: 1,
-      autoBeam: false,
-      autoGenerateMultipleRestMeasuresFromRestMeasures: false,
-      pageFormat: "Endless",
-      followCursor: false,
-      newSystemFromXML: false,
-      renderSingleHorizontalStaffline: strip,
-      // text in the score (lyrics, dynamics, bar numbers) in a book serif, as in a printed edition
-      defaultFontFamily: ENGRAVING_TEXT_FONT,
-    });
-    osmd.EngravingRules.PageLeftMargin = 3;
-    osmd.EngravingRules.PageRightMargin = 3;
-    osmd.EngravingRules.PageTopMargin = 4;
-    osmd.EngravingRules.MinimumDistanceBetweenSystems = 9;
-    // the single line is as long as the piece: OSMD's default limit (32767 px) breaks a long one (an overture)
-    // onto a second line partway through
-    if (strip) osmd.EngravingRules.SheetMaximumWidth = 1_000_000;
-    engraveLikeAPrintedEdition(osmd);
-    osmdRef.current = osmd;
+    // the old engine (only where WebAssembly cannot run): loaded on demand, it is a large library
+    let osmd: OpenSheetMusicDisplay | null = null;
     setLoaded(false);
-    // the text font must be loaded before the score is measured, or the lyrics are spaced for a fallback font
-    const fonts = (document as Document & { fonts?: FontFaceSet }).fonts;
-    const fontsReady = fonts
-      ? Promise.all([fonts.load("20px 'Charis SIL'"), fonts.load("italic 20px 'Charis SIL'"), fonts.load("italic 700 20px 'Charis SIL'")]).catch(() => undefined)
-      : Promise.resolve();
-    Promise.resolve(fontsReady)
-      .then(() => osmd.load(xml))
-      .then(() => {
-        if (!cancelled) {
-          setLoaded(true);
-          setLoadTick((t) => t + 1);
-        }
+    import("opensheetmusicdisplay")
+      .then(({ OpenSheetMusicDisplay: OSMD }) => {
+        if (cancelled) return;
+        const o = new OSMD(host, {
+          backend: "svg",
+          autoResize: false,
+          drawTitle: false,
+          drawSubtitle: false,
+          drawComposer: false,
+          drawLyricist: false,
+          drawCredits: false,
+          drawPartNames: !strip,
+          drawPartAbbreviations: !strip,
+          drawMeasureNumbers: true,
+          measureNumberInterval: 1,
+          autoBeam: false,
+          autoGenerateMultipleRestMeasuresFromRestMeasures: false,
+          pageFormat: "Endless",
+          followCursor: false,
+          newSystemFromXML: false,
+          renderSingleHorizontalStaffline: strip,
+          // text in the score (lyrics, dynamics, bar numbers) in a book serif, as in a printed edition
+          defaultFontFamily: ENGRAVING_TEXT_FONT,
+        });
+        o.EngravingRules.PageLeftMargin = 3;
+        o.EngravingRules.PageRightMargin = 3;
+        o.EngravingRules.PageTopMargin = 4;
+        o.EngravingRules.MinimumDistanceBetweenSystems = 9;
+        // the single line is as long as the piece: OSMD's default limit (32767 px) breaks a long one (an overture)
+        // onto a second line partway through
+        if (strip) o.EngravingRules.SheetMaximumWidth = 1_000_000;
+        engraveLikeAPrintedEdition(o);
+        osmd = o;
+        osmdRef.current = o;
+        // the text font must be loaded before the score is measured, or the lyrics are spaced for a fallback font
+        const fonts = (document as Document & { fonts?: FontFaceSet }).fonts;
+        const fontsReady = fonts
+          ? Promise.all([fonts.load("20px 'Charis SIL'"), fonts.load("italic 20px 'Charis SIL'"), fonts.load("italic 700 20px 'Charis SIL'")]).catch(() => undefined)
+          : Promise.resolve();
+        Promise.resolve(fontsReady)
+          .then(() => o.load(xml))
+          .then(() => {
+            if (!cancelled) {
+              setLoaded(true);
+              setLoadTick((t) => t + 1);
+            }
+          })
+          .catch((e: Error) => !cancelled && setError(`The score could not be displayed: ${e.message}`));
       })
       .catch((e: Error) => !cancelled && setError(`The score could not be displayed: ${e.message}`));
     return () => {
       cancelled = true;
-      osmd.clear();
+      osmd?.clear();
       osmdRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

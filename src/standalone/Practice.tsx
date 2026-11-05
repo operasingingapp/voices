@@ -46,9 +46,10 @@ let LANG = "it";
 /** Typographic apostrophes for display: l’anello, vo’, I’d (the data keeps plain ones). */
 const curly = (t: string) => t.replace(/'/g, "\u2019");
 
-// Offline placeholder recordings, used only when the device has no voice for the piece's language.
+// Offline placeholder recordings, used only when the device has no voice for the piece's language (separate
+// files, fetched only when played: inlined, they added a megabyte to the app's first download).
 const audioModules = import.meta.glob(["../../data/content/*/audio/*.mp3", "!../../data/content/cp-fx-*/**"], {
-  query: "?inline",
+  query: "?url",
   import: "default",
   eager: true,
 }) as Record<string, string>;
@@ -77,7 +78,6 @@ interface VoiceManifest {
   clips: Record<string, { text: string; file: string; words?: [number, number][]; sung?: { file: string; words: [number, number][] } }>;
   words: Record<string, string>;
 }
-const voiceManifests = import.meta.glob("../../content/pieces/*/voice/*/manifest.json", { eager: true, import: "default" }) as Record<string, VoiceManifest>;
 let voices: VoiceManifest[] = [];
 const defaultVoiceId = (voiceConfig as { voiceId: string }).voiceId;
 /** the voice chosen for the piece's language in voice.config.json (Italian: voiceId; others: languages.<code>) */
@@ -265,9 +265,7 @@ function loadPiece(id: string, character?: string) {
   ORIGINAL = LANGUAGE_NAMES[language.language] ?? "Original";
   LANG = language.language || "it";
   setSpeechLanguage(LANG);
-  voices = Object.entries(voiceManifests)
-    .filter(([k, m]) => k.includes(`/pieces/${id}/voice/`) && m.voiceId)
-    .map(([, m]) => m);
+  voices = (d.voices as VoiceManifest[]).filter((m) => m.voiceId);
   pianoPart = edition.parts.find((p) => p.kind === "piano")!;
   if (!displayCache.has(id)) displayCache.set(id, prepareForDisplay(d.scoreXml));
   displayXml = displayCache.get(id)!;
@@ -1283,12 +1281,14 @@ function PracticeScreen({
     setSpeakingWord((k) => (k === key ? null : k));
   };
   useEffect(() => () => stopSpeaking(), []);
-  // this piece's recordings only, a moment after the page opens, so the piano and the score come first
+  // this piece's recordings only, once the piano is ready (and a moment later), so the music always comes first
+  const soundReady = pb.status === "ready";
   useEffect(() => {
+    if (!soundReady) return;
     const files = voices.flatMap((m) => Object.values((m as unknown as { clips?: Record<string, { file?: string }> }).clips ?? {}).map((c) => c.file ?? ""));
-    const t = window.setTimeout(() => preloadVoicePacks(files.filter(Boolean)), 2500);
+    const t = window.setTimeout(() => preloadVoicePacks(files.filter(Boolean)), 1500);
     return () => window.clearTimeout(t);
-  }, []);
+  }, [soundReady]);
 
   const play = async () => {
     if (!engine || !pb.port) return;

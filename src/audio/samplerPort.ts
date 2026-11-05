@@ -33,6 +33,27 @@ const PIANO = NOCT as unknown as {
   layers: Record<string, { file: string; notes: PianoNote[] }>;
   cents: Record<string, number>;
 };
+/** each piano layer's file, fetched once per visit and kept (about 2.5 MB each, only the layers in use) */
+const layerFiles = new Map<string, Promise<ArrayBuffer>>();
+function layerBytes(url: string): Promise<ArrayBuffer> {
+  let p = layerFiles.get(url);
+  if (!p) {
+    p = fetch(url).then((r) => {
+      if (!r.ok) throw new Error("A piano layer could not be loaded");
+      return r.arrayBuffer();
+    });
+    p.catch(() => layerFiles.delete(url));
+    layerFiles.set(url, p);
+  }
+  return p;
+}
+/** Fetch the piano's most used layers ahead (while Home or a role page is open), so a piece starts sooner. */
+export function warmPiano(layers: number[] = [8, 7]) {
+  for (const l of layers) {
+    const url = Object.entries(files).find(([k]) => k.endsWith(`/${PIANO.layers[String(l)]?.file}`) || k.endsWith(`noct-v${String(l).padStart(2, "0")}.mp3`))?.[1];
+    if (url) layerBytes(url).catch(() => undefined);
+  }
+}
 /** the lowest velocity of each of the 16 layers (the Accurate-Salamander SFZ's mapping) */
 const LAYER_FROM = [
   1, 27, 33, 38, 43, 48, 53, 59, 65, 72, 80, 88, 96, 104, 112, 120,
@@ -500,9 +521,8 @@ export class SamplerPort implements SynthPort {
     const prev = L.loading ?? Promise.resolve();
     const layerRef = L;
     const run = prev.then(async () => {
-      const res = await fetch(this.fileUrl(layer));
-      if (!res.ok) throw new Error("A piano layer could not be loaded");
-      const data = await res.arrayBuffer();
+      // a copy: decoding takes the buffer over, and the bytes stay cached for the next keys or piece
+      const data = (await layerBytes(this.fileUrl(layer))).slice(0);
       // decode at 32 kHz (an offline context decodes at its own rate), then keep only the notes asked for
       let whole: AudioBuffer;
       try {

@@ -43,13 +43,19 @@ export default defineConfig({
     chunkSizeWarningLimit: 8000,
     // inline fonts as data URIs; keep JavaScript, the illustrations and the piano samples as separate
     // files, so they load in parallel and are cached on their own
-    assetsInlineLimit: (file: string) => !/\.(js|webp|jpe?g|png|avif|mp3|mp4|musicxml)$/.test(file),
+    assetsInlineLimit: (file: string) => !/\.(js|webp|jpe?g|png|avif|mp3|mp4|musicxml|wav)$/.test(file),
     rollupOptions: {
       input: "standalone.html",
       output: {
-        // each piece's data is its own small file (loaded when the piece opens); the voices' indexes stay together
+        // each piece's data is its own small file (loaded when the piece opens); the voice packs' indexes stay together
         manualChunks(id: string) {
-          if (/voicepacks\/|\/voice\/[^/]+\/manifest\.json/.test(id)) return "voicedata";
+          // the dynamic-import helper in a file of its own: the score engine (7 MB) imports it, and taking it from
+          // the app file gave the engine a new name (so a fresh download) whenever the app changed
+          if (id.includes("vite/preload-helper")) return "preload";
+          // a piece's words and its recorded voices' timings travel together, loaded when the piece opens
+          const words = /\/content\/pieces\/([^/]+)\/voice\/[^/]+\/manifest\.json$/.exec(id) ?? /\/data\/content\/([^/]+)\/language\.json$/.exec(id);
+          if (words) return `words-${words[1]}`;
+          if (/voicepacks\//.test(id)) return "voicedata";
           return undefined;
         },
         entryFileNames: "assets/app-[hash:8].js", chunkFileNames: "assets/[name]-[hash:8].js", assetFileNames: (a) => ((a.names?.[0] ?? a.name ?? "").endsWith(".musicxml") ? "assets/[name]-[hash:8].xml" : "assets/[name]-[hash:8][extname]") },

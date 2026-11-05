@@ -23,10 +23,13 @@ const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../
   import: "default",
   eager: true,
 }) as Record<string, string>;
+// the recorded voices' timings for each piece (word by word), fetched with the piece's words
+const voiceManifests = import.meta.glob("../../content/pieces/*/voice/*/manifest.json", { import: "default" }) as Record<string, () => Promise<unknown>>;
+const voiceData = new Map<string, unknown[]>();
 const scoreText = new Map<string, string>();
 const scoreLoading = new Map<string, Promise<void>>();
 /** true when the piece's score is loaded and pieceData() can be used */
-export const scoreReady = (id: string) => scoreText.has(id) && editionData.has(id) && languageData.has(id);
+export const scoreReady = (id: string) => scoreText.has(id) && editionData.has(id) && languageData.has(id) && voiceData.has(id);
 /** load the piece's score, data and words (once) */
 export function loadScore(id: string): Promise<void> {
   if (scoreReady(id)) return Promise.resolve();
@@ -41,7 +44,12 @@ export function loadScore(id: string): Promise<void> {
         return r.text();
       })
       .then((t) => void scoreText.set(id, t));
-    p = Promise.all([sc, ed, la])
+    const vo = Promise.all(
+      Object.entries(voiceManifests)
+        .filter(([k]) => k.includes(`/pieces/${id}/voice/`))
+        .map(([, load]) => load()),
+    ).then((ms) => void voiceData.set(id, ms));
+    p = Promise.all([sc, ed, la, vo])
       .then(() => undefined)
       .catch((e) => {
         scoreLoading.delete(id);
@@ -2237,6 +2245,8 @@ export interface PieceData {
   language: CompiledLanguage;
   scoreXml: string;
   info: PieceInfo;
+  /** the piece's recorded voices (their manifests: clips and word timings) */
+  voices: unknown[];
 }
 
 const byId = (rec: Record<string, unknown>, id: string, file: string) => rec[`../../data/content/${id}/${file}`];
@@ -2255,5 +2265,6 @@ export function pieceData(id: string): PieceData {
     language: languageData.get(id) as CompiledLanguage,
     scoreXml: scoreText.get(id) ?? "",
     info: PIECE_INFO[id],
+    voices: voiceData.get(id) ?? [],
   };
 }
