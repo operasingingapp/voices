@@ -788,3 +788,28 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
 .num-go.cp-btn.cp-btn--ink svg {
   color: var(--ink);
 }
+
+/* the opera's head: picture and text start together at the top; the story opening is kept short */
+.oh { align-items: start; }
+.oh-cover { aspect-ratio: 4 / 3; }
+.oh-text { padding-top: 6px; }
+.oh-story { max-width: 46ch; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Role head on narrower screens (iPad portrait, split view, the iPad with the rail open): the opera stays a
+   modest line under the name, the portrait shrinks, and the progress strip gets two rows so the bar keeps its length */
+.rp-head { container-type: inline-size; }
+.rp-in { font-size: 26px; }
+@container (max-width: 980px) {
+  .rp-id { grid-template-columns: 140px minmax(0, 1fr); column-gap: 28px; padding: 0 20px; }
+  .rp-face { width: 140px; height: 140px; margin-top: -84px; }
+  .rp-name { font-size: 56px; }
+  .rp-in { display: block; margin-top: 6px; font-size: 22px; white-space: normal; }
+  .rp-strip {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "text go" "bar bar";
+    row-gap: 14px;
+  }
+  .rp-strip-text { grid-area: text; }
+  .rp-strip > .rp-go { grid-area: go; }
+  .rp-strip > :not(.rp-strip-text):not(.rp-go) { grid-area: bar; }
+}

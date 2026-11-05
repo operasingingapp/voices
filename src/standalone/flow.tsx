@@ -1105,7 +1105,10 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
           <h1 className="oh-title" lang={opera.lang}>
             {opera.title}
           </h1>
-          {STORIES[opera.id] && <p className="oh-story">{STORIES[opera.id]}</p>}
+          {STORIES[opera.id] && (
+            // the opening of the story only: the whole plot is behind "The story"
+            <p className="oh-story">{(STORIES[opera.id].match(/^.*?[.!?](?=\s|$)/) ?? [STORIES[opera.id]])[0]}</p>
+          )}
           <p className="oh-meta">
             <span title={opera.composerFull}>{opera.composer}</span>
             <span>libretto by {opera.librettist}</span>
