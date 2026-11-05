@@ -8874,13 +8874,13 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   box-shadow: none;
 }
 .words-view .w-it {
-  font-size: 24px;
-  line-height: 1.35;
+  font-size: 21px;
+  line-height: 1.38;
   color: var(--ink);
 }
 .words-view .w-tr {
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.45;
   color: color-mix(in srgb, var(--ink) 86%, var(--canvas));
   opacity: 1;
@@ -9030,4 +9030,16 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   .w-back--up {
     top: 112px;
   }
+}
+
+/* singer names wrap instead of being cut off ("The Countess", "Count Almaviva") */
+.words-view .w-line.script .w-who {
+  align-items: flex-start;
+}
+.words-view .w-line.script .w-who-name {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
