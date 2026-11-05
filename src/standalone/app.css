@@ -8802,3 +8802,29 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .hm-prog-key span { display: inline-flex; align-items: center; gap: 6px; }
 .hm-prog-key .hm-seg { display: inline-block; width: 14px; min-width: 14px; height: 12px; flex: none; border-radius: 3px; cursor: default; }
 .hm-simple > .hm-prog { order: 2; }
+
+/* 32. Home, calmer: the role as a card; each piece a small dot on its act's line */
+.hm-prog { padding: 24px 28px 22px; border-radius: var(--radius-2xl); background: var(--canvas); box-shadow: inset 0 0 0 1px var(--fog-strong); gap: 18px; }
+.hm-prog-sum { display: flex; align-items: center; gap: 16px; }
+.hm-prog-pct { font-size: 15px; font-weight: 500; }
+.hm-prog-big { display: grid; gap: 2px; font-size: 16px; }
+.hm-prog-big b { font-size: 22px; margin-right: 2px; }
+.hm-prog-big span { font-size: 14px; }
+.hm-prog-acts { gap: 12px; }
+.hm-prog-act { grid-template-columns: 48px minmax(0, 1fr); }
+.hm-prog-strip { flex-wrap: wrap; gap: 9px; align-items: center; position: relative; }
+.hm-seg { flex: none; width: 16px; min-width: 16px; height: 16px; border-radius: 50%; }
+.hm-seg.learned { background: #2e8b57; }
+.hm-seg.practising { background: linear-gradient(90deg, #2e8b57 50%, var(--canvas) 50%); box-shadow: inset 0 0 0 2px #2e8b57; }
+.hm-seg.new { background: var(--canvas); box-shadow: inset 0 0 0 2px var(--fog-strong); }
+.hm-seg.soon { width: 8px; min-width: 8px; height: 8px; margin: 4px; background: var(--fog-strong); box-shadow: none; }
+.hm-seg.here { outline: 2px solid var(--ink); outline-offset: 3px; }
+.hm-seg:not(:disabled):hover { transform: scale(1.25); filter: none; }
+.hm-seg { transition: transform 120ms ease; }
+.hm-prog-key { gap: 6px 18px; }
+.hm-prog-key .hm-seg { width: 12px; min-width: 12px; height: 12px; border-radius: 50%; }
+.hm-prog-key .hm-seg.soon { width: 7px; min-width: 7px; height: 7px; margin: 0 2px; }
+.hm-resume-title { font-size: clamp(28px, 4vw, 40px); }
+@media (max-width: 640px) { .hm-prog { padding: 18px 16px; } }
+.hm-prog-big .hm-prog-line { font-size: 17px; color: var(--ink); }
+.hm-prog-big .hm-prog-line b { font-size: 26px; font-weight: 500; }

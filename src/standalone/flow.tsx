@@ -2691,7 +2691,7 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
           {hero.piece.title}
         </h2>
         <p className="hm-resume-kind">{kindText(hero.piece.kind)}</p>
-        {last && last.bar ? (
+        {last && last.bar && last.bar !== "1" ? (
           <div className="hm-resume-place">
             {typeof last.p === "number" && (
               <span className="hm-track" role="img" aria-label={`${Math.round(last.p * 100)}% of the way through`}>
@@ -2906,13 +2906,17 @@ function RoleProgress({ ctx, cur, recs, here }: { ctx: Ctx; cur: { opera: Opera;
           <Chevron />
         </button>
       </div>
-      <p className="hm-prog-big">
-        <b>{pr.done}</b> of {ch.pieces.length} learned
-        <span>
-          {n.practising ? ` · ${n.practising} in progress` : ""}
-          {ready < ch.pieces.length ? ` · ${ready} with music so far` : ""}
-        </span>
-      </p>
+      <div className="hm-prog-sum">
+        <p className="hm-prog-big">
+          <span className="hm-prog-line">
+            <b>{pr.done}</b> of {ch.pieces.length} pieces learned
+          </span>
+          <span>
+            {n.practising ? `${n.practising} in progress` : "Nothing in progress yet"}
+            {ready < ch.pieces.length ? ` · ${ready} with music so far` : ""}
+          </span>
+        </p>
+      </div>
       <div className="hm-prog-acts">
         {list.map(([act, items]) => (
           <div key={act} className="hm-prog-act">
