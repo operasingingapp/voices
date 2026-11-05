@@ -3055,6 +3055,51 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
         {upNextEl}
         {cur && <RoleProgress ctx={ctx} cur={cur} recs={recs} here={last && last.opera.id === cur.opera.id && last.ch.id === cur.ch.id ? last.index : -1} />}
       </div>
+      {roles.length > 1 && (
+        // every role you are learning, side by side: a tap makes it the current role and opens it
+        <section className="pv-roles" aria-labelledby="hm-roles-h">
+          <h2 className="pv-h3 pv-roles-h" id="hm-roles-h">
+            Your roles
+          </h2>
+          <ul className="pv-roles-list">
+            {roles.map(({ opera, ch }) => {
+              const pr = progressOf(ctx, opera, ch);
+              const isCur = !!cur && cur.opera.id === opera.id && cur.ch.id === ch.id;
+              return (
+                <li key={`${opera.id}:${ch.id}`}>
+                  <button
+                    type="button"
+                    className={`pv-role${isCur ? " is-cur" : ""}`}
+                    data-tone={voiceTone(ch.voice)}
+                    style={toneStyle(opera.id, ch.id)}
+                    aria-label={`${ch.name}, ${opera.title}: ${pr.done} of ${pr.total} learned${isCur ? ", your current role" : ""}`}
+                    onClick={() => {
+                      ctx.chooseRole({ opera: opera.id, character: ch.id });
+                      ctx.go({ screen: "role", opera: opera.id, character: ch.id });
+                    }}
+                  >
+                    <span className="pv-role-face" aria-hidden="true">
+                      <Face opera={opera} ch={ch} />
+                    </span>
+                    <span className="pv-role-text">
+                      <span className="pv-role-name">{ch.name}</span>
+                      <i className="pv-role-opera" lang={opera.lang}>
+                        {opera.title}
+                      </i>
+                      <span className="pv-role-bar" aria-hidden="true">
+                        <span style={{ width: `${pr.total ? Math.round((pr.done / pr.total) * 100) : 0}%` }} />
+                      </span>
+                      <span className="pv-role-count">
+                        {pr.done} of {pr.total} learned
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }
