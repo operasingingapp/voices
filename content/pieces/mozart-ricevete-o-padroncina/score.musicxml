@@ -3683,6 +3683,14 @@
         </direction-type>
         <staff>2</staff>
       </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <note>
         <rest />
         <duration>24</duration>
@@ -10588,7 +10596,9 @@
         <staff>2</staff>
         <beam number="1">begin</beam>
         <notations>
-          <slur type="start" number="11" />
+          <articulations>
+            <staccato />
+          </articulations>
         </notations>
       </note>
       <note>
@@ -10601,6 +10611,9 @@
         <type>eighth</type>
         <staff>2</staff>
         <beam number="1">continue</beam>
+        <notations>
+          <slur type="start" number="11" />
+        </notations>
       </note>
       <note>
         <pitch>

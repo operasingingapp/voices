@@ -5735,6 +5735,14 @@
       <backup>
         <duration>72</duration>
       </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -15343,6 +15351,14 @@
           <slur type="stop" number="11" />
         </notations>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <dynamics>
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+      </direction>
       <note>
         <pitch>
           <step>E</step>
