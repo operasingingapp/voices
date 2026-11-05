@@ -1106,18 +1106,8 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             {opera.title}
           </h1>
           {STORIES[opera.id] && (
-            // the opening of the story, a couple of sentences: the whole plot is behind "The story"
-            <p className="oh-story">
-              {(() => {
-                const parts = STORIES[opera.id].match(/[^.!?]+[.!?]+(?=\s|$)/g) ?? [STORIES[opera.id]];
-                let out = "";
-                for (const s of parts) {
-                  if (out && out.length + s.length > 380) break;
-                  out += s;
-                }
-                return out.trim();
-              })()}
-            </p>
+            // the whole story on a wide screen; a phone shows its opening, the rest is behind "The story"
+            <p className="oh-story">{STORIES[opera.id]}</p>
           )}
           <ul className="oh-tags" aria-label="About this opera">
             <li title={opera.composerFull}>
