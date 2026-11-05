@@ -13,6 +13,7 @@ import { ARCS } from "./arcs";
 import { useBackToClose } from "./nav";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { hasPiece } from "./pieces";
+import { allNotes, MARKS, parseNotesKey, type Note } from "./notes";
 import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
@@ -2447,7 +2448,7 @@ export function Onboarding({
 }
 
 /* =====================================================================
-   Home: where you left off, what to do next, your roles, and more roles for your voice
+   Home: where you stopped, your role through the opera, what you practised and noted lately, more roles
    ===================================================================== */
 type Rec = { q?: number; bar?: string | number; of?: string | number; p?: number; t?: number; loop?: { startQ: number; endQ: number } | null; lb?: [string | number, string | number] | null; loopLine?: number; tempo?: number };
 type HomeRef = Rec & { opera: Opera; ch: Character; piece: Piece; index: number };
@@ -2520,10 +2521,10 @@ function lastPracticedIn(ctx: Ctx, opera: Opera, ch: Character): HomeRef | null 
   const pc = l && l.opera === opera.id && l.character === ch.id ? ch.pieces[l.piece] : undefined;
   return l && pc?.editionId ? (recs[pre + pieceKey(pc)] ?? { opera, ch, piece: pc, index: l.piece }) : null;
 }
-/** open a piece, telling the practice screen whether to resume (place, loop, speed, mix) or start clean */
-function openPiece(ctx: Ctx, r: HomeRef, mode: "resume" | "start") {
+/** open a piece, telling the practice screen whether to resume (place, loop, speed, mix), start clean, or open at a note's bar */
+function openPiece(ctx: Ctx, r: HomeRef, mode: "resume" | "start" | "note", note?: { m: number; q: number }) {
   try {
-    sessionStorage.setItem("cp:open", JSON.stringify({ ed: r.piece.editionId, mode, at: Date.now() }));
+    sessionStorage.setItem("cp:open", JSON.stringify({ ed: r.piece.editionId, mode, at: Date.now(), ...(note ? { m: note.m, q: note.q } : {}) }));
   } catch {
     /* storage unavailable */
   }
@@ -2538,248 +2539,472 @@ function stoppedAt(r: HomeRef): string {
   return b ? `${a} · ${b}` : a;
 }
 
+/** the act a piece falls in ("Aria · Act 3" → 3), or 0 when its list does not say */
+const actNo = (p: Piece) => Number(/Act (\d+)/.exec(p.kind)?.[1] ?? 0);
+/** a piece's kind without its act ("Duet with Susanna · Act 1" → "Duet with Susanna"), for lists already grouped by act */
+const kindOnly = (k: string) => k.replace(/\s*·\s*Act\s*\d+\s*$/, "");
+const ACT_WORDS = ["", "one", "two", "three", "four", "five"];
+const barOf = (r: Rec) => (r.bar && String(r.bar) !== "1" ? String(r.bar) : "");
+
+/** A piece's state in a role, from what the app really keeps: ticked learned, a saved place, or neither. */
+type PieceState = "learned" | "practising" | "new" | "soon";
+function StateMark({ s }: { s: PieceState }) {
+  return (
+    <span className="hm-mark" data-s={s} aria-hidden="true">
+      {s === "learned" && <Check />}
+    </span>
+  );
+}
+const STATE_WORDS: Record<PieceState, string> = { learned: "learned", practising: "practised", new: "not started", soon: "music not ready yet" };
+
+/** One piece's notes on Home: where they live (role and piece), how many, and the newest first. */
+interface NoteGroup {
+  key: string;
+  ref: HomeRef;
+  notes: Note[];
+  latest: number;
+}
+/** Every piece with notes, matched to a role: the ensemble's role when the notes are kept per role, else one of your roles that sings it. */
+function noteGroups(ctx: Ctx): NoteGroup[] {
+  const out: NoteGroup[] = [];
+  const mine = (o: Opera, c: Character) => ctx.roles.some((r) => same(r, { opera: o.id, character: c.id }));
+  for (const [key, list] of Object.entries(allNotes())) {
+    const at = parseNotesKey(key);
+    if (!at) continue;
+    let best: HomeRef | null = null;
+    let score = -1;
+    for (const op of OPERAS)
+      for (const c of op.chars) {
+        if (at.roleId && c.id !== at.roleId) continue;
+        const ix = c.pieces.findIndex((p) => p.editionId === at.editionId);
+        if (ix < 0) continue;
+        const s = (same(ctx.current, { opera: op.id, character: c.id }) ? 2 : 0) + (mine(op, c) ? 1 : 0);
+        if (s > score) {
+          score = s;
+          best = { opera: op, ch: c, piece: c.pieces[ix], index: ix };
+        }
+      }
+    if (!best) continue;
+    const notes = [...list].sort((a, b) => Date.parse(b.at) - Date.parse(a.at));
+    out.push({ key, ref: best, notes, latest: Date.parse(notes[0]?.at) || 0 });
+  }
+  return out.sort((a, b) => b.latest - a.latest);
+}
+/** how many notes you have in one piece, sung as this role */
+function notesIn(groups: NoteGroup[], ch: Character, p: Piece): number {
+  if (!p.editionId) return 0;
+  const g = groups.find((x) => parseNotesKey(x.key)?.editionId === p.editionId && (parseNotesKey(x.key)?.roleId ?? ch.id) === ch.id);
+  return g ? g.notes.length : 0;
+}
+const noteText = (n: Note) => {
+  const mk = MARKS.find((x) => x.id === n.mark);
+  if (!mk) return n.body;
+  return n.body && n.body !== mk.label ? `${mk.label}: ${n.body}` : mk.label;
+};
+
+/**
+ * Home, in the order a singer needs it: where you stopped (one big Continue), your role laid out through the
+ * opera act by act, what you practised lately and the notes you wrote, and last, other roles for your voice.
+ * Everything shown is what this device has kept; nothing is made up to fill the page.
+ */
 export function HomePage({ ctx }: { ctx: Ctx }) {
   const [, tick] = useState(0);
   useEffect(() => {
     const i = setInterval(() => tick((x) => x + 1), 30000);
     return () => clearInterval(i);
   }, []);
-  const greet = new Date().getHours() < 14 ? "Buongiorno" : "Buonasera";
   const recs = savedPlaces();
   const roles = ctx.roles.map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
   const cur = resolve(ctx.current) ?? roles[0] ?? null;
+  const recKey = (r: { opera: Opera; ch: Character; piece: Piece }) => `${r.opera.id}:${r.ch.id}:${pieceKey(r.piece)}`;
 
-  let last: HomeRef | null = null;
-  for (const k in recs) {
-    const r = recs[k];
-    if (r.piece.editionId && r.t && (!last || r.t > (last.t ?? 0))) last = r;
-  }
+  // 1. where you stopped: the latest saved place in any role, else the app's last piece
+  const recent = Object.values(recs)
+    .filter((r) => r.piece.editionId && r.t)
+    .sort((a, b) => (b.t ?? 0) - (a.t ?? 0));
+  let last: HomeRef | null = recent[0] ?? null;
   if (!last && ctx.last) {
     const q = resolve(ctx.last);
     const pc = q?.ch.pieces[ctx.last.piece];
     if (q && pc?.editionId) last = recs[`${q.opera.id}:${q.ch.id}:${pieceKey(pc)}`] ?? { opera: q.opera, ch: q.ch, piece: pc, index: ctx.last.piece };
   }
-  let next: HomeRef | null = null;
-  if (cur) {
+  // never practised: the first piece with music in your role that you have not ticked learned
+  let first: HomeRef | null = null;
+  if (!last && cur) {
     const S = progressOf(ctx, cur.opera, cur.ch).set;
-    const ix = cur.ch.pieces.findIndex((pc) => pc.editionId && !S.has(pieceKey(pc)) && !(last && last.piece === pc));
-    if (ix >= 0) next = { opera: cur.opera, ch: cur.ch, piece: cur.ch.pieces[ix], index: ix };
+    let ix = cur.ch.pieces.findIndex((p) => p.editionId && !S.has(pieceKey(p)));
+    if (ix < 0) ix = cur.ch.pieces.findIndex((p) => p.editionId);
+    if (ix >= 0) first = { opera: cur.opera, ch: cur.ch, piece: cur.ch.pieces[ix], index: ix };
   }
-  const LA = getStored<Record<string, number>>("cp:learnedAt", {});
-  const seed: string[] = [];
-  let due: (HomeRef & { when: number; learned: number }) | null = null;
-  for (const { opera: op, ch: c } of roles) {
-    const S = progressOf(ctx, op, c).set;
-    c.pieces.forEach((pc, ix) => {
-      if (!pc.editionId || !S.has(pieceKey(pc)) || (last && last.piece === pc)) return;
-      const k = `${op.id}:${c.id}:${pieceKey(pc)}`;
-      const w = recs[k]?.t ?? LA[k];
-      if (!w) {
-        seed.push(k);
-        return;
-      }
-      if (!due || w < due.when) due = { opera: op, ch: c, piece: pc, index: ix, when: w, learned: LA[k] ?? w };
-    });
+  // what comes after it in the same role (with music, not yet learned)
+  let after: HomeRef | null = null;
+  if (last) {
+    const L = last;
+    const S = progressOf(ctx, L.opera, L.ch).set;
+    const ix = L.ch.pieces.findIndex((p, i) => i > L.index && p.editionId && !S.has(pieceKey(p)));
+    if (ix >= 0) after = { opera: L.opera, ch: L.ch, piece: L.ch.pieces[ix], index: ix };
   }
-  if (due && Date.now() - (due as { when: number }).when <= 14 * 864e5) due = null;
-  const seedKey = seed.join("|");
-  useEffect(() => {
-    if (!seedKey) return;
-    const m = getStored<Record<string, number>>("cp:learnedAt", {});
-    const t = Date.now();
-    for (const k of seedKey.split("|")) m[k] ??= t;
-    try {
-      localStorage.setItem("cp:learnedAt", JSON.stringify(m));
-    } catch {
-      /* storage unavailable */
-    }
-  }, [seedKey]);
-
-  const voice = cur ? voiceGroup(cur.ch.voice) : null;
-  const more = voice
-    ? rolesForVoice(voice, false)
-        .filter(({ opera: op, ch: c }) => !ctx.roles.some((r) => same(r, { opera: op.id, character: c.id })))
-        .sort((a, b) => Number(!!PORTRAITS[`${b.opera.id}:${b.ch.id}`]) - Number(!!PORTRAITS[`${a.opera.id}:${a.ch.id}`]))
-        .slice(0, 4)
-    : [];
-  const dueR = due as (HomeRef & { when: number; learned: number }) | null;
-  const sugs = [
-    next && { key: "next", label: "Learn next", r: next, sub: `${next.ch.name} · ${kindText(next.piece.kind)}`, go: "Start", mode: "start" as const },
-    dueR && { key: "due", label: "Time to review", r: dueR as HomeRef, sub: `Learned ${relTime(dueR.learned)}`, go: "Sing it through", mode: "start" as const },
-  ].filter((x): x is NonNullable<typeof x> => !!x);
+  const hero = last ?? first;
+  const others = recent.filter((r) => !last || recKey(r) !== recKey(last)).slice(0, 4);
+  const groups = noteGroups(ctx);
   const tone = (c: { opera: Opera; ch: Character }) => ({ "data-tone": voiceTone(c.ch.voice), style: toneStyle(c.opera.id, c.ch.id) });
 
-  const cont = last && (
-    <section className="rc hm-continue" {...tone(last)} aria-labelledby="hm-cont-h">
-      <p className="cp-eyebrow" id="hm-cont-h">
-        Pick up where you left off
-      </p>
-      <div className="rc-band hm-band" aria-hidden="true" style={ART[last.opera.id] ? { backgroundImage: `url(${ART[last.opera.id].cover})` } : undefined} />
-      <div className="rc-id hm-cont-id">
-        <span className="rc-face">
-          <Face opera={last.opera} ch={last.ch} />
-        </span>
-        <div className="rc-text">
-          <h2 className="hm-title" lang={last.opera.lang}>
-            {last.piece.title}
-          </h2>
-          <p className="who-meta">
-            <span>{last.ch.name}</span>
-            <span>{kindText(last.piece.kind)}</span>
-            {last.t ? <span>{relTime(last.t)}</span> : null}
-          </p>
+  const resume = hero && (
+    <section className="hm-resume" {...tone(hero)} aria-labelledby="hm-resume-h">
+      <div className="hm-resume-main">
+      <span className="hm-resume-face" aria-hidden="true">
+        <Face opera={hero.opera} ch={hero.ch} />
+      </span>
+      <div className="hm-resume-body">
+        <p className="hm-resume-who">
+          {last ? (
+            <>
+              {hero.ch.name} in <i lang={hero.opera.lang}>{hero.opera.title}</i>
+              {last.t ? <>, {relTime(last.t)}</> : null}
+            </>
+          ) : (
+            <>
+              Your first piece as {hero.ch.name} in <i lang={hero.opera.lang}>{hero.opera.title}</i>
+            </>
+          )}
+        </p>
+        <h2 className="hm-resume-title" id="hm-resume-h" lang={hero.opera.lang}>
+          {hero.piece.title}
+        </h2>
+        <p className="hm-resume-kind">{kindText(hero.piece.kind)}</p>
+        {last && last.bar ? (
+          <div className="hm-resume-place">
+            {typeof last.p === "number" && (
+              <span className="hm-track" role="img" aria-label={`${Math.round(last.p * 100)}% of the way through`}>
+                <i style={{ width: `${Math.max(1.5, last.p * 100)}%` }} />
+              </span>
+            )}
+            <span>{stoppedAt(last)}</span>
+          </div>
+        ) : !last && hero.piece.when ? (
+          <p className="hm-resume-when">{hero.piece.when}</p>
+        ) : null}
+        <div className="hm-resume-act">
+          <button
+            type="button"
+            className="cp-btn cp-btn--ink cp-btn--stand hm-go"
+            aria-label={`${last ? "Continue" : "Start"} ${hero.piece.title}`}
+            onClick={() => openPiece(ctx, hero, last ? "resume" : "start")}
+          >
+            <Play />
+            <span>{last ? (barOf(last) ? `Continue from bar ${barOf(last)}` : "Continue") : "Start"}</span>
+          </button>
+          {last && barOf(last) && (
+            <button type="button" className="cp-btn cp-btn--ghost hm-again" onClick={() => openPiece(ctx, hero, "start")}>
+              From the top
+            </button>
+          )}
         </div>
       </div>
-      {(typeof last.p === "number" || last.bar) && (
-        <div className="rc-prog hm-cont-prog">
-          {typeof last.p === "number" && (
-            <div className="rc-segs hm-bar" role="progressbar" aria-label="Position in the piece" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(last.p * 100)}>
-              <i className="done" style={{ flexGrow: last.p }} />
-              <i style={{ flexGrow: 1 - last.p }} />
-            </div>
-          )}
-          {last.bar ? (
-            <p className="rc-prog-text">
-              <span>{stoppedAt(last)}</span>
-            </p>
-          ) : null}
-        </div>
+      </div>
+      {after && (
+        <button type="button" className="hm-after" onClick={() => openPiece(ctx, after!, "start")}>
+          <span className="hm-after-label">Next in the role</span>
+          <span className="hm-after-title" lang={after.opera.lang}>
+            {after.piece.title}
+          </span>
+          <Chevron />
+        </button>
       )}
-      <div className="hm-cont-act">
-        <button type="button" className="cp-btn cp-btn--ink cp-btn--stand hm-go" aria-label={`Continue ${last.piece.title}`} onClick={() => openPiece(ctx, last!, "resume")}>
-          <Play />
-          <span>Continue</span>
+    </section>
+  );
+
+  const lately = others.length > 0 && (
+    <section className="hm-sec hm-lately" aria-labelledby="hm-lately-h">
+      <h2 className="hm-h" id="hm-lately-h">
+        Recently practised
+      </h2>
+      <ul className="hm-list">
+        {others.map((r) => (
+          <li key={recKey(r)}>
+            <button type="button" className="hm-item" onClick={() => openPiece(ctx, r, "resume")}>
+              <span className="hm-item-face" {...tone(r)} aria-hidden="true">
+                <Face opera={r.opera} ch={r.ch} />
+              </span>
+              <span className="hm-item-text">
+                <b lang={r.opera.lang}>{r.piece.title}</b>
+                <span>
+                  {roles.length > 1 ? `${r.ch.name}, ` : ""}
+                  {barOf(r) ? `bar ${barOf(r)}, ` : ""}
+                  {relTime(r.t)}
+                </span>
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+
+  const notesEl = (
+    <section className="hm-sec hm-notes" aria-labelledby="hm-notes-h">
+      <h2 className="hm-h" id="hm-notes-h">
+        Your notes
+      </h2>
+      {groups.length ? (
+        <>
+          <p className="hm-sub">
+            {(() => {
+              const n = groups.reduce((s, g) => s + g.notes.length, 0);
+              return `${n} ${n === 1 ? "note" : "notes"} in ${groups.length} ${groups.length === 1 ? "piece" : "pieces"}`;
+            })()}
+          </p>
+          <ul className="hm-note-groups">
+            {groups.slice(0, 3).map((g) => (
+              <li key={g.key} className="hm-ng">
+                <button type="button" className="hm-ng-head" onClick={() => openPiece(ctx, g.ref, "resume")}>
+                  <b lang={g.ref.opera.lang}>{g.ref.piece.title}</b>
+                  <span>
+                    {g.notes.length} {g.notes.length === 1 ? "note" : "notes"}
+                    {roles.length > 1 ? `, ${g.ref.ch.name}` : ""}
+                  </span>
+                </button>
+                <ul className="hm-ng-notes">
+                  {g.notes.slice(0, 2).map((n) => (
+                    <li key={n.id}>
+                      <button type="button" className="hm-note" aria-label={`Open ${g.ref.piece.title} at bar ${n.m + 1}: ${noteText(n)}`} onClick={() => openPiece(ctx, g.ref, "note", n)}>
+                        <span className="hm-note-bar">Bar {n.m + 1}</span>
+                        <span className="hm-note-body">{noteText(n)}</span>
+                        <span className="hm-note-when">{relTime(Date.parse(n.at))}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+          {groups.length > 3 && <p className="hm-sub">And notes in {groups.length - 3} more {groups.length - 3 === 1 ? "piece" : "pieces"}.</p>}
+        </>
+      ) : (
+        <p className="hm-sub">Notes you add while practising, a breath or a reminder on a bar, are listed here so you can go straight back to them.</p>
+      )}
+    </section>
+  );
+
+  // 4. other roles for the voice of the role you are on, with music first
+  const voice = cur ? voiceGroup(cur.ch.voice) : null;
+  const more = (() => {
+    if (!voice) return [];
+    const all = rolesForVoice(voice, false).filter(({ opera: op, ch: c }) => !ctx.roles.some((r) => same(r, { opera: op.id, character: c.id })));
+    const ready = all.filter((x) => x.ch.pieces.some((p) => p.editionId));
+    return (ready.length ? ready : all)
+      .sort((a, b) => Number(!!PORTRAITS[`${b.opera.id}:${b.ch.id}`]) - Number(!!PORTRAITS[`${a.opera.id}:${a.ch.id}`]))
+      .slice(0, 4);
+  })();
+  const moreEl = (
+    <section className="hm-sec hm-more" aria-labelledby="hm-more-h">
+      <h2 className="hm-h" id="hm-more-h">
+        {more.length && voice ? `More ${voice.toLowerCase()} roles` : "Add a role"}
+      </h2>
+      {more.length > 0 && (
+        <ul className="hm-list">
+          {more.map(({ opera: op, ch: c }) => {
+            const n = c.pieces.filter((p) => p.editionId).length;
+            return (
+              <li key={`${op.id}:${c.id}`}>
+                <button type="button" className="hm-item" onClick={() => ctx.go({ screen: "role", opera: op.id, character: c.id })}>
+                  <span className="hm-item-face" {...tone({ opera: op, ch: c })} aria-hidden="true">
+                    <Face opera={op} ch={c} />
+                  </span>
+                  <span className="hm-item-text">
+                    <b className="hm-item-name">{c.name}</b>
+                    <span>
+                      <i lang={op.lang}>{op.title}</i>
+                      {n ? `, ${n} ${n === 1 ? "piece" : "pieces"} ready` : ""}
+                    </span>
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      <div className="hm-more-act">
+        <button type="button" className="cp-btn hm-add" onClick={() => ctx.go({ screen: "explore", by: "voice", voice: voice ?? undefined })}>
+          <Plus />
+          <span>{more.length && voice ? `All ${voice.toLowerCase()} roles` : "Find a role"}</span>
+        </button>
+        <button type="button" className="cp-btn cp-btn--ghost hm-add" onClick={() => ctx.go({ screen: "explore", by: "opera" })}>
+          <span>Browse operas</span>
         </button>
       </div>
     </section>
   );
-  const sugEls = sugs.length > 0 && (
-    <div className="hm-sugs">
-      {sugs.map((sg) => (
-        <section key={sg.key} className="rc hm-card" {...tone(sg.r)} aria-labelledby={`hm-${sg.key}-h`}>
-          <p className="cp-eyebrow" id={`hm-${sg.key}-h`}>
-            {sg.label}
-          </p>
-          <div className="hm-card-row">
-            <span className="pc-face" aria-hidden="true">
-              <Face opera={sg.r.opera} ch={sg.r.ch} />
-            </span>
-            <span className="pc-text">
-              <b lang={sg.r.opera.lang}>{sg.r.piece.title}</b>
-              <span>{sg.sub}</span>
-            </span>
-          </div>
-          <button type="button" className="cp-btn cp-btn--ink" aria-label={`${sg.go}: ${sg.r.piece.title}`} onClick={() => openPiece(ctx, sg.r, sg.mode)}>
-            <Play />
-            <span>{sg.go}</span>
-          </button>
-        </section>
-      ))}
-    </div>
-  );
-  const roleEls = roles.length > 0 && (
-    <section className="block hm-roles" aria-labelledby="hm-roles-h">
-      <p className="cp-eyebrow" id="hm-roles-h">
-        Your roles
-      </p>
-      <div className="hm-role-list">
-        {roles.map(({ opera: op, ch: c }) => {
-          const pr = progressOf(ctx, op, c);
-          const nx = continueTarget(ctx, op, c);
-          return (
-            <button
-              key={`${op.id}:${c.id}`}
-              type="button"
-              className="rc hm-role"
-              data-tone={voiceTone(c.voice)}
-              style={toneStyle(op.id, c.id)}
-              aria-label={`${c.name}, ${op.title}: ${pr.done} of ${pr.total} learned`}
-              onClick={() => {
-                ctx.chooseRole({ opera: op.id, character: c.id });
-                ctx.go({ screen: "role", opera: op.id, character: c.id });
-              }}
-            >
-              <span className="hm-role-id">
-                <span className="vrole-face">
-                  <Face opera={op} ch={c} />
-                </span>
-                <span className="vrole-text">
-                  <b>{c.name}</b>
-                  <span>
-                    <i lang={op.lang}>{op.title}</i>
-                  </span>
-                </span>
-              </span>
-              {pr.total > 0 && (
-                <span className="rc-prog">
-                  <span className="rc-segs" aria-hidden="true">
-                    {c.pieces.map((pc, ix) => {
-                      const k = pieceKey(pc);
-                      const d = pr.set.has(k);
-                      return <i key={k} className={d ? "done" : nx?.place.piece === ix ? "now" : pc.editionId ? "ready" : ""} />;
-                    })}
-                  </span>
-                  <span className="rc-prog-text">
-                    <span>
-                      <b>{pr.done}</b> of {pr.total} learned
-                    </span>
-                  </span>
-                </span>
-              )}
-            </button>
-          );
-        })}
+
+  return (
+    <main className="screen-body gutter page hm-page">
+      <h1 className="sr-only">Home</h1>
+      <div className={`hm${others.length ? " has-lately" : ""}`}>
+        {resume}
+        {lately}
+        {cur && <RoleMap ctx={ctx} roles={roles} cur={cur} recs={recs} hero={last} groups={groups} />}
+        {notesEl}
+        {moreEl}
       </div>
-    </section>
+    </main>
   );
-  const moreEls = more.length > 0 && voice && (
-    <section className="block hm-more" aria-labelledby="hm-more-h">
-      <div className="hm-head">
-        <p className="cp-eyebrow" id="hm-more-h">
-          More {voice.toLowerCase()} roles
-        </p>
-        <button type="button" className="cp-btn cp-btn--ghost hm-all" onClick={() => ctx.go({ screen: "explore", by: "voice", voice })}>
-          <span>See all</span>
+}
+
+/**
+ * Your role through the opera: its pieces in running order, act by act, each with its state (learned, practised,
+ * not started, or no music yet), and a switch between your roles. Wide screens show the acts side by side; a
+ * phone shows one act at a time, opening on the act you are working in.
+ */
+function RoleMap({ ctx, roles, cur, recs, hero, groups }: { ctx: Ctx; roles: { opera: Opera; ch: Character }[]; cur: { opera: Opera; ch: Character }; recs: Record<string, HomeRef>; hero: HomeRef | null; groups: NoteGroup[] }) {
+  const { opera, ch } = cur;
+  const pr = progressOf(ctx, opera, ch);
+  const rk = `${opera.id}:${ch.id}`;
+  const state = (p: Piece): PieceState => (pr.set.has(pieceKey(p)) ? "learned" : !p.editionId ? "soon" : recs[`${rk}:${pieceKey(p)}`]?.t ? "practising" : "new");
+  const acts = new Map<number, { p: Piece; i: number }[]>();
+  ch.pieces.forEach((p, i) => {
+    const a = actNo(p);
+    acts.set(a, [...(acts.get(a) ?? []), { p, i }]);
+  });
+  const list = [...acts.entries()].sort((a, b) => (a[0] || 99) - (b[0] || 99));
+  const here = hero && hero.opera.id === opera.id && hero.ch.id === ch.id ? hero.index : -1;
+  // the act to open on a phone: where you stopped, else the first with something to learn
+  const start = (() => {
+    if (here >= 0) return actNo(ch.pieces[here]);
+    const p = ch.pieces.find((x) => x.editionId && !pr.set.has(pieceKey(x)));
+    return p ? actNo(p) : list[0]?.[0] ?? 0;
+  })();
+  const [pick, setPick] = useState<{ role: string; act: number } | null>(null);
+  const act = pick && pick.role === rk ? pick.act : start;
+  const ready = ch.pieces.filter((p) => p.editionId).length;
+  const practised = ch.pieces.filter((p) => state(p) === "practising").length;
+  const counts = [
+    `${ch.pieces.length} ${ch.pieces.length === 1 ? "piece" : "pieces"}${list.length > 1 && list.every(([a]) => a) ? ` across ${ACT_WORDS[list.length] ?? list.length} acts` : ""}`,
+    ready === ch.pieces.length ? "all ready to sing" : `${ready} ready to sing`,
+    practised ? `${practised} practised` : "",
+    pr.done ? `${pr.done} learned` : "",
+  ].filter(Boolean);
+  const openRole = () => ctx.go({ screen: "role", opera: opera.id, character: ch.id });
+  return (
+    <section className="hm-sec hm-map" aria-labelledby="hm-map-h" {...{ "data-tone": voiceTone(ch.voice) }} style={toneStyle(opera.id, ch.id)}>
+      {roles.length > 1 && (
+        <div className="hm-roles" role="group" aria-label="Your roles">
+          {roles.map((r) => {
+            const on = r.opera.id === opera.id && r.ch.id === ch.id;
+            return (
+              <button
+                key={`${r.opera.id}:${r.ch.id}`}
+                type="button"
+                className="hm-role-tab"
+                aria-pressed={on}
+                data-tone={voiceTone(r.ch.voice)}
+                style={toneStyle(r.opera.id, r.ch.id)}
+                onClick={() => ctx.chooseRole({ opera: r.opera.id, character: r.ch.id })}
+              >
+                <span className="hm-role-face" aria-hidden="true">
+                  <Face opera={r.opera} ch={r.ch} />
+                </span>
+                <span className="hm-role-name">{r.ch.name}</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+      <div className="hm-map-head">
+        <h2 className="hm-h hm-map-h" id="hm-map-h">
+          {ch.name} in <i lang={opera.lang}>{opera.title}</i>
+        </h2>
+        <button type="button" className="cp-btn cp-btn--ghost hm-map-open" onClick={openRole}>
+          <span>Role page</span>
           <Chevron />
         </button>
       </div>
-      <div className="hm-tiles">
-        {more.map(({ opera: op, ch: c }) => {
-          const art = PORTRAITS[`${op.id}:${c.id}`];
-          const ready = c.pieces.some((x) => x.editionId);
-          return (
-            <button key={`${op.id}:${c.id}`} type="button" className="reel-card" data-tone={voiceTone(c.voice)} style={toneStyle(op.id, c.id)} onClick={() => ctx.go({ screen: "role", opera: op.id, character: c.id })}>
-              <span className="reel-pic">
-                {art ? <img src={art.portrait} alt="" decoding="async" loading="lazy" draggable={false} /> : <Face opera={op} ch={c} />}
-                {ready && <span className="reel-ready">Ready to sing</span>}
+      <p className="hm-sub">{counts.join(", ").replace(/^./, (c) => c.toUpperCase())}.</p>
+      {ch.pieces.length === 0 ? (
+        <p className="hm-sub">{ch.name} sings only in the ensembles; no pieces of their own are listed yet.</p>
+      ) : (
+        <>
+          {list.length > 1 && (
+            <div className="hm-act-tabs" role="group" aria-label="Show one act">
+              {list.map(([a]) => (
+                <button key={a} type="button" aria-pressed={a === act} onClick={() => setPick({ role: rk, act: a })}>
+                  {a ? `Act ${a}` : "Other"}
+                </button>
+              ))}
+            </div>
+          )}
+          <div className="hm-acts" style={{ "--acts": Math.min(list.length, 4) } as CSSProperties}>
+            {list.map(([a, items]) => {
+              const r = items.filter((x) => x.p.editionId).length;
+              return (
+                <div key={a} className="hm-act" data-on={a === act || list.length === 1 ? "" : undefined}>
+                  <h3 className="hm-act-h">
+                    <span>{a ? `Act ${a}` : "Other"}</span>
+                    <small>{r === items.length ? `${items.length} ${items.length === 1 ? "piece" : "pieces"}` : r === 0 ? "music not ready yet" : `${r} of ${items.length} ready`}</small>
+                  </h3>
+                  <ol className="hm-pcs">
+                    {items.map(({ p, i }) => {
+                      const s = state(p);
+                      const rec = recs[`${rk}:${pieceKey(p)}`];
+                      const n = notesIn(groups, ch, p);
+                      const meta = [kindOnly(p.kind), s === "learned" ? "learned" : rec?.t ? `${barOf(rec) ? `bar ${barOf(rec)}, ` : ""}${relTime(rec.t)}` : ""].filter(Boolean).join(" · ");
+                      const body = (
+                        <>
+                          <StateMark s={s} />
+                          <span className="hm-pc-text">
+                            <b lang={opera.lang}>{p.title}</b>
+                            <span>{meta}</span>
+                          </span>
+                          {n > 0 && (
+                            <span className="hm-pc-notes" title={`${n} ${n === 1 ? "note" : "notes"}`}>
+                              {n}
+                              <span className="sr-only"> {n === 1 ? "note" : "notes"}</span>
+                            </span>
+                          )}
+                        </>
+                      );
+                      return (
+                        <li key={pieceKey(p)} data-here={i === here ? "" : undefined}>
+                          {p.editionId ? (
+                            <button
+                              type="button"
+                              className="hm-pc"
+                              data-s={s}
+                              aria-label={`${p.title}, ${STATE_WORDS[s]}${i === here ? ", where you stopped" : ""}`}
+                              onClick={() => openPiece(ctx, { ...(rec ?? {}), opera, ch, piece: p, index: i }, rec?.t ? "resume" : "start")}
+                            >
+                              {body}
+                            </button>
+                          ) : (
+                            <span className="hm-pc" data-s={s} aria-label={`${p.title}, ${STATE_WORDS[s]}`}>
+                              {body}
+                            </span>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+              );
+            })}
+          </div>
+          <p className="hm-legend" aria-hidden="true">
+            <span>
+              <StateMark s="new" /> Not started
+            </span>
+            <span>
+              <StateMark s="practising" /> Practised
+            </span>
+            <span>
+              <StateMark s="learned" /> Learned
+            </span>
+            {ready < ch.pieces.length && (
+              <span>
+                <StateMark s="soon" /> Music not ready yet
               </span>
-              <span className="reel-name">{c.name}</span>
-              <span className="reel-opera" lang={op.lang}>
-                {op.title}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+            )}
+          </p>
+        </>
+      )}
     </section>
-  );
-  return (
-    <main className="screen-body gutter page hm">
-      <section className="hero compact hm-hello">
-        <h1>{greet}</h1>
-      </section>
-      {(cont || sugEls) && (
-        <div className={`hm-top${cont && sugEls ? " both" : ""}`}>
-          {cont}
-          {sugEls}
-        </div>
-      )}
-      {(roleEls || moreEls) && (
-        <div className={`hm-bottom${roleEls && moreEls ? " both" : ""}`}>
-          {roleEls}
-          {moreEls}
-        </div>
-      )}
-    </main>
   );
 }

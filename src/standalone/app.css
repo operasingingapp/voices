@@ -7557,54 +7557,9 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* the fold chevron: in line, at the end of the box's tools, never over them */
 .practice > .now-panel .card-fold { position: static; margin: 0 0 0 4px; background: var(--fog); }
 
-/* Home (merged from the other session's version 1793260566): greeting, pick up where you left off, up next and due for review, your roles, more roles for your voice; the rail shows each role's progress on wide landscape screens */
-.hm{gap:var(--space-6)}
-.hm-hello h1{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
-.hm-top,.hm-bottom{gap:var(--space-5);grid-template-columns:minmax(0,1fr);display:grid}
-.hm-sugs{gap:var(--space-3);grid-auto-columns:minmax(0,1fr);grid-auto-flow:column;display:grid}
-.hm .rc{gap:var(--space-3);align-content:start}
-.hm .rc>.cp-eyebrow{padding:var(--space-1) var(--space-4) 0}
-.hm-cont-id{align-items:center}
-.hm-cont-id .rc-face{width:88px;height:88px;box-shadow:none;margin-top:0}
-.hm-cont-id .rc-text{flex:1;padding-top:0}
-.hm-title{letter-spacing:-.01em;margin:0;font:500 26px/1.1 var(--font-sans)}
-.hm-continue{grid-template-columns:minmax(0,1fr) auto}
-.hm-continue>*{grid-column:1/-1}
-.hm-band{display:none}
-.hm-continue>.hm-cont-id{grid-column:1;grid-row:2}
-.hm-continue>.hm-cont-act{grid-column:2;grid-row:2;align-self:center;padding-right:var(--space-4)}
-.hm .rc-prog{padding-top:0}
-.hm-bar{gap:0}
-.hm-card-row{align-items:center;gap:var(--space-3);padding:0 var(--space-4);display:flex}
-.hm-card>.cp-btn{justify-self:start;margin:var(--space-1) var(--space-4) 0}
-.hm-role{width:100%;color:var(--ink);font:inherit;text-align:left;cursor:pointer;border:0}
-.hm-role-id{align-items:center;gap:var(--space-3);padding:0 var(--space-1);display:flex}
-.hm-role .rc-prog{padding:0 var(--space-1)}
-.hm-role-list{gap:var(--space-3);grid-template-columns:repeat(2,minmax(0,1fr));display:grid}
-.hm-head{justify-content:space-between;align-items:center;gap:var(--space-3);display:flex}
-.hm-all{padding:0 var(--space-3);margin:calc(-1*var(--space-3)) calc(-1*var(--space-3)) calc(-1*var(--space-3)) 0}
-.hm-tiles{gap:var(--space-4);grid-template-columns:repeat(4,minmax(0,1fr));display:grid}
-.hm-tiles .reel-card{width:auto;margin-right:0}
 .rail-role-text{display:contents}
 .rail-role-meta,.rail-add-label{display:none}
-@media (orientation:landscape) and (width>=1000px){.hm-top.both{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
-}
 @media (orientation:landscape) and (width>=1000px){
-.hm-top.both .hm-sugs{grid-auto-flow:row}
-}
-@media (orientation:landscape) and (width>=1000px){
-.hm-top.both .hm-continue{grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(4,auto) 1fr}
-}
-@media (orientation:landscape) and (width>=1000px){
-.hm-top.both .hm-continue>.hm-cont-id,.hm-top.both .hm-continue>.hm-cont-act{grid-column:1;grid-row:auto}
-.hm-top.both .hm-cont-id{align-items:flex-start}
-.hm-top.both .hm-cont-id .rc-face{width:120px;height:120px;box-shadow:0 0 0 6px var(--tone-soft,var(--fog));margin-top:-60px}
-.hm-top.both .hm-cont-id .rc-text{padding-top:14px}
-.hm-top.both .hm-continue>.hm-cont-act{align-self:end;padding:0 var(--space-4)}
-.hm-bottom.both{grid-template-columns:minmax(0,2fr) minmax(0,3fr)}
-.hm-bottom.both .hm-role-list{grid-template-columns:minmax(0,1fr)}
-.hm-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
-.hm-tiles>:nth-child(4){display:none}
 .shell{grid-template-columns:300px minmax(0,1fr)}
 .shell>.rail{align-items:stretch;width:300px;padding-inline:var(--space-4)}
 .shell>.rail .rail-link{min-height:var(--touch);justify-content:flex-start;gap:var(--space-3);padding:0 var(--space-4);font-size:15px;flex-direction:row}
@@ -7616,27 +7571,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .shell>.rail .rail-role-name{text-align:left;max-width:none;font-size:15px}
 .shell>.rail .rail-role-meta{color:var(--ink-muted);font:400 12px/1.2 var(--font-sans);display:block}
 .shell>.rail .rail-add-label{display:block}
-}
-@media (orientation:landscape) and (width>=1000px){
-.hm-top.both .hm-band{height:112px;display:block}
-}
-@media (orientation:landscape) and (width>=1000px){
-.hm-top.both .hm-card{grid-template-rows:auto auto 1fr}
-}
-@media (orientation:landscape) and (width>=1000px){
-.hm-top.both .hm-card>.cp-btn{align-self:end}
-}
-@media (width<=640px){.hm-sugs{grid-auto-flow:row}
-.hm-role-list{grid-template-columns:minmax(0,1fr)}
-.hm-continue>.hm-cont-id,.hm-continue>.hm-cont-act{grid-column:1;grid-row:auto}
-.hm-continue>.hm-cont-act{padding:0 var(--space-4)}
-.hm-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media (width<=640px){
-.hm-continue{grid-template-columns:minmax(0,1fr)}
-}
-@media (width<=640px){
-.hm-go{width:100%}
 }
 
 /* =====================================================================
@@ -7841,19 +7775,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .practice .p-bar .bar-parts > .part:first-child[aria-pressed="false"] .part-face { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px color-mix(in srgb, var(--now-mark) 45%, transparent); }
 /* 13. Progress shows one thing: learned (green) and still to learn (grey) */
 .rc-segs i.ready, .rc-segs i.now { background: color-mix(in srgb, var(--ink) 10%, transparent); }
-/* 14. On wider screens a suggestion card runs across its width: who and what on the left, the button on the right */
-@media (min-width: 641px) {
-  .hm .hm-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 16px; }
-  .hm .hm-card > .cp-eyebrow { grid-column: 1 / -1; }
-  .hm .hm-card > .hm-card-row { grid-column: 1; }
-  .hm .hm-card > .cp-btn { grid-column: 2; grid-row: 2; margin: 0 16px 0 0; align-self: center; }
-}
-@media (min-width: 641px) {
-  .hm-top.both .hm-card { grid-template-columns: minmax(0, 1fr); }
-}
-@media (min-width: 641px) {
-  .hm-top.both .hm-card > .cp-btn { grid-column: 1; grid-row: auto; margin: 4px 16px 0 !important; justify-self: start; }
-}
 /* 15–16. Phone top bar: the way back lives here (one row of navigation, not two); the wordmark only on pages
    with nowhere to go back to; your face on the right opens your role */
 .topbar-back { display: contents; }
@@ -7899,10 +7820,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 /* 22. Your role on an opera's tile is a tag on its picture, so every tile is the same height */
 .sc-pic { position: relative; }
 .sc-pic-tag { position: absolute; left: 10px; top: 10px; max-width: calc(100% - 20px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
-/* 23. Home's section headers share one height, so side-by-side sections start on the same line */
-.hm-roles > .cp-eyebrow, .hm-head { min-height: 36px; display: flex; align-items: center; margin: 0 0 12px; padding: 0; }
-.hm-head .cp-eyebrow { margin: 0; }
-.hm-head .hm-all { margin: 0 -8px 0 0; min-height: 36px; }
 /* 24. An opera's cover keeps the heads in the picture: cropped from the bottom, not the top */
 .op-cover img, .op-cover > img { object-position: 50% 12%; }
 /* 25. Phone welcome: the two rows of characters fill the screen (larger cards) instead of leaving its lower half empty */
@@ -7927,9 +7844,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   .pc-soon { font-size: 11px; padding: 3px 8px; }
 }
 .search-results > .block + .block { margin-top: 28px; }
-@media (max-width: 999px), (orientation: portrait) {
-  .hm-roles > .cp-eyebrow, .hm-head { min-height: 0; margin-bottom: 10px; }
-}
 .hero.search-hero { max-width: none; }
 
 /* Hold a singer's face to choose their line's sound: the menu rises above the bar */
@@ -8496,38 +8410,6 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .num { margin-bottom: 6px; }
 .num.soon { box-shadow: none; background: transparent; }
 
-/* Home, "Pick up where you left off": a calm card — no picture band, a small portrait beside the title, one
-   line of details, then the place you stopped and Continue. Both cards at the top share the same build. */
-.hm-continue .hm-band { display: none; }
-.hm-continue .hm-cont-id { display: flex; align-items: center; gap: 16px; margin: 14px 0 0; padding: 0; }
-.hm-continue .rc-face { position: static; width: 64px; height: 64px; min-width: 64px; margin: 0; box-shadow: none; transform: none; }
-.hm-continue .rc-text { min-width: 0; padding: 0; }
-.hm-continue .hm-title { margin: 0; font-size: clamp(20px, 1rem + 0.6vw, 26px); line-height: 1.2; text-wrap: balance; }
-.hm-continue .who-meta, .hm-card .pc-text > span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.4; color: var(--ink-muted); }
-.hm-continue .who-meta > span { white-space: nowrap; }
-.hm-continue .hm-cont-prog { margin-top: 18px; }
-.hm-continue, .hm-card { display: flex; flex-direction: column; }
-.hm-continue .hm-cont-act, .hm-card > .cp-btn { margin-top: auto; padding-top: 16px; align-self: flex-start; }
-.hm-card .hm-card-row { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
-.hm-card .pc-face { width: 64px; height: 64px; min-width: 64px; }
-.hm-card .pc-text b { display: block; font-size: clamp(18px, 0.95rem + 0.4vw, 22px); line-height: 1.25; font-weight: 500; }
-
-/* Home's two top cards, built the same way: label, a small portrait beside the title, one wrapping line of
-   details, then the action at the bottom left. No picture band, nothing cut off, no empty middle. */
-section.rc.hm-continue .rc-band.hm-band { display: none !important; }
-section.rc.hm-continue .rc-id.hm-cont-id { display: flex !important; align-items: center; gap: 16px; margin: 14px 0 0 !important; padding: 0 !important; }
-section.rc.hm-continue .rc-id .rc-face { position: static !important; width: 64px !important; height: 64px !important; min-width: 64px; margin: 0 !important; transform: none !important; box-shadow: none !important; border: 0 !important; }
-section.rc.hm-continue .rc-text { padding: 0 !important; min-width: 0; }
-section.rc.hm-continue .who-meta { display: block !important; white-space: normal !important; }
-section.rc.hm-continue .who-meta > span { white-space: normal !important; display: inline; }
-section.rc.hm-continue .hm-cont-act { display: flex !important; justify-content: flex-start !important; align-self: stretch; margin-top: 16px; }
-section.rc.hm-card > .cp-btn { align-self: flex-start; margin-top: 16px; }
-section.rc.hm-continue .hm-go, section.rc.hm-card > .cp-btn { min-height: 44px; height: 44px; padding: 0 20px; font-size: 15px; }
-.hm-top, .hm-grid { align-items: start; }
-section.rc.hm-continue .hm-cont-act .hm-go { margin-left: 0 !important; margin-right: auto !important; }
-section.rc.hm-continue { display: flex !important; flex-direction: column; align-items: stretch; } section.rc.hm-continue > * { grid-area: auto !important; justify-self: stretch !important; }
-section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
-
 /* the guide no longer darkens anything: a ring round the control, and the card at the top */
 .guide-scrim { pointer-events: none; }
 .guide-hole { box-shadow: none !important; pointer-events: none; }
@@ -8658,3 +8540,219 @@ section.rc.hm-continue > .hm-cont-act { align-self: stretch !important; }
 .note-pick { flex-wrap: wrap; justify-content: center; max-width: calc(100vw - 32px); }
 .note-pick-msg { flex-basis: 100%; white-space: normal; font-size: 13px; padding: 2px 8px 6px; text-align: center; }
 @media (max-width: 480px) { .note-pick { border-radius: 22px; padding: 6px 8px; width: calc(100vw - 32px); box-sizing: border-box; } .note-pick .cp-btn { padding-inline: 12px; min-width: 0; } .note-pick > span:first-child { flex-basis: 100%; text-align: center; padding-top: 4px; } }
+
+/* =====================================================================
+   Home: where you stopped (one Continue), your role through the opera act by act, what you practised and
+   noted lately, and last, more roles. Piece titles are set in the sung-text serif, like a printed programme;
+   everything else is the app's sans. The page lays itself out by its own width (the rail may or may not be there).
+   ===================================================================== */
+.hm-page { container-type: inline-size; max-width: 1180px; gap: 0; }
+.hm { display: grid; grid-template-columns: minmax(0, 1fr); gap: 44px; align-items: start; }
+.hm-resume { order: 1; } .hm-map { order: 2; } .hm-lately { order: 3; } .hm-notes { order: 4; } .hm-more { order: 5; }
+@container (min-width: 760px) {
+  .hm { grid-template-columns: minmax(0, 1fr) minmax(260px, 300px); column-gap: 40px; }
+  .hm > * { order: 0; }
+  .hm-resume { grid-column: 1 / -1; }
+  .hm.has-lately .hm-resume { grid-column: 1; }
+  .hm-lately { grid-column: 2; }
+  .hm-map { grid-column: 1 / -1; }
+  .hm-notes { grid-column: 1; }
+  .hm-more { grid-column: 2; }
+}
+
+/* section headings and their one line of detail */
+.hm-sec { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.hm-h { margin: 0; font: 500 21px/1.25 var(--font-sans); letter-spacing: -0.005em; color: var(--ink); }
+.hm-h i { font-style: italic; }
+.hm-sub { margin: -8px 0 0; font-size: 15px; line-height: 1.45; color: var(--ink-muted); max-width: 62ch; }
+
+/* ---- 1. where you stopped ---- */
+.hm-resume {
+  --ink: var(--on-pastel);
+  --ink-muted: var(--on-pastel-muted);
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border-radius: var(--radius-2xl);
+  background: var(--tone-soft, var(--fog));
+  color: var(--on-pastel);
+  overflow: hidden;
+}
+.hm-resume-main { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 28px; }
+.hm-resume-face {
+  width: 128px; height: 128px; margin: 32px 0 32px 32px;
+  border-radius: var(--radius-round); overflow: hidden;
+  background: var(--tone-strong, var(--fog-strong));
+}
+.hm-resume-body { min-width: 0; padding: 30px 32px 30px 0; display: flex; flex-direction: column; }
+.hm-resume-who { font-size: 15px; line-height: 1.4; color: var(--ink-muted); }
+.hm-resume-title {
+  margin: 6px 0 0;
+  font: 400 clamp(32px, 1.2rem + 1.6vw, 46px)/1.06 var(--font-text);
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.hm-resume-kind { margin-top: 8px; font-size: 16px; color: var(--ink-muted); }
+.hm-resume-when { margin-top: 12px; max-width: 56ch; font-size: 15px; line-height: 1.45; color: var(--ink-muted); }
+.hm-resume-place { display: grid; gap: 8px; margin-top: 18px; max-width: 440px; font-size: 14px; color: var(--ink); }
+.hm-track { display: block; height: 4px; border-radius: 2px; background: color-mix(in srgb, var(--on-pastel) 12%, transparent); overflow: hidden; }
+.hm-track i { display: block; height: 100%; border-radius: 2px; background: var(--now-mark); }
+.hm-resume-act { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 24px; }
+.hm-go { padding: 0 28px 0 22px; }
+.hm-again { color: var(--on-pastel); }
+.hm-again:hover { background: color-mix(in srgb, var(--on-pastel) 7%, transparent); }
+.hm-after {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 14px;
+  min-height: 56px; padding: 12px 24px 12px 32px;
+  border: 0; border-top: 1px solid color-mix(in srgb, var(--on-pastel) 9%, transparent);
+  background: transparent; color: var(--on-pastel); text-align: left; cursor: pointer;
+}
+.hm-after:hover { background: color-mix(in srgb, var(--on-pastel) 4%, transparent); }
+.hm-after-label { flex: none; font-size: 14px; color: var(--on-pastel-muted); }
+.hm-after-title { flex: 1; min-width: 0; font: 400 18px/1.3 var(--font-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-after svg { width: 20px; height: 20px; flex: none; }
+@container (max-width: 700px) {
+  .hm-resume-main { column-gap: 24px; }
+  .hm-resume-face { width: 96px; height: 96px; margin: 30px 0 30px 28px; }
+}
+@container (max-width: 500px) {
+  .hm-resume-main { grid-template-columns: minmax(0, 1fr); }
+  .hm-resume-face { width: 72px; height: 72px; margin: 22px 20px 0; }
+  .hm-resume-body { padding: 14px 20px 22px; }
+  .hm-resume-act { margin-top: 20px; }
+  .hm-go { flex: 1 1 100%; }
+  .hm-again { flex: 1 1 100%; }
+  .hm-after { padding: 12px 16px 12px 20px; flex-wrap: wrap; row-gap: 2px; }
+  .hm-after-label { flex-basis: 100%; }
+  .hm-after-title { flex: 1; }
+}
+
+/* ---- lists of pieces and roles (recently practised, more roles) ---- */
+.hm-list { list-style: none; margin: 0 -8px; padding: 0; display: grid; gap: 2px; }
+.hm-item {
+  width: 100%; display: flex; align-items: center; gap: 14px;
+  min-height: 60px; padding: 8px; border: 0; border-radius: var(--radius-2xl);
+  background: transparent; color: var(--ink); text-align: left; cursor: pointer;
+}
+.hm-item:hover { background: var(--fog); }
+.hm-item-face { flex: none; width: 46px; height: 46px; border-radius: var(--radius-round); overflow: hidden; background: var(--tone-soft, var(--fog)); }
+.hm-item-text { min-width: 0; display: grid; gap: 1px; }
+.hm-item-text b { font: 400 17px/1.3 var(--font-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-item-text b.hm-item-name { font: 500 16px/1.3 var(--font-sans); }
+.hm-item-text > span { font-size: 14px; line-height: 1.35; color: var(--ink-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-lately { padding-top: 4px; }
+
+/* ---- 2. your role through the opera ---- */
+.hm-roles { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+.hm-role-tab {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 48px; padding: 4px 18px 4px 4px;
+  border: 0; border-radius: var(--radius-pill);
+  background: var(--fog); color: var(--ink); font: 500 15px/1.2 var(--font-sans); cursor: pointer;
+}
+.hm-role-tab:hover { background: var(--fog-strong); }
+.hm-role-tab[aria-pressed="true"] { background: var(--tone-strong, var(--fog-strong)); color: var(--on-pastel); }
+.hm-role-face { width: 40px; height: 40px; border-radius: var(--radius-round); overflow: hidden; background: var(--tone-soft, var(--canvas)); }
+.hm-map-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.hm-map-head > h2 { min-width: 0; }
+.hm-map-h { font-size: 26px; }
+.hm-map-open { flex: none; margin: 0 -12px 0 0; padding: 0 10px 0 16px; gap: 2px; color: var(--ink); }
+
+.hm-act-tabs { display: none; }
+.hm-acts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px 24px; margin-top: 6px; }
+@container (min-width: 600px) { .hm-acts { grid-template-columns: repeat(min(var(--acts), 2), minmax(0, 1fr)); } }
+@container (min-width: 880px) { .hm-acts { grid-template-columns: repeat(var(--acts), minmax(0, 1fr)); } }
+.hm-act { min-width: 0; }
+.hm-act-h {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  margin: 0 0 6px; padding: 0 0 8px; border-bottom: 1.5px solid var(--ink);
+  font: 500 16px/1.2 var(--font-sans);
+}
+.hm-act-h small { font-size: 13px; font-weight: 400; color: var(--ink-muted); text-align: right; }
+.hm-pcs { list-style: none; margin: 0 -8px; padding: 0; display: grid; gap: 1px; }
+.hm-pc {
+  width: 100%; display: flex; align-items: flex-start; gap: 10px;
+  padding: 9px 8px; border: 0; border-radius: var(--radius-2xl);
+  background: transparent; color: var(--ink); text-align: left; font: inherit;
+}
+button.hm-pc { cursor: pointer; }
+button.hm-pc:hover { background: var(--fog); }
+.hm-pc .hm-mark { margin-top: 3px; }
+.hm-pc-text { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.hm-pc-text b { font: 400 16px/1.3 var(--font-text); overflow-wrap: anywhere; }
+.hm-pc-text > span { font-size: 13px; line-height: 1.35; color: var(--ink-muted); }
+.hm-pc-text > span:empty { display: none; }
+.hm-pc[data-s="soon"] .hm-pc-text b { color: var(--ink-muted); }
+.hm-pc[data-s="soon"] .hm-pc-text > span { color: color-mix(in srgb, var(--ink-muted) 75%, transparent); }
+li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: inset 3px 0 0 var(--tone-deep, var(--ink)); }
+.hm-pc-notes {
+  flex: none; margin-top: 2px; min-width: 22px; height: 20px; padding: 0 7px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-pill); background: var(--note); color: var(--note-mark);
+  font: 500 12px/1 var(--font-sans);
+}
+
+/* a piece's state: an empty ring (not started), a ring with a dot (practised), filled with a tick (learned),
+   a dashed ring (no music yet) */
+.hm-mark {
+  flex: none; position: relative; width: 16px; height: 16px; border-radius: var(--radius-round);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 38%, transparent);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.hm-mark[data-s="practising"] { border-color: var(--now-mark); }
+.hm-mark[data-s="practising"]::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--now-mark); }
+.hm-mark[data-s="learned"] { border-color: var(--now-mark); background: var(--now-mark); color: var(--on-mark); }
+.hm-mark[data-s="learned"] svg { width: 12px; height: 12px; }
+.hm-mark[data-s="soon"] { border-style: dashed; border-color: color-mix(in srgb, var(--ink) 28%, transparent); }
+.hm-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 4px; font-size: 13px; color: var(--ink-muted); }
+.hm-legend > span { display: inline-flex; align-items: center; gap: 7px; }
+.hm-legend .hm-mark { width: 13px; height: 13px; }
+.hm-legend .hm-mark[data-s="learned"] svg { width: 10px; height: 10px; }
+.hm-legend .hm-mark[data-s="practising"]::after { width: 5px; height: 5px; }
+
+/* a phone: one act at a time, chosen by the row of acts */
+@container (max-width: 599px) {
+  .hm-act-tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -2px; padding: 2px; }
+  .hm-act-tabs::-webkit-scrollbar { display: none; }
+  .hm-act-tabs button {
+    flex: none; min-height: 40px; padding: 0 16px; border: 0; border-radius: var(--radius-pill);
+    background: var(--fog); color: var(--ink); font: 500 15px/1 var(--font-sans); cursor: pointer;
+  }
+  .hm-act-tabs button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+  .hm-act:not([data-on]) { display: none; }
+  .hm-act-h span { display: none; }
+  .hm-act-h { border-bottom-width: 1px; border-color: var(--line, var(--fog-strong)); }
+  .hm-act-h small { text-align: left; }
+  .hm-map-h { font-size: 23px; }
+}
+
+/* ---- 3. your notes ---- */
+.hm-note-groups { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.hm-ng { display: grid; gap: 4px; }
+.hm-ng-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  margin: 0 -8px; padding: 6px 8px; border: 0; border-radius: var(--radius-2xl);
+  background: transparent; color: var(--ink); text-align: left; cursor: pointer;
+}
+.hm-ng-head:hover { background: var(--fog); }
+.hm-ng-head b { min-width: 0; font: 400 18px/1.3 var(--font-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-ng-head span { flex: none; font-size: 14px; color: var(--ink-muted); }
+.hm-ng-notes { list-style: none; margin: 0 -8px; padding: 0; display: grid; gap: 2px; }
+.hm-note {
+  width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px;
+  min-height: 44px; padding: 6px 8px; border: 0; border-radius: var(--radius-2xl);
+  background: transparent; color: var(--ink); text-align: left; cursor: pointer;
+}
+.hm-note:hover { background: var(--fog); }
+.hm-note-bar {
+  min-width: 58px; padding: 4px 10px; border-radius: var(--radius-pill);
+  background: var(--note); color: var(--on-pastel); font: 500 13px/1.2 var(--font-sans); text-align: center; white-space: nowrap;
+}
+.hm-note-body { font-size: 15px; line-height: 1.35; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-note-when { font-size: 13px; color: var(--ink-muted); white-space: nowrap; }
+
+/* ---- 4. more roles, small and last ---- */
+.hm-more-act { display: flex; flex-wrap: wrap; gap: 8px; }
+.hm-add { min-height: 44px; padding: 0 18px; }
+.hm-add svg { width: 18px; height: 18px; }

@@ -19,6 +19,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
+import { allNotes, MARKS, noteLabel, notesKey, NOTE_KEY_RE, type MarkId, type Note } from "./notes";
 import { annotateXml, circled, engravePages, fontFaceCss, openInTab, printDocument, printHtml } from "../score/printScore";
 
 /*
@@ -202,46 +203,6 @@ const tempoWordsOf = (edition: CompiledEdition): string[] => {
   });
 };
 
-interface Note {
-  id: string;
-  m: number;
-  q: number;
-  body: string;
-  at: string;
-  /** a singer's mark instead of (or as well as) words: shown on the score by its sign */
-  mark?: MarkId;
-}
-/** The marks singers pencil into scores most: one tap puts one on the bar you are on. */
-type MarkId = "breath" | "slow" | "push" | "look" | "careful";
-const MARKS: { id: MarkId; sign: string; label: string }[] = [
-  { id: "breath", sign: "\u2019", label: "Breathe" },
-  { id: "slow", sign: "\u2193", label: "Don\u2019t rush" },
-  { id: "push", sign: "\u2192", label: "Move on" },
-  { id: "look", sign: "\u25c9", label: "Look up" },
-  { id: "careful", sign: "!", label: "Careful" },
-];
-/** what a note shows on the score: its mark's sign and name, or the start of its words */
-const noteLabel = (n: Note) => {
-  const mk = MARKS.find((x) => x.id === n.mark);
-  if (mk) return `${mk.sign} ${n.body && n.body !== mk.label ? n.body : mk.label}`.slice(0, 26);
-  return n.body.length > 24 ? `${n.body.slice(0, 23)}\u2026` : n.body;
-};
-/** every piece's notes on this device (each piece and role keeps its own list) */
-const NOTE_KEY_RE = /^cp:(.+:notes|babbino:notes)$/;
-function allNotes(): Record<string, Note[]> {
-  const out: Record<string, Note[]> = {};
-  try {
-    for (let i = 0; i < localStorage.length; i++) {
-      const k = localStorage.key(i);
-      if (!k || !NOTE_KEY_RE.test(k)) continue;
-      const v = JSON.parse(localStorage.getItem(k) ?? "[]");
-      if (Array.isArray(v) && v.length) out[k] = v;
-    }
-  } catch {
-    /* storage unavailable */
-  }
-  return out;
-}
 /** add notes from an export file; a note already here (same id) is kept as it is. Returns how many were added. */
 function mergeNotes(file: unknown): number {
   const f = file as { app?: string; notes?: Record<string, Note[]> };
@@ -313,7 +274,7 @@ function loadPiece(id: string, character?: string) {
   xmlOrder = [...displayXml.matchAll(/<score-part id="([^"]+)"/g)].map((m) => m[1]);
   tempoWords = tempoWordsOf(edition);
   // Babbino's notes keep their first key, so nobody loses them
-  NOTES_KEY = id === "puccini-o-mio-babbino-caro" ? "cp:babbino:notes" : edition.roles.length > 1 ? `cp:${id}:${roleId}:notes` : `cp:${id}:notes`;
+  NOTES_KEY = notesKey(id, roleId, edition.roles.length);
 }
 function loadNotes(): Note[] {
   try {
@@ -1525,8 +1486,9 @@ function PracticeScreen({
     try {
       type Saved = { q?: number; tempo?: number; loop?: { startQ: number; endQ: number } | null; mix?: { hv?: boolean; hp?: boolean; pf?: boolean; lines?: typeof lineSets } };
       const v = JSON.parse(localStorage.getItem(atKey) ?? "null") as Saved | null;
-      // opened from Home: "resume" brings back the place, loop, speed and mix; "start" begins clean
-      let open: { ed?: string; mode?: string; at?: number } | null = null;
+      // opened from Home: "resume" brings back the place, loop, speed and mix; "start" begins clean;
+      // "note" opens at the bar of one of your notes
+      let open: { ed?: string; mode?: string; at?: number; m?: number; q?: number } | null = null;
       try {
         open = JSON.parse(sessionStorage.getItem("cp:open") ?? "null");
       } catch {
@@ -1534,9 +1496,10 @@ function PracticeScreen({
       }
       const mode = open && open.ed === edition.editionId && Date.now() - (open.at ?? 0) < 60000 ? open.mode : null;
       if (mode) sessionStorage.removeItem("cp:open");
-      if (mode === "start") {
+      const noteAt = mode === "note" && typeof open?.m === "number" ? perf.occurrences(open.m)[0] : undefined;
+      if (mode === "start" || noteAt) {
         setLoop(null);
-        if (engine.state !== "playing") engine.seek(0);
+        if (engine.state !== "playing") engine.seek(noteAt ? noteAt.startQ + Math.max(0, Math.min(noteAt.durQ, open?.q ?? 0)) : 0);
       } else {
         if (v?.q && v.q > 0 && v.q < perf.totalQ - 1 && engine.state !== "playing") engine.seek(v.q);
         if (mode === "resume" && v) {
@@ -3292,6 +3255,23 @@ function PracticeScreen({
                           >
                             {showOf(p) ? Icon.eye : Icon.eyeOff}
                           </button>
+                          {/* faded (grey) or in full ink, as the face menu does */}
+                          {(() => {
+                            const faded = isPiano ? pianoFaded : isYou ? !!lineSets[p.key]?.fade : (lineSets[p.key]?.fade ?? true);
+                            return (
+                              <button
+                                type="button"
+                                className="mix-mini"
+                                aria-pressed={faded}
+                                disabled={!showOf(p)}
+                                onClick={() => (isPiano ? setPianoFaded(!faded) : setLine(p.key, { fade: !faded }))}
+                                aria-label={faded ? `Show ${name} in full ink` : `Fade ${name} in the score`}
+                                title={faded ? "Faded in the score" : "In full ink"}
+                              >
+                                {Icon.fade}
+                              </button>
+                            );
+                          })()}
                         </span>
                         <input
                           type="range"
