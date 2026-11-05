@@ -1382,6 +1382,33 @@ function PracticeScreen({
   // on a phone the bar folds to one slim row while the music plays (the score gets the room); a tap opens it
   // phones: the bar is one slim row (play, loop, speed); the arrow opens every control, and closes them again
   const [barOpen, setBarOpen] = useLocalSetting("p:barOpen", false);
+  // the note-picking menu opens upwards from the pencil (when the pencil is on screen), as a short list
+  const [pickAt, setPickAt] = useState<CSSProperties | null>(null);
+  useLayoutEffect(() => {
+    if (!notePick) return setPickAt(null);
+    // a phone on its side: the open controls would cover the music you tap, so they fold away and the menu
+    // opens from the arrow instead
+    if (barOpen && window.matchMedia("(orientation: landscape) and (max-height: 500px)").matches) {
+      setBarOpen(false);
+      return;
+    }
+    const shown = (e: HTMLElement | null) => {
+      const r = e?.getBoundingClientRect();
+      return r && r.width >= 4 && r.height >= 4 && r.bottom <= window.innerHeight && getComputedStyle(e!).visibility !== "hidden" ? r : null;
+    };
+    const place = () => {
+      const pencil = shown(document.querySelector<HTMLElement>(".practice .notes-btn"));
+      const r = pencil ?? shown(document.querySelector<HTMLElement>(".practice .bar-more"));
+      if (!r) return setPickAt(null);
+      const w = 248;
+      // from the pencil: its left edge; from the arrow at the far right: its right edge
+      const left = Math.max(12, Math.min(pencil ? r.left : r.right - w, window.innerWidth - w - 12));
+      setPickAt({ position: "fixed", left, bottom: window.innerHeight - r.top + 8, width: w, transform: "none", top: "auto", right: "auto" });
+    };
+    place();
+    window.addEventListener("resize", place);
+    return () => window.removeEventListener("resize", place);
+  }, [notePick, barOpen]);
   const [speedPop, setSpeedPop] = useState(false);
   // the other singers' row: which edges have more faces beyond them
   const othersRef = useRef<HTMLDivElement>(null);
@@ -3560,7 +3587,7 @@ function PracticeScreen({
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
         {/* "tap the bar": sits just above this bar, so it never covers the title or the words */}
         {notePick && guide < 0 && (
-          <div className="note-pick" role="status">
+          <div className={`note-pick${pickAt ? " at-pencil" : ""}`} role="status" style={pickAt ?? undefined}>
             <span>Tap the bar your note is for</span>
             {/* your notes in a list, and the score to print with them */}
             <button
@@ -3574,7 +3601,7 @@ function PracticeScreen({
               All notes
             </button>
             <button type="button" className="cp-btn cp-btn--ghost" onClick={printScore} disabled={printState === "busy"} aria-busy={printState === "busy"}>
-              {printState === "busy" ? "Preparing…" : "PDF"}
+              {printState === "busy" ? "Preparing…" : "Score as PDF"}
             </button>
             {printState === "blocked" && (
               <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setPrintState(printDoc.current && openInTab(printDoc.current.html) ? "tab" : "noTab")}>
