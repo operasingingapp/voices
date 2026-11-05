@@ -278,7 +278,8 @@ async function speak(voiceId: string, text: string, slow: boolean): Promise<Spok
         // no acting: a plain, even reading
         style: 0,
         use_speaker_boost: config.speakerBoost ?? true,
-        speed: slow ? config.slowSpeed : config.normalSpeed,
+        // Eleven v4 has no speed setting: only sent when it changes anything
+        ...((slow ? config.slowSpeed : config.normalSpeed) !== 1 ? { speed: slow ? config.slowSpeed : config.normalSpeed } : {}),
       },
     }),
   });
