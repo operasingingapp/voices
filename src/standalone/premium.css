@@ -1588,3 +1588,42 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
 }
 .note-pick.at-pencil .cp-btn:last-of-type { color: var(--ink-muted); }
 .note-pick.at-pencil .note-pick-msg { padding: 6px 12px 4px; text-align: left; }
+
+/* =====================================================================
+   The words box keeps one shape, playing or not: the header row (status or
+   whose words · the count-in dots in the middle · hear it and Show) always
+   there, the line always the same size in the same place. While playing the
+   tools only go quieter; between your lines the coming line waits, softer.
+   ===================================================================== */
+.now-panel .now-bar { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; }
+.now-panel .now-meta { justify-self: start; }
+.now-panel .now-count { justify-self: center; display: inline-flex; align-items: center; min-height: 12px; }
+.now-panel .now-tools { justify-self: end; }
+.now-panel.is-playing .now-bar { opacity: 1; pointer-events: auto; }
+.now-panel.is-playing .now-tools,
+.now-panel.is-playing .now-meta { opacity: 0.5; transition: opacity 180ms ease; }
+.now-panel.is-playing:hover .now-tools,
+.now-panel.is-playing:hover .now-meta,
+.now-panel.is-playing:focus-within .now-tools,
+.now-panel.is-playing:focus-within .now-meta { opacity: 1; }
+.now-panel.is-playing .now-step { opacity: 0.45; pointer-events: auto; }
+.now-panel.is-playing .now-step:hover { opacity: 1; }
+/* the coming line, in its place and size, softer until you sing it */
+.now-panel .now-inner.resting > :not(.now-rest) { visibility: visible; }
+.now-inner.resting .now-it,
+.now-inner.resting .now-ipa,
+.now-inner.resting .now-tr { opacity: 0.42; transition: opacity 160ms ease; }
+.now-count .rest-dots { gap: 10px; }
+.now-count .rest-dots i { width: 9px; height: 9px; }
+/* the status words (Now singing / Next) as a quiet label of the same height as the selector beside it */
+.now-panel .now-meta { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; }
+@media (orientation: landscape) and (max-height: 500px) {
+  .practice .now-panel .line-card { position: relative; }
+  /* the count-in dots under the whose-words selector, clear of the line */
+  .practice .now-panel .now-count { grid-area: 1 / 1; align-self: end; justify-self: center; min-height: 0; margin-bottom: 1px; }
+  .practice .now-panel .now-meta { align-self: center; }
+}
+@media (max-width: 640px) {
+  /* narrow: the dots take what is left between the selector and the tools */
+  .now-panel .now-bar { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 6px; }
+}

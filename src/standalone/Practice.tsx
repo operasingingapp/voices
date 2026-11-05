@@ -2503,6 +2503,17 @@ function PracticeScreen({
                 </>
               )}
             </p>
+            {/* between your lines while the music plays: three dots in the middle of the header light one by one on
+                the last three beats before you come in (the line itself stays where it is, softer) */}
+            <span className="now-count" aria-hidden="true">
+              {resting && (
+                <span className="rest-dots">
+                  {[0, 1, 2].map((i) => (
+                    <i key={i} className={i < restLit ? "on" : ""} />
+                  ))}
+                </span>
+              )}
+            </span>
             {/* no tip strip in the card (the card is the words while you sing): a dotted word carries the line's
                 tip, and tapping it opens the word with its sound and the tip */}
             <div className="now-tools">
@@ -2563,20 +2574,6 @@ function PracticeScreen({
               {Icon.left}
             </button>
             <div className={`now-inner${resting ? " resting" : ""}`} aria-live="polite">
-              {/* while the music plays on between your lines: three dots that light one by one on the last
-                  three beats before you come in, and the next line, small, to get ready for */}
-              {resting && (
-                <div className="now-rest" aria-hidden="true">
-                  <span className="rest-dots">
-                    {[0, 1, 2].map((i) => (
-                      <i key={i} className={i < restLit ? "on" : ""} />
-                    ))}
-                  </span>
-                  <span className="rest-next" lang={LANG}>
-                    {shown.ph.words.map((w) => w.text).join(" ")}
-                  </span>
-                </div>
-              )}
               <p ref={itRef} className={`now-it${nowSyl ? " in-progress" : ""}${lineLen(shown.ph) > 110 ? " longer" : lineLen(shown.ph) > 64 ? " long" : ""}`} lang={LANG}>
                 {lineWords(shown.ph, nowSyl, !playing ? litTip : null)}
               </p>
