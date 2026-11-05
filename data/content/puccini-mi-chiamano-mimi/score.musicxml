@@ -38,6 +38,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <words>con semplicità</words>
+        </direction-type>
+        <sound tempo="52" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -51,12 +57,6 @@
             <p />
           </dynamics>
         </direction-type>
-      </direction>
-      <direction placement="above">
-        <direction-type>
-          <words>con semplicità</words>
-        </direction-type>
-        <sound tempo="52" />
       </direction>
       <note>
         <pitch>
@@ -107,7 +107,7 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Andante lento</words>
         </direction-type>
@@ -895,6 +895,33 @@
       </note>
     </measure>
     <measure number="14">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="32" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="34" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="36" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="38" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>rall.</words>
@@ -996,7 +1023,7 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Andante calmo</words>
         </direction-type>
@@ -1325,6 +1352,20 @@
       </note>
     </measure>
     <measure number="18">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="52.65" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="53.325" />
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -1392,6 +1433,61 @@
       </note>
     </measure>
     <measure number="19">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="47.25" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="47.925" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="48.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="49.275" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="49.95" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="50.625" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="51.3" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="51.975" />
+      </direction>
       <note>
         <pitch>
           <step>G</step>
@@ -1502,6 +1598,33 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="44.55" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="45.225" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="45.9" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="46.575" />
+      </direction>
       <note>
         <rest />
         <duration>840</duration>
@@ -1538,6 +1661,26 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="54" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="43.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="43.875" />
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -1743,6 +1886,61 @@
       </note>
     </measure>
     <measure number="23">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="43.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="44.55" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="45.9" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="47.25" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="48.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="49.95" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="51.3" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="52.65" />
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -1881,6 +2079,40 @@
       </note>
     </measure>
     <measure number="24">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="50.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="51.3" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="52.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="53.1" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="54" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>a tempo</words>
@@ -1958,6 +2190,61 @@
       </note>
     </measure>
     <measure number="25">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="43.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="44.1" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="45" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="45.9" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="46.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="47.7" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="48.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="49.5" />
+      </direction>
       <note>
         <pitch>
           <step>D</step>
@@ -2008,7 +2295,7 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Lentamente</words>
         </direction-type>
@@ -2244,7 +2531,7 @@
       </note>
     </measure>
     <measure number="31">
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Allegretto moderato</words>
         </direction-type>
@@ -2516,6 +2803,20 @@
       </note>
     </measure>
     <measure number="36">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="140.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="142.2" />
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -2576,6 +2877,33 @@
       </note>
     </measure>
     <measure number="37">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="133.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="135" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="136.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="138.6" />
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -2640,6 +2968,26 @@
       </note>
     </measure>
     <measure number="38">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="144" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="129.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="131.4" />
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -3032,6 +3380,20 @@
       </note>
     </measure>
     <measure number="46">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="140.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="142.2" />
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -3084,6 +3446,33 @@
       </note>
     </measure>
     <measure number="47">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="133.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="135" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="136.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="138.6" />
+      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -3117,6 +3506,26 @@
       </note>
     </measure>
     <measure number="48">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="144" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="129.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="131.4" />
+      </direction>
       <note>
         <pitch>
           <step>A</step>
@@ -3156,7 +3565,7 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Andante molto sostenuto</words>
         </direction-type>
@@ -3552,6 +3961,61 @@
       </note>
     </measure>
     <measure number="55">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="43.7" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="43.9875" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="44.275" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="44.5625" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="44.85" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="45.1375" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="45.425" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="45.7125" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>poco allarg.</words>
@@ -3608,6 +4072,61 @@
       </note>
     </measure>
     <measure number="56">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="41.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="41.6875" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="41.975" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="42.2625" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="42.55" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="42.8375" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="43.125" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="43.4125" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <wedge type="diminuendo" number="1" />
@@ -3674,6 +4193,12 @@
       </note>
     </measure>
     <measure number="57">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="46" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>a tempo</words>
@@ -3739,6 +4264,61 @@
       </note>
     </measure>
     <measure number="58">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="38.64" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="39.56" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="40.48" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="41.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="42.32" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="43.24" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="44.16" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="45.08" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>rall. molto</words>
@@ -3795,6 +4375,61 @@
       </note>
     </measure>
     <measure number="59">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="31.28" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="32.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="33.12" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="34.04" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="34.96" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="35.88" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="36.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="37.72" />
+      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -3865,7 +4500,7 @@
       </note>
     </measure>
     <measure number="60">
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>I° tempo, Andante agitando appena</words>
         </direction-type>
@@ -4205,6 +4840,61 @@
       </note>
     </measure>
     <measure number="63">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="48.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="49.275" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="49.95" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="50.625" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="51.3" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="51.975" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="52.65" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="53.325" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>allarg.</words>
@@ -4305,6 +4995,61 @@
       </note>
     </measure>
     <measure number="64">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="43.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="43.875" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="44.55" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="45.225" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="45.9" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="46.575" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="47.25" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="47.925" />
+      </direction>
       <direction placement="above">
         <direction-type>
           <words>calmo come prima</words>
@@ -4424,6 +5169,12 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="54" />
+      </direction>
       <note>
         <rest />
         <duration>840</duration>
@@ -4462,7 +5213,7 @@
           <beat-type>4</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>I tempo, ma calmo</words>
         </direction-type>
@@ -4538,6 +5289,27 @@
       </note>
     </measure>
     <measure number="67">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="52.5273" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="53.0182" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="53.5091" />
+      </direction>
       <note>
         <pitch>
           <step>F</step>
@@ -4638,6 +5410,61 @@
       </note>
     </measure>
     <measure number="68">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="48.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="49.0909" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="49.5818" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="50.0727" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="50.5636" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="51.0545" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="51.5455" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="52.0364" />
+      </direction>
       <note>
         <pitch>
           <step>E</step>
@@ -4779,6 +5606,40 @@
       </note>
     </measure>
     <measure number="69">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2940</offset>
+        <sound tempo="48.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2520</offset>
+        <sound tempo="49.95" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2100</offset>
+        <sound tempo="51.3" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="52.65" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="54" />
+      </direction>
       <note>
         <pitch>
           <step>D</step>
@@ -4823,6 +5684,47 @@
       </note>
     </measure>
     <measure number="70">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>3120</offset>
+        <sound tempo="52.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1680</offset>
+        <sound tempo="54" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="43.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="44.55" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="45.9" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="47.25" />
+      </direction>
       <note>
         <rest />
         <duration>840</duration>
@@ -5391,6 +6293,62 @@
       </note>
     </measure>
     <measure number="71">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2960</offset>
+        <sound tempo="43.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2560</offset>
+        <sound tempo="44.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>2160</offset>
+        <sound tempo="45.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1760</offset>
+        <sound tempo="46.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1360</offset>
+        <sound tempo="48" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>960</offset>
+        <sound tempo="49.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>560</offset>
+        <sound tempo="50.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>160</offset>
+        <sound tempo="51.6" />
+      </direction>
       <note>
         <pitch>
           <step>D</step>

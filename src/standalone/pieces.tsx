@@ -102,7 +102,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major, then G♭ major (6 flats) from “Io resto”",
       time: "2/4, then 6/8 (Andantino), then 3/8 (Allegro vivo)",
-      tempo: "Allegretto ♩ = 116; Andantino ♩. = 92; Allegro vivo ♩. = 108 (printed metronome marks)",
+      tempo: "Allegretto ♩ = 116 and Andantino ♩. = 92 (printed metronome marks); Meno (bar 11) ♩ = 104 (chosen: a tenth slower, to the nearest metronome mark); Allegro vivo (I.º tempo) ♩. = 108 (no number printed: the first tempo of the opera, whose opening music returns here). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Rodolfo stays to finish his article; the friends grope their way down the dark stairs",
     about: (
@@ -127,7 +127,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major (no key signature); B♭ major (2 flats) from “Nei cieli bigi”; C major again from “Gran cor!”; G♭ major (6 flats) from “Pensier profondo”; the last bar is the D major (2 sharps) Allegro of the next scene",
       time: "3/8; 6/8 from “Nei cieli bigi”; 3/8 from “Rodolfo, io voglio dirti” (with one bar of 2/8); 6/8 from “Aguzza l’ingegno”; 2/4 from “Quest’intermezzi”; Vivo 3/8, then 2/4, 3/4, 3/8 and 2/4; the last bar 6/8",
-      tempo: "Allegro vivace ♩. = 108 (printed metronome mark), kept by “Lo stesso movimento” in 6/8 and 3/8 and by “A tempo come prima”; from “Quest’intermezzi” 2/4 at ♩ = 108 (the piano keeps the 6/8 beat under the voices’ 2/4, so the bar keeps its length: ♩ = ♩.), kept by “Lo stesso movimento” in G♭; Vivo in 1 ♩. = 108 (no mark printed: the beat kept); 2/4 and 3/4 ♩ = 108; 3/8 ♩. = 108 (printed ♩ = ♩.); 2/4 ♩ = 108 (printed ♩. = ♩); the last bar, Allegro, ♩. = 108 (no mark printed)",
+      tempo: "Allegro vivace ♩. = 108 (printed metronome mark), kept by “Lo stesso movimento” in 6/8 and 3/8 and by “A tempo come prima”; from “Quest’intermezzi” 2/4 at ♩ = 108 (the piano keeps the 6/8 beat under the voices’ 2/4, so the bar keeps its length: ♩ = ♩.), kept by “Lo stesso movimento” in G♭; Vivo in 1 ♩. = 108 (no mark printed: the beat kept); 2/4 and 3/4 ♩ = 108; 3/8 ♩. = 108 (printed ♩ = ♩.); 2/4 ♩ = 108 (printed ♩. = ♩); the last bar, Allegro, ♩. = 108 (no mark printed). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Marcello paints with frozen hands; Rodolfo feeds his play to the fire, act by act",
     about: (
@@ -153,7 +153,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major (2 sharps); E♭ major (3 flats) from bar 56 (“Qua.”, “E mi presento”); D major again from bar 97 (“Il Costituzional!”); F major (1 flat) from bar 141 (Allegretto mosso, “Quando un’olezzo di frittelle”)",
       time: "6/8; 2/4 from bar 116 (“Che il diavolo vi porti”); 2/8 from bar 141 (Allegretto mosso); 3/4 from bar 171 (Moderato, “Un po’ di religione”); 6/8 from bar 176 (Tempo I)",
-      tempo: "Allegretto mosso ♪ = 132 is the only printed metronome mark; the other values are chosen, as no number is printed: Allegro ♩. = 108 (the beat of “Questo Mar Rosso” kept: its last bar is this Allegro’s first); Meno ♩. = 96 (a tenth slower, to the nearest metronome mark); 2/4 from bar 116 ♩ = 96 (the beat kept); Poco meno ♩ = 92 (a little slower again); Allegretto mosso ♪ = 132 (printed); Moderato ♩ = 66 (the printed ♪ = 132 kept); I.º Tempo (Allegro brillante) ♩. = 108 (the opening Allegro’s value, to which it returns)",
+      tempo: "Allegretto mosso ♪ = 132 is the only printed metronome mark; the other values are chosen, as no number is printed: Allegro ♩. = 108 (the beat of “Questo Mar Rosso” kept: its last bar is this Allegro’s first); Meno (bars 107-109) ♩. = 96 (a tenth slower, to the nearest metronome mark); a tempo (bar 110) ♩. = 108; 2/4 from bar 116 ♩ = 108 (the beat kept); Poco meno ♩ = 100 (a little slower); Allegretto mosso ♪ = 132 (printed); Moderato ♩ = 66 (the printed ♪ = 132 kept); I.º Tempo (Allegro brillante) ♩. = 108 (the opening Allegro’s value, to which it returns). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Schaunard comes home rich and tells how he earned it; nobody listens",
     about: (
@@ -180,7 +180,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major (1 flat) for the knock at the door; C major (no key signature) from bar 7 (Allegro vivo); G♭ major (6 flats) from bar 31 (Andantino mosso); E major (4 sharps) from bar 67 (Andantino); D♭ major (5 flats) from bar 90 (Lo stesso movimento); C major from bar 123; D major (2 sharps) from bar 126 (Allegro)",
       time: "2/4; 6/8 from bar 7 (with single bars of 9/8 at 63 and 109); 3/4 from bar 67; 6/8 from bar 90; 2/4 from bar 123",
-      tempo: "Printed metronome marks: Allegro vivo ♩. = 152, Andantino mosso ♩. = 100, Andantino ♩ = 56, Lo stesso movimento ♩ = ♩. (so ♩. = 56), Allegro ♩ = 152. Chosen, as no number is printed: bars 1-6 ♩ = 108 (the Tempo I of “Legna!” carried on, its beat kept into the 2/4); “Appena meno” (bar 69) left as a nuance, ♩ = 56 kept; Più mosso ♩. = 63, and from bar 110 ♩. = 69 (each a tenth faster, to the nearest metronome mark); Lento ♩. = 52, then ♩ = 52 in the 2/4 (just under the printed Andantino ♩ = 56, the beat kept); Meno (bar 154) ♩ = 138 (a tenth slower)",
+      tempo: "Printed metronome marks: Allegro vivo ♩. = 152, Andantino mosso ♩. = 100, Andantino ♩ = 56, Lo stesso movimento ♩ = ♩., Allegro ♩ = 152. Chosen, as no number is printed: bars 1-6 ♩ = 108 (the Tempo I of “Legna!” carried on, its beat kept into the 2/4); Appena meno (bar 69) ♩ = 54 (just slower: one metronome step under 56); so at Lo stesso movimento (bar 90) ♩. = 54, as printed; Più mosso ♩. = 60, and from bar 110 ♩. = 66 (each a tenth faster, to the nearest metronome mark); Lento ♩. = 52, then ♩ = 52 in the 2/4 (the beat kept); Meno (bar 154) ♩ = 138 (a tenth slower). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "The landlord comes for the rent and leaves without it",
     about: (
@@ -206,7 +206,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G♭ major (6 flats); B major (5 sharps) from bar 7 (figure 25); D major (2 sharps) from bar 18 (Lento, “Chi è là!?”); G major (1 sharp) from bar 45 (Andante moderato, figure 26); B♭ major (2 flats) from bar 76 (Un poco più mosso, “sventata”)",
       time: "3/8 for the first bar; 2/4 from bar 2; 3/4 from bar 14; 4/4 (C) from bar 20; 3/4 from bar 25 (Allegro agitato); 2/4 from bar 38 (“Ed ora come faccio?”)",
-      tempo: "Printed metronome marks: Andante moderato ♩ = 88 (bar 45) and Un poco più mosso ♩ = 126 (bar 76). Chosen, as no number is printed: bar 1 ♩. = 108 (the Allegro vivo that ends “Al Quartiere Latin” carried on: this bar is its last); Allegretto (a tempo, bar 2, and again at figure 25) ♩ = 116 (the printed Allegretto of “Al Quartiere Latin”, to which the a tempo returns); Lento (bar 18) ♩ = 52 (the value of the Lento in “Si può?”); Allegro agitato (bar 25) ♩ = 126 (a tenth faster than the Allegretto, to the nearest metronome mark); Allegretto sostenuto (bar 40) ♩ = 104 (the Allegretto held back a tenth); Lento a piacere (bar 42) ♩ = 52 (the earlier Lento); I. Tempo (come prima, bar 67) ♩ = 88 (the Andante moderato it returns to). The a piacere bars, rall. and rit. are left as nuances, the beat kept",
+      tempo: "Printed metronome marks: Andante moderato ♩ = 88 (bar 45) and Un poco più mosso ♩ = 126 (bar 76). Chosen, as no number is printed: bar 1 ♩. = 108 (the Allegro vivo that ends “Al Quartiere Latin” carried on: this bar is its last); Allegretto (a tempo, bar 2, and again at figure 25) ♩ = 116 (the printed Allegretto of “Al Quartiere Latin”, to which the a tempo returns); Lento (bar 18) ♩ = 52 (the value of the Lento in “Si può?”); Allegro agitato (bar 25) ♩ = 126 (a tenth faster than the Allegretto, to the nearest metronome mark); Allegretto sostenuto (bar 40) ♩ = 104 (the Allegretto held back a tenth); Lento a piacere (bar 42) ♩ = 52 (the earlier Lento); I. Tempo (come prima, bar 67) ♩ = 88 (the Andante moderato it returns to). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Mimì knocks for a light, faints, leaves, and comes back for her lost key; both candles go out",
     about: (
@@ -232,7 +232,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D♭ major (5 flats); A♭ major (4 flats) from bar 46 (Andante lento, “In povertà mia lieta”, figure 32)",
       time: "2/4; 3/4 from bar 37 (Andante sostenuto, “chi son?”); 4/4 (C) from bar 46, with single bars of 2/4 at 61 and 70",
-      tempo: "Printed metronome marks: Andantino affettuoso ♩ = 58 (bar 1) and Andante lento ♩ = 52 (bar 46). Chosen, as no number is printed: Andante sostenuto (bar 37) ♩ = 54 (between the printed 58 before it and 52 after it, on the slower side, as Andante and sostenuto both hold back the Andantino). The rall., affrett., allarg., rit. and a tempo marks are left as nuances, the beat kept",
+      tempo: "Printed metronome marks: Andantino affettuoso ♩ = 58 (bar 1) and Andante lento ♩ = 52 (bar 46). Chosen, as no number is printed: Andante sostenuto (bar 37) ♩ = 54 (between the printed 58 before it and 52 after it, on the slower side); Sostenendo largamente (bar 54, “Talor dal mio forziere”, to the end) ♩ = 48 (broader by about a tenth, to the nearest metronome mark). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Rodolfo holds Mimì’s cold hand in the dark and tells her who he is",
     about: (
@@ -263,7 +263,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "4 flats (A♭ major, where “Che gelida manina” ends) for bar 1; D major (2 sharps) from bar 2 (Andante lento)",
       time: "4/4 (C) for bar 1; 2/4 from bar 2; 4/4 from bar 15 (Andante calmo), with a single bar of 2/4 at 20; 2/4 from bar 26 (Lentamente) through the Allegretto moderato; 4/4 from bar 49 (Andante molto sostenuto), with a single bar of 2/4 at 65",
-      tempo: "Printed metronome marks: Andante lento ♩ = 40 (bar 2), Andante calmo ♩ = 54 (bar 15) and Allegretto moderato ♩ = 144 (bar 31). Chosen, as no number is printed: bar 1 ♩ = 52 (the Andante lento ♩ = 52 of “Che gelida manina” carried on, as nothing new is printed over Mimì’s “Si. Mi”); Lentamente (bar 26) ♩ = 40 (the printed Andante lento of bar 2, whose “Mi chiamano Mimì” it brings back); Andante molto sostenuto (bar 49) ♩ = 46 (the Andante calmo’s 54 held back by about a sixth, to the nearest metronome mark); I° tempo, Andante agitando appena (bar 60) and I tempo, ma calmo (bar 66) ♩ = 54 (read as the Andante calmo, the aria’s first 4/4 tempo, whose music bar 66 brings back from bar 21). The a piacere, col canto, rall., rit., allarg., a tempo and Sostenendo marks, and the free cadenza of bar 70 (senza rigore di tempo), are left as nuances, the beat kept",
+      tempo: "Printed metronome marks: Andante lento ♩ = 40 (bar 2), Andante calmo ♩ = 54 (bar 15) and Allegretto moderato ♩ = 144 (bar 31). Chosen, as no number is printed: bar 1 ♩ = 52 (the Andante lento ♩ = 52 of “Che gelida manina” carried on, as nothing new is printed over Mimì’s “Si. Mi”); Lentamente (bar 26) ♩ = 40 (the printed Andante lento of bar 2, whose “Mi chiamano Mimì” it brings back); Andante molto sostenuto (bar 49) ♩ = 46 (the Andante calmo’s 54 held back by about a sixth); I° tempo, Andante agitando appena (bar 60) and I tempo, ma calmo (bar 66) ♩ = 54 (the Andante calmo, whose music returns). The free cadenza of bar 70 (senza rigore di tempo) keeps the beat. The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Mimì tells Rodolfo who she is: her embroidered flowers, her little white room, the first sun of spring",
     about: (
@@ -293,7 +293,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major (2 sharps)",
       time: "2/4",
-      tempo: "Printed metronome mark: Allegretto come prima ♩ = 100 (bar 3). Chosen, as no number is printed: bars 1-2 (a piacere, the piano col canto) ♩ = 100, the Allegretto that follows, so the calls from the courtyard keep its pulse. The a tempo and perdendosi marks are left as nuances, the beat kept",
+      tempo: "Printed metronome mark: Allegretto come prima ♩ = 100 (bar 3). Chosen, as no number is printed: bars 1-2 (a piacere, the piano col canto) ♩ = 100, the Allegretto that follows, so the calls from the courtyard keep its pulse. The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "The friends call from the courtyard; Rodolfo answers from the window; Mimì asks “Chi son?”",
     about: (
@@ -322,7 +322,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "A major (3 sharps) for bars 1-23; C major (no sharps or flats) from bar 24 (Calmo) to the end",
       time: "4/4 (C), with a single bar of 2/4 at 16",
-      tempo: "Printed metronome marks: Largo sostenuto ♩ = 58 (bar 1) and ♩ = 58 again at bar 31 (“Dammi il braccio”). Chosen, as no number is printed: Sempre più sostenuto (bar 17) ♩ = 52 (the Largo’s 58 held back by about a tenth, to the nearest metronome mark, as “ever more held back” asks); Calmo (bar 24) ♩ = 52 (the same pace kept: the conversation stays calm, and the printed ♩ = 58 at bar 31 marks the return to the first tempo). The fermatas of bar 16, the Sostenendo, poco stent., rit., col canto, poco affrett., a tempo, rall., Sost., allargando and molto rall. marks are left as nuances, the beat kept",
+      tempo: "Printed metronome marks: Largo sostenuto ♩ = 58 (bar 1) and ♩ = 58 again at bar 31 (“Dammi il braccio”). Chosen, as no number is printed: Sempre più sostenuto (bar 17) ♩ = 52 (the Largo’s 58 held back by about a tenth, to the nearest metronome mark); Calmo (bar 24) ♩ = 52 (the same pace kept; the printed ♩ = 58 at bar 31 marks the return to the first tempo). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
     },
     notePlaceholder: "Rodolfo sees Mimì in the moonlight; she asks to come to the Momus; they leave arm in arm singing “Amor!”",
     about: (
@@ -338,6 +338,44 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept,
           with the print’s spellings. The print has no optional notes: Rodolfo ends on E and Mimì on the high C. The printed metronome marks are the
           Largo sostenuto’s ♩ = 58 and the ♩ = 58 of bar 31; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-aranci-datteri": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Scene with chorus",
+    facts: {
+      key: "F major (1 flat) for bars 1-103; A flat major (4 flats) for bars 104-121; E major (4 sharps) for bars 122-140; A flat major again for bars 141-146; no sharps or flats for bars 147-167 (the laughing boys); F major again from bar 168 to the end",
+      time: "2/8 for bars 1-103, 147-159 and 168-183; 3/4 for bars 104-146 and 160-167",
+      tempo: "Printed metronome mark: Allegro focoso (in due) ♩ = 112 (bar 1): a 2/8 bar is one crotchet, beaten in two quavers. Chosen, as no number is printed: Lo stesso movimento, legato e un poco sostenuto (bar 104, 3/4) ♩ = 104 (the crotchet kept, ♩ = ♩, held back a little for “un poco sostenuto”); Sostenendo un poco (bar 130) ♩ = 96, then a tempo (bar 139) ♩ = 104; Lo stesso movimento ma un po’ più animando (bar 147, 2/8) ♩ = 120 (about 7% faster than the first tempo); Lo stesso movimento (bar 160, 3/4) ♩ = 120, animando poco a poco (bar 164) ♩ = 126; I. tempo come prima (bar 168, 2/8) ♩ = 112, the printed first tempo. The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "Christmas Eve in the Latin Quarter: the sellers and the crowd; the friends shopping; Rodolfo buys Mimì a bonnet",
+    about: (
+      <>
+        <p>
+          “Aranci, datteri!”, the opening of Act 2: Christmas Eve in the Latin Quarter. Street sellers cry their oranges, dates, sweets and flowers, the
+          crowd and the children push through, the café calls for its waiter. The friends go shopping: Schaunard haggles over a horn with a false D,
+          Colline has his second-hand coat mended and finds a Runic grammar, Marcello offers his heart for a penny to the passing girls. Rodolfo buys
+          Mimì a pink bonnet; she admires a coral necklace: he has a millionaire uncle, and if the good Lord sees sense he will buy her a far finer one.
+          The townsfolk leave for the Café Momus.
+        </p>
+        <p>
+          Score: vocal score pages 83-99 (from the start of Act 2 to the end of page 99, 183 bars), from Carlo Carignani’s piano reduction in the G.
+          Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently, every
+          disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept, with the
+          print’s spellings. The chorus is heard with the piano and shown in the score, but it has no words to practise here. The print gives each
+          chorus group (sellers, crowd, children, girls and students, townsfolk, café customers) its own staff where it sings, fifteen in all; here
+          they are gathered into five staves by voice, sopranos, children, tenors and two bass lines, with each group named where it comes in. Every note
+          and syllable is kept: groups sharing a staff never sing in the same bar, except the two sellers’ soprano lines, which sing the same words in
+          the same rhythm and are written as chords, the crowd’s two sopranos in bar 73, written as two voices as printed, and bar 160, where the
+          girls’ last laugh comes before the townsfolk’s first word. The printed metronome mark is the Allegro focoso’s ♩ = 112; the other tempos are
+          chosen as stated under Tempo.
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were

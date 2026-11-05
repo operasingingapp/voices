@@ -6,7 +6,11 @@
  * and never with page numbers or screen coordinates.
  */
 
-export type PartKind = "voice" | "piano";
+/**
+ * "voice": a character's sung line (a role); "piano": the accompaniment; "chorus": a sung line that is no one's role
+ * (a crowd, the sellers): shown in the score and heard with the piano, never a part to sing nor a line of words.
+ */
+export type PartKind = "voice" | "piano" | "chorus";
 
 /** Explicit mapping from a notated part (MusicXML part + staves) to a playback channel. */
 export interface PlaybackPart {

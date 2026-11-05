@@ -888,7 +888,7 @@ function PracticeScreen({
   // how loud each part is (80 = normal), and what the sung line is played on
   const [vol, setVol] = useLocalSetting<{ voice: number; piano: number }>("p:vol3", { voice: 80, piano: 60 });
   const hearOf = (p: CompiledEdition["parts"][number]) =>
-    p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? false);
+    p === voicePart ? hearVoice : p.kind === "piano" ? hearPiano : (lineSets[p.key]?.hear ?? p.kind === "chorus");
   const setHear = (p: CompiledEdition["parts"][number], x: boolean) =>
     p === voicePart ? setHearVoice(x) : p.kind === "piano" ? setHearPiano(x) : setLine(p.key, { hear: x });
 
@@ -1066,9 +1066,10 @@ function PracticeScreen({
     if (!engine) return;
     engine.setMix(voicePart.key, { muted: !hearVoice, solo: false, volume: volGain(vol.voice, voicePart.defaultVolume) });
     engine.setMix(pianoPart.key, { muted: !hearPiano, solo: false, volume: volGain(vol.piano, pianoPart.defaultVolume) });
-    for (const p of otherVoices) {
+    // the other singers are silent until you add them; the chorus sings unless you mute it
+    for (const p of [...otherVoices, ...edition.parts.filter((x) => x.kind === "chorus")]) {
       const ls = lineSets[p.key] ?? {};
-      engine.setMix(p.key, { muted: !(ls.hear ?? false), solo: false, volume: volGain(ls.vol ?? 80, p.defaultVolume) });
+      engine.setMix(p.key, { muted: !(ls.hear ?? p.kind === "chorus"), solo: false, volume: volGain(ls.vol ?? 80, p.defaultVolume) });
     }
   }, [engine, hearVoice, hearPiano, vol, lineSets]);
   // the sung line's lowest and highest notes, so an instrument can take it an octave down when needed

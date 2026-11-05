@@ -47,7 +47,7 @@
           <clef-octave-change>-1</clef-octave-change>
         </clef>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Allegretto</words>
         </direction-type>
@@ -151,6 +151,27 @@
       </note>
     </measure>
     <measure number="8">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="107.3" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="110.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="113.1" />
+      </direction>
       <note>
         <pitch>
           <step>D</step>
@@ -181,6 +202,33 @@
       </note>
     </measure>
     <measure number="9">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="95.7" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="98.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="101.5" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="104.4" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -190,6 +238,19 @@
       </note>
     </measure>
     <measure number="10">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="116" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="92.8" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -202,6 +263,12 @@
       </note>
     </measure>
     <measure number="11">
+      <direction>
+        <direction-type>
+          <words>Meno</words>
+        </direction-type>
+        <sound tempo="104" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -256,6 +323,33 @@
       </note>
     </measure>
     <measure number="17">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="93.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="96.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="98.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="101.4" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -265,6 +359,33 @@
       </note>
     </measure>
     <measure number="18">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="83.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="85.8" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="88.4" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="91" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -274,6 +395,12 @@
       </note>
     </measure>
     <measure number="19">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="104" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -301,6 +428,20 @@
       </note>
     </measure>
     <measure number="22">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>1260</offset>
+        <sound tempo="93.6" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="98.8" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -310,6 +451,26 @@
       </note>
     </measure>
     <measure number="23">
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>840</offset>
+        <sound tempo="104" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <offset>420</offset>
+        <sound tempo="83.2" />
+      </direction>
+      <direction>
+        <direction-type>
+          <words />
+        </direction-type>
+        <sound tempo="88.4" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -430,7 +591,7 @@
           <beat-type>8</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Andantino</words>
         </direction-type>
@@ -1073,7 +1234,7 @@
           <beat-type>8</beat-type>
         </time>
       </attributes>
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Allegro vivo</words>
         </direction-type>

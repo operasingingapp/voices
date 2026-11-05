@@ -3033,7 +3033,7 @@
   {
     "editionId": "puccini-al-quartiere-latin",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-al-quartiere-latin@1.0.0-carignani#e787bd0f10",
+    "scoreVersionId": "puccini-al-quartiere-latin@1.0.0-carignani#343dbe8da9",
     "title": "Al Quartiere Latin ci attende Momus",
     "subtitle": "Rodolfo, Marcello, Schaunard and Colline: scene from La bohème, Act 1",
     "kind": "scene",
@@ -3066,7 +3066,7 @@
       }
     ],
     "measures": 79,
-    "durationSec": 70,
+    "durationSec": 73,
     "hasRepeats": false,
     "keySignature": "G major",
     "time": "2/4",
@@ -3077,9 +3077,61 @@
     }
   },
   {
+    "editionId": "puccini-aranci-datteri",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-aranci-datteri@1.0.0-carignani#83a24df539",
+    "title": "Aranci, datteri!",
+    "subtitle": "Christmas Eve in the Latin Quarter: the sellers, the crowd, the friends shopping, Rodolfo and Mimì, La bohème, Act 2",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 183,
+    "durationSec": 158,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "2/8",
+    "languageStatus": {
+      "phrases": 30,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-che-gelida-manina",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-che-gelida-manina@1.0.0-carignani#2209785d6b",
+    "scoreVersionId": "puccini-che-gelida-manina@1.0.0-carignani#af4e73d47f",
     "title": "Che gelida manina",
     "subtitle": "Rodolfo's aria, La bohème, Act 1",
     "kind": "aria",
@@ -3100,7 +3152,7 @@
       }
     ],
     "measures": 72,
-    "durationSec": 224,
+    "durationSec": 238,
     "hasRepeats": false,
     "keySignature": "D♭ major",
     "time": "2/4",
@@ -3113,7 +3165,7 @@
   {
     "editionId": "puccini-ehi-rodolfo",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-ehi-rodolfo@1.0.0-carignani#6fe11e0a25",
+    "scoreVersionId": "puccini-ehi-rodolfo@1.0.0-carignani#fd1250062e",
     "title": "Ehi! Rodolfo!",
     "subtitle": "Schaunard, Colline, Marcello, Rodolfo and Mimì: the friends call from the courtyard, La bohème, Act 1",
     "kind": "scene",
@@ -3165,7 +3217,7 @@
   {
     "editionId": "puccini-legna",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-legna@1.0.0-carignani#97f3c829aa",
+    "scoreVersionId": "puccini-legna@1.0.0-carignani#faef7874d1",
     "title": "Legna!",
     "subtitle": "Rodolfo, Marcello, Schaunard and Colline: Schaunard's windfall, La bohème, Act 1",
     "kind": "scene",
@@ -3198,7 +3250,7 @@
       }
     ],
     "measures": 183,
-    "durationSec": 211,
+    "durationSec": 209,
     "hasRepeats": false,
     "keySignature": "D major",
     "time": "6/8",
@@ -3211,7 +3263,7 @@
   {
     "editionId": "puccini-mi-chiamano-mimi",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-mi-chiamano-mimi@1.0.0-carignani#3c8f3da403",
+    "scoreVersionId": "puccini-mi-chiamano-mimi@1.0.0-carignani#9c18b642c9",
     "title": "Mi chiamano Mimì",
     "subtitle": "Mimì's aria, La bohème, Act 1",
     "kind": "aria",
@@ -3232,7 +3284,7 @@
       }
     ],
     "measures": 71,
-    "durationSec": 227,
+    "durationSec": 238,
     "hasRepeats": false,
     "keySignature": "A♭ major",
     "time": "4/4",
@@ -3245,7 +3297,7 @@
   {
     "editionId": "puccini-non-sono-in-vena",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-non-sono-in-vena@1.0.0-carignani#03bf88f067",
+    "scoreVersionId": "puccini-non-sono-in-vena@1.0.0-carignani#bbe0649117",
     "title": "Non sono in vena",
     "subtitle": "Rodolfo and Mimì: her first knock at the door, La bohème, Act 1",
     "kind": "scene",
@@ -3266,7 +3318,7 @@
       }
     ],
     "measures": 155,
-    "durationSec": 197,
+    "durationSec": 199,
     "hasRepeats": false,
     "keySignature": "G♭ major",
     "time": "3/8",
@@ -3307,7 +3359,7 @@
   {
     "editionId": "puccini-o-soave-fanciulla",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-o-soave-fanciulla@1.0.0-carignani#8ac231e2ce",
+    "scoreVersionId": "puccini-o-soave-fanciulla@1.0.0-carignani#8e57455edf",
     "title": "O soave fanciulla",
     "subtitle": "Rodolfo and Mimì, with Marcello offstage: the love duet that ends Act 1 of La bohème",
     "kind": "duet",
@@ -3334,7 +3386,7 @@
       }
     ],
     "measures": 44,
-    "durationSec": 187,
+    "durationSec": 191,
     "hasRepeats": false,
     "keySignature": "A major",
     "time": "4/4",
@@ -3347,7 +3399,7 @@
   {
     "editionId": "puccini-questo-mar-rosso",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-questo-mar-rosso@1.0.0-carignani#896b35225b",
+    "scoreVersionId": "puccini-questo-mar-rosso@1.0.0-carignani#79f05c57b7",
     "title": "Questo Mar Rosso",
     "subtitle": "Marcello, Rodolfo and Colline: the opening scene of La bohème, Act 1",
     "kind": "scene",
@@ -3374,7 +3426,7 @@
       }
     ],
     "measures": 335,
-    "durationSec": 269,
+    "durationSec": 271,
     "hasRepeats": false,
     "keySignature": "C major",
     "time": "3/8",
@@ -3387,7 +3439,7 @@
   {
     "editionId": "puccini-si-puo",
     "editionVersion": "1.0.0-carignani",
-    "scoreVersionId": "puccini-si-puo@1.0.0-carignani#85d3c6c22d",
+    "scoreVersionId": "puccini-si-puo@1.0.0-carignani#4617a7d0e6",
     "title": "Si può?..",
     "subtitle": "Benoit, Marcello, Schaunard, Colline and Rodolfo: the landlord's visit, La bohème, Act 1",
     "kind": "scene",
@@ -3426,7 +3478,7 @@
       }
     ],
     "measures": 160,
-    "durationSec": 242,
+    "durationSec": 249,
     "hasRepeats": false,
     "keySignature": "F major",
     "time": "2/4",

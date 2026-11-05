@@ -2165,6 +2165,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Ehi! Rodolfo!",
       "editionId": "puccini-ehi-rodolfo"
+     },
+     {
+      "title": "Aranci, datteri!",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Aranci, datteri!",
+      "editionId": "puccini-aranci-datteri"
      }
     ]
    },
@@ -2228,6 +2234,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Ehi! Rodolfo!",
       "editionId": "puccini-ehi-rodolfo"
+     },
+     {
+      "title": "Aranci, datteri!",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Aranci, datteri!",
+      "editionId": "puccini-aranci-datteri"
      }
     ]
    },
@@ -2291,6 +2303,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Ehi! Rodolfo!",
       "editionId": "puccini-ehi-rodolfo"
+     },
+     {
+      "title": "Aranci, datteri!",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Aranci, datteri!",
+      "editionId": "puccini-aranci-datteri"
      }
     ]
    },
@@ -2356,6 +2374,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Ehi! Rodolfo!",
       "editionId": "puccini-ehi-rodolfo"
+     },
+     {
+      "title": "Aranci, datteri!",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Aranci, datteri!",
+      "editionId": "puccini-aranci-datteri"
      }
     ]
    },
@@ -2406,6 +2430,12 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 1",
       "id": "Act 1: Ehi! Rodolfo!",
       "editionId": "puccini-ehi-rodolfo"
+     },
+     {
+      "title": "Aranci, datteri!",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Aranci, datteri!",
+      "editionId": "puccini-aranci-datteri"
      }
     ]
    },

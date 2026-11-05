@@ -50,6 +50,12 @@
           <line>2</line>
         </clef>
       </attributes>
+      <direction>
+        <direction-type>
+          <words>a piacere</words>
+        </direction-type>
+        <sound tempo="100" />
+      </direction>
       <note>
         <rest />
         <duration>1680</duration>
@@ -68,7 +74,7 @@
       </note>
     </measure>
     <measure number="3">
-      <direction placement="above">
+      <direction>
         <direction-type>
           <words>Allegretto come prima</words>
         </direction-type>
@@ -2201,12 +2207,6 @@
             <f />
           </dynamics>
         </direction-type>
-      </direction>
-      <direction placement="above">
-        <direction-type>
-          <words>a piacere</words>
-        </direction-type>
-        <sound tempo="100" />
       </direction>
       <note>
         <pitch>
