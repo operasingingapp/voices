@@ -883,3 +883,10 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
 @media (max-width: 640px) {
   .oh-text > .oh-story { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; }
 }
+
+/* the story fills the width of the banner: two columns where the page is wide, one where it is not */
+.oh-text { max-width: none; }
+.oh-text > .oh-story { max-width: none; }
+@container (min-width: 1000px) {
+  .oh-text > .oh-story { columns: 2; column-gap: 48px; }
+}
