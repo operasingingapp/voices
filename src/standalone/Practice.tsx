@@ -1863,6 +1863,22 @@ function PracticeScreen({
     // keep the line being sung in the upper third, so the lines coming next are in view
     box.scrollTo({ top: Math.max(0, el.offsetTop - box.clientHeight * 0.3), behavior: playing ? "smooth" : "auto" });
   }, [activeKey, view, playing]);
+  // when you scroll away from the line being sung, a pill takes you back to it
+  const [wordsAway, setWordsAway] = useState<"up" | "down" | null>(null);
+  const checkAway = () => {
+    const box = wordsRef.current;
+    const el = box?.querySelector<HTMLElement>(`[data-key="${activeKey}"]`);
+    if (!box || !el) return setWordsAway(null);
+    const top = el.offsetTop - box.scrollTop;
+    setWordsAway(top + el.offsetHeight < 60 ? "up" : top > box.clientHeight - 80 ? "down" : null);
+  };
+  useEffect(checkAway, [activeKey, view]);
+  const backToNow = () => {
+    const box = wordsRef.current;
+    const el = box?.querySelector<HTMLElement>(`[data-key="${activeKey}"]`);
+    wordsTouched.current = 0;
+    if (box && el) box.scrollTo({ top: Math.max(0, el.offsetTop - box.clientHeight * 0.3), behavior: "smooth" });
+  };
 
   const status = countLeft ? `Count-in ${countLeft}` : pb.status === "loading" ? "Loading the piano…" : preparing ? "Loading the voices…" : null;
   const qNow = Math.max(0, q);
@@ -2672,8 +2688,15 @@ function PracticeScreen({
             if (openWord && !(e.target as HTMLElement).closest(".word-card, .now-word")) setOpenWord(null);
           }}
           onWheel={() => (wordsTouched.current = performance.now())}
+          onScroll={checkAway}
           data-testid="words-view"
         >
+          {wordsAway === "up" && (
+            <button type="button" className="w-back w-back--up" onClick={backToNow}>
+              {Icon.up}
+              Back to bar {loc.number}
+            </button>
+          )}
           <div className="w-grid">
             {/* side by side, as in a libretto: the original with its IPA, the translation level with it */}
             <div className="w-cols">
@@ -2849,6 +2872,7 @@ function PracticeScreen({
                           </span>
                         </span>
                       )}
+                      <span className="w-bar">{edition.measures[perf.locate(sp.startQ).m].number}</span>
                     </span>
                   ) : (
                     <span className="w-bar" title={barsOf(sp.startQ, sp.endQ)}>
@@ -2883,6 +2907,12 @@ function PracticeScreen({
               );
             })}
           </div>
+          {wordsAway === "down" && (
+            <button type="button" className={`w-back w-back--down`} onClick={backToNow}>
+              {Icon.up}
+              Back to bar {loc.number}
+            </button>
+          )}
         </div>
       )}
 

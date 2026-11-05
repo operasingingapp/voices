@@ -8828,3 +8828,197 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 @media (max-width: 640px) { .hm-prog { padding: 18px 16px; } }
 .hm-prog-big .hm-prog-line { font-size: 17px; color: var(--ink); }
 .hm-prog-big .hm-prog-line b { font-size: 26px; font-weight: 500; }
+
+/* =====================================================================
+   33. Words view, easier to read and compare (Nov 2026)
+   Italian and English set as two equal columns of a libretto, divided by
+   a thin rule; every line has a hairline under it so the eye can travel
+   across; the English is in full ink, a size smaller; bar numbers on every
+   line for finding your place; speakers stay quiet until you point at them
+   ===================================================================== */
+.words-view .w-grid {
+  --w-cols: 44px 36px minmax(0, 1fr) minmax(0, 1fr);
+  max-width: 1180px;
+}
+.words-view .w-grid:has(.w-line.script) {
+  --w-cols: 104px 36px minmax(0, 1fr) minmax(0, 1fr);
+}
+.words-view .w-cols,
+.words-view .w-line {
+  column-gap: 0;
+}
+.words-view .w-line > .w-orig,
+.words-view .w-cols > .w-col-orig {
+  padding-right: 28px;
+}
+.words-view .w-line > .w-tr,
+.words-view .w-cols > .w-col-tr {
+  padding-left: 28px;
+  border-left: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+}
+.words-view .w-line > .w-tr {
+  align-self: stretch;
+  padding-top: 5px;
+}
+.words-view .w-line {
+  align-items: baseline;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--ink) 7%, transparent);
+}
+.words-view .w-line.script {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.words-view .w-line.script.speech-end {
+  box-shadow: none;
+}
+.words-view .w-it {
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.words-view .w-tr {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--ink) 86%, var(--canvas));
+  opacity: 1;
+}
+.words-view .w-line.now .w-tr,
+.words-view .w-line.next .w-tr {
+  color: var(--ink);
+}
+/* the other singers: quieter, but still easy to read */
+.words-view .w-line.other .w-it,
+.words-view .w-line.other .w-tr {
+  color: color-mix(in srgb, var(--ink) 64%, var(--canvas));
+}
+.words-view .w-line.other.cue .w-it,
+.words-view .w-line.other.cue .w-tr {
+  color: color-mix(in srgb, var(--ink) 78%, var(--canvas));
+}
+.words-view .w-line.other.now .w-it,
+.words-view .w-line.other.now .w-tr {
+  color: var(--ink);
+}
+/* the line under the pointer: both halves light up together */
+.words-view .w-line:hover {
+  background: color-mix(in srgb, var(--ink) 4%, transparent);
+}
+.words-view .w-line.script.mine:hover {
+  background: var(--tone-soft, #f3e8ff);
+}
+/* speakers: there when you want them */
+.words-view .w-hear,
+.words-view .w-line.other .w-hear {
+  opacity: 0.28;
+}
+.words-view .w-line:hover .w-hear,
+.words-view .w-line.now .w-hear,
+.words-view .w-line.next .w-hear,
+.words-view .w-hear:focus-visible,
+.words-view .w-hear[aria-pressed="true"] {
+  opacity: 1;
+}
+/* bar numbers on every line */
+.words-view .w-gut .w-bar,
+.words-view .w-line.script:not(.speech-start) .w-gut .w-bar {
+  padding-top: 0;
+  font: 500 12px/1.2 var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+}
+.words-view .w-line.script.speech-start .w-gut .w-bar {
+  padding-left: 32px;
+}
+.words-view .w-line.script:not(.speech-start) .w-gut {
+  padding-top: 7px;
+}
+.words-view .w-line.now .w-gut .w-bar {
+  color: var(--ink);
+  font-weight: 700;
+}
+.words-view .w-bar {
+  font: 500 12px/1.2 var(--font-sans);
+  padding-top: 8px;
+}
+/* the column heads say what each column is */
+.words-view .w-cols b {
+  font: 700 11px/1 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+/* back to the line being sung */
+.w-back {
+  position: sticky;
+  bottom: 18px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  margin: -64px auto 18px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: var(--radius-round);
+  background: var(--ink);
+  color: var(--canvas);
+  font: 600 14px/1 var(--font-sans);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+.w-back svg {
+  width: 16px;
+  height: 16px;
+}
+.w-back--down svg {
+  transform: rotate(180deg);
+}
+.w-back--up {
+  top: 132px;
+  bottom: auto;
+  margin: 0 auto -40px;
+}
+.w-back--down {
+  margin: -60px auto 18px;
+}
+@media (hover: none) {
+  .words-view .w-hear,
+  .words-view .w-line.other .w-hear {
+    opacity: 0.45;
+  }
+}
+@media (max-width: 640px) {
+  .words-view .w-grid,
+  .words-view .w-grid:has(.w-line.script) {
+    --w-cols: 30px 36px minmax(0, 1fr);
+  }
+  .words-view .w-grid:has(.w-line.script) {
+    --w-cols: 64px 34px minmax(0, 1fr);
+  }
+  .words-view .w-line > .w-orig {
+    padding-right: 0;
+  }
+  .words-view .w-line > .w-tr {
+    grid-column: 3;
+    grid-row: 2;
+    padding-left: 0;
+    padding-top: 4px;
+    border-left: 0;
+    font-size: 16px;
+  }
+  .words-view .w-it {
+    font-size: 21px;
+  }
+  .words-view .w-line.script.speech-start .w-gut .w-bar {
+    padding-left: 0;
+  }
+  .words-view .w-line.script > .w-gut {
+    grid-row: 1 / span 2;
+  }
+  .w-back--up {
+    top: 112px;
+  }
+}
