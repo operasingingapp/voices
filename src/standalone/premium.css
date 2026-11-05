@@ -1707,3 +1707,45 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
   .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .bar-mix .mix-btn span { display: none !important; }
   .practice .p-bar.p-bar.p-bar.p-bar:not(.folded) .cp-speed { grid-row: 2; grid-column: 11 / 31; }
 }
+
+/* =====================================================================
+   Role page, crisper: the opera link quiet (no underline, a small chevron);
+   on a phone the portrait and the name side by side, the two buttons equal,
+   the progress and Start one block without rules.
+   ===================================================================== */
+.rp-head .rp-opera { border-bottom: 0; display: inline-flex; align-items: baseline; gap: 4px; color: inherit; }
+.rp-head .rp-opera:hover { color: var(--ink); }
+.rp-head .rp-opera-chev { width: 0.55em; height: 0.55em; flex: none; opacity: 0.6; align-self: center; }
+@media (max-width: 640px) {
+  .rp-head .rp-band { height: 132px; }
+  .rp-head .rp-id {
+    display: grid; grid-template-columns: 92px minmax(0, 1fr); column-gap: 16px; row-gap: 0;
+    align-items: end; margin-top: 0; padding: 0 2px;
+  }
+  .rp-head .rp-face {
+    grid-column: 1; grid-row: 1 / 3; align-self: start;
+    width: 92px; height: 92px; margin: -46px 0 0 8px;
+    box-shadow: 0 0 0 4px var(--canvas), 0 6px 18px rgba(26, 24, 20, 0.12);
+  }
+  .rp-head .rp-text { display: contents; }
+  .rp-head .rp-text > .cp-eyebrow { grid-column: 2; grid-row: 1; align-self: end; margin: 16px 0 4px; font-size: 11px; }
+  .rp-head .rp-name { grid-column: 2; grid-row: 2; align-self: start; margin: 0; font-size: 38px; line-height: 1.02; }
+  .rp-head .rp-in { display: block; margin-top: 4px; font-size: 18px; line-height: 1.25; }
+  .rp-head .rp-desc { grid-column: 1 / -1; grid-row: 3; margin: 16px 0 0; font-size: 15px; line-height: 1.5; }
+  .rp-head .rp-tools-below {
+    grid-column: 1 / -1; grid-row: 4; display: grid; grid-template-columns: max-content; gap: 8px; margin-top: 16px;
+  }
+  /* two buttons share the width equally; one keeps its own size */
+  .rp-head .rp-tools-below:has(> :nth-child(2)) { grid-template-columns: 1fr 1fr; }
+  .rp-head .rp-tools-below .cp-btn { justify-content: center; min-height: 44px; padding: 0 12px; border-radius: 10px; font-size: 15px; }
+  /* the progress and Start: one block, no rules above and below */
+  .rp-head .rp-strip { margin-top: 22px; padding: 0; border: 0; row-gap: 10px; }
+  .rp-head .rp-strip-text { font-size: 14px; }
+  .rp-head .pv-segs { gap: 2px; }
+  .rp-head .pv-segs > * { height: 4px; }
+  .rp-head .rp-strip > .rp-go { min-height: 50px; border-radius: 12px; margin-top: 4px; }
+  /* the acts: the heading's rule lighter, more air above */
+  .rp-music .rp-act-head { padding-bottom: 8px; border-bottom-color: color-mix(in srgb, var(--fog-strong) 70%, transparent); }
+  .rp-music .rp-act-head h3 { font-size: 28px; }
+  .rp-music .rp-act-head span { font-size: 13px; }
+}

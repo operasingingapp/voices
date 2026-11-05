@@ -881,6 +881,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
                 in{" "}
                 <button type="button" className="rp-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
                   <i lang={opera.lang}>{opera.title}</i>
+                  <svg className="rp-opera-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </button>
               </span>
             </h1>
@@ -896,7 +897,8 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
                 {pr.done} of {pr.total}
               </b>{" "}
               learned
-              <span> · {ready === pr.total ? "all with music" : ready ? `${ready} with music` : "no music yet"}</span>
+              {/* said only when it matters: some numbers have no music yet */}
+              {ready !== pr.total && <span> · {ready ? `${ready} with music` : "no music yet"}</span>}
             </p>
             <Segments states={ch.pieces.map(state)} />
             {go && goPiece && (
@@ -1088,8 +1090,6 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   // the opera's story opens over this page (a saved place may still ask for it)
   const [story, setStory] = useState(ctx.place.screen === "opera" && !!ctx.place.synopsis);
   // the cast, narrowed to one voice
-  const voices = VOICES.filter((v) => opera.chars.some((c) => voiceGroup(c.voice) === v));
-  const [voice, setVoice] = useState<string>("all");
   const phone = usePhone();
   if (story && phone && SYNOPSES[opera.id])
     return (
@@ -1101,7 +1101,8 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   // how many acts, where the lists say (a one-act opera's numbers name none)
   const acts = Math.max(0, ...opera.chars.flatMap((c) => c.pieces.map(actNo)));
   const lang = LANG_NAMES[opera.lang];
-  const cast = opera.chars.filter((c) => voice === "all" || voiceGroup(c.voice) === voice);
+  // every character, in the opera's own order (a voice filter here only hid people; Search filters by voice)
+  const cast = opera.chars;
   return (
     <main className="screen-body gutter page op-page">
       <Crumbs ctx={ctx} trail={[{ label: "Operas", to: { screen: "explore", by: "opera" } }, { label: opera.title, lang: opera.lang }]} />
@@ -1159,15 +1160,6 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
           <h2 className="pv-h2" id="chars-h">
             Choose your role
           </h2>
-          {voices.length > 1 && (
-            <Seg
-              label="Show one voice"
-              className="pv-seg--sm pv-seg--scroll"
-              value={voice}
-              options={[["all", "All"], ...voices.map((v) => [v, VOICE_SHORT[v] ?? v] as const)]}
-              onChange={setVoice}
-            />
-          )}
         </div>
         <div className="cast-grid">
           {cast.map((c) => {
