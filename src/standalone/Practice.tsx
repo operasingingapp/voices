@@ -1,4 +1,5 @@
 import { packedUrl, preloadVoicePacks } from "./voicePack";
+import { MAX_FACTOR, MIN_FACTOR, stepFactor } from "./metronome";
 import { foldIpa, foldTranslation, trailingRepeat } from "./repeat";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as RPointerEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
@@ -292,6 +293,20 @@ function saveNotes(n: Note[]) {
 /** characters in a line, so a long one can be set smaller and still fit the words box */
 const lineLen = (ph: { words: { text: string }[] }) => ph.words.reduce((n, w) => n + w.text.length + 1, 0);
 
+/** The beat's note drawn as a small icon (♩, ♩. or ♪), so it stands centred beside the figures at any size (the font
+    glyphs sat high or low depending on the font that supplied them). */
+export function BeatNote({ symbol }: { symbol: string }) {
+  const dotted = symbol === "♩.";
+  const eighth = symbol === "♪";
+  return (
+    <svg className="beat-note" width={dotted ? 14 : 11} height="18" viewBox={`0 0 ${dotted ? 14 : 11} 18`} aria-hidden="true">
+      <ellipse cx="4.2" cy="14.2" rx="3.9" ry="2.9" transform="rotate(-22 4.2 14.2)" fill="currentColor" />
+      <rect x="7" y="1" width="1.4" height="13.4" fill="currentColor" />
+      {eighth && <path d="M8.4 1c.4 2.2 2.6 3.2 2.4 6-.1 1.2-.6 2-1.1 2.6.3-1.6-.2-3.4-1.3-4.2z" fill="currentColor" />}
+      {dotted && <circle cx="11.6" cy="14" r="1.4" fill="currentColor" />}
+    </svg>
+  );
+}
 export const Icon = {
   tip: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1625,15 +1640,17 @@ function PracticeScreen({
   const bi = beatInfo(edition.measures[loc.m].time);
   const beat = Math.floor(loc.beat + 1e-6);
   const countLeft = engine ? engine.countInRemaining() : 0;
-  const tempoPct = Math.round((engine?.tempo ?? 1) * 100);
   // With a recorded singer the speed is one it was rendered at (100% or 70%): further re-timing would be heard.
   // Otherwise − and + move in steps of 5%.
   const singing = (lineSound === "singer" && hearVoice) || otherVoices.some((p) => instOf(p) === "singer" && hearOf(p));
   const tf0 = engine?.tempo ?? 1;
-  const slower = () => engine?.setTempoFactor(singing ? SUNG_TEMPOS[0] : Math.max(0.4, +(tf0 - 0.05).toFixed(2)));
-  const faster = () => engine?.setTempoFactor(singing ? 1 : Math.min(1.5, +(tf0 + 0.05).toFixed(2)));
-  const canSlower = singing ? tf0 > SUNG_TEMPOS[0] + 1e-3 : tf0 > 0.4 + 1e-3;
-  const canFaster = singing ? tf0 < 1 - 1e-3 : tf0 < 1.5 - 1e-3;
+  // − and + step along a metronome's marks (♩ = 120, 126, 132 …), from the tempo of the passage you are in;
+  // the whole piece moves with it, in proportion
+  const printedBeat = perf.bpmAt(q) / (bi.unitQ === 2 ? 1 : bi.unitQ === 0.5 && bi.beats === 3 && perf.bpmAt(q) * 2 >= 240 ? 1.5 : bi.unitQ);
+  const slower = () => engine?.setTempoFactor(singing ? SUNG_TEMPOS[0] : stepFactor(printedBeat, tf0, -1));
+  const faster = () => engine?.setTempoFactor(singing ? 1 : stepFactor(printedBeat, tf0, 1));
+  const canSlower = singing ? tf0 > SUNG_TEMPOS[0] + 1e-3 : tf0 > MIN_FACTOR + 1e-3;
+  const canFaster = singing ? tf0 < 1 - 1e-3 : tf0 < MAX_FACTOR - 1e-3;
   // the singer starts singing (or a speed is restored): take the nearer of its speeds
   useEffect(() => {
     if (!engine || !singing || SUNG_TEMPOS.some((x) => Math.abs(x - engine.tempo) < 1e-3)) return;
@@ -1645,6 +1662,9 @@ function PracticeScreen({
   const shownQ = bi.unitQ === 2 ? 1 : oneInThree ? 1.5 : bi.unitQ;
   const beatSymbol = shownQ === 1.5 ? "♩." : shownQ === 0.5 ? "♪" : "♩";
   const beatBpm = Math.round((perf.bpmAt(q) / shownQ) * (engine?.tempo ?? 1));
+  const printedBpm = Math.round(perf.bpmAt(q) / shownQ);
+  const asPrinted = Math.abs((engine?.tempo ?? 1) - 1) < 1e-3;
+  const tempoLabel = asPrinted ? `Tempo ${beatBpm} beats a minute, as printed` : `Tempo ${beatBpm} beats a minute. Back to the printed ${printedBpm}`;
   const deviceVoice = voiceInfo(false).kind === "device";
   const [finished, setFinished] = useState(false);
   const lastPlayingQ = useRef(0);
@@ -3023,21 +3043,24 @@ function PracticeScreen({
         {/* phone, folded bar: the speed as a chip at the end of this row; − and + open above it */}
         {!barOpen && (
           <div className="tl-speed">
-            <button type="button" className="tl-speed-chip" aria-expanded={speedPop} aria-label={`Speed ${tempoPct}%. Change it`} onClick={() => setSpeedPop(!speedPop)}>
-              {Icon.slow}
-              {tempoPct}%
+            <button type="button" className={`tl-speed-chip${asPrinted ? "" : " changed"}`} aria-expanded={speedPop} aria-label={`${tempoLabel.split(".")[0]}. Change it`} onClick={() => setSpeedPop(!speedPop)}>
+              <BeatNote symbol={beatSymbol} />
+              {beatBpm}
             </button>
             {speedPop && (
               <div className="tl-speed-pop" role="group" aria-label="Speed">
                 <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={!canSlower}>
                   {Icon.minus}
                 </button>
-                <b>{tempoPct}%</b>
+                <b>
+                  <BeatNote symbol={beatSymbol} /> = {beatBpm}
+                </b>
                 <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={!canFaster}>
                   {Icon.plus}
                 </button>
-                <button type="button" className="tl-speed-reset" onClick={() => engine?.setTempoFactor(1)} disabled={tempoPct === 100}>
-                  100%
+                <button type="button" className="tl-speed-reset" onClick={() => engine?.setTempoFactor(1)} disabled={asPrinted} aria-label={`Back to the printed tempo, ${printedBpm}`}>
+                  {Icon.again}
+                  {printedBpm}
                 </button>
               </div>
             )}
@@ -3472,21 +3495,27 @@ function PracticeScreen({
 
         <div className="bar-right">
           <div className="cp-tempo">
-            {/* the beat it plays at, then the speed as a percentage between slower and faster */}
-            <span className="cp-tempo__beat" aria-label={`About ${beatBpm} beats a minute`}>
-              <span className="cp-beat">{beatSymbol}</span> = {beatBpm}
-            </span>
-            {/* − 100% + as one control */}
-            <div className="cp-speed" role="group" aria-label="Speed">
-            <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={!canSlower}>
-              {Icon.minus}
-            </button>
-            <div className="cp-tempo__value" data-testid="tempo">
-              <b>{tempoPct}%</b>
-            </div>
-            <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={!canFaster}>
-              {Icon.plus}
-            </button>
+            {/* − ♩ = 130 + as one control: the metronome number of the passage you are in; tap it for the printed tempo */}
+            <div className="cp-speed" role="group" aria-label="Tempo">
+              <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={!canSlower}>
+                {Icon.minus}
+              </button>
+              <button
+                type="button"
+                className={`cp-tempo__value${asPrinted ? "" : " changed"}`}
+                data-testid="tempo"
+                onClick={() => engine?.setTempoFactor(1)}
+                aria-disabled={asPrinted}
+                aria-label={tempoLabel}
+                title={asPrinted ? "As printed" : `Back to the printed ${beatSymbol} = ${printedBpm}`}
+              >
+                <BeatNote symbol={beatSymbol} />
+                <span className="cp-eq">=</span>
+                <b>{beatBpm}</b>
+              </button>
+              <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={!canFaster}>
+                {Icon.plus}
+              </button>
             </div>
           </div>
           <button

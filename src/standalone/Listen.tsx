@@ -9,7 +9,8 @@ import { useTicker } from "../hooks";
 import { ScoreView, stripCrop, type CursorReading, type MarkerReading } from "../score/ScoreView";
 import type { ScoreLayout } from "../score/layout";
 import { pieceData } from "./pieces";
-import { CROP_PAD, Icon, MAX_ZOOM, STANDARD_LINE_H, fmtTime } from "./Practice";
+import { MAX_FACTOR, MIN_FACTOR, stepFactor } from "./metronome";
+import { BeatNote, CROP_PAD, Icon, MAX_ZOOM, STANDARD_LINE_H, fmtTime } from "./Practice";
 
 /** The score as drawn: the playback-only tempo number and the piano's pedal brackets stay off the line. */
 function forDisplay(xml: string): string {
@@ -93,9 +94,11 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
   const beatSymbol = shownQ === 1.5 ? "♩." : shownQ === 0.5 ? "♪" : "♩";
   const tf = engine?.tempo ?? 1;
   const beatBpm = Math.round((perf.bpmAt(q) / shownQ) * tf);
-  const tempoPct = Math.round(tf * 100);
-  const slower = () => engine?.setTempoFactor(Math.max(0.4, +(tf - 0.05).toFixed(2)));
-  const faster = () => engine?.setTempoFactor(Math.min(1.5, +(tf + 0.05).toFixed(2)));
+  const printedBpm = Math.round(perf.bpmAt(q) / shownQ);
+  const asPrinted = Math.abs(tf - 1) < 1e-3;
+  // − and + step along a metronome's marks, from the passage you are in; the whole piece moves in proportion
+  const slower = () => engine?.setTempoFactor(stepFactor(perf.bpmAt(q) / shownQ, tf, -1));
+  const faster = () => engine?.setTempoFactor(stepFactor(perf.bpmAt(q) / shownQ, tf, 1));
   const tempoWord = useMemo(() => {
     let cur = "";
     return edition.measures.map((m) => {
@@ -226,17 +229,24 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
         </div>
         <div className="bar-right">
           <div className="cp-tempo">
-            <span className="cp-tempo__beat" aria-label={`About ${beatBpm} beats a minute`}>
-              <span className="cp-beat">{beatSymbol}</span> = {beatBpm}
-            </span>
-            <div className="cp-speed" role="group" aria-label="Speed">
-              <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={tf <= 0.4 + 1e-3}>
+            <div className="cp-speed" role="group" aria-label="Tempo">
+              <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={tf <= MIN_FACTOR + 1e-3}>
                 {Icon.minus}
               </button>
-              <div className="cp-tempo__value" data-testid="tempo">
-                <b>{tempoPct}%</b>
-              </div>
-              <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={tf >= 1.5 - 1e-3}>
+              <button
+                type="button"
+                className={`cp-tempo__value${asPrinted ? "" : " changed"}`}
+                data-testid="tempo"
+                onClick={() => engine?.setTempoFactor(1)}
+                aria-disabled={asPrinted}
+                aria-label={asPrinted ? `Tempo ${beatBpm} beats a minute, as printed` : `Tempo ${beatBpm} beats a minute. Back to the printed ${printedBpm}`}
+                title={asPrinted ? "As printed" : `Back to the printed ${beatSymbol} = ${printedBpm}`}
+              >
+                <BeatNote symbol={beatSymbol} />
+                <span className="cp-eq">=</span>
+                <b>{beatBpm}</b>
+              </button>
+              <button type="button" className="cp-icon-btn" aria-label="Faster" onClick={faster} disabled={tf >= MAX_FACTOR - 1e-3}>
                 {Icon.plus}
               </button>
             </div>

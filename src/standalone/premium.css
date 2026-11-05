@@ -1375,3 +1375,44 @@ button.rp-title:focus-visible { outline: 2px solid var(--focus); outline-offset:
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* ---------- Tempo as a metronome number: − ♩ = 130 + ---------- */
+/* the number is the control's middle; changed from the printed tempo it turns green, and a tap restores it */
+.practice .cp-speed .cp-tempo__value,
+.practice.listen .cp-speed .cp-tempo__value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 84px;
+  height: 36px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 16px/36px var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: default;
+}
+.beat-note { flex: none; display: block; }
+.tl-speed-chip .beat-note { width: 10px; height: 16px; }
+.practice .cp-tempo__value .cp-eq { color: var(--ink-muted); font-size: 16px; }
+.practice .cp-tempo__value b { font-size: 17px; font-weight: 500; }
+.practice .cp-tempo__value.changed { cursor: pointer; color: #17402c; }
+.practice .cp-tempo__value.changed b { font-weight: 600; }
+.practice .cp-tempo__value.changed:hover { background: var(--fog); }
+/* the separate "♩ = 130" label is gone: the number lives in the control */
+.practice .cp-tempo__beat { display: none !important; }
+/* phone chip: ♩ 130, green when changed; the reset in its pop-up shows the printed number */
+.tl-speed-chip.changed { color: #17402c; font-weight: 600; }
+/* open: a raised ivory chip, not a black one */
+.tl-speed-chip.tl-speed-chip[aria-expanded="true"] { background: var(--canvas); color: var(--ink); box-shadow: 0 0 0 1px var(--hairline), 0 1px 3px rgba(26, 24, 20, 0.12); }
+.tl-speed-chip.changed[aria-expanded="true"] { color: #17402c; }
+.tl-speed-pop b { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 76px; }
+.tl-speed-reset { display: inline-flex; align-items: center; gap: 6px; }
+.tl-speed-reset svg { width: 16px; height: 16px; }
+@media (max-width: 640px) {
+  .practice .p-bar.p-bar.p-bar .cp-speed .cp-tempo__value { min-width: 84px; }
+}
