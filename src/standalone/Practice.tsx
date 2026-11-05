@@ -3512,8 +3512,7 @@ function PracticeScreen({
           {Icon.chevUp}
         </button>
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
-      </footer>
-
+        {/* "tap the bar": sits just above this bar, so it never covers the title or the words */}
         {notePick && guide < 0 && (
           <div className="note-pick" role="status">
             <span>Tap the bar your note is for</span>
@@ -3552,6 +3551,8 @@ function PracticeScreen({
             )}
           </div>
         )}
+      </footer>
+
         {noteEdit &&
           (() => {
             const ed = noteEdit;

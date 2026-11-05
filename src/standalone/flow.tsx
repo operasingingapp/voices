@@ -43,7 +43,7 @@ const OPERA_TONES: Tone[] = ["sky", "lilac", "mint", "butter", "peach", "pink"];
 
 /** Simple flat portraits: the body in the character's deeper tone, a white face, hair in soft ink. */
 export function Avatar({ kind }: { kind: AvatarKind }) {
-  const body = <path style={{ fill: "var(--tone-deep, var(--ink))" }} d="M8 64C8 49 18 42 32 42s24 7 24 22z" />;
+  const body = <path style={{ fill: "var(--av-body, var(--tone-deep, var(--ink)))" }} d="M8 64C8 49 18 42 32 42s24 7 24 22z" />;
   const face = (r = 11, cy = 28) => <circle style={{ fill: "var(--av-face, #ffffff)" }} cx="32" cy={cy} r={r} />;
   const ink = { fill: "var(--av-hair, #3a3c38)" };
   const parts: Record<AvatarKind, ReactNode> = {
@@ -128,7 +128,7 @@ export function Avatar({ kind }: { kind: AvatarKind }) {
   };
   return (
     // framed like the portraits: a little closer, the head just above the middle, the shoulders to the edge
-    <svg viewBox="4 5 56 59" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }}>
+    <svg className="av" viewBox="4 5 56 59" preserveAspectRatio="xMidYMax slice" aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }}>
       {parts[kind]}
     </svg>
   );
@@ -1051,8 +1051,18 @@ const VOICE_SHORT: Record<string, string> = { Soprano: "Soprano", "Mezzo-soprano
  * changes what the page shows, otherwise as a group of pressed buttons (a filter).
  */
 function Seg<T extends string>({ label, value, options, onChange, tabs, className }: { label: string; value: T; options: readonly (readonly [T, string])[]; onChange: (v: T) => void; tabs?: boolean; className?: string }) {
+  // a track that scrolls sideways (a phone) keeps the chosen segment in view, so a choice made earlier is not hidden
+  const track = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = track.current;
+    if (!el || el.scrollWidth <= el.clientWidth + 1) return;
+    const on = el.querySelector<HTMLElement>('[aria-pressed="true"], [aria-selected="true"]');
+    if (!on) return;
+    const x = on.getBoundingClientRect().left - el.getBoundingClientRect().left + el.scrollLeft;
+    el.scrollLeft = Math.max(0, x - (el.clientWidth - on.offsetWidth) / 2);
+  }, [value]);
   return (
-    <div className={`pv-seg${className ? ` ${className}` : ""}`} role={tabs ? "tablist" : "group"} aria-label={label}>
+    <div ref={track} className={`pv-seg${className ? ` ${className}` : ""}`} role={tabs ? "tablist" : "group"} aria-label={label}>
       {options.map(([v, text]) => (
         <button
           key={v}
@@ -1094,20 +1104,23 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
   return (
     <main className="screen-body gutter page op-page">
       <Crumbs ctx={ctx} trail={[{ label: "Operas", to: { screen: "explore", by: "opera" } }, { label: opera.title, lang: opera.lang }]} />
-      <section className={`oh${art ? " has-art" : ""}`} data-tone={tone} style={opToneStyle(opera.id)}>
+      <section className={`oh${art ? " has-art" : " no-art"}`} data-tone={tone} style={opToneStyle(opera.id)}>
         {art && (
           <figure className="oh-cover">
             <img src={art.cover} alt={art.alt} />
           </figure>
         )}
         <div className="oh-text">
-          <p className="cp-eyebrow oh-eyebrow">{acts > 1 ? `Opera in ${NUMBER_WORDS[acts] ?? acts} acts` : "Opera"}</p>
-          <h1 className="oh-title" lang={opera.lang}>
-            {opera.title}
-          </h1>
+          {/* with a cover, these sit under it; without one, they are set on a plate in the opera's colour, as its banner */}
+          <div className="oh-titleblock">
+            <p className="cp-eyebrow oh-eyebrow">{acts > 1 ? `Opera in ${NUMBER_WORDS[acts] ?? acts} acts` : "Opera"}</p>
+            <h1 className="oh-title" lang={opera.lang}>
+              {opera.title}
+            </h1>
+          </div>
           {STORIES[opera.id] && (
             // the whole story on a wide screen; a phone shows its opening, the rest is behind "The story"
-            <p className="oh-story">{STORIES[opera.id]}</p>
+            <p className={`oh-story${STORIES[opera.id].length > 480 ? " is-long" : ""}`}>{STORIES[opera.id]}</p>
           )}
           <ul className="oh-tags" aria-label="About this opera">
             <li title={opera.composerFull}>
@@ -1248,26 +1261,28 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                   <button
                     type="button"
                     className="cp-btn cp-btn--ink num-go"
+                    aria-label={`Practise ${row.title}`}
                     onClick={(e) => {
                       e.stopPropagation();
                       ctx.go({ screen: "piece", opera: opera.id, character: ch.id, piece: row.piece!.index });
                     }}
                   >
                     <Play />
-                    Practise
+                    <span className="num-go-label">Practise</span>
                   </button>
                 )}
                 {listen && (
                   <button
                     type="button"
                     className="cp-btn cp-btn--ink num-go"
+                    aria-label={`Listen to ${row.title}`}
                     onClick={(e) => {
                       e.stopPropagation();
                       ctx.go({ screen: "listen", opera: opera.id, edition: listen });
                     }}
                   >
                     <Play />
-                    Listen
+                    <span className="num-go-label">Listen</span>
                   </button>
                 )}
                 {p?.context && (
@@ -2166,11 +2181,17 @@ function OperaReel({ onPick, still }: { onPick: (opera: Opera) => void; still?: 
             const art = ART[o.id];
             const n = OPERAS.indexOf(o);
             const ready = o.chars.some((ch) => ch.pieces.some((p) => p.editionId));
-            const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
             return (
               <button key={o.id} type="button" className="reel-card reel-card--opera" data-tone={OPERA_TONES[n % OPERA_TONES.length]} style={opToneStyle(o.id)} onClick={() => onPick(o)}>
                 <span className="reel-pic">
-                  {art ? <img src={art.cover} alt="" loading="lazy" decoding="async" draggable={false} /> : <span className="reel-letter" lang={o.lang}>{letter}</span>}
+                  {art ? (
+                    <img src={art.cover} alt="" loading="lazy" decoding="async" draggable={false} />
+                  ) : (
+                    <span className="og-plate" aria-hidden="true">
+                      <i lang={o.lang}>{o.title}</i>
+                      <span>{o.year}</span>
+                    </span>
+                  )}
                   {ready && <span className="reel-ready">Ready to sing</span>}
                 </span>
                 <span className="reel-name" lang={o.lang}>
@@ -2196,7 +2217,6 @@ function OperaReel({ onPick, still }: { onPick: (opera: Opera) => void; still?: 
               const art = ART[o.id];
               const n = OPERAS.indexOf(o);
               const ready = o.chars.some((ch) => ch.pieces.some((p) => p.editionId));
-              const letter = o.title.replace(/^(Il|La|Le|Les|L’|L'|Die|Der|Das|Don)\s*/u, "").charAt(0).toUpperCase();
               return (
                 <button
                   key={`${copy}-${o.id}`}
@@ -2209,7 +2229,14 @@ function OperaReel({ onPick, still }: { onPick: (opera: Opera) => void; still?: 
                   onClick={() => onPick(o)}
                 >
                   <span className="reel-pic">
-                    {art ? <img src={art.cover} alt="" decoding="async" draggable={false} /> : <span className="reel-letter" lang={o.lang}>{letter}</span>}
+                    {art ? (
+                      <img src={art.cover} alt="" decoding="async" draggable={false} />
+                    ) : (
+                      <span className="og-plate" aria-hidden="true">
+                        <i lang={o.lang}>{o.title}</i>
+                        <span>{o.year}</span>
+                      </span>
+                    )}
                     {ready && <span className="reel-ready">Ready to sing</span>}
                   </span>
                   <span className="reel-name" lang={o.lang}>
