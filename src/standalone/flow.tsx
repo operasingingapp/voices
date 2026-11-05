@@ -456,11 +456,21 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
               </ProgressRing>
               <span className="rail-role-text">
                 <span className="rail-role-name">{ch.name}</span>
-                {(() => {
-                  const m = progressOf(ctx, opera, ch);
-                  return <span className="rail-role-meta">{`${m.done} of ${m.total} learned`}</span>;
-                })()}
+                {/* keeps the room for the opera's link, which sits over this line (a button cannot hold a button) */}
+                <span className="rail-role-meta rail-role-opera-space" aria-hidden="true" lang={opera.lang}>
+                  {opera.title}
+                </span>
               </span>
+            </button>
+            <button
+              type="button"
+              className="rail-opera"
+              aria-current={place.screen === "opera" && (place as { opera?: string }).opera === opera.id ? "page" : undefined}
+              aria-label={`Open the opera ${opera.title}`}
+              onClick={() => go({ screen: "opera", opera: opera.id })}
+            >
+              <span lang={opera.lang}>{opera.title}</span>
+              <Chevron />
             </button>
             {lp && (
               <button type="button" className="rail-last" aria-label={`Continue ${lp.piece.title}`} title={lp.piece.title} onClick={() => openPiece(ctx, lp, "resume")}>
