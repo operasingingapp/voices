@@ -64,7 +64,39 @@ export function filterXml(xml: string, visible: string[] | null, hideNames: bool
     const st = p.querySelector("measure attributes staves");
     parts.push({ id, staves: st ? Number(st.textContent) || 1 : 1 });
   }
+  bracketSingers(doc, parts);
   return { xml: new XMLSerializer().serializeToString(doc), parts };
+}
+
+/** Singers next to each other in the score are joined by a bracket, as in a printed vocal score; the piano (two
+ *  staves) keeps its brace. Works on whatever parts are shown, in the order they are shown. */
+function bracketSingers(doc: Document, parts: { id: string; staves: number }[]) {
+  const list = doc.querySelector("part-list");
+  if (!list) return;
+  const staves = new Map(parts.map((p) => [p.id, p.staves]));
+  const runs: Element[][] = [];
+  let run: Element[] = [];
+  for (const sp of [...list.querySelectorAll(":scope > score-part")]) {
+    if ((staves.get(sp.getAttribute("id") ?? "") ?? 1) === 1) run.push(sp);
+    else if (run.length) (runs.push(run), (run = []));
+  }
+  if (run.length) runs.push(run);
+  runs
+    .filter((r) => r.length > 1)
+    .forEach((r, i) => {
+      const n = String(90 + i);
+      const start = doc.createElement("part-group");
+      start.setAttribute("type", "start");
+      start.setAttribute("number", n);
+      const sym = doc.createElement("group-symbol");
+      sym.textContent = "bracket";
+      start.appendChild(sym);
+      const stop = doc.createElement("part-group");
+      stop.setAttribute("type", "stop");
+      stop.setAttribute("number", n);
+      r[0].before(start);
+      r[r.length - 1].after(stop);
+    });
 }
 
 export interface VrvRenderOptions {

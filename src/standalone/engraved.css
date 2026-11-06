@@ -1,0 +1,219 @@
+/* =====================================================================
+   Engraved: what you read is printed, what you press stays the app.
+   The score's gutter, the line's box and the loop take the look of a printed vocal score; buttons, menus and
+   steps are unchanged. Loaded after the other sheets.
+   ===================================================================== */
+
+/* ---- The practice screen ---- */
+
+/* the staff names in the line's gutter: italic abbreviations, as printed at the start of a staff, not pills */
+.lane-label.lane-label--side.has-abbr {
+  border-color: transparent;
+  background: transparent;
+  padding: 0 3px 0 10px;
+}
+button.lane-label.lane-label--side.has-abbr:hover {
+  background: color-mix(in srgb, var(--ink) 5%, transparent);
+}
+.lane-label--side .lane-abbr {
+  font-size: 15px;
+  color: var(--ink-muted);
+}
+.lane-label--side .lane-abbr.is-you {
+  color: var(--now-mark);
+  font-weight: 600;
+}
+/* your line: a green rule at the edge and your name in green, instead of a band across the music */
+.lane-label--side.has-abbr:has(.lane-abbr.is-you)::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -9px;
+  bottom: -9px;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--now-mark);
+}
+.score-sheet.strip .ov-you,
+.pin-clef .ov-you {
+  display: none;
+}
+
+/* the line's box: a printed plate, a warm paper with a fine second frame inside; the character's colour only as
+   a hint */
+.practice .line-card {
+  --plate: color-mix(in srgb, var(--line-bg, var(--rail)) 16%, #f3efe6);
+  border-radius: 8px;
+  background: var(--plate);
+  box-shadow:
+    inset 0 0 0 1px rgba(26, 24, 20, 0.15),
+    inset 0 0 0 5px var(--plate),
+    inset 0 0 0 6px rgba(26, 24, 20, 0.07);
+}
+.practice .now-panel.minimal .line-card {
+  box-shadow: inset 0 0 0 1px rgba(26, 24, 20, 0.13);
+}
+
+/* ---- The loop: a faint wash between two printed repeat signs, from a note to a note ---- */
+.score-overlay > .ov-loop {
+  background: color-mix(in srgb, var(--loop-mark) 6%, transparent);
+  box-shadow: none;
+}
+/* a repeat sign on each staff: thick line, thin line and two dots (in the 2nd and 3rd spaces) */
+.score-overlay > .ov-rep {
+  position: absolute;
+  z-index: 3;
+  width: 12px;
+  pointer-events: none;
+  --dot: radial-gradient(circle, var(--loop-mark) 0 1.9px, transparent 2.4px);
+  --thin: linear-gradient(var(--loop-mark), var(--loop-mark));
+}
+.score-overlay > .ov-rep-s {
+  border-left: 3px solid var(--loop-mark);
+  background:
+    var(--thin) 2px 0 / 1px 100% no-repeat,
+    var(--dot) 4px calc(37.5% - 3px) / 6px 6px no-repeat,
+    var(--dot) 4px calc(62.5% - 3px) / 6px 6px no-repeat;
+}
+.score-overlay > .ov-rep-e {
+  margin-left: -12px;
+  border-right: 3px solid var(--loop-mark);
+  background:
+    var(--thin) calc(100% - 2px) 0 / 1px 100% no-repeat,
+    var(--dot) calc(100% - 4px) calc(37.5% - 3px) / 6px 6px no-repeat,
+    var(--dot) calc(100% - 4px) calc(62.5% - 3px) / 6px 6px no-repeat;
+}
+/* the edges you drag: an invisible strip along each sign, with a round grip at its top (start) or foot (end) */
+.score-overlay > .ov-lh {
+  width: 16px;
+  margin-left: -8px;
+  border-radius: 0;
+  background: transparent;
+}
+.score-overlay > .ov-lh-s,
+.score-overlay > .ov-lh-e {
+  margin-left: -8px;
+  border-radius: 0;
+}
+.score-overlay > .ov-lh::after {
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 -6px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--loop-mark);
+  box-shadow: 0 0 0 2px var(--canvas);
+  opacity: 1;
+}
+.score-overlay > .ov-lh-s::after {
+  top: -4px;
+}
+.score-overlay > .ov-lh-e::after {
+  top: auto;
+  bottom: -4px;
+}
+.score-overlay > .ov-lh:hover,
+.score-overlay > .ov-lh[data-drag] {
+  filter: none;
+}
+.score-overlay > .ov-lh:hover::after,
+.score-overlay > .ov-lh[data-drag]::after {
+  transform: scale(1.25);
+}
+@media (pointer: coarse) {
+  .score-overlay > .ov-lh::after {
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+  }
+}
+
+/* the page view: your line marked by the same green rule at the edge of each system, not a band */
+.score-sheet:not(.strip) .ov-you {
+  opacity: 1;
+  background: transparent;
+}
+.score-sheet:not(.strip) .ov-you::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 24%;
+  bottom: 42%;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--now-mark);
+}
+
+/* ---- Typography everywhere: titles over a fine rule, piece types as markings, one green signal ---- */
+
+/* Home: the greeting sits over a thick-and-thin rule, as a title page */
+.pv-greet {
+  position: relative;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+}
+.pv-greet::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* the role page: an act's heading over a single ink rule */
+.rp-act-head {
+  border-bottom: 1px solid var(--ink);
+}
+@media (max-width: 640px) {
+  .rp-music .rp-act-head {
+    border-bottom-color: var(--ink);
+  }
+}
+/* the kind of piece reads like a marking in a score */
+.rp-kind {
+  font: italic 400 15.5px/1.3 var(--font-display);
+}
+/* "learn next": the green play button is the one signal; no fill across the row, no green words */
+.rp-row,
+.rp-row[data-next] {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: inset 0 -1px 0 var(--fog-strong);
+}
+.rp-row:hover {
+  background: color-mix(in srgb, var(--ink) 3%, transparent);
+}
+.rp-row[data-next] .rp-status {
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+/* the role's progress: one line that fills in green, not a row of dashes */
+.rp-head .pv-segs,
+.pv-segs {
+  gap: 0;
+  height: 3px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--fog-strong);
+}
+.rp-head .pv-segs > *,
+.pv-segs i {
+  height: 3px;
+  min-width: 0;
+  border-radius: 0;
+}
+.pv-segs i[data-s="soon"] {
+  background: transparent;
+}
+.rp-list,
+.rp-music .rp-list {
+  gap: 0;
+  margin-top: 4px;
+}
+/* without a card under the row, the round play button keeps its own white circle */
+.rp-row:not([data-next]) .rp-play {
+  background: #fdfcf9;
+  box-shadow: 0 1px 3px rgba(26, 24, 20, 0.12), 0 0 0 1px rgba(26, 24, 20, 0.05);
+}

@@ -122,6 +122,9 @@ function rowsHeight(rows: { ipa: boolean; translation: boolean }): number {
 
 type Rect = { x: number; y: number; w: number; h: number; first: boolean; last: boolean; m0: number; m1: number };
 
+/** how far before a note a loop that starts or ends on it is drawn, so its accidental stays inside (px) */
+const LOOP_LEAD = 9;
+
 /** Merge consecutive measures on the same system into rectangles. */
 function rangeRects(layout: ScoreLayout, ms: number[]): Rect[] {
   const out: Rect[] = [];
@@ -441,11 +444,35 @@ export function ScoreView(props: Props) {
   const [layout, setLayout] = useState<ScoreLayout | null>(null);
   const [pinned, setPinned] = useState<ReturnType<typeof buildPinned>>(null);
   // the loop's rectangles, never under the pinned clef and key at the left edge (bar 1's box includes them)
-  const loopRects = (l: ScoreLayout) =>
-    rangeRects(l, loopMeasures).map((r) => {
+  const loopRects = (l: ScoreLayout) => {
+    const rs = rangeRects(l, loopMeasures).map((r) => {
       const edge = strip && pinned ? pinned.width : 0;
       return r.x < edge ? { ...r, w: r.w - (edge - r.x), x: edge } : r;
     });
+    // a loop may start and end on any note, not only at a bar line: trim the first and last bar to those notes
+    const lp = props.loop;
+    if (!lp || !rs.length) return rs;
+    const noteX = (q: number) => {
+      if (q >= props.perf.totalQ - 1e-6) return null;
+      const loc = props.perf.locate(q);
+      if (loc.q < 1e-6) return null;
+      const pt = l.point(loc.m, loc.q, props.edition.measures[loc.m]?.durQ ?? 4);
+      return pt ? pt.x - LOOP_LEAD : null;
+    };
+    const sx = noteX(lp.startQ);
+    const f = rs[0];
+    if (sx !== null && sx > f.x && sx < f.x + f.w) rs[0] = { ...f, w: f.w - (sx - f.x), x: sx };
+    const ex = noteX(lp.endQ);
+    const z = rs[rs.length - 1];
+    if (ex !== null && ex > z.x && ex < z.x + z.w) rs[rs.length - 1] = { ...z, w: ex - z.x };
+    return rs;
+  };
+  /** the staves a loop rectangle crosses: one repeat sign is drawn on each */
+  const lanesOf = (l: ScoreLayout, r: Rect): Lane[] => {
+    if (strip) return l.lanes;
+    const sys = l.systems.find((s) => Math.abs(s.top - 26 - r.y) < 1);
+    return sys ? (l.systemLanes.get(sys.id) ?? []) : [];
+  };
   const [pinIdx, setPinIdx] = useState(-1);
   const [loaded, setLoaded] = useState(false);
   // counts finished loads: a new score that loads at once (its parts put in another order) still gets drawn,
@@ -812,7 +839,8 @@ export function ScoreView(props: Props) {
   const loopMeasures = useMemo(() => {
     if (!props.loop) return [];
     const ms: number[] = [];
-    for (const pm of props.perf.measures) if (pm.startQ >= props.loop.startQ - 1e-6 && pm.startQ < props.loop.endQ - 1e-6) ms.push(pm.m);
+    // every bar the loop reaches into, also one it starts or ends inside
+    for (const pm of props.perf.measures) if (pm.startQ + pm.durQ > props.loop.startQ + 1e-6 && pm.startQ < props.loop.endQ - 1e-6) ms.push(pm.m);
     return ms;
   }, [props.loop, props.perf]);
 
@@ -1055,6 +1083,22 @@ export function ScoreView(props: Props) {
             loopRects(layout).map((r, i) => (
               <div key={`loop${i}`} className="ov-loop" style={{ left: r.x, top: r.y + 6, width: r.w, height: r.h - 12 }} />
             ))}
+          {layout &&
+            (() => {
+              // the loop's two ends as printed repeat signs, one on each staff it crosses
+              const rs = loopRects(layout);
+              if (!rs.length) return null;
+              const first = rs[0];
+              const last = rs[rs.length - 1];
+              return [
+                ...lanesOf(layout, first).map((ln) => (
+                  <div key={`rs-${ln.partId}`} className="ov-rep ov-rep-s" style={{ left: first.x, top: ln.top, height: ln.bottom - ln.top }} />
+                )),
+                ...lanesOf(layout, last).map((ln) => (
+                  <div key={`re-${ln.partId}`} className="ov-rep ov-rep-e" style={{ left: last.x + last.w, top: ln.top, height: ln.bottom - ln.top }} />
+                )),
+              ];
+            })()}
           {layout &&
             props.onLoopEdge &&
             (() => {

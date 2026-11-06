@@ -1534,11 +1534,15 @@ function PracticeScreen({
     } else if (h) {
       const o = perf.occurrences(h.m)[0];
       if (!o) return;
-      // a bar the edge is dragged a little way into is taken in (a quarter of it is enough), so the loop follows
-      // the finger rather than waiting for the far half of a long bar
-      const qEnd = h.q > o.durQ * 0.25 ? o.startQ + o.durQ : o.startQ;
-      const qStart = h.q < o.durQ * 0.75 ? o.startQ : o.startQ + o.durQ;
-      r = k === "s" ? { startQ: Math.min(qStart, Z.startQ), endQ: loop.endQ } : { startQ: loop.startQ, endQ: Math.max(qEnd, F.startQ + F.durQ) };
+      // an edge snaps to a note, not only to a bar line: the start to the note under the finger, the end just after it
+      // (the score already snaps the point to the nearest onset). A loop keeps at least one note.
+      const at = o.startQ + h.q;
+      const after = perf.notes.reduce((best, n) => (n.onQ > at + 1e-6 && n.onQ < best ? n.onQ : best), o.startQ + o.durQ);
+      const minLen = 0.25;
+      r =
+        k === "s"
+          ? { startQ: Math.min(at, loop.endQ - minLen), endQ: loop.endQ }
+          : { startQ: loop.startQ, endQ: Math.max(after, loop.startQ + minLen) };
     }
     if (r && (Math.abs(r.startQ - loop.startQ) > 1e-6 || Math.abs(r.endQ - loop.endQ) > 1e-6)) setLoop(r);
   };
@@ -2001,7 +2005,7 @@ function PracticeScreen({
     { id: "say", part: "The words", sel: [".now-listen"], title: "Hear the line spoken", text: "Tap the speaker. The tortoise says it slowly.", done: () => gTrack.current.spoke && !speakingId },
     { id: "word", part: "The words", sel: [".word-card .wc-actions .cp-btn--ink", ".now-it"], title: "Hear a word", text: openWord ? "Tap Hear the word." : "Tap any word in the line.", done: () => gTrack.current.wordSpoke && !speakingWord },
     { id: "loop", part: "Work on a passage", sel: [".bar-loop"], title: "Loop a passage", text: "Tap Loop. The bar you’re on is marked and will repeat.", done: () => !!loop },
-    { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], title: "Choose the bars", text: "Drag the lit purple handle outwards, along the music, to take in more bars.", done: () => gTrack.current.handleLet && !gTrack.current.holding && !!loop && gTrack.current.loopAt !== null && loop.endQ - loop.startQ > gTrack.current.loopAt + 1e-6 },
+    { id: "edge", part: "Work on a passage", sel: [".ov-lh-e", ".ov-lh-s"], title: "Choose the bars", text: "Drag a purple grip outwards, along the music. A loop can start and end on any note.", done: () => gTrack.current.handleLet && !gTrack.current.holding && !!loop && gTrack.current.loopAt !== null && loop.endQ - loop.startQ > gTrack.current.loopAt + 1e-6 },
     { id: "playloop", part: "Work on a passage", sel: ['.bar-transport [data-testid="play"]', '.bar-transport [data-testid="pause"]'], title: "Play the loop", text: "Press play and listen for it to come round.", after: "It repeats until you stop it. Leave it playing.", dwell: 3000, done: () => gTrack.current.wrapped },
     { id: "unloop", part: "Work on a passage", sel: [".bar-loop"], title: "Stop looping", text: "Tap Loop again. The music carries on from there, through the whole piece.", after: "Back to the whole piece. Leave it playing.", dwell: 2500, done: () => !loop },
     { id: "more", part: "Work on a passage", sel: [".bar-more"], title: "More controls", text: "Tap the arrow to open them. The music keeps playing.", done: () => barOpen, skipIf: () => barOpen || !window.matchMedia("(max-width: 640px)").matches },
