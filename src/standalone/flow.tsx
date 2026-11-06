@@ -1110,6 +1110,12 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
         {art && (
           <figure className="oh-cover">
             <img src={art.cover} alt={art.alt} />
+            {SYNOPSES[opera.id] && (
+              <button type="button" className="pv-chip-light oh-cover-story" onClick={() => setStory(true)}>
+                <BookIcon />
+                <span>The story</span>
+              </button>
+            )}
           </figure>
         )}
         <div className="oh-text">
@@ -1145,7 +1151,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
               </li>
             )}
           </ul>
-          {SYNOPSES[opera.id] && (
+          {SYNOPSES[opera.id] && !art && (
             <button type="button" className="cp-btn pv-btn-line oh-story-btn" onClick={() => setStory(true)}>
               <BookIcon />
               The story
