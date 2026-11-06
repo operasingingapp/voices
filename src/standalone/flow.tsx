@@ -1145,11 +1145,6 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                 <span>Sung in</span> {lang}
               </li>
             )}
-            {mineHere.length > 0 && (
-              <li className="is-yours">
-                <span>Your role</span> {mineHere.map((c) => c.name).join(", ")}
-              </li>
-            )}
           </ul>
           {SYNOPSES[opera.id] && !art && (
             <button type="button" className="cp-btn pv-btn-line oh-story-btn" onClick={() => setStory(true)}>

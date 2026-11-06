@@ -125,19 +125,10 @@
 
 /* ---- Typography everywhere: titles over a fine rule, piece types as markings, one green signal ---- */
 
-/* Home: the greeting sits over a thick-and-thin rule, as a title page */
+/* Home: the greeting over one fine rule */
 .pv-greet {
-  position: relative;
   padding-bottom: 14px;
-  border-bottom: 2px solid var(--ink);
-}
-.pv-greet::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--fog-strong);
 }
 
 /* the role page: an act's heading over a single ink rule */
@@ -187,7 +178,8 @@
 /* the opera's facts: one box, set like the credits page of a programme — a small label over each name */
 .oh-tags {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
   gap: 18px 28px;
   width: 100%;
   margin-top: 16px;
@@ -215,21 +207,13 @@
   text-transform: uppercase;
   color: var(--ink-muted);
 }
-/* your role on a line of its own under a hairline, the four facts in equal columns above it */
-.oh-tags li.is-yours {
-  grid-column: 1 / -1;
-  padding-top: 16px;
-  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ink) 10%, transparent);
-}
 @media (max-width: 640px) {
   .oh-tags {
     grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
     gap: 14px 20px;
     width: 100%;
     padding: 16px 18px 18px;
-  }
-  .oh-tags li:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
   }
 }
 /* "The story" sits on the opera's picture, as "Her story" does on the role's */
