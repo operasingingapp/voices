@@ -1484,14 +1484,19 @@ function SearchFrame({ ctx, by, asked, children }: { ctx: Ctx; by: "opera" | "vo
         {!t && (
           <div className="sx-controls">
             <Seg label="Browse by" tabs className="sx-tabs" value={by} options={EXPLORE_TABS} onChange={(b) => ctx.go({ screen: "explore", by: b })} />
-            <span className="sx-sep" aria-hidden="true" />
-            <Seg
-              label="Type of voice"
-              className="pv-seg--sm pv-seg--scroll sx-voices"
-              value={voice ?? "any"}
-              options={[["any", "Any voice"], ...VOICES.map((v) => [v, VOICE_SHORT[v] ?? v] as const)]}
-              onChange={(v) => setVoice(v === "any" ? null : v)}
-            />
+            {/* the voice filter belongs to roles and arias; operas are browsed whole */}
+            {by !== "opera" && (
+              <>
+                <span className="sx-sep" aria-hidden="true" />
+                <Seg
+                  label="Type of voice"
+                  className="pv-seg--sm pv-seg--scroll sx-voices"
+                  value={voice ?? "any"}
+                  options={[["any", "Any voice"], ...VOICES.map((v) => [v, VOICE_SHORT[v] ?? v] as const)]}
+                  onChange={(v) => setVoice(v === "any" ? null : v)}
+                />
+              </>
+            )}
             <button type="button" className="cp-toggle sx-music" aria-pressed={music} onClick={() => setMusic(!music)}>
               With music only
             </button>
@@ -1552,7 +1557,7 @@ function SearchFrame({ ctx, by, asked, children }: { ctx: Ctx; by: "opera" | "vo
           )}
         </div>
       ) : (
-        children({ voice, music })
+        children({ voice: by === "opera" ? null : voice, music })
       )}
     </main>
   );
