@@ -187,10 +187,9 @@
 /* the opera's facts: one box, set like the credits page of a programme — a small label over each name */
 .oh-tags {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, max-content));
-  gap: 16px 44px;
-  width: fit-content;
-  max-width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px 28px;
+  width: 100%;
   margin-top: 16px;
   padding: 20px 26px 22px;
   border-radius: var(--radius-card);
@@ -215,6 +214,12 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--ink-muted);
+}
+/* your role on a line of its own under a hairline, the four facts in equal columns above it */
+.oh-tags li.is-yours {
+  grid-column: 1 / -1;
+  padding-top: 16px;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ink) 10%, transparent);
 }
 @media (max-width: 640px) {
   .oh-tags {
