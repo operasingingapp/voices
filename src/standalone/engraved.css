@@ -107,20 +107,9 @@
   }
 }
 
-/* the page view: your line marked by the same green rule at the edge of each system, not a band */
+/* the page view: no band and no mark at the edge of the system; your staff name says which line is yours */
 .score-sheet:not(.strip) .ov-you {
-  opacity: 1;
-  background: transparent;
-}
-.score-sheet:not(.strip) .ov-you::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 24%;
-  bottom: 42%;
-  width: 2px;
-  border-radius: 1px;
-  background: var(--now-mark);
+  display: none;
 }
 
 /* ---- Typography everywhere: titles over a fine rule, piece types as markings, one green signal ---- */
