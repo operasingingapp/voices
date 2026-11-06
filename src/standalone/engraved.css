@@ -6,33 +6,11 @@
 
 /* ---- The practice screen ---- */
 
-/* the staff names in the line's gutter: italic abbreviations, as printed at the start of a staff, not pills */
-.lane-label.lane-label--side.has-abbr {
-  border-color: transparent;
-  background: transparent;
-  padding: 0 3px 0 10px;
-}
-button.lane-label.lane-label--side.has-abbr:hover {
-  background: color-mix(in srgb, var(--ink) 5%, transparent);
-}
-.lane-label--side .lane-abbr {
-  font-size: 15px;
-  color: var(--ink-muted);
-}
-.lane-label--side .lane-abbr.is-you {
-  color: var(--now-mark);
-  font-weight: 600;
-}
-/* your line: a green rule at the edge and your name in green, instead of a band across the music */
-.lane-label--side.has-abbr:has(.lane-abbr.is-you)::before {
-  content: "";
-  position: absolute;
-  left: 1px;
-  top: -9px;
-  bottom: -9px;
-  width: 2px;
-  border-radius: 1px;
-  background: var(--now-mark);
+/* the staff names in the line's gutter keep their pills; yours is tinted green, which also stands in for the band
+   that used to run across your line */
+.lane-label.lane-label--side.has-abbr:has(.lane-abbr.is-you) {
+  border-color: color-mix(in srgb, var(--now-mark) 45%, transparent);
+  background: color-mix(in srgb, var(--now-mark) 10%, var(--canvas));
 }
 .score-sheet.strip .ov-you,
 .pin-clef .ov-you {
@@ -175,7 +153,8 @@ button.lane-label.lane-label--side.has-abbr:hover {
 .rp-kind {
   font: italic 400 15.5px/1.3 var(--font-display);
 }
-/* "learn next": the green play button is the one signal; no fill across the row, no green words */
+/* the pieces as a printed list: hairlines between rows instead of cards; "learn next" keeps its green words and
+   green play button, without a fill across the row */
 .rp-row,
 .rp-row[data-next] {
   border-radius: 0;
@@ -185,9 +164,10 @@ button.lane-label.lane-label--side.has-abbr:hover {
 .rp-row:hover {
   background: color-mix(in srgb, var(--ink) 3%, transparent);
 }
-.rp-row[data-next] .rp-status {
-  color: var(--ink-muted);
-  font-weight: 400;
+/* the strip with your progress and the Start button: a rule above only; the progress line closes it */
+.rp-strip {
+  border-bottom: 0;
+  padding-bottom: 6px;
 }
 /* the role's progress: one line that fills in green, not a row of dashes */
 .rp-head .pv-segs,
