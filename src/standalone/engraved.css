@@ -153,47 +153,33 @@
 .rp-kind {
   font: italic 400 15.5px/1.3 var(--font-display);
 }
-/* the pieces as a printed list: hairlines between rows instead of cards; "learn next" keeps its green words and
-   green play button, without a fill across the row */
-.rp-row,
-.rp-row[data-next] {
-  border-radius: 0;
+/* the pieces keep their boxes (a card per piece, Learn next tinted green), as everywhere else in the app */
+
+/* Words: bar numbers set as in the score (italic, old-style figures) */
+.words-view .w-gut .w-bar,
+.words-view .w-line.script:not(.speech-start) .w-gut .w-bar {
+  font: italic 500 14px/1.2 var(--font-display);
+  font-variant-numeric: oldstyle-nums;
+}
+/* the word card: the meaning in italic, as a dictionary gives it */
+.wc-mean {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* the opera page: your role is named, not painted green; the tag reads like the others, the card keeps its plain
+   picture with the "Your role" label */
+.oh-tags li.is-yours {
   background: transparent;
-  box-shadow: inset 0 -1px 0 var(--fog-strong);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
 }
-.rp-row:hover {
-  background: color-mix(in srgb, var(--ink) 3%, transparent);
+.oh-tags li.is-yours span {
+  color: var(--ink-muted);
 }
-/* the strip with your progress and the Start button: a rule above only; the progress line closes it */
-.rp-strip {
-  border-bottom: 0;
-  padding-bottom: 6px;
+.cast-card.yours .cast-pic {
+  box-shadow: none;
 }
-/* the role's progress: one line that fills in green, not a row of dashes */
-.rp-head .pv-segs,
-.pv-segs {
-  gap: 0;
-  height: 3px;
-  border-radius: 2px;
-  overflow: hidden;
-  background: var(--fog-strong);
-}
-.rp-head .pv-segs > *,
-.pv-segs i {
-  height: 3px;
-  min-width: 0;
-  border-radius: 0;
-}
-.pv-segs i[data-s="soon"] {
-  background: transparent;
-}
-.rp-list,
-.rp-music .rp-list {
-  gap: 0;
-  margin-top: 4px;
-}
-/* without a card under the row, the round play button keeps its own white circle */
-.rp-row:not([data-next]) .rp-play {
-  background: #fdfcf9;
-  box-shadow: 0 1px 3px rgba(26, 24, 20, 0.12), 0 0 0 1px rgba(26, 24, 20, 0.05);
+.cast-card.yours .pv-tag {
+  color: var(--ink);
 }
