@@ -231,3 +231,47 @@
     bottom: 10px;
   }
 }
+
+/* ---- Consistency pass ---- */
+/* Home's greeting is hidden on a phone: no rule (it showed as a stray dot) */
+@media (max-width: 699px) {
+  .pv-greet {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+/* "Your role(s)" on a picture reads in ink everywhere, as on the opera page */
+.pv-tag {
+  color: var(--ink);
+}
+.vrole-yours.pv-tag {
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+}
+/* the role's "Her story" sits on the picture on a phone too, as "The story" does on the opera page */
+@media (max-width: 899px) {
+  .rp-band.has-art .rp-band-tools:has(> :only-child) {
+    display: flex;
+    right: 10px;
+    bottom: 10px;
+  }
+  .rp-head:has(.rp-band.has-art .rp-band-tools > :only-child) .rp-tools-below {
+    display: none;
+  }
+}
+/* the role's progress strip: one rule above, the dashes close it (no second rule under them) */
+.rp-strip {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+/* one paper for "yours" and for tips: the warm plate of the line's box, not lavender here and beige there */
+:root {
+  --tip-bg: #f3efe6;
+  --tip-ink: #7a6a4f;
+}
+.words-view .w-line.script.mine {
+  background: color-mix(in srgb, var(--tone-soft, #f3efe6) 22%, #f3efe6);
+}
+.words-view .w-line.script.mine:hover {
+  background: color-mix(in srgb, var(--tone-soft, #f3efe6) 35%, #ede8dd);
+}
