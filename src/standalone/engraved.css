@@ -183,3 +183,119 @@
 .cast-card.yours .pv-tag {
   color: var(--ink);
 }
+
+/* ---- Printed boxes: the same rectangles, drawn as panels in a programme, not as tinted fills ----
+   paper inside, a fine ink frame, a second hairline just inside it on the main panel */
+:root {
+  --frame: rgba(26, 24, 20, 0.2);
+  --frame-in: rgba(26, 24, 20, 0.08);
+}
+.pv-hero,
+.pv-card {
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--frame);
+  border-radius: 6px;
+}
+.pv-hero {
+  box-shadow:
+    inset 0 0 0 1px var(--frame),
+    inset 0 0 0 5px var(--canvas),
+    inset 0 0 0 6px var(--frame-in);
+}
+/* the picture sits inside the frame, like a plate in the panel */
+.pv-hero.has-pic .pv-hero-pic,
+.pv-hero.has-pic > figure,
+.pv-hero.has-pic > img {
+  border-radius: 2px;
+}
+
+/* the opera's facts: one credits box, as in a programme — a small label over each value, fine rules between */
+.oh-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+  justify-content: start;
+  gap: 0;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px var(--frame);
+  overflow: hidden;
+}
+.oh-tags li,
+.oh-tags li.is-yours {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  min-height: 0;
+  padding: 12px 22px 13px 18px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: inset 1px 0 0 var(--frame-in);
+  font: 400 17px/1.25 var(--font-display);
+  color: var(--ink);
+}
+.oh-tags li:first-child {
+  box-shadow: none;
+}
+.oh-tags li span,
+.oh-tags li.is-yours span {
+  font: 500 10.5px/1 var(--font-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+@media (max-width: 640px) {
+  .oh-tags {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .oh-tags li {
+    box-shadow: inset 1px 0 0 var(--frame-in), inset 0 1px 0 var(--frame-in);
+  }
+  .oh-tags li:nth-child(odd) {
+    box-shadow: inset 0 1px 0 var(--frame-in);
+  }
+  .oh-tags li:first-child {
+    box-shadow: none;
+  }
+  .oh-tags li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+/* the secondary round play on Home keeps a fine ring on the paper */
+.pv-next-row:not(:first-child) .pv-play,
+.pv-next li + li .pv-next-row > span:first-child {
+  box-shadow: inset 0 0 0 1px var(--frame);
+}
+
+/* the opera, in order: each piece in its own box, as on the role page; the kind of piece as a marking */
+.oh-numbers .numbers {
+  gap: 8px;
+}
+.oh-numbers .num,
+.oh-numbers .num.ready,
+.oh-numbers .num.yours {
+  border-bottom: 0;
+  border-radius: 6px;
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--frame);
+  padding: 10px 14px 10px 8px;
+}
+.num-kind {
+  font: italic 400 15.5px/1.3 var(--font-display);
+}
+
+/* the role's pieces: the same printed box; Learn next framed in green, not filled */
+.rp-row {
+  border-radius: 6px;
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--frame);
+}
+.rp-row[data-next] {
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--now-mark) 70%, transparent);
+}
+.rp-row:not([data-next]) .rp-play {
+  box-shadow: inset 0 0 0 1px var(--frame);
+}

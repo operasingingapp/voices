@@ -1131,8 +1131,14 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             <li>
               <span>Libretto</span> {opera.librettist}
             </li>
-            <li>{opera.year}</li>
-            {lang && <li>{lang}</li>}
+            <li>
+              <span>First performed</span> {opera.year}
+            </li>
+            {lang && (
+              <li>
+                <span>Sung in</span> {lang}
+              </li>
+            )}
             {mineHere.length > 0 && (
               <li className="is-yours">
                 <span>Your role</span> {mineHere.map((c) => c.name).join(", ")}
@@ -1224,7 +1230,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                 <div className="num-text">
                   <b lang={opera.lang}>{row.title}</b>
                   <span>
-                    {row.kind}
+                    <i className="num-kind">{row.kind}</i>
                     {row.who.length > 0 && " · "}
                     {row.who.map((id, k) => (
                       <span key={id}>
