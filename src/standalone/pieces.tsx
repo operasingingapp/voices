@@ -7,18 +7,18 @@ import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 
 // Each piece's data loads only when the piece opens (one small file per piece), so the app starts at once however
 // many pieces it holds.
-const editions = import.meta.glob(["../../data/content/*/edition.json", "!../../data/content/cp-fx-*/**"], { import: "default" }) as Record<
+const editions = import.meta.glob(["../../data/content/*/edition.json", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], { import: "default" }) as Record<
   string,
   () => Promise<CompiledEdition>
 >;
-const languages = import.meta.glob(["../../data/content/*/language.json", "!../../data/content/cp-fx-*/**"], { import: "default" }) as Record<
+const languages = import.meta.glob(["../../data/content/*/language.json", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], { import: "default" }) as Record<
   string,
   () => Promise<CompiledLanguage>
 >;
 const editionData = new Map<string, CompiledEdition>();
 const languageData = new Map<string, CompiledLanguage>();
 // the scores are separate files, fetched when a piece opens (bundled in, they made the app too large to publish)
-const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**"], {
+const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], {
   query: "?url",
   import: "default",
   eager: true,

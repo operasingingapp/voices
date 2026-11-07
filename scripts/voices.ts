@@ -359,11 +359,15 @@ const LANGUAGE_NAME: Record<string, string> = { it: "Italian", de: "German", fr:
 const AUDITION_LINE: Record<string, string> = {
   it: "O mio babbino caro, mi piace, è bello, bello.",
   de: "Der Hölle Rache kocht in meinem Herzen.",
+  cs: "Měsíčku na nebi hlubokém, světlo tvé daleko vidí.",
+  fr: "L'amour est un oiseau rebelle que nul ne peut apprivoiser.",
 };
 /** regional accents to pass over: a standard accent reads diction best */
 const REGIONAL: Record<string, RegExp> = {
   it: /sicil|napol|venet|sard|roman|milan/i,
   de: /swiss|schweiz|austria|österreich|bavar|bayer|saxon|sächs|berlin|swabian|schwäb/i,
+  fr: /canad|québ|quebec|belg|swiss|suisse|africa|afriq|cajun|louisian/i,
+  cs: /morav|slovak|silesi/i,
 };
 
 async function chooseVoice(lang = "it"): Promise<{ id: string; name: string }> {
