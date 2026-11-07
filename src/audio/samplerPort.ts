@@ -877,6 +877,10 @@ export class SamplerPort implements SynthPort {
    */
   async resume() {
     unlockMediaPlayback();
+    // iPhone: a context made before the first tap (as this one is, to load the piano) can report "running" and
+    // move its clock while staying silent, until a sound is started inside a tap. Start one silent frame here,
+    // synchronously, before anything is awaited, on every press of play.
+    this.tapWake();
     if (this.ctx.state === "running") return;
     const wake = () =>
       Promise.race([
@@ -885,6 +889,18 @@ export class SamplerPort implements SynthPort {
       ]);
     await wake();
     if ((this.ctx.state as string) !== "running") await wake();
+  }
+
+  private tapWake() {
+    try {
+      const b = this.ctx.createBuffer(1, 1, this.ctx.sampleRate);
+      const src = this.ctx.createBufferSource();
+      src.buffer = b;
+      src.connect(this.ctx.destination);
+      src.start(0);
+    } catch {
+      /* nothing to wake */
+    }
   }
 
   currentTime() {
