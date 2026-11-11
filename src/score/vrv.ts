@@ -214,6 +214,13 @@ export class VrvScore {
       }
       if (staff) el.setAttribute("data-staff", staff);
     }
+    // a slur or tie that crosses into the next system is drawn there again (class "spanning id-<its id>"), outside any
+    // bar: it takes the staff of the element it continues
+    for (const el of this.host.querySelectorAll<SVGGElement>("g.spanning")) {
+      const id = [...el.classList].find((c) => c.startsWith("id-"))?.slice(3);
+      const staff = id ? this.host.querySelector(`[id="${id}"]`)?.getAttribute("data-staff") : null;
+      if (staff) el.setAttribute("data-staff", staff);
+    }
   }
 
   /** the staff numbers (Verovio's @n, counted over the parts shown) of a part */
