@@ -7,7 +7,7 @@ import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 import { usePlayback } from "../audio/usePlayback";
 import previewScore from "./preview-score.svg?raw";
 import { decorate, syllableRanges } from "./syllables";
-import { ART, ART_TONES, BRAVO, PORTRAITS, STORIES } from "./opera-extra";
+import { ART, ART_TONES, BRAVO, PORTRAITS, PREMIERES, STORIES } from "./opera-extra";
 import { SYNOPSES, Story, storyOf } from "./synopses";
 import { ARCS } from "./arcs";
 import { useBackToClose } from "./nav";
@@ -1130,22 +1130,34 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             // the whole story on a wide screen; a phone shows its opening, the rest is behind "The story"
             <p className={`oh-story${STORIES[opera.id].length > 480 ? " is-long" : ""}`}>{STORIES[opera.id]}</p>
           )}
-          <ul className="oh-tags" aria-label="About this opera">
-            <li title={opera.composerFull}>
-              <span>Music</span> {opera.composer}
-            </li>
-            <li>
-              <span>Libretto</span> {opera.librettist}
-            </li>
-            <li>
-              <span>First performed</span> {opera.year}
-            </li>
+          {/* the credits, set as a programme sets them: a small label, then the name; the premiere with its theatre */}
+          <dl className="oh-tags oh-credits" aria-label="About this opera">
+            <div>
+              <dt>Music</dt>
+              <dd>{opera.composerFull || opera.composer}</dd>
+            </div>
+            <div>
+              <dt>Libretto</dt>
+              <dd>{opera.librettist}</dd>
+            </div>
+            <div>
+              <dt>First performed</dt>
+              <dd>
+                {opera.year}
+                {PREMIERES[opera.id] && (
+                  <small>
+                    {PREMIERES[opera.id].theatre}, {PREMIERES[opera.id].city}
+                  </small>
+                )}
+              </dd>
+            </div>
             {lang && (
-              <li>
-                <span>Sung in</span> {lang}
-              </li>
+              <div>
+                <dt>Sung in</dt>
+                <dd>{lang}</dd>
+              </div>
             )}
-          </ul>
+          </dl>
           {SYNOPSES[opera.id] && !art && (
             <button type="button" className="cp-btn pv-btn-line oh-story-btn" onClick={() => setStory(true)}>
               <BookIcon />
@@ -2865,12 +2877,11 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
   const resume = hero && (
     <section className={`pv-hero${heroPic ? " has-pic" : ""}`} {...tone(hero)} aria-labelledby="hm-resume-h">
       <div className="pv-hero-text">
-        <p className="pv-eyebrow">
-          {last ? "Continue" : "Your first piece"} · {actKind(hero.piece)}
-        </p>
+        <p className="pv-eyebrow">{last ? "Continue" : "Your first piece"}</p>
         <h2 className={`pv-hero-title${hero.piece.title.length > 26 ? " is-long" : ""}`} id="hm-resume-h" lang={hero.opera.lang}>
           {hero.piece.title}
         </h2>
+        {actKind(hero.piece) && <p className="pv-hero-mark">{actKind(hero.piece)}</p>}
         {last && last.bar && last.bar !== "1" ? (
           <div className="pv-hero-place">
             <span className="pv-hero-stop">

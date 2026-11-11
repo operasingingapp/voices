@@ -116,6 +116,23 @@ export const ART: Record<string, { cover: string; square: string; alt: string }>
     .filter(([, a]) => a.cover && a.square),
 );
 
+/** Where each opera was first performed: the theatre and the city, as a programme's credits page gives them. */
+export const PREMIERES: Record<string, { theatre: string; city: string }> = {
+  figaro: { theatre: "Burgtheater", city: "Vienna" },
+  giovanni: { theatre: "Nostitz Theatre", city: "Prague" },
+  cosi: { theatre: "Burgtheater", city: "Vienna" },
+  zauberfloete: { theatre: "Theater auf der Wieden", city: "Vienna" },
+  barbiere: { theatre: "Teatro Argentina", city: "Rome" },
+  elisir: { theatre: "Teatro della Canobbiana", city: "Milan" },
+  rigoletto: { theatre: "La Fenice", city: "Venice" },
+  traviata: { theatre: "La Fenice", city: "Venice" },
+  carmen: { theatre: "Opéra-Comique", city: "Paris" },
+  boheme: { theatre: "Teatro Regio", city: "Turin" },
+  tosca: { theatre: "Teatro Costanzi", city: "Rome" },
+  butterfly: { theatre: "La Scala", city: "Milan" },
+  schicchi: { theatre: "Metropolitan Opera", city: "New York" },
+};
+
 export const STORIES: Record<string, string> = {
   figaro:
     "On their wedding day, Susanna tells Figaro that their master, Count Almaviva, wants her for himself. With the neglected Countess they plot to catch him out, while the Count does all he can to put off the wedding, the lovesick page Cherubino keeps turning up where he shouldn't, and old Marcellina tries to hold Figaro to a promise of marriage, until a mark on his arm shows that she and Doctor Bartolo are his long-lost parents, and the two couples marry together. Meanwhile, as bait, Susanna has promised the Count a meeting in the garden that night, but the Countess will go in her place. Figaro, not in on the plan, thinks Susanna is betraying him and lies in wait. In the dark the Count is caught courting his own wife, and he begs her forgiveness.",

@@ -264,3 +264,138 @@
 .words-view .w-line.script.mine:hover {
   background: color-mix(in srgb, var(--tone-soft, #f3efe6) 35%, #ede8dd);
 }
+
+/* =====================================================================
+   Credits and home, set like a programme: no boxes, fine rules, names in the display face
+   ===================================================================== */
+
+/* ---- The opera's credits: a ruled list, a small label beside each name (a phone), or four columns (wide) ---- */
+.oh-tags.oh-credits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  margin: 18px 0 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--fog-strong);
+}
+.oh-credits > div {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px 20px 18px;
+}
+.oh-credits > div:first-child { padding-left: 0; }
+.oh-credits > div + div { border-left: 1px solid var(--fog-strong); }
+.oh-credits dt {
+  margin: 0;
+  font: 500 10.5px/1.2 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.oh-credits dd {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  font: 500 21px/1.2 var(--font-display);
+  color: var(--ink);
+  text-wrap: balance;
+  font-variant-numeric: oldstyle-nums;
+}
+.oh-credits dd small {
+  font: italic 400 15px/1.3 var(--font-display);
+  color: var(--ink-muted);
+}
+@media (max-width: 640px) {
+  .oh-tags.oh-credits { grid-template-columns: minmax(0, 1fr); margin-top: 6px; }
+  .oh-credits > div,
+  .oh-credits > div:first-child {
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 12px;
+    padding: 13px 0 12px;
+  }
+  .oh-credits > div + div { border-left: 0; border-top: 1px solid var(--fog-strong); }
+  .oh-credits dt { font-size: 10px; letter-spacing: 0.14em; line-height: 1.5; }
+  .oh-credits dd { font-size: 20px; }
+  .oh-credits dd small { font-size: 14.5px; }
+}
+/* "The story" under the credits (an opera with no picture): a quiet line button, not a full-width bar */
+.oh-text > .oh-story-btn.cp-btn { align-self: flex-start; min-height: 44px; margin-top: 2px; }
+
+/* ---- Home ---- */
+.pv-home { gap: 36px; }
+/* the piece in hand: the role's colour as a printed plate, with the fine second frame of the line's box */
+.pv-hero { position: relative; border-radius: 10px; }
+.pv-hero:not(.has-pic) { box-shadow: inset 0 0 0 1px rgba(26, 24, 20, 0.13); }
+.pv-hero:not(.has-pic)::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(26, 24, 20, 0.08);
+  pointer-events: none;
+}
+.pv-hero-text { gap: 12px; }
+/* the act and kind under the title, as a marking in a score */
+.pv-hero-mark {
+  margin: -4px 0 0;
+  font: italic 400 20px/1.3 var(--font-display);
+  color: var(--on-pastel-muted);
+}
+.pv-hero-who { font-size: 14.5px; }
+
+/* up next and the role act by act: open sections under a fine ink rule, no boxes */
+.pv-below { gap: 36px 48px; }
+.pv-next.pv-card,
+.pv-acts.pv-card {
+  border-radius: 0;
+  background: none;
+  border-top: 1px solid var(--ink);
+}
+.pv-next.pv-card { padding: 0; }
+.pv-next li:last-child { border-bottom: 1px solid var(--fog-strong); }
+.pv-next-row { min-height: 80px; }
+.pv-disc { background: transparent; box-shadow: inset 0 0 0 1px var(--fog-strong); }
+.pv-disc.is-main { box-shadow: none; }
+.pv-next-row:hover .pv-disc:not(.is-main) { box-shadow: inset 0 0 0 1px var(--ink); }
+.pv-next-text b { font: 500 23px/1.15 var(--font-display); }
+.pv-next-meta { font: italic 400 16px/1.3 var(--font-display); }
+
+.pv-acts.pv-card { padding: 14px 0 0; gap: 14px; }
+.pv-acts-head { margin: 0; align-items: baseline; }
+.pv-acts .pv-h3 { font: 500 26px/1.15 var(--font-display); letter-spacing: -0.005em; }
+.pv-acts-sum { margin: -6px 0 2px; font-size: 14px; }
+.pv-act-name { font: italic 400 17px/1 var(--font-display); color: var(--ink); }
+.pv-act-count { font: 400 16px/1 var(--font-display); font-variant-numeric: oldstyle-nums; }
+.pv-seg-btn.here::before { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 3.5px var(--now-mark); }
+.pv-key { padding-top: 12px; border-top: 1px solid var(--fog-strong); font-size: 12.5px; }
+
+@media (max-width: 699px) {
+  .pv-home { gap: 30px; }
+  /* no picture: the face sits small at the plate's top right, beside the label and title */
+  .pv-hero:not(.has-pic) .pv-hero-pic {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: auto;
+    padding: 0;
+  }
+  .pv-hero:not(.has-pic) .pv-hero-face { width: 64px; height: 64px; }
+  .pv-hero:not(.has-pic) .pv-hero-text { padding-top: 26px; }
+  .pv-hero:not(.has-pic) .pv-eyebrow,
+  .pv-hero:not(.has-pic) .pv-hero-title { padding-right: 76px; }
+  .pv-hero-text { padding: 22px 20px 20px; }
+  .pv-hero-mark { font-size: 18px; }
+  .pv-next.pv-card { padding: 0; }
+  .pv-next-row { grid-template-columns: 44px minmax(0, 1fr) 16px; min-height: 76px; }
+  .pv-next-text b { font-size: 21px; }
+  .pv-acts.pv-card { padding: 12px 0 0; }
+  .pv-acts .pv-h3 { font-size: 24px; }
+  .pv-act-row { grid-template-columns: 46px minmax(0, 1fr) 36px; }
+}
