@@ -1,0 +1,53 @@
+{
+ "editionId": "mozart-cosi-sinfonia",
+ "editionVersion": "1.0.0-peters",
+ "title": "Sinfonia",
+ "subtitle": "The overture to Così fan tutte, in Kurt Soldan's piano reduction",
+ "kind": "overture",
+ "fixture": false,
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P1",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.8
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Sinfonia (overture; “Ouvertura” in this score)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Piano reduction by Kurt Soldan in the Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 1–6, 261 bars",
+   "author": "Kurt Soldan (1891–1946)",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: each page range read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar by fresh checkers (clean). The editorial [f] in bar 1 is entered as a plain f; grace notes as sixteenths. Instrument cues (G. Orch., Ob., Fl., Str., Pk., Bässe…) are left out. Playback tempo from the lengths of four complete recordings (Jacobs, Muti, Cantelli, Böhm; median about 4:28): Andante at ♩ = 67, Presto at a half note = 136 (♩ = 272); Mozart gives the words only."
+  }
+ ]
+}

@@ -1623,6 +1623,7 @@ export const OPERAS: Opera[] = [
       "title": "La mia Dorabella capace non è",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: La mia Dorabella capace non è",
+      "editionId": "mozart-la-mia-dorabella",
       "when": "Act 1, curtain up: in a coffee house, Ferrando and Guglielmo are defending their fiancées against their old friend Don Alfonso"
      },
      {
@@ -1704,6 +1705,7 @@ export const OPERAS: Opera[] = [
       "title": "La mia Dorabella capace non è",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: La mia Dorabella capace non è",
+      "editionId": "mozart-la-mia-dorabella",
       "when": "Act 1, curtain up: in a coffee house, Ferrando and Guglielmo are defending their fiancées against their old friend Don Alfonso"
      },
      {
@@ -1791,6 +1793,7 @@ export const OPERAS: Opera[] = [
       "title": "La mia Dorabella capace non è",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: La mia Dorabella capace non è",
+      "editionId": "mozart-la-mia-dorabella",
       "when": "Act 1, curtain up: in a coffee house, Ferrando and Guglielmo are defending their fiancées against their old friend Don Alfonso"
      },
      {
@@ -3395,6 +3398,7 @@ export interface RunningNumber {
 /** the instrumental numbers with music in the app: opera → the running order's title → edition */
 const INSTRUMENTAL: Record<string, Record<string, string>> = {
   figaro: { Sinfonia: "mozart-figaro-sinfonia", "Giovani liete": "mozart-giovani-liete", "Giovani liete (repeated)": "mozart-giovani-liete-reprise", "Ricevete, o padroncina": "mozart-ricevete-o-padroncina" },
+  cosi: { Sinfonia: "mozart-cosi-sinfonia" },
 };
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {

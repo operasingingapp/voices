@@ -2467,6 +2467,65 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-cosi-sinfonia": {
+    // no one sings it: the cast list's first character stands for the opera
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Overture",
+    facts: {
+      key: "C major",
+      time: "¢ (alla breve)",
+      tempo: "Andante at ♩ = 67, then Presto at a half note = 136 (♩ = 272), about 4½ minutes: set from the lengths of four complete recordings (Jacobs, Muti, Cantelli, Böhm); Mozart gives the words only",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          The orchestra plays alone with the curtain down: a short slow Andante, then a fast Presto. The curtain rises only during the first number.
+        </p>
+        <p>
+          Score: the “Ouvertura”, vocal score pages 1–6 (261 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition Peters
+          Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: each page range read by two independent readers, every
+          disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar by fresh checkers. The
+          instrument cues printed over the staves are left off; the editorial [f] of bar 1 is played as a plain f. Mozart gives no metronome number; the
+          tempos are taken from the lengths of four complete recordings.
+        </p>
+        <p>Music by Wolfgang Amadeus Mozart (1790), public domain.</p>
+      </>
+    ),
+  },
+  "mozart-la-mia-dorabella": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Terzetto",
+    facts: {
+      key: "G major",
+      time: "4/4",
+      tempo: "Allegro, played at ♩ = 123 (about 2 minutes, the median of four complete recordings: Jacobs, Harnoncourt, Muti, Böhm): Mozart gives the word only",
+    },
+    notePlaceholder: "Ferrando and Guglielmo swear by their fiancées; Don Alfonso would rather drop the subject",
+    about: (
+      <>
+        <p>
+          In a coffee house, Ferrando says his Dorabella could never betray him: heaven made her as faithful as she is beautiful. Guglielmo says the same of
+          his Fiordiligi. Their grey-haired friend Don Alfonso would rather drop the subject, but they insist: if he has hinted that women can be
+          unfaithful, he must prove it, or draw his sword and end the friendship. Alfonso calls it madness to go looking for a misfortune that only makes you
+          wretched once you find it, while each officer says that anyone who lets slip a word against her cuts him to the quick.
+        </p>
+        <p>
+          Score: No. 1, the Terzetto (vocal score pages 7–12, 61 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and slurs, then checked bar by bar by a fresh
+          checker. Only the Italian words are kept, with the print's spellings (quà, cel'); the stage direction and instrument cues are left out. The
+          eighths of the last bar, beamed in threes, are read as triplets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

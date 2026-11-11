@@ -606,6 +606,27 @@
     }
   },
   {
+    "editionId": "mozart-cosi-sinfonia",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-cosi-sinfonia@1.0.0-peters#971b2b5ce4",
+    "title": "Sinfonia",
+    "subtitle": "The overture to Così fan tutte, in Kurt Soldan's piano reduction",
+    "kind": "overture",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [],
+    "measures": 261,
+    "durationSec": 268,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 0,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-crudel-perche-finora",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-crudel-perche-finora@1.0.0-klengel#0364689a91",
@@ -1526,6 +1547,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-la-mia-dorabella",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-la-mia-dorabella@1.0.0-peters#58042543a7",
+    "title": "La mia Dorabella capace non è",
+    "subtitle": "Ferrando, Guglielmo and Don Alfonso: terzetto from Così fan tutte, Act 1 (No. 1)",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 61,
+    "durationSec": 119,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 70,
       "withAudio": 0,
       "reviewed": 0
     }
