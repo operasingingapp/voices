@@ -2526,6 +2526,69 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-fuor-la-spada": {
+    portrait: "cosi:guglielmo",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 93, from the lengths of three complete recordings (Böhm, Jacobs, Gardiner; about 1 minute)",
+    },
+    notePlaceholder: "Speak it first, then sing: the officers are hot-headed, Alfonso unruffled",
+    about: (
+      <>
+        <p>
+          Swords drawn, Guglielmo tells Don Alfonso to choose which of them he will fight. Alfonso calmly replies that he is a man of peace who fights
+          duels only at the dinner table. Ferrando demands that he either fight or say why he thinks their sweethearts capable of infidelity. Alfonso swears
+          he is not joking: he only wants to know whether their beauties are goddesses or women of flesh and blood like everyone else. When the two admit
+          that they are women, he laughs at their simple faith in finding fidelity in women.
+        </p>
+        <p>
+          Score: the recitative after No. 1 (vocal score pages 12–13, 25 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Where the print
+          gives a second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with the print's spellings ('la spada,
+          sciegliete, perchè). The last bar is printed as a half bar, leading straight into No. 2.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-e-la-fede-delle-femmine": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Terzetto",
+    facts: {
+      key: "E major",
+      time: "¢ (alla breve)",
+      tempo: "Allegro, played at a half note = 97 (♩ = 194), about 1 minute: the median length of three complete recordings (Böhm, Gardiner, Barenboim); Mozart gives the word only",
+    },
+    notePlaceholder: "Alfonso teases lightly; the officers answer with fire",
+    about: (
+      <>
+        <p>
+          Don Alfonso jokes that women's faithfulness is like the Arabian phoenix: everyone says it exists, no one knows where. Ferrando cries that
+          Dorabella is the phoenix, Guglielmo that Fiordiligi is. Alfonso answers that it is neither one nor the other: there never was one, and there
+          never will be.
+        </p>
+        <p>
+          Score: No. 2, the Terzetto (vocal score pages 14–16, 55 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by
+          a fresh checker. Only the Italian words are kept, with the print's spelling (femmine); the misprint “fedc” in bar 1 is read as “fede”, and the
+          stage directions and instrument cues are left out. The last bar, a single beat, holds Ferrando's first syllables of the next recitative.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

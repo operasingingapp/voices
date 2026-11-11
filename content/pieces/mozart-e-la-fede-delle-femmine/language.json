@@ -1,0 +1,994 @@
+{
+ "editionId": "mozart-e-la-fede-delle-femmine",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving (femmine with a double m, sung as printed; the misprint fedc of bar 1 is read as fede). IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L03, IPA checked against Castel), repeated where the score repeats the text. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Ferrando's two upbeat syllables in the last bar (Scioc-che-) begin the next recitative's first word, Scioccherie, and belong to that piece. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "È la fede delle femmine",
+   "translation": "Women's faithfulness is",
+   "ipa": "ˈɛ la ˈfe.de ˈdel.le ˈfɛm.mi.ne",
+   "words": [
+    [
+     "È",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fede",
+     "faith",
+     "ˈfe.de"
+    ],
+    [
+     "delle",
+     "of the",
+     "ˈdel.le"
+    ],
+    [
+     "femmine",
+     "women",
+     "ˈfɛm.mi.ne"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "come l'araba fenice,",
+   "translation": "like the Arabian phoenix:",
+   "ipa": "ˈko.me ˈla.ra.ba feˈni.tʃe",
+   "words": [
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "l'araba",
+     "the Arabian",
+     "ˈla.ra.ba"
+    ],
+    [
+     "fenice,",
+     "phoenix",
+     "feˈni.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "che vi sia ciascun lo dice,",
+   "translation": "that it exists, everyone says,",
+   "ipa": "ke vi ˈsi.a tʃaˈskun lo ˈdi.tʃe",
+   "words": [
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "vi",
+     "there",
+     "vi"
+    ],
+    [
+     "sia",
+     "may be",
+     "ˈsi.a"
+    ],
+    [
+     "ciascun",
+     "everyone",
+     "tʃaˈskun"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "dice,",
+     "says",
+     "ˈdi.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "it exists (subjunctive)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "ciascun lo dice...",
+   "translation": "everyone says…",
+   "ipa": "tʃaˈskun lo ˈdi.tʃe",
+   "words": [
+    [
+     "ciascun",
+     "everyone",
+     "tʃaˈskun"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "dice...",
+     "says",
+     "ˈdi.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "dove sia... dove sia...",
+   "translation": "where it is… where it is…",
+   "ipa": "ˈdo.ve ˈsi.a ˈdo.ve ˈsi.a",
+   "words": [
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "sia...",
+     "it may be",
+     "ˈsi.a"
+    ],
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "sia...",
+     "it may be",
+     "ˈsi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1
+     ],
+     "gloss": "subjunctive: it may be"
+    },
+    {
+     "words": [
+      3
+     ],
+     "gloss": "subjunctive: it may be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a6",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "nessun lo sa.",
+   "translation": "no one knows.",
+   "ipa": "nesˈsun lo ˈsa",
+   "words": [
+    [
+     "nessun",
+     "no one",
+     "nesˈsun"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sa.",
+     "knows",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f1",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "La fenice è Dorabella,",
+   "translation": "The phoenix is Dorabella,",
+   "ipa": "la feˈni.tʃe‿ˈɛ do.raˈbɛl.la",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "fenice",
+     "phoenix",
+     "feˈni.tʃe"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "Dorabella,",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g1",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "La fenice è Fiordiligi,",
+   "translation": "The phoenix is Fiordiligi,",
+   "ipa": "la feˈni.tʃe‿ˈɛ fjor.diˈli.dʒi",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "fenice",
+     "phoenix",
+     "feˈni.tʃe"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "Fiordiligi,",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "Dorabella, la fenice è Dorabella.",
+   "translation": "Dorabella, the phoenix is Dorabella.",
+   "ipa": "do.raˈbɛl.la la feˈni.tʃe‿ˈɛ do.raˈbɛl.la",
+   "words": [
+    [
+     "Dorabella,",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fenice",
+     "phoenix",
+     "feˈni.tʃe"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "Dorabella.",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "Fiordiligi, la fenice è Fiordiligi.",
+   "translation": "Fiordiligi, the phoenix is Fiordiligi.",
+   "ipa": "fjor.diˈli.dʒi la feˈni.tʃe‿ˈɛ fjor.diˈli.dʒi",
+   "words": [
+    [
+     "Fiordiligi,",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fenice",
+     "phoenix",
+     "feˈni.tʃe"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "Fiordiligi.",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a7",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Non è questa, non è quella,",
+   "translation": "It is not this one, it is not that one,",
+   "ipa": "non ˈɛ ˈkwe.sta non ˈɛ ˈkwel.la",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "questa,",
+     "this one",
+     "ˈkwe.sta"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "quella,",
+     "that one",
+     "ˈkwel.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a8",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "non fu mai, non vi sarà,",
+   "translation": "there never was one, there never will be,",
+   "ipa": "non ˈfu ˈmai non vi saˈra",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "fu",
+     "was",
+     "ˈfu"
+    ],
+    [
+     "mai,",
+     "ever",
+     "ˈmai"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vi",
+     "there",
+     "vi"
+    ],
+    [
+     "sarà,",
+     "will be",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "never was"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "there will not be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a9",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "non vi sarà, non vi sarà.",
+   "translation": "there never will be, there never will be.",
+   "ipa": "non vi saˈra non vi saˈra",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vi",
+     "there",
+     "vi"
+    ],
+    [
+     "sarà,",
+     "will be",
+     "saˈra"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vi",
+     "there",
+     "vi"
+    ],
+    [
+     "sarà.",
+     "will be",
+     "saˈra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "there will not be"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "there will not be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a10",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "È la fede delle femmine",
+   "translation": "Women's faithfulness is",
+   "ipa": "ˈɛ la ˈfe.de ˈdel.le ˈfɛm.mi.ne",
+   "words": [
+    [
+     "È",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fede",
+     "faith",
+     "ˈfe.de"
+    ],
+    [
+     "delle",
+     "of the",
+     "ˈdel.le"
+    ],
+    [
+     "femmine",
+     "women",
+     "ˈfɛm.mi.ne"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a11",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "come l'araba fenice,",
+   "translation": "like the Arabian phoenix:",
+   "ipa": "ˈko.me ˈla.ra.ba feˈni.tʃe",
+   "words": [
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "l'araba",
+     "the Arabian",
+     "ˈla.ra.ba"
+    ],
+    [
+     "fenice,",
+     "phoenix",
+     "feˈni.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f3",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "La fenice è Dorabella, Dorabella è la fenice,",
+   "translation": "The phoenix is Dorabella, Dorabella is the phoenix,",
+   "ipa": "la feˈni.tʃe‿ˈɛ do.raˈbɛl.la do.raˈbɛl.la‿ˈɛ la feˈni.tʃe",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "fenice",
+     "phoenix",
+     "feˈni.tʃe"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "Dorabella,",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ],
+    [
+     "Dorabella",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fenice,",
+     "phoenix",
+     "feˈni.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "La fenice è Fiordiligi, Fiordiligi è la fenice,",
+   "translation": "The phoenix is Fiordiligi, Fiordiligi is the phoenix,",
+   "ipa": "la feˈni.tʃe‿ˈɛ fjor.diˈli.dʒi fjor.diˈli.dʒi‿ˈɛ la feˈni.tʃe",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "fenice",
+     "phoenix",
+     "feˈni.tʃe"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "Fiordiligi,",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ],
+    [
+     "Fiordiligi",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fenice,",
+     "phoenix",
+     "feˈni.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a12",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "che vi sia, ciascun lo dice...",
+   "translation": "that it exists, everyone says…",
+   "ipa": "ke vi ˈsi.a tʃaˈskun lo ˈdi.tʃe",
+   "words": [
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "vi",
+     "there",
+     "vi"
+    ],
+    [
+     "sia,",
+     "may be",
+     "ˈsi.a"
+    ],
+    [
+     "ciascun",
+     "everyone",
+     "tʃaˈskun"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "dice...",
+     "says",
+     "ˈdi.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "it exists (subjunctive)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f4",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "Dorabella,",
+   "translation": "Dorabella,",
+   "ipa": "do.raˈbɛl.la",
+   "words": [
+    [
+     "Dorabella,",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "Fiordiligi,",
+   "translation": "Fiordiligi,",
+   "ipa": "fjor.diˈli.dʒi",
+   "words": [
+    [
+     "Fiordiligi,",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a13",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "dove sia... dove sia...",
+   "translation": "where it is… where it is…",
+   "ipa": "ˈdo.ve ˈsi.a ˈdo.ve ˈsi.a",
+   "words": [
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "sia...",
+     "it may be",
+     "ˈsi.a"
+    ],
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "sia...",
+     "it may be",
+     "ˈsi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1
+     ],
+     "gloss": "subjunctive: it may be"
+    },
+    {
+     "words": [
+      3
+     ],
+     "gloss": "subjunctive: it may be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "Fiordiligi,",
+   "translation": "Fiordiligi,",
+   "ipa": "fjor.diˈli.dʒi",
+   "words": [
+    [
+     "Fiordiligi,",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f5",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "Dorabella,",
+   "translation": "Dorabella,",
+   "ipa": "do.raˈbɛl.la",
+   "words": [
+    [
+     "Dorabella,",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a14",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "nessun lo sa,",
+   "translation": "no one knows,",
+   "ipa": "nesˈsun lo ˈsa",
+   "words": [
+    [
+     "nessun",
+     "no one",
+     "nesˈsun"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sa,",
+     "knows",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f6",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "51",
+   "original": "Dorabella.",
+   "translation": "Dorabella.",
+   "ipa": "do.raˈbɛl.la",
+   "words": [
+    [
+     "Dorabella.",
+     "Dorabella",
+     "do.raˈbɛl.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "Fiordiligi.",
+   "translation": "Fiordiligi.",
+   "ipa": "fjor.diˈli.dʒi",
+   "words": [
+    [
+     "Fiordiligi.",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a15",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "nessun lo sa.",
+   "translation": "no one knows.",
+   "ipa": "nesˈsun lo ˈsa",
+   "words": [
+    [
+     "nessun",
+     "no one",
+     "nesˈsun"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sa.",
+     "knows",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

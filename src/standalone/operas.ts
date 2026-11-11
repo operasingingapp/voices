@@ -1630,6 +1630,7 @@ export const OPERAS: Opera[] = [
       "title": "È la fede delle femmine",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: È la fede delle femmine",
+      "editionId": "mozart-e-la-fede-delle-femmine",
       "when": "Act 1, the officers admit that their sweethearts are women, not goddesses, and Don Alfonso laughs at them for expecting fidelity from women"
      },
      {
@@ -1691,6 +1692,13 @@ export const OPERAS: Opera[] = [
       "kind": "Andante · Act 2",
       "id": "Act 2: Tutti accusan le donne",
       "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
+     },
+     {
+      "title": "Fuor la spada: scegliete",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Fuor la spada: scegliete",
+      "editionId": "mozart-fuor-la-spada",
+      "when": "Act 1, straight after the opening terzetto, in the coffee house: Don Alfonso has hinted that the officers' fiancées could be unfaithful, and they draw their swords on him"
      }
     ]
    },
@@ -1712,6 +1720,7 @@ export const OPERAS: Opera[] = [
       "title": "È la fede delle femmine",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: È la fede delle femmine",
+      "editionId": "mozart-e-la-fede-delle-femmine",
       "when": "Act 1, the officers admit that their sweethearts are women, not goddesses, and Don Alfonso laughs at them for expecting fidelity from women"
      },
      {
@@ -1773,6 +1782,13 @@ export const OPERAS: Opera[] = [
       "kind": "Andante · Act 2",
       "id": "Act 2: Tutti accusan le donne",
       "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
+     },
+     {
+      "title": "Fuor la spada: scegliete",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Fuor la spada: scegliete",
+      "editionId": "mozart-fuor-la-spada",
+      "when": "Act 1, straight after the opening terzetto, in the coffee house: Don Alfonso has hinted that the officers' fiancées could be unfaithful, and they draw their swords on him"
      }
     ]
    },
@@ -1800,6 +1816,7 @@ export const OPERAS: Opera[] = [
       "title": "È la fede delle femmine",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: È la fede delle femmine",
+      "editionId": "mozart-e-la-fede-delle-femmine",
       "when": "Act 1, the officers admit that their sweethearts are women, not goddesses, and Don Alfonso laughs at them for expecting fidelity from women"
      },
      {
@@ -1831,6 +1848,13 @@ export const OPERAS: Opera[] = [
       "kind": "Andante · Act 2",
       "id": "Act 2: Tutti accusan le donne",
       "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
+     },
+     {
+      "title": "Fuor la spada: scegliete",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Fuor la spada: scegliete",
+      "editionId": "mozart-fuor-la-spada",
+      "when": "Act 1, straight after the opening terzetto, in the coffee house: Don Alfonso has hinted that the officers' fiancées could be unfaithful, and they draw their swords on him"
      }
     ]
    }

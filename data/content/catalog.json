@@ -803,6 +803,46 @@
     }
   },
   {
+    "editionId": "mozart-e-la-fede-delle-femmine",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-e-la-fede-delle-femmine@1.0.0-peters#198b5b654b",
+    "title": "È la fede delle femmine",
+    "subtitle": "Don Alfonso, Ferrando and Guglielmo: terzetto from Così fan tutte, Act 1 (No. 2)",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 55,
+    "durationSec": 67,
+    "hasRepeats": false,
+    "keySignature": "E major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 27,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-e-perche-fosti-meco",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-e-perche-fosti-meco@1.0.0-klengel#fac3b7f692",
@@ -1187,6 +1227,46 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 0,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-fuor-la-spada",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-fuor-la-spada@1.0.0-peters#c6cf6991bf",
+    "title": "Fuor la spada: scegliete",
+    "subtitle": "Guglielmo, Don Alfonso and Ferrando: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 25,
+    "durationSec": 63,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 24,
       "withAudio": 0,
       "reviewed": 0
     }
