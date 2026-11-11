@@ -1481,15 +1481,56 @@ export const OPERAS: Opera[] = [
     "id": "fiordiligi",
     "name": "Fiordiligi",
     "voice": "Soprano",
-    "desc": "A lady from Ferrara, engaged to Guglielmo.",
+    "desc": "A lady from Ferrara living in Naples, Dorabella's sister, engaged to Guglielmo.",
     "avatar": "bun",
     "pieces": [
      {
       "title": "Soave sia il vento",
       "kind": "Terzettino · Act 1",
       "editionId": "mozart-soave-sia-il-vento",
-      "when": "Act 1, on the shore at Naples, as the officers' boat sails",
-      "context": "Don Alfonso has bet Ferrando and Guglielmo that their fiancées will not stay faithful for a day, and the officers have pretended to be called to war. Fiordiligi and Dorabella, in tears, watch the boat carry their lovers away, and with Alfonso, who is in on the trick, they pray for a gentle wind, calm waves and every element kind to their wishes. The sisters mean every word; Alfonso is already planning the officers' return in disguise."
+      "when": "Act 1, the boat carrying the officers is disappearing from sight, and the sisters wish it a safe voyage"
+     },
+     {
+      "title": "Ah guarda, sorella",
+      "kind": "Duetto · Act 1",
+      "id": "Act 1: Ah guarda, sorella",
+      "when": "Act 1, in a garden by the sea, the sisters look at the portraits of their fiancés that they wear at their sides"
+     },
+     {
+      "title": "Sento, o Dio, che questo piede",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Sento, o Dio, che questo piede",
+      "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
+     },
+     {
+      "title": "Di scrivermi ogni giorno",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Di scrivermi ogni giorno",
+      "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
+     },
+     {
+      "title": "Temerari, sortite… Come scoglio",
+      "kind": "Recitative and aria · Act 1",
+      "id": "Act 1: Temerari, sortite… Come scoglio",
+      "when": "Act 1, Don Alfonso has passed off the two moustached strangers as his dearest friends, and they have declared their love; Dorabella asks her sister what they should do"
+     },
+     {
+      "title": "Prenderò quel brunettino",
+      "kind": "Duetto · Act 2",
+      "id": "Act 2: Prenderò quel brunettino",
+      "when": "Act 2, Dorabella has persuaded Fiordiligi that a little amusement is no breach of faith, and asks which of the two strangers she wants; she has already chosen hers"
+     },
+     {
+      "title": "Ei parte… Per pietà",
+      "kind": "Recitative and rondò · Act 2",
+      "id": "Act 2: Ei parte… Per pietà",
+      "when": "Act 2, Ferrando has gone; Fiordiligi is alone, frightened by what she now feels"
+     },
+     {
+      "title": "Fra gli amplessi in pochi istanti",
+      "kind": "Duetto · Act 2",
+      "id": "Act 2: Fra gli amplessi in pochi istanti",
+      "when": "Act 2, Fiordiligi has sent for the officers' uniforms and put on a hat, meaning to join her fiancé at the front; Guglielmo and Don Alfonso are watching unseen"
      }
     ]
    },
@@ -1497,15 +1538,56 @@ export const OPERAS: Opera[] = [
     "id": "dorabella",
     "name": "Dorabella",
     "voice": "Mezzo-soprano",
-    "desc": "Fiordiligi's sister, engaged to Ferrando.",
+    "desc": "A lady from Ferrara living in Naples, Fiordiligi's sister, engaged to Ferrando. (The score lists her as Soprano.)",
     "avatar": "long",
     "pieces": [
      {
       "title": "Soave sia il vento",
       "kind": "Terzettino · Act 1",
       "editionId": "mozart-soave-sia-il-vento",
-      "when": "Act 1, on the shore at Naples, as the officers' boat sails",
-      "context": "Don Alfonso has bet Ferrando and Guglielmo that their fiancées will not stay faithful for a day, and the officers have pretended to be called to war. Fiordiligi and Dorabella, in tears, watch the boat carry their lovers away, and with Alfonso, who is in on the trick, they pray for a gentle wind, calm waves and every element kind to their wishes. The sisters mean every word; Alfonso is already planning the officers' return in disguise."
+      "when": "Act 1, the boat carrying the officers is disappearing from sight, and the sisters wish it a safe voyage"
+     },
+     {
+      "title": "Ah guarda, sorella",
+      "kind": "Duetto · Act 1",
+      "id": "Act 1: Ah guarda, sorella",
+      "when": "Act 1, in a garden by the sea, the sisters look at the portraits of their fiancés that they wear at their sides"
+     },
+     {
+      "title": "Sento, o Dio, che questo piede",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Sento, o Dio, che questo piede",
+      "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
+     },
+     {
+      "title": "Di scrivermi ogni giorno",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Di scrivermi ogni giorno",
+      "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
+     },
+     {
+      "title": "Ah scostati… Smanie implacabili",
+      "kind": "Recitative and aria · Act 1",
+      "id": "Act 1: Ah scostati… Smanie implacabili",
+      "when": "Act 1, back at home, Dorabella has thrown the breakfast Despina brought on the floor and the sisters have torn off their jewellery; Despina asks what has happened"
+     },
+     {
+      "title": "Prenderò quel brunettino",
+      "kind": "Duetto · Act 2",
+      "id": "Act 2: Prenderò quel brunettino",
+      "when": "Act 2, Dorabella has persuaded Fiordiligi that a little amusement is no breach of faith, and asks which of the two strangers she wants; she has already chosen hers"
+     },
+     {
+      "title": "Il core vi dono",
+      "kind": "Duetto · Act 2",
+      "id": "Act 2: Il core vi dono",
+      "when": "Act 2, walking in the garden, Dorabella has just accepted Guglielmo's little gift of a heart"
+     },
+     {
+      "title": "È amore un ladroncello",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: È amore un ladroncello",
+      "when": "Act 2, Fiordiligi has confessed that she loves the fair stranger but says she will master herself; Dorabella tells her she had better give in"
      }
     ]
    },
@@ -1515,37 +1597,237 @@ export const OPERAS: Opera[] = [
     "voice": "Soprano",
     "desc": "The sisters' maid.",
     "avatar": "cap",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "In uomini, in soldati",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: In uomini, in soldati",
+      "when": "Act 1, Despina has heard that the sisters' lovers have gone to war and told them to amuse themselves; Dorabella calls her talk an insult to faithful lovers"
+     },
+     {
+      "title": "Una donna a quindici anni",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Una donna a quindici anni",
+      "when": "Act 2, Despina is urging the sisters to let the two rich strangers adore them; asked what they should do, she answers: whatever they like, are they flesh and blood or not?"
+     }
+    ]
    },
    {
     "id": "ferrando",
     "name": "Ferrando",
     "voice": "Tenor",
-    "desc": "An officer, engaged to Dorabella.",
+    "desc": "An officer, Dorabella's fiancé.",
     "avatar": "curls",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "La mia Dorabella capace non è",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: La mia Dorabella capace non è",
+      "when": "Act 1, curtain up: in a coffee house, Ferrando and Guglielmo are defending their fiancées against their old friend Don Alfonso"
+     },
+     {
+      "title": "È la fede delle femmine",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: È la fede delle femmine",
+      "when": "Act 1, the officers admit that their sweethearts are women, not goddesses, and Don Alfonso laughs at them for expecting fidelity from women"
+     },
+     {
+      "title": "Una bella serenata",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: Una bella serenata",
+      "when": "Act 1, the officers have bet Don Alfonso a hundred zecchini and sworn to obey him; Guglielmo asks what they will do with the money"
+     },
+     {
+      "title": "Sento, o Dio, che questo piede",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Sento, o Dio, che questo piede",
+      "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
+     },
+     {
+      "title": "Al fato dan legge",
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Al fato dan legge",
+      "when": "Act 1, during the farewell: Fiordiligi has asked Guglielmo for his sword, and the men ask the sisters not to speak of such dark omens"
+     },
+     {
+      "title": "Di scrivermi ogni giorno",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Di scrivermi ogni giorno",
+      "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
+     },
+     {
+      "title": "Un'aura amorosa",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Un'aura amorosa",
+      "when": "Act 1, Don Alfonso sends the officers to wait in the garden for his orders; Guglielmo asks whether there will be no dinner, and Ferrando answers that supper will taste better after the battle"
+     },
+     {
+      "title": "Secondate, aurette amiche",
+      "kind": "Duetto con Coro · Act 2",
+      "id": "Act 2: Secondate, aurette amiche",
+      "when": "Act 2, Don Alfonso has hurried the sisters to the garden by the sea, where the two 'Albanians' wait in a boat decked with flowers, with musicians"
+     },
+     {
+      "title": "Ah lo veggio quell'anima bella",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Ah lo veggio quell'anima bella",
+      "when": "Act 2, Ferrando has followed Fiordiligi, who called him a snake and told him to go; he asks only for a kinder look, and sees her look at him and sigh"
+     },
+     {
+      "title": "In qual fiero contrasto… Tradito, schernito",
+      "kind": "Recitative and cavatina · Act 2",
+      "id": "Act 2: In qual fiero contrasto… Tradito, schernito",
+      "when": "Act 2, Guglielmo has gone; Ferrando is alone, torn between revenge and his love for Dorabella"
+     },
+     {
+      "title": "Fra gli amplessi in pochi istanti",
+      "kind": "Duetto · Act 2",
+      "id": "Act 2: Fra gli amplessi in pochi istanti",
+      "when": "Act 2, Fiordiligi has sent for the officers' uniforms and put on a hat, meaning to join her fiancé at the front; Guglielmo and Don Alfonso are watching unseen"
+     },
+     {
+      "title": "Tutti accusan le donne",
+      "kind": "Andante · Act 2",
+      "id": "Act 2: Tutti accusan le donne",
+      "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
+     }
+    ]
    },
    {
     "id": "guglielmo",
     "name": "Guglielmo",
     "voice": "Baritone",
-    "desc": "An officer, engaged to Fiordiligi.",
+    "desc": "An officer, Fiordiligi's fiancé (the libretto spells his name Guilelmo).",
     "avatar": "short",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "La mia Dorabella capace non è",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: La mia Dorabella capace non è",
+      "when": "Act 1, curtain up: in a coffee house, Ferrando and Guglielmo are defending their fiancées against their old friend Don Alfonso"
+     },
+     {
+      "title": "È la fede delle femmine",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: È la fede delle femmine",
+      "when": "Act 1, the officers admit that their sweethearts are women, not goddesses, and Don Alfonso laughs at them for expecting fidelity from women"
+     },
+     {
+      "title": "Una bella serenata",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: Una bella serenata",
+      "when": "Act 1, the officers have bet Don Alfonso a hundred zecchini and sworn to obey him; Guglielmo asks what they will do with the money"
+     },
+     {
+      "title": "Sento, o Dio, che questo piede",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Sento, o Dio, che questo piede",
+      "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
+     },
+     {
+      "title": "Al fato dan legge",
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Al fato dan legge",
+      "when": "Act 1, during the farewell: Fiordiligi has asked Guglielmo for his sword, and the men ask the sisters not to speak of such dark omens"
+     },
+     {
+      "title": "Di scrivermi ogni giorno",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Di scrivermi ogni giorno",
+      "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
+     },
+     {
+      "title": "Non siate ritrosi",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Non siate ritrosi",
+      "when": "Act 1, the sisters are about to leave; Don Alfonso asks them for a little kindness towards his friends, and Guglielmo pleads for the two strangers"
+     },
+     {
+      "title": "Rivolgete a lui lo sguardo",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Rivolgete a lui lo sguardo",
+      "when": "Act 1, the same moment as “Non siate ritrosi”, which replaced it: the sisters are about to leave, and Guglielmo pleads for the two strangers (Mozart's first aria for this spot, KV 584)"
+     },
+     {
+      "title": "Secondate, aurette amiche",
+      "kind": "Duetto con Coro · Act 2",
+      "id": "Act 2: Secondate, aurette amiche",
+      "when": "Act 2, Don Alfonso has hurried the sisters to the garden by the sea, where the two 'Albanians' wait in a boat decked with flowers, with musicians"
+     },
+     {
+      "title": "Il core vi dono",
+      "kind": "Duetto · Act 2",
+      "id": "Act 2: Il core vi dono",
+      "when": "Act 2, walking in the garden, Dorabella has just accepted Guglielmo's little gift of a heart"
+     },
+     {
+      "title": "Donne mie, la fate a tanti",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Donne mie, la fate a tanti",
+      "when": "Act 2, Guglielmo has shown Ferrando the portrait of Ferrando that he took from Dorabella, saying she gave it to him as a pledge, and Ferrando begs him for advice that he cannot give"
+     },
+     {
+      "title": "Tutti accusan le donne",
+      "kind": "Andante · Act 2",
+      "id": "Act 2: Tutti accusan le donne",
+      "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
+     }
+    ]
    },
    {
     "id": "alfonso",
     "name": "Don Alfonso",
-    "voice": "Bass",
-    "desc": "An old philosopher who doubts women's constancy.",
+    "voice": "Bass-baritone",
+    "desc": "An old philosopher, the two officers' friend. (The score lists him as Bass.)",
     "avatar": "beard",
     "pieces": [
      {
       "title": "Soave sia il vento",
       "kind": "Terzettino · Act 1",
       "editionId": "mozart-soave-sia-il-vento",
-      "when": "Act 1, on the shore at Naples, as the officers' boat sails",
-      "context": "Don Alfonso has bet Ferrando and Guglielmo that their fiancées will not stay faithful for a day, and the officers have pretended to be called to war. Fiordiligi and Dorabella, in tears, watch the boat carry their lovers away, and with Alfonso, who is in on the trick, they pray for a gentle wind, calm waves and every element kind to their wishes. The sisters mean every word; Alfonso is already planning the officers' return in disguise."
+      "when": "Act 1, the boat carrying the officers is disappearing from sight, and the sisters wish it a safe voyage"
+     },
+     {
+      "title": "La mia Dorabella capace non è",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: La mia Dorabella capace non è",
+      "when": "Act 1, curtain up: in a coffee house, Ferrando and Guglielmo are defending their fiancées against their old friend Don Alfonso"
+     },
+     {
+      "title": "È la fede delle femmine",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: È la fede delle femmine",
+      "when": "Act 1, the officers admit that their sweethearts are women, not goddesses, and Don Alfonso laughs at them for expecting fidelity from women"
+     },
+     {
+      "title": "Una bella serenata",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: Una bella serenata",
+      "when": "Act 1, the officers have bet Don Alfonso a hundred zecchini and sworn to obey him; Guglielmo asks what they will do with the money"
+     },
+     {
+      "title": "Vorrei dir",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Vorrei dir",
+      "when": "Act 1, the sisters, waiting for their fiancés, see Don Alfonso arrive alone and apparently in tears, and beg him to tell them what has happened"
+     },
+     {
+      "title": "Sento, o Dio, che questo piede",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Sento, o Dio, che questo piede",
+      "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
+     },
+     {
+      "title": "Di scrivermi ogni giorno",
+      "kind": "Quintetto · Act 1",
+      "id": "Act 1: Di scrivermi ogni giorno",
+      "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
+     },
+     {
+      "title": "Tutti accusan le donne",
+      "kind": "Andante · Act 2",
+      "id": "Act 2: Tutti accusan le donne",
+      "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
      }
     ]
    }
@@ -3043,3 +3325,15 @@ const BOHEME_V2: Record<string, string[]> = {
 };
 Object.assign(V2_KEYS, BOHEME_V2);
 for (const id of ["schaunard", "benoit", "alcindoro", "parpignol", "sergente", "doganiere"]) V2_KEYS[`boheme:${id}`] = [];
+
+// Così fan tutte's running order has since been rebuilt from the vocal score section by section, with every recitative,
+// so its old lists are kept as they were rather than rebuilt from today's running order
+const COSI_V2: Record<string, string[]> = {
+  "cosi:fiordiligi": ["Act 1: Ah guarda, sorella", "Act 1: Sento, o Dio, che questo piede", "Act 1: Di scrivermi ogni giorno", "Soave sia il vento", "Act 1: Alla bella Despinetta", "Act 1: Temerari, sortite fuori… Come scoglio", "Act 1: Ah, che tutta in un momento", "Act 2: Prenderò quel brunettino", "Act 2: Ei parte… Per pietà, ben mio, perdona", "Act 2: Fra gli amplessi in pochi istanti", "Act 2: Fate presto, o cari amici"],
+  "cosi:dorabella": ["Act 1: Ah guarda, sorella", "Act 1: Sento, o Dio, che questo piede", "Act 1: Di scrivermi ogni giorno", "Soave sia il vento", "Act 1: Ah, scostati!… Smanie implacabili", "Act 1: Alla bella Despinetta", "Act 1: Ah, che tutta in un momento", "Act 2: Prenderò quel brunettino", "Act 2: Il core vi dono", "Act 2: È amore un ladroncello", "Act 2: Fate presto, o cari amici"],
+  "cosi:despina": ["Act 1: In uomini, in soldati", "Act 1: Che silenzio!", "Act 1: Alla bella Despinetta", "Act 1: Oh, la saria da ridere!", "Act 1: Ah, che tutta in un momento", "Act 2: Una donna a quindici anni", "Act 2: La mano a me date", "Act 2: Fate presto, o cari amici"],
+  "cosi:ferrando": ["Act 1: La mia Dorabella capace non è", "Act 1: È la fede delle femmine", "Act 1: Una bella serenata", "Act 1: Sento, o Dio, che questo piede", "Act 1: Al fato dan legge quegli occhi vezzosi", "Act 1: Di scrivermi ogni giorno", "Act 1: Alla bella Despinetta", "Act 1: E voi ridete?", "Act 1: Un'aura amorosa", "Act 1: Ah, che tutta in un momento", "Act 2: Secondate, aurette amiche", "Act 2: La mano a me date", "Act 2: Barbara! perché fuggi?… Ah, lo veggio, quell'anima bella", "Act 2: In qual fiero contrasto… Tradito, schernito", "Act 2: Fra gli amplessi in pochi istanti", "Act 2: Tutti accusan le donne", "Act 2: Fate presto, o cari amici"],
+  "cosi:guglielmo": ["Act 1: La mia Dorabella capace non è", "Act 1: È la fede delle femmine", "Act 1: Una bella serenata", "Act 1: Sento, o Dio, che questo piede", "Act 1: Al fato dan legge quegli occhi vezzosi", "Act 1: Di scrivermi ogni giorno", "Act 1: Alla bella Despinetta", "Act 1: Non siate ritrosi", "Act 1: E voi ridete?", "Act 1: Ah, che tutta in un momento", "Act 2: Secondate, aurette amiche", "Act 2: La mano a me date", "Act 2: Il core vi dono", "Act 2: Donne mie, la fate a tanti", "Act 2: Tutti accusan le donne", "Act 2: Fate presto, o cari amici"],
+  "cosi:alfonso": ["Act 1: La mia Dorabella capace non è", "Act 1: È la fede delle femmine", "Act 1: Una bella serenata", "Act 1: Vorrei dir, e cor non ho", "Act 1: Sento, o Dio, che questo piede", "Act 1: Di scrivermi ogni giorno", "Soave sia il vento", "Act 1: Nel mare solca", "Act 1: Che silenzio!", "Act 1: Alla bella Despinetta", "Act 1: E voi ridete?", "Act 1: Oh, la saria da ridere!", "Act 1: Ah, che tutta in un momento", "Act 2: La mano a me date", "Act 2: Tutti accusan le donne", "Act 2: Fate presto, o cari amici"],
+};
+Object.assign(V2_KEYS, COSI_V2);
