@@ -573,6 +573,80 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-ohe-la-le-guardie": {
+    portrait: "boheme:musetta",
+    opera: "La bohème",
+    kind: "Prelude and scene with chorus",
+    facts: {
+      key: "1 flat (D minor colouring over a held D-A fifth) for bars 1-30 and 50-78; D major (2 sharps) for bars 31-49 and from bar 79 (the tavern song) to the end",
+      time: "2/4 throughout, from a one-eighth upbeat",
+      tempo: "Printed metronome mark: Andantino mosso ♩ = 112 (bar 1, the start of Act 3), which returns with the printed “a tempo” at figure (4) (bar 114) and holds to the end. Chosen, as no number is printed: Poco più mosso (bar 109, the men’s “Trallerallè” in the tavern) ♩ = 120, a little faster, to the nearest metronome mark. The written quasi rit., poco rall. and rall. are played as a gradual slowing over the bars they cover, then back to the tempo; the fermata (bar 144) is held",
+    },
+    notePlaceholder: "Dawn in the snow at the toll gate: street sweepers bang to be let in, Musetta sings in the tavern, milkmaids, carters and peasant women pass through",
+    about: (
+      <>
+        <p>
+          “Ohè, là, le guardie!”, the opening of Act 3 at the Barrière d’Enfer, a toll gate on the edge of Paris, at first light in February. Snow is
+          falling; the customs men doze round a brazier. Behind the closed gate, street sweepers stamp and shout to be let in: they are the sweepers
+          from Gentilly, and it is freezing. A customs officer goes to open for them. From the tavern by the gate come a drinking song, clinking glasses
+          and laughter, and Musetta’s voice: if there is pleasure in the glass, there is love on young lips. The sergeant has the gate opened for the
+          day: milk women come through calling good morning, carters crack their whips, and peasant women with baskets of butter, cheese, chickens and
+          eggs pass the gate, agree to meet at noon and go their separate ways.
+        </p>
+        <p>
+          Score: vocal score pages 167-176 (from the start of Act 3 to the end of page 176 system 3, before figure (6), 174 bars), from Carlo
+          Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the
+          piano each read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only
+          the Italian words are kept, with the print’s spellings. The chorus is heard with the piano and shown in the score, but it has no words to
+          practise here. The print gives the street sweepers, the women and the men singing in the tavern, the milk women, the carters and two groups of
+          peasant women their own staves, eleven parts in all; here they are gathered into three staves by voice, sopranos and contraltos, tenors and
+          basses, with each group named where it comes in. Every note is kept: parts printed in chords on one staff, or singing the same words in the
+          same rhythm, are written as chords, and where the two groups of peasant women sing in the same bar the second is a second voice on the staff.
+          The shouted notes, printed without noteheads, are written with x noteheads. The printed metronome mark is the Andantino mosso’s ♩ = 112; the
+          Poco più mosso is chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-sa-dirmi": {
+    portrait: "boheme:mimi",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "D major (2 sharps) for bars 1-3; F major (1 flat) from bar 4 (Lento molto) to the end",
+      time: "2/4 throughout",
+      tempo: "Printed: Andantino mosso ♩ = 112, the metronome mark at the start of Act 3 (page 167), which is the tempo of bars 1-3 and returns as “I.° Tempo” at bar 23; and Lento molto (bar 4) with the printed relation half note = quaver, the old bar becoming the new quaver: ♪ = 56, so ♩ = 28. Chosen, as no number is printed: Allegro (bar 9, a single loud chord and held rests) ♩ = 120; Andante (bar 10, Mimì a piacere, the piano following her) ♩ = 66, so that her quaver triplets move at the pace of anxious speech, and the same for the a tempo of bar 15. The written rall. and rit. are played as a gradual slowing over the bars they cover (the rall. of bars 1-3 into the Lento molto), then on to the next tempo; fermatas are held",
+    },
+    notePlaceholder: "Mimì, coughing, comes to the toll gate at dawn and asks for the tavern where Marcello paints; she sends a message that she is waiting",
+    about: (
+      <>
+        <p>
+          “Sa dirmi, scusi, qual’è l’osteria”, Act 3 at the Barrière d’Enfer, at dawn in February. Mimì comes in from the rue d’Enfer looking about
+          her, and is stopped by a violent fit of coughing. She asks the customs sergeant for the tavern where a painter works, and he points it out.
+          A serving woman comes out, and Mimì asks her to find the painter Marcello: she must speak to him, she is in a great hurry, he is to be told,
+          quietly, that Mimì is waiting. At the gate the sergeant stops a passer-by’s basket, a customs officer finds it empty and lets him through;
+          from the Hospice of Maria Theresa the bell rings for matins, and it becomes a grey winter day.
+        </p>
+        <p>
+          Score: vocal score pages 176-179 (from figure (6), page 176 system 4, to the end of page 179 system 2, before Marcello’s “Mimì?!” at
+          figure (8), 44 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the
+          printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked against the page and corrected. Only the Italian words are kept, with the print’s spellings (“qual’è”). The sergeant’s “Ehi,” is
+          printed without a notehead, shouted. The matins bell (“Campanelle”), printed under the piano’s right hand and from page 179 on a small
+          staff of its own, is played in the piano’s right hand. The printed metronome mark is Act 3’s Andantino mosso ♩ = 112, with the printed
+          relation that sets the Lento molto; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

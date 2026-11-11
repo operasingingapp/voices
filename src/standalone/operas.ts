@@ -2572,6 +2572,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Caro!",
       "editionId": "puccini-caro"
+     },
+     {
+      "title": "Sa dirmi, scusi, qual'è l'osteria",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Sa dirmi, scusi, qual'è l'osteria",
+      "editionId": "puccini-sa-dirmi"
      }
     ]
    },
@@ -2706,6 +2712,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Caro!",
       "editionId": "puccini-caro"
+     },
+     {
+      "title": "Ohè, là, le guardie!",
+      "kind": "Prelude and scene with chorus · Act 3",
+      "id": "Act 3: Ohè, là, le guardie!",
+      "editionId": "puccini-ohe-la-le-guardie"
      }
     ]
    },
@@ -2930,7 +2942,14 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "The sergeant of the customs post at the toll gate. (His few low notes would suit a bass or a baritone.)",
     "avatar": "cap",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Sa dirmi, scusi, qual'è l'osteria",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Sa dirmi, scusi, qual'è l'osteria",
+      "editionId": "puccini-sa-dirmi"
+     }
+    ]
    },
    {
     "id": "doganiere",
@@ -2938,7 +2957,20 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "A customs officer at the toll gate. (His few low notes would suit a bass or a baritone.)",
     "avatar": "cap",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Ohè, là, le guardie!",
+      "kind": "Prelude and scene with chorus · Act 3",
+      "id": "Act 3: Ohè, là, le guardie!",
+      "editionId": "puccini-ohe-la-le-guardie"
+     },
+     {
+      "title": "Sa dirmi, scusi, qual'è l'osteria",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Sa dirmi, scusi, qual'è l'osteria",
+      "editionId": "puccini-sa-dirmi"
+     }
+    ]
    }
   ]
  },

@@ -1,0 +1,161 @@
+# S17: p.176 sys 4 bar 1 ((6)) to p.179 sys 2 last bar
+# page 176 system 4 starts bar 1
+# bar 1: (6); 2/4, D major (2 sharps); word rall. bars 1-3; D4 tied in from previous bar
+1 RH1: word:rall. D4:h~
+1 LH1: r:h
+2 RH1: D4~+E4:h(
+2 LH1: r:h
+3 RH1: D4~+F#4:h
+3 LH1: r:h
+# bar 4: double bar, LENTO MOLTO (half note = eighth note), key F major (1 flat), espressivo, pp
+4 RH1: word:LENTO_MOLTO word:espressivo G4:e A4:e hp:< Bb4:e[ E5:e] hp:end
+4 RH2: dyn:pp D4:q E4:q
+4 LH1: Bb3:q( C4:q
+4 LH2: C3:h~
+5 RH1: D5:q.) F#4:e(
+5 RH2: hp:> F4:q. E4:s Eb4:s hp:end
+5 LH1: A3:h)
+5 LH2: C3:h~
+6 RH1: G4:e A4:e hp:< Bb4:e[ E5:e] hp:end
+6 RH2: D4:q E4:q
+6 LH1: Bb3:q( C4:q
+6 LH2: C3:h~
+# bar 6: RH2 E4 carries a printed natural (cancels Eb of bar 5)
+# bar 7: RH three voices: G5 q / F5 e. / E5 s (stems up), C5 half (stem up, middle), G4 q / F4 e. / E4 s (stems down); C5 written as tied chord tone in RH2
+7 RH1: G5:q) F5:e. E5:s(
+7 RH2: hp:> G4+C5~:q C5~+F4:e. C5+E4:s hp:end
+7 LH1: A3:h)
+7 LH2: C3:h
+# page 177 system 1 starts bar 8
+# bar 8: rit. (in LH); hairpin < under RH beat 2. LH upper: A3 tied into an unflagged note before the 16th triplet; read as eighth (A3:e) so the beat adds up (unsure: could be read as a triplet quarter)
+8 RH1: Eb5:q( hp:< A4:q3 D5:e3) hp:end
+8 RH2: Eb4+G4:h
+8 LH1: A3:q~ word:rit. A3:e Bb3:s3( C4:s3 D4:s3)
+8 LH2: C3:q~ C3:q3 Bb2:e3
+# bar 9: Allegro, f; fermatas over the quarter rests
+9 RH1: word:Allegro dyn:f C4+Eb4+G4+C5:e> r:e r:q!
+9 RH2: C4:q~ C4:e r:e
+9 LH1: A1+A2:e> r:e r:q!
+# bar 10: double bar, ANDANTE; col canto (dotted line through bar 13)
+10 RH1: word:ANDANTE r:h
+10 LH1: word:col_canto r:h
+11 RH1: r:h
+11 LH1: r:h
+# page 177 system 2 starts bar 12
+12 RH1: r:h
+12 LH1: r:h
+13 RH1: r:h
+13 LH1: r:h
+# bar 14: fermatas over both whole-bar rests
+14 RH1: r:h!
+14 LH1: r:h!
+# bar 15: a Tempo, p
+15 RH1: word:a_Tempo r:h
+15 LH1: dyn:p G3:h(
+# page 177 system 3 starts bar 16
+# bars 16-19: RH chords each with a tenuto, in triplet groups (eighth rest + quarter); bar 16 beat 2 flats printed on F5 and A5 (Fb5, Ab5)
+16 RH1: r:e3 B4+F5+A5:q3- r:e3 Bb4+Fb5+Ab5:q3-
+16 LH1: D4:q)( Db4:q
+17 RH1: r:e3 A4+Eb5+G5:q3~ A4+Eb5+G5:e3 A4+Eb5+G5:q3-
+17 LH1: C4:h)
+# bar 18: beat 2 chord printed with courtesy naturals on A4 and G5
+18 RH1: r:e3 Bb4+Fb5+Ab5:q3- r:e3 A4+Eb5+G5:q3-
+18 LH1: Db4:q( C4:q
+# bar 19: fermata over RH quarter rest and over LH half note; D5 with natural
+19 RH1: r:e3 G#4+D5+F#5:q3- r:q!
+19 LH1: B3:h!)
+# page 178 system 1 starts bar 20
+# bar 20: RH eighth chord F3+B3 printed on the bass staff with the stem and flag up into the treble staff (RH); B3 with natural; fermatas over RH and under LH eighth rests
+20 RH1: F3+B3:e r:e! r:q
+20 LH1: G1+G2:e r:e! r:q
+# bar 21: pp, col canto (dotted line to end of bar 22)
+21 RH1: dyn:pp word:col_canto E4+A#4:q( Eb4+An4:q
+21 LH1: F#3:q( Fn3:q
+# bar 22: second chord in a triplet (quarter + eighth rest); B3 with natural; double bar at end
+22 RH1: D4+G#4:q B3+F4:q3) r:e3
+22 LH1: E3:q D3:q3) r:e3
+# page 178 system 2 starts bar 23
+# bar 23: (7) AND.no MOSSO, I.o Tempo; LH tremolo C2-G2 half notes with three beams (32nds), slurred, every bar 23-30; pp
+23 RH1: word:AND.no_MOSSO word:I.o_Tempo r:h
+23 LH1: dyn:pp trem3:C2|G2:h
+24 RH1: r:q dyn:ppp C5+G5:e* r:e
+24 LH1: trem3:C2|G2:h
+25 RH1: Bb4+F5:e* r:e Ab4+Eb5:e* r:e
+25 LH1: trem3:C2|G2:h
+26 RH1: G4+D5:e* r:e F4+C5:e* Ab4+Eb5:e*
+26 LH1: trem3:C2|G2:h
+# bar 27: tenuto over the half-note chord
+27 RH1: G4+D5:h~-
+27 LH1: trem3:C2|G2:h
+28 RH1: G4+D5:e r:e Ab4+Eb5:e r:e
+28 LH1: trem3:C2|G2:h
+# page 178 system 3 starts bar 29
+29 RH1: G4+D5:e* r:e F4+C5:e* r:e
+29 LH1: trem3:C2|G2:h
+30 RH1: Eb4+Bb4:e* r:e D4+Ab4:e* F4+C5:e*
+30 LH1: trem3:C2|G2:h
+# bar 31: tenuto under C4; pp (LH); C2+G2 held and tied through bar 36 and beyond
+31 RH1: C4+G4:q~- C4+G4:e r:e
+31 LH1: dyn:pp C2+G2:h~
+# bar 32: no rest printed in the RH staff (empty); LH chord stem up, C2 and G2 tied on
+32 RH1: r:h
+32 LH1: C2~+G2~+C3+G3:h
+33 RH1: C4+G4:h
+33 LH1: C2+G2:h~
+34 RH1: C5+G5:h
+34 LH1: C2+G2:h~
+# bar 35: "(Campanelle)" printed under the RH staff; RH upper voice C6+G6 half notes (ledger lines) tied on
+35 RH1: C6+G6:h~
+35 RH2: r:e E5:e* C5:e* D5:e*
+35 LH1: C2+G2:h~
+36 RH1: C6+G6:h~
+36 RH2: G4:e* E5:e* C5:e* D5:e*
+36 LH1: C2+G2:h~
+# page 179 system 1 starts bar 37
+# bar 37: RH upper C6+G6 half (ledger lines) tied on from p.178; bell figure still in the RH (no Campanelle staff in this bar)
+37 RH1: C6+G6:h~
+37 RH2: G4:e* E5:e* C5:e* D5:e*
+37 LH1: C2+G2:h~
+# bar 38: from here a separate small treble staff "Campanelle" (no key signature) above the piano: written as RH3
+38 RH3: r:e E5:e* C5:e* D5:e*
+38 RH1: C6+G6:h~
+38 RH2: G4:e* r:e r:q
+# bar 38 LH: upper voice quarter rest then triplet (16th rest, 16th, two eighths), staccato, pp
+38 LH1: r:q dyn:pp r:s3 C3:s3* C3:e3* B2:e3*
+38 LH2: C2+G2:h~
+39 RH3: G4:e* E5:e* C5:e* D5:e*
+39 RH1: C6+G6:h~
+39 RH2: r:s3 E3+C4:s3* E3+C4:e3* F3+D4:e3* C4+E4:e* r:e
+39 LH1: Bb2:q r:s3 C4:s3* C4:e3* B3:e3*
+39 LH2: C2+G2:h~
+# bar 40: LH clef change to treble after the first quarter (Bb3) for the triplet figure, f; the held C2+G2 continue below
+40 RH3: G4:e* E5:e* C5:e* D5:e*
+40 RH1: C6+G6:h~
+40 RH2: r:s3 E4+C5:s3* E4+C5:e3* G4+D5:e3* C5+E5:e r:e
+40 LH1: Bb3:q clef:G dyn:f r:s3 C5:s3* C5:e3* B4:e3*
+40 LH2: C2+G2:h~
+# page 179 system 2 starts bar 41
+# bars 41-44: LH staff in treble clef with the held C2+G2 written below it under small bass-clef signs at the start of each bar; LH upper Bb4 half with marcato (^), tied through bar 44
+41 RH3: G4:e* E5:e* C5:e* D5:e*
+41 RH1: C6+G6:h~
+41 RH2: dyn:f r:s3 E5+C6:s3* E5+C6:e3* G5+D6:e3* C6+E6:e3* D6+F6:e3* E6+G6:e3*
+41 LH1: Bb4:h~^
+41 LH2: C2+G2:h~
+# bar 42: grace note (slashed eighth, A6) before the first chord, slurred to it; grace pitch slightly unsure (A6 vs G6)
+42 RH3: G4:e* E5:e* C5:e* D5:e*
+42 RH1: C6+G6:h~
+42 RH2: g:A6:e E6+G6:e3* D6+F6:e.3* C6+E6:s3* C6+E6:e3* G5+D6:e.3* E5+C6:s3*
+42 LH1: Bb4:h~
+42 LH2: C2+G2:h~
+# bar 43: hairpin > across the bar
+43 RH3: G4:e* E5:e* C5:e* D5:e*
+43 RH1: C6+G6:h~
+43 RH2: hp:> E5+C6:e3* D5+G5:e.3* C5+E5:s3* C5+E5:e3* G4+D5:e.3* E4+C5:s3* hp:end
+43 LH1: Bb4:h~
+43 LH2: C2+G2:h~
+# bar 44: "(Campanelle)" printed under the RH; LH clef back to bass at the end of the bar (for the next system)
+44 RH3: G4:e* r:e r:q
+44 RH1: C6+G6:e r:e r:q
+44 RH2: E4+C5:e* r:e E5:e* r:e
+44 LH1: Bb4:e r:e r:q clef:F
+44 LH2: C2+G2:e s:e s:q

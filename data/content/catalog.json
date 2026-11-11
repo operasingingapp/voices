@@ -3577,6 +3577,40 @@
     }
   },
   {
+    "editionId": "puccini-ohe-la-le-guardie",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-ohe-la-le-guardie@1.0.0-carignani#5decdd1e2c",
+    "title": "Ohè, là, le guardie!",
+    "subtitle": "Dawn in the snow at the Barrière d'Enfer: street sweepers, the tavern song with Musetta, milkmaids, carters and peasant women at the toll gate, La bohème, Act 3",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "doganiere",
+        "name": "Doganiere",
+        "voiceType": "Bass",
+        "partKey": "doganiere"
+      }
+    ],
+    "measures": 174,
+    "durationSec": 186,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 5,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-quando-men-vo",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-quando-men-vo@1.0.0-carignani#dc38a6f2b3",
@@ -3676,6 +3710,46 @@
     "time": "3/8",
     "languageStatus": {
       "phrases": 82,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-sa-dirmi",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-sa-dirmi@1.0.0-carignani#e596ee97fe",
+    "title": "Sa dirmi, scusi, qual'è l'osteria",
+    "subtitle": "Mimì at the toll gate asks for the tavern where Marcello paints, La bohème, Act 3",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "sergente",
+        "name": "Sergente",
+        "voiceType": "Bass",
+        "partKey": "sergente"
+      },
+      {
+        "id": "doganiere",
+        "name": "Doganiere",
+        "voiceType": "Bass",
+        "partKey": "doganiere"
+      }
+    ],
+    "measures": 44,
+    "durationSec": 74,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 9,
       "withAudio": 0,
       "reviewed": 0
     }

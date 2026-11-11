@@ -1,0 +1,178 @@
+{
+ "editionId": "puccini-ohe-la-le-guardie",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Ohè, là, le guardie!",
+ "subtitle": "Dawn in the snow at the Barrière d'Enfer: street sweepers, the tavern song with Musetta, milkmaids, carters and peasant women at the toll gate, La bohème, Act 3",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "musetta",
+   "name": "Musetta",
+   "voiceType": "Soprano",
+   "partKey": "musetta"
+  },
+  {
+   "id": "doganiere",
+   "name": "Doganiere",
+   "voiceType": "Bass",
+   "partKey": "doganiere"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "musetta",
+   "label": "Musetta (Soprano)",
+   "shortLabel": "Musetta",
+   "kind": "voice",
+   "roleId": "musetta",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 1,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "doganiere",
+   "label": "Doganiere (Bass)",
+   "shortLabel": "Doganiere",
+   "kind": "voice",
+   "roleId": "doganiere",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos and contraltos",
+   "shortLabel": "Chorus S. C.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 2,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Prelude: snow falling at dawn at the Barrière d'Enfer (Andantino mosso)",
+   "start": "1",
+   "end": "45"
+  },
+  {
+   "id": "b",
+   "label": "Ohè, là, le guardie! The street sweepers at the gate; the customs officer: Vengo!",
+   "start": "46",
+   "end": "78"
+  },
+  {
+   "id": "c",
+   "label": "From the tavern: Chi nel ber trovò il piacer, and Musetta's song (D major)",
+   "start": "79",
+   "end": "108"
+  },
+  {
+   "id": "d",
+   "label": "Trallerallè (the men in the tavern, Poco più mosso); milkmaids and carters at the gate",
+   "start": "109",
+   "end": "134"
+  },
+  {
+   "id": "e",
+   "label": "Burro e cacio! The peasant women pass through the gate and go their ways",
+   "start": "135",
+   "end": "174"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 3",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 167-176 (from the start of Act 3, page 167, to the end of page 176 system 3, before figure (6), 174 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. The print's chorus groups (street sweepers; three-part women's and three men's staves in the tavern; milkmaids; carters; two groups of peasant women) are gathered here into three staves by voice (every note kept, each group named where it comes in; parts printed together on one staff, or with the same words and rhythm, are written as chords; the two groups of peasant women are written as separate voices on the staff where they sing in the same bar). Shouted notes printed without noteheads are written with x noteheads. Tempo from the printed metronome mark (Andantino mosso ♩ = 112) and the printed a tempo; the Poco più mosso is a value chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

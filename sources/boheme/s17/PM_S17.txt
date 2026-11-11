@@ -1,0 +1,193 @@
+# S17 piano (p.176 sys 4 bar 1 to p.179 sys 2 last bar). Slurs are not transcribed; ties are.
+# page 176 system 4 starts bar 1
+# bar 1: (6); 2/4, D major (2 sharps); word rall. (bars 1-3); RH D4 tied in from the previous bar
+1 RH1: word:rall. D4:h~
+1 LH1: r:h
+# JUDGE bar 2 RH1: Y - long slur starts on the bar-2 chord (ends bar 5 D5)
+2 RH1: D4~+E4:h(
+2 LH1: r:h
+3 RH1: D4~+F#4:h
+3 LH1: r:h
+# bar 4: double bar, key F major (1 flat), LENTO MOLTO, half note = eighth note; no new time signature (2/4 continues); pp espressivo
+# JUDGE bar 4 RH1: Y - LENTO MOLTO printed over the bar; small nested slur Bb4-E5 inside the long slur
+4 RH1: word:LENTO_MOLTO word:espressivo G4:e A4:e hp:< Bb4:e[ E5:e] hp:end
+# JUDGE bar 4 RH2: Y - pp printed under the lower voice D4
+4 RH2: dyn:pp D4:q E4:q
+# JUDGE bar 4 LH1: Y - slur Bb3 to bar-5 A3
+# MARKS bar 4 LH1: pp between the staves (both hands)
+4 LH1: dyn:pp Bb3:q( C4:q
+4 LH2: C3:h~
+# JUDGE bar 5 RH1: OWN - hairpin > under D5 ends at the F#4 (X); slurs from Y: long slur ends on D5, new one starts on F#4
+5 RH1: hp:> D5:q.) hp:end F#4:e(
+5 RH2: F4:q. E4:s Eb4:s
+# JUDGE bar 5 LH1: Y - slur end
+5 LH1: A3:h)
+5 LH2: C3:h~
+# JUDGE bar 6 RH1: Y - nested slur Bb4-E5
+6 RH1: G4:e A4:e hp:< Bb4:e[ E5:e] hp:end
+6 RH2: D4:q E4:q
+# JUDGE bar 6 LH1: Y - slur Bb3 to bar-7 A3
+6 LH1: Bb3:q( C4:q
+6 LH2: C3:h~
+# JUDGE bar 7 RH1: OWN - X voicing (octaves + C5 half) kept; the slur from bar-5 F#4 ends on F5 dotted eighth (not G5), a new slur starts on E5 and runs to bar-8 D5
+7 RH1: hp:> G4+G5:q F4+F5:e.) E4+E5:s( hp:end
+7 RH2: C5:h
+# JUDGE bar 7 LH1: Y - slur end
+7 LH1: A3:h)
+7 LH2: C3:h
+# page 177 system 1 starts bar 8
+# bar 8: rit. (LH); LH upper: second A3 drawn as a plain eighth with the 16th triplet (B3 C4 D4) after it, though aligned with the lower triplet's Bb2
+# JUDGE bar 8 RH1: OWN - slur here is the continuation from bar-7 E5 (arc starts left of Eb5), ends on D5; hairpin < starts at beat 2 (Y)
+8 RH1: Eb5:q hp:< A4:q3 D5:e3) hp:end
+8 RH2: Eb4+G4:h
+# JUDGE bar 8 LH1: Y - "rit." printed after the second A3 (beat 2), slur over the 16th triplet
+# MARKS bar 8 LH1: hairpin < between the staves (both hands); slur A3 eighth to D4 over the nested triplet slur
+8 LH1: A3:q~ word:rit. hp:< A3:e( Bb3:s3[ C4:s3 D4:s3]) hp:end
+8 LH2: C3:q~ C3:q3 Bb2:e3
+# bar 9: Allegro, f; fermata on the quarter rests
+# JUDGE bar 9 RH1: X - C4 is the RH2 note (own down stem, accent below), not part of the upper chord
+9 RH1: word:Allegro dyn:f Eb4+G4+C5:e> r:e r:q!
+# JUDGE bar 9 RH2: X - accent printed below the C4
+9 RH2: C4:q>~ C4:e r:e
+# MARKS bar 9 LH1: f between the staves (both hands)
+9 LH1: dyn:f A1+A2:e> r:e r:q!
+# bar 10: double bar; ANDANTE; col canto (bars 10-13)
+# JUDGE bar 10 RH1: OWN - ANDANTE printed over the RH staff (Y) and "col canto" between the staves (kept on RH as in X and bar 21)
+10 RH1: word:ANDANTE word:col_canto r:h
+10 LH1: r:h
+11 RH1: r:h
+11 LH1: r:h
+# page 177 system 2 starts bar 12
+12 RH1: r:h
+12 LH1: r:h
+13 RH1: r:h
+13 LH1: r:h
+14 RH1: r:h!
+14 LH1: r:h!
+# bar 15: a Tempo
+15 RH1: word:a_Tempo r:h
+# JUDGE bar 15 LH1: Y - slur starts on G3
+15 LH1: dyn:p G3:h(
+# page 177 system 3 starts bar 16
+16 RH1: r:e3 B4+F5+A5:q3- r:e3 Bb4+Fb5+Ab5:q3-
+# JUDGE bar 16 LH1: OWN - the slur from bar-15 G3 continues across the system break to bar-17 C4; no slur end/start on D4
+16 LH1: D4:q Db4:q
+17 RH1: r:e3 A4+Eb5+G5:q3~ A4+Eb5+G5:e3 A4+Eb5+G5:q3-
+# JUDGE bar 17 LH1: Y - slur end
+17 LH1: C4:h)
+18 RH1: r:e3 Bb4+Fb5+Ab5:q3- r:e3 A4+Eb5+G5:q3-
+# JUDGE bar 18 LH1: Y - slur Db4 to bar-19 B3
+18 LH1: Db4:q( C4:q
+# bar 19: fermata over RH (between chord and quarter rest, put on the chord) and LH half note
+# JUDGE bar 19 RH1: Y - fermata sits nearer the quarter rest than the chord
+19 RH1: r:e3 G#4+D5+F#5:q3- r:q!
+# JUDGE bar 19 LH1: Y - slur end
+19 LH1: B3:h!)
+# page 178 system 1 starts bar 20
+# bar 20: RH eighth chord F3+B3 is printed on the bass staff with its stem and flag in the treble staff (cross-staff); fermatas on the eighth rests
+20 RH1: F3+B3:e r:e! r:q
+20 LH1: G1+G2:e r:e! r:q
+# bar 21: pp, col canto (bars 21-22)
+# JUDGE bar 21 RH1: Y - slur to bar-22 B3+F4 (printed natural on A = bare A4)
+21 RH1: dyn:pp word:col_canto E4+A#4:q( Eb4+A4:q
+# JUDGE bar 21 LH1: Y - slur to bar-22 D3 (printed natural = bare F3)
+# MARKS bar 21 LH1: pp between the staves (both hands)
+21 LH1: dyn:pp F#3:q( F3:q
+# JUDGE bar 22 RH1: Y - slur end
+22 RH1: D4+G#4:q B3+F4:q3) r:e3
+# JUDGE bar 22 LH1: Y - slur end
+22 LH1: E3:q D3:q3) r:e3
+# page 178 system 2 starts bar 23
+# bar 23: double bar before it; (7) AND.no MOSSO, I.° Tempo; LH pp; LH tremolo three strokes (32nds) C2-G2, bars 23-30
+# JUDGE bar 23 RH1: X - print shows "I.°" (superscript o), as in AND.no
+23 RH1: word:AND.no_MOSSO word:I.°_Tempo r:h
+# MARKS bar 23 LH1: slur over the tremolo pair
+23 LH1: dyn:pp trem3:C2|G2:h()
+24 RH1: r:q dyn:ppp C5+G5:e* r:e
+# MARKS bar 24 LH1: slur over the tremolo pair
+# MARKS bar 24 LH1: ppp between the staves (both hands)
+24 LH1: dyn:ppp trem3:C2|G2:h()
+25 RH1: Bb4+F5:e* r:e Ab4+Eb5:e* r:e
+# MARKS bar 25 LH1: slur over the tremolo pair
+25 LH1: trem3:C2|G2:h()
+26 RH1: G4+D5:e* r:e F4+C5:e* Ab4+Eb5:e*
+# MARKS bar 26 LH1: slur over the tremolo pair
+26 LH1: trem3:C2|G2:h()
+27 RH1: G4+D5:h-~
+# MARKS bar 27 LH1: slur over the tremolo pair
+27 LH1: trem3:C2|G2:h()
+28 RH1: G4+D5:e r:e Ab4+Eb5:e r:e
+# MARKS bar 28 LH1: slur over the tremolo pair
+28 LH1: trem3:C2|G2:h()
+# page 178 system 3 starts bar 29
+29 RH1: G4+D5:e* r:e F4+C5:e* r:e
+# MARKS bar 29 LH1: slur over the tremolo pair
+29 LH1: trem3:C2|G2:h()
+30 RH1: Eb4+Bb4:e* r:e D4+Ab4:e* F4+C5:e*
+# MARKS bar 30 LH1: slur over the tremolo pair
+30 LH1: trem3:C2|G2:h()
+31 RH1: C4+G4:q-~ C4+G4:e r:e
+31 LH1: dyn:pp C2+G2:h~
+# bar 32: RH staff empty (no rest printed)
+32 RH1: r:h
+32 LH1: C2~+G2~+C3+G3:h
+33 RH1: C4+G4:h
+33 LH1: C2+G2:h~
+34 RH1: C5+G5:h
+34 LH1: C2+G2:h~
+# bar 35: "(Campanelle)" printed under the RH eighth figure (bars 35-36)
+35 RH1: C6+G6:h~
+35 RH2: r:e E5:e* C5:e* D5:e*
+35 LH1: C2+G2:h~
+36 RH1: C6+G6:h~
+36 RH2: G4:e* E5:e* C5:e* D5:e*
+36 LH1: C2+G2:h~
+# page 179 system 1 starts bar 37
+37 RH1: C6+G6:h~
+37 RH2: G4:e* E5:e* C5:e* D5:e*
+37 LH1: C2+G2:h~
+# bar 38: a separate small treble staff "Campanelle" (no key signature) starts above the piano: written as RH3 (bars 38-44)
+38 RH1: C6+G6:h~
+38 RH2: G4:e* r:e r:q
+38 RH3: r:e E5:e* C5:e* D5:e*
+38 LH1: r:q dyn:pp r:s3 C3:s3* C3:e3* B2:e3*
+38 LH2: C2+G2:h~
+39 RH1: C6+G6:h~
+# JUDGE bar 39 RH2: X - third chord lower note between the 2nd and 3rd ledger lines below = G3
+39 RH2: r:s3 E3+C4:s3* E3+C4:e3* G3+D4:e3* C4+E4:e* r:e
+39 RH3: G4:e* E5:e* C5:e* D5:e*
+39 LH1: Bb2:q r:s3 C4:s3* C4:e3* B3:e3*
+39 LH2: C2+G2:h~
+# bar 40: LH changes to treble clef for the upper voice after beat 1 (the tied C2+G2 stay in bass-clef position under the staff)
+40 RH1: C6+G6:h~
+40 RH2: r:s3 E4+C5:s3* E4+C5:e3* G4+D5:e3* C5+E5:e r:e
+40 RH3: G4:e* E5:e* C5:e* D5:e*
+40 LH1: Bb3:q clef:G dyn:f r:s3 C5:s3* C5:e3* B4:e3*
+40 LH2: C2+G2:h~
+# page 179 system 2 starts bar 41
+# bars 41-44: LH staff in treble clef (upper voice); the lower tied C2+G2 printed with a small bass clef under the staff
+41 RH1: C6+G6:h~
+41 RH2: dyn:f r:s3 E5+C6:s3* E5+C6:e3* G5+D6:e3* C6+E6:e3* D6+F6:e3* E6+G6:e3*
+41 RH3: G4:e* E5:e* C5:e* D5:e*
+41 LH1: Bb4:h^~
+41 LH2: C2+G2:h~
+# bar 42: small grace note (slashed eighth) before the first triplet, read as A6 (could be G6)
+42 RH1: C6+G6:h~
+# MARKS bar 42 RH2: slur from the grace note to its main chord
+42 RH2: g:A6:e( E6+G6:e3*) D6+F6:e.3* C6+E6:s3* C6+E6:e3* G5+D6:e.3* E5+C6:s3*
+42 RH3: G4:e* E5:e* C5:e* D5:e*
+42 LH1: Bb4:h~
+42 LH2: C2+G2:h~
+43 RH1: C6+G6:h~
+43 RH2: hp:> E5+C6:e3* D5+G5:e.3* C5+E5:s3* C5+E5:e3* G4+D5:e.3* E4+C5:s3* hp:end
+43 RH3: G4:e* E5:e* C5:e* D5:e*
+# MARKS bar 43 LH1: hairpin > between the staves (both hands)
+43 LH1: hp:> Bb4:h~ hp:end
+43 LH2: C2+G2:h~
+# bar 44: "(Campanelle)" under the RH E5; LH back to bass clef at the end of the bar
+# JUDGE bar 44 RH1: X - no rests printed for the upper C6+G6 voice: hidden
+44 RH1: C6+G6:e s:e s:q
+44 RH2: E4+C5:e* r:e E5:e* r:e
+44 RH3: G4:e* r:e r:q
+44 LH1: Bb4:e r:e r:q clef:F
+44 LH2: C2+G2:e s:e s:q
