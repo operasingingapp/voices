@@ -34,6 +34,12 @@ export async function newVerovioToolkit(): Promise<Toolkit> {
 const PX_PER_SPACE_AT_100 = 18;
 /** width (px) of the names' column at the left of the single line */
 export const LANE_GUTTER_PX = 104;
+/** width (px) of the names' column at the left of the page view: a grip and the part's short name */
+export const PAGE_GUTTER_PX = 62;
+/** each staff carries its number, and each mark drawn between staves the staff it belongs to, so a part can be faded
+ *  element by element (a band laid over the page would cut through slurs and high notes that reach a neighbour);
+ *  the marks between staves are tagged after drawing (tagControlEvents) */
+const STAFF_ATTRS = ["staff@n"];
 
 interface TimeEntry {
   qstamp: number;
@@ -136,7 +142,7 @@ export class VrvScore {
       pageMarginTop: Math.round(o.topPx * unitsPerPx),
       pageMarginBottom: 40,
       // the single line keeps a gutter at its left for the parts' names, beside their staves
-      pageMarginLeft: o.strip ? Math.round(LANE_GUTTER_PX * unitsPerPx) : 30,
+      pageMarginLeft: Math.round((o.strip ? LANE_GUTTER_PX : PAGE_GUTTER_PX) * unitsPerPx),
       pageMarginRight: 30,
       spacingSystem: Math.max(6, Math.round(o.systemGapPx / (o.zoom * 10))),
       header: "none",
@@ -147,11 +153,13 @@ export class VrvScore {
       lyricWordSpace: 2.4,
       lyricHyphenLength: 0.9,
       font: "Leipzig",
+      svgAdditionalAttribute: STAFF_ATTRS,
       svgCss: "g.verse text{font-family:'Charis SIL',Charter,Georgia,serif} g.dir text,g.tempo text,g.dynam text,g.mNum text{font-family:'Charis SIL',Charter,Georgia,serif}",
     };
     this.tk.setOptions(options);
     if (key !== this.loadedKey) {
-      const f = filterXml(this.xml, o.visibleParts, o.strip);
+      // the names are drawn beside the staves by the app (in the line and on the page), not engraved
+      const f = filterXml(this.xml, o.visibleParts, true);
       this.parts = f.parts;
       this.tk.loadData(f.xml);
       this.loadedKey = key;
@@ -182,12 +190,54 @@ export class VrvScore {
     }
     const svg = this.host.querySelector("svg");
     if (svg) svg.classList.add("vrv-score");
+    this.tagControlEvents();
     this.indexOnsets();
     return svg;
   }
 
-  /** the part a staff element belongs to: its position among the staves of its bar */
+  /** the marks drawn at the bar's level (slurs, ties, dynamics, hairpins, words...) get the staff they belong to, as
+   *  data-staff: their own @staff, or the staff of the note they start on */
+  private tagControlEvents() {
+    for (const el of this.host.querySelectorAll<SVGGElement>("g.measure > g:not(.staff):not(.barLine):not(.mNum)")) {
+      if (!el.id || el.hasAttribute("data-staff")) continue;
+      let staff = "";
+      try {
+        const a = this.tk.getElementAttr(el.id) as Record<string, string>;
+        if (a.staff) staff = a.staff;
+        else {
+          const sid = (a.startid ?? a.plist?.split(" ")[0] ?? "").replace(/^#/, "");
+          const st = sid ? this.host.querySelector(`[id="${sid}"]`)?.closest("g.staff") : null;
+          staff = st?.getAttribute("data-n") ?? "";
+        }
+      } catch {
+        /* not an element the toolkit knows */
+      }
+      if (staff) el.setAttribute("data-staff", staff);
+    }
+  }
+
+  /** the staff numbers (Verovio's @n, counted over the parts shown) of a part */
+  staffNs(pid: string): number[] {
+    let n = 1;
+    for (const p of this.parts) {
+      if (p.id === pid) return Array.from({ length: p.staves }, (_, k) => n + k);
+      n += p.staves;
+    }
+    return [];
+  }
+
+  /** the part a staff element belongs to: by its number (a system may leave out staves that only rest), else by its
+   *  position among the staves of its bar */
   private partOfStaff(staff: Element): string | null {
+    const dn = Number(staff.getAttribute("data-n"));
+    if (dn > 0) {
+      let k = dn - 1;
+      for (const p of this.parts) {
+        if (k < p.staves) return p.id;
+        k -= p.staves;
+      }
+      return null;
+    }
     const m = staff.closest("g.measure");
     if (!m) return null;
     const staves = [...m.querySelectorAll(":scope > g.staff")];

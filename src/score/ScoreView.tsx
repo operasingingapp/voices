@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MutableRefObject, type ReactNode } from "react";
+import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MutableRefObject, type ReactNode } from "react";
 import type { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 import { buildLayout, type Lane, type ScoreLayout } from "./layout";
 import { buildPinnedVrv, loadVerovio, VrvScore } from "./vrv";
@@ -96,6 +96,8 @@ interface Props {
   laneYou?: string;
   /** tapping a part's name (strip): e.g. a menu to move or hide that part */
   onLaneLabel?: (partId: string, el: HTMLElement) => void;
+  /** a part's name dragged by its grip (page view) and dropped on another part's place */
+  onLaneMove?: (partId: string, toPartId: string) => void;
   /** parts given a soft tint across the score (xml part ids): the line you sing, easy to find */
   tintXmlParts?: string[];
   /** Colour the note sounding now, in the first of these parts that has one (xml part ids). */
@@ -425,6 +427,95 @@ export function ScoreView(props: Props) {
       return bs.map((b, k) => (b ? <div key={`tint-${pid}-${k}`} className="ov-you" style={{ position: "absolute", left: 0, top: b.top, width: "100%", height: b.height }} /> : null));
     });
   const { xml, visibleXmlParts, zoom } = props;
+  const svId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
+  /** Verovio: a faded part is drawn lighter element by element (its staves, and the slurs, dynamics and other marks
+   *  that belong to them), so nothing of a neighbouring part is covered and every system fades the same way */
+  const fadeStyle = (vrv: VrvScore) => {
+    const rules: string[] = [];
+    for (const pid of props.fadedXmlParts ?? []) {
+      const ns = vrv.staffNs(pid);
+      if (!ns.length) continue;
+      const sel = ns.flatMap((n) => [`[data-sv="${svId}"] g.staff[data-n="${n}"]`, `[data-sv="${svId}"] g[data-staff~="${n}"]`]).join(",");
+      rules.push(`${sel}{opacity:${props.softFadedXmlParts?.includes(pid) ? 0.4 : 0.14};transition:opacity .25s}`);
+    }
+    return rules.length ? <style>{rules.join("\n")}</style> : null;
+  };
+  // page view: each part's short name in the gutter of every system, with a grip to drag it to another place
+  const [drag, setDrag] = useState<{ pid: string; sys: number; y0: number; dy: number } | null>(null);
+  const pageLabelEls = (layout: ScoreLayout) => {
+    if (!props.laneLabels) return null;
+    const out: ReactNode[] = [];
+    for (const [sid, lanes] of layout.systemLanes) {
+      lanes.forEach((l) => {
+        const name = props.laneLabels![l.partId];
+        if (!name) return;
+        const face = props.laneFaces?.[l.partId];
+        const abbr = typeof face === "string" ? face : name;
+        const mid = (l.top + l.bottom) / 2;
+        const dragging = drag && drag.pid === l.partId && drag.sys === sid;
+        // where the dragged name would land: the part whose staff is nearest
+        let target: string | null = null;
+        if (drag && drag.sys === sid && Math.abs(drag.dy) > 6) {
+          const y = (lanes.find((x) => x.partId === drag.pid)!.top + lanes.find((x) => x.partId === drag.pid)!.bottom) / 2 + drag.dy;
+          target = lanes.reduce((b, x) => (Math.abs((x.top + x.bottom) / 2 - y) < Math.abs((b.top + b.bottom) / 2 - y) ? x : b)).partId;
+        }
+        out.push(
+          <div
+            key={`pl-${sid}-${l.partId}`}
+            className={`page-label${dragging ? " is-dragging" : ""}${drag && drag.sys === sid && target === l.partId && !dragging ? " is-target" : ""}${props.laneYou === l.partId ? " is-you" : ""}`}
+            style={{ top: Math.round(mid - 13), transform: dragging ? `translateY(${drag!.dy}px)` : undefined }}
+            onPointerUp={(e) => e.stopPropagation()}
+            onPointerDown={(e) => e.stopPropagation()}
+          >
+            {props.onLaneMove && (
+              <span
+                className="page-grip"
+                role="button"
+                tabIndex={-1}
+                aria-label={`Drag to move ${name}`}
+                title="Drag to move this line"
+                onPointerDown={(e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+                  setDrag({ pid: l.partId, sys: sid, y0: e.clientY, dy: 0 });
+                }}
+                onPointerMove={(e) => {
+                  if (!drag || drag.pid !== l.partId || drag.sys !== sid) return;
+                  e.stopPropagation();
+                  setDrag({ ...drag, dy: e.clientY - drag.y0 });
+                }}
+                onPointerUp={(e) => {
+                  e.stopPropagation();
+                  if (drag && drag.pid === l.partId && drag.sys === sid && target && target !== l.partId) props.onLaneMove!(l.partId, target);
+                  setDrag(null);
+                }}
+                onPointerCancel={() => setDrag(null)}
+              >
+                <svg viewBox="0 0 10 16" aria-hidden="true">
+                  {[3, 8, 13].flatMap((y) => [<circle key={`a${y}`} cx="3" cy={y} r="1.3" />, <circle key={`b${y}`} cx="7" cy={y} r="1.3" />])}
+                </svg>
+              </span>
+            )}
+            <button
+              type="button"
+              className="page-name"
+              title={name}
+              aria-label={`${name}: move, hide or mute this line`}
+              onClick={(e) => {
+                e.stopPropagation();
+                props.onLaneLabel?.(l.partId, e.currentTarget);
+              }}
+            >
+              {abbr}
+            </button>
+          </div>,
+        );
+      });
+    }
+    return out;
+  };
+
   const scrollRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
@@ -1077,7 +1168,7 @@ export function ScoreView(props: Props) {
       >
         {error && <p className="score-error">{error}</p>}
         {!loaded && !error && <p className="score-loading">Engraving the score…</p>}
-        <div ref={hostRef} className="osmd-host" />
+        <div ref={hostRef} className="osmd-host" data-sv={svId} />
         <div className="score-overlay" aria-hidden={false}>
           {layout &&
             loopRects(layout).map((r, i) => (
@@ -1283,7 +1374,10 @@ export function ScoreView(props: Props) {
           {layout && hasLyrics && renderSungText(layout)}
           {layout && tintEls(layout)}
           {layout && !(pinned && pinIdx >= 0 && pinIdx < pinned.panels.length) && laneLabelEls(layout)}
+          {layout && useVrv && vrvRef.current && fadeStyle(vrvRef.current)}
+          {layout && useVrv && !strip && pageLabelEls(layout)}
           {layout &&
+            !(useVrv && vrvRef.current) &&
             props.fadedXmlParts?.flatMap((pid) => {
               if (!strip)
                 return pageBands(layout, pid, "fade").map((b, k) => <div key={`${pid}-${k}`} className={`ov-fade${props.softFadedXmlParts?.includes(pid) ? " soft" : ""}`} style={{ left: 0, top: b.top, width: "100%", height: b.height }} />);

@@ -399,3 +399,50 @@
   .pv-acts .pv-h3 { font-size: 24px; }
   .pv-act-row { grid-template-columns: 46px minmax(0, 1fr) 36px; }
 }
+
+/* ---- Page view: each line's short name in the gutter of every system, with a grip to drag it to another place ---- */
+.score-overlay > .page-label {
+  left: 4px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  border-radius: var(--radius-pill);
+  background: var(--canvas);
+  color: var(--ink);
+  pointer-events: auto;
+  transition: box-shadow 0.15s, background 0.15s;
+}
+.page-label .page-grip {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 100%;
+  padding-left: 3px;
+  color: var(--ink-muted);
+  cursor: grab;
+  touch-action: none;
+}
+.page-label .page-grip svg { width: 8px; height: 13px; fill: currentColor; }
+.page-label .page-grip:hover { color: var(--ink); }
+.page-label .page-name {
+  max-width: 40px;
+  height: 100%;
+  padding: 0 8px 0 2px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: italic 500 13px/1 var(--font-display);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.page-label:not(:has(.page-grip)) .page-name { padding-left: 8px; }
+.page-label:hover { background: var(--fog); }
+.page-label.is-you { border-color: color-mix(in srgb, var(--now-mark) 45%, transparent); background: color-mix(in srgb, var(--now-mark) 10%, var(--canvas)); }
+.page-label.is-you .page-name { color: var(--now-mark); font-weight: 700; }
+.page-label.is-dragging { z-index: 8; cursor: grabbing; box-shadow: 0 6px 18px -6px rgba(26, 24, 20, 0.35); transition: none; }
+.page-label.is-dragging .page-grip { cursor: grabbing; }
+.page-label.is-target { box-shadow: 0 0 0 2px var(--now-mark); }

@@ -2618,6 +2618,7 @@ function PracticeScreen({
             const r = el.getBoundingClientRect();
             setLaneMenu((m) => (m?.xid === xid ? null : { xid, left: r.left, top: r.bottom + 6 }));
           }}
+          onLaneMove={(from, to) => placeLine(orderedIds.indexOf(from), orderedIds.indexOf(to))}
           tintXmlParts={[voicePart.source.xmlPartId]}
           zoom={effZoom}
           cursor={cursorRef}
