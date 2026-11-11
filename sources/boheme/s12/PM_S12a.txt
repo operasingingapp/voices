@@ -1,0 +1,430 @@
+# S12a piano: pages 111-115 (Act 2), bars 1-87. Key A major (3 sharps) throughout; time 2/4 unless a remark says otherwise.
+# page 111 system 1 starts bar 1
+# bar 1: figure (15), 2/4, A major (3 sharps); "sempre pp"
+# JUDGE bar 1 RH: Y - "sempre pp" printed between the staves at the start; written once, on the RH
+1 RH1: word:sempre dyn:pp A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+# JUDGE bar 1 LH: X - "sempre pp" written once, on the RH
+# MARKS bar 1 LH1: sempre pp (between the staves) also on LH
+1 LH1: word:sempre dyn:pp r:e A3+E4:e r:e A3+E4:e
+2 RH1: A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+2 LH1: r:e A3+E4:e r:e A3+E4:e
+3 RH1: A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+3 LH1: r:e A3+E4:e r:e A3+E4:e
+4 RH1: A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+4 LH1: r:e A3+E4:e r:e A3+E4:e
+# page 111 system 2 starts bar 5
+5 RH1: A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+5 LH1: r:e A3+E4:e r:e A3+E4:e clef:G
+6 RH1: A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+6 LH1: r:e E4:e( F#4:e G#4:e
+# bar 7: 3/4
+7 RH1: A5+C#6+E6:e r:e A5+C#6+E6:e r:e A5+C#6+E6:e r:e
+7 LH1: A4:e B4:e C#5:e D5:e E5:e C#5:e)
+# page 111 system 3 starts bar 8
+# bar 8: 2/4
+8 RH1: A5+C#6+F#6:e r:e A5+C#6+F#6:e r:e
+8 LH1: F#5:q.( C#5:e
+9 RH1: G#5+D6+E6:e r:e G#5+D6+E6:e r:e
+9 LH1: E5:q. C#5:e
+10 RH1: D5+E5+B5:e r:e C#5+E5+A5:e r:e
+# MARKS bar 10 LH1: phrase slur from bar 8 ends on B4 (not E3); nested grace slur C#5-B4; new slur starts on E3
+10 LH1: g:C#5:e[ B4:e]) r:e A4:e> E3:e(
+11 RH1: C#5+E5+A5:e r:e A4+C#5+F#5:e r:e
+11 LH1: A3:e C#4:e E4:e F#4:e
+# page 111 system 4 starts bar 12
+12 RH1: r:e B4+E5+B5:e r:e B4+E5+B5:e
+12 LH1: G#4:h
+13 RH1: r:e A4+E5+B5:e r:e A4+D#5+B5:e
+13 LH1: F#4:q B3:q
+14 RH1: r:e G#4+B4+E5:e r:e G#4+B4+E5:e
+# MARKS bar 14 LH1: slur from bar 10 ends on the first E4, not on D#4
+14 LH1: E4:e.) E4:s* E4:e* D#4:e*
+15 RH1: r:e E4:e( F#4:e G#4:e
+15 LH1: r:q r:e E4:e~
+15 LH2: D4:h(
+# page 112 system 1 starts bar 16
+# bar 16: 3/4
+# MARKS bar 16 RH1: the slur from bar 15 E4 runs on across the system break to B4 in bar 19; removed the restart on A4
+16 RH1: A4:e B4:e C#5:e D5:e E5:e C#5:e
+16 LH1: E4:e E4:q E4:q E4:e~
+# MARKS bar 16 LH2: slur from bar 15 D4 runs on to the A3 of bar 17 (removed end on B3)
+16 LH2: C#4:h B3:q
+# bar 17: 2/4
+17 RH1: F#5:q. C#5:e
+17 LH1: E4:e E4:q E4:e~
+# MARKS bar 17 LH2: slur ends on A3
+17 LH2: A3:h)
+# MARKS bar 18 RH1: slur does not end here (ends on B4 bar 19)
+18 RH1: E5:q. C#5:e
+18 LH1: E4:e E4:q E4:e~
+# JUDGE bar 18 LH2: Y - lower-voice last eighth shares the E4 notehead (unison with the upper voice), not D4
+18 LH2: B3:q. E4:e
+# MARKS bar 19 RH1: slur from bar 15 ends on B4; A4 only tied (no slur start)
+19 RH1: B4:e) r:e A4:q>~
+19 LH1: E4:e E4:q E4:e>(
+# JUDGE bar 19 LH2: X - lower voice: D4 eighth, eighth rest, C#4 QUARTER (no flag) with accent
+19 LH2: D4:e r:e C#4:q>
+# MARKS bar 20 RH1: A4 tied over the system break to the A4 (RH2) of bar 21, not a slur end
+20 RH1: A4:h~
+20 LH1: C#4:e) clef:F A3:e* E3:e* A2:e*
+# page 112 system 2 starts bar 21
+21 RH1: F#5+A5:h~(
+21 RH2: A4:h~
+21 LH1: r:e A2:e* D3:e* F#3:e*
+21 LH2: D2:h~
+22 RH1: F#5+A5:q E5+G#5:q
+22 RH2: A4:h~
+22 LH1: A3:e* D4:e* F#4:e* A4:e*
+22 LH2: D2:h
+# bar 23: rall.
+# MARKS bar 23 RH1: rall. (between the staves) also on RH
+23 RH1: word:rall. E5+G#5:q D5+F#5:q)
+23 RH2: A4:h~
+# JUDGE bar 23 LH: Y - "rall." printed between the staves
+23 LH1: word:rall. r:e F#2:e* B2:e* D3:e*
+# JUDGE bar 23 LH2: OWN - B1 half has a tenuto dash and is tied into bar 24 (X lacked tenuto, Y lacked tie)
+23 LH2: B1:h~
+# bar 24: stent.
+# MARKS bar 24 RH1: stent. (between the staves) also on RH
+24 RH1: word:stent. D5+F#5:e- D5+F#5:e- C#5+E5:e- B4+D5:e-
+24 RH2: A4:h
+# JUDGE bar 24 LH: Y - "stent." printed between the staves
+24 LH1: word:stent. F#3:e* B3:e* D4:e* F#4:e*
+24 LH2: B1:h
+# bar 25: a tempo; hairpin < in the LH
+# MARKS bar 25 RH1: a tempo and hairpin < (between the staves) also on RH
+25 RH1: word:a_tempo hp:< E#4+G#4+C#5:h~
+# JUDGE bar 25 LH: Y - "a tempo" printed between the staves, hairpin under the LH figure
+25 LH1: word:a_tempo hp:< r:e G#2:e* C#3:e* E#3:e*
+25 LH2: C#2:h~
+# MARKS bar 26 RH1: hairpin end; G#4 tied into the bar 27 chord
+26 RH1: E#4+G#4+C#5:q hp:end E#4:e( G#4:e~
+26 LH1: G#3:e* C#4:e* hp:end s:q
+26 LH2: C#2:h~
+# page 112 system 3 starts bar 27
+# MARKS bar 27 RH1: slur from bar 26 E#4 ends on the chord (a further arc from E#4 to the chord E#4, a held note, cannot be written)
+27 RH1: E#4+G#4+C#5:h~)
+27 LH1: C#2:e r:e r:q clef:G
+28 RH1: E#4+G#4+C#5:e C#5:e( B4:e A4:e)
+28 LH1: r:e C#4:e( B3:e A3:e)
+29 RH1: E5:h~
+29 LH1: E4:h~
+# MARKS bar 30 RH1: p (between the staves) also on RH
+30 RH1: dyn:p E5:e r:e r:q
+30 LH1: dyn:p E4:e. E4:s* E4:e* D#4:e*
+31 RH1: r:e E4:e( F#4:e G#4:e
+31 LH1: r:q r:e E4:e~
+31 LH2: D4:h(
+# bar 32: 3/4
+32 RH1: A4:e B4:e C#5:e D5:e E5:e C#5:e)
+# JUDGE bar 32 LH: X - no tie from the last E4 into bar 33
+32 LH1: E4:e E4:q E4:q E4:e
+32 LH2: C#4:h B3:q)
+# page 112 system 4 starts bar 33
+# bar 33: 2/4
+33 RH1: F#5:q.( C#5:e)
+33 LH1: E4:e E4:q E4:e clef:F
+33 LH2: A3:h
+# bar 34: rall.
+# JUDGE bar 34 RH: OWN - three grace 16ths: D4 (hanging below the E4 line), G#4 (on the G line), C#5; X missed C#5, Y read E4 for the first
+# MARKS bar 34 RH1: slur from the grace notes to E5
+34 RH1: word:rall. g:D4:s( g:G#4:s g:C#5:s E5:q.)( C#5:e)
+# MARKS bar 34 LH1: rall. (between the staves) also on LH
+34 LH1: word:rall. E2:e r:e E3+G#3+D4:ea* r:e
+# bar 35: a tempo
+# JUDGE bar 35 RH: Y - "a tempo" printed between the staves (RH only)
+# MARKS bar 35 RH1: grace slur C#5-B4; slur B4-A4 closed on A4
+35 RH1: word:a_tempo g:C#5:e( B4:q)( A4:q~)
+35 RH2: D4+E4:q C#4+E4:q~
+# JUDGE bar 35 LH: X - "a tempo" written once, on the RH
+# MARKS bar 35 LH1: a tempo (between the staves) also on LH
+35 LH1: word:a_tempo A2:e( E3:e A3:e E3:e)
+35 LH2: A2:h~
+# MARKS bar 36 RH1: slur from E5 runs on to A4 of bar 37
+36 RH1: A4:q E5:e( C#5:e
+36 RH2: C#4+E4:e r:e D4:q
+36 LH1: A3:e( E3:e G#3:e E3:e)
+36 LH2: A2:h
+# MARKS bar 37 RH1: slur from bar 36 E5 ends on A4
+37 RH1: B4:q A4:q~)
+37 RH2: D4+E4:q C#4+E4:q~
+37 LH1: A2:e( E3:e A3:e E3:e)
+37 LH2: A2:h~
+# JUDGE bar 38 RH: X - no tenuto on the E5 (speck only)
+# MARKS bar 38 RH1: slur runs over the page break to B4 of bar 39
+38 RH1: A4:e C#5:e( E5:e C#5:e
+38 RH2: C#4+E4:e r:e D4:q
+38 LH1: A3:e( E3:e G#3:e E3:e)
+# JUDGE bar 38 LH2: X - no tie from the A2 into bar 39
+38 LH2: A2:h
+# page 113 system 1 starts bar 39
+# JUDGE bar 39 RH: OWN - chord is C#4+E4+A4 (middle note on the bottom line = E4, as Y) with a tenuto under it (as X)
+# MARKS bar 39 RH1: slur from bar 38 ends on B4
+39 RH1: B4:e) r:e C#4+E4+A4:q-~
+39 LH1: A2:e( E3:e A3:e E3:e)
+39 LH2: A2:h~
+# JUDGE bar 40 RH: OWN - tied chord is C#4+E4+A4 (as Y); f and hairpin once, on the RH
+40 RH1: C#4+E4+A4:q~ C#4+E4+A4:e r:x dyn:f hp:< B3:x( C#4:x D#4:x) hp:end
+40 RH2: s:h
+# JUDGE bar 40 LH: X - f and hairpin written once, on the RH
+# MARKS bar 40 LH1: f and hairpin < (between the staves) also on LH
+40 LH1: A3:e( E3:e A3:e) r:x dyn:f hp:< B2:x( C#3:x D#3:x) hp:end
+# JUDGE bar 40 LH2: Y - A2 quarter tied to the A2 eighth (tie arc visible)
+40 LH2: A2:q~ A2:e s:e
+41 RH1: E4:e dyn:f G#3+B3+E4:e> r:e dyn:p G#3+B3+E4:e*
+# MARKS bar 41 LH1: f (between the staves) also on LH
+41 LH1: dyn:f E3:e r:e dyn:p G#1+G#2:e* B1+B2:e*
+# bar 42: cres.
+# MARKS bar 42 RH1: cres. (between the staves) also on RH
+42 RH1: r:e word:cres. G#3+B3+E4:e r:q
+42 LH1: E1+E2:e word:cres. B2:e* C#3:e* D#3:e*
+# page 113 system 2 starts bar 43
+# bar 43: 3/4; LH hairpin <
+43 RH1: r:e B3+E4+G#4:e* r:e B3+E4+G#4:e* r:e E4+G#4+B4:e*
+43 LH1: hp:< E3:e* F#3:e* G#3:e* A3:e* B3:e* G#3:e* hp:end
+# bar 44: 2/4
+# JUDGE bar 44 RH: OWN - second chord: C#4 on the ledger, E4 on the bottom line, G#4 on the G line (X B3+E4+G#4, Y C#4+E4+A4 both wrong)
+44 RH1: r:e E4+A4+C#5:e* r:e C#4+E4+G#4:e*
+44 LH1: C#4:q.> G#3:e(
+# MARKS bar 45 RH1: hairpin > (between the staves) also on RH
+45 RH1: r:e hp:> D#4+A4+B4:e* r:e B3+E4+G#4:e* hp:end
+# MARKS bar 45 LH1: slur G#3 (bar 44) ends on B3; new slur starts on G#3
+45 LH1: B3:q.>) hp:> G#3:e( hp:end
+# JUDGE bar 46 RH: X - hairpin written once, on the LH
+# MARKS bar 46 RH1: hairpin < (between the staves) also on RH
+46 RH1: r:e B3+D#4+A4:e* hp:< r:e B3+E4+G#4:e* hp:end
+# JUDGE bar 46 LH: Y - grace note in the space above F#3 = G#3; hairpin < under the last beat
+# MARKS bar 46 LH1: slur from bar 45 G#3 ends on the grace note; grace slur G#3-F#3 (E3 is only tied on)
+46 LH1: g:G#3:e)( F#3:q) hp:< E3:q-~ hp:end
+# page 113 system 3 starts bar 47
+# JUDGE bar 47 RH: Y - 2nd chord G#4+B4+E5 and 4th B3+E4+G#4 as both; 3rd chord middle head on the G line = E4+G#4+C#5; hairpin < over chords 1-2, > over 3-4
+47 RH1: hp:< E4+G#4+B4:e* A4+C#5+E5:e* hp:end hp:> E4+G#4+C#5:e* B3+E4+G#4:e* hp:end
+# MARKS bar 47 LH1: hairpins < > (between the staves) also on LH; E3 only tied from bar 46, no slur end
+47 LH1: hp:< E3:q~ hp:end hp:> E3:e r:e hp:end
+48 RH1: r:e dyn:mf B3+F#4+B4:e r:e B3+F#4+A#4:e
+# JUDGE bar 48 LH: X - mf written once, on the RH
+# MARKS bar 48 LH1: mf (between the staves) also on LH
+48 LH1: dyn:mf D#2+D#3:e r:e G#2+G#3:e r:e
+# JUDGE bar 49 RH: X - first chord bottom note hangs below the C4 ledger = B3
+49 RH1: r:e B3+E4+G#4:e r:e A#3+E4+F#4:e
+49 LH1: C#2+C#3:e r:e F#2+F#3:e r:e
+# JUDGE bar 50 RH: X - f chord: one ledger (C4) only, bottom note below it = B3; sharp on D = B3+D#4+F#4
+50 RH1: r:e dyn:f B3+D#4+F#4:e> r:e dyn:p B4+B5:e(
+# JUDGE bar 50 LH: X - f written once, on the RH; notes agree
+# MARKS bar 50 LH1: f (between the staves) also on LH
+50 LH1: B2+B3:e dyn:f F#2+F#3:e> s:q
+# MARKS bar 50 LH2: p (between the staves) also on LH
+50 LH2: s:q dyn:p B1+B2:q>~
+# MARKS bar 51 RH1: slur from bar 50 runs on over the system break
+51 RH1: Dn5+Dn6:e C#5+C#6:e B4+B5:e A4+A5:e
+51 LH1: r:e F#3+B3+Dn4:q F#3+B3+D4:e~
+51 LH2: B1+B2:h~
+# page 113 system 4 starts bar 52
+# MARKS bar 52 RH1: no new slur (continuation of the bar 50 slur)
+52 RH1: G#4+G#5:e F#4+F#5:e G#4+G#5:e A4+A5:e
+# JUDGE bar 52 LH: Y - top note sits just above the single C4 ledger = D4 (E4 would need a second ledger)
+52 LH1: F#3+B3+D4:e F#3+B3+D4:q F#3+B3+D4:e
+52 LH2: B1+B2:h
+# JUDGE bar 53 RH: X - C#-major chord G#4+C#5+E#5+G#5 (heads in spaces E#5/C#5, two sharps)
+# MARKS bar 53 RH1: hairpin < (between the staves)
+53 RH1: hp:< G#4+C#5+E#5+G#5:h~
+# JUDGE bar 53 LH: X - chord heads sit ON the C4 and E4 ledgers with sharps = G#3+C#4+E#4
+# MARKS bar 53 LH1: hairpin < (between the staves)
+53 LH1: hp:< r:e G#3+C#4+E#4:q G#3+C#4+E#4:e~
+53 LH2: B1+B2:h~
+# JUDGE bar 54 RH: X - last eighth G#5 above the top line + G#4 on the G line
+# MARKS bar 54 RH1: slur from bar 50 ends on the chord; hairpin end; new slur from the G#4+G#5 eighth
+54 RH1: G#4+C#5+E#5+G#5:q.) hp:end G#4+G#5:e(
+# JUDGE bar 54 LH: X - same chords as bar 53
+# MARKS bar 54 LH1: hairpin end
+54 LH1: G#3+C#4+E#4:e G#3+C#4+E#4:q hp:end G#3+C#4+E#4:e
+54 LH2: B1+B2:h
+# bar 55: "lusingando un poco"
+# MARKS bar 55 RH1: slur from bar 54 runs on (no restart)
+55 RH1: word:lusingando_un_poco D5+D6:e C#5+C#6:e B4+B5:e A4+A5:e*
+# JUDGE bar 55 LH: Y - last chord top note D4 (same position as bar 52)
+# MARKS bar 55 LH1: lusingando un poco (between the staves) also on LH
+55 LH1: word:lusingando_un_poco r:e F#3+B3+D4:q F#3+B3+D4:e~
+55 LH2: B1+B2:h~
+# JUDGE bar 56 RH: X - grace note a step above the A5 main note (above the ledger) = B5
+# MARKS bar 56 RH1: grace slur B5-A4+A5 (nested); the long slur runs on over the page break to bar 57
+56 RH1: G#4+G#5:e F#4+F#5:e G#4+G#5:e g:B5:e[ A4+A5:e]
+# JUDGE bar 56 LH: Y - top note D4 throughout (one ledger only)
+56 LH1: F#3+B3+D4:e F#3+B3+D4:q F#3+B3+D4:e
+56 LH2: B1+B2:h
+# page 114 system 1 starts bar 57
+# bar 57: a tempo
+# MARKS bar 57 RH1: slur from bar 54 ends on this chord (over the page break); hairpin < (between the staves)
+57 RH1: word:a_tempo hp:< G#4+C#5+E#5+G#5:h~)
+# JUDGE bar 57 LH: X - "a tempo" written once, on the RH
+# MARKS bar 57 LH1: hairpin < (between the staves)
+57 LH1: hp:< r:e G#3+C#4+E#4:q G#3+C#4+E#4:e~
+# JUDGE bar 57 LH2: X - bass octave B1+B2 (B2 on the 2nd line; B1 below the C2 ledger), same as bar 53
+57 LH2: B1+B2:h~
+# bar 58: cres:...... (to bar 59)
+# JUDGE bar 58 RH: X - cres. written once, on the LH
+# MARKS bar 58 RH1: hairpin end; cres. (between the staves) also on RH; no slur printed over bars 58-59
+58 RH1: hp:end G#4+C#5+E#5+G#5:q. word:cres. C#5+C#6:e
+# JUDGE bar 58 LH: Y - "cres:......" starts under the last eighth of bar 58
+# MARKS bar 58 LH1: hairpin end
+58 LH1: hp:end G#3+C#4+E#4:e G#3+C#4+E#4:q word:cres. G#3+C#4+E#4:e
+# JUDGE bar 58 LH2: X - B1+B2 tied from bar 57
+58 LH2: B1+B2:h
+# bar 59: sostenendo un poco
+# JUDGE bar 59 RH: X - "sostenendo un poco" centred over bar 59
+# MARKS bar 59 RH1: no slur printed (removed slur end)
+59 RH1: word:sostenendo_un_poco F#5+F#6:e En5+En6:e D5+D6:e C#5+C#6:e
+59 LH1: r:e B3+D4+F#4:q B3+D4+F#4:e~
+# JUDGE bar 59 LH2: X - bass a step lower than bar 57: A1+A2 (A1 on the third ledger)
+59 LH2: A1+A2:h~
+60 RH1: B4+B5:e( A4+A5:e G#4+G#5:e A4+A5:e)
+60 LH1: B3+D4+F#4:e B3+D4+F#4:q B3+D4+F#4:e
+# JUDGE bar 60 LH2: X - A1+A2 tied from bar 59
+60 LH2: A1+A2:h
+# bar 61: a tempo; cres.
+# MARKS bar 61 RH1: cres. (between the staves, second half of the bar) also on RH
+61 RH1: word:a_tempo B4+F#5+B5:h~ word:cres.
+61 LH1: r:e D3+F#3+B3:q word:cres. D3+F#3+B3:e~
+61 LH2: D2+D3:h~
+# page 114 system 2 starts bar 62
+# JUDGE bar 62 RH: Y - hairpin < spans the whole bar between the staves; written once on the LH
+# MARKS bar 62 RH1: hairpin < (between the staves) also on RH
+62 RH1: hp:< B4+F#5+B5:q. D5+D6:e hp:end
+# JUDGE bar 62 LH: Y - hairpin < spans the whole bar
+62 LH1: hp:< D3+F#3+B3:e D3+F#3+B3:q D3+F#3+B3:e hp:end
+62 LH2: D2+D3:h
+# bar 63: f, allarg.
+63 RH1: dyn:f word:allarg. A5+A6:e- G#5+G#6:e- F#5+F#6:e- E5+E6:e-
+# JUDGE bar 63 LH: X - f written once, on the RH
+# MARKS bar 63 LH1: f allarg. (between the staves) also on LH
+63 LH1: dyn:f word:allarg. r:e B3+D4+F#4+A4:q B3+D4+F#4+A4:e~
+# JUDGE bar 63 LH2: Y - bass octave B1+B2 (B2 on the 2nd line, B1 below the C2 ledger), not C#
+63 LH2: B1+B2:h~
+# JUDGE bar 64 RH: X - tenuto on chords 1-2, slur over chords 3-4
+64 RH1: D5+D6:e- C#5+C#6:e- B4+B5:e( A4+A5:e)
+# JUDGE bar 64 LH: Y - last chord at the same height as the others = B3+D4+F#4+A4
+64 LH1: B3+D4+F#4+A4:e B3+D4+F#4+A4:q B3+D4+F#4+A4:e
+# JUDGE bar 64 LH2: Y - B1+B2 tied from bar 63
+64 LH2: B1+B2:h
+# bar 65: a tempo; "m.d." over the LH-staff run (played by the right hand), hairpin <
+# JUDGE bar 65 RH: X - notes agree; "a tempo" kept on the RH
+65 RH1: word:a_tempo E5+A5+C#6+E6:h~
+# JUDGE bar 65 LH: X - m.d. run E3 A3 C#4 E4 A4 C#5 in 16ths after an eighth rest; E2+E3 half tied below
+# MARKS bar 65 LH1: a tempo (between the staves) also on LH
+65 LH1: word:a_tempo r:e hp:< E3:s A3:s C#4:s E4:s A4:s C#5:s hp:end
+65 LH2: E2+E3:h~
+# MARKS bar 66 RH1: mf (between the staves) also on RH
+66 RH1: E5+A5+C#6+E6:e dyn:mf r:e r:q
+# JUDGE bar 66 LH: X - single notes E4, E4 (on the 2nd ledger) and D#4 (between the ledgers), not chords
+66 LH1: E2+E3:e r:s dyn:mf E4:s E4:e> D#4:e>
+# page 114 system 3 starts bar 67
+# MARKS bar 67 RH1: p (between the staves) also on RH
+67 RH1: r:e dyn:p E4+E5:e* F#4+F#5:e* G#4+G#5:e*
+# JUDGE bar 67 LH: Y - "p" printed after the quarter rest, before the eighth rest
+67 LH1: r:q dyn:p r:e E4:e~
+67 LH2: Dn4:h(
+# bar 68: 3/4; RH hairpin <
+68 RH1: hp:< A4+A5:e* B4+B5:e* C#5+C#6:e* D5+D6:e* E5+E6:e* C#5+C#6:e* hp:end
+# MARKS bar 68 LH1: hairpin < (between the staves) also on LH
+68 LH1: hp:< E4:e E4:q E4:q E4:e hp:end
+68 LH2: C#4:h B3:e A3:e)
+# bar 69: 2/4, rall.; hairpin > (bars 69-70)
+# JUDGE bar 69 RH: X - diminuendo hairpin from the 2nd eighth of bar 69 to bar 70 as printed
+# MARKS bar 69 RH1: moved hairpin start (the > begins under the 4th eighth, C#5+C#6, not the 2nd)
+69 RH1: word:rall. F#5+F#6:e~ F#5+F#6:e r:e hp:> C#5+C#6:e(
+# JUDGE bar 69 LH: X - bass E2+E3 (E3 in the D3-F3 space); 3rd chord C#4+F#4+A4
+# MARKS bar 69 LH1: rall. and hairpin > (between the staves) also on LH
+69 LH1: word:rall. E2+E3:e A3+C#4+F#4:e C#4+F#4+A4:e hp:> r:e
+# bar 70: 3/4
+# JUDGE bar 70 RH: X - first chord filled head = quarter, tied to an eighth, then eighth and quarter rests
+# MARKS bar 70 RH1: slur from bar 69 ends on the quarter chord (then only tied)
+70 RH1: E5+E6:q~) E5+E6:e hp:end r:e r:q
+# JUDGE bar 70 LH: X - 3rd chord D4+E4+G#4 (no B3 head)
+# MARKS bar 70 LH1: hairpin end
+70 LH1: E2+E3:e G#3+D4+E4:e D4+E4+G#4:e hp:end r:e r:q
+# bar 71: 2/4, a tempo, pp
+# JUDGE bar 71 RH: X - one sharp only (D#5); B4 natural
+# MARKS bar 71 RH1: slur B5-A5 closed on the second chord
+71 RH1: word:a_tempo dyn:pp B4+D#5~+B5:q( A4+D#5+A5:q~)
+# JUDGE bar 71 LH: X - one beam = eighths
+# MARKS bar 71 LH1: a tempo (between the staves) also on LH
+71 LH1: word:a_tempo r:e A3+B3:e( F#3+D#4:e A3+B3:e)
+# JUDGE bar 71 LH2: X - bass half F#2 in the space below the G2 line
+# MARKS bar 71 LH2: grace slur F#1-F#2
+71 LH2: dyn:pp g:F#1:e( F#2:h~)
+# page 114 system 4 starts bar 72
+# JUDGE bar 72 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+72 RH1: A4+D#5+A5:h~
+72 LH1: F#3+D#4:e( A3+B3:e F#3+D#4:e A3+B3:e)
+# JUDGE bar 72 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+# MARKS bar 72 LH2: no tie printed from bar 72 to 73
+72 LH2: F#2:h
+# JUDGE bar 73 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+73 RH1: A4+D#5+A5:h~
+73 LH1: F#3+D#4:e( A3+B3:e F#3+D#4:e A3+B3:e)
+# JUDGE bar 73 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+73 LH2: F#2:h~
+# JUDGE bar 74 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+74 RH1: A4+D#5+A5:h~
+74 LH1: F#3+D#4:e( A3+B3:e F#3+D#4:e A3+B3:e)
+# JUDGE bar 74 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+74 LH2: F#2:h
+# JUDGE bar 75 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+75 RH1: A4+D#5+A5:h~
+75 LH1: r:e A3+B3:e( Fn3+D#4:e A3+B3:e)
+# JUDGE bar 75 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+# MARKS bar 75 LH2: grace slur F1-F2
+75 LH2: g:Fn1:e( Fn2:h~)
+# JUDGE bar 76 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+76 RH1: A4+D#5+A5:h~
+76 LH1: Fn3+D#4:e( A3+B3:e Fn3+D#4:e A3+B3:e)
+# JUDGE bar 76 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+# MARKS bar 76 LH2: Fn2 tied over the page break to bar 77
+76 LH2: Fn2:h~
+# page 115 system 1 starts bar 77
+# JUDGE bar 77 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+77 RH1: A4+D#5+A5:h~
+77 LH1: Fn3+D#4:e( A3+B3:e Fn3+D#4:e A3+B3:e)
+# JUDGE bar 77 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+77 LH2: Fn2:h~
+# JUDGE bar 78 RH: X - one sharp (D#5) only, three heads A4+D#5+A5 (no B#4)
+78 RH1: A4+D#5+A5:h
+78 LH1: Fn3+D#4:e( A3+B3:e Fn3+D#4:e A3+B3:e)
+# JUDGE bar 78 LH2: X - bass half below the G2 line = F#2 (bars 75-78 F natural)
+78 LH2: Fn2:h
+# bar 79: RH hairpin <
+# JUDGE bar 79 RH: X - hairpin starts under the run, after the first chord
+79 RH1: A4+C#5+E5+A5:e hp:< C#4:s( E4:s A4:s C#5:s E5:s A5:s hp:end
+# JUDGE bar 79 LH: Y - grace note below the F1 ledger (4 ledgers) = E1
+# MARKS bar 79 LH1: grace slur E1-E2; hairpin < (between the staves, under the RH run) also on LH
+79 LH1: g:E1:e( hp:< E2:h~) hp:end
+# bar 80: "m.s." under the accented E4+A4+C#5 (taken by the left hand)
+# JUDGE bar 80 RH: X - chord E4(m.s., stem down)+A4+C#5 with C#6 on the second ledger above
+80 RH1: E4+A4+C#5+C#6:e>) r:e r:q
+# JUDGE bar 80 LH: X - E2 eighth tied from bar 79; the m.s. E4 is written on the RH staff
+80 LH1: E2:e r:e r:q
+81 RH1: r:h
+81 LH1: r:h
+82 RH1: r:h
+82 LH1: r:h
+# bar 83: ff deciso
+# JUDGE bar 83 RH: X - E5+E6 octaves only (no C#6 head)
+83 RH1: r:e. dyn:ff word:deciso E5+E6:s* E5+E6:e> D#5+D#6:e>
+# JUDGE bar 83 LH: X - ff written once, on the RH
+# MARKS bar 83 LH1: ff deciso (between the staves) also on LH
+83 LH1: dyn:ff word:deciso r:e. E2+E3:s* E2+E3:e> D#2+D#3:e>
+# page 115 system 2 starts bar 84
+84 RH1: Dn5+Dn6:e> r:e r:q
+# JUDGE bar 84 LH: X - both D3 and D2 carry naturals
+84 LH1: Dn2+Dn3:e> r:e r:q
+# bar 85: 3/4
+85 RH1: r:h.
+85 LH1: r:h.
+86 RH1: r:h.
+86 LH1: r:h.
+# bar 87: f; grace notes E1-E2 before the LH chord; RH chord read E4 G#4 C#5 E5 over LH E3 G#3 D4; double bar at the end, next bar 4 flats, 9/8
+# JUDGE bar 87 RH: X - third head on the G line = G#4 (E7 chord), not A4
+87 RH1: dyn:f E4+G#4+C#5+E5:h>~ E4+G#4+C#5+E5:e r:e
+# JUDGE bar 87 LH: X - graces E1 (below 4 ledgers) and E2 (16ths); chord E3+G#3+D4
+# MARKS bar 87 LH1: f (between the staves) also on LH; slur from the grace notes to the chord
+87 LH1: dyn:f g:E1:s( g:E2:s E3+G#3+D4:h~) E3+G#3+D4:e r:e

@@ -392,6 +392,187 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-chi-guardi": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Scene with chorus",
+    facts: {
+      key: "A♭ major (4 flats) for bars 1-13; F major (1 flat) for bars 14-17; G major (1 sharp) for bars 18-36; E major (4 sharps) for bars 37-54; F major (1 flat) for bars 55-77; D major (2 sharps) for bars 78-103; A major (3 sharps) from bar 104 (Tempo I) to the end",
+      time: "3/4 for bars 1-17; 2/4 for bars 18-23; 6/8 for bars 24-36; 3/4 for bars 37-52, with a single bar of 4/4 (C) at 53 and 3/4 at 54; 2/4 for bars 55-98; 3/4 for bars 99-103; 2/4 from bar 104 to the end",
+      tempo: "Printed metronome marks: Allegretto moderato ♩. = 76 (bar 24, 6/8), Andante mosso ♩ = 80 (bar 37) and Allegretto giocoso ♩ = 132 (bar 55). Chosen, as no number is printed: Lo stesso movimento ma sostenendo (bar 1, 3/4) ♩ = 100 (the crotchet of “Aranci, datteri!”, whose last tempo is ♩ = 112, kept and held back by about a tenth, to the nearest metronome mark); Moderato assai (bar 18, 2/4, Parpignol far off) ♩ = 84 (a moderate pace, slower than the café scene around it); Brillante (bar 44) ♩ = 88 (the Andante mosso’s 80 quickened by about a tenth); Poco meno (bar 46) ♩ = 80 (a tenth slower again); Più mosso (bar 78, the mothers) ♩ = 144 (a tenth faster than 132, to the nearest metronome mark); Molto sostenuto (bar 99, the crying boy, a piacere) ♩ = 72 (half the Più mosso’s beat); Tempo I (Allegretto giocoso, bar 104) ♩ = 132, the printed tempo of bar 55. The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover, then back to the tempo; Rodolfo’s “senza rallentare” (bar 43) keeps the tempo; fermatas are held",
+    },
+    notePlaceholder: "At the Café Momus Rodolfo presents Mimì to his friends; Parpignol’s toy cart; the friends order supper",
+    about: (
+      <>
+        <p>
+          “Chi guardi?”, Act 2: Rodolfo, a little jealous, asks Mimì whom she is looking at. Marcello, Schaunard and Colline carry a table out of the
+          Café Momus and shout for the waiter; far off, Parpignol the toy seller cries his wares. Rodolfo brings Mimì to the table and presents her in
+          verse (“Questa è Mimì, gaia fioraia”); the friends laugh at his fine words and admit her in mock Latin. The children swarm round Parpignol’s
+          cart while the friends order roast venison, a turkey, Rhine wine and lobster; the mothers scold the children, a boy cries for a trumpet, Mimì
+          orders custard, and the children follow Parpignol away.
+        </p>
+        <p>
+          Score: vocal score pages 100-110 (from figure (8), “Chi guardi?”, to the end of page 110, before figure (15), 119 bars), from Carlo
+          Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the
+          piano each read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only
+          the Italian words are kept, with the print’s spellings (Mimì’s “crêma” with its circumflex). The chorus is heard with the piano and shown in
+          the score, but it has no words to practise here. The print gives the girls and students, the children (in two parts from bar 63), the mothers
+          and a crying boy their own staves where they sing, seven in all; here they are gathered into four staves by voice, sopranos (the girls in bar
+          13, the mothers in bars 77-97), the students’ tenors and two children’s staves (the first also carrying the boy’s “Vo’ la tromba”, bars
+          99-100), with each group named where it comes in. Every note and syllable is kept: groups sharing a staff never sing in the same bar, except the
+          girls’ two soprano lines in bar 13, written as two voices. The printed metronome marks are the Allegretto moderato’s ♩. = 76, the Andante
+          mosso’s ♩ = 80 and the Allegretto giocoso’s ♩ = 132; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-signorina-mimi": {
+    portrait: "boheme:marcello",
+    opera: "La bohème",
+    kind: "Scene with chorus",
+    facts: {
+      key: "A major (3 sharps) for bars 1-87; A flat major (4 flats) for bars 88-164 (from Musetta’s arrival); no sharps or flats from bar 165 (Un poco meno, “Tu non mi guardi!”) to the end",
+      time: "2/4 for bars 1-84, with single bars of 3/4 at 7, 16, 32, 43, 68 and 70; 3/4 for bars 85-87; 9/8 for bars 88-164, with 3/4 at 119-120, 127-128 and 148-149; 3/4 for bars 165-171; 4/4 (C) from bar 172 to the end",
+      tempo: "Printed metronome mark: Allegro moderato ♩. = 132 (bar 88, 9/8). Chosen, as no number is printed: bars 1-87 ♩ = 132, the I.º tempo (Allegretto giocoso ♩ = 132, printed on page 106 and restored on page 110) carried on, as figure (15) prints no new tempo; lusingando un poco (bar 55) and sostenendo un poco (bar 59) ♩ = 120, each until its printed a tempo (bars 57 and 61); Sostenendo appena (bar 117) ♩. = 126; ritenendo (bar 127) and ritenuto (bar 133) ♩. = 112, then a tempo (bar 128) ♩. = 126 and al tempo I.º (bar 134) ♩. = 132, the printed Allegro moderato; the 3/4 bars inside the 9/8 keep the bar’s length (♩ = ♩., the print sets them against 9/8 with the same bar lines); Un poco meno (bar 165, 3/4) ♩ = 120 (the 9/8 beat taken as the crotchet and held back a little); Sostenendo (bar 172, 4/4) ♩ = 112. The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "At the Café Momus: Mimì shows off her bonnet; the toast; Musetta arrives with Alcindoro and tries to make Marcello look at her",
+    about: (
+      <>
+        <p>
+          “Signorina Mimì, che dono raro”, Act 2 at the Café Momus. Marcello asks what rare gift Rodolfo has given Mimì; she shows her pink bonnet,
+          long wished for: he read what her heart was hiding. Schaunard and Colline mock the poet, Marcello sighs over the age of illusions, Mimì
+          finds love sweeter than honey, Marcello says it depends on the palate, and Schaunard and Colline change the subject with a toast. Then
+          Musetta sweeps in with old Alcindoro trailing behind her. Marcello paints her portrait (name Musetta, surname Temptation, a bird that feeds
+          on hearts); she throws a plate, scolds the waiter and her escort, and plots to make Marcello give in: “Tu non mi guardi!”.
+        </p>
+        <p>
+          Score: vocal score pages 111-129 (from figure (15), “Signorina Mimì”, to the end of page 129, 188 bars), from Carlo Carignani’s piano
+          reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read
+          independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian
+          words are kept, with the print’s spellings. Where the print sets a singer in 3/4 against 9/8 with the same bar lines (bars 119-120,
+          127-128, 133-135 and 148-149), the line is written in the bar’s own metre with the same timing. The chorus is heard with the piano and
+          shown in the score, but it has no words to practise here. The print gives the shopwomen two staves and the girls and the students one each;
+          here they are gathered into two staves by voice, sopranos and tenors, with each group named where it comes in. Every note and syllable is
+          kept: the two shopwomen’s lines, which answer each other and overlap in bars 95-96, are written as two voices (bars 95, 96 and 98). The
+          printed metronome mark is the Allegro moderato’s ♩. = 132; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-quando-men-vo": {
+    portrait: "boheme:musetta",
+    opera: "La bohème",
+    kind: "Waltz and ensemble",
+    facts: {
+      key: "E major (4 sharps) throughout",
+      time: "3/4, with a single bar of 4/4 (C) at 32 (Alcindoro’s “Quel canto scurrile”, in triplets)",
+      tempo: "Printed metronome mark: Tempo di valzer lento ♩ = 104 (bar 1). Chosen, as no number is printed: sottolineando ritenendo (bar 17) ♩ = 96, until the a tempo of bar 19 (♩ = 104); appena animando (bar 49, piano, the ensemble begins) ♩ = 108 (the nearest metronome mark above the waltz); poco sostenuto (bar 57, figure 24) ♩ = 96 (about 7% held back, as Aranci’s Sostenendo un poco); a tempo (bar 65, “So ben, le angoscie tue”) ♩ = 104, the waltz’s tempo; sostenendo (bar 71, beat 2) ♩ = 92 (held back by about a tenth), a tempo (bar 73) ♩ = 104; un poco sostenendo (bar 74, figure 25) ♩ = 96, the pace “Ahi! qual dolore” takes up. The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string., incalz. and accel. as a quickening), then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "Musetta sings her waltz at Marcello to win him back, while Alcindoro squirms and the others look on",
+    about: (
+      <>
+        <p>
+          “Quando me’n vo’”, Musetta’s waltz at the Café Momus, Act 2. Musetta sings, for Marcello to hear, how people stop and stare when she walks
+          alone in the street, and how she savours the longing in their eyes; then she turns on him: she knows he is suffering and will not say so.
+          Marcello asks his friends to tie him to his chair, Alcindoro frets about what people will say. Mimì sees that Musetta is in love with
+          Marcello, and Rodolfo tells her their story; Schaunard is sure Marcello will give in, Colline prefers his pipe and a Greek text. As the
+          waltz returns in full, Musetta declares she will do as she pleases and decides to get rid of the old man.
+        </p>
+        <p>
+          Score: vocal score pages 130-140 (from figure (21), Tempo di valzer lento, page 130, to the end of page 140 system 1, 77 bars), from
+          Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines
+          and the piano each read independently, every disagreement settled on the page by a separate judge, then checked against the page and
+          corrected. Only the Italian words are kept, with the print’s spellings (“Cosi” without its accent, “angoscie”). The printed metronome mark
+          is the Tempo di valzer lento’s ♩ = 104; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-ahi-qual-dolore": {
+    portrait: "boheme:musetta",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "E major (4 sharps) throughout",
+      time: "3/4 throughout",
+      tempo: "No metronome mark is printed in this passage. I.º tempo (bar 5) is the printed first tempo of Musetta’s waltz, Tempo di valzer lento ♩ = 104 (page 130). Chosen, as no number is printed: Musetta’s cry “strillando, quasi a piacere” (bar 1, the piano silent, col canto) and the piano’s a tempo (bar 3) ♩ = 96 (the waltz’s “un poco sostenendo” pace just before, as Aranci’s Sostenendo un poco); a tempo Sostenuto (bar 19, the waltz tune fff) ♩ = 92 (the I.º tempo held back by about a tenth, to the nearest metronome mark); Meno (bar 22) ♩ = 84 (about a tenth slower again); ancora più Lento (bar 27) ♩ = 76 (slower still, a tenth). The written rall., rit. and allarg. are played as a gradual slowing over the bars they cover (affrett., string. and accel. as a quickening), then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "Musetta fakes a pain in her foot and sends Alcindoro off for new shoes; she and Marcello fall into each other’s arms; the bill arrives",
+    about: (
+      <>
+        <p>
+          “Ahi! qual dolore”, the end of Musetta’s waltz scene at the Café Momus. Musetta cries out that her foot hurts and has Alcindoro unlace her
+          shoe, then sends him running to the shoemaker for another pair. Marcello, overcome, sings that his youth is not dead and his heart would still
+          open to her; Mimì and Rodolfo see that Musetta loves Marcello, Schaunard and Colline enjoy the comedy. Alcindoro hides the shoe in his
+          waistcoat and runs off; Musetta and Marcello embrace (“Marcello!” “Sirena!”), and a waiter brings the bill.
+        </p>
+        <p>
+          Score: vocal score pages 140-145 (from Musetta’s “Ahi! qual dolore”, page 140 system 2, to the bar before the Allegro alla marcia on page
+          145, 29 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed
+          pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then checked
+          against the page and corrected. Only the Italian words are kept, with the print’s spellings. Musetta’s first “Ahi!” is printed with crossed
+          noteheads, shouted. The offstage drums’ separate staff that begins on page 145 is left out. No metronome mark is printed here; the tempos
+          are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-caro": {
+    portrait: "boheme:musetta",
+    opera: "La bohème",
+    kind: "Finale",
+    facts: {
+      key: "B♭ major (2 flats) throughout",
+      time: "2/4, with a single bar of 3/4 at 125 (allargando e sostenendo, tutta forza)",
+      tempo: "Printed metronome mark: Allegro alla marcia ♩ = 132 (bar 1), which holds to the last page (the print’s “ogni battuta di 2/4 equivale a un quarto di 3/4” only lines up the offstage drums with the bar before). Chosen, as no number is printed: the closing allarg. e sostenendo (bar 125) broadens over its bar to ♩ = 104 (about four-fifths of the march, to the nearest metronome mark) and holds there to the end, with the stent. of bar 128 slowing the last chords further. The written allarg. and stent. are played as a gradual slowing over the bars they cover; fermatas are held",
+    },
+    notePlaceholder: "The bill is steep and Schaunard’s money has gone; the military tattoo marches through; Musetta is carried off in triumph and Alcindoro is left to pay",
+    about: (
+      <>
+        <p>
+          “Caro!”, the end of Act 2 at the Café Momus. The friends look at the bill: it is steep, and Schaunard’s money has vanished. Far off the
+          military tattoo is heard drawing nearer, and the children, girls, students and townsfolk run back and forth to see where it will come
+          from. Musetta has the waiter add the friends’ bill to her own and leaves both at Alcindoro’s place: “the gentleman who was here with me
+          pays”, and where he sat let him find her farewell. The drum major marches past; Musetta, with only one shoe, is lifted up by Marcello and
+          Colline and carried off behind the band, the friends and the whole crowd following and cheering her. Alcindoro comes back with the new
+          shoes, is handed the bill and falls into a chair.
+        </p>
+        <p>
+          Score: vocal score pages 145-166 (from the Allegro alla marcia, page 145 system 2, to the end of Act 2, 129 bars), from Carlo Carignani’s
+          piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each
+          read independently, every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the
+          Italian words are kept, with the print’s spellings (“danaro”, “biricchin”); Musetta’s “date a me-”, printed with a trailing hyphen as if
+          cut off, is given as “me”. The chorus is heard with the piano and shown in the score, but it has no words to practise here. The print gives
+          the children, the girls, the students, the townsfolk (sopranos and tenors), the sellers and the mothers and boys at the windows their own
+          staves where they sing, eight groups in all; here they are gathered into four staves by voice, sopranos, children, tenors and basses, with
+          each group named where it comes in. Every note and syllable is kept: where two groups on one staff sing at the same time (from bar 48 on,
+          the girls and the townswomen, the students and the townsmen), the second is written as a second voice on the staff. The offstage drums’
+          separate staff (pages 145-162) is left out. Mimì sings only the friends’ “Lesti!” (bars 87-88), on one staff with Musetta and Rodolfo.
+          The printed metronome mark is the Allegro alla marcia’s ♩ = 132; the closing tempo is chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

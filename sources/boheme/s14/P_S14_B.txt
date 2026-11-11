@@ -1,0 +1,95 @@
+# Chunk S14, piano. p.140 sys 2 bar 1 to the bar before "ALL.o alla MARCIA" on p.145. 3/4, 4 sharps (E major) throughout.
+# page 140 system 2 starts bar 1
+# bar 1: piano "col canto" (dotted line through bar 2); both staves rest
+1 RH1: word:col_canto r:h.
+1 LH1: r:h.
+2 RH1: r:h.
+2 LH1: r:h.
+# page 140 system 3 starts bar 3
+# bar 3: "a tempo"; p; crescendo hairpin through bars 3-4 with "cres. molto" at bar 4; one slur over bars 3-4
+3 RH1: word:a_tempo dyn:p hp:< D#4:s( E4:s E#4:s F#4:s F##4:s G#4:s A4:s A#4:s B4:s B#4:s C#5:s C##5:s
+3 LH1: r:h.
+4 RH1: word:cres._molto D#5:s E5:s E#5:s F#5:s F##5:s G#5:s A5:s A#5:s B5:s B#5:s C#6:s D#6:s) hp:end
+4 LH1: r:h.
+# double bar after bar 4
+# page 140 system 4 starts bar 5
+# bar 5: "I.o TEMPO"; f
+5 RH1: word:I°_TEMPO E5+E6:h~ E5+E6:e3 E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} E6:s{6:4})
+5 LH1: dyn:f E1+E2:q G#3+B3+E4:q~ G#3+B3+E4:e r:e
+6 RH1: D#5+D#6:h~ D#5+D#6:e3 E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} D#6:s{6:4})
+6 LH1: G#1+G#2:q E3+B3+D#4:q~ E3+B3+D#4:e r:e
+# bar 7: decrescendo hairpin under the RH; RH slur continues to p.141
+7 RH1: hp:> C#5+C#6:h.~ hp:end
+7 LH1: A1+A2:q E3+A3+C#4:q G#1+G#2:e* r:e
+# page 141 system 1 starts bar 8
+# bar 8: p, "quasi rit."; the RH chord is tied from bar 7
+8 RH1: dyn:p word:quasi_rit. C#5+C#6:e C#6:e-( D#6:e- g:F#6:s E6:e- D#6:e- C#6:e-)
+8 LH1: F#1+F#2:e* r:e r:q F#3+A3+E4:e* r:e
+# bar 9: "a tempo"; LH treble clef for one chord, then bass clef again
+9 RH1: word:a_tempo E6:e( A5:e) A5:q* A5:q-~
+9 LH1: B1+B2:e* r:e r:q clef:G C#4+E4+A4:ea* r:e clef:F
+# bar 10: "quasi rit."
+10 RH1: word:quasi_rit. A5:e-( B5:e- C#6:e- g:E6:s D#6:e- A5+C#6:e- A5+B5:e-)
+10 LH1: F#2+F#3:e* r:e r:q A3+B3+D#4:ea* r:e
+# page 141 system 2 starts bar 11
+# bar 11: "a tempo"
+11 RH1: g:B5:s G#5+D#6:e( F#5+G#5:e) E5+G#5:q* D#5+G#5~:q-
+11 LH1: word:a_tempo E2+E3:e* r:e r:q G#3+B3+E4:ea* r:e
+# bar 12: crescendo hairpin under the RH arpeggio; one slur from the second RH eighth into bar 13
+12 RH1: C#5+G#5:e hp:< B3+B4:e( C#4+C#5:e E4+E5:e G#4+G#5:e B4+B5:e hp:end
+12 LH1: B1+B2:e* r:e r:q B3+E4:e* r:e
+# bar 13: f
+13 RH1: E5+E6:h~) E5+E6:e3 E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} E6:s{6:4})
+13 LH1: dyn:f E2+E3:e r:e G#3+B3+E4:q~ G#3+B3+E4:e r:e
+# page 142 system 1 starts bar 14 (one system of piano on this page; the voices fill the rest)
+14 RH1: D#5+D#6:h~ D#5+D#6:e3 E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} D#6:s{6:4})
+14 LH1: G#1+G#2:e r:e E3+B3+D#4:q~ E3+B3+D#4:e r:e
+# bar 15: RH in two voices: upper C#5 eighth (accent) tied to a half; lower voice descending eighths B4-E4 under a slur
+15 RH1: C#5+C#6:e C#5:e>~ C#5:h
+15 RH2: s:e B4:e( A4:e G#4:e F#4:e E4:e)
+15 LH1: A1+A2:e r:e A3+C#4+E4:e r:e G#2+G#3:e r:e
+# bar 16: "poco allarg:" with dotted extension line and crescendo hairpin under the RH
+16 RH1: A4+C#5:e word:poco_allarg. hp:< C#5+C#6:e-( D#5+D#6:e- g:F#6:s E5+E6:e- D#5+D#6:e- C#5+C#6:e-) hp:end
+16 LH1: F#2+F#3:e r:e C#4+E4+A4:q~ C#4+E4+A4:e r:e
+# page 143 system 1 starts bar 17 (the piano has one system at the foot of the page)
+# bar 17: f (inside the dotted "poco allarg:" extension line, which runs to "col canto" in bar 18)
+17 RH1: dyn:f B5+E6+B6:e( G#6:e) G#5+C#6+F#6:e( E6:e) E5+A5+C#6:e( A4+C#5+E5+G#5:e)
+17 LH1: G#1+G#2:q C#2+C#3:q F#1+F#2:q
+# bar 18: "col canto"; fermatas over the last eighth rest in both staves
+18 RH1: G#4+B4+E5+G#5:e( B4+E5+G#5+B5:e)~ B4+E5+G#5+B5:e r:e word:col_canto A3+B3:e> r:e!
+18 LH1: B1+B2:q B3+E4+G#4:ea r:e B1+B2:e> r:e!
+# double bar before bar 19; bar 19: figure (26), "a tempo Sostenuto", fff "tutta forza"
+19 RH1: word:a_tempo_Sostenuto dyn:fff E4+G#4+B4+E5:h^ E4:s>( G#4:s B4:s E5:s)
+19 LH1: E1+E2:e> B2:e> E3:e> G#3:e> B3:e> r:e
+# page 144 system 1 starts bar 20
+20 RH1: E4+G#4+B4+D#5:h^ E4:s>( G#4:s B4:s D#5:s)
+20 LH1: G#1+G#2:e> B2:e> E3:e> G#3:e> B3:e> r:e
+# bar 21: "allarg." (above the RH and again below it) with a crescendo hairpin under the RH
+21 RH1: word:allarg. hp:< E4+A4+C#5:e> C#4:e> E4:e> A4:e> E4+A4+C#5:e> A4+C#5+E5:e> hp:end
+21 LH1: A1+A2:q> E3+A3+C#4:q> G#2+G#3:q>
+# bar 22: "MENO"; pp "dolcissimo"
+22 RH1: word:MENO A4+C#5+E5+A5:e> dyn:pp word:dolcissimo C#5+C#6:e-( D#5+D#6:e- g:F#6:s E5+E6:e- D#5+D#6:e- C#5+C#6:e-)
+22 LH1: F#2+F#3:e> r:e r:q F#3+A3+E4:e* r:e
+# page 144 system 2 starts bar 23
+23 RH1: E5+A5+C#6+E6:ea A4+A5:e A4+A5:q* A4+C#5+E5+A5:qa~
+23 LH1: B1+B2:e* r:e r:q A3+C#4+E4:e* r:e
+24 RH1: A4+C#5+E5+A5:e B4+B5:e-( C#5+C#6:e- g:E6:s D#5+D#6:e- C#5+C#6:e- B4+B5:e-)
+24 LH1: F#1+F#2:e r:e r:q F#3+A3+D#4:e* r:e
+# bar 25: the last RH chord is tied into bar 26 (p.145)
+25 RH1: D#5+G#5+B5+D#6:ea G#4+G#5:e G#4+G#5:q* G#4+B4+E5+G#5:qa-~
+25 LH1: E1+E2:e* r:e r:q G#3+B3+E4:e* r:e
+# page 145 system 1 starts bar 26
+# bar 26: the first RH chord is tied from bar 25; one slur from the second RH eighth into bar 27
+26 RH1: G#4+B4+E5+G#5:e B3+B4:e( C#4+C#5:e E4+E5:e G#4+G#5:e B4+B5:e
+26 LH1: B1+B2:e* r:e r:e G#3+B3:e* B3+E4:e* E4+G#4:e*
+# bar 27: "ancora più Lento"; "sempre pp"; figure (27) is printed above the RH eighth chord on beat 3. The 2/4 "Tamburi" staff on this page is ignored.
+# bar 27: the four RH notes after the eighth chord carry three beams (32nds)
+27 RH1: word:ancora_più_Lento E5+E6:h~) E5+E6:e E5:x( G#5:x B5:x E6:x)
+27 LH1: dyn:pp word:sempre G#4+B4:e* r:e E1+E2:e* r:e G#3+B3+E4:e* r:e
+# page 145 system 2 starts bar 28
+28 RH1: D#5+D#6:h~ D#5+D#6:e E5:x( G#5:x B5:x D#6:x)
+28 LH1: r:q G#1+G#2:e* r:e G#3+B3+E4:e* r:e
+# bar 29: in the LH staff the upper chords are marked "m.d." (right hand); LH2 = the octaves below. Next bar (not included): double bar, 2 flats, 2/4, ALL.o alla MARCIA quarter = 132
+29 RH1: C#5+C#6:h.(
+29 LH1: r:q word:m.d. E3+A3+C#4:e* r:e A3+C#4+E4:e* r:e
+29 LH2: s:q A1+A2:e* r:e G#1+G#2:e* r:e

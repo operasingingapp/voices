@@ -1,0 +1,91 @@
+# S15c, pp.156-160. Key: 2 flats (B-flat major), 2/4 throughout (in force from before the chunk). Drum staff (Tamburi) ignored.
+# page 156 system 1 starts bar 1
+# bar 1: LH in treble clef; clef change to bass at end of bar
+1 RH1: Gb5+Bb5+Eb6:e* Ab5+C6+F6:e Db5+F5+Bb5:q-
+1 LH1: Eb5:e* F5:e* Gb4+Bb4:q- clef:F
+2 RH1: dyn:ff Db4+F4+Bb4+Db5:e* Eb4+Bb4+Eb5:e* F4+A4+C5+F5:e* C5:s* C5:s*
+2 LH1: dyn:ff Bb2+Bb3:e* Gb2+Gb3:e* F2+F3:e* r:e
+# bar 3: 8va dashed line starts over the 16ths after F6 and ends on the first note of bar 4 (read as applying to the two C6 16ths -> C7, and to bar 4's F6 -> F7)
+3 RH1: F5:e* C6:s* C6:s* F6:e* C7:s* C7:s*
+3 LH1: r:h
+4 RH1: F7:e* r:e dyn:ff C4+Eb4+Ab4+C5:e> D4+Ab4+Bb4+D5:e>
+4 LH1: r:q dyn:ff Ab2+Ab3:e> F2+F3:e>
+# page 157 system 1 starts bar 5
+# bar 5: RH first chord has a (courtesy) natural before G4; LH changes to treble clef after the eighth rest
+5 RH1: Eb4+G4+Bb4+Eb5:e> r:e G4+Eb5:e* r:s Eb5+G5:s
+5 LH1: Eb2+Eb3:e> r:e clef:G G3+Eb4:e* r:s Eb4+G4:s
+6 RH1: G5+Bb5:h~
+6 LH1: G4+Bb4:h~
+7 RH1: G5+Bb5:h~
+7 LH1: G4+Bb4:h~
+# bar 8: LH clef change to bass after the eighth rest; naturals before A3 and A4 in RH third chord (courtesy)
+8 RH1: G5+Bb5:e r:e dyn:p G3+Bb3+Eb4+G4:e* A3+Eb4+F4+A4:e*
+8 LH1: G4+Bb4:e r:e clef:F dyn:p Eb2+Eb3:e* C2+C3:e*
+# bar 9: figure (32). LH beat 2: two eighth-value stems (chord Bb2+Cb3, then A2) joined by a beam plus two loose strokes between them = fingered tremolo, slurred; the flat is placed at C3 (Cb3)
+# JUDGE bar 9 RH: Y - ff printed between the staves under beat 2 (below the RH dotted eighth, over the LH tremolo), not at the bar start
+9 RH1: Bb3+D4+F4+Bb4:e* r:e dyn:ff D4+Bb4:e. Bb4+D5:s
+# JUDGE bar 9 LH: Y - ff printed between the staves under beat 2 (below the RH dotted eighth, over the LH tremolo), not at the bar start
+# JUDGE bar 9 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+9 LH1: Bb1+Bb2:e* r:e dyn:ff trem3:Bb2+Cb3|A2:q()
+# page 158 system 1 starts bar 10
+# pp.158-160 LH: three-note cluster A2+Bb2+Cb3 (drum imitation): the flat printed before the first cluster of each bar sits in the C3 space (bowl centred on C3, not on the A2 space) = Cb3, A2 natural; as in S15a/S15b
+10 RH1: D5+F5:q.. C5+Eb5:s
+# JUDGE bar 10 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+10 LH1: A2+Bb2+Cb3:q r:q
+11 RH1: Bb4+D5:e F4+C5:e Bb4+D5:e. C5+Eb5:s
+# JUDGE bar 11 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+11 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+12 RH1: Bb4+D5:q( F4+C5:e.) D4+Bb4:s
+# JUDGE bar 12 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+12 LH1: A2+Bb2+Cb3:q* r:q
+13 RH1: F4+C5:q* Bb4+D5:q*
+# JUDGE bar 13 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+13 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+# page 158 system 2 starts bar 14
+14 RH1: F4+C5:q.. D4+Bb4:s
+# JUDGE bar 14 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+14 LH1: A2+Bb2+Cb3:q* r:q
+# bar 15: LH beat 1 as bar 9: chord Bb2+Cb3 (flat printed at C3) and A2, eighth stems + beam + two loose strokes = fingered tremolo, slurred
+15 RH1: F4+C5:q* Bb4+D5:q*
+# JUDGE bar 15 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+# JUDGE bar 15 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+15 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+16 RH1: F4+C5:e. Bb4+D5:s C5+Eb5:e* Bb4+D5:e*
+# JUDGE bar 16 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+16 LH1: A2+Bb2+Cb3:e. A2+Bb2+Cb3:s A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+17 RH1: F4+C5:q* D4+Bb4:q*
+# JUDGE bar 17 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+17 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+# page 159 system 1 starts bar 18
+18 RH1: F4+C5:q* r:q
+# JUDGE bar 18 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+18 LH1: A2+Bb2+Cb3:q* r:q
+# bar 19: LH beat 2 fingered tremolo (beam + two loose strokes, slurred) Bb2+C3|A2 with no accidental printed: the Cb3 of the cluster earlier in the bar carries, A2 natural
+19 RH1: D5+F5:e. Eb5+G5:s D5+F5:e C5+Eb5:e
+# JUDGE bar 19 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+# JUDGE bar 19 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+19 LH1: A2+Bb2+Cb3:e* r:e trem3:Bb2+Cb3|A2:q()
+20 RH1: Bb4+D5:q.. Bb4+D5:s
+# JUDGE bar 20 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+20 LH1: A2+Bb2+Cb3:q r:q
+21 RH1: G4+Eb5:e* Bb4+D5:e* G4+Eb5:e. Bb4+F5:s
+# JUDGE bar 21 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+21 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+22 RH1: Eb5+G5:q.. A4+C5:s
+# JUDGE bar 22 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+22 LH1: A2+Bb2+Cb3:q* r:q
+# page 160 system 1 starts bar 23
+23 RH1: Bb4+D5:e* F4+C5:e* Bb4+D5:e* C5+Eb5:e*
+# JUDGE bar 23 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+23 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+24 RH1: D5+F5:q.. Eb4+F4:s
+# JUDGE bar 24 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+24 LH1: A2+Bb2+Cb3:q* r:q
+# bar 25: LH tremolo as bars 9 and 15 (flat printed at C3 height before the Bb2+C3 chord, slurred to A2)
+25 RH1: D4+Bb4:q* F4+C5:q*
+# JUDGE bar 25 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+# JUDGE bar 25 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+25 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+26 RH1: Bb4+D5:e. C5+Eb5:s D5+F5:e* C5+Eb5:e*
+# JUDGE bar 26 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+26 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*

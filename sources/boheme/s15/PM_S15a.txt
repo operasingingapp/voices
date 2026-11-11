@@ -1,0 +1,138 @@
+# Chunk S15a piano, pp.145-150. Drum staff (Tamburi) ignored.
+# page 145 system 2: chunk begins at its last bar (bar 1)
+# bar 1: ALL.o alla MARCIA, quarter = 132; key 2 flats (B-flat major), time 2/4 (from 4 sharps, 3/4); LH marked "(Tamburi)"
+# bar 1: slurs from the previous bar (B4/B5) end on this chord
+# JUDGE bar 1 RH: X - the arcs from the previous bar's B4/B5 change pitch to C#5/C#6: slur end, not ties
+1 RH1: C#4+En4+A4+C#5+C#6:e*) r:e r:q
+1 LH1: A2+Bb2+Cb3:q* r:q
+# page 146 system 1 starts bar 2
+2 RH1: dyn:pp D4+Bb4:e r:e D4+Bb4:e. Bb4+D5:s
+# MARKS bar 2 LH1: pp (between staves); slur over tremolo pair
+2 LH1: dyn:pp A2+Bb2+Cb3:q* trem3:Bb2+Cb3|A2:q()
+# bar 2: LH second beat = two eighths (Bb2+Cb3 cluster, A2) with two extra tremolo strokes between the stems, slurred: written as trem3 lasting a quarter (slur over the two notes not encoded)
+3 RH1: D5+F5:q.. C5+Eb5:s
+3 LH1: A2+Bb2+Cb3:q* r:q
+4 RH1: Bb4+D5:e F4+C5:e Bb4+D5:e. C5+Eb5:s
+4 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+5 RH1: Bb4+D5:q( F4+C5:e.) D4+Bb4:s
+5 LH1: A2+Bb2+Cb3:q* r:q
+# page 146 system 2 starts bar 6
+6 RH1: F4+C5:q* Bb4+D5:q*
+6 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+7 RH1: F4+C5:q.. D4+Bb4:s
+7 LH1: A2+Bb2+Cb3:q* r:q
+8 RH1: F4+C5:q* Bb4+D5:q*
+# MARKS bar 8 LH1: slur over tremolo pair
+8 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+9 RH1: F4+C5:e. Bb4+D5:s C5+Eb5:e* Bb4+D5:e*
+9 LH1: A2+Bb2+Cb3:e. A2+Bb2+Cb3:s A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+# page 147 system 1 starts bar 10
+10 RH1: F4+C5:q* D4+Bb4:q*
+10 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+11 RH1: F4+C5:q* r:q
+11 LH1: A2+Bb2+Cb3:q* r:q
+12 RH1: D5+F5:e. Eb5+G5:s D5+F5:e C5+Eb5:e
+# MARKS bar 12 LH1: slur over tremolo pair
+12 LH1: A2+Bb2+Cb3:e* r:e trem3:Bb2+Cb3|A2:q()
+13 RH1: Bb4+D5:q.. Bb4+D5:s
+13 LH1: A2+Bb2+Cb3:q* r:q
+# page 147 system 2 starts bar 14
+# bar 14: "avvicinandosi a poco a poco" printed between the staves (bars 14-15)
+# JUDGE bar 14 RH: X - "avvicinandosi a poco a poco" printed once, between the staves under the RH
+14 RH1: word:avvicinandosi_a_poco_a_poco G4+Eb5:e* Bb4+D5:e* G4+Eb5:e. Bb4+F5:s
+# MARKS bar 14 LH1: avvicinandosi a poco a poco (between staves)
+14 LH1: word:avvicinandosi_a_poco_a_poco A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+15 RH1: Eb5+G5:q.. A4+C5:s
+15 LH1: A2+Bb2+Cb3:q r:q
+16 RH1: Bb4+D5:e* F4+C5:e* Bb4+D5:e* C5+Eb5:e*
+16 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+17 RH1: D5+F5:q.. Eb4+F4:s
+17 LH1: A2+Bb2+Cb3:q* r:q
+# page 148 system 1 starts bar 18
+18 RH1: D4+Bb4:q F4+C5:q
+# MARKS bar 18 LH1: slur over tremolo pair
+18 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+19 RH1: Bb4+D5:e. C5+Eb5:s D5+F5:e* C5+Eb5:e*
+19 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+20 RH1: Bb4+D5:q* F4+C5:e* dyn:ff F4:s3( G4:s3 A4:s3)
+20 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:e* dyn:ff F3:s3( G3:s3 A3:s3)
+# bar 20: "(Orchestra)" cue word ignored
+# bar 21: figure (28); "marcatissimo"
+# JUDGE bar 21 RH: confirmed (both readers) - beat 1 carries an open V wedge below the note, the same sign as the LH open ^ above, clearly distinct from the three > accents on the triplet: marcato ^
+21 RH1: word:marcatissimo Bb4:q^ A4:e3> F4:e3> A4:e3>
+# MARKS bar 21 LH1: marcatissimo (between staves)
+21 LH1: word:marcatissimo Bb3:q^ A3:e3> F3:e3> A3:e3>
+# page 148 system 2 starts bar 22
+# JUDGE bar 22 RH: Y - short arc joining the two G4 noteheads (same pitch, adjacent): tie. The mark on beat 1 is an open V (marcato, inverted below the note)
+22 RH1: G4:q^~ G4:q3 D4:e3*
+# JUDGE bar 22 LH: Y - same tie G3-G3 above the staff
+22 LH1: G3:q^~ G3:q3 D3:e3*
+# JUDGE bar 23 RH: Y - slur from the slashed grace F4 to Eb4 is printed: encode it
+23 RH1: g:F4:e( Eb4:e3*) r:e3 D4:e3* C4:e3* r:e3 Bb3:e3*
+# JUDGE bar 23 LH: Y - grace slur printed
+23 LH1: g:F3:e( Eb3:e3*) r:e3 D3:e3* C3:e3* r:e3 Bb2:e3* clef:G
+# bar 23: grace notes are slashed acciaccature, slurred to the main note
+24 RH1: dyn:p D5+F5:e* C5+En5:s* C5+En5:s* Bb4+D5:e* A4+C5:e*
+# MARKS bar 24 LH1: p (between staves)
+24 LH1: dyn:p Bb4:e* A4:e* G4:e* F4:e*
+25 RH1: Bb4+D5:e* C5+En5:e* D5+F5:q-
+# JUDGE bar 25 LH: Y - G4 has a staccato dot below
+25 LH1: G4:e* A4:e* Bb4:q- clef:F
+# page 148 system 3 starts bar 26
+26 RH1: G4+Bb4+Eb5+G5:e* A4+Eb5+F5+A5:e* Bb4+D5+F5+Bb5:q-~
+26 LH1: Eb4:e* C4:e* Bb3:q-~
+# bar 26: RH first chord has a (courtesy) flat on E5
+27 RH1: Bb4+D5+F5+Bb5:e r:e G4+Bb4+Eb5+G5:e* A4+Eb5+F5+A5:e*
+27 LH1: Bb3:e r:e Eb4:e* C4:e*
+28 RH1: Bb4+D5+F5+Bb5:e* r:e dyn:mf F6:e3> r:s3 D6:s3( Bb5:e3*)
+# MARKS bar 28 LH1: mf (between staves)
+28 LH1: Bb3:e* r:e clef:G dyn:mf F5:e3> r:s3 D5:s3( Bb4:e3*)
+29 RH1: G5:e3* A5:e3* Bb5:e3* C6:e3* D6:e3* En6:e3*
+29 LH1: G4:e3* A4:e3* Bb4:e3* C5:e3* D5:e3* En5:e3*
+# page 149 system 1 starts bar 30 (both piano staves in treble clef)
+30 RH1: F6:e> r:e r:q
+# JUDGE bar 30 RH: X - p printed once between the staves, under the second RH chord
+30 RH2: A5+C6:e dyn:p G5+Bn5:s* G5+Bn5:s* F5+A5:e* Eb5+G5:e*
+# MARKS bar 30 LH1: p (between staves)
+30 LH1: dyn:p F5:e* En5:e* D5:e* C5:e*
+31 RH1: F5+A5:e* G5+Bn5:e* A5+C6:q-
+31 LH1: D5:e* En5:e* F5:q-
+32 RH1: D5+F5+Bb5+D6:e* En5+Bb5+C6+En6:e* F5+A5+C6+F6:q-~
+32 LH1: Bb4:e* G4:e* F4:q-~
+# bar 32: RH first chord has a courtesy flat on B5
+33 RH1: F5+A5+C6+F6:e r:e D5+F5+Bb5+D6:e* En5+Bb5+C6+En6:e*
+33 LH1: F4:e r:e Bb4:e* G4:e*
+# page 149 system 2 starts bar 34
+# bar 34: figure (29)
+# JUDGE bar 34 RH: X - f printed once between the staves, under the C6 triplet
+34 RH1: F5+A5+C6+F6:e* r:e dyn:f C6:e3> r:s3 A5:s3( F5:e3*)
+# MARKS bar 34 LH1: f (between staves)
+34 LH1: F4:e* r:e dyn:f C5:e3> r:s3 A4:s3( F4:e3*)
+35 RH1: D5:e3* En5:e3* F5:e3* hp:< G5:e3* A5:e3* Bb5:e3* hp:end
+# MARKS bar 35 LH1: cresc. hairpin (between staves), as RH
+35 LH1: D4:e3* En4:e3* F4:e3* hp:< G4:e3* A4:e3* Bb4:e3* hp:end
+36 RH1: C6:e3> r:s3 D6:s3( Eb6:e3*) G5:e3> r:s3 A5:s3( Bb5:e3*)
+36 LH1: C5:e> r:e G4+Bb4+D5:e> r:e
+# bar 36: courtesy flat on E6
+# page 150 system 1 starts bar 37 (both piano staves in treble clef)
+# bars 37-39: the 8th / 16th-rest / 16th / 8th groups carry no printed "3" here but continue the triplet figure of bars 34-36: written as triplets
+37 RH1: C6:e3> r:s3 D6:s3( Eb6:e3*) G5:e3> r:s3 A5:s3( Bb5:e3*)
+37 LH1: C5+Eb5+G5:e> r:e G4+Bb4+D5:e> r:e
+38 RH1: C5:e3> r:s3 D5:s3( Eb5:e3*) G4:e3> r:s3 A4:s3( Bb4:e3*)
+38 LH1: C4+Eb4+G4:e> r:e clef:F G3+Bb3+D4:e> r:e
+39 RH1: C4:e3> r:s3 D4:s3( Eb4:e3)~ Eb4:q~
+39 LH1: C3+Eb3+G3:e> r:e r:q
+# page 150 system 2 starts bar 40
+40 RH1: hp:> Eb4:h~
+# MARKS bar 40 LH1: dim. hairpin (between staves), as RH; LH rests
+40 LH1: hp:> r:h
+41 RH1: Eb4:q~ Eb4:e hp:end dyn:p Eb4:s( F4:s
+# MARKS bar 41 LH1: hairpin end and p (between staves); LH rests whole bar, so position approximate
+41 LH1: hp:end dyn:p r:h
+42 RH1: Gb4:s Ab4:s Bb4:s C5:s Db5:s Eb5:s F5:s Gb5:s
+42 LH1: r:h clef:G
+# bar 43: RH 4th 16th has no accidental after the Db5 earlier in the bar: read as Db5 by the bar rule
+43 RH1: dyn:p Ab5:e-) F5:s( Db5:s) Bb5:e- F5:s( Db5:s)
+# JUDGE bar 43 LH: Y - second chord D4 has no accidental after the Db4 of the first chord: Db4 by the bar rule (p printed once, under RH)
+# MARKS bar 43 LH1: p (between staves)
+43 LH1: dyn:p r:e Db4+F4+Ab4:e* r:e Bb3+Db4+F4+Bb4:e*

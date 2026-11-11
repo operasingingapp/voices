@@ -1,0 +1,137 @@
+# S14 (s14A) piano. Pages 140 (system 2) to 145 (system 2, up to the bar before ALL.o alla MARCIA). 29 bars. 4 sharps, 3/4.
+# page 140 system 2 starts bar 1
+# bar 1: piano rests, "col canto ......" (bars 1-2)
+1 RH1: word:col_canto r:h.
+# MARKS bar 1 LH: word:col_canto (printed between the staves)
+1 LH1: word:col_canto r:h.
+2 RH1: r:h.
+2 LH1: r:h.
+# page 140 system 3 starts bar 3
+# bar 3: a tempo, p, crescendo hairpin through bar 4; long slur over bars 3-4
+3 RH1: word:a_tempo dyn:p hp:< D#4:s( E4:s E#4:s F#4:s F##4:s G#4:s A4:s A#4:s B4:s B#4:s C#5:s C##5:s
+# MARKS bar 3 LH: dyn:p, hp:< (between the staves)
+3 LH1: dyn:p hp:< r:h.
+# bar 4: "cres. molto"; the run skips C##6 (B#5 then C#6, D#6) as printed; double bar at end
+4 RH1: word:cres._molto D#5:s E5:s E#5:s F#5:s F##5:s G#5:s A5:s A#5:s B5:s B#5:s C#6:s D#6:s) hp:end
+# MARKS bar 4 LH: word:cres._molto, hp:end (between the staves)
+4 LH1: word:cres._molto r:h. hp:end
+# page 140 system 4 starts bar 5
+# bar 5: I.o TEMPO, f
+# JUDGE bar 5 RH: X - 6 printed over the whole group incl. the eighth chord: e{6:4}; f between the staves kept on RH; "I.o TEMPO"
+5 RH1: word:I.o_TEMPO dyn:f E5+E6:h~ E5+E6:e{6:4} E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} E6:s{6:4})
+# JUDGE bar 5 LH: X - f kept on RH (printed between the staves)
+# MARKS bar 5 LH: dyn:f (between the staves)
+5 LH1: dyn:f E1+E2:q G#3+B3+E4:q~ G#3+B3+E4:e r:e
+# JUDGE bar 6 RH: X - sextuplet includes the eighth chord: e{6:4}
+6 RH1: D#5+D#6:h~ D#5+D#6:e{6:4} E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} D#6:s{6:4})
+6 LH1: G#1+G#2:q E3+B3+D#4:q~ E3+B3+D#4:e r:e
+7 RH1: hp:> C#5+C#6:h.~ hp:end
+# MARKS bar 7 LH: hp:> ... hp:end (diminuendo between the staves, ends at the G#1 eighth)
+7 LH1: hp:> A1+A2:q E3+A3+C#4:q hp:end G#1+G#2:e* r:e
+# page 141 system 1 starts bar 8
+# bar 8: p, quasi rit.
+# JUDGE bar 8 RH: X - grace F#6 printed with flag+slash (eighth)
+# MARKS bar 8 RH: nested grace-note slur [ ] F#6 grace to E6
+8 RH1: dyn:p word:quasi_rit. C#5+C#6:e C#6:e-( D#6:e- g:F#6:e[ E6:e-] D#6:e- C#6:e-)
+# JUDGE bar 8 LH: Y - staccato dot under the low F#1 octave
+# MARKS bar 8 LH: dyn:p, word:quasi_rit. (between the staves)
+8 LH1: dyn:p word:quasi_rit. F#1+F#2:e* r:e r:q F#3+A3+E4:e* r:e
+# bar 9: a tempo; LH clef change to treble for the arpeggiated chord and back to bass
+9 RH1: word:a_tempo E6:e( A5:e) A5:q* A5:q-~
+# JUDGE bar 9 LH: Y - staccato dot under the low B1 octave
+# MARKS bar 9 LH: word:a_tempo (between the staves)
+9 LH1: word:a_tempo B1+B2:e* r:e r:q clef:G C#4+E4+A4:ea* r:e clef:F
+# bar 10: quasi rit.
+# JUDGE bar 10 RH: X - first A5 is the tie end from bar 9 (no tenuto); slur starts on B5; grace E6 eighth
+# MARKS bar 10 RH: nested grace-note slur [ ] E6 grace to D#6
+10 RH1: word:quasi_rit. A5:e B5:e-( C#6:e- g:E6:e[ D#6:e-] A5+C#6:e- A5+B5:e-)
+# MARKS bar 10 LH: word:quasi_rit. (between the staves)
+10 LH1: word:quasi_rit. F#2+F#3:e* r:e r:q A3+B3+D#4:ea* r:e
+# page 141 system 2 starts bar 11
+# bar 11: a tempo
+# JUDGE bar 11 RH: X - "a tempo" under the RH staff; grace eighth; top arc G#5-G#5 = tie, lower arc D#5 to C#5 of bar 12 = slur
+# MARKS bar 11 RH: grace-note slur [ ] B5 grace to the G#5+D#6 chord
+11 RH1: word:a_tempo g:B5:e[ G#5+D#6:e]( F#5+G#5:e) E5+G#5:q* D#5+G#5~:q-(
+# JUDGE bar 11 LH: X - "a tempo" kept on RH
+# MARKS bar 11 LH: word:a_tempo (between the staves)
+11 LH1: word:a_tempo E2+E3:e* r:e r:q G#3+B3+E4:ea* r:e
+# JUDGE bar 12 RH: OWN - slur end on first chord as X; crescendo hairpin starts under the 2nd eighth (B3+B4) as Y
+12 RH1: C#5+G#5:e) hp:< B3+B4:e( C#4+C#5:e E4+E5:e G#4+G#5:e B4+B5:e hp:end
+# JUDGE bar 12 LH: Y - staccato dot under the low B1 octave
+# MARKS bar 12 LH: hp:< from the 2nd eighth to the bar end (between the staves)
+12 LH1: B1+B2:e* hp:< r:e r:q B3+E4:e* r:e hp:end
+# bar 13: f
+# JUDGE bar 13 RH: X - sextuplet includes the eighth chord; f between staves kept on RH
+13 RH1: dyn:f E5+E6:h~) E5+E6:e{6:4} E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} E6:s{6:4})
+# JUDGE bar 13 LH: X - f kept on RH
+# MARKS bar 13 LH: dyn:f (between the staves)
+13 LH1: dyn:f E2+E3:e r:e G#3+B3+E4:q~ G#3+B3+E4:e r:e
+# page 142 system 1 starts bar 14
+# JUDGE bar 14 RH: X - sextuplet includes the eighth chord: e{6:4}
+14 RH1: D#5+D#6:h~ D#5+D#6:e{6:4} E5:s{6:4}>( G#5:s{6:4} B5:s{6:4} D#6:s{6:4})
+14 LH1: G#1+G#2:e r:e E3+B3+D#4:q~ E3+B3+D#4:e r:e
+# bar 15: RH in two voices (upper C#5 eighth tied to half; lower descending eighths)
+# JUDGE bar 15 RH: X - long arc from the upper C#5 over the barline to the A4+C#5 chord of bar 16 = slur
+15 RH1: C#5+C#6:e C#5:e>~ C#5:h(
+15 RH2: s:e B4:e( A4:e G#4:e F#4:e E4:e)
+15 LH1: A1+A2:e r:e A3+C#4+E4:e r:e G#2+G#3:e r:e
+# bar 16: poco allarg:......, crescendo hairpin
+# JUDGE bar 16 RH: OWN - slur end on the first chord and grace eighth as X; "poco allarg:" starts under the 2nd eighth as Y
+# MARKS bar 16 RH: nested grace-note slur [ ] F#6 grace to E5+E6
+16 RH1: A4+C#5:e) word:poco_allarg. hp:< C#5+C#6:e-( D#5+D#6:e- g:F#6:e[ E5+E6:e-] D#5+D#6:e- C#5+C#6:e-) hp:end
+# MARKS bar 16 LH: word:poco_allarg., hp:< ... hp:end (between the staves, from the 2nd eighth)
+16 LH1: F#2+F#3:e word:poco_allarg. hp:< r:e C#4+E4+A4:q~ C#4+E4+A4:e r:e hp:end
+# page 143 system 1 starts bar 17
+17 RH1: dyn:f B5+E6+B6:e( G#6:e) G#5+C#6+F#6:e( E6:e) E5+A5+C#6:e( A4+C#5+E5+G#5:e)
+# MARKS bar 17 LH: dyn:f (between the staves)
+17 LH1: dyn:f G#1+G#2:q C#2+C#3:q F#1+F#2:q
+# bar 18: col canto; fermatas on the final rests; double bar at end
+18 RH1: G#4+B4+E5+G#5:e( B4+E5+G#5+B5:e)~ B4+E5+G#5+B5:e r:e word:col_canto A3+B3:e> r:e!
+# MARKS bar 18 LH: word:col_canto (between the staves)
+18 LH1: B1+B2:q B3+E4+G#4:ea r:e word:col_canto B1+B2:e> r:e!
+# bar 19: figure (26), a tempo Sostenuto, fff tutta forza. Hollow chord of five heads in the spaces D#4-F#4-A4-C#5-E5 (marcato)
+# JUDGE bar 19 RH: X - 400 dpi: five hollow heads stacked in the spaces from below the staff (D#4) to under the top line (E5); "tutta forza" printed after fff
+19 RH1: word:a_tempo_Sostenuto dyn:fff word:tutta_forza D#4+F#4+A4+C#5+E5:h^ E4:s>( G#4:s B4:s E5:s)
+# MARKS bar 19 LH: dyn:fff, word:tutta_forza (between the staves)
+19 LH1: dyn:fff word:tutta_forza E1+E2:e> B2:e> E3:e> G#3:e> B3:e> r:e
+# page 144 system 1 starts bar 20
+# JUDGE bar 20 RH: X - same five-head chord in the spaces D#4-F#4-A4-C#5-E5
+20 RH1: D#4+F#4+A4+C#5+E5:h^ E4:s>( G#4:s B4:s D#5:s)
+20 LH1: G#1+G#2:e> B2:e> E3:e> G#3:e> B3:e> r:e
+# bar 21: allarg., crescendo hairpin
+21 RH1: word:allarg. hp:< E4+A4+C#5:e> C#4:e> E4:e> A4:e> E4+A4+C#5:e> A4+C#5+E5:e> hp:end
+# MARKS bar 21 LH: word:allarg., hp:< ... hp:end (the lower allarg. and the hairpin are between the staves)
+21 LH1: word:allarg. hp:< A1+A2:q> E3+A3+C#4:q> G#2+G#3:q> hp:end
+# bar 22: MENO, pp dolcissimo
+# JUDGE bar 22 RH: OWN - grace eighth as X; "pp dolcissimo" starts under the 2nd eighth as Y
+# MARKS bar 22 RH: nested grace-note slur [ ] F#6 grace to E5+E6
+22 RH1: word:MENO A4+C#5+E5+A5:e> dyn:pp word:dolcissimo C#5+C#6:e-( D#5+D#6:e- g:F#6:e[ E5+E6:e-] D#5+D#6:e- C#5+C#6:e-)
+# MARKS bar 22 LH: dyn:pp, word:dolcissimo (between the staves, at the 2nd eighth)
+22 LH1: F#2+F#3:e> dyn:pp word:dolcissimo r:e r:q F#3+A3+E4:e* r:e
+# page 144 system 2 starts bar 23
+23 RH1: E5+A5+C#6+E6:ea A4+A5:e A4+A5:q* A4+C#5+E5+A5:qa~
+23 LH1: B1+B2:e* r:e r:q A3+C#4+E4:e* r:e
+# JUDGE bar 24 RH: X - grace E6 eighth (flag+slash)
+# MARKS bar 24 RH: nested grace-note slur [ ] E6 grace to D#5+D#6
+24 RH1: A4+C#5+E5+A5:e B4+B5:e-( C#5+C#6:e- g:E6:e[ D#5+D#6:e-] C#5+C#6:e- B4+B5:e-)
+24 LH1: F#1+F#2:e r:e r:q F#3+A3+D#4:e* r:e
+# JUDGE bar 25 RH: X - same marks, order only
+25 RH1: D#5+G#5+B5+D#6:ea G#4+G#5:e G#4+G#5:q* G#4+B4+E5+G#5:q-a~
+25 LH1: E1+E2:e* r:e r:q G#3+B3+E4:e* r:e
+# page 145 system 1 starts bar 26
+26 RH1: G#4+B4+E5+G#5:e B3+B4:e( C#4+C#5:e E4+E5:e G#4+G#5:e B4+B5:e
+26 LH1: B1+B2:e* r:e r:e G#3+B3:e* B3+E4:e* E4+G#4:e*
+# bar 27: ancora più Lento, sempre pp, figure (27) at the eighth chord (beat 3); offstage drum staff (not transcribed) begins
+# JUDGE bar 27 RH: X - "sempre pp" printed under the RH staff
+27 RH1: word:ancora_più_Lento word:sempre dyn:pp E5+E6:h~) E5+E6:e E5:x( G#5:x B5:x E6:x)
+# JUDGE bar 27 LH: X - "sempre pp" kept on RH
+# MARKS bar 27 LH: word:sempre, dyn:pp (between the staves)
+27 LH1: word:sempre dyn:pp G#4+B4:e* r:e E1+E2:e* r:e G#3+B3+E4:e* r:e
+# page 145 system 2 starts bar 28
+28 RH1: D#5+D#6:h~ D#5+D#6:e E5:x( G#5:x B5:x D#6:x)
+28 LH1: r:q G#1+G#2:e* r:e G#3+B3+E4:e* r:e
+# bar 29: LH upper chords marked "m.d." (two voices); RH dotted-half chord tied into the next (2/4) bar; double bar follows, then ALL.o alla MARCIA quarter = 132, 2 flats, 2/4
+# JUDGE bar 29 RH: X - arcs join C#6-C#6 and C#5-C#5 (re-sharped after the key change) = ties
+29 RH1: C#5+C#6:h.~
+29 LH1: r:q E3+A3+C#4:e* r:e A3+C#4+E4:e* r:e
+29 LH2: s:q A1+A2:e* r:e G#1+G#2:e* r:e

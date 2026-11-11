@@ -1,0 +1,845 @@
+# page 105 system 1 starts bar 1
+# bar 1: BRILLANTE, figure (11), 3/4, E major (4 sharps)
+# bar 1-2 M, S, C: (ridendo), "Ah! ah!" printed as stems without noteheads (gridato): pitch X
+# JUDGE bar 1 R: Y - print has "-mor!..........." with melisma dots
+1 R: E4:q~ "mor!....." E4:e r:e r:q
+1 M: r:q r:q3 X:e3 "Ah!" X:e3 "ah!" r:e3 X:e3 "ah!"
+1 S: r:q r:q3 X:e3 "Ah!" X:e3 "ah!" r:e3 X:e3 "ah!"
+1 C: r:q r:q3 X:e3 "Ah!" X:e3 "ah!" r:e3 X:e3 "ah!"
+1 P: r:h.
+1 K15: r:h.
+1 K16: r:h.
+1 K17: r:h.
+1 K18: r:h.
+1 I: r:h.
+2 R: r:h.!
+2 M: X:e "ah!" r:e r:q r:q!
+2 S: X:e "ah!" r:e r:q r:q!
+2 C: X:e "ah!" r:e r:q r:q!
+2 P: r:h.
+2 K15: r:h.
+2 K16: r:h.
+2 K17: r:h.
+2 K18: r:h.
+2 I: r:h.
+# bar 3: double bar, POCO MENO; M (ironico)
+3 R: r:h.
+3 M: r:q B3:e3 "Dio" B3:e3 "che" B3:e3 "con-" B3:q3 "cet-" Dn4:e3 "ti"
+3 S: r:h.
+3 C: r:h.
+3 P: r:h.
+3 K15: r:h.
+3 K16: r:h.
+3 K17: r:h.
+3 K18: r:h.
+3 I: r:h.
+4 R: r:h.
+4 M: A3:q "ra-" A3:q "ri!" r:q
+4 S: r:h.
+4 C: r:h.
+4 P: r:h.
+4 K15: r:h.
+4 K16: r:h.
+4 K17: r:h.
+4 K18: r:h.
+4 I: r:h.
+# page 105 system 2 starts bar 5
+# bar 5: C (solenne, accennando a Mimì); Latin words in italics
+5 R: r:h.
+5 M: r:h.
+5 S: r:h.
+# JUDGE bar 5 C: X - same pitches; explicit naturals redundant (absolute pitch)
+5 C: r:q Gn3:q3 "Di-" G3:e3 "gna" G3:q3 "est" B3:e3 "in-"
+5 P: r:h.
+5 K15: r:h.
+5 K16: r:h.
+5 K17: r:h.
+5 K18: r:h.
+5 I: r:h.
+6 R: r:h.
+6 M: r:h.
+6 S: r:h.
+6 C: F#3:q "tra-" F#3:q "ri." r:q
+6 P: r:h.
+6 K15: r:h.
+6 K16: r:h.
+6 K17: r:h.
+6 K18: r:h.
+6 I: r:h.
+# bar 7: S (con autorità comica)
+7 R: r:h.
+7 M: r:h.
+7 S: r:q3 E3:e3 "In-" E3:q3 "gre-" E3:e3 "diat" E3:q3 "si" Gn3:e3 "ne-"
+7 C: r:h.
+7 P: r:h.
+7 K15: r:h.
+7 K16: r:h.
+7 K17: r:h.
+7 K18: r:h.
+7 I: r:h.
+8 R: r:h.
+8 M: r:h.
+# JUDGE bar 8 S: X - same pitches; explicit natural redundant
+8 S: Dn3:q "ces-" D3:q "sit." r:q
+8 C: r:h.
+8 P: r:h.
+8 K15: r:h.
+8 K16: r:h.
+8 K17: r:h.
+8 K18: r:h.
+8 I: r:h.
+# page 105 system 3 starts bar 9
+# bar 9: "poco rall." (Colline), "col canto" (piano)
+9 R: r:h.
+9 M: r:h.
+9 S: r:h.
+# JUDGE bar 9 C: X - noteheads sit on the 2nd line from the bottom of the bass staff = B2 (4 sharps: B natural); not G#2
+# MARKS bar 9 C: word:poco_rall. (printed over the first triplet)
+9 C: word:poco_rall. r:e3 B2:e3 "Io" B2:e3 "non" B2:q "dò" B2:q3 "che_un" B2:e3 "ac-"
+9 P: r:h.
+9 K15: r:h.
+9 K16: r:h.
+9 K17: r:h.
+9 K18: r:h.
+9 I: r:h.
+# bar 10: double bar, 4/4 (C), figure (12); Parpignol (vicinissimo), tenor treble clef written an octave higher (sounding pitch written); "corta" over the fermata on the dotted triplet eighth
+# bar 10 P: a large > printed under the last two notes (read as accent on E)
+10 R: r:w
+10 M: r:w
+10 S: r:w
+# JUDGE bar 10 C: X - same B2 noteheads as bar 9
+10 C: B2:e "ces-" B2:e "sit!" r:q r:h
+# JUDGE bar 10 P: Y - noteheads just above the top line (G5 written) = G4 sounding, last note in top space E5 = E4 sounding; dotted triplet eighth written e.3; the > stands under the dotted G
+# MARKS bar 10 P: word:corta (over the fermata)
+10 P: r:q Gn4:e3 "Ec-" Gn4:e3 "co_i" Gn4:e3 "gio-" Gn4:e3 "cat-" Gn4:e3 "to-" Gn4:e3 "li" Gn4:e3 "di" word:corta Gn4:e.3>! "Par-" E4:s3 "pi-"
+10 K15: r:w
+10 K16: r:w
+10 K17: r:w
+10 K18: r:w
+10 I: r:w
+# bar 11: double bar, 3/4; C (vedendo il cameriere gli grida con enfasi); then double bar to 2/4, 1 flat (F major)
+11 R: r:h.
+11 M: r:h.
+11 S: r:h.
+11 C: r:q r:q r:e.! Cn4:s "Sa-"
+# JUDGE bar 11 P: Y - half note on the top line, F# in key = F#5 written = F#4 sounding
+11 P: F#4:h~ "gnol!....." F#4:e r:e!
+11 K15: r:h.
+11 K16: r:h.
+11 K17: r:h.
+11 K18: r:h.
+11 I: r:h.
+# page 106 system 1 starts bar 12
+# bar 12: ALLEGRETTO GIOCOSO, quarter = 132, 2/4, F major (1 flat); BAMBINE E RAGAZZI (interno) = K15 (single staff until p.106 sys 3)
+12 R: r:h
+12 M: r:h
+12 S: r:h
+12 C: C4:e> "la-" C4:e> "me!..." r:q
+12 P: r:h
+12 K15: r:e G4:s "Par-" G4:s "pi-" C5:e "gnol," G4:s "Par-" G4:s "pi-"
+12 K16: r:h
+12 K17: r:h
+12 K18: r:h
+12 I: r:h
+13 R: r:h
+13 M: r:h
+13 S: r:h
+13 C: r:h
+13 P: r:h
+13 K15: C5:e "gnol," G4:s "Par-" G4:s "pi-" C5:e "gnol," G4:s "Par-" G4:s "pi-"
+13 K16: r:h
+13 K17: r:h
+13 K18: r:h
+13 I: r:h
+# bar 14: Bambine e ragazzi (escono)
+14 R: r:h
+14 M: r:h
+14 S: r:h
+14 C: r:h
+14 P: r:h
+14 K15: C5:e "gnol!" r:e r:q
+14 K16: r:h
+14 K17: r:h
+14 K18: r:h
+14 I: r:h
+15 R: r:h
+15 M: r:h
+15 S: r:h
+15 C: r:h
+15 P: r:h
+15 K15: r:q dyn:f F4:s "Ec-" G4:s "co" A4:s "Par-" Bb4:s "pi-"
+15 K16: r:h
+15 K17: r:h
+15 K18: r:h
+15 I: r:h
+# page 106 system 2 starts bar 16
+16 R: r:h
+16 M: r:h
+16 S: r:h
+16 C: r:h
+16 P: r:h
+16 K15: C5:e "gnol," A4:s "Par-" F4:s "pi-" D5:e "gnol," A4:s "Par-" F4:s "pi-"
+16 K16: r:h
+16 K17: r:h
+16 K18: r:h
+16 I: r:h
+17 R: r:h
+17 M: r:h
+17 S: r:h
+17 C: r:h
+17 P: r:h
+# JUDGE bar 17 K15: Y - "gnol!" is under the C5 quarter, "Col....." under the slurred F-G, "car-" under the slurred A-Bb; slurs printed
+17 K15: C5:q "gnol!" F4:s( "Col....." G4:s) A4:s( "car-" Bb4:s)
+17 K16: r:h
+17 K17: r:h
+17 K18: r:h
+17 I: r:h
+18 R: r:h
+18 M: r:h
+18 S: r:h
+18 C: r:h
+18 P: r:h
+# JUDGE bar 18 K15: Y - slur F4-A4 printed
+18 K15: C5:e "ret-" F4:s( "to....." A4:s) D5:e* "tut-" A4:e* "to"
+18 K16: r:h
+18 K17: r:h
+18 K18: r:h
+18 I: r:h
+19 R: r:h
+19 M: r:h
+19 S: r:h
+19 C: r:h
+19 P: r:h
+19 K15: C5:q~ "fior!....." C5:e C4:s "Ec-" D4:s "co"
+19 K16: r:h
+19 K17: r:h
+19 K18: r:h
+19 I: r:h
+# page 106 system 3 starts bar 20
+# bar 20: the Bambine e ragazzi divide: I.i = K15, 2.i = K16
+20 R: r:h
+20 M: r:h
+20 S: r:h
+20 C: r:h
+20 P: r:h
+20 K15: E4:q> "Par-" A4:q> "pi-"
+20 K16: E4:q> "Par-" A4:q> "pi-"
+20 K17: r:h
+20 K18: r:h
+20 I: r:h
+21 R: r:h
+21 M: r:h
+21 S: r:h
+21 C: r:h
+21 P: r:h
+# JUDGE bar 21 K15: Y - slur A4-F4 printed
+21 K15: A4:e( "gnol..." F4:q) C4:s "Par-" D4:s "pi-"
+# JUDGE bar 21 K16: Y - slur A4-F4 printed
+21 K16: A4:e( "gnol..." F4:q) C4:s "Par-" D4:s "pi-"
+21 K17: r:h
+21 K18: r:h
+21 I: r:h
+22 R: r:h
+22 M: r:h
+22 S: r:h
+22 C: r:h
+22 P: r:h
+22 K15: E4:e* "gnol," E4:s* "Par-" E4:s* "pi-" A4:e* "gnol," A4:s* "Par-" A4:s* "pi-"
+22 K16: E4:e* "gnol," E4:s* "Par-" E4:s* "pi-" A4:e* "gnol," A4:s* "Par-" A4:s* "pi-"
+22 K17: r:h
+22 K18: r:h
+22 I: r:h
+23 R: r:h
+23 M: r:h
+23 S: r:h
+23 C: r:h
+23 P: r:h
+# JUDGE bar 23 K15: X - same pitches; explicit natural redundant
+23 K15: F4:e "gnol!" r:e C5:e> "Vo-" Bn4:s "glio" B4:s "la"
+23 K16: F4:e "gnol!" r:e r:q
+23 K17: r:h
+23 K18: r:h
+23 I: r:h
+24 R: r:h
+24 M: r:h
+24 S: r:h
+24 C: r:h
+24 P: r:h
+# JUDGE bar 24 K15: Y - elision "ba,_il" on one note per TB.md (_ joins two syllables on one note)
+24 K15: A4:e "trom-" G4:e "ba,_il" A4:e "ca-" Bn4:e "val-"
+24 K16: r:h
+24 K17: r:h
+24 K18: r:h
+24 I: r:h
+# page 107 system 1 starts bar 25 (top staff = Bambine e ragazzi I.i K15, second staff = 2.i K16)
+25 R: r:h
+25 M: r:h
+25 S: r:h
+25 C: r:h
+25 P: r:h
+25 K15: C5:e "lin," r:e r:q
+25 K16: r:e F4:s "Il" F4:s "tam-" F4:e "bur," F4:s "tam-" F4:s "bu-"
+25 K17: r:h
+25 K18: r:h
+25 I: r:h
+26 R: r:h
+26 M: r:h
+26 S: r:h
+26 C: r:h
+26 P: r:h
+# JUDGE bar 26 K15: X - same pitches; explicit natural redundant
+26 K15: r:q C5:e> "vo-" Bn4:s "glio_il" B4:s "can-"
+26 K16: F4:e "rel," r:e r:q
+26 K17: r:h
+26 K18: r:h
+26 I: r:h
+27 R: r:h
+27 M: r:h
+27 S: r:h
+27 C: r:h
+27 P: r:h
+27 K15: A4:e "non," G4:e "vo-" A4:e "glio_il" Bn4:e "fru-"
+27 K16: r:h
+27 K17: r:h
+27 K18: r:h
+27 I: r:h
+28 R: r:h
+28 M: r:h
+28 S: r:h
+28 C: r:h
+28 P: r:h
+28 K15: C5:e "stin." r:e r:q
+28 K16: r:e F4:s "dei" F4:s "sol-" F4:e "da-" F4:s "ti_i" F4:s "drap-"
+28 K17: r:h
+28 K18: r:h
+28 I: r:h
+# page 107 system 2 starts bar 29
+# p.107 sys 2 staves: "I.i Sop. LE MAMME" = K17 (top), then two unlabelled treble staves = K15, K16 (the ragazzi, "pel." on the third)
+29 R: r:h
+29 M: r:h
+29 S: r:q C4:e "Cer-" F3:e "vo_ar-"
+29 C: r:h
+29 P: r:h
+29 K15: r:h
+29 K16: F4:e "pel." r:e r:q
+29 K17: r:h
+29 K18: r:h
+29 I: r:h
+30 R: r:h
+30 M: r:q C4:e "Un" F3:e "tac-"
+30 S: C4:e "ro-" F3:e "sto!" r:q
+30 C: r:h
+30 P: r:h
+30 K15: r:h
+30 K16: r:h
+30 K17: r:h
+30 K18: r:h
+30 I: r:h
+31 R: r:h
+31 M: C4:e "chi-" F3:e "no!" r:q
+31 S: r:q F3:e "Vin" F3:e "del"
+31 C: r:h
+31 P: r:h
+31 K15: r:h
+31 K16: r:h
+31 K17: r:h
+31 K18: r:h
+31 I: r:h
+32 R: r:h
+32 M: r:h
+32 S: F3:e "Re-" F3:e "no!" r:q
+32 C: r:q F3:e "Vin" F3:e "da"
+32 P: r:h
+32 K15: r:h
+32 K16: r:h
+32 K17: r:h
+32 K18: r:h
+32 I: r:h
+# bar 33: figure (13) (piano)
+33 R: r:h
+33 M: r:h
+33 S: r:q A3:e "A-" A3:e "ra-"
+33 C: A3:s "ta-" A3:s "vo-" A3:e "la!" r:q
+33 P: r:h
+33 K15: r:h
+33 K16: r:h
+33 K17: r:h
+33 K18: r:h
+33 I: r:h
+# bar 34: Le Mamme (strillanti e minaccianti), "deciso", f; double bar after this bar: key change to D major (2 sharps)
+34 R: r:h
+34 M: r:h
+34 S: A3:e "go-" A3:e "sta" A3:e "sen-" A3:e "za"
+34 C: r:h
+34 P: r:h
+34 K15: r:h
+34 K16: r:h
+# MARKS bar 34 K17: word:deciso (printed above the note)
+34 K17: r:q r:e word:deciso dyn:f A4:e "Ah!"
+34 K18: r:h
+34 I: r:h
+# page 108 system 1 starts bar 35
+# bar 35: PIÙ MOSSO, "con slancio" (voice); 2/4, D major (2 sharps); the Mamme staff (K17) is unlabelled from here
+35 R: r:h
+35 M: r:h
+35 S: D4:e> "cro-" D3:e> "sta!" r:q
+35 C: r:h
+35 P: r:h
+35 K15: r:h
+35 K16: r:h
+# MARKS bar 35 K17: word:con_slancio (printed at the top of the system under PIÙ MOSSO)
+35 K17: word:con_slancio A5:e> "raz-" F#5:e "za" D5:e "di" B4:e "fur-"
+35 K18: r:h
+35 I: r:h
+36 R: r:h
+36 M: r:h
+36 S: r:h
+36 C: r:h
+36 P: r:h
+36 K15: r:h
+36 K16: r:h
+36 K17: A4:e "fan-" F#4:e "ti_in-" E4:e "de-" D4:e "mo-"
+36 K18: r:h
+36 I: r:h
+37 R: r:h
+37 M: r:h
+37 S: r:h
+37 C: r:h
+37 P: r:h
+37 K15: r:h
+37 K16: r:h
+# JUDGE bar 37 K17: Y - slurs printed as Y has them
+37 K17: C#4:q( "nia-" D4:q)
+37 K18: r:h
+37 I: r:h
+38 R: r:h
+38 M: r:h
+38 S: r:h
+38 C: r:h
+38 P: r:h
+38 K15: r:h
+38 K16: r:h
+38 K17: E4:e. "ti," G4:s "che" B4:e "ci" B4:e "ve-"
+38 K18: r:h
+38 I: r:h
+# page 108 system 2 starts bar 39
+39 R: r:h
+39 M: r:h
+39 S: r:h
+39 C: r:h
+39 P: r:h
+39 K15: r:h
+39 K16: r:h
+39 K17: A4:q "ni-" B4:q "te_a"
+39 K18: r:h
+39 I: r:h
+40 R: r:h
+40 M: r:h
+40 S: r:h
+40 C: r:h
+40 P: r:h
+40 K15: r:h
+40 K16: r:h
+# JUDGE bar 40 K17: Y - slurs printed as Y has them
+40 K17: C#5:e( "fa-" F#5:q>) C#5:e "re_in"
+40 K18: r:h
+40 I: r:h
+41 R: r:h
+41 M: r:h
+41 S: r:h
+41 C: r:h
+41 P: r:h
+41 K15: r:h
+41 K16: r:h
+# JUDGE bar 41 K17: Y - slurs printed as Y has them
+41 K17: E5:e( "que-" D5:e) C#5:e( "sto" B4:e)
+41 K18: r:h
+41 I: r:h
+# bar 42: breath mark (comma) after "co?"
+42 R: r:h
+42 M: r:h
+42 S: r:h
+42 C: r:h
+42 P: r:h
+42 K15: r:h
+42 K16: r:h
+# JUDGE bar 42 K17: Y - slurs printed as Y has them
+42 K17: D5:e( "lo-" C#5:e) B4:e, "co?" A4:e( "A"
+42 K18: r:h
+42 I: r:h
+# page 108 system 3 starts bar 43
+43 R: r:h
+43 M: r:h
+43 S: r:h
+43 C: r:h
+43 P: r:h
+43 K15: r:h
+43 K16: r:h
+# JUDGE bar 43 K17: Y - slur from bar 42 A4 ends on A5; elision "sa,_a" per TB.md
+43 K17: A5:e>) "ca-" F#5:e "sa,_a" D5:e "let-" B4:e "to!"
+43 K18: r:h
+43 I: r:h
+44 R: r:h
+44 M: r:h
+44 S: r:h
+44 C: r:h
+44 P: r:h
+44 K15: r:h
+44 K16: r:h
+44 K17: A4:e "Via" F#4:e "brut-" E4:e "ti" D4:e "sgua-"
+44 K18: r:h
+44 I: r:h
+45 R: r:h
+45 M: r:h
+45 S: r:h
+45 C: r:h
+45 P: r:h
+45 K15: r:h
+45 K16: r:h
+# JUDGE bar 45 K17: Y - slurs printed as Y has them
+45 K17: C#4:q( "ia-" D4:q)
+45 K18: r:h
+45 I: r:h
+46 R: r:h
+46 M: r:h
+46 S: r:h
+46 C: r:h
+46 P: r:h
+46 K15: r:h
+46 K16: r:h
+46 K17: E4:e "ti," r:s B4:s "gli" E5:e "scap-" E5:e "pel-"
+46 K18: r:h
+46 I: r:h
+# page 108 system 4 starts bar 47
+47 R: r:h
+47 M: r:h
+47 S: r:h
+47 C: r:h
+47 P: r:h
+47 K15: r:h
+47 K16: r:h
+47 K17: E5:e> "lot-" A4:e> "ti" B4:e "vi" B4:e "par-"
+47 K18: r:h
+47 I: r:h
+48 R: r:h
+48 M: r:h
+48 S: r:h
+48 C: r:h
+48 P: r:h
+48 K15: r:h
+48 K16: r:h
+# JUDGE bar 48 K17: Y - slurs printed as Y has them
+48 K17: C#5:e( "ran-" F#5:q>) C#5:e "no"
+48 K18: r:h
+48 I: r:h
+49 R: r:h
+49 M: r:h
+49 S: r:h
+49 C: r:h
+49 P: r:h
+49 K15: r:h
+49 K16: r:h
+49 K17: E5:e "po-" D5:e "co!" r:e C#5:e "A"
+49 K18: r:h
+49 I: r:h
+50 R: r:h
+50 M: r:h
+50 S: r:h
+50 C: r:h
+50 P: r:h
+50 K15: r:h
+50 K16: r:h
+50 K17: E5:e "ca-" D5:e "sa," r:e C#5:e "a"
+50 K18: r:h
+50 I: r:h
+# page 109 system 1 starts bar 51 (Le Mamme K17, unlabelled)
+51 R: r:h
+51 M: r:h
+51 S: r:h
+51 C: r:h
+51 P: r:h
+51 K15: r:h
+51 K16: r:h
+51 K17: E5:e "let-" D5:e "to," G5:q>~ "raz-"
+51 K18: r:h
+51 I: r:h
+52 R: r:h
+52 M: r:h
+52 S: r:h
+52 C: r:h
+52 P: r:h
+52 K15: r:h
+52 K16: r:h
+52 K17: G5:e F#5:e "za" B4:e "di" D#5:e "fur-"
+52 K18: r:h
+52 I: r:h
+53 R: r:h
+53 M: r:h
+53 S: r:h
+53 C: r:h
+53 P: r:h
+53 K15: r:h
+53 K16: r:h
+53 K17: F#5:e "fan-" E5:e "ti," r:e. Dn5:s "a"
+53 K18: r:h
+53 I: r:h
+54 R: r:h
+54 M: r:h
+54 S: r:h
+54 C: r:h
+54 P: r:h
+54 K15: r:h
+54 K16: r:h
+54 K17: D5:q> "let-" E4:q> "to!"
+54 K18: r:h
+54 I: r:h
+# page 109 system 2 starts bar 55
+# JUDGE: bar count 76. p.109 system 1 has 4 bars (51-54); system 2 opens with a 2/4 bar (bar 55: voices whole-bar rest, RH 16th run G#5-D#6, LH chord tied from bar 54), then the double bar and 3/4 MOLTO SOSTENUTO (bar 56). X omitted bar 55; X bars 55-75 renumbered 56-76.
+# JUDGE bar 55 R: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 R: r:h
+# JUDGE bar 55 M: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 M: r:h
+# JUDGE bar 55 S: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 S: r:h
+# JUDGE bar 55 C: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 C: r:h
+# JUDGE bar 55 P: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 P: r:h
+# JUDGE bar 55 I: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 I: r:h
+# JUDGE bar 55 K15: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 K15: r:h
+# JUDGE bar 55 K16: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 K16: r:h
+# JUDGE bar 55 K17: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 K17: r:h
+# JUDGE bar 55 K18: Y - bar 55 (2/4, top of p.109 sys 2, whole-bar rest in the voices, piano run G#5-D#6) is printed; X skipped it
+55 K18: r:h
+# bar 56: double bar, 3/4, MOLTO SOSTENUTO; RAGAZZO SOLO (piagnucolando) = K18, "a piacere", "corta" over the fermata
+56 R: r:h.
+56 M: r:h.
+56 S: r:h.
+56 C: r:h.
+56 P: r:h.
+56 K15: r:h.
+56 K16: r:h.
+56 K17: r:h.
+# JUDGE bar 56 K18: Y - elision "ba,_il" per TB.md
+# MARKS bar 56 K18: word:a_piacere (over the second triplet), word:corta (over the fermata)
+56 K18: r:e3 Bb4:e3 "Vo'" Bb4:e3 "la" word:a_piacere Bb4:q3 "trom-" Bb4:e3 "ba,_il" word:corta Bb4:q3! "ca-" G4:e3 "val-"
+56 I: r:h.
+# bar 57 R: tenor treble clef, sounding pitch written
+57 R: r:q r:s. dyn:p A3:x "E" A3:x "tu" A3:x "Mi-" A3:x "mì," A3:x "che" E4:e "vuoi?" r:e
+57 M: r:h.
+57 S: r:h.
+57 C: r:h.
+57 P: r:h.
+57 K15: r:h.
+57 K16: r:h.
+57 K17: r:h.
+57 K18: A4:q( "lin!..." A4:e) r:e r:q
+57 I: r:h.
+# page 109 system 3 starts bar 58
+# bar 58 I: printed "crêma" (circumflex accent over the e), kept as printed
+58 R: r:h.
+58 M: r:h.
+58 S: r:h.
+58 C: r:h.
+58 P: r:h.
+58 K15: r:h.
+58 K16: r:h.
+58 K17: r:h.
+58 K18: r:h.
+58 I: r:e. A4:s "La" D5:s "crê-" Cn5:s "ma." r:e r:q
+# bar 59 S: (con somma importanza al cameriere...)
+59 R: r:h.
+59 M: r:h.
+59 S: r:q r:q r:e F#3:s "E" F#3:s "gran"
+59 C: r:h.
+59 P: r:h.
+59 K15: r:h.
+59 K16: r:h.
+59 K17: r:h.
+59 K18: r:h.
+59 I: r:h.
+# bar 60 S: "C'è una dama!" printed squeezed "C'èunadama!" under 4 notes; judged "C'è_u-" "na" "da-" "ma!"
+60 R: r:h.
+60 M: r:h.
+# JUDGE bar 60 S: Y - 4 notes for "C'è u-na da-ma": synalepha è+u on the F#3 ("C'è_u-"), "na" on D#3 (text squeezed, Italian elision decides)
+60 S: F#3:s "sfar-" F#3:s "zo." r:e r:e3 F#3:e3 "C'è_u-" D#3:e3 "na" B3:e3 "da-" B3:e3 "ma!" r:e3!
+60 C: r:h.
+60 P: r:h.
+60 K15: r:h.
+60 K16: r:h.
+60 K17: r:h.
+60 K18: r:h.
+60 I: r:h.!
+61 R: r:h
+61 M: r:h
+61 S: r:h
+61 C: r:h
+61 P: r:h
+61 K15: r:h
+61 K16: r:h
+61 K17: r:h
+61 K18: r:h
+61 I: r:h
+62 R: r:h
+62 M: r:h
+62 S: r:h
+62 C: r:h
+62 P: r:h
+62 K15: r:h
+62 K16: r:h
+62 K17: r:h
+62 K18: r:h
+62 I: r:h
+63 R: r:h
+63 M: r:h
+63 S: r:h
+63 C: r:h
+63 P: r:h
+63 K15: r:h
+63 K16: r:h
+63 K17: r:h
+63 K18: r:h
+63 I: r:h
+64 R: r:h
+64 M: r:h
+64 S: r:h
+64 C: r:h
+64 P: r:h
+64 K15: r:h
+64 K16: r:h
+64 K17: r:h
+64 K18: r:h
+64 I: r:h
+65 R: r:h
+65 M: r:h
+65 S: r:h
+65 C: r:h
+65 P: r:h
+65 K15: r:h
+65 K16: r:h
+65 K17: r:h
+65 K18: r:h
+65 I: r:h
+# double bar after bar 60: 2/4, A major (3 sharps)
+# page 110 system 1 starts bar 61
+# bar 61: I.o TEMPO (All.tto giocoso), figure (14), 2/4, A major (3 sharps); no voice in bars 61-64
+# page 110 system 2 starts bar 65 (BAMBINE E RAGAZZI = K15, one staff)
+66 R: r:h
+66 M: r:h
+66 S: r:h
+66 C: r:h
+66 P: r:h
+66 K15: r:q r:e E4:s "Vi-" F#4:s "va"
+66 K16: r:h
+66 K17: r:h
+66 K18: r:h
+66 I: r:h
+67 R: r:h
+67 M: r:h
+67 S: r:h
+67 C: r:h
+67 P: r:h
+67 K15: G#4:q> "Par-" C#5:q> "pi-"
+67 K16: r:h
+67 K17: r:h
+67 K18: r:h
+67 I: r:h
+68 R: r:h
+68 M: r:h
+68 S: r:h
+68 C: r:h
+68 P: r:h
+68 K15: C#5:e( "gnol....." A4:q) E4:s "Par-" F#4:s "pi-"
+68 K16: r:h
+68 K17: r:h
+68 K18: r:h
+68 I: r:h
+# page 110 system 3 starts bar 69
+69 R: r:h
+69 M: r:h
+69 S: r:h
+69 C: r:h
+69 P: r:h
+# JUDGE bar 69 K15: X - staccato dots printed under all three G#4 notes as well
+69 K15: G#4:e* "gnol," G#4:s* "Par-" G#4:s* "pi-" C#5:e* "gnol," C#5:s* "Par-" C#5:s* "pi-"
+69 K16: r:h
+69 K17: r:h
+69 K18: r:h
+69 I: r:h
+70 R: r:h
+70 M: r:h
+70 S: r:h
+70 C: r:h
+70 P: r:h
+70 K15: A4:e "gnol!" r:e r:q
+70 K16: r:h
+70 K17: r:h
+70 K18: r:h
+70 I: r:h
+71 R: r:h
+71 M: r:h
+71 S: r:h
+71 C: r:h
+71 P: r:h
+71 K15: r:h
+71 K16: r:h
+71 K17: r:h
+71 K18: r:h
+71 I: r:h
+# bar 72: (interno)
+72 R: r:h
+72 M: r:h
+72 S: r:h
+72 C: r:h
+72 P: r:h
+72 K15: r:e dyn:p A4:s "Il" A4:s "tam-" A4:e "bur," A4:s "tam-" A4:s "bu-"
+72 K16: r:h
+72 K17: r:h
+72 K18: r:h
+72 I: r:h
+# page 110 system 4 starts bar 73
+73 R: r:h
+73 M: r:h
+73 S: r:h
+73 C: r:h
+73 P: r:h
+73 K15: A4:e "rel," r:e r:q
+73 K16: r:h
+73 K17: r:h
+73 K18: r:h
+73 I: r:h
+74 R: r:h
+74 M: r:h
+74 S: r:h
+74 C: r:h
+74 P: r:h
+74 K15: r:h
+74 K16: r:h
+74 K17: r:h
+74 K18: r:h
+74 I: r:h
+# bar 75: (più lontano)
+75 R: r:h
+75 M: r:h
+75 S: r:h
+75 C: r:h
+75 P: r:h
+75 K15: r:e A4:s "dei" A4:s "sol-" A4:e "da-" A4:s "ti_il" A4:s "drap-"
+75 K16: r:h
+75 K17: r:h
+75 K18: r:h
+75 I: r:h
+76 R: r:h
+76 M: r:h
+76 S: r:h
+76 C: r:h
+76 P: r:h
+76 K15: A4:e "pel!" r:e r:q
+76 K16: r:h
+76 K17: r:h
+76 K18: r:h
+76 I: r:h

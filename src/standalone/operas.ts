@@ -2392,7 +2392,8 @@ export const OPERAS: Opera[] = [
       "title": "Quando me'n vo'",
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
      },
      {
       "title": "Vai?… Donde lieta uscì",
@@ -2453,6 +2454,30 @@ export const OPERAS: Opera[] = [
       "kind": "Scene with chorus · Act 2",
       "id": "Act 2: Aranci, datteri!",
       "editionId": "puccini-aranci-datteri"
+     },
+     {
+      "title": "Chi guardi?…",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Chi guardi?…",
+      "editionId": "puccini-chi-guardi"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
+     },
+     {
+      "title": "Caro!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Caro!",
+      "editionId": "puccini-caro"
      }
     ]
    },
@@ -2491,7 +2516,8 @@ export const OPERAS: Opera[] = [
       "title": "Quando me'n vo'",
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
      },
      {
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
@@ -2522,6 +2548,30 @@ export const OPERAS: Opera[] = [
       "kind": "Scene with chorus · Act 2",
       "id": "Act 2: Aranci, datteri!",
       "editionId": "puccini-aranci-datteri"
+     },
+     {
+      "title": "Chi guardi?…",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Chi guardi?…",
+      "editionId": "puccini-chi-guardi"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
+     },
+     {
+      "title": "Caro!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Caro!",
+      "editionId": "puccini-caro"
      }
     ]
    },
@@ -2548,7 +2598,8 @@ export const OPERAS: Opera[] = [
       "title": "Quando me'n vo'",
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
      },
      {
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
@@ -2591,6 +2642,30 @@ export const OPERAS: Opera[] = [
       "kind": "Scene with chorus · Act 2",
       "id": "Act 2: Aranci, datteri!",
       "editionId": "puccini-aranci-datteri"
+     },
+     {
+      "title": "Chi guardi?…",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Chi guardi?…",
+      "editionId": "puccini-chi-guardi"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
+     },
+     {
+      "title": "Caro!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Caro!",
+      "editionId": "puccini-caro"
      }
     ]
    },
@@ -2602,15 +2677,35 @@ export const OPERAS: Opera[] = [
     "avatar": "hat",
     "pieces": [
      {
-      "title": "Quando m'en vo'",
+      "title": "Quando me'n vo'",
       "kind": "Waltz · Act 2",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "id": "Quando m'en vo'",
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
      },
      {
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
       "kind": "Quartet · Act 3",
       "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
+     },
+     {
+      "title": "Caro!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Caro!",
+      "editionId": "puccini-caro"
      }
     ]
    },
@@ -2625,7 +2720,8 @@ export const OPERAS: Opera[] = [
       "title": "Quando me'n vo'",
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
      },
      {
       "title": "Vecchia zimarra",
@@ -2662,6 +2758,30 @@ export const OPERAS: Opera[] = [
       "kind": "Scene with chorus · Act 2",
       "id": "Act 2: Aranci, datteri!",
       "editionId": "puccini-aranci-datteri"
+     },
+     {
+      "title": "Chi guardi?…",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Chi guardi?…",
+      "editionId": "puccini-chi-guardi"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
+     },
+     {
+      "title": "Caro!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Caro!",
+      "editionId": "puccini-caro"
      }
     ]
    },
@@ -2681,7 +2801,8 @@ export const OPERAS: Opera[] = [
       "title": "Quando me'n vo'",
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
      },
      {
       "title": "Al Quartiere Latin ci attende Momus.",
@@ -2718,6 +2839,30 @@ export const OPERAS: Opera[] = [
       "kind": "Scene with chorus · Act 2",
       "id": "Act 2: Aranci, datteri!",
       "editionId": "puccini-aranci-datteri"
+     },
+     {
+      "title": "Chi guardi?…",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Chi guardi?…",
+      "editionId": "puccini-chi-guardi"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
+     },
+     {
+      "title": "Caro!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Caro!",
+      "editionId": "puccini-caro"
      }
     ]
    },
@@ -2747,7 +2892,20 @@ export const OPERAS: Opera[] = [
       "title": "Quando me'n vo'",
       "kind": "Waltz and ensemble · Act 2",
       "id": "Act 2: Quando me'n vo'",
-      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her"
+      "when": "Act 2, at the Café Momus, Musetta still has not made Marcello look at her",
+      "editionId": "puccini-quando-men-vo"
+     },
+     {
+      "title": "Signorina Mimì, che dono raro",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Signorina Mimì, che dono raro",
+      "editionId": "puccini-signorina-mimi"
+     },
+     {
+      "title": "Ahi! qual dolore",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ahi! qual dolore",
+      "editionId": "puccini-ahi-qual-dolore"
      }
     ]
    },
@@ -2757,7 +2915,14 @@ export const OPERAS: Opera[] = [
     "voice": "Tenor",
     "desc": "A toy seller who wheels his cart through the Latin Quarter on Christmas Eve.",
     "avatar": "cap",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Chi guardi?…",
+      "kind": "Scene with chorus · Act 2",
+      "id": "Act 2: Chi guardi?…",
+      "editionId": "puccini-chi-guardi"
+     }
+    ]
    },
    {
     "id": "sergente",

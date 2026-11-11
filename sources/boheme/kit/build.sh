@@ -7,6 +7,7 @@ python3 $K/mk6.py "$1" "$2" $T/a.xml "$4" "$5" "$6"
 python3 $K/tup.py $T/b.xml $T/c.xml
 python3 $K/dedupe.py $T/c.xml
 python3 $K/beam.py $T/c.xml "$3"
+python3 $K/tiefix.py "$3"
 sed -i '/<!DOCTYPE/d' "$3"
 python3 $K/reqacc.py "$3" --fix "$3" | tail -3
 python3 $K/reqacc.py "$3" | tail -2

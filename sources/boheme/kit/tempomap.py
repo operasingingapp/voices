@@ -98,6 +98,7 @@ if ramps_on:
     for q, w in sorted(words):
         slow, fast = SLOW.search(w), FAST.search(w)
         if not (slow or fast) or RESET.search(w) and not slow: continue
+        if re.search(r"\bsenza\b", w, re.I): continue  # "senza rallentare": no slowing
         if any(abs(q - bq) < 0.01 for bq, _, _ in base): continue  # a section's own heading
         if any(abs(q - s) < 1.0 for s in seen) or (made_end and q < made_end[-1] - 1e-6): continue
         seen.append(q)

@@ -1,0 +1,239 @@
+{
+ "editionId": "puccini-ahi-qual-dolore",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Ahi! qual dolore",
+ "subtitle": "Musetta's shoe: Alcindoro sent off, Musetta and Marcello reunited, the bill arrives, La bohème, Act 2",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "musetta",
+   "name": "Musetta",
+   "voiceType": "Soprano",
+   "partKey": "musetta"
+  },
+  {
+   "id": "alcindoro",
+   "name": "Alcindoro",
+   "voiceType": "Bass",
+   "partKey": "alcindoro"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "schaunard",
+   "name": "Schaunard",
+   "voiceType": "Baritone",
+   "partKey": "schaunard"
+  },
+  {
+   "id": "colline",
+   "name": "Colline",
+   "voiceType": "Bass",
+   "partKey": "colline"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P8",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "musetta",
+   "label": "Musetta (Soprano)",
+   "shortLabel": "Musetta",
+   "kind": "voice",
+   "roleId": "musetta",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 1,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alcindoro",
+   "label": "Alcindoro (Bass)",
+   "shortLabel": "Alcindoro",
+   "kind": "voice",
+   "roleId": "alcindoro",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 2,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "schaunard",
+   "label": "Schaunard (Baritone)",
+   "shortLabel": "Schaunard",
+   "kind": "voice",
+   "roleId": "schaunard",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "colline",
+   "label": "Colline (Bass)",
+   "shortLabel": "Colline",
+   "kind": "voice",
+   "roleId": "colline",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ahi! qual dolore: Musetta's foot hurts (quasi a piacere, E major)",
+   "start": "1",
+   "end": "4"
+  },
+  {
+   "id": "b",
+   "label": "Sciogli, slaccia! Gioventù mia (I.º tempo, the waltz)",
+   "start": "5",
+   "end": "10"
+  },
+  {
+   "id": "c",
+   "label": "Ahi! che fitta: the shoe comes off; La commedia è stupenda",
+   "start": "11",
+   "end": "18"
+  },
+  {
+   "id": "d",
+   "label": "Marcello! Sirena! (a tempo Sostenuto, the waltz in full)",
+   "start": "19",
+   "end": "22"
+  },
+  {
+   "id": "e",
+   "label": "Siamo all'ultima scena: the bill (Meno, ancora più Lento)",
+   "start": "23",
+   "end": "29"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 2",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 140-145 (from Musetta's \"Ahi! qual dolore\", page 140 system 2, to the bar before the Allegro alla marcia on page 145, 29 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. The offstage drums' separate staff (from page 145) is not included. No metronome mark is printed in this passage: the I.º tempo is the waltz's printed ♩ = 104 (page 130); other values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

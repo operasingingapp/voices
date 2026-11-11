@@ -1,0 +1,83 @@
+# S13b piano: key E major (4 sharps), 3/4 throughout
+# page 135 system 1 starts bar 1 (LH in treble clef at the start of the system)
+1 RH1: F#5+A5:e* E5+G#5:s* E5+G#5:s* D5+F#5:e* C#5+E5:e* D5+F#5:e* C#5+E5+G#5:e*
+1 LH1: clef:G D5:e* C#5:s* C#5:s* B4:e* A4:e* B4:e* r:e clef:F
+2 RH1: F#5+A5:q- F#5+A5:q- F#5+A5:q-
+2 LH1: B2:e* F#3:e* A3:e* D4:e* F#4:e* clef:G A4:e*
+3 RH1: F#5+A5:e* E5+G#5:s* E5+G#5:s* D5+F#5:e* C#5+E5:e* D5+F#5:e* D5+G#5:e*
+3 LH1: D5:e* C#5:s* C#5:s* B4:e* A4:e* B4:e* E4:e* clef:F
+# page 135 system 2 starts bar 4
+4 RH1: C#5+E5:q- C#5+E5:q- C#5+E5:q-
+4 LH1: A2:e* E3:e* A3:e* B3:e* C#4:e* E4:e* clef:G
+5 RH1: C#5+E5:e* B4+D#5:s* B4+D#5:s* A4+C#5:e* G#4+B4:e* A4+C#5:e* G#4+B4+D#5:e*
+5 LH1: A4:e* G#4:s* G#4:s* F#4:e* E4:e* F#4:e* r:e clef:F
+6 RH1: C#5+E5:q- C#5+E5:q- C#5+E5:q-
+6 LH1: A2:e* E3:e* A3:e* B3:e* C#4:e* E4:e*
+# page 136 system 1 starts bar 7
+# bar 7: rall. with a crescendo hairpin
+7 RH1: C#5+E5:e* hp:< B4+D#5:s* B4+D#5:s* word:rall. A4+C#5:e* A4+C#5+E5:e* B4+D5+F#5:e* C#5+E5+G#5:e* hp:end
+7 LH1: A4:e* G#4:e* F#4:e* E4:e* D4:e* C#4:e*
+# bar 8: figure (24), poco sostenuto, p
+8 RH1: word:poco_sostenuto F#5+A5:h( E5+G#5:e D5+F#5:e
+8 LH1: g:B1:e dyn:p B2:e( F#3:e A3:e D4:e F#4:e A4:e)
+9 RH1: g:G#5:e D5+F#5:q C#5+E5:q B4+D#5:q)
+9 LH1: r:e A4:e( F#4:e D4:e A3:e F#3:e)
+# page 136 system 2 starts bar 10
+10 RH1: g:D4:s[ g:F#4:s C#5:h]( B4:q)~
+10 LH1: B2:e* F#3:e( A3:e B3:e D4:e F#4:e)
+11 RH1: B4:e hp:< D4+B4:e( F#4+C#5:e B4+D5:e D5+F#5:e F#5+A5:e) hp:end
+11 LH1: B2:e* r:e r:q r:q
+12 RH1: E5+G#5:q- E5+G#5:q- E5+G#5:q-
+12 LH1: C#2+G#2+C#3:e* E3:e* G#3:e* C#4:e* E4:e* G#4:e* clef:G
+# page 137 system 1 starts bar 13
+13 RH1: E5+G#5:e* D#5+F#5:s* D#5+F#5:s* C#5+E5:e* B4+D#5:e* C#5+E5:e* B4+D#5+F#5:e*
+13 LH1: C#5:e* B4:e* A4:e* G#4:e* A4:e* r:e clef:F
+14 RH1: E5+G#5:q- E5+G#5:q- E5+G#5:q-
+14 LH1: C#2+C#3:e* E3:e* G#3:e* C#4:e* E4:e* G#4:e* clef:G
+# bar 15: f poco rall.; accent on the LH chord
+15 RH1: E5+G#5:e dyn:f word:poco_rall. E5+E6:e( D#5+D#6:e C#5+C#6:e) G#4+G#5:s( B4+B5:s A#4+A#5:s C#5+C#6:x*) r:x
+15 LH1: C#5:e* G#4:e( F#4:e E4:e) clef:F F#3+A3+E4:e> r:e
+# page 137 system 2 starts bar 16
+# bar 16: a tempo, p, "tratt. l'ultimo quarto"; the two chords on beats 1.5-2 are written across both staves on one stem (lower notes in the LH staff): written here in RH1
+16 RH1: r:e word:a_tempo dyn:p F#3+B3+D#4+F#4:e( G#3+B3+D#4+G#4:e) F#5+F#6:e( word:tratt._l'ultimo_quarto G#5+G#6:s- F#5+F#6:s- E5+E6:s- D#5+D#6:s-)
+16 LH1: hp:> B1+B2:h hp:end B#1+B#2:q
+17 RH1: F#5+F#6:e( E5+E6:e) F#4+G#4:e( E4+B4:e) G#4+E5:s( B4:s A#4:s C#5:x*) r:x
+17 LH1: C#2+C#3:h F#1+F#2:e F#3+A3+E4:e
+# page 138 system 1 starts bar 18
+# bar 18: mf, poco allarg.; LH changes to treble clef after the first eighth
+18 RH1: r:e B4+D#5+B5:e( C#5+C#6:q G#5+G#6:q)
+18 LH1: dyn:mf B1+B2:e clef:G A4:e~ A4:q A4:q
+18 LH2: s:e B3:e C#4:q D#4:q
+# bar 19: LH back to bass clef before the arpeggiated chord on beat 3
+19 RH1: g:F#6:s g:G#6:s F#5+F#6:e( E5+E6:e B4+B5:e G#4+G#5:e~ G#4+G#5:s) C#5+C#6:s( A#4+A#5:s D#5+D#6:x*) r:x
+19 LH1: E4+G#4:q~ E4+G#4:e r:e clef:F F#2+E3+A#3:e>a r:e
+# page 138 system 2 starts bar 20
+# bar 20: a tempo, p, then "cres. ed incalz. un poco"; the two chords on beats 1.5-2 are written across both staves on one stem (lower notes in the LH staff): written here in RH1
+20 RH1: r:e dyn:p F#3+B3+D#4+F#4:e( G#3+B3+D#4+G#4:s) word:cres._ed_incalz._un_poco D#5:s* D#5:s* D#5:s* D#5:s* E5:s* F#5:s* D#5:s*
+20 LH1: B1+B2:h B#1+B#2:q(
+21 RH1: D#5:s* E5:s* G##4:s* A#4:s* B#4:s* C#5:s* D#5:s* E5:s* E#5:s* F#5:s* G#5:s* E#5:s*
+21 LH1: C#2+C#3:h) C##2+C##3:q(
+# page 139 system 1 starts bar 22
+# bar 22: f, sostenendo
+22 RH1: hp:< E#5:s( F#5:s) A#5:e> hp:end dyn:f G#5:e> F#5:e> F5:s> Eb5:s> Db5:s> C5:s>
+22 LH1: D#2+D#3:q) clef:G A#3+F#4+A#4:q clef:F C3+Gb3+Bb3:q
+23 RH1: F5:e* Bb4:e* Db5:q- g:C5:s g:Db5:s C5:s( B4:s C5:s F4:s)
+23 LH1: F2:q F3+Bb3+Db4:q dyn:p F3+A3+Eb4:q
+# page 139 system 2 starts bar 24
+# bar 24: a tempo; pp at the end of the bar
+24 RH1: F4+Bb4:e Bb4:s* Bb4:s* F4+Db5:e* Bb4+F5:e Db5:e r:e
+24 LH1: Bb3+Db4:e r:e r:q r:e dyn:pp A#1+A#2:e
+# bar 25: figure (25), un poco sostenendo, pp
+25 RH1: dyn:pp G#4:e.a( A#4:s G#4:e) D#4:e* A#4:e* E#4:e*
+25 RH2: B3+D#4:ea r:e r:q C#4+E#4:ea r:e
+25 LH1: C#2+C#3:e* r:e r:q A#1+A#2:e* r:e
+26 RH1: G#4:e.( A#4:s G#4:s) D#5:s* D#5:s* D#5:s* D#5:s* C#5:s* B4:s* G#4:s*
+26 RH2: B3+D#4:e r:e r:q r:q
+26 LH1: C#2+C#3:e* r:e r:q r:q
+# page 140 system 1 starts bar 27 (piano alone)
+27 RH1: F#4:e.( G#4:s F#4:s) hp:< C#5:s* E5:s* A5:s* hp:> G#5:x3( A5:x3 G#5:x3) E5:s* C#5:s* A4:s* hp:end
+27 RH2: A3+C#4:q~ A3+C#4:s s:e. s:q
+27 LH1: B1+B2:q~ B1+B2:s clef:G C#4:s* E4:s* A4:s* G#4:x3 A4:x3 G#4:x3 E4:s* C#4:s* A3:s* clef:F
+# bar 28: f rall.
+28 RH1: G#4:x3( A4:x3 G#4:x3) dyn:f word:rall. hp:> F#4:s* A4:s* E4:s* A#4:s* D#4:s* B4:e hp:end r:q
+28 LH1: G#3:x3 A3:x3 G#3:x3 F#3:s* A3:s* E3:s* A#3:s* D#3:s* B3:s* B2:s* B1:e* r:e

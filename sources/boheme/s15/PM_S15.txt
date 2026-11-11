@@ -1,0 +1,425 @@
+# Chunk S15a piano, pp.145-150. Drum staff (Tamburi) ignored.
+# page 145 system 2: chunk begins at its last bar (bar 1)
+# bar 1: ALL.o alla MARCIA, quarter = 132; key 2 flats (B-flat major), time 2/4 (from 4 sharps, 3/4); LH marked "(Tamburi)"
+# bar 1: slurs from the previous bar (B4/B5) end on this chord
+# JUDGE bar 1 RH: X - the arcs from the previous bar's B4/B5 change pitch to C#5/C#6: slur end, not ties
+1 RH1: C#4+En4+A4+C#5+C#6:e*) r:e r:q
+1 LH1: A2+Bb2+Cb3:q* r:q
+# page 146 system 1 starts bar 2
+2 RH1: dyn:pp D4+Bb4:e r:e D4+Bb4:e. Bb4+D5:s
+# MARKS bar 2 LH1: pp (between staves); slur over tremolo pair
+2 LH1: dyn:pp A2+Bb2+Cb3:q* trem3:Bb2+Cb3|A2:q()
+# bar 2: LH second beat = two eighths (Bb2+Cb3 cluster, A2) with two extra tremolo strokes between the stems, slurred: written as trem3 lasting a quarter (slur over the two notes not encoded)
+3 RH1: D5+F5:q.. C5+Eb5:s
+3 LH1: A2+Bb2+Cb3:q* r:q
+4 RH1: Bb4+D5:e F4+C5:e Bb4+D5:e. C5+Eb5:s
+4 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+5 RH1: Bb4+D5:q( F4+C5:e.) D4+Bb4:s
+5 LH1: A2+Bb2+Cb3:q* r:q
+# page 146 system 2 starts bar 6
+6 RH1: F4+C5:q* Bb4+D5:q*
+6 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+7 RH1: F4+C5:q.. D4+Bb4:s
+7 LH1: A2+Bb2+Cb3:q* r:q
+8 RH1: F4+C5:q* Bb4+D5:q*
+# MARKS bar 8 LH1: slur over tremolo pair
+8 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+9 RH1: F4+C5:e. Bb4+D5:s C5+Eb5:e* Bb4+D5:e*
+9 LH1: A2+Bb2+Cb3:e. A2+Bb2+Cb3:s A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+# page 147 system 1 starts bar 10
+10 RH1: F4+C5:q* D4+Bb4:q*
+10 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+11 RH1: F4+C5:q* r:q
+11 LH1: A2+Bb2+Cb3:q* r:q
+12 RH1: D5+F5:e. Eb5+G5:s D5+F5:e C5+Eb5:e
+# MARKS bar 12 LH1: slur over tremolo pair
+12 LH1: A2+Bb2+Cb3:e* r:e trem3:Bb2+Cb3|A2:q()
+13 RH1: Bb4+D5:q.. Bb4+D5:s
+13 LH1: A2+Bb2+Cb3:q* r:q
+# page 147 system 2 starts bar 14
+# bar 14: "avvicinandosi a poco a poco" printed between the staves (bars 14-15)
+# JUDGE bar 14 RH: X - "avvicinandosi a poco a poco" printed once, between the staves under the RH
+14 RH1: word:avvicinandosi_a_poco_a_poco G4+Eb5:e* Bb4+D5:e* G4+Eb5:e. Bb4+F5:s
+# MARKS bar 14 LH1: avvicinandosi a poco a poco (between staves)
+14 LH1: word:avvicinandosi_a_poco_a_poco A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+15 RH1: Eb5+G5:q.. A4+C5:s
+15 LH1: A2+Bb2+Cb3:q r:q
+16 RH1: Bb4+D5:e* F4+C5:e* Bb4+D5:e* C5+Eb5:e*
+16 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+17 RH1: D5+F5:q.. Eb4+F4:s
+17 LH1: A2+Bb2+Cb3:q* r:q
+# page 148 system 1 starts bar 18
+18 RH1: D4+Bb4:q F4+C5:q
+# MARKS bar 18 LH1: slur over tremolo pair
+18 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+19 RH1: Bb4+D5:e. C5+Eb5:s D5+F5:e* C5+Eb5:e*
+19 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+20 RH1: Bb4+D5:q* F4+C5:e* dyn:ff F4:s3( G4:s3 A4:s3)
+20 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:e* dyn:ff F3:s3( G3:s3 A3:s3)
+# bar 20: "(Orchestra)" cue word ignored
+# bar 21: figure (28); "marcatissimo"
+# JUDGE bar 21 RH: confirmed (both readers) - beat 1 carries an open V wedge below the note, the same sign as the LH open ^ above, clearly distinct from the three > accents on the triplet: marcato ^
+21 RH1: word:marcatissimo Bb4:q^ A4:e3> F4:e3> A4:e3>
+# MARKS bar 21 LH1: marcatissimo (between staves)
+21 LH1: word:marcatissimo Bb3:q^ A3:e3> F3:e3> A3:e3>
+# page 148 system 2 starts bar 22
+# JUDGE bar 22 RH: Y - short arc joining the two G4 noteheads (same pitch, adjacent): tie. The mark on beat 1 is an open V (marcato, inverted below the note)
+22 RH1: G4:q^~ G4:q3 D4:e3*
+# JUDGE bar 22 LH: Y - same tie G3-G3 above the staff
+22 LH1: G3:q^~ G3:q3 D3:e3*
+# JUDGE bar 23 RH: Y - slur from the slashed grace F4 to Eb4 is printed: encode it
+23 RH1: g:F4:e( Eb4:e3*) r:e3 D4:e3* C4:e3* r:e3 Bb3:e3*
+# JUDGE bar 23 LH: Y - grace slur printed
+23 LH1: g:F3:e( Eb3:e3*) r:e3 D3:e3* C3:e3* r:e3 Bb2:e3* clef:G
+# bar 23: grace notes are slashed acciaccature, slurred to the main note
+24 RH1: dyn:p D5+F5:e* C5+En5:s* C5+En5:s* Bb4+D5:e* A4+C5:e*
+# MARKS bar 24 LH1: p (between staves)
+24 LH1: dyn:p Bb4:e* A4:e* G4:e* F4:e*
+25 RH1: Bb4+D5:e* C5+En5:e* D5+F5:q-
+# JUDGE bar 25 LH: Y - G4 has a staccato dot below
+25 LH1: G4:e* A4:e* Bb4:q- clef:F
+# page 148 system 3 starts bar 26
+26 RH1: G4+Bb4+Eb5+G5:e* A4+Eb5+F5+A5:e* Bb4+D5+F5+Bb5:q-~
+26 LH1: Eb4:e* C4:e* Bb3:q-~
+# bar 26: RH first chord has a (courtesy) flat on E5
+27 RH1: Bb4+D5+F5+Bb5:e r:e G4+Bb4+Eb5+G5:e* A4+Eb5+F5+A5:e*
+27 LH1: Bb3:e r:e Eb4:e* C4:e*
+28 RH1: Bb4+D5+F5+Bb5:e* r:e dyn:mf F6:e3> r:s3 D6:s3( Bb5:e3*)
+# MARKS bar 28 LH1: mf (between staves)
+28 LH1: Bb3:e* r:e clef:G dyn:mf F5:e3> r:s3 D5:s3( Bb4:e3*)
+29 RH1: G5:e3* A5:e3* Bb5:e3* C6:e3* D6:e3* En6:e3*
+29 LH1: G4:e3* A4:e3* Bb4:e3* C5:e3* D5:e3* En5:e3*
+# page 149 system 1 starts bar 30 (both piano staves in treble clef)
+30 RH1: F6:e> r:e r:q
+# JUDGE bar 30 RH: X - p printed once between the staves, under the second RH chord
+30 RH2: A5+C6:e dyn:p G5+Bn5:s* G5+Bn5:s* F5+A5:e* Eb5+G5:e*
+# MARKS bar 30 LH1: p (between staves)
+30 LH1: dyn:p F5:e* En5:e* D5:e* C5:e*
+31 RH1: F5+A5:e* G5+Bn5:e* A5+C6:q-
+31 LH1: D5:e* En5:e* F5:q-
+32 RH1: D5+F5+Bb5+D6:e* En5+Bb5+C6+En6:e* F5+A5+C6+F6:q-~
+32 LH1: Bb4:e* G4:e* F4:q-~
+# bar 32: RH first chord has a courtesy flat on B5
+33 RH1: F5+A5+C6+F6:e r:e D5+F5+Bb5+D6:e* En5+Bb5+C6+En6:e*
+33 LH1: F4:e r:e Bb4:e* G4:e*
+# page 149 system 2 starts bar 34
+# bar 34: figure (29)
+# JUDGE bar 34 RH: X - f printed once between the staves, under the C6 triplet
+34 RH1: F5+A5+C6+F6:e* r:e dyn:f C6:e3> r:s3 A5:s3( F5:e3*)
+# MARKS bar 34 LH1: f (between staves)
+34 LH1: F4:e* r:e dyn:f C5:e3> r:s3 A4:s3( F4:e3*)
+35 RH1: D5:e3* En5:e3* F5:e3* hp:< G5:e3* A5:e3* Bb5:e3* hp:end
+# MARKS bar 35 LH1: cresc. hairpin (between staves), as RH
+35 LH1: D4:e3* En4:e3* F4:e3* hp:< G4:e3* A4:e3* Bb4:e3* hp:end
+36 RH1: C6:e3> r:s3 D6:s3( Eb6:e3*) G5:e3> r:s3 A5:s3( Bb5:e3*)
+36 LH1: C5:e> r:e G4+Bb4+D5:e> r:e
+# bar 36: courtesy flat on E6
+# page 150 system 1 starts bar 37 (both piano staves in treble clef)
+# bars 37-39: the 8th / 16th-rest / 16th / 8th groups carry no printed "3" here but continue the triplet figure of bars 34-36: written as triplets
+37 RH1: C6:e3> r:s3 D6:s3( Eb6:e3*) G5:e3> r:s3 A5:s3( Bb5:e3*)
+37 LH1: C5+Eb5+G5:e> r:e G4+Bb4+D5:e> r:e
+38 RH1: C5:e3> r:s3 D5:s3( Eb5:e3*) G4:e3> r:s3 A4:s3( Bb4:e3*)
+38 LH1: C4+Eb4+G4:e> r:e clef:F G3+Bb3+D4:e> r:e
+39 RH1: C4:e3> r:s3 D4:s3( Eb4:e3)~ Eb4:q~
+39 LH1: C3+Eb3+G3:e> r:e r:q
+# page 150 system 2 starts bar 40
+40 RH1: hp:> Eb4:h~
+# MARKS bar 40 LH1: dim. hairpin (between staves), as RH; LH rests
+40 LH1: hp:> r:h
+41 RH1: Eb4:q~ Eb4:e hp:end dyn:p Eb4:s( F4:s
+# MARKS bar 41 LH1: hairpin end and p (between staves); LH rests whole bar, so position approximate
+41 LH1: hp:end dyn:p r:h
+42 RH1: Gb4:s Ab4:s Bb4:s C5:s Db5:s Eb5:s F5:s Gb5:s
+42 LH1: r:h clef:G
+# bar 43: RH 4th 16th has no accidental after the Db5 earlier in the bar: read as Db5 by the bar rule
+43 RH1: dyn:p Ab5:e-) F5:s( Db5:s) Bb5:e- F5:s( Db5:s)
+# JUDGE bar 43 LH: Y - second chord D4 has no accidental after the Db4 of the first chord: Db4 by the bar rule (p printed once, under RH)
+# MARKS bar 43 LH1: p (between staves)
+43 LH1: dyn:p r:e Db4+F4+Ab4:e* r:e Bb3+Db4+F4+Bb4:e*
+# ---- end of PM_S15a.txt (bars 1-43)
+# S15b piano, pages 151-155. Key 2 flats (B-flat major), 2/4 throughout. Drum staff (Tamburi) ignored.
+# page 151 system 1 starts bar 44 (LH in treble clef)
+44 RH1: Ab5:q- F5:s( G5:s A5:s Bb5:s
+44 LH1: r:e Db4+F4+Ab4:e* r:q
+45 RH1: C6:s*) A5:s* F5:s* A5:s* D6:e* A5:e*
+45 LH1: F4+A4+C5:e* r:e r:e D4+F4+A4+D5:e*
+46 RH1: C6:e* r:s C5:s( hp:< F5:s A5:s C6:s D6:s hp:end
+# MARKS bar 46 LH1: cresc. hairpin (between staves), as RH
+46 LH1: F4+A4+C5:e* hp:< r:e r:q hp:end
+47 RH1: dyn:f Eb6:e>) F5+A5:s* F5+A5:s* Eb5+G5:e* D5+F5:e*
+# MARKS bar 47 LH1: f (between staves); slur from grace notes to Eb5
+47 LH1: dyn:f g:Eb4:s( g:G4:s g:Bb4:s Eb5:e>) D5:e* C5:e* Bb4:e*
+# page 152 system 1 starts bar 48 (LH treble clef, changes to bass clef at the end of bar 5)
+48 RH1: Eb5+G5:e* F5+A5:e* G5+Bb5:q-
+48 LH1: C5:e* D5:e* Eb5:q- clef:F
+49 RH1: dyn:f F5+Ab5+Db6+F6:e> G5+Db6+Eb6+G6:e> Ab5+C6+Eb6+Ab6:q^~
+49 LH1: Db3+Db4:e> Bb2+Bb3:e> Ab2+Ab3:q^~
+# bar 51: figure (30)
+# JUDGE bar 50 RH: Y - ff printed between the staves (under the RH beam, before the 3rd eighth): both hands
+50 RH1: Ab5+C6+Eb6+Ab6:e r:e dyn:ff F4+Ab4+Db5+F5:e> G4+Db5+Eb5+G5:e>
+# JUDGE bar 50 LH: X - ff printed between the staves: both hands
+50 LH1: Ab2+Ab3:e r:e dyn:ff Db2+Db3:e> Bb1+Bb2:e>
+51 RH1: Ab4+C5+Eb5+Ab5:e> s:e s:q
+51 LH1: s:e dyn:mf Eb3:s* Eb3:s* Ab3:e> Eb3:s* Eb3:s*
+51 LH2: Ab1+Ab2:e> r:e r:q
+# page 153 system 1 starts bar 52 (RH staff empty in bars 9-12)
+52 RH1: r:h
+52 LH1: F3:s* F3:s* Eb3:s* Db3:s* Ab3:e> Eb3:s* Eb3:s*
+52 LH2: Db2:e* F2:e* Ab1:e* r:e
+53 RH1: r:h
+53 LH1: Ab3:e* Eb3:s* Eb3:s* F3:s* F3:s* Eb3:s* Db3:s*
+53 LH2: r:q Db2:e* F2:e*
+# MARKS bar 54 RH1: dim. hairpin (between staves), as LH; RH rests, position approximate
+54 RH1: hp:> r:h
+54 LH1: Ab3:e* Eb3:s* Eb3:s* hp:> Ab3:q~
+54 LH2: Ab1:e* r:e r:q
+# MARKS bar 55 RH1: hairpin end (between staves), as LH
+55 RH1: r:h hp:end
+55 LH1: Ab3:h~ hp:end
+55 LH2: r:h
+# page 153 system 2 starts bar 56
+# MARKS bar 56 RH1: pp (between staves), as LH
+56 RH1: s:q dyn:pp Bb3+Gb4+Bb4:e( C4+Ab4+C5:e
+56 LH1: Ab3:e r:e dyn:pp s:q
+56 LH2: r:q Gb2:e* Db3:e*
+57 RH1: Db4+F4+Db5:q~ Db4+F4+Db5:e Eb4+F4+Eb5:e
+57 LH1: Db2:e* Db3:q Db3:e*
+58 RH1: Db4+Bb4+Db5:e C4+Ab4+C5:e Bb3+F4+Bb4:q~
+# MARKS bar 58 LH1: staccato on Db2
+58 LH1: Gb2:e Db3:e Db2:e* Db3:e~
+# MARKS bar 59 RH1: slur from bar 13 ends on 1st chord (was 4th); new slur starts on 2nd chord
+59 RH1: Bb3+F4+Bb4:e) Ab3+F4+Ab4:e( Bb3+Gb4+Bb4:e C4+Ab4+C5:e
+59 LH1: Db3:e Db3:e* Gb2:e* Db3:e*
+# MARKS bar 60 RH1: slur from bar 16 ends here
+60 RH1: Db4+F4+Db5:e Eb4+Ab4+Eb5:e F4+Db5+F5:q)
+60 LH1: Db2:e* Db3:q Db3:e*
+# page 154 system 1 starts bar 61
+# MARKS bar 61 RH1: slur from grace note to Eb5
+61 RH1: Eb4+Gb4+Bb4+Eb5:qa g:F5:e( Eb5:e) Db5:e~
+61 RH2: s:q F4+Ab4:q~
+61 LH1: Gb2:e* Db3:e* Db2:e* Db3:e~
+# MARKS bar 62 RH1: phrase slur starts (to bar 22)
+62 RH1: F4+Ab4+Db5:q dyn:pp word:dolce Bb4+Gb5+Bb5:e( C5+Ab5+C6:e
+# MARKS bar 62 LH1: pp (between staves), as RH
+62 LH1: Db3:e Db3:e* dyn:pp r:e Db3:e~
+# MARKS bar 62 LH2: phrase slur under LH starts (to bar 22)
+62 LH2: s:q Gb2:q(
+63 RH1: Db5+F5+Db6:q~ Db5+F5+Db6:e Eb5+F5+Eb6:e
+63 LH1: Db3:e Db3:q Db3:e*
+63 LH2: Db2:h
+64 RH1: Db5+Bb5+Db6:e C5+Ab5+C6:e Bb4+F5+Bb5:q~
+64 LH1: r:e Db3:q Db3:e~
+64 LH2: Gb2:q Db2:q~
+# MARKS bar 65 RH1: phrase slur ends on 1st chord; new slur starts on 2nd chord, runs over the page turn to bar 23
+65 RH1: Bb4+F5+Bb5:e) Ab4+F5+Ab5:e( Bb4+Gb5+Bb5:e C5+Ab5+C6:e
+65 LH1: Db3:e Db3:e* r:e Db3:e~
+# MARKS bar 65 LH2: phrase slur from bar 19 ends
+65 LH2: Db2:q Gb2:q)
+# page 155 system 1 starts bar 66
+# MARKS bar 66 RH1: slur now continues from bar 22 (arc open at the end of p.154), start removed from 1st chord
+66 RH1: Db5+F5+Db6:e Eb5+Ab5+Eb6:e F5+Db6+F6:q)
+66 LH1: Db2+Db3:q. C2+C3:e
+67 RH1: Db5+G5+Db6:qa Eb5+Ab5+C6+Eb6:sa( C5:s Db5:s Eb5:s
+67 LH1: Bb1+Bb2:q Ab1+Ab2:q~
+68 RH1: hp:< F5:s Gb5:s Ab5:s Bb5:s C6:s Db6:s Eb6:s F6:s hp:end
+# MARKS bar 68 LH1: cresc. hairpin (between staves), as RH
+68 LH1: hp:< Ab1+Ab2:e r:e r:q hp:end clef:G
+# bar 69: figure (31); LH in treble clef
+# JUDGE bar 69 RH: Y - 2nd/3rd chords: lowest head on the first ledger line with no flat = A5 (no Ab earlier in the bar; the 4th chord has its own flat on Ab5)
+69 RH1: dyn:f Gb6:e) A5+C6+F6:s* A5+C6+F6:s* Gb5+Bb5+Eb6:e* F5+Ab5+Db6:e*
+# JUDGE bar 69 LH: X - f printed between the staves: both hands
+69 LH1: dyn:f Gb4+Bb4+Db5+Gb5:e> F5:e* Eb5:e* Db5:e*
+# ---- end of PM_S15b.txt (bars 44-69)
+# S15c, pp.156-160. Key: 2 flats (B-flat major), 2/4 throughout (in force from before the chunk). Drum staff (Tamburi) ignored.
+# page 156 system 1 starts bar 70
+# bar 70: LH in treble clef; clef change to bass at end of bar
+70 RH1: Gb5+Bb5+Eb6:e* Ab5+C6+F6:e Db5+F5+Bb5:q-
+70 LH1: Eb5:e* F5:e* Gb4+Bb4:q- clef:F
+71 RH1: dyn:ff Db4+F4+Bb4+Db5:e* Eb4+Bb4+Eb5:e* F4+A4+C5+F5:e* C5:s* C5:s*
+71 LH1: dyn:ff Bb2+Bb3:e* Gb2+Gb3:e* F2+F3:e* r:e
+# bar 72: 8va dashed line starts over the 16ths after F6 and ends on the first note of bar 4 (read as applying to the two C6 16ths -> C7, and to bar 4's F6 -> F7)
+72 RH1: F5:e* C6:s* C6:s* F6:e* C7:s* C7:s*
+72 LH1: r:h
+73 RH1: F7:e* r:e dyn:ff C4+Eb4+Ab4+C5:e> D4+Ab4+Bb4+D5:e>
+73 LH1: r:q dyn:ff Ab2+Ab3:e> F2+F3:e>
+# page 157 system 1 starts bar 74
+# bar 74: RH first chord has a (courtesy) natural before G4; LH changes to treble clef after the eighth rest
+74 RH1: Eb4+G4+Bb4+Eb5:e> r:e G4+Eb5:e* r:s Eb5+G5:s
+74 LH1: Eb2+Eb3:e> r:e clef:G G3+Eb4:e* r:s Eb4+G4:s
+75 RH1: G5+Bb5:h~
+75 LH1: G4+Bb4:h~
+76 RH1: G5+Bb5:h~
+76 LH1: G4+Bb4:h~
+# bar 77: LH clef change to bass after the eighth rest; naturals before A3 and A4 in RH third chord (courtesy)
+77 RH1: G5+Bb5:e r:e dyn:p G3+Bb3+Eb4+G4:e* A3+Eb4+F4+A4:e*
+77 LH1: G4+Bb4:e r:e clef:F dyn:p Eb2+Eb3:e* C2+C3:e*
+# bar 78: figure (32). LH beat 2: two eighth-value stems (chord Bb2+Cb3, then A2) joined by a beam plus two loose strokes between them = fingered tremolo, slurred; the flat is placed at C3 (Cb3)
+# JUDGE bar 78 RH: Y - ff printed between the staves under beat 2 (below the RH dotted eighth, over the LH tremolo), not at the bar start
+78 RH1: Bb3+D4+F4+Bb4:e* r:e dyn:ff D4+Bb4:e. Bb4+D5:s
+# JUDGE bar 78 LH: Y - ff printed between the staves under beat 2 (below the RH dotted eighth, over the LH tremolo), not at the bar start
+# JUDGE bar 78 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+78 LH1: Bb1+Bb2:e* r:e dyn:ff trem3:Bb2+Cb3|A2:q()
+# page 158 system 1 starts bar 79
+# pp.158-160 LH: three-note cluster A2+Bb2+Cb3 (drum imitation): the flat printed before the first cluster of each bar sits in the C3 space (bowl centred on C3, not on the A2 space) = Cb3, A2 natural; as in S15a/S15b
+79 RH1: D5+F5:q.. C5+Eb5:s
+# JUDGE bar 79 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+79 LH1: A2+Bb2+Cb3:q r:q
+80 RH1: Bb4+D5:e F4+C5:e Bb4+D5:e. C5+Eb5:s
+# JUDGE bar 80 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+80 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+81 RH1: Bb4+D5:q( F4+C5:e.) D4+Bb4:s
+# JUDGE bar 81 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+81 LH1: A2+Bb2+Cb3:q* r:q
+82 RH1: F4+C5:q* Bb4+D5:q*
+# JUDGE bar 82 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+82 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+# page 158 system 2 starts bar 83
+83 RH1: F4+C5:q.. D4+Bb4:s
+# JUDGE bar 83 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+83 LH1: A2+Bb2+Cb3:q* r:q
+# bar 84: LH beat 1 as bar 9: chord Bb2+Cb3 (flat printed at C3) and A2, eighth stems + beam + two loose strokes = fingered tremolo, slurred
+84 RH1: F4+C5:q* Bb4+D5:q*
+# JUDGE bar 84 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+# JUDGE bar 84 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+84 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+85 RH1: F4+C5:e. Bb4+D5:s C5+Eb5:e* Bb4+D5:e*
+# JUDGE bar 85 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+85 LH1: A2+Bb2+Cb3:e. A2+Bb2+Cb3:s A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+86 RH1: F4+C5:q* D4+Bb4:q*
+# JUDGE bar 86 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+86 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+# page 159 system 1 starts bar 87
+87 RH1: F4+C5:q* r:q
+# JUDGE bar 87 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+87 LH1: A2+Bb2+Cb3:q* r:q
+# bar 88: LH beat 2 fingered tremolo (beam + two loose strokes, slurred) Bb2+C3|A2 with no accidental printed: the Cb3 of the cluster earlier in the bar carries, A2 natural
+88 RH1: D5+F5:e. Eb5+G5:s D5+F5:e C5+Eb5:e
+# JUDGE bar 88 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+# JUDGE bar 88 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+88 LH1: A2+Bb2+Cb3:e* r:e trem3:Bb2+Cb3|A2:q()
+89 RH1: Bb4+D5:q.. Bb4+D5:s
+# JUDGE bar 89 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+89 LH1: A2+Bb2+Cb3:q r:q
+90 RH1: G4+Eb5:e* Bb4+D5:e* G4+Eb5:e. Bb4+F5:s
+# JUDGE bar 90 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+90 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+91 RH1: Eb5+G5:q.. A4+C5:s
+# JUDGE bar 91 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+91 LH1: A2+Bb2+Cb3:q* r:q
+# page 160 system 1 starts bar 92
+92 RH1: Bb4+D5:e* F4+C5:e* Bb4+D5:e* C5+Eb5:e*
+# JUDGE bar 92 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+92 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q*
+93 RH1: D5+F5:q.. Eb4+F4:s
+# JUDGE bar 93 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+93 LH1: A2+Bb2+Cb3:q* r:q
+# bar 94: LH tremolo as bars 9 and 15 (flat printed at C3 height before the Bb2+C3 chord, slurred to A2)
+94 RH1: D4+Bb4:q* F4+C5:q*
+# JUDGE bar 94 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+# JUDGE bar 94 LH: OWN (both wrong) - slur over the tremolo pair is printed (both readers remark it) - encoded q() as in S15a
+94 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q*
+95 RH1: Bb4+D5:e. C5+Eb5:s D5+F5:e* C5+Eb5:e*
+# JUDGE bar 95 LH: Y - flat before the cluster sits on the C3 space: Cb3 with A2 natural (consistent with S15a/S15b); X's Ab2+C3 has no flat at A2
+95 LH1: A2+Bb2+Cb3:e* r:e A2+Bb2+Cb3:e* A2+Bb2+Cb3:e*
+# ---- end of PM_S15c.txt (bars 70-95)
+# S15d piano: pp.161-166. Key 2 flats, 2/4 unless remarked.
+# page 161 system 1 starts bar 96
+96 RH1: Bb4+D5:q* F4+C5:q*
+96 LH1: A2+Bb2+Cb3:q* A2+Bb2+Cb3:q* clef:G
+# bar 97: figure (33), ff "(Orchestra)"
+97 RH1: dyn:ff D5+F5:e> C5+E5:s> C5+E5:s> Bb4+D5:e> A4+C5:e>
+# MARKS bar 97 LH: dyn:ff (printed between the staves, copied from RH)
+97 LH1: dyn:ff Bb4:e> A4:e> G4:e> F4:e>
+98 RH1: Bb4+D5:e> C5+E5:e> D5+F5:e> G4+Bb4+G5:e>
+98 LH1: G4:e A4:e Bb4:e clef:F Eb3+Eb4:e>
+99 RH1: A4+Eb5+A5:e> Bb4+D5+Bb5:e> C5+F5+C6:e> D5+F5+D6:e>
+99 LH1: C3+C4:e> Bb2+Bb3:e> A2+A3:e> Bb2+Bb3:e>
+100 RH1: G5+Bb5+G6:e> D5+Bb5+D6:s D5+Bb5+D6:s Eb5+Bb5+Eb6:e> C5+F5+A5+C6:e>
+100 LH1: Eb2+Eb3:e> G2+G3:e> C2+C3:e> F2+F3:e>
+# page 162 system 1 starts bar 101
+# bar 101: figure (34), ff. LH beat 2: chord Bb2+Cb3 and A2 joined by one beam with two detached extra strokes between the stems (fingered-tremolo look, drum imitation), read as a quarter-long tremolo (needed to fill the bar); uncertain.
+101 RH1: Bb4+D5+F5+Bb5:e> r:e dyn:ff D4+Bb4:e. Bb4+D5:s
+# MARKS bar 101 LH: dyn:ff (between the staves at beat 2, copied from RH); slur under the tremolo pair ()
+101 LH1: Bb1+Bb2:e> r:e dyn:ff trem3:Bb2+Cb3|A2:q()
+102 RH1: D5+F5:q.. C5+Eb5:s
+102 LH1: A2+Bb2+Cb3:q r:q
+103 RH1: Bb4+D5:e F4+C5:e Bb4+D5:e. C5+Eb5:s
+103 LH1: A2+Bb2+Cb3:e r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+104 RH1: Bb4+D5:q( F4+C5:e.) D4+Bb4:s
+104 LH1: A2+Bb2+Cb3:q r:q
+105 RH1: F4+C5:q* Bb4+D5:q*
+105 LH1: A2+Bb2+Cb3:q A2+Bb2+Cb3:q
+# page 163 system 1 starts bar 106
+106 RH1: F4+C5:q.. D4+Bb4:s
+106 LH1: A2+Bb2+Cb3:q r:q
+# bar 107: LH beat 1 same tremolo-like figure as bar 6
+107 RH1: F4+C5:q* Bb4+D5:q*
+# MARKS bar 107 LH: slur under the tremolo pair ()
+107 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q
+108 RH1: F4+C5:e. Bb4+D5:s C5+Eb5:e* Bb4+D5:e*
+108 LH1: A2+Bb2+Cb3:e. A2+Bb2+Cb3:s A2+Bb2+Cb3:e A2+Bb2+Cb3:e
+109 RH1: F4+C5:q* D4+Bb4:q*
+109 LH1: A2+Bb2+Cb3:q A2+Bb2+Cb3:q
+110 RH1: F4+C5:q* r:q
+110 LH1: A2+Bb2+Cb3:q r:q
+# page 164 system 1 starts bar 111
+111 RH1: D5+F5:e. Eb5+G5:s D5+F5:e* C5+Eb5:e*
+# MARKS bar 111 LH: slur under the tremolo pair ()
+111 LH1: A2+Bb2+Cb3:e r:e trem3:Bb2+Cb3|A2:q()
+112 RH1: Bb4+D5:q.. Bb4+D5:s
+112 LH1: A2+Bb2+Cb3:q r:q
+113 RH1: G4+Eb5:e* Bb4+D5:e* G4+Eb5:e. Bb4+F5:s
+113 LH1: A2+Bb2+Cb3:e r:e A2+Bb2+Cb3:e. A2+Bb2+Cb3:s
+114 RH1: Eb5+G5:q.. A4+C5:s
+114 LH1: A2+Bb2+Cb3:q r:q
+# page 165 system 1 starts bar 115
+115 RH1: Bb4+D5:e* F4+C5:e* Bb4+D5:e* C5+Eb5:e*
+115 LH1: A2+Bb2+Cb3:q A2+Bb2+Cb3:q
+116 RH1: D5+F5:q.. Eb4+F4:s
+116 LH1: A2+Bb2+Cb3:q r:q
+# bar 117: LH beat 1 same tremolo-like figure as bar 6
+117 RH1: D4+Bb4:q* F4+C5:q*
+# MARKS bar 117 LH: slur under the tremolo pair ()
+117 LH1: trem3:Bb2+Cb3|A2:q() A2+Bb2+Cb3:q
+118 RH1: Bb4+D5:e. C5+Eb5:s D5+F5:e* C5+Eb5:e*
+118 LH1: A2+Bb2+Cb3:e r:e A2+Bb2+Cb3:e A2+Bb2+Cb3:e
+119 RH1: Bb4+D5:q* F4+C5:q*
+119 LH1: A2+Bb2+Cb3:q A2+Bb2+Cb3:q clef:G
+# page 166 system 1 starts bar 120
+# bar 120: figure (35), ff in both hands; LH in treble clef (clef:G from end of bar 24)
+120 RH1: dyn:ff D5+F5:e> C5+E5:s> C5+E5:s> Bb4+D5:e> A4+C5:e>
+# JUDGE bar 120 LH: Y - single ff printed between the staves under the RH (as bars 2, 6); one token on RH only
+# MARKS bar 120 LH: dyn:ff (printed between the staves, copied from RH)
+120 LH1: dyn:ff Bb4:e> A4:e> G4:e> F4:e>
+121 RH1: Bb4+D5:e> C5+E5:e> D5+F5:q>
+121 LH1: G4:e> A4:e> Bb4:q> clef:F
+122 RH1: G4+Bb4+Eb5+G5:e> A4+Eb5+F5+A5:e> Bb4+D5+F5+Bb5:q^
+122 LH1: Eb3+Eb4:e> C3+C4:e> Bb2+Bb3:q^
+# bar 123: 8va over the RH for the whole bar (sounding pitches written); LH clef:G at the end of the bar
+123 RH1: G5+Bb5+Eb6+G6:e> A5+Eb6+F6+A6:e> Bb5+D6+F6+Bb6:e> r:e
+123 LH1: Eb2+Eb3:e> C2+C3:e> Bb1+Bb2:e> r:e clef:G
+124 RH1: D5+F5:e> C5+E5:s> C5+E5:s> Bb4+D5:e> A4+C5:e>
+124 LH1: Bb4:e> A4:e> G4:e> F4:e>
+# page 166 system 2 starts bar 125
+# bar 125: double bar, 3/4; "allarg. e sostenendo"; "tutta forza" and ff at beat 3; LH changes to F clef before beat 3
+# JUDGE bar 125 RH: Y - 'allarg. e sostenendo' printed over bar start, goes in as word: token; ff at beat 3 kept on RH as in bar 25
+125 RH1: word:allarg._e_sostenendo Bb4+D5:e> C5+E5:e> D5+F5:q^ word:tutta_forza dyn:ff G4+Bb4+Eb5+G5:e> A4+Eb5+F5+A5:e>
+# JUDGE bar 125 LH: Y - the one ff (between staves, beat 3) is written on RH
+# MARKS bar 125 LH: dyn:ff (between the staves at beat 3, copied from RH)
+125 LH1: G4:e> A4:e> Bb4:q^ clef:F dyn:ff Eb3+Eb4:e> C3+C4:e>
+# bar 126: double bar, 2/4
+# JUDGE bar 126 RH: Y - 400dpi zoom: chord 2 = C5 (space), F5 (top line), A5 and C6 (on ledgers); no Eb5 head
+126 RH1: Bb4+D5+F5+Bb5:q^ C5+F5+A5+C6:q^
+126 LH1: Bb2+Bb3:q^ F2+F3:q^
+# JUDGE bar 127 RH: Y - 400dpi zoom: chord 1 head on 1st ledger = A5 (not Bb5); chord 3 top head has a ledger through it = Eb6, inner heads sit between ledgers = Bb5, G5, bottom in top space = Eb5; chord 4 inner heads between ledgers = Bb5, G5 (not F5)
+127 RH1: D5+F5+A5+D6:e> Bb4+D5+G5+Bb5:e> Eb5+G5+Bb5+Eb6:e> D5+G5+Bb5+D6:e>
+127 LH1: D2+D3:e> G2+G3:e> C2+C3:e> D2+D3:s> Eb2+Eb3:s>
+# bar 128: "stent." over RH beat 2; LH "secco" over the second chord
+128 RH1: C5+F5+Bb5+C6:e> r:e word:stent. F5+A5+C6+F6:e^ r:e
+# JUDGE bar 128 LH: Y - 'secco' printed over the second LH chord
+128 LH1: F2+F3:e> r:e word:secco F2+F3:e^ r:e
+# bar 129: final bar (end of Quadro II)
+# JUDGE bars 31-34 RH: dense chords re-checked at 400 dpi; bar 33 (C5+F5+Bb5+C6, F5+A5+C6+F6) and bar 34 (Bb5+D6+F6+Bb6) confirmed as both read
+129 RH1: Bb5+D6+F6+Bb6:e^ r:e r:q
+129 LH1: Bb1+Bb2:e^ r:e r:q
+# ---- end of PM_S15d.txt (bars 96-129)

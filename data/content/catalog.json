@@ -3031,6 +3031,70 @@
     }
   },
   {
+    "editionId": "puccini-ahi-qual-dolore",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-ahi-qual-dolore@1.0.0-carignani#b3b82bc6c1",
+    "title": "Ahi! qual dolore",
+    "subtitle": "Musetta's shoe: Alcindoro sent off, Musetta and Marcello reunited, the bill arrives, La bohème, Act 2",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "alcindoro",
+        "name": "Alcindoro",
+        "voiceType": "Bass",
+        "partKey": "alcindoro"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 29,
+    "durationSec": 57,
+    "hasRepeats": false,
+    "keySignature": "E major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-al-quartiere-latin",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-al-quartiere-latin@1.0.0-carignani#5051134631",
@@ -3129,6 +3193,64 @@
     }
   },
   {
+    "editionId": "puccini-caro",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-caro@1.0.0-carignani#043db12a39",
+    "title": "Caro!",
+    "subtitle": "The bill, the military tattoo, Musetta carried off in triumph, Alcindoro left to pay, La bohème, Act 2",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 129,
+    "durationSec": 119,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 54,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-che-gelida-manina",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-che-gelida-manina@1.0.0-carignani#af4e73d47f",
@@ -3158,6 +3280,64 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 26,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-chi-guardi",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-chi-guardi@1.0.0-carignani#f1a9d7f975",
+    "title": "Chi guardi?…",
+    "subtitle": "Christmas Eve at the Café Momus: Rodolfo presents Mimì to his friends, Parpignol's toy cart, the supper ordered, La bohème, Act 2",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      },
+      {
+        "id": "parpignol",
+        "name": "Parpignol",
+        "voiceType": "Tenor",
+        "partKey": "parpignol"
+      }
+    ],
+    "measures": 119,
+    "durationSec": 169,
+    "hasRepeats": false,
+    "keySignature": "A♭ major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 41,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -3397,6 +3577,70 @@
     }
   },
   {
+    "editionId": "puccini-quando-men-vo",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-quando-men-vo@1.0.0-carignani#dc38a6f2b3",
+    "title": "Quando me'n vo'",
+    "subtitle": "Musetta's waltz: she sings at Marcello to win him back, while the others look on, La bohème, Act 2",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "alcindoro",
+        "name": "Alcindoro",
+        "voiceType": "Bass",
+        "partKey": "alcindoro"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 77,
+    "durationSec": 139,
+    "hasRepeats": false,
+    "keySignature": "E major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-questo-mar-rosso",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-questo-mar-rosso@1.0.0-carignani#5ad994f150",
@@ -3484,6 +3728,70 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 120,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-signorina-mimi",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-signorina-mimi@1.0.0-carignani#281e2a86fb",
+    "title": "Signorina Mimì, che dono raro",
+    "subtitle": "At the Café Momus: the bonnet and the toast, Musetta arrives with Alcindoro and tries to make Marcello look at her, La bohème, Act 2",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      },
+      {
+        "id": "alcindoro",
+        "name": "Alcindoro",
+        "voiceType": "Bass",
+        "partKey": "alcindoro"
+      }
+    ],
+    "measures": 188,
+    "durationSec": 239,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 98,
       "withAudio": 0,
       "reviewed": 0
     }

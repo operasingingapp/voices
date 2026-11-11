@@ -1,0 +1,271 @@
+{
+ "editionId": "puccini-signorina-mimi",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Signorina Mimì, che dono raro",
+ "subtitle": "At the Café Momus: the bonnet and the toast, Musetta arrives with Alcindoro and tries to make Marcello look at her, La bohème, Act 2",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "musetta",
+   "name": "Musetta",
+   "voiceType": "Soprano",
+   "partKey": "musetta"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "schaunard",
+   "name": "Schaunard",
+   "voiceType": "Baritone",
+   "partKey": "schaunard"
+  },
+  {
+   "id": "colline",
+   "name": "Colline",
+   "voiceType": "Bass",
+   "partKey": "colline"
+  },
+  {
+   "id": "alcindoro",
+   "name": "Alcindoro",
+   "voiceType": "Bass",
+   "partKey": "alcindoro"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P10",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "musetta",
+   "label": "Musetta (Soprano)",
+   "shortLabel": "Musetta",
+   "kind": "voice",
+   "roleId": "musetta",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "schaunard",
+   "label": "Schaunard (Baritone)",
+   "shortLabel": "Schaunard",
+   "kind": "voice",
+   "roleId": "schaunard",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "colline",
+   "label": "Colline (Bass)",
+   "shortLabel": "Colline",
+   "kind": "voice",
+   "roleId": "colline",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alcindoro",
+   "label": "Alcindoro (Bass)",
+   "shortLabel": "Alcindoro",
+   "kind": "voice",
+   "roleId": "alcindoro",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos",
+   "shortLabel": "Chorus S.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 1,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P9"
+   },
+   "channel": 2,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Signorina Mimì, che dono raro: the pink bonnet; the reader of hearts (A major)",
+   "start": "1",
+   "end": "49"
+  },
+  {
+   "id": "b",
+   "label": "O bella età d'inganni: love sweeter than honey; the toast",
+   "start": "50",
+   "end": "87"
+  },
+  {
+   "id": "c",
+   "label": "Musetta arrives with Alcindoro (Allegro moderato, A flat major)",
+   "start": "88",
+   "end": "115"
+  },
+  {
+   "id": "d",
+   "label": "Il suo nome è Musetta: Marcello's portrait; Musetta's tantrum",
+   "start": "116",
+   "end": "133"
+  },
+  {
+   "id": "e",
+   "label": "Ehi! Camerier!: the plate, the laughing girls and students; Musetta's plan",
+   "start": "134",
+   "end": "164"
+  },
+  {
+   "id": "f",
+   "label": "Tu non mi guardi! (Un poco meno, no sharps or flats) to the waltz",
+   "start": "165",
+   "end": "188"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 2",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 111-129 (from figure (15), \"Signorina Mimì\", to the end of page 129, 188 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. The print's four chorus staves are gathered here into two by voice (every note and syllable kept, each group named where it comes in). Tempo from the printed metronome mark; where none is printed, a value chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

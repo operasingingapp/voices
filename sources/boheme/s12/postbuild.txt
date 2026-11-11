@@ -1,0 +1,11 @@
+  S12 post-build: python3 ../kit/trillacc.py s12.xml "167:E5:sharp;168:E5:sharp"
+
+How s12.xml is made (checked: this reproduces s12.xml byte for byte):
+  SEGS=$(cat segs.txt); SING=$(cat singers.txt)
+  python3 kit/polyfix.py VM_S12.txt VM_S12.poly.txt "$SEGS"   # polymeter bars (119, 120, 127, ...) rewritten into the bar's meter
+  python3 kit/polyfix.py PM_S12.txt PM_S12.poly.txt "$SEGS"
+  kit/build.sh VM_S12.poly.txt PM_S12.poly.txt s12.xml "$SEGS" "Signorina Mimì" "$SING"
+  python3 kit/trillacc.py s12.xml "167:E5:sharp;168:E5:sharp"   # the sharps over the piano trills in bars 167-168
+VM_S12.txt / PM_S12.txt are the merged, judged transcriptions as printed (S12a-d stitched: 188 bars = 87+35+33+33);
+the .poly.txt files are polyfix.py's output, the build's input. polyfix.py, tiefix.py (called by build.sh) and
+trillacc.py are in /home/claude/ext/boheme/kit.
