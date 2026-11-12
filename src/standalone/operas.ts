@@ -2818,7 +2818,7 @@ export const OPERAS: Opera[] = [
       "editionId": "puccini-o-mimi-tu-piu-non-torni"
      },
      {
-      "title": "Si. Mi chiamano Mimì",
+      "title": "Mi chiamano Mimì",
       "kind": "Aria · Act 1",
       "id": "Act 1: Si. Mi chiamano Mimì",
       "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)",
@@ -2853,7 +2853,7 @@ export const OPERAS: Opera[] = [
       "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
      },
      {
-      "title": "Al Quartiere Latin ci attende Momus.",
+      "title": "Al Quartiere Latin ci attende Momus",
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
@@ -2877,7 +2877,7 @@ export const OPERAS: Opera[] = [
       "editionId": "puccini-si-puo"
      },
      {
-      "title": "Non sono in vena.",
+      "title": "Non sono in vena",
       "kind": "Scene · Act 1",
       "id": "Act 1: Non sono in vena.",
       "editionId": "puccini-non-sono-in-vena"
@@ -2975,8 +2975,9 @@ export const OPERAS: Opera[] = [
     "avatar": "long",
     "pieces": [
      {
-      "title": "Sì, mi chiamano Mimì",
+      "title": "Mi chiamano Mimì",
       "kind": "Aria · Act 1",
+      "id": "Sì, mi chiamano Mimì",
       "when": "Straight after “Che gelida manina”: now it is her turn to say who she is. (The print has “Si.” where the libretto has “Sì”, meaning “yes”.)",
       "editionId": "puccini-mi-chiamano-mimi"
      },
@@ -2987,13 +2988,14 @@ export const OPERAS: Opera[] = [
       "editionId": "puccini-o-soave-fanciulla"
      },
      {
-      "title": "Donde lieta uscì",
+      "title": "Vai?… Donde lieta uscì",
       "kind": "Aria · Act 3",
+      "id": "Donde lieta uscì",
       "editionId": "puccini-donde-lieta-usci",
       "when": "Act 3, Mimì has overheard that she is dying, and Marcello has gone back into the tavern"
      },
      {
-      "title": "Ah!… Che gelida manina",
+      "title": "Che gelida manina",
       "kind": "Aria · Act 1",
       "id": "Act 1: Ah!… Che gelida manina",
       "when": "Act 1, in the dark, as Rodolfo's hand finds Mimì's while they search for her key",
@@ -3021,7 +3023,7 @@ export const OPERAS: Opera[] = [
       "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
      },
      {
-      "title": "Non sono in vena.",
+      "title": "Non sono in vena",
       "kind": "Scene · Act 1",
       "id": "Act 1: Non sono in vena.",
       "editionId": "puccini-non-sono-in-vena"
@@ -3137,7 +3139,7 @@ export const OPERAS: Opera[] = [
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
      },
      {
-      "title": "Al Quartiere Latin ci attende Momus.",
+      "title": "Al Quartiere Latin ci attende Momus",
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
@@ -3341,7 +3343,7 @@ export const OPERAS: Opera[] = [
       "editionId": "puccini-vecchia-zimarra"
      },
      {
-      "title": "Al Quartiere Latin ci attende Momus.",
+      "title": "Al Quartiere Latin ci attende Momus",
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
@@ -3432,8 +3434,9 @@ export const OPERAS: Opera[] = [
     "avatar": "beard",
     "pieces": [
      {
-      "title": "Vecchia zimarra, senti",
+      "title": "Vecchia zimarra",
       "kind": "Aria · Act 4",
+      "id": "Vecchia zimarra, senti",
       "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì",
       "editionId": "puccini-vecchia-zimarra"
      },
@@ -3445,7 +3448,7 @@ export const OPERAS: Opera[] = [
       "editionId": "puccini-quando-men-vo"
      },
      {
-      "title": "Al Quartiere Latin ci attende Momus.",
+      "title": "Al Quartiere Latin ci attende Momus",
       "kind": "Scene · Act 1",
       "id": "Act 1: Al Quartiere Latin ci attende Momus.",
       "editionId": "puccini-al-quartiere-latin"
@@ -3953,6 +3956,7 @@ const ALIAS: Record<string, string> = {
   "Vecchia zimarra, senti": "Vecchia zimarra",
   "Che gelida manina": "Ah!… Che gelida manina",
   "Sì, mi chiamano Mimì": "Si. Mi chiamano Mimì",
+  "Mi chiamano Mimì": "Si. Mi chiamano Mimì",
   "Quando m'en vo'": "Quando me'n vo'",
   "Donde lieta uscì": "Vai?… Donde lieta uscì",
   "O Mimì, tu più non torni": "O Mimì tu più non torni",
