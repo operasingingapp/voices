@@ -1119,10 +1119,12 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
         <div className="oh-text">
           {/* with a cover, these sit under it; without one, they are set on a plate in the opera's colour, as its banner */}
           <div className="oh-titleblock">
-            <p className="cp-eyebrow oh-eyebrow">{acts > 1 ? `Opera in ${NUMBER_WORDS[acts] ?? acts} acts` : "Opera"}</p>
             <h1 className="oh-title" lang={opera.lang}>
               {opera.title}
             </h1>
+            <p className="oh-meta">
+              {acts > 1 ? `Opera in ${NUMBER_WORDS[acts] ?? acts} acts` : "Opera"}
+            </p>
           </div>
           {STORIES[opera.id] && (
             // the whole story on a wide screen; a phone shows its opening, the rest is behind "The story"
