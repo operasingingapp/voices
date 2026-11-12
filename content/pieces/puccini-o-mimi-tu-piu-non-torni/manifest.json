@@ -1,0 +1,133 @@
+{
+ "editionId": "puccini-o-mimi-tu-piu-non-torni",
+ "editionVersion": "1.0.0-carignani",
+ "title": "O Mimì, tu più non torni",
+ "subtitle": "Alone in the garret, Rodolfo with Mimì's bonnet and Marcello at a painting that keeps turning into Musetta, each mourns his lost love to himself, La bohème, Act 4",
+ "kind": "duet",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Rodolfo: O Mimì, tu più non torni (Andantino mosso); Marcello: Io non so come sia",
+   "start": "1",
+   "end": "9"
+  },
+  {
+   "id": "b",
+   "label": "(3) Se pingere mi piace; Sostenendo: due pupille nere, una bocca procace; Musetta's face again ((4))",
+   "start": "10",
+   "end": "17"
+  },
+  {
+   "id": "c",
+   "label": "molto sost.: E tu, cuffietta lieve / E n'esce di Musetta il viso; a tempo: tutta sai la nostra felicità",
+   "start": "18",
+   "end": "22"
+  },
+  {
+   "id": "d",
+   "label": "Vien sul mio cuor (senza rall.); poichè è morto amor; the piano's calm close (rall. molto)",
+   "start": "23",
+   "end": "29"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 4",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 228-231 (from the start of page 228 to the end of page 231 system 2, 29 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's part is printed in the treble clef and written here at sounding pitch. Tempo from the printed metronome mark Andantino mosso ♩ = 84 (bar 1), to which the a tempo bars return; the Sostenendo (bar 12), molto sost. (bar 18), trattenuto (bar 20) and the affrettando held through the senza rall. (bars 21-25) carry no number and are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

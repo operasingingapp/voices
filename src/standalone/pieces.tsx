@@ -861,6 +861,42 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-o-mimi-tu-piu-non-torni": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Duet",
+    facts: {
+      key: "No key signature (no sharps or flats) throughout; the keys are written with accidentals",
+      time: "4/4 (common time) for bars 1-8; one bar of 2/4 (bar 9, “gioventù!”); 4/4 from figure (3) (bar 10) to the end",
+      tempo: "Printed metronome mark: Andantino mosso ♩ = 84 (bar 1); the a tempo bars (bars 16, 17, 19 and 21) and the piano’s calm close (bar 26) return to it. Chosen, as no number is printed: Sostenendo (bar 12, “egli mi traccia”) ♩ = 76, a tenth slower; molto sost. (bar 18, “E… tu, cuffietta lieve”) ♩ = 69; the trattenuto of bar 20 held at ♩ = 67 until the a tempo; the cres. e affrettando of bars 21-23 rises to ♩ = 94 and is kept there through the printed “senza rall.” until the rall. of bar 25. The written appena rall., poco rall., rall. molto, poco allarg., stent. and the closing rall. molto are played as a gradual change over the bars they cover, then back to the tempo; fermatas are held. Performances take this duet much more broadly (about 2½-3¼ min in four complete recordings against 1½ min at the printed tempo)",
+    },
+    notePlaceholder: "Rodolfo and Marcello each try to work, and each, to himself, mourns the woman he has lost: Rodolfo over Mimì’s bonnet, Marcello over a painting that keeps turning into Musetta",
+    about: (
+      <>
+        <p>
+          “O Mimì tu più non torni”, Act 4 in the garret, straight after “In un coupè?”. The two friends have given up pretending to work,
+          and each sings to himself. Rodolfo thinks of Mimì, who will not come back: the happy days, her little hands, her scented hair,
+          her snow-white neck, his youth that went by so fast. Marcello cannot understand why his brush, whatever he sets out to paint,
+          skies or fields, winter or spring, keeps drawing two dark eyes and a teasing mouth: Musetta’s face, all charm and all deceit,
+          while she enjoys herself and his weak heart still calls for her. Rodolfo takes from the drawer the pink bonnet Mimì left under
+          the pillow when she went, the keeper of their happiness, and presses it to his heart, since their love is dead.
+        </p>
+        <p>
+          Score: vocal score pages 228-231 (from the double bar at the top of page 228 to the end of system 2 on page 231, 29 bars),
+          from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed
+          pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge,
+          then checked against the page and corrected. Only the Italian words are kept, with the print’s spellings (“guancial”,
+          “poichè”, “ancor”) and the brackets in which the whole duet is printed. Rodolfo’s part, printed in the treble clef, is
+          written at sounding pitch. The printed metronome mark is the Andantino mosso’s ♩ = 84; the other tempos are chosen as stated
+          under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "puccini-vecchia-zimarra": {
     portrait: "boheme:colline",
     opera: "La bohème",

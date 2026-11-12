@@ -2814,7 +2814,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O Mimì, tu più non torni",
       "kind": "Duet with Marcello · Act 4",
-      "when": "Act 4, back in the garret; both men have just pretended not to care about the women they lost"
+      "when": "Act 4, back in the garret; both men have just pretended not to care about the women they lost",
+      "editionId": "puccini-o-mimi-tu-piu-non-torni"
      },
      {
       "title": "Si. Mi chiamano Mimì",
@@ -3090,7 +3091,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O Mimì, tu più non torni",
       "kind": "Duet with Rodolfo · Act 4",
-      "when": "Act 4, back in the garret; both men have just pretended not to care about the women they lost"
+      "when": "Act 4, back in the garret; both men have just pretended not to care about the women they lost",
+      "editionId": "puccini-o-mimi-tu-piu-non-torni"
      },
      {
       "title": "O soave fanciulla",
