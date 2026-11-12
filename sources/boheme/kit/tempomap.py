@@ -103,14 +103,17 @@ if ramps_on:
         if any(abs(q - s) < 1.0 for s in seen) or (made_end and q < made_end[-1] - 1e-6): continue
         seen.append(q)
         b = bar_at(q)
-        end = min([x for x in resets if x > q + 1e-6] + [q + 2 * max(lens[b], 1.0), END])
+        a ramp also ends where the next ramp word of the opposite kind starts
+        opp = [x for x, ww in words if x > q + 1e-6 and ((SLOW.search(ww) and not FAST.search(ww)) if fast else (FAST.search(ww) is not None and not SLOW.search(ww)))]
+        end = min([x for x in resets if x > q + 1e-6] + opp + [q + 2 * max(lens[b], 1.0), END])
+        into_opp = any(abs(end - x) < 1e-6 for x in opp)
         if end - q < 0.75: continue
         lw = w.lower()
         f_ = (0.90 if "poco" in lw else 0.68 if "molto" in lw else 0.80) if slow else (1.06 if "poco" in lw else 1.12)
         b0 = base_at(q); n = max(3, round((end - q) / 0.5))
         for k in range(1, n + 1):
             add(q + (end - q) * (k - 1) / n, b0 * (1 + (f_ - 1) * k / n), "")
-        if end < END - 1e-6 and not any(abs(end - x) < 1e-6 for x, _, _ in base): add(end, b0, "")
+        if end < END - 1e-6 and not into_opp and not any(abs(end - x) < 1e-6 for x, _, _ in base): add(end, b0, "")
         made_end.append(end)
         made.append(f"{bar_at(q)}:{w}->{bar_at(end - 1e-6)}x{f_}")
 
