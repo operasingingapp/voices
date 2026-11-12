@@ -1,0 +1,193 @@
+# S25a piano. RH = upper staff, LH = lower staff. Sounding pitches (8va passages written at sounding pitch).
+# page 231 system 3 starts bar 1
+# bar 1: 4/4, no key signature
+1 RH1: C4+E4+G4+C5:h~ C4+E4+G4+C5:e r:e r:q
+1 LH1: C2+G2+E3:h~ C2+G2+E3:e r:e r:q
+# bar 2: p mosso
+2 RH1: E4+G4:e r:e r:q C4:e r:e r:q
+2 LH1: dyn:p C2+C3+E3+G3+Bb3:e r:e r:q C2+C3+E3+G3+Bb3:e r:e r:q
+# bar 3: double bar, 2/4, a tempo, f
+3 RH1: r:e dyn:f A3+D4+F4:e> r:e G#3+D4+E4:e>
+3 LH1: r:e B1+B2:e> r:e E2+E3:e>
+# page 232 system 1 starts bar 4
+# bar 4: double bar, 6/8, (5) ALLEGRO dotted-quarter = 126
+4 RH1: g:E4:x g:F#4:x g:G#4:x A4:q. G#4:e> E4:e> G#4:e>
+4 RH2: r:e C#4+E4:q> r:q r:e
+4 LH1: g:E3:x g:F#3:x g:G#3:x A3:q.^ G#3:e> E3:e> G#3:e>
+5 RH1: g:A4:x g:C#5:x g:E5:x A5:e B5:e B#5:e C#6:e F#5:e F##5:e
+5 LH1: F#3:e clef:G B4:e B#4:e C#5:e F#4:e F##4:e
+6 RH1: G#5:e A5:e C#5:e D5:e D#5:e E5:e
+6 LH1: G#4:e A4:e C#4:e D4:e D#4:e E4:e clef:F
+7 RH1: A4:e Bb4:e Bn4:e C5:e Fn4:e G4:e
+7 LH1: A3:e Bb3:e Bn3:e C4:e Fn3:e G3:e
+# page 232 system 2 starts bar 8
+8 RH1: G#4:e A4:e dyn:f hp:< A3:e Bb3:e Bn3:e C4:e hp:end
+8 LH1: G#3:e A3:e A1+A2:e Bb1+Bb2:e Bn1+Bn2:e C2+C3:e
+9 RH1: dyn:p F4:q.- E4:e* C4:e* E4:e*
+9 RH2: r:q A3+C4:e~ A3+C4:e r:e r:e
+9 LH1: F3:q.- E3:e* C3:e* E3:e*
+10 RH1: D4:q.~ D4:q A3:e
+10 LH1: r:q F3+A3:e~ F3+A3:e r:e r:e
+10 LH2: D3:q.~ D3:q A2:e
+11 RH1: g:C4:e Bb3:q* s:q s:q
+11 LH1: g:C3:e Bb2:q* A2+A3:e( G2+G3:q* F2+F3:e
+# page 232 system 3 starts bar 12
+12 RH1: C4:h.
+12 LH1: r:q F3+A3:e~ F3+A3:q F3+A3:e)
+12 LH2: C3:h.
+13 RH1: Db4:q( C4:e) s:q.
+13 LH1: Db3:q( C3:e) Ab2+Ab3:e* F2+F3:e* Ab2+Ab3:e*
+14 RH1: r:h.
+14 LH1: C4:q Ab3:e( F3:q) C3:e
+14 LH2: C3:q Ab2:e( F2:q) C2:e
+# bar 15: col canto; double bar and key change to 4 sharps (E major) at end of bar
+15 RH1: r:h.
+15 LH1: Db3:q. Eb3:q.
+15 LH2: Db2:q. Eb2:q.
+# page 233 system 1 starts bar 16
+# bar 16: E major (4 sharps), 6/8, a tempo
+16 RH1: dyn:fp G#4+B4+E5:q.> D#5:e* B4:e* D#5:e*
+16 LH1: E2:e>* B2:e* E3:e* G#3:q> r:e
+17 RH1: E#4+B4+C#5:q.~ E#4+B4+C#5:q G#4:e
+17 LH1: G#2:e* C#3:e* E#3:e* B3:q> r:e
+18 RH1: g:B4:e A4:q G#4:e F#4:q E4:e
+18 RH2: C#4:h.
+18 LH1: F#1+F#2:e* r:e G#1+G#2:e* A1+A2:e* r:e A#1+A#2:e*
+19 RH1: g:A3:s g:D#4:s g:F#4:s B4:q> B3:e( hp:< D#4:e F#4:e B4:e) hp:end
+19 LH1: B1+B2:e> F#2:e( B2:e D#3:e F#3:e B3:e)
+# page 233 system 2 starts bar 20
+20 RH1: C#5:q>( B4:e) G#4:e* E4:e* G#4:e*
+20 LH1: G#3+B3+E4:h.^
+21 RH1: g:A3:s g:D#4:s g:F#4:s B4:q> B3:e( hp:< D#4:e F#4:e B4:e) hp:end
+21 LH1: B1+B2:e> F#2:e( B2:e D#3:e F#3:e B3:e)
+22 RH1: C#5:q>( B4:e) G#4:e* E4:e* G#4:e*
+22 LH1: G#3+B3+E4:h.^
+23 RH1: g:B3:s g:D#4:s g:F#4:s B4:e> hp:< B4+Cn5:ev B4+C#5:ev B4+Dn5:ev B4+D#5:ev B4+E5:ev
+23 LH1: B1+B2:e> clef:G B3+Cn4:ev B3+C#4:ev B3+Dn4:ev B3+D#4:ev B3+E4:ev
+# page 233 system 3 starts bar 24 (both piano staves in treble clef)
+24 RH1: hp:> B4+E#5:ev B4+F#5:ev B4+F##5:ev B4+G#5:ev B4+A5:ev B4+A#5:ev hp:end
+24 LH1: B3+E#4:ev B3+F#4:ev B3+F##4:ev B3+G#4:ev B3+A4:ev B3+A#4:ev
+# bar 25: a piacere
+25 RH1: B4+B5:e> r:e r:e r:q r:e
+25 LH1: B3+B4:e> r:e r:e r:q r:e clef:F
+26 RH1: r:h.
+26 LH1: r:h.
+# page 234 system 1 starts bar 27
+# bar 27: (6) a tempo
+27 RH1: r:q r:e dyn:ff hp:< A#3:s( B3:s C#4:s D#4:s E4:s F#4:s
+27 LH1: r:q r:e B2+D#3+An3:q.^~
+28 RH1: G#4:s An4:s B4:s C#5:s D#5:s E5:s F#5:s G#5:s A5:s B5:s C#6:s D#6:s hp:end
+28 LH1: B2+D#3+A3:h.
+29 RH1: E6:e) r:e dyn:p E4+G#4+B4:e* E4+G#4+B4:e* r:e E4+G#4+B4:e*
+29 LH1: E3+G#3:e r:e B3:e* B3:e* r:e B3:e*
+# page 234 system 2 starts bar 30
+30 RH1: E4+G#4+B4:e* r:e E4+G#4+B4:e* E4+A4+C#5:e* r:e E4+A4+C#5:e*
+30 LH1: B3:e* r:e B3:e* C#4:e* r:e C#4:e*
+31 RH1: E4+G#4+B4:e* r:e E4+G#4+B4:e* G#4+B4+E5:e* r:e G#4+B4+E5:e*
+31 LH1: B3:e* r:e B3:e* E4:e* r:e E4:e*
+32 RH1: C#4+E4+A4:e* r:e C#4+E4+A4:e* D#4+F#4+B4:e* r:e D#4+F#4+B4:e*
+32 LH1: F#3:e* r:e F#3:e* B3:e* r:e B3:e*
+# page 234 system 3 starts bar 33
+# bar 33: 8va over the first 32nd group and the following E (written here at sounding pitch)
+33 RH1: G#3+B3+E4:e r:e dyn:pp B6:x( A6:x G#6:x F#6:x E6:e) r:e B5:x( A5:x G#5:x F#5:x
+33 LH1: E3:e r:e clef:G B3+E4+G#4:e* B3+E4+G#4:e* r:e B3+E4+G#4:e*
+34 RH1: E5:e) r:e clef:F B2:x( A2:x G#2:x F#2:x E2:e) r:e clef:G D#4:x( F#4:x G#4:x A#4:x
+34 LH1: B3+E4+G#4:e* r:e B3+E4+G#4:e* B3+E4+G#4:e* r:e r:e
+# bar 35: duplets ("2") in both hands
+35 RH1: dyn:f B4:e{2:3}) B3+D#4+G#4:e{2:3} B3+D#4+G#4:e{2:3}> B3+D#4+G#4:e{2:3}>
+35 LH1: B3+D#4+G#4:e> r:e r:e clef:F D#2+D#3:e{2:3}> G#1+G#2:e{2:3}>
+# page 234 system 4 starts bar 36
+# bar 36: rit.
+36 RH1: C#4+E4+A4:q* C#4+E4+A4:e* D#4+F#4+B4:q* D#4+F#4+B4:e*
+36 LH1: r:q F#2+F#3:e* r:q B2+B3:e*
+# bar 37: a tempo, brillante
+37 RH1: E4+A4+C#5:s A4:s( C#5:s E5:s A5:s C#6:s F#6:e>) E6:e* C#6:e*
+37 LH1: A1+A2:q^ A3+C#4+E4:e* A3+C#4+E4:e> A3+C#4+E4:e* A3+C#4+E4:e*
+38 RH1: A5:e* F#5:e* E5:e* C#5:s3( Dn5:s3 C#5:s3) B4:e* A4:e*
+38 LH1: A3+C#4+E4:q A3+C#4+E4:e A3+C#4+E4:q A3+C#4+E4:e
+# page 235 system 1 starts bar 39
+# bar 39: 8va over the first 32nd group and the following E
+39 RH1: E5:e r:e dyn:p A6:x( B6:x C#7:x Dn7:x E7:e) r:e A5:x( B5:x C#6:x Dn6:x
+39 LH1: A3+C#4+E4:q A3+C#4+E4:e A3+C#4+E4:q A3+C#4+E4:e
+40 RH1: E6:e) r:e E5:x( Dn5:x C#5:x B4:x A4:e) r:e r:e
+40 LH1: A3+C#4+E4:q A3+C#4+E4:e A3+C#4+E4:e r:e C#3:x( B2:x A2:x G#2:x
+# bar 41: double bar, 2/4, Sostenendo un poco, p stacc., rit. molto
+41 RH1: dyn:p C#4+E4+A4:e* C#4+E4+A4:e* r:e B#3+D#4+G#4:e*
+41 LH1: F#2:e*) r:e G#1+G#2:e* r:e
+# page 235 system 2 starts bar 42
+42 RH1: hp:> G#3+C#4+E4:e* G#3+C#4+E4:e* r:e D#4:e*
+42 LH1: s:q s:e E#3+B3:e
+42 LH2: C#2+C#3:e* B1+B2:e* A1+A2:e* G#1+G#2:e*
+43 RH1: C#4:e* C#4:e* r:e r:e hp:end
+43 LH1: En3+A3:e En3+A3:e s:e D#3+A3+B3:e*
+43 LH2: F#1+F#2:e* r:e B1+B2:e* r:e
+# bar 44: double bar, 6/8, a tempo
+44 RH1: r:e r:e dyn:p B5:x( A5:x G#5:x F#5:x E5:e) r:e B4:x( A4:x G#4:x F#4:x
+44 LH1: E1+E2+E3+G#3+B3:e* r:e clef:G B4:x( A4:x G#4:x F#4:x E4:e) r:e clef:F B3:x( A3:x G#3:x F#3:x
+# page 235 system 3 starts bar 45
+45 RH1: E4:e) r:e r:e B4:e{2:3}( C#5:e{2:3})
+45 LH1: E3:e) r:e dyn:f B2:x( A2:x G#2:x F#2:x E2:e) r:e r:e
+# bar 46: double bar, 2/4
+46 RH1: Dn5:e( C#5:e B4:e F#4:e)
+46 RH2: Dn4:h
+46 LH1: r:e F#3:q.
+46 LH2: B2:h~
+47 RH1: C#4+Dn4+A4:e( B3+D4~+G#4:e A3+D4+F#4:e D4:e)
+47 LH1: s:q s:e F#3+A3:e
+47 LH2: B2:q. B2:x( A2:x G#2:x F#2:x)
+48 RH1: C#4:h
+48 LH1: r:e Dn3+G#3:q Dn3+G#3:e~
+48 LH2: E2:h~
+# page 235 system 4 starts bar 49
+49 RH1: B3:e3( C#4:e3 Dn4:e3 E4:e3 F#4:e3 G#4:e3
+49 LH1: Dn3+G#3:e Dn3+G#3:q Dn3+G#3:e
+49 LH2: E2:h
+50 RH1: A4:q3 C#5:e3 E5:q3 A5:e3
+50 LH1: F#2:e C#3+A3:q F#3+A3+C#4+E4:ea
+51 RH1: G#5:q g:F#5:x g:G#5:x F#5:e3 B4:e3 F#5:e3)
+51 LH1: B2:e A#3+C#4+E4:q A#3+C#4+E4:e
+# bar 52: 8va over the first 32nd group (written at sounding pitch)
+52 RH1: E5:e B6:x( A6:x G#6:x F#6:x) E5:e B5:x( A5:x G#5:x F#5:x)
+52 LH1: E3:e G#3+B3+E4:q clef:G B3+E4+G#4:e~
+# page 236 system 1 starts bar 53
+53 RH1: E5:e r:e E4+E5:e( F#4+F#5:e
+53 LH1: B3+E4+G#4:e clef:F B3:x( A3:x G#3:x F#3:x E3:e) r:e
+54 RH1: Gn5:e F#5:e E5:e B4:e
+54 RH2: Gn4:h
+54 LH1: r:e B3:q.
+54 LH2: E3:h~
+55 RH1: F#4+Gn4+Dn5:e E4+Gn4+C#5:e Dn4+Gn4+B4:e B3+Dn4+Gn4:e
+55 LH1: E3:q. E3:x( Dn3:x C#3:x B2:x
+56 RH1: E4:h~
+56 LH1: r:e Gn3+C#4:q Gn3+C#4:e~
+56 LH2: A2:h~
+# page 236 system 2 starts bar 57
+57 RH1: E4:e3 hp:< F#4:e3* Gn4:e3* A4:e3* B4:e3* C#5:e3* hp:end
+57 LH1: Gn3+C#4:e r:e r:q
+57 LH2: A2:h
+58 RH1: Dn5:q3 B4+F#5:e3 Dn5+A5:q3 F#5+Dn6:e3
+58 LH1: E2+B2:e F#3+B3+Dn4:q B3+Dn4+F#4:e
+59 RH1: E5+C#6:q Dn5+B5:e3* E5:e3* Dn5+B5:e3*
+59 LH1: E3:e G#3+Dn4+E4:q G#3+Dn4+E4:e
+# page 236 system 3 starts bar 60
+# bar 60: 8va over the first 32nd group and the following A (written at sounding pitch)
+60 RH1: C#5+A5:e E7:x( Dn7:x C#7:x B6:x A6:e) E5:x( Dn5:x C#5:x B4:x
+60 LH1: A2:e A3+C#4+E4:q A3+C#4+E4:e~
+61 RH1: A4:e) r:e A4:e( B4:e
+61 LH1: A3+C#4+E4:e E3:x( Dn3:x C#3:x B2:x A2:e) r:e
+62 RH1: hp:< Cn5:e E5:e hp:> D#5:q~ hp:end
+62 LH1: r:e A3+Cn4+Fn4:q> A3+Cn4+Fn4:e~
+63 RH1: D#5:q) clef:F A2:e( B2:e
+63 LH1: A3+Cn4+Fn4:e A3+Cn4+Fn4:q A3+Cn4+E4:e~
+# page 236 system 4 starts bar 64 (RH staff in bass clef)
+64 RH1: hp:< Cn3:e E3:e hp:> D#3:q~ hp:end
+64 LH1: A3+Cn4+E4:e A3+Cn4+Fn4:q> A3+Cn4+Fn4:e~
+65 RH1: D#3:q) clef:G A4:e( B4:e
+65 LH1: A3+Cn4+Fn4:e A3+Cn4+Fn4:q A3+Cn4+E4:e~
+# bar 66: poco affrett. e cres.
+66 RH1: word:poco_affrett._e_cres. Cn5:e E5:e D#5:e E5:e
+66 LH1: A3+Cn4+E4:e A3+Cn4+Fn4:q A3+Cn4+E4:e~
+67 RH1: Gn5:e F#5:e Dn6:e. Cn6:s
+67 LH1: A3+Cn4+E4:e A3+C#4+E4:q D#3+A3+F#4:ea~
+68 RH1: B5:h
+68 LH1: D#3+A3+F#4:e F#3+Cn4+E4:q> F#3+Cn4+E4:e~

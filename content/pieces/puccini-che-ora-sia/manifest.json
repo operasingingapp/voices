@@ -1,0 +1,185 @@
+{
+ "editionId": "puccini-che-ora-sia",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Che ora sia?",
+ "subtitle": "The four friends make a banquet of four rolls and a herring, dance, and fight a mock duel with the fire shovel and tongs, La bohème, Act 4",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "schaunard",
+   "name": "Schaunard",
+   "voiceType": "Baritone",
+   "partKey": "schaunard"
+  },
+  {
+   "id": "colline",
+   "name": "Colline",
+   "voiceType": "Bass",
+   "partKey": "colline"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "colline",
+   "label": "Colline (Bass)",
+   "shortLabel": "Colline",
+   "kind": "voice",
+   "roleId": "colline",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "schaunard",
+   "label": "Schaunard (Baritone)",
+   "shortLabel": "Schaunard",
+   "kind": "voice",
+   "roleId": "schaunard",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Che ora sia?; Schaunard and Colline bring four rolls and a herring ((5), Allegro); the mock banquet: Sciampagna on ice ((6)), trout or salmon, parrot's tongue",
+   "start": "1",
+   "end": "40"
+  },
+  {
+   "id": "b",
+   "label": "Grazie, m'inpingua (Sostenendo un poco); Colline has no time: Il Re m'aspetta; Il Re mi chiama al minister ((7)); Guizot!",
+   "start": "41",
+   "end": "79"
+  },
+  {
+   "id": "c",
+   "label": "Porgimi il nappo! (Allegro); Schaunard's speech, shouted down: Basta! ((8)); Azione coreografica allora? Sì! sì! ((9), Vivo)",
+   "start": "80",
+   "end": "107"
+  },
+  {
+   "id": "d",
+   "label": "Si sgombrino le sale! (Andantino mosso); Gavotta, Minuetto, Pavanella, Fandango ((10)); the quadrille (Lo stesso movimento): Lallera, Vezzosa damigella, Balancez!",
+   "start": "108",
+   "end": "144"
+  },
+  {
+   "id": "e",
+   "label": "The duel ((11), Allegro): Bestia!; Snudi il ferro; Il tuo sangue io voglio ber (4/8, one bar worth two); Come prima: Mentre incalza la tenzone",
+   "start": "145",
+   "end": "169"
+  },
+  {
+   "id": "f",
+   "label": "(12), Allegro spigliato: Rodolfo and Marcello dance round the duellists until the door bursts open",
+   "start": "170",
+   "end": "200"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 4",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 231-247 (from page 231 system 3, Rodolfo's “Che ora sia?” over the last chord of the duet, to page 247 system 3 bar 3, the bar where the door bursts open, 200 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's part is printed in the treble clef and written here at sounding pitch. The spoken words (Marcello's “La prego.”, Colline's “Balancez!”, Schaunard's “Assaggia.”), printed with stems and flags but no noteheads, are written with cross noteheads. Tempo from the printed metronome marks Allegro ♩. = 126 at figure (5) (bar 4), Allegretto mosso ♩ = 120 at figure (10) (bar 118), Allegro ♩. = 72 (bar 125) and Allegro spigliato ♩ = 132 at figure (12) (bar 170), and from the printed relations (Lo stesso movimento, bar 131; “Una battuta vale due delle precedenti”, bar 156; Come prima, bar 164); the mosso of bar 2, the Allegro of bars 82 and 145, the Vivo at figure (9), the Andantino mosso (bar 108), the Sostenendo bars and the a piacere bars carry no number and are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

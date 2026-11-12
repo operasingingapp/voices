@@ -4256,6 +4256,52 @@
     }
   },
   {
+    "editionId": "puccini-che-ora-sia",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-che-ora-sia@1.0.0-carignani#c2dcab1734",
+    "title": "Che ora sia?",
+    "subtitle": "The four friends make a banquet of four rolls and a herring, dance, and fight a mock duel with the fire shovel and tongs, La bohème, Act 4",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      }
+    ],
+    "measures": 200,
+    "durationSec": 224,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 68,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-chi-guardi",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-chi-guardi@1.0.0-carignani#f1a9d7f975",

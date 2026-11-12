@@ -11,3 +11,4 @@ python3 $K/tiefix.py "$3"
 sed -i '/<!DOCTYPE/d' "$3"
 python3 $K/reqacc.py "$3" --fix "$3" | tail -3
 python3 $K/reqacc.py "$3" | tail -2
+rm -rf "$T"

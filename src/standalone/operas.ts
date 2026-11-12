@@ -2777,6 +2777,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: In un coupè?",
       "when": "Act 4, months later, back in the garret: the two men pretend to work",
       "editionId": "puccini-in-un-coupe"
+     },
+     {
+      "title": "Che ora sia?",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Che ora sia?",
+      "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
+      "editionId": "puccini-che-ora-sia"
      }
     ]
    },
@@ -3017,6 +3024,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: In un coupè?",
       "when": "Act 4, months later, back in the garret: the two men pretend to work",
       "editionId": "puccini-in-un-coupe"
+     },
+     {
+      "title": "Che ora sia?",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Che ora sia?",
+      "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
+      "editionId": "puccini-che-ora-sia"
      }
     ]
    },
@@ -3141,6 +3155,13 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Caro!",
       "editionId": "puccini-caro"
+     },
+     {
+      "title": "Che ora sia?",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Che ora sia?",
+      "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
+      "editionId": "puccini-che-ora-sia"
      }
     ]
    },
@@ -3223,6 +3244,13 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Caro!",
       "editionId": "puccini-caro"
+     },
+     {
+      "title": "Che ora sia?",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Che ora sia?",
+      "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
+      "editionId": "puccini-che-ora-sia"
      }
     ]
    },

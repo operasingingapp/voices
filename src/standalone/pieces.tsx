@@ -895,6 +895,45 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-che-ora-sia": {
+    portrait: "boheme:schaunard",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "No key signature for bars 1-15; E major (4 sharps) from bar 16 to bar 79; no key signature (C major) from bar 80 (“Porgimi il nappo!”); A major (3 sharps) from figure (10) (bar 118, the dances); D major (2 sharps) from bar 131 (the quadrille); four flats from figure (12) (bar 170) to the end",
+      time: "4/4 for the first two bars (the duet’s last chord); 2/4 for bar 3; 6/8 from figure (5) (bar 4), with 2/4 stretches in bars 41-43 and 46-73; 6/8 again in bars 74-79; 2/4 from bar 80; 3/8 for the Fandango (bars 125-130); 6/8 for the quadrille (bars 131-144); 2/4 for the duel from figure (11), with 4/8 in bars 156-163 (“one bar is worth two of the previous ones”); 2/4 from bar 164 to the end",
+      tempo: "Printed metronome marks: Allegro ♩. = 126 at figure (5) (bar 4), Allegretto mosso ♩ = 120 at figure (10) (bar 118), Allegro ♩. = 72 (bar 125, 3/8) and Allegro spigliato ♩ = 132 at figure (12) (bar 170). Printed relations: Lo stesso movimento at the quadrille keeps ♩. = 72; in the 4/8 bars of the duel one bar lasts as long as two of the 2/4 bars before (♩ = 63); Come prima returns to the duel’s Allegro. The 2/4 bars inside the Allegro keep its beat (♩ = 126): the 6/8’s quavers come back as triplets, and the recordings fit it. Chosen, as no number is printed: the duet’s last chord ♩ = 84 (its Andantino mosso), mosso ♩ = 92 and the a tempo of bar 3 ♩ = 84; the Allegro of bars 82 and 145 ♩ = 126, as at figure (5); Vivo at figure (9) ♩ = 138; Andantino mosso (bar 108) ♩ = 84, the score’s printed Andantino mosso; the Sostenendo bars a tenth slower (♩ = 112; ♩. = 66 in the quadrille); Schaunard’s and Colline’s a piacere bars at two-thirds of the running tempo. The written rit., rall. and affrettando are played as a gradual change over the bars they cover; the affrettando into figure (12) and the closing incalzando keep their quicker tempo to the next section. Timed against eight complete recordings (about 4 min); fermatas are held",
+    },
+    notePlaceholder: "The four friends dine on four rolls and a herring as if at a banquet, dance, and fight a mock duel with the fire shovel and tongs until the door bursts open",
+    about: (
+      <>
+        <p>
+          “Che ora sia?”, Act 4 in the garret. Rodolfo, hiding his feelings, asks the time: the hour of yesterday’s dinner, says
+          Marcello. Schaunard and Colline come in with four rolls and a salted herring, and the four sit down as if to a feast fit for
+          Carnival, with a bottle of water in Colline’s hat as champagne on ice, offering one another trout, salmon and parrot’s tongue.
+          Colline has no time to stay: the King has summoned him to the ministry. Schaunard climbs on a chair to make a speech and is
+          shouted down; a ballet, then, with singing. They push the table aside and call out dances, gavotte, minuet, pavane,
+          fandango, and settle on a quadrille. Rodolfo and Marcello dance it as gentleman and lady while Schaunard takes offence and
+          he and Colline fight a duel with the fire shovel and tongs, and the other two dance round them, until the door bursts open.
+        </p>
+        <p>
+          Score: vocal score pages 231-247 (from Rodolfo’s “Che ora sia?” over the last chord of the duet, page 231 system 3, to the
+          bar where the door bursts open, page 247 system 3 bar 3, 200 bars), from Carlo Carignani’s piano reduction in the G. Ricordi
+          &amp; C. vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently,
+          every disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian
+          words are kept, with the print’s spellings (“Sciampagna”, “m’inpingua”, “minister”, “cimiter”). Rodolfo’s part, printed in
+          the treble clef, is written at sounding pitch. Marcello’s “La prego.”, Colline’s “Balancez!” and Schaunard’s “Assaggia.”
+          are spoken, printed with stems but no noteheads, and are written with cross noteheads. The printed metronome marks are
+          the Allegro’s ♩. = 126, the Allegretto mosso’s ♩ = 120, the 3/8 Allegro’s ♩. = 72 and the Allegro spigliato’s ♩ = 132;
+          the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

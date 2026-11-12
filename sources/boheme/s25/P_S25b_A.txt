@@ -1,0 +1,214 @@
+# S25b piano: La boheme Act 4, pp.237-242 (bars 1-64)
+# page 237 system 1 starts bar 1
+# bar 1: 4 sharps (E major), 2/4 (continuing from p.236)
+1 RH1: A5:e r:e r:q
+1 LH1: F#3+C4+E4:e r:e r:q
+# bar 2: sostenendo (voice and piano); piano sf, p
+2 RH1: r:e dyn:sf B3+D#4:q> r:e
+2 LH1: s:e F#3:q( G3:e*)
+2 LH2: dyn:p A1+A2:e r:e r:q
+3 RH1: r:e dyn:p C4+E4:e r:e C#4+F#4:e
+3 LH1: s:e A3:e s:e A#3:e
+3 LH2: G1+G2:e r:e F#1+F#2:e r:e
+# bar 4: (7) a tempo; piano f
+4 RH1: r:e r:e dyn:f hp:< A#3:s{6:4} B3:s{6:4} C#4:s{6:4} D#4:s{6:4} E4:s{6:4} F#4:s{6:4}
+4 LH1: B1+B2+D#3+F#3+B3:e r:e B2+D#3+A3:q>~
+# page 237 system 2 starts bar 5
+5 RH1: G#4:s{6:4}( A4:s{6:4} B4:s{6:4} C#5:s{6:4} D#5:s{6:4} E5:s{6:4} F#5:s{6:4} G#5:s{6:4} A5:s{6:4} B5:s{6:4} C#6:s{6:4} D#6:s{6:4}) hp:end
+5 LH1: B2+D#3+A3:h
+# bar 6: double bar, 6/8; piano p
+6 RH1: E6:e> r:e dyn:p E4+G#4+B4:e* E4+G#4+B4:e* r:e E4+G#4+B4:e*
+6 LH1: E3+G#3:e r:e B3:e* B3:e* r:e B3:e*
+7 RH1: E4+G#4+B4:e* r:e E4+G#4+B4:e* E4+G#4+B4:e* r:e E4+G#4+C#5:e*
+7 LH1: B3:q.> C#4:q.>
+8 RH1: E4+G#4+B4:e* r:e E4+G#4+B4:e* G#4+B4+E5:e* r:e G#4+B4+E5:e*
+8 LH1: B3:q.> E4:q.>
+# page 237 system 3 starts bar 9
+9 RH1: C#4+E4+A4:e* r:e C#4+E4+A4:e* D#4+F#4+B4:e* r:e D#4+F#4+B4:e*
+9 LH1: F#3:q.> B3:q.>
+# bar 10: piano RH 8va from the second group of this bar (B6..E6) to its end; written sounding
+# bar 10: RH 8va sign over B6-E6 group only (sounding written)
+10 RH1: G#3+B3+E4:e* r:e dyn:p B6:x( A6:x G#6:x F#6:x E6:e) r:e B5:x A5:x G#5:x F#5:x
+10 LH1: E2+B2:h.(
+# bar 11: piano f at the last group; double bar at end: key change to no sharps/flats (C major), 2/4
+11 RH1: E5:e r:e B4:x( A4:x G#4:x F#4:x E4:e) r:e dyn:f G4:x( F4:x E4:x D4:x)
+11 LH1: E2+B2:q.~ E2+B2:e) r:e G3:x( F3:x E3:x D3:x)
+# page 238 system 1 starts bar 12
+# bar 12: C major, 2/4; Schaunard (a Marcello)
+12 RH1: C4:e) r:e r:q
+12 LH1: C3:e) r:e r:q
+13 RH1: r:h
+13 LH1: r:h
+# bar 14: double bar, ALLEGRO (voice and piano); piano f; Marcello sings Si! Bevi, io pappo!
+14 RH1: r:e dyn:f E4+G4+C5:e> F4+Bb4+D5:e> Ab4+C5+Eb5:e>
+14 LH1: r:e C3+C4:e> Bb2+Bb3:e> Ab2+Ab3:e>
+# page 238 system 2 starts bar 15
+15 RH1: G#4+B4+E5:e> r:e A4+C5+D#5+F#5:e> r:e
+15 LH1: E2+E3:e> r:e D2+D3:e> r:e
+# bar 16: Schaunard a piacere, con enfasi; piano col canto (solenne, sale su di una sedia)
+16 RH1: G4+B4+D5+G5:e> r:e r:q
+16 LH1: G1+G2:e> r:e r:q
+17 RH1: r:h
+17 LH1: r:h
+# page 238 system 3 starts bar 18
+# bar 18: piano a tempo, f; R and C (interrompendolo) and M: gridato/urlando lines printed with noteheads
+18 RH1: r:q dyn:f D4+F4+A4:e3* D4+F4+A4:e3* D4+F4+A4:e3*
+18 LH1: r:h
+19 RH1: D4+F4+A4:s* D4+F4+A4:s* D4+F4+A4:s* D4+F4+A4:s* D4+F4+A4:s* D4+F4+A4:s* D4+F4+A4:s* D4+F4+A4:s*
+19 LH1: r:h
+# bar 20: piano ff
+# bar 20: LH grace octave C2+C3 then tremolo (3 strokes) C3+D3+F3 / A3
+20 RH1: dyn:ff D4+F4+A4+D5:q^ g:D5:s g:F5:s g:A5:s D6:e3* A5:e3* F5:e3*
+20 LH1: g:C2+C3:e trem3:C3+D3+F3|A3:h(
+# page 239 system 1 starts bar 21
+# bar 21: Schaunard (fa cenno agli amici di lasciarlo continuare)
+# bar 21: RH: in each beat a 16th-triplet inside the first note of an eighth-triplet (written s{9:4}); LH three-stroke tremolo C-E-G / A3
+21 RH1: E5:s{9:4}( F5:s{9:4} E5:s{9:4} D5:e3* A4:e3*) F4:s{9:4}( G4:s{9:4} F4:s{9:4} E4:e3* D4:e3*)
+21 LH1: trem3:C3+E3+G3|A3:h)
+# bar 22: (8); Schaunard (ispirato) a piacere; piano col canto, sf
+# bar 22: RH tremolo Bb3+D4 with LH-staff F3 (cross-staff), written in RH
+22 RH1: trem3:Bb3+D4|F3:h
+22 LH1: dyn:sf Bb1+Bb2:e> r:e r:q
+# bar 23: LH whole-bar rest; RH tremolo to F3
+23 RH1: trem3:Bb3+D4|F3:h
+23 LH1: r:h
+# page 239 system 2 starts bar 24
+24 RH1: trem3:Bb3+D4|F3:h
+24 LH1: dyn:sf G1+G2:e> r:e r:q
+# bar 25: tremolo end note E3 printed with natural
+25 RH1: trem3:Bb3+D4|E3:h
+25 LH1: dyn:sf C2+C3:e> r:e r:q
+# bar 26: a tempo (voice and piano); piano ff; Rodolfo (urlando) No!
+26 RH1: C4:e r:e dyn:ff g:F5:s g:A5:s g:C6:s F6:e3> C6:e3> A5:e3>
+26 LH1: dyn:sf F1+F2+F3+A3:e> r:e trem2:F3+A3|C4:q
+# page 239 system 3 starts bar 27
+# bar 27: Marcello and Colline (urlando) No!
+# bar 27: RH as bar 21; LH tremolo E3+G3+B3 / C4
+27 RH1: G5:s{9:4}( A5:s{9:4} G5:s{9:4} F5:e3* C5:e3*) A4:s{9:4}( Bb4:s{9:4} A4:s{9:4} F4:e3* D4:e3*)
+27 LH1: trem3:E3+G3+B3|C4:h
+# bar 28: Schaunard (arrendevole) a piacere; piano col canto
+# bar 28: LH B3 printed with natural (after Bb in bar 27)
+28 RH1: r:e D5:s{6:4}( E5:s{6:4} F5:s{6:4} G5:s{6:4} A5:e{6:4}>) r:e
+28 LH1: D3+F3+A3+B3:q>~ D3+F3+A3+B3:e r:e
+29 RH1: r:h
+29 LH1: r:h
+# page 240 system 1 starts bar 30
+# bar 30: Schaunard a tempo; piano ff a tempo
+30 RH1: dyn:ff A3+E4+A4:e> r:e B3+F4+A4:e> B3+D4+G#4:e>
+30 LH1: C2+C3:e> r:e D2+D3:e> E2+E3:e>
+# bar 31: (9) double bar, VIVO; piano ff; (applaudendo, circondano Schaunard)
+31 RH1: r:q r:s3 dyn:ff A5+A6:s3* A5+A6:e3> G#5+G#6:e3>
+31 LH1: r:q r:s3 A2+A3:s3* A2+A3:e3> G#2+G#3:e3>
+# bar 32: G naturals in both hands
+32 RH1: G5+G6:s3> r:s3 g:C#5:e A5:e3* E5+B5:e3* A5+C#6:e3* B5+D6:e3* C#6+E6:e3*
+32 LH1: dyn:ff G2+G3:s3> r:s3 G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3*
+# page 240 system 2 starts bar 33
+# bar 33: RH: per beat eighth + dotted eighth + 16th under triplet "3" (e3, e.3 = 1/8, s3); grace F#6 slashed
+33 RH1: g:F#6:e C#6+E6:e3* B5+D6:e.3 A5+C#6:s3 A5+C#6:e3* E5+B5:e.3 C#5+A5:s3
+33 LH1: G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3* G3+A3+C#4+E4:e3*
+# bar 34: whole bar under a triplet bracket (3 in the time of 2): all durations {3:2}; LH treble clef for the A4-E5 group, then bass clef
+# bar 34: whole bar 3:2; LH treble-clef group A4..E5 then bass clef with octave 16ths (LH2 lower octave)
+34 RH1: C#5+A5:e3* A5:s3( B5:s3 C#6:s3 D6:s3 E6:e3>) s:q3
+34 LH1: G3+A3+C#4+E4:e3* clef:G A4:s3( B4:s3 C#5:s3 D5:s3 E5:e3>) clef:F C#4:s3( B3:s3 A#3:s3 G#3:s3)
+34 LH2: s:h3 C#3:s3 B2:s3 A#2:s3 G#2:s3
+# bar 35: piano sf
+# bar 35: RH first eighth empty in print (hidden s:e)
+35 RH1: s:e r:e dyn:sf F#4+A#4+C#5+F#5:e> r:e
+35 LH1: F#2+F#3:e>) r:e F#3+C#4:e> r:e
+# page 241 system 1 starts bar 36
+# bar 36: Schaunard a piacere; piano col canto
+36 RH1: r:h
+36 LH1: r:h
+37 RH1: r:h
+37 LH1: r:h
+# bar 38: a tempo (Schaunard and piano), piano ff; then Colline a piacere, piano col canto
+38 RH1: r:q dyn:ff B4+D5+F#5+B5:e> r:e
+38 LH1: r:q B1+B2:e> r:e
+# bar 39: double bar at end
+39 RH1: r:h
+39 LH1: r:h
+# page 241 system 2 starts bar 40
+# bar 40: AND.no MOSSO (voice and piano); piano p; (portano da un lato la tavola e le sedie e si dispongono a ballare)
+40 RH1: r:q F#4+D5:e* A4+F#5:e*
+40 LH1: dyn:p r:q F#3+D4:e* A3+F#4:e*
+40 LH2: g:E1:e E2:h~
+41 RH1: D4+A4+D5+A5:q- A3+F#4+A4+F#5:e D4+A4+D5+A5:e
+41 LH1: r:h
+41 LH2: E2:h~
+42 RH1: F#4+D5+F#5+D6:q- D4+A4+D5+A5:e* A3+F#4+A4+F#5:e*
+42 LH1: r:h
+42 LH2: E2:h~
+43 RH1: D4+A4+D5+A5:e* D4+A4+D5+A5:e* A3+F#4+A4+F#5:e* D4+A4+D5+A5:e*
+43 LH1: r:h
+43 LH2: E2:h~
+44 RH1: D4+A4+D5+A5:q- dyn:p F#4:e* D4:e*
+44 LH1: r:h
+44 LH2: E2:h~
+# page 241 system 3 starts bar 45
+# bar 45: piano tr on A3, small 16th notes G#3 A3 after the trill written as grace notes
+# bar 45: RH tr on A3; small 16ths G#3 A3 ending the trill written as graces at start of bar 46
+45 RH1: G#3:q A3:qt
+45 LH1: D3:q( C#3:q
+45 LH2: E2:h~
+# bar 46: piano p
+46 RH1: g:G#3:s g:A3:s C#4:e( B3:e) dyn:p F#4+F#5:e* E4+E5:e*
+46 RH2: G#3:e r:e s:q
+46 LH1: D3:e) r:e r:q
+46 LH2: E2:e s:e s:q
+47 RH1: C#5+C#6:e* B4+B5:e* F#5+F#6:e* E5+E6:e*
+47 LH1: r:h
+# bar 48: bar printed (VUOTA) - empty
+48 RH1: r:h
+48 LH1: r:h
+# bar 49: bar printed (VUOTA) - empty; double bar, key change to 3 sharps (A major)
+49 RH1: r:h
+49 LH1: r:h
+# page 242 system 1 starts bar 50
+# bar 50: (10) ALL.tto MOSSO, quarter = 120 (voice and piano), A major, 2/4; piano f < p > ; (proponendo varie danze)
+# bar 50: RH grace pair before B5+D6 unclear (read C#6 D6)
+50 RH1: dyn:f hp:< E5:e( C#6+E6:s) r:s hp:end dyn:p hp:> g:C#6:s g:D6:s B5+D6:e* A5+C#6:e*
+50 LH1: r:h
+51 RH1: G#5+B5:e* F#5+A5:e* hp:end E5+G#5:e* D5+F#5:e*
+51 LH1: A2:e* E3:e* A3:e* C#4:e*
+52 RH1: C#5+E5:q B4+D5:qt g:C#5:s g:D5:s
+52 LH1: C#4:e* E4:e* F#4:e* G#4:e*
+# bar 53: Colline p
+53 RH1: C#5:q. A5:s( C#5:s)
+53 LH1: A4:e* E4:e( C#4:e A3:e)
+# bar 54: Marcello p
+54 RH1: B4:e( E5:s) r:s E5:e( B4:s) r:s
+54 RH2: E4:q E4:q
+54 LH1: G#3:q E3+D4:q
+# page 242 system 2 starts bar 55
+# bar 55: Rodolfo p
+# bar 55: LH chord pitches uncertain (B3+D4, F#3+C#4)
+55 RH1: B4:e( C#5:s) r:s A4:e( E5:s) r:s
+55 RH2: E4:q E4:q
+55 LH1: B3+D4:q F#3+C#4:q
+# bar 56: piano rall.; fermatas on Rodolfo quarter rest, Marcello bar rest, Schaunard eighth rest, piano final 16th rests; double bar
+56 RH1: E5:e( F#5:s) r:s F#5:e( B5:s) r:s!
+56 RH2: A4+D5:q G#4+D5:e~ G#4+D5:s r:s!
+56 LH1: B3:q E3:e~ E3:s r:s!
+# bar 57: ALLEGRO, dotted quarter = 72, 3/8; piano ff energico; Schaunard (marcando la danza spagnuola)
+# bar 57: RH graces C4 D4 (naturals), F natural, C natural
+57 RH1: dyn:ff g:C4:s g:D4:s F4:e> A3+C4+F4:s* A3+C4+F4:s* A3+C4+F4:s* A3+C4+F4:s*
+57 LH1: F1+F2:e> r:e r:e
+# bar 58: RH grace D#4 (slashed)
+58 RH1: A3+C4+F4:e> B3:e> g:D#4:e E4:e>
+58 LH1: r:e B1+B2:e> E2+E3:e>
+59 RH1: A3:e> A4+C#5+E5+A5:s> A4+C#5+E5+A5:s> A4+C#5+E5+A5:s> A4+C#5+E5+A5:s>
+59 LH1: A1+A2:e> A3:e> r:e
+# page 242 system 3 starts bar 60
+60 RH1: A4+C#5+E5+A5:e> r:e r:e
+60 LH1: r:q.
+# bar 61: Colline rall.
+61 RH1: r:q.
+61 LH1: r:q.
+# bar 62: double bar at end: key change to 2 sharps (D major), 6/8
+62 RH1: r:q.
+62 LH1: r:q.
+# bar 63: LO STESSO MOV.to, D major, 6/8; piano pp stacc.; (gli altri approvano)
+63 RH1: dyn:pp r:q A3+D4+F#4:e* r:q A3+D4+F#4:e*
+63 LH1: D2+D3:e* r:e r:e A1+A2:e* r:e r:e
+64 RH1: r:q A3+D4+F#4:e* r:q A3+D4+F#4:e*
+64 LH1: D2+D3:e* r:e r:e A1+A2:e* r:e r:e
