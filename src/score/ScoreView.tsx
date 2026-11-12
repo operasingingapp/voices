@@ -362,12 +362,43 @@ export function ScoreView(props: Props) {
                 key={`lbl-${l.partId}`}
                 type="button"
                 className={`lane-label${useVrvRef.current ? " lane-label--side" : ""}${useVrvRef.current && props.laneFaces?.[l.partId] ? (typeof props.laneFaces[l.partId] === "string" ? " has-abbr" : " has-face") : ""}`}
-                style={{ top: labelTop(l) - (useVrvRef.current && props.laneFaces?.[l.partId] && typeof props.laneFaces[l.partId] !== "string" ? 4 : 0) }}
+                style={{
+                  top: labelTop(l) - (useVrvRef.current && props.laneFaces?.[l.partId] && typeof props.laneFaces[l.partId] !== "string" ? 4 : 0),
+                  transform: lineShift(layout, l.partId) ? `translateY(${lineShift(layout, l.partId)}px)` : undefined,
+                }}
                 onClick={(e) => {
                   e.stopPropagation();
+                  // a press that turned into a drag moved the line; only a plain press (or a key) opens the menu
+                  if (dragMoved.current) {
+                    dragMoved.current = false;
+                    return;
+                  }
                   props.onLaneLabel!(l.partId, e.currentTarget);
                 }}
-                onPointerUp={(e) => e.stopPropagation()}
+                // in the line view the name itself is the handle: drag it up or down to move the whole line
+                onPointerDown={(e) => {
+                  if (!(useVrvRef.current && props.strip && props.onLaneMove)) return;
+                  e.stopPropagation();
+                  dragMoved.current = false;
+                  (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+                  setDrag({ pid: l.partId, sys: 0, y0: e.clientY, dy: 0 });
+                }}
+                onPointerMove={(e) => {
+                  if (!drag || drag.pid !== l.partId || !props.strip) return;
+                  e.stopPropagation();
+                  const dy = e.clientY - drag.y0;
+                  if (Math.abs(dy) > 6) dragMoved.current = true;
+                  setDrag({ ...drag, dy });
+                }}
+                onPointerUp={(e) => {
+                  e.stopPropagation();
+                  if (drag && drag.pid === l.partId && props.strip) {
+                    const plan = dragPlan(layout.systemLanes.get(0) ?? layout.lanes);
+                    if (dragMoved.current && plan?.target) props.onLaneMove!(l.partId, plan.target);
+                    setDrag(null);
+                  }
+                }}
+                onPointerCancel={() => setDrag(null)}
                 aria-label={`${props.laneLabels![l.partId]}: move, hide or mute this line`}
               >
                 {useVrvRef.current && props.laneFaces?.[l.partId] ? (
@@ -447,6 +478,9 @@ export function ScoreView(props: Props) {
     if (t < i) for (let k = t; k < i; k++) shifts.set(lanes[k].partId, mid(lanes[k + 1]) - mid(lanes[k]));
     return { target: t === i ? null : lanes[t].partId, shifts };
   };
+  const dragMoved = useRef(false);
+  /** how far a line's name moves while a line is dragged in the line view */
+  const lineShift = (layout: ScoreLayout, pid: string) => (drag && props.strip ? (dragPlan(layout.systemLanes.get(0) ?? layout.lanes)?.shifts.get(pid) ?? 0) : 0);
   const pageLabelEls = (layout: ScoreLayout) => {
     if (!props.laneLabels) return null;
     const out: ReactNode[] = [];
@@ -547,7 +581,7 @@ export function ScoreView(props: Props) {
   // while a line is dragged in the page view, the whole line moves with the pointer (not just its name)
   useLayoutEffect(() => {
     if (!useVrv || !vrvRef.current || !layout) return;
-    const plan = drag ? dragPlan(layout.systemLanes.get(drag.sys)) : null;
+    const plan = drag ? dragPlan(layout.systemLanes.get(drag.sys) ?? (props.strip ? layout.lanes : undefined)) : null;
     vrvRef.current.shiftParts(drag && plan ? drag.sys : null, plan?.shifts ?? null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [drag, layout, useVrv]);
@@ -1154,7 +1188,7 @@ export function ScoreView(props: Props) {
       >
       {strip && pinned && pinIdx >= 0 && pinIdx < pinned.panels.length && (
         <div className="pin-clef" style={{ width: pinned.width, marginRight: -pinned.width, height: layout?.height }} aria-hidden="true">
-          <div dangerouslySetInnerHTML={{ __html: pinned.panels[pinIdx].html }} />
+          <div style={{ opacity: drag ? 0 : undefined }} dangerouslySetInnerHTML={{ __html: pinned.panels[pinIdx].html }} />
           {layout && tintEls(layout)}
           {layout && laneLabelEls(layout)}
           {layout &&
