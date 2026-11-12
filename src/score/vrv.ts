@@ -151,6 +151,8 @@ export class VrvScore {
       spacingSystem: Math.max(6, Math.round(o.systemGapPx / (o.zoom * 10))),
       header: "none",
       footer: "none",
+      // no engraver's "//" between systems: the app already spaces and labels its systems
+      systemDivider: "none",
       mnumInterval: 1,
       lyricSize: 4.2,
       lyricTopMinMargin: 3,
