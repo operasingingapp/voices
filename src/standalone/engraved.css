@@ -269,7 +269,7 @@
    Credits and home, set like a programme: no boxes, fine rules, names in the display face
    ===================================================================== */
 
-/* ---- The opera's credits, set as a vocal score's title page: two lines in the display face, the small connecting words
+/* ---- The opera's credits, set as a vocal score's title page: one credit to a line in the display face, the small connecting words
    in italic and quieter, a short ink rule above. No labels in capitals, no boxes, no columns. ---- */
 .oh-credits {
   display: grid;
@@ -291,17 +291,9 @@
   font-size: 0.92em;
   color: var(--ink-muted);
 }
-.oh-sep {
-  margin: 0 0.55em;
-  color: color-mix(in srgb, var(--ink-muted) 55%, transparent);
-}
-.oh-part { white-space: normal; }
-/* a phone: one credit to a line, each beginning with its capital */
 @media (max-width: 640px) {
-  .oh-credits { gap: 4px; margin-top: 4px; padding-top: 16px; }
-  .oh-credits p { display: grid; gap: 4px; font-size: 19px; line-height: 1.35; }
-  .oh-credits .oh-sep { display: none; }
-  .oh-part::first-letter { text-transform: uppercase; }
+  .oh-credits { margin-top: 4px; padding-top: 16px; }
+  .oh-credits p { font-size: 19px; line-height: 1.4; }
 }
 /* "The story" under the credits (an opera with no picture): a quiet line button, not a full-width bar */
 .oh-text > .oh-story-btn.cp-btn { align-self: flex-start; min-height: 44px; margin-top: 2px; }

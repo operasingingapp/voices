@@ -1131,7 +1131,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             <p className={`oh-story${STORIES[opera.id].length > 480 ? " is-long" : ""}`}>{STORIES[opera.id]}</p>
           )}
           {/* the credits, set as a vocal score's title page sets them: the names in the display face, the small words between
-              them in italic ("Music by … · libretto by …", "First performed at the … in 1786 · sung in Italian") */}
+              them in italic, one credit to a line: "Music by …", "Libretto by …", "First performed at the …, Vienna, 1786" */}
           {(() => {
             const pr = PREMIERES[opera.id];
             // "at the Burgtheater", but "at La Scala": a theatre whose name has its own article takes none
@@ -1139,37 +1139,13 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             return (
               <div className="oh-credits" aria-label="About this opera">
                 <p>
-                  <span className="oh-part">
-                    <i>Music by</i> {opera.composerFull || opera.composer}
-                  </span>
-                  <span className="oh-sep" aria-hidden="true">
-                    ·
-                  </span>
-                  <span className="oh-part">
-                    <i>libretto by</i> {opera.librettist}
-                  </span>
+                  <i>Music by</i> {opera.composerFull || opera.composer}
                 </p>
                 <p>
-                  <span className="oh-part">
-                    <i>{at}</i>{" "}
-                    {pr ? (
-                      <>
-                        {pr.theatre}, {pr.city}, <i>in</i> {opera.year}
-                      </>
-                    ) : (
-                      opera.year
-                    )}
-                  </span>
-                  {lang && (
-                    <>
-                      <span className="oh-sep" aria-hidden="true">
-                        ·
-                      </span>
-                      <span className="oh-part">
-                        <i>sung in</i> {lang}
-                      </span>
-                    </>
-                  )}
+                  <i>Libretto by</i> {opera.librettist}
+                </p>
+                <p>
+                  <i>{at}</i> {pr ? `${pr.theatre}, ${pr.city}, ${opera.year}` : opera.year}
                 </p>
               </div>
             );
