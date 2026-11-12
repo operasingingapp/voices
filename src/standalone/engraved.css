@@ -269,60 +269,61 @@
    Credits and home, set like a programme: no boxes, fine rules, names in the display face
    ===================================================================== */
 
-/* ---- The opera's credits: a ruled list, a small label beside each name (a phone), or four columns (wide) ---- */
+/* ---- The opera's credits, set as a programme's credits page: a fine ink rule above, then label and name side by side
+   on quiet hairlines; two pairs to a row on a wide screen, one under another on a phone. No boxes, no columns of rules. ---- */
 .oh-tags.oh-credits {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
   width: 100%;
   margin: 18px 0 0;
   padding: 0;
   border-radius: 0;
   background: none;
   border-top: 1px solid var(--ink);
-  border-bottom: 1px solid var(--fog-strong);
+  border-bottom: 0;
 }
-.oh-credits > div {
+.oh-credits > div,
+.oh-credits > div:first-child {
   display: grid;
-  align-content: start;
-  gap: 8px;
+  grid-template-columns: 128px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 16px;
   min-width: 0;
-  padding: 16px 20px 18px;
+  padding: 14px 0 13px;
+  border: 0;
 }
-.oh-credits > div:first-child { padding-left: 0; }
-.oh-credits > div + div { border-left: 1px solid var(--fog-strong); }
+.oh-credits > div:nth-child(n + 3) { border-top: 1px solid var(--fog-strong); }
 .oh-credits dt {
   margin: 0;
-  font: 500 10.5px/1.2 var(--font-sans);
-  letter-spacing: 0.16em;
+  font: 500 10.5px/1.5 var(--font-sans);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--ink-muted);
 }
 .oh-credits dd {
-  display: grid;
-  gap: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 10px;
+  row-gap: 2px;
   margin: 0;
-  font: 500 21px/1.2 var(--font-display);
+  font: 500 21px/1.25 var(--font-display);
   color: var(--ink);
-  text-wrap: balance;
   font-variant-numeric: oldstyle-nums;
 }
 .oh-credits dd small {
-  font: italic 400 15px/1.3 var(--font-display);
+  font: italic 400 16px/1.3 var(--font-display);
   color: var(--ink-muted);
 }
 @media (max-width: 640px) {
   .oh-tags.oh-credits { grid-template-columns: minmax(0, 1fr); margin-top: 6px; }
   .oh-credits > div,
-  .oh-credits > div:first-child {
-    grid-template-columns: 112px minmax(0, 1fr);
-    align-items: baseline;
-    gap: 12px;
-    padding: 13px 0 12px;
-  }
-  .oh-credits > div + div { border-left: 0; border-top: 1px solid var(--fog-strong); }
-  .oh-credits dt { font-size: 10px; letter-spacing: 0.14em; line-height: 1.5; }
-  .oh-credits dd { font-size: 20px; }
+  .oh-credits > div:first-child { grid-template-columns: 112px minmax(0, 1fr); gap: 12px; padding: 13px 0 12px; }
+  .oh-credits > div:nth-child(n + 2) { border-top: 1px solid var(--fog-strong); }
+  .oh-credits dt { font-size: 10px; letter-spacing: 0.14em; white-space: normal; }
+  .oh-credits dd { font-size: 20px; flex-direction: column; align-items: flex-start; }
   .oh-credits dd small { font-size: 14.5px; }
 }
 /* "The story" under the credits (an opera with no picture): a quiet line button, not a full-width bar */
