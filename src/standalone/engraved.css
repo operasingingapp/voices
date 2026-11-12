@@ -269,62 +269,39 @@
    Credits and home, set like a programme: no boxes, fine rules, names in the display face
    ===================================================================== */
 
-/* ---- The opera's credits, set as a programme's credits page: a fine ink rule above, then label and name side by side
-   on quiet hairlines; two pairs to a row on a wide screen, one under another on a phone. No boxes, no columns of rules. ---- */
-.oh-tags.oh-credits {
+/* ---- The opera's credits, set as a vocal score's title page: two lines in the display face, the small connecting words
+   in italic and quieter, a short ink rule above. No labels in capitals, no boxes, no columns. ---- */
+.oh-credits {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 56px;
+  gap: 2px;
   width: 100%;
-  margin: 18px 0 0;
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  border-top: 1px solid var(--ink);
-  border-bottom: 0;
+  margin: 14px 0 0;
+  padding-top: 18px;
+  background: linear-gradient(var(--ink), var(--ink)) 0 0 / 44px 1px no-repeat;
 }
-.oh-credits > div,
-.oh-credits > div:first-child {
-  display: grid;
-  grid-template-columns: 128px minmax(0, 1fr);
-  align-items: baseline;
-  gap: 16px;
-  min-width: 0;
-  padding: 14px 0 13px;
-  border: 0;
-}
-.oh-credits > div:nth-child(n + 3) { border-top: 1px solid var(--fog-strong); }
-.oh-credits dt {
+.oh-credits p {
   margin: 0;
-  font: 500 10.5px/1.5 var(--font-sans);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--ink-muted);
-}
-.oh-credits dd {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  column-gap: 10px;
-  row-gap: 2px;
-  margin: 0;
-  font: 500 21px/1.25 var(--font-display);
+  font: 500 22px/1.5 var(--font-display);
   color: var(--ink);
   font-variant-numeric: oldstyle-nums;
+  text-wrap: pretty;
 }
-.oh-credits dd small {
-  font: italic 400 16px/1.3 var(--font-display);
+.oh-credits i {
+  font-style: italic;
+  font-size: 0.92em;
   color: var(--ink-muted);
 }
+.oh-sep {
+  margin: 0 0.55em;
+  color: color-mix(in srgb, var(--ink-muted) 55%, transparent);
+}
+.oh-part { white-space: normal; }
+/* a phone: one credit to a line, each beginning with its capital */
 @media (max-width: 640px) {
-  .oh-tags.oh-credits { grid-template-columns: minmax(0, 1fr); margin-top: 6px; }
-  .oh-credits > div,
-  .oh-credits > div:first-child { grid-template-columns: 112px minmax(0, 1fr); gap: 12px; padding: 13px 0 12px; }
-  .oh-credits > div:nth-child(n + 2) { border-top: 1px solid var(--fog-strong); }
-  .oh-credits dt { font-size: 10px; letter-spacing: 0.14em; white-space: normal; }
-  .oh-credits dd { font-size: 20px; flex-direction: column; align-items: flex-start; }
-  .oh-credits dd small { font-size: 14.5px; }
+  .oh-credits { gap: 4px; margin-top: 4px; padding-top: 16px; }
+  .oh-credits p { display: grid; gap: 4px; font-size: 19px; line-height: 1.35; }
+  .oh-credits .oh-sep { display: none; }
+  .oh-part::first-letter { text-transform: uppercase; }
 }
 /* "The story" under the credits (an opera with no picture): a quiet line button, not a full-width bar */
 .oh-text > .oh-story-btn.cp-btn { align-self: flex-start; min-height: 44px; margin-top: 2px; }

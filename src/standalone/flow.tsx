@@ -1130,34 +1130,50 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
             // the whole story on a wide screen; a phone shows its opening, the rest is behind "The story"
             <p className={`oh-story${STORIES[opera.id].length > 480 ? " is-long" : ""}`}>{STORIES[opera.id]}</p>
           )}
-          {/* the credits, set as a programme sets them: a small label, then the name; the premiere with its theatre */}
-          <dl className="oh-tags oh-credits" aria-label="About this opera">
-            <div>
-              <dt>Music</dt>
-              <dd>{opera.composerFull || opera.composer}</dd>
-            </div>
-            <div>
-              <dt>Libretto</dt>
-              <dd>{opera.librettist}</dd>
-            </div>
-            <div>
-              <dt>First performed</dt>
-              <dd>
-                {opera.year}
-                {PREMIERES[opera.id] && (
-                  <small>
-                    {PREMIERES[opera.id].theatre}, {PREMIERES[opera.id].city}
-                  </small>
-                )}
-              </dd>
-            </div>
-            {lang && (
-              <div>
-                <dt>Sung in</dt>
-                <dd>{lang}</dd>
+          {/* the credits, set as a vocal score's title page sets them: the names in the display face, the small words between
+              them in italic ("Music by … · libretto by …", "First performed at the … in 1786 · sung in Italian") */}
+          {(() => {
+            const pr = PREMIERES[opera.id];
+            // "at the Burgtheater", but "at La Scala": a theatre whose name has its own article takes none
+            const at = pr ? (/^(La|Le|Il|Lo|L')\s?/.test(pr.theatre) ? "First performed at" : "First performed at the") : "First performed in";
+            return (
+              <div className="oh-credits" aria-label="About this opera">
+                <p>
+                  <span className="oh-part">
+                    <i>Music by</i> {opera.composerFull || opera.composer}
+                  </span>
+                  <span className="oh-sep" aria-hidden="true">
+                    ·
+                  </span>
+                  <span className="oh-part">
+                    <i>libretto by</i> {opera.librettist}
+                  </span>
+                </p>
+                <p>
+                  <span className="oh-part">
+                    <i>{at}</i>{" "}
+                    {pr ? (
+                      <>
+                        {pr.theatre}, {pr.city}, <i>in</i> {opera.year}
+                      </>
+                    ) : (
+                      opera.year
+                    )}
+                  </span>
+                  {lang && (
+                    <>
+                      <span className="oh-sep" aria-hidden="true">
+                        ·
+                      </span>
+                      <span className="oh-part">
+                        <i>sung in</i> {lang}
+                      </span>
+                    </>
+                  )}
+                </p>
               </div>
-            )}
-          </dl>
+            );
+          })()}
           {SYNOPSES[opera.id] && !art && (
             <button type="button" className="cp-btn pv-btn-line oh-story-btn" onClick={() => setStory(true)}>
               <BookIcon />
