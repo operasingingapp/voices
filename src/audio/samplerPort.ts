@@ -383,12 +383,20 @@ export class SamplerPort implements SynthPort {
     preDelay.delayTime.value = 0.022;
     const room = ctx.createConvolver();
     room.buffer = roomImpulse(ctx);
+    // the room's return passes a ducker (see duck): it dips while the piano plays loud and blooms in the gaps
+    this.roomDuck = ctx.createGain();
+    this.roomDuck.connect(makeup);
     this.master
       .connect(this.reverbSend)
       .connect(lowCut)
       .connect(preDelay)
       .connect(room)
-      .connect(makeup);
+      .connect(this.roomDuck);
+    this.roomLowCut = lowCut;
+    this.dryMeter = ctx.createAnalyser();
+    this.dryMeter.fftSize = 1024;
+    this.master.connect(this.dryMeter);
+    this.duckTimer = window.setInterval(() => this.duck(), 30);
     // Sympathetic resonance: with the dampers lifted, every string answers the notes it shares partials with. Only
     // notes held by the pedal are sent here (where a pianist's pedal is down), quietly, so the pedalled passages
     // bloom as on a real piano while the dry ones stay clear.
@@ -403,7 +411,7 @@ export class SamplerPort implements SynthPort {
       })
       .catch(() => undefined);
     this.roomIn = preDelay;
-    this.roomOut = makeup;
+    this.roomOut = this.roomDuck;
     this.room = room;
     void this.loadHall();
     this.masterAnalyser = ctx.createAnalyser();
@@ -487,35 +495,71 @@ export class SamplerPort implements SynthPort {
   /** the room chosen for the piece (setRoom), and the share of it the texture allows right now */
   private roomBase = 1;
   private roomAuto = 1;
-  private roomOnsets: number[] = [];
+  private roomOnsets: { t: number; w: number }[] = [];
   private roomAt = -1;
+  private roomDuck!: GainNode;
+  private roomLowCut!: BiquadFilterNode;
+  private dryMeter!: AnalyserNode;
+  private duckTimer = 0;
+  private duckBuf = new Float32Array(1024);
+  private duckLevel = 1;
 
   /**
-   * The room follows the texture, as a pianist's pedal and a hall's acoustics do in practice. A solo line over a
-   * light accompaniment keeps the whole hall; a busy ensemble (many notes struck each second, many ringing at once,
-   * the other singers' lines on top) gets less of it, so the harmony stays clear instead of blurring into a wash.
-   * It is set at the scheduled time of the notes and eased over about a second, so it never pumps.
+   * How much a note muddies the room: the bass and the middle of the keyboard fill a hall's sound far more than the
+   * treble (low partials ring longest and mask each other), so they weigh more.
    */
-  private followTexture(t: number) {
+  private static weight(midi: number) {
+    return midi < 55 ? 1.6 : midi < 67 ? 1.2 : midi < 79 ? 0.8 : 0.5;
+  }
+
+  /**
+   * The room follows the texture, as an engineer rides the reverb of a live mix. A solo line over a light
+   * accompaniment keeps the whole hall; a busy passage (many notes struck each second and ringing at once, weighted
+   * to the bass and middle register, the other singers' lines included) gets less of it, and less of its bass, so
+   * the harmony stays clear instead of blurring into a wash. Set at the scheduled time of the notes, eased over about
+   * a second, so it never pumps.
+   */
+  private followTexture(t: number, midi: number) {
     // a jump back (a new start, a loop) leaves later times behind: keep only the last two seconds before this note
-    const on = (this.roomOnsets = this.roomOnsets.filter((x) => x <= t && x > t - 2));
-    on.push(t);
+    const on = (this.roomOnsets = this.roomOnsets.filter((x) => x.t <= t && x.t > t - 2));
+    on.push({ t, w: SamplerPort.weight(midi) });
     if (t < this.roomAt) this.roomAt = -1;
     if (t - this.roomAt < 0.25) return;
     this.roomAt = t;
-    const perSecond = on.length / 2;
+    let struck = 0;
+    for (const x of on) struck += x.w;
     let ringing = 0;
-    for (const v of this.voices) if (!v.released && v.start <= t) ringing++;
-    const busy = perSecond / 12 + ringing / 24;
+    for (const v of this.voices) if (!v.released && v.start <= t) ringing += SamplerPort.weight(v.midi);
+    const busy = struck / 2 / 12 + ringing / 24;
     const auto = Math.min(1, Math.max(0.5, 1 - 0.4 * Math.max(0, busy - 0.6)));
     if (Math.abs(auto - this.roomAuto) < 0.03) return;
     this.roomAuto = auto;
-    this.reverbSend.gain.setTargetAtTime(
-      REVERB_SEND * this.roomBase * auto,
-      Math.max(t, this.ctx.currentTime),
-      0.6,
-    );
+    const at = Math.max(t, this.ctx.currentTime);
+    this.reverbSend.gain.setTargetAtTime(REVERB_SEND * this.roomBase * auto, at, 0.6);
+    // the busier it is, the less bass goes into the room (220 Hz when light, up to about 400 Hz at the busiest)
+    this.roomLowCut.frequency.setTargetAtTime(220 + 360 * (1 - auto), at, 0.6);
   }
+
+  /**
+   * Ducking, the mixing engineer's way to keep a reverb from clouding the playing: the room's return is turned down
+   * a little while the piano sounds loud and comes back up as it falls quiet, so the hall blooms in the gaps, after
+   * a chord and at the end of a phrase, where it is heard as space rather than as blur. Up to about 4 dB, fast down
+   * (60 ms), slow back (about 0.4 s), measured on the dry sound.
+   */
+  private duck() {
+    if (this.ctx.state !== "running") return;
+    this.dryMeter.getFloatTimeDomainData(this.duckBuf);
+    let e = 0;
+    for (const v of this.duckBuf) e += v * v;
+    const db = 10 * Math.log10(e / this.duckBuf.length + 1e-12);
+    const loud = Math.min(1, Math.max(0, (db + 42) / 30));
+    const level = 1 - 0.37 * loud;
+    if (Math.abs(level - this.duckLevel) < 0.01) return;
+    const down = level < this.duckLevel;
+    this.duckLevel = level;
+    this.roomDuck.gain.setTargetAtTime(level, this.ctx.currentTime, down ? 0.06 : 0.4);
+  }
+
 
   static async create(
     onProgress?: (msg: string) => void,
@@ -1114,7 +1158,7 @@ export class SamplerPort implements SynthPort {
       env.disconnect();
     };
     this.voices.push(voice);
-    this.followTexture(t);
+    this.followTexture(t, midi);
     // too many ringing notes (long tremolos): let the oldest go quickly
     if (this.voices.length > MAX_VOICES) this.release(this.voices[0], t, 0.03);
   }

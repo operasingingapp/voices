@@ -13,6 +13,9 @@
 import { beatInfo, type Performance, type PerfNote } from "../../shared/timeline";
 import type { PlaybackPart } from "../../shared/types";
 
+/** a note more than this late (seconds) when it comes to be scheduled is skipped, not played late */
+const LATE_SKIP = 0.06;
+
 export interface SynthPort {
   currentTime(): number; // scheduling clock (seconds)
   outputTime(): number; // clock time currently reaching the speakers
@@ -528,8 +531,21 @@ export class PlaybackEngine {
     }
     // offs before ons at the same instant so repeated notes re-attack cleanly
     batch.sort((x, y) => x.q - y.q || (x.off === y.off ? 0 : x.off ? -1 : 1));
+    // When the page was busy (a view switch redrawing the score, a phone waking) the timer can come back late. Notes
+    // whose moment has already passed are left out rather than struck all at once: the music falls silent for that
+    // instant and carries on in time, instead of a pile of late notes blurring into each other.
+    const late = this.port.currentTime() - LATE_SKIP;
+    const skipped = new Set<string>();
     for (const b of batch) {
       const t = this.timeOf(b.q);
+      if (!b.off && t < late) {
+        skipped.add(b.ev!.key);
+        continue;
+      }
+      if (b.off && skipped.has(b.a!.ev.key)) {
+        this.active.delete(b.a!.ev.key);
+        continue;
+      }
       if (b.off) {
         this.active.delete(b.a!.ev.key);
         this.endNote(b.a!, t, b.q);
