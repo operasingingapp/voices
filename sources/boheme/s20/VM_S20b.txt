@@ -1,0 +1,139 @@
+# S20b: pp.202-205, bars 1-32 (bar 1 = first bar of p.202, (23); bar 32 = last bar of p.205, before (26))
+# MERGED by judge from VA (X) and VB (Y), settled on p.202-205 crops.
+# Singers: I = Mimì, R = Rodolfo (treble-8 clef, written an octave lower here = sounding), M = Marcello
+# page 202 system 1 starts bar 1
+# bar 1: I.° TEMPO ma agitando un poco; 2/4; key 4 flats (A-flat major / F minor); Mimì "(angosciata)"
+1 I: r:e3 C5:e3 "Ahi-" C5:e3 "mè!" r:e3 F4:e3 "ahi-" F4:e3 "mè!"
+1 R: C4:q3 "mì" C4:e3 "di" C4:q3 "ser-" C4:e3 "ra_è"
+1 M: r:h
+# JUDGE bar 2 I: Y - slur printed over C5-F4 "ni-ta"
+2 I: r:e3 C5:e3 "È" C5:e3 "fi-" C5:e3( "ni-" F4:e3) "ta!.." r:e3
+2 R: C4:q "fio-" C4:q "re."
+2 M: r:e.{6:4} C3:s{6:4} "Oh" C3:s{6:4} "qual" C3:s{6:4} "pie-" Dn3:e "tà!" r:e
+3 I: r:e3 Gb5:e3 "O" Eb5:e3 "mia" Cb5:e3 "vi-" Cb5:e3 "ta!.." r:e3
+3 R: r:e3 Bb3:e3 "Po-" Bb3:e3 "ver-" Bb3:e3 "tà" Bb3:e3 "l'ha" Bb3:e3 "sfio-"
+3 M: r:h
+# JUDGE bar 4 I: Y - print has plain "E" (no grave accent) in bar 4, unlike bar 2
+# FIX bar 4 I: "È" with its grave accent, as printed (fresh check, confirmed on a crop)
+4 I: r:e3 Bb4:e3 "È" Bb4:e3 "fi-" Bb4:e3 "ni-" Eb4:e3 "ta!.." r:e3
+4 R: Bb3:q "ri-" Bb3:q "ta,"
+4 M: r:q3 C3:s3 "Po-" C3:s3 "ve-" C3:e3 "ret-" C3:e3 "ta!" r:e3
+# page 202 system 2 starts bar 5
+# bar 5: Rodolfo "allarg." at the start of the bar, "rit." over the A-flat (accent); piano "col canto"
+5 I: r:h
+# JUDGE bar 5 R: OWN - pitches/words as X ("mar-" hyphen printed; last note G natural in the space above the top line, not A); slurs Ab-Bb and Eb-F printed (as Y); allarg./rit. words as X
+5 R: word:allarg. Ab3:s( "per" Bb3:s) C4:s "ri-" Db4:s "chia-" Eb4:s( "mar-" F4:s) word:rit. Ab4:s.> "la" Gn4:x "in"
+5 M: r:h
+# bar 6: "rall:......" (Mimì and piano) to the end of bar 7; Rodolfo breath mark after "ta"
+# MARKS bar 6 I: rall. (over the staff, from "mè")
+6 I: r:e3 Ab4:e3 "Ah-" Ab4:e3 "i-" word:rall. Ab4:q3 "mè" Bb4:e3 "mo-"
+6 R: C4:e3 "vi-" C4:e3, "ta" C4:e3 "non" C4:q3 "ba-" C4:e3 "sta_a-"
+6 M: r:q r:e{6:4} C4:s{6:4} "Po-" C4:s{6:4} "ve-" C4:s{6:4} "ra" C4:s{6:4} "Mi-"
+# bar 7: fermatas on beat 2 (Mimì's F, Rodolfo's C, Marcello's eighth rest); double bar at the end: key changes to 1 flat
+# JUDGE bar 7 I: X - comma printed after "rir,"
+7 I: G4:q3 "rir," G4:e3 "ahi-" F4:q3! "mè" En4:e3 "mo-"
+7 R: C4:q3 "mor," C4:e3 "non" C4:q3! "ba-" C4:e3 "sta_a-"
+7 M: C4:e "mì!" r:e r:e{6:4}! C4:s{6:4} "Po-" C4:s{6:4} "ve-" C4:s{6:4} "ra" C4:s{6:4} "Mi-"
+# page 203 system 1 starts bar 8
+# bar 8: key 1 flat (F major), 2/4; Mimì "a tempo"
+# JUDGE bar 8 I: X - "a tempo" printed over Mimi's staff
+8 I: word:a_tempo F4:e "rir!" r:e r:q
+8 R: C4:e "mor!" r:e r:q
+8 M: F3:e "mì!" r:e r:q
+9 I: r:h
+9 R: r:h
+9 M: r:h
+# page 203 system 2 starts bar 10 (piano only; voices rest)
+10 I: r:h
+10 R: r:h
+10 M: r:h
+11 I: r:h
+11 R: r:h
+11 M: r:h
+# page 203 system 3 starts bar 12
+12 I: r:h
+12 R: F4:e> "Chè?!" r:s A4:s "Mi-" A4:e.> "mì!" A4:s "Tu"
+12 M: r:h
+# bar 13: "poco allarg." (Rodolfo, beat 2)
+13 I: r:h
+# JUDGE bar 13 R: X - same notes; "poco allarg." printed over Rodolfo; e3 notation = {3:2}
+13 R: Bn3:e> "qui?" r:e word:poco_allarg. G4:e3 "M'ha-" D4:e.3 "i" F4:s3 "sen-"
+# JUDGE bar 13 M: X - "dun-" is G3 (space below top line, same as "El-"), not A3; e3 notation = {3:2}
+13 M: r:e3 G3:e3 "El-" A3:e3 "la" G3:e3 "dun-" D4:e.3 "que_a-" F4:s3 "scol-"
+# bar 14: double bar at the end: time changes to 4/8
+14 I: r:h
+# JUDGE bar 14 R: Y - slur printed over F4-E4 "ti-to"
+14 R: F4:q( "ti-" E4:e) "to?" r:e
+# JUDGE bar 14 M: Y - slur printed over F4-E4 "ta-va"
+14 M: F4:q( "ta-" E4:e) "va?!" r:e
+# page 204 system 1 starts bar 15
+# bar 15: 4/8, "LO STESSO MOVIMENTO" (Rodolfo and piano); key 1 flat
+15 I: r:h
+15 R: G3:e "Fa-" A3:s "ci-" A3:s "le_al-" Bb3:e "la" E4:e "pa-"
+15 M: r:h
+16 I: r:h
+16 R: D4:q "u-" C4:e "ra" r:s F#3:s "per"
+16 M: r:h
+17 I: r:h
+17 R: G3:e "nul-" A3:e "la_io" Bb3:e "m'ar-" E4:e "ro-"
+17 M: r:h
+# page 204 system 2 starts bar 18
+18 I: r:h
+18 R: G4:q "vel-" F4:e "lo." r:e
+18 M: r:h
+19 I: r:h
+19 R: Eb4:q "Vien" Eb4:e3 "là" Eb4:e3 "nel" D4:e3 "te-"
+19 M: r:h
+# bar 20: double bar, 3/4, "LO STESSO MOVIMENTO eighth = quarter" (Mimì and piano); (24)
+20 I: C5:e> "No," r:s C5:s "quel" G5:q> "tan-" G4:e. "fo" G4:s "mi"
+20 R: C4:e "por!" r:e r:q r:q
+20 M: r:h.
+# page 204 system 3 starts bar 21
+21 I: G4:e. "sof-" G4:s "fo-" G4:e "ca!" r:e r:q
+21 R: r:h.
+21 M: r:h.
+22 I: r:h.
+22 R: r:q G4:q.> "Ah" Bb3:e "Mi-"
+22 M: r:h.
+# bar 23: double bar at the end: key 1 sharp, time 9/8
+23 I: r:h.
+23 R: Eb4:q "mì!" r:q r:q
+23 M: r:h.
+# page 205 system 1 starts bar 24
+# bar 24: 9/8, key 1 sharp (G major), "ALL.tto MOSSO" (Marcello and piano); (25)
+24 I: r:h. r:q.
+24 R: r:h. r:q.
+24 M: r:h. r:q.
+25 I: r:h. r:q.
+25 R: r:h. r:q.
+25 M: r:q r:e r:e C4:e "È" C4:e "Mu-" C4:e "set-" C4:e "ta" C4:e "che"
+# bar 26: the PIANO changes to 3/4 here (to bar 27; 9/8 again at bar 28), but Marcello's staff has no time change and
+# his bars 26 and 27 add up to 9/8 (dotted quarter of the voice = quarter of the piano). Voice lines here are counted in 9/8.
+26 I: r:h. r:q.
+26 R: r:h. r:q.
+26 M: B3:e "ri-" B3:e "de." r:e r:q r:e B3:q "Con" G3:e "chi"
+# page 205 system 2 starts bar 27
+27 I: r:h. r:q.
+27 R: r:h. r:q.
+27 M: D4:e "ri-" D4:e "de?" r:e r:q r:e r:q r:e
+# bar 28: Marcello "parlato" (notes still printed with pitches); piano back to 9/8
+28 I: r:h. r:q.
+28 R: r:h. r:q.
+# JUDGE bar 28 M: X - "parlato" printed over Marcello's bar
+28 M: r:q r:e r:q r:e word:parlato A3:e "Ah" r:e A3:s "la" A3:s "ci-"
+29 I: r:h. r:q.
+29 R: r:h. r:q.
+# bar 29: the print has "Im - pare." here and "ra-i." in bar 30 (Imparerai); syllables split as printed
+# JUDGE bar 29 M: X - print reads "pare." with a full stop
+29 M: D4:e> "vet-" A3:e "ta!" r:e r:q r:e A3:q "Im-" A3:s "pa-" A3:s "re."
+# page 205 system 3 starts bar 30
+30 I: r:h. r:q.
+30 R: r:h. r:q.
+30 M: D3:e "ra-" D3:e "i." r:e r:q r:e r:q r:e
+31 I: r:q r:e r:q r:e Gb4:q. "Ad-"
+31 R: r:h. r:q.
+31 M: r:h. r:q.
+# bar 32: double bar at the end: key 5 flats, time 2/4 (start of (26) on p.206)
+32 I: Ab4:q. "di-" Ab4:e "o." r:e r:e r:q r:e
+32 R: r:q r:e r:q r:e dyn:p Eb4:q "Che!" r:e
+32 M: r:h. r:q.

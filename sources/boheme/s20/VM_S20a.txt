@@ -1,0 +1,139 @@
+# S20a sung lines: p.198 last bar (Rodolfo "Mi-", tristamente) to the last bar beginning on p.201 (Rodolfo "Mi-" before the 2/4 change). 28 bars.
+# Singers: R = Rodolfo (treble clef with 8, written an octave higher: SOUNDING pitch given), I = Mimi, M = Marcello.
+# page 198 system 4 starts before the chunk; bar 1 = its last bar. 2/4, C major (no key signature). tristamente (R).
+# JUDGE bar 1 R: X - "tristamente" printed over this bar above the R staff (p.198); Y omitted it
+1 R: r:q r:e word:tristamente C4:e "Mi-"
+1 I: r:h
+1 M: r:h
+# bar 1: double bar at end; key change to 4 flats (A-flat major / F minor).
+# page 199 system 1 starts bar 2
+# bar 2: (21) LENTO TRISTE, quarter = 48, 4 flats, 2/4 continues (not restated).
+# JUDGE bar 2 R: X - LENTO TRISTE printed above the R staff
+2 R: C4:e. "mì" C4:s "è" C4:e3 "tan-" C4:e3 "to" C4:e3 "ma-"
+2 I: r:h
+2 M: r:h
+# JUDGE bar 3 R: Y - both notes in the 3rd space (written C5, same height as bar 2) = sounding C4, not Eb
+3 R: C4:q "la-" C4:q "ta!"
+3 I: r:h
+3 M: r:h
+# JUDGE bar 4 R: Y - 400dpi: all five notes on the middle line (written Bb4) = sounding Bb3; rhythm r:e3 + 5 e3 = 2/4 verified (barmatch flag: durations correct in both)
+4 R: r:e3 Bb3:e3 "O-" Bb3:e3 "gni" Bb3:e3 "dì" Bb3:e3 "più" Bb3:e3 "de-"
+4 I: r:h
+4 M: r:h
+# page 199 system 2 starts bar 5
+5 R: Bb3:q "cli-" Bb3:e "na." r:s Bb3:s "La"
+5 I: r:h
+5 M: r:h
+# bar 6: allarg. (R); the fermata on the 7th note (A-flat) is marked "corta" (short fermata). M: (temendo che Mimi possa udire, tenta di allontanare Rodolfo).
+# bar 6 R: 11 syllables on 10 notes over bars 6-7: "na è" read as one note (elision), printed "piccina è" without a mark.
+# JUDGE bar 6 R: X - no hairpin on the R staff (the < is under the piano RH)
+# MARKS bar 6 R: word:corta (printed over the fermata)
+6 R: word:allarg. Ab3:s "po-" Bb3:s "ve-" C4:s "ra" Db4:s "pic-" Eb4:s- "ci-" F4:s- "na_è" word:corta Ab4:s.>! "con-" G4:x "dan-"
+6 I: r:h
+6 M: r:q r:e. C4:s "Mi-"
+# bar 7: molto rit. (Mimi, "fra sè"); fermatas end of bar (R on the quarter rest, M on the quarter rest, I over the end of the bar, put on her last note).
+# JUDGE bar 7 R: Y - both eighths in the 3rd space (written C5) = sounding C4
+7 R: C4:e- "na-" C4:e- "ta!" r:q!
+# JUDGE bar 7 I: X - fermata printed over the end of the Mimì bar; kept on her last note
+7 I: word:molto_rit. r:e C4:s "Che" C4:s "vuol" C4:e "di-" C4:e! "re?"
+7 M: C4:e "mì!?!" r:e r:q!
+# page 199 system 3 starts bar 8
+# bar 8: R "p con la massima espressione"; piano "Sostenuto molto, quarter = 40", ppp lentissimo.
+# JUDGE bar 8 R: X - "p con la massima espressione" printed
+8 R: dyn:p word:con_la_massima_espressione Ab3:e{6:4} "U-" Ab3:s{6:4} "na" Ab3:s{6:4} "ter-" Ab3:s{6:4} "ri-" Ab3:s{6:4} "bil" Bb3:q3 "tos-" Bb3:e3 "se"
+8 I: r:h
+8 M: r:h
+9 R: r:e3 Ab3:e3 "l'e-" Bb3:e3 "sil" Ab3:e3 "pet-" Bb3:e.3 "to" Ab3:s3 "le"
+9 I: r:h
+9 M: r:h
+# JUDGE bar 10 R: X - hairpin < starts over the second note (C)
+10 R: Bb3:q "scuo-" hp:< C4:q~ "te......."
+10 I: r:h
+10 M: r:h
+# page 200 system 1 starts bar 11
+# JUDGE bar 11 R: X - hairpin from bar 10 runs to the beginning of this bar
+11 R: hp:end C4:e3 Bb3:e3 "già" C4:e3 "le" Bb3:e3 "smun-" C4:e.3 Bb3:s3 "te"
+11 I: r:h
+11 M: r:h
+# JUDGE bar 12 R: X - cres. and the < start before the second note; melisma dots as printed (long row)
+12 R: Db4:q "go-" word:cres. hp:< F4:q~ "te................"
+12 I: r:h
+12 M: r:h
+# bar 13: breath mark (comma) after the tied F; fermata over the high B-flat (sounding Bb4, written Bb5).
+# JUDGE bar 13 R: X - 400dpi: high note sits ABOVE the first ledger line (written Bb5) = Bb4, matches piano top Bb5
+13 R: F4:e3, Eb4:e3 "di......" F4:e3 Eb4:e3 "san-" hp:end Bb4:e.3! Db4:s3 "gue_ha"
+13 I: r:h
+13 M: r:h
+# page 200 system 2 starts bar 14
+# bar 14: R grace note (small eighth) before "ros-"; I (piangendo); M (agitato, accorgendosi che Mimi ode).
+14 R: g:Eb4:e Db4:q> "ros-" C4:q "se..."
+14 I: r:h
+14 M: r:q Ab3:s "Po-" Ab3:s "ve-" Ab3:s "ra" Ab3:s "Mi-"
+# bar 15: molto rit. (I); slashed grace note before "mè".
+15 R: r:h
+15 I: word:molto_rit. r:e3 Bb4:e3 "Ah-" Db5:e3 "i-" g:Db5:e C5:e3 "mè,....." Bb4:e.3 C5:s3 "mo-"
+15 M: Ab3:e "mì!" r:e r:q
+# bar 16: (22) a tempo.
+# bar 16 R: "stanza è una" printed on fewer notes: read "za è u" on one note (elision), as the syllables line up.
+16 R: r:e3 Db4:e3 "La" Db4:e3 "mia" Db4:e{6:4} "stan-" Db4:s{6:4} "za_è_u-" Db4:s{6:4} "na" Db4:s{6:4} "ta-" Db4:s{6:4} "na"
+16 I: word:a_tempo Ab4:e "ri-" Ab4:e "re?!" r:q
+16 M: r:h
+# page 200 system 3 starts bar 17
+17 R: Db4:e. "squal-" Ab3:s "li-" Ab3:q3 "da..." r:e3
+17 I: r:h
+17 M: r:h
+# FIX bar 18 R: "co_ho" elided on Db, "spen-" on the Eb quarter, "to" on the Eb eighth tied into bar 19 (fresh check, confirmed on a crop)
+18 R: Bb3:e3 "il" C4:e3 "fuo-" Db4:e3 "co_ho" Eb4:q3 "spen-" Eb4:e3~ "to.........."
+18 I: r:h
+18 M: r:h
+# bar 19: poco rall. (R and piano).
+# JUDGE bar 19 R: X - "poco rall." printed over the sextuplet, not over "to"
+19 R: Eb4:e r:e word:poco_rall. Eb4:e{6:4} "V'en-" Eb4:s{6:4} "tra_e" Eb4:s{6:4} "l'ag-" Eb4:s{6:4} "gi-" Eb4:s{6:4} "ra_il"
+19 I: r:h
+19 M: r:h
+# page 201 system 1 starts bar 20
+# bar 20: a tempo (R; piano f a tempo).
+# JUDGE bar 20 R: X - arc from beat-2 E to the first E of bar 21 is a tie (same pitch); "to" melisma dots run past that E
+20 R: word:a_tempo E4:q "ven-" E4:q~ "to..............."
+20 I: r:h
+20 M: r:h
+# bar 21: rit. (R and piano), runs to the end of bar 22.
+# JUDGE bar 21 R: X - "di" sits under the F#, after the tied E (Y put it on the tied E)
+21 R: word:rit. E4:e3 F#4:e3 "di....." G#4:e3 F#4:e3 "tra-" E4:e.3 G#4:s3 "mon-"
+21 I: r:h
+21 M: r:h
+# JUDGE bar 22 R: X - same pitch; bare letter = natural (TB.md)
+22 R: F#4:q "ta-" E4:q "na."
+22 I: r:h
+22 M: r:h
+# page 201 system 2 starts bar 23
+# bar 23: a tempo (R and piano).
+# JUDGE bar 23 R: X - same pitch; bare letter = natural
+23 R: word:a_tempo r:e3 A3:e3 "Es-" A3:e3 "sa" A3:e3 "can-" A3:e3 "ta_e" A3:e3 "sor-"
+23 I: r:h
+23 M: r:h
+# bar 24: double bar, time change to 3/4 (key stays 4 flats). R "affrett. e cres." with hairpin <.
+# bar 24: "de,e" printed on one note (elision) written "de,_e".
+# JUDGE bar 24 R: OWN - words as X ("de,e" under the 2nd note, "il" under the 3rd); "affrett. e cres." over the 2nd triplet ("mor-"); the hairpin itself begins only after the barline, so moved to bar 25
+24 R: C4:q "ri-" C4:e3 "de,_e" C4:e3 "il" C4:e3 "ri-" word:affrett._e_cres. C4:e3 "mor-" C4:e.3 "so" Ab3:s3 "m'ás-"
+24 I: r:h.
+24 M: r:h.
+# bar 25: allarg. (R and piano).
+# JUDGE bar 25 R: OWN - hairpin < starts at the first note of this bar and runs to the end of the bar (X began it in bar 24, Y had none)
+25 R: word:allarg. hp:< Eb4:q "sa-" Eb4:e3 "le." Eb4:e3 "Me," F4:e3 "ca-" F4:e3 "gion" Eb4:e3 "del" Ab4:e3 "fa-" hp:end
+25 I: r:h.
+25 M: r:h.
+# page 201 system 3 starts bar 26
+# bar 26: a tempo (R and piano), 3/4.
+# JUDGE bar 26 R: X - 400dpi: "mal" and "che" on the 4th line like "le" (written Db5) = Db4, not C
+26 R: word:a_tempo Ab4:q "ta-" Db4:q "le" Db4:e3 "mal" Db4:e.3 "che" Eb4:s3 "l'uc-"
+26 I: r:h.
+26 M: r:h.
+# bar 27: I (desolata), rit.; M (vorrebbe allontanare Rodolfo).
+27 R: C4:e> "ci-" C4:e> "de!" r:q r:q
+27 I: r:q r:q word:rit. Bb4:e. "O" G4:s "mia"
+27 M: r:e Eb3:s "Che" Eb3:s "far" Eb3:e3 "dun-" Eb3:e3 "que?" r:e3 r:q
+# bar 28: fermatas: I on her last quarter rest, R on the dotted-eighth rest, M on the full-bar rest. Double bar at end: time change to 2/4 (next chunk).
+28 R: r:q r:q r:e.! C4:s "Mi-"
+28 I: C5:q "vi-" C5:q "ta!" r:q!
+28 M: r:h.!

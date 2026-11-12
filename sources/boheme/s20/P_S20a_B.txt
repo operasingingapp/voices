@@ -1,0 +1,96 @@
+# S20a piano: p.198 last bar to p.201 last bar
+# page 198 system 4 starts inside: bar 1 is the last bar of the system
+# bar 1: 2/4, C major; double bar at end, key change to 4 flats
+1 RH1: C5:h)
+1 LH1: r:h
+# page 199 system 1 starts bar 2
+# bar 2: (21) LENTO TRISTE quarter = 48, pp, 4 flats
+2 RH1: dyn:pp C4+F4+Ab4+C5:q- Db4+F4+Ab4+C5:q-
+2 LH1: F2+C3:q- Bb1+F2:q-
+3 RH1: C4+F4+Ab4+C5:q- Dn4+F4+Ab4+C5:q-
+3 LH1: F2+C3:q- Bb1+F2:q-
+4 RH1: Bb3+Eb4+Gb4+Bb4:q- Cb4+Eb4+Gb4+Bb4:q-
+4 LH1: Eb2+Bb2:q- Ab1+Eb2:q-
+# page 199 system 2 starts bar 5
+5 RH1: Bb3+Eb4+Gb4+Bb4:q- Cn4+Eb4+Gb4+Bb4:q-
+5 LH1: Eb2+Bb2:q- Ab1+Eb2:q-
+# bar 6: allarg.
+6 RH1: word:allarg. hp:< Ab3+Db4+F4+Ab4:q( Db4+F4+Db5:q) hp:end
+6 LH1: Db2+Ab2:q- Bb1+F2:q-
+# bar 7: molto rit., fermatas
+7 RH1: word:molto_rit. Ab4:e- G4:e- F4:e~ F4:s r:s!
+7 RH2: Bb3+En4:q Ab3+C4:e~ Ab3+C4:s r:s
+7 LH1: C2+C3:q- F2+C3:e~ F2+C3:s r:s!
+# page 199 system 3 starts bar 8
+# bar 8: Sostenuto molto quarter = 40, ppp lentissimo
+8 RH1: dyn:ppp word:lentissimo Ab3+Db4+F4+Ab4:q- Bb3+Db4+F4+Bb4:q-~
+8 LH1: r:h
+9 RH1: Bb3+Db4+F4+Bb4:e3( Ab3+Db4+F4+Ab4:e3- Bb3+Db4+F4+Bb4:e3- Ab3+Db4+F4+Ab4:e3- Bb3+Db4+F4+Bb4:e.3- Ab3+Db4+F4+Ab4:s3)
+9 LH1: Ab1+Ab2:qa~ Ab1+Ab2:e r:e
+10 RH1: Bb3+Eb4+Gb4+Bb4:q-( C4+Eb4+Gb4+C5:q-~)
+10 LH1: r:h
+# page 200 system 1 starts bar 11
+11 RH1: C4+Eb4+Gb4+C5:e3( Bb3+Eb4+Gb4+Bb4:e3- C4+Eb4+Gb4+C5:e3- Bb3+Eb4+Gb4+Bb4:e3- C4+Eb4+Gb4+C5:e.3- Bb3+Eb4+Gb4+Bb4:s3)
+11 LH1: Ab1+Ab2:qa~ Ab1+Ab2:e r:e
+# bar 12: cres.
+12 RH1: word:cres. Db4+F4+Bb4+Db5:q( F4+Bb4+Db5+F5:q-~)
+12 LH1: r:h
+# bar 13: ff, rit.
+13 RH1: F4+Bb4+Db5+F5:e3( Eb4+G4+Bb4+Eb5:e3- F4+G4+Bb4+F5:e3- Eb4+G4+Db5+Eb5:e3 Bb4+Eb5+G5+Bb5:e.3! Db4+G4+Bb4+Db5:s3)
+13 LH1: dyn:ff Eb1+Eb2:qa word:rit. Eb3+G3+Db4:qa>
+# page 200 system 2 starts bar 14
+14 RH1: hp:> Db4+Gb4+Bb4+Db5:q>( C4+Gb4+Bb4+C5:q-~) hp:end
+14 LH1: Eb3+Ab3:h
+# bar 15: pp, molto rit.
+15 RH1: C4+Gb4+Bb4+C5:e3 Eb4+Gb4+Bb4:e3- Eb4+Gb4+Db5:e3- g:Db5:e C5:e3- Bb4:e.3- C5:s3
+15 RH2: s:q Eb4+Gb4:e3 Eb4+Gb4:q3
+15 LH1: dyn:pp word:molto_rit. r:e3 Bb3:e3- Db4:e3- C4:e3- Bb3:e.3- C4:s3
+15 LH2: Ab1+Ab2:qa~ Ab1+Ab2:e r:e
+# bar 16: (22) a tempo, pppp con stanchezza
+16 RH1: word:a_tempo Ab4+Db5+F5+Ab5:q( Bb4+Db5+F5+Bb5:q-~
+16 LH1: dyn:pppp word:con_stanchezza Ab3+Db4+F4:q( Bb3+Db4+F4:q-~
+# page 200 system 3 starts bar 17
+# bar 17: cres.
+17 RH1: Bb4+Db5+F5+Bb5:e3 Ab4+Db5+F5+Ab5:e3- Bb4+Db5+F5+Bb5:e3- Ab4+Db5+F5+Ab5:e3- Bb4+Db5+F5+Bb5:e.3- Ab4+Db5+F5+Ab5:s3)
+17 LH1: word:cres. Bb3+Db4+F4:e3 Ab3+Db4+F4:e3-( Bb3+Db4+F4:e3- Ab3+Db4+F4:e3- Bb3+Db4+F4:e.3- Ab3+Db4+F4:s3)
+17 LH2: Ab1+Ab2:qa~ Ab1+Ab2:e r:e
+18 RH1: word:cres. Bb4+Eb5+Gb5+Bb5:q-( C5+Eb5+Gb5+C6:q-~)
+18 LH1: Bb3+Eb4+Gb4:q-( C4+Eb4+Gb4:q-~)
+# bar 19: poco rall.
+19 RH1: word:poco_rall. hp:< C5+Eb5+Gb5+C6:e3( Bb4+Eb5+Gb5+Bb5:e3- C5+Eb5+Gb5+C6:e3- Bb4+Eb5+Gb5+Bb5:e3- C5+Eb5+Gb5+C6:e.3- Bb4+Eb5+Gb5+Bb5:s3) hp:end
+19 LH1: C4+Eb4+Gb4:e3 Bb3+Eb4+Gb4:e3-( C4+Eb4+Gb4:e3- Bb3+Eb4+Gb4:e3- C4+Eb4+Gb4:e.3- Bb3+Eb4+Gb4:s3)
+19 LH2: Ab1+Ab2:qa~ Ab1+Ab2:e r:e
+# page 201 system 1 starts bar 20
+# bar 20: f a tempo
+20 RH1: dyn:f word:a_tempo C#5+En5+An5+C#6:q En5+An5+C#6+En6:q~
+20 LH1: r:e3 En3:e3( An3:e3 C#4:e3 En4:e3 An4:e3
+20 LH2: En2+En3:h~
+# bar 21: rit.
+21 RH1: word:rit. En5+An5+C#6+En6:e r:e G#3+Dn4+G#4:e~ G#3+Dn4+G#4:s r:s
+21 LH1: En2+En3+C#5:e) r:e dyn:f hp:> Bn1+Bn2:e~ Bn1+Bn2:s hp:end r:s
+# bar 22: pp
+22 RH1: F#4+An4+C#5+F#5:q g:En4:s( g:An4:s g:C#5:s En5:q~
+22 LH1: dyn:pp r:e3 An2:e3( En3:e3 An3:e3 C#4:e3 En4:e3
+22 LH2: g:An1:e An2:h
+# page 201 system 2 starts bar 23
+# bar 23: a tempo
+23 RH1: word:a_tempo En5:e) r:e r:q
+23 LH1: An4:h(
+# bar 24: double bar before it, time change to 3/4; affrett.
+24 RH1: r:h.
+24 LH1: word:affrett. hp:> An4:h Ab4:q
+# bar 25: allarg.
+25 RH1: r:h.
+25 LH1: word:allarg. G4:h Gb4:q
+# page 201 system 3 starts bar 26
+# bar 26: f a tempo
+26 RH1: r:h.
+26 LH1: dyn:f word:a_tempo hp:> F4:h Fb4:q hp:end
+# bar 27: pp col canto
+27 RH1: r:q r:q dyn:pp word:col_canto F4+Bb4:q(
+27 LH1: Eb4:h Db4:q(
+# bar 28: fermatas; arpeggiated pp chord with fermata; double bar at end, time change to 2/4 (next chunk)
+28 RH1: r:q r:q dyn:pp C5+C6:qa!
+28 RH2: En4+Ab4:h.!)
+28 LH1: C4:h.!)
+28 LH2: r:q r:q C2+C3:qa
