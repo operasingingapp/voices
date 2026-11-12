@@ -541,3 +541,16 @@
 /* two syllables sung on one note (an elision) light up in the same green as any other note; the tie ‿ shows the join,
    so no second colour is needed */
 :root { --join: color-mix(in srgb, var(--now-mark) 24%, transparent); --join-mark: var(--now-mark); }
+
+/* role page head (wider screens): the picture stays a clean banner; under it the portrait sits beside the name instead
+   of cutting into the picture, the name is a size calmer, and "Her story" moves out of the picture to sit with the text */
+@media (min-width: 641px) {
+  .rp-head .rp-band .rp-band-tools { display: none !important; }
+  .rp-head.rp-head .rp-id { grid-template-columns: 112px minmax(0, 1fr); column-gap: 28px; margin-top: 28px; padding: 0 4px; align-items: start; }
+  .rp-head.rp-head .rp-face { width: 112px; height: 112px; margin: 4px 0 0; box-shadow: none; }
+  .rp-head.rp-head .rp-text { gap: 8px; }
+  .rp-head.rp-head .rp-name { font-size: 48px; line-height: 1.02; }
+  .rp-head.rp-head .rp-in { font-size: 24px; }
+  .rp-head.rp-head .rp-tools-below { display: flex !important; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .rp-head .rp-tools-below .pv-chip-light, .rp-head .rp-tools-below .cp-btn { background: transparent; box-shadow: inset 0 0 0 1px var(--hairline, color-mix(in srgb, var(--ink) 18%, transparent)); }
+}
