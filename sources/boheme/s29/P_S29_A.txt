@@ -1,0 +1,160 @@
+# S29 piano: La boheme Act 4, p.269 system 4 bar 1 to the last bar of p.273. 48 bars.
+# page 269 system 4 starts bar 1
+# bar 1: ALL.o MOD.to, quarter = 120, 3/4, 1 sharp (G major)
+1 RH1: g:A4:s g:C5:s g:E5:s A5:q( E5:q. G5:e)
+1 LH1: g:F#1+F#2:e dyn:fp trem3:E3+G3+B3+D4|E4:h trem3:G3+C4|E4:q
+2 RH1: G5:q~ word:cres. G5:s( F#5:s E5:s C5:s A4:s G#4:s G4:s F#4:s)
+2 LH1: A1+A2:e A3+C4+E4:q> r:e r:q
+# bar 3: col canto
+3 RH1: dyn:f hp:> E4+F#4+C5:q~ E4+F#4+C5:e hp:end r:e r:q
+3 LH1: B2+F#3+A3:q~ B2+F#3+A3:e r:e r:q
+# page 270 system 1 starts bar 4
+# bar 4: a tempo
+4 RH1: r:e dyn:f hp:< B3:s C#4:s D#4:s E4:s F#4:s G#4:s A4:s B4:s C#5:s D#5:s hp:end
+4 LH1: r:e B2:s C#3:s D#3:s E3:s F#3:s G#3:s A3:s B3:s C#4:s D#4:s
+# bar 5: (26), 2/4
+5 RH1: E5:q^ D#5:e3* B4:e3* D#5:e3*
+5 RH2: r:e G#4+B4:e s:q
+5 LH1: dyn:f E4:q^ g:E3:s( g:G#3:s g:B3:s) D#4:e3* B3:e3* D#4:e3*
+6 RH1: C#5:e> B4+C#5:e> r:q
+6 RH2: r:e C#4:q.~
+6 LH1: C#4:e> dyn:ff hp:> G#2+E#3:e> r:q
+# page 270 system 2 starts bar 7
+7 RH1: C#4:h hp:end
+7 LH1: r:h
+# bar 8: AND.no CON MOTO, 4/4 (C), espressivo
+8 RH1: dyn:pp hp:< C#4:q( D#4:q E4:q A#4:q hp:end
+8 RH2: B3:h A#3:q C#4:q
+8 LH1: E3:h G#3:e( F#3:e*) E3:q
+8 LH2: F#2:w
+# bar 9: rit.
+9 RH1: hp:> G#4:h D#4:q) E4:e3( F#4:e3 G#4:e3) hp:end
+9 RH2: B3:h B3:h
+9 LH1: D#3:h G#3:q~ G#3:e3( F#3:e3 E#3:e3)
+9 LH2: F#2:w
+# page 270 system 3 starts bar 10
+# bar 10: poco rall.; LH E3 and D2 carry cautionary naturals
+10 RH1: A4:q( B4:q C5:q F#5:q
+10 RH2: C4:q~ C4:e D4:e E4:q A4:q
+10 LH1: dyn:pp hp:< E3:q~( E3:e F#3:e A3:q C4:q hp:end
+10 LH2: D2:w~
+11 RH1: hp:> E5:h.) hp:end G5:q(
+11 RH2: G4:h~ G4:e r:e r:q
+11 LH1: B3:h~) B3:e r:e r:q
+11 LH2: D2:h~ D2:e r:e r:q
+# bar 12: rall.; fermatas marked "corta"; clef change to treble in the LH at the end of the bar; double bar, 3/4 follows
+12 RH1: A#4:h. F#5:q!)
+12 RH2: E4:h~ E4:e r:e r:q
+12 LH1: C#3~+G3:h( C#3+F#3:e) r:e r:q! clef:G
+# page 271 system 1 starts bar 13
+# bar 13: (27) ALLEGRETTO, 3/4, 1 sharp; LH in treble clef
+13 RH1: dyn:p B4:e.{3:2} C#5:s{3:2}( D#5:e{3:2}*) E5:e3* D#5:e3* C#5:e3* B4:e3( E5:e3) B4:e3*
+13 LH1: B3+E4+G#4:ha>~ B3+E4+G#4:e r:e
+14 RH1: B4:e3( E5:e3) B4:e3* A#4:q~ A#4:e r:e
+14 LH1: B3+C#4+E4+G4:h.~
+# bar 15: col canto
+15 RH1: r:h.
+15 LH1: B3+C#4+E4+G4:h.~
+16 RH1: r:h.
+16 LH1: B3+C#4+E4+G4:h.~
+# page 271 system 2 starts bar 17
+17 RH1: r:h.
+17 LH1: B3+C#4+E4+G4:h.
+# bar 18: clef change to bass in the LH at the end of the bar
+18 RH1: r:h.
+18 LH1: B3+D#4+F#4:h. clef:F
+# bar 19: a tempo
+19 RH1: dyn:pp C#4+E4+A4:h.
+19 LH1: F#3:h.
+# page 271 system 3 starts bar 20
+# bar 20: rall.
+20 RH1: B3+D#4+A4+B4:h.
+20 LH1: F#3:h.
+21 RH1: hp:< D4+Ab4+C5:h( D4+G#4+C#5:q) hp:end
+21 LH1: F3:h( E3:q)
+# bar 22: AND.no SOST.to, 4/4 (C), dolciss.; a bracket "(" before the chords (bars 22-23) ignored
+22 RH1: dyn:ppp E5:q( C#5:q B4:q D5:q
+22 RH2: C#4+A4:h D4+F#4:h
+22 LH1: A2+E3:h A2+F#3+B3:h
+# bar 23: col canto; double bar at the end, key change to 5 flats and 2/4
+23 RH1: C#5:q E5:q~ E5:e) r:e r:q
+23 RH2: E4+A4:h~ E4+A4:e r:e r:q
+23 LH1: A2+E3+C#4:h~ A2+E3+C#4:e r:e r:q
+# page 272 system 1 starts bar 24
+# bar 24: (28) AND.te LENTO, 2/4, 5 flats
+# bars 24-31, 40-47: LH2 = Ab2 pedal with slashed grace note Ab1
+24 RH1: r:q r:e Eb5+Ab5:e(
+24 LH1: r:q dyn:pppp Ab3+Db4+F4:qa~
+24 LH2: g:Ab1:e Ab2:h~
+25 RH1: Db5+F5:q.) C5+Db5:e(
+25 LH1: Ab3+Db4+F4:h
+25 LH2: Ab2:q g:Ab1:e Ab2:q~
+26 RH1: Bb4+Gb5:q.) Ab4:e(
+26 LH1: Ab3+Bb3+Gb4:h
+26 LH2: Ab2:q g:Ab1:e Ab2:q~
+# bar 27: LH1 C4 is joined by a line to the beamed Db4-Eb4 printed on the RH staff (stems down); LH3 = the held Ab3 half note
+27 RH1: Eb5:q( Db5:e C5:e)
+27 RH2: Gb4:h
+27 LH1: C4:q Db4:e Eb4:e
+27 LH2: Ab2:q g:Ab1:e Ab2:q~
+27 LH3: Ab3:h
+# page 272 system 2 starts bar 28
+28 RH1: F4+Bb4:q. Eb5+Ab5:e(
+28 LH1: Ab3+Db4:h
+28 LH2: Ab2:q g:Ab1:e Ab2:q~
+29 RH1: Db5+F5:q.) C5+Db5:e(
+29 LH1: Ab3+Db4+F4:h
+29 LH2: Ab2:q g:Ab1:e Ab2:q~
+30 RH1: Bb4+Gb5:q.) Ab4:e(
+30 LH1: Ab3+Bb3+Gb4:h
+30 LH2: Ab2:q g:Ab1:e Ab2:q~
+# bar 31: rall.
+31 RH1: Eb5:e) r:e r:q
+31 LH1: Ab3+C4+Gb4:e r:e r:q
+31 LH2: Ab2:e r:e r:q
+# page 272 system 3 starts bar 32
+32 RH1: r:h
+32 LH1: dyn:pp C#4+E4:h~
+33 RH1: r:h
+33 LH1: C#4+E4:q~ C#4+E4:e r:e
+34 RH1: E4+G#4:h(
+34 LH1: dyn:ppp B3:h(
+# bar 35: rit.
+35 RH1: C#4+E4+A4:h)
+35 LH1: A3:h)
+# page 273 system 1 starts bar 36
+36 RH1: B3+E4+G#4:h~
+36 LH1: E3:h~
+# bar 37: fermatas on the eighth rests; clef change to treble in the LH at the end of the bar
+37 RH1: B3+E4+G#4:q~ B3+E4+G#4:e r:e!
+37 LH1: E3:q~ E3:e r:e! clef:G
+38 RH1: r:q F#4+F#5:q~
+38 LH1: dyn:ppp hp:> B3+D4+F#4:h~
+# bar 39: rall.; clef change to bass in the LH at the end of the bar
+39 RH1: F#4+F#5:e hp:end r:e r:q
+39 LH1: B3+D4+F#4:h clef:F
+# page 273 system 2 starts bar 40
+40 RH1: dyn:ppp Ab3+C4+Eb4+Ab4:qa~ Ab3+C4+Eb4+Ab4:e dyn:pppp Eb5+Ab5:e(
+40 LH1: Ab2:h~
+# bar 41: rall: e morendo ... sempre
+41 RH1: Db5+F5:q.) C5+Db5:e(
+41 LH1: Ab2:q g:Ab1:e Ab2:q~
+42 RH1: Bb4+Gb5:q.) Ab4:e(
+42 LH1: Ab2:q g:Ab1:e Ab2:q~
+43 RH1: Eb5:q( Db5:e C5:e)
+43 RH2: Gb4:h
+43 LH1: Ab2:q g:Ab1:e Ab2:q~
+# page 273 system 3 starts bar 44
+44 RH1: F4+Bb4:q~ F4+Bb4:e Eb5+Ab5:e(
+44 LH1: Ab2:q g:Ab1:e Ab2:q~
+45 RH1: Db5+F5:q.) C5+Db5:e(
+45 LH1: Ab2:q g:Ab1:e Ab2:q~
+# bar 46: molto rall.
+46 RH1: Bb4+Gb5:q.) Ab4:e(
+46 LH1: Ab2:q g:Ab1:e Ab2:q~
+47 RH1: Eb5:h~)
+47 RH2: Gb4:q~ Gb4:e r:e
+47 LH1: Ab2:e r:e r:q
+# bar 48: fermata "(lunga pausa)" on the RH eighth rest, fermata on the LH rest; double bar, key change to 2 sharps follows
+48 RH1: Eb5:q~ Eb5:e r:e!
+48 LH1: r:h!

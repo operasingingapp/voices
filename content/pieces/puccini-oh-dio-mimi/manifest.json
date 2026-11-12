@@ -1,0 +1,199 @@
+{
+ "editionId": "puccini-oh-dio-mimi",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Oh Dio! Mimì!",
+ "subtitle": "Mimì chokes and rallies; Musetta and Marcello bring medicine and the muff, which Mimì takes for Rodolfo's gift, and she drifts off to sleep, La bohème, Act 4",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "musetta",
+   "name": "Musetta",
+   "voiceType": "Soprano",
+   "partKey": "musetta"
+  },
+  {
+   "id": "schaunard",
+   "name": "Schaunard",
+   "voiceType": "Baritone",
+   "partKey": "schaunard"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "musetta",
+   "label": "Musetta (Soprano)",
+   "shortLabel": "Musetta",
+   "kind": "voice",
+   "roleId": "musetta",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 1,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "schaunard",
+   "label": "Schaunard (Baritone)",
+   "shortLabel": "Schaunard",
+   "kind": "voice",
+   "roleId": "schaunard",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Mimì chokes: Rodolfo's Oh Dio! Mimì! (Allegro moderato); Schaunard: Che avvien? ((26)); Nulla...",
+   "start": "1",
+   "end": "7"
+  },
+  {
+   "id": "b",
+   "label": "Sto bene; Zitta per carità; Sì, sì, perdona. Or sarò buona... (Andantino con moto)",
+   "start": "8",
+   "end": "12"
+  },
+  {
+   "id": "c",
+   "label": "(27) Allegretto: Dorme? Riposa; Marcello: Ho veduto il dottore!; Ecco il cordial; Chi parla? Io... Musetta (Andantino sostenuto): the muff",
+   "start": "13",
+   "end": "23"
+  },
+  {
+   "id": "d",
+   "label": "(28) Andante lento: Oh come è bello e morbido; Non più le mani allividite; Sei tu che me lo doni?; Tu! Spensierato!",
+   "start": "24",
+   "end": "36"
+  },
+  {
+   "id": "e",
+   "label": "Piangi? Sto bene...; Quì amor... sempre con te!; Le mani... al caldo... e... dormire..., to the lunga pausa",
+   "start": "37",
+   "end": "48"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 4",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 269-273 (from page 269 system 4, Allegro moderato, as Mimì chokes, to the end of page 273, the \"(lunga pausa)\" before figure (29), 48 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's part is printed in the treble clef and written here at sounding pitch. Tempo from the printed metronome mark Allegro moderato ♩ = 120 (bar 1); the Andantino con moto (bar 8), the Allegretto at figure (27) (bar 13), the Andantino sostenuto (bar 22) and the Andante lento at figure (28) (bar 24) carry no number and are values chosen as stated in the piece's notes, as are the quasi a piacere and a piacere bars (3, 15-18)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -1045,6 +1045,42 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-oh-dio-mimi": {
+    portrait: "boheme:mimi",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "One sharp for bars 1-23 (the harmony moves freely over it, to A major at the Andantino sostenuto, bar 22); D-flat major (5 flats) from figure (28) (bar 24, “morbido”) to the end",
+      time: "3/4 for bars 1-4; 2/4 from figure (26) (bar 5); 4/4 from bar 8 (Andantino con moto); 3/4 from figure (27) (bar 13); 4/4 for bars 22-23 (Andantino sostenuto); 2/4 from figure (28) (bar 24) to the end",
+      tempo: "Printed metronome mark: Allegro moderato ♩ = 120 (bar 1); the a tempo of bar 4 returns to it. Chosen, as no number is printed: Andantino con moto (bar 8) ♩ = 84, the score’s printed Andantino mosso; Allegretto at figure (27) (bar 13) ♩ = 116, the score’s printed Allegretto; Andantino sostenuto (bar 22) ♩ = 50, a tenth under the score’s printed Andantino; Andante lento at figure (28) (bar 24) ♩ = 40, the score’s printed Andante lento in 2/4 (Act 1, “Mi chiamano Mimì”). Rodolfo’s quasi a piacere (bar 3) and the a piacere dialogue of bars 15-18 are held at two-thirds of the tempo until the printed a tempo; the slowing of bars 9-11 is held at ♩ = 67, and Mimì’s last phrases (rall. e morendo, sempre più affievolendosi) at ♩ = 32 from bar 43, then the molto rall. to the end. The other written rall., rit. and rall. molto are played as a gradual change, then back to the tempo; fermatas are held. Timed against complete recordings (about 2¾ min, with the pauses and the broadening that the map does not play)",
+    },
+    notePlaceholder: "Mimì chokes and rallies; Musetta brings her the muff, which she takes for Rodolfo’s gift, and she drifts off to sleep",
+    about: (
+      <>
+        <p>
+          “Oh Dio! Mimì!”, Act 4 in the garret. Mimì has been remembering, with Rodolfo, the night they met, when a fit of choking
+          cuts her short and she falls back. At Rodolfo’s cry Schaunard runs in; Mimì opens her eyes and smiles: it is nothing, she
+          is well, and she will be good. Musetta and Marcello come back: Marcello has seen the doctor, who is on his way, and brings
+          a cordial. Musetta gives Mimì the muff she wished for. Mimì thinks it is Rodolfo’s present, thanks him and scolds him for
+          spending so much, and when she sees him crying tells him she is well. With her hands warm in the muff, she drifts off to
+          sleep.
+        </p>
+        <p>
+          Score: vocal score pages 269-273 (from page 269 system 4, Allegro moderato, to the end of page 273, the “lunga pausa”
+          before figure (29), 48 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public
+          domain. Written out from the printed pages: the sung lines and the piano each read independently, every disagreement
+          settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept,
+          with the print’s spellings and punctuation (“Quì”, “perchè”). Rodolfo’s part, printed in the treble clef, is written at
+          sounding pitch. The printed metronome mark is the Allegro moderato’s ♩ = 120; the other tempos are chosen as stated
+          under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
