@@ -198,8 +198,63 @@ export class VrvScore {
     if (svg) svg.classList.add("vrv-score");
     this.tagControlEvents();
     this.tagByPlace();
+    this.declutter();
     this.indexOnsets();
     return svg;
+  }
+
+  /**
+   * Words and tempo marks never sit on top of anything else. The engraver places a "sotto voce" or an "a tempo" by its
+   * staff without looking at the bar numbers, the lyrics or the other words around it, so they can collide. Each such
+   * mark is moved away from its staff (up when it stands above it, down when below) until it is clear, as an
+   * engraver would nudge it by hand. The text is moved itself (its y), so the parts' own shifts still apply.
+   */
+  private declutter() {
+    type Box = { x: number; y: number; w: number; h: number };
+    const boxOf = (el: SVGGraphicsElement): Box | null => {
+      try {
+        const b = el.getBBox();
+        return b.width > 0 && b.height > 0 ? { x: b.x, y: b.y, w: b.width, h: b.height } : null;
+      } catch {
+        return null;
+      }
+    };
+    const hit = (a: Box, b: Box, pad: number) =>
+      a.x < b.x + b.w + pad && b.x < a.x + a.w + pad && a.y < b.y + b.h + pad && b.y < a.y + a.h + pad;
+    for (const sys of this.host.querySelectorAll<SVGGElement>("g.system")) {
+      const marks = [...sys.querySelectorAll<SVGGElement>("g.dir, g.tempo")];
+      if (!marks.length) continue;
+      const obstacles: { el: Element; box: Box }[] = [];
+      for (const el of sys.querySelectorAll<SVGGElement>("g.mNum, g.verse, g.dynam, g.dir, g.tempo")) {
+        const box = boxOf(el);
+        if (box) obstacles.push({ el, box });
+      }
+      const boxes = new Map(obstacles.map((o) => [o.el, o.box]));
+      for (const m of marks) {
+        const bb = boxes.get(m);
+        if (!bb) continue;
+        // which side of its staff it stands on: the staff's top line
+        const staff = m.closest("g.measure")?.querySelector<SVGGElement>(`g.staff[data-n="${m.getAttribute("data-staff") ?? "1"}"]`);
+        const line = staff?.querySelector<SVGGraphicsElement>(":scope > path");
+        const lb = line ? boxOf(line) : null;
+        const above = !lb || bb.y + bb.h / 2 < lb.y + (lb.h || 0) / 2;
+        const pad = bb.h * 0.15;
+        let total = 0;
+        for (let k = 0; k < 8; k++) {
+          const o = obstacles.find((x) => x.el !== m && !m.contains(x.el) && !x.el.contains(m) && hit(bb, boxes.get(x.el)!, pad));
+          if (!o) break;
+          const ob = boxes.get(o.el)!;
+          const dy = above ? ob.y - pad - (bb.y + bb.h) : ob.y + ob.h + pad - bb.y;
+          bb.y += dy;
+          total += dy;
+        }
+        if (!total) continue;
+        for (const t of m.querySelectorAll("text, tspan[y]")) {
+          const y = parseFloat(t.getAttribute("y") ?? "");
+          if (!Number.isNaN(y)) t.setAttribute("y", String(y + total));
+        }
+      }
+    }
   }
 
   /** the marks drawn at the bar's level (slurs, ties, dynamics, hairpins, words...) get the staff they belong to, as
