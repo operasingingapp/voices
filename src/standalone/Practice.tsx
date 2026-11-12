@@ -1912,7 +1912,7 @@ function PracticeScreen({
     const minGap = allWords ? 7.9 : 2.9;
     spans.forEach((sp, i) => {
       if (sp.startQ - prevEnd >= (i === 0 ? 2.9 : minGap))
-        out.push({ kind: "gap", key: `gap-${i}`, startQ: prevEnd, endQ: sp.startQ, label: i === 0 ? (ens ? "Introduction" : "Piano introduction") : ens ? "Rest" : "Piano" });
+        out.push({ kind: "gap", key: `gap-${i}`, startQ: prevEnd, endQ: sp.startQ, label: i === 0 ? (ens ? "Introduction" : "Piano introduction") : "Piano" });
       out.push({ kind: "line", key: sp.ph.id, i });
       prevEnd = Math.max(prevEnd, sp.endQ);
     });
@@ -2732,10 +2732,43 @@ function PracticeScreen({
                 {Icon.down}
                 <span>Move down</span>
               </button>
-              <button type="button" role="menuitem" disabled={hiddenIds.length >= orderedIds.length - 1} onClick={done(() => setLine(p.key, { show: false }))}>
-                {Icon.eyeOff}
-                <span>Hide in the score</span>
-              </button>
+              {(() => {
+                // how the line looks in the score: the same three choices as the singer's face below
+                const isPiano = p.key === pianoPart.key;
+                const mine = p === voicePart;
+                const shown = showOf(p);
+                const faded = isPiano ? pianoFaded : mine ? !!lineSets[p.key]?.fade : (lineSets[p.key]?.fade ?? true);
+                const look = !shown ? "hide" : faded ? "fade" : "show";
+                const setLook = (l: "show" | "fade" | "hide") => {
+                  if (l === "hide") return setLine(p.key, { show: false });
+                  if (isPiano) {
+                    setLine(p.key, { show: true });
+                    setPianoFaded(l === "fade");
+                  } else setLine(p.key, { show: true, fade: l === "fade" });
+                };
+                return (
+                  <div className="face-menu-look" role="group" aria-label="In the score">
+                    <button type="button" role="menuitemradio" aria-checked={look === "show"} onClick={done(() => setLook("show"))}>
+                      {Icon.eye}
+                      <span>Show</span>
+                    </button>
+                    <button type="button" role="menuitemradio" aria-checked={look === "fade"} onClick={done(() => setLook("fade"))}>
+                      {Icon.fade}
+                      <span>Fade</span>
+                    </button>
+                    <button
+                      type="button"
+                      role="menuitemradio"
+                      aria-checked={look === "hide"}
+                      disabled={mine || (shown && hiddenIds.length >= orderedIds.length - 1)}
+                      onClick={done(() => setLook("hide"))}
+                    >
+                      {Icon.eyeOff}
+                      <span>Hide</span>
+                    </button>
+                  </div>
+                );
+              })()}
               <button type="button" role="menuitem" className="fm-hear" onClick={done(() => setHear(p, !on))}>
                 {on ? Icon.muted : Icon.speaker}
                 <span>{on ? (p.kind === "piano" ? "Mute the piano" : "Mute: sung live") : "Play this line"}</span>
@@ -2743,7 +2776,7 @@ function PracticeScreen({
               {p.kind === "voice" && p !== voicePart && onSing && p.roleId && (
                 <button type="button" role="menuitem" onClick={done(() => onSing(p.roleId!))}>
                   {Icon.music}
-                  <span>Sing {name}'s part</span>
+                  <span>Practise this piece as {name}</span>
                 </button>
               )}
               <button type="button" role="menuitem" className="lane-menu-more" onClick={done(() => setMixOpen(true))}>

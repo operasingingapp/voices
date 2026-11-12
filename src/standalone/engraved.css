@@ -427,3 +427,79 @@
   .practice.listen .p-head .layout-switch button { min-width: 44px; padding: 0 10px; }
   .practice.listen .p-head .layout-switch svg { width: 20px; height: 20px; }
 }
+
+/* =====================================================================
+   Words while the music plays: easy to follow at a glance
+   - the piano passages are a quiet engraved rule with an italic marking, not a box; while one plays, the rule
+     fills in green and counts down to the next entrance
+   - the line being sung carries a green rule at its edge; the syllable being sung is underlined in green
+   - while playing, the English steps back (the Italian leads); the line being sung keeps it in full ink
+   - without the English, the words column sits in the middle of the screen at a comfortable reading width
+   ===================================================================== */
+.words-view .w-gap { margin: 2px 0; }
+.words-view .w-gap .w-gap-band {
+  min-height: 40px;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--ink-muted);
+}
+.words-view .w-gap .w-gap-band::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: color-mix(in srgb, var(--ink) 16%, transparent);
+}
+.words-view .w-gap .w-gap-fill {
+  top: calc(50% - 1px);
+  bottom: auto;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--now-mark);
+}
+.words-view .w-gap .w-gap-main,
+.words-view .w-gap .w-gap-side {
+  padding: 0 12px;
+  background: var(--canvas);
+  font: italic 400 16px/1.2 var(--font-display);
+  letter-spacing: 0.01em;
+}
+.words-view .w-gap .w-gap-main { padding-left: 0; padding-right: 14px; }
+.words-view .w-gap .w-gap-side { padding-right: 0; padding-left: 14px; font: 500 13px/1.2 var(--font-sans); font-variant-numeric: tabular-nums; }
+.words-view .w-gap .w-gap-main svg { width: 15px; height: 15px; opacity: 0.7; }
+.words-view .w-gap .w-gap-main b { font-weight: 400; color: inherit; }
+.words-view .w-gap .w-gap-bars::before { content: "· "; }
+.words-view .w-gap:hover .w-gap-band { background: none; color: var(--ink); }
+.words-view .w-gap.now .w-gap-band { background: none; color: var(--ink); }
+.words-view .w-gap.now .w-gap-side { color: var(--now-mark); font-weight: 600; }
+
+/* the line being sung */
+.words-view .w-line.now { box-shadow: inset 4px 0 0 var(--now-mark); }
+.words-view .w-it .syl-now {
+  background-image: none;
+  background-color: transparent;
+  color: var(--ink);
+  text-decoration: underline 3px var(--now-mark);
+  text-underline-offset: 0.22em;
+  text-decoration-skip-ink: none;
+}
+/* while playing: the English steps back, except on the line being sung */
+.words-view.is-playing .w-line:not(.now) .w-tr { color: color-mix(in srgb, var(--ink) 52%, var(--canvas)); }
+
+/* only the words: one centred column at a comfortable reading width */
+.words-view.no-tr .w-grid,
+.words-view.no-tr .w-grid:has(.w-line.script) {
+  max-width: 820px;
+  margin-inline: auto;
+}
+@media (min-width: 641px) {
+  .words-view.no-tr .w-grid { --w-cols: 44px 36px minmax(0, 1fr) 0px; }
+  .words-view.no-tr .w-grid:has(.w-line.script) { --w-cols: 128px 34px 34px minmax(0, 1fr) 0px; }
+  .words-view.no-tr .w-line > .w-orig { padding-right: 0; }
+}
+
+/* the words view covers the text panel: its resting preview must not show through during a piano passage */
+.practice.is-words > .now-panel .now-inner.resting > * { visibility: hidden; }
