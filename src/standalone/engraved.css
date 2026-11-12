@@ -542,17 +542,19 @@
    so no second colour is needed */
 :root { --join: color-mix(in srgb, var(--now-mark) 24%, transparent); --join-mark: var(--now-mark); }
 
-/* role page head (wider screens): the picture stays a clean banner; under it the portrait sits beside the name instead
-   of cutting into the picture, the name is a size calmer, and "Her story" moves out of the picture to sit with the text */
+/* role page head (wider screens), as on a phone: the portrait sits over the banner's lower edge, the name beside it,
+   "Her story" on the picture; the text lines up in one column to the right of the portrait */
 @media (min-width: 641px) {
-  .rp-head .rp-band .rp-band-tools { display: none !important; }
-  .rp-head.rp-head .rp-id { grid-template-columns: 112px minmax(0, 1fr); column-gap: 28px; margin-top: 28px; padding: 0 4px; align-items: start; }
-  .rp-head.rp-head .rp-face { width: 112px; height: 112px; margin: 4px 0 0; box-shadow: none; }
-  .rp-head.rp-head .rp-text { gap: 8px; }
-  .rp-head.rp-head .rp-name { font-size: 48px; line-height: 1.02; }
-  .rp-head.rp-head .rp-in { font-size: 24px; }
-  .rp-head.rp-head .rp-tools-below { display: flex !important; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-  .rp-head .rp-tools-below .pv-chip-light, .rp-head .rp-tools-below .cp-btn { background: transparent; box-shadow: inset 0 0 0 1px var(--hairline, color-mix(in srgb, var(--ink) 18%, transparent)); }
+  .rp-head.rp-head .rp-band { height: 220px; }
+  .rp-head.rp-head .rp-band.has-art .rp-band-tools { display: flex !important; position: absolute; right: 16px; bottom: 16px; }
+  .rp-head.rp-head:has(.rp-band.has-art) .rp-tools-below { display: none !important; }
+  .rp-head.rp-head .rp-id { display: grid; grid-template-columns: 148px minmax(0, 1fr); column-gap: 28px; row-gap: 0; margin-top: 0; padding: 0 0 0 20px; align-items: start; }
+  .rp-head.rp-head .rp-face { grid-column: 1; grid-row: 1 / 4; width: 148px; height: 148px; margin: -74px 0 0; box-shadow: 0 0 0 5px var(--canvas), 0 8px 22px rgba(26, 24, 20, 0.12); }
+  .rp-head.rp-head .rp-text { display: contents; }
+  .rp-head.rp-head .rp-name { grid-column: 2; grid-row: 1; margin: 18px 0 0; font-size: 48px; line-height: 1.02; }
+  .rp-head.rp-head .rp-meta { grid-column: 2; grid-row: 2; margin: 6px 0 0; }
+  .rp-head.rp-head .rp-desc { grid-column: 2; grid-row: 3; margin: 14px 0 0; max-width: 640px; }
+  .rp-head.rp-head .rp-tools-below { grid-column: 2; grid-row: 4; display: flex; gap: 8px; margin-top: 14px; }
 }
 
 /* phone: "Her story" sits only on the picture, never a second time under the text */
