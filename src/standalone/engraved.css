@@ -478,14 +478,16 @@
 
 /* the line being sung */
 .words-view .w-line.now { box-shadow: inset 4px 0 0 var(--now-mark); }
+/* the syllable being sung: a marker stroke in the line's green (an underline was too faint to follow) */
 .words-view .w-it .syl-now {
   background-image: none;
-  background-color: transparent;
+  background-color: color-mix(in srgb, var(--now-mark) 24%, transparent);
+  box-shadow: 0 0 0 0.08em color-mix(in srgb, var(--now-mark) 24%, transparent);
+  border-radius: 0.14em;
   color: var(--ink);
-  text-decoration: underline 3px var(--now-mark);
-  text-underline-offset: 0.22em;
-  text-decoration-skip-ink: none;
 }
+/* the line being sung: a lighter band, so the marker on the syllable stands out */
+.words-view .w-line.now { background: color-mix(in srgb, var(--now-soft) 55%, var(--canvas)); }
 /* while playing: the English steps back, except on the line being sung */
 .words-view.is-playing .w-line:not(.now) .w-tr { color: color-mix(in srgb, var(--ink) 52%, var(--canvas)); }
 
@@ -535,3 +537,7 @@
 .pv-next-meta { font: 400 14px/1.35 var(--font-sans); color: var(--ink-muted); font-style: normal; }
 .pv-next-why { color: var(--ink); font-weight: 500; }
 @media (max-width: 640px) { .pv-next-row { grid-template-columns: 36px minmax(0, 1fr) 16px; column-gap: 14px; } .pv-next-row .pv-disc { width: 36px; height: 36px; } .pv-next-text b { font-size: 20px; } }
+
+/* two syllables sung on one note (an elision) light up in the same green as any other note; the tie ‿ shows the join,
+   so no second colour is needed */
+:root { --join: color-mix(in srgb, var(--now-mark) 24%, transparent); --join-mark: var(--now-mark); }
