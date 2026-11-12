@@ -2607,6 +2607,7 @@ export const OPERAS: Opera[] = [
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
       "kind": "Quartet · Act 3",
       "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "editionId": "puccini-addio-dolce-svegliare",
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
      },
      {
@@ -2738,6 +2739,7 @@ export const OPERAS: Opera[] = [
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
       "kind": "Quartet · Act 3",
       "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "editionId": "puccini-addio-dolce-svegliare",
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
      },
      {
@@ -2844,6 +2846,7 @@ export const OPERAS: Opera[] = [
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
       "kind": "Quartet · Act 3",
       "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "editionId": "puccini-addio-dolce-svegliare",
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
      },
      {
@@ -2944,6 +2947,7 @@ export const OPERAS: Opera[] = [
       "title": "Dunque è proprio finita!… Addio dolce svegliare",
       "kind": "Quartet · Act 3",
       "id": "Act 3: Dunque è proprio finita!… Addio dolce svegliare",
+      "editionId": "puccini-addio-dolce-svegliare",
       "when": "Straight after “Donde lieta uscì”: Rodolfo answers her goodbye"
      },
      {

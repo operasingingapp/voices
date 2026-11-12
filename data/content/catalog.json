@@ -3676,6 +3676,52 @@
     }
   },
   {
+    "editionId": "puccini-addio-dolce-svegliare",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-addio-dolce-svegliare@1.0.0-carignani#e96f3a112d",
+    "title": "Dunque è proprio finita!… Addio dolce svegliare",
+    "subtitle": "Mimì and Rodolfo say goodbye to their life together but agree to part only in spring, while Marcello and Musetta quarrel and part in anger, La bohème, Act 3",
+    "kind": "quartet",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      }
+    ],
+    "measures": 86,
+    "durationSec": 187,
+    "hasRepeats": false,
+    "keySignature": "D♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 51,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-ahi-qual-dolore",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-ahi-qual-dolore@1.0.0-carignani#b3b82bc6c1",

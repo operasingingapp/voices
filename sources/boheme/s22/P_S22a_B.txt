@@ -1,0 +1,128 @@
+# S22a piano. Bars numbered from 1 = p.209 system 3 bar 2 ((29)).
+# page 209 system 3 (its bar 2) starts bar 1
+# bar 1: (29) a tempo, ppp; 4/4; key 5 flats (D-flat major). LH staff in bass clef (clef change in the bar before). Fermata "(corta)" marks belong to the bar before.
+1 RH1: dyn:ppp Db4:h~ Db4:e r:e r:q
+1 LH1: F3+Ab3:h~ F3+Ab3:e r:e r:q
+1 LH2: r:q Db2+Ab2+Db3:qa Db2+Ab2+Db3:ea s:e s:q
+# bar 2: p
+2 RH1: r:q dyn:p Gb3+Cb4+Eb4:e* r:e Gb3+Cb4+Eb4:e* r:e r:q
+2 LH1: r:q Db2+Db3:e* r:e Db2+Db3:e* r:e r:q
+# page 209 system 4 starts bar 3
+3 RH1: r:q Ab3+Cb4+F4:e* r:e r:q Bb3+Db4+Gb4:e Eb4+Gb4+Bb4:e*
+3 LH1: r:q Db2+Db3:e* r:e r:q Db2+Db3:e* r:e
+# bar 4: time change to 3/4 (double bar); p, hairpins < >. LH changes to treble clef after the first eighth.
+# 4 LH: the low note is blotted in the print (a second ledger stub suggests C2); read as Db2 like bars 2-3.
+4 RH1: Cb4+F4+Db5:ea dyn:p hp:< Eb5:e( F5:e Bb5:e Ab5:e hp:> Gb5:e
+4 LH1: Db2+Db3:e* clef:G Eb4:e( F4:e Bb4:e Ab4:e Gb4:e
+# bar 5: "col canto"; LH back to bass clef at the end of the bar; double bar, key change to 6 flats (G-flat major) after bar 5
+5 RH1: F5:e Eb5:e Db5:e) hp:end r:e word:col_canto r:q
+5 LH1: F4:e Eb4:e Db4:e) r:e r:q clef:F
+# page 210 system 1 starts bar 6
+# bar 6: (30) AND.te CON MOTO, quarter = 92; 3/4; key 6 flats; pp
+6 RH1: Gb5:e- Gb4+Bb4:q( Eb4+Ab4:e) r:e F4+Cb5+Eb5:e*
+6 LH1: dyn:pp Gb3:q> Bb3:e* Cb4:e* Db4:e*- r:e
+7 RH1: Gb5:e- Gb4+Bb4:q( Eb4+Ab4:e) r:e F4+Cb5+Eb5:e*
+7 LH1: Gb3:q> Bb3:e* Cb4:e* Db4:e*- r:e
+# bar 8: "rit. col canto......"
+8 RH1: Gb5:e- Gb4+Bb4:q( Eb4+Ab4:e) r:e F4+Cb5+Eb5:e*
+8 LH1: word:rit._col_canto Gb3:q> Bb3:e* Cb4:e* Db4:e*- r:e
+# page 210 system 2 starts bar 9
+9 RH1: Gb5:e- Gb4+Bb4:q( Eb4+Ab4:e) r:e F4+Cb5+Eb5:e*
+9 LH1: Gb3:q> Bb3:e* Cb4:e* Db4:e*- r:e
+# bar 10: a tempo
+10 RH1: hp:> Gb5:h~ Gb5:e hp:end r:e
+10 RH2: r:e Gb4+Bb4:q Gb4+Bb4:q Gb4+Bb4:e~
+10 LH1: word:a_tempo Gb3:q> Bb3:e* Db4:e* Eb4:e*- Db3:e*
+11 RH1: Gb4+Bb4:e Gb4+Bb4:q Gb4+Bb4:q Gb4+Bb4:e
+11 LH1: Gb3:e* r:e g:Cn4:e hp:> Db4:h hp:end
+# page 210 system 3 starts bar 12
+12 RH1: r:e Ab3+Db4+F4+Ab4:q Ab3+Db4+F4+Ab4:q Bb3+Eb4+Gb4+Db5:ea
+12 LH1: Db3:h Gb2:q
+13 RH1: r:e Ab3+Db4+F4+Ab4:q Ab3+Db4+F4+Ab4:q Db4+F4+Ab4:e
+13 LH1: r:q r:q Cn4:q(
+13 LH2: Db3:h.~
+14 RH1: r:e Db5:e( Eb5:e F5:e g:F5:e Eb5:e Db5:e)
+14 RH2: r:e F4+Ab4:q F4+Ab4:e r:e F4+Cb5:e
+14 LH1: Cb4:h) s:q
+14 LH2: Db3:h Ab2+Db3:q
+# page 211 system 1 starts bar 15
+15 RH1: hp:> Gb5:h~ Gb5:e hp:end r:e
+15 RH2: r:e Gb4+Bb4:q Gb4+Bb4:q Gb4+Bb4:e~
+15 LH1: Gb2+Gb3:q> Bb3:e* Db4:e* Eb4:e*- Db3:e*
+16 RH1: Gb4+Bb4:e Gb4+Bb4:q Gb4+Bb4:q Gb4+Bb4:e
+16 LH1: Gb3:e* r:e g:Cn4:e hp:> Db4:h hp:end
+17 RH1: r:e Db4+F4+Bb4:q Db4+F4+Bb4:e r:e Cn4+Gb4+Bb4:e
+17 LH1: g:En3:e F3:h g:An3:e Bb3:q
+17 LH2: Bb2:q* r:q Eb3:q*
+# page 211 system 2 starts bar 18
+18 RH1: r:e Db4+F4+Bb4:q Db4+F4+Bb4:e r:e Cn4+Gb4+Bb4:e
+18 LH1: g:En3:e F3:h g:An3:e Bb3:q
+18 LH2: Bb2:q* r:q Eb3:q*
+19 RH1: r:e Bb4:e( Cn5:e Db5:e Eb5:e Cn5:e)
+19 RH2: r:e Db4+F4:q Db4+F4:e r:e Gb4+Bb4:e
+19 LH1: g:En3:e F3:h g:An3:e Bb3:q
+19 LH2: Bb2:q* r:q Eb3:q*
+20 RH1: F5:h~ F5:e r:e
+20 RH2: r:e Db4+F4+Bb4:q Db4+F4+Bb4:q Db4+F4+Bb4:e
+20 LH1: g:En3:e F3:h r:q
+20 LH2: Bb2:q* r:q Bb2+F3:q*
+# page 211 system 3 starts bar 21
+# bar 21: pp dolce
+21 RH1: dyn:pp word:dolce F4+Ab4:e3- F4+Ab4:e3- F4+Ab4:e3- F4+Ab4:q( Gb4+Bb4:q)
+21 LH1: Db2:e* Ab2:e* F3:e* Ab2:e* Gb2:e* Db3:e*
+22 RH1: Db5:h.
+22 RH2: F4:h( Eb4:q
+22 LH1: Db2:e* Ab2:e* F3:e* Ab2:e* Gb2:e* Db3:e*
+23 RH1: Db5:e( Db5:e Eb5:e F5:e g:F5:e Eb5:e. Db5:s)
+23 RH2: F4:q) Ab4:q Bb4:q
+23 LH1: Db2:e* Ab2:e* F3:e* Ab2:e* Gb2:e* Db3:e*
+# page 212 system 1 starts bar 24
+# bar 24: "poco allarg." (under LH)
+24 RH1: F4+Db5+Ab5:h.
+24 LH1: Db2+Ab2:e* word:poco_allarg. F3:e* Db3:e* Ab3:e* F3:e* Db4:e*
+# bar 25: (31), p. RH: octaves stem down, plus a middle voice C-flat6 (dotted half, stem up).
+25 RH1: F5+F6:q( F5+F6:q. Eb5+Eb6:e
+25 RH2: Cb6:h.
+25 LH1: Ab1+Ab2:e dyn:p Ab3+Cb4+F4:q Ab3+Cb4+F4:q Ab3+Cb4+Eb4:e
+26 RH1: hp:< Eb5+Ab5+Eb6:h hp:> Db5+Db6:q~ hp:end
+26 LH1: F1+F2:e F3+Ab3+Cb4+Eb4:q F3+Ab3+Cb4+Eb4:e r:e F3+Ab3+Db4+Eb4:e
+# page 212 system 2 starts bar 27
+# bar 27: f, "poco allarg." (under LH); the triplet = F (eighth), E-flat (dotted eighth), F (sixteenth).
+27 RH1: dyn:f Db5+Db6:e F5+F6:e Gb5+Gb6:e F5+F6:e g:Gb5+Gb6:e F5+F6:e3 Eb5+Eb6:e.3 F5+F6:s3
+27 LH1: Ab1+Ab2:e Ab3+Cb4+F4:e Gb4:e Ab3+Cb4+F4:e g:Gb4:e word:poco_allarg. Ab3+Cb4+F4:e3 Ab3+Cb4+Eb4:e.3 F4:s3
+# 28 RH: ties on the A-flat5 only; slurs E-flat -> D-flat above and below. Clef change to bass at the end of the RH bar.
+28 RH1: hp:> Eb5+Ab5~+Eb6:h Db5+Ab5+Db6:q hp:end clef:F
+28 LH1: F1+F2:e F3+Ab3+Cb4+Eb4:q F3+Ab3+Cb4+Eb4:e r:e F3+Ab3+Db4+Eb4:e
+# bar 29: p "affrett. un poco"; LH "espressivo"; RH in bass clef
+29 RH1: r:e dyn:p word:affrett._un_poco F3+Cb4:q F3+Cb4:q F3+Cb4:e
+29 RH2: Eb3+Eb4:h( Db3+Db4:q)
+29 LH1: g:Ab1:e word:espressivo Ab2:h.
+# page 212 system 3 starts bar 30
+# bar 30: f a tempo; RH starts in bass clef, changes to treble after the first chord; LH changes to treble after the first eighth
+30 RH1: dyn:f F3+Cb4+Db4:e> clef:G Eb5:e( F5:e Bb5:e Ab5:e Gb5:e
+30 LH1: word:a_tempo Db2+Db3:e> clef:G Eb4:e( F4:e Bb4:e Ab4:e Gb4:e
+# bar 31: "poco affrett.", "rall:......"; LH back to bass clef after the third eighth
+31 RH1: g:F5:s g:Gb5:s F5:e Eb5:e Db5:e Bb4:e- Ab4:e- Bb4:e-)
+31 LH1: g:F4:s g:Gb4:s word:poco_affrett. F4:e Eb4:e Db4:e clef:F word:rall. Bb3:e- Ab3:e- Bb3:e-)
+# bar 32: "espressivo", hairpins < >
+32 RH1: hp:< Gb4:q( F4:e Eb4:e hp:> Db4:e Ab4:e) hp:end
+32 RH2: r:e Bb3+Db4:q Ab3+Cb4:e r:e Ab3+Cb4+F4:ea
+32 LH1: Gb2+Gb3:e r:e Bb2:e* Cb3:e* Db3:e* r:e
+# page 213 system 1 starts bar 33
+# bar 33: a tempo, p
+33 RH1: word:a_tempo Gb4:e* Bb3+Db4:e* r:e Eb4+Ab4:e* r:e F4+Cb5+Eb5:e*
+33 LH1: dyn:p Gb2+Gb3:e* r:e Bb3:e* Cb4:e* Db4:e* r:e
+# 34 LH: the print shows an extra eighth rest between C-flat4 and D-flat4 (seven eighth-units in a 3/4 bar); the D-flat4 lines up with beat 3, so the extra rest is left out.
+34 RH1: Gb5:e- Gb4+Bb4:q( Eb4+Ab4:e) r:e F4+Cb5+Eb5:e*
+34 LH1: Gb2+Gb3:e* r:e Bb3:e* Cb4:e* Db4:e* r:e
+# page 213 system 2 starts bar 35
+# bar 35: f "ritenuto molto"; RH 16ths arpeggiated (the arpeggio line runs through both staves); LH: treble clef for the second chord, bass clef for the third
+35 RH1: r:e dyn:f word:ritenuto_molto Bb4+Bb5:e( Db5+Db6:e Eb5+Eb6:e) Ab4+Cb5+Eb5+Ab5:sa( Bb4+Bb5:s Cb5+Cb6:s Db5+Db6:s)
+35 LH1: Gb1+Gb2:q- clef:G Bb3+Db4+Eb4+Gb4:qa clef:F Db3+F3+Cb4:qa
+# bar 36: hairpin >, then p
+36 RH1: hp:> Bb4+Bb5:q( Db4+Db5:e) hp:end dyn:p Eb4+Eb5:e F4+F5:e3( Gb4+Gb5:e3 Ab4+Ab5:e3)
+36 LH1: Gb1+Gb2:e Db3:e* Gb3:e* Bb3:e* hp:> Cb4:q- hp:end
+# bar 37: a tempo; hairpin under RH
+37 RH1: word:a_tempo Gb5:h.(
+37 RH2: Gb4:e Gb4+Bb4:q Gb4+Bb4:q Gb4+Bb4:e~
+37 LH1: Gb1+Gb2:e Gb3:e* Bb3:e* Db4:e* Eb4:e* Db3:e*

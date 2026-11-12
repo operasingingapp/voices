@@ -793,6 +793,44 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-addio-dolce-svegliare": {
+    portrait: "boheme:mimi",
+    opera: "La bohème",
+    kind: "Quartet",
+    facts: {
+      key: "D-flat major (5 flats) for bars 1-5, from figure (29); G-flat major (6 flats) from bar 6 (figure (30), “Addio dolce svegliare”) to the end of the act",
+      time: "4/4 for bars 1-3; 3/4 from bar 4 to the end",
+      tempo: "Printed metronome mark: Andante con moto ♩ = 92 at figure (30) (bar 6); the a tempo bars after it return to ♩ = 92. The first bar (figure (29), a tempo) is the last bar of “Donde lieta uscì” and keeps its Andantino mosso, ♩ = 84. Chosen, as no number is printed: Più lento (bar 66, “Sempre tua per la vita”) ♩ = 76, about a fifth slower, a section heading that holds to the end of the act; the piano’s Sostenendo after figure (35) (bar 81) ♩ = 69, a tenth slower again; the piano’s ritenuto molto (bars 35-36) held at ♩ = 63 until the a tempo. The written poco rit., rit., rall., allarg. and affrett. are played as a gradual change over the bars they cover, then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "Mimì and Rodolfo say goodbye to their life together and agree to part only when spring comes, while Marcello and Musetta quarrel and part in a fury",
+    about: (
+      <>
+        <p>
+          “Dunque è proprio finita!… Addio dolce svegliare”, the end of Act 3 at the Barrière d’Enfer. Rodolfo answers Mimì’s farewell:
+          so it is really over. Together they say goodbye to waking up side by side, to the quarrels and jealousy, to the kisses he
+          turned into rhymes; but being alone in winter is unbearable, and in spring the sun keeps everyone company, so they agree to
+          stay together until the flowers come. Meanwhile Marcello catches Musetta flirting with a stranger in the tavern; their row
+          spills out into the snow, ends in shouted insults, and Musetta storms off. Mimì and Rodolfo walk away together, singing,
+          from offstage, that they will part when the flowers return, as the curtain falls.
+        </p>
+        <p>
+          Score: vocal score pages 209-222 (from the bar of figure (29), page 209 system 3 bar 2, to the end of Act 3, 86 bars), from
+          Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed
+          pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge,
+          then checked against the page and corrected. Only the Italian words are kept, with the print’s spellings (“Niuno”,
+          “lascieremo” beside “lascerem”, “Fo’all’amor”, “vò”). The first bar is also the last bar of the previous piece: it holds
+          Mimì’s last syllable of “senza rancor”, which is not part of this piece’s words, and Rodolfo’s first words. Musetta’s and
+          Marcello’s shouted insults are printed without noteheads and are written with cross noteheads. Rodolfo’s part, printed in
+          the treble clef, is written at sounding pitch. The printed metronome mark is the Andante con moto’s ♩ = 92; the other
+          tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

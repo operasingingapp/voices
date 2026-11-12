@@ -1,0 +1,124 @@
+# S22c piano. Bars numbered from 1 = first bar beginning on p.218; last bar = final bar of p.222 (end of Quadro III).
+# Key 6 flats (G-flat major) and 3/4 throughout. Pedal marks (Ped./*) at bar 8 not encoded.
+# page 218 system 1 starts bar 1
+1 RH1: F4:e( Db5:e Eb5:e F5:e g:Gb5:e Eb5:e Db5:e)
+1 RH2: F4:q( Ab4:q Bb4:q)
+1 LH1: Db2+Ab2:e* Ab3+Db4:q Ab3+Db4+F4:e Gb2+Db3:e* Bb3+Db4+F4:e
+# bar 2: RH small notes F4, Db5 (16th strokes) before the dotted half Ab5: written as grace notes.
+2 RH1: g:F4:s g:Db5:s Ab5:h.
+2 RH2: r:e hp:< F4:e F4+Ab4:e F4+Ab4+Db5:e Ab4+Db5+F5:e Db5+F5+Ab5:e hp:end
+2 LH1: Db2+Ab2:e* Ab3+Db4:q Ab3+Db4:q Ab3+Db4+F4:e
+# page 218 system 2 starts bar 3
+# bar 3: figure (33); "p espressivo". Octave tremolos (one beam + two strokes = 32nd strokes).
+3 RH1: dyn:p word:espressivo trem3:F6|F5:q trem3:F6|F5:q. Eb6:x Eb5:x Eb6:x Eb5:x
+3 LH1: Ab1+Ab2:e Ab3+Cb4+F4:q Ab3+Cb4+F4:q Ab3+Cb4+Eb4:e
+4 RH1: hp:< trem3:Eb6|Eb5:h trem3:Db6|Db5:q hp:end
+4 LH1: F1+F2:e F3+Ab3+Cb4+Eb4:q F3+Ab3+Cb4+Eb4:e r:e Gb3+Ab3+Cb4+Eb4:e
+# page 219 system 1 starts bar 5
+# bar 5: "allargando ......", LH "f"; triplet on the last beat as in the voices.
+5 RH1: Db5+Db6:e F5+F6:e> Gb5+Gb6:e> F5+F6:e> g:Gb5+Gb6:e F5+F6:e{3:2}> Eb5+Eb6:e..{3:2}> F5+F6:x{3:2}
+5 LH1: r:e dyn:f Ab3+Cb4+F4:e> Gb4:e> Ab3+Cb4+F4:e> g:Gb4:e Ab3+Cb4+F4:e{3:2}> Ab3+Cb4+Eb4:e..{3:2}> F4:x{3:2}
+5 LH2: Ab1+Ab2:h.
+# bar 6: RH clef changes to bass at the end of the bar.
+6 RH1: hp:> trem3:Eb6|Eb5:h trem3:Db6|Db5:q hp:end clef:F
+6 LH1: r:e F3+Ab3+Cb4+Eb4:q F3+Ab3+Cb4+Eb4:e r:e F3+Ab3+Cb4+Db4:e
+6 LH2: Ab1+Ab2:h.
+# page 219 system 2 starts bar 7
+# bar 7: RH in bass clef; "pp poco affrett: ...."
+7 RH1: dyn:pp word:poco_affrett. r:e F3+Cb4:q F3+Cb4:q F3+Cb4:e
+7 RH2: Eb3+Eb4:h Db3+Db4:q
+7 LH1: Ab1+Ab2:h.
+# bar 8: "ff ... molto allarg: ...."; both staves change to treble clef after the first eighth; fermata on the 4th eighth. Ped. at bar start, * at bar end.
+8 RH1: dyn:ff F3+Cb4+Db4:e> clef:G word:molto_allarg. Eb5+Eb6:e F5+F6:e Bb5+Bb6:e! Ab5+Ab6:e Gb5+Gb6:e
+8 LH1: Db2+Db3:e> clef:G Eb4:e F4:e Bb4:e! Ab4:e Gb4:e
+# bar 9: "poco affrett: ..... rall: ......" with fermatas on the last chord; LH back to bass clef for the last three eighths.
+9 RH1: word:poco_affrett. g:F6:s g:Gb6:s F5+F6:e Eb5+Eb6:e Db5+Db6:e word:rall. Bb4+Bb5:e- Ab4+Ab5:e- Bb4+Bb5:e-!
+9 LH1: g:F4:s g:Gb4:s F4:e Eb4:e Db4:e clef:F Bb3:e- Ab3:e- Bb3:e-!
+# page 220 system 1 starts bar 10
+# bar 10: figure (34); hairpin < and a dotted continuation line between the staves.
+10 RH1: g:Gb5:e Gb4:q F4:e Eb4:e Db4:e Ab4:e
+10 RH2: r:e Bb3+Db4:q Gb3+Bb3:e F3+Cb4:q
+10 LH1: r:q F3:e( Eb3:e Db3:q)
+10 LH2: Gb1+Gb2:h.
+# bar 11: "a tempo"
+11 RH1: Gb4:h.~
+11 RH2: r:e Gb3+Bb3:e~ Gb3+Bb3:h
+11 LH1: Gb1+Gb2:e r:e Bb2+Bb3:e* Db3+Db4:e* Eb3+Eb4:e* Db2+Db3:e*
+# bar 12: "rall: ......"
+12 RH1: word:rall. Gb4:h.~
+12 RH2: r:e Gb3+Bb3:e~ Gb3+Bb3:h~
+12 LH1: Gb1+Gb2:e r:e Bb2+Bb3:e* Db3+Db4:e* Eb3+Eb4:e* Db2+Db3:e*
+# page 220 system 2 starts bar 13
+# bar 13: PIÙ LENTO, "ppp"; arpeggiated octaves.
+13 RH1: dyn:ppp Gb4:e Bb4+Bb5:ea Db5+Db6:ea Eb5+Eb6:ea g:Ab4:s g:Eb5:s Ab5:s( Bb5:s Cb6:s Db6:s)
+13 RH2: Gb3+Bb3:e s:e s:h
+13 LH1: Gb1+Gb2:e r:e Bb3+Db4+Eb4+Gb4:e r:e Db3+Cb4+Eb4:ea r:e
+# bar 14: RH triplets as in Mimi's line; LH clef G for one chord, then back to F.
+14 RH1: Bb5:q( Db5:q3 Eb5:e3) F4+F5:e3a( Gb4+Gb5:e3a Ab4+Ab5:e3a)
+14 LH1: Gb2:s* Db3:s* Gb3:s* Bb3:s* clef:G Db4+Eb4+Gb4+Bb4:ea r:e clef:F Db3+Ab3+Cb4+Eb4:qa
+# page 221 system 1 starts bar 15
+15 RH1: Gb4+Gb5:e Bb3+Db4+Gb4:ea* Bb4:e* Db5:e* Eb5:e* Db4:e*
+15 LH1: Gb2+Gb3:e r:e Bb2+Bb3:ea Db3+Db4:ea Eb3+Eb4:ea Db2+Db3:ea
+# bar 16: LH grace note C natural (natural sign) before Db4; Db4 quarter tied to Db4 eighth; hairpin >.
+16 RH1: r:e Bb3+Db4+Gb4:ea Gb4+Bb4:qa Gb4+Bb4+Db5:qa
+16 LH1: Gb2+Gb3:ea r:e g:C4:e hp:> Db4:q~ Db4:e hp:end r:e
+# bar 17: "pp"; LH treble clef for the four 16ths, then bass clef.
+17 RH1: g:Ab4:e dyn:pp F5+Ab5:e3- F5+Ab5:e3- F5+Ab5:e3- F5+Ab5:q- g:Bb4:e Gb5+Bb5:q-
+17 LH1: Db2+Ab2:e* r:e clef:G Db5:s* Ab4:s* F4:s* Db4:s* clef:F Gb2+Db3:e* Bb3+Db4+Eb4+Gb4:e*
+# page 221 system 2 starts bar 18
+# bar 18: C5 has a natural sign.
+18 RH1: g:Db5:e F5+Db6:s F5:s* C5:s* Bb4:s* Ab4:e* F4+Db5:ea* Eb4:e* Gb4+Db5:ea*
+18 LH1: Db2+Ab2:e* r:e r:q Gb2+Db3:e* r:e
+19 RH1: r:e Db5:e( Eb5:e F5:e g:Eb5:s g:F5:s Eb5:e. Db5:s)
+19 RH2: F4:q( Ab4:q) Gb4+Bb4:qa
+19 LH1: Db2+Ab2:e* r:e Ab3+Db4:e* r:e Gb2+Db3:e* r:e
+# bar 20: RH dotted-half chord Ab5 over F4 with a "(" bracket before it; upper voice: 16th rest, 16th, eighth, eighth under a triplet "3" (C5 natural).
+20 RH1: r:q r:q r:s{3:2} Db5:s{3:2}* Db5:e{3:2}* C5:e{3:2}*
+20 RH2: F4+Ab5:h.
+20 LH1: Db2:s* Ab2:s* F3:s* Ab3:s* Db4:s* Ab3:s* F3:s* Db3:s* Db2+Ab2:e* r:e
+# page 221 system 3 starts bar 21
+# bar 21: "pp". LH: eighth chord, four 32nds, then a half-note tremolo (3 strokes).
+21 RH1: F5:q( F5:q. Eb5:e
+21 RH2: dyn:pp Cb5:q~ Cb5:e r:e r:q
+21 LH1: Ab1+Ab2:e* Ab3:x( Cb4:x Ab3:x Cb4:x trem3:Ab3|Cb4:h)
+# bar 22: C5 has a natural sign.
+22 RH1: Eb5:h Db5:q)
+22 RH2: Ab4:q~ Ab4:e r:e r:s{3:2} Db5:s{3:2}* Db5:e{3:2}* C5:e{3:2}*
+22 LH1: F1+F2:e* F3:x( Ab3:x F3:x Ab3:x trem3:F3|Ab3:h)
+# bar 23: "poco allarg: ......."
+23 RH1: Cb5:e* word:poco_allarg. F5+F6:e( Gb5+Gb6:e F5+F6:e g:Gb5+Gb6:e F5+F6:e{3:2} Eb5+Eb6:e.{3:2} F5+F6:s{3:2})
+23 LH1: Ab1+Ab2:e* Ab3:x( Cb4:x Ab3:x Cb4:x trem3:Ab3|Cb4:h)
+# page 222 system 1 starts bar 24
+24 RH1: Eb5+Eb6:h( Db5+Db6:q)
+24 LH1: F1+F2:e* F3:x( Ab3:x F3:x Ab3:x trem3:F3|Ab3:h)
+# bar 25: "pp ......"; RH clef changes to bass at the end of the bar.
+25 RH1: dyn:pp Eb4+Eb5:h( Db4+Db5:e) r:e clef:F
+25 LH1: trem3:F3|Ab3:h.
+# bar 26: figure (35). "f", "col canto", hairpin >, "pp". RH (bass clef) plays the low Db2+Ab2, then clef G for the last chord.
+26 RH1: dyn:f Db2+Ab2:e> word:col_canto r:e r:q r:e clef:G dyn:pp Eb5+Gb5:e*
+26 LH1: Cb4+Db4:h.~
+26 LH2: F3:e> r:e r:q r:q
+# page 222 system 2 starts bar 27
+# bar 27: "col canto ........."; fermata on the last chord (RH) and on the LH chord.
+27 RH1: word:col_canto F5+Ab5:e* Gb5+Bb5:e* Ab5+Cb6:e* Bb5+Db6:e* Cb6+Eb6:e* Db6+F6:e*!
+27 LH1: Cb4+Db4:h.!
+# bar 28: "Sostenendo", "p", hairpins < >; LH "espressivo".
+28 RH1: dyn:p word:Sostenendo hp:< Gb6:s* Db6:s* Bb5:s* Gb5:s* Bb5:s* Gb5:s* hp:end hp:> Db5:s* Bb4:s* Ab5:s* F5:s* Db5:s* Cb5:s* hp:end
+28 LH1: word:espressivo g:Gb2:s g:Db3:s Gb4:q( F4:e Eb4:e Db4:e Ab4:e)
+# bar 29: "dim. ......... e ........."
+29 RH1: word:dim. Gb4+Bb4:s* Bb3:s* Db4:s* Eb4:s* Gb4:s* Bb4:s* Db5:s* Eb5:s* Gb5:s* Eb5:s* Db5:s* Bb4:s*
+29 LH1: Gb2+Db3:q- Bb2+Bb3:e* Db3+Db4:e* Eb3+Eb4:e* Db2+Db3:e*
+# page 222 system 3 starts bar 30
+# bar 30: "rall. ........."
+30 RH1: word:rall. Gb4:s* Bb3:s* Db4:s* Eb4:s* Gb4:s* Bb4:s* Db5:s* Eb5:s* Gb5:s* Eb5:s* Db5:s* Bb4:s*
+30 LH1: Gb2+Db3:q- Bb2+Bb3:e* Db3+Db4:e* Eb3+Eb4:e* Db2+Db3:e*
+# bar 31: "a tempo", "ppp"
+31 RH1: word:a_tempo dyn:ppp Bb3+Db4+Gb4:h.~
+31 LH1: Gb3:h.~
+31 LH2: Gb2:e* r:e r:q r:q
+# bar 32: "ff" at the last 16th
+32 RH1: Bb3+Db4+Gb4:h~ Bb3+Db4+Gb4:e r:s dyn:ff Db6:s*
+32 LH1: Gb3:h~ Gb3:e r:s Db2:s*
+# bar 33: final bar (double bar), "(sipario calato)"; accents.
+33 RH1: Gb5+Gb6:e> r:e r:q r:q
+33 LH1: Gb1+Gb2:e> r:e r:q r:q

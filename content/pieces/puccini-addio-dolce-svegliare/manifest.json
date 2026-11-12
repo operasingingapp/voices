@@ -1,0 +1,185 @@
+{
+ "editionId": "puccini-addio-dolce-svegliare",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Dunque è proprio finita!… Addio dolce svegliare",
+ "subtitle": "Mimì and Rodolfo say goodbye to their life together but agree to part only in spring, while Marcello and Musetta quarrel and part in anger, La bohème, Act 3",
+ "kind": "quartet",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "musetta",
+   "name": "Musetta",
+   "voiceType": "Soprano",
+   "partKey": "musetta"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "musetta",
+   "label": "Musetta (Soprano)",
+   "shortLabel": "Musetta",
+   "kind": "voice",
+   "roleId": "musetta",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 1,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Rodolfo: Dunque è proprio finita! Te ne vai, la mia piccina ((29), a tempo); Addio sogni d'amor!",
+   "start": "1",
+   "end": "7"
+  },
+  {
+   "id": "b",
+   "label": "Addio dolce svegliare alla mattina ((30), Andante con moto): goodbye to the scoldings and jealousies, the kisses and rhymes",
+   "start": "8",
+   "end": "24"
+  },
+  {
+   "id": "c",
+   "label": "Soli d'inverno è cosa da morire! ((31), con anima); Mentre a primavera c'è compagno il sol!",
+   "start": "25",
+   "end": "32"
+  },
+  {
+   "id": "d",
+   "label": "The quarrel breaks out: Che facevi? Che dicevi?; Niuno è solo l'april; Musetta: Quel signore mi diceva ((32)); Voglio piena libertà!",
+   "start": "33",
+   "end": "45"
+  },
+  {
+   "id": "e",
+   "label": "Che mi canti?; Al fiorir di primavera; La brezza della sera ((33)); Musetta se ne va; Vuoi che aspettiam la primavera ancor?",
+   "start": "46",
+   "end": "62"
+  },
+  {
+   "id": "f",
+   "label": "The insults ((34)): Pittore da bottega! Vipera! Rospo! Strega!; Sempre tua per la vita (Più lento); Ci lascerem alla stagion dei fior! ((35)), to the curtain",
+   "start": "63",
+   "end": "86"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 3",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 209-222 (from the bar of figure (29), page 209 system 3 bar 2, to the end of Act 3 on page 222, 86 bars; the first bar, with Mimì's last syllable, is also the last bar of the previous piece)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's part is printed in the treble clef and written here at sounding pitch. Musetta's and Marcello's shouted insults (bars 64-66), printed without noteheads, are written with cross noteheads. Tempo from the printed metronome mark Andante con moto ♩ = 92 at figure (30) (bar 6); the a tempo of the first bar (figure (29)) is the previous piece's Andantino mosso ♩ = 84; the Più lento (bar 66) and the piano's Sostenendo (bar 81) carry no number and are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

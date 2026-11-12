@@ -1,0 +1,196 @@
+# page 209 system 3 starts inside the chunk: bar 1 = p.209 sys 3 bar 2
+# bar 1: (29), 4/4, D-flat major (5 flats), a tempo; R "dolcemente". Rodolfo: sounding pitch (treble-8)
+# MARKS bar 1 I: a tempo printed above Mimi at the top of the system
+1 I: word:a_tempo Db5:q~ "cor....." Db5:e r:e r:h
+# JUDGE bar 1 R: X - "fi-" printed under the 5th note of bar 1, "que_è" elided on one note; + Y's dolcemente
+1 R: r:h r:e3 word:dolcemente Db4:e3 "Dun-" Db4:e3 "que_è" Db4:e3 "pro-" Db4:e3 "prio" Db4:e3 "fi-"
+1 U: r:w
+1 M: r:w
+2 I: r:w
+# JUDGE bar 2 R: X - "ni-" "ta!" on beats 1-2; the arc from beat 2 to the eighth joins the same pitch/one syllable: tie
+2 R: Db4:q "ni-" Db4:q~ "ta!......" Db4:e r:e Db4:e. "Te" Db4:s "ne"
+2 U: r:w
+2 M: r:w
+# page 209 system 4 starts bar 3
+3 I: r:w
+3 R: Db4:q "vai," Db4:e. "te" Db4:s "ne" Db4:e "vai," Db4:e "la" Db4:e "mia" Db4:e "pic-"
+3 U: r:w
+3 M: r:w
+# bar 4: 3/4
+4 I: r:h.
+4 R: Db4:q "ci-" Db4:e "na." r:e r:e Gb4:e "Ad-"
+4 U: r:h.
+4 M: r:h.
+# bar 5: rall.; end: key change to G-flat major (6 flats)
+5 I: r:h.
+# JUDGE bar 5 R: Y - rall. printed above Rodolfo bar 5
+5 R: F4:e "di-" Eb4:e Db4:e "o" word:rall. Bb3:e- "so-" Ab3:e- "gni" Bb3:e- "d'a-"
+5 U: r:h.
+5 M: r:h.
+# page 210 system 1 starts bar 6: (30) AND.te CON MOTO quarter=92
+6 I: r:h.
+# JUDGE bar 6 R: Y - note sits on the 2nd line (G) with G-flat key: Gb3 sounding
+6 R: Gb3:e "mor!.." r:e r:q r:q
+6 U: r:h.
+6 M: r:h.
+7 I: r:h.
+7 R: r:h.
+7 U: r:h.
+7 M: r:h.
+# bar 8: Mimi p dolciss., ritenendo
+# JUDGE bar 8 I: OWN - Y's notes and dolciss., plus "ritenendo" printed above (missing in both)
+8 I: r:e dyn:p word:dolciss. word:ritenendo Bb4:e "Ad-" Db5:e "di-" Eb5:e "o" Ab4:s "dol-" Bb4:s Cb5:s "ce" Db5:s "sve-"
+8 R: r:h.
+8 U: r:h.
+8 M: r:h.
+# page 210 system 2 starts bar 9
+9 I: Bb4:q "glia-" Db4:e "re" Eb4:e "al-" F4:e3 "la" Gb4:e3 Ab4:e3 "mat-"
+9 R: r:h.
+9 U: r:h.
+9 M: r:h.
+# bar 10: a tempo
+# JUDGE bar 10 I: Y - a tempo over Mimi; dots
+10 I: word:a_tempo Gb4:q "ti-" Gb4:q~ "na!........." Gb4:e r:e
+10 R: r:h.
+10 U: r:h.
+10 M: r:h.
+11 I: r:h.
+# JUDGE bar 11 R: Y - notehead centred on the 4th line (D5 written, Db4 sounding), not E space
+11 R: r:q r:q r:e Db4:e "Ad-"
+11 U: r:h.
+11 M: r:h.
+# page 210 system 3 starts bar 12
+12 I: r:q r:q r:e Bb4:e "Ad-"
+12 R: Db4:q "di-" Db4:e "o" Db4:e "so-" Eb4:e3 "gnan-" Db4:e3 Bb3:e3 "te"
+12 U: r:h.
+12 M: r:h.
+# JUDGE bar 13 I: X - lyric "fi e" falls on the 4th note, "ge" and "lo" on the two C naturals; "si-e!.." on the 2 notes of bar 14
+13 I: Db5:e "dio" Db5:e "rab-" Db5:e "buf-" Db5:e "fi_e" C5:e "ge-" C5:e "lo-"
+# JUDGE bar 13 R: Y - melisma dots: Y's count matches the print
+13 R: Db4:q "vi-" Db4:h "ta............................"
+13 U: r:h.
+13 M: r:h.
+# JUDGE bar 14 I: X - "si - e!.." printed under the two C-flats
+14 I: Cb5:e "si-" Cb5:e "e!.." r:q r:q
+# JUDGE bar 14 R: X - 400 dpi: "ri" under the grace-note E-flat, hyphens sor-ri / ri-so fall between notes 4-5 and 5-6, so "so ac-" share the last note
+14 R: Db4:e "che" Db4:e "un" Eb4:e "tuo" F4:e "sor-" g:F4:e Eb4:e "ri-" Db4:e "so_ac-"
+14 U: r:h.
+14 M: r:h.
+# page 211 system 1 starts bar 15
+15 I: r:h.
+# JUDGE bar 15 R: Y - melisma dots: Y's count matches the print
+15 R: Gb4:q "que-" Gb3:q~ "ta!........." Gb3:e r:e
+15 U: r:h.
+15 M: r:h.
+# JUDGE bar 16: Y - X dropped this bar (p.211 sys 1 has 3 bars: "que-ta!", an all-rest bar for the singers with the piano repeating bar 11, then Mimi's "Addio so-"); true count 37 bars
+16 I: r:h.
+16 R: r:h.
+16 U: r:h.
+16 M: r:h.
+# JUDGE bar 17 I: X - C5 = C natural (Y's Cn5 is the same pitch)
+17 I: Db5:h "Ad-" Eb5:e "dio" C5:e "so-"
+17 R: r:h.
+17 U: r:h.
+17 M: r:h.
+# page 211 system 2 starts bar 18
+18 I: Bb4:e "spet-" Bb4:e "ti,.." r:q r:q
+18 R: r:q Bb3:q "Ba-" Bb3:q "ci"
+18 U: r:h.
+18 M: r:h.
+# JUDGE bar 19 I: Y - C-D-flat under one slur (melisma on "gen-"), "ti a-" elided on E-flat
+19 I: r:e Bb4:e "pun-" Cn5:e "gen-" Db5:e Eb5:e "ti_a-" Cn5:e "ma-"
+19 R: r:h.
+19 U: r:h.
+19 M: r:h.
+20 I: F5:h "rez-" F5:q "ze!"
+20 R: r:h.
+20 U: r:h.
+20 M: r:h.
+# page 211 system 3 starts bar 21
+21 I: r:h.
+21 R: Ab3:q3 "ch'io" Ab3:e3 "da" Ab3:q "ve-" Bb3:e "ro" Bb3:e "po-"
+21 U: r:h.
+21 M: r:h.
+22 I: r:h.
+# JUDGE bar 22 R: Y - melisma dots: Y's count matches the print
+22 R: Db4:h "e-" Db4:q~ "ta.............."
+22 U: r:h.
+22 M: r:h.
+23 I: r:h.
+23 R: Db4:e Db4:e "ri-" Eb4:e "ma-" F4:e "vo" g:F4:e Eb4:e. "con" Db4:s "ca-"
+23 U: r:h.
+23 M: r:h.
+# page 212 system 1 starts bar 24
+24 I: r:h.
+24 R: Ab4:h "rez-" Ab4:q "ze!"
+24 U: r:h.
+24 M: r:h.
+# bar 25: (31) con anima p
+# JUDGE bar 25 I: Y - con anima printed
+25 I: dyn:p word:con_anima F5:q "So-" F5:q. "li" Eb5:e "d'in-"
+25 R: r:h.
+25 U: r:h.
+25 M: r:h.
+26 I: Eb5:h "ver-" Db5:q~ "no........"
+# JUDGE bar 26 R: Y - melisma dots: Y's count matches the print
+26 R: Eb4:h "So-" Db4:q~ "li.........."
+26 U: r:h.
+26 M: r:h.
+# page 212 system 2 starts bar 27
+27 I: Db5:e F5:e "è" Gb5:e "co-" F5:e "sa" g:Gb5:e F5:e3 "da....." Eb5:e.3 F5:s3 "mo-"
+27 R: Db4:e F4:e "e" Gb4:e "co-" F4:e "sa" g:Gb4:e F4:e3 "da....." Eb4:e.3 F4:s3 "mo-"
+27 U: r:h.
+27 M: r:h.
+28 I: Eb5:h "ri-" Db5:q "re!"
+28 R: Eb4:h "ri-" Db4:q "re!"
+28 U: r:h.
+28 M: r:h.
+# JUDGE bar 29 I: Y - affrett. un poco printed above Mimi
+29 I: word:affrett._un_poco Eb4:h "So-" Db4:q "li!"
+29 R: r:h.
+29 U: r:h.
+29 M: r:h.
+# page 212 system 3 starts bar 30
+# JUDGE bar 30 I: OWN - X's underlay (E-flat-F slurred melisma on "Men-", "ve-" begins bar 31) + Y's a tempo + "poco allarg." printed above Mimi (missing in both)
+30 I: r:e word:a_tempo word:poco_allarg. Eb5:e "Men-" F5:e Bb5:e "tre_a" Ab5:e "pri-" Gb5:e "ma-"
+# JUDGE bar 30 R: OWN - X's underlay + Y's a tempo + "poco allarg." printed under Rodolfo (missing in both)
+30 R: r:e word:a_tempo word:poco_allarg. Eb4:e "Men-" F4:e Bb4:e "tre_a" Ab4:e "pri-" Gb4:e "ma-"
+30 U: r:h.
+30 M: r:h.
+# JUDGE bar 31 I: X underlay ("ve-" on F, "gno_il" on one note, as in bar 32) + Y's poco affrett. / rall.
+31 I: g:F5:s g:Gb5:s word:poco_affrett. F5:e "ve-" Eb5:e "ra" Db5:e "c'è" word:rall. Bb4:e- "com-" Ab4:e- "pa-" Bb4:e- "gno_il"
+# JUDGE bar 31 R: X underlay + Y's poco affrett. / rall.
+31 R: g:F4:s g:Gb4:s word:poco_affrett. F4:e "ve-" Eb4:e "ra" Db4:e "c'è" word:rall. Bb3:e- "com-" Ab3:e- "pa-" Bb3:e- "gno_il"
+31 U: r:h.
+31 M: r:h.
+# JUDGE bar 32 I: Y - espressivo printed above Mimi
+32 I: Gb4:q "sol," F4:e "c'è" Eb4:e "com-" Db4:e "pa-" Ab4:e "gno_il"
+32 R: Gb3:e "sol!" r:e r:q r:q
+32 U: r:h.
+32 M: r:h.
+# page 213 system 1 starts bar 33: U, M (di dentro)
+# JUDGE bar 33 I: Y - melisma dots: Y's count matches the print
+33 I: Gb4:q~ "sol!............." Gb4:e r:e r:q
+33 R: r:h.
+33 U: r:q r:q r:e dyn:f Db5:s "Che" Db5:s "vuoi"
+# JUDGE bar 33 M: Y - concitato printed
+33 M: r:e dyn:f word:concitato Gb3:s "Che" Gb3:s "fa-" Bb3:s "ce-" Bb3:s "vi." Cb4:s "Che" Cb4:s "di-" Db4:s "ce-" Db4:s "vi" r:e
+34 I: r:h.
+34 R: r:h.
+34 U: Gb5:e> "dir!" r:e r:q r:e Db5:s "che" Db5:s "vuoi"
+34 M: r:e Gb3:s "pres-" Gb3:s "so_al" Bb3:s "fuo-" Bb3:s "co_a" Cb4:s "quel" Cb4:s "si-" Db4:s "gno-" Db4:s "re?" r:e
+# page 213 system 2 starts bar 35
+35 I: r:h.
+35 R: r:h.
+35 U: Gb5:e> "dir!" r:e r:q r:q
+35 M: r:h.
+36 I: r:q dyn:f Db5:e "Niu-" Eb5:e "no_è" F5:e3 "so-" Gb5:e3 "lo" Ab5:e3 "l'a-"
+36 R: r:h.
+36 U: r:h.
+36 M: r:h.
+# JUDGE bar 37 I: OWN (both wrong) - the Gb5 is tied over the page turn (tie arc into Gb5 eighth on p.214) and a > hairpin runs above it; dots per Y
+37 I: hp:> Gb5:h.~ "pril..................." hp:end
+37 R: r:h.
+37 U: r:h.
+# JUDGE bar 37 M: Y - 400 dpi: "ta-to" noteheads sit on the 2nd ledger line above the bass staff = E-flat4 (F4 would sit above it)
+37 M: r:s Gb3:s "Al" Gb3:s "mio" Gb3:s "ve-" Bb3:s "ni-" Bb3:s "re" Db4:s "hai" Db4:s "mu-" Eb4:s "ta-" Eb4:s "to" Db3:s "di" Db3:s "co-"
