@@ -1515,6 +1515,7 @@ export const OPERAS: Opera[] = [
       "title": "Temerari, sortite… Come scoglio",
       "kind": "Recitative and aria · Act 1",
       "id": "Act 1: Temerari, sortite… Come scoglio",
+      "editionId": "mozart-come-scoglio",
       "when": "Act 1, Don Alfonso has passed off the two moustached strangers as his dearest friends, and they have declared their love; Dorabella asks her sister what they should do"
      },
      {
@@ -1590,6 +1591,27 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Signora Dorabella, Signora Fiordiligi",
       "editionId": "mozart-signora-dorabella",
       "when": "Act 1, straight after “Ah scostati… Smanie implacabili”: Dorabella has raged at her torments, and both sisters sit apart, beside themselves, while Despina wonders what has happened"
+     },
+     {
+      "title": "Alla bella Despinetta",
+      "kind": "Sestetto · Act 1",
+      "id": "Act 1: Alla bella Despinetta",
+      "editionId": "mozart-alla-bella-despinetta",
+      "when": "Act 1, Don Alfonso has promised Despina twenty scudi to help two strangers win her mistresses' favour, and brings in the officers disguised as 'Albanians'"
+     },
+     {
+      "title": "Che susurro, che strepito",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che susurro, che strepito",
+      "editionId": "mozart-che-susurro",
+      "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
+     },
+     {
+      "title": "Ah non partite!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ah non partite!",
+      "editionId": "mozart-ah-non-partite",
+      "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
      }
     ]
    },
@@ -1707,6 +1729,27 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Signora Dorabella, Signora Fiordiligi",
       "editionId": "mozart-signora-dorabella",
       "when": "Act 1, straight after “Ah scostati… Smanie implacabili”: Dorabella has raged at her torments, and both sisters sit apart, beside themselves, while Despina wonders what has happened"
+     },
+     {
+      "title": "Alla bella Despinetta",
+      "kind": "Sestetto · Act 1",
+      "id": "Act 1: Alla bella Despinetta",
+      "editionId": "mozart-alla-bella-despinetta",
+      "when": "Act 1, Don Alfonso has promised Despina twenty scudi to help two strangers win her mistresses' favour, and brings in the officers disguised as 'Albanians'"
+     },
+     {
+      "title": "Che susurro, che strepito",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che susurro, che strepito",
+      "editionId": "mozart-che-susurro",
+      "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
+     },
+     {
+      "title": "Ah non partite!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ah non partite!",
+      "editionId": "mozart-ah-non-partite",
+      "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
      }
     ]
    },
@@ -1743,6 +1786,27 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Signora Dorabella, Signora Fiordiligi",
       "editionId": "mozart-signora-dorabella",
       "when": "Act 1, straight after “Ah scostati… Smanie implacabili”: Dorabella has raged at her torments, and both sisters sit apart, beside themselves, while Despina wonders what has happened"
+     },
+     {
+      "title": "Che silenzio, che aspetto di tristezza",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che silenzio, che aspetto di tristezza",
+      "editionId": "mozart-che-silenzio",
+      "when": "Act 1, straight after “In uomini, in soldati”: Despina and the sisters have gone out, and Don Alfonso comes into the empty room alone"
+     },
+     {
+      "title": "Alla bella Despinetta",
+      "kind": "Sestetto · Act 1",
+      "id": "Act 1: Alla bella Despinetta",
+      "editionId": "mozart-alla-bella-despinetta",
+      "when": "Act 1, Don Alfonso has promised Despina twenty scudi to help two strangers win her mistresses' favour, and brings in the officers disguised as 'Albanians'"
+     },
+     {
+      "title": "Che susurro, che strepito",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che susurro, che strepito",
+      "editionId": "mozart-che-susurro",
+      "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
      }
     ]
    },
@@ -1865,6 +1929,34 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Non v'è più tempo, amici",
       "editionId": "mozart-non-ve-piu-tempo-amici",
       "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
+     },
+     {
+      "title": "Alla bella Despinetta",
+      "kind": "Sestetto · Act 1",
+      "id": "Act 1: Alla bella Despinetta",
+      "editionId": "mozart-alla-bella-despinetta",
+      "when": "Act 1, Don Alfonso has promised Despina twenty scudi to help two strangers win her mistresses' favour, and brings in the officers disguised as 'Albanians'"
+     },
+     {
+      "title": "Che susurro, che strepito",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che susurro, che strepito",
+      "editionId": "mozart-che-susurro",
+      "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
+     },
+     {
+      "title": "Ah non partite!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ah non partite!",
+      "editionId": "mozart-ah-non-partite",
+      "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
+     },
+     {
+      "title": "E voi ridete?",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: E voi ridete?",
+      "editionId": "mozart-e-voi-ridete",
+      "when": "Act 1, straight after “Non siate ritrosi”: the sisters have stormed out, leaving the two officers alone with Don Alfonso"
      }
     ]
    },
@@ -1921,12 +2013,14 @@ export const OPERAS: Opera[] = [
       "title": "Non siate ritrosi",
       "kind": "Aria · Act 1",
       "id": "Act 1: Non siate ritrosi",
+      "editionId": "mozart-non-siate-ritrosi",
       "when": "Act 1, the sisters are about to leave; Don Alfonso asks them for a little kindness towards his friends, and Guglielmo pleads for the two strangers"
      },
      {
       "title": "Rivolgete a lui lo sguardo",
       "kind": "Aria · Act 1",
       "id": "Act 1: Rivolgete a lui lo sguardo",
+      "editionId": "mozart-rivolgete-a-lui-lo-sguardo",
       "when": "Act 1, the same moment as “Non siate ritrosi”, which replaced it: the sisters are about to leave, and Guglielmo pleads for the two strangers (Mozart's first aria for this spot, KV 584)"
      },
      {
@@ -1980,6 +2074,34 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Non v'è più tempo, amici",
       "editionId": "mozart-non-ve-piu-tempo-amici",
       "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
+     },
+     {
+      "title": "Alla bella Despinetta",
+      "kind": "Sestetto · Act 1",
+      "id": "Act 1: Alla bella Despinetta",
+      "editionId": "mozart-alla-bella-despinetta",
+      "when": "Act 1, Don Alfonso has promised Despina twenty scudi to help two strangers win her mistresses' favour, and brings in the officers disguised as 'Albanians'"
+     },
+     {
+      "title": "Che susurro, che strepito",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che susurro, che strepito",
+      "editionId": "mozart-che-susurro",
+      "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
+     },
+     {
+      "title": "Ah non partite!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ah non partite!",
+      "editionId": "mozart-ah-non-partite",
+      "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
+     },
+     {
+      "title": "E voi ridete?",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: E voi ridete?",
+      "editionId": "mozart-e-voi-ridete",
+      "when": "Act 1, straight after “Non siate ritrosi”: the sisters have stormed out, leaving the two officers alone with Don Alfonso"
      }
     ]
    },
@@ -2106,6 +2228,41 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Non son cattivo comico",
       "editionId": "mozart-non-son-cattivo-comico",
       "when": "Act 1, on the shore, straight after “Soave sia il vento”: the sisters have gone, leaving Don Alfonso alone"
+     },
+     {
+      "title": "Che silenzio, che aspetto di tristezza",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che silenzio, che aspetto di tristezza",
+      "editionId": "mozart-che-silenzio",
+      "when": "Act 1, straight after “In uomini, in soldati”: Despina and the sisters have gone out, and Don Alfonso comes into the empty room alone"
+     },
+     {
+      "title": "Alla bella Despinetta",
+      "kind": "Sestetto · Act 1",
+      "id": "Act 1: Alla bella Despinetta",
+      "editionId": "mozart-alla-bella-despinetta",
+      "when": "Act 1, Don Alfonso has promised Despina twenty scudi to help two strangers win her mistresses' favour, and brings in the officers disguised as 'Albanians'"
+     },
+     {
+      "title": "Che susurro, che strepito",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che susurro, che strepito",
+      "editionId": "mozart-che-susurro",
+      "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
+     },
+     {
+      "title": "Ah non partite!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Ah non partite!",
+      "editionId": "mozart-ah-non-partite",
+      "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
+     },
+     {
+      "title": "E voi ridete?",
+      "kind": "Terzetto · Act 1",
+      "id": "Act 1: E voi ridete?",
+      "editionId": "mozart-e-voi-ridete",
+      "when": "Act 1, straight after “Non siate ritrosi”: the sisters have stormed out, leaving the two officers alone with Don Alfonso"
      }
     ]
    }

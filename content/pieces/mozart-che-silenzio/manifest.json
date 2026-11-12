@@ -1,0 +1,116 @@
+{
+ "editionId": "mozart-che-silenzio",
+ "editionVersion": "1.0.0-peters",
+ "title": "Che silenzio, che aspetto di tristezza",
+ "subtitle": "Don Alfonso and Despina: recitative from Così fan tutte, Act 1",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  },
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Don Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "65"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 10, recitative after No. 12",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (macchine, vorebbe, quà, Si without its accent; Despina's Me lo dona?, where the libretto has Me la dona?, and è loro il mio giulebbe, where it has È l'oro; com' io and Or ben as two words). Despina's aside “Per me questa mi preme” is not set in this score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 87–91, the recitative between No. 12 and No. 13 (65 bars)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges, pp. 87–89 and 90–91), then checked bar by bar by a fresh checker (three errors found and corrected: Don Alfonso's rhythm in bars 42 and 44, and a tie in the right hand in bar 15). Where the print gives a second rhythm for the German words (bars 12, 14, 27, 29, 36, 42, 44, 46, 56, 57, 60 and 61), the Italian rhythm is kept. The German singing translation is left out. In bar 23 Don Alfonso's line is printed a sixteenth too long; its second B flat is written as a sixteenth. The last bar is printed with one quarter before “attacca Nr. 13” and is filled out with rests to a full bar. Playback tempo ♩ = 93, a speaking pace for secco recitative, from Rattle (2:37), Klemperer (2:47) and Jacobs (2:54); Mozart gives no tempo."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

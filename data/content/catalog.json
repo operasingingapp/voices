@@ -104,6 +104,58 @@
     }
   },
   {
+    "editionId": "mozart-ah-non-partite",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-non-partite@1.0.0-peters#cdedf6ac72",
+    "title": "Ah non partite!",
+    "subtitle": "Ferrando, Guglielmo, Don Alfonso, Dorabella and Fiordiligi: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      }
+    ],
+    "measures": 23,
+    "durationSec": 68,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 13,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-scostati-smanie-implacabili",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-ah-scostati-smanie-implacabili@1.0.0-peters#610ebc1c7c",
@@ -213,6 +265,64 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 20,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-alla-bella-despinetta",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-alla-bella-despinetta@1.0.0-peters#c5d92c5cbe",
+    "title": "Alla bella Despinetta",
+    "subtitle": "Fiordiligi, Dorabella, Despina, Ferrando, Don Alfonso and Guglielmo: sextet from Così fan tutte, Act 1 (No. 13)",
+    "kind": "sestetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 220,
+    "durationSec": 278,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "1/4",
+    "languageStatus": {
+      "phrases": 98,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -560,6 +670,98 @@
     }
   },
   {
+    "editionId": "mozart-che-silenzio",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-che-silenzio@1.0.0-peters#e473bbad6f",
+    "title": "Che silenzio, che aspetto di tristezza",
+    "subtitle": "Don Alfonso and Despina: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      }
+    ],
+    "measures": 65,
+    "durationSec": 168,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-che-susurro",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-che-susurro@1.0.0-peters#bb6c29c9fa",
+    "title": "Che susurro, che strepito",
+    "subtitle": "Don Alfonso, Dorabella, Fiordiligi, Despina, Ferrando and Guglielmo: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 43,
+    "durationSec": 112,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 29,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-che-vita-maledetta",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-che-vita-maledetta@1.0.0-peters#566ce54306",
@@ -629,6 +831,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 60,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-come-scoglio",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-come-scoglio@1.0.0-peters#7f7ccf2d76",
+    "title": "Temerari, sortite… Come scoglio",
+    "subtitle": "Fiordiligi: recitative and aria from Così fan tutte, Act 1 (No. 14)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 153,
+    "durationSec": 331,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 16,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1204,6 +1440,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 15,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-e-voi-ridete",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-e-voi-ridete@1.0.0-peters#2464220f61",
+    "title": "E voi ridete?",
+    "subtitle": "Ferrando, Guglielmo and Don Alfonso: terzetto from Così fan tutte, Act 1 (No. 16)",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 61,
+    "durationSec": 55,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 26,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2266,6 +2542,34 @@
     }
   },
   {
+    "editionId": "mozart-non-siate-ritrosi",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-non-siate-ritrosi@1.0.0-peters#9e61a2ceeb",
+    "title": "Non siate ritrosi",
+    "subtitle": "Guglielmo: aria from Così fan tutte, Act 1 (No. 15)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 68,
+    "durationSec": 106,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "1/8",
+    "languageStatus": {
+      "phrases": 8,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-non-so-piu",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-non-so-piu@1.0.0-klengel#61a7c653bf",
@@ -3005,6 +3309,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 209,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-rivolgete-a-lui-lo-sguardo",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-rivolgete-a-lui-lo-sguardo@1.0.0-peters#f67417e190",
+    "title": "Rivolgete a lui lo sguardo",
+    "subtitle": "Guglielmo: aria from Così fan tutte, Act 1 (No. 15a, K. 584)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 195,
+    "durationSec": 297,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 23,
       "withAudio": 0,
       "reviewed": 0
     }

@@ -1,0 +1,114 @@
+{
+ "editionId": "mozart-rivolgete-a-lui-lo-sguardo",
+ "editionVersion": "1.0.0-peters",
+ "title": "Rivolgete a lui lo sguardo",
+ "subtitle": "Guglielmo: aria from Così fan tutte, Act 1 (No. 15a, K. 584)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Rivolgete a lui lo sguardo · E voi cara",
+   "start": "1",
+   "end": "30"
+  },
+  {
+   "id": "b",
+   "label": "Un Orlando innamorato · da Vienna al Canadà",
+   "start": "31",
+   "end": "72"
+  },
+  {
+   "id": "c",
+   "label": "Siam due Cresi · se balliamo · se cantiam",
+   "start": "73",
+   "end": "128"
+  },
+  {
+   "id": "d",
+   "label": "Bella, bella, tengon sodo · Eroine di costanza (Allegro molto, to the end)",
+   "start": "129",
+   "end": "195"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 11, No. 15a Aria, K. 584 (Mozart's first aria for this place, replaced by No. 15 before the first performance)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (confronte, where the libretto has confronto; d'un ciclopo, where it has di Ciclopo; usignuolo, where it has uscignuolo; Canada without its accent in bar 67; Pich ne; all' usignuolo and qualch' altro as two words)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 125–134, bars 1–195 of No. 15a (K. 584)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung line and piano each read by two independent readers, every disagreement settled on the page by a judge (in three page ranges), a separate sweep for dynamics and other marks, then checked bar by bar by four fresh checkers (all clean on notes, rhythm, words and dynamics). The German singing translation is left out. Kept as printed: the editorial f in brackets in bar 1. The small naturals printed above the trills in the right hand in bars 116 and 118 cannot be written in the file and are left out; the trills are there. In bar 92 no natural is printed on the left hand's lower C on beat 4; it is written C natural, as in bar 90. The last five bars are for the piano alone. Playback tempo ♩ = 138, then a half note = 108 (♩ = 216) from the Allegro molto (bar 129), estimated (about 5 minutes; no timing was found, since most recordings leave this aria out); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
