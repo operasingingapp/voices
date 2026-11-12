@@ -1,0 +1,145 @@
+# S18a piano. Key 1 flat; 2/4.
+# page 179 system 3 starts bar 1
+# bar 1: 2/4, 1 flat
+1 RH1: C5:e* r:e D5:e* r:e
+1 LH1: r:h
+2 RH1: G4:e* r:e r:q
+2 LH1: r:h
+3 RH1: G4:e* r:e r:q
+3 LH1: r:h
+# bar 4: double bar, (8) ALLEGRO, ff. The upper LH notes (F3 G3 E3) are stemmed up and beamed with the RH chords (cross-staff); written in LH.
+4 RH1: r:e dyn:ff C4+F4:e> C4+G4:e> C4+E4:e>
+4 LH1: r:e A1+A2+F3:e> Bb1+Bb2+G3:e> G1+G2+E3:e>
+5 RH1: C4+F4:e> r:e r:q
+5 LH1: A1+A2+F3:e> r:e r:q
+# end of bar 5: double bar, time change to 3/4
+# page 180 system 1 starts bar 6
+# bar 6: MODERATO, 3/4, 1 flat. RH chords have stems both ways (two beams) but one rhythm: written as one voice. LH: no notes, no rest printed (long slur from RH into LH bar 7).
+6 RH1: dyn:p hp:> G4+Bb4+Eb5:e( F4+A4+D5:e Eb4+G4+C5:e D4+F4+Bb4:e C4+Eb4+A4:e Bb3+D4+G4:e hp:end
+6 LH1: r:h.
+7 RH1: C4+F#4:e) r:e r:q dyn:sf C#4+E4+G4+Bb4:q>
+7 LH1: A3:e) r:e dyn:p D2+D3:e* r:e r:q
+# page 180 system 2 starts bar 8
+# bar 8: col canto (to bar 9)
+8 RH1: r:q dyn:p C4+D4+F#4+A4:q- r:q
+8 LH1: D2+D3:e* r:e r:q D2+D3:e* r:e
+# bar 9: poco rall. (voice), piano col canto; LH clef change to treble at end of bar
+9 RH1: r:h.
+9 LH1: r:h. clef:G
+# bar 10: a tempo, p
+10 RH1: dyn:p Db5:e.3* Eb5:s3( F5:e3) Gb5:e3* F5:e3* Eb5:e3* Db5:e3( Gb5:e3) Db5:e3*
+10 LH1: Db4+Gb4+Bb4:q~ Db4+Gb4+Bb4:e r:e Db4+Gb4+Bb4:q-
+# page 180 system 3 starts bar 11 (LH still treble clef; back to bass clef at end of bar 11)
+11 RH1: Db5:e3( Gb5:e3) Db5:e3* C5:q~ C5:e r:e
+11 LH1: Db4+Eb4+Gb4+A4:q-~ Db4+Eb4+Gb4+A4:e r:e Db4+Eb4+Gb4+A4:e* r:e clef:F
+# bar 12: risoluto, ff
+12 RH1: dyn:ff C5+C6:e.3> D5+D6:s3( E5+E6:e3) F5+F6:e> r:e r:q
+12 LH1: C2+C3:q^ A3+C4+F4:e> r:e r:q
+# bar 13: f. The RH C4 and the LH C3+E3+Bb3 share one up-stem (cross-staff chord); LH C2 stem down.
+13 RH1: r:q r:q dyn:f C4:e> r:e
+13 LH1: r:q r:q C2+C3+E3+Bb3:e r:e
+# end of bar 13: double bar, time change to 3/8
+# page 181 system 1 starts bar 14
+# bar 14: VIVO, 3/8, 1 flat, pp
+14 RH1: r:q.
+14 LH1: r:s dyn:pp F2+F3:s* F2+F3:e* E2+E3:e*
+# bar 15: LH clef change to treble after the first chord; hairpin < bars 15-16
+15 RH1: r:e g:A4:e F5:e* hp:< C5+G5:e*
+15 LH1: Eb2+Eb3:e* clef:G Eb4+F4:e* Eb4+F4:e*
+16 RH1: F5+A5:e* G5+Bb5:e* A5+C6:e* hp:end
+16 LH1: Eb4+F4:e* Eb4+F4:e* Eb4+F4:e*
+# bar 17: hairpin > bars 17-18
+17 RH1: g:D6:e hp:> A5+C6:e* G5+Bb5:e.* F5+A5:s*
+17 LH1: Eb4+F4:e* r:e r:e
+18 RH1: F5+A5:e* C5+G5:e.* A4+F5:s* hp:end
+18 LH1: r:q. clef:F
+# page 181 system 2 starts bar 19 (LH bass clef)
+# bar 19: col canto (to bar 20)
+19 RH1: A4+F5:e* r:e r:e
+19 LH1: r:q.
+20 RH1: r:q.
+20 LH1: r:q.
+# bar 21: double bar, (9) ANDANTE, quarter = 48, 3/4, key 2 flats. The RH chords and the upper LH notes share one stem (cross-staff chords): upper LH notes on LH1, the LH octaves (stems down) on LH2.
+21 RH1: r:e dyn:pp D4+E4:q( D4+F4:q D4+G4:e)
+21 LH1: s:e E3+Bb3:q F3+Bb3:q G3+Bb3:e
+21 LH2: Bb1+Bb2:q~ Bb1+Bb2:e r:e r:q
+22 RH1: r:e D4+E4:q( D4+F4:q D4+G4:e)
+22 LH1: s:e E3+Bb3:q F3+Bb3:q G3+Bb3:e
+22 LH2: Bb1+Bb2:q~ Bb1+Bb2:e r:e r:q
+# page 181 system 3 starts bar 23
+23 RH1: D5+D6:e( Bb4+Bb5:e G4+G5:e) r:e r:q
+23 LH1: r:e E3+Bb3+D4:q( F3+Bb3+D4:q G3+Bb3+D4:e)
+23 LH2: g:Bb1:e Bb2:h.
+# bar 24: printed cautionary (b) before the E of the second LH chord
+24 RH1: r:q r:q C5+C6:q(
+24 LH1: r:e A3+C4+F4:q C4+Eb4+G4:q Eb4+F4+A4:e
+24 LH2: g:Bb1:e Bb2:h.
+# bar 25: RH 32nd run (last six a sextuplet) with hairpin <
+25 RH1: Bb4+Bb5:q)~ Bb4+Bb5:e hp:< F4:x( G4:x A4:x Bb4:x B4:x C5:x C#5:x D5:x D#5:x{6:4} E5:x{6:4} F5:x{6:4} F#5:x{6:4} G5:x{6:4} G#5:x{6:4}) hp:end
+25 LH1: r:e E3+Bb3+D4:q( F3+Bb3+D4:q G3+Bb3+D4:e)
+25 LH2: g:Bb1:e Bb2:h.
+# page 182 system 1 starts bar 26
+# bar 26: f > p (hairpin in the first two beats)
+26 RH1: dyn:f hp:> A5:q>( F5:q hp:end dyn:p G5:e3 F5:e3 E5:e3
+26 LH1: r:e A3+D4+F4:q( F3+A3+D4:e) r:e G3+Bb3+E4:e-
+26 LH2: D2+D3:h.>
+27 RH1: D5:h) E5:e( F5:e
+27 LH1: r:e F3+A3+D4:q F3+A3+D4:e r:e A3+D4+F4:e-
+27 LH2: D2+D3:h.>
+# page 182 system 2 starts bar 28
+28 RH1: G5:e( E5:e C5:q F5:e3 D5:e3 Bb4:e3
+28 LH1: r:e C4+E4+G4:q( G3+C4+E4:e) r:e F3+Bb3+D4:e-
+28 LH2: C2+C3:h Bb1+Bb2:q
+# bar 29: p, hairpin < from the last eighth into bar 30
+29 RH1: E5:h~ E5:e) dyn:p hp:< C#5+C#6:e(
+29 LH1: r:e E3+A3+C#4:q A3+C#4+E4:q r:e
+29 LH2: A1+A2:h.
+# bar 30: con anima. A stray "(1" fingering-like mark at the start of the RH. RH2 = F5 half note stemmed up beside the E5 of the first chord.
+30 RH1: E5+E6:q hp:end D5+D6:q) Bb4+D5+F5+Bb5:e. A4+A5:s
+30 RH2: F5:h s:q
+30 LH1: r:e G3+Bb3+D4+F4:q G3+Bb3+D4+F4:q G3+Bb3+D4+F4:e
+30 LH2: g:G1:e G2:h~ G2:e r:e
+# page 182 system 3 starts bar 31
+# bar 31: poco affrett. e cres.
+31 RH1: C5+F5+C6:q~ C5+F5+C6:e3( D5+D6:e3 E5+E6:e3 F5+A5+F6:e3 E5+E6:e3 F5+F6:e3)
+31 LH1: r:e A3+C4+F4:q A3+C4+F4:e s:q
+31 LH2: g:A1:e A2:q~ A2:e r:e D2+D3:e A3+C4+F4:e
+# bar 32: hairpin < through the bar; rall. on the last beat (tenuto on its three chords). RH2/LH stems-up voices as printed. Printed RH chord on beat 3 note 2 has no accidental (Eb) against Mimì's E natural.
+32 RH1: hp:< G4+G5:e3( A4+A5:e3 Bb4+Bb5:e3) C5+C6:e3( B4+B5:e3 C5+C6:e3) D4+Bb4+D5:e3- Eb4+Bb4+Eb5:e3- F4+Bb4+F5:e3- hp:end
+32 RH2: D5:q F5:q s:q
+32 LH1: G3:e3( A3:e3 Bb3:e3) D4:e3( B3:e3 D4:e3) Bb2+Bb3:q3( A2+A3:e3)
+32 LH2: Bb2:q A2+F3:qa s:q
+# page 183 system 1 starts bar 33
+# bar 33: ff; rall. dotted line continues from bar 32. RH2 = D5 stemmed up beside the first triplet chord.
+33 RH1: dyn:ff Bb4+D5+F5+Bb5:h> A4+A5:e3( G4+G5:e3 F4+F5:e3)
+33 RH2: s:h D5:q
+33 LH1: r:e G3+Bb3+D4+G4:q G3+Bb3+D4+G4:e r:e A3+D4:e
+33 LH2: G1+G2:h> A1+A2:q
+# bar 34: rit. (beats 1-2), hairpin > , a tempo at beat 3. RH2 = Bb4 stemmed up in the first triplet chord.
+34 RH1: hp:> G4+D5+G5:q~ G4+D5+G5:e A4+D5+A5:e> G4+G5:e3> F4+F5:e3- E4+E5:e3- hp:end
+34 RH2: s:h Bb4:q
+34 LH1: r:e Bb3+D4+E4:q Bb3+D4+E4:e C3+G3+Bb3+E4:qa
+34 LH2: Bb1+Bb2:h s:q
+# page 183 system 2 starts bar 35
+# bar 35: p dim. molto
+35 RH1: dyn:p word:dim._molto F4+A4+F5:h.~
+35 LH1: r:e F3+A3+C4:q F3+A3+C4:q F3+A3+C4:e
+35 LH2: F1+F2:h.~
+# bar 36: pp, hairpin >
+36 RH1: dyn:pp hp:> F4+A4+F5:h~ F4+A4+F5:e hp:end r:e
+36 LH1: F3+A3+C4:e F3+A3+C4:q F3+A3+C4:q F3+A3+C4:e
+36 LH2: F1+F2:h~ F1+F2:e r:e
+# bar 37: (10) dolce, p
+37 RH1: dyn:p word:dolce F5:e( Db5:e Bb4:h)
+37 LH1: r:e Bb3+Db4+F4:q Bb3+Db4+Gb4:q Bb3+Db4+Gb4:e~
+37 LH2: g:Bb1:e Bb2:h.~
+# page 183 system 3 starts bar 38. RH: RH1 = stems-down voice, RH2 = stems-up voice (dotted-eighth rest, then 16ths with tenuto).
+38 RH1: Db5:e( Bb4:e Gb4:q) Ab4:e-( Bb4:e-
+38 RH2: s:q r:e. Db5:s( Eb5:s- F5:s- Eb5:s- Db5:s-)
+38 LH1: Bb3+Db4+Gb4:e Bb3+Db4+Gb4:q Bb3+Eb4+Gb4:q Bb3+Db4+Gb4:e
+38 LH2: Bb2:h.
+# bar 39: hairpin < from beat 1 to the end of the bar
+39 RH1: hp:< Eb5:e Ab4:e~) Ab4:q* g:Gb4:e( F5:q) hp:end
+39 RH2: C5:h s:q
+39 LH1: r:e Ab3+C4+Gb4:q Ab3+C4+Gb4:q Ab3+C4+Gb4:e
+39 LH2: g:Ab1:e Ab2:h.

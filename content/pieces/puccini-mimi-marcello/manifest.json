@@ -1,0 +1,145 @@
+{
+ "editionId": "puccini-mimi-marcello",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Mimì?!",
+ "subtitle": "Marcello finds Mimì at the toll gate and she begs him to help her and Rodolfo part, La bohème, Act 3",
+ "kind": "duet",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Marcello comes out of the tavern: the month he and Musetta have spent there",
+   "start": "1",
+   "end": "20"
+  },
+  {
+   "id": "b",
+   "label": "C'è Rodolfo? Mimì cannot go in: Rodolfo's jealousy (Andante)",
+   "start": "21",
+   "end": "35"
+  },
+  {
+   "id": "c",
+   "label": "Un passo, un detto: his suspicions, Mi grida ad ogni istante",
+   "start": "36",
+   "end": "51"
+  },
+  {
+   "id": "d",
+   "label": "Quando s'è come voi: they had better part (I.° Tempo)",
+   "start": "52",
+   "end": "68"
+  },
+  {
+   "id": "e",
+   "label": "Rodolfo asleep inside; Da ieri ho l'ossa rotte (Andante mosso)",
+   "start": "69",
+   "end": "82"
+  },
+  {
+   "id": "f",
+   "label": "Rodolfo wakes: Marcello sends Mimì home, and she hides (Allegretto)",
+   "start": "83",
+   "end": "113"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 3",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 179-191 (from Marcello's entrance, page 179 system 3, across the Allegro at figure (8), to the end of page 191, before Rodolfo's entrance, 113 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. The unlabelled instrumental staff printed above the piano on page 191 (bars 102-108) is played in the piano's right hand. Tempo from the printed Andante ♩ = 48 at figure (9), which returns as I.° Tempo and, as \"lo stesso movimento\", at the Andante mosso; bars 1-3 continue Act 3's Andantino mosso ♩ = 112 (page 167); the Allegro, Moderato, Vivo, Sostenendo molto, Lento a piacere, Allegretto and Poco meno are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
