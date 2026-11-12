@@ -571,3 +571,17 @@
   .rp-head.rp-head .rp-name { grid-column: 2; grid-row: 1; align-self: end; margin: 18px 0 0; }
   .rp-head.rp-head .rp-meta { grid-column: 2; grid-row: 2; align-self: start; margin: 4px 0 0; }
 }
+
+/* home's first card: the piece's name, one line for who and which opera, one small line for where in it; no eyebrow */
+.pv-hero .pv-hero-title { margin: 0; }
+.pv-hero .pv-hero-meta { margin: 10px 0 0; font: 400 16px/1.4 var(--font-sans); color: var(--ink); display: flex; flex-wrap: wrap; align-items: baseline; }
+.pv-hero .pv-hero-meta > span[aria-hidden] { margin: 0 .4em; color: color-mix(in srgb, var(--ink) 45%, transparent); }
+.pv-hero .pv-hero-meta i { font: italic 500 19px/1.2 var(--font-display); }
+.pv-hero .pv-hero-detail { margin: 2px 0 0; font: 400 14px/1.4 var(--font-sans); color: color-mix(in srgb, var(--ink) 60%, transparent); }
+.pv-hero .pv-hero-detail:empty { display: none; }
+.pv-hero .pv-hero-track { display: block; margin-top: 12px; max-width: 260px; }
+.pv-hero .pv-hero-act { margin-top: 20px; }
+.pv-hero .pv-hero-text { gap: 0; }
+.pv-hero .pv-hero-title { font-size: clamp(38px, 4.4vw, 56px); line-height: 1.02; }
+.pv-hero .pv-hero-title.is-long { font-size: clamp(32px, 3.6vw, 44px); }
+@media (max-width: 640px) { .pv-hero .pv-hero-title, .pv-hero .pv-hero-title.is-long { font-size: 34px; } }

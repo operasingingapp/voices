@@ -2859,26 +2859,22 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
   const resume = hero && (
     <section className={`pv-hero${heroPic ? " has-pic" : ""}`} {...tone(hero)} aria-labelledby="hm-resume-h">
       <div className="pv-hero-text">
-        <p className="pv-eyebrow">{last ? "Continue" : "Your first piece"}</p>
         <h2 className={`pv-hero-title${hero.piece.title.length > 26 ? " is-long" : ""}`} id="hm-resume-h" lang={hero.opera.lang}>
           {hero.piece.title}
         </h2>
-        {actKind(hero.piece) && <p className="pv-hero-mark">{actKind(hero.piece)}</p>}
-        {last && last.bar && last.bar !== "1" ? (
-          <div className="pv-hero-place">
-            {typeof last.p === "number" && (
-              <span className="hm-track" role="img" aria-label={`${Math.round(last.p * 100)}% of the way through`}>
-                <i style={{ width: `${Math.max(1.5, last.p * 100)}%` }} />
-              </span>
-            )}
-          </div>
-        ) : !last && hero.piece.when ? (
-          <p className="pv-hero-place">{hero.piece.when}</p>
-        ) : null}
-        <p className="pv-hero-who">
-          {hero.ch.name} in <i lang={hero.opera.lang}>{hero.opera.title}</i>
-          {last?.t ? <> · {relTime(last.t)}</> : null}
+        <p className="pv-hero-meta">
+          {hero.ch.name}
+          <span aria-hidden="true"> · </span>
+          <i lang={hero.opera.lang}>{hero.opera.title}</i>
         </p>
+        <p className="pv-hero-detail">
+          {[!last && hero.piece.when ? hero.piece.when : actKind(hero.piece), last?.t ? relTime(last.t) : ""].filter(Boolean).join(" · ")}
+        </p>
+        {last && last.bar && last.bar !== "1" && typeof last.p === "number" && (
+          <span className="hm-track pv-hero-track" role="img" aria-label={`${Math.round(last.p * 100)}% of the way through`}>
+            <i style={{ width: `${Math.max(1.5, last.p * 100)}%` }} />
+          </span>
+        )}
         <div className="pv-hero-act">
           <button
             type="button"
