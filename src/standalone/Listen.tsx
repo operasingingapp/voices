@@ -5,7 +5,7 @@
 import { useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { Performance, beatInfo } from "../../shared/timeline";
 import { usePlayback } from "../audio/usePlayback";
-import { useTicker } from "../hooks";
+import { useLocalSetting, useTicker } from "../hooks";
 import { ScoreView, stripCrop, type CursorReading, type MarkerReading } from "../score/ScoreView";
 import type { ScoreLayout } from "../score/layout";
 import { pieceData } from "./pieces";
@@ -46,6 +46,8 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
   cursorRef.current = () => (engine ? { q: engine.displayQ(), show: true, playing: engine.state === "playing", label: playing ? "Playing" : "You are here" } : null);
   const markerRef = useRef<() => MarkerReading | null>(() => null);
 
+  // one line scrolling sideways, or the page (systems one under another): the same choice as on the practice screen
+  const [pageView, setPageView] = useLocalSetting("p:pageView", false);
   // the line of music fits the stage's height, as on the practice screen
   const stageRef = useRef<HTMLElement>(null);
   const [stageH, setStageH] = useState(0);
@@ -61,8 +63,10 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
   // a piano line is lower than the standard sung line, so it may grow a little more; on a phone it stays small
   // enough to show a few bars
   const fit = natural && stageH ? (stageH - 24 - CROP_PAD) / Math.max(natural, STANDARD_LINE_H * 0.6) : Infinity;
-  const roomCap = typeof window !== "undefined" && window.innerWidth < 700 ? 0.8 : 1.1;
-  const fitZoom = Math.max(0.55, Math.min(MAX_ZOOM, roomCap, Math.floor(fit * 40) / 40));
+  // a piano reduction reads best at the size of a printed page: the line stays near it however tall the screen is
+  const phone = typeof window !== "undefined" && window.innerWidth < 700;
+  const roomCap = phone ? 0.62 : 0.8;
+  const fitZoom = pageView ? (phone ? 0.5 : 0.68) : Math.max(0.5, Math.min(MAX_ZOOM, roomCap, Math.floor(fit * 40) / 40));
   const heldZoom = useRef<number | null>(null);
   if (!playing) heldZoom.current = null;
   else if (heldZoom.current === null) heldZoom.current = fitZoom;
@@ -134,6 +138,22 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
             </a>
           </p>
         </div>
+        <div className="cp-seg view-switch layout-switch" role="group" aria-label="How the music is laid out">
+          <button type="button" aria-pressed={!pageView} onClick={() => setPageView(false)} title="One line, scrolling sideways">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" d="M2.5 8.5h14M2.5 12h14M2.5 15.5h14" />
+              <path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M18.5 8.5 22 12l-3.5 3.5" />
+            </svg>
+            <span className="label">Line</span>
+          </button>
+          <button type="button" aria-pressed={pageView} onClick={() => setPageView(true)} title="Page: systems one under another, scrolling down">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4.5" y="2.5" width="15" height="19" rx="2.5" fill="none" stroke="currentColor" strokeWidth="2" />
+              <path fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" d="M8 7.5h8M8 10h8M8 14.5h8M8 17h8" />
+            </svg>
+            <span className="label">Page</span>
+          </button>
+        </div>
       </header>
 
       <main className="p-stage" ref={stageRef} style={{ gridRow: 2 }}>
@@ -153,7 +173,7 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
           onTap={onTap}
           onUserScroll={() => undefined}
           onLayout={onLayout}
-          strip
+          strip={!pageView}
           ink="#0b0b0b"
           nowNoteParts={[parts[0].source.xmlPartId]}
         />

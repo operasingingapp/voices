@@ -416,3 +416,14 @@
 .page-label.is-dragging { z-index: 8; cursor: grabbing; box-shadow: 0 6px 18px -6px rgba(26, 24, 20, 0.35); transition: none; }
 .page-label.is-dragging .page-grip { cursor: grabbing; }
 .page-label.is-target { box-shadow: 0 0 0 2px var(--now-mark); }
+
+/* ---- Listen: the Line / Page switch at the right of the header; on a phone, icons only, beside the back button ---- */
+.practice.listen .p-head { display: flex; align-items: center; gap: 16px; }
+.practice.listen .p-head .p-title { flex: 1 1 auto; min-width: 0; order: 1; }
+.practice.listen .p-head .layout-switch { flex: none; margin-left: auto; order: 2; }
+@media (max-width: 699px) {
+  .practice.listen .p-head { flex-wrap: nowrap; }
+  .practice.listen .p-head .layout-switch .label { display: none; }
+  .practice.listen .p-head .layout-switch button { min-width: 44px; padding: 0 10px; }
+  .practice.listen .p-head .layout-switch svg { width: 20px; height: 20px; }
+}
