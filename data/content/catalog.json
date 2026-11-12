@@ -156,6 +156,40 @@
     }
   },
   {
+    "editionId": "mozart-al-fato-dan-legge",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-al-fato-dan-legge@1.0.0-peters#34c9578807",
+    "title": "Al fato dan legge",
+    "subtitle": "Ferrando and Guglielmo: duettino from Così fan tutte, Act 1 (No. 7)",
+    "kind": "duettino",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 38,
+    "durationSec": 89,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 20,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-andiam-bel-paggio",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-andiam-bel-paggio@1.0.0-klengel#43d7b3f31a",
@@ -305,6 +339,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 23,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-bella-vita-militar",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-bella-vita-militar@1.0.0-peters#6a0de334d3",
+    "title": "Bella vita militar",
+    "subtitle": "Chorus of soldiers: chorus from Così fan tutte, Act 1 (No. 8)",
+    "kind": "chorus",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "soprano",
+        "name": "Chorus sopranos",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      },
+      {
+        "id": "alto",
+        "name": "Chorus altos",
+        "voiceType": "Alto",
+        "partKey": "alto"
+      },
+      {
+        "id": "tenor",
+        "name": "Chorus tenors",
+        "voiceType": "Tenor",
+        "partKey": "tenor"
+      },
+      {
+        "id": "bass",
+        "name": "Chorus basses",
+        "voiceType": "Bass",
+        "partKey": "bass"
+      }
+    ],
+    "measures": 51,
+    "durationSec": 107,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "1/4",
+    "languageStatus": {
+      "phrases": 27,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1666,6 +1746,52 @@
     }
   },
   {
+    "editionId": "mozart-la-commedia-e-graziosa",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-la-commedia-e-graziosa@1.0.0-peters#d376608683",
+    "title": "La comedia è graziosa",
+    "subtitle": "Don Alfonso, Ferrando, Fiordiligi and Dorabella: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 8,
+    "durationSec": 23,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 6,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-la-mia-dorabella",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-la-mia-dorabella@1.0.0-peters#a2fab7629a",
@@ -1848,6 +1974,58 @@
     }
   },
   {
+    "editionId": "mozart-non-piangere-idol-mio",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-non-piangere-idol-mio@1.0.0-peters#dd135a573e",
+    "title": "Non piangere, idol mio",
+    "subtitle": "Guglielmo, Ferrando, Don Alfonso, Fiordiligi and Dorabella: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 17,
+    "durationSec": 45,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 15,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-non-piu-andrai",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-non-piu-andrai@1.0.0-klengel#9b0e353058",
@@ -1899,6 +2077,58 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 36,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-non-ve-piu-tempo-amici",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-non-ve-piu-tempo-amici@1.0.0-peters#00c2bed4da",
+    "title": "Non v'è più tempo, amici",
+    "subtitle": "Don Alfonso, Fiordiligi, Dorabella, Ferrando and Guglielmo: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 12,
+    "durationSec": 28,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 14,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2642,6 +2872,58 @@
     }
   },
   {
+    "editionId": "mozart-sento-o-dio",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-sento-o-dio@1.0.0-peters#78352b4164",
+    "title": "Sento, o Dio, che questo piede",
+    "subtitle": "Fiordiligi, Dorabella, Ferrando, Guglielmo and Don Alfonso: quintet from Così fan tutte, Act 1 (No. 6)",
+    "kind": "quintetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 108,
+    "durationSec": 231,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 104,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-signora-ella-mi-disse",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-signora-ella-mi-disse@1.0.0-klengel#3affd9fcc4",
@@ -2769,6 +3051,46 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-stelle-per-carita",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-stelle-per-carita@1.0.0-peters#a4e3506915",
+    "title": "Stelle, per carità, Signor Alfonso",
+    "subtitle": "Fiordiligi, Dorabella and Don Alfonso: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 23,
+    "durationSec": 56,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 26,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -3326,6 +3648,34 @@
     }
   },
   {
+    "editionId": "mozart-vorrei-dir",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-vorrei-dir@1.0.0-peters#cc17ca98c5",
+    "title": "Vorrei dir",
+    "subtitle": "Don Alfonso: aria from Così fan tutte, Act 1 (No. 5)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 38,
+    "durationSec": 37,
+    "hasRepeats": false,
+    "keySignature": "A♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-ahi-qual-dolore",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-ahi-qual-dolore@1.0.0-carignani#b3b82bc6c1",
@@ -3638,6 +3988,40 @@
     }
   },
   {
+    "editionId": "puccini-donde-lieta-usci",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-donde-lieta-usci@1.0.0-carignani#584e14cd4f",
+    "title": "Vai?… Donde lieta uscì",
+    "subtitle": "Mimì says goodbye to Rodolfo without bitterness, asks him to gather up her few things and lets him keep her pink bonnet, La bohème, Act 3",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      }
+    ],
+    "measures": 39,
+    "durationSec": 122,
+    "hasRepeats": false,
+    "keySignature": "D♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-ehi-rodolfo",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-ehi-rodolfo@1.0.0-carignani#81b1990b9c",
@@ -3805,6 +4189,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-mimi-e-tanto-malata",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-mimi-e-tanto-malata@1.0.0-carignani#dd15d53091",
+    "title": "Mimì è tanto malata!",
+    "subtitle": "Rodolfo tells Marcello that Mimì is dying and he is too poor to save her, while she listens in hiding until her coughing gives her away, La bohème, Act 3",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      }
+    ],
+    "measures": 60,
+    "durationSec": 163,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 34,
       "withAudio": 0,
       "reviewed": 0
     }

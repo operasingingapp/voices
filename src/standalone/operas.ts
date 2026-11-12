@@ -1501,6 +1501,7 @@ export const OPERAS: Opera[] = [
       "title": "Sento, o Dio, che questo piede",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Sento, o Dio, che questo piede",
+      "editionId": "mozart-sento-o-dio",
       "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
      },
      {
@@ -1539,6 +1540,34 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Mi par, che stamattina volentieri",
       "editionId": "mozart-mi-par-che-stamattina",
       "when": "Act 1, in the garden by the sea, straight after “Ah guarda, sorella”: the sisters have sworn on their fiancés' portraits to stay true, and are waiting for them to come"
+     },
+     {
+      "title": "Stelle, per carità, Signor Alfonso",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Stelle, per carità, Signor Alfonso",
+      "editionId": "mozart-stelle-per-carita",
+      "when": "Act 1, in the garden by the sea, straight after “Vorrei dir”: Don Alfonso has stammered that he cannot bring himself to tell the sisters the terrible news"
+     },
+     {
+      "title": "Non piangere, idol mio",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non piangere, idol mio",
+      "editionId": "mozart-non-piangere-idol-mio",
+      "when": "Act 1, straight after “Sento, o Dio, che questo piede”: the sisters have begged the officers not to go, and all five have lamented that fate cheats human hopes"
+     },
+     {
+      "title": "La comedia è graziosa",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: La comedia è graziosa",
+      "editionId": "mozart-la-commedia-e-graziosa",
+      "when": "Act 1, straight after “Al fato dan legge”: the officers have promised their sweethearts to come back happily to their arms"
+     },
+     {
+      "title": "Non v'è più tempo, amici",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non v'è più tempo, amici",
+      "editionId": "mozart-non-ve-piu-tempo-amici",
+      "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
      }
     ]
    },
@@ -1566,6 +1595,7 @@ export const OPERAS: Opera[] = [
       "title": "Sento, o Dio, che questo piede",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Sento, o Dio, che questo piede",
+      "editionId": "mozart-sento-o-dio",
       "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
      },
      {
@@ -1604,6 +1634,34 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Mi par, che stamattina volentieri",
       "editionId": "mozart-mi-par-che-stamattina",
       "when": "Act 1, in the garden by the sea, straight after “Ah guarda, sorella”: the sisters have sworn on their fiancés' portraits to stay true, and are waiting for them to come"
+     },
+     {
+      "title": "Stelle, per carità, Signor Alfonso",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Stelle, per carità, Signor Alfonso",
+      "editionId": "mozart-stelle-per-carita",
+      "when": "Act 1, in the garden by the sea, straight after “Vorrei dir”: Don Alfonso has stammered that he cannot bring himself to tell the sisters the terrible news"
+     },
+     {
+      "title": "Non piangere, idol mio",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non piangere, idol mio",
+      "editionId": "mozart-non-piangere-idol-mio",
+      "when": "Act 1, straight after “Sento, o Dio, che questo piede”: the sisters have begged the officers not to go, and all five have lamented that fate cheats human hopes"
+     },
+     {
+      "title": "La comedia è graziosa",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: La comedia è graziosa",
+      "editionId": "mozart-la-commedia-e-graziosa",
+      "when": "Act 1, straight after “Al fato dan legge”: the officers have promised their sweethearts to come back happily to their arms"
+     },
+     {
+      "title": "Non v'è più tempo, amici",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non v'è più tempo, amici",
+      "editionId": "mozart-non-ve-piu-tempo-amici",
+      "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
      }
     ]
    },
@@ -1660,12 +1718,14 @@ export const OPERAS: Opera[] = [
       "title": "Sento, o Dio, che questo piede",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Sento, o Dio, che questo piede",
+      "editionId": "mozart-sento-o-dio",
       "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
      },
      {
       "title": "Al fato dan legge",
       "kind": "Duettino · Act 1",
       "id": "Act 1: Al fato dan legge",
+      "editionId": "mozart-al-fato-dan-legge",
       "when": "Act 1, during the farewell: Fiordiligi has asked Guglielmo for his sword, and the men ask the sisters not to speak of such dark omens"
      },
      {
@@ -1723,6 +1783,27 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Scioccherie di poeti!",
       "editionId": "mozart-scioccherie-di-poeti",
       "when": "Act 1, in the coffee house, straight after “È la fede delle femmine”: Don Alfonso has just compared women's fidelity to the Arabian phoenix, which everyone talks of and no one has found"
+     },
+     {
+      "title": "Non piangere, idol mio",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non piangere, idol mio",
+      "editionId": "mozart-non-piangere-idol-mio",
+      "when": "Act 1, straight after “Sento, o Dio, che questo piede”: the sisters have begged the officers not to go, and all five have lamented that fate cheats human hopes"
+     },
+     {
+      "title": "La comedia è graziosa",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: La comedia è graziosa",
+      "editionId": "mozart-la-commedia-e-graziosa",
+      "when": "Act 1, straight after “Al fato dan legge”: the officers have promised their sweethearts to come back happily to their arms"
+     },
+     {
+      "title": "Non v'è più tempo, amici",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non v'è più tempo, amici",
+      "editionId": "mozart-non-ve-piu-tempo-amici",
+      "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
      }
     ]
    },
@@ -1758,12 +1839,14 @@ export const OPERAS: Opera[] = [
       "title": "Sento, o Dio, che questo piede",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Sento, o Dio, che questo piede",
+      "editionId": "mozart-sento-o-dio",
       "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
      },
      {
       "title": "Al fato dan legge",
       "kind": "Duettino · Act 1",
       "id": "Act 1: Al fato dan legge",
+      "editionId": "mozart-al-fato-dan-legge",
       "when": "Act 1, during the farewell: Fiordiligi has asked Guglielmo for his sword, and the men ask the sisters not to speak of such dark omens"
      },
      {
@@ -1821,6 +1904,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Scioccherie di poeti!",
       "editionId": "mozart-scioccherie-di-poeti",
       "when": "Act 1, in the coffee house, straight after “È la fede delle femmine”: Don Alfonso has just compared women's fidelity to the Arabian phoenix, which everyone talks of and no one has found"
+     },
+     {
+      "title": "Non piangere, idol mio",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non piangere, idol mio",
+      "editionId": "mozart-non-piangere-idol-mio",
+      "when": "Act 1, straight after “Sento, o Dio, che questo piede”: the sisters have begged the officers not to go, and all five have lamented that fate cheats human hopes"
+     },
+     {
+      "title": "Non v'è più tempo, amici",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non v'è più tempo, amici",
+      "editionId": "mozart-non-ve-piu-tempo-amici",
+      "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
      }
     ]
    },
@@ -1862,12 +1959,14 @@ export const OPERAS: Opera[] = [
       "title": "Vorrei dir",
       "kind": "Aria · Act 1",
       "id": "Act 1: Vorrei dir",
+      "editionId": "mozart-vorrei-dir",
       "when": "Act 1, the sisters, waiting for their fiancés, see Don Alfonso arrive alone and apparently in tears, and beg him to tell them what has happened"
      },
      {
       "title": "Sento, o Dio, che questo piede",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Sento, o Dio, che questo piede",
+      "editionId": "mozart-sento-o-dio",
       "when": "Act 1, Don Alfonso has told the sisters that a royal order sends the officers to war at once, and calls the two men in to say goodbye"
      },
      {
@@ -1902,6 +2001,34 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Mi par, che stamattina volentieri",
       "editionId": "mozart-mi-par-che-stamattina",
       "when": "Act 1, in the garden by the sea, straight after “Ah guarda, sorella”: the sisters have sworn on their fiancés' portraits to stay true, and are waiting for them to come"
+     },
+     {
+      "title": "Stelle, per carità, Signor Alfonso",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Stelle, per carità, Signor Alfonso",
+      "editionId": "mozart-stelle-per-carita",
+      "when": "Act 1, in the garden by the sea, straight after “Vorrei dir”: Don Alfonso has stammered that he cannot bring himself to tell the sisters the terrible news"
+     },
+     {
+      "title": "Non piangere, idol mio",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non piangere, idol mio",
+      "editionId": "mozart-non-piangere-idol-mio",
+      "when": "Act 1, straight after “Sento, o Dio, che questo piede”: the sisters have begged the officers not to go, and all five have lamented that fate cheats human hopes"
+     },
+     {
+      "title": "La comedia è graziosa",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: La comedia è graziosa",
+      "editionId": "mozart-la-commedia-e-graziosa",
+      "when": "Act 1, straight after “Al fato dan legge”: the officers have promised their sweethearts to come back happily to their arms"
+     },
+     {
+      "title": "Non v'è più tempo, amici",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non v'è più tempo, amici",
+      "editionId": "mozart-non-ve-piu-tempo-amici",
+      "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
      }
     ]
    }
@@ -2473,6 +2600,7 @@ export const OPERAS: Opera[] = [
       "title": "Vai?… Donde lieta uscì",
       "kind": "Aria · Act 3",
       "id": "Act 3: Vai?… Donde lieta uscì",
+      "editionId": "puccini-donde-lieta-usci",
       "when": "Act 3, Mimì has overheard that she is dying, and Marcello has gone back into the tavern"
      },
      {
@@ -2558,6 +2686,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 3",
       "id": "Act 3: Marcello, finalmente!… Mimì è tanto malata",
       "editionId": "puccini-marcello-finalmente"
+     },
+     {
+      "title": "Mimì è tanto malata!",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Mimì è tanto malata!",
+      "editionId": "puccini-mimi-e-tanto-malata"
      }
     ]
    },
@@ -2583,6 +2717,7 @@ export const OPERAS: Opera[] = [
      {
       "title": "Donde lieta uscì",
       "kind": "Aria · Act 3",
+      "editionId": "puccini-donde-lieta-usci",
       "when": "Act 3, Mimì has overheard that she is dying, and Marcello has gone back into the tavern"
      },
      {
@@ -2670,6 +2805,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 3",
       "id": "Act 3: Marcello, finalmente!… Mimì è tanto malata",
       "editionId": "puccini-marcello-finalmente"
+     },
+     {
+      "title": "Mimì è tanto malata!",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Mimì è tanto malata!",
+      "editionId": "puccini-mimi-e-tanto-malata"
      }
     ]
    },
@@ -2776,6 +2917,12 @@ export const OPERAS: Opera[] = [
       "kind": "Duet · Act 3",
       "id": "Act 3: Marcello, finalmente!… Mimì è tanto malata",
       "editionId": "puccini-marcello-finalmente"
+     },
+     {
+      "title": "Mimì è tanto malata!",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Mimì è tanto malata!",
+      "editionId": "puccini-mimi-e-tanto-malata"
      }
     ]
    },
@@ -3499,7 +3646,7 @@ export interface RunningNumber {
 /** the instrumental numbers with music in the app: opera → the running order's title → edition */
 const INSTRUMENTAL: Record<string, Record<string, string>> = {
   figaro: { Sinfonia: "mozart-figaro-sinfonia", "Giovani liete": "mozart-giovani-liete", "Giovani liete (repeated)": "mozart-giovani-liete-reprise", "Ricevete, o padroncina": "mozart-ricevete-o-padroncina" },
-  cosi: { Sinfonia: "mozart-cosi-sinfonia" },
+  cosi: { Sinfonia: "mozart-cosi-sinfonia", "Bella vita militar": "mozart-bella-vita-militar" },
 };
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {
