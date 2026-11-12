@@ -519,3 +519,9 @@
 .pv-below, .pv-below.is-single { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
 .pv-below .pv-role-line { margin-top: 28px; }
 .pv-role-go { border-top-color: var(--ink); }
+
+/* line view: the dotted grip at the left of each part's name says the line can be dragged to another place */
+.lane-label .lane-grip { width: 8px; height: 13px; flex: none; margin-right: 3px; fill: currentColor; opacity: 0.45; cursor: grab; }
+.lane-label:hover .lane-grip { opacity: 0.8; }
+.lane-label.lane-label--side { cursor: grab; }
+.lane-label.lane-label--side:active { cursor: grabbing; }

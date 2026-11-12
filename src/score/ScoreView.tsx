@@ -401,6 +401,11 @@ export function ScoreView(props: Props) {
                 onPointerCancel={() => setDrag(null)}
                 aria-label={`${props.laneLabels![l.partId]}: move, hide or mute this line`}
               >
+                {useVrvRef.current && props.strip && props.onLaneMove && (
+                  <svg className="lane-grip" viewBox="0 0 10 16" aria-hidden="true">
+                    {[3, 8, 13].flatMap((y) => [<circle key={`a${y}`} cx="3" cy={y} r="1.3" />, <circle key={`b${y}`} cx="7" cy={y} r="1.3" />])}
+                  </svg>
+                )}
                 {useVrvRef.current && props.laneFaces?.[l.partId] ? (
                   typeof props.laneFaces[l.partId] === "string" ? (
                     <span className={`lane-abbr${props.laneYou === l.partId ? " is-you" : ""}`} title={props.laneLabels![l.partId]}>
