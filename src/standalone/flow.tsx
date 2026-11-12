@@ -3080,7 +3080,6 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
       {resume}
       <div className={`pv-below${upNextEl ? "" : " is-single"}`}>
         {upNextEl}
-        {cur && <RoleProgress ctx={ctx} cur={cur} recs={recs} here={last && last.opera.id === cur.opera.id && last.ch.id === cur.ch.id ? last.index : -1} />}
       </div>
       {roles.length > 1 && (
         // every role you are learning, side by side: a tap makes it the current role and opens it
@@ -3128,31 +3127,6 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
         </section>
       )}
     </main>
-  );
-}
-
-/**
- * The current role in one quiet line under "up next": how many of its pieces are learned and ready, and the way to
- * all of them (the act-by-act strips were more chart than help).
- */
-function RoleProgress({ ctx, cur }: { ctx: Ctx; cur: { opera: Opera; ch: Character }; recs: Record<string, HomeRef>; here: number }) {
-  const { opera, ch } = cur;
-  const pr = progressOf(ctx, opera, ch);
-  const ready = ch.pieces.filter((p) => p.editionId).length;
-  const learned = ch.pieces.filter((p) => pr.set.has(pieceKey(p))).length;
-  const bits = [learned ? `${learned} learned` : "", `${ready} of ${ch.pieces.length} pieces ready to sing`].filter(Boolean);
-  return (
-    <section className="pv-role-line" aria-label={`${ch.name}: all pieces`}>
-      <button type="button" className="pv-role-go" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
-        <span className="pv-role-name">
-          All of {ch.name}'s pieces
-        </span>
-        <span className="pv-role-sum">{bits.join(" · ")}</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      </button>
-    </section>
   );
 }
 
