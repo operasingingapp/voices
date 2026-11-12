@@ -1494,6 +1494,7 @@ export const OPERAS: Opera[] = [
       "title": "Ah guarda, sorella",
       "kind": "Duetto · Act 1",
       "id": "Act 1: Ah guarda, sorella",
+      "editionId": "mozart-ah-guarda-sorella",
       "when": "Act 1, in a garden by the sea, the sisters look at the portraits of their fiancés that they wear at their sides"
      },
      {
@@ -1531,6 +1532,13 @@ export const OPERAS: Opera[] = [
       "kind": "Duetto · Act 2",
       "id": "Act 2: Fra gli amplessi in pochi istanti",
       "when": "Act 2, Fiordiligi has sent for the officers' uniforms and put on a hat, meaning to join her fiancé at the front; Guglielmo and Don Alfonso are watching unseen"
+     },
+     {
+      "title": "Mi par, che stamattina volentieri",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par, che stamattina volentieri",
+      "editionId": "mozart-mi-par-che-stamattina",
+      "when": "Act 1, in the garden by the sea, straight after “Ah guarda, sorella”: the sisters have sworn on their fiancés' portraits to stay true, and are waiting for them to come"
      }
     ]
    },
@@ -1551,6 +1559,7 @@ export const OPERAS: Opera[] = [
       "title": "Ah guarda, sorella",
       "kind": "Duetto · Act 1",
       "id": "Act 1: Ah guarda, sorella",
+      "editionId": "mozart-ah-guarda-sorella",
       "when": "Act 1, in a garden by the sea, the sisters look at the portraits of their fiancés that they wear at their sides"
      },
      {
@@ -1588,6 +1597,13 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 2",
       "id": "Act 2: È amore un ladroncello",
       "when": "Act 2, Fiordiligi has confessed that she loves the fair stranger but says she will master herself; Dorabella tells her she had better give in"
+     },
+     {
+      "title": "Mi par, che stamattina volentieri",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par, che stamattina volentieri",
+      "editionId": "mozart-mi-par-che-stamattina",
+      "when": "Act 1, in the garden by the sea, straight after “Ah guarda, sorella”: the sisters have sworn on their fiancés' portraits to stay true, and are waiting for them to come"
      }
     ]
    },
@@ -1637,6 +1653,7 @@ export const OPERAS: Opera[] = [
       "title": "Una bella serenata",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: Una bella serenata",
+      "editionId": "mozart-una-bella-serenata",
       "when": "Act 1, the officers have bet Don Alfonso a hundred zecchini and sworn to obey him; Guglielmo asks what they will do with the money"
      },
      {
@@ -1699,6 +1716,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Fuor la spada: scegliete",
       "editionId": "mozart-fuor-la-spada",
       "when": "Act 1, straight after the opening terzetto, in the coffee house: Don Alfonso has hinted that the officers' fiancées could be unfaithful, and they draw their swords on him"
+     },
+     {
+      "title": "Scioccherie di poeti!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Scioccherie di poeti!",
+      "editionId": "mozart-scioccherie-di-poeti",
+      "when": "Act 1, in the coffee house, straight after “È la fede delle femmine”: Don Alfonso has just compared women's fidelity to the Arabian phoenix, which everyone talks of and no one has found"
      }
     ]
    },
@@ -1727,6 +1751,7 @@ export const OPERAS: Opera[] = [
       "title": "Una bella serenata",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: Una bella serenata",
+      "editionId": "mozart-una-bella-serenata",
       "when": "Act 1, the officers have bet Don Alfonso a hundred zecchini and sworn to obey him; Guglielmo asks what they will do with the money"
      },
      {
@@ -1789,6 +1814,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Fuor la spada: scegliete",
       "editionId": "mozart-fuor-la-spada",
       "when": "Act 1, straight after the opening terzetto, in the coffee house: Don Alfonso has hinted that the officers' fiancées could be unfaithful, and they draw their swords on him"
+     },
+     {
+      "title": "Scioccherie di poeti!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Scioccherie di poeti!",
+      "editionId": "mozart-scioccherie-di-poeti",
+      "when": "Act 1, in the coffee house, straight after “È la fede delle femmine”: Don Alfonso has just compared women's fidelity to the Arabian phoenix, which everyone talks of and no one has found"
      }
     ]
    },
@@ -1823,6 +1855,7 @@ export const OPERAS: Opera[] = [
       "title": "Una bella serenata",
       "kind": "Terzetto · Act 1",
       "id": "Act 1: Una bella serenata",
+      "editionId": "mozart-una-bella-serenata",
       "when": "Act 1, the officers have bet Don Alfonso a hundred zecchini and sworn to obey him; Guglielmo asks what they will do with the money"
      },
      {
@@ -1855,6 +1888,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Fuor la spada: scegliete",
       "editionId": "mozart-fuor-la-spada",
       "when": "Act 1, straight after the opening terzetto, in the coffee house: Don Alfonso has hinted that the officers' fiancées could be unfaithful, and they draw their swords on him"
+     },
+     {
+      "title": "Scioccherie di poeti!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Scioccherie di poeti!",
+      "editionId": "mozart-scioccherie-di-poeti",
+      "when": "Act 1, in the coffee house, straight after “È la fede delle femmine”: Don Alfonso has just compared women's fidelity to the Arabian phoenix, which everyone talks of and no one has found"
+     },
+     {
+      "title": "Mi par, che stamattina volentieri",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par, che stamattina volentieri",
+      "editionId": "mozart-mi-par-che-stamattina",
+      "when": "Act 1, in the garden by the sea, straight after “Ah guarda, sorella”: the sisters have sworn on their fiancés' portraits to stay true, and are waiting for them to come"
      }
     ]
    }

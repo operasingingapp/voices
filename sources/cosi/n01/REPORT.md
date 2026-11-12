@@ -33,3 +33,5 @@
 **Fresh check:** one round, one fresh agent, all 61 bars. CLEAN.
 
 **Tempo:** median track length of 4 complete recordings: Jacobs 1:53, Harnoncourt (Concertgebouw) 1:59, Muti 1:59, Böhm 2:03. The median is 1:59, so 244 quarters / 119 s gives quarter = 123.
+
+**Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.

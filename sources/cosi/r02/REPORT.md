@@ -24,3 +24,5 @@
 **Fresh check:** round 1 found one real error. In bar 17 (Alfonso, "se mangian come") the file followed the German rhythm. It was fixed to se:e, man:s, gian:s and confirmed on a crop. The rest of the round was clean.
 
 **Tempo:** median of three complete recordings: Böhm (Philharmonia, 1962) 0:59, Jacobs 1:03, Gardiner (DG, 1993) 1:04. The median is 1:03, so 98 quarters in 63 s gives quarter = 93. It is only a nominal tempo for secco recitative.
+
+**Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.

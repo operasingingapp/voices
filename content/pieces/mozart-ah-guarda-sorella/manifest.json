@@ -1,0 +1,134 @@
+{
+ "editionId": "mozart-ah-guarda-sorella",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ah guarda, sorella",
+ "subtitle": "Fiordiligi and Dorabella: duet from Così fan tutte, Act 1 (No. 4)",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ah guarda, sorella",
+   "start": "1",
+   "end": "32"
+  },
+  {
+   "id": "b",
+   "label": "Osserva tu un poco",
+   "start": "33",
+   "end": "49"
+  },
+  {
+   "id": "c",
+   "label": "Si vede un sembiante · Si vede una faccia · Felice son io",
+   "start": "50",
+   "end": "71"
+  },
+  {
+   "id": "d",
+   "label": "Se questo mio core (Allegro, to the end)",
+   "start": "72",
+   "end": "154"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 2, No. 4 Duetto",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 25–30, bars 1–154 of No. 4",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar by fresh checkers (the 64th-note runs of bars 11 and 62–64 corrected, then clean). The German singing translation is left out. Grace notes are written without a slash, as printed; the small notes of bar 86 are written as a grace-note turn. Playback tempos: Andante ♪ = 70 (♩ = 35), Allegro ♩ = 93, Adagio ♩ = 40, from the lengths of four recordings (Böhm, Jacobs, Muti, Cantelli; median about 4:58). The recordings do not split the sections, so the balance between them is an estimate; Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

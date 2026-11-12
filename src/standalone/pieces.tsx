@@ -2661,6 +2661,136 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-scioccherie-di-poeti": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 117, from the only two separate recordings of it found (Böhm 1:04, Gardiner 1:35; about 1½ minutes)",
+    },
+    notePlaceholder: "Speak it first: the officers quick and sure of themselves, Alfonso amused",
+    about: (
+      <>
+        <p>
+          The two officers call Don Alfonso's phoenix poets' nonsense and old men's foolishness. Asked what proof they have that their sweethearts will stay
+          true, they list long experience, noble upbringing, lofty thinking, promises and oaths; Alfonso adds tears, sighs, caresses and fainting fits, and
+          laughs. He offers to show them, today, that their women are like all the others, and they bet him a hundred zecchini. They swear as soldiers of
+          honour not to drop a hint to their “Penelopes” and to do whatever he tells them, and look forward to having their fun at his expense; Guglielmo
+          wonders what they will do with the money.
+        </p>
+        <p>
+          Score: the recitative after No. 2 (vocal score pages 17–19, 39 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by fresh checkers. Where the print gives a
+          second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with the print's spellings (Poeti, cóstanti,
+          sièn, Penelopi). Ferrando's first word begins in the last bar of No. 2, so this piece starts on its last syllable, and Guglielmo's last word
+          runs on into No. 3.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-una-bella-serenata": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Terzetto",
+    facts: {
+      key: "C major",
+      time: "4/4",
+      tempo: "Allegro, played at ♩ = 128 (about 2½ minutes, the median of five recordings: Böhm, Gardiner, Jacobs, Marriner, Cantelli); Mozart gives the word only",
+    },
+    notePlaceholder: "Light and quick: three men already celebrating a bet they think they have won",
+    about: (
+      <>
+        <p>
+          Ferrando plans to spend his winnings on a serenade for his goddess, Guglielmo on a banquet in honour of Venus. Don Alfonso asks if he will be one
+          of the guests; certainly, they say, and all three look forward to drinking toast after toast to the god of love. They go off, and the piano ends
+          the scene alone.
+        </p>
+        <p>
+          Score: No. 3, the Terzetto (vocal score pages 20–24, 76 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by
+          fresh checkers. Only the Italian words are kept, with the print's spellings (si Signor, anch' io). The first bar also holds Guglielmo's last two
+          syllables of the recitative before, where the print has them.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-guarda-sorella": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Duetto",
+    facts: {
+      key: "A major",
+      time: "3/8, then 2/4 (Allegro)",
+      tempo: "Andante at an eighth note = 70 (♩ = 35), then Allegro at ♩ = 93, with a short Adagio cadenza (♩ = 40); about 5 minutes in all, the median of four recordings (Böhm, Jacobs, Muti, Cantelli). The recordings do not mark where the Allegro starts, so the balance between the two speeds is an estimate; Mozart gives the words only",
+    },
+    notePlaceholder: "Each sister sings her own portrait: Fiordiligi proud, Dorabella fiery; then the vow together",
+    about: (
+      <>
+        <p>
+          In a garden by the sea, the sisters Fiordiligi and Dorabella each gaze at the portrait she wears at her side. Fiordiligi asks whether a finer
+          mouth or a nobler face could be found; Dorabella points to the fire in the eyes of hers. One sees a warrior and a lover, the other a face that
+          charms and threatens, and each declares herself happy. Together, in a quicker section, they swear that if their hearts ever change, Love may make
+          them suffer for the rest of their lives.
+        </p>
+        <p>
+          Score: No. 4, the Duetto (vocal score pages 25–30, 154 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition Peters
+          Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by
+          bar by fresh checkers. Only the Italian words are kept, and the grace notes are written as Peters prints them.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-mi-par-che-stamattina": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 110, from the only separate recording of it found (Böhm, about 1 minute)",
+    },
+    notePlaceholder: "Speak it first: the sisters playful, then alarmed when Alfonso comes in alone",
+    about: (
+      <>
+        <p>
+          Fiordiligi feels like being a little mad this morning: there is a fire in her veins, and she plans to play a trick on Guglielmo when he comes.
+          Dorabella feels something new too, and would swear that their weddings are not far off. Fiordiligi reads her palm and finds marriage there, soon.
+          But why are their bridegrooms so late? It is already six. Instead of the officers it is Don Alfonso who arrives, alone and apparently in tears,
+          and the sisters beg him to tell them what has happened.
+        </p>
+        <p>
+          Score: the recitative after No. 4 (vocal score pages 31–32, 29 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Where the print gives a
+          second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with the print's spellings (stamattina,
+          Guglielmo, astrologarti, Pì). The singers' names follow the print: Dorabella asks Alfonso what has happened and says “L'amante…”, Fiordiligi
+          “L'idol mio…”, the other way round from common libretto editions. The last bar, two beats, leads straight into No. 5, where Don Alfonso finishes
+          his line.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

@@ -29,3 +29,5 @@
 **Tempo:** median of the track lengths of complete recordings: Jacobs (harmonia mundi) 4:01, Muti (Vienna PO, 1992) 4:27, Cantelli (La Scala, live) 4:29, Böhm (Philharmonia, 1962) 4:48. The median is about 4:28.
 - The track is not split into sections, so about 50 s was assumed for the Andante.
 - Settings: quarter = 67 at bar 1 (Andante), quarter = 272 (half = 136) at bar 15 (Presto).
+
+**Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.

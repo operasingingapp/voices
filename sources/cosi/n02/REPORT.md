@@ -28,3 +28,5 @@
 **Fresh check:** one round, all 55 bars. CLEAN. Its one "unsure" item (the bar 21 blot) was re-checked by the lead at 400 dpi: a blot.
 
 **Tempo:** median of three complete recordings: Böhm 1:12, Gardiner 1:07, Barenboim (Berlin PO) 1:00. The median is 1:07, so 217 quarters in 67 s gives quarter = 194 (half = 97).
+
+**Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.

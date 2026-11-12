@@ -70,6 +70,40 @@
     }
   },
   {
+    "editionId": "mozart-ah-guarda-sorella",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-guarda-sorella@1.0.0-peters#9daf9176fc",
+    "title": "Ah guarda, sorella",
+    "subtitle": "Fiordiligi and Dorabella: duet from Così fan tutte, Act 1 (No. 4)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 154,
+    "durationSec": 294,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "3/8",
+    "languageStatus": {
+      "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-signor-signor",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-ah-signor-signor@1.0.0-klengel#95a55708af",
@@ -608,7 +642,7 @@
   {
     "editionId": "mozart-cosi-sinfonia",
     "editionVersion": "1.0.0-peters",
-    "scoreVersionId": "mozart-cosi-sinfonia@1.0.0-peters#971b2b5ce4",
+    "scoreVersionId": "mozart-cosi-sinfonia@1.0.0-peters#bd10b067c8",
     "title": "Sinfonia",
     "subtitle": "The overture to Così fan tutte, in Kurt Soldan's piano reduction",
     "kind": "overture",
@@ -805,7 +839,7 @@
   {
     "editionId": "mozart-e-la-fede-delle-femmine",
     "editionVersion": "1.0.0-peters",
-    "scoreVersionId": "mozart-e-la-fede-delle-femmine@1.0.0-peters#198b5b654b",
+    "scoreVersionId": "mozart-e-la-fede-delle-femmine@1.0.0-peters#2fa2086240",
     "title": "È la fede delle femmine",
     "subtitle": "Don Alfonso, Ferrando and Guglielmo: terzetto from Così fan tutte, Act 1 (No. 2)",
     "kind": "terzetto",
@@ -1634,7 +1668,7 @@
   {
     "editionId": "mozart-la-mia-dorabella",
     "editionVersion": "1.0.0-peters",
-    "scoreVersionId": "mozart-la-mia-dorabella@1.0.0-peters#58042543a7",
+    "scoreVersionId": "mozart-la-mia-dorabella@1.0.0-peters#a2fab7629a",
     "title": "La mia Dorabella capace non è",
     "subtitle": "Ferrando, Guglielmo and Don Alfonso: terzetto from Così fan tutte, Act 1 (No. 1)",
     "kind": "terzetto",
@@ -1723,6 +1757,46 @@
     "time": "6/8",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-mi-par-che-stamattina",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-mi-par-che-stamattina@1.0.0-peters#811ff330e0",
+    "title": "Mi par, che stamattina volentieri",
+    "subtitle": "Fiordiligi, Dorabella and Don Alfonso: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 29,
+    "durationSec": 62,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 25,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2466,6 +2540,46 @@
     }
   },
   {
+    "editionId": "mozart-scioccherie-di-poeti",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-scioccherie-di-poeti@1.0.0-peters#b31b2ef7b5",
+    "title": "Scioccherie di poeti!",
+    "subtitle": "Ferrando, Guglielmo and Don Alfonso: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 39,
+    "durationSec": 79,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 47,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-se-a-caso-madama",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-se-a-caso-madama@1.0.0-klengel#477f80ac68",
@@ -2939,6 +3053,46 @@
     "time": "3/4",
     "languageStatus": {
       "phrases": 66,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-una-bella-serenata",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-una-bella-serenata@1.0.0-peters#aba38baa67",
+    "title": "Una bella serenata",
+    "subtitle": "Ferrando, Guglielmo and Don Alfonso: terzetto from Così fan tutte, Act 1 (No. 3)",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 76,
+    "durationSec": 143,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 28,
       "withAudio": 0,
       "reviewed": 0
     }
