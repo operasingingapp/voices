@@ -554,3 +554,20 @@
   .rp-head.rp-head .rp-tools-below { display: flex !important; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
   .rp-head .rp-tools-below .pv-chip-light, .rp-head .rp-tools-below .cp-btn { background: transparent; box-shadow: inset 0 0 0 1px var(--hairline, color-mix(in srgb, var(--ink) 18%, transparent)); }
 }
+
+/* phone: "Her story" sits only on the picture, never a second time under the text */
+@media (max-width: 640px) {
+  .rp-head.rp-head:has(.rp-band.has-art .rp-band-tools > :only-child) .rp-tools-below { display: none !important; }
+}
+/* role head text: one name, one quiet line (voice · opera), the description; no eyebrow, no italic sub-title */
+.rp-head .rp-name { display: block; }
+.rp-head .rp-meta { margin: 2px 0 0; font: 400 15px/1.4 var(--font-sans); color: var(--ink-muted, color-mix(in srgb, var(--ink) 62%, transparent)); display: flex; align-items: center; flex-wrap: wrap; }
+.rp-head .rp-meta .rp-opera { font: italic 500 17px/1.2 var(--font-display); color: var(--ink); background: none; border: 0; padding: 0; display: inline-flex; align-items: center; gap: 2px; cursor: pointer; }
+.rp-head .rp-meta .rp-opera-chev { width: 13px; height: 13px; opacity: .5; }
+.rp-head .rp-desc { margin-top: 10px; }
+@media (min-width: 641px) { .rp-head .rp-meta { font-size: 16px; } .rp-head .rp-meta .rp-opera { font-size: 19px; } }
+.rp-head .rp-meta > span[aria-hidden] { margin: 0 .4em; }
+@media (max-width: 640px) {
+  .rp-head.rp-head .rp-name { grid-column: 2; grid-row: 1; align-self: end; margin: 18px 0 0; }
+  .rp-head.rp-head .rp-meta { grid-column: 2; grid-row: 2; align-self: start; margin: 4px 0 0; }
+}

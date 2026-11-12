@@ -874,17 +874,15 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
             <Face opera={opera} ch={ch} />
           </span>
           <div className="rp-text">
-            <p className="cp-eyebrow">{ch.voice}</p>
-            <h1 className="rp-name">
-              <span>{ch.name}</span>{" "}
-              <span className="rp-in">
-                in{" "}
-                <button type="button" className="rp-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
-                  <i lang={opera.lang}>{opera.title}</i>
-                  <svg className="rp-opera-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                </button>
-              </span>
-            </h1>
+            <h1 className="rp-name">{ch.name}</h1>
+            <p className="rp-meta">
+              {ch.voice}
+              <span aria-hidden="true"> · </span>
+              <button type="button" className="rp-opera" onClick={() => ctx.go({ screen: "opera", opera: opera.id })}>
+                <i lang={opera.lang}>{opera.title}</i>
+                <svg className="rp-opera-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </button>
+            </p>
             <p className="rp-desc">{ch.desc}</p>
             {/* phone: the tools under the words, so they never sit on the faces in the picture */}
             <div className="rp-tools-below">{tools}</div>
