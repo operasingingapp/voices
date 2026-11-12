@@ -4674,6 +4674,64 @@
     }
   },
   {
+    "editionId": "puccini-musetta",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-musetta@1.0.0-carignani#fe0c976c0f",
+    "title": "Musetta!",
+    "subtitle": "Musetta brings in the dying Mimì, who is with Rodolfo again, and sends Marcello to sell her earrings for medicine and a doctor while she goes for a muff, La bohème, Act 4",
+    "kind": "scene",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "musetta",
+        "name": "Musetta",
+        "voiceType": "Soprano",
+        "partKey": "musetta"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "schaunard",
+        "name": "Schaunard",
+        "voiceType": "Baritone",
+        "partKey": "schaunard"
+      },
+      {
+        "id": "colline",
+        "name": "Colline",
+        "voiceType": "Bass",
+        "partKey": "colline"
+      }
+    ],
+    "measures": 107,
+    "durationSec": 255,
+    "hasRepeats": false,
+    "keySignature": "A♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 49,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-non-sono-in-vena",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-non-sono-in-vena@1.0.0-carignani#b250618b64",

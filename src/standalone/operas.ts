@@ -2784,6 +2784,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Che ora sia?",
       "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
       "editionId": "puccini-che-ora-sia"
+     },
+     {
+      "title": "Musetta!",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Musetta!",
+      "when": "Act 4, Musetta brings in the dying Mimì",
+      "editionId": "puccini-musetta"
      }
     ]
    },
@@ -2904,6 +2911,13 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 3",
       "id": "Act 3: Mimì è tanto malata!",
       "editionId": "puccini-mimi-e-tanto-malata"
+     },
+     {
+      "title": "Musetta!",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Musetta!",
+      "when": "Act 4, Musetta brings in the dying Mimì",
+      "editionId": "puccini-musetta"
      }
     ]
    },
@@ -3031,6 +3045,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Che ora sia?",
       "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
       "editionId": "puccini-che-ora-sia"
+     },
+     {
+      "title": "Musetta!",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Musetta!",
+      "when": "Act 4, Musetta brings in the dying Mimì",
+      "editionId": "puccini-musetta"
      }
     ]
    },
@@ -3078,6 +3099,13 @@ export const OPERAS: Opera[] = [
       "kind": "Prelude and scene with chorus · Act 3",
       "id": "Act 3: Ohè, là, le guardie!",
       "editionId": "puccini-ohe-la-le-guardie"
+     },
+     {
+      "title": "Musetta!",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Musetta!",
+      "when": "Act 4, Musetta brings in the dying Mimì",
+      "editionId": "puccini-musetta"
      }
     ]
    },
@@ -3162,6 +3190,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Che ora sia?",
       "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
       "editionId": "puccini-che-ora-sia"
+     },
+     {
+      "title": "Musetta!",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Musetta!",
+      "when": "Act 4, Musetta brings in the dying Mimì",
+      "editionId": "puccini-musetta"
      }
     ]
    },
@@ -3251,6 +3286,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Che ora sia?",
       "when": "Act 4, Schaunard and Colline come back with four rolls and a herring",
       "editionId": "puccini-che-ora-sia"
+     },
+     {
+      "title": "Musetta!",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: Musetta!",
+      "when": "Act 4, Musetta brings in the dying Mimì",
+      "editionId": "puccini-musetta"
      }
     ]
    },

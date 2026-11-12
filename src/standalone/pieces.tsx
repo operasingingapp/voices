@@ -934,6 +934,44 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-musetta": {
+    portrait: "boheme:musetta",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "Four flats for the first bar (the end of the previous scene, as the door bursts open); no key signature (C major) from bar 2 (Allegro moderato agitato, “C’è Mimì”) to bar 40; two sharps from figure (14) (bar 41, Andante mesto, Musetta’s story) to bar 63; one sharp from figure (16) (bar 64, Lento) to bar 82; no key signature from bar 83 (Andante, “è assai buona Musetta”) to the end",
+      time: "2/4 for bars 1-40; 4/4 from figure (14) (bar 41), with one bar of 2/4 (bar 46); 2/4 from figure (16) (bar 64); 3/4 from figure (17) (bar 81) to the end",
+      tempo: "No metronome mark is printed in this scene, so every value is chosen. The first bar keeps the previous scene’s closing tempo (♩ = 148). Allegro moderato agitato (bar 2) ♩ = 104; Meno molto (bar 13) ♩ = 72, about two-thirds of it; Andante mesto at figure (14) ♩ = 60, a sad Andante below the score’s printed Andante moderato (♩ = 88); the piano’s “a tempo, ma sostenendo” (bar 50) ♩ = 54, a tenth slower; Lento at figure (16) ♩ = 48, the score’s printed Lento triste of Act 3; Allegretto mosso at figure (17) and bar 87 ♩ = 120, the score’s printed Allegretto mosso of this act (figure (10)); Andante (bar 83) ♩ = 60. The allarg. and rall. molto of bars 33-40 are played over all the bars they cover, the poco rall. and poco rit. of bars 92-93 and 99-100 are held at ♩ = 108 until the a tempo, and the other written rall., rit., allarg., affrett. and string. are played as a gradual change, then back to the tempo; fermatas are held. Timed against seven complete recordings (about 5½ min, with the pauses and the broadening that the map does not play)",
+    },
+    notePlaceholder: "Musetta brings in the dying Mimì; there is nothing in the house, and Musetta gives Marcello her earrings to sell for medicine and a doctor and goes to buy Mimì a muff",
+    about: (
+      <>
+        <p>
+          “Musetta!”, Act 4 in the garret. The door bursts open on the friends’ mock duel and Musetta comes in: Mimì is with her, too ill
+          to climb the last stairs. They bring her in and lay her on the bed. Musetta tells the others how she heard that Mimì had left
+          her viscount and was dying, and found her dragging herself along the street, saying she wanted to die near Rodolfo. Mimì feels
+          better here, and Rodolfo is overjoyed to hear her voice. There is nothing in the house, no coffee, no wine, and Schaunard
+          whispers to Colline that she will be dead within half an hour. Mimì’s hands are cold and she wishes for a muff; she greets
+          the friends one by one and tells Marcello that Musetta is good. Musetta takes off her earrings for Marcello to sell for a
+          cordial and a doctor, and goes with him to buy the muff herself: it may be the last thing Mimì ever asks for.
+        </p>
+        <p>
+          Score: vocal score pages 247-257 (from Marcello’s “Mu-” as Musetta appears in the doorway, page 247 system 3 bar 4, to the
+          last bar of page 257, 107 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the
+          page by a separate judge, then checked against the page and corrected. Only the Italian words are kept, with the print’s
+          spellings (“Viscontino”, “veggo”, “cordial”, “Pel”). The first bar is the last bar of the previous scene’s music, before the
+          double bar. Rodolfo’s part, printed in the treble clef, is written at sounding pitch. Marcello’s “Sst”, printed with a stem
+          but no notehead, is written with a cross notehead. No metronome mark is printed in this scene; the tempos are chosen as
+          stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

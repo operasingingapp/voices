@@ -1,0 +1,170 @@
+# S26a piano: p.247 sys 3 bar 4 to the last bar of p.252 (57 bars)
+# page 247 system 3 starts bar 1 (bar 4 of the system); 2/4, 4 flats; ff
+1 RH1: F5:s Ab5:s C6:s Eb6:s C6:e* D5+G5+Bb5:e>
+1 LH1: r:q r:e Bb1+Bb2:e>
+# bar 1: double bar, key change to C major at the end
+# page 247 system 4 starts bar 2
+# bar 2: ALL.º MOD.to AGITATO; fermata over beat 1; fff subito pp; "8" (8va) over the RH chord (starts and ends on this chord), written at sounding pitch; footnote "Cassa sola" under the LH low E tremolo
+2 RH1: r:q! B5+E6+G6+B6:e> r:e
+2 LH1: r:q! trem3:E1+B1|E2:q
+3 RH1: r:h
+3 LH1: trem3:E1+B1|E2:h
+4 RH1: r:h
+4 LH1: trem3:E1+B1|E2:h
+5 RH1: r:h
+5 LH1: trem3:E1+B1|E2:h
+# page 248 system 1 starts bar 6
+6 RH1: r:q dyn:f F4+A4+C5+D#5:q!^
+6 LH1: trem3:E1+B1|E2:h!
+# bar 7: ff con slancio ed espansione
+7 RH1: dyn:ff E4+G4+B4+E5:e B3:s E4:s G4:s B4:s E5:s G5:s
+7 LH1: trem3:E1+B1|E2:h
+8 RH1: B5:e B5:q> B5:e~
+8 LH1: trem3:E1+B1|E2:h
+# bar 9: allarg.
+9 RH1: word:allarg. B5:e E6:e> D6:e> C6:e>
+9 LH1: trem3:E1+B1|E2:h
+# bar 10: cres.
+10 RH1: word:cres. B5:e> G5:e> F#5:e> g:A5:e G5:e>
+10 LH1: trem3:E1+B1|E2:h
+# page 248 system 2 starts bar 11
+# bar 11: affrett.
+11 RH1: word:affrett. F#5:e.> E5:s B4:e.> G4:s
+11 LH1: trem3:E1+B1|E2:h
+12 RH1: word:cres. F#4:e.> E4:s hp:< B3:e3 C4:e3 C#4:e3 hp:end
+12 LH1: trem3:E1+B1|E2:h
+# bar 13: Meno mosso, p
+13 RH1: dyn:p D4:q( E4:q)
+13 LH1: g:F3:s g:A3:s trem3:G2|F3:h
+14 RH1: hp:< Ab3+B3+F4:q D4+F4+C5:q hp:end
+14 LH1: trem3:G2|F3:h
+15 RH1: dyn:ff C#4+E4+B4:h>~
+15 LH1: trem3:G2+E3|G3:h
+# page 248 system 3 starts bar 16
+# bar 16: p, hairpin >; RH upper note read as B-flat (uncertain)
+16 RH1: dyn:p Bb4:q C#4:q
+16 RH2: C#4+E4:q s:q
+16 LH1: trem3:G2+E3|G3:h
+17 RH1: D4:q E4:q
+17 RH2: A3:h
+17 LH1: trem3:G2|E3:h
+18 RH1: hp:< Ab3+B3+F4:q D4+F4+B4:q hp:end
+18 LH1: trem3:G2|E3:h
+19 RH1: dyn:ff D4+G4~+Bb4~+D5:h>
+19 LH1: trem3:G2|E3:h
+20 RH1: dyn:p C#4+G4+Bb4+C#5:q. C4+C5:e
+20 LH1: trem3:G2|E3:h
+21 RH1: dyn:pp g:B3:s g:D4:s g:F#4:s B4:h
+21 LH1: G#1+G#2:e* G#2+D3:x F#3:x G#2+D3:x F#3:x trem3:G#2+D3|F#3:q
+# page 248 system 4 starts bar 22
+22 RH1: F#3+F#4:q. A3+A4:e
+22 LH1: trem3:G#2+D3|F#3:q trem3:A2+D3|F#3:q
+23 RH1: A3+D4+A4:h
+23 LH1: trem3:B2+D3|F#3:h
+24 RH1: G#3+D4+G#4:e F#3:s G#3:s B3:s D4:s F#4:s B4:s
+24 LH1: trem3:B2+D3|F#3:h
+25 RH1: g:D4:s g:F4:s g:A4:s D5:h
+25 LH1: B1+B2:e* B2+F3:x A3:x B2+F3:x A3:x trem3:B2+F3|A3:q
+26 RH1: A3+A4:q. C4+C5:e
+26 LH1: trem3:B2+F3|A3:q trem3:C3+F3|A3:q
+# page 249 system 1 starts bar 27
+27 RH1: C4+F4~+C5:h
+27 LH1: trem3:D3+G3|A3:h
+28 RH1: B3+F4+B4:e B3:s D4:s F4:s A4:s B4:s D5:s
+28 LH1: trem3:D3+G3|A3:h
+# bar 29: rehearsal figure (13)
+29 RH1: F4+F5:h
+29 LH1: D2+D3:e* D3+F3:x A3:x D3+F3:x A3:x trem3:D3+F3|B3:q
+30 RH1: E4+E5:q. C4+C5:e
+30 LH1: E2+E3:e* E3+A3:x B3:x E3+A3:x B3:x trem3:E3+A3|C4:q
+31 RH1: E4+E5:h
+31 LH1: F2+F3:e* F3+A3:x C4:x F3+A3:x C4:x trem3:F3+A3|C4:q
+# page 249 system 2 starts bar 32
+32 RH1: D4+D5:q F4:s A4:s D5:s F5:s
+32 LH1: trem3:F3+A3+C4|D4:h
+# bar 33: f, allarg.
+33 RH1: dyn:f word:allarg. A4+C5+E5+A5:h
+33 LH1: g:B1:e trem3:B2+D3+G3|A3:h
+34 RH1: G4+G5:q. F4+F5:e
+34 LH1: trem3:B2+D3+G3|A3:h
+35 RH1: E4+G#4~+E5:h
+35 LH1: trem3:B2+E3|G#3:h
+36 RH1: D#4+D#5:q. D4+D5:e
+36 RH2: G#4:h
+36 LH1: trem3:B2+E3|G#3:q g:Bb1:e trem3:Bb2+E3|G#3:q
+# bar 37: rall. molto
+37 RH1: word:rall._molto D4+G4+D5:h
+37 LH1: g:A1:e trem3:A2+E3|G3:h
+# page 249 system 3 starts bar 38
+38 RH1: hp:> C#4+G4+C#5:q~ C#4+G4+C#5:e r:e hp:end
+38 LH1: trem3:A2+E3|G3:q A2+E3+G3:e r:e clef:G
+# bar 39: p (LH in treble clef)
+39 RH1: r:h
+39 LH1: dyn:p Bb3+C#4+G4:e Bb3+C#4+G4:e~ Bb3+C#4+G4:e Bb3+C#4+G4:s Bb3+C#4+G4:s
+40 RH1: r:h
+40 LH1: A3+C#4+G4:e A3+C#4+G4:e~ A3+C#4+G4:e A3+C#4+G4:s A3+C#4+G4:s
+# bar 40: double bar at the end, key change to D major (2 sharps), C (4/4)
+# page 250 system 1 starts bar 41
+# bar 41: (14) AND.te MESTO, 4/4, D major, pp
+41 RH1: dyn:pp A5:q F#5:q E5:q G5:q
+41 LH1: A3+D4+F#4+A4:e A3+D4+F#4+A4:e~ A3+D4+F#4+A4:e A3+D4+F#4:s A3+D4+F#4:s A3+B3+D4+G4:e A3+B3+D4+G4:e~ A3+B3+D4+E4:e A3+B3+D4+E4:s A3+B3+D4+E4:s
+42 RH1: F#5:q A5:q~ A5:e3 B4+B5:e3 C#5+C#6:e3 D5+D6:e3 B4+B5:e3 D5+D6:e3
+42 LH1: A3+D4+F#4+A4:e A3+D4+F#4+A4:e~ A3+D4+F#4+A4:e A3+D4+F#4:s A3+D4+F#4:s r:e3 D4+F#4:q3~ D4+F#4:e3 D4+F#4:q3
+42 LH2: s:h B3:h>
+# page 250 system 2 starts bar 43
+43 RH1: C#5+C#6:h r:e E5+E6:e- F#5+F#6:e- G#5+G#6:e-
+43 LH1: r:e F#4+A4:e~ F#4+A4:e F#4+A4:s F#4+A4:s r:e A#4+C#5:e~ A#4+C#5:e E4+B4:s E4+B4:s
+43 LH2: C#4:h> D4:h>
+# bar 44: poco rall.
+44 RH1: word:poco_rall. hp:< E5+E6:h F#5+F#6:q A5+A6:e. G#5+G#6:s hp:end
+44 LH1: r:e A4+C#5:q- A4+C#5:e clef:F F#2+D3+B3:ea clef:G F#4+A4+E5:q- F#4+A4+D5:e clef:F
+44 LH2: E4:h> s:h
+# page 250 system 3 starts bar 45
+45 RH1: dyn:mf hp:> G#5+G#6:s E6:s E6:e g:F#5:e G#5:qt g:F##5:s g:G#5:s C#6:e r:e g:F#5:e C#6:qt g:B#5:s g:C#6:s hp:end
+45 LH1: C#2+G#2+E3:ea clef:G C#4+E4+G#4+C#5:e~ C#4+E4+G#4+C#5:e C#4+E4+G#4+C#5:s C#4+E4+G#4+C#5:s C#4+E4+G#4+C#5:e C#4+E4+G#4+C#5:e~ C#4+E4+G#4+C#5:e C#4+E4+G#4+C#5:s C#4+E4+G#4+C#5:s
+# bar 46: 2/4 (double bar), pp; double bar back to C (4/4) at the end
+46 RH1: dyn:pp hp:> F#5+B5+F#6:q~ F#5+B5+F#6:e r:e hp:end
+46 LH1: clef:F B1+F#2+B2:e clef:G B3+D4+F#4+B4:e~ B3+D4+F#4+B4:e B3+D4+F#4+B4:s B3+D4+F#4+B4:s
+# page 251 system 1 starts bar 47
+# bar 47: (15), 4/4, LH in treble clef; LH chord spellings approximate
+47 RH1: hp:< B4+B5:q~ B4+B5:e C#5+C#6:e hp:end hp:> A4+A5:q~ A4+A5:e B4+B5:e hp:end
+47 LH1: G3+B3+D4:e G3+B3+D4:e~ G3+B3+D4:e G3+B3+D4:s G3+B3+D4:s E3+G3+C#4:e E3+G3+C#4:e~ E3+G3+C#4:e E3+G3+C#4:s E3+G3+C#4:s clef:F
+48 RH1: A4+F#5:h.~ A4+F#5:e C#5+A5:e
+48 LH1: r:e A3+C#4:e~ A3+C#4:e A3+C#4:s A3+C#4:s A3+C#4:e A3+C#4:e~ A3+C#4:e C#4+E4:s C#4+E4:s
+48 LH2: D3:w>
+# page 251 system 2 starts bar 49
+# bar 49: rall. (piano); RH and LH2 pitches approximate
+49 RH1: E4+G4+B4+E5:qa B4+D6:e A4+C#6:e g:B5:s g:C#6:s G4+B5:e F#4+A5:e E4+G5:e. C#5+A5:s
+49 LH1: r:e G3+A3+C#4:e~ G3+A3+C#4:e G3+A3+E4:s G3+A3+E4:s r:e G3+A3+C#4:e~ G3+A3+C#4:e G3+A3+E4:s G3+A3+E4:s
+49 LH2: A1+E2+C#3:ha g:A1:e A2:h
+# bar 50: a tempo, ma sostenendo; pp dolcissimo; RH last beat and LH rhythm approximate
+50 RH1: D4+D5:q. E5:e dyn:pp F#4+F#5:e C#5+A5:e B4+D5+F#5:e.a C#5+E6:s
+50 LH1: r:q D2:s A2:s D3+F#3:s C#4:s A3+D4:e D4+F#4:e D4+F#4+A4:ea r:e
+# page 251 system 3 starts bar 51
+51 RH1: D5+F#5+A5+D6:h A4+A5:e. E4+B5:s G4+B4+D5+F#5:e.a E5+E6:s
+51 LH1: D2:e. A2:s B2:e. D3:s A3:e3 D4:e3 F#4:e3 F#3+A3+D4:qa
+51 LH2: D2:h.~ D2:e r:e
+# bar 52: con molta anima e cres.
+52 RH1: word:con_molta_anima_e_cres. D5+F#5+A5+D6:h. D5+D6:e.> C#5+C#6:s
+52 LH1: D2:e. A2:s B2:e. D3:s A3:e. D4:s F#4:e. A4:s
+52 LH2: D2:h.~ D2:e r:e
+# page 252 system 1 starts bar 53
+# bar 53: RH fingered tremolo (three beams) between E6 and E5, dotted halves; LH2 low whole note read as B1 (uncertain)
+53 RH1: hp:< trem3:E6|E5:h. E5+E6:e. D#5+D#6:s
+53 LH1: B2:e. E3:s G#3:e. B3:s D4:e. E4:s G#4:q
+53 LH2: B1:w
+54 RH1: trem3:F#6|F#5:h F#5+F#6:e E5+E6:e F#5+F#6:e. G5+G6:s hp:end
+54 LH1: r:e. G3:s A3:e. C#4:s E4:e C#4:e A3:e. E4:s
+54 LH2: A1+A2:w
+# bar 55: f, poco rall.; marcato on the first chord; pitches approximate
+55 RH1: dyn:f word:poco_rall. A4+C5+E5+A5:h^~ A4+C5+E5+A5:q3 E4+G5:e3 D4+F#5:e A4+A5:e
+55 LH1: r:e. A2:s E3:e. G3:s A3:q3 B3:e3 G3:s A3:s B3:e
+55 LH2: A1+A2:h G2+D3:h
+# page 252 system 2 starts bar 56
+# bar 56: dim.; pitches approximate
+56 RH1: G5+B5+E6+G6:ea F#5+F#6:e- E5+E6:h- word:dim. D5+D6:e. E5+E6:s
+56 LH1: r:e A3:e> G3:e. G2:s C#3:e. G3:s A3:q
+56 LH2: E2+B2+G3:wa
+# bar 57: ppp; LH lowest note read as E2 (uncertain)
+57 RH1: dyn:ppp G5+Bb5+D6+G6:h~ G5+Bb5+D6+G6:e. F#5+F#6:s E5+E6:e. G5+G6:s
+57 LH1: E2:e G3:x Bb3:x D4:x G4:x clef:G Bb4:e. G4:s D4:q Bb3:q clef:F
