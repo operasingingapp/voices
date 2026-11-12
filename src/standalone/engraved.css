@@ -637,3 +637,15 @@
 .pv-next .pv-next-text b { font: 400 20px/1.25 var(--font-text); }
 .pv-next.pv-card.pv-card { border-top: 0; }
 .pv-next .pv-next-row { border-bottom: 0 !important; }
+
+/* a tapped piece is chosen, not opened: its card opens on the scene and its play button pulses, inviting the start */
+.rp-row.open, .numbers .num.num.open { box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--now-mark) 55%, transparent); }
+.rp-row.open .rp-play, .numbers .num.open .num-go.cp-btn { background: var(--now); color: var(--on-now); animation: sv-pulse 1.8s var(--ease-standard, ease) infinite; }
+.numbers .num.open .num-go svg { color: var(--on-now); }
+@keyframes sv-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--now) 45%, transparent); }
+  70% { box-shadow: 0 0 0 12px color-mix(in srgb, var(--now) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .rp-row.open .rp-play, .numbers .num.open .num-go.cp-btn { animation: none; } }
+.numbers .num.ready, .numbers .num.linked { cursor: pointer; }

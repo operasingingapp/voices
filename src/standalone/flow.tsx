@@ -958,10 +958,9 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
                           <button
                             type="button"
                             className="rp-title"
-                            aria-label={isReady ? `Practise ${p.title}` : undefined}
-                            aria-expanded={isReady ? undefined : isOpen}
-                            aria-controls={isReady ? undefined : panelId}
-                            onClick={isReady ? practise : toggle}
+                            aria-expanded={isOpen}
+                            aria-controls={p.context ? panelId : undefined}
+                            onClick={toggle}
                           >
                             {words}
                           </button>
@@ -1006,7 +1005,7 @@ export function RolePage({ ctx, opera, ch }: { ctx: Ctx; opera: Opera; ch: Chara
           {(() => {
             const canPlay = ch.pieces.some((p) => p.editionId);
             const canRead = ch.pieces.some((p) => p.context);
-            const how = canPlay && canRead ? "Tap a piece to practise, or the arrow for its scene. " : canPlay ? "Tap a piece to practise. " : canRead ? "Tap the arrow to read what happens in a piece. " : "";
+            const how = canPlay && canRead ? "Tap a piece to read its scene, then play to practise. " : canPlay ? "Tap play to practise a piece. " : canRead ? "Tap a piece to read what happens in it. " : "";
             return `${how}Tick the circle when you know a piece.`;
           })()}
         </p>
@@ -1229,7 +1228,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
               <li
                 key={i}
                 className={`num${ready ? " ready" : " soon"}${yours ? " yours" : ""}${p?.context ? " linked" : ""}${isOpen ? " open" : ""}`}
-                onClick={p?.context ? toggle : undefined}
+                onClick={ready || p?.context ? toggle : undefined}
               >
                 <span className="num-i">{i + 1}</span>
                 <div className="num-text">
