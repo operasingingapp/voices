@@ -1,0 +1,330 @@
+# S28a: p.261 sys3 bar3 ((21) PIU SOSTENUTO) to the last bar of p.265. Singers: I = Mimi, R = Rodolfo (R written in treble clef, sounding pitch given)
+# page 261 system 3 starts bar 1 (bar 3 of the system; no voice staff on this system)
+# bar 1: (21) PIU SOSTENUTO, C major (key signature cancelled), 4/4 (C)
+1 I: r:w
+1 R: r:w
+# page 261 system 4 starts bar 2 (no voice staff)
+2 I: r:w
+2 R: r:w
+# page 261 system 5 starts bar 3 (MIMI staff)
+3 I: r:w
+3 R: r:w
+# bar 4: rall. (piano); Mimi "con grande espress."; fermata on the rest
+4 I: r:h r:q! word:con_grande_espress. G4:e. "So-" G4:s "no_an-"
+4 R: r:w
+# page 262 system 1 starts bar 5
+# bar 5: AND.te CALMO, E-flat major (3 flats), 4/4
+5 I: C5:q "da-" C5:q "ti?" r:e. C5:s "Fin-" C5:s "ge-" D5:s "vo" Eb5:s "di" C5:s "dor-"
+5 R: r:w
+6 I: Bb4:q "mi-" Bb4:q~ "re........" Bb4:e r:e Bb4:e. "per-" C5:s "chè"
+6 R: r:w
+7 I: Ab4:q "vol-" Ab4:e "li" G4:e "con" F4:e "te" G4:e "so-" Ab4:e "la" Bb4:e "re-"
+7 R: r:w
+# page 262 system 2 starts bar 8
+8 I: G4:q "sta-" G4:q~ "re........" G4:e G4:e "Ho" C5:q3 "tan-" Eb4:e3 "te"
+8 R: r:w
+9 I: F4:q "co-" F4:q "se" F4:e "che" G4:e "ti" Ab4:e "vo-" Bb4:e "glio"
+9 R: r:w
+# JUDGE bar 10 I: Y - print has "di _ re": hyphen after "di"; 9 melisma dots counted (X count)
+10 I: g:Bb4:e Eb4:q "di-" Eb4:q~ "re........." Eb4:e r:e Eb4:e "o" G4:e "u_na"
+10 R: r:w
+# page 262 system 3 starts bar 11
+# JUDGE bar 11 I: OWN - cresc hairpin starts at the 2nd note "la," and ends after F4 "gran-"; decresc from F4 "de" to D4 "co-"
+11 I: D4:q "so-" hp:< D4:e "la," Eb4:e "ma" F4:e "gran-" hp:end hp:> F4:e "de" D4:e "co-" hp:end Eb4:e "me_il"
+11 R: r:w
+# JUDGE bar 12 I: X - comma + 7 melisma dots counted on the print
+12 I: C4:q "ma-" C4:q~ "re,......." C4:e r:e C4:e "co-" C4:e "me_il"
+12 R: r:w
+# bar 13: piano cres.
+13 I: C5:q "ma-" C5:e. "re" C5:s "pro-" C5:e. "fon-" C5:s "da_ed" Db5:e. "in-" Db5:s "fi-"
+13 R: r:w
+# page 262 system 4 starts bar 14
+# bar 14: Mimi "con espansione" (at "Sei il")
+# JUDGE bar 14 I: X - "Sei il mio" ends bar 14; "a-mor" begins on bar 15 Ab5; 8 dots counted
+14 I: Bb4:q "ni-" Bb4:q~ "ta........" Bb4:e r:e word:con_espansione F5:e. "Sei_il" Eb5:s "mio"
+14 R: r:w
+# JUDGE bar 15 I: X - "a" under the Ab5 quarter, "mor" under the dotted eighth (curve is a slur, two syllables, no tie); 8 dots
+15 I: Ab5:q> "a-" Ab5:e. "mor........" Eb5:s "e" Eb5:e. "tut-" Eb5:s "ta" F5:e. "la" Bb5:s "mia"
+15 R: r:w
+# bar 16: Mimi "poco rit:.. dolcissimo", p
+# JUDGE bar 16 I: X - "Sei" under Db5, "il" under Bb4, "mio a-" under C5; tenuto lines on all three; poco rit:.. printed above
+16 I: Ab5:h "vi-" Eb5:q "ta!..." word:poco_rit. dyn:p word:dolcissimo Db5:e3- "Sei" Bb4:e3- "il" C5:e3- "mio_a-"
+16 R: r:w
+# page 263 system 1 starts bar 17 (Mimi staff + ROD. staff)
+# bar 17: Mimi "sostenendo"
+# JUDGE bar 17 I: X - "re" and "la" notes sit in the same space as "mo" (A-flat), not on the G line
+17 I: word:sostenendo Ab4:q "mo-" Ab4:e. "re" Bb4:s "e" C5:e. "tut-" Bb4:s "ta" Ab4:e. "la" C5:s "mia"
+17 R: r:w
+# JUDGE bar 18 I: OWN (both wrong) - melisma dots after "ta" counted on the print: 11
+18 I: Bb4:q "vi-" Bb4:q~ "ta..........." Bb4:e r:e r:q
+18 R: r:h r:q F4:e.> "Ah!" Eb4:s "Mi-"
+# page 263 system 2 starts bar 19
+19 I: r:w
+19 R: Ab4:q.. "mì," Eb4:s "mia" Eb4:q "bel-" F4:q3 "la" Bb4:e3 "Mi-"
+# bar 20: Mimi p, poco rit.
+# JUDGE bar 20 I: X - "poco rit:...." printed above the Mimì staff in this bar
+20 I: r:h r:q3 dyn:p word:poco_rit. Eb5:e3 "Son" Db5:e3 "bel-" Bb4:e3 "la" C5:e3 "an-"
+20 R: Ab4:h "mì." r:h
+# page 263 system 3 starts bar 21
+# bar 21: Rodolfo "sostenendo"
+21 I: Ab4:q "co-" Ab4:q "ra?" r:h
+21 R: r:h word:sostenendo C4:e. "Bel-" Bb3:s "la" Ab3:e3 "co-" Ab3:e3 "me_un'" C4:e3 "au-"
+# bar 22: (22); double bar at the end, to 2/4
+22 I: r:h r:e3 Bb4:e3 "Hai" Bb4:e3 "sba-" Bb4:e3 "glia-" Ab4:e3 "to_il" Gb4:e3 "raf-"
+# JUDGE bar 22 R: X - 8 melisma dots counted
+22 R: Bb3:q "ro-" Bb3:q~ "ra........" Bb3:e r:e r:q
+# page 264 system 1 starts bar 23
+# bar 23: 2/4 (E-flat major); Mimi "Lo stesso movimento"; piano ppp un poco animando
+23 I: word:Lo_stesso_movimento Bb4:q "fron-" Bb4:q "to."
+23 R: r:h
+24 I: r:q3 Bb4:e3 "Vo-" Bb4:q3 "le-" Eb5:e3 "vi"
+24 R: r:h
+# JUDGE bar 25 I: X - 9 dots counted; "poco rall:" is printed over bar 26, not 25
+25 I: Ab4:q~ "dir........." Ab4:e r:e
+25 R: r:h
+# bar 26: poco rall. (voice and piano)
+# JUDGE bar 26 I: X - "poco rall:...." starts over this bar
+26 I: word:poco_rall. Ab4:q3 "bel-" Ab4:e3 "la" Ab4:e3 "co-" Ab4:e3 "me_un" Bb4:e3 "tra-"
+26 R: r:h
+# page 264 system 2 starts bar 27
+27 I: Gb4:q "mon-" Gb4:q "to."
+27 R: r:h
+28 I: r:h
+28 R: r:h
+# bar 29: rall. molto, mf
+# JUDGE bar 29 I: Y - "rall. molto" printed at the start of the bar, before the first rest
+29 I: word:rall._molto r:q r:e dyn:mf G#4:e "«Mi"
+29 R: r:h
+# bar 30: double bar, Più Sostenuto (voice and piano)
+# JUDGE bar 30 I: X - same pitches (naturals implicit); accent and Più Sostenuto printed
+# MARKS bar 30 I: crescendo hairpin starts after B4 (runs to end of bar 31)
+30 I: word:Più_Sostenuto A4:q> "chia-" B4:q "ma-" hp:<
+30 R: r:h
+# page 264 system 3 starts bar 31
+# JUDGE bar 31 I: OWN - crescendo hairpin covers both notes; a decrescendo hairpin follows over bar 32
+# MARKS bar 31 I: hairpin start moved to bar 30
+31 I: C5:q "no" F#5:q "Mi-" hp:end
+31 R: r:h
+# JUDGE bar 32 I: OWN - tie to bar 33 E5 (X); 14 melisma dots counted; decresc hairpin over the bar
+32 I: hp:> E5:h~ "mì.............." hp:end
+32 R: r:h
+# bar 33: Mimi "(come eco)", pp
+# JUDGE bar 33 I: X - tied E5 continuation; (come eco) pp printed
+33 I: E5:e r:e r:e dyn:pp word:come_eco E#4:e "mi"
+33 R: r:h
+34 I: F#4:q "chia-" G#4:q "ma-"
+34 R: r:h
+# bar 35: molto rall.
+# JUDGE bar 35 I: X - naturals implicit; hairpin printed over the two notes
+35 I: word:molto_rall. hp:< A4:q "no" hp:end D#5:q "Mi-"
+35 R: r:h
+# page 264 system 4 starts bar 36
+# JUDGE bar 36 I: OWN - inner curve is a tie to bar 37 C#5 (X); 15 melisma dots counted
+36 I: hp:> C#5:h~ "mì..............." hp:end
+36 R: r:h
+37 I: C#5:e r:e Fb5:e. "il" Fb5:s "per-"
+37 R: r:h
+# JUDGE bar 38 I: X - G natural = G4 (absolute pitch); 8 dots counted
+38 I: G4:q "chè........" r:q
+38 R: r:h
+# JUDGE bar 39 I: Y - staccato dot printed directly over the E-flat notehead
+39 I: r:q Eb5:e* "non" r:e
+39 R: r:h
+# bar 40: (23); double bar at the end of the page
+40 I: Ab4:e "so...»" r:e r:q
+40 R: r:h
+# page 265 system 1 starts bar 41
+# bar 41: ALL.tto MOSSO (voice and piano), 2/4, E-flat major; Rodolfo "(carezzevole ed intenerito)"
+41 I: r:h
+# JUDGE bar 41 R: X - ALL.tto MOSSO printed above the voice staff
+41 R: word:ALL.tto_MOSSO Ab3:q "Tor-" Bb3:e "nò" C4:e "al"
+42 I: r:h
+42 R: Db4:q "ni-" Db4:e "do" C4:e "la"
+43 I: r:h
+43 R: Bb3:e "ron-" C4:e "di-" Db4:e "ne_e" Eb4:e "cin-"
+44 I: r:h
+44 R: Ab3:q "guet-" Ab3:q "ta."
+# page 265 system 2 starts bar 45 (voice staff R: rests)
+45 I: r:h
+45 R: r:h
+46 I: r:h
+46 R: r:h
+# bar 47: accelerando (piano)
+47 I: r:h
+47 R: r:h
+48 I: r:h
+48 R: r:h
+# page 265 system 3 starts bar 49 (no voice staff)
+49 I: r:h
+49 R: r:h
+50 I: r:h
+50 R: r:h
+# bar 51: rall: (piano)
+51 I: r:h
+51 R: r:h
+52 I: r:h
+52 R: r:h
+# page 265 system 4 starts bar 53 (MIMI staff, "(gaiamente)")
+# JUDGE bar 53 I: X - "(gaiamente)" printed by Mimì's name
+53 I: word:gaiamente r:e Ab4:e "La" Ab4:e "mia" Ab4:e "cuf-"
+53 R: r:h
+54 I: C5:q "fiet-" C5:q "ta,"
+54 R: r:h
+55 I: r:e C5:e "la" C5:e "mia" C5:e "cuf-"
+55 R: r:h
+56 I: Eb5:q "fiet-" Eb5:q "ta..."
+56 R: r:h
+# bar 57: rall. (voice and piano); double bar with key change to 2 flats at the end (belongs to the next chunk)
+# JUDGE bar 57 I: X - E natural = E5 (absolute pitch)
+57 I: word:rall. E5:h "Ah!..."
+57 R: r:h
+# ---- end of VM_S28a.txt (bars 1-57)
+# S28b: La bohème Act 4, pp. 266-269 (to end of p.269 system 3). Singers: I = Mimì, R = Rodolfo.
+# page 266 system 1 starts bar 58
+# bar 58: (24) ALL.tto UN PO' SOST.to, quarter = 108, 2/4, B-flat major (2 flats)
+58 I: F5:h "Te"
+58 R: r:h
+59 I: Eb5:q. "lo" Eb5:e "ram-"
+59 R: r:h
+60 I: Bb4:q "men-" Bb4:q "ti"
+60 R: r:h
+61 I: C5:e "quan-" D5:e "do" Eb5:e "so-" C5:e "no_en-"
+61 R: r:h
+# page 266 system 2 starts bar 62
+62 I: D5:q "tra-" D5:e "ta" D5:e "la"
+62 R: r:h
+63 I: Bb4:e "pri-" C5:e "ma" D5:e "vol-" Bb4:e "ta,"
+63 R: r:h
+64 I: C5:q~ "là?..........." C5:e r:e
+64 R: r:e C4:e "Se" C4:e "lo" C4:e "ram-"
+65 I: r:h
+65 R: C4:q "men-" C4:q "to!"
+# page 266 system 3 starts bar 66
+66 I: r:q r:e Bb4:e "Il"
+66 R: r:h
+67 I: Bb4:e "lu-" Bb4:e "me" Bb4:e "s'e-" Bb4:e "ra"
+67 R: r:h
+68 I: F5:q "spen-" D5:q
+68 R: r:h
+69 I: Bb4:q "to..." r:q
+69 R: r:h
+# page 266 system 4 starts bar 70
+70 I: r:h
+70 R: Eb4:q "E-" D4:q "ri"
+71 I: r:h
+71 R: C4:e "tan-" D4:e Bb3:e "to" C4:e "tur-"
+72 I: r:h
+72 R: D4:h "ba-"
+73 I: r:h
+73 R: D4:e "ta!" r:e r:q
+# page 267 system 1 starts bar 74
+74 I: r:h
+# JUDGE bar 74 R: X - first note on the top line of the 8vb treble staff (F5 written = F4 sounding), not above it
+74 R: F4:e "Poi" Eb4:e "smar-" D4:q~ "ri-"
+75 I: r:h
+75 R: D4:q C4:e "sti" D4:e "la"
+76 I: r:h
+76 R: Bb3:h "chia-"
+77 I: r:e F4:e "E" G4:e "a" A4:e "cer-"
+77 R: Bb3:e "ve..." r:e r:q
+# page 267 system 2 starts bar 78
+78 I: A4:q "car-" A4:e "la" A4:e "ta-"
+78 R: r:h
+# bar 79: poco rit.
+# MARKS bar 79 I: poco rit.
+79 I: word:poco_rit. Bn4:e "sto-" Bn4:e "ni" Bn4:e "ti" D5:e "sei"
+79 R: r:h
+# bar 80: a tempo
+# MARKS bar 80 I: a tempo
+80 I: word:a_tempo G4:q "mes-" G4:e "so!.." r:e
+80 R: r:q r:e G3:e "E"
+81 I: r:h
+81 R: C4:q "cer-" C4:e "ca,..." r:e
+# page 267 system 3 starts bar 82
+82 I: r:h
+82 R: C4:q "cer-" C4:e "ca..." r:e
+# bar 83: (25) Mimì "graziosamente", rit.
+# JUDGE bar 83 I: X - "graziosamente" is printed over Mimì's staff at this bar
+# MARKS bar 83 I: rit.
+83 I: word:graziosamente word:rit. G4:e "Mio" G4:e "bel" A4:e "si-" Bb4:e "gno-"
+83 R: r:h
+# bar 84: a tempo
+# MARKS bar 84 I: a tempo
+84 I: word:a_tempo F5:q "ri-" Bb4:q "no"
+84 R: r:h
+85 I: Bb4:q "pos-" Bb4:e "so" Bb4:e "ben"
+85 R: r:h
+# page 268 system 1 starts bar 86
+86 I: G4:e "dir-" G4:e "lo_a-" C5:e "des-" C5:e "so,"
+86 R: r:h
+87 I: r:h
+87 R: r:h
+# bar 88: Mimì "con grazia", rall.
+# JUDGE bar 88 I: X - "con grazia" printed above Mimì's staff over the first Db5
+# MARKS bar 88 I: rall.
+88 I: r:e word:con_grazia word:rall. Db5:e "lei" Db5:e "la" Db5:e "tro-"
+88 R: r:h
+# JUDGE bar 89 I: OWN - 3rd note in the space above D5 (Eb5) but 4th note sits on the D5 line (Db5, flat from beat 1); doubles RH top line Db F Eb Db
+89 I: Db5:e "vò....." F5:e Eb5:e "as-" Db5:e "sai"
+89 R: r:h
+# page 268 system 2 starts bar 90
+90 I: Eb5:e "pre-" Db5:s3 Eb5:s3 Db5:s3 C5:q~ "sto.............."
+90 R: r:h
+# bar 91: a tempo
+# MARKS bar 91 I: a tempo
+91 I: word:a_tempo C5:e r:e r:q
+91 R: r:h
+92 I: r:h
+92 R: r:q Ab3:e "A-" Ab3:e "iu-"
+93 I: r:h
+93 R: Ab3:q "ta-" Ab3:e "vo_il" Ab3:e "de-"
+94 I: r:h
+94 R: Ab3:q "sti-" Ab3:q~ "no...."
+# page 268 system 3 starts bar 95
+# bar 95: Mimì (ricordando l'incontro suo con Rodolfo la sera della Vigilia di Natale)
+95 I: r:q Ab4:e "E-" Ab4:e "ra"
+# JUDGE bar 95 R: Y - tied continuation of "no...." from bar 37; only melisma dots under it, no new syllable
+95 R: Ab3:e r:e r:q
+# bar 96: rall. (Mimì, to bar 43)
+# 39 I: first syllable printed as "buio,e" under one note
+# JUDGE bar 96 I: X - print sets "buio,e" under the 1st note and "il" alone under the 2nd
+# MARKS bar 96 I: rall.
+96 I: word:rall. Ab4:e "buio,e" Ab4:e "il" Ab4:e "mio" Ab4:e "ros-"
+96 R: r:h
+97 I: Ab4:e "sor" Ab4:e "non" Ab4:e "si" Ab4:e "ve-"
+97 R: r:h
+98 I: Ab4:q "de-" Ab4:q~ "va.........."
+98 R: r:h
+99 I: Ab4:e r:e r:q
+99 R: r:h
+# bar 100: dolciss.; double bar at end of page 268
+# JUDGE bar 100 I: X - "dolciss." printed above Mimì's staff at the «Che entry
+100 I: r:q r:e word:dolciss. Ab4:e "«Che"
+100 R: r:h
+# page 269 system 1 starts bar 101
+# bar 101: AND.no AFFETTUOSO; Mimì (con un fil di voce ripete le parole di Rodolfo)
+101 I: Ab4:e "ge-" Ab4:e "li-" Ab4:e "da" Ab4:e "ma-"
+101 R: r:h
+102 I: Ab4:e "ni-" Ab4:q "na..." Ab4:s* "Se" Ab4:s* "la"
+102 R: r:h
+103 I: Eb5:e* "la-" Eb5:e "sci" Db5:e "ri-" C5:e "scal-"
+103 R: r:h
+# page 269 system 2 starts bar 104
+# JUDGE bar 104 I: Y - the printed melisma line after "dar!" is about 17 dots long
+104 I: Bb4:q~ "dar!.................»" Bb4:e r:e
+104 R: r:h
+105 I: r:q Ab4:e "E-" Ab4:e "ra"
+105 R: r:h
+106 I: Ab4:q "bu-" Ab4:e "io,e" Ab4:e "la"
+106 R: r:h
+# page 269 system 3 starts bar 107
+# bars 50-51: rall.
+107 I: Ab4:e "man" Ab4:e "tu" Ab4:e "mi" Ab4:e "pren-"
+107 R: r:h
+# MARKS bar 108 I: rall.
+108 I: Ab4:q "de-" word:rall. Ab4:q "vi..."
+108 R: r:h
+# bar 109: fermata on the rest (Mimì è presa da uno spasimo di soffocazione); double bar after bar 52, then 1 sharp and 3/4 (next chunk)
+109 I: r:h!
+109 R: r:h
+# ---- end of VM_S28b.txt (bars 58-109)

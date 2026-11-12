@@ -1,0 +1,280 @@
+# S28b piano, La bohème Act 4, pp. 266-269 (to end of p.269 system 3)
+# page 266 system 1 starts bar 1
+# bar 1: (24) ALL.tto UN PO' SOST.to, quarter = 108, 2/4, B-flat major (2 flats); pp dolciss.
+# JUDGE bar 1 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 1 RH1: slur start
+1 RH1: dyn:pp word:dolciss. F5:h-(
+# MARKS bar 1 LH1: pp (between staves)
+1 LH1: dyn:pp D3:e* F3:e* Bb3:e* F4:e*
+2 RH1: Eb5:h-
+# JUDGE bar 2 LH1: X - 3rd eighth sits just above the top line (Bb3), only the 4th is on the 2nd ledger line (Eb4)
+2 LH1: C3:e* G3:e* Bb3:e* Eb4:e*
+# JUDGE bar 3 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 3 RH1: slur end
+3 RH1: Bb4:h-)
+3 LH1: G2:e* D3:e* G3:e* Bb3:e*
+# MARKS bar 4 RH1: slur now runs on to bar 5 D5 (end moved)
+4 RH1: C5:e( D5:e Eb5:e C5:e
+# MARKS bar 4 RH2: slur start
+4 RH2: G4:h~(
+4 LH1: Eb2+Eb3:e* r:e C2+C3:e* r:e
+# page 266 system 2 starts bar 5
+# MARKS bar 5 RH1: slur end
+5 RH1: D5:h)
+# JUDGE bar 5 RH2: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 5 RH2: slur end
+5 RH2: G4:q F#4:q)
+5 LH1: Bb1+Bb2:e* r:e A1+A2:e* r:e
+# JUDGE bar 6 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 6 RH1: slur start
+6 RH1: Bb4:e( C5:e D5:e Bb4:e
+# JUDGE bar 6 RH2: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 6 RH2: slur start
+6 RH2: F4:q( E4:q
+6 LH1: G1+G2:e* r:e C2+C3:e* r:e
+7 RH1: C5:h~
+# MARKS bar 7 RH2: slur end
+7 RH2: Bb4:q A4:q~)
+# JUDGE bar 7 LH1: X - staccato dot printed under the F1 of the octave
+7 LH1: F1+F2:e* C3:e* F3:e* A3:e*
+# JUDGE bar 8 RH1: X - same pitches as Y's two-voice split (A4 and C5 tied in from bar 7, then F4 A4 C5); kept as one chord
+# MARKS bar 8 RH1: slur end
+8 RH1: A4+C5:e) F4:e* A4:e* C5:e*
+8 LH1: C4:e* r:e r:q
+# page 266 system 3 starts bar 9
+# JUDGE bar 9 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 9 RH1: slur start
+9 RH1: dyn:pp G5:h(
+9 RH2: G4:h~
+# MARKS bar 9 LH1: pp (between staves), grace slur
+9 LH1: dyn:pp g:Eb2:e( Eb3:e*) G3:e* Bb3:e* Eb4:e*
+10 RH1: Eb5:e F5:e G5:e Eb5:e
+10 RH2: G4:e Bb4:e Eb5:e G4:e
+# JUDGE bar 10 LH1: X - 3rd eighth sits above the top line (Bb3), not on the first ledger line
+10 LH1: C3:e* G3:e* Bb3:e* Eb4:e*
+# JUDGE bar 11 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 11 RH1: slur end
+11 RH1: F5:q D5:q)
+# JUDGE bar 11 RH2: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 11 RH2: slur start
+11 RH2: r:e F4:e( G4:e A4:e
+11 LH1: D3:e* F3:e* Bb3:e* D4:e*
+# MARKS bar 12 RH1: slur under the two grace notes
+12 RH1: Bb4:ht g:A4:s( g:Bb4:s)
+# JUDGE bar 12 RH2: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+12 RH2: F4:h
+12 LH1: G2:e* D3:e* F3:e* Bb3:e*
+# page 266 system 4 starts bar 13
+# JUDGE bar 13 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 13 RH1: slur start
+13 RH1: C5+Eb5:q( Bb4+D5:q
+# MARKS bar 13 RH2: slur end (from bar 11)
+13 RH2: Eb4:h~)
+13 LH1: C2:e* G2:e* Eb3:e* G3:e*
+# JUDGE bar 14 RH1: X - 2nd chord is B4 line + D5 line (Bb4+D5), matching Rodolfo's D4
+14 RH1: A4+C5:e Bb4+D5:e G4+Bb4:e A4+C5:e
+14 RH2: Eb4:h
+14 LH1: F2:e* Eb3:e* F3:e* r:e
+# MARKS bar 15 RH1: nested grace slur
+15 RH1: g:Eb4:e[ Bb4+D5:h~]
+15 LH1: r:e D4:e* F4:e* D4:e*
+15 LH2: Bb3:h>
+# bar 16: dolce, p
+# JUDGE bar 16 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 16 RH1: slur end, slur start
+16 RH1: Bb4+D5:e) word:dolce dyn:p Bb4+D5:e( C5+Eb5:e D5+F5:e~
+# JUDGE bar 16 LH1: X - only one p, printed under the RH second chord (kept on RH1)
+# MARKS bar 16 LH1: p (between staves)
+16 LH1: r:e dyn:p Bb3:e* D4:e* F4:e*
+16 LH2: A3:h>
+# page 267 system 1 starts bar 17
+# JUDGE bar 17 RH1: X - first chord F5 line + D5 line, tied from bar 16 D5+F5
+17 RH1: D5+F5:e C5+Eb5:e Bb4+D5:q
+17 LH1: r:e Bb3:e* D4:e* F4:e*
+17 LH2: G3:h>
+# JUDGE bar 18 RH1: X - grace note in the space below the top line (Eb5)
+# MARKS bar 18 RH1: nested grace slur
+18 RH1: g:Eb5:e[ Bb4+D5:q] A4+C5:e D5:e
+18 LH1: r:e Bb3+D4+F4:e r:e A3+C4:e
+18 LH2: F3:q> Eb3:q>
+# JUDGE bar 19 RH1: X - lower note in the F4 space, a fourth below Bb4 (not the E4 line)
+# MARKS bar 19 RH1: slur end
+19 RH1: F4+Bb4:h)
+# JUDGE bar 19 LH1: X - D3 line, F3 line, Bb3 above the staff, F4 above the 2nd ledger line
+19 LH1: D3:e* F3:e* Bb3:e* F4:e*
+# MARKS bar 20 RH1: slur start
+20 RH1: r:e dyn:p D5+F5:e( En5+G5:e F5+A5:e~
+# MARKS bar 20 LH1: p (between staves)
+20 LH1: Bb4:e* dyn:p F4:e* D4:e* C4:e*
+# page 267 system 2 starts bar 21
+21 RH1: F5+A5:e En5+G5:e D5+F5:q~
+21 LH1: Bn3:e* D4:e* A4:e* F4:e*
+# bar 22: poco rit.
+# MARKS bar 22 RH1: poco rit.
+22 RH1: word:poco_rit. D5+F5:e En5+G5:s D5+F5:s Bn4+En5:e D5+F5:e
+22 LH1: G3:e* Bn3:e* F4:e* Bn3:e*
+# bar 23: a tempo
+# MARKS bar 23 RH1: a tempo
+23 RH1: word:a_tempo En5+G5:h~
+# JUDGE bar 23 LH1: X - 3rd eighth in the C3 space, 4th on the bottom line (G2)
+23 LH1: C4:e* G3:e* C3:e* G2:e*
+24 RH1: En5+G5:h~
+24 LH1: C2:e* r:e r:q
+# page 267 system 3 starts bar 25
+# MARKS bar 25 RH1: tie to bar 26 (printed)
+25 RH1: En5+G5:h~
+25 LH1: r:h
+# bar 26: (25) pp, rit.
+# JUDGE bar 26 RH1: Y - 3rd chord has the flat on the lower note (E5 space = Eb5) and the upper note on the 1st ledger line (A5); crescendo hairpin printed from the 2nd chord to the end of the bar
+# MARKS bar 26 RH1: slur end, rit., slur start
+26 RH1: dyn:pp En5+G5:e) hp:< word:rit. En5+G5:e( Eb5+A5:e D5+Bb5:e hp:end
+26 LH1: r:h
+# bar 27: a tempo
+# MARKS bar 27 RH1: a tempo, slur end, slur start
+27 RH1: word:a_tempo Db5+F5:q) Db5+F5:q-~(
+# JUDGE bar 27 LH1: X - grace note hangs below the 3rd ledger line (G1); upper voice (eighths after the treble clef) is LH1
+27 LH1: r:e clef:G Db4:e* F4:e* Bb4:e*
+# JUDGE bar 27 LH2: X - grace G1 below the 3rd ledger line, slurred to the G2 half
+# MARKS bar 27 LH2: grace slur
+27 LH2: g:G1:e( G2:h)
+# MARKS bar 28 RH1: slur end
+28 RH1: Db5+F5:e F5+Ab5:e Eb5+G5:e Db5+F5:e)
+28 LH1: Db5:e* r:e r:q clef:F
+# page 268 system 1 starts bar 29
+# MARKS bar 29 RH1: slur start
+29 RH1: Eb5+G5:e( Db5+F5:s3 G5:s3 F5:s3 C5+Eb5:q~
+29 LH1: C2:e* G2:e* C3:e* G3:e*
+29 LH2: C2:h~
+# bar 30: poco rit.
+# JUDGE bar 30 RH1: X - 3rd chord: F5 on the top line + flatted note in the C5 space (Cb5)
+# MARKS bar 30 RH1: slur end, slur, poco rit.
+30 RH1: C5+Eb5:e) C5+Eb5:e-( word:poco_rit. Cb5+F5:e- Bb4+G5:e-)
+30 LH1: C4:e* G4:e* r:q
+30 LH2: C2:e r:e r:q
+# bar 31: rall.
+# MARKS bar 31 RH1: rall., slur start
+31 RH1: Bbb4+Db5:q word:rall. Bbb4+Db5:q-~(
+31 LH1: Eb2+Eb3:ea Bbb3:e* Db4:e* Gb4:e*
+# JUDGE bar 32 RH1: X - 2nd chord F5 line + D5 line, 3rd chord E5 space + C5 space (doubles Mimì Db F Eb Db)
+# MARKS bar 32 RH1: slur end
+32 RH1: Bbb4+Db5:e Db5+F5:e C5+Eb5:e Bbb4+Db5:e)
+32 LH1: Bbb4:e* r:e r:q
+# page 268 system 2 starts bar 33
+# JUDGE bar 33 RH1: X - the natural-flat sign cancels the bar-31/32 double flat: Bb4, not B natural
+# MARKS bar 33 RH1: slur start
+33 RH1: C5+Eb5:e( Bb4+Db5:s3 Eb5:s3 Db5:s3 Ab4+C5:q~
+33 LH1: Ab2:e* Eb3:e* Ab3:e* Bn3:e*
+# bar 34: mf a tempo, espressivo
+# JUDGE bar 34 RH1: OWN - X pitches (2nd eighth Ab4 from the chord's flat, natural-flat = Bb4); mf is printed between the staves under the 2nd eighth, so it goes on RH1 as in Y
+# MARKS bar 34 RH1: slur end, a tempo, slur start
+34 RH1: Ab4+C5:e) dyn:mf word:a_tempo word:espressivo Ab4:e( Bb4:e C5:e
+# JUDGE bar 34 LH1: OWN - X pitch (head on the 2nd ledger line = Eb4); mf moved to RH1
+34 LH1: Eb4:e* r:e r:q
+# JUDGE bar 35 RH1: Y - Gb4 half has its own up-stem (tied to bar 36); Bb3+Db4 is a separate down-stem half
+# MARKS bar 35 RH1: slur end
+35 RH1: Gb4:h~)
+35 RH2: Bb3+Db4:h
+35 LH1: Ab1+Ab2:h~
+# MARKS bar 36 RH1: slur start
+36 RH1: Gb4:e dyn:p F4:e( Gb4:e Ab4:e
+# JUDGE bar 36 RH2: OWN (both wrong) - both heads sit ON ledger lines (C4 and A3), flat before the A3: Ab3+C4
+36 RH2: Ab3+C4:h
+36 LH1: Ab1+Ab2:h~
+# JUDGE bar 37 RH1: OWN - up-stem Eb4 on the bottom line, tied to bar 38; down-stem half: heads hang below the C4 ledger (Bb3) and below the A3 ledger (G3, with flat)
+# MARKS bar 37 RH1: slur end
+37 RH1: Eb4:h~)
+37 RH2: Gb3+Bb3:h
+37 LH1: Ab1+Ab2:h~
+# page 268 system 3 starts bar 38
+# JUDGE bar 38 RH1: X - first eighth on the bottom line (Eb4, tied from bar 37)
+# MARKS bar 38 RH1: slur
+38 RH1: Eb4:e Db4:e( Eb4:e F4:e)
+# JUDGE bar 38 RH2: OWN - three ledger lines; heads on the A3 and F3 ledgers, flat before the A3: F3+Ab3
+38 RH2: F3+Ab3:h
+38 LH1: Ab1+Ab2:h
+# bar 39: rall. col canto, pp
+# MARKS bar 39 RH1: rall. col canto, slur
+39 RH1: r:e word:rall._col_canto dyn:pp C4:e( Db4:e Eb4:e)
+# JUDGE bar 39 RH2: Y - the C4 head belongs to the up-stem eighths; only the Ab3 has the down stem and the single dot
+39 RH2: r:e Ab3:q.
+# JUDGE bar 39 LH1: X - beamed notes in E3 space (flat in key), F3 line, G3 space with flat
+# MARKS bar 39 LH1: pp (between staves), slur
+39 LH1: r:e dyn:pp Eb3:e( F3:e Gb3:e)
+# JUDGE bar 39 LH2: Y - only one eighth rest printed in the LH (upper voice): hidden rest for the lower voice
+39 LH2: s:e Ab1+Ab2:q.
+# bar 40: ppp
+# MARKS bar 40 RH1: slur
+40 RH1: r:e dyn:ppp Bb3:e( C4:e Db4:e)
+40 RH2: r:e Ab3:q.
+# MARKS bar 40 LH1: ppp (between staves), slur
+40 LH1: r:e dyn:ppp Db3:e( Eb3:e F3:e)
+# JUDGE bar 40 LH2: Y - only one eighth rest printed in the LH (upper voice)
+40 LH2: s:e Ab1+Ab2:q.
+41 RH1: r:h
+# JUDGE bar 41 LH1: X - held note sits on the top line (Ab3, flat), not the space below
+41 LH1: r:q hp:> Ab3:q>~
+42 RH1: r:h
+# JUDGE bar 42 LH1: X - head centred on the top line: Ab3
+42 LH1: Ab3:h~
+43 RH1: r:h
+# JUDGE bar 43 LH1: X - Ab3 on the top line; tie continues over the page turn to the bar-44 Ab3
+43 LH1: Ab3:h~ hp:end
+# double bar at end of page 268
+# page 269 system 1 starts bar 44
+# bar 44: AND.no AFFETTUOSO, ppp
+# JUDGE bar 44 RH1: X - slur-only difference; X kept because Y marks slurs only in scattered bars, so no consistent slur layer is added
+# MARKS bar 44 RH1: slur start
+44 RH1: r:q Bb4:q(
+# JUDGE bar 44 RH2: X - ppp printed at the start of the bar between the staves (kept on LH1 as X)
+# MARKS bar 44 RH2: ppp (between staves)
+44 RH2: r:e dyn:ppp F4+Ab4:q F4+Ab4:e
+# JUDGE bar 44 LH1: X - ppp at the bar start
+44 LH1: dyn:ppp Ab3:h
+45 RH1: C5:h
+45 RH2: r:e Gb4+Ab4:q Gb4+Ab4:e
+45 LH1: Eb4:h
+# JUDGE bar 46 RH1: X - last up-stem note is C5 alone; the seconds below have their own down stem and flag
+# MARKS bar 46 RH1: slur end
+46 RH1: Eb5:q Db5:e C5:e)
+# JUDGE bar 46 RH2: X - flagged down-stem second Gb4+Ab4 on the last eighth, as in bar 45
+46 RH2: r:e Gb4+Ab4:q Gb4+Ab4:e
+46 LH1: Ab3:h
+# page 269 system 2 starts bar 47
+# JUDGE bar 47 RH1: OWN - ppp printed under the last eighth of bar 47 (X), but the curve to bar 48 joins different pitches, so it is a slur, not a tie (Y)
+# MARKS bar 47 RH1: slur start
+47 RH1: Bb4:q~ Bb4:e dyn:ppp Eb5+Ab5:e(
+47 RH2: r:e F4+Ab4:q.
+47 LH1: Db4:h
+# JUDGE bar 48 RH1: X - no ppp in bar 48 (it is under the end of bar 47)
+# MARKS bar 48 RH1: slur end, slur start
+48 RH1: Db5+F5:q.) C5+Db5:e(
+# JUDGE bar 48 LH1: X - three ledger lines up to G4: heads above the G4 ledger (Ab4) and between G4 and E4 ledgers (F4)
+48 LH1: r:e F4+Ab4:q.
+# JUDGE bar 48 LH2: X - half note centred on the top line: Ab3
+48 LH2: Ab3:h
+# JUDGE bar 49 RH1: OWN (both wrong) - the curve from the Ab4 eighth to bar 50 lands on Gb4: a slur, not a tie
+# MARKS bar 49 RH1: slur end, slur start
+49 RH1: Bb4+Gb5:q.) Ab4:e(
+# JUDGE bar 49 LH1: OWN - both heads (Db4 between ledgers, Gb4 on the G4 ledger) carry their own dots: printed dotted quarter kept; it fills eighths 2-4 of the up-stem voice
+49 LH1: r:e Db4+Gb4:q.
+# JUDGE bar 49 LH2: X - Eb3 open half, stem down; the up-stem eighth C4+Gb4 on the last eighth (C4 and G4 ledgers) cannot follow the dotted chord in the same voice, so it is a third voice LH3
+49 LH2: Eb3:h
+49 LH3: s:q. C4+Gb4:e
+# page 269 system 3 starts bar 50
+50 RH1: Eb5:q Db5:e C5:e
+# MARKS bar 50 RH2: slur start
+50 RH2: Gb4:h(
+50 LH1: r:e Ab3:q.
+50 LH2: Ab2:h
+# bar 51: rall.
+# JUDGE bar 51 RH1: OWN - last chord: Ab5 on the 1st ledger line + Eb5 in the E5 space (X), but the curve to bar 52 is a slur to Db5+F5, not a tie
+# MARKS bar 51 RH1: slur end, rall., slur start
+51 RH1: Bb4:q~ Bb4:e) word:rall. Eb5+Ab5:e(
+# MARKS bar 51 RH2: slur end
+51 RH2: F4:q~ F4:e) s:e
+51 LH1: r:e Ab4:q.
+51 LH2: Db3:h
+# bar 52: fermatas; double bar after this bar, then 1 sharp and 3/4 (next chunk)
+# MARKS bar 52 RH1: slur end
+52 RH1: Db5+F5:q. C5+Db5:e!)
+52 LH1: Ab1+Ab2:e Ab3+Db4+F4:q r:e!

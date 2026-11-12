@@ -2848,6 +2848,7 @@ export const OPERAS: Opera[] = [
       "title": "Sono andati?",
       "kind": "Duet · Act 4",
       "id": "Act 4: Sono andati?",
+      "editionId": "puccini-sono-andati",
       "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
      },
      {
@@ -3001,6 +3002,7 @@ export const OPERAS: Opera[] = [
       "title": "Sono andati?",
       "kind": "Duet · Act 4",
       "id": "Act 4: Sono andati?",
+      "editionId": "puccini-sono-andati",
       "when": "Act 4, the others have left; Mimì opens her eyes, alone with Rodolfo"
      },
      {

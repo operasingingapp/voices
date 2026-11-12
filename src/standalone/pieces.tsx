@@ -972,6 +972,43 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-sono-andati": {
+    portrait: "boheme:mimi",
+    opera: "La bohème",
+    kind: "Duet",
+    facts: {
+      key: "No key signature for bars 1-4 (figure (21), leading into E-flat); E-flat major (3 flats) from bar 5 (“Sono andati?”) to bar 57; B-flat major (2 flats) from figure (24) (bar 58, “Te lo rammenti”) to the end",
+      time: "4/4 for bars 1-22; 2/4 from bar 23 (“Lo stesso movimento”) to the end",
+      tempo: "Printed metronome mark: Allegretto un po’ sostenuto ♩ = 108 at figure (24) (bar 58); the a tempo bars after it return to ♩ = 108. Chosen, as no number is printed: Più sostenuto at figure (21) ♩ = 50, a tenth under the previous piece’s Andantino mosso beat; Andante calmo (bar 5) ♩ = 54, the score’s own printed Andante calmo (Act 1, “Mi chiamano Mimì”); Lo stesso movimento (bar 23) keeps that beat, ♩ = 54; Più sostenuto (bar 30, “Mi chiamano Mimì”) ♩ = 48, a tenth slower; Allegretto mosso (bar 41) ♩ = 120, a tenth quicker than the Allegretto un po’ sostenuto that follows; Andantino affettuoso (bar 101) ♩ = 58, the printed mark of the same heading over the same music in “Che gelida manina”. The sostenendo of bars 17-22 is held at ♩ = 49 after its poco rit., the rall. of bars 88-90 at ♩ = 78 and the rall. of bars 96-100 at ♩ = 86 until the next tempo. The written poco rit., rit., rall., rall. molto and accelerando are played as a gradual change over the bars they cover, then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "Left alone with Rodolfo, the dying Mimì tells him he is her whole life, and they remember the night they met",
+    about: (
+      <>
+        <p>
+          “Sono andati?”, Act 4 in the garret. Colline and Schaunard have gone out, and Mimì, who was only pretending to sleep, opens
+          her eyes: she wanted to be alone with Rodolfo. She has so much to tell him, or just one thing, as vast as the sea: he is
+          her love and her whole life. Is she still pretty? As lovely as the dawn, he says; no, she answers, as lovely as a sunset.
+          She sings the words with which she introduced herself (“Mi chiamano Mimì”), Rodolfo gives her back the pink bonnet he has
+          kept against his heart, and together they remember the night they met: her candle blown out, the key she dropped, his
+          hunting for it in the dark, and how quickly he found it. Softly she repeats his first words to her, “Che gelida manina”,
+          until a fit of coughing cuts her short.
+        </p>
+        <p>
+          Score: vocal score pages 261-269 (from figure (21), page 261 system 3 bar 3, to the end of page 269 system 3, before “Oh
+          Dio! Mimì!”, 109 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain.
+          Written out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on
+          the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept, with the
+          print’s spellings and punctuation (“perchè”, “buio,e” printed as one). Rodolfo’s part, printed in the treble clef, is
+          written at sounding pitch. The printed metronome mark is the Allegretto un po’ sostenuto’s ♩ = 108; the other tempos are
+          chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

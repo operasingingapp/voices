@@ -1,0 +1,1527 @@
+{
+ "editionId": "puccini-sono-andati",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Luigi Illica and Giuseppe Giacosa (1896). Words follow the Ricordi vocal score's spelling and punctuation, with its dot runs (dormire........, Mimì.............., presto..............), perchè with the grave accent, \"un'aurora\", Mimì's \"come un tramonto\", \"Mio bel signorino posso ben dirlo adesso,\" (no comma after signorino), and \"buio,e\" printed as one run: in bar 96 \"buio,e\" is sung on one note, in bar 106 \"bu-io,e\" on two. Mimì's quotations in «» are her words from Act 1 (\"Mi chiamano Mimì… il perchè non so\") and Rodolfo's (\"Che gelida manina… Se la lasci riscaldar!\"). IPA follows sung Italian conventions: stressed syllable marked, words sung on one note joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "i1",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Sono andati?",
+   "translation": "Have they left?",
+   "ipa": "ˈso.no‿anˈda.ti",
+   "words": [
+    [
+     "Sono",
+     "they are",
+     "ˈso.no"
+    ],
+    [
+     "andati?",
+     "gone",
+     "anˈda.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i2",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Fingevo di dormire........ perchè volli con te sola restare........",
+   "translation": "I made believe I was asleep, so that I could stay here with you, just the two of us.",
+   "ipa": "finˈdʒe.vo di dorˈmi.re perˈke ˈvɔl.li kon te ˈso.la reˈsta.re",
+   "words": [
+    [
+     "Fingevo",
+     "I was pretending",
+     "finˈdʒe.vo"
+    ],
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "dormire........",
+     "sleep",
+     "dorˈmi.re"
+    ],
+    [
+     "perchè",
+     "because",
+     "perˈke"
+    ],
+    [
+     "volli",
+     "I wanted",
+     "ˈvɔl.li"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "te",
+     "you",
+     "te"
+    ],
+    [
+     "sola",
+     "alone",
+     "ˈso.la"
+    ],
+    [
+     "restare........",
+     "to stay",
+     "reˈsta.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "I made as if asleep"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "gloss": "I wanted to stay alone with you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i3",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Ho tante cose che ti voglio dire......... o una sola, ma grande come il mare,.......",
+   "translation": "I have so much to tell you, or a single thing, vast as the ocean,",
+   "ipa": "ɔ ˈtan.te ˈkɔ.ze ke ti ˈvɔʎ.ʎo ˈdi.re o ˈu.na ˈso.la ma ˈgran.de ˈko.me‿il ˈma.re",
+   "words": [
+    [
+     "Ho",
+     "I have",
+     "ɔ"
+    ],
+    [
+     "tante",
+     "so many",
+     "ˈtan.te"
+    ],
+    [
+     "cose",
+     "things",
+     "ˈkɔ.ze"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "ti",
+     "to you",
+     "ti"
+    ],
+    [
+     "voglio",
+     "I want",
+     "ˈvɔʎ.ʎo"
+    ],
+    [
+     "dire.........",
+     "to say",
+     "ˈdi.re"
+    ],
+    [
+     "o",
+     "or",
+     "o"
+    ],
+    [
+     "una",
+     "one",
+     "ˈu.na"
+    ],
+    [
+     "sola,",
+     "only",
+     "ˈso.la"
+    ],
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "grande",
+     "great",
+     "ˈgran.de"
+    ],
+    [
+     "come",
+     "as",
+     "ˈko.me"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mare,.......",
+     "sea",
+     "ˈma.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "that I mean to tell you"
+    },
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "or a single one"
+    },
+    {
+     "words": [
+      10,
+      11,
+      12,
+      13,
+      14
+     ],
+     "gloss": "but vast as the sea"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i4",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "come il mare profonda ed infinita........",
+   "translation": "as deep and boundless as the ocean.",
+   "ipa": "ˈko.me‿il ˈma.re proˈfon.da‿ed in.fiˈni.ta",
+   "words": [
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mare",
+     "sea",
+     "ˈma.re"
+    ],
+    [
+     "profonda",
+     "deep",
+     "proˈfon.da"
+    ],
+    [
+     "ed",
+     "and",
+     "ed"
+    ],
+    [
+     "infinita........",
+     "boundless",
+     "in.fiˈni.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "like the sea"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i5",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Sei il mio amor........ e tutta la mia vita!...",
+   "translation": "You're my love, and everything I live for!",
+   "ipa": "ˈsɛi‿il ˈmi.o aˈmor e ˈtut.ta la ˈmi.a ˈvi.ta",
+   "words": [
+    [
+     "Sei",
+     "you are",
+     "ˈsɛi"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "amor........",
+     "love",
+     "aˈmor"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "tutta",
+     "all",
+     "ˈtut.ta"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "vita!...",
+     "life",
+     "ˈvi.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "my love"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "gloss": "my entire life"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i6",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Sei il mio amore e tutta la mia vita...........",
+   "translation": "You're my love, and everything I live for.",
+   "ipa": "ˈsɛi il ˈmi.o‿aˈmo.re e ˈtut.ta la ˈmi.a ˈvi.ta",
+   "words": [
+    [
+     "Sei",
+     "you are",
+     "ˈsɛi"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "amore",
+     "love",
+     "aˈmo.re"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "tutta",
+     "all",
+     "ˈtut.ta"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "vita...........",
+     "life",
+     "ˈvi.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "my love"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7,
+      8
+     ],
+     "gloss": "my entire life"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Ah! Mimì, mia bella Mimì.",
+   "translation": "Oh, Mimì, my lovely Mimì.",
+   "ipa": "a miˈmi ˈmi.a ˈbɛl.la miˈmi",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "a"
+    ],
+    [
+     "Mimì,",
+     "Mimì",
+     "miˈmi"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "bella",
+     "lovely",
+     "ˈbɛl.la"
+    ],
+    [
+     "Mimì.",
+     "Mimì",
+     "miˈmi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i7",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Son bella ancora?",
+   "translation": "Am I still pretty?",
+   "ipa": "son ˈbɛl.la anˈko.ra",
+   "words": [
+    [
+     "Son",
+     "I am",
+     "son"
+    ],
+    [
+     "bella",
+     "pretty",
+     "ˈbɛl.la"
+    ],
+    [
+     "ancora?",
+     "still",
+     "anˈko.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Bella come un'aurora........",
+   "translation": "As lovely as the dawn.",
+   "ipa": "ˈbɛl.la ˈko.me‿u.nauˈrɔ.ra",
+   "words": [
+    [
+     "Bella",
+     "lovely",
+     "ˈbɛl.la"
+    ],
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "un'aurora........",
+     "a sunrise",
+     "u.nauˈrɔ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "like a sunrise"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i8",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "Hai sbagliato il raffronto.",
+   "translation": "That is the wrong comparison.",
+   "ipa": "ˈai zbaʎˈʎa.to‿il rafˈfron.to",
+   "words": [
+    [
+     "Hai",
+     "you have",
+     "ˈai"
+    ],
+    [
+     "sbagliato",
+     "got wrong",
+     "zbaʎˈʎa.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "raffronto.",
+     "simile",
+     "rafˈfron.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "you have chosen badly"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i9",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "Volevi dir......... bella come un tramonto.",
+   "translation": "What you meant was: lovely as a sunset.",
+   "ipa": "voˈle.vi dir ˈbɛl.la ˈko.me‿un traˈmon.to",
+   "words": [
+    [
+     "Volevi",
+     "you wanted",
+     "voˈle.vi"
+    ],
+    [
+     "dir.........",
+     "to say",
+     "dir"
+    ],
+    [
+     "bella",
+     "lovely",
+     "ˈbɛl.la"
+    ],
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "tramonto.",
+     "sunset",
+     "traˈmon.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "what you meant was"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "like a sunset"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i10",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "«Mi chiamano Mimì.............. mi chiamano Mimì............... il perchè........ non so...»",
+   "translation": "“My name is Mimì, my name is Mimì, why, I cannot say…”",
+   "ipa": "mi ˈkja.ma.no miˈmi mi ˈkja.ma.no miˈmi il perˈke non ˈsɔ",
+   "words": [
+    [
+     "«Mi",
+     "me",
+     "mi"
+    ],
+    [
+     "chiamano",
+     "they name",
+     "ˈkja.ma.no"
+    ],
+    [
+     "Mimì..............",
+     "Mimì",
+     "miˈmi"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "chiamano",
+     "they name",
+     "ˈkja.ma.no"
+    ],
+    [
+     "Mimì...............",
+     "Mimì",
+     "miˈmi"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "perchè........",
+     "why",
+     "perˈke"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "so...»",
+     "I know",
+     "ˈsɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I am called"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I am called"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "gloss": "I don't know why"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "Tornò al nido la rondine e cinguetta.",
+   "translation": "Home to its nest came the swallow, and now it sings.",
+   "ipa": "torˈnɔ al ˈni.do la ˈron.di.ne‿e tʃinˈgwet.ta",
+   "words": [
+    [
+     "Tornò",
+     "came back",
+     "torˈnɔ"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "nido",
+     "nest",
+     "ˈni.do"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "rondine",
+     "swallow",
+     "ˈron.di.ne"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "cinguetta.",
+     "chirps",
+     "tʃinˈgwet.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "came home to the nest"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i11",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "La mia cuffietta, la mia cuffietta... Ah!...",
+   "translation": "My bonnet, my bonnet… Ah!",
+   "ipa": "la ˈmi.a kufˈfjet.ta la ˈmi.a kufˈfjet.ta a",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "cuffietta,",
+     "bonnet",
+     "kufˈfjet.ta"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "cuffietta...",
+     "bonnet",
+     "kufˈfjet.ta"
+    ],
+    [
+     "Ah!...",
+     "ah",
+     "a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "my little cap"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i12",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "Te lo rammenti quando sono entrata la prima volta, là?...........",
+   "translation": "Do you recall the first time I walked in, over there?",
+   "ipa": "te lo ramˈmen.ti ˈkwan.do ˈso.no‿enˈtra.ta la ˈpri.ma ˈvɔl.ta ˈla",
+   "words": [
+    [
+     "Te",
+     "to you",
+     "te"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "rammenti",
+     "you recall",
+     "ramˈmen.ti"
+    ],
+    [
+     "quando",
+     "when",
+     "ˈkwan.do"
+    ],
+    [
+     "sono",
+     "I am",
+     "ˈso.no"
+    ],
+    [
+     "entrata",
+     "come in",
+     "enˈtra.ta"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "prima",
+     "first",
+     "ˈpri.ma"
+    ],
+    [
+     "volta,",
+     "time",
+     "ˈvɔl.ta"
+    ],
+    [
+     "là?...........",
+     "there",
+     "ˈla"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "do you recall it"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "I came in"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "for the first time"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r4",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "64",
+   "original": "Se lo rammento!",
+   "translation": "Do I remember!",
+   "ipa": "se lo ramˈmen.to",
+   "words": [
+    [
+     "Se",
+     "if",
+     "se"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "rammento!",
+     "I recall",
+     "ramˈmen.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "how could I forget"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i13",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "Il lume s'era spento...",
+   "translation": "The lamp had blown out…",
+   "ipa": "il ˈlu.me ˈsɛ.ra ˈspɛn.to",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "lume",
+     "lamp",
+     "ˈlu.me"
+    ],
+    [
+     "s'era",
+     "had",
+     "ˈsɛ.ra"
+    ],
+    [
+     "spento...",
+     "extinguished",
+     "ˈspɛn.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "had blown out"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r5",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "70",
+   "original": "Eri tanto turbata!",
+   "translation": "You were so flustered!",
+   "ipa": "ˈɛ.ri ˈtan.to turˈba.ta",
+   "words": [
+    [
+     "Eri",
+     "you were",
+     "ˈɛ.ri"
+    ],
+    [
+     "tanto",
+     "so",
+     "ˈtan.to"
+    ],
+    [
+     "turbata!",
+     "flustered",
+     "turˈba.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r6",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "74",
+   "original": "Poi smarristi la chiave...",
+   "translation": "And then the key went missing…",
+   "ipa": "ˈpɔi zmarˈri.sti la ˈkja.ve",
+   "words": [
+    [
+     "Poi",
+     "then",
+     "ˈpɔi"
+    ],
+    [
+     "smarristi",
+     "you mislaid",
+     "zmarˈri.sti"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "chiave...",
+     "key",
+     "ˈkja.ve"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i14",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "77",
+   "original": "E a cercarla tastoni ti sei messo!..",
+   "translation": "And you felt your way round in the dark, hunting for it!",
+   "ipa": "e a tʃerˈkar.la taˈsto.ni ti ˈsɛi ˈmes.so",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "cercarla",
+     "find it",
+     "tʃerˈkar.la"
+    ],
+    [
+     "tastoni",
+     "by feel",
+     "taˈsto.ni"
+    ],
+    [
+     "ti",
+     "yourself",
+     "ti"
+    ],
+    [
+     "sei",
+     "you have",
+     "ˈsɛi"
+    ],
+    [
+     "messo!..",
+     "set",
+     "ˈmes.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "to hunt for it"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "you set about"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r7",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "80",
+   "original": "E cerca,... cerca...",
+   "translation": "And I searched, and searched…",
+   "ipa": "e ˈtʃer.ka ˈtʃer.ka",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "cerca,...",
+     "search",
+     "ˈtʃer.ka"
+    ],
+    [
+     "cerca...",
+     "search",
+     "ˈtʃer.ka"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i15",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "83",
+   "original": "Mio bel signorino posso ben dirlo adesso,",
+   "translation": "My handsome young sir, I can safely tell you now,",
+   "ipa": "ˈmi.o ˈbɛl si.ɲoˈri.no ˈpɔs.so ˈbɛn ˈdir.lo‿aˈdɛs.so",
+   "words": [
+    [
+     "Mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "bel",
+     "handsome",
+     "ˈbɛl"
+    ],
+    [
+     "signorino",
+     "young sir",
+     "si.ɲoˈri.no"
+    ],
+    [
+     "posso",
+     "I can",
+     "ˈpɔs.so"
+    ],
+    [
+     "ben",
+     "indeed",
+     "ˈbɛn"
+    ],
+    [
+     "dirlo",
+     "tell it",
+     "ˈdir.lo"
+    ],
+    [
+     "adesso,",
+     "now",
+     "aˈdɛs.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "my handsome young sir"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "I may safely say it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i16",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "lei la trovò..... assai presto..............",
+   "translation": "you came upon it in no time at all.",
+   "ipa": "ˈlɛi la troˈvɔ asˈsai ˈprɛ.sto",
+   "words": [
+    [
+     "lei",
+     "you",
+     "ˈlɛi"
+    ],
+    [
+     "la",
+     "it",
+     "la"
+    ],
+    [
+     "trovò.....",
+     "found",
+     "troˈvɔ"
+    ],
+    [
+     "assai",
+     "very",
+     "asˈsai"
+    ],
+    [
+     "presto..............",
+     "soon",
+     "ˈprɛ.sto"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "pretty soon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r8",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "92",
+   "original": "Aiutavo il destino....",
+   "translation": "I was giving fate a hand…",
+   "ipa": "a.juˈta.vo‿il deˈsti.no",
+   "words": [
+    [
+     "Aiutavo",
+     "I was aiding",
+     "a.juˈta.vo"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "destino....",
+     "fate",
+     "deˈsti.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i17",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "95",
+   "original": "Era buio,e il mio rossor non si vedeva..........",
+   "translation": "It was dark, and my blushes did not show.",
+   "ipa": "ˈɛ.ra ˈbu.jo‿e il ˈmi.o rosˈsor non si veˈde.va",
+   "words": [
+    [
+     "Era",
+     "it was",
+     "ˈɛ.ra"
+    ],
+    [
+     "buio,",
+     "dark",
+     "ˈbu.jo"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "rossor",
+     "blush",
+     "rosˈsor"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "si",
+     "itself",
+     "si"
+    ],
+    [
+     "vedeva..........",
+     "showed",
+     "veˈde.va"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "my blushes"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "stayed hidden"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i18",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "100",
+   "original": "«Che gelida manina... Se la lasci riscaldar!.................»",
+   "translation": "“Your tiny hand is frozen… let me warm it!”",
+   "ipa": "ke ˈdʒɛ.li.da maˈni.na se la ˈlaʃ.ʃi ri.skalˈdar",
+   "words": [
+    [
+     "«Che",
+     "what",
+     "ke"
+    ],
+    [
+     "gelida",
+     "frozen",
+     "ˈdʒɛ.li.da"
+    ],
+    [
+     "manina...",
+     "tiny hand",
+     "maˈni.na"
+    ],
+    [
+     "Se",
+     "if",
+     "se"
+    ],
+    [
+     "la",
+     "it",
+     "la"
+    ],
+    [
+     "lasci",
+     "you let",
+     "ˈlaʃ.ʃi"
+    ],
+    [
+     "riscaldar!.................»",
+     "warm",
+     "ri.skalˈdar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "how frozen your little hand is"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "let me warm it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i19",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "Era buio,e la man tu mi prendevi...",
+   "translation": "In the dark, you were holding my hand…",
+   "ipa": "ˈɛ.ra ˈbu.jo‿e la ˈman tu mi prenˈde.vi",
+   "words": [
+    [
+     "Era",
+     "it was",
+     "ˈɛ.ra"
+    ],
+    [
+     "buio,",
+     "dark",
+     "ˈbu.jo"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "man",
+     "hand",
+     "ˈman"
+    ],
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "prendevi...",
+     "were taking",
+     "prenˈde.vi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "my hand"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "you took hold of"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}
