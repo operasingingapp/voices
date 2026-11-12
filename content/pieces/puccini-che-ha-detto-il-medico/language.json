@@ -1,0 +1,808 @@
+{
+ "editionId": "puccini-che-ha-detto-il-medico",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Luigi Illica and Giuseppe Giacosa (1896). Words follow the Ricordi vocal score's spelling and punctuation, with its dot runs (Così...., venire..., così..., spirata..., Musetta,...., voi!..., va?.., Vedi?.., Coraggio...., Mimì........), perchè with the grave accent, and \"Madonna santa io sono indegna di perdono\" without commas. Words printed on stems without noteheads (Colline's \"Come va?..\" and Rodolfo's \"Vedi?.. È tranquilla.\", senza voce; Rodolfo's \"Che vuol dire...\", con voce strozzata; Marcello's \"Coraggio....\") are spoken: they are cross noteheads in the score, with the same IPA as sung words. IPA follows sung Italian conventions: stressed syllable marked, words sung on one note joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced; io on one note is jo. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "u1",
+   "role": "musetta",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Madonna benedetta, fate la grazia a questa poveretta che non debba morire.",
+   "translation": "Holy Virgin, show your grace to this poor girl and spare her from dying.",
+   "ipa": "maˈdɔn.na be.neˈdet.ta ˈfa.te la ˈgrat.tsja‿a ˈkwe.sta po.veˈret.ta ke non ˈdeb.ba moˈri.re",
+   "words": [
+    [
+     "Madonna",
+     "Our Lady",
+     "maˈdɔn.na"
+    ],
+    [
+     "benedetta,",
+     "blessed",
+     "be.neˈdet.ta"
+    ],
+    [
+     "fate",
+     "do",
+     "ˈfa.te"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "grazia",
+     "grace",
+     "ˈgrat.tsja"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "questa",
+     "this",
+     "ˈkwe.sta"
+    ],
+    [
+     "poveretta",
+     "poor thing",
+     "po.veˈret.ta"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "debba",
+     "she should",
+     "ˈdeb.ba"
+    ],
+    [
+     "morire.",
+     "die",
+     "moˈri.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "Holy Virgin"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "grant the favour"
+    },
+    {
+     "words": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "gloss": "that she need not die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "u2",
+   "role": "musetta",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Qui ci vuole un riparo perchè la fiamma sventola. Così....",
+   "translation": "Something has to shield this, the flame is wavering. That's it....",
+   "ipa": "ˈkwi tʃi ˈvwɔ.le‿un riˈpa.ro perˈke la ˈfjam.ma ˈzvɛn.to.la koˈzi",
+   "words": [
+    [
+     "Qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "ci",
+     "(there)",
+     "tʃi"
+    ],
+    [
+     "vuole",
+     "is needed",
+     "ˈvwɔ.le"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "riparo",
+     "shield",
+     "riˈpa.ro"
+    ],
+    [
+     "perchè",
+     "because",
+     "perˈke"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "fiamma",
+     "flame",
+     "ˈfjam.ma"
+    ],
+    [
+     "sventola.",
+     "flutters",
+     "ˈzvɛn.to.la"
+    ],
+    [
+     "Così....",
+     "that's it",
+     "koˈzi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "this wants shielding"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "u3",
+   "role": "musetta",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "E che possa guarire.",
+   "translation": "And grant that she gets better.",
+   "ipa": "e ke ˈpɔs.sa gwaˈri.re",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "possa",
+     "she might",
+     "ˈpɔs.sa"
+    ],
+    [
+     "guarire.",
+     "recover",
+     "gwaˈri.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "that she might recover"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "u4",
+   "role": "musetta",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Madonna santa io sono indegna di perdono mentre invece Mimì è un angelo del cielo.",
+   "translation": "Holy Virgin, I don't deserve to be forgiven, whereas Mimì is a heavenly angel.",
+   "ipa": "maˈdɔn.na ˈsan.ta jo ˈso.no‿inˈdeɲ.ɲa di perˈdo.no ˈmen.tre‿inˈve.tʃe miˈmi ˈɛ‿un ˈan.dʒe.lo del ˈtʃɛ.lo",
+   "words": [
+    [
+     "Madonna",
+     "Our Lady",
+     "maˈdɔn.na"
+    ],
+    [
+     "santa",
+     "holy",
+     "ˈsan.ta"
+    ],
+    [
+     "io",
+     "I",
+     "jo"
+    ],
+    [
+     "sono",
+     "am",
+     "ˈso.no"
+    ],
+    [
+     "indegna",
+     "undeserving",
+     "inˈdeɲ.ɲa"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "perdono",
+     "pardon",
+     "perˈdo.no"
+    ],
+    [
+     "mentre",
+     "whereas",
+     "ˈmen.tre"
+    ],
+    [
+     "invece",
+     "on the other hand",
+     "inˈve.tʃe"
+    ],
+    [
+     "Mimì",
+     "Mimì",
+     "miˈmi"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "un",
+     "an",
+     "un"
+    ],
+    [
+     "angelo",
+     "angel",
+     "ˈan.dʒe.lo"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "cielo.",
+     "heaven",
+     "ˈtʃɛ.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "Holy Virgin"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "undeserving of pardon"
+    },
+    {
+     "words": [
+      7,
+      8
+     ],
+     "gloss": "whereas"
+    },
+    {
+     "words": [
+      11,
+      12,
+      13,
+      14
+     ],
+     "gloss": "a heavenly angel"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "u5",
+   "role": "musetta",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Non credo.",
+   "translation": "I don't think so.",
+   "ipa": "non ˈkre.do",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "credo.",
+     "I believe",
+     "ˈkre.do"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I don't think so"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Che ha detto il medico?",
+   "translation": "What has the doctor told you?",
+   "ipa": "ke‿a ˈdet.to‿il ˈmɛ.di.ko",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "ha",
+     "has",
+     "a"
+    ],
+    [
+     "detto",
+     "told",
+     "ˈdet.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "medico?",
+     "doctor",
+     "ˈmɛ.di.ko"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "what did he tell"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Io spero ancora.",
+   "translation": "I'm still hoping.",
+   "ipa": "jo ˈspɛ.ro‿anˈko.ra",
+   "words": [
+    [
+     "Io",
+     "I",
+     "jo"
+    ],
+    [
+     "spero",
+     "am hoping",
+     "ˈspɛ.ro"
+    ],
+    [
+     "ancora.",
+     "still",
+     "anˈko.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "I'm still hoping"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Vi pare che sia grave?",
+   "translation": "Does it seem serious to you?",
+   "ipa": "vi ˈpa.re ke ˈsi.a ˈgra.ve",
+   "words": [
+    [
+     "Vi",
+     "to you",
+     "vi"
+    ],
+    [
+     "pare",
+     "it seems",
+     "ˈpa.re"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "sia",
+     "it is",
+     "ˈsi.a"
+    ],
+    [
+     "grave?",
+     "serious",
+     "ˈgra.ve"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "does it seem to you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r4",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "Vedi?.. È tranquilla.",
+   "translation": "See?.. She's quiet now.",
+   "ipa": "ˈve.di ˈɛ tranˈkwil.la",
+   "words": [
+    [
+     "Vedi?..",
+     "look",
+     "ˈve.di"
+    ],
+    [
+     "È",
+     "she is",
+     "ˈɛ"
+    ],
+    [
+     "tranquilla.",
+     "peaceful",
+     "tranˈkwil.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r5",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "Che vuol dire quell'andare e venire... quel guardarmi così...",
+   "translation": "What is all this coming and going... the way you look at me...",
+   "ipa": "ke ˈvwɔl ˈdi.re kwel.lanˈda.re‿e veˈni.re kwel gwarˈdar.mi koˈzi",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "vuol",
+     "wants",
+     "ˈvwɔl"
+    ],
+    [
+     "dire",
+     "to say",
+     "ˈdi.re"
+    ],
+    [
+     "quell'andare",
+     "that going",
+     "kwel.lanˈda.re"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "venire...",
+     "coming",
+     "veˈni.re"
+    ],
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "guardarmi",
+     "looking at me",
+     "gwarˈdar.mi"
+    ],
+    [
+     "così...",
+     "so",
+     "koˈzi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "what is the meaning of"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "all that coming and going"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "the way you look at me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r6",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "36",
+   "original": "Mimì........",
+   "translation": "Mimì........",
+   "ipa": "miˈmi",
+   "words": [
+    [
+     "Mimì........",
+     "Mimì",
+     "miˈmi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r7",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Mimì........",
+   "translation": "Mimì........",
+   "ipa": "miˈmi",
+   "words": [
+    [
+     "Mimì........",
+     "Mimì",
+     "miˈmi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m1",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Verrà.",
+   "translation": "He's on his way.",
+   "ipa": "verˈra",
+   "words": [
+    [
+     "Verrà.",
+     "he will come",
+     "verˈra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m2",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "34",
+   "original": "Coraggio....",
+   "translation": "Be brave....",
+   "ipa": "koˈrad.dʒo",
+   "words": [
+    [
+     "Coraggio....",
+     "courage",
+     "koˈrad.dʒo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "s1",
+   "role": "schaunard",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Marcello, è spirata...",
+   "translation": "Marcello, she's gone...",
+   "ipa": "marˈtʃɛl.lo‿ɛ spiˈra.ta",
+   "words": [
+    [
+     "Marcello,",
+     "Marcello",
+     "marˈtʃɛl.lo"
+    ],
+    [
+     "è",
+     "has",
+     "ˈɛ"
+    ],
+    [
+     "spirata...",
+     "breathed her last",
+     "spiˈra.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "she is gone"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c1",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Musetta,.... a voi!...",
+   "translation": "Musetta,.... here, take this!...",
+   "ipa": "muˈzet.ta a ˈvoi",
+   "words": [
+    [
+     "Musetta,....",
+     "Musetta",
+     "muˈzet.ta"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "voi!...",
+     "you",
+     "ˈvoi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "this is yours"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c2",
+   "role": "colline",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Come va?..",
+   "translation": "How is it going?..",
+   "ipa": "ˈko.me ˈva",
+   "words": [
+    [
+     "Come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "va?..",
+     "goes",
+     "ˈva"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "how is she doing"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

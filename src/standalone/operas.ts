@@ -2957,6 +2957,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Oh Dio! Mimì!",
       "when": "Act 4, Mimì chokes; Musetta has brought the muff, and Mimì falls asleep",
       "editionId": "puccini-oh-dio-mimi"
+     },
+     {
+      "title": "Che ha detto il medico?",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Che ha detto il medico?",
+      "when": "Act 4, the end: Musetta prays, Mimì dies in her sleep, and Rodolfo is the last to understand",
+      "editionId": "puccini-che-ha-detto-il-medico"
      }
     ]
    },
@@ -3234,6 +3241,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Oh Dio! Mimì!",
       "when": "Act 4, Mimì chokes; Musetta has brought the muff, and Mimì falls asleep",
       "editionId": "puccini-oh-dio-mimi"
+     },
+     {
+      "title": "Che ha detto il medico?",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Che ha detto il medico?",
+      "when": "Act 4, the end: Musetta prays, Mimì dies in her sleep, and Rodolfo is the last to understand",
+      "editionId": "puccini-che-ha-detto-il-medico"
      }
     ]
    },
@@ -3295,6 +3309,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Oh Dio! Mimì!",
       "when": "Act 4, Mimì chokes; Musetta has brought the muff, and Mimì falls asleep",
       "editionId": "puccini-oh-dio-mimi"
+     },
+     {
+      "title": "Che ha detto il medico?",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Che ha detto il medico?",
+      "when": "Act 4, the end: Musetta prays, Mimì dies in her sleep, and Rodolfo is the last to understand",
+      "editionId": "puccini-che-ha-detto-il-medico"
      }
     ]
    },
@@ -3393,6 +3414,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Oh Dio! Mimì!",
       "when": "Act 4, Mimì chokes; Musetta has brought the muff, and Mimì falls asleep",
       "editionId": "puccini-oh-dio-mimi"
+     },
+     {
+      "title": "Che ha detto il medico?",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Che ha detto il medico?",
+      "when": "Act 4, the end: Musetta prays, Mimì dies in her sleep, and Rodolfo is the last to understand",
+      "editionId": "puccini-che-ha-detto-il-medico"
      }
     ]
    },
@@ -3489,6 +3517,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 4: Musetta!",
       "when": "Act 4, Musetta brings in the dying Mimì",
       "editionId": "puccini-musetta"
+     },
+     {
+      "title": "Che ha detto il medico?",
+      "kind": "Finale · Act 4",
+      "id": "Act 4: Che ha detto il medico?",
+      "when": "Act 4, the end: Musetta prays, Mimì dies in her sleep, and Rodolfo is the last to understand",
+      "editionId": "puccini-che-ha-detto-il-medico"
      }
     ]
    },

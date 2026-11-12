@@ -1081,6 +1081,45 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-che-ha-detto-il-medico": {
+    portrait: "boheme:musetta",
+    opera: "La bohème",
+    kind: "Finale",
+    facts: {
+      key: "Two sharps from figure (29) (it opens on a B minor chord) to bar 33; four sharps from figure (31) (bar 34, “Coraggio”) to the end, which closes on C-sharp minor chords",
+      time: "2/4 from figure (29); one bar of 6/8 (bar 18, “Non credo”, “Marcello, è spirata…”); 2/4 again from figure (30) (bar 19); 4/4 at figure (31) (bar 34), 3/4 for bars 35-36, 4/4 from bar 37 to the end",
+      tempo: "No metronome mark is printed in this piece. Chosen and timed against complete recordings (about 2½ min, with the pauses the map does not play): Andante lento e sostenuto at figure (29) ♩ = 52, the score’s printed Andante lento in common time (Act 1, “Che gelida manina”), as the recordings take this part well above the 2/4 Andante lento’s ♩ = 40; the a tempo at figure (30) returns to it; Largo sostenuto at figure (31) (bar 34) ♩ = 46, broader than the score’s other Largo sostenuto (♩ = 58), as the recordings take the last page; Grave (bar 42) ♩ = 40. Musetta’s quasi a piacere aside and Colline’s a piacere words keep the running tempo. The written rall. (bar 18) and poco rall. (bar 41) are played as a gradual change, then back to the tempo; fermatas, including the lunga pause of bar 30, are held",
+    },
+    notePlaceholder: "Musetta prays for Mimì while the friends whisper; Schaunard finds that she has died, and Rodolfo is the last to understand",
+    about: (
+      <>
+        <p>
+          “Che ha detto il medico?”, the end of Act 4 and of the opera, in the garret. Mimì has fallen asleep, and Rodolfo quietly
+          asks Marcello about the doctor: he is coming. Musetta warms the medicine over the spirit lamp and, almost without knowing
+          it, murmurs a prayer to the Madonna for Mimì, breaking off to ask for something to shield the flickering flame: she herself
+          does not deserve forgiveness, but Mimì is an angel. Rodolfo still hopes; Musetta does not think it is serious. Schaunard
+          looks at the bed and whispers to Marcello that she has died. Colline comes back with the money from his coat. Rodolfo
+          hangs Musetta’s cape over the window to keep the sun off Mimì’s face, tells Colline that she is resting, and then sees how
+          the others are looking at him. Marcello embraces him (“Coraggio”), and Rodolfo throws himself on Mimì’s body, crying her
+          name.
+        </p>
+        <p>
+          Score: vocal score pages 274-277 (from figure (29), Andante lento e sostenuto, to the last bar of the opera, 45 bars), from
+          Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed
+          pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge,
+          then checked against the page and corrected. Only the Italian words are kept, with the print’s spellings and punctuation
+          (“perchè”, “Madonna santa io sono indegna di perdono”). The whispered and choked words (Colline’s “Come va?”, Rodolfo’s
+          “Vedi? È tranquilla” and “Che vuol dire quell’andare e venire…”, Marcello’s “Coraggio”) are printed with stems but no
+          noteheads and are written with cross noteheads. Rodolfo’s part, printed in the treble clef, is written at sounding pitch.
+          No metronome mark is printed; the tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",
