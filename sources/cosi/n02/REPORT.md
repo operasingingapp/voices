@@ -30,3 +30,5 @@
 **Tempo:** median of three complete recordings: Böhm 1:12, Gardiner 1:07, Barenboim (Berlin PO) 1:00. The median is 1:07, so 217 quarters in 67 s gives quarter = 194 (half = 97).
 
 **Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

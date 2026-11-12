@@ -35,3 +35,5 @@
 **Tempo:** median track length of 4 complete recordings: Jacobs 1:53, Harnoncourt (Concertgebouw) 1:59, Muti 1:59, Böhm 2:03. The median is 1:59, so 244 quarters / 119 s gives quarter = 123.
 
 **Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

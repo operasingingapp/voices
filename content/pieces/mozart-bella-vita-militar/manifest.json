@@ -1,0 +1,156 @@
+{
+ "editionId": "mozart-bella-vita-militar",
+ "editionVersion": "1.0.0-peters",
+ "title": "Bella vita militar",
+ "subtitle": "Chorus of soldiers: chorus from Così fan tutte, Act 1 (No. 8)",
+ "kind": "chorus",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "soprano",
+   "name": "Chorus sopranos",
+   "voiceType": "Soprano",
+   "partKey": "soprano"
+  },
+  {
+   "id": "alto",
+   "name": "Chorus altos",
+   "voiceType": "Alto",
+   "partKey": "alto"
+  },
+  {
+   "id": "tenor",
+   "name": "Chorus tenors",
+   "voiceType": "Tenor",
+   "partKey": "tenor"
+  },
+  {
+   "id": "bass",
+   "name": "Chorus basses",
+   "voiceType": "Bass",
+   "partKey": "bass"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "soprano",
+   "label": "Chorus sopranos (Soprano)",
+   "shortLabel": "Chorus sopranos",
+   "kind": "voice",
+   "roleId": "soprano",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alto",
+   "label": "Chorus altos (Alto)",
+   "shortLabel": "Chorus altos",
+   "kind": "voice",
+   "roleId": "alto",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tenor",
+   "label": "Chorus tenors (Tenor)",
+   "shortLabel": "Chorus tenors",
+   "kind": "voice",
+   "roleId": "tenor",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "bass",
+   "label": "Chorus basses (Bass)",
+   "shortLabel": "Chorus basses",
+   "kind": "voice",
+   "roleId": "bass",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "51"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 5, No. 8 Coro",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score. The print gives no words under the basses."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 52–54, bars 1–51 of No. 8",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (one error found in bar 43 and corrected). The German singing translation is left out. Bar 1 is the one-beat upbeat, set as 1/4. The sopranos and altos share one staff in the print and are written as two parts; where one notehead has two stems, both sing it. Playback tempo: a half note = 56 (♩ = 113), from Böhm's recording (1:47); Mozart gives the word Maestoso only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -19,3 +19,5 @@
 **Fresh check:** one round, all 29 bars. CLEAN.
 
 **Tempo:** only one separate track was found: Böhm 1:02. 114 quarters gives quarter = 110. It is only a nominal tempo for secco recitative.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

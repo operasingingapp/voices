@@ -23,3 +23,5 @@
 - Round 2 on the fixed bars: CLEAN.
 
 **Tempo:** median of five recordings: Böhm 2:22, Gardiner 2:20, Jacobs 2:28, Marriner 2:20, Cantelli 2:24. The median is 2:22, so 304 quarters gives quarter = 128.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

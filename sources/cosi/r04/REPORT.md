@@ -20,3 +20,5 @@
 - Round 2 on the fixed bars: CLEAN.
 
 **Tempo:** only two separate-track recordings were found: Böhm 1:04 and Gardiner 1:35. Their mean is 79.5 s, so 155 quarters gives quarter = 117. It is only a nominal tempo for secco recitative.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

@@ -1,0 +1,553 @@
+{
+ "editionId": "mozart-non-ve-piu-tempo-amici",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (Non v'e without the accent, amici;, Muojo). IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L15, IPA checked against Castel). The sisters' last line, Muojo d'affanno, ends in the first bar of No. 9 (Di scrivermi ogni giorno): only Muojo d'af- is sung in this piece, so the line is shown and spoken whole but only those syllables are matched to the notes. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Non v'e più tempo, amici; andar conviene",
+   "translation": "There is no more time, friends: you must go",
+   "ipa": "non ˈvɛ ˈpju ˈtɛm.po‿aˈmi.tʃi anˈdar konˈvjɛ.ne",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "v'e",
+     "there is",
+     "ˈvɛ"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "tempo,",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "amici;",
+     "friends",
+     "aˈmi.tʃi"
+    ],
+    [
+     "andar",
+     "to go",
+     "anˈdar"
+    ],
+    [
+     "conviene",
+     "it is fitting",
+     "konˈvjɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "there is no more time"
+    },
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "you must go"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "ove il destino, anzi il dover v'invita.",
+   "translation": "where destiny, or rather duty, calls you.",
+   "ipa": "ˈo.ve‿il deˈsti.no ˈan.tsi‿il doˈver vinˈvi.ta",
+   "words": [
+    [
+     "ove",
+     "where",
+     "ˈo.ve"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "destino,",
+     "destiny",
+     "deˈsti.no"
+    ],
+    [
+     "anzi",
+     "rather",
+     "ˈan.tsi"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "dover",
+     "duty",
+     "doˈver"
+    ],
+    [
+     "v'invita.",
+     "calls you",
+     "vinˈvi.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f1",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Mio cor...",
+   "translation": "My heart…",
+   "ipa": "ˈmi.o ˈkɔr",
+   "words": [
+    [
+     "Mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "cor...",
+     "heart",
+     "ˈkɔr"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d1",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Idolo mio...",
+   "translation": "My beloved…",
+   "ipa": "ˈi.do.lo ˈmi.o",
+   "words": [
+    [
+     "Idolo",
+     "idol",
+     "ˈi.do.lo"
+    ],
+    [
+     "mio...",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "my beloved"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Mio ben...",
+   "translation": "My love…",
+   "ipa": "ˈmi.o ˈbɛn",
+   "words": [
+    [
+     "Mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "ben...",
+     "beloved",
+     "ˈbɛn"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g1",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Mia vita...",
+   "translation": "My life…",
+   "ipa": "ˈmi.a ˈvi.ta",
+   "words": [
+    [
+     "Mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "vita...",
+     "life",
+     "ˈvi.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Ah per un sol momento...",
+   "translation": "Ah, for just one moment…",
+   "ipa": "ˈa per un ˈsol moˈmen.to",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "sol",
+     "single",
+     "ˈsol"
+    ],
+    [
+     "momento...",
+     "moment",
+     "moˈmen.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Del vostro reggimento già è partita la barca,",
+   "translation": "The boat of your regiment has already left;",
+   "ipa": "del ˈvɔ.stro red.dʒiˈmen.to ˈdʒa‿ˈɛ parˈti.ta la ˈbar.ka",
+   "words": [
+    [
+     "Del",
+     "of the",
+     "del"
+    ],
+    [
+     "vostro",
+     "your",
+     "ˈvɔ.stro"
+    ],
+    [
+     "reggimento",
+     "regiment",
+     "red.dʒiˈmen.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "partita",
+     "departed",
+     "parˈti.ta"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "barca,",
+     "boat",
+     "ˈbar.ka"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "has left"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "raggiungerla convien coi pochi amici",
+   "translation": "you must catch it up with the few friends",
+   "ipa": "radˈdʒun.dʒer.la konˈvjɛn koi ˈpɔ.ki‿aˈmi.tʃi",
+   "words": [
+    [
+     "raggiungerla",
+     "to reach it",
+     "radˈdʒun.dʒer.la"
+    ],
+    [
+     "convien",
+     "it is fitting",
+     "konˈvjɛn"
+    ],
+    [
+     "coi",
+     "with the",
+     "koi"
+    ],
+    [
+     "pochi",
+     "few",
+     "ˈpɔ.ki"
+    ],
+    [
+     "amici",
+     "friends",
+     "aˈmi.tʃi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "you must catch it up"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "che su legno più lieve attendendo vi stanno.",
+   "translation": "who are waiting for you in a lighter vessel.",
+   "ipa": "ke su ˈleɲ.ɲo ˈpju ˈljɛ.ve at.tenˈdɛn.do vi ˈstan.no",
+   "words": [
+    [
+     "che",
+     "who",
+     "ke"
+    ],
+    [
+     "su",
+     "on",
+     "su"
+    ],
+    [
+     "legno",
+     "vessel",
+     "ˈleɲ.ɲo"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "lieve",
+     "light",
+     "ˈljɛ.ve"
+    ],
+    [
+     "attendendo",
+     "waiting",
+     "at.tenˈdɛn.do"
+    ],
+    [
+     "vi",
+     "for you",
+     "vi"
+    ],
+    [
+     "stanno.",
+     "they stand",
+     "ˈstan.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "lighter"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "are waiting for you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Abbracciami, idol mio.",
+   "translation": "Embrace me, my beloved.",
+   "ipa": "abˈbrat.tʃa.mi‿ˈi.dol ˈmi.o",
+   "words": [
+    [
+     "Abbracciami,",
+     "embrace me",
+     "abˈbrat.tʃa.mi"
+    ],
+    [
+     "idol",
+     "idol",
+     "ˈi.dol"
+    ],
+    [
+     "mio.",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Abbracciami, idol mio.",
+   "translation": "Embrace me, my beloved.",
+   "ipa": "abˈbrat.tʃa.mi‿ˈi.dol ˈmi.o",
+   "words": [
+    [
+     "Abbracciami,",
+     "embrace me",
+     "abˈbrat.tʃa.mi"
+    ],
+    [
+     "idol",
+     "idol",
+     "ˈi.dol"
+    ],
+    [
+     "mio.",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f3",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Muojo d'affanno.",
+   "translation": "I am dying of grief.",
+   "ipa": "ˈmwɔ.jo dafˈfan.no",
+   "words": [
+    [
+     "Muojo",
+     "I die",
+     "ˈmwɔ.jo"
+    ],
+    [
+     "d'af-",
+     "of anguish",
+     "dafˈfan.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Muojo d'affanno.",
+   "translation": "I am dying of grief.",
+   "ipa": "ˈmwɔ.jo dafˈfan.no",
+   "words": [
+    [
+     "Muojo",
+     "I die",
+     "ˈmwɔ.jo"
+    ],
+    [
+     "d'af-",
+     "of anguish",
+     "dafˈfan.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

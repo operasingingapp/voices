@@ -1,0 +1,930 @@
+{
+ "editionId": "mozart-stelle-per-carita",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (Signor, Oh Dei, Che caso dunque?, Nè un solo addio; the libretto has dèi, Che cosa, dunque? and Né). IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L09, IPA checked against Castel); Dei is sung in two syllables (De-i), and the IPA follows (ˈdɛ.i). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "f1",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Stelle, per carità, Signor Alfonso,",
+   "translation": "Heavens! For pity's sake, Signor Alfonso,",
+   "ipa": "ˈstel.le per ka.riˈta siɲˈɲor alˈfon.so",
+   "words": [
+    [
+     "Stelle,",
+     "stars",
+     "ˈstel.le"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "carità,",
+     "charity",
+     "ka.riˈta"
+    ],
+    [
+     "Signor",
+     "Signor",
+     "siɲˈɲor"
+    ],
+    [
+     "Alfonso,",
+     "Alfonso",
+     "alˈfon.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0
+     ],
+     "gloss": "heavens!"
+    },
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "for pity's sake"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "non ci fate morir.",
+   "translation": "do not make us die.",
+   "ipa": "non tʃi ˈfa.te moˈrir",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ci",
+     "us",
+     "tʃi"
+    ],
+    [
+     "fate",
+     "make",
+     "ˈfa.te"
+    ],
+    [
+     "morir.",
+     "die",
+     "moˈrir"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "do not make us die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Convien armarvi,",
+   "translation": "You must arm yourselves,",
+   "ipa": "konˈvjɛn arˈmar.vi",
+   "words": [
+    [
+     "Convien",
+     "it is fitting",
+     "konˈvjɛn"
+    ],
+    [
+     "armarvi,",
+     "to arm yourselves",
+     "arˈmar.vi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "you must arm yourselves"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "figlie mie, di costanza.",
+   "translation": "my daughters, with constancy.",
+   "ipa": "ˈfiʎ.ʎe ˈmi.e di koˈstan.tsa",
+   "words": [
+    [
+     "figlie",
+     "daughters",
+     "ˈfiʎ.ʎe"
+    ],
+    [
+     "mie,",
+     "my",
+     "ˈmi.e"
+    ],
+    [
+     "di",
+     "with",
+     "di"
+    ],
+    [
+     "costanza.",
+     "constancy",
+     "koˈstan.tsa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d1",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Oh Dei, qual male è addivenuto mai, qual caso rio,",
+   "translation": "Oh gods! What evil can have happened, what cruel mischance?",
+   "ipa": "ˈɔ ˈdɛ.i ˈkwal ˈma.le‿ˈɛ‿ad.di.veˈnu.to ˈmai ˈkwal ˈka.zo ˈri.o",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "Dei,",
+     "gods",
+     "ˈdɛ.i"
+    ],
+    [
+     "qual",
+     "what",
+     "ˈkwal"
+    ],
+    [
+     "male",
+     "evil",
+     "ˈma.le"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "addivenuto",
+     "happened",
+     "ad.di.veˈnu.to"
+    ],
+    [
+     "mai,",
+     "ever",
+     "ˈmai"
+    ],
+    [
+     "qual",
+     "what",
+     "ˈkwal"
+    ],
+    [
+     "caso",
+     "chance",
+     "ˈka.zo"
+    ],
+    [
+     "rio,",
+     "cruel",
+     "ˈri.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "has happened"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "forse è morto il mio bene?",
+   "translation": "Is my beloved perhaps dead?",
+   "ipa": "ˈfor.se‿ˈɛ ˈmɔr.to‿il ˈmi.o ˈbɛ.ne",
+   "words": [
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "morto",
+     "dead",
+     "ˈmɔr.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "bene?",
+     "beloved",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "my"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f3",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "È morto il mio?",
+   "translation": "Is mine dead?",
+   "ipa": "ˈɛ ˈmɔr.to‿il ˈmi.o",
+   "words": [
+    [
+     "È",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "morto",
+     "dead",
+     "ˈmɔr.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio?",
+     "mine",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "mine"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Morti non son, ma poco men che morti.",
+   "translation": "They are not dead, but little short of dead.",
+   "ipa": "ˈmɔr.ti non ˈson ma ˈpɔ.ko ˈmen ke ˈmɔr.ti",
+   "words": [
+    [
+     "Morti",
+     "dead",
+     "ˈmɔr.ti"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "son,",
+     "they are",
+     "ˈson"
+    ],
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "poco",
+     "little",
+     "ˈpɔ.ko"
+    ],
+    [
+     "men",
+     "less",
+     "ˈmen"
+    ],
+    [
+     "che",
+     "than",
+     "ke"
+    ],
+    [
+     "morti.",
+     "dead",
+     "ˈmɔr.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "little short of"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Feriti?",
+   "translation": "Wounded?",
+   "ipa": "feˈri.ti",
+   "words": [
+    [
+     "Feriti?",
+     "wounded",
+     "feˈri.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "No.",
+   "translation": "No.",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No.",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f4",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Ammalati?",
+   "translation": "Ill?",
+   "ipa": "am.maˈla.ti",
+   "words": [
+    [
+     "Ammalati?",
+     "ill",
+     "am.maˈla.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Neppur.",
+   "translation": "Not that either.",
+   "ipa": "nepˈpur",
+   "words": [
+    [
+     "Neppur.",
+     "not even",
+     "nepˈpur"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f5",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Che caso dunque?",
+   "translation": "What has happened, then?",
+   "ipa": "ke ˈka.zo ˈduŋ.kwe",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "caso",
+     "matter",
+     "ˈka.zo"
+    ],
+    [
+     "dunque?",
+     "then",
+     "ˈduŋ.kwe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a6",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Al marzial campo ordin regio li chiama.",
+   "translation": "To the field of battle a royal order calls them.",
+   "ipa": "al marˈtsjal ˈkam.po ˈor.din ˈrɛ.dʒo li ˈkja.ma",
+   "words": [
+    [
+     "Al",
+     "to the",
+     "al"
+    ],
+    [
+     "marzial",
+     "martial",
+     "marˈtsjal"
+    ],
+    [
+     "campo",
+     "field",
+     "ˈkam.po"
+    ],
+    [
+     "ordin",
+     "order",
+     "ˈor.din"
+    ],
+    [
+     "regio",
+     "royal",
+     "ˈrɛ.dʒo"
+    ],
+    [
+     "li",
+     "them",
+     "li"
+    ],
+    [
+     "chiama.",
+     "calls",
+     "ˈkja.ma"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f6",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Ohimè, che sento!",
+   "translation": "Alas! What do I hear!",
+   "ipa": "oiˈmɛ ke ˈsɛn.to",
+   "words": [
+    [
+     "Ohimè,",
+     "alas",
+     "oiˈmɛ"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "sento!",
+     "I hear",
+     "ˈsɛn.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d4",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Ohimè, che sento!",
+   "translation": "Alas! What do I hear!",
+   "ipa": "oiˈmɛ ke ˈsɛn.to",
+   "words": [
+    [
+     "Ohimè,",
+     "alas",
+     "oiˈmɛ"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "sento!",
+     "I hear",
+     "ˈsɛn.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f7",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "E partiran?",
+   "translation": "And will they leave?",
+   "ipa": "e par.tiˈran",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "partiran?",
+     "they will leave",
+     "par.tiˈran"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a7",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Sul fatto.",
+   "translation": "At once.",
+   "ipa": "sul ˈfat.to",
+   "words": [
+    [
+     "Sul",
+     "on the",
+     "sul"
+    ],
+    [
+     "fatto.",
+     "deed",
+     "ˈfat.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "at once"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d5",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "E non v'è modo d'impedirlo?",
+   "translation": "And is there no way to prevent it?",
+   "ipa": "e non ˈvɛ ˈmɔ.do dim.peˈdir.lo",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "v'è",
+     "there is",
+     "ˈvɛ"
+    ],
+    [
+     "modo",
+     "way",
+     "ˈmɔ.do"
+    ],
+    [
+     "d'impedirlo?",
+     "of preventing it",
+     "dim.peˈdir.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "there is not"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a8",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Non v'è.",
+   "translation": "There is none.",
+   "ipa": "non ˈvɛ",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "v'è.",
+     "there is",
+     "ˈvɛ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f8",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Nè un solo addio...",
+   "translation": "Not even one farewell?…",
+   "ipa": "ne un ˈso.lo‿adˈdi.o",
+   "words": [
+    [
+     "Nè",
+     "not even",
+     "ne"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "solo",
+     "single",
+     "ˈso.lo"
+    ],
+    [
+     "addio...",
+     "farewell",
+     "adˈdi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a9",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Gl'infelici non hanno coraggio di vedervi;",
+   "translation": "The poor men do not have the courage to see you;",
+   "ipa": "ʎin.feˈli.tʃi non ˈan.no koˈrad.dʒo di veˈder.vi",
+   "words": [
+    [
+     "Gl'infelici",
+     "the unhappy ones",
+     "ʎin.feˈli.tʃi"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "hanno",
+     "have",
+     "ˈan.no"
+    ],
+    [
+     "coraggio",
+     "courage",
+     "koˈrad.dʒo"
+    ],
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "vedervi;",
+     "see you",
+     "veˈder.vi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a10",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "ma se voi lo bramate,",
+   "translation": "but if you desire it,",
+   "ipa": "ma se ˈvoi lo braˈma.te",
+   "words": [
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "voi",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "bramate,",
+     "desire",
+     "braˈma.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a11",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "son pronti...",
+   "translation": "they are ready…",
+   "ipa": "ˈson ˈpron.ti",
+   "words": [
+    [
+     "son",
+     "they are",
+     "ˈson"
+    ],
+    [
+     "pronti...",
+     "ready",
+     "ˈpron.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d6",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Dove son?",
+   "translation": "Where are they?",
+   "ipa": "ˈdo.ve ˈson",
+   "words": [
+    [
+     "Dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "son?",
+     "are they",
+     "ˈson"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a12",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Amici, entrate.",
+   "translation": "Friends, come in.",
+   "ipa": "aˈmi.tʃi enˈtra.te",
+   "words": [
+    [
+     "Amici,",
+     "friends",
+     "aˈmi.tʃi"
+    ],
+    [
+     "entrate.",
+     "come in",
+     "enˈtra.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

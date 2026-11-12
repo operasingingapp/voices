@@ -32,3 +32,5 @@
 
 **Tempo:** median of four recordings: Böhm 4:44, Jacobs 4:51, Muti 5:04, Cantelli 5:11. The median is about 4:58.
 - The tracks don't split the sections, so the split is an estimate: Andante eighth ≈ 70 (quarter = 35), Allegro quarter = 93, Adagio quarter = 40.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

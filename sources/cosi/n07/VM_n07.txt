@@ -1,0 +1,109 @@
+# No. 7 Duettino "Al fato dan legge quegli occhi vezzosi" -- R = Ferrando (treble clef, written 8va: sounding pitch given), G = Guglielmo
+# page 049 system 2 starts bar 1
+# bar 1: Andante, 2/4, B-flat major (2 flats)
+1 R: r:q r:e F3:e "Al"
+# JUDGE bar 1 G: X - print shows F3 (2nd line, same height as bar-2 "to" F3), not D3
+1 G: r:q r:e F3:e "Al"
+2 R: Bb3:q "fa-" C4:e. "to" C4:s "dan"
+2 G: D3:q "fa-" F3:e. "to" F3:s "dan"
+3 R: D4:e "leg-" C4:e "ge" r:e F3:e "que-"
+3 G: Bb3:e "leg-" F3:e "ge" r:e F3:e "que-"
+# JUDGE bar 4 R: Y - "gli oc" both printed under the quarter, "chi" under dotted 8th, "vez-" under the 16th
+4 R: C4:q "gli_oc-" D4:e. "chi" D4:s "vez-"
+# JUDGE bar 4 G: Y - "gli oc" both printed under the quarter, "chi" under dotted 8th, "vez-" under the 16th
+4 G: A3:q "gli_oc-" Bb3:e. "chi" Bb3:s "vez-"
+# JUDGE bar 5 R: Y - "zo-" under first 16th, second 16th melisma, "si;" on the 8th
+5 R: F4:s "zo-" Eb4:s D4:e "si;" r:e F3:e "A-"
+# JUDGE bar 5 G: Y - "zo-" under first 16th, second 16th melisma, "si;" on the 8th
+5 G: D4:s "zo-" C4:s Bb3:e "si;" r:e F3:e "A-"
+# page 049 system 3 starts bar 6
+6 R: D4:q "mor" Eb4:e. "li" Eb4:s "pro-"
+6 G: Bb3:q "mor" C4:e. "li" C4:s "pro-"
+# JUDGE bar 7 R: Y - "nè" under first 16th, "i" under second 16th (400 dpi), "lo-" on bar-8 quarter
+7 R: F4:e "teg-" Eb4:q "ge," D4:s "nè" C4:s "i"
+# JUDGE bar 7 G: Y - "nè" under first 16th, "i" under second 16th (400 dpi), "ló-" on bar-8 quarter
+7 G: D4:e "teg-" C4:q "ge," Bb3:s "nè" A3:s "i"
+8 R: D4:q "lo-" Eb4:e. "ro" Eb4:s "ri-"
+# JUDGE bar 8 G: X - Guglielmo's Italian printed "ló" with accent
+8 G: Bb3:q "ló-" C4:e. "ro" C4:s "ri-"
+# 8 G: Guglielmo's Italian is printed "ló" (with accent), Ferrando's "lo"
+9 R: F4:s "po-" Eb4:s Eb4:q "si" C4:e "le"
+9 G: D4:s "po-" C4:s C4:q "si" A3:e "le"
+10 R: D4:q. "bar-" Eb4:s "ba-" F4:s "re"
+10 G: Bb3:q. "bar-" C4:s "ba-" D4:s "re"
+11 R: G3:s "stel-" Eb4:s Eb4:q "le" C4:e "ar-"
+11 G: Eb3:s "stel-" C4:s C4:q "le" A3:e "ar-"
+# page 050 system 1 starts bar 12
+12 R: D4:e. "dis-" C4:s D4:s "con" C4:s D4:s "tur-" Eb4:s
+12 G: Bb3:e. "dis-" A3:s Bb3:s "con" A3:s Bb3:s "tur-" C4:s
+13 R: C4:q "bar." r:e F3:e "Il"
+13 G: A3:q "bar." r:e F3:e "Il"
+# JUDGE bar 14 R: X - E natural: same pitch as Y's En4 (bare letter = natural)
+14 R: F4:e "ci-" E4:e Eb4:e. "glio" C4:s "se-"
+14 G: F3:e "ci-" G3:e A3:e. "glio" A3:s "se-"
+15 R: Eb4:s "re-" D4:s C4:e "no," r:e F3:e "mio"
+15 G: C4:s "re-" Bb3:s A3:e "no," r:e F3:e "mio"
+# JUDGE bar 16 R: X - "ne, a" centred under the dotted 8th, "me" under the 16th
+16 R: F4:e "be-" E4:e Eb4:e. "ne,_a" C4:s "me"
+# JUDGE bar 16 G: X - "ne, a" centred under the dotted 8th, "me" under the 16th
+16 G: F3:e "be-" G3:e A3:e. "ne,_a" A3:s "me"
+# JUDGE bar 17 R: X - "gi-" under first 16th, "ra," under the 8th; "me" belongs to bar 16
+17 R: Eb4:s "gi-" D4:s C4:e "ra," r:e C4:e "mio"
+# JUDGE bar 17 G: X - "gi-" under first 16th, "ra," under the 8th; "me" belongs to bar 16
+17 G: C4:s "gi-" Bb3:s A3:e "ra," r:e A3:e "mio"
+# page 050 system 2 starts bar 18
+# JUDGE bar 18 R: X - E natural: same pitch as Y's En4
+18 R: D4:e "be-" Eb4:e E4:e "ne,_a" F4:e "me"
+18 G: Bb3:e "be-" C4:e C#4:e "ne,_a" D4:e "me"
+# bar 19: fermata over the dotted quarter in both voices (piano: colla parte)
+19 R: Eb4:q.! "gi-" D4:e
+# JUDGE bar 19 G: X - C natural is diatonic; same pitch as Cn4
+19 G: C4:q.! "gi-" Bb3:e
+# bar 20: fermata over the eighth rest
+20 R: C4:q "ra;" r:e! F4:e "fe-"
+20 G: A3:q "ra;" r:e! D4:e "fe-"
+21 R: G4:e "li-" Eb4:e C4:e "ce_al" A3:e "tuo"
+21 G: Eb4:e "li-" C4:e A3:e "ce_al" F3:e "tuo"
+22 R: F4:e "se-" D4:q "no" Eb4:s "io" C4:s
+22 G: D4:e "se-" Bb3:q "no" G3:s "io" Eb3:s
+23 R: Bb3:q "spe-" C4:e. "re" C4:s "tor-"
+23 G: D3:q "spe-" F3:e. "re" F3:s "tor-"
+# page 050 system 3 starts bar 24
+# JUDGE bar 24 R: X - eighth rest + single-flag eighth; the speck after the rest is not a dot
+24 R: C4:e "nar," D4:e r:e F4:e "fe-"
+# JUDGE bar 24 G: X - eighth rest + single-flag eighth; the speck after the rest is not a dot
+24 G: F3:e "nar," Bb3:e r:e D4:e "fe-"
+25 R: G4:e "li-" Eb4:e C4:e "ce_al" A3:e "tuo"
+25 G: Eb4:e "li-" C4:e A3:e "ce_al" F3:e "tuo"
+26 R: F4:e "se-" D4:q "no" Eb4:s "io" C4:s
+26 G: D4:e "se-" Bb3:q "no" G3:s "io" Eb3:s
+27 R: Bb3:q "spe-" A3:e. "ro" A3:s "tor-"
+27 G: D3:q "spe-" C3:e. "ro" C3:s "tor-"
+28 R: Bb3:s "nar," g:C4:s Bb3:x A3:x Bb3:s C4:s D4:s Eb4:s F4:s G4:s
+28 G: F3:h~ "nar,"
+# JUDGE bar 29 R: X - E natural: same pitch as En4
+29 R: G4:s F4:s E4:s F4:s F4:s Eb4:s D4:s "io" Eb4:s
+29 G: F3:q. F3:e "io"
+# page 050 system 4 starts bar 30
+30 R: D4:e "spe-" Eb4:s C4:s Bb3:e "ro" A3:e "tor-"
+30 G: F3:e "spe-" G3:s Eb3:s D3:e "ro" C3:e "tor-"
+31 R: F4:h~ "nar,"
+31 G: Bb2:s "nar," g:C3:s Bb2:x A2:x Bb2:s C3:s D3:s Eb3:s F3:s G3:s
+32 R: F4:q. F4:e "io"
+# JUDGE bar 32 G: X - E natural: same pitch as En3
+32 G: G3:s F3:s E3:s F3:s F3:s Eb3:s D3:s "io" Eb3:s
+# bar 32 G: a small, partly broken turn-like sign (~) is printed above the 5th 16th (F3); not encoded, possibly a speck
+33 R: F4:s "spe-" D4:s Eb4:s C4:s Bb3:e "ro" A3:e "tor-"
+33 G: D3:s "spe-" F3:s G3:s Eb3:s D3:e "ro" C3:e "tor-"
+# page 051 system 1 starts bar 34
+34 R: D4:q "nar," r:e Eb4:s "io" C4:s
+34 G: F3:q "nar," r:e G3:s "io" Eb3:s
+35 R: Bb3:q "spe-" g:D4:s C4:e. "ro" Bb3:s "tor-"
+35 G: D3:q "spe-" g:F3:s Eb3:e. "ro" D3:s "tor-"
+36 R: Bb3:q "nar," r:s Eb4:s "io" G4:s Eb4:s
+36 G: D3:q "nar," r:s C4:s "io" Eb4:s C4:s
+37 R: D4:e "spe-" g:F4:s Eb4:q "ro" C4:e "tor-"
+37 G: Bb3:e "spe-" g:D4:s C4:q "ro" A3:e "tor-"
+# bar 38: final double bar
+38 R: Bb3:q "nar." r:q
+38 G: Bb3:q "nar." r:q

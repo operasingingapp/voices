@@ -26,3 +26,5 @@
 **Tempo:** median of three complete recordings: Böhm (Philharmonia, 1962) 0:59, Jacobs 1:03, Gardiner (DG, 1993) 1:04. The median is 1:03, so 98 quarters in 63 s gives quarter = 93. It is only a nominal tempo for secco recitative.
 
 **Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

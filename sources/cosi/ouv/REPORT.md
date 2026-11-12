@@ -31,3 +31,5 @@
 - Settings: quarter = 67 at bar 1 (Andante), quarter = 272 (half = 136) at bar 15 (Presto).
 
 **Update (batch 3):** grace notes are now written without a slash, as Peters prints them; nothing else changed.
+
+**Words (batch 4 update):** now also checked against the libretto (DME LV_311). Every difference is an edition spelling kept as printed, e.g. fè/fe', quà, perchè, femmine, cel', brindis, "costanza e beltà".

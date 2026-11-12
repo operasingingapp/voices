@@ -1,0 +1,547 @@
+{
+ "editionId": "mozart-vorrei-dir",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (quà, and commas where the libretto has question and exclamation marks). IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L08, IPA checked against Castel), repeated where the score repeats the text. The aria opens, as printed, with fato!, the last word of Don Alfonso's line Barbaro fato! from the recitative before (Mi par, che stamattina volentieri), whose last bar holds Barbaro; its meaning and IPA come from L07. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "fato!",
+   "translation": "(Cruel) fate!",
+   "ipa": "ˈfa.to",
+   "words": [
+    [
+     "fato!",
+     "fate",
+     "ˈfa.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Vorrei dir, e cor non ho, e cor non ho:",
+   "translation": "I would like to speak, but I have not the heart, I have not the heart:",
+   "ipa": "vorˈrɛi ˈdir e ˈkɔr non ˈɔ e ˈkɔr non ˈɔ",
+   "words": [
+    [
+     "Vorrei",
+     "I would like",
+     "vorˈrɛi"
+    ],
+    [
+     "dir,",
+     "to say",
+     "ˈdir"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "cor",
+     "heart",
+     "ˈkɔr"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho,",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "cor",
+     "heart",
+     "ˈkɔr"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho:",
+     "I have",
+     "ˈɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "I do not have the heart"
+    },
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "I do not have the heart"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "balbettando il labbro va.",
+   "translation": "my lips go stammering.",
+   "ipa": "bal.betˈtan.do il ˈlab.bro ˈva",
+   "words": [
+    [
+     "balbettando",
+     "stammering",
+     "bal.betˈtan.do"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "labbro",
+     "lip",
+     "ˈlab.bro"
+    ],
+    [
+     "va.",
+     "goes",
+     "ˈva"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Fuor la voce uscir non può,",
+   "translation": "my voice cannot come out,",
+   "ipa": "ˈfwɔr la ˈvo.tʃe‿uʃˈʃir non ˈpwɔ",
+   "words": [
+    [
+     "Fuor",
+     "out",
+     "ˈfwɔr"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "voce",
+     "voice",
+     "ˈvo.tʃe"
+    ],
+    [
+     "uscir",
+     "to come out",
+     "uʃˈʃir"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "può,",
+     "can",
+     "ˈpwɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "ma mi resta mezza quà.",
+   "translation": "but stays halfway here.",
+   "ipa": "ma mi ˈrɛ.sta ˈmɛd.dza ˈkwa",
+   "words": [
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "resta",
+     "stays",
+     "ˈrɛ.sta"
+    ],
+    [
+     "mezza",
+     "half",
+     "ˈmɛd.dza"
+    ],
+    [
+     "quà.",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a6",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Che farete, che farò,",
+   "translation": "What will you do, what shall I do,",
+   "ipa": "ke faˈre.te ke faˈrɔ",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "farete,",
+     "will you do",
+     "faˈre.te"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "farò,",
+     "shall I do",
+     "faˈrɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a7",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "oh che gran fatalità,",
+   "translation": "oh, what a dreadful stroke of fate,",
+   "ipa": "ˈɔ ke ˈgran fa.ta.liˈta",
+   "words": [
+    [
+     "oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "gran",
+     "great",
+     "ˈgran"
+    ],
+    [
+     "fatalità,",
+     "fatality",
+     "fa.ta.liˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a8",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "dar di peggio non si può, ah non si può,",
+   "translation": "nothing worse could happen, ah, nothing could,",
+   "ipa": "ˈdar di ˈpɛd.dʒo non si ˈpwɔ ˈa non si ˈpwɔ",
+   "words": [
+    [
+     "dar",
+     "to give",
+     "ˈdar"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "peggio",
+     "worse",
+     "ˈpɛd.dʒo"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "si",
+     "one",
+     "si"
+    ],
+    [
+     "può,",
+     "can",
+     "ˈpwɔ"
+    ],
+    [
+     "ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "si",
+     "one",
+     "si"
+    ],
+    [
+     "può,",
+     "can",
+     "ˈpwɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "nothing worse could happen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a9",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "ho di voi, di lor pietà,",
+   "translation": "I pity you, and them,",
+   "ipa": "ˈɔ di ˈvoi di ˈlor pjeˈta",
+   "words": [
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "voi,",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "lor",
+     "them",
+     "ˈlor"
+    ],
+    [
+     "pietà,",
+     "pity",
+     "pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a10",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "ho di voi, di lor pietà,",
+   "translation": "I pity you, and them,",
+   "ipa": "ˈɔ di ˈvoi di ˈlor pjeˈta",
+   "words": [
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "voi,",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "lor",
+     "them",
+     "ˈlor"
+    ],
+    [
+     "pietà,",
+     "pity",
+     "pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a11",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "ho di voi, di lor pietà,",
+   "translation": "I pity you, and them,",
+   "ipa": "ˈɔ di ˈvoi di ˈlor pjeˈta",
+   "words": [
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "voi,",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "lor",
+     "them",
+     "ˈlor"
+    ],
+    [
+     "pietà,",
+     "pity",
+     "pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a12",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "di voi pietà, di lor pietà.",
+   "translation": "pity for you, pity for them.",
+   "ipa": "di ˈvoi pjeˈta di ˈlor pjeˈta",
+   "words": [
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "voi",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "pietà,",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "lor",
+     "them",
+     "ˈlor"
+    ],
+    [
+     "pietà.",
+     "pity",
+     "pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}
