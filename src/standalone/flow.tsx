@@ -3131,86 +3131,30 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
 }
 
 /**
- * The current role at a glance, act by act: one strip per act, a segment per piece in running order (learned,
- * being practised, not started, or music not here yet); a tap on a segment opens the piece.
+ * The current role in one quiet line under "up next": how many of its pieces are learned and ready, and the way to
+ * all of them (the act-by-act strips were more chart than help).
  */
-function RoleProgress({ ctx, cur, recs, here }: { ctx: Ctx; cur: { opera: Opera; ch: Character }; recs: Record<string, HomeRef>; here: number }) {
+function RoleProgress({ ctx, cur }: { ctx: Ctx; cur: { opera: Opera; ch: Character }; recs: Record<string, HomeRef>; here: number }) {
   const { opera, ch } = cur;
   const pr = progressOf(ctx, opera, ch);
-  const rk = `${opera.id}:${ch.id}`;
-  const state = (p: Piece): PieceState => (pr.set.has(pieceKey(p)) ? "learned" : !p.editionId ? "soon" : recs[`${rk}:${pieceKey(p)}`]?.t ? "practising" : "new");
-  const list = actGroups(ch);
-  const n = { learned: 0, practising: 0, new: 0, soon: 0 } as Record<PieceState, number>;
-  ch.pieces.forEach((p) => n[state(p)]++);
-  const word: Record<PieceState, string> = { learned: "learned", practising: "in progress", new: "to learn", soon: "music not here yet" };
-  const sum = [n.learned ? `${n.learned} learned` : "Nothing learned yet", n.practising ? `${n.practising} in progress` : "", n.new ? `${n.new} to go` : "", n.soon ? `${n.soon} without music yet` : ""].filter(Boolean);
+  const ready = ch.pieces.filter((p) => p.editionId).length;
+  const learned = ch.pieces.filter((p) => pr.set.has(pieceKey(p))).length;
+  const bits = [learned ? `${learned} learned` : "", `${ready} of ${ch.pieces.length} pieces ready to sing`].filter(Boolean);
   return (
-    <section className="pv-card pv-acts" aria-labelledby="hm-prog-h" {...{ "data-tone": voiceTone(ch.voice) }} style={toneStyle(opera.id, ch.id)}>
-      <div className="pv-acts-head">
-        <h2 className="pv-h3" id="hm-prog-h">
-          {ch.name}
-          {list.some((g) => g.act) ? ", act by act" : ""}
-        </h2>
-        <button type="button" className="pv-link" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
-          All {ch.pieces.length} {ch.pieces.length === 1 ? "piece" : "pieces"}
-        </button>
-      </div>
-      <p className="pv-acts-sum">{sum.join(" · ")}</p>
-      {ch.pieces.length > 0 && (
-        <div className="pv-acts-rows">
-          {list.map(({ act, items }, gi) => (
-            <div key={gi} className="pv-act-row">
-              <span className="pv-act-name">{act ? `Act ${act}` : list.length > 1 ? "Other" : "All"}</span>
-              <div className="pv-act-strip" role="list" data-dense>
-                {items.map(({ p, i }) => {
-                  const st = state(p);
-                  return (
-                    <button
-                      key={i}
-                      type="button"
-                      role="listitem"
-                      className={`pv-seg-btn${i === here ? " here" : ""}`}
-                      data-s={st}
-                      disabled={st === "soon"}
-                      title={`${p.title}: ${word[st]}`}
-                      aria-label={`${p.title}: ${word[st]}${i === here ? ", where you stopped" : ""}`}
-                      onClick={() => openPiece(ctx, { ...(recs[`${rk}:${pieceKey(p)}`] ?? {}), opera, ch, piece: p, index: i }, recs[`${rk}:${pieceKey(p)}`]?.t ? "resume" : "start")}
-                    />
-                  );
-                })}
-              </div>
-              <span className="pv-act-count">
-                {items.filter(({ p }) => pr.set.has(pieceKey(p))).length} / {items.length}
-              </span>
-            </div>
-          ))}
-        </div>
-      )}
-      <p className="pv-key" aria-hidden="true">
-        <span>
-          <i data-s="learned" /> learned
+    <section className="pv-role-line" aria-label={`${ch.name}: all pieces`}>
+      <button type="button" className="pv-role-go" onClick={() => ctx.go({ screen: "role", opera: opera.id, character: ch.id })}>
+        <span className="pv-role-name">
+          All of {ch.name}'s pieces
         </span>
-        <span>
-          <i data-s="practising" /> in progress
-        </span>
-        <span>
-          <i data-s="new" /> to learn
-        </span>
-        {n.soon > 0 && (
-          <span>
-            <i data-s="soon" /> music to come
-          </span>
-        )}
-      </p>
+        <span className="pv-role-sum">{bits.join(" · ")}</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" />
+        </svg>
+      </button>
     </section>
   );
 }
 
-/**
- * Your role through the opera: its pieces in running order, act by act, each with its state (learned, practised,
- * not started, or no music yet), and a switch between your roles. Wide screens show the acts side by side; a
- * phone shows one act at a time, opening on the act you are working in.
- */
 function RoleMap({ ctx, roles, cur, recs, hero, groups }: { ctx: Ctx; roles: { opera: Opera; ch: Character }[]; cur: { opera: Opera; ch: Character }; recs: Record<string, HomeRef>; hero: HomeRef | null; groups: NoteGroup[] }) {
   const { opera, ch } = cur;
   const pr = progressOf(ctx, opera, ch);

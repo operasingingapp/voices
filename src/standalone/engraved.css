@@ -507,3 +507,15 @@
 /* home: "From the top" sits beside the Continue button, quietly */
 .pv-hero-act .pv-again { margin-left: 6px; font: 500 15px/1.2 var(--font-sans); }
 @media (max-width: 640px) { .pv-hero-act .pv-again { grid-column: 1 / -1; justify-self: center; margin: 4px 0 0; } }
+
+/* home: the role in one line under "up next" (replaces the act-by-act strips) */
+.pv-role-line { margin-top: 8px; }
+.pv-role-go { display: flex; align-items: baseline; gap: 14px; width: 100%; padding: 18px 4px; border: 0; border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); background: none; color: var(--ink); text-align: left; cursor: pointer; }
+.pv-role-go:hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.pv-role-name { font: 400 22px/1.2 var(--font-display); }
+.pv-role-sum { flex: 1; font: 400 15px/1.3 var(--font-sans); color: var(--ink-muted); }
+.pv-role-go svg { width: 18px; height: 18px; align-self: center; color: var(--ink-muted); }
+@media (max-width: 640px) { .pv-role-go { flex-wrap: wrap; gap: 4px 10px; } .pv-role-sum { flex-basis: 100%; order: 3; } }
+.pv-below, .pv-below.is-single { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+.pv-below .pv-role-line { margin-top: 28px; }
+.pv-role-go { border-top-color: var(--ink); }
