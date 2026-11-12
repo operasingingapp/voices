@@ -2929,9 +2929,10 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
                 <Play />
               </span>
               <span className="pv-next-text">
-                <span className="pv-eyebrow">{label}</span>
                 <b lang={r.opera.lang}>{r.piece.title}</b>
-                <span className="pv-next-meta">{meta}</span>
+                <span className="pv-next-meta">
+                  <span className="pv-next-why">{label}</span> · {meta}
+                </span>
               </span>
               <Chevron />
             </button>
