@@ -1,0 +1,634 @@
+{
+ "editionId": "mozart-dove-son",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (Oh Dei, figliuole;). IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L18, IPA checked against Castel). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "d1",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Dove son?",
+   "translation": "Where are they?",
+   "ipa": "ˈdo.ve ˈson",
+   "words": [
+    [
+     "Dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "son?",
+     "are they",
+     "ˈson"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Buon viaggio!",
+   "translation": "Safe journey!",
+   "ipa": "ˈbwɔn ˈvjad.dʒo",
+   "words": [
+    [
+     "Buon",
+     "good",
+     "ˈbwɔn"
+    ],
+    [
+     "viaggio!",
+     "journey",
+     "ˈvjad.dʒo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "safe journey"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Faccia che al campo giunga con fortunati auspici.",
+   "translation": "May it grant that it reach the camp under fortunate omens.",
+   "ipa": "ˈfat.tʃa ke‿al ˈkam.po ˈdʒuŋ.ga kon for.tuˈna.ti‿auˈspi.tʃi",
+   "words": [
+    [
+     "Faccia",
+     "may it make",
+     "ˈfat.tʃa"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "campo",
+     "camp",
+     "ˈkam.po"
+    ],
+    [
+     "giunga",
+     "it may arrive",
+     "ˈdʒuŋ.ga"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "fortunati",
+     "fortunate",
+     "for.tuˈna.ti"
+    ],
+    [
+     "auspici.",
+     "omens",
+     "auˈspi.tʃi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0
+     ],
+     "gloss": "subjunctive: may (heaven) grant"
+    },
+    {
+     "words": [
+      4
+     ],
+     "gloss": "subjunctive: may arrive"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Son partiti.",
+   "translation": "They have gone.",
+   "ipa": "ˈson parˈti.ti",
+   "words": [
+    [
+     "Son",
+     "are",
+     "ˈson"
+    ],
+    [
+     "partiti.",
+     "departed",
+     "parˈti.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "they have left"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Fate core, carissime figliuole;",
+   "translation": "Take heart, my dearest girls;",
+   "ipa": "ˈfa.te ˈkɔ.re kaˈris.si.me fiʎˈʎwɔ.le",
+   "words": [
+    [
+     "Fate",
+     "make",
+     "ˈfa.te"
+    ],
+    [
+     "core,",
+     "heart",
+     "ˈkɔ.re"
+    ],
+    [
+     "carissime",
+     "dearest",
+     "kaˈris.si.me"
+    ],
+    [
+     "figliuole;",
+     "daughters",
+     "fiʎˈʎwɔ.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "take heart"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "guardate, da lontano vi fan cenno con mano i cari sposi.",
+   "translation": "look, from far away your dear bridegrooms are waving to you.",
+   "ipa": "gwarˈda.te da lonˈta.no vi ˈfan ˈtʃen.no kon ˈma.no‿i ˈka.ri ˈspɔ.zi",
+   "words": [
+    [
+     "guardate,",
+     "look",
+     "gwarˈda.te"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "lontano",
+     "afar",
+     "lonˈta.no"
+    ],
+    [
+     "vi",
+     "to you",
+     "vi"
+    ],
+    [
+     "fan",
+     "they make",
+     "ˈfan"
+    ],
+    [
+     "cenno",
+     "sign",
+     "ˈtʃen.no"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "mano",
+     "hand",
+     "ˈma.no"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "cari",
+     "dear",
+     "ˈka.ri"
+    ],
+    [
+     "sposi.",
+     "bridegrooms",
+     "ˈspɔ.zi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "from afar"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "they wave"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "E a voi salvi gli amanti, e a me gli amici.",
+   "translation": "And keep your lovers safe for you, and my friends for me.",
+   "ipa": "e‿a ˈvoi ˈsal.vi ʎi‿aˈman.ti e‿a ˈme ʎi‿aˈmi.tʃi",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "voi",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "salvi",
+     "may save",
+     "ˈsal.vi"
+    ],
+    [
+     "gli",
+     "the",
+     "ʎi"
+    ],
+    [
+     "amanti,",
+     "lovers",
+     "aˈman.ti"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "gli",
+     "the",
+     "ʎi"
+    ],
+    [
+     "amici.",
+     "friends",
+     "aˈmi.tʃi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3
+     ],
+     "gloss": "subjunctive: may (heaven) keep safe"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f1",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Oh dipartenza crudelissima amara!",
+   "translation": "Oh, parting most cruel, bitter!",
+   "ipa": "ˈɔ di.parˈtɛn.tsa kru.deˈlis.si.ma‿aˈma.ra",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "dipartenza",
+     "parting",
+     "di.parˈtɛn.tsa"
+    ],
+    [
+     "crudelissima",
+     "most cruel",
+     "kru.deˈlis.si.ma"
+    ],
+    [
+     "amara!",
+     "bitter",
+     "aˈma.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Buon viaggio, mia vita!",
+   "translation": "Safe journey, my life!",
+   "ipa": "ˈbwɔn ˈvjad.dʒo ˈmi.a ˈvi.ta",
+   "words": [
+    [
+     "Buon",
+     "good",
+     "ˈbwɔn"
+    ],
+    [
+     "viaggio,",
+     "journey",
+     "ˈvjad.dʒo"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "vita!",
+     "life",
+     "ˈvi.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "safe journey"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f3",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Oh Dei, come veloce se ne va quella barca, già sparisce,",
+   "translation": "Oh gods! How fast that boat is going away! It is vanishing already,",
+   "ipa": "ˈɔ ˈdɛi ˈko.me veˈlo.tʃe se ne ˈva ˈkwel.la ˈbar.ka ˈdʒa spaˈriʃ.ʃe",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "Dei,",
+     "gods",
+     "ˈdɛi"
+    ],
+    [
+     "come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "veloce",
+     "fast",
+     "veˈlo.tʃe"
+    ],
+    [
+     "se",
+     "itself",
+     "se"
+    ],
+    [
+     "ne",
+     "away",
+     "ne"
+    ],
+    [
+     "va",
+     "goes",
+     "ˈva"
+    ],
+    [
+     "quella",
+     "that",
+     "ˈkwel.la"
+    ],
+    [
+     "barca,",
+     "boat",
+     "ˈbar.ka"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "sparisce,",
+     "vanishes",
+     "spaˈriʃ.ʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "goes away"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f4",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "già non si vede più.",
+   "translation": "already it can be seen no more.",
+   "ipa": "ˈdʒa non si ˈve.de ˈpju",
+   "words": [
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "si",
+     "itself",
+     "si"
+    ],
+    [
+     "vede",
+     "sees",
+     "ˈve.de"
+    ],
+    [
+     "più.",
+     "more",
+     "ˈpju"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "can no longer be seen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f5",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Deh faccia il cielo ch'abbia prospero corso.",
+   "translation": "Oh, may heaven grant that it has a prosperous voyage.",
+   "ipa": "ˈdɛ ˈfat.tʃa‿il ˈtʃɛ.lo ˈkab.bja ˈprɔ.spe.ro ˈkor.so",
+   "words": [
+    [
+     "Deh",
+     "ah",
+     "ˈdɛ"
+    ],
+    [
+     "faccia",
+     "may make",
+     "ˈfat.tʃa"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cielo",
+     "heaven",
+     "ˈtʃɛ.lo"
+    ],
+    [
+     "ch'abbia",
+     "that it may have",
+     "ˈkab.bja"
+    ],
+    [
+     "prospero",
+     "prosperous",
+     "ˈprɔ.spe.ro"
+    ],
+    [
+     "corso.",
+     "course",
+     "ˈkor.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1
+     ],
+     "gloss": "subjunctive: may (heaven) grant"
+    },
+    {
+     "words": [
+      4
+     ],
+     "gloss": "subjunctive: that it may have"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

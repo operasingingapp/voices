@@ -1,0 +1,108 @@
+{
+ "editionId": "mozart-in-uomini-in-soldati",
+ "editionVersion": "1.0.0-peters",
+ "title": "In uomini, in soldati",
+ "subtitle": "Despina: aria from Così fan tutte, Act 1 (No. 12)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "In uomini, in soldati (2/4)",
+   "start": "1",
+   "end": "24"
+  },
+  {
+   "id": "b",
+   "label": "Di pasta simile · Mentite lagrime · In noi non amano (6/8)",
+   "start": "25",
+   "end": "59"
+  },
+  {
+   "id": "c",
+   "label": "Paghiam, o femmine · La ra la (to the end)",
+   "start": "60",
+   "end": "93"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 9, No. 12 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (nè)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 83–87, bars 1–93 of No. 12",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, words and slurs, then checked bar by bar by two fresh checkers (one error found, a left-hand tie in bars 20–21, and one incomplete tie in bar 43, both corrected). The German singing translation is left out. Bar 1 is a one-eighth upbeat, set as 1/8; bars 89–93 are for the piano alone. A printed slur that crosses from the right hand into the left hand's middle voice (bars 41–42 and 44–45) is written in the left hand only. Playback tempo: ♩ = 60 in 2/4, and a dotted quarter = 72 (♩ = 108) in 6/8 from bar 25, set so the whole matches Rattle (2:46) and Klemperer (3:11); Mozart gives the word Allegretto only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

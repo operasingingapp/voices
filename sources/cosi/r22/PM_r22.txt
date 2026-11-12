@@ -1,0 +1,142 @@
+# page 080 system 1 starts bar 1
+# bar 1: Rezitativ, 4/4 (C), C major (no key signature)
+1 RH1: r:w
+1 LH1: r:w
+2 RH1: Eb4+Bb4:w~
+2 LH1: G3:w~
+3 RH1: Eb4+Bb4:w
+3 LH1: G3:w
+# page 080 system 2 starts bar 4
+4 RH1: C4+G4+C5:w~
+4 LH1: E3:w~
+5 RH1: C4+G4+C5:w~
+5 LH1: E3:w~
+6 RH1: C4+G4+C5:w
+6 LH1: E3:w~
+# page 080 system 3 starts bar 7
+7 RH1: Db4+G4+Bb4:w
+7 LH1: E3:w
+8 RH1: C4+F4+Ab4:q r:q C4+F4+A4:h~
+8 LH1: F3:h Eb3:h~
+9 RH1: C4+F4+A4:w
+9 LH1: Eb3:w
+# page 080 system 4 starts bar 10
+10 RH1: D4+A4:w~
+10 LH1: F#3:w~
+11 RH1: D4+A4+C5:h D4+G4+Bb4:h~
+11 LH1: F#3:h G3:h~
+12 RH1: D4+G4+Bb4:w~
+12 LH1: G3:w~
+# page 080 system 5 starts bar 13
+13 RH1: D4+G4+Bb4:q r:q D4+G4+B4:h
+13 LH1: G3:h F3:h
+14 RH1: C4+G4+C5:w~
+14 LH1: E3:w~
+# JUDGE bar 15 RH1: Y - two ties leave the chord: one below G4 and one below C4 (C5 not tied)
+15 RH1: C4~+G4~+C5:w
+15 LH1: E3:w~
+# page 081 system 1 starts bar 16
+16 RH1: C4+G4+Bb4:h C4+F4+A4:q r:q
+16 LH1: E3:h F3:h
+17 RH1: C4+F4+A4:w~
+17 LH1: Eb3:w~
+18 RH1: C4+F4+A4:w~
+18 LH1: Eb3:w~
+# page 081 system 2 starts bar 19
+19 RH1: C4+F4+A4:h Bb3+F4+Bb4:h~
+19 LH1: Eb3:h D3:h~
+20 RH1: Bb3+F4+Bb4:h r:h
+20 LH1: D3:w
+21 RH1: F4+Bb4+D5:w
+21 LH1: Ab3:w
+22 RH1: Eb4+Bb4+Eb5:q r:q r:h
+22 LH1: G3:w~
+# page 081 system 3 starts bar 23
+# JUDGE bar 23 RH1: Y - lowest head just under the bottom line with no ledger line = D4 (measured), chord D4+A4+D5
+23 RH1: r:h D4+A4+D5:h
+23 LH1: G3:h F#3:h~
+24 RH1: Eb4+A4+C5:w
+24 LH1: F#3:w
+25 RH1: D4+G4+Bb4:h r:h
+25 LH1: G3:w
+# page 081 system 4 starts bar 26
+26 RH1: D4+G4+B4:h C4+G4+C5:h~
+26 LH1: F3:h E3:h~
+27 RH1: C4+G4+C5:h E4+B4:h~
+27 LH1: E3:h G#3:h~
+28 RH1: E4+B4:h E4+A4+C5:h~
+28 LH1: G#3:h A3:h~
+# page 081 system 5 starts bar 29
+29 RH1: E4+A4+C5:h D4+A4+D5:h~
+29 LH1: A3:h F#3:h~
+30 RH1: D5:h C5:h
+30 RH2: D4+A4:w
+30 LH1: F#3:w
+31 RH1: D4+G4+B4:w~
+31 LH1: G3:w~
+# page 081 system 6 starts bar 32
+32 RH1: D4+G4+B4:h E4+G4+C5:h~
+32 LH1: G3:h E3:h~
+33 RH1: E4+G4+C5:h E4+A4~:h
+33 LH1: E3:h F3:h~
+34 RH1: D4+A4:h B3+E4+G#4:h~
+# JUDGE bar 34 RH2: OWN - (both wrong) second down-stem quarter has a second ledger line through its head (C4 ledger above it, head centred on the A3 ledger, 400 dpi pixel check) = A3, not B3
+34 RH2: D4:q A3:q s:h
+34 LH1: F3:h E3:h~
+# page 082 system 1 starts bar 35
+35 RH1: B3+E4+G#4:w
+35 LH1: E3:w
+36 RH1: A3+E4+A4:w
+36 LH1: C3:w
+37 RH1: C#4+E4+A4:w
+37 LH1: G3:w
+# page 082 system 2 starts bar 38
+38 RH1: D4+A4:w~
+38 LH1: F#3:w~
+39 RH1: D4+A4:w
+39 LH1: F#3:w
+40 RH1: D4+G4+B4:w~
+40 LH1: G3:w~
+# page 082 system 3 starts bar 41
+# JUDGE bar 41 RH1: Y - second chord has only three heads: D4, G4 (on line), B4 (on line); no F4
+41 RH1: D4+G4+B4:q r:q D4+G4+B4:h~
+41 LH1: G3:h F3:h~
+# JUDGE bar 42 RH1: Y - same chord as end of bar 41, no F4
+42 RH1: D4+G4+B4:h C4+G4+C5:h~
+42 LH1: F3:h E3:h~
+43 RH1: C4+G4+C5:w~
+43 LH1: E3:w~
+# page 082 system 4 starts bar 44
+44 RH1: C5:h Bb4:h~
+44 RH2: C4+G4:w~
+44 LH1: E3:w~
+# JUDGE bar 45 RH1: Y - first chord heads: C4 (ledger), G4, Bb4 (tied from 44); nothing on the E4 line
+45 RH1: C4+G4+Bb4:h C4+F4+A4:h~
+45 LH1: E3:h F3:h~
+46 RH1: C4+F4+A4:h C4+F4+C5:q r:q
+46 LH1: F3:h A3:h~
+# page 082 system 5 starts bar 47
+47 RH1: r:w
+47 LH1: A3:w
+48 RH1: D4~+A4~+D5:w
+48 LH1: F#3:w~
+49 RH1: D4+A4+C5:w
+49 LH1: F#3:w
+# page 082 system 6 starts bar 50
+50 RH1: D4+G4+Bb4:w
+50 LH1: G3:w~
+51 RH1: Eb4+Bb4+Eb5:h Eb4+F4+C5:h~
+51 LH1: G3:h A3:h~
+# JUDGE bar 52: checked - no tie leaves bar 52 (piano or voice); the mark after the second Eb5 in the voice is a broken stem/flag, not a tie. Ties INTO 52 (C5, F4, Eb4 and LH A3) as in bar 51
+52 RH1: Eb4+F4+C5:w
+52 LH1: A3:w
+# page 083 system 1 starts bar 53
+53 RH1: D4+F4+Bb4:w
+53 LH1: Bb3:w
+# JUDGE bar 54 RH1: Y - ties below G4 and below C4 into bar 55
+54 RH1: C4~+G4~+C5:w
+54 LH1: E3:w~
+# bar 55: incomplete final bar (3 quarters) as printed; double bar, "attacca subito Nr. 12 Arie"
+# JUDGE bar 55 RH1: Y - first chord = C4, G4, Bb4 only (no head on the E4 line); ties into G4 and C4 from bar 54
+55 RH1: C4+G4+Bb4:h C4+F4+A4:q
+55 LH1: E3:h F3:q

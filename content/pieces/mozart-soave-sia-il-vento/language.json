@@ -4,7 +4,7 @@
  "review": {
   "status": "unreviewed-fixture"
  },
- "notes": "Libretto by Lorenzo Da Ponte (1790). IPA follows sung Italian conventions: stressed syllable marked, elisions joined with ‿ (sia‿il, ogni‿elemento are each sung on one note), open e/o as ɛ/ɔ, intervocalic s voiced (desir). Translation literal, for meaning.",
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation. IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L19, IPA checked against Castel). In bar 17 Fiordiligi and Don Alfonso sing o-gni e-le-men-to on separate notes, while Dorabella joins ogni‿elemento on one note, as in bar 7; the IPA follows each part. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
  "phrases": [
   {
    "id": "f01",
@@ -40,10 +40,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be gentle"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -55,7 +54,7 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "tranquilla sia l'onda,",
-   "translation": "may the waves be calm,",
+   "translation": "may the wave be calm,",
    "ipa": "traŋˈkwil.la ˈsi.a ˈlon.da",
    "words": [
     [
@@ -77,10 +76,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be calm"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -140,7 +138,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -151,14 +149,14 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "10",
-   "original": "ai nostri desir.",
-   "translation": "our wishes.",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "original": "ai nostri desir,",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -166,7 +164,7 @@
      "ˈnɔ.stri"
     ],
     [
-     "desir.",
+     "desir,",
      "desires",
      "deˈzir"
     ]
@@ -175,16 +173,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -193,14 +184,14 @@
    "id": "f06",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "12",
-   "original": "Soave sia il vento,",
+   "original": "soave sia il vento,",
    "translation": "May the wind be gentle,",
    "ipa": "soˈa.ve ˈsi.a‿il ˈvɛn.to",
    "words": [
     [
-     "Soave",
+     "soave",
      "gentle",
      "soˈa.ve"
     ],
@@ -223,10 +214,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be gentle"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -235,10 +225,10 @@
    "id": "f07",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "14",
    "original": "tranquilla sia l'onda,",
-   "translation": "may the waves be calm,",
+   "translation": "may the wave be calm,",
    "ipa": "traŋˈkwil.la ˈsi.a ˈlon.da",
    "words": [
     [
@@ -260,10 +250,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be calm"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -272,11 +261,11 @@
    "id": "f08",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "16",
    "original": "ed ogni elemento",
    "translation": "and may every element",
-   "ipa": "ed ˈoɲ.ɲi‿e.leˈmen.to",
+   "ipa": "ed ˈoɲ.ɲi e.leˈmen.to",
    "words": [
     [
      "ed",
@@ -301,7 +290,7 @@
    "id": "f09",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "18",
    "original": "benigno risponda",
    "translation": "kindly answer",
@@ -323,7 +312,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -332,16 +321,16 @@
    "id": "f10",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "20",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -358,16 +347,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -376,16 +358,16 @@
    "id": "f11",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 3,
+   "occurrence": 1,
    "startMeasure": "23",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -402,16 +384,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -420,7 +395,7 @@
    "id": "f12",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 3,
+   "occurrence": 1,
    "startMeasure": "26",
    "original": "benigno risponda",
    "translation": "kindly answer",
@@ -442,7 +417,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -451,16 +426,16 @@
    "id": "f13",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 4,
+   "occurrence": 1,
    "startMeasure": "30",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -477,16 +452,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -495,16 +463,16 @@
    "id": "f14",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 5,
+   "occurrence": 1,
    "startMeasure": "32",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -521,16 +489,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -539,16 +500,16 @@
    "id": "f15",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 6,
+   "occurrence": 1,
    "startMeasure": "34",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -565,16 +526,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -583,16 +537,16 @@
    "id": "f16",
    "role": "fiordiligi",
    "verse": 1,
-   "occurrence": 7,
+   "occurrence": 1,
    "startMeasure": "36",
    "original": "ai nostri desir!",
-   "translation": "our wishes!",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires!",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -609,16 +563,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -657,10 +604,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be gentle"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -672,7 +618,7 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "tranquilla sia l'onda,",
-   "translation": "may the waves be calm,",
+   "translation": "may the wave be calm,",
    "ipa": "traŋˈkwil.la ˈsi.a ˈlon.da",
    "words": [
     [
@@ -694,10 +640,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be calm"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -757,7 +702,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -768,14 +713,14 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "10",
-   "original": "ai nostri desir.",
-   "translation": "our wishes.",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "original": "ai nostri desir,",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -783,7 +728,7 @@
      "ˈnɔ.stri"
     ],
     [
-     "desir.",
+     "desir,",
      "desires",
      "deˈzir"
     ]
@@ -792,16 +737,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -810,14 +748,14 @@
    "id": "d06",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "12",
-   "original": "Soave sia il vento,",
+   "original": "soave sia il vento,",
    "translation": "May the wind be gentle,",
    "ipa": "soˈa.ve ˈsi.a‿il ˈvɛn.to",
    "words": [
     [
-     "Soave",
+     "soave",
      "gentle",
      "soˈa.ve"
     ],
@@ -840,10 +778,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be gentle"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -852,10 +789,10 @@
    "id": "d07",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "14",
    "original": "tranquilla sia l'onda,",
-   "translation": "may the waves be calm,",
+   "translation": "may the wave be calm,",
    "ipa": "traŋˈkwil.la ˈsi.a ˈlon.da",
    "words": [
     [
@@ -877,10 +814,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be calm"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -889,7 +825,7 @@
    "id": "d08",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "16",
    "original": "ed ogni elemento",
    "translation": "and may every element",
@@ -918,7 +854,7 @@
    "id": "d09",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "18",
    "original": "benigno risponda",
    "translation": "kindly answer",
@@ -940,7 +876,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -949,16 +885,16 @@
    "id": "d10",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "20",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -975,16 +911,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -993,16 +922,16 @@
    "id": "d11",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 3,
+   "occurrence": 1,
    "startMeasure": "23",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1019,16 +948,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1037,7 +959,7 @@
    "id": "d12",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 3,
+   "occurrence": 1,
    "startMeasure": "26",
    "original": "benigno risponda",
    "translation": "kindly answer",
@@ -1059,7 +981,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -1068,16 +990,16 @@
    "id": "d13",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 4,
+   "occurrence": 1,
    "startMeasure": "30",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1094,16 +1016,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1112,16 +1027,16 @@
    "id": "d14",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 5,
+   "occurrence": 1,
    "startMeasure": "32",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1138,16 +1053,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1156,16 +1064,16 @@
    "id": "d15",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 6,
+   "occurrence": 1,
    "startMeasure": "34",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1182,16 +1090,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1200,16 +1101,16 @@
    "id": "d16",
    "role": "dorabella",
    "verse": 1,
-   "occurrence": 7,
+   "occurrence": 1,
    "startMeasure": "36",
    "original": "ai nostri desir!",
-   "translation": "our wishes!",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires!",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1226,16 +1127,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1274,10 +1168,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be gentle"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -1289,7 +1182,7 @@
    "occurrence": 1,
    "startMeasure": "4",
    "original": "tranquilla sia l'onda,",
-   "translation": "may the waves be calm,",
+   "translation": "may the wave be calm,",
    "ipa": "traŋˈkwil.la ˈsi.a ˈlon.da",
    "words": [
     [
@@ -1311,10 +1204,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be calm"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -1374,7 +1266,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -1385,14 +1277,14 @@
    "verse": 1,
    "occurrence": 1,
    "startMeasure": "10",
-   "original": "ai nostri desir.",
-   "translation": "our wishes.",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "original": "ai nostri desir,",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1400,7 +1292,7 @@
      "ˈnɔ.stri"
     ],
     [
-     "desir.",
+     "desir,",
      "desires",
      "deˈzir"
     ]
@@ -1409,16 +1301,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1427,14 +1312,14 @@
    "id": "a06",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "12",
-   "original": "Soave sia il vento,",
+   "original": "soave sia il vento,",
    "translation": "May the wind be gentle,",
    "ipa": "soˈa.ve ˈsi.a‿il ˈvɛn.to",
    "words": [
     [
-     "Soave",
+     "soave",
      "gentle",
      "soˈa.ve"
     ],
@@ -1457,10 +1342,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be gentle"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -1469,10 +1353,10 @@
    "id": "a07",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "14",
    "original": "tranquilla sia l'onda,",
-   "translation": "may the waves be calm,",
+   "translation": "may the wave be calm,",
    "ipa": "traŋˈkwil.la ˈsi.a ˈlon.da",
    "words": [
     [
@@ -1494,10 +1378,9 @@
    "glossGroups": [
     {
      "words": [
-      0,
       1
      ],
-     "gloss": "may be calm"
+     "gloss": "subjunctive: may be"
     }
    ],
    "audio": {}
@@ -1506,11 +1389,11 @@
    "id": "a08",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "16",
    "original": "ed ogni elemento",
    "translation": "and may every element",
-   "ipa": "ed ˈoɲ.ɲi‿e.leˈmen.to",
+   "ipa": "ed ˈoɲ.ɲi e.leˈmen.to",
    "words": [
     [
      "ed",
@@ -1535,7 +1418,7 @@
    "id": "a09",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "18",
    "original": "benigno risponda",
    "translation": "kindly answer",
@@ -1557,7 +1440,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -1566,16 +1449,16 @@
    "id": "a10",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 2,
+   "occurrence": 1,
    "startMeasure": "20",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1592,16 +1475,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1610,16 +1486,16 @@
    "id": "a11",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 3,
+   "occurrence": 1,
    "startMeasure": "23",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1636,16 +1512,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1654,16 +1523,16 @@
    "id": "a12",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 4,
+   "occurrence": 1,
    "startMeasure": "26",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1680,16 +1549,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1698,7 +1560,7 @@
    "id": "a13",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 3,
+   "occurrence": 1,
    "startMeasure": "28",
    "original": "benigno risponda",
    "translation": "kindly answer",
@@ -1720,7 +1582,7 @@
      "words": [
       1
      ],
-     "gloss": "risponda: may it answer (subjunctive, a wish)"
+     "gloss": "subjunctive: may answer"
     }
    ],
    "audio": {}
@@ -1729,16 +1591,16 @@
    "id": "a14",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 5,
+   "occurrence": 1,
    "startMeasure": "29",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1755,16 +1617,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1773,16 +1628,16 @@
    "id": "a15",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 6,
+   "occurrence": 1,
    "startMeasure": "30",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1799,16 +1654,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1817,16 +1665,16 @@
    "id": "a16",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 7,
+   "occurrence": 1,
    "startMeasure": "32",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1843,16 +1691,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1861,16 +1702,16 @@
    "id": "a17",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 8,
+   "occurrence": 1,
    "startMeasure": "34",
    "original": "ai nostri desir,",
-   "translation": "our wishes,",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires,",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1887,16 +1728,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}
@@ -1905,16 +1739,16 @@
    "id": "a18",
    "role": "alfonso",
    "verse": 1,
-   "occurrence": 9,
+   "occurrence": 1,
    "startMeasure": "36",
    "original": "ai nostri desir!",
-   "translation": "our wishes!",
-   "ipa": "ai̯ ˈnɔ.stri deˈzir",
+   "translation": "our desires!",
+   "ipa": "ai ˈnɔ.stri deˈzir",
    "words": [
     [
      "ai",
-     "to (the)",
-     "ai̯"
+     "to the",
+     "ai"
     ],
     [
      "nostri",
@@ -1931,16 +1765,9 @@
     {
      "words": [
       0,
-      1,
-      2
+      1
      ],
-     "gloss": "to our desires"
-    },
-    {
-     "words": [
-      2
-     ],
-     "gloss": "desir = desiderî, desires (poetic)"
+     "gloss": "to our"
     }
    ],
    "audio": {}

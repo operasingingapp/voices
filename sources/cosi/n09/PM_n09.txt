@@ -1,0 +1,203 @@
+# No. 9 Quintetto 'Di scrivermi ogni giorno' (Edition Peters pp. 56-59), piano
+# page 056 system 2 starts bar 1
+# bar 1: Andante, 4/4 (C), F major (1 flat); p (Fg. Str.) printed between the staves
+1 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# JUDGE bar 1 RH2: Y - one slur runs from F4 across the barline to the E4 of bar 2 (not closed in bar 1); single p between the staves kept here
+1 RH2: dyn:p F4:h( E4:h
+# MARKS bar 1 LH1: dyn:p (printed between the staves: both hands)
+1 LH1: dyn:p C4:w~
+# JUDGE bar 1 LH2: X - only one p is printed (between the staves), already on RH2
+1 LH2: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+2 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# JUDGE bar 2 RH2: OWN - slur from bar 1 F4 passes over this F4 unbroken and ends on E4; no new slur starts
+2 RH2: F4:h E4:h)
+# JUDGE bar 2 LH1: Y - tie from bar 1 ends here; no tie leaves this C4 (system break, bar 3 starts a fresh tie)
+2 LH1: C4:w
+2 LH2: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+# page 056 system 3 starts bar 3
+3 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# JUDGE bar 3 RH2: Y - slur runs on into bar 4
+3 RH2: F4:h( E4:h
+3 LH1: C4:w~
+3 LH2: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+4 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# JUDGE bar 4 RH2: OWN - slur from bar 3 F4 ends on E4, unbroken over this F4
+4 RH2: F4:h E4:h)
+# JUDGE bar 4 LH1: Y - no tie leaves this C4 (end of page)
+4 LH1: C4:w
+4 LH2: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+# page 057 system 1 starts bar 5
+5 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# JUDGE bar 5 RH2: Y - slur runs on into bar 6
+5 RH2: F4:h( E4:h
+5 LH1: C4:w~
+5 LH2: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+6 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# JUDGE bar 6 RH2: OWN - slur from bar 5 F4 ends on E4, unbroken over this F4
+6 RH2: F4:h E4:h)
+6 LH1: C4:w~
+6 LH2: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+# page 057 system 2 starts bar 7
+7 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+F5:s A4+F5:s A4+F5:s r:s F4+F5:s F4+F5:s F4+F5:s r:s G4+Eb5:s G4+Eb5:s G4+Eb5:s
+7 RH2: F4:h( s:h
+# JUDGE bar 7 LH1: X - same notes as Y; beat-1 C4 (tie arriving from bar 6) kept in the F3+C4 eighth chord of LH2
+7 LH1: s:h C4:h~
+7 LH2: F3+C4:e r:e F3:e r:e A3:e r:e G3:e r:e
+8 RH1: r:s A4+D5:s A4+D5:s A4+D5:s r:s F#4+D5:s F#4+D5:s F#4+D5:s r:s F#4+D5:s F#4+D5:s F#4+D5:s r:s A4+C5:s A4+C5:s A4+C5:s
+# JUDGE bar 8 LH1: X - long slur from bar 7 RH F4 ends on this C4 half (cross-staff); A3 starts a slur, D4 tied on
+8 LH1: C4:h) A3:q( D4:q~
+# FIX bar 8 LH2: last eighth F#3 (no accidental printed, the sharp of beat 1 carries) - fresh check, confirmed on crop
+8 LH2: F#3:e r:e A3:e r:e D3:e r:e F#3:e r:e
+# page 058 system 1 starts bar 9
+9 RH1: r:s G4+Bb4:s G4+Bb4:s G4+Bb4:s r:s G4+Bb4:s G4+Bb4:s G4+Bb4:s r:s G4+Bb4:s G4+Bb4:s G4+Bb4:s r:s Bb4+D5:s Bb4+D5:s Bb4+D5:s
+# bar 9 LH beat 4: cautionary natural printed before F3 (after F#3 in bar 8)
+# JUDGE bar 9 LH1: OWN - beat 4 is G3 quarter (space above the F line, stem up) beside F-natural3 eighth: X notes; but the long slur from bar 8 A3 passes over D4 and ends on bar 10 G3, so no ) here; short arc G3-G3 is a tie
+9 LH1: D4:h. G3:q~
+9 LH2: G3:e r:e Bb3:e r:e G3:e r:e F3:e r:e
+# JUDGE bar 10 RH1: X - beat 4 noteheads sit on the G4 and B4 lines (G4+Bb4), not A4+C5
+10 RH1: r:s G4+C5:s G4+C5:s G4+C5:s r:s E4+C5:s E4+C5:s E4+C5:s r:s F4+C5:s F4+C5:s F4+C5:s r:s G4+Bb4:s G4+Bb4:s G4+Bb4:s
+# JUDGE bar 10 LH1: OWN - long slur from bar 8 A3 ends on this G3 (tie from bar 9 G3 also arrives)
+10 LH1: G3:q) C4:h.~
+10 LH2: E3:e r:e C3:e r:e D3:e r:e E3:e r:e
+# page 058 system 2 starts bar 11
+11 RH1: r:s F4+A4:s( F4+F5:s) F4+F5:sv r:s F4+F5:s F4+F5:s F4+F5:s r:s F4+F5:s F4+F5:s F4+F5:s r:s F4+F5:s F4+F5:s F4+F5:s
+11 LH1: F3+C4:e r:e G3+Bb3:e r:e A3+C4:e r:e Bb3+D4:e r:e
+12 RH1: r:s F4+F5:s F4+F5:s F4+F5:s r:s F4+F5:s F4+F5:s F4+F5:s r:s F4+F5:s( D4+D5:s) D4+D5:s r:s D4+D5:s D4+D5:s D4+D5:s
+12 LH1: C4+Eb4:e r:e A3+C#4:e r:e Bb3+D4:e r:e G3+Bb3:e r:e
+# page 058 system 3 starts bar 13
+# bar 13 LH beat 1: cautionary natural printed before C4 (after C#4 in bar 12)
+# JUDGE bar 13 RH1: Y - cresc. starts under the first sixteenth of beat 4, after the rest
+13 RH1: r:s D4+D5:s D4+D5:s D4+D5:s r:s D4+D5:s D4+D5:s D4+D5:s r:s D4+D5:s( Bb3+Bb4:s) Bb3+Bb4:s r:s word:cresc. G4+G5:s G4+G5:s G4+G5:s
+# MARKS bar 13 LH1: word:cresc. (between the staves: both hands)
+13 LH1: A3+C4:e r:e F#3+A3:e r:e G3+Bb3:e r:e word:cresc. Bb2+D3+G3:e r:e
+# bar 14 RH beat 2: natural printed before E4 (cautionary)
+# JUDGE bar 14 RH1: X - f stands under the beat-4 sixteenth rest
+14 RH1: r:s Bb4+E5:s Bb4+E5:s Bb4+E5:s r:s Bb4+E5:s Bb4+E5:s Bb4+E5:s r:s A4+F5:s A4+F5:s A4+F5:s dyn:f r:s A4+F5:s A4+F5:s A4+F5:s
+14 RH2: G4:q( E4:q F4:q) s:q
+# MARKS bar 14 LH1: dyn:f beat 4 (between the staves: both hands)
+14 LH1: G3:h( F3:q dyn:f E3:q)
+# JUDGE bar 14 LH2: X - one f only, between the staves, already on RH1
+14 LH2: C3:e r:e C#3:e r:e D3:e r:e C3:e r:e
+# page 059 system 1 starts bar 15; p (Kl. Fg. Str.) printed at bar 15
+# JUDGE bar 15 RH1: X - p stands at the beat-1 rest; wedge on the 3rd sixteenth confirmed
+15 RH1: dyn:p r:s G4+F5:s( F4+G4:s) F4+G4:sv r:s F4+G4:s F4+G4:s F4+G4:s r:s F4+G4:s F4+G4:s F4+G4:s r:s F4+G4:s F4+G4:s F4+G4:s
+# JUDGE bar 15 LH1: X - one p only, between the staves, already on RH1
+# MARKS bar 15 LH1: dyn:p (between the staves: both hands)
+15 LH1: dyn:p B2+D3:e r:e D3:e r:e F3:e r:e G3:e r:e
+16 RH1: r:s F4+G4:s F4+G4:s F4+G4:s r:s F4+G4:s F4+G4:s F4+G4:s r:s D4+F4+G4:s D4+F4+G4:s D4+F4+G4:s r:s B3+D4+F4+G4:s B3+D4+F4+G4:s B3+D4+F4+G4:s
+16 LH1: B3:e r:e D4:e r:e B3:e r:e G3:e r:e
+# page 059 system 2 starts bar 17
+17 RH1: r:s E4+G4:s E4+G4:s E4+G4:s r:s E4+G4:s E4+G4:s E4+G4:s r:s D4+F4:s D4+F4:s D4+F4:s r:s D4+G4+Bb4:s D4+G4+Bb4:s D4+G4+Bb4:s
+# JUDGE bar 17 RH2: Y - the dash over A3 is the C4 ledger line, not a tenuto
+17 RH2: Bb3:h A3:q( Bb3:q)
+17 LH1: C3:e r:e C3:e r:e D3:e r:e Bb2:e r:e
+18 RH1: r:s F4+A4:s F4+A4:s F4+A4:s r:s F4+A4:s F4+A4:s F4+A4:s r:s F4+A4:s F4+A4:s F4+A4:s r:s E4+G4:s E4+G4:s E4+G4:s
+# JUDGE bar 18 RH2: Y - the dash over Bb3 is the C4 ledger line, not a tenuto
+18 RH2: C4:h.( Bb3:q)
+18 LH1: C3:e r:e C3:e r:e C3:e r:e C3:e r:e
+# JUDGE bar 19 RH1: OWN - beat 1 single F4 (both agree); cresc. starts after the rest under the first sixteenth (Y), f under the beat-4 rest (X)
+19 RH1: r:s word:cresc. F4:s F4:s F4:s r:s F4+A4:s F4+A4:s F4+A4:s r:s F4+A4:s F4+A4:s F4+A4:s dyn:f r:s F4+A4:s F4+A4:s F4+A4:s
+# JUDGE bar 19 RH2: Y - the dash over A3 is the C4 ledger line, not a tenuto
+19 RH2: A3:q D4:q r:h
+# MARKS bar 19 LH1: word:cresc. and dyn:f (between the staves: both hands)
+19 LH1: D3:e r:e word:cresc. D3:e r:e D4:e r:e dyn:f C4:e r:e
+# ---- end of chunk/PM_n09a.txt (bars 1-19)
+# No. 9 Quintetto (end) + Coro reprise, printed pages 60-62; piano
+# bar 20: Andante (continuing), 4/4, F major (1 flat); first bar of p. 60, a full bar
+# page 060 system 1 starts bar 20
+# JUDGE bar 20 RH: X - the p stands at the very start of the bar under the opening sixteenth rest (level with the first LH note)
+20 RH1: dyn:p r:s D4+F4+G4:s D4+F4+G4:s D4+F4+G4:s r:s F4+G4:s F4+G4:s F4+G4:s r:s D4+F4+G4:s D4+F4+G4:s D4+F4+G4:s r:s Bn3+D4+F4+G4:s Bn3+D4+F4+G4:s Bn3+D4+F4+G4:s
+# MARKS bar 20 LH1: dyn:p (printed between the staves, both hands)
+20 LH1: dyn:p Bn3:e r:e D4:e r:e Bn3:e r:e G3:e r:e
+21 RH1: r:s E4+G4:s E4+G4:s E4+G4:s r:s E4+G4:s E4+G4:s E4+G4:s r:s D4+F4:s D4+F4:s D4+F4:s r:s D4+G4+Bb4:s D4+G4+Bb4:s D4+G4+Bb4:s
+21 RH2: Bb3:h A3:q( Bb3:q)
+21 LH1: C3:e r:e C3:e r:e D3:e r:e Bb2:e r:e
+22 RH1: r:s F4+A4:s F4+A4:s F4+A4:s r:s F4+A4:s F4+A4:s F4+A4:s r:s F4+A4:s F4+A4:s F4+A4:s r:s E4+G4:s E4+G4:s E4+G4:s
+22 RH2: C4:h.( Bb3:q)
+22 LH1: C3:e r:e C3:e r:e C2+C3:e r:e C2+C3:e r:e
+# page 060 system 2 starts bar 23
+23 RH1: F4:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+23 RH2: A3:q( F4:q E4:h)
+23 LH1: F2+F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+24 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# MARKS bar 24 RH2: slur runs on over the page turn to the E4 of bar 6 (one slur over bars 5-6)
+24 RH2: F4:h( E4:h
+24 LH1: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+# page 061 system 1 starts bar 25
+25 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s A4+C5:s A4+C5:s A4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s r:s Bb4+C5:s Bb4+C5:s Bb4+C5:s
+# MARKS bar 25 RH2: slur continued from bar 5, ends on E4
+25 RH2: F4:h E4:h)
+25 LH1: F3:e r:e A3:e r:e G3:e r:e C3:e r:e
+26 RH1: r:s A4+C5:s A4+C5:s A4+C5:s r:s F4+A4:s F4+A4:s F4+A4:s r:s C4+F4:s C4+F4:s C4+F4:s r:s A3+C4:s A3+C4:s A3+C4:s
+26 RH2: F4:q C4:q A3:q F3:q
+26 LH1: F2+F3:e r:e F2+F3:e r:e F2+F3:e r:e F2:e r:e
+# bar 26 LH: the 4th eighth shows only the low F2 (no upper F3 notehead visible under the beam end)
+# bar 27: SHORT bar, 3 quarters (double bar after it); the 4th quarter is the chorus pickup = bar 9
+27 RH1: A3+C4:q r:q dyn:f E4+G4+A4+C#5:q
+# MARKS bar 27 LH1: dyn:f (printed between the staves, both hands)
+27 LH1: F2+F3:q r:q dyn:f E2+E3:q
+# bar 28: Maestoso, cut time (2/2), D major (2 sharps); bar 9 is a PICKUP of one quarter
+# page 061 system 2 starts bar 28
+28 RH1: A4:e. A4:s
+28 LH1: A2+A3:e. A2+A3:s
+29 RH1: F#4+A4+D5:q. F#4+A4:e A4+D5+F#5:q G4+A4+C#5+E5:q
+29 LH1: D3+D4:q. D3+D4:e D3+D4:q A2+A3:q
+30 RH1: F#4+A4+D5:q D4+F#4+A4:e. D4+F#4+A4:s D4+F#4+A4:q F#4+A4:e. F#4+A4:s
+30 LH1: D3+D4:q D2+D3:e. D2+D3:s D2+D3:q D3+D4:e. D3+D4:s
+31 RH1: A4+C#5+E5:q. A4:e A4+C#5+E5+G5:q A4+D5+F#5:q
+31 LH1: A2+A3:q. A2+A3:e A2+A3:q D3+D4:q
+32 RH1: A4+C#5+E5:q C#4+E4+A4:e. C#4+E4+A4:s C#4+E4+A4:q A4:e. A4:s
+32 LH1: A2+A3:q A1+A2:e. A1+A2:s A1+A2:q A2+A3:e. A2+A3:s
+33 RH1: D4+D5:q F#4+F#5:q G4+G5:q E4+E5:q
+33 LH1: D3:q F#3:q G3:q E3:q
+# page 061 system 3 starts bar 34
+34 RH1: D4+D5:q A4:h A4:e. A4:s
+34 LH1: D3:q A2+A3:e. A2+A3:s A2+A3:q A2+A3:e. A2+A3:s
+35 RH1: D4+D5:q F#4+F#5:q G4+G5:q E4+E5:q
+35 LH1: D3:q F#3:q G3:q E3:q
+36 RH1: D4+D5:q A4:h A4:e. A4:s
+36 LH1: D3:q A2+A3:e. A2+A3:s A2+A3:q A2+A3:e. A2+A3:s
+37 RH1: D4+D5:q A4+A5:e. A4+A5:s F#5:e. F#5:s D5:e. D5:s
+37 LH1: D3:q A3:q F#3:q D3:q
+# JUDGE bar 38 RH: Y - inner chords are C#4+E4+A4 (lowest head on the ledger line, middle head on the bottom staff line), A major, not D4+F#4
+38 RH1: A4+A5:q C#4+E4+A4:e. C#4+E4+A4:s C#4+E4+A4:q A4:e. A4:s
+38 LH1: A3:q A2+A3:e. A2+A3:s A2+A3:q A3:e. A3:s
+# page 062 system 1 starts bar 39
+39 RH1: A4+C#5+E5:q. A4+C#5+E5:e A4+C#5+E5:q. A4+C#5+E5:e
+39 LH1: A3+C#4+E4:q. A3+C#4+E4:e A3+C#4+E4:q. A3+C#4+E4:e
+40 RH1: A4+E5+G5:q A4+C#5+E5:e. A4+C#5+E5:s A4+C#5+E5:q E5+G5:s A5:s D5+F#5:s G5:s
+40 LH1: A3+E4+G4:q A3+C#4+E4:e. A3+C#4+E4:s A3+C#4+E4:q C#4+E4:e D4+F#4:e
+41 RH1: C#5+E5:q E5+G5:s A5:s D5+F#5:s G5:s C#5+E5:q A4:e. A4:s
+41 LH1: A3+E4+G4:q C#4+E4:e D4+F#4:e A3+E4+G4:q A3:e. A3:s
+42 RH1: A4+D5+F#5:q. A4+D5+F#5:e A4+D5+F#5:q. A4+D5+F#5:e
+42 LH1: D3+D4:q. D3+D4:e D3+D4:q. D3+D4:e
+43 RH1: A4+D5+F#5+A5:q r:e A3:s3( B3:s3 C#4:s3 D4:q) r:e A3:s3( B3:s3 C#4:s3
+43 LH1: D3+D4:q r:e A2:s3( B2:s3 C#3:s3 D3:q) r:e A2:s3( B2:s3 C#3:s3
+# page 062 system 2 starts bar 44
+44 RH1: D4:e) A3:s3( B3:s3 C#4:s3 D4:e) A3:s3( B3:s3 C#4:s3 D4:q) D4+F#4+A4:e. D4+F#4+A4:s
+44 LH1: D3:e) A2:s3( B2:s3 C#3:s3 D3:e) A2:s3( B2:s3 C#3:s3 D3:q) r:q
+45 RH1: F#4+A4+D5:h~ F#4+A4+D5:e. D5:s D5:e.t( C#5:x D5:x)
+45 LH1: trem2:D3+F#3|A3:h trem2:D3+F#3|A3:h
+46 RH1: E5:e. E5:s E5:e.t( D5:x E5:x) F#5:e. F#5:s F#5:e.t( E5:x F#5:x)
+46 LH1: trem2:D3+G3+A3|C#4:h trem2:D3+A3|Cn4:h
+47 RH1: G5:e. G5:s B4+G5:q r:e G5:s A5:s D5+B5:s G5:s B5:s G5:s
+47 LH1: G3+B3:q G3+B3+D4:e. G3+B3+D4:s G3+B3+D4:q G3+B3:q
+# page 062 system 3 starts bar 48
+48 RH1: A4+D5+E5:q. A4+D5+E5:e A4+C#5+E5+A5:q. A4+C#5+E5+A5:e
+48 LH1: A3:q. A3:e A2:q. A2:e
+# JUDGE bar 49 RH: X - figure is dotted eighth F#5 (one beam) + two 32nds G5 F#5 (three beams) + dotted eighth E5 + sixteenth D5 with wedge
+49 RH1: F#4+A4+D5:q r:q F#5:e.( G5:x F#5:x E5:e.) D5:sv
+49 LH1: D3:q r:q F#3:e. F#3:s E3:e. D3:s
+# JUDGE bar 50 RH: X - figure is dotted eighth F#5 (one beam) + two 32nds G5 F#5 (three beams) + dotted eighth E5 + sixteenth D5 with wedge
+50 RH1: F#5:e.( G5:x F#5:x E5:e.) D5:sv A5:q A4:q
+50 LH1: F#3:e. F#3:s E3:e. D3:s A3:q A2:q
+# JUDGE bar 51 RH: X - figure is dotted eighth F#5 (one beam) + two 32nds G5 F#5 (three beams) + dotted eighth E5 + sixteenth D5 with wedge
+51 RH1: D5:q r:q F#5:e.( G5:x F#5:x E5:e.) D5:sv
+51 LH1: D3:q r:q F#3:e. F#3:s E3:e. D3:s
+# JUDGE bar 52 RH: X - figure is dotted eighth F#5 (one beam) + two 32nds G5 F#5 (three beams) + dotted eighth E5 + sixteenth D5 with wedge
+52 RH1: F#5:e.( G5:x F#5:x E5:e.) D5:sv A5:q E5+G5+A5+C#6:q
+52 LH1: F#3:e. F#3:s E3:e. D3:s A3:q A1+A2:q
+53 RH1: D5+F#5+A5+D6:q D4:e. D4:s D4:q r:q
+53 LH1: D2+D3:q D2+D3:e. D2+D3:s D2+D3:q r:q
+# bar 53: final double bar of the number
+# ---- end of chunk/PM_n09b.txt (bars 20-53)

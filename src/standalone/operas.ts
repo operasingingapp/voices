@@ -1508,6 +1508,7 @@ export const OPERAS: Opera[] = [
       "title": "Di scrivermi ogni giorno",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Di scrivermi ogni giorno",
+      "editionId": "mozart-di-scrivermi-ogni-giorno",
       "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
      },
      {
@@ -1568,6 +1569,27 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Non v'è più tempo, amici",
       "editionId": "mozart-non-ve-piu-tempo-amici",
       "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
+     },
+     {
+      "title": "Dove son?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Dove son?",
+      "editionId": "mozart-dove-son",
+      "when": "Act 1, on the shore, straight after “Di scrivermi ogni giorno”: the boat has carried the officers away to the sound of drums, and the sisters stand motionless"
+     },
+     {
+      "title": "Che vita maledetta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che vita maledetta",
+      "editionId": "mozart-che-vita-maledetta",
+      "when": "Act 1, in a room in the sisters' house, after the officers have sailed: Despina, the sisters' maid, is alone, whisking their morning chocolate"
+     },
+     {
+      "title": "Signora Dorabella, Signora Fiordiligi",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Signora Dorabella, Signora Fiordiligi",
+      "editionId": "mozart-signora-dorabella",
+      "when": "Act 1, straight after “Ah scostati… Smanie implacabili”: Dorabella has raged at her torments, and both sisters sit apart, beside themselves, while Despina wonders what has happened"
      }
     ]
    },
@@ -1602,12 +1624,14 @@ export const OPERAS: Opera[] = [
       "title": "Di scrivermi ogni giorno",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Di scrivermi ogni giorno",
+      "editionId": "mozart-di-scrivermi-ogni-giorno",
       "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
      },
      {
       "title": "Ah scostati… Smanie implacabili",
       "kind": "Recitative and aria · Act 1",
       "id": "Act 1: Ah scostati… Smanie implacabili",
+      "editionId": "mozart-ah-scostati-smanie-implacabili",
       "when": "Act 1, back at home, Dorabella has thrown the breakfast Despina brought on the floor and the sisters have torn off their jewellery; Despina asks what has happened"
      },
      {
@@ -1662,6 +1686,27 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Non v'è più tempo, amici",
       "editionId": "mozart-non-ve-piu-tempo-amici",
       "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
+     },
+     {
+      "title": "Dove son?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Dove son?",
+      "editionId": "mozart-dove-son",
+      "when": "Act 1, on the shore, straight after “Di scrivermi ogni giorno”: the boat has carried the officers away to the sound of drums, and the sisters stand motionless"
+     },
+     {
+      "title": "Che vita maledetta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che vita maledetta",
+      "editionId": "mozart-che-vita-maledetta",
+      "when": "Act 1, in a room in the sisters' house, after the officers have sailed: Despina, the sisters' maid, is alone, whisking their morning chocolate"
+     },
+     {
+      "title": "Signora Dorabella, Signora Fiordiligi",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Signora Dorabella, Signora Fiordiligi",
+      "editionId": "mozart-signora-dorabella",
+      "when": "Act 1, straight after “Ah scostati… Smanie implacabili”: Dorabella has raged at her torments, and both sisters sit apart, beside themselves, while Despina wonders what has happened"
      }
     ]
    },
@@ -1676,6 +1721,7 @@ export const OPERAS: Opera[] = [
       "title": "In uomini, in soldati",
       "kind": "Aria · Act 1",
       "id": "Act 1: In uomini, in soldati",
+      "editionId": "mozart-in-uomini-in-soldati",
       "when": "Act 1, Despina has heard that the sisters' lovers have gone to war and told them to amuse themselves; Dorabella calls her talk an insult to faithful lovers"
      },
      {
@@ -1683,6 +1729,20 @@ export const OPERAS: Opera[] = [
       "kind": "Aria · Act 2",
       "id": "Act 2: Una donna a quindici anni",
       "when": "Act 2, Despina is urging the sisters to let the two rich strangers adore them; asked what they should do, she answers: whatever they like, are they flesh and blood or not?"
+     },
+     {
+      "title": "Che vita maledetta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Che vita maledetta",
+      "editionId": "mozart-che-vita-maledetta",
+      "when": "Act 1, in a room in the sisters' house, after the officers have sailed: Despina, the sisters' maid, is alone, whisking their morning chocolate"
+     },
+     {
+      "title": "Signora Dorabella, Signora Fiordiligi",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Signora Dorabella, Signora Fiordiligi",
+      "editionId": "mozart-signora-dorabella",
+      "when": "Act 1, straight after “Ah scostati… Smanie implacabili”: Dorabella has raged at her torments, and both sisters sit apart, beside themselves, while Despina wonders what has happened"
      }
     ]
    },
@@ -1732,6 +1792,7 @@ export const OPERAS: Opera[] = [
       "title": "Di scrivermi ogni giorno",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Di scrivermi ogni giorno",
+      "editionId": "mozart-di-scrivermi-ogni-giorno",
       "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
      },
      {
@@ -1853,6 +1914,7 @@ export const OPERAS: Opera[] = [
       "title": "Di scrivermi ogni giorno",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Di scrivermi ogni giorno",
+      "editionId": "mozart-di-scrivermi-ogni-giorno",
       "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
      },
      {
@@ -1973,6 +2035,7 @@ export const OPERAS: Opera[] = [
       "title": "Di scrivermi ogni giorno",
       "kind": "Quintetto · Act 1",
       "id": "Act 1: Di scrivermi ogni giorno",
+      "editionId": "mozart-di-scrivermi-ogni-giorno",
       "when": "Act 1, after the soldiers' chorus: Don Alfonso says the regiment's boat has left and friends wait for the officers in a lighter boat, and the lovers embrace for the last time"
      },
      {
@@ -2029,6 +2092,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Non v'è più tempo, amici",
       "editionId": "mozart-non-ve-piu-tempo-amici",
       "when": "Act 1, straight after the soldiers' chorus “Bella vita militar”: the boat has come in to the shore to take the officers away"
+     },
+     {
+      "title": "Dove son?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Dove son?",
+      "editionId": "mozart-dove-son",
+      "when": "Act 1, on the shore, straight after “Di scrivermi ogni giorno”: the boat has carried the officers away to the sound of drums, and the sisters stand motionless"
+     },
+     {
+      "title": "Non son cattivo comico",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Non son cattivo comico",
+      "editionId": "mozart-non-son-cattivo-comico",
+      "when": "Act 1, on the shore, straight after “Soave sia il vento”: the sisters have gone, leaving Don Alfonso alone"
      }
     ]
    }

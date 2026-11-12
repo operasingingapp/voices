@@ -104,6 +104,34 @@
     }
   },
   {
+    "editionId": "mozart-ah-scostati-smanie-implacabili",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-scostati-smanie-implacabili@1.0.0-peters#610ebc1c7c",
+    "title": "Ah scostati… Smanie implacabili",
+    "subtitle": "Dorabella: recitative and aria from Così fan tutte, Act 1 (No. 11)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 126,
+    "durationSec": 211,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "1/4",
+    "languageStatus": {
+      "phrases": 23,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-signor-signor",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-ah-signor-signor@1.0.0-klengel#95a55708af",
@@ -532,6 +560,46 @@
     }
   },
   {
+    "editionId": "mozart-che-vita-maledetta",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-che-vita-maledetta@1.0.0-peters#566ce54306",
+    "title": "Che vita maledetta",
+    "subtitle": "Despina, Fiordiligi and Dorabella: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 23,
+    "durationSec": 64,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 18,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-cinque-dieci-venti",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-cinque-dieci-venti@1.0.0-klengel#cd94e1cf99",
@@ -798,6 +866,122 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 20,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-di-scrivermi-ogni-giorno",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-di-scrivermi-ogni-giorno@1.0.0-peters#9a572ddc63",
+    "title": "Di scrivermi ogni giorno",
+    "subtitle": "Fiordiligi, Dorabella, Ferrando, Guglielmo and Don Alfonso, with the chorus: quintet from Così fan tutte, Act 1 (No. 9)",
+    "kind": "quintetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "soprano",
+        "name": "Chorus sopranos",
+        "voiceType": "Soprano",
+        "partKey": "soprano"
+      },
+      {
+        "id": "alto",
+        "name": "Chorus altos",
+        "voiceType": "Alto",
+        "partKey": "alto"
+      },
+      {
+        "id": "tenor",
+        "name": "Chorus tenors",
+        "voiceType": "Tenor",
+        "partKey": "tenor"
+      },
+      {
+        "id": "bass",
+        "name": "Chorus basses",
+        "voiceType": "Bass",
+        "partKey": "bass"
+      }
+    ],
+    "measures": 53,
+    "durationSec": 174,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 63,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-dove-son",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-dove-son@1.0.0-peters#c9d9f96b2b",
+    "title": "Dove son?",
+    "subtitle": "Dorabella, Don Alfonso and Fiordiligi: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      }
+    ],
+    "measures": 17,
+    "durationSec": 64,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 12,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1712,6 +1896,34 @@
     }
   },
   {
+    "editionId": "mozart-in-uomini-in-soldati",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-in-uomini-in-soldati@1.0.0-peters#c58967f0eb",
+    "title": "In uomini, in soldati",
+    "subtitle": "Despina: aria from Così fan tutte, Act 1 (No. 12)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      }
+    ],
+    "measures": 93,
+    "durationSec": 162,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "1/8",
+    "languageStatus": {
+      "phrases": 19,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-io-vi-dico-signor",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-io-vi-dico-signor@1.0.0-klengel#abfbcfbff0",
@@ -2077,6 +2289,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 36,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-non-son-cattivo-comico",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-non-son-cattivo-comico@1.0.0-peters#2867c88e6e",
+    "title": "Non son cattivo comico",
+    "subtitle": "Don Alfonso: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 26,
+    "durationSec": 69,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 10,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2924,6 +3164,46 @@
     }
   },
   {
+    "editionId": "mozart-signora-dorabella",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-signora-dorabella@1.0.0-peters#eb8791759b",
+    "title": "Signora Dorabella, Signora Fiordiligi",
+    "subtitle": "Despina, Dorabella and Fiordiligi: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      }
+    ],
+    "measures": 55,
+    "durationSec": 135,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 26,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-signora-ella-mi-disse",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-signora-ella-mi-disse@1.0.0-klengel#3affd9fcc4",
@@ -3017,11 +3297,11 @@
   },
   {
     "editionId": "mozart-soave-sia-il-vento",
-    "editionVersion": "1.0.0-musescore-3.6.1",
-    "scoreVersionId": "mozart-soave-sia-il-vento@1.0.0-musescore-3.6.1#1f5cb39498",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-soave-sia-il-vento@1.0.0-peters#99b6ee6fe9",
     "title": "Soave sia il vento",
-    "subtitle": "Terzettino for Fiordiligi, Dorabella and Don Alfonso from Così fan tutte, Act 1",
-    "kind": "ensemble",
+    "subtitle": "Fiordiligi, Dorabella and Don Alfonso: terzettino from Così fan tutte, Act 1 (No. 10)",
+    "kind": "terzettino",
     "fixture": false,
     "composer": "Wolfgang Amadeus Mozart",
     "roles": [
@@ -3040,12 +3320,12 @@
       {
         "id": "alfonso",
         "name": "Don Alfonso",
-        "voiceType": "Bass",
+        "voiceType": "Bass-baritone",
         "partKey": "alfonso"
       }
     ],
     "measures": 41,
-    "durationSec": 151,
+    "durationSec": 186,
     "hasRepeats": false,
     "keySignature": "E major",
     "time": "2/2",

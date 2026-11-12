@@ -1,9 +1,9 @@
 {
  "editionId": "mozart-soave-sia-il-vento",
- "editionVersion": "1.0.0-musescore-3.6.1",
+ "editionVersion": "1.0.0-peters",
  "title": "Soave sia il vento",
- "subtitle": "Terzettino for Fiordiligi, Dorabella and Don Alfonso from Così fan tutte, Act 1",
- "kind": "ensemble",
+ "subtitle": "Fiordiligi, Dorabella and Don Alfonso: terzettino from Così fan tutte, Act 1 (No. 10)",
+ "kind": "terzettino",
  "fixture": false,
  "pedal": "classical",
  "composer": "Wolfgang Amadeus Mozart",
@@ -30,7 +30,7 @@
   {
    "id": "alfonso",
    "name": "Don Alfonso",
-   "voiceType": "Bass",
+   "voiceType": "Bass-baritone",
    "partKey": "alfonso"
   }
  ],
@@ -82,7 +82,7 @@
   },
   {
    "key": "alfonso",
-   "label": "Don Alfonso (Bass)",
+   "label": "Don Alfonso (Bass-baritone)",
    "shortLabel": "Alfonso",
    "kind": "voice",
    "roleId": "alfonso",
@@ -124,7 +124,7 @@
  "licences": [
   {
    "item": "Music",
-   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), No. 10, terzettino",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 6, No. 10 Terzettino",
    "author": "Wolfgang Amadeus Mozart (1756–1791)",
    "licence": "Public domain",
    "notes": ""
@@ -134,18 +134,18 @@
    "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
    "author": "Lorenzo Da Ponte (1749–1838)",
    "licence": "Public domain",
-   "notes": ""
+   "notes": "Words as printed in the Peters vocal score."
   },
   {
    "item": "Score (score.musicxml)",
-   "source": "MuseScore 3.6.1 piano-vocal engraving \"Soave sia il vento\" (2021), supplied by the user (original kept as source-musescore.mxl)",
-   "author": "Unknown engraver",
-   "licence": "Not stated in the file",
-   "notes": "Check the engraver's licence before distributing. The three voices are named (the engraving labels them Fi., Do. and D.A.); the German singing translation under the Italian is removed; Dorabella's missing ‘e’ of elemento is restored in bar 17; Don Alfonso's ‘be-’ in bar 26 is corrected to ‘ai’ (ai nostri desir); the stage direction is given in English."
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 64–68, bars 1–41 of No. 10",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar by a fresh checker (clean). The German singing translation is left out. The tempo word is printed in Peters' brackets, [Andante]. In bar 12 the small notes for Fiordiligi and Dorabella are grace notes; bars 39–41 are for the piano alone. Playback tempo: a half note ≈ 27 (♩ = 53), from Rattle (2:56) and Klemperer (3:15); Mozart gives the word Andante only."
   },
   {
    "item": "IPA, gloss and translation",
-   "source": "Written for this MVP",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
    "author": "Counterpart development team",
    "licence": "CC0 1.0",
    "notes": "Unreviewed by a diction coach."

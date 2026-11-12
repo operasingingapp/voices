@@ -2626,17 +2626,22 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     kind: "Terzettino",
     facts: {
       key: "E major",
-      time: "2/2 (alla breve)",
-      tempo: "Andante, ♩ ≈ 65: the engraving's playback number, Mozart gives the word only",
+      time: "¢ (alla breve)",
+      tempo: "Andante (in Peters' brackets), played at a half note ≈ 27 (♩ = 53), about 3 minutes, from two recordings (Rattle 2:56, Klemperer 3:15); Mozart gives the word only",
     },
     notePlaceholder: "Keep the line smooth and quiet, and listen to the other two",
     about: (
       <>
         <p>
-          Score: a piano-vocal engraving made in MuseScore 3.6.1 (2021), supplied by you; the engraver and licence are not stated in the file, so check them
-          before sharing. The three voices, labelled Fi., Do. and D.A. in the file, are named; the German singing translation printed under the Italian is
-          left out; Dorabella's missing ‘e’ of elemento is restored in bar 17, and Don Alfonso's ‘be-’ in bar 26 is corrected to ‘ai’ (ai nostri desir). The
-          stage direction at the end is given in English. On screen the tempo marks appear in the bar box and joined syllables use ‿.
+          Watching the boat that carries the officers disappear, the sisters and Don Alfonso pray together: may the wind be gentle, the waves calm, and
+          every element answer their wishes kindly. At the end the sisters go out, leaving Alfonso alone.
+        </p>
+        <p>
+          Score: No. 10, the Terzettino (vocal score pages 64–68, 41 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by
+          bar by a fresh checker. The small notes in bar 12 are grace notes; the last three bars are for the piano alone. Only the Italian words are kept,
+          with the print's spelling and punctuation.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
@@ -3141,6 +3146,232 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Where the print gives
           a second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with the print's spellings (v'e without its
           accent, Muojo). The sisters' last words, “Muojo d'affanno”, run on into No. 9, which begins on the same page: this piece ends on “d'af-”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-di-scrivermi-ogni-giorno": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Quintetto",
+    facts: {
+      key: "F major, then D major for the chorus",
+      time: "4/4, then ¢ (alla breve) for the chorus",
+      tempo: "Andante, played at ♩ = 53, then the chorus Maestoso at a half note ≈ 58 (♩ = 115); about 3 minutes in all, from two recordings (Rattle 1:55 and 0:48, Klemperer 2:06 and 0:57); Mozart gives the words only",
+    },
+    notePlaceholder: "Broken by sobs: the sisters mean every word, the officers are acting, Alfonso can hardly keep a straight face",
+    about: (
+      <>
+        <p>
+          Through their tears the sisters ask their lovers to swear to write every day, twice a day if they can; the officers tell them to be sure of it,
+          and the sisters ask them to stay true. Aside, Don Alfonso says he will burst if he does not laugh. With repeated goodbyes all four say their
+          hearts are breaking. Then the chorus sings again of the soldier's life as the boat moves off, and the sisters stand motionless on the shore.
+        </p>
+        <p>
+          Score: No. 9, the Quintetto with the chorus “Bella vita militar” sung again (vocal score pages 56–62, 53 bars), from Kurt Soldan's piano
+          reduction in the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed
+          pages: each of its two page ranges read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for
+          dynamics and other marks, then checked bar by bar by two fresh checkers (one left-hand note corrected in bar 8). Only the Italian words are kept,
+          with the print's broken words and ellipses. The first bar opens with the sisters' “-fanno”, the end of “Muojo d'affanno” from the recitative
+          before. The sopranos and altos share one staff in the print and are written here as two parts. A printed slur that crosses from the right hand
+          to the left in bars 7–8 cannot be written in the file and is left out.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-dove-son": {
+    portrait: "cosi:dorabella",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 64, from two recordings (Rattle 1:05, Klemperer 1:03; about 1 minute)",
+    },
+    notePlaceholder: "Speak it first: Dorabella dazed, Alfonso brisk, Fiordiligi watching the boat go",
+    about: (
+      <>
+        <p>
+          Dorabella comes to as if from a trance and asks where they are; gone, says Don Alfonso. He tells the sisters to take heart: their sweethearts
+          are waving to them from far away. The sisters wish them a good journey, watch the boat vanish, and pray that it reaches the camp safely. Alfonso
+          adds a wish of his own: that heaven keep the lovers safe for them and the friends for him.
+        </p>
+        <p>
+          Score: the recitative after No. 9 (vocal score pages 63–64, 17 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Only the Italian words
+          are kept, with the print's spellings (Oh Dei). It leads straight into No. 10.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-non-son-cattivo-comico": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, kept for the closing Allegro moderato too, from two recordings (Rattle 1:03, Klemperer 1:14; just over a minute)",
+    },
+    notePlaceholder: "Speak it first: Alfonso alone and pleased with himself, then the proverb sung out",
+    about: (
+      <>
+        <p>
+          Alone, Don Alfonso congratulates himself on his acting. The two champions of Venus and Mars are waiting for him at the place they agreed, and he
+          must join them. All the grimaces and play-acting are so much the better for him: people like that change their minds fastest, and the poor
+          fools have bet a hundred zecchini on a woman. Over the orchestra he sings a proverb: whoever builds his hopes on a woman's heart is ploughing the
+          sea, sowing the sand and trying to catch the wind in a net.
+        </p>
+        <p>
+          Score: the recitative after No. 10 (vocal score pages 69–70, 26 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung line and the piano each read by
+          two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Bars 1–13 are secco
+          recitative; from bar 14 the proverb is set with orchestra, Allegro moderato. Only the Italian words are kept, with the print's spelling
+          (femmina) and its quotation marks around the proverb.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-che-vita-maledetta": {
+    // Despina opens it; she has no picture yet, so the cast list's avatar shows
+    portrait: "cosi:despina",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 85, from two recordings (Rattle 1:05, Klemperer 1:03; about 1 minute)",
+    },
+    notePlaceholder: "Speak it first: Despina grumbling, then the sisters bursting in",
+    about: (
+      <>
+        <p>
+          Despina, the sisters' maid, is making chocolate and grumbling: a lady's maid slaves from morning to night and gets nothing for herself. She has
+          been whisking for half an hour and is left with only the smell, so she tastes it and finds it delicious. Her mistresses burst in in despair;
+          when she offers them their breakfast, they throw everything aside, and Fiordiligi calls for a blade or poison. Despina asks what on earth has
+          happened.
+        </p>
+        <p>
+          Score: the recitative before No. 11 (vocal score pages 71–72, 23 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, then checked bar by bar by a fresh checker. Where the print gives a second rhythm for the German words, the Italian
+          rhythm is kept. Only the Italian words are kept, with the print's spellings (Per Bacco vo assagiarlo). The last bar, three beats, leads into
+          No. 11.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-scostati-smanie-implacabili": {
+    portrait: "cosi:dorabella",
+    opera: "Così fan tutte",
+    kind: "Recitative and aria",
+    facts: {
+      key: "E♭ major (the aria; the recitative has no key signature)",
+      time: "4/4, then ¢ (alla breve) for the aria",
+      tempo: "The recitative at ♩ = 79, then the aria Allegro agitato at a half note ≈ 87 (♩ = 175); about 3½ minutes in all, from two recordings (Rattle 1:03 and 2:00, Klemperer 1:19 and 2:40); the recitative's Allegro assai and Maestoso keep its pace; Mozart gives the words only",
+    },
+    notePlaceholder: "Over the top on purpose: real grief, played as grand tragedy",
+    about: (
+      <>
+        <p>
+          Dorabella orders Despina away: let her fear what a desperate love can do. She wants the windows shut; she hates the light, the air she breathes
+          and herself, and asks to be left alone. In the aria she says that the torments in her soul will not stop until her anguish kills her, and that if
+          she lives, the horrible sound of her sighs will make her a wretched example of fatal love to the Furies.
+        </p>
+        <p>
+          Score: No. 11, the Recitativo ed Aria (vocal score pages 73–79, 126 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the recitative and the aria each read by
+          two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar
+          by three fresh checkers (two errors in the recitative corrected). Only the Italian words are kept, with the print's spelling (finchè). The
+          left hand's A flat in bar 51 is kept as printed, though the harmony suggests A natural, and the cut signs printed at bars 104 and 112 are not
+          written in.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-signora-dorabella": {
+    portrait: "cosi:despina",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 97, from two recordings (Rattle 2:10, Klemperer 2:21; about 2¼ minutes)",
+    },
+    notePlaceholder: "Speak it first: Despina breezy and cynical, the sisters tragic and offended",
+    about: (
+      <>
+        <p>
+          Despina hears that the sisters' lovers have left Naples for the battlefield and laughs: they will come back covered in laurels, and if they die,
+          so much the better, since the sisters lose two men and keep all the others. Fiordiligi and Dorabella say they would die without Guglielmo and
+          Ferrando. Despina answers that no woman has ever died of love: one man is as good as another, because none of them is worth anything. Instead of
+          wasting time in tears they should amuse themselves, as their sweethearts surely will in camp. Dorabella protests at this insult to such
+          faithful souls; Despina says such fairy tales are for children.
+        </p>
+        <p>
+          Score: the recitative after No. 11 (vocal score pages 80–83, 55 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Where the print gives
+          a second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with the print's spellings (Guglielmo, buon'
+          ora, più tosto, perchè, and Fiordiligi's “Divertirvi?”). The last bar, three beats, leads straight into No. 12.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
+          this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-in-uomini-in-soldati": {
+    portrait: "cosi:despina",
+    opera: "Così fan tutte",
+    kind: "Aria",
+    facts: {
+      key: "F major",
+      time: "2/4, then 6/8",
+      tempo: "Allegretto, played at ♩ = 60, then a dotted quarter = 72 (♩ = 108) in 6/8; about 2¾ minutes, set to come close to two recordings (Rattle 2:46, Klemperer 3:11); Mozart gives the word only",
+    },
+    notePlaceholder: "Mocking and light: Despina enjoys shocking her mistresses",
+    about: (
+      <>
+        <p>
+          Fidelity, from men, from soldiers? Despina laughs at the idea. Men are all made of the same dough: the leaves on the trees and the breezes are
+          steadier than they are, and false tears, lying looks and deceitful words are their chief qualities. They love only their own pleasure, then
+          despise women and deny them affection. So women should pay them back in the same coin and love for convenience and vanity. She ends with a
+          carefree tra-la-la.
+        </p>
+        <p>
+          Score: No. 12, the Aria (vocal score pages 83–87, 93 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition Peters
+          Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung line and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, words and slurs, then checked bar by bar
+          by two fresh checkers (one tie corrected, one completed). The first bar is the one-eighth upbeat; the last five bars are for the piano alone.
+          Only the Italian words are kept, with the print's spelling (nè). A printed slur that crosses into the left hand's middle voice (bars 41–45) is
+          written in the left hand only.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for

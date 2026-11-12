@@ -1,0 +1,268 @@
+{
+ "editionId": "mozart-di-scrivermi-ogni-giorno",
+ "editionVersion": "1.0.0-peters",
+ "title": "Di scrivermi ogni giorno",
+ "subtitle": "Fiordiligi, Dorabella, Ferrando, Guglielmo and Don Alfonso, with the chorus: quintet from Così fan tutte, Act 1 (No. 9)",
+ "kind": "quintetto",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  },
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  },
+  {
+   "id": "soprano",
+   "name": "Chorus sopranos",
+   "voiceType": "Soprano",
+   "partKey": "soprano"
+  },
+  {
+   "id": "alto",
+   "name": "Chorus altos",
+   "voiceType": "Alto",
+   "partKey": "alto"
+  },
+  {
+   "id": "tenor",
+   "name": "Chorus tenors",
+   "voiceType": "Tenor",
+   "partKey": "tenor"
+  },
+  {
+   "id": "bass",
+   "name": "Chorus basses",
+   "voiceType": "Bass",
+   "partKey": "bass"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P10",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "soprano",
+   "label": "Chorus sopranos (Soprano)",
+   "shortLabel": "Chorus sopranos",
+   "kind": "voice",
+   "roleId": "soprano",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alto",
+   "label": "Chorus altos (Alto)",
+   "shortLabel": "Chorus altos",
+   "kind": "voice",
+   "roleId": "alto",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tenor",
+   "label": "Chorus tenors (Tenor)",
+   "shortLabel": "Chorus tenors",
+   "kind": "voice",
+   "roleId": "tenor",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "bass",
+   "label": "Chorus basses (Bass)",
+   "shortLabel": "Chorus basses",
+   "kind": "voice",
+   "roleId": "bass",
+   "source": {
+    "xmlPartId": "P9"
+   },
+   "channel": 12,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Di scrivermi ogni giorno · Sii costante a me sol · Addio",
+   "start": "1",
+   "end": "14"
+  },
+  {
+   "id": "b",
+   "label": "Mi si divide il cor · Addio (with Alfonso’s aside)",
+   "start": "15",
+   "end": "27"
+  },
+  {
+   "id": "c",
+   "label": "Bella vita militar (the chorus, to the end)",
+   "start": "28",
+   "end": "53"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 5, No. 9 Quintetto, ending with the chorus Bella vita militar sung again",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score: the broken words with the print's ellipses, Sii, dì, bell' idol, and Don Alfonso's aside in brackets. The first bar's -fanno, the end of the sisters' Muojo d'affanno from the recitative before, is sung here but belongs to that recitative's line."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 56–62, bars 1–53 of No. 9",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges, pp. 56–59 and 60–62), a separate sweep for dynamics and other marks, then checked bar by bar by two fresh checkers (one error found in bar 8, a left-hand F sharp, and corrected; the chorus clean). The German singing translation is left out, and handwritten pencil marks on p. 57 are ignored. Bar 1 begins with the sisters' -fanno, the end of the recitative before. Bar 27, the last Andante bar, is printed with three quarters before the double bar and is set as 3/4; bar 28 is the chorus's one-quarter upbeat, set as 1/4. Each soloist and each chorus part has its own staff; the sopranos and altos share one staff in the print and are written as two parts (where one notehead serves both, both sing it). One printed slur that crosses from the right hand to the left hand in bars 7–8 cannot be encoded and is left out. Playback tempo: the quintet ♩ = 53, from Rattle (1:55) and Klemperer (2:06); the chorus from bar 28 a half note ≈ 58 (♩ = 115), from Rattle (0:48) and Klemperer (0:57); Mozart gives the words Andante and Maestoso only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

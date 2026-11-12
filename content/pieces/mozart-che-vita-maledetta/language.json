@@ -1,0 +1,914 @@
+{
+ "editionId": "mozart-che-vita-maledetta",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (Per Bacco vo assagiarlo, where the libretto has Perbacco, vo' assaggiarlo, with the IPA following the print's single g; Ov' è, dov' è and com' è as two words; Signore). Despina's noi in bar 6 is sung on two notes, no-i, and its IPA follows the score (ˈno.i). IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L21, IPA checked against Castel). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "e1",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Che vita maledetta è il far la cameriera;",
+   "translation": "What a cursed life it is, being a chambermaid!",
+   "ipa": "ke ˈvi.ta ma.leˈdet.ta ˈɛ‿il ˈfar la ka.meˈrjɛ.ra",
+   "words": [
+    [
+     "Che",
+     "what a",
+     "ke"
+    ],
+    [
+     "vita",
+     "life",
+     "ˈvi.ta"
+    ],
+    [
+     "maledetta",
+     "cursed",
+     "ma.leˈdet.ta"
+    ],
+    [
+     "è",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "far",
+     "doing",
+     "ˈfar"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "cameriera;",
+     "chambermaid",
+     "ka.meˈrjɛ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "working as a maid"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e2",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "dal mattino alla sera",
+   "translation": "From morning to evening",
+   "ipa": "dal matˈti.no‿ˈal.la ˈse.ra",
+   "words": [
+    [
+     "dal",
+     "from the",
+     "dal"
+    ],
+    [
+     "mattino",
+     "morning",
+     "matˈti.no"
+    ],
+    [
+     "alla",
+     "to the",
+     "ˈal.la"
+    ],
+    [
+     "sera",
+     "evening",
+     "ˈse.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e3",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "si fa, si suda, si lavora, e poi",
+   "translation": "you toil, you sweat, you work, and then",
+   "ipa": "si ˈfa si ˈsu.da si laˈvo.ra e ˈpɔi",
+   "words": [
+    [
+     "si",
+     "one",
+     "si"
+    ],
+    [
+     "fa,",
+     "does",
+     "ˈfa"
+    ],
+    [
+     "si",
+     "one",
+     "si"
+    ],
+    [
+     "suda,",
+     "sweats",
+     "ˈsu.da"
+    ],
+    [
+     "si",
+     "one",
+     "si"
+    ],
+    [
+     "lavora,",
+     "works",
+     "laˈvo.ra"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "poi",
+     "then",
+     "ˈpɔi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "one toils"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e4",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "di tanto, che si fa, nulla è per noi.",
+   "translation": "of all that is done, nothing is for us.",
+   "ipa": "di ˈtan.to ke si ˈfa ˈnul.la‿ˈɛ per ˈno.i",
+   "words": [
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "tanto,",
+     "so much",
+     "ˈtan.to"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "si",
+     "(one)",
+     "si"
+    ],
+    [
+     "fa,",
+     "does",
+     "ˈfa"
+    ],
+    [
+     "nulla",
+     "nothing",
+     "ˈnul.la"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "noi.",
+     "us",
+     "ˈno.i"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "is done"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e5",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "È mezza ora, che sbatto, il cioccolatte è fatto, ed a me tocca",
+   "translation": "For half an hour I have been whisking, the chocolate is made, and is it my lot",
+   "ipa": "ˈɛ ˈmɛd.dza‿ˈo.ra ke ˈzbat.to‿il tʃok.koˈlat.te ˈɛ ˈfat.to ed a ˈme ˈtok.ka",
+   "words": [
+    [
+     "È",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "mezza",
+     "half",
+     "ˈmɛd.dza"
+    ],
+    [
+     "ora,",
+     "hour",
+     "ˈo.ra"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "sbatto,",
+     "I whisk",
+     "ˈzbat.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cioccolatte",
+     "chocolate",
+     "tʃok.koˈlat.te"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "fatto,",
+     "made",
+     "ˈfat.to"
+    ],
+    [
+     "ed",
+     "and",
+     "ed"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "tocca",
+     "it falls",
+     "ˈtok.ka"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "for half an hour"
+    },
+    {
+     "words": [
+      10,
+      11,
+      12
+     ],
+     "gloss": "it falls to me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e6",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "restar ad odorarlo a secca bocca?",
+   "translation": "to stand smelling it with a dry mouth?",
+   "ipa": "reˈstar ad o.doˈrar.lo‿a ˈsek.ka ˈbok.ka",
+   "words": [
+    [
+     "restar",
+     "to stay",
+     "reˈstar"
+    ],
+    [
+     "ad",
+     "to",
+     "ad"
+    ],
+    [
+     "odorarlo",
+     "smell it",
+     "o.doˈrar.lo"
+    ],
+    [
+     "a",
+     "with",
+     "a"
+    ],
+    [
+     "secca",
+     "dry",
+     "ˈsek.ka"
+    ],
+    [
+     "bocca?",
+     "mouth",
+     "ˈbok.ka"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "with a dry mouth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e7",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Non è forse la mia come la vostra?",
+   "translation": "Is my mouth, perhaps, not just like yours?",
+   "ipa": "non ˈɛ ˈfor.se la ˈmi.a ˈko.me la ˈvɔ.stra",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "mine",
+     "ˈmi.a"
+    ],
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "vostra?",
+     "yours",
+     "ˈvɔ.stra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e8",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "O garbate Signore, che a voi dessi l'essenza, e a me l'odore?",
+   "translation": "O genteel ladies, that I should give you the substance and myself the smell?",
+   "ipa": "o garˈba.te siɲˈɲo.re ke‿a ˈvoi ˈdes.si lesˈsɛn.tsa e‿a ˈme loˈdo.re",
+   "words": [
+    [
+     "O",
+     "O",
+     "o"
+    ],
+    [
+     "garbate",
+     "genteel",
+     "garˈba.te"
+    ],
+    [
+     "Signore,",
+     "ladies",
+     "siɲˈɲo.re"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "voi",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "dessi",
+     "I should give",
+     "ˈdes.si"
+    ],
+    [
+     "l'essenza,",
+     "the essence",
+     "lesˈsɛn.tsa"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "l'odore?",
+     "the smell",
+     "loˈdo.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      6
+     ],
+     "gloss": "imperfect subjunctive: I should give"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e9",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Per Bacco vo assagiarlo:",
+   "translation": "By Bacchus, I want to taste it:",
+   "ipa": "per ˈbak.ko ˈvɔ‿as.saˈdʒar.lo",
+   "words": [
+    [
+     "Per",
+     "by",
+     "per"
+    ],
+    [
+     "Bacco",
+     "Bacchus",
+     "ˈbak.ko"
+    ],
+    [
+     "vo",
+     "I want",
+     "ˈvɔ"
+    ],
+    [
+     "assagiarlo:",
+     "to taste it",
+     "as.saˈdʒar.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "by Jove"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e10",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "com' è buono! Vien gente, oh ciel, son le padrone.",
+   "translation": "How good it is! Someone is coming: oh heavens, it's the mistresses!",
+   "ipa": "kom ˈɛ ˈbwɔ.no ˈvjɛn ˈdʒɛn.te ˈɔ ˈtʃɛl ˈson le paˈdro.ne",
+   "words": [
+    [
+     "com'",
+     "how",
+     "kom"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "buono!",
+     "good",
+     "ˈbwɔ.no"
+    ],
+    [
+     "Vien",
+     "comes",
+     "ˈvjɛn"
+    ],
+    [
+     "gente,",
+     "people",
+     "ˈdʒɛn.te"
+    ],
+    [
+     "oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "ciel,",
+     "heaven",
+     "ˈtʃɛl"
+    ],
+    [
+     "son",
+     "are",
+     "ˈson"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "padrone.",
+     "mistresses",
+     "paˈdro.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "someone is coming"
+    },
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "it's the mistresses"
+    },
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "how … is"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e11",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Madame, ecco la vostra collazione.",
+   "translation": "Ladies, here is your breakfast.",
+   "ipa": "maˈda.me ˈɛk.ko la ˈvɔ.stra kol.latˈtsjo.ne",
+   "words": [
+    [
+     "Madame,",
+     "ladies",
+     "maˈda.me"
+    ],
+    [
+     "ecco",
+     "here is",
+     "ˈɛk.ko"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "vostra",
+     "your",
+     "ˈvɔ.stra"
+    ],
+    [
+     "collazione.",
+     "breakfast",
+     "kol.latˈtsjo.ne"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e12",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "Diamine, cosa fate?",
+   "translation": "What the deuce! What are you doing?",
+   "ipa": "ˈdja.mi.ne ˈkɔ.za ˈfa.te",
+   "words": [
+    [
+     "Diamine,",
+     "the deuce",
+     "ˈdja.mi.ne"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "fate?",
+     "you do",
+     "ˈfa.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e13",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Che cosa è nato?",
+   "translation": "What has happened?",
+   "ipa": "ke ˈkɔ.za‿ˈɛ ˈna.to",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "cosa",
+     "thing",
+     "ˈkɔ.za"
+    ],
+    [
+     "è",
+     "has",
+     "ˈɛ"
+    ],
+    [
+     "nato?",
+     "arisen",
+     "ˈna.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "what"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "has happened"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e14",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "Padrone, dico...",
+   "translation": "Mistresses, I say!…",
+   "ipa": "paˈdro.ne ˈdi.ko",
+   "words": [
+    [
+     "Padrone,",
+     "mistresses",
+     "paˈdro.ne"
+    ],
+    [
+     "dico...",
+     "I say",
+     "ˈdi.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f1",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "ˈa",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "ˈa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Ov' è un acciaro,",
+   "translation": "Where is a blade,",
+   "ipa": "ov ˈɛ‿un atˈtʃa.ro",
+   "words": [
+    [
+     "Ov'",
+     "where",
+     "ov"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "acciaro,",
+     "blade",
+     "atˈtʃa.ro"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "where is"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f3",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "un veleno dov' è?",
+   "translation": "a poison, where is it?",
+   "ipa": "un veˈle.no dov ˈɛ",
+   "words": [
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "veleno",
+     "poison",
+     "veˈle.no"
+    ],
+    [
+     "dov'",
+     "where",
+     "dov"
+    ],
+    [
+     "è?",
+     "is",
+     "ˈɛ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "where is it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "ˈa",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "ˈa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}
