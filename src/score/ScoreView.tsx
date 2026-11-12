@@ -433,6 +433,20 @@ export function ScoreView(props: Props) {
   const fadeKey = `${(props.fadedXmlParts ?? []).join(",")}|${(props.softFadedXmlParts ?? []).join(",")}`;
   // page view: each part's short name in the gutter of every system, with a grip to drag it to another place
   const [drag, setDrag] = useState<{ pid: string; sys: number; y0: number; dy: number } | null>(null);
+  /** while a line is dragged: the line under the pointer, and the lines it passes slide over to make room */
+  const dragPlan = (lanes: Lane[] | undefined) => {
+    if (!drag || !lanes) return null;
+    const mid = (x: Lane) => (x.top + x.bottom) / 2;
+    const i = lanes.findIndex((x) => x.partId === drag.pid);
+    if (i < 0) return null;
+    const y = mid(lanes[i]) + drag.dy;
+    let t = i;
+    if (Math.abs(drag.dy) > 6) t = lanes.reduce((b, x, k) => (Math.abs(mid(x) - y) < Math.abs(mid(lanes[b]) - y) ? k : b), 0);
+    const shifts = new Map<string, number>([[drag.pid, drag.dy]]);
+    if (t > i) for (let k = i + 1; k <= t; k++) shifts.set(lanes[k].partId, mid(lanes[k - 1]) - mid(lanes[k]));
+    if (t < i) for (let k = t; k < i; k++) shifts.set(lanes[k].partId, mid(lanes[k + 1]) - mid(lanes[k]));
+    return { target: t === i ? null : lanes[t].partId, shifts };
+  };
   const pageLabelEls = (layout: ScoreLayout) => {
     if (!props.laneLabels) return null;
     const out: ReactNode[] = [];
@@ -444,17 +458,15 @@ export function ScoreView(props: Props) {
         const abbr = typeof face === "string" ? face : name;
         const mid = (l.top + l.bottom) / 2;
         const dragging = drag && drag.pid === l.partId && drag.sys === sid;
-        // where the dragged name would land: the part whose staff is nearest
-        let target: string | null = null;
-        if (drag && drag.sys === sid && Math.abs(drag.dy) > 6) {
-          const y = (lanes.find((x) => x.partId === drag.pid)!.top + lanes.find((x) => x.partId === drag.pid)!.bottom) / 2 + drag.dy;
-          target = lanes.reduce((b, x) => (Math.abs((x.top + x.bottom) / 2 - y) < Math.abs((b.top + b.bottom) / 2 - y) ? x : b)).partId;
-        }
+        // where the dragged line would land, and how the others make room
+        const plan = drag && drag.sys === sid ? dragPlan(lanes) : null;
+        const target = plan?.target ?? null;
+        const shift = plan?.shifts.get(l.partId) ?? 0;
         out.push(
           <div
             key={`pl-${sid}-${l.partId}`}
             className={`page-label${dragging ? " is-dragging" : ""}${drag && drag.sys === sid && target === l.partId && !dragging ? " is-target" : ""}${props.laneYou === l.partId ? " is-you" : ""}`}
-            style={{ top: Math.round(mid - 13), transform: dragging ? `translateY(${drag!.dy}px)` : undefined }}
+            style={{ top: Math.round(mid - 13), transform: shift ? `translateY(${shift}px)` : undefined }}
             onPointerUp={(e) => e.stopPropagation()}
             onPointerDown={(e) => e.stopPropagation()}
           >
@@ -532,6 +544,13 @@ export function ScoreView(props: Props) {
     vrvRef.current.applyFade(lv);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [layout, fadeKey, useVrv]);
+  // while a line is dragged in the page view, the whole line moves with the pointer (not just its name)
+  useLayoutEffect(() => {
+    if (!useVrv || !vrvRef.current || !layout) return;
+    const plan = drag ? dragPlan(layout.systemLanes.get(drag.sys)) : null;
+    vrvRef.current.shiftParts(drag && plan ? drag.sys : null, plan?.shifts ?? null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [drag, layout, useVrv]);
   const [pinned, setPinned] = useState<ReturnType<typeof buildPinned>>(null);
   // the loop's rectangles, never under the pinned clef and key at the left edge (bar 1's box includes them)
   const loopRects = (l: ScoreLayout) => {

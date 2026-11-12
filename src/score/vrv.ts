@@ -321,6 +321,34 @@ export class VrvScore {
     for (const el of this.host.querySelectorAll<SVGElement>("[data-staff]")) set(el, el.getAttribute("data-staff")!.split(/\s+/));
   }
 
+  /** While a line is dragged to a new place: move whole parts of one system (staves, words, marks) up or down by
+   *  so many px, as a preview; null clears every shift. */
+  shiftParts(sid: number | null, shifts: Map<string, number> | null) {
+    for (const el of this.host.querySelectorAll<SVGElement>("[data-shifted]")) {
+      el.style.transform = "";
+      el.style.transition = "";
+      el.removeAttribute("data-shifted");
+    }
+    if (sid === null || !shifts) return;
+    const sys = this.host.querySelectorAll("g.system")[sid];
+    if (!sys) return;
+    // the shift is given in screen px; the score's own units are scaled
+    const k = (sys as SVGGraphicsElement).getScreenCTM?.()?.d || 1;
+    const byN = new Map<string, number>();
+    for (const [pid, dy] of shifts) for (const n of this.staffNs(pid)) byN.set(String(n), dy / k);
+    const move = (el: SVGElement, dy: number | undefined) => {
+      if (dy === undefined || dy === 0) return;
+      el.setAttribute("data-shifted", "");
+      el.style.transform = `translateY(${dy}px)`;
+    };
+    for (const el of sys.querySelectorAll<SVGGElement>("g.staff[data-n]")) move(el, byN.get(el.getAttribute("data-n")!));
+    for (const el of sys.querySelectorAll<SVGElement>("[data-staff]")) {
+      const ns = el.getAttribute("data-staff")!.split(/\s+/);
+      const ds = new Set(ns.map((n) => byN.get(n) ?? 0));
+      if (ds.size === 1) move(el, [...ds][0]);
+    }
+  }
+
   /** the staff numbers (Verovio's @n, counted over the parts shown) of a part */
   staffNs(pid: string): number[] {
     let n = 1;
