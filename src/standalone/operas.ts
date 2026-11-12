@@ -2505,6 +2505,12 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Caro!",
       "editionId": "puccini-caro"
+     },
+     {
+      "title": "Marcello. Finalmente!",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Marcello, finalmente!… Mimì è tanto malata",
+      "editionId": "puccini-marcello-finalmente"
      }
     ]
    },
@@ -2605,6 +2611,18 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 3",
       "id": "Act 3: Sa dirmi, scusi, qual'è l'osteria",
       "editionId": "puccini-sa-dirmi"
+     },
+     {
+      "title": "Mimì?!",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Mimì?!… Speravo di trovarvi qui",
+      "editionId": "puccini-mimi-marcello"
+     },
+     {
+      "title": "Marcello. Finalmente!",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Marcello, finalmente!… Mimì è tanto malata",
+      "editionId": "puccini-marcello-finalmente"
      }
     ]
    },
@@ -2699,6 +2717,18 @@ export const OPERAS: Opera[] = [
       "kind": "Finale · Act 2",
       "id": "Act 2: Caro!",
       "editionId": "puccini-caro"
+     },
+     {
+      "title": "Mimì?!",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Mimì?!… Speravo di trovarvi qui",
+      "editionId": "puccini-mimi-marcello"
+     },
+     {
+      "title": "Marcello. Finalmente!",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Marcello, finalmente!… Mimì è tanto malata",
+      "editionId": "puccini-marcello-finalmente"
      }
     ]
    },

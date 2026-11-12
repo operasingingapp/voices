@@ -647,6 +647,78 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-mimi-marcello": {
+    portrait: "boheme:mimi",
+    opera: "La bohème",
+    kind: "Duet",
+    facts: {
+      key: "F major (1 flat) for bars 1-20; B♭ major (2 flats) from bar 21 (Andante, figure (9)); G major (1 sharp) from bar 75 (Andante mosso) to the end",
+      time: "2/4 (bars 1-5), 3/4 (Moderato, bars 6-13), 3/8 (Vivo, bars 14-20), 3/4 (Andante, bars 21-74), 2/4 from bar 75 to the end",
+      tempo: "Printed metronome mark: Andante ♩ = 48 at figure (9) (bar 21), which returns as “I.° Tempo” at bar 52 and, as “Andante mosso (lo stesso movimento)”, at bar 75. Bars 1-3 continue the previous scene’s Andantino mosso ♩ = 112, the metronome mark at the start of Act 3 (page 167). Chosen, as no number is printed: Allegro (bar 4, Marcello’s cry and Mimì’s quick reply) ♩ = 120, as in the previous scene; Moderato (bar 6, Marcello’s easy chatter) ♩ = 88; Vivo (bar 14, 3/8) one beat a bar at ♩. = 108, as Act 1’s Vivo; Sostenendo molto (bar 45, “Mi grida ad ogni istante”) ♩ = 40, to the I.° Tempo; Lento a piacere (bar 80, the piano col canto) ♩ = 40; Allegretto (bar 83, figure (14)) ♩ = 100, Act 1’s printed Allegretto come prima; Poco meno (bar 101) ♩ = 92, about a tenth slower. The written rall., rit., stent. and poco affrett. are played as a gradual change over the bars they cover, then back to the tempo",
+    },
+    notePlaceholder: "Marcello comes out of the tavern and finds Mimì; she tells him Rodolfo’s jealousy is killing their love and begs him to help them part",
+    about: (
+      <>
+        <p>
+          “Mimì?!”, Act 3 at the Barrière d’Enfer, on a grey winter morning. Marcello comes out of the tavern and is surprised to find Mimì: she was
+          hoping to find him there. He and Musetta have lived at the tavern for a month at the innkeeper’s expense, she teaching the guests to sing
+          and he painting soldiers on the front; it is cold, and he asks her in. Rodolfo is inside, so she cannot go in. In tears she tells him that
+          Rodolfo loves her and runs from her, eaten up by jealousy: a step, a word, a trinket make him suspicious; at night he watches her while she
+          pretends to sleep and tells her to find another lover. Marcello says that people like them should not live together, and she asks him to
+          help them part. Rodolfo arrived an hour before dawn and fell asleep on a bench; he wakes and comes towards the door, and Marcello sends her
+          home, but she hides near the tavern.
+        </p>
+        <p>
+          Score: vocal score pages 179-191 (from Marcello’s entrance, page 179 system 3, across the Allegro at figure (8), to the end of page 191,
+          before Rodolfo comes out, 113 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written
+          out from the printed pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate
+          judge, then checked against the page and corrected. Only the Italian words are kept, with the print’s spellings (“lascjarci” with its j,
+          “Perchè”, “passeggieri”). The instrumental line printed on its own staff above the piano on page 191 is played in the piano’s right hand.
+          The printed metronome mark is the Andante’s ♩ = 48 at figure (9); the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-marcello-finalmente": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Duet",
+    facts: {
+      key: "D major (2 sharps) for bars 1-12; E major (4 sharps) from bar 13 (Allegro moderato, figure (16)); C major (no sharps or flats) from bar 58 (figure (19), “Mimì è una civetta”) to the end",
+      time: "6/8 for bars 1-38 (from bar 28 Rodolfo’s line is printed in 2/4, bar for bar against the piano’s 6/8); 2/4 from bar 39 (“Se non ride e sfavilla”) to the end",
+      tempo: "Printed metronome mark: Allegro moderato ♩. = 126 at figure (16) (bar 13). The 2/4 from bar 39 is its “a tempo”, taken bar for bar (♩ = ♩.), as Rodolfo’s own 2/4 bars already run against the piano’s 6/8 from bar 28: ♩ = 126. Chosen, as no number is printed: Moderato con moto (bar 1) ♩. = 100, about four fifths of the Allegro moderato; Rodolfo’s a piacere “Io voglio separarmi da Mimì” (bars 7-8, piano col canto) ♩. = 84, a tempo at bar 9; Meno (bar 35, “Dei pazzi è l’amor tetro”) ♩. = 112, a tenth slower; after the rall. of bars 80-81 no a tempo is printed until bar 92, so bars 82-91 (Rodolfo’s a piacere “Ebbene no, non lo son” and the Sostenendo at figure (20), “Invan, invan nascondo”) stay at ♩ = 100, a tempo ♩ = 126 at bar 92. The written string., allarg., rit., rall., poco allarg. and accel. are played as a gradual change over the bars they cover, then back to the tempo",
+    },
+    notePlaceholder: "Rodolfo tells Marcello he wants to leave Mimì, calls her a flirt, then admits he loves her and is afraid, while she listens hidden",
+    about: (
+      <>
+        <p>
+          “Marcello. Finalmente!”, Act 3 at the Barrière d’Enfer, on a grey winter morning. Rodolfo comes out of the tavern and runs to Marcello:
+          nobody can hear them, and he wants to leave Mimì. Once before he thought his heart was dead, and her blue eyes brought it back to life;
+          now it is weary again. Marcello tells him that a gloomy love that makes people cry is for madmen, and calls him jealous, hot-tempered,
+          moody, stubborn. Mimì, who had hidden behind a plane tree, overhears them. Rodolfo says Mimì is a flirt who plays up to every man, and
+          that a little viscount is making eyes at her. Marcello does not believe him, and Rodolfo gives in: he loves Mimì more than anything in
+          the world, but he is afraid.
+        </p>
+        <p>
+          Score: vocal score pages 192-198 (from Rodolfo’s entrance at the top of page 192, Moderato con moto, to page 198 without its last bar,
+          which holds Rodolfo’s upbeat to “Mimì è tanto malata!”, 112 bars), from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C.
+          vocal score, public domain. Written out from the printed pages: the sung lines and the piano each read independently, every
+          disagreement settled on the page by a separate judge, then checked against the page and corrected. Only the Italian words are kept,
+          with the print’s spellings (“volubil”, “sgonnella”, “lusinghier”, “sincer”). Rodolfo’s bars printed in 2/4 against the piano’s 6/8
+          (bars 28-38) are written into the 6/8 bars. The printed metronome mark is the Allegro moderato’s ♩. = 126 at figure (16); the other
+          tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

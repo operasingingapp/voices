@@ -1,0 +1,165 @@
+{
+ "editionId": "puccini-marcello-finalmente",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Marcello. Finalmente!",
+ "subtitle": "Rodolfo tells Marcello he wants to leave Mimì, then admits she is gravely ill, while she listens in hiding, La bohème, Act 3",
+ "kind": "duet",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  },
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Rodolfo comes out of the tavern: Io voglio separarmi da Mimì (Moderato con moto)",
+   "start": "1",
+   "end": "12"
+  },
+  {
+   "id": "b",
+   "label": "Già un'altra volta: his heart revived, and now wearied; Marcello: Cambia metro (Allegro moderato, (16))",
+   "start": "13",
+   "end": "38"
+  },
+  {
+   "id": "c",
+   "label": "Se non ride e sfavilla: Marcello calls him jealous; Mimì listens, hidden",
+   "start": "39",
+   "end": "56"
+  },
+  {
+   "id": "d",
+   "label": "Mimì è una civetta: Rodolfo's ironic portrait ((19))",
+   "start": "57",
+   "end": "77"
+  },
+  {
+   "id": "e",
+   "label": "Lo devo dir? Ebbene no: Invan nascondo (Sostenendo, (20))",
+   "start": "78",
+   "end": "95"
+  },
+  {
+   "id": "f",
+   "label": "Amo Mimì sovra ogni cosa al mondo, ma ho paura",
+   "start": "96",
+   "end": "112"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 3",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 192-198 (from Rodolfo's entrance at the top of page 192, Moderato con moto, to page 198 without its last bar, which holds Rodolfo's upbeat to \"Mimì è tanto malata!\", 112 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's bars printed in 2/4 against the piano's 6/8 (bars 28-38) are written into the 6/8 bars. Tempo from the printed Allegro moderato ♩. = 126 at figure (16) (bar 13), kept bar for bar (♩ = ♩.) across the change to 2/4 at bar 39; the Moderato con moto, a piacere, Meno, Sostenendo and the tempo after the rall. of bars 80-81 are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -1,0 +1,444 @@
+# page 192 system 1 starts bar 1
+# bar 1: MOD.to CON MOTO, 6/8, D major (2 sharps); ROD. enters (esce dal Cabaré)
+1 R: r:q r:e r:q A3:e "Mar-"
+1 M: r:h.
+1 I: r:h.
+2 R: B3:q "cel-" D4:e "lo." G4:q "Fi-" D4:e "nal-"
+2 M: r:h.
+2 I: r:h.
+3 R: F#4:q. "men-" F#4:e "te!" r:e r:e
+3 M: r:h.
+3 I: r:h.
+4 R: r:q E4:e "Qui" E4:q "niun" B3:e "ci"
+4 M: r:h.
+4 I: r:h.
+# page 192 system 2 starts bar 5
+5 R: D4:q. "sen-" D4:e "te." r:e r:e
+5 M: r:h.
+5 I: r:h.
+6 R: r:h.
+6 M: r:h.
+6 I: r:h.
+# bar 7: a piacere; bracket "4" over the last four 16ths (quadruplet in the time of a dotted quarter, read as {4:6})
+# MARKS bar 7 R: a piacere
+7 R: word:a_piacere r:e r:e. C#4:s "Io" C#4:s{4:6} "vo-" C#4:s{4:6} "glio" C#4:s{4:6} "se-" C#4:s{4:6} "pa-"
+7 M: r:h.
+7 I: r:h.
+# bar 8: natural printed before "Mi-" (E4)
+8 R: C#4:q "rar-" C#4:e "mi" C#4:q "da" E4:e "Mi-"
+8 M: r:h.
+8 I: r:h.
+# page 192 system 3 starts bar 9
+# bar 9: a tempo
+# MARKS bar 9 R: a tempo
+9 R: word:a_tempo G#4:q "mì." r:e r:q r:e
+9 M: r:h.
+9 I: r:h.
+10 R: r:h.
+10 M: r:e C#4:e "Sei" B3:e "vo-" A#3:e "lu-" G#3:e "bil" F#3:e "co-"
+10 I: r:h.
+11 R: r:h.
+11 M: B3:e "sì?" r:e r:e r:q r:e
+11 I: r:h.
+# page 192 system 4 starts bar 12
+12 R: r:h.
+12 M: r:h.
+12 I: r:h.
+# bar 13: ALL.o MODERATO, dotted-quarter = 126, E major (4 sharps), 6/8 ((16) in piano)
+13 R: E4:q. "Già_un'" D#4:q "al-" C#4:e "tra"
+13 M: r:h.
+13 I: r:h.
+14 R: B3:q. "vol-" C#4:q "ta" D#4:e "cre-"
+14 M: r:h.
+14 I: r:h.
+15 R: C#4:q. "det-" B3:q. "ti"
+15 M: r:h.
+15 I: r:h.
+# page 193 system 1 starts bar 16
+16 R: F#4:q. "mor-" D#4:q "to_il" C#4:e "mio"
+16 M: r:h.
+16 I: r:h.
+17 R: B3:q "cor," r:e r:q r:e
+17 M: r:h.
+17 I: r:h.
+18 R: r:h.
+18 M: r:h.
+18 I: r:h.
+19 R: D#4:q. "ma" D#4:q "di" D#4:e "que-"
+19 M: r:h.
+19 I: r:h.
+# page 193 system 2 starts bar 20
+20 R: E4:q. "gl'oc-" F#4:q. "chi_az-"
+20 M: r:h.
+20 I: r:h.
+# JUDGE bar 21 R: X - "ri al" printed together under the D#4 eighth, "lo" under C#4 (al-lo)
+21 R: g:F#4:e E4:q "zur-" D#4:e "ri_al-" C#4:q "lo" B3:e "splen-"
+21 M: r:h.
+21 I: r:h.
+# JUDGE bar 22 R: X - "dor" on the tied D#4 with dotted extender as printed
+22 R: D#4:q.~ "dor......" D#4:e r:e r:e
+22 M: r:h.
+22 I: r:h.
+# page 193 system 3 starts bar 23
+23 R: G#4:h. "es-"
+23 M: r:h.
+23 I: r:h.
+24 R: F#4:q.~ "so_è" F#4:q C#4:e "ri-"
+24 M: r:h.
+24 I: r:h.
+25 R: C#4:h. "sor-"
+25 M: r:h.
+25 I: r:h.
+# page 193 system 4 starts bar 26
+# JUDGE bar 26 R: X - "to" on the tied B3 with dotted extender as printed
+26 R: B3:q.~ "to......" B3:e r:e r:e
+26 M: r:h.
+26 I: r:h.
+# bar 27: allarg. printed over the voice (dotted line into bar 28)
+# JUDGE bar 27 R: Y - O- is on the ledger line above the staff (written A5, sounding A4), tied to the A4 quarter; allarg. printed over the voice from this bar
+# MARKS bar 27 R: allarg.
+27 R: A4:q.~ "O-" A4:q word:allarg. G#4:e "ra_il"
+27 M: r:h.
+27 I: r:h.
+# bar 28: time 2/4 printed on Rodolfo's staff only (bars 28-38): polymeter. Rodolfo's lines in bars 28-38 are written in his own 2/4 values (sum 2/4, for kit/polyfix.py); Marcello, Mimì and the piano count 6/8 (r:h.) until the double bar after bar 38, where 2/4 is restated for all staves
+# JUDGE bar 28 R: X - Rodolfo's own 2/4 values (te- e, -dio accent e tied to e., l'as- s); dotted extender kept as printed
+28 R: F#4:e "te-" E4:e>~ "dio......" E4:e. D#4:s "l'as-"
+# JUDGE bar 28 M: Y - bar counted in 6/8 (the metre of Marcello and the piano); only Rodolfo's staff carries 2/4
+28 M: r:h.
+# JUDGE bar 28 I: Y - bar counted in 6/8, as Marcello
+28 I: r:h.
+# page 194 system 1 starts bar 29
+# bar 29: (17) a tempo; Marcello enters (6/8 eighths). Rodolfo still in 2/4 (own values)
+# JUDGE bar 29 R: OWN - printed G#4 eighth, eighth rest, quarter rest in Rodolfo's 2/4; written in his own values (sum 2/4), no added rest, no duplets
+# MARKS bar 29 R: a tempo
+29 R: word:a_tempo G#4:e "sal..." r:e r:q
+29 M: r:e G#3:e "E" G#3:e "gli" G#3:e "vuoi" G#3:e "rin-" G#3:e "no-"
+29 I: r:h.
+# JUDGE bar 30 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+30 R: r:h
+30 M: A#3:q "va-" B#3:e "re_il" C#4:q "fu-" D#4:e "ne-"
+30 I: r:h.
+# JUDGE bar 31 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+31 R: r:h
+31 M: G#3:e "ral?" r:e r:e r:q r:e
+31 I: r:h.
+# page 194 system 2 starts bar 32
+# bar 32: Rodolfo (con dolore)
+# JUDGE bar 32 R: OWN - printed quarter rest, eighth rest, D#4 eighth in Rodolfo's 2/4, written in his own values
+32 R: r:q r:e D#4:e "Per"
+32 M: r:h.
+32 I: r:h.
+# bar 33: Marcello duplet "2" over Cam-bia
+# JUDGE bar 33 R: OWN - printed D#4 e, G#3 e, quarter rest in Rodolfo's 2/4, written in his own values
+33 R: D#4:e "sem-" G#3:e "pre!" r:q
+# JUDGE bar 33 M: X - p printed before Cam-
+33 M: r:q r:e dyn:p B#3:e{2:3} "Cam-" D#4:e{2:3} "bia"
+33 I: r:h.
+# JUDGE bar 34 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+34 R: r:h
+# JUDGE bar 34 M: X - p printed before Dei
+34 M: G#3:e "me-" G#3:e "tro." r:e r:q dyn:p G#3:e "Dei"
+34 I: r:h.
+# page 194 system 3 starts bar 35
+# bar 35: MENO
+# JUDGE bar 35 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+35 R: r:h
+# MARKS bar 35 M: MENO
+35 M: word:MENO C#4:q "paz-" C#4:e "zi_è" E4:q "l'a-" E4:e "mor"
+35 I: r:h.
+# JUDGE bar 36 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+36 R: r:h
+36 M: D#4:q. "te-" G#3:q "tro" G#3:e "che"
+36 I: r:h.
+# JUDGE bar 37 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+37 R: r:h
+# JUDGE bar 37 M: Y - me/di- are E4 (same notes as bar 35, one ledger line above the bass staff), not F#4
+37 M: C#4:q "la-" C#4:e "cri-" E4:q "me" E4:e "di-"
+37 I: r:h.
+# JUDGE bar 38 R: OWN (both wrong) - Rodolfo's staff is in 2/4 through bar 38: full-bar rest written in his metre (r:h)
+38 R: r:h
+38 M: D#4:q. "stil-" G#3:q "la." r:e
+38 I: r:h.
+# page 194 system 4 starts bar 39
+# bar 39: 2/4 (restated after double bar), a tempo
+39 R: r:h
+# MARKS bar 39 M: a tempo; hp:> ... hp:end
+39 M: word:a_tempo dyn:f hp:> C#4:q.> "Se" B3:e "non" hp:end
+39 I: r:h
+40 R: r:h
+40 M: A3:e "ri-" B3:s A3:s G#3:e "de_e" F#3:e "sfa-"
+40 I: r:h
+41 R: r:h
+41 M: E3:q "vil-" E3:e "la" E3:e "l'a-"
+41 I: r:h
+42 R: r:h
+42 M: F#3:e "mo-" G#3:e "re_è" A3:e "fiac-" B3:e "co_e"
+42 I: r:h
+# page 195 system 1 starts bar 43
+43 R: r:h
+43 M: E3:e "ro-" E3:e "co." r:q
+43 I: r:h
+44 R: r:h
+44 M: r:h
+44 I: r:h
+45 R: r:h
+45 M: r:h
+45 I: r:h
+# bar 46: fermata on Marcello's first rest, p, rit.
+46 R: r:h
+# MARKS bar 46 M: rit.
+46 M: r:e! dyn:p word:rit. E3:e- "Tu" E3:e- "sei" E3:e- "ge-"
+46 I: r:h
+# page 195 system 2 starts bar 47
+# bar 47: a tempo
+# MARKS bar 47 R: a tempo
+47 R: word:a_tempo r:q r:e F3:e "Un"
+47 M: F3:q "lo-" F3:e "so." r:e
+47 I: r:h
+48 R: F3:e "po-" F3:e "co." r:q
+48 M: r:q r:e F3:e "Col-"
+48 I: r:h
+49 R: r:h
+49 M: F#3:e. "le-" F#3:s "ri-" F#3:e "co," r:s F#3:s "lu-"
+49 I: r:h
+50 R: r:h
+50 M: G3:e. "na-" G3:s "ti-" G3:e3 "co," r:e3 G3:s3 "im-" G3:s3 "be-"
+50 I: r:h
+# page 195 system 3 starts bar 51
+51 R: r:h
+51 M: Ab3:e3 "vu-" Ab3:e3 "to" Ab3:e3 "di" A3:q3 "pre-" A3:e3 "giu-"
+51 I: r:h
+52 R: r:h
+52 M: Bb3:q "di-" Bb3:e "zi," r:s Bb3:s "no-"
+52 I: r:h
+53 R: r:h
+# MARKS bar 53 M: cres. (printed over the bar line 52/53, read as starting bar 53)
+53 M: word:cres. B3:e "io-" B3:e "so," r:e. B3:s "coc-"
+53 I: r:h
+# bar 54: Mimì (fra sè), aside
+54 R: r:h
+54 M: C4:e> "ciu-" C4:e> "to!" r:q
+54 I: r:e3 E4:e3 "Or" E4:e3 "lo" E4:e3 "fa_in-" E4:e3 "col-" E4:e3 "le-"
+# page 195 system 4 starts bar 55
+55 R: r:h
+55 M: r:h
+55 I: E4:e "rir!" r:e E4:e3 "Me" E4:e3 "po-" E4:e3 "ve-"
+56 R: r:h
+56 M: r:h
+56 I: E4:e3 "ret-" E4:e3 "ta!..." r:e3 r:q
+# bar 57: Rodolfo (con amarezza ironica); double bar after this bar: key change to C major (next chunk)
+57 R: r:q E4:q "Mi-"
+57 M: r:h
+57 I: r:h
+# ---- end of VM_S19a.txt (bars 1-57)
+# S19b sung lines: Ricordi vocal score pp.196-198, bars 1-55 (bar 55 = second-to-last bar of p.198; the last bar of p.198, Rodolfo's "Mi-", belongs to S20)
+# Key C major (no key signature since the double bar at the end of p.195), time 2/4 throughout (not restated).
+# Singers: R = Rodolfo (treble clef with 8, written an octave lower here = sounding), M = Marcello (bass clef, bars 21-25 only)
+# page 196 system 1 starts bar 58
+58 R: F4:q "mì" E4:q "è_u-"
+58 M: r:h
+58 I: r:h
+59 R: D4:q "na" C4:q "ci-"
+59 M: r:h
+59 I: r:h
+60 R: E4:h "vet-"
+60 M: r:h
+60 I: r:h
+# JUDGE bar 61 R: X - "ta" with the printed dotted extender; extender dots kept as printed (TB: words exactly as printed)
+61 R: D4:h~ "ta.........."
+61 M: r:h
+61 I: r:h
+62 R: D4:q D4:e "che" C4:e "fra-"
+62 M: r:h
+62 I: r:h
+# page 196 system 2 starts bar 63
+63 R: B3:q "scheg-" D4:e "gia" C4:e "con"
+63 M: r:h
+63 I: r:h
+64 R: A3:q "tut-" A3:q "ti."
+64 M: r:h
+64 I: r:h
+# bar 65: Rodolfo "(con grande ironia)"
+65 R: r:e A3:e "Un" B3:e "mo-" C4:e "scar-"
+65 M: r:h
+65 I: r:h
+66 R: B3:q "di-" B3:e "no" B3:e "di"
+66 M: r:h
+66 I: r:h
+67 R: A3:q "Vi-" A3:q "scon-"
+67 M: r:h
+67 I: r:h
+# page 196 system 3 starts bar 68
+68 R: B3:e "ti-" B3:e "no" B3:e "le" B3:e "fa"
+68 M: r:h
+68 I: r:h
+69 R: A3:e "l'oc-" B3:s A3:s G3:e "chio" A3:e "di"
+69 M: r:h
+69 I: r:h
+70 R: B3:q "tri-" B3:q "glia."
+70 M: r:h
+70 I: r:h
+# bar 71: Rodolfo "(con ironia crescente)"
+71 R: r:e E4:e "El-" E4:e "la" E4:e "sgon-"
+71 M: r:h
+71 I: r:h
+# page 196 system 4 starts bar 72
+72 R: D4:e "nel-" E4:e F4:e "la" G4:e "e"
+72 M: r:h
+72 I: r:h
+73 R: F4:e "sco-" E4:e "pre" D4:e "la" C4:e "ca-"
+73 M: r:h
+73 I: r:h
+74 R: D4:e "vi-" D4:e "glia" D4:e "con" D4:e "un"
+74 M: r:h
+74 I: r:h
+75 R: C4:q "far" C4:e "pro-" C4:e "met-"
+75 M: r:h
+75 I: r:h
+# page 197 system 1 starts bar 76
+# JUDGE bar 76 R: X - both notes on the middle line of the octave-treble staff = B3 sounding
+76 R: B3:q "ten-" B3:q "te_e"
+76 M: r:h
+76 I: r:h
+77 R: A3:q "lu-" E4:q "sin-"
+77 M: r:h
+77 I: r:h
+78 R: G3:q "ghier..." r:q
+78 M: r:q r:e G3:e "Lo"
+78 I: r:h
+79 R: r:h
+79 M: A3:q "de-" E4:q "vo"
+79 I: r:h
+80 R: r:h
+80 M: G3:e "dir?" r:e G3:e "Non" G3:e "mi"
+80 I: r:h
+# page 197 system 2 starts bar 81
+# bar 81: Marcello "rall."
+81 R: r:h
+# JUDGE bar 81 M: Y - "rall." printed just above the MAR. staff at this bar
+81 M: word:rall. F3:q "sem-" F3:e "bri" D4:e "sin-"
+81 I: r:h
+82 R: r:h
+82 M: E3:q "cer." r:q
+82 I: r:h
+83 R: r:h
+83 M: r:h
+83 I: r:h
+84 R: r:h
+84 M: r:h
+84 I: r:h
+# bar 85: Rodolfo "a piacere", f
+# JUDGE bar 85 R: Y - "a piacere" printed over the voice before the f
+85 R: word:a_piacere r:q r:s dyn:f E4:s "Eb-" E4:s "be-" B3:s "ne"
+85 M: r:h
+85 I: r:h
+# page 197 system 3 starts bar 86
+86 R: E4:q "no," r:e E4:s.! "non" B3:x "lo"
+86 M: r:h
+86 I: r:h
+87 R: E4:q.! "son." E4:e "In-"
+87 M: r:h
+87 I: r:h
+# bar 88: (20) "Sostenendo......" over the voice (through bar 34)
+# JUDGE bar 88 R: Y - "Sostenendo........" printed over the voice from this bar
+88 R: word:Sostenendo A4:q "van," E4:q "in-"
+88 M: r:h
+88 I: r:h
+89 R: D4:q "van" C4:q "na-"
+89 M: r:h
+89 I: r:h
+90 R: E4:h "scon-"
+90 M: r:h
+90 I: r:h
+# page 197 system 4 starts bar 91
+# JUDGE bar 91 R: X - "do" with the printed dotted extender; extender dots kept as printed (TB: words exactly as printed)
+91 R: D4:h~ "do.........."
+91 M: r:h
+91 I: r:h
+# bar 92: a tempo
+# JUDGE bar 92 R: Y - "a tempo" ends the dotted line over the voice at this bar
+92 R: word:a_tempo D4:q D4:e "la" C4:e "mia"
+92 M: r:h
+92 I: r:h
+93 R: B3:q "ve-" D4:e "ra" C4:e "tor-"
+93 M: r:h
+93 I: r:h
+# JUDGE bar 94 R: Y - half note in the 2nd space of the staff (same height as bar 38 A) = A3 sounding, not G3
+94 R: A3:h "tu-"
+94 M: r:h
+94 I: r:h
+# JUDGE bar 95 R: OWN - syllable "ra" printed under the first (tied) A, not the tied-to eighth; dots kept as printed
+95 R: A3:q~ "ra.........." A3:e r:e
+95 M: r:h
+95 I: r:h
+# page 198 system 1 starts bar 96
+96 R: G4:h "A-"
+96 M: r:h
+96 I: r:h
+97 R: D4:q. "mo" E4:e "Mi-"
+97 M: r:h
+97 I: r:h
+98 R: D4:q. "mì" C4:e "so-"
+98 M: r:h
+98 I: r:h
+# JUDGE bar 99 R: Y - "vra" under the 1st eighth, "ogni" whole under the 2nd, "co-" 3rd, "sa al" 4th
+99 R: B3:e "vra" C4:e "ogni" E4:e "co-" G4:e "sa_al"
+99 M: r:h
+99 I: r:h
+# page 198 system 2 starts bar 100
+# bar 100: poco allarg:........
+100 R: Bb4:h "mon-"
+100 M: r:h
+100 I: r:h
+# JUDGE bar 101 R: Y - accent > printed over the A eighth "io"
+101 R: D4:q. "do," A4:e> "io"
+101 M: r:h
+101 I: r:h
+# bar 102: a tempo
+102 R: A4:h^ "l'a-"
+102 M: r:h
+102 I: r:h
+# JUDGE bar 103 R: OWN - "mo" printed under the first (tied) G; dots kept as printed
+103 R: G4:q~ "mo.........." G4:e r:e
+103 M: r:h
+103 I: r:h
+# page 198 system 3 starts bar 104
+# bar 104: accel:........ (to bar 50)
+# JUDGE bar 104 R: Y - "accel:........" printed over the voice from this bar
+104 R: word:accel. F4:h "ma"
+104 M: r:h
+104 I: r:h
+105 R: A3:q. "ho" E4:e- "pa-"
+105 M: r:h
+105 I: r:h
+106 R: E4:h "u-"
+106 M: r:h
+106 I: r:h
+# JUDGE bar 107 R: OWN - "ra," printed under the first (tied) E; dots kept as printed
+107 R: hp:> E4:q~ "ra,.........." E4:e hp:end r:e
+107 M: r:h
+107 I: r:h
+# page 198 system 4 starts bar 108
+# bar 108: rall:........
+# JUDGE bar 108 R: Y - "rall:" printed over the voice
+108 R: word:rall. D4:h "ma"
+108 M: r:h
+108 I: r:h
+# bar 109: rit.
+# JUDGE bar 109 R: Y - "rit." over the voice; tenuto line over the C eighth "pa-"
+109 R: word:rit. F3:q. "ho" C4:e- "pa-"
+109 M: r:h
+109 I: r:h
+# bar 110: a tempo
+# JUDGE bar 110 R: Y - "a tempo" over the voice
+110 R: word:a_tempo C4:h "u-"
+110 M: r:h
+110 I: r:h
+# JUDGE bar 111 R: Y - "ra!......" printed under the first (tied) C
+111 R: C4:q~ "ra!......" C4:e r:e
+111 M: r:h
+111 I: r:h
+112 R: r:h
+112 M: r:h
+112 I: r:h
+# ---- end of VM_S19b.txt (bars 58-112)

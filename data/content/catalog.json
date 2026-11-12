@@ -3582,6 +3582,46 @@
     }
   },
   {
+    "editionId": "puccini-marcello-finalmente",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-marcello-finalmente@1.0.0-carignani#ff9df20769",
+    "title": "Marcello. Finalmente!",
+    "subtitle": "Rodolfo tells Marcello he wants to leave Mimì, then admits she is gravely ill, while she listens in hiding, La bohème, Act 3",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "rodolfo",
+        "name": "Rodolfo",
+        "voiceType": "Tenor",
+        "partKey": "rodolfo"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      },
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      }
+    ],
+    "measures": 112,
+    "durationSec": 113,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 23,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "puccini-mi-chiamano-mimi",
     "editionVersion": "1.0.0-carignani",
     "scoreVersionId": "puccini-mi-chiamano-mimi@1.0.0-carignani#9c18b642c9",
@@ -3611,6 +3651,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "puccini-mimi-marcello",
+    "editionVersion": "1.0.0-carignani",
+    "scoreVersionId": "puccini-mimi-marcello@1.0.0-carignani#e4d95c1c9a",
+    "title": "Mimì?!",
+    "subtitle": "Marcello finds Mimì at the toll gate and she begs him to help her and Rodolfo part, La bohème, Act 3",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Giacomo Puccini",
+    "roles": [
+      {
+        "id": "mimi",
+        "name": "Mimì",
+        "voiceType": "Soprano",
+        "partKey": "mimi"
+      },
+      {
+        "id": "marcello",
+        "name": "Marcello",
+        "voiceType": "Baritone",
+        "partKey": "marcello"
+      }
+    ],
+    "measures": 113,
+    "durationSec": 299,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 34,
       "withAudio": 0,
       "reviewed": 0
     }

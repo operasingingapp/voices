@@ -103,7 +103,7 @@ if ramps_on:
         if any(abs(q - s) < 1.0 for s in seen) or (made_end and q < made_end[-1] - 1e-6): continue
         seen.append(q)
         b = bar_at(q)
-        a ramp also ends where the next ramp word of the opposite kind starts
+        # a ramp also ends where the next ramp word of the opposite kind starts
         opp = [x for x, ww in words if x > q + 1e-6 and ((SLOW.search(ww) and not FAST.search(ww)) if fast else (FAST.search(ww) is not None and not SLOW.search(ww)))]
         end = min([x for x in resets if x > q + 1e-6] + opp + [q + 2 * max(lens[b], 1.0), END])
         into_opp = any(abs(end - x) < 1e-6 for x in opp)
