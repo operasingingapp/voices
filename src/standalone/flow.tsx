@@ -2706,14 +2706,6 @@ function openPiece(ctx: Ctx, r: HomeRef, mode: "resume" | "start" | "note", note
   }
   ctx.go({ screen: "piece", opera: r.opera.id, character: r.ch.id, piece: r.index });
 }
-function stoppedAt(r: HomeRef): string {
-  if (!r.bar) return "";
-  const a = `Stopped at bar ${r.bar}${r.of ? ` of ${r.of}` : ""}`;
-  const lp = r.loop ? (r.loopLine ? `looping line ${r.loopLine}` : r.lb ? (r.lb[0] === r.lb[1] ? `looping bar ${r.lb[0]}` : `looping bars ${r.lb[0]}–${r.lb[1]}`) : "looping") : "";
-  const tp = r.tempo ? Math.round(r.tempo * 100) : 100;
-  const b = lp ? (tp !== 100 ? `${lp} at ${tp}%` : lp) : tp !== 100 ? `${tp}% speed` : "";
-  return b ? `${a} · ${b}` : a;
-}
 
 /** the act a piece falls in ("Aria · Act 3" → 3), or 0 when its list does not say */
 const actNo = (p: Piece) => Number(/Act (\d+)/.exec(p.kind)?.[1] ?? 0);
@@ -2876,12 +2868,6 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
         {actKind(hero.piece) && <p className="pv-hero-mark">{actKind(hero.piece)}</p>}
         {last && last.bar && last.bar !== "1" ? (
           <div className="pv-hero-place">
-            <span className="pv-hero-stop">
-              <span>{stoppedAt(last).replace(/^Stopped/, "You stopped")}.</span>
-              <button type="button" className="pv-link pv-again" onClick={() => openPiece(ctx, hero, "start")}>
-                From the top
-              </button>
-            </span>
             {typeof last.p === "number" && (
               <span className="hm-track" role="img" aria-label={`${Math.round(last.p * 100)}% of the way through`}>
                 <i style={{ width: `${Math.max(1.5, last.p * 100)}%` }} />
@@ -2905,6 +2891,11 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
             <Play />
             <span>{last ? (barOf(last) ? `Continue at bar ${barOf(last)}` : "Continue") : "Start"}</span>
           </button>
+          {last && barOf(last) && (
+            <button type="button" className="pv-link pv-again" onClick={() => openPiece(ctx, hero, "start")}>
+              From the top
+            </button>
+          )}
         </div>
       </div>
       <div className="pv-hero-pic" aria-hidden="true">

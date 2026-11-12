@@ -11,6 +11,9 @@ import { App } from "./App";
 // The practice app accompanies on a sampled grand piano (Noct-Salamander, from the Salamander Grand Piano V3; CC BY 3.0).
 setPortFactory((onProgress) => SamplerPort.create(onProgress));
 
+// the viewer around the app shows the page's name ("Sottovoce") as a tooltip wherever the pointer rests, over the
+// text; an empty tooltip on the page itself stands in for it (a button's own tooltip still shows)
+document.body.setAttribute("title", " ");
 createRoot(document.getElementById("root")!).render(<App />);
 
 // While Home or a role page is open, fetch what every piece needs (the piano's main layers, then the score

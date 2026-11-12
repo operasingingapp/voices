@@ -503,3 +503,7 @@
 
 /* the words view covers the text panel: its resting preview must not show through during a piano passage */
 .practice.is-words > .now-panel .now-inner.resting > * { visibility: hidden; }
+
+/* home: "From the top" sits beside the Continue button, quietly */
+.pv-hero-act .pv-again { margin-left: 6px; font: 500 15px/1.2 var(--font-sans); }
+@media (max-width: 640px) { .pv-hero-act .pv-again { grid-column: 1 / -1; justify-self: center; margin: 4px 0 0; } }
