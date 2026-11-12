@@ -2770,6 +2770,13 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 3",
       "id": "Act 3: Mimì è tanto malata!",
       "editionId": "puccini-mimi-e-tanto-malata"
+     },
+     {
+      "title": "In un coupè?",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: In un coupè?",
+      "when": "Act 4, months later, back in the garret: the two men pretend to work",
+      "editionId": "puccini-in-un-coupe"
      }
     ]
    },
@@ -3003,6 +3010,13 @@ export const OPERAS: Opera[] = [
       "kind": "Scene · Act 3",
       "id": "Act 3: Mimì è tanto malata!",
       "editionId": "puccini-mimi-e-tanto-malata"
+     },
+     {
+      "title": "In un coupè?",
+      "kind": "Scene · Act 4",
+      "id": "Act 4: In un coupè?",
+      "when": "Act 4, months later, back in the garret: the two men pretend to work",
+      "editionId": "puccini-in-un-coupe"
      }
     ]
    },
@@ -3071,7 +3085,8 @@ export const OPERAS: Opera[] = [
       "title": "Vecchia zimarra",
       "kind": "Aria · Act 4",
       "id": "Act 4: Vecchia zimarra",
-      "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì"
+      "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì",
+      "editionId": "puccini-vecchia-zimarra"
      },
      {
       "title": "Al Quartiere Latin ci attende Momus.",
@@ -3139,7 +3154,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Vecchia zimarra, senti",
       "kind": "Aria · Act 4",
-      "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì"
+      "when": "Act 4, Musetta and Marcello have gone for medicine and a muff for the dying Mimì",
+      "editionId": "puccini-vecchia-zimarra"
      },
      {
       "title": "Quando me'n vo'",

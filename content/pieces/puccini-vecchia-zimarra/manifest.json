@@ -1,0 +1,139 @@
+{
+ "editionId": "puccini-vecchia-zimarra",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Vecchia zimarra",
+ "subtitle": "Colline says goodbye to his old coat before pawning it for Mimì, then sends Schaunard out to leave her alone with Rodolfo, La bohème, Act 4",
+ "kind": "aria",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "colline",
+   "name": "Colline",
+   "voiceType": "Bass",
+   "partKey": "colline"
+  },
+  {
+   "id": "schaunard",
+   "name": "Schaunard",
+   "voiceType": "Baritone",
+   "partKey": "schaunard"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "colline",
+   "label": "Colline (Bass)",
+   "shortLabel": "Colline",
+   "kind": "voice",
+   "roleId": "colline",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "schaunard",
+   "label": "Schaunard (Baritone)",
+   "shortLabel": "Schaunard",
+   "kind": "voice",
+   "roleId": "schaunard",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Vecchia zimarra, senti ((19), Allegretto moderato e triste): the coat must climb the sacred mount; it never bowed to the rich and powerful",
+   "start": "1",
+   "end": "11"
+  },
+  {
+   "id": "b",
+   "label": "Passar nelle tue tasche: philosophers and poets in its pockets; Ora che i giorni lieti fuggir, addio (molto rit.), then the piano (a tempo)",
+   "start": "12",
+   "end": "26"
+  },
+  {
+   "id": "c",
+   "label": "Schaunard, ognuno per diversa via (Meno): two kind deeds; io... questo! E tu... lasciali soli là!",
+   "start": "27",
+   "end": "36"
+  },
+  {
+   "id": "d",
+   "label": "Schaunard: Filosofo, ragioni! È ver!.. Vo via! (Andantino, A major)",
+   "start": "37",
+   "end": "42"
+  },
+  {
+   "id": "e",
+   "label": "Piano alone ((20), Andantino mosso, calmo, G major): the two friends leave Mimì and Rodolfo together",
+   "start": "43",
+   "end": "59"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 4",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 258-261 (from figure (19) at the top of page 258 to page 261 system 3 bar 2, the bar before figure (21), 59 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Tempo from the printed metronome mark Allegretto moderato e triste ♩ = 63 at figure (19) (bar 1); the Meno (bar 28), the Andantino (bar 37) and the Andantino mosso at figure (20) (bar 43) carry no number and are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

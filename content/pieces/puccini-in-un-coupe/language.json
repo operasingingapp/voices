@@ -1,0 +1,893 @@
+{
+ "editionId": "puccini-in-un-coupe",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Luigi Illica and Giuseppe Giacosa (1896). Words follow the Ricordi vocal score's spelling and punctuation (coupè with the print's grave accent, Tò!, davver, Lavoriam, the print's quotation marks around Rodolfo's report of Musetta's answer, «Non batte o non lo sento grazie al velluto che il copre», the brackets of the asides (Loiola va! Ti rodi e ridi.) and (Bugiardo, si strugge d'amor.), and the runs of dots after cuor, vidi, guarda). Loiola (Ignatius of Loyola) is Rodolfo's name for Marcello as a sly Jesuit; the print sets it without a comma before va!. IPA follows sung Italian conventions: stressed syllable marked, words sung on one note joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "r1",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Con pariglia e livree.",
+   "translation": "Drawn by a matched pair of horses, with footmen in livery.",
+   "ipa": "kon paˈriʎ.ʎa‿e liˈvrɛ.e",
+   "words": [
+    [
+     "Con",
+     "with",
+     "kon"
+    ],
+    [
+     "pariglia",
+     "two-horse team",
+     "paˈriʎ.ʎa"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "livree.",
+     "liveried servants",
+     "liˈvrɛ.e"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "behind a pair of horses"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "and footmen in livery"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Mi salutò ridendo:",
+   "translation": "She waved hello to me with a laugh:",
+   "ipa": "mi sa.luˈtɔ riˈdɛn.do",
+   "words": [
+    [
+     "Mi",
+     "(to) me",
+     "mi"
+    ],
+    [
+     "salutò",
+     "she hailed",
+     "sa.luˈtɔ"
+    ],
+    [
+     "ridendo:",
+     "with a laugh",
+     "riˈdɛn.do"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "she hailed me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "Tò! Musetta!",
+   "translation": "Well, look who it is: Musetta!",
+   "ipa": "ˈtɔ muˈzet.ta",
+   "words": [
+    [
+     "Tò!",
+     "well, look!",
+     "ˈtɔ"
+    ],
+    [
+     "Musetta!",
+     "Musetta",
+     "muˈzet.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r4",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Le dissi: e il cuor?..........",
+   "translation": "So I put it to her: and what about that heart of yours?",
+   "ipa": "le ˈdis.si e‿il ˈkwɔr",
+   "words": [
+    [
+     "Le",
+     "to her",
+     "le"
+    ],
+    [
+     "dissi:",
+     "I said",
+     "ˈdis.si"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cuor?..........",
+     "heart",
+     "ˈkwɔr"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I asked her"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "what of your heart"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r5",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "«Non batte o non lo sento",
+   "translation": "“It isn't beating, or if it is I can't feel it,",
+   "ipa": "non ˈbat.te o non lo ˈsɛn.to",
+   "words": [
+    [
+     "«Non",
+     "not",
+     "non"
+    ],
+    [
+     "batte",
+     "it beats",
+     "ˈbat.te"
+    ],
+    [
+     "o",
+     "or",
+     "o"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sento",
+     "I feel",
+     "ˈsɛn.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "it has no beat"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "or I can't make it out"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r6",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "grazie al velluto che il copre»",
+   "translation": "muffled as it is under all that velvet.”",
+   "ipa": "ˈgrat.tsje‿al velˈlu.to ke‿il ˈkɔ.pre",
+   "words": [
+    [
+     "grazie",
+     "owing",
+     "ˈgrat.tsje"
+    ],
+    [
+     "al",
+     "to",
+     "al"
+    ],
+    [
+     "velluto",
+     "velvet",
+     "velˈlu.to"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "il",
+     "it",
+     "il"
+    ],
+    [
+     "copre»",
+     "covers",
+     "ˈkɔ.pre"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "because of the velvet"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "lying on top of it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r7",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "(Loiola va! Ti rodi e ridi.)",
+   "translation": "(Carry on, you Jesuit! You're eating your heart out, and laughing.)",
+   "ipa": "loˈjɔ.la ˈva ti ˈro.di e ˈri.di",
+   "words": [
+    [
+     "(Loiola",
+     "Loyola: you sly Jesuit",
+     "loˈjɔ.la"
+    ],
+    [
+     "va!",
+     "carry on",
+     "ˈva"
+    ],
+    [
+     "Ti",
+     "yourself",
+     "ti"
+    ],
+    [
+     "rodi",
+     "you gnaw",
+     "ˈro.di"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "ridi.)",
+     "you laugh",
+     "ˈri.di"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "carry on, Loyola"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "you are eating your heart out"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r8",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "Musetta?",
+   "translation": "Musetta?",
+   "ipa": "muˈzet.ta",
+   "words": [
+    [
+     "Musetta?",
+     "Musetta",
+     "muˈzet.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r9",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "50",
+   "original": "L'hai vista? Oh guarda!..",
+   "translation": "You ran into her? Well, would you believe it!",
+   "ipa": "ˈlai ˈvi.sta ɔ ˈgwar.da",
+   "words": [
+    [
+     "L'hai",
+     "you have ... her",
+     "ˈlai"
+    ],
+    [
+     "vista?",
+     "seen",
+     "ˈvi.sta"
+    ],
+    [
+     "Oh",
+     "oh",
+     "ɔ"
+    ],
+    [
+     "guarda!..",
+     "look",
+     "ˈgwar.da"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "you caught sight of her"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "fancy that"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r10",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "Evviva! Ne son contento.",
+   "translation": "Hurrah! I'm glad to hear it.",
+   "ipa": "evˈvi.va ne ˈson konˈtɛn.to",
+   "words": [
+    [
+     "Evviva!",
+     "hurrah",
+     "evˈvi.va"
+    ],
+    [
+     "Ne",
+     "of it",
+     "ne"
+    ],
+    [
+     "son",
+     "I am",
+     "ˈson"
+    ],
+    [
+     "contento.",
+     "glad",
+     "konˈtɛn.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "it makes me happy"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r11",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "62",
+   "original": "Lavoriam.",
+   "translation": "Let's get on with the work.",
+   "ipa": "la.voˈrjam",
+   "words": [
+    [
+     "Lavoriam.",
+     "let's work",
+     "la.voˈrjam"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r12",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "74",
+   "original": "Che penna infame!",
+   "translation": "What a wretched pen!",
+   "ipa": "ke ˈpen.na‿inˈfa.me",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "penna",
+     "pen",
+     "ˈpen.na"
+    ],
+    [
+     "infame!",
+     "vile",
+     "inˈfa.me"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "this useless pen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m1",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "In un coupè?",
+   "translation": "In a closed carriage?",
+   "ipa": "in un kuˈpe",
+   "words": [
+    [
+     "In",
+     "in",
+     "in"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "coupè?",
+     "coupé (closed carriage)",
+     "kuˈpe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "riding in a coupé"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m2",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "Ci ho gusto davver, ci ho gusto davver!",
+   "translation": "That really does me good, it really does!",
+   "ipa": "tʃi‿ɔ ˈgu.sto davˈver tʃi‿ɔ ˈgu.sto davˈver",
+   "words": [
+    [
+     "Ci",
+     "about it",
+     "tʃi"
+    ],
+    [
+     "ho",
+     "I have",
+     "ɔ"
+    ],
+    [
+     "gusto",
+     "pleasure",
+     "ˈgu.sto"
+    ],
+    [
+     "davver,",
+     "really",
+     "davˈver"
+    ],
+    [
+     "ci",
+     "about it",
+     "tʃi"
+    ],
+    [
+     "ho",
+     "I have",
+     "ɔ"
+    ],
+    [
+     "gusto",
+     "pleasure",
+     "ˈgu.sto"
+    ],
+    [
+     "davver!",
+     "really",
+     "davˈver"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "it pleases me"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "it pleases me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m3",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "Non batte? Bene!",
+   "translation": "No heartbeat? All the better!",
+   "ipa": "non ˈbat.te ˈbɛ.ne",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "batte?",
+     "it beats",
+     "ˈbat.te"
+    ],
+    [
+     "Bene!",
+     "fine",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "it has stopped beating"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m4",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "Io pur vidi...",
+   "translation": "I saw someone too...",
+   "ipa": "jo ˈpur ˈvi.di",
+   "words": [
+    [
+     "Io",
+     "I",
+     "jo"
+    ],
+    [
+     "pur",
+     "too",
+     "ˈpur"
+    ],
+    [
+     "vidi...",
+     "saw",
+     "ˈvi.di"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I too"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m5",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "Mimì.",
+   "translation": "Mimì.",
+   "ipa": "miˈmi",
+   "words": [
+    [
+     "Mimì.",
+     "Mimì",
+     "miˈmi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m6",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "54",
+   "original": "Era in carrozza vestita come una regina.",
+   "translation": "She rode by in a carriage, got up like a queen.",
+   "ipa": "ˈɛ.ra‿in karˈrɔt.tsa veˈsti.ta ˈko.me ˈu.na reˈdʒi.na",
+   "words": [
+    [
+     "Era",
+     "she was",
+     "ˈɛ.ra"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "carrozza",
+     "carriage",
+     "karˈrɔt.tsa"
+    ],
+    [
+     "vestita",
+     "dressed",
+     "veˈsti.ta"
+    ],
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "regina.",
+     "queen",
+     "reˈdʒi.na"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "she was riding in a carriage"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "dressed up like a queen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m7",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "(Bugiardo, si strugge d'amor.)",
+   "translation": "(Liar! He's pining away for her.)",
+   "ipa": "buˈdʒar.do si ˈstrud.dʒe daˈmor",
+   "words": [
+    [
+     "(Bugiardo,",
+     "liar",
+     "buˈdʒar.do"
+    ],
+    [
+     "si",
+     "himself",
+     "si"
+    ],
+    [
+     "strugge",
+     "melts",
+     "ˈstrud.dʒe"
+    ],
+    [
+     "d'amor.)",
+     "of love",
+     "daˈmor"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "he is wasting away for love"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m8",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "63",
+   "original": "Lavoriam.",
+   "translation": "Back to work.",
+   "ipa": "la.voˈrjam",
+   "words": [
+    [
+     "Lavoriam.",
+     "let's work",
+     "la.voˈrjam"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m9",
+   "role": "marcello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "75",
+   "original": "Che infame pennello!",
+   "translation": "What a rotten brush!",
+   "ipa": "ke‿inˈfa.me penˈnɛl.lo",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "infame",
+     "vile",
+     "inˈfa.me"
+    ],
+    [
+     "pennello!",
+     "paintbrush",
+     "penˈnɛl.lo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "this useless brush"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

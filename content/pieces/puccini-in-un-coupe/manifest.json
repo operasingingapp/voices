@@ -1,0 +1,139 @@
+{
+ "editionId": "puccini-in-un-coupe",
+ "editionVersion": "1.0.0-carignani",
+ "title": "In un coupè?",
+ "subtitle": "Back in the garret, Rodolfo and Marcello pretend to work and to have got over Musetta and Mimì, each seeing through the other, La bohème, Act 4",
+ "kind": "scene",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  },
+  {
+   "id": "marcello",
+   "name": "Marcello",
+   "voiceType": "Baritone",
+   "partKey": "marcello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marcello",
+   "label": "Marcello (Baritone)",
+   "shortLabel": "Marcello",
+   "kind": "voice",
+   "roleId": "marcello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Marcello: In un coupè?; Rodolfo saw Musetta with horses and livery: e il cuor? (Allegro vivo, Quadro quarto)",
+   "start": "1",
+   "end": "26"
+  },
+  {
+   "id": "b",
+   "label": "«Non batte o non lo sento» (Lo stesso movimento, 9/8); Ci ho gusto davver!; Loiola va!; Non batte? Bene! ((1))",
+   "start": "27",
+   "end": "36"
+  },
+  {
+   "id": "c",
+   "label": "Io pur vidi... Mimì. L'hai vista? Oh guarda!",
+   "start": "37",
+   "end": "54"
+  },
+  {
+   "id": "d",
+   "label": "Era in carrozza vestita come una regina (Lo stesso movimento, 2/4); Evviva! Ne son contento; Bugiardo, si strugge d'amor; Lavoriam",
+   "start": "55",
+   "end": "65"
+  },
+  {
+   "id": "e",
+   "label": "(2): Che penna infame! Che infame pennello!; Sostenuto, Andantino: Marcello takes out a silk ribbon and kisses it",
+   "start": "66",
+   "end": "85"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 4",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 223-227 (from the start of the Quadro quarto, top of page 223, to the double bar at the end of page 227, 85 bars)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's part is printed in the treble clef and written here at sounding pitch. The piano's right hand in bars 29-30, printed in 3/4 inside the 9/8 bars, is written as duplets. Tempo from the printed metronome mark Allegro vivo ♩. = 108 (bar 1); the two “lo stesso movimento” changes (bar 27, 9/8; bar 55, 2/4) keep the quaver, as the recordings show; the a piacere bars, the Sostenuto (bar 76) and the Andantino (bar 77) carry no number and are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

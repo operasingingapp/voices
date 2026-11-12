@@ -825,6 +825,76 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "puccini-in-un-coupe": {
+    portrait: "boheme:rodolfo",
+    opera: "La bohème",
+    kind: "Scene",
+    facts: {
+      key: "No key signature (no sharps or flats) from the start of Act 4 to the end of the scene; the keys are written with accidentals",
+      time: "3/8 for bars 1-26 (Allegro vivo, one beat a bar); 9/8 for bars 27-36 (“Non batte o non lo sento”; the piano’s right hand in bars 29-30 is printed in 3/4, Musetta’s waltz against the 9/8); 3/8 for bars 37-54; 2/4 from bar 55 (“Era in carrozza”) to the end",
+      tempo: "Printed metronome mark: Allegro vivo ♩. = 108 at the start of the act. Printed relations: Lo stesso movimento at the 9/8 (bar 27) and at the 2/4 (bar 55); the quaver stays the same through both, so the 9/8 keeps ♩. = 108 and the 2/4 runs at ♩ = 162 (the reading that fits the recordings: taking the 2/4’s crotchet at 108 would make the scene longer than Toscanini’s, Leinsdorf’s and Solti’s performances before the Andantino is even reached). Chosen, as no number is printed: the a piacere of “Che penna infame!” and “Che infame pennello!” (bars 74-75) ♩ = 108; Sostenuto (bar 76) and Andantino (bar 77) ♩ = 60, timed from six complete recordings (median 1:22) and below the Andantino mosso ♩ = 84 that follows; the closing rall. (bar 81) held at ♩ = 48 to the end. Fermatas are held",
+    },
+    notePlaceholder: "Back in the garret, Rodolfo and Marcello pretend to work and to have forgotten Musetta and Mimì, and each sees through the other",
+    about: (
+      <>
+        <p>
+          “In un coupè?”, the start of Act 4, months later, back in the garret. Marcello is at his easel and Rodolfo at his table, both
+          pretending to work. Rodolfo has seen Musetta riding in a carriage with a pair of horses and footmen in livery; he asked her
+          about her heart, and she laughed that she could not feel it beating under all that velvet. Marcello says he is delighted,
+          but Rodolfo can see him gnawing at himself while he laughs. Marcello answers in kind: he has seen Mimì in a carriage, dressed
+          like a queen; Rodolfo says he is glad of it, and Marcello knows he is lying. They go back to work, give up, throw down pen
+          and brush, and Marcello secretly takes a silk ribbon from his pocket and kisses it.
+        </p>
+        <p>
+          Score: vocal score pages 223-227 (from the start of the Quadro quarto to the double bar at the end of page 227, 85 bars),
+          from Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed
+          pages: the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge,
+          then checked against the page and corrected. Only the Italian words are kept, with the print’s spellings (“coupè”, “Tò”,
+          “davver”, “Lavoriam”). Rodolfo’s part, printed in the treble clef, is written at sounding pitch. The piano’s right hand in
+          bars 29-30, printed in 3/4 inside the 9/8 bars, is written as duplets. The printed metronome mark is the Allegro vivo’s
+          ♩. = 108; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "puccini-vecchia-zimarra": {
+    portrait: "boheme:colline",
+    opera: "La bohème",
+    kind: "Aria",
+    facts: {
+      key: "C-sharp minor (4 sharps) from figure (19) to bar 36; A major (3 sharps) for the Andantino, bars 37-42 (Schaunard’s “Filosofo, ragioni!”); G major (1 sharp) from figure (20) (bar 43) to the end",
+      time: "2/4 for bars 1-36; 3/4 for bars 37-42 (Andantino); 6/8 from figure (20) (bar 43) to the end",
+      tempo: "Printed metronome mark: Allegretto moderato e triste ♩ = 63 at figure (19); the a tempo bars return to it. Chosen, as no number is printed: Meno (bar 28, “Schaunard, ognuno per diversa via”) ♩ = 56, a tenth slower, to the nearest metronome mark; Andantino (bar 37) ♩ = 56, the score’s own printed Andantino; Andantino mosso at figure (20) (bar 43, Calmo, the piano alone) ♩. = 56, the Andantino’s beat carried over as the 6/8 beat (checked against recordings); the rall. of bar 18 held at ♩ = 50 until the a tempo at bar 23. The written poco rit., rall., molto rit. and affrett. are played as a gradual change over the bars they cover, then back to the tempo; fermatas are held",
+    },
+    notePlaceholder: "Colline says goodbye to the old coat he is about to pawn for Mimì, then takes Schaunard away to leave her alone with Rodolfo",
+    about: (
+      <>
+        <p>
+          “Vecchia zimarra”, Act 4 in the garret. Mimì is lying on the bed, dying; Musetta and Marcello have gone to sell her earrings
+          for medicine and a muff. Colline takes off his old greatcoat: it must go up the “sacred mount”, the pawnshop, while he stays
+          below. He thanks it for never bowing its threadbare back to the rich and powerful, and for the philosophers and poets that
+          have passed through its pockets, and says goodbye to it as to a faithful friend. Then he tells Schaunard that each of them
+          will do a kind deed: he will pawn the coat, and Schaunard will leave the two alone. Schaunard agrees and follows him out,
+          and the piano plays on alone as Mimì and Rodolfo are left together.
+        </p>
+        <p>
+          Score: vocal score pages 258-261 (from figure (19) to page 261 system 3 bar 2, the bar before figure (21), 59 bars), from
+          Carlo Carignani’s piano reduction in the G. Ricordi &amp; C. vocal score, public domain. Written out from the printed pages:
+          the sung lines and the piano each read independently, every disagreement settled on the page by a separate judge, then
+          checked against the page and corrected. Only the Italian words are kept, with the print’s spellings and punctuation. The
+          printed metronome mark is the Allegretto moderato e triste’s ♩ = 63; the other tempos are chosen as stated under Tempo.
+        </p>
+        <p>
+          Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
+          written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-e-susanna-non-vien": {
     portrait: "figaro:countess",
     opera: "Le nozze di Figaro",

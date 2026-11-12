@@ -1,0 +1,196 @@
+# page 258 system 1 starts bar 1
+# bar 1: (19) ALL.tto MOD.to e TRISTE, quarter = 63, 2/4, E major (4 sharps); RH staff starts with treble clef and changes at once to bass clef; pp staccatissimo
+1 RH1: clef:F r:e dyn:pp word:staccatissimo E3+G#3:e r:e F#3+G#3:e
+1 LH1: C#2+G#2:e r:e D#2+G#2:e r:e
+2 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+2 LH1: E2+G#2:e r:e D#2+G#2:e r:e
+# bar 3: poco rit......
+3 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+3 LH1: word:poco_rit. C#2+G#2:e r:e D#2+G#2:e r:e
+# page 258 system 2 starts bar 4
+# bar 4: a tempo
+4 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+4 LH1: word:a_tempo E2+G#2:e r:e D#2+G#2:e r:e
+5 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+5 LH1: C#2+G#2:e r:e D#2+G#2:e r:e
+6 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+6 LH1: E2+G#2:e r:e G#1+G#2:e r:e
+# page 258 system 3 starts bar 7
+7 RH1: r:e E3+G#3:e r:e E3+G#3:e
+7 LH1: C#2+G#2:e r:e C#2+G#2:e r:e
+# bar 8: p (LH); RH upper voice tenuto quarters under a slur
+8 RH1: B3:q-( C#4:q-
+8 RH2: r:e D#3+F#3:e r:e E3+A3:e
+8 LH1: dyn:p B1+B2:e r:e A1+A2:e r:e
+9 RH1: B3:q- C#4:q-)
+9 RH2: r:e D#3+F#3:e r:e E3+A3:e
+9 LH1: B1+B2:e r:e A1+A2:e r:e
+10 RH1: E4:e( D#4:e C#4:e B3:e)
+10 RH2: r:e A3:e r:e D#3+A3~:e
+10 LH1: F#1+F#2:e r:e B1+B2:e r:e
+# page 258 system 4 starts bar 11
+# 10/11 RH: the A3 of the last chord of bar 10 is tied into the half note A3 of bar 11
+11 RH1: A3:h
+11 RH2: A3:s( G#3:s F#3:s E3:s) E3:e* E3:e*
+11 LH1: F#1+F#2:e r:e G#1+G#2:e r:e
+# bar 12: p poco rall:......
+12 RH1: Eb4:q( Dn4:q
+12 RH2: r:e Gn3+Db4:e r:e F#3+Cn4:e
+12 LH1: dyn:p word:poco_rall. Bb1+Bb2:e r:e A1+A2:e r:e
+# bar 13: a tempo
+13 RH1: Db4:q Cn4:q)
+13 RH2: r:e Gn3+Db4:e r:e E3+Bb3:e
+13 LH1: word:a_tempo Ab1+Ab2:e r:e Gn1+Gn2:e r:e
+# page 259 system 1 starts bar 14
+# bar 14: pp rall:......
+14 RH1: B3:q( B3:e) r:e
+14 RH2: r:e D#3+An3:e r:q
+14 LH1: dyn:pp word:rall. F#1+F#2:e r:e B1+B2:e r:e
+# 14 LH: the F#1 and F#2 carry printed (cautionary) sharps
+# bar 15: a tempo
+15 RH1: r:h
+15 LH1: word:a_tempo E1+E2:e r:e G#1+G#2:e r:e
+16 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+16 LH1: C#2+C#3:e r:e D#2+G#2:e r:e
+# page 259 system 2 starts bar 17
+17 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+17 LH1: E2+G#2:e r:e D#2+G#2:e r:e
+# bar 18: rall......
+18 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+18 LH1: word:rall. C#2+G#2:e r:e D#2+G#2:e r:e
+19 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+19 LH1: E2+G#2:e r:e D#2+G#2:e r:e
+# page 259 system 3 starts bar 20
+20 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+20 LH1: C#2+G#2:e r:e D#2+G#2:e r:e
+21 RH1: r:e E3+G#3:e r:e F#3+G#3:e
+21 LH1: E2+G#2:e r:e D#2+G#2:e r:e
+# bar 22: molto rit......, col canto, fermatas; RH clef changes to treble at the end of the bar
+22 RH1: r:e E3+G#3:e r:q! clef:G
+22 LH1: word:col_canto C#2+G#2:e r:e G#1+G#2:e r:e!
+# page 259 system 4 starts bar 23
+# bar 23: a tempo; RH treble clef; mf; arpeggiated chords
+23 RH1: word:a_tempo C#4+E4+G#4+C#5:qa B3+D#4+F#4+B4:qa
+23 LH1: dyn:mf hp:< C#2:e* G#2:e* D#2:e* B2:e*
+24 RH1: A3+C#4+E4+A4:q.a> B3+D#4+F#4+B4:ea
+24 LH1: E2:e* C#3:e* r:e D#2:e* hp:end
+25 RH1: C#4+F#4+A4+C#5:ha~
+25 LH1: hp:> C#2:e* G#2:e* r:e G#1:e*
+# 26-27 RH: four ties are printed from the bar 26 chord into the bar 27 chord; only C#4 and C#5 are common to both chords
+26 RH1: C#4~+F#4+A4+C#5~:ha
+26 LH1: C#2:e* G#2:e* r:e G#1:e* hp:end
+27 RH1: C#4+E4+G#4+C#5:e r:e r:q
+27 LH1: C#2:e* r:e r:q
+# page 260 system 1 starts bar 28
+# bar 28: MENO; RH treble clef; p
+28 RH1: A3+E4:h(
+28 LH1: dyn:p C#3+E3:h(
+29 RH1: Dn4+A4:h
+29 LH1: B2+F#3:h
+30 RH1: Dn4+G#4:q~ Dn4+G#4:e) r:e
+30 LH1: E3+B3:q~ E3+B3:e) r:e
+# bars 31-32: pp; the RH note shares one stem with the LH upper chord (cross-staff chord); LH lower voice = bass notes
+31 RH1: r:e C#4:e r:e Dn4:e
+31 LH1: r:e dyn:pp A2+E3+A3:e r:e B2+E3+G#3:e
+31 LH2: r:e A1:e r:e B1:e
+32 RH1: r:e E4:e r:e E4+F#4:e
+32 LH1: r:e C#3+E3+A3:e r:e Cn3+A3:e
+32 LH2: r:e C#2:e r:e Cn2:e
+# page 260 system 2 starts bar 33
+# bars 33-34: the B3 on the LH staff shares the stem of the RH chord; RH D4 carries a printed (cautionary) sharp
+33 RH1: r:e D#4+F#4:e~ D#4+F#4:q~
+33 LH1: r:e B3:e~ B3:q~
+33 LH2: r:e B1+B2:e~ B1+B2:q~
+34 RH1: D#4+F#4:h
+34 LH1: B3:h
+34 LH2: B1+B2:h
+# bar 35: poco affrett.
+35 RH1: r:e word:poco_affrett. C#4+E4+A4:e~ C#4+E4+A4:e D#4+A4+B4:e~
+35 LH1: r:e A1+A2:e~ A1+A2:e F#1+F#2:e~
+36 RH1: D#4+A4+B4:e r:e r:q
+36 LH1: F#1+F#2:e r:e r:q
+# bar 37: ANDANTINO, 3/4, A major (3 sharps); pp dolce; LH upper line doubles the RH an octave lower
+37 RH1: r:e dyn:pp word:dolce F#5:e( hp:> D5:e C#5:e B4:e F#4:e hp:end
+37 LH1: E1+E2:e* F#4:e( D4:e C#4:e B3:e F#3:e)
+38 RH1: A4:h G#4:q~)
+38 RH2: D4:h.
+38 LH1: E3:q( F#3:q G#3:q)
+38 LH2: B2:h.
+# page 260 system 3 starts bar 39
+39 RH1: G#4:q F#4:h~
+39 RH2: C#4:h.
+39 LH1: A2+A3:h.
+# bar 40: RH upper voice: 8 32nds, then a beamed group (chord, 16th rest, 16th); hairpin < to mf
+40 RH1: F#4:q E4:x hp:< F#4:x E4:x F#4:x E4:x D#4:x E4:x F#4:x hp:end dyn:mf A3+Dn4:e r:s B4:s
+40 RH2: B3:q~ B3:e r:e s:q
+40 LH1: G#2+E3:q~ G#2+E3:e r:e F#2+B2:e r:e
+41 RH1: G#3+C#4:e r:e r:q Gn3+Cn4:e r:e
+41 LH1: E#2+B2:e r:e r:q En2+A2:e r:e
+# bar 42: f; RH: printed eighth rest then the half-note octave (fermata) placed from beat 2; the half beat after the rest is filled with a hidden rest; double bar, then key change to 1 sharp and 6/8
+42 RH1: r:e s:e B3+B4:h! hp:> hp:end
+42 LH1: r:e dyn:f F#3+B3:e> r:q r:q!
+42 LH2: r:e D#2+A2:e> s:q s:q
+# page 260 system 4 starts bar 43
+# bar 43: (20) AND.no MOSSO, 6/8, 1 sharp (G major / E minor); Calmo; p; piano solo
+43 RH1: word:Calmo G4:q.( F#4:e D4:e F#4:e)
+43 RH2: B3:h.
+43 LH1: dyn:p G3:h.
+# bars 44-47: brackets join RH stems to notes on the LH staff (to be taken by the right hand); written here by staff
+44 RH1: E4:q.~ E4:q B3:e
+44 LH1: G#3+D4:h.
+44 LH2: B2:h.
+# 45 RH: small grace note (with stroke) before the chord; natural on the lower note G3
+45 RH1: g:D4:e C4:q B3:e A3:q G3:e
+45 RH2: Gn3:q. s:q.
+45 LH1: E3:h.
+45 LH2: A2:q( B2:e C3:q C#3:e
+46 RH1: A3+C4:h.
+46 LH1: G3:q( F#3:e E3:e F#3:e D3:e)
+46 LH2: D3:q. D2:q.)
+47 RH1: E4:q( D4:e B3:e G3:e B3:e)
+47 LH1: G3:q. D3:q.
+47 LH2: B2:q.( G2:q.)
+# page 261 system 1 starts bar 48
+# bar 48: cres. e affrett.
+48 RH1: word:cres._e_affrett. A3+C4:h.
+48 LH1: G3:q( F#3:e E3:e F#3:e D3:e)
+48 LH2: D3:q. D2:q.
+49 RH1: r:e E4:e( D4:e B3:e G3:e B3:e)
+49 LH1: r:e G3:q D3:q.
+49 LH2: B2:q.( G2:q.)
+# bar 50: the RH chords on beats 4 and 6 share their stems with the A3 and B3 on the LH staff
+50 RH1: A3+D4:q C4+E4:e C4+F#4:q D4+G4:e
+50 LH1: G3:e( A3:e F#3:e) A3:q B3:e
+50 LH2: D2:q. D3:e( C3:e B2:e)
+51 RH1: C4+E4+A4:q( D4+F#4+B4:e) E4+G4+C5:q( G4~+C5+E5:e)
+51 LH1: A2:e( G2:e F#2:e) E2:e( D2:e C2:e)
+# page 261 system 2 starts bar 52
+52 RH1: C5+E5:q.( E5+G5:q.)
+52 RH2: G4:h.
+52 LH1: E3:q( A3:e C4:q E4:e)
+52 LH2: A1:h.
+# 53 RH: two small 16th grace chords (D5+F#5, E5+G5) before the first chord
+53 RH1: g:D5+F#5:s g:E5+G5:s D5+F#5:q( C5+E5:e B4+D5:q.~
+53 RH2: F#4:h.~
+53 LH1: r:q r:e F#2:e( B2:e D3:e
+53 LH2: B1:h.(
+54 RH1: B4+D5:q C5+E5:e) D5+F#5:e( E5+G5:e F#5+A5:e)
+54 RH2: F#4:q. F#4:e( G4:e A4:e)
+54 LH1: F#3:q.( B3:q.)
+54 LH2: B1:h.)
+55 RH1: B4+G5+B5:q.~( B4+G5+B5:q A4+F#5+A5:e
+55 LH1: r:e D3:e( E3:e F#3:e G3:e A3:e)
+55 LH2: G2:h.
+# 56 RH: small grace note (with stroke) B5 before the first chord; LH: small grace note E2 (with stroke) before the E2
+56 RH1: g:B5:e A4+F#5+A5:q G4+E5+G5:e E4+C#5+E5:q G4+E5+G5:e)
+56 LH1: B3:q.( C#4:q.)
+56 LH2: g:E2:e E2:h.
+# page 261 system 3 starts bar 57
+# bar 57: rall.; hairpin < across bars 57-58
+57 RH1: A4+F#5+A5:h.~
+57 LH1: r:q word:rall. A2:e( hp:< D3:q F#3:e
+57 LH2: D2+D3:h.~
+# bar 58: last bar of the chunk; double bar follows, then (21) PIU SOSTENUTO in C major, common time
+58 RH1: A4+F#5+A5:h.
+58 LH1: A3:q D4:e F#4:q A4:e) hp:end
+58 LH2: D2+D3:h.
