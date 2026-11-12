@@ -476,10 +476,44 @@ export class SamplerPort implements SynthPort {
 
   /** more or less room (1 = the default send); eased so a change mid-piece never clicks */
   setRoom(level: number) {
+    this.roomBase = level;
     this.reverbSend.gain.setTargetAtTime(
-      REVERB_SEND * level,
+      REVERB_SEND * level * this.roomAuto,
       this.ctx.currentTime,
       0.05,
+    );
+  }
+
+  /** the room chosen for the piece (setRoom), and the share of it the texture allows right now */
+  private roomBase = 1;
+  private roomAuto = 1;
+  private roomOnsets: number[] = [];
+  private roomAt = -1;
+
+  /**
+   * The room follows the texture, as a pianist's pedal and a hall's acoustics do in practice. A solo line over a
+   * light accompaniment keeps the whole hall; a busy ensemble (many notes struck each second, many ringing at once,
+   * the other singers' lines on top) gets less of it, so the harmony stays clear instead of blurring into a wash.
+   * It is set at the scheduled time of the notes and eased over about a second, so it never pumps.
+   */
+  private followTexture(t: number) {
+    // a jump back (a new start, a loop) leaves later times behind: keep only the last two seconds before this note
+    const on = (this.roomOnsets = this.roomOnsets.filter((x) => x <= t && x > t - 2));
+    on.push(t);
+    if (t < this.roomAt) this.roomAt = -1;
+    if (t - this.roomAt < 0.25) return;
+    this.roomAt = t;
+    const perSecond = on.length / 2;
+    let ringing = 0;
+    for (const v of this.voices) if (!v.released && v.start <= t) ringing++;
+    const busy = perSecond / 12 + ringing / 24;
+    const auto = Math.min(1, Math.max(0.5, 1 - 0.4 * Math.max(0, busy - 0.6)));
+    if (Math.abs(auto - this.roomAuto) < 0.03) return;
+    this.roomAuto = auto;
+    this.reverbSend.gain.setTargetAtTime(
+      REVERB_SEND * this.roomBase * auto,
+      Math.max(t, this.ctx.currentTime),
+      0.6,
     );
   }
 
@@ -1080,6 +1114,7 @@ export class SamplerPort implements SynthPort {
       env.disconnect();
     };
     this.voices.push(voice);
+    this.followTexture(t);
     // too many ringing notes (long tremolos): let the oldest go quickly
     if (this.voices.length > MAX_VOICES) this.release(this.voices[0], t, 0.03);
   }
