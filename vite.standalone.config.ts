@@ -53,7 +53,11 @@ export default defineConfig({
           // the app file gave the engine a new name (so a fresh download) whenever the app changed
           if (id.includes("vite/preload-helper")) return "preload";
           // a piece's words and its recorded voices' timings travel together, loaded when the piece opens
-          const words = /\/content\/pieces\/([^/]+)\/voice\/[^/]+\/manifest\.json$/.exec(id) ?? /\/data\/content\/([^/]+)\/language\.json$/.exec(id);
+          // (one file per piece: its words, data, score and voice timings, so the published file count stays low as pieces are added)
+          const words =
+            /\/content\/pieces\/([^/]+)\/voice\/[^/]+\/manifest\.json$/.exec(id) ??
+            /\/data\/content\/([^/]+)\/(?:language|edition)\.json$/.exec(id) ??
+            /\/data\/content\/([^/]+)\/score\.musicxml\?raw$/.exec(id);
           if (words) return `words-${words[1]}`;
           if (/voicepacks\//.test(id)) return "voicedata";
           return undefined;

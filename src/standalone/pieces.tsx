@@ -17,12 +17,11 @@ const languages = import.meta.glob(["../../data/content/*/language.json", "!../.
 >;
 const editionData = new Map<string, CompiledEdition>();
 const languageData = new Map<string, CompiledLanguage>();
-// the scores are separate files, fetched when a piece opens (bundled in, they made the app too large to publish)
-const scoreUrls = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], {
-  query: "?url",
+// the scores travel in each piece's own file, loaded when the piece opens (bundled into the app, they made it too large to publish)
+const scores = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], {
+  query: "?raw",
   import: "default",
-  eager: true,
-}) as Record<string, string>;
+}) as Record<string, () => Promise<string>>;
 // the recorded voices' timings for each piece (word by word), fetched with the piece's words
 const voiceManifests = import.meta.glob("../../content/pieces/*/voice/*/manifest.json", { import: "default" }) as Record<string, () => Promise<unknown>>;
 const voiceData = new Map<string, unknown[]>();
@@ -35,15 +34,10 @@ export function loadScore(id: string): Promise<void> {
   if (scoreReady(id)) return Promise.resolve();
   let p = scoreLoading.get(id);
   if (!p) {
-    const url = scoreUrls[`../../data/content/${id}/score.musicxml`];
     const ed = editions[`../../data/content/${id}/edition.json`]?.().then((e) => void editionData.set(id, e));
     const la = languages[`../../data/content/${id}/language.json`]?.().then((l) => void languageData.set(id, l));
-    const sc = fetch(url)
-      .then((r) => {
-        if (!r.ok) throw new Error(`score ${id}: ${r.status}`);
-        return r.text();
-      })
-      .then((t) => void scoreText.set(id, t));
+    const load = scores[`../../data/content/${id}/score.musicxml`];
+    const sc = (load ? load() : Promise.reject(new Error(`score ${id}: missing`))).then((t) => void scoreText.set(id, t));
     const vo = Promise.all(
       Object.entries(voiceManifests)
         .filter(([k]) => k.includes(`/pieces/${id}/voice/`))
