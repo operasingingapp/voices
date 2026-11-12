@@ -1,0 +1,139 @@
+{
+ "editionId": "puccini-donde-lieta-usci",
+ "editionVersion": "1.0.0-carignani",
+ "title": "Vai?… Donde lieta uscì",
+ "subtitle": "Mimì says goodbye to Rodolfo without bitterness, asks him to gather up her few things and lets him keep her pink bonnet, La bohème, Act 3",
+ "kind": "aria",
+ "fixture": false,
+ "composer": "Giacomo Puccini",
+ "librettist": "Luigi Illica and Giuseppe Giacosa",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "mimi",
+   "name": "Mimì",
+   "voiceType": "Soprano",
+   "partKey": "mimi"
+  },
+  {
+   "id": "rodolfo",
+   "name": "Rodolfo",
+   "voiceType": "Tenor",
+   "partKey": "rodolfo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "mimi",
+   "label": "Mimì (Soprano)",
+   "shortLabel": "Mimì",
+   "kind": "voice",
+   "roleId": "mimi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "rodolfo",
+   "label": "Rodolfo (Tenor)",
+   "shortLabel": "Rodolfo",
+   "kind": "voice",
+   "roleId": "rodolfo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Rodolfo: Vai?; Donde lieta uscì al tuo grido d'amore (Lento molto, (26))",
+   "start": "1",
+   "end": "6"
+  },
+  {
+   "id": "b",
+   "label": "Torna sola Mimì al solitario nido (Andantino espressivo): back to making artificial flowers",
+   "start": "7",
+   "end": "13"
+  },
+  {
+   "id": "c",
+   "label": "Addio, senza rancor (Lento); Ascolta, ascolta ((27), Andantino mosso): her few things, the gold ring, the prayer book",
+   "start": "14",
+   "end": "23"
+  },
+  {
+   "id": "d",
+   "label": "Involgi tutto quanto in un grembiale ((28)); Bada... sotto il guanciale (A major)",
+   "start": "24",
+   "end": "30"
+  },
+  {
+   "id": "e",
+   "label": "The pink bonnet: Se vuoi serbarla a ricordo d'amor! (poco allarg.); Addio, addio senza rancor ((29), a tempo)",
+   "start": "31",
+   "end": "39"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giacomo Puccini, La bohème (1896), Act 3",
+   "author": "Giacomo Puccini (1858–1924)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Luigi Illica and Giuseppe Giacosa, libretto of La bohème (1896)",
+   "author": "Luigi Illica (1857–1919) and Giuseppe Giacosa (1847–1906)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score of La bohème, pages 206-209 (from figure (26) at the top of page 206 to the bar of figure (29), page 209 system 3 bar 2, 39 bars; this last bar, with Mimì's last syllable, is also the first bar of the next piece)",
+   "author": "Carlo Carignani (1857–1919), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each transcribed independently, disagreements settled on the page by a separate judge, then checked against the print and corrected. Rodolfo's part is printed in the treble clef and written here at sounding pitch. Tempo from the printed metronome marks Lento molto ♪ = 66 at figure (26) (bar 1) and Andantino mosso ♩ = 84 at figure (27) (bar 16); the Andantino espressivo (bar 7) and the Lento (bar 14) carry no number and are values chosen as stated in the piece's notes."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -1,0 +1,740 @@
+{
+ "editionId": "puccini-donde-lieta-usci",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Luigi Illica and Giuseppe Giacosa (1896). Words follow the Ricordi vocal score's spelling and punctuation (intesser, fior, rancor, d'or, d'amor; the print's dots after portiere... and Bada...). Vai? is sung on two notes (Va-i?). The last bar (figure (29)) is shared with the next piece: it holds Mimì's last syllable (ran-cor) and Rodolfo's \"Dunque è proprio fi-\", which belongs to \"Dunque è proprio finita!\" and is left out of this piece's phrases. IPA follows sung Italian conventions: stressed syllable marked, words sung on one note joined with ‿, open e/o as ɛ/ɔ, intervocalic s voiced. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "r1",
+   "role": "rodolfo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Vai?",
+   "translation": "Leaving?",
+   "ipa": "ˈva.i",
+   "words": [
+    [
+     "Vai?",
+     "you go",
+     "ˈva.i"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i1",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Donde lieta uscì al tuo grido d'amore,",
+   "translation": "To the place she left so happily when you called her with love,",
+   "ipa": "ˈdon.de ˈljɛ.ta uʃˈʃi al ˈtu.o ˈgri.do daˈmo.re",
+   "words": [
+    [
+     "Donde",
+     "whence",
+     "ˈdon.de"
+    ],
+    [
+     "lieta",
+     "happy",
+     "ˈljɛ.ta"
+    ],
+    [
+     "uscì",
+     "she went out",
+     "uʃˈʃi"
+    ],
+    [
+     "al",
+     "at the",
+     "al"
+    ],
+    [
+     "tuo",
+     "your",
+     "ˈtu.o"
+    ],
+    [
+     "grido",
+     "cry",
+     "ˈgri.do"
+    ],
+    [
+     "d'amore,",
+     "of love",
+     "daˈmo.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "the place she gladly left"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "at your call of love"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i2",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "torna sola Mimì al solitario nido.",
+   "translation": "Mimì goes home alone, to her solitary little nest.",
+   "ipa": "ˈtor.na ˈso.la miˈmi al so.liˈta.rjo ˈni.do",
+   "words": [
+    [
+     "torna",
+     "goes back",
+     "ˈtor.na"
+    ],
+    [
+     "sola",
+     "alone",
+     "ˈso.la"
+    ],
+    [
+     "Mimì",
+     "Mimì",
+     "miˈmi"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "solitario",
+     "solitary",
+     "so.liˈta.rjo"
+    ],
+    [
+     "nido.",
+     "nest",
+     "ˈni.do"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to the empty nest"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i3",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Ritorna un'altra volta a intesser finti fior!",
+   "translation": "Once again she goes back to stitching artificial flowers!",
+   "ipa": "riˈtor.na uˈnal.tra ˈvɔl.ta a‿inˈtɛs.ser ˈfin.ti ˈfjor",
+   "words": [
+    [
+     "Ritorna",
+     "she returns",
+     "riˈtor.na"
+    ],
+    [
+     "un'altra",
+     "another",
+     "uˈnal.tra"
+    ],
+    [
+     "volta",
+     "time",
+     "ˈvɔl.ta"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "intesser",
+     "interweave",
+     "inˈtɛs.ser"
+    ],
+    [
+     "finti",
+     "fake",
+     "ˈfin.ti"
+    ],
+    [
+     "fior!",
+     "flowers",
+     "ˈfjor"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "once more"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "to weave"
+    },
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "artificial flowers"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i4",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Addio, senza rancor",
+   "translation": "Goodbye, and no hard feelings",
+   "ipa": "adˈdi.o ˈsɛn.tsa ranˈkor",
+   "words": [
+    [
+     "Addio,",
+     "goodbye",
+     "adˈdi.o"
+    ],
+    [
+     "senza",
+     "without",
+     "ˈsɛn.tsa"
+    ],
+    [
+     "rancor",
+     "resentment",
+     "ranˈkor"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "with no ill will"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i5",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Ascolta, ascolta.",
+   "translation": "Listen, listen.",
+   "ipa": "aˈskol.ta‿aˈskol.ta",
+   "words": [
+    [
+     "Ascolta,",
+     "listen",
+     "aˈskol.ta"
+    ],
+    [
+     "ascolta.",
+     "listen",
+     "aˈskol.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "i6",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Le poche robe aduna che lasciai sparse.",
+   "translation": "Collect the few things of mine I left lying about.",
+   "ipa": "le ˈpɔ.ke ˈrɔ.be‿aˈdu.na ke laʃˈʃai ˈspar.se",
+   "words": [
+    [
+     "Le",
+     "the",
+     "le"
+    ],
+    [
+     "poche",
+     "few",
+     "ˈpɔ.ke"
+    ],
+    [
+     "robe",
+     "belongings",
+     "ˈrɔ.be"
+    ],
+    [
+     "aduna",
+     "collect",
+     "aˈdu.na"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "lasciai",
+     "I left",
+     "laʃˈʃai"
+    ],
+    [
+     "sparse.",
+     "strewn",
+     "ˈspar.se"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "my few belongings"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "that I left lying around"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i7",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Nel mio cassetto stan chiusi quel cerchietto d'or, e il libro di preghiere.",
+   "translation": "Shut away in my drawer are that little gold ring and the prayer book.",
+   "ipa": "nel ˈmi.o kasˈset.to ˈstan ˈkju.zi kwel tʃerˈkjet.to ˈdɔr e‿il ˈli.bro di preˈgjɛ.re",
+   "words": [
+    [
+     "Nel",
+     "in the",
+     "nel"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "cassetto",
+     "drawer",
+     "kasˈset.to"
+    ],
+    [
+     "stan",
+     "are",
+     "ˈstan"
+    ],
+    [
+     "chiusi",
+     "closed",
+     "ˈkju.zi"
+    ],
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "cerchietto",
+     "little ring",
+     "tʃerˈkjet.to"
+    ],
+    [
+     "d'or,",
+     "of gold",
+     "ˈdɔr"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "libro",
+     "book",
+     "ˈli.bro"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "preghiere.",
+     "prayers",
+     "preˈgjɛ.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "in my drawer"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "are kept"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "that little gold ring"
+    },
+    {
+     "words": [
+      9,
+      10,
+      11,
+      12
+     ],
+     "gloss": "the prayer book"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i8",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "Involgi tutto quanto in un grembiale e manderò il portiere...",
+   "translation": "Bundle it all up in an apron, and I'll send the doorkeeper for it...",
+   "ipa": "inˈvɔl.dʒi ˈtut.to ˈkwan.to in un gremˈbja.le‿e man.deˈrɔ il porˈtjɛ.re",
+   "words": [
+    [
+     "Involgi",
+     "bundle up",
+     "inˈvɔl.dʒi"
+    ],
+    [
+     "tutto",
+     "all",
+     "ˈtut.to"
+    ],
+    [
+     "quanto",
+     "of it",
+     "ˈkwan.to"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "un",
+     "an",
+     "un"
+    ],
+    [
+     "grembiale",
+     "apron",
+     "gremˈbja.le"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "manderò",
+     "I will send",
+     "man.deˈrɔ"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "portiere...",
+     "porter",
+     "porˈtjɛ.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "the whole lot"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "in an apron"
+    },
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "I'll send the porter"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i9",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "Bada... sotto il guanciale c'è la cuffietta rosa.",
+   "translation": "Remember... under the pillow is the little pink bonnet.",
+   "ipa": "ˈba.da ˈsot.to‿il gwanˈtʃa.le ˈtʃɛ la kufˈfjet.ta ˈrɔ.za",
+   "words": [
+    [
+     "Bada...",
+     "take note",
+     "ˈba.da"
+    ],
+    [
+     "sotto",
+     "under",
+     "ˈsot.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "guanciale",
+     "pillow",
+     "gwanˈtʃa.le"
+    ],
+    [
+     "c'è",
+     "there is",
+     "ˈtʃɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "cuffietta",
+     "bonnet",
+     "kufˈfjet.ta"
+    ],
+    [
+     "rosa.",
+     "pink",
+     "ˈrɔ.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "under the pillow"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "the pink bonnet"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i10",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "Se vuoi, se vuoi, se vuoi serbarla a ricordo d'amor!",
+   "translation": "If you'd like, if you'd like, if you'd like to keep it to remember our love by!",
+   "ipa": "se ˈvwɔi se ˈvwɔi se ˈvwɔi serˈbar.la a riˈkɔr.do daˈmor",
+   "words": [
+    [
+     "Se",
+     "if",
+     "se"
+    ],
+    [
+     "vuoi,",
+     "you wish",
+     "ˈvwɔi"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "vuoi,",
+     "you wish",
+     "ˈvwɔi"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "vuoi",
+     "you wish",
+     "ˈvwɔi"
+    ],
+    [
+     "serbarla",
+     "to keep it",
+     "serˈbar.la"
+    ],
+    [
+     "a",
+     "as",
+     "a"
+    ],
+    [
+     "ricordo",
+     "remembrance",
+     "riˈkɔr.do"
+    ],
+    [
+     "d'amor!",
+     "of love",
+     "daˈmor"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "if you like"
+    },
+    {
+     "words": [
+      7,
+      8,
+      9
+     ],
+     "gloss": "in memory of love"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "i11",
+   "role": "mimi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "36",
+   "original": "Addio, addio senza rancor",
+   "translation": "Goodbye, goodbye, and no hard feelings",
+   "ipa": "adˈdi.o adˈdi.o ˈsɛn.tsa ranˈkor",
+   "words": [
+    [
+     "Addio,",
+     "goodbye",
+     "adˈdi.o"
+    ],
+    [
+     "addio",
+     "goodbye",
+     "adˈdi.o"
+    ],
+    [
+     "senza",
+     "without",
+     "ˈsɛn.tsa"
+    ],
+    [
+     "rancor",
+     "resentment",
+     "ranˈkor"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "with no ill will"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}
