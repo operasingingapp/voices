@@ -428,18 +428,9 @@ export function ScoreView(props: Props) {
     });
   const { xml, visibleXmlParts, zoom } = props;
   const svId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
-  /** Verovio: a faded part is drawn lighter element by element (its staves, and the slurs, dynamics and other marks
-   *  that belong to them), so nothing of a neighbouring part is covered and every system fades the same way */
-  const fadeStyle = (vrv: VrvScore) => {
-    const rules: string[] = [];
-    for (const pid of props.fadedXmlParts ?? []) {
-      const ns = vrv.staffNs(pid);
-      if (!ns.length) continue;
-      const sel = ns.flatMap((n) => [`[data-sv="${svId}"] g.staff[data-n="${n}"]`, `[data-sv="${svId}"] g[data-staff~="${n}"]`]).join(",");
-      rules.push(`${sel}{opacity:${props.softFadedXmlParts?.includes(pid) ? 0.4 : 0.14};transition:opacity .25s}`);
-    }
-    return rules.length ? <style>{rules.join("\n")}</style> : null;
-  };
+  /** Verovio: a faded part is drawn lighter element by element (see VrvScore.applyFade): nothing of a neighbouring
+   *  part is covered, and every system fades the same way */
+  const fadeKey = `${(props.fadedXmlParts ?? []).join(",")}|${(props.softFadedXmlParts ?? []).join(",")}`;
   // page view: each part's short name in the gutter of every system, with a grip to drag it to another place
   const [drag, setDrag] = useState<{ pid: string; sys: number; y0: number; dy: number } | null>(null);
   const pageLabelEls = (layout: ScoreLayout) => {
@@ -533,6 +524,14 @@ export function ScoreView(props: Props) {
   const markerEl = useRef<HTMLDivElement>(null);
   const measureEl = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<ScoreLayout | null>(null);
+  // faded parts, applied to the drawing each time it is drawn or the choice changes
+  useLayoutEffect(() => {
+    if (!useVrv || !vrvRef.current || !layout) return;
+    const lv = new Map<string, number>();
+    for (const pid of props.fadedXmlParts ?? []) lv.set(pid, props.softFadedXmlParts?.includes(pid) ? 0.4 : 0.14);
+    vrvRef.current.applyFade(lv);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [layout, fadeKey, useVrv]);
   const [pinned, setPinned] = useState<ReturnType<typeof buildPinned>>(null);
   // the loop's rectangles, never under the pinned clef and key at the left edge (bar 1's box includes them)
   const loopRects = (l: ScoreLayout) => {
@@ -1374,7 +1373,6 @@ export function ScoreView(props: Props) {
           {layout && hasLyrics && renderSungText(layout)}
           {layout && tintEls(layout)}
           {layout && !(pinned && pinIdx >= 0 && pinIdx < pinned.panels.length) && laneLabelEls(layout)}
-          {layout && useVrv && vrvRef.current && fadeStyle(vrvRef.current)}
           {layout && useVrv && !strip && pageLabelEls(layout)}
           {layout &&
             !(useVrv && vrvRef.current) &&

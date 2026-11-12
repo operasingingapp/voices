@@ -97,6 +97,10 @@ function bracketSingers(doc: Document, parts: { id: string; staves: number }[]) 
       const sym = doc.createElement("group-symbol");
       sym.textContent = "bracket";
       start.appendChild(sym);
+      // a vocal score draws each singer's barlines on that singer's staff only (room for the words below it)
+      const bl = doc.createElement("group-barline");
+      bl.textContent = "no";
+      start.appendChild(bl);
       const stop = doc.createElement("part-group");
       stop.setAttribute("type", "stop");
       stop.setAttribute("number", n);
@@ -191,6 +195,7 @@ export class VrvScore {
     const svg = this.host.querySelector("svg");
     if (svg) svg.classList.add("vrv-score");
     this.tagControlEvents();
+    this.tagByPlace();
     this.indexOnsets();
     return svg;
   }
@@ -221,6 +226,97 @@ export class VrvScore {
       const staff = id ? this.host.querySelector(`[id="${id}"]`)?.getAttribute("data-staff") : null;
       if (staff) el.setAttribute("data-staff", staff);
     }
+  }
+
+  /** what belongs to no staff in the drawing (barlines, the system's opening line, braces and brackets, bar
+   *  numbers) is given the staves it stands against, by where it is drawn: a barline segment against the staves it
+   *  crosses, a bracket against all the staves it joins, a bar number against the staff under it */
+  private tagByPlace() {
+    for (const sys of this.host.querySelectorAll<SVGGElement>("g.system")) {
+      const staves: { n: string; top: number; bottom: number }[] = [];
+      const seen = new Set<string>();
+      for (const st of sys.querySelectorAll<SVGGElement>("g.measure > g.staff[data-n]")) {
+        const n = st.getAttribute("data-n")!;
+        const ys = [...st.querySelectorAll(":scope > path")].map((pth) => {
+          const r = pth.getBoundingClientRect();
+          return r.top + r.height / 2;
+        });
+        if (!ys.length) continue;
+        const top = Math.min(...ys);
+        const bottom = Math.max(...ys);
+        if (seen.has(n)) {
+          const o = staves.find((x) => x.n === n)!;
+          o.top = Math.min(o.top, top);
+          o.bottom = Math.max(o.bottom, bottom);
+        } else {
+          seen.add(n);
+          staves.push({ n, top, bottom });
+        }
+      }
+      if (!staves.length) continue;
+      staves.sort((a, b) => a.top - b.top);
+      const against = (el: Element) => {
+        const r = el.getBoundingClientRect();
+        const hit = staves.filter((x) => r.bottom >= x.top - 1.5 && r.top <= x.bottom + 1.5).map((x) => x.n);
+        if (hit.length) return hit;
+        // above every staff (a bar number) or between two: the staff below it
+        const below = staves.find((x) => x.top >= r.bottom - 1);
+        return [below?.n ?? staves[staves.length - 1].n];
+      };
+      const parts = [
+        ...sys.querySelectorAll(":scope > path"),
+        ...sys.querySelectorAll(":scope > g.grpSym"),
+        ...sys.querySelectorAll("g.measure > g.barLine > *"),
+        ...sys.querySelectorAll("g.measure > g.mNum"),
+      ];
+      // staff extents in drawing units, from their lines ("M x y L x2 y")
+      const units = staves
+        .map(({ n }) => {
+          const ys = [...sys.querySelectorAll(`g.measure > g.staff[data-n="${n}"] > path`)]
+            .map((pth) => /^M\S+ (\S+) L\S+ (\S+)$/.exec(pth.getAttribute("d") ?? ""))
+            .filter((m): m is RegExpExecArray => !!m && m[1] === m[2])
+            .map((m) => Number(m[1]));
+          return ys.length ? { n, top: Math.min(...ys), bottom: Math.max(...ys) } : null;
+        })
+        .filter((x): x is { n: string; top: number; bottom: number } => !!x)
+        .sort((a, b) => a.top - b.top);
+      for (const el of parts) {
+        if (el.hasAttribute("data-staff")) continue;
+        const hit = against(el);
+        // a straight vertical line across several staves (the system's opening line, a barline joining staves) is
+        // cut into one piece per staff, each piece reaching halfway to the next staff, so each fades with its own
+        const m = el.tagName === "path" ? /^M(\S+) (\S+) L(\S+) (\S+)$/.exec(el.getAttribute("d") ?? "") : null;
+        if (hit.length > 1 && m && m[1] === m[3] && units.length > 1) {
+          const y0 = Math.min(Number(m[2]), Number(m[4]));
+          const y1 = Math.max(Number(m[2]), Number(m[4]));
+          units.forEach((u, i) => {
+            const lo = Math.max(y0, i === 0 ? -Infinity : (units[i - 1].bottom + u.top) / 2);
+            const hi = Math.min(y1, i === units.length - 1 ? Infinity : (u.bottom + units[i + 1].top) / 2);
+            if (hi <= lo) return;
+            const piece = el.cloneNode() as Element;
+            piece.setAttribute("d", `M${m[1]} ${lo} L${m[1]} ${hi}`);
+            piece.setAttribute("data-staff", u.n);
+            el.before(piece);
+          });
+          el.remove();
+          continue;
+        }
+        el.setAttribute("data-staff", hit.join(" "));
+      }
+    }
+  }
+
+  /** Draw parts lighter or at full strength: each staff, and everything tagged with staves, takes the strongest look
+   *  among its staves (a barline or a bracket shared with a part shown in full stays in full). level: 1 = full. */
+  applyFade(levels: Map<string, number>) {
+    const byN = new Map<string, number>();
+    for (const [pid, lv] of levels) for (const n of this.staffNs(pid)) byN.set(String(n), lv);
+    const set = (el: SVGElement | HTMLElement, ns: string[]) => {
+      const lv = Math.max(...ns.map((n) => byN.get(n) ?? 1));
+      el.style.opacity = lv < 1 ? String(lv) : "";
+    };
+    for (const el of this.host.querySelectorAll<SVGGElement>("g.staff[data-n]")) set(el, [el.getAttribute("data-n")!]);
+    for (const el of this.host.querySelectorAll<SVGElement>("[data-staff]")) set(el, el.getAttribute("data-staff")!.split(/\s+/));
   }
 
   /** the staff numbers (Verovio's @n, counted over the parts shown) of a part */
