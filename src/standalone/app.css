@@ -8167,14 +8167,12 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .meet-person {
   appearance: none; display: grid; justify-items: center; gap: 5px; width: 72px;
   padding: 0; border: 0; background: none; color: var(--ink); font: inherit; font-size: 12.5px;
-  line-height: 1.2; text-align: center; cursor: pointer;
+  line-height: 1.2; text-align: center; cursor: default;
 }
 .meet-person img {
   width: 56px; height: 56px; border-radius: 50%; object-fit: cover;
   box-shadow: 0 0 0 2px var(--tone-soft); transition: transform 300ms var(--ease-standard);
 }
-@media (hover: hover) { .meet-person:hover img { transform: translateY(-2px); } }
-.meet-person:focus-visible { outline: 2px solid var(--tone-strong); outline-offset: 3px; border-radius: 8px; }
 .meet-note { margin: 14px 0 0; color: var(--ink-muted); font-size: 14px; }
 .meet--opera .meet-pic img { object-position: 50% 40%; }
 .meet--opera.covered { visibility: hidden; }

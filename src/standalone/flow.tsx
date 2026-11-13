@@ -2265,7 +2265,7 @@ function OperaReel({ onPick, still }: { onPick: (opera: Opera) => void; still?: 
 
 /**
  * Meeting an opera before choosing a role in it (the welcome screen): its picture, what it is about, its people
- * (a tap meets one), then "Choose your role" or the whole opera's page.
+ * (shown, not tappable), then one way on: "Choose your role".
  */
 function MeetOpera({ opera, covered, onRoles, onPage, onMeet, onClose }: { opera: Opera; covered: boolean; onRoles: () => void; onPage: () => void; onMeet: (ch: Character) => void; onClose: () => void }) {
   const go = useRef<HTMLButtonElement>(null);
@@ -2310,10 +2310,10 @@ function MeetOpera({ opera, covered, onRoles, onPage, onMeet, onClose }: { opera
             {people.length > 0 && (
               <div className="meet-people" aria-label="Its people">
                 {people.map((ch) => (
-                  <button key={ch.id} type="button" className="meet-person" onClick={() => onMeet(ch)}>
+                  <div key={ch.id} className="meet-person">
                     <img src={PORTRAITS[`${opera.id}:${ch.id}`].face} alt="" />
                     <span>{ch.name}</span>
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
@@ -2324,9 +2324,6 @@ function MeetOpera({ opera, covered, onRoles, onPage, onMeet, onClose }: { opera
           <div className="meet-actions">
             <button ref={go} type="button" className="cp-btn cp-btn--ink meet-take" onClick={onRoles}>
               Choose your role
-            </button>
-            <button type="button" className="cp-btn cp-btn--ghost" onClick={onPage}>
-              See the whole opera
             </button>
           </div>
         </div>
