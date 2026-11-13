@@ -3985,7 +3985,7 @@ export function Onboarding({
                 [
                   [1, "Characters"],
                   [2, "Operas"],
-                  ...(both ? ([[4, "Choral works"]] as const) : []),
+                  ...(both ? ([[4, "Choral"]] as const) : []),
                 ] as const
               ).map(([n, label]) => (
                 <button
