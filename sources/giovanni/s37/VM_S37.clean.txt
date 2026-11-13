@@ -1,0 +1,73 @@
+# G = Don Giovanni
+# S37  No. 16 Canzonetta "Deh vieni alla finestra" (Don Giovanni), pp. 174-175, 44 bars
+# bar 1: Allegretto, D major (2 sharps). The printed time signature is C, but every bar of the print holds six eighths
+#   (the canzonetta is 6/8 in Mozart): bars are written and checked as 6/8.
+# bar 1 TIMESIG: the print shows a plain C (common time, no vertical stroke) on the voice staff and both piano staves (checked at 400 dpi); contents are six eighths per bar, kept as 6/8 here: builder to decide what to display.
+# bar 44: last bar of No. 16; it is followed by a double bar with a change to C major (naturals) and C, belonging to the next number.
+# page 174 system 1 starts bar 1
+1 G: r:h.
+2 G: r:h.
+3 G: r:h.
+# bar 4: Don Giovanni enters (printed name 'Don Giovanni.')
+4 G: r:q r:e r:q A3:e "Deh"
+# page 174 system 2 starts bar 5
+5 G: A3:e "vie-" D4:e D4:e "ni_al-" D4:q "la" C#4:e "fi-"
+6 G: B3:q "ne-" B3:e "stra," r:q B3:e "o"
+# bar 7 G: A3 dotted quarter tied to A3 eighth (inner curve), outer slur to B3
+# JUDGE bar 7 G: X - 'mio' is printed under the A3 dotted quarter (Y left the note without its syllable)
+7 G: A3:q.~ "mio" A3:e B3:e G3:e "te-"
+8 G: A3:q "so-" G3:e F#3:e "ro," r:e A3:e "deh"
+# page 174 system 3 starts bar 9
+9 G: A3:e "vie-" D4:e D4:e "ni_a" D4:q "con-" C#4:e "so-"
+# bar 10 G: small grace eighth C#4 (acciaccatura/appoggiatura, flagged eighth) slurred to B3
+# JUDGE bar 10 G: X - grace head sits at the C#4 ledger position (same height as the C#4 on 'il'), not above it as a D4 would
+10 G: g:C#4:e B3:q. "lar" C#4:q. "il"
+11 G: A3:q "pian-" D4:e "to" C#4:e. "mi-" D4:s B3:e
+12 G: A3:q "o." r:e r:q r:e
+# page 174 system 4 starts bar 13
+13 G: r:h.
+14 G: r:q r:e r:q A3:e "Se"
+15 G: A3:q "ne-" A3:e "ghi_a" A3:e "me" G3:e F#3:e "di"
+16 G: G3:q. "dar" C4:q. "qual-"
+# page 174 system 5 starts bar 17
+17 G: A3:q "che" A3:e "ri-" D4:e. "sto-" E4:s C4:e
+18 G: B3:q "ro," r:e r:q G3:e "da-"
+# JUDGE bar 19 G: X - print runs 'ti_agli_oc-chi' together with no room for a hyphen; 'a-gli' is one word split over two notes, so 'ti_a-' per TB.md (hyphen = next syllable of the same word)
+19 G: D4:q "van-" A3:e "ti_a-" B3:e. "gli_oc-" A3:s G3:e "chi"
+20 G: D4:q. "tuoi" A#3:q. "mo-"
+# page 175 system 1 starts bar 21
+# bar 21 G: printed 'rir_ vo-gl\'i - o!' (end of 'morir'); slur B3-C#4 on 'rir', slur D3 to the 16ths
+21 G: B3:e "rir" C#4:e D4:e "vo-" D3:q "gl'i-" F#3:s E3:s
+22 G: D3:q "o!" r:e r:q r:e
+23 G: r:h.
+24 G: r:q r:e r:q A3:e "Tu"
+# page 175 system 2 starts bar 25
+# bar 25 G: a small dot above-right of the C#4 eighth ('ca') read as a printing speck (bar adds up without it)
+25 G: A3:e "ch'hai" D4:e D4:e "la" D4:q "boc-" C#4:e "ca"
+26 G: C#4:q "dol-" B3:e B3:q. "ce"
+# bar 27 G: tie A3 dotted quarter to A3 eighth as in bar 7
+# JUDGE bar 27 G: X - 'più' is printed under the A3 dotted quarter (Y omitted it)
+27 G: A3:q.~ "più" A3:e B3:e "che" G3:e "il"
+28 G: A3:q "mie-" G3:e F#3:q "le," r:e
+# page 175 system 3 starts bar 29
+29 G: A3:q "tu" A3:e "che_il" D4:e. "zuc-" D4:s "che-" C#4:e "ro"
+30 G: C#4:e "por-" B3:e B3:e "ti" C#4:q. "in"
+31 G: A3:q "mez-" D4:e "zo_al" C#4:e. "co-" D4:s B3:e
+32 G: A3:q "re!" r:e r:q r:e
+# page 175 system 4 starts bar 33
+33 G: r:h.
+34 G: r:q r:e r:q A3:e "Non"
+35 G: A3:q "es-" A3:e "ser," A3:e "gio-" G3:e F#3:e "ja"
+36 G: G3:q. "mia," C4:q. "con"
+# page 175 system 5 starts bar 37
+37 G: A3:q "me" A3:e "cru-" D4:e. "de-" E4:s C4:e
+38 G: B3:q "le!" r:e r:q r:e
+# bar 39 G: 've-' printed with a mark like an apostrophe ('ve\'-der'), read as 've-'
+39 G: D4:e. "la-" D4:s "scia-" A3:e "ti_al-" B3:e. "men" A3:s G3:e "ve-"
+40 G: D4:q. "der," A#3:q. "mio"
+# page 175 system 6 starts bar 41
+# bar 41 G: printed 'bell\'_ a - mo - re!' (extender after bell'); slur B3-C#4
+41 G: B3:e. "bell'" C#4:s D4:e "a-" D3:q "mo-" F#3:s E3:s
+42 G: D3:q "re!" r:e r:q r:e
+43 G: r:h.
+44 G: r:h.

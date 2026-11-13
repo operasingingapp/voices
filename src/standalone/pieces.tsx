@@ -2842,6 +2842,38 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-deh-vieni-alla-finestra": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Canzonetta",
+    facts: {
+      key: "D major",
+      time: "6/8 (the Schirmer print shows C, but every bar holds six eighths, Mozart's own metre)",
+      tempo: "Allegretto, played at a dotted quarter = 48 (♩ = 72), about 1¾ minutes, the median of five recordings (Fricsay, Giulini, Davis, Böhm, Karajan); Mozart gives the word only",
+    },
+    notePlaceholder: "Keep it light and easy over the plucked accompaniment: a serenade, not a declaration",
+    about: (
+      <>
+        <p>
+          Act 2. Don Giovanni has swapped hat and cloak with Leporello and sent him off with Donna Elvira, so that he can have the street
+          to himself and serenade her maid. Alone under the window, accompanying himself on the mandolin, he begs her to come to the
+          window and console his tears, or he will die before her eyes: her mouth is sweeter than honey and her heart is sugar; let her
+          not be cruel, but at least let herself be seen.
+        </p>
+        <p>
+          Score: No. 16, the Canzonetta (vocal score pages 174–175, 44 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The print
+          shows a C time signature, but every bar holds six eighths: the canzonetta is written here in 6/8, Mozart's own metre. The
+          piano imitates the mandolin over pizzicato strings; the cue words are left out. The small note in bar 10 is an appoggiatura.
+          Only the Italian words are kept, with the print's spelling and punctuation (“gioja”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

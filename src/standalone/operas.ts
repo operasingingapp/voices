@@ -1451,7 +1451,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Deh vieni alla finestra",
       "kind": "Canzonetta · Act 2",
-      "id": "Act 2: Deh vieni alla finestra"
+      "id": "Act 2: Deh vieni alla finestra",
+      "editionId": "mozart-deh-vieni-alla-finestra"
      },
      {
       "title": "V'è gente alla finestra",
