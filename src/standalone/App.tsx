@@ -24,6 +24,9 @@ import { FIRST_PASS_KEYS, OPERAS, RUNNING, V2_KEYS } from "./operas";
 import { Practice } from "./Practice";
 import { Listen } from "./Listen";
 import { hasPiece, loadScore, pieceTitle, scoreReady } from "./pieces";
+import { ChoralHome, WorkPage } from "./Choral";
+import { findWork } from "./choral";
+import type { Mode } from "./choralParts";
 
 const K = {
   place: "cp:place",
@@ -33,6 +36,8 @@ const K = {
   learned: "cp:learned",
   profile: "cp:profile",
   onboarded: "cp:onboarded",
+  /** what you sing: "opera" or "choral" */
+  mode: "cp:mode",
 };
 function read<T>(key: string, fallback: T): T {
   try {
@@ -109,7 +114,12 @@ function migrate(p: unknown): Place | null {
     case "explore":
     case "profile":
     case "onboarding":
+    case "choral":
       return o as Place;
+    case "work": {
+      const w = (o as { work?: string }).work;
+      return w && findWork(w) ? { screen: "work", work: w } : { screen: "choral" };
+    }
     case "listen": {
       const e = (o as { edition?: string }).edition;
       return o.opera && hasPiece(e) ? { screen: "listen", opera: o.opera, edition: e } : null;
@@ -141,6 +151,10 @@ function titleOf(place: Place): string {
       return `Settings${tail}`;
     case "home":
       return `Home${tail}`;
+    case "choral":
+      return `Choral${tail}`;
+    case "work":
+      return `${findWork(place.work)?.title ?? "Choral"}${tail}`;
     case "listen":
       return `${(hasPiece(place.edition) && pieceTitle(place.edition)) || "Listen"}${tail}`;
     default:
@@ -163,14 +177,15 @@ export function App() {
   const [, setScoreTick] = useState(0);
   const [profile, setProfile] = useState<Profile>(() => read<Profile>(K.profile, { voices: [], notSinger: false }));
   const [onboarded, setOnboarded] = useState<boolean>(() => read<boolean | null>(K.onboarded, null) ?? roles.length > 0);
-  const home = (): Place => (roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
+  const [mode, setModeState] = useState<Mode>(() => (read<string | null>(K.mode, null) === "choral" ? "choral" : "opera"));
+  const home = (): Place => (mode === "choral" ? { screen: "choral" } : roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
   // a role just learned in full: the celebration shows over whatever screen you are on
   const [bravo, setBravo] = useState<RoleRef | null>(null);
   // the side panel over the practice screen
   const [drawerOpen, setDrawerOpen] = useState(false);
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
   const [place, setPlace] = useState<Place>(() => {
-    if (!onboarded) return { screen: "onboarding", step: 1 };
+    if (!onboarded) return { screen: "onboarding", step: 0 };
     return migrate(read<unknown>(K.place, null)) ?? home();
   });
 
@@ -190,6 +205,13 @@ export function App() {
   useEffect(() => write(K.learned, learned), [learned]);
   useEffect(() => write(K.profile, profile), [profile]);
   useEffect(() => write(K.onboarded, onboarded), [onboarded]);
+  useEffect(() => write(K.mode, mode), [mode]);
+  // the mode follows the screen: a choral page is choral, an opera's pages are opera (so Back keeps them in step)
+  useEffect(() => {
+    const s = place.screen;
+    if (s === "choral" || s === "work") setModeState("choral");
+    else if (s !== "onboarding" && s !== "profile") setModeState("opera");
+  }, [place]);
 
   const addRole = (r: RoleRef) => setRoles((rs) => (rs.some((x) => same(x, r)) ? rs : [...rs, r]));
   const removeRole = (r: RoleRef) => {
@@ -285,14 +307,20 @@ export function App() {
       setLearned({});
       setProfile({ voices: [], notSinger: false });
       setOnboarded(false);
-      setPlace({ screen: "onboarding", step: 1 });
+      setModeState("opera");
+      setPlace({ screen: "onboarding", step: 0 });
+    },
+    mode,
+    setMode: (m) => {
+      setModeState(m);
+      go(m === "choral" ? { screen: "choral" } : roles.length ? { screen: "home" } : { screen: "explore", by: "opera" });
     },
   };
 
   const bravoEl = bravo ? <Bravo ctx={ctx} r={bravo} onClose={() => setBravo(null)} /> : null;
 
   if (place.screen === "home" && !roles.length) return <Onboarding ctx={ctx} step={1} />;
-  if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} />;
+  if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} />;
 
   // a piece's score is fetched when it opens: show a short wait until it is here
   const wantScore = place.screen === "piece" ? findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId : place.screen === "listen" ? place.edition : undefined;
@@ -369,6 +397,11 @@ export function App() {
     const opera = findOpera(place.opera);
     page = <RolePage ctx={ctx} opera={opera} ch={findCharacter(opera, place.character)} />;
   } else if (place.screen === "home") page = <HomePage ctx={ctx} />;
+  else if (place.screen === "choral") page = <ChoralHome ctx={ctx} />;
+  else if (place.screen === "work") {
+    const w = findWork(place.work);
+    page = w ? <WorkPage key={w.id} ctx={ctx} work={w} /> : <ChoralHome ctx={ctx} />;
+  }
   else if (place.screen === "opera") page = <OperaPage ctx={ctx} opera={findOpera(place.opera)} />;
   else if (place.screen === "explore") page = place.by === "voice" ? <ExploreVoices ctx={ctx} voice={place.voice} /> : place.by === "piece" ? <ExplorePieces ctx={ctx} /> : <ExploreOperas ctx={ctx} />;
   else page = <ProfilePage ctx={ctx} />;

@@ -1,0 +1,232 @@
+/* =====================================================================
+   Opera | Choral: the switch, the composers' faces, the choral home and
+   a choral work's page. Built on the app's own parts (pv-seg, sx-*, og-*,
+   oh-*, ob-*); only what they lack is here.
+   ===================================================================== */
+
+/* ---------- what you sing: the switch ---------- */
+.mode-switch { flex: none; box-shadow: inset 0 0 0 1px var(--fog-strong); }
+/* phone: compact, right of the wordmark; gone when the bar holds a page's way back (as the wordmark is) */
+.topbar-mode { padding: 3px; }
+.topbar-mode button { min-height: 36px; padding: 0 12px; font-size: 14px; }
+/* with your role's face beside it, the bar is full: a little tighter on the smallest phones */
+@media (max-width: 699px) {
+  /* menu, wordmark, switch and your role's face share the bar: its edges as narrow as the menu button allows */
+  .shell .topbar.gutter { padding-left: 8px; padding-right: 12px; }
+  .topbar-mark { min-width: 0; overflow: hidden; white-space: nowrap; }
+}
+@media (max-width: 380px) {
+  .topbar:has(.now-pill) { gap: 6px; }
+  .topbar:has(.now-pill) .topbar-mark { font-size: 23px !important; }
+  .topbar:has(.now-pill) .topbar-mode button { padding: 0 9px; }
+}
+@media (max-width: 340px) {
+  .topbar:has(.now-pill) .topbar-mark { visibility: hidden; flex: 1 1 0; width: 0; padding: 0; }
+}
+.topbar:has(.crumbs-up) .topbar-mode { display: none; }
+/* the rail: across its head, above Home and Search */
+.rail-mode { display: flex; width: 100%; box-sizing: border-box; margin-bottom: 10px; }
+.rail-mode button { flex: 1 1 0; min-width: 0; }
+/* the narrow rail (a tablet held upright): the two stacked */
+.shell > .rail .rail-mode { flex-direction: column; }
+.shell > .rail .rail-mode button { min-height: 36px; padding: 0 6px; font-size: 13px; }
+@media (orientation: landscape) and (width >= 1000px) {
+  .shell > .rail .rail-mode { flex-direction: row; margin-bottom: 14px; }
+  .shell > .rail .rail-mode button { min-height: 40px; padding: 0 14px; font-size: 15px; }
+}
+/* a phone's slide-in rail and the practice screen's side panel are wide: side by side */
+@media (max-width: 699px) {
+  .shell > .rail .rail-mode { flex-direction: row; }
+  .shell > .rail .rail-mode button { min-height: 40px; font-size: 15px; }
+}
+.sd-panel > .rail .rail-mode { flex-direction: row; }
+.sd-panel > .rail .rail-mode button { min-height: 40px; font-size: 15px; }
+/* on a phone the switch is in the top bar: the menu need not repeat it */
+@media (max-width: 699px) {
+  .shell > .rail .rail-mode { display: none; }
+}
+
+/* ---------- composers: a row of round faces under the filters ---------- */
+.cx { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.cx-label {
+  margin: 0;
+  color: var(--ink-muted);
+  font: 500 11px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.cx-row {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+  margin: 0 -4px;
+  padding: 4px 4px 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.cx-row::-webkit-scrollbar { display: none; }
+.cx-item {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  width: 76px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-muted);
+  font: 400 13px/1.2 var(--font-sans);
+  cursor: pointer;
+}
+.cx-face {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-round);
+  overflow: hidden;
+  background: var(--fog-strong);
+  transition: box-shadow var(--duration-quick) var(--ease-standard);
+}
+.cx-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cx-face i { color: var(--ink-muted); font: italic 500 30px/1 var(--font-display); }
+.cx-item:hover { color: var(--ink); }
+.cx-item[aria-pressed="true"] { color: var(--ink); font-weight: 500; }
+.cx-item[aria-pressed="true"] .cx-face { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px var(--ink); }
+.cx-item:focus-visible { outline: none; }
+.cx-item:focus-visible .cx-face { outline: 2px solid var(--focus); outline-offset: 5px; }
+.cx-name { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 640px) {
+  .cx-item { width: 72px; }
+  .cx-face { width: 60px; height: 60px; }
+}
+
+/* ---------- the choral home: a composer's portrait as each work's cover, his face near the top ---------- */
+.og-pic img.og-portrait { object-position: 50% 8%; }
+
+/* ---------- a choral work ---------- */
+.ch-cover img { object-position: 50% 14%; }
+/* a portrait is upright: on a wide screen it stands beside the text, not as a wide banner */
+.ch-page .oh.has-art { grid-template-columns: minmax(0, 360px) minmax(0, 1fr); }
+.ch-page .ch-cover { width: 100%; aspect-ratio: 4 / 5; }
+@media (max-width: 899px) {
+  .ch-page .oh.has-art { grid-template-columns: minmax(0, 1fr); }
+  .ch-page .ch-cover { aspect-ratio: 16 / 9; }
+}
+.ch-page .oh-meta { font-size: 17px; }
+
+/* the chorus parts: pale tiles in the voice's tone, the part's letter large in the display italic */
+.part-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; max-width: 880px; }
+.part-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.part-pic {
+  display: grid;
+  place-items: center;
+  height: 150px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--tone-soft, var(--fog)) 80%, var(--tone-strong, var(--fog-strong)));
+  color: color-mix(in oklab, var(--tone-deep, var(--ink-muted)) 45%, var(--ink));
+  font: italic 500 72px/1 var(--font-display);
+  transition: box-shadow var(--duration-quick) var(--ease-standard);
+}
+.part-card:hover .part-pic { background: color-mix(in srgb, var(--tone-strong, var(--fog-strong)) 45%, var(--tone-soft, var(--fog))); }
+.part-card[aria-pressed="true"] .part-pic { box-shadow: 0 0 0 2.5px var(--canvas), 0 0 0 5px var(--now-mark); }
+.part-card:focus-visible { outline: none; }
+.part-card:focus-visible .part-pic { outline: 2px solid var(--focus); outline-offset: 4px; }
+.part-text { display: grid; gap: 3px; min-width: 0; }
+.part-text b { font: 500 17px/1.25 var(--font-sans); }
+.part-text span { color: var(--ink-muted); font: italic 400 13px/1.35 var(--font-sans); }
+
+/* the soloists: pills */
+.part-solo { display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
+.part-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.part-pill {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--fog);
+  color: var(--ink);
+  font: 500 14px/1.2 var(--font-sans);
+  cursor: pointer;
+  transition: background-color var(--duration-quick) var(--ease-standard);
+}
+.part-pill:hover { background: var(--fog-strong); }
+.part-pill[aria-pressed="true"] { background: var(--now-soft); color: var(--on-pastel); box-shadow: inset 0 0 0 1.5px var(--now-mark); }
+.part-pill:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* where the practice would be: a quiet, plain note */
+.part-note {
+  margin: 0;
+  max-width: 640px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: var(--rail);
+  box-shadow: inset 0 0 0 1px var(--fog-strong);
+  color: var(--ink-muted);
+  font: 400 15px/1.5 var(--font-sans);
+}
+
+@media (max-width: 640px) {
+  .part-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 14px; }
+  .part-pic { height: 132px; font-size: 64px; }
+  .part-text b { font-size: 15px; }
+  .part-text span { font-size: 12.5px; }
+  .ch-page .ch-cover { aspect-ratio: auto; height: 200px; }
+}
+
+/* ---------- first visit: what do you sing? ---------- */
+.ob-sing { display: flex; flex-direction: column; align-items: center; }
+.ob-sing .ob-hero { text-align: center; max-width: 560px; }
+.ob-sing .ob-hero h1 { font-size: clamp(34px, 4.6vw, 56px); }
+.ob-sing .ob-hero .lede { margin: 0; }
+.ob-sing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; width: 100%; max-width: 620px; }
+.ob-sing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.ob-sing-pic {
+  display: block;
+  aspect-ratio: 3 / 4;
+  margin-bottom: 6px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--fog-strong);
+  box-shadow: 0 2px 10px rgba(40, 30, 60, 0.1);
+}
+.ob-sing-pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--duration-settle) var(--ease-standard); }
+.ob-sing-portrait img { object-position: 50% 10%; }
+.ob-sing-card:hover .ob-sing-pic img { transform: scale(1.03); }
+.ob-sing-card:focus-visible { outline: none; }
+.ob-sing-card:focus-visible .ob-sing-pic { outline: 2px solid var(--focus); outline-offset: 4px; }
+.ob-sing-card b { font: italic 500 30px/1 var(--font-display); }
+.ob-sing-card > span:last-child { color: var(--ink-muted); font-size: 15px; line-height: 1.4; }
+.ob-both.cp-btn { margin-top: 28px; min-height: 44px; padding: 0 20px; background: var(--fog); color: var(--ink); }
+.ob-both.cp-btn:hover { background: var(--fog-strong); }
+@media (max-width: 640px) {
+  .ob-sing-grid { gap: 14px; }
+  .ob-sing-card b { font-size: 26px; }
+  .ob-sing-card > span:last-child { font-size: 14px; }
+}

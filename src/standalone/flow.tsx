@@ -15,6 +15,8 @@ import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
 import { hasPiece } from "./pieces";
 import { allNotes, MARKS, parseNotesKey, type Note } from "./notes";
 import { OPERAS, RUNNING, type AvatarKind, type Character, type Opera, type Piece } from "./operas";
+import { composerNamed } from "./composers";
+import { ComposerRow, ModeSwitch, type Mode } from "./choralParts";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
 export type Tone = "pink" | "lilac" | "peach" | "sky" | "mint" | "butter";
@@ -156,7 +158,12 @@ export interface Profile {
 }
 export type PiecePlace = { screen: "piece"; opera: string; character: string; piece: number };
 export type Place =
-  | { screen: "onboarding"; step: 1 | 2 | 3; role?: RoleRef; by?: "voice" | "opera"; opera?: string }
+  /** step 0: what you sing (opera or choral); 1, 2: which role (characters, operas); 3: the chosen opera's cast */
+  | { screen: "onboarding"; step: 0 | 1 | 2 | 3; role?: RoleRef; by?: "voice" | "opera"; opera?: string; sing?: boolean }
+  /** Choral: find your part (the choral home) */
+  | { screen: "choral" }
+  /** a choral work, where you choose your part */
+  | { screen: "work"; work: string }
   | { screen: "role"; opera: string; character: string }
   | { screen: "opera"; opera: string; synopsis?: boolean; as?: string }
   | { screen: "explore"; by: "opera" | "voice" | "piece"; voice?: string }
@@ -184,6 +191,10 @@ export interface Ctx {
   finishOnboarding: (to: Place) => void;
   /** erase everything kept on this device and begin again at the welcome */
   startOver: () => void;
+  /** what you sing: opera or choral (remembered on this device) */
+  mode: Mode;
+  /** switch to opera or choral, and go to its home */
+  setMode: (m: Mode) => void;
 }
 
 export const VOICES = ["Soprano", "Mezzo-soprano", "Contralto", "Tenor", "Baritone", "Bass"];
@@ -281,7 +292,7 @@ const MenuIcon = () => (
     <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" strokeWidth="2" />
   </svg>
 );
-const CloseIcon = () => (
+export const CloseIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" strokeWidth="2" />
   </svg>
@@ -386,7 +397,7 @@ const HomeIcon = () => (
     <path d="M4 10.5L12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
   </svg>
 );
-const SearchIcon = () => (
+export const SearchIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" strokeWidth="1.8" />
     <path d="M15 15l5 5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -404,22 +415,41 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
   const onRole = (o: string, c: string) => (place.screen === "role" || place.screen === "piece") && place.opera === o && place.character === c;
   const home = ctx.home();
   const atHome = place.screen === "home";
+  // choral: your parts (none can be kept yet: no work has music), and the way to find one
+  const choral = ctx.mode === "choral";
+  const inChoral = place.screen === "choral" || place.screen === "work";
   return (
-    <aside className="rail" aria-label="Home, search and your roles">
+    <aside className="rail" aria-label={choral ? "Home, search and your parts" : "Home, search and your roles"}>
+      <ModeSwitch className="rail-mode" mode={ctx.mode} onChange={ctx.setMode} />
       <nav className="rail-top" aria-label="Main">
         <button type="button" className="rail-link" aria-current={atHome ? "page" : undefined} onClick={() => go(home)}>
           <HomeIcon />
           <span>Home</span>
         </button>
-        <button type="button" className="rail-link" aria-current={(place.screen === "explore" && !atHome) || place.screen === "opera" ? "page" : undefined} onClick={() => go({ screen: "explore", by: "opera" })}>
+        <button
+          type="button"
+          className="rail-link"
+          aria-current={(place.screen === "explore" && !atHome) || place.screen === "opera" || inChoral ? "page" : undefined}
+          onClick={() => go(choral ? { screen: "choral" } : { screen: "explore", by: "opera" })}
+        >
           <SearchIcon />
           <span>Search</span>
         </button>
       </nav>
       <span className="rail-rule" aria-hidden="true" />
       <p className="rail-label" id="rail-roles">
-        Roles
+        {choral ? "Parts" : "Roles"}
       </p>
+      {choral ? (
+        <div className="rail-roles">
+          <button type="button" className="rail-add" aria-label="Add a part" title="Add a part" onClick={() => go({ screen: "choral" })}>
+            <span className="rail-add-ring">
+              <Plus />
+            </span>
+            <span className="rail-role-name">Add a part</span>
+          </button>
+        </div>
+      ) : (
       <div className="rail-roles" role="list" aria-labelledby="rail-roles">
         {all.map(({ opera, ch }) => {
           const r = { opera: opera.id, character: ch.id };
@@ -486,6 +516,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           {all.length === 0 ? <span className="rail-role-name">Add a role</span> : <span className="rail-role-name rail-add-label">Add a role</span>}
         </button>
       </div>
+      )}
       <span className="rail-spacer" />
       <button type="button" className="rail-link rail-settings" aria-current={place.screen === "profile" ? "page" : undefined} onClick={() => go({ screen: "profile" })}>
         <GearIcon />
@@ -629,7 +660,8 @@ export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
           <button type="button" className="topbar-mark" onClick={() => ctx.go(ctx.home())}>
             Sottovoce
           </button>
-          <NowPill ctx={ctx} />
+          <ModeSwitch className="topbar-mode" mode={ctx.mode} onChange={ctx.setMode} />
+          {ctx.mode === "opera" && <NowPill ctx={ctx} />}
         </header>
         <div className="screen" ref={mainRef}>
           {children}
@@ -1619,17 +1651,36 @@ export function ExplorePieces({ ctx }: { ctx: Ctx }) {
   );
 }
 
+/** the composer the operas are narrowed to (kept while you move about, as the other filters are) */
+let operaComposer: string | null = null;
 export function ExploreOperas({ ctx }: { ctx: Ctx }) {
+  const [composer, setComposerState] = useState<string | null>(operaComposer);
+  const setComposer = (c: string | null) => {
+    operaComposer = c;
+    setComposerState(c);
+  };
+  // the composers of the operas here, in the catalogue's order, with their portraits where we have one
+  const composers = [...new Set(OPERAS.map((o) => o.composer))].map(composerNamed);
+  const by = composer && composers.some((c) => c.name === composer) ? composer : null;
   return (
     <SearchFrame ctx={ctx} by="opera">
       {(f) => {
         // with a voice chosen: the roles in each opera for that voice (with music, when only music is asked for)
         const suits = (o: Opera) => o.chars.filter((c) => (!f.voice || voiceGroup(c.voice) === f.voice) && (!f.music || c.pieces.some((p) => p.editionId)));
-        const list = OPERAS.filter((o) => suits(o).length > 0);
-        if (!list.length) return <NoneFor f={f} what="operas" />;
+        const list = OPERAS.filter((o) => suits(o).length > 0 && (!by || o.composer === by));
+        const row = <ComposerRow composers={composers} value={by} onChange={setComposer} />;
+        if (!list.length)
+          return (
+            <>
+              {row}
+              <NoneFor f={f} what={by ? `operas by ${by}` : "operas"} />
+            </>
+          );
         const forWho = f.voice ? (ctx.profile.voices.includes(f.voice) ? "For you" : `For ${PLURAL[f.voice] ?? f.voice}`) : "";
         return (
-          <section className="block" aria-label="All operas">
+          <>
+          {row}
+          <section className="block" aria-label={by ? `Operas by ${by}` : "All operas"}>
             <div className="og">
               {list.map((o) => {
                 const art = ART[o.id];
@@ -1664,6 +1715,7 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
               })}
             </div>
           </section>
+          </>
         );
       }}
     </SearchFrame>
@@ -2402,20 +2454,25 @@ export function Onboarding({
   step: stepAsked,
   role,
   opera: operaId,
+  sing,
 }: {
   ctx: Ctx;
-  step: 1 | 2 | 3;
+  step: 0 | 1 | 2 | 3;
   role?: RoleRef;
   by?: "voice" | "opera";
   opera?: string;
+  /** came through "What do you sing?" (step 0): the opera path then has three steps, not two */
+  sing?: boolean;
 }) {
-  // two steps: a character (or an opera) on the welcome screen, then that opera's cast to confirm
+  // a first visit asks what you sing (step 0); opera then has two steps: a character (or an opera) on the welcome
+  // screen, then that opera's cast to confirm. Choral goes straight to its home.
   const chosenOpera = operaId ? OPERAS.find((o) => o.id === operaId) : undefined;
-  const at = (step: 1 | 2 | 3, extra: { role?: RoleRef; opera?: string } = {}): Place => ({
+  const at = (step: 0 | 1 | 2 | 3, extra: { role?: RoleRef; opera?: string } = {}): Place => ({
     screen: "onboarding",
     step,
     by: "opera",
     opera: operaId,
+    ...(sing ? { sing: true } : {}),
     ...extra,
   });
   const skip = () => ctx.finishOnboarding({ screen: "explore", by: "opera" });
@@ -2447,6 +2504,10 @@ export function Onboarding({
   // 1: the gallery of characters; 2: the list of operas (a quieter way in); 3: the chosen opera's cast.
   // A cast with no opera goes back to the gallery.
   const step = stepAsked === 3 ? (roles.length ? 3 : 1) : stepAsked;
+  // the count stays honest for the path taken: "What do you sing?" is step 1 of 3 (choral ends there)
+  const total = step === 0 || sing ? 3 : 2;
+  const stepNo = step === 0 ? 1 : (step === 3 ? 2 : 1) + (total === 3 ? 1 : 0);
+  const marks = total === 3 ? [1, 2, 3] : [1, 2];
   const scroller = useRef<HTMLDivElement>(null);
   const roleKeyNow = role ? roleKey(role) : "";
   useEffect(() => {
@@ -2462,11 +2523,13 @@ export function Onboarding({
     <div className={`screen onboarding step-${step}`} ref={scroller}>
       <div className="ob-top gutter">
         <span className="wordmark-lg">Sottovoce</span>
-        <div className="ob-steps" aria-label={`Step ${step === 3 ? 2 : 1} of 2`}>
-          <span>Step {step === 3 ? 2 : 1} of 2</span>
+        <div className="ob-steps" aria-label={`Step ${stepNo} of ${total}`}>
+          <span>
+            Step {stepNo} of {total}
+          </span>
           <div className="ob-track" aria-hidden="true">
-            {[1, 3].map((n) => (
-              <i key={n} className={n <= step ? "on" : ""} />
+            {marks.map((n) => (
+              <i key={n} className={n <= stepNo ? "on" : ""} />
             ))}
           </div>
         </div>
@@ -2474,6 +2537,30 @@ export function Onboarding({
           Skip
         </button>
       </div>
+
+      {step === 0 && (
+        <main className="ob-body ob-sing gutter" key="s0">
+          <div className="ob-hero">
+            <h1>What do you sing?</h1>
+            <p className="lede">Choose where to begin. You can switch at the top of the app any time.</p>
+          </div>
+          <div className="ob-sing-grid">
+            <button type="button" className="ob-sing-card" onClick={() => ctx.go({ screen: "onboarding", step: 1, by: "opera", sing: true })}>
+              <span className="ob-sing-pic">{ART.figaro ? <img src={ART.figaro.square} alt="" /> : null}</span>
+              <b>Opera</b>
+              <span>Your role in arias, duets and ensembles</span>
+            </button>
+            <button type="button" className="ob-sing-card" onClick={() => ctx.finishOnboarding({ screen: "choral" })}>
+              <span className="ob-sing-pic ob-sing-portrait">{composerNamed("Handel").portrait ? <img src={composerNamed("Handel").portrait} alt="" /> : null}</span>
+              <b>Choral</b>
+              <span>Your part in requiems, masses and oratorios</span>
+            </button>
+          </div>
+          <button type="button" className="cp-btn ob-both" onClick={() => ctx.go({ screen: "onboarding", step: 1, by: "opera", sing: true })}>
+            I sing both
+          </button>
+        </main>
+      )}
 
       {(step === 1 || step === 2) && (
         <main className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}`} key="s12">

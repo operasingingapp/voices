@@ -5,6 +5,7 @@ import "./ds.css";
 import "./app.css";
 import "./premium.css";
 import "./engraved.css";
+import "./choral.css";
 import "@fontsource/caveat/latin-500.css";
 import { App } from "./App";
 

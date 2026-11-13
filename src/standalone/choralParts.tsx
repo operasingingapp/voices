@@ -1,0 +1,47 @@
+import type { Composer } from "./composers";
+
+export type Mode = "opera" | "choral";
+
+/**
+ * What you sing: Opera or Choral, the raised ivory segment on a fog track (as every switch in the app). In the top
+ * bar on a phone, at the head of the rail from a tablet up.
+ */
+export function ModeSwitch({ mode, onChange, className }: { mode: Mode; onChange: (m: Mode) => void; className?: string }) {
+  return (
+    <div className={`pv-seg mode-switch${className ? ` ${className}` : ""}`} role="group" aria-label="What you sing">
+      {(
+        [
+          ["opera", "Opera"],
+          ["choral", "Choral"],
+        ] as const
+      ).map(([m, label]) => (
+        <button key={m} type="button" aria-pressed={mode === m} onClick={() => mode !== m && onChange(m)}>
+          {label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** A row of composers' faces under the search's filters: one tap narrows the list to him, a second tap clears it. */
+export function ComposerRow({ composers, value, onChange }: { composers: Composer[]; value: string | null; onChange: (name: string | null) => void }) {
+  if (composers.length < 2) return null;
+  return (
+    <section className="cx" aria-labelledby="cx-h">
+      <p className="cx-label" id="cx-h">
+        Composers
+      </p>
+      <div className="cx-row" role="group" aria-labelledby="cx-h">
+        {composers.map((c) => {
+          const on = value === c.name;
+          return (
+            <button key={c.name} type="button" className="cx-item" aria-pressed={on} onClick={() => onChange(on ? null : c.name)}>
+              <span className="cx-face">{c.face ? <img src={c.face} alt="" loading="lazy" decoding="async" /> : <i aria-hidden="true">{c.name[0]}</i>}</span>
+              <span className="cx-name">{c.name}</span>
+            </button>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
