@@ -193,11 +193,29 @@ export function Avatar({ kind }: { kind: AvatarKind }) {
   );
 }
 
-/** A character's picture: the illustrated portrait when there is one, otherwise the simple avatar. */
+/** Where a character has no portrait: a plain soft grey ground with the name in white (initials in a small circle). */
+export function NamePlate({ name, small }: { name: string; small?: boolean }) {
+  const initials = name
+    .replace(/^(The|Don|Donna|Doctor|Count|First|Second|Third)\s+/, "")
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2);
+  return (
+    <span
+      className={`name-plate${small ? " name-plate--small" : ""}`}
+      aria-hidden="true"
+    >
+      <b>{small ? initials : name}</b>
+    </span>
+  );
+}
+
+/** A character's picture: the illustrated portrait when there is one, otherwise its name on a soft grey ground. */
 export function Face({ opera, ch }: { opera: Opera; ch: Character }) {
   const art = PORTRAITS[`${opera.id}:${ch.id}`];
   if (art) return <img className="face-img" src={art.face} alt="" />;
-  return <Avatar kind={ch.avatar} />;
+  return <NamePlate name={ch.name} small />;
 }
 
 /* ====================================================================================
@@ -909,9 +927,7 @@ export function Bravo({
           ) : art ? (
             <img src={art.portrait} alt="" />
           ) : (
-            <span className="bravo-bust" aria-hidden="true">
-              <Avatar kind={ch.avatar} />
-            </span>
+            <NamePlate name={ch.name} />
           )}
         </div>
         <div className="bravo-text">
@@ -1927,9 +1943,7 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                       decoding="async"
                     />
                   ) : (
-                    <span className="cast-bust" aria-hidden="true">
-                      <Avatar kind={c.avatar} />
-                    </span>
+                    <NamePlate name={c.name} />
                   )}
                   {yours && <span className="pv-tag">Your role</span>}
                 </span>
@@ -3378,9 +3392,7 @@ function CastReel({
                           draggable={false}
                         />
                       ) : (
-                        <span className="sc-bust" aria-hidden="true">
-                          <Avatar kind={ch.avatar} />
-                        </span>
+                        <NamePlate name={ch.name} />
                       )}
                       {ready && (
                         <span className="reel-ready">Ready to sing</span>
@@ -3429,9 +3441,7 @@ function CastReel({
                         draggable={false}
                       />
                     ) : (
-                      <span className="sc-bust" aria-hidden="true">
-                        <Avatar kind={ch.avatar} />
-                      </span>
+                      <NamePlate name={ch.name} />
                     )}
                     {ready && <span className="reel-ready">Ready to sing</span>}
                   </span>
@@ -4095,9 +4105,7 @@ export function Onboarding({
                         decoding="async"
                       />
                     ) : (
-                      <span className="sc-bust" aria-hidden="true">
-                        <Avatar kind={ch.avatar} />
-                      </span>
+                      <NamePlate name={ch.name} />
                     )}
                     <span className="sc-check" aria-hidden="true">
                       <Check />

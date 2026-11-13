@@ -262,3 +262,19 @@
 .ob-sub button:hover { color: var(--ink); }
 .ob-sub button[aria-selected="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
 .ob-sub button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- a character without a portrait: a plain soft grey ground with the name in white ---------- */
+.name-plate {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  background: #b9b4aa;
+  color: #fff;
+  text-align: center;
+}
+.name-plate b { font: italic 500 clamp(19px, 2vw, 28px)/1.1 var(--font-display); text-wrap: balance; }
+/* in a circle (a role's face): the initials */
+.name-plate--small { position: static; width: 100%; height: 100%; padding: 0; border-radius: inherit; }
+.name-plate--small b { font: 500 15px/1 var(--font-sans); letter-spacing: 0.04em; }
