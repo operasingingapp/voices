@@ -129,6 +129,23 @@ let pianoPart: CompiledEdition["parts"][number];
  * - Elided syllables arrive as separate <text> pieces joined by the SMuFL glyph U+E551, which the
  *   renderer cannot draw; they are shown as one syllable with the undertie ‿.
  */
+/** what the Sottovoce edition adds, and keeps as its own */
+const SOTTOVOCE_EDITION = "Sottovoce edition: engraving, translation and IPA © 2026 Sottovoce.";
+
+/**
+ * The score's credit line in print: the music and words are public domain, the piano reduction is credited to the
+ * printed edition it was taken from, and the edition's own work (engraving, translation, IPA) is marked as ours.
+ */
+function printCredits(source: string): string {
+  if (!/public domain/i.test(source)) return source;
+  const from = source
+    .replace(/^\s*Music and text public domain\.\s*/i, "")
+    .replace(/^Vocal score, piano reduction by /, "Piano reduction after ")
+    .replace(/^Piano reduction by /, "Piano reduction after ")
+    .replace(/^Vocal score[,]? /, "After the vocal score ");
+  return `Music and libretto in the public domain.${from ? ` ${from}` : ""} ${SOTTOVOCE_EDITION}`;
+}
+
 const TEMPO_WORD = /^(tempo|a tempo|allegr|andant|adagi|larg|lent|grave|modera|prest|vivac|vivo|maestos|sostenut|recit|più|meno|poco|l'istesso|lo stesso)/i;
 function prepareForDisplay(xml: string, forPrint = false): string {
   try {
@@ -997,7 +1014,8 @@ function PracticeScreen({
         const xml = annotateXml(orderedIds.join() === xmlOrder.join() ? printXml : reorderXml(printXml, orderedIds), mine, list.filter((x) => edition.measures[x.m]));
         const { pages, firstTopMm } = await engravePages(xml, visible);
         const rights = /<rights[^>]*>([^<]*)<\/rights>/.exec(displayXml)?.[1];
-        const credits = rights ? new DOMParser().parseFromString(`<r>${rights}</r>`, "application/xml").documentElement.textContent ?? "" : "";
+        const source = rights ? new DOMParser().parseFromString(`<r>${rights}</r>`, "application/xml").documentElement.textContent ?? "" : "";
+        const credits = printCredits(source);
         const html = printHtml({
           title: edition.title,
           running: `${roleName} · ${info.opera}`,
@@ -1037,6 +1055,7 @@ function PracticeScreen({
         mine: roleId,
         lang: LANG,
         langName: ORIGINAL,
+        credits: `Libretto in the public domain. ${SOTTOVOCE_EDITION.replace("engraving, ", "")}`,
         fontCss: fontFaceCss(["Charis SIL", "Cormorant Garamond", "Jost"]),
       },
       o,
