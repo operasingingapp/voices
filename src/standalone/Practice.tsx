@@ -20,7 +20,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
-import { GRAND_GAIN_DB, grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
+import { GRAND_GAIN_DB, grandLineMap, grandLineUrl, grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
 /** a concert grand seen from above, lid open: the badge of the recorded grand piano */
 const GRAND_ICON = (
   <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -1089,12 +1089,16 @@ function PracticeScreen({
     return pr;
   };
   const [preparing, setPreparing] = useState(false);
+  // a line set to the piano plays on the recorded grand too, where the piece has that line recorded (at the printed tempo)
+  const lineInst = (p: CompiledEdition["parts"][number]) => (p === voicePart ? lineSound : resolveLine(lineSets[p.key]?.inst ?? "auto", voiceTypeOf(p), sungOf(p.key)));
+  const grandLine = (p: CompiledEdition["parts"][number]) => (useGrand && lineInst(p) === "piano" ? grandLineUrl(edition.editionId, p.key) : undefined);
+  const grandLineKey = voiceParts.map((p) => (grandLine(p) ? 1 : 0)).join("");
   // the recorded singers, placed on this performance's timeline (before their instruments are chosen below)
   useEffect(() => {
     const port = pb.port;
     if (!port?.setRecording) return;
     // the port outlives the piece: drop any other piece's singers first, or they would sing along here
-    port.keepRecordings?.([...voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel), ...(useGrand ? [pianoPart.channel] : [])]);
+    port.keepRecordings?.([...voiceParts.filter((p) => sungOf(p.key) || grandLine(p)).map((p) => p.channel), ...(useGrand ? [pianoPart.channel] : [])]);
     // the grand piano: its recording plays the piano's channel (the app's piano fills in until it has loaded)
     if (useGrand) {
       track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf), gainDb: GRAND_GAIN_DB + grandPianoGain(edition.editionId), exact: true }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
@@ -1103,8 +1107,16 @@ function PracticeScreen({
       void port.setRecording(pianoPart.channel, null);
     }
     for (const p of voiceParts) {
+      const gl = grandLine(p);
+      if (gl) {
+        track(port.setRecording(p.channel, [{ tempo: 1, url: gl, map: grandLineMap(edition, perf, p.key), gainDb: grandPianoGain(edition.editionId), exact: true }])).catch(() => undefined);
+        continue;
+      }
       const recs = recordingsOf(p.key);
-      if (!recs.length) continue;
+      if (!recs.length) {
+        void port.setRecording(p.channel, null);
+        continue;
+      }
       const placed = recs.map((rec) => {
         const pts = perf.notes
           .filter((n) => n.part === p.key && rec.onsets[n.ids[0]] !== undefined)
@@ -1114,7 +1126,7 @@ function PracticeScreen({
       });
       track(port.setRecording(p.channel, placed)).catch(() => undefined);
     }
-  }, [pb.port, perf, useGrand]);
+  }, [pb.port, perf, useGrand, grandLineKey]);
   // leaving the piece: its singers go too
   useEffect(() => {
     const port = pb.port;
@@ -1125,13 +1137,13 @@ function PracticeScreen({
     if (!port?.setInstrument) return;
     let alive = true;
     setSoundLoading(lineSound !== "piano");
-    track(port.setInstrument(voicePart.channel, lineSound, voiceRange))
+    track(port.setInstrument(voicePart.channel, grandLine(voicePart) ? "singer" : lineSound, voiceRange))
       .catch(() => undefined)
       .finally(() => alive && setSoundLoading(false));
     return () => {
       alive = false;
     };
-  }, [pb.port, lineSound, voiceRange]);
+  }, [pb.port, lineSound, voiceRange, grandLineKey]);
   // The room suits the pedalling. Puccini is pedalled with the harmony (and its own Ped. marks), so the
   // default hall is enough; Mozart is pedalled lightly, beat by beat, to keep the texture clear, and
   // without a little more hall that clean playing sounds dry: the room gives it the warmth instead.
@@ -1146,10 +1158,10 @@ function PracticeScreen({
     if (!port?.setInstrument) return;
     for (const p of otherVoices) {
       const ms = edition.notes.filter((n) => n.part === p.key).map((n) => n.midi);
-      track(port.setInstrument(p.channel, instOf(p), [Math.min(...ms), Math.max(...ms)])).catch(() => undefined);
+      track(port.setInstrument(p.channel, grandLine(p) ? "singer" : instOf(p), [Math.min(...ms), Math.max(...ms)])).catch(() => undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pb.port, instKey]);
+  }, [pb.port, instKey, grandLineKey]);
   // the sound panel closes on a tap elsewhere or Escape
   useEffect(() => {
     if (!mixOpen) return;

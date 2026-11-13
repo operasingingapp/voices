@@ -16,14 +16,34 @@ export const GRAND_BASE = "https://pub-d8d81ace089e4d0f9b94db0d9c548850.r2.dev/p
 
 /** editionId -> its piano recording (the Pianoteq master itself, lossless FLAC) and the gain that matches it to the
  * app's own piano (the masters are left untouched; the level is set here) */
-const FILES = list as Record<string, { file: string; gainDb: number }>;
+const FILES = list as Record<string, { file: string; gainDb: number; lines?: Record<string, string> }>;
 
 /** the recorded grand under the sung lines: a full concert grand masks piano-sounding lines far more than the app's piano */
-export const GRAND_GAIN_DB = -6;
+export const GRAND_GAIN_DB = -2;
 
 export const grandPianoUrl = (editionId: string): string | undefined => (FILES[editionId] ? GRAND_BASE + FILES[editionId].file : undefined);
 /** the recording's level against the app's piano (dB) */
 export const grandPianoGain = (editionId: string): number => FILES[editionId]?.gainDb ?? 0;
+/** a singer's line played on the same grand (rendered with the accompaniment, on the same clock), if there is one */
+export const grandLineUrl = (editionId: string, partKey: string): string | undefined => {
+  const f = FILES[editionId]?.lines?.[partKey];
+  return f ? GRAND_BASE + f : undefined;
+};
+
+/** where a sung line's notes fall on the playing timeline against the recording (as grandPianoMap, for one part) */
+export function grandLineMap(edition: CompiledEdition, playing: Performance, partKey: string): RecordingMap {
+  const rendered = new Performance(edition, [], { tempo: "score", pedal: true });
+  const at = new Map<string, number>();
+  for (const n of rendered.notes) if (n.part === partKey && !at.has(n.ids[0])) at.set(n.ids[0], rendered.qToSec(n.onQ));
+  const pairs: [number, number, number][] = [];
+  for (const n of playing.notes) {
+    if (n.part !== partKey) continue;
+    const a = at.get(n.ids[0]);
+    if (a !== undefined) pairs.push([playing.qToSec(n.onQ), a, playing.qToSec(n.offQ)]);
+  }
+  pairs.sort((x, y) => x[0] - y[0]);
+  return { perf: pairs.map((p) => p[0]), audio: pairs.map((p) => p[1]), ends: pairs.map((p) => p[2]) };
+}
 
 /**
  * Where the recording's notes fall on the playing timeline: each piano onset's time in the performance playing now
