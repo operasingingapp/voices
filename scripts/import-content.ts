@@ -35,6 +35,7 @@ import type {
   AudioAsset,
 } from "../shared/types";
 import { Performance } from "../shared/timeline";
+import { shapeVelocities } from "./expressive";
 
 const SRC = process.env.CONTENT_SRC ?? "content/pieces";
 const OUT = process.env.CONTENT_OUT ?? "data/content";
@@ -499,6 +500,7 @@ function importPiece(dir: string) {
     if (!manifest.partMapping.some((p) => p.key === r.partKey && p.kind === "voice")) problems.push(`role ${r.id} has no vocal part`);
 
   const { measures, notes, keySignature } = parseScore(xml, manifest, problems);
+  shapeVelocities(new DOMParser().parseFromString(xml, "text/xml").documentElement as unknown as Element, measures, notes, manifest.partMapping);
   // MusicXML (like MIDI) plays at ♩ = 120 until the first tempo mark
   if (measures.length && !measures[0].tempos.some((t) => t.q === 0)) measures[0].tempos.unshift({ q: 0, bpm: 120 });
 
@@ -509,7 +511,7 @@ function importPiece(dir: string) {
     return { id: p.id, label: p.label, startM: s, endM: e };
   });
 
-  const hash = createHash("sha256").update(xml).update(JSON.stringify(manifest)).update(langSrcText);
+  const hash = createHash("sha256").update("expressive-1").update(xml).update(JSON.stringify(manifest)).update(langSrcText);
   const audioDir = join(dir, manifest.files.audioDir);
   const audioFiles = existsSync(audioDir) ? readdirSync(audioDir).sort() : [];
   for (const f of audioFiles) hash.update(f).update(readFileSync(join(audioDir, f)));
