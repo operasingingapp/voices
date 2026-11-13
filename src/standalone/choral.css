@@ -230,3 +230,7 @@
   .ob-sing-card b { font-size: 26px; }
   .ob-sing-card > span:last-child { font-size: 14px; }
 }
+
+/* the choral works in the first-visit choices: the full width of the page, as the opera grid elsewhere (a shrink-wrapped
+   grid would fall to one column) */
+.ob-works-grid { align-self: stretch; width: 100%; max-width: 1100px; margin-inline: auto; box-sizing: border-box; }

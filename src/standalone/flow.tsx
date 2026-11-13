@@ -4055,7 +4055,7 @@ export function Onboarding({
             className={`ob-choices${showAll ? " is-all" : ""}`}
           >
             {step === 4 ? (
-              <div className="gutter">
+              <div className="gutter ob-works-grid">
                 <WorksGrid
                   onPick={(w) =>
                     ctx.finishOnboarding({ screen: "work", work: w })
