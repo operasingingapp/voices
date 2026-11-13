@@ -992,12 +992,17 @@ function PracticeScreen({
   // the line of music always fits the space under the text: no vertical scrolling, with or without the piano
   const stageRef = useRef<HTMLElement>(null);
   const [stageH, setStageH] = useState(0);
+  const [stageW, setStageW] = useState(0);
   useLayoutEffect(() => {
     const el = stageRef.current;
     if (!el) return;
-    const ro = new ResizeObserver(() => setStageH(el.clientHeight));
+    const ro = new ResizeObserver(() => {
+      setStageH(el.clientHeight);
+      setStageW(el.clientWidth);
+    });
     ro.observe(el);
     setStageH(el.clientHeight);
+    setStageW(el.clientWidth);
     return () => ro.disconnect();
   }, []);
   const [natural, setNatural] = useState(0);
@@ -1018,6 +1023,10 @@ function PracticeScreen({
   if (engine?.state !== "playing") heldZoom.current = null;
   else if (heldZoom.current === null) heldZoom.current = fitZoom;
   const effZoom = heldZoom.current ?? fitZoom;
+  // On a wide screen the page view would set eight or more bars on a line, too long for the eye to follow from a music
+  // stand: past about 1150 px the music grows with the width instead (up to half as large again), so a line keeps the
+  // four to six bars of a printed vocal score.
+  const pageZoom = pageView && stageW > 1150 ? Math.round(effZoom * Math.min(1.5, stageW / 1150) * 40) / 40 : effZoom;
   const effZoomRef = useRef(effZoom);
   effZoomRef.current = effZoom;
   const naturalSeen = useRef("");
@@ -2620,7 +2629,7 @@ function PracticeScreen({
           }}
           onLaneMove={(from, to) => placeLine(orderedIds.indexOf(from), orderedIds.indexOf(to))}
           tintXmlParts={[voicePart.source.xmlPartId]}
-          zoom={effZoom}
+          zoom={pageZoom}
           cursor={cursorRef}
           marker={markerRef}
           scrollTarget={playing ? "cursor" : "none"}
