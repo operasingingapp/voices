@@ -101,10 +101,11 @@ export function librettoHtml(d: LibrettoDoc, o: LibrettoOptions): string {
     const tr = o.translation && p.translation ? `<div class="tr" lang="en">${esc(p.translation)}</div>` : "";
     return `<div class="ln${two ? " two" : ""}"><div class="sung">${sung}${two ? "" : tr}</div>${two ? tr : ""}</div>`;
   };
+  // a flat flow (each name, then its lines): the page script below sets it on A4 sheets
   const body = blocks
     .map(
       (b) =>
-        `<section class="blk${b.role === d.mine && o.everyone && blocks.some((x) => x.role !== d.mine) ? " you" : ""}${o.gloss ? " wbw" : ""}"><h3>${esc(d.names[b.role] ?? b.role)}</h3>${b.lines.map(line).join("")}</section>`,
+        `<h3 data-cls="blk${b.role === d.mine && o.everyone && blocks.some((x) => x.role !== d.mine) ? " you" : ""}${o.gloss ? " wbw" : ""}">${esc(d.names[b.role] ?? b.role)}</h3>${b.lines.map(line).join("")}`,
     )
     .join("");
   const empty = list.length ? "" : `<p class="none">No sung words to show with these choices.</p>`;
@@ -112,16 +113,22 @@ export function librettoHtml(d: LibrettoDoc, o: LibrettoOptions): string {
 <title>${esc(d.head.title)} · libretto</title>
 <style>
 ${d.fontCss ?? ""}
-@page { size: A4 portrait; margin: 22mm 22mm 20mm;
-  @bottom-left { content: "${esc(d.running).replace(/"/g, "")}"; font: 500 6.6pt "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
-  @bottom-right { content: counter(page) " / " counter(pages); font: 600 10pt "Cormorant Garamond", Garamond, Georgia, serif; color: #2a2622; }
-}
+@page { size: A4 portrait; margin: 0; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: #fff; color: #1c1a17; }
 body { font-family: "Charis SIL", Charter, Georgia, serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.doc { width: 210mm; }
+#flow { display: none; }
+.sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #fff; break-after: page; page-break-after: always; }
+.sheet:last-of-type { break-after: auto; page-break-after: auto; }
+/* the type area: 24 mm above, 22 mm at the sides, 28 mm below (the folio sits in it) */
+.pg { position: absolute; top: 24mm; left: 22mm; right: 22mm; bottom: 28mm; overflow: hidden; }
+.folio { position: absolute; left: 22mm; right: 22mm; bottom: 13mm; display: flex; align-items: baseline; justify-content: space-between; gap: 8mm; padding-top: 1.8mm; border-top: 0.2mm solid #e2dccf; }
+.folio .run { font: 500 6.6pt/1.4 "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
+.folio .pno { white-space: nowrap; font: 600 10.5pt/1 "Cormorant Garamond", Garamond, Georgia, serif; color: #2a2622; }
+.folio .pno i { font-weight: 500; color: #9a9184; }
+.blk h3 .ct { margin-left: 2mm; font: italic 400 8pt/1 "Charis SIL", Georgia, serif; letter-spacing: 0; text-transform: none; color: #9a9184; }
 ${HEAD_CSS}
-.head { margin-bottom: 9mm; }
+.head { margin-bottom: 12mm; }
 .blk { margin: 0 0 6.5mm; }
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; margin: 0 0 4mm; padding-bottom: 1.4mm; border-bottom: 0.2mm solid #e2dccf; font: 500 6.4pt/1.3 "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #9a9184; }
 .blk h3 { margin: 0 0 1.8mm; font: 600 10.5pt/1.2 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.14em; text-transform: uppercase; color: #2a2622; break-after: avoid; page-break-after: avoid; }
@@ -147,9 +154,44 @@ ${HEAD_CSS}
 .credits { margin-top: 10mm; padding-top: 2mm; border-top: 0.2mm solid #e2dccf; font: italic 7pt/1.4 "Charis SIL", Georgia, serif; color: #7a7268; }
 @media screen {
   html, body { background: #e7e7e3; } body { padding: 1px 0; }
-  .doc { margin: 16px auto; padding: 22mm 22mm 20mm; min-height: 297mm; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.18); zoom: var(--fit, 1); }
+  .sheet { margin: 16px auto; box-shadow: 0 1px 4px rgba(0,0,0,.18); zoom: var(--fit, 1); }
 }
 </style></head><body>
-<div class="doc">${headBlock(d.head)}${two && list.length ? `<div class="cols"><span>${esc(d.langName)}</span><span>English</span></div>` : ""}${body}${empty}${d.credits ? `<div class="credits">${esc(d.credits)}</div>` : ""}</div>
+<div id="flow">${headBlock(d.head, "centred")}${body}${empty}${d.credits ? `<div class="credits">${esc(d.credits)}</div>` : ""}</div>
+<div id="pages"></div>
+<script>${PAGINATE.replace("__RUN__", JSON.stringify(d.running).replace(/</g, "\\u003c"))}</script>
 </body></html>`;
 }
+
+/**
+ * Sets the flow on A4 sheets once the fonts are in: line by line, a new sheet when the type area is full. A name is
+ * never left alone at the foot of a page; a character's lines that run on to the next page carry the name again
+ * ("continued"), and the column heads are repeated. Each sheet gets its folio: the running title and "n / total".
+ */
+const PAGINATE = `(function(){
+var RUN=__RUN__;
+function run(){
+  var flow=document.getElementById("flow"),out=document.getElementById("pages");
+  if(!flow||!out||out.childElementCount)return;
+  var items=[].slice.call(flow.children),cols=flow.querySelector(".cols"),sheets=[],body,blk=null,name=null;
+  function sheet(){var s=document.createElement("section");s.className="sheet";body=document.createElement("div");body.className="pg";s.appendChild(body);out.appendChild(s);sheets.push(s);blk=null;}
+  function full(){return body.scrollHeight>body.clientHeight+1;}
+  function open(cont){var b=document.createElement("section");b.className=name.getAttribute("data-cls")||"blk";var h=name.cloneNode(true);h.removeAttribute("data-cls");if(cont){var c=document.createElement("span");c.className="ct";c.textContent="continued";h.appendChild(c);}b.appendChild(h);body.appendChild(b);blk=b;}
+  function fresh(cont){sheet();if(cols)body.appendChild(cols.cloneNode(true));if(name)open(cont);}
+  sheet();
+  items.forEach(function(el){
+    if(el.tagName==="H3"){name=el;open(false);return;}
+    if(el.classList.contains("ln")&&blk){
+      blk.appendChild(el);
+      if(full()){blk.removeChild(el);var lone=!blk.querySelector(".ln");if(lone)body.removeChild(blk);fresh(!lone);blk.appendChild(el);}
+      return;
+    }
+    body.appendChild(el);
+    if(full()&&body.childElementCount>1){body.removeChild(el);sheet();body.appendChild(el);}
+  });
+  flow.parentNode.removeChild(flow);
+  sheets.forEach(function(s,i){var f=document.createElement("footer");f.className="folio";var r=document.createElement("span");r.className="run";r.textContent=RUN;var p=document.createElement("span");p.className="pno";p.textContent=String(i+1);var t=document.createElement("i");t.textContent=" / "+sheets.length;p.appendChild(t);f.appendChild(r);f.appendChild(p);s.appendChild(f);});
+}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(run,run);else run();
+setTimeout(run,2500);
+})();`;

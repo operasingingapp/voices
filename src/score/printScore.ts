@@ -103,8 +103,8 @@ function pageUnits(staves: number) {
   return { w, h: Math.round((w * 297) / 210), mm: w / 210 };
 }
 
-/** the title block on page 1 runs from 16 mm to about 44 mm; the music begins clear of it */
-const TITLE_ROOM_MM = 50;
+/** the title block on page 1 runs from 16 mm to about 48 mm; the music begins clear of it */
+const TITLE_ROOM_MM = 54;
 
 /** The engraved pages, and where the music begins on the first one (mm from the top), below its title block. */
 export interface Engraved {
@@ -398,28 +398,43 @@ export interface PrintDoc {
 }
 
 export interface PrintHead {
-  eyebrow: string;
+  /** the opera the piece is from */
+  opera: string;
+  /** aria, duet, recitative… */
+  kind?: string;
   title: string;
+  /** "The Countess's part" */
   role?: string;
   composer?: string;
   librettist?: string;
 }
 
-/** The title block of a printed page, in the app's type: the opera and kind, the title, then librettist, part and composer. */
-export function headBlock(h: PrintHead, style = ""): string {
-  return `<header class="head"${style ? ` style="${style}"` : ""}><div class="eyebrow">${esc(h.eyebrow)}</div><h1>${esc(h.title)}</h1><div class="byline"><span>${
-    h.librettist ? `Libretto by ${esc(h.librettist)}` : ""
-  }</span><span class="role">${h.role ? esc(h.role) : ""}</span><span>${h.composer ? esc(h.composer) : ""}</span></div></header>`;
+/**
+ * The title block, set like an engraved title: the opera in italic, the piece's name, what it is and whose part in
+ * small capitals, a short rule, then the credits: on a score as music prints them (the librettist over the first
+ * staff on the left, the composer on the right), on a libretto centred on one line.
+ */
+export function headBlock(h: PrintHead, layout: "score" | "centred" = "score"): string {
+  const sub = [h.kind, h.role].filter(Boolean).map((x) => esc(x!)).join(" <b>·</b> ");
+  const lib = h.librettist ? `<span>Libretto by ${esc(h.librettist)}</span>` : "";
+  const mus = h.composer ? `<span class="composer">${layout === "centred" ? "Music by " : ""}${esc(h.composer)}</span>` : "";
+  return `<header class="head head--${layout}"><div class="opera">${esc(h.opera)}</div><h1>${esc(h.title)}</h1>${sub ? `<div class="sub">${sub}</div>` : ""}<div class="rule"></div><div class="byline">${
+    layout === "centred" ? `${mus}${mus && lib ? `<b>·</b>` : ""}${lib}` : `${lib || "<span></span>"}${mus}`
+  }</div></header>`;
 }
 
 /** The title block's type (the layout around it is the document's own) */
 export const HEAD_CSS = `.head { text-align: center; color: #1c1a17; }
-.head .eyebrow { font: 500 7pt/1.3 "Jost", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.24em; text-transform: uppercase; color: #8b7f70; }
-.head h1 { margin: 2mm 0 4.2mm; font: 600 25pt/1.04 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.005em; }
-.head .byline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 4mm; padding-top: 3.4mm; border-top: 0.2mm solid #ddd6ca; font: italic 8.6pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
-.head .byline span:first-child { text-align: left; }
-.head .byline span:last-child { text-align: right; font-style: normal; font-family: "Cormorant Garamond", Garamond, Georgia, serif; font-weight: 600; font-size: 10.5pt; letter-spacing: 0.02em; color: #2a2622; }
-.head .byline .role { font: 500 6.8pt/1.3 "Jost", Arial, sans-serif; font-style: normal; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }`;
+.head .opera { font: italic 500 12.5pt/1.2 "Cormorant Garamond", Garamond, Georgia, serif; color: #6b6359; letter-spacing: 0.01em; }
+.head h1 { margin: 1mm 0 0; font: 600 27pt/1.05 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.004em; }
+.head .sub { margin-top: 2.6mm; font: 500 6.6pt/1.3 "Jost", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.24em; text-transform: uppercase; color: #8b7f70; }
+.head .sub b, .head .byline b { font-weight: 400; margin: 0 1.4mm; color: #b5ab9c; }
+.head .rule { width: 16mm; height: 0; margin: 4.2mm auto 0; border-top: 0.25mm solid #c9bfb0; }
+.head .byline { margin-top: 4.2mm; font: italic 8.8pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
+.head .composer { font: 600 10.5pt/1.3 "Cormorant Garamond", Garamond, Georgia, serif; font-style: normal; letter-spacing: 0.02em; color: #2a2622; }
+.head--score .byline { display: flex; justify-content: space-between; align-items: baseline; text-align: left; }
+.head--centred .byline { display: flex; justify-content: center; align-items: baseline; flex-wrap: wrap; gap: 0; }
+.head--centred .composer { font: italic 8.8pt/1.3 "Charis SIL", Charter, Georgia, serif; letter-spacing: 0; color: #4d4740; }`;
 
 /** The print document: A4 sheets with page numbers, then the notes in full. Self-contained, so it can open anywhere. */
 export function printHtml(d: PrintDoc): string {

@@ -1005,9 +1005,10 @@ function PracticeScreen({
           notes: list,
           fontCss: fontFaceCss(["Charis SIL", "Cormorant Garamond", "Jost"]),
           head: {
-            eyebrow: [info.opera, info.kind].filter(Boolean).join(" · "),
+            opera: info.opera,
+            kind: info.kind,
             title: edition.title,
-            role: roleName ? `${roleName}'s part` : undefined,
+            role: roleName ? `${roleName}’s part` : undefined,
             composer: edition.composer,
             librettist: edition.librettist,
           },
@@ -1022,9 +1023,10 @@ function PracticeScreen({
     librettoHtml(
       {
         head: {
-          eyebrow: [info.opera, info.kind, "Libretto"].filter(Boolean).join(" · "),
+          opera: info.opera,
+          kind: `${info.kind} · libretto`,
           title: edition.title,
-          role: o.everyone && edition.roles.length > 1 ? undefined : `${roleName}'s lines`,
+          role: o.everyone && edition.roles.length > 1 ? undefined : `${roleName}’s lines`,
           composer: edition.composer,
           librettist: edition.librettist,
         },
