@@ -1,0 +1,180 @@
+# S02c: No. 1 Introduction, pp. 16-19 (bar 1 = first bar of p.16; last bar = p.19 system 1 bar 1)
+# Singers: G = Don Giovanni, C = Commendatore, L = Leporello (no chorus in this chunk)
+# bar 1: no new tempo/meter printed on p.16: Molto allegro continues, 4/4 (C), key signature 1 flat (D minor)
+# page 016 system 1 starts bar 1
+1 G: r:w
+1 C: r:q C4:q "da" C4:q "me" G3:q "fug-"
+1 L: r:w
+2 G: r:w
+2 C: A3:q "gir?" r:q r:h
+# JUDGE bar 2 L: X - p printed under the D3 on beat 2: dyn token goes right before its note (TB.md), not before the rest
+2 L: r:q dyn:p D3:q "(Po-" F#3:q "tes-" A3:q "si_al-"
+3 G: r:q G3:q "Va," Bb3:q "non" D4:q "mi"
+3 C: r:w
+3 L: Bb3:h "me-" G3:h "no"
+4 G: Bb3:h "de-" G3:h "gno,"
+4 C: r:w
+4 L: r:q D4:q "di" Bb3:q "quà" G3:q "par-"
+5 G: D4:q "no!" r:q r:h
+5 C: r:q A3:q "Co-" A3:q "sì" A3:q "pre-"
+5 L: D3:q "tir!" r:q r:h
+6 G: r:w
+6 C: D4:h "ten-" D4:q. "di" D4:e "da"
+6 L: r:w
+# page 016 system 2 starts bar 7
+7 G: r:w
+7 C: D4:h. "me" G#3:q "fug-"
+7 L: r:w
+8 G: r:w
+8 C: A3:q "gir?" r:q r:h
+# JUDGE bar 8 L: X - p printed under the C#3 on beat 2: dyn token right before its note
+8 L: r:q dyn:p C#3:q "po-" E3:q "tes-" A3:q "si_al-"
+# bar 9 G: "mezza voce" printed over the G staff
+# JUDGE bar 9 G: X - "mezza voce" is printed over the G staff in this bar
+9 G: word:mezza_voce A3:q. "Mi-" D3:e "se-" D3:q "ro!" r:q
+9 C: r:w
+9 L: F3:h "me-" D3:h "no"
+10 G: r:w
+10 C: D4:q. "Ba-" D3:e "ti-" D3:q "ti!" r:q
+10 L: r:q A3:q "di" F3:q "quà" D3:q "par-"
+# bar 11 G: "più voce" printed over the G staff
+# JUDGE bar 11 G: X - "più voce" is printed over the G staff in this bar
+11 G: word:più_voce C#4:q. "Mi-" A3:e "se-" A3:q "ro!" r:q
+11 C: r:w
+11 L: A3:q "tir!)" r:q r:h
+12 G: r:w
+12 C: r:w
+12 L: r:w
+13 G: dyn:f D4:w "Mi-"
+13 C: r:w
+13 L: r:w
+# page 016 system 3 starts bar 14 (only the G staff is printed in this system; C and L rest)
+# JUDGE bar 14 G: Y - the arc joins D3 half to D3 dotted quarter (same pitch) = tie, and the elided "ro!_at-" (elision arc under "o!a") stands under the D4 eighth; Mi-se-ro_at-ten-di
+14 G: D3:h~ "se-" D3:q. D4:e "ro!_at-"
+14 C: r:w
+14 L: r:w
+15 G: Bb3:h "ten-" Bb3:h "di"
+15 C: r:w
+15 L: r:w
+16 G: r:h r:q Bb3:q "se"
+16 C: r:w
+16 L: r:w
+17 G: G3:w "vuoi"
+17 C: r:w
+17 L: r:w
+18 G: A3:w "mo-"
+18 C: r:w
+18 L: r:w
+19 G: D3:q "rir!" r:q r:h
+19 C: r:w
+19 L: r:w
+20 G: r:w
+20 C: r:w
+20 L: r:w
+# page 016 system 4 starts bar 21 (piano only; all singers rest)
+21 G: r:w
+21 C: r:w
+21 L: r:w
+22 G: r:w
+22 C: r:w
+22 L: r:w
+23 G: r:w
+23 C: r:w
+23 L: r:w
+24 G: r:w
+24 C: r:w
+24 L: r:w
+# page 016 system 5 starts bar 25 (piano only; all singers rest)
+25 G: r:w
+25 C: r:w
+25 L: r:w
+26 G: r:w
+26 C: r:w
+26 L: r:w
+27 G: r:w
+27 C: r:w
+27 L: r:w
+# bar 28: fermata bar (piano), then double bar and time change
+28 G: r:w
+28 C: r:w
+28 L: r:w
+# page 017 system 1 starts bar 29
+# bar 29: Andante, time signature cut time (2/2, alla breve), key signature 1 flat unchanged
+29 G: r:w
+29 C: r:h C4:q "Ah!" r:e C4:e "soc-"
+29 L: r:w
+# bar 30 G: "sotto voce" printed. bar 30 C: the rest on beat 3 is printed as an EIGHTH rest; the bar only adds up with a quarter rest (the notes "son" and "tra-" stand under beat 4), so r:q is written; the flat on "cor-" (Ab3) holds through the bar, so "son" is Ab3
+# JUDGE bar 30 G: X - pixel check: "Ah!" and "già" heads sit on the 2nd line from the top (F3), no ledger lines; "sotto voce" printed
+30 G: r:h word:sotto_voce F3:q "Ah!" r:e F3:e "già"
+# JUDGE bar 30 C: X - "son" on the top line = A, the flat on "cor-" (Ab3) holds through the bar; printed eighth rest before "son" must be a quarter (son falls on beat 4, under G's eighth rest), both readers agree on r:q r:q
+30 C: Ab3:e "cor-" Ab3:e "so!" r:q r:q Ab3:e. "son" F3:s "tra-"
+# JUDGE bar 30 L: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+30 L: r:q Ab3:h "Qual" B2:q "mi-"
+# JUDGE bar 31 G: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+31 G: C4:e "ca-" B3:e C4:e "de_il" Db4:e C4:e "scia-" Bb3:e Ab3:e "gu-" G3:e
+31 C: E3:e "di-" G3:e "to!" r:q C4:q "l'as-" r:e C4:e "sas-"
+31 L: C3:q "sfat-" C3:q "to!" r:h
+# page 017 system 2 starts bar 32
+32 G: F3:e "ra-" F3:e "to," r:q r:q F3:e "af-" F3:e "fan-"
+32 C: Ab3:q "si-" r:e Ab3:e "no" F3:q "m'ha" r:e F3:e "fe-"
+# JUDGE bar 32 L: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+32 L: r:q Ab3:h "Qual" B2:q "ec-"
+# JUDGE bar 33 G: Y - the C4-Db4 pair is slurred like every pair in bars 31/33 and "so e_a" is spread under it exactly as "de_il" is in bar 31 (which both readers put on the first note): one syllable per slurred pair
+33 G: C4:e "no-" Bn3:e C4:e "so_e_a-" Db4:e C4:e "go-" Bb3:e Ab3:e "niz-" G3:e
+33 C: E3:e "ri-" G3:e "to," r:q r:h
+33 L: C3:q "ces-" C3:q "so!" r:h
+34 G: F3:e "zan-" F3:e "te" F3:h "già" F3:q "dal"
+34 C: Ab3:q "e" r:q r:q r:e Ab3:e "dal"
+34 L: r:q C4:e. "En-" C4:s "tro_il" Ab3:e. "sen" Ab3:s "dal-" F3:e. "lo" F3:s "spa-"
+# page 017 system 3 starts bar 35
+35 G: Gb3:q. "se-" Gb3:e "no" F3:q. "pal-" Eb3:e "pi-"
+# JUDGE bar 35 C: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+35 C: A3:q "se-" r:e A3:e "no" A3:q "pal-" r:e A3:e "pi-"
+# JUDGE bar 35 L: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+35 L: Eb3:e. "ven-" Eb3:s "to" C3:e. "pal-" C3:s "pi-" A2:e. "tar" A2:s "il" C3:e. "cor" C3:s "mi"
+# JUDGE bar 36 G: OWN - pixel check: "veg-" head sits on top of the single C4 ledger (D4, no 2nd ledger) = Db4 (X); "ma" head with natural sits in the space below the top line = G3 (natural sign cancels nothing; courtesy) (Y)
+36 G: Db3:e "tan-" Bb2:e "te" Db4:e. "veg-" C4:s "go" Bb3:e. "l'a-" Ab3:s "ni-" G3:e. "ma" F3:s "par-"
+36 C: Bb3:e "tan-" Bb3:e "te" r:q r:h
+36 L: Bb2:q "sen-" Bb2:q "to!" r:h
+# page 018 system 1 starts bar 37
+# JUDGE bar 37 G: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+37 G: E3:q "tir," E3:q "veg-" r:q F3:q "go"
+37 C: Bb3:q "sen-" r:q Ab3:q "to" r:q
+37 L: r:q C3:e. "Io" C3:s "non" Db3:e. "sò" Db3:s "che" Db3:e. "far," Db3:s "che"
+# JUDGE bar 38 G: X - pixel check: "ma" and "par-" heads centre in the space below the top line (G3), not on the top line (A3)
+38 G: Bb3:q "l'a-" r:e Bb3:e "ni-" G3:q "ma" r:e G3:e "par-"
+# JUDGE bar 38 C: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+38 C: G3:q "l'a-" r:e G3:e "ni-" E3:q "ma" r:e E3:e "par-"
+38 L: Bb2:q "dir," Bb2:e. "io" Bb2:s "non" C3:e. "sò" C3:s "che" C3:e. "far," C3:s "che"
+# JUDGE bar 39 G: X - pixel check: last eighth (with natural) centres on the top line = A3 (natural is a courtesy), not B3
+39 G: F3:q "tir," Db4:h "già" C4:e "dal" A3:e
+39 C: F3:q "tir," r:q r:h
+39 L: F3:q "dir," F3:e. "en-" F3:s "tro_il" Gb3:e. "sen" Gb3:s "dal-" Eb3:e. "lo" Eb3:s "spa-"
+# page 018 system 2 starts bar 40
+40 G: Gb3:q. "se-" Gb3:e "no" F3:q. "pal-" Eb3:e "pi-"
+# JUDGE bar 40 C: X - pixel check: "to" head centres on the 2nd line = F3, not G3
+40 C: A3:h "sen-" r:q r:e F3:e "to"
+# JUDGE bar 40 L: X - same notes; X and Y differ only in explicit natural spelling (bare letter = natural per TB.md)
+40 L: C3:e. "ven-" C3:s "to" Eb3:e. "pal-" Eb3:s "pi-" A2:e. "tar" A2:s "il" C3:e. "cor" C3:s "mi"
+41 G: Db3:e "tan-" Db3:e "te" Db4:q "veg-" r:q Bb3:q "go"
+# JUDGE bar 41 C: X - pixel check: flatted "ni-" head is in the space below the top line = Gb3 (piano has Gb in this bar), not Ab3
+41 C: Bb3:q "l'a-" r:q Gb3:q "ni-" r:q
+41 L: Bb2:e. "sen-" Bb2:s "to," Bb2:e. "io" Bb2:s "non" Bb2:e. "sò" Bb2:s "che" Bb2:e. "far," Bb2:s "che"
+42 G: Ab3:q "l'a-" r:e Ab3:e "ni-" G3:q "ma" r:e G3:e "par-"
+# JUDGE bar 42 C: X - pixel check: "ma" on the 2nd line = F3 and "par-" in the 3rd space from top = E3; one step lower than Y
+42 C: F3:q "ma" r:q E3:q "par-" r:q
+42 L: C3:q "dir," C3:e. "io" C3:s "non" C3:e. "sò" C3:s "che" C3:e. "far," C3:s "che"
+# page 018 system 3 starts bar 43 (the Commendatore dies after "tir.")
+43 G: F3:q "tir." r:q r:h
+43 C: F3:q "tir." r:q r:h
+43 L: F3:q "dir!" r:q r:h
+44 G: r:w
+44 C: r:w
+44 L: r:w
+45 G: r:w
+45 C: r:w
+45 L: r:w
+# page 019 system 1 starts bar 46 (shared G/L staff; whole-bar rest). END of chunk; the next bar is "Recit." (chunk S03)
+46 G: r:w
+46 C: r:w
+46 L: r:w

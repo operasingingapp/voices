@@ -3084,6 +3084,41 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-notte-e-giorno-faticar": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Introduction",
+    facts: {
+      key: "F major (one flat); from bar 149, as the duel begins, D minor under the same signature, and the Andante's darker harmony is written with accidentals",
+      time: "4/4 (Molto allegro), after a two-beat upbeat bar, to bar 176; cut time (Andante) from bar 177 to the end",
+      tempo: "Molto allegro, played at ♩ = 156, then Andante at ♩ = 52, about 6 minutes in all, the median of five recordings (Fricsay, Giulini, Klemperer, Böhm, Karajan); their tracks are not split at the Andante, so its triplet eighths are set to the Molto allegro's quarter notes; the fermatas are held; Mozart gives the words only",
+    },
+    notePlaceholder: "Leporello grumbles in quick, crisp patter; once the duel starts, everyone sings at once, and the Andante drops to a hush",
+    about: (
+      <>
+        <p>
+          Act 1, night, in front of the Commendatore's house. The Overture runs straight into it. Leporello, keeping watch while his
+          master is inside, grumbles about toiling night and day for a man who values nothing, in wind and rain, eating badly and
+          sleeping worse: he would like to be the gentleman himself and stop serving. Someone is coming, and he hides. Donna Anna
+          rushes out clinging to a masked man, Don Giovanni, and will not let him go; he tells her she will never find out who he is,
+          and she calls for help. Her father, the Commendatore, comes out sword in hand and challenges him. Giovanni at first refuses
+          to fight an old man, then gives way, and in the Andante the Commendatore falls, dying, while Giovanni watches and Leporello,
+          aside, does not know what to do or say.
+        </p>
+        <p>
+          Score: No. 1, the Introduction (vocal score pages 8–19, 194 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose three
+          findings were corrected. Bar 1 is the printed two-beat upbeat bar; a slur joining two chords in bars 36–37 cannot be shown
+          here. Only the Italian words are kept, with the print's spelling and punctuation (“Scelerato”, “batiti”, “sò”, “quà”, “colla
+          bella”, “già cade” and “affannoso”, where the libretto has “cadde” and “affannosa”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

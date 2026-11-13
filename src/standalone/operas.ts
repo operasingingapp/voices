@@ -1336,7 +1336,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Notte e giorno faticar",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Notte e giorno faticar"
+      "id": "Act 1: Notte e giorno faticar",
+      "editionId": "mozart-notte-e-giorno-faticar"
      },
      {
       "title": "Leporello, ove sei?",
@@ -1509,7 +1510,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Notte e giorno faticar",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Notte e giorno faticar"
+      "id": "Act 1: Notte e giorno faticar",
+      "editionId": "mozart-notte-e-giorno-faticar"
      },
      {
       "title": "Leporello, ove sei?",
@@ -1674,7 +1676,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Notte e giorno faticar",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Notte e giorno faticar"
+      "id": "Act 1: Notte e giorno faticar",
+      "editionId": "mozart-notte-e-giorno-faticar"
      },
      {
       "title": "Ma qual mai s'offre, oh Dei",
@@ -2253,7 +2256,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Notte e giorno faticar",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Notte e giorno faticar"
+      "id": "Act 1: Notte e giorno faticar",
+      "editionId": "mozart-notte-e-giorno-faticar"
      },
      {
       "title": "Ah, ah, ah, ah, questa è buona",

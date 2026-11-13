@@ -2623,6 +2623,34 @@
     }
   },
   {
+    "editionId": "mozart-mi-tradi",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-mi-tradi@1.0.0-schirmer#06fe70908f",
+    "title": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
+    "subtitle": "Donna Elvira: recitative and aria from Don Giovanni, Act 2 (No. 21c, Vienna 1788)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      }
+    ],
+    "measures": 166,
+    "durationSec": 370,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 34,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-nel-padiglione-a-manca",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-nel-padiglione-a-manca@1.0.0-klengel#42cfc8a2c2",
@@ -2880,6 +2908,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 14,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-notte-e-giorno-faticar",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-notte-e-giorno-faticar@1.0.0-schirmer#d5b98239d5",
+    "title": "Notte e giorno faticar",
+    "subtitle": "Leporello, Donna Anna, Don Giovanni and the Commendatore: introduction from Don Giovanni, Act 1 (No. 1)",
+    "kind": "introduction",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "commendatore",
+        "name": "Il Commendatore",
+        "voiceType": "Bass",
+        "partKey": "commendatore"
+      }
+    ],
+    "measures": 194,
+    "durationSec": 353,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 123,
       "withAudio": 0,
       "reviewed": 0
     }

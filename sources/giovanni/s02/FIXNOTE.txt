@@ -1,0 +1,2 @@
+# s02.raw.xml = kit/build.sh VM_S02.clean.txt PM_S02.txt (builder output); s02.xml = kit/fix64.py s02.raw.xml (64th pairs 52+53, 3 notes); s02f.xml = kit/xfix.py s02.xml fixes.txt (final barline) = the checked score
+# VM_S02.txt / PM_S02.txt = kit/stitch.py of the chunk files S02a-c plus the fresh-check fixes ("# FIX": PM bar 57 RH octaves, bar 133 RH held Bb4); VM_S02.clean.txt = kit/cleanv.py VM_S02.txt
