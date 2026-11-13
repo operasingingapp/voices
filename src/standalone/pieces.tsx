@@ -2986,6 +2986,40 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-batti-batti": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "F major",
+      time: "2/4 (Andante grazioso) from the one-quarter upbeat in bar 1 to the fermata in bar 61; 6/8 (Allegro) from the three-eighth upbeat in bar 62 to the end",
+      tempo: "Andante grazioso, played at ♩ = 47, then Allegro at a dotted quarter ≈ 63 (♩ = 94), about 3¾ minutes in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); their tracks are not split at the Allegro, so its eighth note is set to the Andante's sixteenth; the fermata on “core” is held; Mozart gives the words only",
+    },
+    notePlaceholder: "Coax, don't plead: keep the 2/4 light and lilting, then let the 6/8 smile once Masetto gives in",
+    about: (
+      <>
+        <p>
+          Act 1. Masetto is sulking after finding his bride Zerlina with Don Giovanni, and will not let her touch him. She offers
+          herself to his anger: let him beat his poor Zerlina, she will stand there like a lamb and wait for the blows; he may tear
+          her hair and pluck out her eyes, and afterwards she will happily kiss his dear hands. Then she sees that he has not the heart
+          to do it. In the quicker 6/8 she makes peace with him, and they will spend their nights and days in happiness. Masetto is
+          on stage but does not sing.
+        </p>
+        <p>
+          Score: No. 12, the Aria (vocal score pages 106–110, 101 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The upbeats
+          are kept as their own short bars (bar 1, and bar 62 at the Allegro), and bar 61 is the one-quarter bar with the fermatas. In
+          bars 53–58 the piano's pairs of 64th notes are written so that each trill figure fills its sixteenth exactly. Only the
+          Italian words are kept, with the print's spelling and punctuation (“Lascierò”, “straziar mi il crine”, “in contento”, and
+          “Masétto” with the print's accent once).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

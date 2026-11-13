@@ -1932,7 +1932,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Batti, batti, o bel Masetto",
       "kind": "Aria · Act 1",
-      "id": "Act 1: Batti, batti, o bel Masetto"
+      "id": "Act 1: Batti, batti, o bel Masetto",
+      "editionId": "mozart-batti-batti"
      },
      {
       "title": "Guarda un po', come seppe questa strega",
