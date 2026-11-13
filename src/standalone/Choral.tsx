@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CHORAL_WORKS, LANGUAGE_NAMES, type ChoralWork } from "./choral";
 import { COMPOSERS, composerNamed } from "./composers";
-import { ComposerRow } from "./choralParts";
+import { ComposerRow, WorksGrid, toneOf } from "./choralParts";
 import { CloseIcon, Crumbs, SearchIcon, type Ctx, type Tone } from "./flow";
 
 /**
@@ -10,14 +10,16 @@ import { CloseIcon, Crumbs, SearchIcon, type Ctx, type Tone } from "./flow";
  * plainly where the practice would be.
  */
 
-const TONES: Tone[] = ["sky", "lilac", "mint", "butter", "peach", "pink"];
-const toneOf = (w: ChoralWork) => TONES[CHORAL_WORKS.indexOf(w) % TONES.length];
-
 /** folded for matching: no accents, no case ("faure" finds Fauré, "schopfung" Die Schöpfung) */
-const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const fold = (s: string) =>
+  s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 /** kept while you move between the choral pages, as Search keeps its own */
-const prefs: { q: string; music: boolean; composer: string | null } = { q: "", music: false, composer: null };
+const prefs: { q: string; music: boolean; composer: string | null } = {
+  q: "",
+  music: false,
+  composer: null,
+};
 
 export function ChoralHome({ ctx }: { ctx: Ctx }) {
   const [q, setQ] = useState(prefs.q);
@@ -32,21 +34,42 @@ export function ChoralHome({ ctx }: { ctx: Ctx }) {
   const words = t.split(/\s+/).filter(Boolean);
   // a match is on the start of words, in the title, its other name, the composer or the year
   const matches = (w: ChoralWork) => {
-    const ws = fold([w.title, w.subtitle, w.composer, w.composerFull, w.year].join(" ")).split(/[\s,.\-–()]+/);
+    const ws = fold(
+      [w.title, w.subtitle, w.composer, w.composerFull, w.year].join(" "),
+    ).split(/[\s,.\-–()]+/);
     return words.every((x) => ws.some((v) => v.startsWith(x)));
   };
   // the composers of the works here, in the order of the works, with their portraits where we have one
-  const composers = [...new Set(CHORAL_WORKS.map((w) => w.composer))].map(composerNamed).filter((c) => COMPOSERS.includes(c));
-  const list = CHORAL_WORKS.filter((w) => (t ? matches(w) : (!composer || w.composer === composer) && (!music || w.music)));
+  const composers = [...new Set(CHORAL_WORKS.map((w) => w.composer))]
+    .map(composerNamed)
+    .filter((c) => COMPOSERS.includes(c));
+  const list = CHORAL_WORKS.filter((w) =>
+    t
+      ? matches(w)
+      : (!composer || w.composer === composer) && (!music || w.music),
+  );
   return (
     <main className="screen-body gutter page sx ch-home">
       <section className="sx-head">
         <h1 className="sx-h">Find your part</h1>
         <label className="sx-line">
           <SearchIcon />
-          <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="A work or a composer" aria-label="Search choral works and composers" autoComplete="off" spellCheck={false} />
+          <input
+            type="search"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="A work or a composer"
+            aria-label="Search choral works and composers"
+            autoComplete="off"
+            spellCheck={false}
+          />
           {q && (
-            <button type="button" className="search-clear" aria-label="Clear the search" onClick={() => setQ("")}>
+            <button
+              type="button"
+              className="search-clear"
+              aria-label="Clear the search"
+              onClick={() => setQ("")}
+            >
               <CloseIcon />
             </button>
           )}
@@ -54,11 +77,20 @@ export function ChoralHome({ ctx }: { ctx: Ctx }) {
         {!t && (
           <>
             <div className="sx-controls">
-              <button type="button" className="cp-toggle sx-music" aria-pressed={music} onClick={() => setMusic(!music)}>
+              <button
+                type="button"
+                className="cp-toggle sx-music"
+                aria-pressed={music}
+                onClick={() => setMusic(!music)}
+              >
                 With music only
               </button>
             </div>
-            <ComposerRow composers={composers} value={composer} onChange={setComposer} />
+            <ComposerRow
+              composers={composers}
+              value={composer}
+              onChange={setComposer}
+            />
           </>
         )}
       </section>
@@ -73,40 +105,32 @@ export function ChoralHome({ ctx }: { ctx: Ctx }) {
           </p>
         </div>
       ) : (
-        <section className="block" aria-label={composer && !t ? `Works by ${composer}` : "Choral works"}>
-          <div className="og">
-            {list.map((w) => {
-              const c = composerNamed(w.composer);
-              return (
-                <button key={w.id} type="button" className={`og-card${c.portrait ? " has-art" : ""}`} data-tone={toneOf(w)} onClick={() => ctx.go({ screen: "work", work: w.id })}>
-                  <span className="og-pic">
-                    {c.portrait ? (
-                      <img className="og-portrait" src={c.portrait} alt="" loading="lazy" decoding="async" />
-                    ) : (
-                      <span className="og-plate" aria-hidden="true">
-                        <i lang={w.lang}>{w.title}</i>
-                        <span>{w.year}</span>
-                      </span>
-                    )}
-                  </span>
-                  <span className="og-text">
-                    <b lang={w.lang}>{w.title}</b>
-                    <span>
-                      {w.composer} · {w.year}
-                    </span>
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+        <section
+          className="block"
+          aria-label={composer && !t ? `Works by ${composer}` : "Choral works"}
+        >
+          <WorksGrid
+            works={list}
+            onPick={(id) => ctx.go({ screen: "work", work: id })}
+          />
         </section>
       )}
     </main>
   );
 }
 
-const LETTER: Record<string, string> = { Soprano: "S", Alto: "A", Tenor: "T", Bass: "B" };
-const PART_TONE: Record<string, Tone> = { Soprano: "pink", Alto: "lilac", Tenor: "sky", Bass: "butter" };
+const LETTER: Record<string, string> = {
+  Soprano: "S",
+  Alto: "A",
+  Tenor: "T",
+  Bass: "B",
+};
+const PART_TONE: Record<string, Tone> = {
+  Soprano: "pink",
+  Alto: "lilac",
+  Tenor: "sky",
+  Bass: "butter",
+};
 
 /** A choral work: its composer's portrait, what it is, its credits, then the parts to choose from. */
 export function WorkPage({ ctx, work: w }: { ctx: Ctx; work: ChoralWork }) {
@@ -121,8 +145,17 @@ export function WorkPage({ ctx, work: w }: { ctx: Ctx; work: ChoralWork }) {
   );
   return (
     <main className="screen-body gutter page op-page ch-page">
-      <Crumbs ctx={ctx} trail={[{ label: "Choral", to: { screen: "choral" } }, { label: w.title, lang: w.lang }]} />
-      <section className={`oh${c.portrait ? " has-art" : " no-art"}`} data-tone={toneOf(w)}>
+      <Crumbs
+        ctx={ctx}
+        trail={[
+          { label: "Choral", to: { screen: "choral" } },
+          { label: w.title, lang: w.lang },
+        ]}
+      />
+      <section
+        className={`oh${c.portrait ? " has-art" : " no-art"}`}
+        data-tone={toneOf(w)}
+      >
         {c.portrait && (
           <figure className="oh-cover ch-cover">
             <img src={c.portrait} alt={c.alt ?? ""} />
@@ -160,7 +193,14 @@ export function WorkPage({ ctx, work: w }: { ctx: Ctx; work: ChoralWork }) {
         </div>
         <div className="part-grid" role="group" aria-label="Chorus">
           {w.chorus.map((p) => (
-            <button key={p} type="button" className="part-card" data-tone={PART_TONE[p]} aria-pressed={part === `chorus:${p}`} onClick={() => pick(`chorus:${p}`)}>
+            <button
+              key={p}
+              type="button"
+              className="part-card"
+              data-tone={PART_TONE[p]}
+              aria-pressed={part === `chorus:${p}`}
+              onClick={() => pick(`chorus:${p}`)}
+            >
               <span className="part-pic" aria-hidden="true">
                 {LETTER[p]}
               </span>
@@ -178,7 +218,13 @@ export function WorkPage({ ctx, work: w }: { ctx: Ctx; work: ChoralWork }) {
           </p>
           <div className="part-pills" role="group" aria-labelledby="solo-h">
             {w.soloists.map((s) => (
-              <button key={s} type="button" className="part-pill" aria-pressed={part === `solo:${s}`} onClick={() => pick(`solo:${s}`)}>
+              <button
+                key={s}
+                type="button"
+                className="part-pill"
+                aria-pressed={part === `solo:${s}`}
+                onClick={() => pick(`solo:${s}`)}
+              >
                 {s}
               </button>
             ))}

@@ -1,7 +1,7 @@
 """Composer faces (320x320) from the user's 700x700 circle frames in composers_1.fig: each frame's crop exactly as
 placed (incl. mirrored layers), the cut-out over the portrait's backdrop colour with the paper grain.
 Usage: python3 scripts/art/composer-faces.py <unzipped fig dir with x/images and nodes2.json> <out dir>
-(nodes2.json from scripts/art/figma-nodes.cjs). Bizet has no circle frame: his face stays the plain crop."""
+(nodes2.json from scripts/art/figma-nodes.cjs). Bizet has no circle frame: placed by hand at the end to match."""
 import json, os, sys
 from PIL import Image
 FIG, OUT = sys.argv[1], sys.argv[2]
@@ -28,3 +28,11 @@ for f in [x for x in n if x['type'] == 'FRAME' and round(x['size']['x']) == 700]
     fig = Image.new('RGBA', (320, 320), (0, 0, 0, 0)); fig.paste(part, (round(px), round(py)), part)
     i = list(g['CUT']).index(key)
     g['comp'](fig, g['COLS'][key], (320, 320), i * 7 + 1).save(f'{OUT}/composer-{key}-face.webp', quality=82, method=6)
+
+# Bizet has no circle frame in the file: placed by hand to match the others (in a 700 px frame: the figure 580 wide,
+# 60 from the left, at the top), so his head sits at the same size as theirs.
+bz = Image.open(H[g['CUT']['bizet'][:6]]).convert('RGBA')
+x, y, w = 60, 0, 580; s = 320 / 700
+part = bz.resize((round(w * s), round(w * bz.height / bz.width * s)), Image.LANCZOS)
+fig = Image.new('RGBA', (320, 320), (0, 0, 0, 0)); fig.paste(part, (round(x * s), round(y * s)), part)
+g['comp'](fig, g['COLS']['bizet'], (320, 320), list(g['CUT']).index('bizet') * 7 + 1).save(f'{OUT}/composer-bizet-face.webp', quality=82, method=6)

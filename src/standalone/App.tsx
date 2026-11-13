@@ -320,7 +320,7 @@ export function App() {
   const bravoEl = bravo ? <Bravo ctx={ctx} r={bravo} onClose={() => setBravo(null)} /> : null;
 
   if (place.screen === "home" && !roles.length) return <Onboarding ctx={ctx} step={1} />;
-  if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} />;
+  if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} both={place.both} />;
 
   // a piece's score is fetched when it opens: show a short wait until it is here
   const wantScore = place.screen === "piece" ? findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId : place.screen === "listen" ? place.edition : undefined;
