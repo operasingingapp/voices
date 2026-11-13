@@ -41,12 +41,33 @@ const norm = (s: string) =>
     .replace(/[^a-z]+/g, " ")
     .trim();
 
-/** the phrases to print, in sung order */
+/**
+ * The phrases to print, in sung order. A musical phrase may stop mid-sentence ("porgi amor qualche ristoro al" /
+ * "mio duolo,"): a character's phrases are joined into verse lines that end at a punctuation mark, as a libretto
+ * prints them.
+ */
 export function librettoPhrases(d: Pick<LibrettoDoc, "phrases" | "mine">, o: Pick<LibrettoOptions, "everyone" | "repeats">): Phrase[] {
   const seen = new Set<string>();
-  return [...d.phrases]
+  const sung = [...d.phrases]
     .filter((p) => o.everyone || p.roleId === d.mine)
-    .sort((a, b) => a.startM - b.startM || a.startQ - b.startQ || a.occurrence - b.occurrence)
+    .sort((a, b) => a.startM - b.startM || a.startQ - b.startQ || a.occurrence - b.occurrence);
+  const verses: Phrase[] = [];
+  for (const p of sung) {
+    const last = verses[verses.length - 1];
+    const open = last && last.roleId === p.roleId && !/[.,;:!?…»”"')]\s*$/.test(last.original);
+    if (open && last.original.length + p.original.length < 90)
+      verses[verses.length - 1] = {
+        ...last,
+        original: `${last.original} ${p.original}`,
+        words: [...last.words, ...p.words],
+        ipa: [last.ipa, p.ipa].filter(Boolean).join(" "),
+        translation: [last.translation, p.translation].filter(Boolean).join(" "),
+        endM: p.endM,
+        endQ: p.endQ,
+      };
+    else verses.push(p);
+  }
+  return verses
     .filter((p) => {
       if (o.repeats) return true;
       const k = `${p.roleId}|${norm(p.original)}`;
@@ -81,7 +102,7 @@ export function librettoHtml(d: LibrettoDoc, o: LibrettoOptions): string {
   const body = blocks
     .map(
       (b) =>
-        `<section class="blk${b.role === d.mine && o.everyone ? " you" : ""}"><h3>${esc(d.names[b.role] ?? b.role)}</h3>${b.lines.map(line).join("")}</section>`,
+        `<section class="blk${b.role === d.mine && o.everyone && blocks.some((x) => x.role !== d.mine) ? " you" : ""}${o.gloss ? " wbw" : ""}"><h3>${esc(d.names[b.role] ?? b.role)}</h3>${b.lines.map(line).join("")}</section>`,
     )
     .join("");
   const empty = list.length ? "" : `<p class="none">No sung words to show with these choices.</p>`;
@@ -89,7 +110,7 @@ export function librettoHtml(d: LibrettoDoc, o: LibrettoOptions): string {
 <title>${esc(d.head.title)} · libretto</title>
 <style>
 ${d.fontCss ?? ""}
-@page { size: A4 portrait; margin: 18mm 20mm 20mm;
+@page { size: A4 portrait; margin: 22mm 22mm 20mm;
   @bottom-left { content: "${esc(d.running).replace(/"/g, "")}"; font: 500 6.6pt "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
   @bottom-right { content: counter(page) " / " counter(pages); font: 600 10pt "Cormorant Garamond", Garamond, Georgia, serif; color: #2a2622; }
 }
@@ -99,28 +120,31 @@ body { font-family: "Charis SIL", Charter, Georgia, serif; -webkit-print-color-a
 .doc { width: 210mm; }
 ${HEAD_CSS}
 .head { margin-bottom: 9mm; }
-.blk { margin: 0 0 5.5mm; }
-.blk h3 { margin: 0 0 1.6mm; font: 500 7.2pt/1.3 "Jost", Arial, sans-serif; letter-spacing: 0.22em; text-transform: uppercase; color: #8b7f70; break-after: avoid; page-break-after: avoid; }
+.blk { margin: 0 0 6mm; }
+.blk h3 { margin: 0 0 2mm; font: 500 7.2pt/1.3 "Jost", Arial, sans-serif; letter-spacing: 0.22em; text-transform: uppercase; color: #8b7f70; break-after: avoid; page-break-after: avoid; }
 .blk.you h3 { color: #1f5139; }
-.blk.you h3::after { content: " · you"; letter-spacing: 0.12em; text-transform: none; font-style: italic; font-family: "Charis SIL", Georgia, serif; font-size: 7.6pt; }
-.blk.you .ln { border-left: 0.6mm solid #a9d8b9; padding-left: 3mm; margin-left: -3.6mm; }
-.ln { margin: 0 0 2.4mm; break-inside: avoid; page-break-inside: avoid; }
-.ln.two { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
-.orig { font: 12pt/1.38 "Charis SIL", Georgia, serif; }
-.ipa { margin-top: 0.4mm; font: 8.6pt/1.35 "Charis SIL", Georgia, serif; color: #6b6359; }
-.tr { font: italic 10.4pt/1.42 "Charis SIL", Georgia, serif; color: #4d4740; }
-.sung > .tr { margin-top: 0.6mm; }
-.ln.two > .tr { padding-top: 0.5mm; }
-.words { display: flex; flex-wrap: wrap; gap: 1.6mm 3.2mm; }
-.w { display: inline-flex; flex-direction: column; }
-.w .o { font: 12pt/1.3 "Charis SIL", Georgia, serif; }
-.w .i { font: 8pt/1.3 "Charis SIL", Georgia, serif; color: #6b6359; }
-.w .g { font: 500 7.2pt/1.35 "Jost", Arial, sans-serif; color: #8b7f70; }
+.blk.you h3::after { content: "you"; margin-left: 2.2mm; padding: 0.3mm 1.6mm; border-radius: 3mm; background: #e3efe6; color: #1f5139; letter-spacing: 0.14em; font-size: 6pt; vertical-align: 0.3mm; }
+.ln { margin: 0 0 1.8mm; break-inside: avoid; page-break-inside: avoid; }
+.ln.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+.orig { font: 12pt/1.4 "Charis SIL", Georgia, serif; }
+.ipa { margin-top: 0.2mm; font: 8.4pt/1.35 "Charis SIL", Georgia, serif; color: #8b8378; }
+.tr { font: italic 10.6pt/1.45 "Charis SIL", Georgia, serif; color: #4d4740; }
+.sung > .tr { margin-top: 0.4mm; }
+.ln.two > .tr { padding-top: 0.6mm; }
+.ln.two .orig + .ipa { margin-bottom: 0.6mm; }
+/* word by word: each verse a row of small columns (the word, how it sounds, what it means), its sense under it */
+.wbw .ln { margin: 0 0 4.2mm; }
+.words { display: flex; flex-wrap: wrap; gap: 1.2mm 2.6mm; }
+.w { display: inline-flex; flex-direction: column; gap: 0.2mm; }
+.w .o { font: 11.5pt/1.25 "Charis SIL", Georgia, serif; }
+.w .i { font: 7.6pt/1.25 "Charis SIL", Georgia, serif; color: #8b8378; }
+.w .g { font: 400 6.9pt/1.25 "Jost", Arial, sans-serif; color: #6b6359; letter-spacing: 0.01em; }
+.wbw .sung > .tr { margin-top: 1.4mm; font-size: 10pt; }
 .none { font: italic 11pt "Charis SIL", Georgia, serif; color: #6b6359; }
 .credits { margin-top: 10mm; padding-top: 2mm; border-top: 0.2mm solid #e2dccf; font: italic 7pt/1.4 "Charis SIL", Georgia, serif; color: #7a7268; }
 @media screen {
   body { background: #e7e7e3; }
-  .doc { margin: 16px auto; padding: 18mm 20mm 20mm; min-height: 297mm; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.18); zoom: var(--fit, 1); }
+  .doc { margin: 16px auto; padding: 22mm 22mm 20mm; min-height: 297mm; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.18); zoom: var(--fit, 1); }
 }
 </style></head><body>
 <div class="doc">${headBlock(d.head)}${body}${empty}${d.credits ? `<div class="credits">${esc(d.credits)}</div>` : ""}</div>

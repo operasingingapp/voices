@@ -37,7 +37,7 @@ function loadOpts(): LibrettoOptions {
 const forPreview = (html: string) =>
   html.replace(
     "</body>",
-    `<style>.bar{display:none!important}body{overflow-x:hidden}</style><script>function fit(){var w=document.documentElement.clientWidth;document.documentElement.style.setProperty("--fit",String(Math.min(1,(w-24)/794)))}fit();addEventListener("resize",fit)</script></body>`,
+    `<style>.bar{display:none!important}body{overflow-x:hidden}</style><script>function fit(){var w=document.documentElement.clientWidth;document.documentElement.style.setProperty("--fit",String(Math.min(1.45,(w-40)/794)))}fit();addEventListener("resize",fit)</script></body>`,
   );
 
 export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes, ensemble, roleName, onClose }: Props) {

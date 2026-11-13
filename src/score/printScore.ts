@@ -135,7 +135,7 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
       adjustPageHeight: false,
       breaks: "auto",
       // the page number and the credits are written in the bottom margin (see printHtml)
-      pageMarginTop: Math.round(13 * mm),
+      pageMarginTop: Math.round(19 * mm),
       pageMarginBottom: Math.round(17 * mm),
       pageMarginLeft: Math.round(14 * mm),
       pageMarginRight: Math.round(14 * mm),
@@ -162,7 +162,7 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
     host.style.cssText = "position:absolute;left:-100000px;top:0;visibility:hidden;pointer-events:none";
     document.body.appendChild(host);
     const pages: string[] = [];
-    let firstTopMm = 26;
+    let firstTopMm = 34;
     try {
       for (let i = 1; i <= n; i++) {
         host.innerHTML = tk.renderToSVG(i) as string;
@@ -174,7 +174,7 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
           // where the first system's highest mark sits, as a share of the page's height (the page is A4: 297 mm)
           const sys = svg.querySelector("g.system");
           const page = svg.getBoundingClientRect();
-          if (sys && page.height > 0) firstTopMm = Math.max(18, ((sys.getBoundingClientRect().top - page.top) / page.height) * 297);
+          if (sys && page.height > 0) firstTopMm = Math.max(24, ((sys.getBoundingClientRect().top - page.top) / page.height) * 297);
         }
         spreadNotes(svg);
         // fill the page box it is put in (the drawing keeps its own proportions, which are A4's)
@@ -415,7 +415,7 @@ export const HEAD_CSS = `.head { text-align: center; color: #1c1a17; }
 export function printHtml(d: PrintDoc): string {
   const total = d.pages.length;
   const h = d.head;
-  const headHtml = h ? headBlock(h, `height:${Math.max(14, (d.firstTopMm ?? 28) - 5 - 9).toFixed(1)}mm`) : "";
+  const headHtml = h ? headBlock(h, `height:${Math.max(14, (d.firstTopMm ?? 34) - 6 - 15).toFixed(1)}mm`) : "";
   const sheets = d.pages
     .map(
       (svg, i) =>
@@ -447,7 +447,7 @@ body { font-family: "Charis SIL", Charter, Georgia, "Times New Roman", serif; -w
 .sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #fff; break-after: page; page-break-after: always; break-inside: avoid; }
 .sheet:last-of-type { break-after: auto; page-break-after: auto; }
 .sheet > svg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
-.head { position: absolute; left: 16mm; right: 16mm; top: 9mm; display: flex; flex-direction: column; justify-content: flex-end; }
+.head { position: absolute; left: 16mm; right: 16mm; top: 15mm; display: flex; flex-direction: column; justify-content: flex-end; }
 ${HEAD_CSS}
 .folio { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; align-items: baseline; justify-content: space-between; gap: 8mm; padding-top: 1.8mm; border-top: 0.2mm solid #e2dccf; font: 7pt/1.4 "Charis SIL", Charter, Georgia, serif; color: #7a7268; }
 .folio .credits { max-width: 140mm; font-style: italic; }
