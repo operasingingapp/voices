@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CHORAL_WORKS, LANGUAGE_NAMES, type ChoralWork } from "./choral";
 import { COMPOSERS, composerNamed } from "./composers";
 import { ComposerRow, WorksGrid, toneOf } from "./choralParts";
-import { CloseIcon, Crumbs, SearchIcon, type Ctx, type Tone } from "./flow";
+import { CloseIcon, Crumbs, SearchIcon, type Ctx } from "./flow";
 
 /**
  * Choral: "Find your part", a gallery of requiems, masses and oratorios with their composers' portraits, and each
@@ -119,19 +119,6 @@ export function ChoralHome({ ctx }: { ctx: Ctx }) {
   );
 }
 
-const LETTER: Record<string, string> = {
-  Soprano: "S",
-  Alto: "A",
-  Tenor: "T",
-  Bass: "B",
-};
-const PART_TONE: Record<string, Tone> = {
-  Soprano: "pink",
-  Alto: "lilac",
-  Tenor: "sky",
-  Bass: "butter",
-};
-
 /** A choral work: its composer's portrait, what it is, its credits, then the parts to choose from. */
 export function WorkPage({ ctx, work: w }: { ctx: Ctx; work: ChoralWork }) {
   const c = composerNamed(w.composer);
@@ -191,27 +178,25 @@ export function WorkPage({ ctx, work: w }: { ctx: Ctx; work: ChoralWork }) {
             Choose your part
           </h2>
         </div>
-        <div className="part-grid" role="group" aria-label="Chorus">
-          {w.chorus.map((p) => (
-            <button
-              key={p}
-              type="button"
-              className="part-card"
-              data-tone={PART_TONE[p]}
-              aria-pressed={part === `chorus:${p}`}
-              onClick={() => pick(`chorus:${p}`)}
-            >
-              <span className="part-pic" aria-hidden="true">
-                {LETTER[p]}
-              </span>
-              <span className="part-text">
-                <b>{p}</b>
-                <span>Chorus</span>
-              </span>
-            </button>
-          ))}
+        <div className="part-solo">
+          <p className="cx-label" id="chorus-h">
+            Chorus
+          </p>
+          <div className="part-pills" role="group" aria-labelledby="chorus-h">
+            {w.chorus.map((p) => (
+              <button
+                key={p}
+                type="button"
+                className="part-pill"
+                aria-pressed={part === `chorus:${p}`}
+                onClick={() => pick(`chorus:${p}`)}
+              >
+                {p}
+              </button>
+            ))}
+          </div>
+          {part?.startsWith("chorus:") && !w.music && note}
         </div>
-        {part?.startsWith("chorus:") && !w.music && note}
         <div className="part-solo">
           <p className="cx-label" id="solo-h">
             Soloists
