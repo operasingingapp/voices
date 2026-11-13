@@ -1,655 +1,1288 @@
 {
  "mozart-ah-signor-signor": {
   "file": "mozart-ah-signor-signor.m4a",
-  "gainDb": 8.0,
+  "gainDb": 4.1,
   "lines": {
-   "antonio": "lines/mozart-ah-signor-signor/antonio.m4a",
-   "count": "lines/mozart-ah-signor-signor/count.m4a",
-   "countess": "lines/mozart-ah-signor-signor/countess.m4a",
-   "figaro": "lines/mozart-ah-signor-signor/figaro.m4a",
-   "susanna": "lines/mozart-ah-signor-signor/susanna.m4a"
+   "antonio": {
+    "file": "lines/mozart-ah-signor-signor/antonio.m4a",
+    "gainDb": -3.4
+   },
+   "count": {
+    "file": "lines/mozart-ah-signor-signor/count.m4a",
+    "gainDb": -3.2
+   },
+   "countess": {
+    "file": "lines/mozart-ah-signor-signor/countess.m4a",
+    "gainDb": -2.5
+   },
+   "figaro": {
+    "file": "lines/mozart-ah-signor-signor/figaro.m4a",
+    "gainDb": -1.4
+   },
+   "susanna": {
+    "file": "lines/mozart-ah-signor-signor/susanna.m4a",
+    "gainDb": -1.5
+   }
   }
  },
  "mozart-andiam-bel-paggio": {
   "file": "mozart-andiam-bel-paggio.m4a",
-  "gainDb": 6.3,
+  "gainDb": 2.7,
   "lines": {
-   "barbarina": "lines/mozart-andiam-bel-paggio/barbarina.m4a",
-   "cherubino": "lines/mozart-andiam-bel-paggio/cherubino.m4a"
+   "barbarina": {
+    "file": "lines/mozart-andiam-bel-paggio/barbarina.m4a",
+    "gainDb": -2.9
+   },
+   "cherubino": {
+    "file": "lines/mozart-andiam-bel-paggio/cherubino.m4a",
+    "gainDb": -5.1
+   }
   }
  },
  "mozart-aprite-presto-aprite": {
   "file": "mozart-aprite-presto-aprite.m4a",
-  "gainDb": 10.0,
+  "gainDb": 5.5,
   "lines": {
-   "cherubino": "lines/mozart-aprite-presto-aprite/cherubino.m4a",
-   "susanna": "lines/mozart-aprite-presto-aprite/susanna.m4a"
+   "cherubino": {
+    "file": "lines/mozart-aprite-presto-aprite/cherubino.m4a",
+    "gainDb": -3.3
+   },
+   "susanna": {
+    "file": "lines/mozart-aprite-presto-aprite/susanna.m4a",
+    "gainDb": -3.5
+   }
   }
  },
  "mozart-barbarina-coshai": {
   "file": "mozart-barbarina-coshai.m4a",
-  "gainDb": 6.6,
+  "gainDb": 3.5,
   "lines": {
-   "barbarina": "lines/mozart-barbarina-coshai/barbarina.m4a",
-   "figaro": "lines/mozart-barbarina-coshai/figaro.m4a",
-   "marcellina": "lines/mozart-barbarina-coshai/marcellina.m4a"
+   "barbarina": {
+    "file": "lines/mozart-barbarina-coshai/barbarina.m4a",
+    "gainDb": -3.0
+   },
+   "figaro": {
+    "file": "lines/mozart-barbarina-coshai/figaro.m4a",
+    "gainDb": -2.4
+   },
+   "marcellina": {
+    "file": "lines/mozart-barbarina-coshai/marcellina.m4a",
+    "gainDb": -4.2
+   }
   }
  },
  "mozart-basilio-in-traccia-tosto": {
   "file": "mozart-basilio-in-traccia-tosto.m4a",
-  "gainDb": 7.1,
+  "gainDb": 2.7,
   "lines": {
-   "basilio": "lines/mozart-basilio-in-traccia-tosto/basilio.m4a",
-   "cherubino": "lines/mozart-basilio-in-traccia-tosto/cherubino.m4a",
-   "count": "lines/mozart-basilio-in-traccia-tosto/count.m4a",
-   "susanna": "lines/mozart-basilio-in-traccia-tosto/susanna.m4a"
+   "basilio": {
+    "file": "lines/mozart-basilio-in-traccia-tosto/basilio.m4a",
+    "gainDb": -3.3
+   },
+   "cherubino": {
+    "file": "lines/mozart-basilio-in-traccia-tosto/cherubino.m4a",
+    "gainDb": -3.3
+   },
+   "count": {
+    "file": "lines/mozart-basilio-in-traccia-tosto/count.m4a",
+    "gainDb": -2.8
+   },
+   "susanna": {
+    "file": "lines/mozart-basilio-in-traccia-tosto/susanna.m4a",
+    "gainDb": -1.6
+   }
   }
  },
  "mozart-bravo-che-bella-voce": {
   "file": "mozart-bravo-che-bella-voce.m4a",
-  "gainDb": 6.5,
+  "gainDb": 2.4,
   "lines": {
-   "cherubino": "lines/mozart-bravo-che-bella-voce/cherubino.m4a",
-   "countess": "lines/mozart-bravo-che-bella-voce/countess.m4a",
-   "susanna": "lines/mozart-bravo-che-bella-voce/susanna.m4a"
+   "cherubino": {
+    "file": "lines/mozart-bravo-che-bella-voce/cherubino.m4a",
+    "gainDb": -2.8
+   },
+   "countess": {
+    "file": "lines/mozart-bravo-che-bella-voce/countess.m4a",
+    "gainDb": -4.3
+   },
+   "susanna": {
+    "file": "lines/mozart-bravo-che-bella-voce/susanna.m4a",
+    "gainDb": -3.0
+   }
   }
  },
  "mozart-bravo-signor-padrone": {
   "file": "mozart-bravo-signor-padrone.m4a",
-  "gainDb": 6.9,
+  "gainDb": 3.0,
   "lines": {
-   "figaro": "lines/mozart-bravo-signor-padrone/figaro.m4a"
+   "figaro": {
+    "file": "lines/mozart-bravo-signor-padrone/figaro.m4a",
+    "gainDb": -3.4
+   }
   }
  },
  "mozart-che-imbarazzo": {
   "file": "mozart-che-imbarazzo.m4a",
-  "gainDb": 5.5,
+  "gainDb": 3.6,
   "lines": {
-   "count": "lines/mozart-che-imbarazzo/count.m4a",
-   "countess": "lines/mozart-che-imbarazzo/countess.m4a",
-   "susanna": "lines/mozart-che-imbarazzo/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-che-imbarazzo/count.m4a",
+    "gainDb": -2.3
+   },
+   "countess": {
+    "file": "lines/mozart-che-imbarazzo/countess.m4a",
+    "gainDb": -4.6
+   },
+   "susanna": {
+    "file": "lines/mozart-che-imbarazzo/susanna.m4a",
+    "gainDb": -3.7
+   }
   }
  },
  "mozart-che-novita": {
   "file": "mozart-che-novita.m4a",
-  "gainDb": 7.7,
+  "gainDb": 1.5,
   "lines": {
-   "count": "lines/mozart-che-novita/count.m4a",
-   "countess": "lines/mozart-che-novita/countess.m4a"
+   "count": {
+    "file": "lines/mozart-che-novita/count.m4a",
+    "gainDb": -3.0
+   },
+   "countess": {
+    "file": "lines/mozart-che-novita/countess.m4a",
+    "gainDb": -4.2
+   }
   }
  },
  "mozart-cinque-dieci-venti": {
   "file": "mozart-cinque-dieci-venti.m4a",
-  "gainDb": 7.7,
+  "gainDb": 4.3,
   "lines": {
-   "figaro": "lines/mozart-cinque-dieci-venti/figaro.m4a",
-   "susanna": "lines/mozart-cinque-dieci-venti/susanna.m4a"
+   "figaro": {
+    "file": "lines/mozart-cinque-dieci-venti/figaro.m4a",
+    "gainDb": -2.1
+   },
+   "susanna": {
+    "file": "lines/mozart-cinque-dieci-venti/susanna.m4a",
+    "gainDb": -3.1
+   }
   }
  },
  "mozart-cos-e-questa-commedia": {
   "file": "mozart-cos-e-questa-commedia.m4a",
-  "gainDb": 7.6,
+  "gainDb": 2.7,
   "lines": {
-   "chorus": "lines/mozart-cos-e-questa-commedia/chorus.m4a",
-   "count": "lines/mozart-cos-e-questa-commedia/count.m4a",
-   "figaro": "lines/mozart-cos-e-questa-commedia/figaro.m4a",
-   "susanna": "lines/mozart-cos-e-questa-commedia/susanna.m4a"
+   "chorus": {
+    "file": "lines/mozart-cos-e-questa-commedia/chorus.m4a",
+    "gainDb": -4.0
+   },
+   "count": {
+    "file": "lines/mozart-cos-e-questa-commedia/count.m4a",
+    "gainDb": -3.3
+   },
+   "figaro": {
+    "file": "lines/mozart-cos-e-questa-commedia/figaro.m4a",
+    "gainDb": -3.3
+   },
+   "susanna": {
+    "file": "lines/mozart-cos-e-questa-commedia/susanna.m4a",
+    "gainDb": -4.1
+   }
   }
  },
  "mozart-cosa-mi-narri": {
   "file": "mozart-cosa-mi-narri.m4a",
-  "gainDb": 6.6,
+  "gainDb": 2.0,
   "lines": {
-   "countess": "lines/mozart-cosa-mi-narri/countess.m4a",
-   "susanna": "lines/mozart-cosa-mi-narri/susanna.m4a"
+   "countess": {
+    "file": "lines/mozart-cosa-mi-narri/countess.m4a",
+    "gainDb": -4.6
+   },
+   "susanna": {
+    "file": "lines/mozart-cosa-mi-narri/susanna.m4a",
+    "gainDb": -4.6
+   }
   }
  },
  "mozart-cosa-sento": {
   "file": "mozart-cosa-sento.m4a",
-  "gainDb": 7.5,
+  "gainDb": 4.5,
   "lines": {
-   "basilio": "lines/mozart-cosa-sento/basilio.m4a",
-   "count": "lines/mozart-cosa-sento/count.m4a",
-   "susanna": "lines/mozart-cosa-sento/susanna.m4a"
+   "basilio": {
+    "file": "lines/mozart-cosa-sento/basilio.m4a",
+    "gainDb": -3.9
+   },
+   "count": {
+    "file": "lines/mozart-cosa-sento/count.m4a",
+    "gainDb": -3.3
+   },
+   "susanna": {
+    "file": "lines/mozart-cosa-sento/susanna.m4a",
+    "gainDb": -3.7
+   }
   }
  },
  "mozart-cosa-stai-misurando": {
   "file": "mozart-cosa-stai-misurando.m4a",
-  "gainDb": 6.4,
+  "gainDb": 1.9,
   "lines": {
-   "figaro": "lines/mozart-cosa-stai-misurando/figaro.m4a",
-   "susanna": "lines/mozart-cosa-stai-misurando/susanna.m4a"
+   "figaro": {
+    "file": "lines/mozart-cosa-stai-misurando/figaro.m4a",
+    "gainDb": -2.9
+   },
+   "susanna": {
+    "file": "lines/mozart-cosa-stai-misurando/susanna.m4a",
+    "gainDb": -3.1
+   }
   }
  },
  "mozart-crudel-perche-finora": {
   "file": "mozart-crudel-perche-finora.m4a",
-  "gainDb": 8.1,
+  "gainDb": 4.7,
   "lines": {
-   "count": "lines/mozart-crudel-perche-finora/count.m4a",
-   "susanna": "lines/mozart-crudel-perche-finora/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-crudel-perche-finora/count.m4a",
+    "gainDb": -3.5
+   },
+   "susanna": {
+    "file": "lines/mozart-crudel-perche-finora/susanna.m4a",
+    "gainDb": -2.1
+   }
   }
  },
  "mozart-dove-sono": {
   "file": "mozart-dove-sono.m4a",
-  "gainDb": 7.4,
+  "gainDb": 4.5,
   "lines": {
-   "soprano": "lines/mozart-dove-sono/soprano.m4a"
+   "soprano": {
+    "file": "lines/mozart-dove-sono/soprano.m4a",
+    "gainDb": -3.8
+   }
   }
  },
  "mozart-dunque-voi-non-aprite": {
   "file": "mozart-dunque-voi-non-aprite.m4a",
-  "gainDb": 6.8,
+  "gainDb": 3.7,
   "lines": {
-   "count": "lines/mozart-dunque-voi-non-aprite/count.m4a",
-   "countess": "lines/mozart-dunque-voi-non-aprite/countess.m4a"
+   "count": {
+    "file": "lines/mozart-dunque-voi-non-aprite/count.m4a",
+    "gainDb": -2.1
+   },
+   "countess": {
+    "file": "lines/mozart-dunque-voi-non-aprite/countess.m4a",
+    "gainDb": -3.5
+   }
   }
  },
  "mozart-e-decisa-la-lite": {
   "file": "mozart-e-decisa-la-lite.m4a",
-  "gainDb": 6.6,
+  "gainDb": 3.8,
   "lines": {
-   "bartolo": "lines/mozart-e-decisa-la-lite/bartolo.m4a",
-   "count": "lines/mozart-e-decisa-la-lite/count.m4a",
-   "curzio": "lines/mozart-e-decisa-la-lite/curzio.m4a",
-   "figaro": "lines/mozart-e-decisa-la-lite/figaro.m4a",
-   "marcellina": "lines/mozart-e-decisa-la-lite/marcellina.m4a"
+   "bartolo": {
+    "file": "lines/mozart-e-decisa-la-lite/bartolo.m4a",
+    "gainDb": -4.3
+   },
+   "count": {
+    "file": "lines/mozart-e-decisa-la-lite/count.m4a",
+    "gainDb": -4.7
+   },
+   "curzio": {
+    "file": "lines/mozart-e-decisa-la-lite/curzio.m4a",
+    "gainDb": -3.2
+   },
+   "figaro": {
+    "file": "lines/mozart-e-decisa-la-lite/figaro.m4a",
+    "gainDb": -2.7
+   },
+   "marcellina": {
+    "file": "lines/mozart-e-decisa-la-lite/marcellina.m4a",
+    "gainDb": -4.1
+   }
   }
  },
  "mozart-e-perche-fosti-meco": {
   "file": "mozart-e-perche-fosti-meco.m4a",
-  "gainDb": 7.3,
+  "gainDb": 1.2,
   "lines": {
-   "count": "lines/mozart-e-perche-fosti-meco/count.m4a",
-   "figaro": "lines/mozart-e-perche-fosti-meco/figaro.m4a",
-   "susanna": "lines/mozart-e-perche-fosti-meco/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-e-perche-fosti-meco/count.m4a",
+    "gainDb": -2.7
+   },
+   "figaro": {
+    "file": "lines/mozart-e-perche-fosti-meco/figaro.m4a",
+    "gainDb": -4.2
+   },
+   "susanna": {
+    "file": "lines/mozart-e-perche-fosti-meco/susanna.m4a",
+    "gainDb": -3.3
+   }
   }
  },
  "mozart-e-susanna-non-vien": {
   "file": "mozart-e-susanna-non-vien.m4a",
-  "gainDb": 6.1,
+  "gainDb": 4.1,
   "lines": {
-   "soprano": "lines/mozart-e-susanna-non-vien/soprano.m4a"
+   "soprano": {
+    "file": "lines/mozart-e-susanna-non-vien/soprano.m4a",
+    "gainDb": -3.6
+   }
   }
  },
  "mozart-ecco-la-marcia": {
   "file": "mozart-ecco-la-marcia.m4a",
-  "gainDb": 7.1,
+  "gainDb": 4.7,
   "lines": {
-   "coro-alto": "lines/mozart-ecco-la-marcia/coro-alto.m4a",
-   "coro-bass": "lines/mozart-ecco-la-marcia/coro-bass.m4a",
-   "coro-soprano": "lines/mozart-ecco-la-marcia/coro-soprano.m4a",
-   "coro-tenor": "lines/mozart-ecco-la-marcia/coro-tenor.m4a",
-   "count": "lines/mozart-ecco-la-marcia/count.m4a",
-   "countess": "lines/mozart-ecco-la-marcia/countess.m4a",
-   "figaro": "lines/mozart-ecco-la-marcia/figaro.m4a",
-   "susanna": "lines/mozart-ecco-la-marcia/susanna.m4a"
+   "coro-alto": {
+    "file": "lines/mozart-ecco-la-marcia/coro-alto.m4a",
+    "gainDb": -1.6
+   },
+   "coro-bass": {
+    "file": "lines/mozart-ecco-la-marcia/coro-bass.m4a",
+    "gainDb": -4.0
+   },
+   "coro-soprano": {
+    "file": "lines/mozart-ecco-la-marcia/coro-soprano.m4a",
+    "gainDb": -1.3
+   },
+   "coro-tenor": {
+    "file": "lines/mozart-ecco-la-marcia/coro-tenor.m4a",
+    "gainDb": -3.1
+   },
+   "count": {
+    "file": "lines/mozart-ecco-la-marcia/count.m4a",
+    "gainDb": -2.6
+   },
+   "countess": {
+    "file": "lines/mozart-ecco-la-marcia/countess.m4a",
+    "gainDb": -4.2
+   },
+   "figaro": {
+    "file": "lines/mozart-ecco-la-marcia/figaro.m4a",
+    "gainDb": -3.1
+   },
+   "susanna": {
+    "file": "lines/mozart-ecco-la-marcia/susanna.m4a",
+    "gainDb": -6.5
+   }
   }
  },
  "mozart-eccovi-o-caro-amico": {
   "file": "mozart-eccovi-o-caro-amico.m4a",
-  "gainDb": 5.7,
+  "gainDb": 3.1,
   "lines": {
-   "bartolo": "lines/mozart-eccovi-o-caro-amico/bartolo.m4a",
-   "figaro": "lines/mozart-eccovi-o-caro-amico/figaro.m4a",
-   "marcellina": "lines/mozart-eccovi-o-caro-amico/marcellina.m4a",
-   "susanna": "lines/mozart-eccovi-o-caro-amico/susanna.m4a"
+   "bartolo": {
+    "file": "lines/mozart-eccovi-o-caro-amico/bartolo.m4a",
+    "gainDb": -4.0
+   },
+   "figaro": {
+    "file": "lines/mozart-eccovi-o-caro-amico/figaro.m4a",
+    "gainDb": -3.6
+   },
+   "marcellina": {
+    "file": "lines/mozart-eccovi-o-caro-amico/marcellina.m4a",
+    "gainDb": -3.4
+   },
+   "susanna": {
+    "file": "lines/mozart-eccovi-o-caro-amico/susanna.m4a",
+    "gainDb": -3.6
+   }
   }
  },
  "mozart-ed-aspettaste-il-giorno": {
   "file": "mozart-ed-aspettaste-il-giorno.m4a",
-  "gainDb": 6.5,
+  "gainDb": 3.0,
   "lines": {
-   "bartolo": "lines/mozart-ed-aspettaste-il-giorno/bartolo.m4a",
-   "marcellina": "lines/mozart-ed-aspettaste-il-giorno/marcellina.m4a"
+   "bartolo": {
+    "file": "lines/mozart-ed-aspettaste-il-giorno/bartolo.m4a",
+    "gainDb": -2.5
+   },
+   "marcellina": {
+    "file": "lines/mozart-ed-aspettaste-il-giorno/marcellina.m4a",
+    "gainDb": -3.1
+   }
   }
  },
  "mozart-eh-cospettate": {
   "file": "mozart-eh-cospettate.m4a",
-  "gainDb": 6.7,
+  "gainDb": 3.0,
   "lines": {
-   "antonio": "lines/mozart-eh-cospettate/antonio.m4a",
-   "barbarina": "lines/mozart-eh-cospettate/barbarina.m4a",
-   "cherubino": "lines/mozart-eh-cospettate/cherubino.m4a",
-   "count": "lines/mozart-eh-cospettate/count.m4a",
-   "countess": "lines/mozart-eh-cospettate/countess.m4a",
-   "figaro": "lines/mozart-eh-cospettate/figaro.m4a",
-   "susanna": "lines/mozart-eh-cospettate/susanna.m4a"
+   "antonio": {
+    "file": "lines/mozart-eh-cospettate/antonio.m4a",
+    "gainDb": -2.5
+   },
+   "barbarina": {
+    "file": "lines/mozart-eh-cospettate/barbarina.m4a",
+    "gainDb": -2.7
+   },
+   "cherubino": {
+    "file": "lines/mozart-eh-cospettate/cherubino.m4a",
+    "gainDb": -6.6
+   },
+   "count": {
+    "file": "lines/mozart-eh-cospettate/count.m4a",
+    "gainDb": -3.3
+   },
+   "countess": {
+    "file": "lines/mozart-eh-cospettate/countess.m4a",
+    "gainDb": -3.5
+   },
+   "figaro": {
+    "file": "lines/mozart-eh-cospettate/figaro.m4a",
+    "gainDb": -2.5
+   },
+   "susanna": {
+    "file": "lines/mozart-eh-cospettate/susanna.m4a",
+    "gainDb": -4.7
+   }
   }
  },
  "mozart-esci-omai-garzon-malnato": {
   "file": "mozart-esci-omai-garzon-malnato.m4a",
-  "gainDb": 7.5,
+  "gainDb": 4.4,
   "lines": {
-   "count": "lines/mozart-esci-omai-garzon-malnato/count.m4a",
-   "countess": "lines/mozart-esci-omai-garzon-malnato/countess.m4a"
+   "count": {
+    "file": "lines/mozart-esci-omai-garzon-malnato/count.m4a",
+    "gainDb": -3.2
+   },
+   "countess": {
+    "file": "lines/mozart-esci-omai-garzon-malnato/countess.m4a",
+    "gainDb": -2.7
+   }
   }
  },
  "mozart-evviva": {
   "file": "mozart-evviva.m4a",
-  "gainDb": 6.5,
+  "gainDb": 2.6,
   "lines": {
-   "basilio": "lines/mozart-evviva/basilio.m4a",
-   "cherubino": "lines/mozart-evviva/cherubino.m4a",
-   "count": "lines/mozart-evviva/count.m4a",
-   "figaro": "lines/mozart-evviva/figaro.m4a",
-   "susanna": "lines/mozart-evviva/susanna.m4a"
+   "basilio": {
+    "file": "lines/mozart-evviva/basilio.m4a",
+    "gainDb": -6.4
+   },
+   "cherubino": {
+    "file": "lines/mozart-evviva/cherubino.m4a",
+    "gainDb": -5.8
+   },
+   "count": {
+    "file": "lines/mozart-evviva/count.m4a",
+    "gainDb": -3.1
+   },
+   "figaro": {
+    "file": "lines/mozart-evviva/figaro.m4a",
+    "gainDb": -2.1
+   },
+   "susanna": {
+    "file": "lines/mozart-evviva/susanna.m4a",
+    "gainDb": -4.4
+   }
   }
  },
  "mozart-figaro-sinfonia": {
   "file": "mozart-figaro-sinfonia.m4a",
-  "gainDb": 7.1
+  "gainDb": 5.0
  },
  "mozart-gente-gente-all-armi": {
   "file": "mozart-gente-gente-all-armi.m4a",
-  "gainDb": 7.0,
+  "gainDb": 4.1,
   "lines": {
-   "antonio": "lines/mozart-gente-gente-all-armi/antonio.m4a",
-   "barbarina": "lines/mozart-gente-gente-all-armi/barbarina.m4a",
-   "bartolo": "lines/mozart-gente-gente-all-armi/bartolo.m4a",
-   "basilio": "lines/mozart-gente-gente-all-armi/basilio.m4a",
-   "cherubino": "lines/mozart-gente-gente-all-armi/cherubino.m4a",
-   "count": "lines/mozart-gente-gente-all-armi/count.m4a",
-   "countess": "lines/mozart-gente-gente-all-armi/countess.m4a",
-   "curzio": "lines/mozart-gente-gente-all-armi/curzio.m4a",
-   "figaro": "lines/mozart-gente-gente-all-armi/figaro.m4a",
-   "marcellina": "lines/mozart-gente-gente-all-armi/marcellina.m4a",
-   "susanna": "lines/mozart-gente-gente-all-armi/susanna.m4a"
+   "antonio": {
+    "file": "lines/mozart-gente-gente-all-armi/antonio.m4a",
+    "gainDb": -3.4
+   },
+   "barbarina": {
+    "file": "lines/mozart-gente-gente-all-armi/barbarina.m4a",
+    "gainDb": -2.6
+   },
+   "bartolo": {
+    "file": "lines/mozart-gente-gente-all-armi/bartolo.m4a",
+    "gainDb": -2.3
+   },
+   "basilio": {
+    "file": "lines/mozart-gente-gente-all-armi/basilio.m4a",
+    "gainDb": -2.1
+   },
+   "cherubino": {
+    "file": "lines/mozart-gente-gente-all-armi/cherubino.m4a",
+    "gainDb": -2.6
+   },
+   "count": {
+    "file": "lines/mozart-gente-gente-all-armi/count.m4a",
+    "gainDb": -3.3
+   },
+   "countess": {
+    "file": "lines/mozart-gente-gente-all-armi/countess.m4a",
+    "gainDb": -3.4
+   },
+   "curzio": {
+    "file": "lines/mozart-gente-gente-all-armi/curzio.m4a",
+    "gainDb": -3.4
+   },
+   "figaro": {
+    "file": "lines/mozart-gente-gente-all-armi/figaro.m4a",
+    "gainDb": -3.5
+   },
+   "marcellina": {
+    "file": "lines/mozart-gente-gente-all-armi/marcellina.m4a",
+    "gainDb": -2.6
+   },
+   "susanna": {
+    "file": "lines/mozart-gente-gente-all-armi/susanna.m4a",
+    "gainDb": -2.8
+   }
   }
  },
  "mozart-giovani-liete": {
   "file": "mozart-giovani-liete.m4a",
-  "gainDb": 7.1,
+  "gainDb": 3.6,
   "lines": {
-   "alto": "lines/mozart-giovani-liete/alto.m4a",
-   "bass": "lines/mozart-giovani-liete/bass.m4a",
-   "soprano": "lines/mozart-giovani-liete/soprano.m4a",
-   "tenor": "lines/mozart-giovani-liete/tenor.m4a"
+   "alto": {
+    "file": "lines/mozart-giovani-liete/alto.m4a",
+    "gainDb": -2.5
+   },
+   "bass": {
+    "file": "lines/mozart-giovani-liete/bass.m4a",
+    "gainDb": -3.2
+   },
+   "soprano": {
+    "file": "lines/mozart-giovani-liete/soprano.m4a",
+    "gainDb": -3.2
+   },
+   "tenor": {
+    "file": "lines/mozart-giovani-liete/tenor.m4a",
+    "gainDb": -1.1
+   }
   }
  },
  "mozart-giovani-liete-reprise": {
   "file": "mozart-giovani-liete-reprise.m4a",
-  "gainDb": 6.7,
+  "gainDb": 4.6,
   "lines": {
-   "alto": "lines/mozart-giovani-liete-reprise/alto.m4a",
-   "bass": "lines/mozart-giovani-liete-reprise/bass.m4a",
-   "soprano": "lines/mozart-giovani-liete-reprise/soprano.m4a",
-   "tenor": "lines/mozart-giovani-liete-reprise/tenor.m4a"
+   "alto": {
+    "file": "lines/mozart-giovani-liete-reprise/alto.m4a",
+    "gainDb": -1.9
+   },
+   "bass": {
+    "file": "lines/mozart-giovani-liete-reprise/bass.m4a",
+    "gainDb": -2.6
+   },
+   "soprano": {
+    "file": "lines/mozart-giovani-liete-reprise/soprano.m4a",
+    "gainDb": -3.3
+   },
+   "tenor": {
+    "file": "lines/mozart-giovani-liete-reprise/tenor.m4a",
+    "gainDb": -1.7
+   }
   }
  },
  "mozart-giunse-alfin-il-momento": {
   "file": "mozart-giunse-alfin-il-momento.m4a",
-  "gainDb": 8.6,
+  "gainDb": -1.1,
   "lines": {
-   "susanna": "lines/mozart-giunse-alfin-il-momento/susanna.m4a"
+   "susanna": {
+    "file": "lines/mozart-giunse-alfin-il-momento/susanna.m4a",
+    "gainDb": -3.4
+   }
   }
  },
  "mozart-hai-diavoli-nel-corpo": {
   "file": "mozart-hai-diavoli-nel-corpo.m4a",
-  "gainDb": 5.3,
+  "gainDb": 0.6,
   "lines": {
-   "bartolo": "lines/mozart-hai-diavoli-nel-corpo/bartolo.m4a",
-   "basilio": "lines/mozart-hai-diavoli-nel-corpo/basilio.m4a"
+   "bartolo": {
+    "file": "lines/mozart-hai-diavoli-nel-corpo/bartolo.m4a",
+    "gainDb": -2.7
+   },
+   "basilio": {
+    "file": "lines/mozart-hai-diavoli-nel-corpo/basilio.m4a",
+    "gainDb": -3.2
+   }
   }
  },
  "mozart-hai-gia-vinta": {
   "file": "mozart-hai-gia-vinta.m4a",
-  "gainDb": 7.6,
+  "gainDb": 4.8,
   "lines": {
-   "count": "lines/mozart-hai-gia-vinta/count.m4a"
+   "count": {
+    "file": "lines/mozart-hai-gia-vinta/count.m4a",
+    "gainDb": -1.8
+   }
   }
  },
  "mozart-il-capro-e-la-capretta": {
   "file": "mozart-il-capro-e-la-capretta.m4a",
-  "gainDb": 7.6,
+  "gainDb": 3.8,
   "lines": {
-   "marcellina": "lines/mozart-il-capro-e-la-capretta/marcellina.m4a"
+   "marcellina": {
+    "file": "lines/mozart-il-capro-e-la-capretta/marcellina.m4a",
+    "gainDb": -2.6
+   }
   }
  },
  "mozart-in-quegli-anni": {
   "file": "mozart-in-quegli-anni.m4a",
-  "gainDb": 7.5,
+  "gainDb": 3.6,
   "lines": {
-   "basilio": "lines/mozart-in-quegli-anni/basilio.m4a"
+   "basilio": {
+    "file": "lines/mozart-in-quegli-anni/basilio.m4a",
+    "gainDb": -3.7
+   }
   }
  },
  "mozart-io-vi-dico-signor": {
   "file": "mozart-io-vi-dico-signor.m4a",
-  "gainDb": 7.7,
+  "gainDb": 4.8,
   "lines": {
-   "antonio": "lines/mozart-io-vi-dico-signor/antonio.m4a",
-   "count": "lines/mozart-io-vi-dico-signor/count.m4a"
+   "antonio": {
+    "file": "lines/mozart-io-vi-dico-signor/antonio.m4a",
+    "gainDb": -3.2
+   },
+   "count": {
+    "file": "lines/mozart-io-vi-dico-signor/count.m4a",
+    "gainDb": -3.2
+   }
   }
  },
  "mozart-la-vendetta": {
   "file": "mozart-la-vendetta.m4a",
-  "gainDb": 7.4,
+  "gainDb": 5.3,
   "lines": {
-   "bartolo": "lines/mozart-la-vendetta/bartolo.m4a"
+   "bartolo": {
+    "file": "lines/mozart-la-vendetta/bartolo.m4a",
+    "gainDb": -2.0
+   }
   }
  },
  "mozart-lho-perduta": {
   "file": "mozart-lho-perduta.m4a",
-  "gainDb": 7.5,
+  "gainDb": -2.7,
   "lines": {
-   "barbarina": "lines/mozart-lho-perduta/barbarina.m4a"
+   "barbarina": {
+    "file": "lines/mozart-lho-perduta/barbarina.m4a",
+    "gainDb": -4.7
+   }
   }
  },
  "mozart-nel-padiglione-a-manca": {
   "file": "mozart-nel-padiglione-a-manca.m4a",
-  "gainDb": 6.0,
+  "gainDb": 3.5,
   "lines": {
-   "barbarina": "lines/mozart-nel-padiglione-a-manca/barbarina.m4a",
-   "bartolo": "lines/mozart-nel-padiglione-a-manca/bartolo.m4a",
-   "basilio": "lines/mozart-nel-padiglione-a-manca/basilio.m4a",
-   "figaro": "lines/mozart-nel-padiglione-a-manca/figaro.m4a"
+   "barbarina": {
+    "file": "lines/mozart-nel-padiglione-a-manca/barbarina.m4a",
+    "gainDb": -2.9
+   },
+   "bartolo": {
+    "file": "lines/mozart-nel-padiglione-a-manca/bartolo.m4a",
+    "gainDb": -2.8
+   },
+   "basilio": {
+    "file": "lines/mozart-nel-padiglione-a-manca/basilio.m4a",
+    "gainDb": -3.6
+   },
+   "figaro": {
+    "file": "lines/mozart-nel-padiglione-a-manca/figaro.m4a",
+    "gainDb": -3.9
+   }
   }
  },
  "mozart-non-piu-andrai": {
   "file": "mozart-non-piu-andrai.m4a",
-  "gainDb": 6.8,
+  "gainDb": 5.4,
   "lines": {
-   "figaro": "lines/mozart-non-piu-andrai/figaro.m4a"
+   "figaro": {
+    "file": "lines/mozart-non-piu-andrai/figaro.m4a",
+    "gainDb": -2.6
+   }
   }
  },
  "mozart-non-so-piu": {
   "file": "mozart-non-so-piu.m4a",
-  "gainDb": 8.0,
+  "gainDb": 4.6,
   "lines": {
-   "cherubino": "lines/mozart-non-so-piu/cherubino.m4a"
+   "cherubino": {
+    "file": "lines/mozart-non-so-piu/cherubino.m4a",
+    "gainDb": -3.6
+   }
   }
  },
  "mozart-oh-guarda-il-demonietto": {
   "file": "mozart-oh-guarda-il-demonietto.m4a",
-  "gainDb": 6.5,
+  "gainDb": 2.9,
   "lines": {
-   "susanna": "lines/mozart-oh-guarda-il-demonietto/susanna.m4a"
+   "susanna": {
+    "file": "lines/mozart-oh-guarda-il-demonietto/susanna.m4a",
+    "gainDb": -3.1
+   }
   }
  },
  "mozart-or-bene-ascolta-e-taci": {
   "file": "mozart-or-bene-ascolta-e-taci.m4a",
-  "gainDb": 5.8,
+  "gainDb": 2.3,
   "lines": {
-   "figaro": "lines/mozart-or-bene-ascolta-e-taci/figaro.m4a",
-   "susanna": "lines/mozart-or-bene-ascolta-e-taci/susanna.m4a"
+   "figaro": {
+    "file": "lines/mozart-or-bene-ascolta-e-taci/figaro.m4a",
+    "gainDb": -4.2
+   },
+   "susanna": {
+    "file": "lines/mozart-or-bene-ascolta-e-taci/susanna.m4a",
+    "gainDb": -2.3
+   }
   }
  },
  "mozart-pace-pace": {
   "file": "mozart-pace-pace.m4a",
-  "gainDb": 8.4,
+  "gainDb": 3.9,
   "lines": {
-   "count": "lines/mozart-pace-pace/count.m4a",
-   "figaro": "lines/mozart-pace-pace/figaro.m4a",
-   "susanna": "lines/mozart-pace-pace/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-pace-pace/count.m4a",
+    "gainDb": -4.3
+   },
+   "figaro": {
+    "file": "lines/mozart-pace-pace/figaro.m4a",
+    "gainDb": -2.8
+   },
+   "susanna": {
+    "file": "lines/mozart-pace-pace/susanna.m4a",
+    "gainDb": -4.1
+   }
   }
  },
  "mozart-partito-e-alfin-l-audace": {
   "file": "mozart-partito-e-alfin-l-audace.m4a",
-  "gainDb": 7.1,
+  "gainDb": 4.3,
   "lines": {
-   "count": "lines/mozart-partito-e-alfin-l-audace/count.m4a",
-   "countess": "lines/mozart-partito-e-alfin-l-audace/countess.m4a",
-   "figaro": "lines/mozart-partito-e-alfin-l-audace/figaro.m4a",
-   "susanna": "lines/mozart-partito-e-alfin-l-audace/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-partito-e-alfin-l-audace/count.m4a",
+    "gainDb": -2.2
+   },
+   "countess": {
+    "file": "lines/mozart-partito-e-alfin-l-audace/countess.m4a",
+    "gainDb": -2.2
+   },
+   "figaro": {
+    "file": "lines/mozart-partito-e-alfin-l-audace/figaro.m4a",
+    "gainDb": -2.7
+   },
+   "susanna": {
+    "file": "lines/mozart-partito-e-alfin-l-audace/susanna.m4a",
+    "gainDb": -4.4
+   }
   }
  },
  "mozart-perfida-e-in-quella-forma": {
   "file": "mozart-perfida-e-in-quella-forma.m4a",
-  "gainDb": 6.2,
+  "gainDb": 1.3,
   "lines": {
-   "cherubino": "lines/mozart-perfida-e-in-quella-forma/cherubino.m4a",
-   "countess": "lines/mozart-perfida-e-in-quella-forma/countess.m4a",
-   "figaro": "lines/mozart-perfida-e-in-quella-forma/figaro.m4a"
+   "cherubino": {
+    "file": "lines/mozart-perfida-e-in-quella-forma/cherubino.m4a",
+    "gainDb": -4.1
+   },
+   "countess": {
+    "file": "lines/mozart-perfida-e-in-quella-forma/countess.m4a",
+    "gainDb": -3.8
+   },
+   "figaro": {
+    "file": "lines/mozart-perfida-e-in-quella-forma/figaro.m4a",
+    "gainDb": -4.6
+   }
   }
  },
  "mozart-pian-pianin": {
   "file": "mozart-pian-pianin.m4a",
-  "gainDb": 8.5,
+  "gainDb": 4.2,
   "lines": {
-   "cherubino": "lines/mozart-pian-pianin/cherubino.m4a",
-   "count": "lines/mozart-pian-pianin/count.m4a",
-   "countess": "lines/mozart-pian-pianin/countess.m4a",
-   "figaro": "lines/mozart-pian-pianin/figaro.m4a",
-   "susanna": "lines/mozart-pian-pianin/susanna.m4a"
+   "cherubino": {
+    "file": "lines/mozart-pian-pianin/cherubino.m4a",
+    "gainDb": -3.6
+   },
+   "count": {
+    "file": "lines/mozart-pian-pianin/count.m4a",
+    "gainDb": -2.0
+   },
+   "countess": {
+    "file": "lines/mozart-pian-pianin/countess.m4a",
+    "gainDb": -2.5
+   },
+   "figaro": {
+    "file": "lines/mozart-pian-pianin/figaro.m4a",
+    "gainDb": -0.8
+   },
+   "susanna": {
+    "file": "lines/mozart-pian-pianin/susanna.m4a",
+    "gainDb": -2.5
+   }
   }
  },
  "mozart-piegato-e-il-foglio": {
   "file": "mozart-piegato-e-il-foglio.m4a",
-  "gainDb": 7.4,
+  "gainDb": 1.8,
   "lines": {
-   "countess": "lines/mozart-piegato-e-il-foglio/countess.m4a",
-   "susanna": "lines/mozart-piegato-e-il-foglio/susanna.m4a"
+   "countess": {
+    "file": "lines/mozart-piegato-e-il-foglio/countess.m4a",
+    "gainDb": -4.1
+   },
+   "susanna": {
+    "file": "lines/mozart-piegato-e-il-foglio/susanna.m4a",
+    "gainDb": -4.5
+   }
   }
  },
  "mozart-porgi-amor": {
   "file": "mozart-porgi-amor.m4a",
-  "gainDb": 8.3,
+  "gainDb": 3.4,
   "lines": {
-   "countess": "lines/mozart-porgi-amor/countess.m4a"
+   "countess": {
+    "file": "lines/mozart-porgi-amor/countess.m4a",
+    "gainDb": -5.2
+   }
   }
  },
  "mozart-presto-avvertiam-susanna": {
   "file": "mozart-presto-avvertiam-susanna.m4a",
-  "gainDb": 6.7,
+  "gainDb": 1.6,
   "lines": {
-   "marcellina": "lines/mozart-presto-avvertiam-susanna/marcellina.m4a"
+   "marcellina": {
+    "file": "lines/mozart-presto-avvertiam-susanna/marcellina.m4a",
+    "gainDb": -4.0
+   }
   }
  },
  "mozart-quante-buffonerie": {
   "file": "mozart-quante-buffonerie.m4a",
-  "gainDb": 6.3,
+  "gainDb": 3.6,
   "lines": {
-   "cherubino": "lines/mozart-quante-buffonerie/cherubino.m4a",
-   "count": "lines/mozart-quante-buffonerie/count.m4a",
-   "countess": "lines/mozart-quante-buffonerie/countess.m4a",
-   "susanna": "lines/mozart-quante-buffonerie/susanna.m4a"
+   "cherubino": {
+    "file": "lines/mozart-quante-buffonerie/cherubino.m4a",
+    "gainDb": -1.8
+   },
+   "count": {
+    "file": "lines/mozart-quante-buffonerie/count.m4a",
+    "gainDb": -3.1
+   },
+   "countess": {
+    "file": "lines/mozart-quante-buffonerie/countess.m4a",
+    "gainDb": -2.6
+   },
+   "susanna": {
+    "file": "lines/mozart-quante-buffonerie/susanna.m4a",
+    "gainDb": -3.6
+   }
   }
  },
  "mozart-quanto-duolmi-susanna": {
   "file": "mozart-quanto-duolmi-susanna.m4a",
-  "gainDb": 6.4,
+  "gainDb": 4.3,
   "lines": {
-   "cherubino": "lines/mozart-quanto-duolmi-susanna/cherubino.m4a",
-   "countess": "lines/mozart-quanto-duolmi-susanna/countess.m4a",
-   "susanna": "lines/mozart-quanto-duolmi-susanna/susanna.m4a"
+   "cherubino": {
+    "file": "lines/mozart-quanto-duolmi-susanna/cherubino.m4a",
+    "gainDb": -5.1
+   },
+   "countess": {
+    "file": "lines/mozart-quanto-duolmi-susanna/countess.m4a",
+    "gainDb": -2.4
+   },
+   "susanna": {
+    "file": "lines/mozart-quanto-duolmi-susanna/susanna.m4a",
+    "gainDb": -3.9
+   }
   }
  },
  "mozart-queste-sono-madama": {
   "file": "mozart-queste-sono-madama.m4a",
-  "gainDb": 6.4,
+  "gainDb": 2.8,
   "lines": {
-   "barbarina": "lines/mozart-queste-sono-madama/barbarina.m4a",
-   "countess": "lines/mozart-queste-sono-madama/countess.m4a",
-   "susanna": "lines/mozart-queste-sono-madama/susanna.m4a"
+   "barbarina": {
+    "file": "lines/mozart-queste-sono-madama/barbarina.m4a",
+    "gainDb": -4.7
+   },
+   "countess": {
+    "file": "lines/mozart-queste-sono-madama/countess.m4a",
+    "gainDb": -4.4
+   },
+   "susanna": {
+    "file": "lines/mozart-queste-sono-madama/susanna.m4a",
+    "gainDb": -5.3
+   }
   }
  },
  "mozart-questo-giorno-di-tormenti": {
   "file": "mozart-questo-giorno-di-tormenti.m4a",
-  "gainDb": 6.6,
+  "gainDb": 3.8,
   "lines": {
-   "antonio": "lines/mozart-questo-giorno-di-tormenti/antonio.m4a",
-   "barbarina": "lines/mozart-questo-giorno-di-tormenti/barbarina.m4a",
-   "bartolo": "lines/mozart-questo-giorno-di-tormenti/bartolo.m4a",
-   "basilio": "lines/mozart-questo-giorno-di-tormenti/basilio.m4a",
-   "cherubino": "lines/mozart-questo-giorno-di-tormenti/cherubino.m4a",
-   "count": "lines/mozart-questo-giorno-di-tormenti/count.m4a",
-   "countess": "lines/mozart-questo-giorno-di-tormenti/countess.m4a",
-   "curzio": "lines/mozart-questo-giorno-di-tormenti/curzio.m4a",
-   "figaro": "lines/mozart-questo-giorno-di-tormenti/figaro.m4a",
-   "marcellina": "lines/mozart-questo-giorno-di-tormenti/marcellina.m4a",
-   "susanna": "lines/mozart-questo-giorno-di-tormenti/susanna.m4a"
+   "antonio": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/antonio.m4a",
+    "gainDb": -2.3
+   },
+   "barbarina": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/barbarina.m4a",
+    "gainDb": -3.6
+   },
+   "bartolo": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/bartolo.m4a",
+    "gainDb": -2.3
+   },
+   "basilio": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/basilio.m4a",
+    "gainDb": -2.0
+   },
+   "cherubino": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/cherubino.m4a",
+    "gainDb": -3.6
+   },
+   "count": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/count.m4a",
+    "gainDb": -1.5
+   },
+   "countess": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/countess.m4a",
+    "gainDb": -3.1
+   },
+   "curzio": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/curzio.m4a",
+    "gainDb": -2.0
+   },
+   "figaro": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/figaro.m4a",
+    "gainDb": -2.3
+   },
+   "marcellina": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/marcellina.m4a",
+    "gainDb": -3.6
+   },
+   "susanna": {
+    "file": "lines/mozart-questo-giorno-di-tormenti/susanna.m4a",
+    "gainDb": -3.1
+   }
   }
  },
  "mozart-ricevete-o-padroncina": {
   "file": "mozart-ricevete-o-padroncina.m4a",
-  "gainDb": 10.5,
+  "gainDb": -0.5,
   "lines": {
-   "soprano-1": "lines/mozart-ricevete-o-padroncina/soprano-1.m4a",
-   "soprano-2": "lines/mozart-ricevete-o-padroncina/soprano-2.m4a"
+   "soprano-1": {
+    "file": "lines/mozart-ricevete-o-padroncina/soprano-1.m4a",
+    "gainDb": -4.7
+   },
+   "soprano-2": {
+    "file": "lines/mozart-ricevete-o-padroncina/soprano-2.m4a",
+    "gainDb": -3.8
+   }
   }
  },
  "mozart-riconosci-in-questo-amplesso": {
   "file": "mozart-riconosci-in-questo-amplesso.m4a",
-  "gainDb": 7.7,
+  "gainDb": 3.9,
   "lines": {
-   "bartolo": "lines/mozart-riconosci-in-questo-amplesso/bartolo.m4a",
-   "count": "lines/mozart-riconosci-in-questo-amplesso/count.m4a",
-   "curzio": "lines/mozart-riconosci-in-questo-amplesso/curzio.m4a",
-   "figaro": "lines/mozart-riconosci-in-questo-amplesso/figaro.m4a",
-   "marcellina": "lines/mozart-riconosci-in-questo-amplesso/marcellina.m4a",
-   "susanna": "lines/mozart-riconosci-in-questo-amplesso/susanna.m4a"
+   "bartolo": {
+    "file": "lines/mozart-riconosci-in-questo-amplesso/bartolo.m4a",
+    "gainDb": -3.0
+   },
+   "count": {
+    "file": "lines/mozart-riconosci-in-questo-amplesso/count.m4a",
+    "gainDb": -1.7
+   },
+   "curzio": {
+    "file": "lines/mozart-riconosci-in-questo-amplesso/curzio.m4a",
+    "gainDb": -1.2
+   },
+   "figaro": {
+    "file": "lines/mozart-riconosci-in-questo-amplesso/figaro.m4a",
+    "gainDb": -2.8
+   },
+   "marcellina": {
+    "file": "lines/mozart-riconosci-in-questo-amplesso/marcellina.m4a",
+    "gainDb": -3.7
+   },
+   "susanna": {
+    "file": "lines/mozart-riconosci-in-questo-amplesso/susanna.m4a",
+    "gainDb": -2.5
+   }
   }
  },
  "mozart-se-a-caso-madama": {
   "file": "mozart-se-a-caso-madama.m4a",
-  "gainDb": 8.4,
+  "gainDb": 6.0,
   "lines": {
-   "figaro": "lines/mozart-se-a-caso-madama/figaro.m4a",
-   "susanna": "lines/mozart-se-a-caso-madama/susanna.m4a"
+   "figaro": {
+    "file": "lines/mozart-se-a-caso-madama/figaro.m4a",
+    "gainDb": -3.1
+   },
+   "susanna": {
+    "file": "lines/mozart-se-a-caso-madama/susanna.m4a",
+    "gainDb": -3.3
+   }
   }
  },
  "mozart-se-vuol-ballare": {
   "file": "mozart-se-vuol-ballare.m4a",
-  "gainDb": 7.7,
+  "gainDb": 4.2,
   "lines": {
-   "figaro": "lines/mozart-se-vuol-ballare/figaro.m4a"
+   "figaro": {
+    "file": "lines/mozart-se-vuol-ballare/figaro.m4a",
+    "gainDb": -3.3
+   }
   }
  },
  "mozart-signora-ella-mi-disse": {
   "file": "mozart-signora-ella-mi-disse.m4a",
-  "gainDb": 6.9,
+  "gainDb": 3.4,
   "lines": {
-   "countess": "lines/mozart-signora-ella-mi-disse/countess.m4a",
-   "figaro": "lines/mozart-signora-ella-mi-disse/figaro.m4a",
-   "marcellina": "lines/mozart-signora-ella-mi-disse/marcellina.m4a",
-   "susanna": "lines/mozart-signora-ella-mi-disse/susanna.m4a"
+   "countess": {
+    "file": "lines/mozart-signora-ella-mi-disse/countess.m4a",
+    "gainDb": -5.4
+   },
+   "figaro": {
+    "file": "lines/mozart-signora-ella-mi-disse/figaro.m4a",
+    "gainDb": -4.3
+   },
+   "marcellina": {
+    "file": "lines/mozart-signora-ella-mi-disse/marcellina.m4a",
+    "gainDb": -5.1
+   },
+   "susanna": {
+    "file": "lines/mozart-signora-ella-mi-disse/susanna.m4a",
+    "gainDb": -4.3
+   }
   }
  },
  "mozart-signori-di-fuori": {
   "file": "mozart-signori-di-fuori.m4a",
-  "gainDb": 7.3,
+  "gainDb": 4.2,
   "lines": {
-   "count": "lines/mozart-signori-di-fuori/count.m4a",
-   "countess": "lines/mozart-signori-di-fuori/countess.m4a",
-   "figaro": "lines/mozart-signori-di-fuori/figaro.m4a",
-   "susanna": "lines/mozart-signori-di-fuori/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-signori-di-fuori/count.m4a",
+    "gainDb": -1.4
+   },
+   "countess": {
+    "file": "lines/mozart-signori-di-fuori/countess.m4a",
+    "gainDb": -2.2
+   },
+   "figaro": {
+    "file": "lines/mozart-signori-di-fuori/figaro.m4a",
+    "gainDb": -1.6
+   },
+   "susanna": {
+    "file": "lines/mozart-signori-di-fuori/susanna.m4a",
+    "gainDb": -2.9
+   }
   }
  },
  "mozart-sullaria": {
   "file": "mozart-sullaria.m4a",
-  "gainDb": 8.7,
+  "gainDb": -2.0,
   "lines": {
-   "countess": "lines/mozart-sullaria/countess.m4a",
-   "susanna": "lines/mozart-sullaria/susanna.m4a"
+   "countess": {
+    "file": "lines/mozart-sullaria/countess.m4a",
+    "gainDb": -4.9
+   },
+   "susanna": {
+    "file": "lines/mozart-sullaria/susanna.m4a",
+    "gainDb": -3.9
+   }
   }
  },
  "mozart-susanna-or-via-sortite": {
   "file": "mozart-susanna-or-via-sortite.m4a",
-  "gainDb": 7.2,
+  "gainDb": 4.2,
   "lines": {
-   "count": "lines/mozart-susanna-or-via-sortite/count.m4a",
-   "countess": "lines/mozart-susanna-or-via-sortite/countess.m4a",
-   "susanna": "lines/mozart-susanna-or-via-sortite/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-susanna-or-via-sortite/count.m4a",
+    "gainDb": -1.1
+   },
+   "countess": {
+    "file": "lines/mozart-susanna-or-via-sortite/countess.m4a",
+    "gainDb": -2.4
+   },
+   "susanna": {
+    "file": "lines/mozart-susanna-or-via-sortite/susanna.m4a",
+    "gainDb": -0.9
+   }
   }
  },
  "mozart-susanna-signore": {
   "file": "mozart-susanna-signore.m4a",
-  "gainDb": 7.4,
+  "gainDb": 5.1,
   "lines": {
-   "count": "lines/mozart-susanna-signore/count.m4a",
-   "countess": "lines/mozart-susanna-signore/countess.m4a",
-   "susanna": "lines/mozart-susanna-signore/susanna.m4a"
+   "count": {
+    "file": "lines/mozart-susanna-signore/count.m4a",
+    "gainDb": -3.6
+   },
+   "countess": {
+    "file": "lines/mozart-susanna-signore/countess.m4a",
+    "gainDb": -2.5
+   },
+   "susanna": {
+    "file": "lines/mozart-susanna-signore/susanna.m4a",
+    "gainDb": -1.9
+   }
   }
  },
  "mozart-taci-vien-gente": {
   "file": "mozart-taci-vien-gente.m4a",
-  "gainDb": 6.9,
+  "gainDb": 5.7,
   "lines": {
-   "basilio": "lines/mozart-taci-vien-gente/basilio.m4a",
-   "count": "lines/mozart-taci-vien-gente/count.m4a",
-   "susanna": "lines/mozart-taci-vien-gente/susanna.m4a"
+   "basilio": {
+    "file": "lines/mozart-taci-vien-gente/basilio.m4a",
+    "gainDb": -2.5
+   },
+   "count": {
+    "file": "lines/mozart-taci-vien-gente/count.m4a",
+    "gainDb": -3.8
+   },
+   "susanna": {
+    "file": "lines/mozart-taci-vien-gente/susanna.m4a",
+    "gainDb": -1.4
+   }
   }
  },
  "mozart-tutto-ancor-non-ho-perso": {
   "file": "mozart-tutto-ancor-non-ho-perso.m4a",
-  "gainDb": 7.6,
+  "gainDb": 2.1,
   "lines": {
-   "marcellina": "lines/mozart-tutto-ancor-non-ho-perso/marcellina.m4a",
-   "susanna": "lines/mozart-tutto-ancor-non-ho-perso/susanna.m4a"
+   "marcellina": {
+    "file": "lines/mozart-tutto-ancor-non-ho-perso/marcellina.m4a",
+    "gainDb": -2.3
+   },
+   "susanna": {
+    "file": "lines/mozart-tutto-ancor-non-ho-perso/susanna.m4a",
+    "gainDb": -2.9
+   }
   }
  },
  "mozart-tutto-e-come-il-lasciai": {
   "file": "mozart-tutto-e-come-il-lasciai.m4a",
-  "gainDb": 6.0,
+  "gainDb": 3.4,
   "lines": {
-   "count": "lines/mozart-tutto-e-come-il-lasciai/count.m4a",
-   "countess": "lines/mozart-tutto-e-come-il-lasciai/countess.m4a"
+   "count": {
+    "file": "lines/mozart-tutto-e-come-il-lasciai/count.m4a",
+    "gainDb": -3.2
+   },
+   "countess": {
+    "file": "lines/mozart-tutto-e-come-il-lasciai/countess.m4a",
+    "gainDb": -2.4
+   }
   }
  },
  "mozart-tutto-e-disposto": {
   "file": "mozart-tutto-e-disposto.m4a",
-  "gainDb": 7.7,
+  "gainDb": 4.7,
   "lines": {
-   "figaro": "lines/mozart-tutto-e-disposto/figaro.m4a"
+   "figaro": {
+    "file": "lines/mozart-tutto-e-disposto/figaro.m4a",
+    "gainDb": -3.8
+   }
   }
  },
  "mozart-tutto-e-tranquillo": {
   "file": "mozart-tutto-e-tranquillo.m4a",
-  "gainDb": 7.8,
+  "gainDb": 4.1,
   "lines": {
-   "figaro": "lines/mozart-tutto-e-tranquillo/figaro.m4a",
-   "susanna": "lines/mozart-tutto-e-tranquillo/susanna.m4a"
+   "figaro": {
+    "file": "lines/mozart-tutto-e-tranquillo/figaro.m4a",
+    "gainDb": -1.2
+   },
+   "susanna": {
+    "file": "lines/mozart-tutto-e-tranquillo/susanna.m4a",
+    "gainDb": -1.4
+   }
   }
  },
  "mozart-va-la-vecchia-pedante": {
   "file": "mozart-va-la-vecchia-pedante.m4a",
-  "gainDb": 7.1,
+  "gainDb": 2.5,
   "lines": {
-   "cherubino": "lines/mozart-va-la-vecchia-pedante/cherubino.m4a",
-   "susanna": "lines/mozart-va-la-vecchia-pedante/susanna.m4a"
+   "cherubino": {
+    "file": "lines/mozart-va-la-vecchia-pedante/cherubino.m4a",
+    "gainDb": -1.3
+   },
+   "susanna": {
+    "file": "lines/mozart-va-la-vecchia-pedante/susanna.m4a",
+    "gainDb": -3.4
+   }
   }
  },
  "mozart-venite-inginocchiatevi": {
   "file": "mozart-venite-inginocchiatevi.m4a",
-  "gainDb": 9.8,
+  "gainDb": 4.8,
   "lines": {
-   "susanna": "lines/mozart-venite-inginocchiatevi/susanna.m4a"
+   "susanna": {
+    "file": "lines/mozart-venite-inginocchiatevi/susanna.m4a",
+    "gainDb": -3.8
+   }
   }
  },
  "mozart-via-resti-servita": {
   "file": "mozart-via-resti-servita.m4a",
-  "gainDb": 7.9,
+  "gainDb": 6.0,
   "lines": {
-   "marcellina": "lines/mozart-via-resti-servita/marcellina.m4a",
-   "susanna": "lines/mozart-via-resti-servita/susanna.m4a"
+   "marcellina": {
+    "file": "lines/mozart-via-resti-servita/marcellina.m4a",
+    "gainDb": -3.6
+   },
+   "susanna": {
+    "file": "lines/mozart-via-resti-servita/susanna.m4a",
+    "gainDb": -1.8
+   }
   }
  },
  "mozart-vieni-cara-susanna": {
   "file": "mozart-vieni-cara-susanna.m4a",
-  "gainDb": 6.8,
+  "gainDb": 4.3,
   "lines": {
-   "countess": "lines/mozart-vieni-cara-susanna/countess.m4a",
-   "figaro": "lines/mozart-vieni-cara-susanna/figaro.m4a",
-   "susanna": "lines/mozart-vieni-cara-susanna/susanna.m4a"
+   "countess": {
+    "file": "lines/mozart-vieni-cara-susanna/countess.m4a",
+    "gainDb": -4.2
+   },
+   "figaro": {
+    "file": "lines/mozart-vieni-cara-susanna/figaro.m4a",
+    "gainDb": -2.5
+   },
+   "susanna": {
+    "file": "lines/mozart-vieni-cara-susanna/susanna.m4a",
+    "gainDb": -3.0
+   }
   }
  },
  "mozart-voi-che-sapete": {
   "file": "mozart-voi-che-sapete.m4a",
-  "gainDb": 9.1,
+  "gainDb": 4.2,
   "lines": {
-   "cherubino": "lines/mozart-voi-che-sapete/cherubino.m4a"
+   "cherubino": {
+    "file": "lines/mozart-voi-che-sapete/cherubino.m4a",
+    "gainDb": -5.2
+   }
   }
  },
  "mozart-voi-signor-che-giusto-siete": {
   "file": "mozart-voi-signor-che-giusto-siete.m4a",
-  "gainDb": 7.1,
+  "gainDb": 5.6,
   "lines": {
-   "bartolo": "lines/mozart-voi-signor-che-giusto-siete/bartolo.m4a",
-   "basilio": "lines/mozart-voi-signor-che-giusto-siete/basilio.m4a",
-   "count": "lines/mozart-voi-signor-che-giusto-siete/count.m4a",
-   "countess": "lines/mozart-voi-signor-che-giusto-siete/countess.m4a",
-   "figaro": "lines/mozart-voi-signor-che-giusto-siete/figaro.m4a",
-   "marcellina": "lines/mozart-voi-signor-che-giusto-siete/marcellina.m4a",
-   "susanna": "lines/mozart-voi-signor-che-giusto-siete/susanna.m4a"
+   "bartolo": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/bartolo.m4a",
+    "gainDb": -1.1
+   },
+   "basilio": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/basilio.m4a",
+    "gainDb": 0.9
+   },
+   "count": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/count.m4a",
+    "gainDb": -1.5
+   },
+   "countess": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/countess.m4a",
+    "gainDb": -0.9
+   },
+   "figaro": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/figaro.m4a",
+    "gainDb": -2.2
+   },
+   "marcellina": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/marcellina.m4a",
+    "gainDb": -2.8
+   },
+   "susanna": {
+    "file": "lines/mozart-voi-signor-che-giusto-siete/susanna.m4a",
+    "gainDb": -0.9
+   }
   }
  },
  "puccini-addio-dolce-svegliare": {
