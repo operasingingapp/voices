@@ -237,8 +237,10 @@
 
 /* a choral work's head on a wide screen: the portrait as tall as the text beside it */
 @media (min-width: 900px) {
-  .ch-page .oh.has-art { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); align-items: stretch; }
-  .ch-page .oh.has-art .ch-cover { aspect-ratio: auto; height: 100%; min-height: 320px; }
+  .ch-page .oh.has-art { grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr); align-items: stretch; }
+  /* the picture takes the text's height (it adds none of its own), never shorter than a comfortable portrait */
+  .ch-page .oh.has-art .ch-cover { position: relative; aspect-ratio: auto; height: auto; min-height: 280px; }
+  .ch-page .oh.has-art .ch-cover img { position: absolute; inset: 0; }
 }
 /* the parts: two quiet groups of pills, the chorus first */
 .ch-page .part-solo + .part-solo { margin-top: 24px; }
