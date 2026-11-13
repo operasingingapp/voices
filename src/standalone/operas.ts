@@ -1978,7 +1978,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Vedrai, carino",
       "kind": "Aria · Act 2",
-      "id": "Act 2: Vedrai, carino"
+      "id": "Act 2: Vedrai, carino",
+      "editionId": "mozart-vedrai-carino"
      },
      {
       "title": "Sola, sola in bujo loco",

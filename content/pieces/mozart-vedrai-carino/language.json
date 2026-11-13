@@ -1,0 +1,975 @@
+{
+ "editionId": "mozart-vedrai-carino",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling and punctuation (t'el where the libretto has tel, quà with the print's accent, and the added no in non lo sa far, no). IPA, word meanings and translations were drafted for this app (S41) and the IPA was checked against Castel. Zerlina repeats non lo sa far, dove mi sta, and, in the second half, sentilo battere and toccami quà many times. rimedio is sung on four notes (ri-me-di-o), so its IPA has four syllables. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "z1",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Vedrai, carino,",
+   "translation": "You will see, my dear,",
+   "ipa": "veˈdrai kaˈri.no",
+   "words": [
+    [
+     "Vedrai,",
+     "you will see",
+     "veˈdrai"
+    ],
+    [
+     "carino,",
+     "dear",
+     "kaˈri.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z2",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "se sei buonino,",
+   "translation": "if you behave yourself,",
+   "ipa": "se ˈsei bwoˈni.no",
+   "words": [
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "sei",
+     "you are",
+     "ˈsei"
+    ],
+    [
+     "buonino,",
+     "good little boy",
+     "bwoˈni.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z3",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "che bel rimedio",
+   "translation": "what a fine remedy",
+   "ipa": "ke ˈbɛl riˈmɛ.di.o",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "bel",
+     "fine",
+     "ˈbɛl"
+    ],
+    [
+     "rimedio",
+     "remedy",
+     "riˈmɛ.di.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z4",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "ti voglio dar!",
+   "translation": "I am going to give you!",
+   "ipa": "ti ˈvɔʎ.ʎo ˈdar",
+   "words": [
+    [
+     "ti",
+     "to you",
+     "ti"
+    ],
+    [
+     "voglio",
+     "I want",
+     "ˈvɔʎ.ʎo"
+    ],
+    [
+     "dar!",
+     "to give",
+     "ˈdar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "I mean to give"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z5",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "È naturale,",
+   "translation": "It's a natural one,",
+   "ipa": "ˈɛ na.tuˈra.le",
+   "words": [
+    [
+     "È",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "naturale,",
+     "natural",
+     "na.tuˈra.le"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z6",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "non dà disgusto,",
+   "translation": "it isn't unpleasant,",
+   "ipa": "non ˈda dizˈgu.sto",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "dà",
+     "gives",
+     "ˈda"
+    ],
+    [
+     "disgusto,",
+     "distaste",
+     "dizˈgu.sto"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "it isn't nasty"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z7",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "e lo speziale",
+   "translation": "and the pharmacist",
+   "ipa": "e lo spetˈtsja.le",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "lo",
+     "the",
+     "lo"
+    ],
+    [
+     "speziale",
+     "pharmacist",
+     "spetˈtsja.le"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z8",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "non lo sa far, no,",
+   "translation": "can't make it, no,",
+   "ipa": "non lo ˈsa ˈfar ˈnɔ",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sa",
+     "knows how",
+     "ˈsa"
+    ],
+    [
+     "far,",
+     "to make",
+     "ˈfar"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "cannot make it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z9",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "non lo sa far, no;",
+   "translation": "can't make it, no;",
+   "ipa": "non lo ˈsa ˈfar ˈnɔ",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sa",
+     "knows how",
+     "ˈsa"
+    ],
+    [
+     "far,",
+     "to make",
+     "ˈfar"
+    ],
+    [
+     "no;",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "cannot make it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z10",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "non lo sa far.",
+   "translation": "can't make it.",
+   "ipa": "non lo ˈsa ˈfar",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "sa",
+     "knows how",
+     "ˈsa"
+    ],
+    [
+     "far.",
+     "to make",
+     "ˈfar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "cannot make it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z11",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "34",
+   "original": "È un certo balsamo",
+   "translation": "It's a special kind of balm",
+   "ipa": "ˈɛ‿un ˈtʃɛr.to ˈbal.sa.mo",
+   "words": [
+    [
+     "È",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "certo",
+     "particular",
+     "ˈtʃɛr.to"
+    ],
+    [
+     "balsamo",
+     "balm",
+     "ˈbal.sa.mo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z12",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "36",
+   "original": "che porto addosso,",
+   "translation": "which I have about me,",
+   "ipa": "ke ˈpɔr.to‿adˈdɔs.so",
+   "words": [
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "porto",
+     "I bear",
+     "ˈpɔr.to"
+    ],
+    [
+     "addosso,",
+     "about me",
+     "adˈdɔs.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "I have about me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z13",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "dare t'el posso,",
+   "translation": "and you can have it from me,",
+   "ipa": "ˈda.re tel ˈpɔs.so",
+   "words": [
+    [
+     "dare",
+     "to give",
+     "ˈda.re"
+    ],
+    [
+     "t'el",
+     "it to you (te + lo)",
+     "tel"
+    ],
+    [
+     "posso,",
+     "I can",
+     "ˈpɔs.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "you can have it from me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z14",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "40",
+   "original": "se il vuoi provar.",
+   "translation": "if you'd like to give it a try.",
+   "ipa": "se‿il ˈvwɔi proˈvar",
+   "words": [
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "il",
+     "it",
+     "il"
+    ],
+    [
+     "vuoi",
+     "you want",
+     "ˈvwɔi"
+    ],
+    [
+     "provar.",
+     "to try",
+     "proˈvar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z15",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "Saper vorresti",
+   "translation": "Would you wish to know",
+   "ipa": "saˈper vorˈres.ti",
+   "words": [
+    [
+     "Saper",
+     "to know",
+     "saˈper"
+    ],
+    [
+     "vorresti",
+     "would you wish",
+     "vorˈres.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z16",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "dove mi sta, dove, dove, dove mi sta?",
+   "translation": "where I keep it, where, where, where I keep it?",
+   "ipa": "ˈdo.ve mi ˈsta ˈdo.ve ˈdo.ve ˈdo.ve mi ˈsta",
+   "words": [
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "mi",
+     "on me",
+     "mi"
+    ],
+    [
+     "sta,",
+     "it stays",
+     "ˈsta"
+    ],
+    [
+     "dove,",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "dove,",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "dove",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "mi",
+     "on me",
+     "mi"
+    ],
+    [
+     "sta?",
+     "it stays",
+     "ˈsta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "where I keep it"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "where I keep it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z17",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "Sentilo battere,",
+   "translation": "Feel how it beats,",
+   "ipa": "ˈsɛn.ti.lo ˈbat.te.re",
+   "words": [
+    [
+     "Sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z18",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "Toccami quà,",
+   "translation": "Put your hand here,",
+   "ipa": "ˈtok.ka.mi ˈkwa",
+   "words": [
+    [
+     "Toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà,",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z19",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "61",
+   "original": "sentilo battere, sentilo battere,",
+   "translation": "Feel how it beats, feel how it beats,",
+   "ipa": "ˈsɛn.ti.lo ˈbat.te.re ˈsɛn.ti.lo ˈbat.te.re",
+   "words": [
+    [
+     "sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ],
+    [
+     "sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z20",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "toccami quà!",
+   "translation": "put your hand here!",
+   "ipa": "ˈtok.ka.mi ˈkwa",
+   "words": [
+    [
+     "toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z21",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "67",
+   "original": "sentilo battere, sentilo battere, sentilo battere,",
+   "translation": "Feel how it beats, feel how it beats, feel how it beats,",
+   "ipa": "ˈsɛn.ti.lo ˈbat.te.re ˈsɛn.ti.lo ˈbat.te.re ˈsɛn.ti.lo ˈbat.te.re",
+   "words": [
+    [
+     "sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ],
+    [
+     "sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ],
+    [
+     "sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z22",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "72",
+   "original": "toccami quà! quà! quà!",
+   "translation": "put your hand here! here! here!",
+   "ipa": "ˈtok.ka.mi ˈkwa ˈkwa ˈkwa",
+   "words": [
+    [
+     "toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z23",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "76",
+   "original": "sentilo battere,",
+   "translation": "Feel how it beats,",
+   "ipa": "ˈsɛn.ti.lo ˈbat.te.re",
+   "words": [
+    [
+     "sentilo",
+     "feel it (sentire: hear, feel)",
+     "ˈsɛn.ti.lo"
+    ],
+    [
+     "battere,",
+     "to beat",
+     "ˈbat.te.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z24",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "toccami quà, quà!",
+   "translation": "put your hand here, here!",
+   "ipa": "ˈtok.ka.mi ˈkwa ˈkwa",
+   "words": [
+    [
+     "toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà,",
+     "here",
+     "ˈkwa"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z25",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "80",
+   "original": "toccami quà, quà!",
+   "translation": "put your hand here, here!",
+   "ipa": "ˈtok.ka.mi ˈkwa ˈkwa",
+   "words": [
+    [
+     "toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà,",
+     "here",
+     "ˈkwa"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z26",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "82",
+   "original": "toccami quà, quà,",
+   "translation": "put your hand here, here,",
+   "ipa": "ˈtok.ka.mi ˈkwa ˈkwa",
+   "words": [
+    [
+     "toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà,",
+     "here",
+     "ˈkwa"
+    ],
+    [
+     "quà,",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z27",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "84",
+   "original": "toccami quà!",
+   "translation": "put your hand here!",
+   "ipa": "ˈtok.ka.mi ˈkwa",
+   "words": [
+    [
+     "toccami",
+     "touch me",
+     "ˈtok.ka.mi"
+    ],
+    [
+     "quà!",
+     "here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "touch me here"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

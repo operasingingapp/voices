@@ -3361,6 +3361,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-vedrai-carino": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "C major",
+      time: "3/8 throughout",
+      tempo: "Grazioso, played at ♩ = 44 (an eighth note = 88), about 3½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); the fermatas on “sta?” and on the last “quà!” are held; Mozart gives the word only",
+    },
+    notePlaceholder: "Tender and teasing, never heavy: let the 3/8 sway and keep “sentilo battere” light as a heartbeat",
+    about: (
+      <>
+        <p>
+          Act 2. Don Giovanni, disguised as Leporello, has sent Masetto's armed friends off in all directions and beaten him.
+          Zerlina finds him groaning on the ground and comforts him: if he is good, she has a fine remedy for him, a natural one,
+          not at all unpleasant, that no apothecary can make. It is a balm she carries with her, and she will give it to him if he
+          wants to try it. Does he want to know where she keeps it? She lays his hand on her heart: feel it beating, touch me here.
+          Masetto is on stage but does not sing.
+        </p>
+        <p>
+          Score: No. 18, the Aria (vocal score pages 184–187, 104 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          Two misprints are corrected: in bar 82 Zerlina's E is a dotted eighth, as in bars 78 and 80, and in bar 4 the left hand
+          gets a sixteenth rest to fill the bar. Only the Italian words are kept, with the print's spelling and punctuation (“t'el”,
+          “quà”, and the added “no” in “non lo sa far, no”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

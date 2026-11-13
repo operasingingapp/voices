@@ -1,0 +1,127 @@
+{
+ "editionId": "mozart-vedrai-carino",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Vedrai, carino",
+ "subtitle": "Zerlina: aria from Don Giovanni, Act 2 (No. 18)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Vedrai, carino, se sei buonino … ti voglio dar!",
+   "start": "1",
+   "end": "18"
+  },
+  {
+   "id": "b",
+   "label": "È naturale … non lo sa far · È un certo balsamo … se il vuoi provar",
+   "start": "19",
+   "end": "43"
+  },
+  {
+   "id": "c",
+   "label": "Saper vorresti dove mi sta? (to the fermata)",
+   "start": "44",
+   "end": "55"
+  },
+  {
+   "id": "d",
+   "label": "Sentilo battere, toccami quà! (to the fermata)",
+   "start": "56",
+   "end": "75"
+  },
+  {
+   "id": "e",
+   "label": "Sentilo battere, toccami quà (again) · the piano's close",
+   "start": "76",
+   "end": "104"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scene 6, No. 18 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (t'el, quà, and the added no in non lo sa far, no; the libretto has tel, qua and non lo sa far)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 184–187, bars 1–104 of No. 18",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation and the stage directions are left out; Masetto is on stage but does not sing. Two corrections to the print: in bar 82 Zerlina's E is written as a dotted eighth, as in bars 78 and 80 (the print has no dot, which leaves the bar a sixteenth short), and in bar 4 the left hand gets a sixteenth rest to fill the bar. Playback tempo: Grazioso ♩ = 44 (an eighth note = 88), about 3:33, from the median (3:34) of five complete recordings (Fricsay 1958 3:14, Giulini 1959 3:14, Böhm 1977 4:11, Haitink 1984 3:42, Karajan 1985 3:34); the fermatas in bars 51–52 and 75 are held. Mozart gives the word Grazioso only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}
