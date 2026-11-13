@@ -2581,6 +2581,10 @@ export function Onboarding({
             >
               {selectedRole ? `Continue with ${selectedRole.ch.name}` : "Select a role"}
             </button>
+            <button type="button" className="back-to inline ob-whole" onClick={() => ctx.finishOnboarding({ screen: "opera", opera: chosenOpera.id })}>
+              <span>See the whole opera</span>
+              <span aria-hidden="true" className="ob-whole-arrow">→</span>
+            </button>
           </div>
         </main>
       )}

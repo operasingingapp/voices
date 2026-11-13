@@ -3724,6 +3724,11 @@ span.ck-text {
 .ob-sticky > .cp-btn {
   grid-column: 2;
 }
+.ob-sticky > .ob-whole {
+  grid-column: 3;
+  justify-self: start;
+  gap: 6px;
+}
 .ob-sticky > .back-to:only-child {
   grid-column: 2;
   justify-self: center;
@@ -3731,8 +3736,14 @@ span.ck-text {
 @media (max-width: 640px) {
   .ob-sticky {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
+  }
+  .ob-sticky > .ob-whole {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
   }
 }
 @media (max-width: 640px) {
