@@ -143,7 +143,7 @@ ${HEAD_CSS}
 .none { font: italic 11pt "Charis SIL", Georgia, serif; color: #6b6359; }
 .credits { margin-top: 10mm; padding-top: 2mm; border-top: 0.2mm solid #e2dccf; font: italic 7pt/1.4 "Charis SIL", Georgia, serif; color: #7a7268; }
 @media screen {
-  body { background: #e7e7e3; }
+  html, body { background: #e7e7e3; } body { padding: 1px 0; }
   .doc { margin: 16px auto; padding: 22mm 22mm 20mm; min-height: 297mm; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.18); zoom: var(--fit, 1); }
 }
 </style></head><body>

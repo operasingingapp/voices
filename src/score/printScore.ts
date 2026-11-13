@@ -468,7 +468,7 @@ ${HEAD_CSS}
 .bar { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #1d1d1b; color: #fff; font: 14px/1.4 system-ui, sans-serif; }
 .bar button { font: inherit; padding: 6px 14px; border-radius: 999px; border: 0; background: #fff; color: #111; cursor: pointer; }
 @media screen {
-  body { background: #e7e7e3; }
+  html, body { background: #e7e7e3; } body { padding: 1px 0; }
   .sheet, .notes { margin: 16px auto; box-shadow: 0 1px 4px rgba(0,0,0,.18); background: #fff; }
   .sheet, .notes { zoom: var(--fit, 1); }
 }
