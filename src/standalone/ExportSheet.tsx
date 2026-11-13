@@ -90,39 +90,57 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
     }
   }, [opts]);
 
-  // the score is engraved once per choice (it takes a moment); the libretto is made at once
+  // The score is engraved once per choice, and engraving holds the page for a moment: so changing the lines only
+  // marks the preview out of date. It is engraved when you ask (Update engraving) or save, never while you choose.
   const scoreKey = `${withNotes && hasNotes && mineShown}|${shown.join()}`;
+  const [wanted, setWanted] = useState(scoreKey);
+  const [saveAfter, setSaveAfter] = useState(false);
   useEffect(() => {
-    if (kind !== "score" || scoreHtml?.key === scoreKey) return;
+    if (kind !== "score" || scoreHtml?.key === wanted) return;
     let live = true;
     setBusy(true);
     setFailed(false);
-    // Engraving holds the page for a moment: it starts only once the switch has moved and the loader is showing,
-    // and quick changes in a row are engraved once, after the last.
+    const [notesOn, list] = [wanted.split("|")[0] === "true", wanted.split("|")[1].split(",")];
+    // a moment for the loader to show before the page is held
     const t = window.setTimeout(() => {
       if (!live) return;
-      makeScore(withNotes && hasNotes && mineShown, shown.length === parts.length ? null : shown)
-        .then((html) => live && setScoreHtml({ key: scoreKey, html }))
+      makeScore(notesOn, list.length === parts.length ? null : list)
+        .then((html) => live && setScoreHtml({ key: wanted, html }))
         .catch(() => live && setFailed(true))
         .finally(() => live && setBusy(false));
-    }, 320);
+    }, 120);
     return () => {
       live = false;
       window.clearTimeout(t);
     };
-  }, [kind, scoreKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [kind, wanted]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // while the score is engraved again the last preview stays, marked as updating
   const stale = kind === "score" && scoreHtml?.key !== scoreKey;
+  const engraving = kind === "score" && busy;
   const html = kind === "score" ? (scoreHtml?.html ?? null) : makeLibretto(opts);
   useEffect(() => setState("idle"), [kind, html]);
 
-  const save = async () => {
-    if (!html) return;
+  const print = async (doc: string) => {
     setState("saving");
-    const how = await printDocument(html);
+    const how = await printDocument(doc);
     setState(how === "dialog" ? "idle" : how);
   };
+  const save = () => {
+    if (stale) {
+      setWanted(scoreKey);
+      setSaveAfter(true);
+      return;
+    }
+    if (html) void print(html);
+  };
+  // Save with the lines changed: engraved first, then saved
+  useEffect(() => {
+    if (saveAfter && !busy && scoreHtml?.key === scoreKey) {
+      setSaveAfter(false);
+      void print(scoreHtml.html);
+    }
+  }, [saveAfter, busy, scoreHtml]); // eslint-disable-line react-hooks/exhaustive-deps
+  const linesShown = shown.length;
 
   const row = (on: boolean, flip: () => void, label: string, hint: string) => (
     <button type="button" className="ex-row" role="switch" aria-checked={on} onClick={flip}>
@@ -222,8 +240,8 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
               </>
             )}
             <div className="ex-actions">
-              <button type="button" className="cp-btn cp-btn--ink" onClick={save} disabled={!html || stale || state === "saving"}>
-                {state === "saving" ? "Opening…" : "Save as PDF"}
+              <button type="button" className="cp-btn cp-btn--ink" onClick={save} disabled={(!html && !stale) || engraving || state === "saving"}>
+                {state === "saving" ? "Opening…" : engraving && saveAfter ? "Engraving…" : "Save as PDF"}
               </button>
               {state === "blocked" && (
                 <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setState(html && openInTab(html) ? "tab" : "noTab")}>
@@ -244,7 +262,7 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
           <div className="ex-preview" aria-label="Preview" aria-busy={busy || !html}>
             {html ? (
               <>
-                <iframe ref={frameRef} title="Preview" srcDoc={forPreview(html)} className={stale ? "stale" : undefined} onLoad={applyZoom} />
+                <iframe ref={frameRef} title="Preview" srcDoc={forPreview(html)} className={stale || engraving ? "stale" : undefined} onLoad={applyZoom} />
                 <div className="ex-zoom" role="group" aria-label="Preview size">
                   <button type="button" onClick={() => step(-1)} aria-label="Smaller" disabled={current <= STEPS[0] + 0.01}>
                     −
@@ -259,7 +277,20 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
                     Fit
                   </button>
                 </div>
-                {stale && <Engraving failed={failed} />}
+                {engraving || failed ? (
+                  <Engraving failed={failed} />
+                ) : (
+                  stale && (
+                    <div className="ex-engraving ex-outdated" role="status">
+                      <span>
+                        {linesShown === parts.length ? "All lines" : `${linesShown} of ${parts.length} lines`} chosen
+                      </span>
+                      <button type="button" className="cp-btn cp-btn--ink ex-update" onClick={() => setWanted(scoreKey)}>
+                        Update engraving
+                      </button>
+                    </div>
+                  )
+                )}
               </>
             ) : (
               kind === "score" && <Engraving failed={failed} />

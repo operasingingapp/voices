@@ -9312,3 +9312,5 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .ex-zoom button[aria-pressed="true"] { background: var(--picked); }
 .ex-zoom .ex-zoom-pct { min-width: 64px; }
 .ex-zoom .ex-zoom-fit { border-left: 1px solid var(--fog-strong); border-radius: 0 999px 999px 0; padding-left: 12px; }
+.ex-outdated { gap: 14px; padding: 10px 10px 10px 18px; }
+.ex-update { min-height: 38px; padding: 0 16px; font-size: 14px; }
