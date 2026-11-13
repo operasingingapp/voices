@@ -3320,12 +3320,11 @@ function Preview() {
   );
 }
 
-/** Characters with a portrait, for the welcome gallery. */
+/** Every character, for the welcome gallery (a portrait where there is one, else the drawn figure). */
 function portraitRoles(): { opera: Opera; ch: Character }[] {
   const out: { opera: Opera; ch: Character }[] = [];
   for (const opera of OPERAS)
-    for (const ch of opera.chars)
-      if (PORTRAITS[`${opera.id}:${ch.id}`]) out.push({ opera, ch });
+    for (const ch of opera.chars) out.push({ opera, ch });
   return out;
 }
 
@@ -3370,13 +3369,19 @@ function CastReel({
                     onClick={() => onPick(opera, ch)}
                   >
                     <span className="reel-pic">
-                      <img
-                        src={art.portrait}
-                        alt=""
-                        loading="lazy"
-                        decoding="async"
-                        draggable={false}
-                      />
+                      {art ? (
+                        <img
+                          src={art.portrait}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                          draggable={false}
+                        />
+                      ) : (
+                        <span className="sc-bust" aria-hidden="true">
+                          <Avatar kind={ch.avatar} />
+                        </span>
+                      )}
                       {ready && (
                         <span className="reel-ready">Ready to sing</span>
                       )}
@@ -3416,12 +3421,18 @@ function CastReel({
                   onClick={() => onPick(opera, ch)}
                 >
                   <span className="reel-pic">
-                    <img
-                      src={art.portrait}
-                      alt=""
-                      decoding="async"
-                      draggable={false}
-                    />
+                    {art ? (
+                      <img
+                        src={art.portrait}
+                        alt=""
+                        decoding="async"
+                        draggable={false}
+                      />
+                    ) : (
+                      <span className="sc-bust" aria-hidden="true">
+                        <Avatar kind={ch.avatar} />
+                      </span>
+                    )}
                     {ready && <span className="reel-ready">Ready to sing</span>}
                   </span>
                   <span className="reel-name">{ch.name}</span>
