@@ -1401,7 +1401,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Finch'han dal vino calda la testa",
       "kind": "Aria · Act 1",
-      "id": "Act 1: Finch'han dal vino calda la testa"
+      "id": "Act 1: Finch'han dal vino calda la testa",
+      "editionId": "mozart-finchan-dal-vino"
      },
      {
       "title": "Guarda un po', come seppe questa strega",

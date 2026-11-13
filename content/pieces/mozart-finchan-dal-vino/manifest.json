@@ -1,0 +1,127 @@
+{
+ "editionId": "mozart-finchan-dal-vino",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Finch'han dal vino calda la testa",
+ "subtitle": "Don Giovanni: aria from Don Giovanni, Act 1 (No. 11)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Finch'han dal vino … cerca menar",
+   "start": "1",
+   "end": "32"
+  },
+  {
+   "id": "b",
+   "label": "Senza alcun ordine la danza sia … farai ballar",
+   "start": "33",
+   "end": "56"
+  },
+  {
+   "id": "c",
+   "label": "Ed io frattanto … d'una decina devi aumentar",
+   "start": "57",
+   "end": "85"
+  },
+  {
+   "id": "d",
+   "label": "Se trovi in piazza (again) … farai ballar",
+   "start": "86",
+   "end": "116"
+  },
+  {
+   "id": "e",
+   "label": "Ah, la mia lista (to the end)",
+   "start": "117",
+   "end": "160"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 15, No. 11 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (menuetto, l'alemana where the libretto has l'alemanna, folia once for follia, fa for fa'; bar 134 prints de-vi_aum-tar, kept as devi aumentar)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 100–104, bars 1–160 of No. 11",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation is left out; Leporello is on stage but does not sing. The piano's held chords in bars 87–114 are written as printed (F, C, E-flat over the bass). Playback tempo: a half note = 116 (♩ = 232), about 1:23, the median of five complete recordings (Fricsay 1958 1:18, Giulini 1959 1:23, C. Davis 1973 1:32, Böhm 1977 1:44, Karajan 1985 1:21); Mozart gives the word Presto only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

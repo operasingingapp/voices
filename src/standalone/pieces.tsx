@@ -2922,6 +2922,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-finchan-dal-vino": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "B-flat major",
+      time: "2/4",
+      tempo: "Presto, played at a half note = 116 (♩ = 232), under 1½ minutes, the median of five recordings (Fricsay, Giulini, Davis, Böhm, Karajan); Mozart gives the word only",
+    },
+    notePlaceholder: "Breathless but exact: light, short notes at full speed, with the words crisp on every eighth",
+    about: (
+      <>
+        <p>
+          Act 1. Leporello has just told his master how he got Donna Elvira out of the way and kept the peasants drinking at the
+          house. Delighted, Don Giovanni orders a great party: while the wine keeps their heads hot, bring in any girl from the
+          square, and let them dance without any order, the minuet, the follia and the allemande all at once. Meanwhile he will
+          flirt with this one and that, and by tomorrow morning his list will be some ten names longer.
+        </p>
+        <p>
+          Score: No. 11, the Aria (vocal score pages 100–104, 160 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. Leporello is
+          on stage but does not sing. Only the Italian words are kept, with the print's spelling and punctuation (“l'alemana”,
+          “menuetto”, and “folia” once for “follia”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
