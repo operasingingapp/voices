@@ -3836,22 +3836,8 @@ export function Onboarding({
   );
   // an opera tapped in its gallery: a short card about it first
   const [meetOp, setMeetOp] = useState<Opera | null>(null);
-  // the gallery drifts; "Show all" stands everything still in a list to look through (remembered on this device)
-  const [showAll, setShowAllState] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem("cp:welcomeAll") === "1";
-    } catch {
-      return false;
-    }
-  });
-  const setShowAll = (v: boolean) => {
-    setShowAllState(v);
-    try {
-      localStorage.setItem("cp:welcomeAll", v ? "1" : "0");
-    } catch {
-      /* no storage: the choice lasts this visit */
-    }
-  };
+  // everything stands still in a grid to look through (the drifting gallery is gone)
+  const showAll = true;
   // 1: the gallery of characters; 2: the list of operas (a quieter way in); 3: the chosen opera's cast.
   // A cast with no opera goes back to the gallery.
   const step =
@@ -4003,52 +3989,6 @@ export function Onboarding({
                 </button>
               ))}
             </div>
-            {step !== 4 && (
-              <button
-                type="button"
-                className="ob-showall"
-                aria-pressed={showAll}
-                onClick={() => setShowAll(!showAll)}
-              >
-                {showAll ? (
-                  <>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M4 9h16M4 15h16"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    Moving gallery
-                  </>
-                ) : (
-                  <>
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    Show all
-                  </>
-                )}
-              </button>
-            )}
           </div>
           <div
             id="ob-choices"
