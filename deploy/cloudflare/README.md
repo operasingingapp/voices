@@ -1,0 +1,9 @@
+# Cloudflare deployment
+
+- Site: Cloudflare Pages project `sottovoce` (https://sottovoce-382.pages.dev), the standalone build as assembled for
+  the artifact (index.html + assets/), deployed with
+  `npx wrangler pages deploy <assembled dir> --project-name sottovoce --branch main` run from this folder (it picks up
+  `functions/`). Needs CLOUDFLARE_API_TOKEN (Pages: Edit, R2: Edit) and CLOUDFLARE_ACCOUNT_ID in the environment.
+- `functions/_middleware.js`: the site is private while SITE_PASSWORD is set in the project's settings (a secret).
+- R2 `sottovoce-masters` (private): Pianoteq masters (FLAC). R2 `sottovoce-audio` (public, r2.dev): the app's
+  compressed audio, e.g. `piano/<editionId>.m4a` for the grand piano (src/standalone/grandPiano.*).
