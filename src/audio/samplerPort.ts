@@ -227,7 +227,7 @@ function unlockMediaPlayback() {
 
 const MAX_VOICES = 72;
 /** level sent to the room; with the impulse below this sits about 14 dB under the direct sound */
-const REVERB_SEND = 0.8;
+const REVERB_SEND = 0.66; // was 0.8; lowered once the printed dynamics made the soft passages really soft (they duck the room less)
 
 /**
  * The impulse response of a small recital hall, generated rather than downloaded: a few early
@@ -552,7 +552,7 @@ export class SamplerPort implements SynthPort {
     let e = 0;
     for (const v of this.duckBuf) e += v * v;
     const db = 10 * Math.log10(e / this.duckBuf.length + 1e-12);
-    const loud = Math.min(1, Math.max(0, (db + 42) / 30));
+    const loud = Math.min(1, Math.max(0, (db + 48) / 30)); // from -48 dB: soft playing ducks a little too
     const level = 1 - 0.37 * loud;
     if (Math.abs(level - this.duckLevel) < 0.01) return;
     const down = level < this.duckLevel;
