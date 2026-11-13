@@ -97,12 +97,18 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
     let live = true;
     setBusy(true);
     setFailed(false);
-    makeScore(withNotes && hasNotes && mineShown, shown.length === parts.length ? null : shown)
-      .then((html) => live && setScoreHtml({ key: scoreKey, html }))
-      .catch(() => live && setFailed(true))
-      .finally(() => live && setBusy(false));
+    // Engraving holds the page for a moment: it starts only once the switch has moved and the loader is showing,
+    // and quick changes in a row are engraved once, after the last.
+    const t = window.setTimeout(() => {
+      if (!live) return;
+      makeScore(withNotes && hasNotes && mineShown, shown.length === parts.length ? null : shown)
+        .then((html) => live && setScoreHtml({ key: scoreKey, html }))
+        .catch(() => live && setFailed(true))
+        .finally(() => live && setBusy(false));
+    }, 320);
     return () => {
       live = false;
+      window.clearTimeout(t);
     };
   }, [kind, scoreKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -235,7 +241,7 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
               </p>
             </div>
           </aside>
-          <div className="ex-preview" aria-label="Preview" aria-busy={!html}>
+          <div className="ex-preview" aria-label="Preview" aria-busy={busy || !html}>
             {html ? (
               <>
                 <iframe ref={frameRef} title="Preview" srcDoc={forPreview(html)} className={stale ? "stale" : undefined} onLoad={applyZoom} />
@@ -253,14 +259,30 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
                     Fit
                   </button>
                 </div>
-                {stale && <p className="ex-updating">{failed ? "Could not update. Try again." : "Updating…"}</p>}
+                {stale && <Engraving failed={failed} />}
               </>
             ) : (
-              <p className="ex-wait">{failed ? "The score could not be prepared. Try again." : busy ? "Engraving the score…" : ""}</p>
+              kind === "score" && <Engraving failed={failed} />
             )}
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+/** over the preview while the score is engraved: a turning ring (it keeps turning while the page is busy) */
+function Engraving({ failed }: { failed: boolean }) {
+  return (
+    <div className="ex-engraving" role="status" aria-live="polite">
+      {failed ? (
+        <span>The score could not be prepared. Try again.</span>
+      ) : (
+        <>
+          <span className="ex-spin" aria-hidden="true" />
+          <span>Engraving the score…</span>
+        </>
+      )}
     </div>
   );
 }

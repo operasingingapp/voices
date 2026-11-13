@@ -9287,9 +9287,12 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .ex-actions { margin-top: auto; display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
 .ex-msg { margin: 2px 0 0; color: var(--ink-muted); font: 400 13px/1.4 var(--font-sans); }
 .ex-preview { position: relative; min-height: 0; background: #e7e7e3; }
-.ex-preview iframe { display: block; width: 100%; height: 100%; border: 0; transition: opacity 200ms var(--ease-standard); }
-.ex-preview iframe.stale { opacity: 0.45; }
-.ex-updating { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); margin: 0; padding: 6px 14px; border-radius: 999px; background: var(--ink); color: var(--on-ink); font: 500 13px/1.3 var(--font-sans); box-shadow: var(--shadow-float); }
+.ex-preview iframe { display: block; width: 100%; height: 100%; border: 0; transition: opacity 180ms var(--ease-standard), filter 180ms var(--ease-standard); }
+.ex-engraving { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: var(--radius-2xl); background: var(--canvas); box-shadow: var(--shadow-float); color: var(--ink); font: 500 14px/1.3 var(--font-sans); white-space: nowrap; animation: ex-pop 220ms var(--ease-standard) both; }
+.ex-spin { width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid var(--fog-strong); border-top-color: var(--now-mark); animation: ex-spin 800ms linear infinite; will-change: transform; }
+@keyframes ex-spin { to { transform: rotate(360deg); } }
+@keyframes ex-pop { from { opacity: 0; transform: translate(-50%, -46%); } }
+.ex-preview iframe.stale { opacity: 0.35; filter: blur(1px); }
 .ex-wait { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--ink-muted); font: 400 15px/1.4 var(--font-sans); }
 @media (max-width: 760px) {
   .ex-sheet { padding: 0; }
