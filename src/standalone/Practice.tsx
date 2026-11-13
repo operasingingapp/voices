@@ -3149,12 +3149,19 @@ function PracticeScreen({
             type="button"
             className="grand-chip"
             aria-pressed={useGrand && asPrinted}
-            onClick={() => setPianoSound(useGrand ? "app" : "grand")}
-            aria-label={useGrand ? (asPrinted ? "Grand piano: a recorded concert grand plays the accompaniment. Switch to the app piano" : "Grand piano at the printed tempo; at this tempo the app piano plays. Switch the grand piano off") : "App piano. Switch to the recorded grand piano"}
-            title={useGrand ? (asPrinted ? "Grand piano: a recorded concert grand" : "Grand piano plays at the printed tempo") : "App piano: tap for the grand piano"}
+            onClick={() => {
+              // on: back to the app piano; off (another tempo, or the app piano chosen): the grand, at the printed tempo
+              if (useGrand && asPrinted) setPianoSound("app");
+              else {
+                setPianoSound("grand");
+                engine?.setTempoFactor(1);
+              }
+            }}
+            aria-label={useGrand && asPrinted ? "Grand piano: a recorded concert grand plays the accompaniment. Switch to the app piano" : "Grand piano: play the recorded concert grand, at the printed tempo"}
+            title={useGrand && asPrinted ? "Grand piano: a recorded concert grand (tap for the app piano)" : "Tap for the grand piano, at the printed tempo"}
           >
             {GRAND_ICON}
-            <span>{useGrand ? (asPrinted ? "Grand piano" : "Grand at printed tempo") : "App piano"}</span>
+            <span>Grand piano</span>
           </button>
         )}
         <div className="tl-time">
