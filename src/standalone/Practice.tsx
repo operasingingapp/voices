@@ -20,7 +20,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
-import { GRAND_GAIN_DB, grandLineMap, grandLineUrl, grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
+import { GRAND_GAIN_DB, grandLineGain, grandLineMap, grandLineUrl, grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
 /** a concert grand seen from above, lid open: the badge of the recorded grand piano */
 const GRAND_ICON = (
   <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -1175,7 +1175,7 @@ function PracticeScreen({
     for (const p of voiceParts) {
       const gl = grandLine(p);
       if (gl) {
-        track(port.setRecording(p.channel, [{ tempo: 1, url: gl, map: grandLineMap(edition, perf, p.key), gainDb: grandPianoGain(edition.editionId), exact: true }])).catch(() => undefined);
+        track(port.setRecording(p.channel, [{ tempo: 1, url: gl, map: grandLineMap(edition, perf, p.key), gainDb: grandLineGain(edition.editionId, p.key), exact: true }])).catch(() => undefined);
         continue;
       }
       const recs = recordingsOf(p.key);

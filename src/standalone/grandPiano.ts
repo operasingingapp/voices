@@ -16,7 +16,7 @@ export const GRAND_BASE = "https://pub-d8d81ace089e4d0f9b94db0d9c548850.r2.dev/p
 
 /** editionId -> its piano recording (the Pianoteq master itself, lossless FLAC) and the gain that matches it to the
  * app's own piano (the masters are left untouched; the level is set here) */
-const FILES = list as Record<string, { file: string; gainDb: number; lines?: Record<string, string> }>;
+const FILES = list as Record<string, { file: string; gainDb: number; lines?: Record<string, string | { file: string; gainDb: number }> }>;
 
 /** the recorded grand under the sung lines: a full concert grand masks piano-sounding lines far more than the app's piano */
 export const GRAND_GAIN_DB = -2;
@@ -27,7 +27,12 @@ export const grandPianoGain = (editionId: string): number => FILES[editionId]?.g
 /** a singer's line played on the same grand (rendered with the accompaniment, on the same clock), if there is one */
 export const grandLineUrl = (editionId: string, partKey: string): string | undefined => {
   const f = FILES[editionId]?.lines?.[partKey];
-  return f ? GRAND_BASE + f : undefined;
+  return f ? GRAND_BASE + (typeof f === "string" ? f : f.file) : undefined;
+};
+/** a line's level against the app's sound of it (dB): its own when it was rendered on its own, else the piece's */
+export const grandLineGain = (editionId: string, partKey: string): number => {
+  const f = FILES[editionId]?.lines?.[partKey];
+  return f && typeof f !== "string" ? f.gainDb : grandPianoGain(editionId);
 };
 
 /** where a sung line's notes fall on the playing timeline against the recording (as grandPianoMap, for one part) */
