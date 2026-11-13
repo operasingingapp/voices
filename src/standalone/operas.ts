@@ -1497,7 +1497,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Don Giovanni! a cenar teco",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Don Giovanni! a cenar teco"
+      "id": "Act 2: Don Giovanni! a cenar teco",
+      "editionId": "mozart-a-cenar-teco"
      }
     ]
    },
@@ -1650,7 +1651,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Don Giovanni! a cenar teco",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Don Giovanni! a cenar teco"
+      "id": "Act 2: Don Giovanni! a cenar teco",
+      "editionId": "mozart-a-cenar-teco"
      },
      {
       "title": "Ah! dov'è il perfido?",
@@ -2283,7 +2285,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Don Giovanni! a cenar teco",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Don Giovanni! a cenar teco"
+      "id": "Act 2: Don Giovanni! a cenar teco",
+      "editionId": "mozart-a-cenar-teco"
      }
     ]
    }

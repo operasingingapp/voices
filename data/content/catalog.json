@@ -70,6 +70,46 @@
     }
   },
   {
+    "editionId": "mozart-a-cenar-teco",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-a-cenar-teco@1.0.0-schirmer#9c16a8216d",
+    "title": "Don Giovanni! a cenar teco",
+    "subtitle": "The Commendatore, Don Giovanni, Leporello and chorus: finale from Don Giovanni, Act 2 (No. 24)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "commendatore",
+        "name": "Il Commendatore",
+        "voiceType": "Bass",
+        "partKey": "commendatore"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 170,
+    "durationSec": 426,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 84,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-chi-mi-dice-mai",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-ah-chi-mi-dice-mai@1.0.0-schirmer#0c89d0d6ea",

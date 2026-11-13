@@ -1,0 +1,192 @@
+{
+ "editionId": "mozart-a-cenar-teco",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Don Giovanni! a cenar teco",
+ "subtitle": "The Commendatore, Don Giovanni, Leporello and chorus: finale from Don Giovanni, Act 2 (No. 24)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "commendatore",
+   "name": "Il Commendatore",
+   "voiceType": "Bass",
+   "partKey": "commendatore"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "commendatore",
+   "label": "Il Commendatore (Bass)",
+   "shortLabel": "Commendatore",
+   "kind": "voice",
+   "roleId": "commendatore",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus of spirits (basses)",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Don Giovanni! a cenar teco · Leporello! un altra cena!",
+   "start": "1",
+   "end": "19"
+  },
+  {
+   "id": "b",
+   "label": "Ferma un po'! · Non si pasce di cibo mortale · altra brama quaggiù mi guidò",
+   "start": "20",
+   "end": "37"
+  },
+  {
+   "id": "c",
+   "label": "La terzana d'avere mi sembra · Parlo; ascolta! · Parla, parla, ascoltando ti sto",
+   "start": "38",
+   "end": "54"
+  },
+  {
+   "id": "d",
+   "label": "Tu m'invitasti a cena · verrai tu a cenar meco? · Ho fermo il core in petto",
+   "start": "55",
+   "end": "84"
+  },
+  {
+   "id": "e",
+   "label": "Dammi la mano in pegno! · Pentiti! · No! · Ah! tempo più non vè!",
+   "start": "85",
+   "end": "121"
+  },
+  {
+   "id": "f",
+   "label": "Allegro: Da qual tremore insolito · Tutto a tue colpe è poco! (chorus)",
+   "start": "122",
+   "end": "145"
+  },
+  {
+   "id": "g",
+   "label": "Chi l'anima mi lacera? (again) · Vieni! · Ah! (to the end)",
+   "start": "146",
+   "end": "170"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 24 Finale (scene of the Commendatore's statue)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (un altra, dond'escono, Oibò, Cos' hai on two notes, vè, sò, foco; the libretto has un'altra, D'onde escono, Ohibò, v'è, so). Two print misprints are written as the libretto has them: bar 74 \"mia\" for mai, bar 149 \"eeffo\" for ceffo."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 273–282, bars 1–170 of the Act 2 Finale's Andante and Allegro (from the double bar at \"Andante\" to the fermata bar before \"Allegro assai\")",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose seven findings were corrected. The English singing translation and the stage directions are left out. The chorus of spirits (basses, from below, bars 131–162) is kept on its own staff and heard in the mix; it has no role here. Andante 4/4 bars 1–121, Allegro bars 122–170, D minor throughout; the last bar is the fermata bar before Allegro assai (\"Ah! dov'è il perfido?\"). Playback tempo: Andante ♩ = 82 and Allegro ♩ = 163, about 7:06 in all, from the median of five complete recordings with this scene on its own track or tracks (Giulini 1959 6:26, Fricsay 1958 6:56, C. Davis 1973 7:06, Haitink 1984 7:19, Barenboim 1975 7:51; median 7:06), divided between the two sections by the Allegro's share in the three that put \"Da qual tremore\" on its own track (Giulini 1:06 of 6:26, Haitink 1:17 of 7:19, Barenboim 1:16 of 7:51; mean 16.9%). Mozart gives the words Andante and Allegro only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

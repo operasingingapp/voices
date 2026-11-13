@@ -1,0 +1,2 @@
+# s60.raw.xml = kit/build.sh VM_S60.clean.txt PM_S60.txt (builder output, title "Don Giovanni, a cenar teco"); s60.xml = kit/fix64.py s60.raw.xml (64th pairs 52+53, 2 notes); s60f.xml = kit/xfix.py s60.xml fixes.txt (final barline) = the checked score
+# VM_S60.txt = kit/stitch.py VM_S60a.k.txt VM_S60b.txt (VM_S60a.k.txt = the judged chunk VM_S60a.txt with K3 whole-bar rests added for bars 1-88); PM_S60.txt = kit/stitch.py PM_S60a.txt PM_S60b.txt; the fresh-check fixes (7) are in the chunk files; VM_S60.clean.txt = kit/cleanv.py VM_S60.txt (identical)

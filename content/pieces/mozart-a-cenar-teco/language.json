@@ -1,0 +1,3149 @@
+{
+ "editionId": "mozart-a-cenar-teco",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling, punctuation and syllables: \"un altra\" as two words, un sung with the first syllable of altra (libretto un'altra); \"dond'escono\" as one word (libretto D'onde escono); \"Oibò\" (libretto Ohibò); \"Cos' hai?\" on two notes; \"pentiti\" in lower case at bar 91; \"vè!\" (libretto v'è); \"sò\" with its accent; \"foco\". Bar 74's \"mai\" (\"tacciato mai sarò\") is printed \"mia\" in the score, a misprint, and bar 149's \"ceffo\" is printed \"eeffo\"; both are written as the libretto has them. In bars 82-84 the print sets \"ti-mor\" with a hyphen after mor, running on to \"ver-rò!\"; they are two words, timor and verrò. Lines are repeated as the score repeats them, and Leporello's \"Sì\" of the libretto is not in this score (only the Commendatore sings it). The chorus of spirits from below (bars 131-161: \"Tutto a tue colpe è poco! Vieni! c'è un mal peggior!\") sings in the score and is heard with the piano, but has no role and no lines here. IPA, word meanings and translations were drafted for this app (S60), and the IPA was checked against Castel. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "c1",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Don Giovanni a cenar teco",
+   "translation": "Don Giovanni! To sup at your table",
+   "ipa": "don dʒoˈvan.ni a tʃeˈnar ˈte.ko",
+   "words": [
+    [
+     "Don",
+     "Don",
+     "don"
+    ],
+    [
+     "Giovanni",
+     "Giovanni",
+     "dʒoˈvan.ni"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "cenar",
+     "to sup",
+     "tʃeˈnar"
+    ],
+    [
+     "teco",
+     "with you",
+     "ˈte.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c2",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "m'invitasti! e son venuto!",
+   "translation": "you asked me, and here I am!",
+   "ipa": "min.viˈta.sti e ˈson veˈnu.to",
+   "words": [
+    [
+     "m'invitasti!",
+     "you invited me",
+     "min.viˈta.sti"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "son",
+     "I have",
+     "ˈson"
+    ],
+    [
+     "venuto!",
+     "come",
+     "veˈnu.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "I have come"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g1",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Non l'avrei giammai creduto;",
+   "translation": "I'd never have thought it;",
+   "ipa": "non laˈvrɛi dʒamˈmai kreˈdu.to",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "l'avrei",
+     "I would have … it",
+     "laˈvrɛi"
+    ],
+    [
+     "giammai",
+     "ever",
+     "dʒamˈmai"
+    ],
+    [
+     "creduto;",
+     "believed",
+     "kreˈdu.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "I would never have believed it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "ma farò quel che potrò.",
+   "translation": "but I'll do my best.",
+   "ipa": "ma faˈrɔ kwel ke poˈtrɔ",
+   "words": [
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "farò",
+     "I will do",
+     "faˈrɔ"
+    ],
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "potrò.",
+     "I can",
+     "poˈtrɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "what I can"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Leporello! un altra cena!",
+   "translation": "Leporello! Another supper,",
+   "ipa": "le.poˈrɛl.lo un‿ˈal.tra ˈtʃe.na",
+   "words": [
+    [
+     "Leporello!",
+     "Leporello",
+     "le.poˈrɛl.lo"
+    ],
+    [
+     "un",
+     "an",
+     "un"
+    ],
+    [
+     "altra",
+     "other",
+     "ˈal.tra"
+    ],
+    [
+     "cena!",
+     "supper",
+     "ˈtʃe.na"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "another"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "fa che subito si porti!",
+   "translation": "and bring it quickly!",
+   "ipa": "ˈfa ke ˈsu.bi.to si ˈpɔr.ti",
+   "words": [
+    [
+     "fa",
+     "see to it",
+     "ˈfa"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "subito",
+     "at once",
+     "ˈsu.bi.to"
+    ],
+    [
+     "si",
+     "itself",
+     "si"
+    ],
+    [
+     "porti!",
+     "be brought",
+     "ˈpɔr.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "be brought"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l1",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Ah padron, ah padron!",
+   "translation": "Ah, master, ah, master!",
+   "ipa": "ˈa paˈdron ˈa paˈdron",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "padron,",
+     "master",
+     "paˈdron"
+    ],
+    [
+     "ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "padron!",
+     "master",
+     "paˈdron"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l2",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Ah padron! siam tutti morti.",
+   "translation": "Ah, master! We're done for.",
+   "ipa": "ˈa paˈdron ˈsjam ˈtut.ti ˈmɔr.ti",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "padron!",
+     "master",
+     "paˈdron"
+    ],
+    [
+     "siam",
+     "we are",
+     "ˈsjam"
+    ],
+    [
+     "tutti",
+     "all",
+     "ˈtut.ti"
+    ],
+    [
+     "morti.",
+     "dead",
+     "ˈmɔr.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "we are all dead"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "Vanne, dico!",
+   "translation": "Off with you, I said!",
+   "ipa": "ˈvan.ne ˈdi.ko",
+   "words": [
+    [
+     "Vanne,",
+     "go away",
+     "ˈvan.ne"
+    ],
+    [
+     "dico!",
+     "I say",
+     "ˈdi.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c3",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Ferma un po'!",
+   "translation": "Stay a moment!",
+   "ipa": "ˈfer.ma un ˈpɔ",
+   "words": [
+    [
+     "Ferma",
+     "stay",
+     "ˈfer.ma"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "po'!",
+     "little",
+     "ˈpɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "a moment"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c4",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "Non si pasce di cibo mortale,",
+   "translation": "He takes no nourishment from mortal food,",
+   "ipa": "non si ˈpaʃ.ʃe di ˈtʃi.bo morˈta.le",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "si",
+     "himself",
+     "si"
+    ],
+    [
+     "pasce",
+     "feeds",
+     "ˈpaʃ.ʃe"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "cibo",
+     "food",
+     "ˈtʃi.bo"
+    ],
+    [
+     "mortale,",
+     "mortal",
+     "morˈta.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "does not feed"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c5",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "chi si pasce di cibo celeste!",
+   "translation": "one who is nourished by the food of heaven!",
+   "ipa": "ki si ˈpaʃ.ʃe di ˈtʃi.bo tʃeˈlɛ.ste",
+   "words": [
+    [
+     "chi",
+     "who",
+     "ki"
+    ],
+    [
+     "si",
+     "himself",
+     "si"
+    ],
+    [
+     "pasce",
+     "feeds",
+     "ˈpaʃ.ʃe"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "cibo",
+     "food",
+     "ˈtʃi.bo"
+    ],
+    [
+     "celeste!",
+     "heavenly",
+     "tʃeˈlɛ.ste"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "feeds"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c6",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "Altre cure, più gravi di queste,",
+   "translation": "Weightier concerns than these,",
+   "ipa": "ˈal.tre ˈku.re ˈpju ˈgra.vi di ˈkwe.ste",
+   "words": [
+    [
+     "Altre",
+     "other",
+     "ˈal.tre"
+    ],
+    [
+     "cure,",
+     "concerns",
+     "ˈku.re"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "gravi",
+     "weighty",
+     "ˈgra.vi"
+    ],
+    [
+     "di",
+     "than",
+     "di"
+    ],
+    [
+     "queste,",
+     "these",
+     "ˈkwe.ste"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "weightier"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c7",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "34",
+   "original": "altra brama quaggiù mi guidò.",
+   "translation": "a different longing led me down here.",
+   "ipa": "ˈal.tra ˈbra.ma kwadˈdʒu mi gwiˈdɔ",
+   "words": [
+    [
+     "altra",
+     "another",
+     "ˈal.tra"
+    ],
+    [
+     "brama",
+     "longing",
+     "ˈbra.ma"
+    ],
+    [
+     "quaggiù",
+     "down here",
+     "kwadˈdʒu"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "guidò.",
+     "led",
+     "gwiˈdɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l3",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "La terzana d'avere mi sembra,",
+   "translation": "I think I've caught the shakes,",
+   "ipa": "la terˈtsa.na daˈve.re mi ˈsem.bra",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "terzana",
+     "ague (tertian fever)",
+     "terˈtsa.na"
+    ],
+    [
+     "d'avere",
+     "to have",
+     "daˈve.re"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "sembra,",
+     "it seems",
+     "ˈsem.bra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I seem"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Parla dunque! che chiedi? che vuoi?",
+   "translation": "Say it, then! What are you asking? What is it you want?",
+   "ipa": "ˈpar.la ˈduŋ.kwe ke ˈkjɛ.di ke ˈvwɔi",
+   "words": [
+    [
+     "Parla",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "dunque!",
+     "then",
+     "ˈduŋ.kwe"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "chiedi?",
+     "do you ask",
+     "ˈkjɛ.di"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "vuoi?",
+     "do you want",
+     "ˈvwɔi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l4",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "e le membra fermar più non sò,",
+   "translation": "my arms and legs won't keep still,",
+   "ipa": "e le ˈmem.bra ferˈmar ˈpju non ˈsɔ",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "membra",
+     "limbs",
+     "ˈmem.bra"
+    ],
+    [
+     "fermar",
+     "keep still",
+     "ferˈmar"
+    ],
+    [
+     "più",
+     "any longer",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "sò,",
+     "I can",
+     "ˈsɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "I can no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l5",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "40",
+   "original": "la terzana d'avere mi sembra,",
+   "translation": "I think I've caught the shakes,",
+   "ipa": "la terˈtsa.na daˈve.re mi ˈsem.bra",
+   "words": [
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "terzana",
+     "ague (tertian fever)",
+     "terˈtsa.na"
+    ],
+    [
+     "d'avere",
+     "to have",
+     "daˈve.re"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "sembra,",
+     "it seems",
+     "ˈsem.bra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I seem"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l6",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "e le membra fermar più non sò.",
+   "translation": "my arms and legs won't keep still.",
+   "ipa": "e le ˈmem.bra ferˈmar ˈpju non ˈsɔ",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "membra",
+     "limbs",
+     "ˈmem.bra"
+    ],
+    [
+     "fermar",
+     "keep still",
+     "ferˈmar"
+    ],
+    [
+     "più",
+     "any longer",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "sò.",
+     "I can",
+     "ˈsɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "I can no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c8",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "42",
+   "original": "Parlo; ascolta! più tempo non ho.",
+   "translation": "I'll speak; hear me! My time is short.",
+   "ipa": "ˈpar.lo aˈskol.ta ˈpju ˈtɛm.po non ˈɔ",
+   "words": [
+    [
+     "Parlo;",
+     "I speak",
+     "ˈpar.lo"
+    ],
+    [
+     "ascolta!",
+     "listen",
+     "aˈskol.ta"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "tempo",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho.",
+     "I have",
+     "ˈɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "I have no more time"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g7",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "Parla, parla, ascoltando ti sto.",
+   "translation": "Go on, go on, I'm listening.",
+   "ipa": "ˈpar.la ˈpar.la‿a.skolˈtan.do ti ˈstɔ",
+   "words": [
+    [
+     "Parla,",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "parla,",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "ascoltando",
+     "listening",
+     "a.skolˈtan.do"
+    ],
+    [
+     "ti",
+     "to you",
+     "ti"
+    ],
+    [
+     "sto.",
+     "I am",
+     "ˈstɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "I am listening to you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l7",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "Ah le membra fermar più non sò;",
+   "translation": "Ah, my arms and legs won't keep still;",
+   "ipa": "ˈa le ˈmem.bra ferˈmar ˈpju non ˈsɔ",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "membra",
+     "limbs",
+     "ˈmem.bra"
+    ],
+    [
+     "fermar",
+     "keep still",
+     "ferˈmar"
+    ],
+    [
+     "più",
+     "any longer",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "sò;",
+     "I can",
+     "ˈsɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "I can no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c9",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "Parlo; ascolta! più tempo non ho.",
+   "translation": "I'll speak; hear me! My time is short.",
+   "ipa": "ˈpar.lo aˈskol.ta ˈpju ˈtɛm.po non ˈɔ",
+   "words": [
+    [
+     "Parlo;",
+     "I speak",
+     "ˈpar.lo"
+    ],
+    [
+     "ascolta!",
+     "listen",
+     "aˈskol.ta"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "tempo",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho.",
+     "I have",
+     "ˈɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "I have no more time"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l8",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "la terzana d'avere mi sembra,",
+   "translation": "I think I've caught the shakes,",
+   "ipa": "la terˈtsa.na daˈve.re mi ˈsem.bra",
+   "words": [
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "terzana",
+     "ague (tertian fever)",
+     "terˈtsa.na"
+    ],
+    [
+     "d'avere",
+     "to have",
+     "daˈve.re"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "sembra,",
+     "it seems",
+     "ˈsem.bra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I seem"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l9",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "la terzana d'avere mi sembra,",
+   "translation": "I think I've caught the shakes,",
+   "ipa": "la terˈtsa.na daˈve.re mi ˈsem.bra",
+   "words": [
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "terzana",
+     "ague (tertian fever)",
+     "terˈtsa.na"
+    ],
+    [
+     "d'avere",
+     "to have",
+     "daˈve.re"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "sembra,",
+     "it seems",
+     "ˈsem.bra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I seem"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l10",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "e le membra fermar più non sò!",
+   "translation": "my arms and legs won't keep still!",
+   "ipa": "e le ˈmem.bra ferˈmar ˈpju non ˈsɔ",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "membra",
+     "limbs",
+     "ˈmem.bra"
+    ],
+    [
+     "fermar",
+     "keep still",
+     "ferˈmar"
+    ],
+    [
+     "più",
+     "any longer",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "sò!",
+     "I can",
+     "ˈsɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "I can no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g8",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "50",
+   "original": "Parla, parla, ascoltando ti sto.",
+   "translation": "Go on, go on, I'm listening.",
+   "ipa": "ˈpar.la ˈpar.la‿a.skolˈtan.do ti ˈstɔ",
+   "words": [
+    [
+     "Parla,",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "parla,",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "ascoltando",
+     "listening",
+     "a.skolˈtan.do"
+    ],
+    [
+     "ti",
+     "to you",
+     "ti"
+    ],
+    [
+     "sto.",
+     "I am",
+     "ˈstɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "I am listening to you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c10",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "55",
+   "original": "Tu m'invitasti a cena,",
+   "translation": "You asked me to supper;",
+   "ipa": "tu min.viˈta.sti‿a ˈtʃe.na",
+   "words": [
+    [
+     "Tu",
+     "you",
+     "tu"
+    ],
+    [
+     "m'invitasti",
+     "you invited me",
+     "min.viˈta.sti"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "cena,",
+     "supper",
+     "ˈtʃe.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c11",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "59",
+   "original": "il tuo dover or sai,",
+   "translation": "you know what you owe me now,",
+   "ipa": "il ˈtu.o doˈver or ˈsa.i",
+   "words": [
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "tuo",
+     "your",
+     "ˈtu.o"
+    ],
+    [
+     "dover",
+     "duty",
+     "doˈver"
+    ],
+    [
+     "or",
+     "now",
+     "or"
+    ],
+    [
+     "sai,",
+     "you know",
+     "ˈsa.i"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c12",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "62",
+   "original": "rispondimi,",
+   "translation": "answer me,",
+   "ipa": "riˈspon.di.mi",
+   "words": [
+    [
+     "rispondimi,",
+     "answer me",
+     "riˈspon.di.mi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c13",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "64",
+   "original": "rispondimi,",
+   "translation": "answer me,",
+   "ipa": "riˈspon.di.mi",
+   "words": [
+    [
+     "rispondimi,",
+     "answer me",
+     "riˈspon.di.mi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c14",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "verrai tu a cenar meco?",
+   "translation": "will you come and sup with me in turn?",
+   "ipa": "verˈrai tu‿a tʃeˈnar ˈme.ko",
+   "words": [
+    [
+     "verrai",
+     "will … come",
+     "verˈrai"
+    ],
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "cenar",
+     "to sup",
+     "tʃeˈnar"
+    ],
+    [
+     "meco?",
+     "with me",
+     "ˈme.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l11",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "69",
+   "original": "Oibò, oibò; tempo non ha, scusate.",
+   "translation": "Oh no, no thank you; he's too busy, forgive him.",
+   "ipa": "ojˈbɔ ojˈbɔ ˈtɛm.po non ˈa skuˈza.te",
+   "words": [
+    [
+     "Oibò,",
+     "oh no",
+     "ojˈbɔ"
+    ],
+    [
+     "oibò;",
+     "oh no",
+     "ojˈbɔ"
+    ],
+    [
+     "tempo",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ha,",
+     "he has",
+     "ˈa"
+    ],
+    [
+     "scusate.",
+     "excuse (him)",
+     "skuˈza.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "he has no time"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g9",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "72",
+   "original": "A torto di viltate tacciato mai sarò!",
+   "translation": "Never shall I be falsely branded a coward!",
+   "ipa": "a ˈtɔr.to di vilˈta.te tatˈtʃa.to ˈmai saˈrɔ",
+   "words": [
+    [
+     "A",
+     "at",
+     "a"
+    ],
+    [
+     "torto",
+     "wrong",
+     "ˈtɔr.to"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "viltate",
+     "cowardice",
+     "vilˈta.te"
+    ],
+    [
+     "tacciato",
+     "branded",
+     "tatˈtʃa.to"
+    ],
+    [
+     "mai",
+     "never",
+     "ˈmai"
+    ],
+    [
+     "sarò!",
+     "I shall be",
+     "saˈrɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "wrongly"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c15",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "75",
+   "original": "Risolvi!",
+   "translation": "Make up your mind!",
+   "ipa": "riˈsɔl.vi",
+   "words": [
+    [
+     "Risolvi!",
+     "decide",
+     "riˈsɔl.vi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g10",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "77",
+   "original": "Ho già risolto.",
+   "translation": "My mind is made up.",
+   "ipa": "ˈɔ ˈdʒa riˈsɔl.to",
+   "words": [
+    [
+     "Ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "risolto.",
+     "decided",
+     "riˈsɔl.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c16",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "Verrai?",
+   "translation": "Are you coming?",
+   "ipa": "verˈrai",
+   "words": [
+    [
+     "Verrai?",
+     "will you come",
+     "verˈrai"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l12",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "80",
+   "original": "Dite di no, dite di no!",
+   "translation": "Tell him no, tell him no!",
+   "ipa": "ˈdi.te di ˈnɔ ˈdi.te di ˈnɔ",
+   "words": [
+    [
+     "Dite",
+     "say",
+     "ˈdi.te"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "dite",
+     "say",
+     "ˈdi.te"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "no!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "say no"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "say no"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g11",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "80",
+   "original": "Ho fermo il core in petto,",
+   "translation": "My heart is firm within me:",
+   "ipa": "ˈɔ ˈfer.mo‿il ˈkɔ.re‿in ˈpɛt.to",
+   "words": [
+    [
+     "Ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "fermo",
+     "steady",
+     "ˈfer.mo"
+    ],
+    [
+     "il",
+     "my",
+     "il"
+    ],
+    [
+     "core",
+     "heart",
+     "ˈkɔ.re"
+    ],
+    [
+     "in",
+     "in my",
+     "in"
+    ],
+    [
+     "petto,",
+     "breast",
+     "ˈpɛt.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I hold firm"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g12",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "82",
+   "original": "Non ho timor verrò!",
+   "translation": "I have no fear, I will come!",
+   "ipa": "non ˈɔ tiˈmor verˈrɔ",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "timor",
+     "fear",
+     "tiˈmor"
+    ],
+    [
+     "verrò!",
+     "I will come",
+     "verˈrɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c17",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "85",
+   "original": "Dammi la mano in pegno!",
+   "translation": "Your hand on it, as a pledge!",
+   "ipa": "ˈdam.mi la ˈma.no‿in ˈpeɲ.ɲo",
+   "words": [
+    [
+     "Dammi",
+     "give me",
+     "ˈdam.mi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mano",
+     "hand",
+     "ˈma.no"
+    ],
+    [
+     "in",
+     "as",
+     "in"
+    ],
+    [
+     "pegno!",
+     "pledge",
+     "ˈpeɲ.ɲo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "as a pledge"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g13",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "Eccola!",
+   "translation": "There it is!",
+   "ipa": "ˈɛk.ko.la",
+   "words": [
+    [
+     "Eccola!",
+     "there it is",
+     "ˈɛk.ko.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g14",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "89",
+   "original": "Ohimè!",
+   "translation": "Oh!",
+   "ipa": "oiˈmɛ",
+   "words": [
+    [
+     "Ohimè!",
+     "oh, alas",
+     "oiˈmɛ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c18",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "89",
+   "original": "Cos' hai?",
+   "translation": "What ails you?",
+   "ipa": "ˈkɔz ˈai",
+   "words": [
+    [
+     "Cos'",
+     "what",
+     "ˈkɔz"
+    ],
+    [
+     "hai?",
+     "have you",
+     "ˈai"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "what is wrong with you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g15",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "90",
+   "original": "che gelo è questo mai?",
+   "translation": "what deathly cold is this?",
+   "ipa": "ke ˈdʒɛ.lo‿ˈɛ ˈkwe.sto ˈmai",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "gelo",
+     "icy cold",
+     "ˈdʒɛ.lo"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "mai?",
+     "(ever)",
+     "ˈmai"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c19",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "91",
+   "original": "pentiti, cangia vita, è l'ultimo momento!",
+   "translation": "repent, mend your ways: this is your last hour!",
+   "ipa": "ˈpɛn.ti.ti ˈkan.dʒa ˈvi.ta ˈɛ ˈlul.ti.mo moˈmen.to",
+   "words": [
+    [
+     "pentiti,",
+     "repent",
+     "ˈpɛn.ti.ti"
+    ],
+    [
+     "cangia",
+     "change",
+     "ˈkan.dʒa"
+    ],
+    [
+     "vita,",
+     "life",
+     "ˈvi.ta"
+    ],
+    [
+     "è",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "l'ultimo",
+     "the last",
+     "ˈlul.ti.mo"
+    ],
+    [
+     "momento!",
+     "moment",
+     "moˈmen.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "change your life"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g16",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "95",
+   "original": "No, no, ch'io non mi pento,",
+   "translation": "No, no, I will not repent;",
+   "ipa": "ˈnɔ ˈnɔ kjo non mi ˈpɛn.to",
+   "words": [
+    [
+     "No,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "ch'io",
+     "for I",
+     "kjo"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "mi",
+     "myself",
+     "mi"
+    ],
+    [
+     "pento,",
+     "repent",
+     "ˈpɛn.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "I repent"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g17",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "98",
+   "original": "vanne lontan da me!",
+   "translation": "leave me be!",
+   "ipa": "ˈvan.ne lonˈtan da ˈme",
+   "words": [
+    [
+     "vanne",
+     "go away",
+     "ˈvan.ne"
+    ],
+    [
+     "lontan",
+     "far",
+     "lonˈtan"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "me!",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "go far from me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "c20",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "101",
+   "original": "Pentiti, scellerato!",
+   "translation": "Repent, you villain!",
+   "ipa": "ˈpɛn.ti.ti ʃel.leˈra.to",
+   "words": [
+    [
+     "Pentiti,",
+     "repent",
+     "ˈpɛn.ti.ti"
+    ],
+    [
+     "scellerato!",
+     "villain",
+     "ʃel.leˈra.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g18",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "103",
+   "original": "No, vecchio infatuato!",
+   "translation": "No, you deluded old man!",
+   "ipa": "ˈnɔ ˈvɛk.kjo‿in.fa.tuˈa.to",
+   "words": [
+    [
+     "No,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "vecchio",
+     "old man",
+     "ˈvɛk.kjo"
+    ],
+    [
+     "infatuato!",
+     "deluded",
+     "in.fa.tuˈa.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c21",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "106",
+   "original": "Pentiti!",
+   "translation": "Repent!",
+   "ipa": "ˈpɛn.ti.ti",
+   "words": [
+    [
+     "Pentiti!",
+     "repent",
+     "ˈpɛn.ti.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g19",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "107",
+   "original": "No!",
+   "translation": "No!",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c22",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "108",
+   "original": "Pentiti!",
+   "translation": "Repent!",
+   "ipa": "ˈpɛn.ti.ti",
+   "words": [
+    [
+     "Pentiti!",
+     "repent",
+     "ˈpɛn.ti.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g20",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "109",
+   "original": "No!",
+   "translation": "No!",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c23",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "110",
+   "original": "Sì! sì!",
+   "translation": "Yes! yes!",
+   "ipa": "ˈsi ˈsi",
+   "words": [
+    [
+     "Sì!",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "sì!",
+     "yes",
+     "ˈsi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g21",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "no!",
+   "translation": "no!",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "no!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g22",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "113",
+   "original": "No!",
+   "translation": "No!",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c24",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "113",
+   "original": "Sì! sì!",
+   "translation": "Yes! yes!",
+   "ipa": "ˈsi ˈsi",
+   "words": [
+    [
+     "Sì!",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "sì!",
+     "yes",
+     "ˈsi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g23",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "no! no!",
+   "translation": "no! no!",
+   "ipa": "ˈnɔ ˈnɔ",
+   "words": [
+    [
+     "no!",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "no!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "c25",
+   "role": "commendatore",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "117",
+   "original": "Ah! tempo più non vè!",
+   "translation": "Ah! Your time is up!",
+   "ipa": "ˈa ˈtɛm.po ˈpju non ˈvɛ",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "tempo",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vè!",
+     "there is",
+     "ˈvɛ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "there is no more time"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g24",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "123",
+   "original": "Da qual tremore insolito",
+   "translation": "By what strange trembling",
+   "ipa": "da ˈkwal treˈmo.re‿inˈsɔ.li.to",
+   "words": [
+    [
+     "Da",
+     "by",
+     "da"
+    ],
+    [
+     "qual",
+     "what",
+     "ˈkwal"
+    ],
+    [
+     "tremore",
+     "trembling",
+     "treˈmo.re"
+    ],
+    [
+     "insolito",
+     "unwonted",
+     "inˈsɔ.li.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g25",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "125",
+   "original": "sento assalir gli spiriti!",
+   "translation": "I feel my spirits seized!",
+   "ipa": "ˈsɛn.to‿as.saˈlir ʎi ˈspi.ri.ti",
+   "words": [
+    [
+     "sento",
+     "I feel",
+     "ˈsɛn.to"
+    ],
+    [
+     "assalir",
+     "seize",
+     "as.saˈlir"
+    ],
+    [
+     "gli",
+     "the",
+     "ʎi"
+    ],
+    [
+     "spiriti!",
+     "spirits",
+     "ˈspi.ri.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g26",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "126",
+   "original": "dond'escono quei vortici",
+   "translation": "Where do they rise from, these whirling flames,",
+   "ipa": "donˈdɛ.sko.no kwei ˈvɔr.ti.tʃi",
+   "words": [
+    [
+     "dond'escono",
+     "where do … rise from",
+     "donˈdɛ.sko.no"
+    ],
+    [
+     "quei",
+     "those",
+     "kwei"
+    ],
+    [
+     "vortici",
+     "whirlwinds",
+     "ˈvɔr.ti.tʃi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g27",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "128",
+   "original": "di foco pien d'orror?",
+   "translation": "so full of fire and horror?",
+   "ipa": "di ˈfɔ.ko ˈpjɛn dorˈror",
+   "words": [
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "foco",
+     "fire",
+     "ˈfɔ.ko"
+    ],
+    [
+     "pien",
+     "full",
+     "ˈpjɛn"
+    ],
+    [
+     "d'orror?",
+     "of horror",
+     "dorˈror"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g28",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "136",
+   "original": "Chi l'anima mi lacera?",
+   "translation": "Who tears at my soul?",
+   "ipa": "ki ˈla.ni.ma mi ˈla.tʃe.ra",
+   "words": [
+    [
+     "Chi",
+     "who",
+     "ki"
+    ],
+    [
+     "l'anima",
+     "the soul",
+     "ˈla.ni.ma"
+    ],
+    [
+     "mi",
+     "my",
+     "mi"
+    ],
+    [
+     "lacera?",
+     "rends",
+     "ˈla.tʃe.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l13",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "137",
+   "original": "Che ceffo disperato!",
+   "translation": "What a look of despair!",
+   "ipa": "ke ˈtʃɛf.fo di.speˈra.to",
+   "words": [
+    [
+     "Che",
+     "what a",
+     "ke"
+    ],
+    [
+     "ceffo",
+     "mug",
+     "ˈtʃɛf.fo"
+    ],
+    [
+     "disperato!",
+     "desperate",
+     "di.speˈra.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g29",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "138",
+   "original": "Chi m'agita le viscere?",
+   "translation": "Who twists my very entrails?",
+   "ipa": "ki ˈma.dʒi.ta le ˈviʃ.ʃe.re",
+   "words": [
+    [
+     "Chi",
+     "who",
+     "ki"
+    ],
+    [
+     "m'agita",
+     "churns my",
+     "ˈma.dʒi.ta"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "viscere?",
+     "entrails",
+     "ˈviʃ.ʃe.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l14",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "139",
+   "original": "Che gesti da dannato!",
+   "translation": "He thrashes like one damned!",
+   "ipa": "ke ˈdʒɛ.sti da danˈna.to",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "gesti",
+     "gestures",
+     "ˈdʒɛ.sti"
+    ],
+    [
+     "da",
+     "of a",
+     "da"
+    ],
+    [
+     "dannato!",
+     "damned soul",
+     "danˈna.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g30",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "140",
+   "original": "Che strazio ohimè, che smania!",
+   "translation": "What agony, oh, what madness!",
+   "ipa": "ke ˈstrat.tsjo‿oiˈmɛ ke ˈzma.nja",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "strazio",
+     "agony",
+     "ˈstrat.tsjo"
+    ],
+    [
+     "ohimè,",
+     "oh, alas",
+     "oiˈmɛ"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "smania!",
+     "madness",
+     "ˈzma.nja"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l15",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "141",
+   "original": "che gridi! che lamenti!",
+   "translation": "How he shrieks! How he wails!",
+   "ipa": "ke ˈgri.di ke laˈmen.ti",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "gridi!",
+     "shrieks",
+     "ˈgri.di"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "lamenti!",
+     "wails",
+     "laˈmen.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g31",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "142",
+   "original": "Che inferno, che terror!",
+   "translation": "What an inferno, what dread!",
+   "ipa": "ke‿inˈfɛr.no ke terˈror",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "inferno,",
+     "hell",
+     "inˈfɛr.no"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "terror!",
+     "dread",
+     "terˈror"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l16",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "144",
+   "original": "come mi fa terror, mi fa terror!",
+   "translation": "how he frightens me, he frightens me!",
+   "ipa": "ˈko.me mi ˈfa terˈror mi ˈfa terˈror",
+   "words": [
+    [
+     "come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "fa",
+     "makes",
+     "ˈfa"
+    ],
+    [
+     "terror,",
+     "dread",
+     "terˈror"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "fa",
+     "makes",
+     "ˈfa"
+    ],
+    [
+     "terror!",
+     "dread",
+     "terˈror"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "frightens"
+    },
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "frightens"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g32",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "147",
+   "original": "Chi l'anima mi lacera?",
+   "translation": "Who tears at my soul?",
+   "ipa": "ki ˈla.ni.ma mi ˈla.tʃe.ra",
+   "words": [
+    [
+     "Chi",
+     "who",
+     "ki"
+    ],
+    [
+     "l'anima",
+     "the soul",
+     "ˈla.ni.ma"
+    ],
+    [
+     "mi",
+     "my",
+     "mi"
+    ],
+    [
+     "lacera?",
+     "rends",
+     "ˈla.tʃe.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l17",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "148",
+   "original": "Che ceffo disperato!",
+   "translation": "What a look of despair!",
+   "ipa": "ke ˈtʃɛf.fo di.speˈra.to",
+   "words": [
+    [
+     "Che",
+     "what a",
+     "ke"
+    ],
+    [
+     "ceffo",
+     "mug",
+     "ˈtʃɛf.fo"
+    ],
+    [
+     "disperato!",
+     "desperate",
+     "di.speˈra.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g33",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "151",
+   "original": "Chi m'agita le viscere?",
+   "translation": "Who twists my very entrails?",
+   "ipa": "ki ˈma.dʒi.ta le ˈviʃ.ʃe.re",
+   "words": [
+    [
+     "Chi",
+     "who",
+     "ki"
+    ],
+    [
+     "m'agita",
+     "churns my",
+     "ˈma.dʒi.ta"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "viscere?",
+     "entrails",
+     "ˈviʃ.ʃe.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l18",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "152",
+   "original": "Che gesti da dannato!",
+   "translation": "He thrashes like one damned!",
+   "ipa": "ke ˈdʒɛ.sti da danˈna.to",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "gesti",
+     "gestures",
+     "ˈdʒɛ.sti"
+    ],
+    [
+     "da",
+     "of a",
+     "da"
+    ],
+    [
+     "dannato!",
+     "damned soul",
+     "danˈna.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g34",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "153",
+   "original": "che strazio ohimè, che smania!",
+   "translation": "what agony, oh, what madness!",
+   "ipa": "ke ˈstrat.tsjo‿oiˈmɛ ke ˈzma.nja",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "strazio",
+     "agony",
+     "ˈstrat.tsjo"
+    ],
+    [
+     "ohimè,",
+     "oh, alas",
+     "oiˈmɛ"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "smania!",
+     "madness",
+     "ˈzma.nja"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l19",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "154",
+   "original": "che gridi! che lamenti!",
+   "translation": "how he shrieks! how he wails!",
+   "ipa": "ke ˈgri.di ke laˈmen.ti",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "gridi!",
+     "shrieks",
+     "ˈgri.di"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "lamenti!",
+     "wails",
+     "laˈmen.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g35",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "156",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "ˈa",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "ˈa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l20",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "156",
+   "original": "che gridi! che lamenti!",
+   "translation": "how he shrieks! how he wails!",
+   "ipa": "ke ˈgri.di ke laˈmen.ti",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "gridi!",
+     "shrieks",
+     "ˈgri.di"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "lamenti!",
+     "wails",
+     "laˈmen.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g36",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "157",
+   "original": "che inferno! che terror!",
+   "translation": "what an inferno! what dread!",
+   "ipa": "ke‿inˈfɛr.no ke terˈror",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "inferno!",
+     "hell",
+     "inˈfɛr.no"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "terror!",
+     "dread",
+     "terˈror"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l21",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "159",
+   "original": "come mi fa terror!",
+   "translation": "how he frightens me!",
+   "ipa": "ˈko.me mi ˈfa terˈror",
+   "words": [
+    [
+     "come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "fa",
+     "makes",
+     "ˈfa"
+    ],
+    [
+     "terror!",
+     "dread",
+     "terˈror"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "frightens"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g37",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "162",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "ˈa",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "ˈa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l22",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "164",
+   "original": "Ah!",
+   "translation": "Ah!",
+   "ipa": "ˈa",
+   "words": [
+    [
+     "Ah!",
+     "ah",
+     "ˈa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

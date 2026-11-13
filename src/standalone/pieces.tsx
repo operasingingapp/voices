@@ -3464,6 +3464,43 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-a-cenar-teco": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "D minor (one flat), closing on a D major chord",
+      time: "4/4 (common time) throughout: Andante, then Allegro from bar 122",
+      tempo: "Andante at ♩ = 82, then Allegro at ♩ = 163, about 7 minutes in all, the median of five recordings with this scene on its own track or tracks (Giulini, Fricsay, Davis, Haitink, Barenboim), divided between the two sections as in Giulini's, Haitink's and Barenboim's, which put “Da qual tremore” on its own track; Mozart gives the words only",
+    },
+    notePlaceholder: "The statue's lines slow and immovable, Giovanni's defiant and quick, Leporello's whispered asides; then the Allegro's terror",
+    about: (
+      <>
+        <p>
+          Act 2, the finale. Don Giovanni is at supper when the statue of the Commendatore, whom he killed, comes in: it was
+          invited, and it has come. Giovanni, astonished, orders Leporello to bring another supper, while Leporello, hiding, shakes
+          as if with fever. The statue will not eat mortal food: other cares have brought it down from heaven. It asks Giovanni to
+          come to supper with it in turn. Leporello begs him to refuse, but Giovanni will not be called a coward, accepts, and gives
+          the statue his hand. Its grip is ice. Repent, it says, this is your last moment; again and again he answers no. Its time
+          is up. Flames rise, a chorus of spirits calls him from below to a worse evil, and Giovanni, tormented, is dragged down to
+          hell while Leporello looks on in terror.
+        </p>
+        <p>
+          Score: the Act 2 Finale (No. 24) from the statue's entrance, Andante and Allegro (vocal score pages 273–282, 170 bars),
+          from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the
+          sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then
+          checked bar by bar and checked again by fresh checkers, whose seven findings were corrected. Two misprints are corrected
+          from the libretto: “mia” for “mai” in bar 74 and “eeffo” for “ceffo” in bar 149. The chorus of spirits (basses, from
+          below) sings in bars 131–162 and is heard with the piano; it has no part to practise here. The first three bars and the
+          last six are for the piano alone; the piece ends at the fermata before “Ah! dov'è il perfido?”. Only the Italian words are
+          kept, with the print's spelling and punctuation (“un altra”, “dond'escono”, “Oibò”, “vè”, “sò”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

@@ -1,0 +1,334 @@
+# S60b piano: Finale "Don Giovanni! a cenar teco" (Andante, D minor, 4/4), p.278 - p.282 sys 4 bar 3
+# RH bars 1-14 in bass clef; open-headed two-note tremolos written as trem2 (16th-stroke beams)
+# page 278 system 1 starts bar 1
+# MARKS bar 1 RH1: slur over each tremolo pair
+1 RH1: clef:F trem2:Bb3+Db4|G3:h() trem2:Bb3+Db4|G3:h()
+1 LH1: E2+E3:w~
+# MARKS bar 2 RH1: slur over each tremolo pair
+2 RH1: trem2:Bb3+C4|G3:h() trem2:Bb3+C4|G3:h()
+2 LH1: E2+E3:w
+# MARKS bar 3 RH1: slur over each tremolo pair
+3 RH1: trem2:A3+C4|F3:h() trem2:A3+C4|F3:h()
+3 LH1: Eb2+Eb3:w~
+# JUDGE bar 4 RH: X - cresc. printed under the second half of the bar (beat 3)
+# MARKS bar 4 RH1: slur over each tremolo pair
+4 RH1: trem2:A3+C4|F3:h() word:cresc. trem2:A3+C4|F3:h()
+4 LH1: Eb2+Eb3:w
+# bar 5 LH: run = one 16th then four 64ths (2 beams then 4 beams), C3 and Eb3 separate quarters
+# MARKS bar 5 RH1: slur over each tremolo pair
+5 RH1: dyn:f trem2:A3+C4|F#3:h() trem2:A3+C4|F#3:h()
+# JUDGE bar 5 LH: X - run = E2 16th + F#2 G2 A2 Bb2 64ths (4 beams); C3 and Eb3 are separate quarters; f between the staves applies to both hands
+# MARKS bar 5 LH1: slur moved to start on D2; slur D2 q. to C3 q
+5 LH1: dyn:f D2:q.( E2:s F#2:y G2:y A2:y Bb2:y C3:q) Eb3:q
+# page 278 system 2 starts bar 6
+# MARKS bar 6 RH1: slur over each tremolo pair
+6 RH1: dyn:p trem2:C4+D4|A3:h() trem2:C4+D4|A3:h()
+# MARKS bar 6 LH1: dyn:p (between the staves: both hands)
+6 LH1: dyn:p F#1+F#2:w
+# MARKS bar 7 RH1: slur over each tremolo pair
+7 RH1: dyn:f trem2:Bb3+D4|G3:h() trem2:Bb3+D4|G3:h()
+# JUDGE bar 7 LH: X - f printed between the staves: both hands (MARKS.md)
+# MARKS bar 7 LH1: tie quarter to first 16th; slur quarter to the quarter after the run
+7 LH1: dyn:f G1:q~( G1:s A1:x Bb1:x C2:x D2:x E2:x F#2:x G2:q) Bb2:q
+# MARKS bar 8 RH1: slur over each tremolo pair
+8 RH1: dyn:p trem2:Bb3+E4|G3:h() trem2:Bb3+E4|G3:h()
+# MARKS bar 8 LH1: dyn:p (between the staves: both hands)
+8 LH1: dyn:p C#2:w~
+# MARKS bar 9 RH1: slur over each tremolo pair
+9 RH1: trem2:Bb3+E4|G3:h() trem2:Bb3+E4|G3:h()
+9 LH1: C#2:w
+# MARKS bar 10 RH1: slur over each tremolo pair
+10 RH1: dyn:f trem2:A3+F4|F3:h() trem2:A3+F4|F3:h()
+# JUDGE bar 10 LH: X - f printed between the staves: both hands
+# MARKS bar 10 LH1: tie quarter to first 16th; slur quarter to the quarter after the run
+10 LH1: dyn:f D2:q~( D2:s E2:x F2:x G2:x A2:x Bn2:x C#3:x D3:q) F3:q
+# page 278 system 3 starts bar 11
+# MARKS bar 11 RH1: slur over each tremolo pair
+11 RH1: dyn:p trem2:Bn3+D4|F3:h() trem2:Bn3+D4|F3:h()
+# MARKS bar 11 LH1: dyn:p (between the staves: both hands)
+11 LH1: dyn:p G#1+G#2:w
+# MARKS bar 12 RH1: slur over each tremolo pair
+12 RH1: dyn:f trem2:A3+C#4|E3:h() trem2:A3+C#4|E3:h()
+# JUDGE bar 12 LH: X - f printed between the staves: both hands
+# MARKS bar 12 LH1: tie quarter to first 16th; slur quarter to the quarter after the run
+12 LH1: dyn:f A1:q~( A1:s Bn1:x C#2:x D2:x E2:x F2:x G2:x A2:q) G2:q
+# MARKS bar 13 RH1: slur over each tremolo pair
+13 RH1: dyn:p trem2:A3+D4|F3:h trem2:A3+D4|F3:h
+# JUDGE bar 13 LH: Y - whole note hangs just below the bottom line, no ledger = F2
+# MARKS bar 13 LH1: dyn:p (between the staves: both hands)
+13 LH1: dyn:p F2:w~
+# MARKS bar 14 RH1: slur over each tremolo pair
+14 RH1: trem2:A3+D4|F3:h trem2:A3+D4|F3:h
+# JUDGE bar 14 LH: Y - tied F2 whole
+14 LH1: F2:w
+# bar 15: RH clef changes to treble (printed at the end of bar 14)
+# MARKS bar 15 RH1: slur over each tremolo pair
+15 RH1: clef:G dyn:f trem2:D4+E4|Bb3:h() trem2:D4+E4|Bb3:h()
+# JUDGE bar 15 LH: OWN - last quarter is an octave G1+G2 (Y); f between the staves kept for LH (X)
+# MARKS bar 15 LH1: tie quarter to first 16th; slur quarter to the quarter after the run
+15 LH1: dyn:f G1:q~( G1:s A1:x Bb1:x C2:x D2:x E2:x F#2:x G2:q) G1+G2:q
+# page 278 system 4 starts bar 16
+# MARKS bar 16 RH1: slur over each tremolo pair
+16 RH1: dyn:p trem2:D4+F#4|C4:h() trem2:D4+F#4|C4:h()
+# MARKS bar 16 LH1: dyn:p (between the staves: both hands)
+16 LH1: dyn:p A1+A2:w
+# MARKS bar 17 RH1: slur over each tremolo pair
+17 RH1: dyn:f trem2:D4+G4|Bb3:h() trem2:D4+G4|Bb3:h()
+# JUDGE bar 17 LH: X - f printed between the staves: both hands
+# MARKS bar 17 LH1: tie Bb1 to the 16th; slur to Bb2 q
+17 LH1: dyn:f Bb1~+Bb2:q( Bb1:s C2:x D2:x Eb2:x F2:x G2:x A2:x Bb2:q) Bb1:q*
+# JUDGE bar 18 RH: X - flat printed before the first chord: Eb4 (holds for the second chord)
+# MARKS bar 18 RH1: slur over each tremolo pair
+18 RH1: dyn:p trem2:Eb4+G4|Bb3:h() trem2:Eb4+G4|Bb3:h()
+# MARKS bar 18 LH1: dyn:p (between the staves: both hands)
+18 LH1: dyn:p Bb2:w
+# MARKS bar 19 RH1: slur over each tremolo pair
+19 RH1: dyn:f trem2:D4+Ab4|Bb3:h() trem2:D4+Ab4|Bb3:h()
+# JUDGE bar 19 LH: X - f printed between the staves: both hands
+# MARKS bar 19 LH1: tie quarter to first 16th; slur quarter to the quarter after the run
+19 LH1: dyn:f Bb1:q~( Bb1:s C2:x D2:x Eb2:x F2:x G2:x A2:x Bb2:q) Bb1:q
+# MARKS bar 20 RH1: slur over each tremolo pair
+20 RH1: dyn:p trem2:Eb4+Gb4|Bb3:h() trem2:Eb4+Gb4|Bb3:h()
+# MARKS bar 20 LH1: dyn:p (between the staves: both hands)
+20 LH1: dyn:p Bb2:w
+# page 279 system 1 starts bar 21
+# bar 21 LH: run read as one 16th + six 32nds (pattern of bars 7/10/12)
+21 RH1: dyn:f trem2:F4+Ab4|D4:h trem2:F4+Ab4|D4:h
+# MARKS bar 21 LH1: tie quarter to first 16th; slur quarter to the quarter after the run; dyn:f (between the staves: both hands)
+21 LH1: dyn:f B1:q~( B1:s C2:x D2:x E2:x F2:x G2:x A2:x B2:q) B1:q
+# JUDGE bar 22 RH: X - second chord: sharp is on F (first space); the lower head is Eb4 by the flat earlier in the bar (dim. 7th over A2)
+22 RH1: dyn:fp trem2:Eb4+G4|C4:h dyn:fp trem2:Eb4+F#4|C4:h
+# JUDGE bar 22 LH: X - fp between staves (both hands), p/f/p printed under the LH
+# MARKS bar 22 LH1: slur Eb3 run ends on A2 q.; slur C3 run continues to F#2 of bar 23
+22 LH1: dyn:fp C2:q. dyn:p Eb3:x( D3:x C3:x Bb2:x dyn:f A2:q.) dyn:p C3:x( Bb2:x A2:x G2:x
+23 RH1: dyn:sf trem2:D4+A4|C4:h trem2:D4+A4|C4:h
+# JUDGE bar 23 LH: Y - F#2 quarter is double-dotted; only three 32nds (D2 E2 F#2) follow: 32nd triplet fills the bar (no G2 printed)
+# MARKS bar 23 LH1: dyn:sf (between the staves: both hands); slur from bar 22 ends on F#2; slur D2 32nd triplet to G2 of bar 24
+23 LH1: dyn:sf F#2:h~) F#2:q.. D2:x3( E2:x3 F#2:x3
+24 RH1: dyn:fp trem2:D4+G4|Bb3:h dyn:fp trem2:C#4+G4|Bb3:h
+# JUDGE bar 24 LH: X - p/f/p printed under the LH
+# MARKS bar 24 LH1: dyn:fp (between the staves: both hands); slur from bar 23 ends on G2; slur Bb2 run ends on Eb2 q.; slur G2 run continues to C# octave of bar 25
+24 LH1: dyn:fp G2:q.) dyn:p Bb2:x( A2:x G2:x F2:x dyn:f Eb2:q.) dyn:p G2:x( F2:x Eb2:x D2:x
+# page 279 system 2 starts bar 25
+25 RH1: dyn:f trem2:E4+G4|A3:h trem2:E4+G4|A3:h
+# JUDGE bar 25 LH: Y - as bar 23: double-dotted quarter + three 32nds (A2 B2 C#3)
+# MARKS bar 25 LH1: slur from bar 24 ends on C# octave; slur A2 triplet to D3 of bar 26
+25 LH1: dyn:sf C#2+C#3:h~) C#2+C#3:q.. A2:x3( B2:x3 C#3:x3
+26 RH1: dyn:fp trem2:D4+F4|A3:h dyn:fp trem2:D4+F4|G#3:h
+# JUDGE bar 26 LH: X - f, p, f, p printed under the LH
+# MARKS bar 26 LH1: slur from bar 25 ends on D3; slur F3 run ends on Bb2 q.; slur D3 run continues to G#2 of bar 27
+26 LH1: dyn:f D3:q.) dyn:p F3:x( E3:x D3:x C3:x dyn:f Bb2:q.) dyn:p D3:x( C3:x Bb2:x A2:x
+27 RH1: dyn:f D4+F4+B4+D5:h r:h
+# JUDGE bar 27 LH: X - f printed between the staves: both hands
+# MARKS bar 27 LH1: slur from bar 26 ends on G#2
+27 LH1: dyn:f G#2:h) r:h
+28 RH1: dyn:f A4+C#5+E5+A5:h r:h
+# MARKS bar 28 LH1: dyn:f (between the staves: both hands)
+28 LH1: dyn:f A1+A2:h r:h
+29 RH1: dyn:p Bb4:e Bb5:e Bb4:e Bb5:e Bb4:e Bb5:e Bb4:e Bb5:e
+# MARKS bar 29 LH1: dyn:p (between the staves: both hands)
+29 LH1: dyn:p Bb2+Bb3:w
+30 RH1: C#4:e C#5:e C#4:e C#5:e C#4:e C#5:e C#4:e C#5:e
+30 LH1: C#2+C#3:w
+# page 279 system 3 starts bar 31
+31 RH1: D4:e D5:e D4:e D5:e D4:e D5:e D4:e D5:e
+31 LH1: D2+D3:w
+32 RH1: G#3:e G#4:e G#3:e G#4:e G#3:e G#4:e G#3:e G#4:e
+32 LH1: G#1+G#2:w
+33 RH1: A3:e A4:e A3:e A4:e A3:e A4:e A3:e A4:e
+33 LH1: A1+A2:w
+# bar 34: double bar, Allegro
+34 RH1: dyn:f F3+A3+D4:w~
+# JUDGE bar 34 LH: X - f printed between the staves: both hands (RH chord has three heads F3+A3+D4, all tied)
+34 LH1: dyn:f D2+D3:q. F2+F3:e D2+D3:q. F2+F3:e
+35 RH1: F3+A3+D4:e dyn:p F3+A3+D4:q F3+A3+D4:q F3+A3+D4:q F3+A3+D4:e
+# JUDGE bar 35 LH: X - p printed between the staves: both hands
+35 LH1: dyn:p D2+D3:q D2+D3:q D2+D3:q D2+D3:q
+# page 279 system 4 starts bar 36
+36 RH1: dyn:f G5:s( F5:s E5:s F5:s) E5:s( D5:s C#5:s D5:s) Bb4:s( A4:s G#4:s A4:s) G4:s( F4:s E4:s F4:s)
+# JUDGE bar 36 LH: Y - four heads D3 F3 A3 D4 (four duration dots), eighth chord F3 A3 D4
+# MARKS bar 36 LH1: dyn:f (between the staves: both hands)
+36 LH1: dyn:f D3+F3+A3+D4:q. F3+A3+D4:e D3+F3+A3+D4:q. F3+A3+D4:e
+37 RH1: dyn:p E4:w
+# JUDGE bar 37 LH: Y - heads on the middle line (D3), in the G3 space and above the top line (Bb3)
+# MARKS bar 37 LH1: dyn:p (between the staves: both hands)
+37 LH1: dyn:p D3+G3+Bb3:w
+38 RH1: dyn:f A5:s( G5:s F#5:s G5:s) F5:s( E5:s D#5:s E5:s) C5:s( Bb4:s A4:s Bb4:s) A4:s( G4:s F#4:s G4:s)
+# MARKS bar 38 LH1: dyn:f (between the staves: both hands)
+38 LH1: dyn:f D3+G3+Bb3:q. G3+Bb3:e D3+G3+Bb3:q. G3+Bb3:e
+# page 280 system 1 starts bar 39
+# JUDGE bar 39 RH: OWN - two heads only: F#4 (first space, sharp) and D4 below the staff; no A4 (pixel check)
+39 RH1: dyn:p D4+F#4:w
+# MARKS bar 39 LH1: dyn:p (between the staves: both hands)
+39 LH1: dyn:p C3+F#3+A3:w
+40 RH1: dyn:f Bb5:s( A5:s G#5:s A5:s) G5:s( F#5:s E5:s F#5:s) E5:s( D5:s C#5:s D5:s) Bb4:s( A4:s G#4:s A4:s)
+# JUDGE bar 40 LH: Y - sharp on F; four heads C3 (offset) D3 F#3 A3, eighth chords D3+F#3+A3 and F#3+A3; dots are duration dots
+# MARKS bar 40 LH1: dyn:f (between the staves: both hands)
+40 LH1: dyn:f C3+D3+F#3+A3:q. D3+F#3+A3:e C3+D3+F#3+A3:q. F#3+A3:e
+41 RH1: dyn:p trem2:G4|D4:h word:cresc. trem2:G4|D4:h
+# MARKS bar 41 LH1: dyn:p (between the staves: both hands); word:cresc. (between the staves: both hands)
+41 LH1: dyn:p trem2:B1|B2:h word:cresc. trem2:B1|B2:h
+42 RH1: trem2:F#4+G4|D4:h trem2:F#4+G4|D4:h
+42 LH1: trem2:Bb1|Bb2:h trem2:Bb1|Bb2:h
+43 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 43 LH: X - plain half-note octaves, no tremolo beams on the LH stems
+# MARKS bar 43 LH1: dyn:sf (between the staves: both hands)
+43 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+# page 280 system 2 starts bar 44
+44 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 44 LH: X - plain half-note octaves
+# MARKS bar 44 LH1: dyn:sf (between the staves: both hands)
+44 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+# JUDGE bar 45 RH: OWN - first eighth below the C4 ledger with no accidental = Bb3 (X); sharp + offset heads in chords 1-2 = F#5+G5+D6, chords 3-4 D5+G5+D6 (Y)
+# MARKS bar 45 RH1: slur last chord to first chord of bar 46
+45 RH1: dyn:f Bb3:e F#5+G5+D6:q F#5+G5+D6:q D5+G5+D6:q D5+G5+D6:e(
+# MARKS bar 45 LH1: dyn:f (between the staves: both hands)
+45 LH1: dyn:f Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q
+# MARKS bar 46 RH1: slur from bar 45 ends; slur A5 to A3
+46 RH1: E5+A5+C#6:s) A5:s( G#5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G#4:s F#4:s E4:s D4:s C#4:s B3:s A3:s)
+46 LH1: A1+A2:w
+47 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 47 LH: X - plain half-note octaves
+# MARKS bar 47 LH1: dyn:sf (between the staves: both hands)
+47 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+48 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 48 LH: X - plain half-note octaves
+# MARKS bar 48 LH1: dyn:sf (between the staves: both hands)
+48 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+# page 280 system 3 starts bar 49
+# JUDGE bar 49 RH: OWN - first eighth = Bb3 (no accidental; X); the natural before chord 1 is a courtesy on G5; last chord tied (three ties) into bar 50 (Y)
+49 RH1: dyn:f Bb3:e D5+G5+D6:q D5+G5+D6:q D5+G5+D6:q D5+G5+D6:e~
+# MARKS bar 49 LH1: dyn:f (between the staves: both hands)
+49 LH1: dyn:f Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q
+# JUDGE bar 50 RH: Y - tied D5+G5+D6 eighth then 14 sixteenths C6..D4 (groups 2+4+4+4)
+# MARKS bar 50 RH1: slur C6 to C4 of bar 51
+50 RH1: D5+G5+D6:e C6:s( B5:s A5:s G5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s F4:s E4:s D4:s
+50 LH1: B1+B2:w
+# JUDGE bar 51 RH: OWN - chords 1-2 are E5+G5+E6 (no C6 head), last eighth G5+Bb5+E6 (Y); no f printed in this bar; only the E6 is tied into bar 52 (other curves are slurs to A5/E5)
+# MARKS bar 51 RH1: slur from bar 50 ends on C4; slur last chord (G5/Bb5 to A5) to first chord of next bar; E6 tie kept
+51 RH1: C4:e) E5+G5+E6:q E5+G5+E6:q G5+Bb5+E6:q G5+Bb5+E6~:e(
+51 LH1: C2+C3:q C2+C3:q C2+C3:q C2+C3:q
+# JUDGE bar 52 RH: Y - E5+A5+E6 eighth + 14 sixteenths ending on E4
+# MARKS bar 52 RH1: slur from previous bar ends; slur D6 to D4 of bar 53
+52 RH1: E5+A5+E6:e) D6:s( C#6:s B5:s A5:s G5:s F5:s E5:s D5:s C#5:s B4:s A4:s G4:s F4:s E4:s
+52 LH1: C#2+C#3:w
+# page 280 system 4 starts bar 53
+# JUDGE bar 53 RH: Y - half chord has two heads only: G#5 and F6 (pixel check)
+# MARKS bar 53 RH1: slur from bar 52 ends on D4
+53 RH1: D4:q) G#5+F6:h F5+G#5:q
+# JUDGE bar 53 LH: OWN - heads D3 F3(offset) G#3 B3 with sharp and natural (Y); single slash on each stem = repeated eighths, written out
+53 LH1: D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e
+# MARKS bar 54 RH1: slur first chord to D4 of bar 55
+54 RH1: E5+A5:e( G#5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G#4:s F#4:s E4:s D4:s C#4:s B3:s A3:s
+54 LH1: C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e
+# JUDGE bar 55 RH: Y - as bar 53: G#5+F6
+# MARKS bar 55 RH1: slur from bar 54 ends on D4
+55 RH1: D4:q) G#5+F6:h F5+G#5:q
+# JUDGE bar 55 LH: OWN - as bar 53: D3+F3+G#3+B3 half chords with a stem slash, written out as eighths
+55 LH1: D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e D3+F3+G#3+B3:e
+# page 281 system 1 starts bar 56
+# MARKS bar 56 RH1: slur first chord to last A3
+56 RH1: E5+A5:e( G#5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G#4:s F#4:s E4:s D4:s C#4:s B3:s A3:s)
+56 LH1: C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e C#3+E3+A3:e
+57 RH1: r:s D5:s D6:s D5:s r:s A4:s A5:s A4:s r:s F4:s F5:s F4:s r:s D4:s D5:s D4:s
+57 LH1: D3+F3+A3:q A2+A3:q F2+F3:q D2+D3:q
+58 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 58 LH: X - plain half-note octaves
+# MARKS bar 58 LH1: dyn:sf (between the staves: both hands)
+58 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+59 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 59 LH: X - plain half-note octaves
+# MARKS bar 59 LH1: dyn:sf (between the staves: both hands)
+59 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+# page 281 system 2 starts bar 60
+# JUDGE bar 60 RH: OWN - as bar 45: Bb3 eighth, F#5+G5+D6 twice, D5+G5+D6 twice
+# MARKS bar 60 RH1: slur last chord to first chord of bar 61
+60 RH1: Bb3:e F#5+G5+D6:q F#5+G5+D6:q D5+G5+D6:q D5+G5+D6:e(
+60 LH1: Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q
+# MARKS bar 61 RH1: slur from bar 60 ends
+61 RH1: E5+A5+C#6:s) A5:s G#5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G#4:s F#4:s E4:s D4:s C#4:s B3:s A3:s
+61 LH1: A1+A2:w
+62 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 62 LH: X - plain half-note octaves
+# MARKS bar 62 LH1: dyn:sf (between the staves: both hands)
+62 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+63 RH1: dyn:sf trem2:A3|A4:h dyn:sf trem2:A3|A4:h
+# JUDGE bar 63 LH: X - plain half-note octaves
+# MARKS bar 63 LH1: dyn:sf (between the staves: both hands)
+63 LH1: dyn:sf A1+A2:h dyn:sf A1+A2:h
+# JUDGE bar 64 RH: OWN - as bar 49: Bb3 eighth, last chord tied into bar 65
+64 RH1: dyn:f Bb3:e D5+G5+D6:q D5+G5+D6:q D5+G5+D6:q D5+G5+D6:e~
+# MARKS bar 64 LH1: dyn:f (between the staves: both hands)
+64 LH1: dyn:f Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q Bb1+Bb2:q
+# page 281 system 3 starts bar 65
+# JUDGE bar 65 RH: Y - as bar 50
+# MARKS bar 65 RH1: slur C6 to E4 of bar 66
+65 RH1: D5+G5+D6:e C6:s( B5:s A5:s G5:s F5:s E5:s D5:s C5:s B4:s A4:s G4:s F4:s E4:s D4:s
+65 LH1: B1+B2:w
+# JUDGE bar 66 RH: OWN - first eighth sits on the bottom line = E4, no f printed (Y); chords as bar 51 with the E6 tie into bar 67
+# MARKS bar 66 RH1: slur from bar 65 ends on E4; slur last chord (G5/Bb5 to A5) to first chord of next bar; E6 tie kept
+66 RH1: E4:e) E5+G5+E6:q E5+G5+E6:q G5+Bb5+E6:q G5~+Bb5+E6~:e(
+66 LH1: C2+C3:q C2+C3:q C2+C3:q C2+C3:q
+# JUDGE bar 67 RH: Y - as bar 52
+# MARKS bar 67 RH1: slur from previous bar ends; slur D6 to F4 of bar 68
+67 RH1: G5+A5+E6:e) D6:s( C#6:s B5:s A5:s G5:s F5:s E5:s D5:s C#5:s B4:s A4:s G4:s F4:s E4:s
+67 LH1: C#2+C#3:w
+# JUDGE bar 68 RH: OWN - last two chords F5+A5+D6 (A5 on its ledger, F5 on the top line) (Y); top D6 tied into bar 69
+# MARKS bar 68 RH1: slur from bar 67 ends on F4
+68 RH1: F4:e) D4+F4:q D4+F4:q F5+A5+D6:q F5+A5+D6~:e
+68 LH1: D2+D3:q F2+F3:q A2+A3:q D3+D4:q
+# page 282 system 1 starts bar 69
+# JUDGE bar 69 RH: Y - single tied D6 eighth (no Bb5 head) then the run
+69 RH1: D6:e C6:s Bb5:s A5:s G5:s F5:s E5:s D5:s C5:s Bb4:s A4:s G4:s F4:s E4:s D4:s
+# JUDGE bar 69 LH: Y - heads D3 F3 A3 D4 (pixel check)
+69 LH1: D3+F3+A3+D4:w
+# JUDGE bar 70 RH: Y - chords Bb3+D4+F4 and D5+F5+Bb5 (pixel check); Bb5 tied into bar 71
+70 RH1: Bb3+D4+F4:e Bb3+D4+F4:q Bb3+D4+F4:q D5+F5+Bb5:q D5+F5+Bb5~:e
+# JUDGE bar 70 LH: Y - Bb1+Bb2 octave on beat 1 (Bb2 on the fourth line), rising Bb arpeggio
+70 LH1: Bb1+Bb2:q D2+D3:q F2+F3:q Bb2+Bb3:q
+# JUDGE bar 71 RH: Y - tied Bb5 eighth then A5 ... Bb3 (14 sixteenths)
+71 RH1: Bb5:e A5:s G5:s F5:s Eb5:s D5:s C5:s Bb4:s A4:s G4:s F4:s Eb4:s D4:s C4:s Bb3:s
+# JUDGE bar 71 LH: OWN - four heads: above the top line (Bb3) and on the F3, D3 and B2 lines = Bb2+D3+F3+Bb3 (pixel check)
+71 LH1: Bb2+D3+F3+Bb3:w
+72 RH1: D4+E4:w
+# JUDGE bar 72 LH: Y - upper half head in the top space = G3 (octave G2+G3)
+72 LH1: G2+G3:h A2+A3:q. Bb2+Bb3:e
+# JUDGE bar 73 RH: Y - second chord has four heads A4 C#5 E5 A5
+73 RH1: C#4+E4:q r:q A4+C#5+E5+A5:q r:q
+73 LH1: A2+A3:h A1+A2:h
+# page 282 system 2 starts bar 74
+# JUDGE bar 74 RH: Y - run C#6 B5(natural) A5 G5 F#5 E5 D5 C#5 B4(natural) A4 G4 F#4 E4 D4 (pixel check)
+74 RH1: dyn:sf D5+F#5+A5+D6:e C#6:s B5:s A5:s G5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s E4:s D4:s
+# MARKS bar 74 LH1: dyn:sf (between the staves: both hands)
+74 LH1: dyn:sf D2+D3:w
+75 RH1: dyn:p C#4:s D4:s C#4:s D4:s C4:s D4:s C4:s D4:s B3:s D4:s B3:s D4:s Bb3:s D4:s Bb3:s D4:s
+# JUDGE bar 75 LH: OWN - half chord on the top line and F3 line with one sharp = F#3+A3 (Y); slur to the G3 half (X)
+# MARKS bar 75 LH1: dyn:p (between the staves: both hands)
+75 LH1: dyn:p F#3+A3:h( G3:h)
+# JUDGE bar 76 RH: Y - first chord has two heads only: D5+D6; run as bar 74 (sharps printed)
+76 RH1: dyn:f D5+D6:e C#6:s B5:s A5:s G5:s F#5:s E5:s D5:s C#5:s B4:s A4:s G4:s F#4:s E4:s D4:s
+# MARKS bar 76 LH1: dyn:f (between the staves: both hands)
+76 LH1: dyn:f D3+F#3:w
+# page 282 system 3 starts bar 77
+77 RH1: dyn:p C#4:s D4:s C#4:s D4:s C4:s D4:s C4:s D4:s B3:s D4:s B3:s D4:s Bb3:s D4:s Bb3:s D4:s
+# JUDGE bar 77 LH: OWN - as bar 75
+# MARKS bar 77 LH1: dyn:p (between the staves: both hands)
+77 LH1: dyn:p F#3+A3:h( G3:h)
+# JUDGE bar 78 RH: Y - cresc. printed under the fourth beat group
+78 RH1: A3:s D4:s Bb3:s D4:s A3:s D4:s Bb3:s D4:s A3:s D4:s Bb3:s D4:s word:cresc. A3:s D4:s Bb3:s D4:s
+# MARKS bar 78 LH1: word:cresc. (between the staves: both hands)
+78 LH1: D3+F#3:e G3:e D3+F#3:e G3:e D3+F#3:e G3:e word:cresc. D3+F#3:e G3:e
+79 RH1: A3:s D4:s Bb3:s D4:s A3:s D4:s Bb3:s D4:s A3:s D4:s Bb3:s D4:s A3:s D4:s Bb3:s D4:s
+79 LH1: D3+F#3:e G3:e D3+F#3:e G3:e D3+F#3:e G3:e D3+F#3:e G3:e
+# page 282 system 4 starts bar 80
+# JUDGE bar 80 RH: OWN - half/dotted-quarter chord = A3 (on the second ledger line) + D4; sixteenths F#3+A3+D4 (pixel check)
+80 RH1: dyn:f A3+D4:h~ A3+D4:q. F#3+A3+D4:s F#3+A3+D4:s
+# JUDGE bar 80 LH: OWN - chord heads on the F3 and D3 lines with sharp = D3+F#3 (X); f between the staves applies to LH too (Y)
+80 LH1: dyn:f D3+F#3:h~ D3+F#3:q. D2+D3:s D2+D3:s
+# JUDGE bar 81 RH: Y - chords F#3+A3+D4 (D on the space below the staff, A3 and F#3 on ledgers)
+81 RH1: F#3+A3+D4:q. F#3+A3+D4:s F#3+A3+D4:s F#3+A3+D4:q. F#3+A3+D4:s F#3+A3+D4:s
+81 LH1: D2+D3:q. D2+D3:s D2+D3:s D2+D3:q. D2+D3:s D2+D3:s
+# bar 82: fermata; double bar follows (Allegro assai = next chunk)
+# JUDGE bar 82 RH: Y - fermata chord F#3+A3+D4
+82 RH1: F#3+A3+D4:w!
+82 LH1: D2+D3:w!
