@@ -8,7 +8,11 @@ const indexes = import.meta.glob("./voicepacks/*.json", { eager: true, import: "
 // full quality; voiceblobs.json maps each pack to its stored address.
 import blobMap from "./voiceblobs.json";
 const bins: Record<string, string> = {};
-for (const [name, v] of Object.entries(blobMap as Record<string, { url: string }>)) bins[`./voicepacks/${name}`] = v.url;
+// Outside claude.ai (the app's own website) the same packs are served from the public audio bucket, by content hash.
+const VOICE_BASE = "https://pub-d8d81ace089e4d0f9b94db0d9c548850.r2.dev/voicepacks/";
+const inArtifact = typeof location !== "undefined" && /claude/i.test(location.hostname);
+for (const [name, v] of Object.entries(blobMap as Record<string, { url: string; sha1: string }>))
+  bins[`./voicepacks/${name}`] = inArtifact ? v.url : `${VOICE_BASE}${v.sha1}.mp3`;
 
 const where = new Map<string, { pack: string; off: number; len: number }>();
 for (const [p, idx] of Object.entries(indexes)) {

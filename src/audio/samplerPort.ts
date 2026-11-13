@@ -141,6 +141,8 @@ interface Singer {
   playing: { src: AudioBufferSourceNode; env: GainNode }[];
   /** a recording's own level against the singer's (dB; the recorded grand piano sits under the sung lines) */
   gainDb?: number;
+  /** played only at the tempi it was recorded at (the grand piano): elsewhere the channel's live sound plays */
+  exact?: boolean;
 }
 
 interface Sample {
@@ -783,7 +785,7 @@ export class SamplerPort implements SynthPort {
    */
   setRecording(
     ch: number,
-    recs: { tempo: number; url: string; map: RecordingMap; gainDb?: number }[] | null,
+    recs: { tempo: number; url: string; map: RecordingMap; gainDb?: number; exact?: boolean }[] | null,
   ): Promise<void> {
     const old = this.singers.get(ch);
     const key = recs?.map((r) => r.url).join("|");
@@ -802,6 +804,7 @@ export class SamplerPort implements SynthPort {
       key: key!,
       sources: recs.map((r) => ({ ...r, line: null, load: null })),
       gainDb: recs[0]?.gainDb,
+      exact: recs[0]?.exact,
       follow: null,
       playing: [],
       ready: Promise.resolve(),
@@ -809,7 +812,7 @@ export class SamplerPort implements SynthPort {
     sg.ready = this.lineFor(sg, sg.follow?.f ?? 1).then(async (line) => {
       // lay it out for the tempo now, so pressing play does not wait for it
       await line.timed(this.ctx, sg.follow?.f ?? 1).catch(() => undefined);
-      if (sg.follow) this.startSinger(ch, sg); // playback may already be running: join in where it is now
+      if (sg.follow && !SamplerPort.offTempo(sg)) this.startSinger(ch, sg); // playback may already be running: join in where it is now
     });
     sg.ready.catch(
       () => this.singers.get(ch) === sg && this.singers.delete(ch),
@@ -853,6 +856,7 @@ export class SamplerPort implements SynthPort {
       if (this.channelKit.get(ch) !== "singer") continue;
       this.stopSinger(sg, t);
       sg.follow = { t, s, f };
+      if (SamplerPort.offTempo(sg)) continue; // the live sound plays this channel at this tempo
       this.startSinger(ch, sg);
     }
   }
@@ -945,10 +949,14 @@ export class SamplerPort implements SynthPort {
 
   /** is this channel's line sung by its recording (so its notes stay silent)? */
   private sung(ch: number) {
-    return (
-      this.channelKit.get(ch) === "singer" &&
-      !!this.singers.get(ch)?.sources.some((x) => x.line)
-    );
+    const sg = this.singers.get(ch);
+    return this.channelKit.get(ch) === "singer" && !!sg?.sources.some((x) => x.line) && !SamplerPort.offTempo(sg);
+  }
+
+  /** a recording played only at its own tempi, and the tempo now is another */
+  private static offTempo(sg: Singer) {
+    const f = sg.follow?.f ?? 1;
+    return !!sg.exact && !sg.sources.some((x) => Math.abs(x.tempo - f) < 0.005);
   }
 
   /**

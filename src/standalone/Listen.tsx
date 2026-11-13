@@ -50,7 +50,7 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
     if (!port?.setRecording || pianoCh === undefined) return;
     if (pianoSound === "grand" && grandUrl) {
       port.keepRecordings?.([pianoCh]);
-      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, map: grandPianoMap(edition, perf), gainDb: 0 }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
+      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, map: grandPianoMap(edition, perf), gainDb: 0, exact: true }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
     } else {
       port.setInstrument?.(pianoCh, "piano");
       port.keepRecordings?.([]);

@@ -1097,7 +1097,7 @@ function PracticeScreen({
     port.keepRecordings?.([...voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel), ...(useGrand ? [pianoPart.channel] : [])]);
     // the grand piano: its recording plays the piano's channel (the app's piano fills in until it has loaded)
     if (useGrand) {
-      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf), gainDb: GRAND_GAIN_DB }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
+      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf), gainDb: GRAND_GAIN_DB, exact: true }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
     } else {
       port.setInstrument?.(pianoPart.channel, "piano");
       void port.setRecording(pianoPart.channel, null);
@@ -3148,13 +3148,13 @@ function PracticeScreen({
           <button
             type="button"
             className="grand-chip"
-            aria-pressed={useGrand}
+            aria-pressed={useGrand && asPrinted}
             onClick={() => setPianoSound(useGrand ? "app" : "grand")}
-            aria-label={useGrand ? "Grand piano: a recorded concert grand plays the accompaniment. Switch to the app piano" : "App piano. Switch to the recorded grand piano"}
-            title={useGrand ? "Grand piano: a recorded concert grand" : "App piano: tap for the grand piano"}
+            aria-label={useGrand ? (asPrinted ? "Grand piano: a recorded concert grand plays the accompaniment. Switch to the app piano" : "Grand piano at the printed tempo; at this tempo the app piano plays. Switch the grand piano off") : "App piano. Switch to the recorded grand piano"}
+            title={useGrand ? (asPrinted ? "Grand piano: a recorded concert grand" : "Grand piano plays at the printed tempo") : "App piano: tap for the grand piano"}
           >
             {GRAND_ICON}
-            <span>{useGrand ? "Grand piano" : "App piano"}</span>
+            <span>{useGrand ? (asPrinted ? "Grand piano" : "Grand at printed tempo") : "App piano"}</span>
           </button>
         )}
         <div className="tl-time">

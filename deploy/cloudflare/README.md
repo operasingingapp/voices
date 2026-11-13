@@ -7,3 +7,6 @@
 - `functions/_middleware.js`: the site is private while SITE_PASSWORD is set in the project's settings (a secret).
 - R2 `sottovoce-masters` (private): Pianoteq masters (FLAC). R2 `sottovoce-audio` (public, r2.dev): the app's
   compressed audio, e.g. `piano/<editionId>.m4a` for the grand piano (src/standalone/grandPiano.*).
+- Word recordings: the voice packs (src/standalone/voicepacks/*.mp3) are in the artifact's file store on claude.ai
+  and, for the website, in `sottovoce-audio/voicepacks/<sha1>.mp3` (voicePack.ts picks by host). When packs change,
+  upload the new ones there too.
