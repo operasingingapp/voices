@@ -103,10 +103,28 @@ function pageUnits(staves: number) {
   return { w, h: Math.round((w * 297) / 210), mm: w / 210 };
 }
 
-/** The score engraved on A4 pages: one SVG per page, sized to fill its page. */
-export async function engravePages(xml: string, visibleParts: string[] | null): Promise<string[]> {
+/** The engraved pages, and where the music begins on the first one (mm from the top), below its title block. */
+export interface Engraved {
+  pages: string[];
+  firstTopMm: number;
+}
+
+/**
+ * The score engraved on A4 pages: one SVG per page, sized to fill its page. The title block is set by printHtml in
+ * the app's own type; the engraver only keeps the room for it on the first page (a placeholder heading, removed).
+ */
+export async function engravePages(xml: string, visibleParts: string[] | null): Promise<Engraved> {
   const tk = await newVerovioToolkit();
   try {
+    // the score's own heading and credits make way for a placeholder that reserves the title block's height
+    xml = xml
+      .replace(/<credit\b[\s\S]*?<\/credit>/g, "")
+      .replace(/<work>[\s\S]*?<\/work>/, "")
+      .replace(/<movement-(?:title|number)>[\s\S]*?<\/movement-(?:title|number)>/g, "")
+      .replace(/<creator\b[^>]*>[\s\S]*?<\/creator>/g, "")
+      .replace(/(<score-partwise\b[^>]*>)/, "$1<movement-title>Title</movement-title>")
+      .replace(/<identification>/, '<identification><creator type="lyricist">.</creator><creator type="composer">.</creator><creator type="composer">.</creator>');
+    if (!/<identification>/.test(xml)) xml = xml.replace(/(<part-list>)/, '<identification><creator type="lyricist">.</creator><creator type="composer">.</creator><creator type="composer">.</creator></identification>$1');
     const f = filterXml(xml, visibleParts, false);
     const staves = f.parts.reduce((n, p) => n + p.staves, 0);
     const { w, h, mm } = pageUnits(staves);
@@ -129,9 +147,12 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
       lyricSize: 4.2,
       lyricTopMinMargin: 3,
       lyricWordSpace: 2.4,
-      font: "Leipzig",
+      // Leland: an engraving font after the classic hand-engraved plates (more ink, rounder heads than Leipzig)
+      font: "Leland",
       svgCss:
-        "g.verse text,g.dir text,g.tempo text,g.dynam text,g.mNum text,g.pgHead text,g.label text,g.labelAbbr text{font-family:'Charis SIL',Charter,Georgia,'Times New Roman',serif}",
+        "g.verse text,g.dir text,g.dynam text,g.label text,g.labelAbbr text{font-family:'Charis SIL',Charter,Georgia,'Times New Roman',serif}" +
+        "g.tempo text{font-family:'Cormorant Garamond',Garamond,Georgia,serif;font-weight:600}" +
+        "g.mNum text{font-family:'Cormorant Garamond',Garamond,Georgia,serif;font-style:italic;fill:#6b6560}",
     });
     tk.loadData(f.xml);
     const n = tk.getPageCount() as number;
@@ -141,13 +162,20 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
     host.style.cssText = "position:absolute;left:-100000px;top:0;visibility:hidden;pointer-events:none";
     document.body.appendChild(host);
     const pages: string[] = [];
+    let firstTopMm = 26;
     try {
       for (let i = 1; i <= n; i++) {
         host.innerHTML = tk.renderToSVG(i) as string;
         const svg = host.querySelector("svg");
         if (!svg) continue;
-        // the title is on the first page; the page numbers are written in the margin (Verovio's "– 2 –" is dropped)
-        if (i > 1) for (const g of svg.querySelectorAll("g.pgHead")) g.remove();
+        // the placeholder heading only kept the room: printHtml writes the title block there
+        for (const g of svg.querySelectorAll("g.pgHead")) g.remove();
+        if (i === 1) {
+          // where the first system's highest mark sits, as a share of the page's height (the page is A4: 297 mm)
+          const sys = svg.querySelector("g.system");
+          const page = svg.getBoundingClientRect();
+          if (sys && page.height > 0) firstTopMm = Math.max(18, ((sys.getBoundingClientRect().top - page.top) / page.height) * 297);
+        }
         spreadNotes(svg);
         // fill the page box it is put in (the drawing keeps its own proportions, which are A4's)
         svg.setAttribute("width", "100%");
@@ -157,7 +185,7 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
     } finally {
       host.remove();
     }
-    return pages;
+    return { pages, firstTopMm };
   } finally {
     try {
       tk.destroy?.();
@@ -351,19 +379,29 @@ export interface PrintDoc {
   credits?: string;
   pages: string[];
   notes: { n: number; where: string; sign?: string; text: string }[];
-  /** @font-face rules for the fonts the score's words use */
+  /** @font-face rules for the fonts the print uses (the app's: Cormorant Garamond, Jost, Charis SIL) */
   fontCss?: string;
+  /** the title block on the first page */
+  head?: { eyebrow: string; title: string; role?: string; composer?: string; librettist?: string };
+  /** where the music begins on the first page (mm from the top): the title block sits above it */
+  firstTopMm?: number;
 }
 
 /** The print document: A4 sheets with page numbers, then the notes in full. Self-contained, so it can open anywhere. */
 export function printHtml(d: PrintDoc): string {
   const total = d.pages.length;
+  const h = d.head;
+  const headHtml = h
+    ? `<header class="head" style="height:${Math.max(14, (d.firstTopMm ?? 28) - 3 - 9).toFixed(1)}mm"><div class="eyebrow">${esc(h.eyebrow)}</div><h1>${esc(h.title)}</h1><div class="byline"><span>${
+        h.librettist ? `Libretto by ${esc(h.librettist)}` : ""
+      }</span><span class="role">${h.role ? esc(h.role) : ""}</span><span>${h.composer ? esc(h.composer) : ""}</span></div></header>`
+    : "";
   const sheets = d.pages
     .map(
       (svg, i) =>
-        `<section class="sheet">${svg}<footer class="folio">${
-          i === 0 ? `<span class="credits">${esc(d.credits ?? "")}</span>` : `<span>${esc(d.title)} · ${esc(d.running)}</span>`
-        }<span class="pno">${i + 1} / ${total}</span></footer></section>`,
+        `<section class="sheet">${i === 0 ? headHtml : ""}${svg}<footer class="folio">${
+          i === 0 ? `<span class="credits">${esc(d.credits ?? "")}</span>` : `<span class="run">${esc(d.title)} · ${esc(d.running)}</span>`
+        }<span class="pno">${i + 1}<i> / ${total}</i></span></footer></section>`,
     )
     .join("");
   const list = d.notes.length
@@ -389,19 +427,28 @@ body { font-family: "Charis SIL", Charter, Georgia, "Times New Roman", serif; -w
 .sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #fff; break-after: page; page-break-after: always; break-inside: avoid; }
 .sheet:last-of-type { break-after: auto; page-break-after: auto; }
 .sheet > svg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
-.folio { position: absolute; left: 14mm; right: 14mm; bottom: 7mm; display: flex; align-items: flex-end; justify-content: space-between; gap: 8mm; font-size: 8pt; line-height: 1.35; color: #555; }
-.folio .credits { max-width: 150mm; }
-.folio .pno { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.head { position: absolute; left: 16mm; right: 16mm; top: 9mm; display: flex; flex-direction: column; justify-content: flex-end; text-align: center; color: #1c1a17; }
+.head .eyebrow { font: 500 7pt/1.3 "Jost", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.24em; text-transform: uppercase; color: #8b7f70; }
+.head h1 { margin: 1.4mm 0 1.6mm; font: 600 25pt/1.04 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.005em; }
+.head .byline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 4mm; padding-top: 1.6mm; border-top: 0.2mm solid #d9d2c6; font: italic 8.6pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
+.head .byline span:first-child { text-align: left; }
+.head .byline span:last-child { text-align: right; font-style: normal; font-family: "Cormorant Garamond", Garamond, Georgia, serif; font-weight: 600; font-size: 10.5pt; letter-spacing: 0.02em; color: #2a2622; }
+.head .byline .role { font: 500 6.8pt/1.3 "Jost", Arial, sans-serif; font-style: normal; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
+.folio { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; align-items: baseline; justify-content: space-between; gap: 8mm; padding-top: 1.8mm; border-top: 0.2mm solid #e2dccf; font: 7pt/1.4 "Charis SIL", Charter, Georgia, serif; color: #7a7268; }
+.folio .credits { max-width: 140mm; font-style: italic; }
+.folio .run { font: 500 6.6pt/1.4 "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
+.folio .pno { white-space: nowrap; font: 600 10.5pt/1 "Cormorant Garamond", Garamond, Georgia, serif; color: #2a2622; font-variant-numeric: lining-nums; }
+.folio .pno i { font-weight: 500; color: #9a9184; }
 .notes { width: 210mm; border-collapse: collapse; break-before: page; page-break-before: always; }
-.notes td { padding: 0 18mm; vertical-align: top; }
-.notes .sp-top { height: 16mm; }
-.notes .sp-bot { height: 16mm; vertical-align: bottom; padding-bottom: 7mm; font-size: 8pt; color: #555; }
-.notes h2 { font-size: 17pt; font-weight: 400; margin: 0 0 2mm; }
-.notes .lede { margin: 0 0 6mm; font-size: 10pt; color: #555; }
+.notes td { padding: 0 20mm; vertical-align: top; }
+.notes .sp-top { height: 18mm; }
+.notes .sp-bot { height: 16mm; vertical-align: bottom; padding-bottom: 8mm; font: 500 6.6pt/1.4 "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
+.notes h2 { font: 600 22pt/1.1 "Cormorant Garamond", Garamond, Georgia, serif; margin: 0 0 2mm; color: #1c1a17; }
+.notes .lede { margin: 0 0 6mm; font: italic 9.5pt/1.4 "Charis SIL", Georgia, serif; color: #6b6359; }
 .notes ol { list-style: none; margin: 0; padding: 0; }
-.notes li { display: grid; grid-template-columns: 8mm 34mm 1fr; gap: 2mm; padding: 2.4mm 0; border-top: 0.3mm solid #ddd; font-size: 11pt; line-height: 1.4; break-inside: avoid; page-break-inside: avoid; }
+.notes li { display: grid; grid-template-columns: 8mm 34mm 1fr; gap: 2mm; padding: 2.6mm 0; border-top: 0.2mm solid #e2dccf; font: 10.5pt/1.45 "Charis SIL", Georgia, serif; break-inside: avoid; page-break-inside: avoid; }
 .notes .num { color: ${NOTE_INK}; font-weight: 700; }
-.notes .where { color: #444; font-variant-numeric: tabular-nums; }
+.notes .where { font: 500 7.5pt/2 "Jost", Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: #8b7f70; font-variant-numeric: tabular-nums; }
 .notes .sign { color: ${NOTE_INK}; }
 .bar { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #1d1d1b; color: #fff; font: 14px/1.4 system-ui, sans-serif; }
 .bar button { font: inherit; padding: 6px 14px; border-radius: 999px; border: 0; background: #fff; color: #111; cursor: pointer; }

@@ -986,10 +986,25 @@ function PracticeScreen({
           };
         });
         const xml = annotateXml(shownXml, mine, list.filter((x) => edition.measures[x.m]));
-        const pages = await engravePages(xml, visible);
+        const { pages, firstTopMm } = await engravePages(xml, visible);
         const rights = /<rights[^>]*>([^<]*)<\/rights>/.exec(displayXml)?.[1];
         const credits = rights ? new DOMParser().parseFromString(`<r>${rights}</r>`, "application/xml").documentElement.textContent ?? "" : "";
-        const html = printHtml({ title: edition.title, running: `${roleName} · ${info.opera}`, credits, pages, notes: list, fontCss: fontFaceCss(["Charis SIL"]) });
+        const html = printHtml({
+          title: edition.title,
+          running: `${roleName} · ${info.opera}`,
+          credits,
+          pages,
+          notes: list,
+          fontCss: fontFaceCss(["Charis SIL", "Cormorant Garamond", "Jost"]),
+          head: {
+            eyebrow: [info.opera, info.kind].filter(Boolean).join(" · "),
+            title: edition.title,
+            role: roleName ? `${roleName}'s part` : undefined,
+            composer: edition.composer,
+            librettist: edition.librettist,
+          },
+          firstTopMm,
+        });
         printDoc.current = { key, html };
       }
       const how = await printDocument(printDoc.current.html);
@@ -1038,7 +1053,11 @@ function PracticeScreen({
   // On a wide screen the page view would set eight or more bars on a line, too long for the eye to follow from a music
   // stand: past about 1150 px the music grows with the width instead (up to half as large again), so a line keeps the
   // four to six bars of a printed vocal score.
-  const pageZoom = pageView && stageW > 1150 ? Math.round(effZoom * Math.min(1.5, stageW / 1150) * 40) / 40 : effZoom;
+  // The page view's notes are read from a distance, so they start a fifth larger than the line view's and grow with a
+  // wide screen (from about 950 px, up to two thirds larger again), a line still keeping four to six bars.
+  const pageZoom = pageView
+    ? Math.round(effZoom * Math.max(stageW < 700 ? 1.1 : 1.2, Math.min(1.65, stageW / 950)) * 40) / 40
+    : effZoom;
   const effZoomRef = useRef(effZoom);
   effZoomRef.current = effZoom;
   const naturalSeen = useRef("");
