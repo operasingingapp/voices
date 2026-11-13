@@ -1,0 +1,214 @@
+{
+ "editionId": "mozart-dove-son-cosi",
+ "editionVersion": "1.0.0-peters",
+ "title": "Dove son",
+ "subtitle": "Ferrando, Guglielmo, Despina, Don Alfonso, Fiordiligi and Dorabella: Act 1 finale (No. 18), section 5, from Così fan tutte",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Don Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Dove son · No, tu sei l'alma mia dea",
+   "start": "1",
+   "end": "18"
+  },
+  {
+   "id": "b",
+   "label": "Son effetti ancor del tosco · Sarà ver · Dalla voglia ch'ho di ridere",
+   "start": "19",
+   "end": "28"
+  },
+  {
+   "id": "c",
+   "label": "Per pietà, bell'idol mio · Più resister non poss'io · In poch'ore, lo vedrete",
+   "start": "29",
+   "end": "43"
+  },
+  {
+   "id": "d",
+   "label": "Ah tu sei l'alma mia dea (to the end)",
+   "start": "44",
+   "end": "56"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 16, No. 18 Finale, section 5 of 6",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score: poss' io, poch' ore and bell' idol as two words, “or or” (printed hyphenated, “or-or”, and in bar 43 under one note; set here as two words), Ferrando's and Guglielmo's “Ah tu sei” in bar 44, and their asides in brackets as printed (the last one is not closed)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 177–186, bars 429–484 of No. 18",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the No. 18 Finale (697 bars) read in fifteen page ranges, sung lines and piano each by two independent readers, every disagreement settled on the zoomed page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by nine fresh proofreaders (three fixes on pages 148–154, the rest clean). The German singing translation is left out. All the singers of this section have a staff throughout, with rests where the print leaves a staff out; singers who do not sing in this section are left out. Cut from the one-file finale at bars 429–484: from the Andante (B flat, 4/4) to the bar with the fermatas before the Allegro. In bars 25, 27, 49, 51 and 55 the print hyphenates “or-or” like one word; it is two words, and the lyric is marked so (no note changed). The cut Peters marks (“vi-” in bar 33 to “-de” in bar 48) is not made. Playback tempo ♩ = 56 from René Jacobs's recording (harmonia mundi), 3:58."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

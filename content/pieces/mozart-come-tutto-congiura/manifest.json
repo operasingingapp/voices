@@ -1,0 +1,156 @@
+{
+ "editionId": "mozart-come-tutto-congiura",
+ "editionVersion": "1.0.0-peters",
+ "title": "Come tutto congiura",
+ "subtitle": "Fiordiligi, Despina, Don Alfonso and Guglielmo: recitative from Così fan tutte, Act 2",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  },
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Don Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "65"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scenes 11–12, recitative between No. 28 and No. 29",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (minaccierò; molti uniformi, where the libretto has molte; Guglielmo for the libretto's Guilelmo; un po and Fiordiligi's di, “tell”, without apostrophes; bell' esempio as two words; abregè; medesma; the asides in brackets). Guglielmo's “Bravissima, la mia casta Artemisia, la sentite?” is printed as one aside. The printed serbaci (bar 37) is a slip for serbarci and is kept as printed."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 292–296, the recitative between No. 28 and No. 29 (65 bars)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by a fresh checker (clean). Where the print gives a second rhythm for the German words, notes that carry only a German syllable are left out and the Italian rhythm is kept. The German singing translation is left out. Bars 40–42 (Fiordiligi's “Vanne: sei cavalli di posta voli un servo a ordinar…”) are bracketed in the print, perhaps as an optional cut; they are kept. The print's “Zwölfte Szene” heading falls at bar 46. Its footnote says that this recitative follows a manuscript in the Istituto musicale in Florence (the version written into the autograph by another hand is in the score's Appendix II, not included here). It ends “segue Nr. 29 Duett”. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 89, from Jacobs (2:55)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

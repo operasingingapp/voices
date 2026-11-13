@@ -1,0 +1,1939 @@
+{
+ "editionId": "mozart-il-core-vi-dono",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (bell' idolo and anch' io as two words each, me'l, quì and qui both as printed, perchè, E'il on one note, and the asides in brackets). Guglielmo's l'hai (bar 19) and Dorabella's dai (bar 23) and fai (bar 59) are sung in two syllables, and their IPA follows the score. Guglielmo's “perchè batte qui?” and Dorabella's “che mai balza lì?” are repeated in the score, sung together, and from “E'il mio coricino” the two sing the same words; each has his or her own phrases. IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L48, IPA checked against Castel). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "g1",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Il core vi dono, bell' idolo mio;",
+   "translation": "I give you my heart, my lovely idol;",
+   "ipa": "il ˈkɔ.re vi ˈdo.no ˈbɛl ˈi.do.lo ˈmi.o",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "core",
+     "heart",
+     "ˈkɔ.re"
+    ],
+    [
+     "vi",
+     "to you",
+     "vi"
+    ],
+    [
+     "dono,",
+     "I give",
+     "ˈdo.no"
+    ],
+    [
+     "bell'",
+     "lovely",
+     "ˈbɛl"
+    ],
+    [
+     "idolo",
+     "idol",
+     "ˈi.do.lo"
+    ],
+    [
+     "mio;",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "lovely idol"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "ma il vostro vo' anch' io, via datelo a me.",
+   "translation": "but I want yours too: come, give it to me.",
+   "ipa": "ma‿il ˈvɔ.stro ˈvɔ aŋk ˈi.o ˈvi.a ˈda.te.lo‿a ˈme",
+   "words": [
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "vostro",
+     "yours",
+     "ˈvɔ.stro"
+    ],
+    [
+     "vo'",
+     "want",
+     "ˈvɔ"
+    ],
+    [
+     "anch'",
+     "also",
+     "aŋk"
+    ],
+    [
+     "io,",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "via",
+     "come",
+     "ˈvi.a"
+    ],
+    [
+     "datelo",
+     "give it",
+     "ˈda.te.lo"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "me.",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "I too"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Mel date lo prendo, ma il mio non vi rendo,",
+   "translation": "You give it to me, I take it, but I won't give you mine in return,",
+   "ipa": "mel ˈda.te lo ˈprɛn.do ma‿il ˈmi.o non vi ˈrɛn.do",
+   "words": [
+    [
+     "Mel",
+     "it to me",
+     "mel"
+    ],
+    [
+     "date",
+     "you give",
+     "ˈda.te"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "prendo,",
+     "I take",
+     "ˈprɛn.do"
+    ],
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "mine",
+     "ˈmi.o"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vi",
+     "to you",
+     "vi"
+    ],
+    [
+     "rendo,",
+     "I give back",
+     "ˈrɛn.do"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "invan me'l chiedete, più meco ei non è.",
+   "translation": "in vain you ask me for it, it is no longer with me.",
+   "ipa": "inˈvan mel kjeˈde.te ˈpju ˈme.ko ˈei non ˈɛ",
+   "words": [
+    [
+     "invan",
+     "in vain",
+     "inˈvan"
+    ],
+    [
+     "me'l",
+     "it of me",
+     "mel"
+    ],
+    [
+     "chiedete,",
+     "you ask",
+     "kjeˈde.te"
+    ],
+    [
+     "più",
+     "any more",
+     "ˈpju"
+    ],
+    [
+     "meco",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è.",
+     "is",
+     "ˈɛ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      6
+     ],
+     "gloss": "no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Se teco non l'hai perchè batte qui?",
+   "translation": "If you don't have it with you, why is it beating here?",
+   "ipa": "se ˈte.ko non ˈla.i perˈke ˈbat.te ˈkwi",
+   "words": [
+    [
+     "Se",
+     "if",
+     "se"
+    ],
+    [
+     "teco",
+     "with you",
+     "ˈte.ko"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "l'hai",
+     "it you have",
+     "ˈla.i"
+    ],
+    [
+     "perchè",
+     "why",
+     "perˈke"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "qui?",
+     "here",
+     "ˈkwi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d3",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Se a me tu lo dai che mai balza lì?",
+   "translation": "If you give it to me, what is it that leaps there?",
+   "ipa": "se a ˈme tu lo ˈda.i ke ˈmai ˈbal.tsa ˈli",
+   "words": [
+    [
+     "Se",
+     "if",
+     "se"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "lo",
+     "it",
+     "lo"
+    ],
+    [
+     "dai",
+     "give",
+     "ˈda.i"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈmai"
+    ],
+    [
+     "balza",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "lì?",
+     "there",
+     "ˈli"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Perchè batte, batte, batte quì? perchè batte, batte, batte quì?",
+   "translation": "Why is it beating, beating, beating here? why is it beating, beating, beating here?",
+   "ipa": "perˈke ˈbat.te ˈbat.te ˈbat.te ˈkwi perˈke ˈbat.te ˈbat.te ˈbat.te ˈkwi",
+   "words": [
+    [
+     "Perchè",
+     "why",
+     "perˈke"
+    ],
+    [
+     "batte,",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "batte,",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "quì?",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "perchè",
+     "why",
+     "perˈke"
+    ],
+    [
+     "batte,",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "batte,",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "quì?",
+     "here",
+     "ˈkwi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d4",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Che mai balza, balza, balza lì, che mai balza, balza, balza lì?",
+   "translation": "What is it that leaps, leaps, leaps there, what is it that leaps, leaps, leaps there?",
+   "ipa": "ke ˈmai ˈbal.tsa ˈbal.tsa ˈbal.tsa ˈli ke ˈmai ˈbal.tsa ˈbal.tsa ˈbal.tsa ˈli",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈmai"
+    ],
+    [
+     "balza,",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "balza,",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "balza",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "lì,",
+     "there",
+     "ˈli"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "mai",
+     "ever",
+     "ˈmai"
+    ],
+    [
+     "balza,",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "balza,",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "balza",
+     "leaps",
+     "ˈbal.tsa"
+    ],
+    [
+     "lì?",
+     "there",
+     "ˈli"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "E' il mio coricino che più non è meco, che più non è meco, ei venne a star teco,",
+   "translation": "It is my little heart that is no longer with me, that is no longer with me, it has come to stay with you,",
+   "ipa": "ˈɛ‿il ˈmi.o ko.riˈtʃi.no ke ˈpju non ˈɛ ˈme.ko ke ˈpju non ˈɛ ˈme.ko ˈei ˈven.ne‿a ˈstar ˈte.ko",
+   "words": [
+    [
+     "E'",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "coricino",
+     "little heart",
+     "ko.riˈtʃi.no"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "più",
+     "any more",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "meco,",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "più",
+     "any more",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "meco,",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "venne",
+     "came",
+     "ˈven.ne"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "star",
+     "stay",
+     "ˈstar"
+    ],
+    [
+     "teco,",
+     "with you",
+     "ˈte.ko"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "no longer"
+    },
+    {
+     "words": [
+      10,
+      11
+     ],
+     "gloss": "no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d5",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "E' il mio coricino che più non è meco, che più non è meco, ei venne a star teco,",
+   "translation": "It is my little heart that is no longer with me, that is no longer with me, it has come to stay with you,",
+   "ipa": "ˈɛ‿il ˈmi.o ko.riˈtʃi.no ke ˈpju non ˈɛ ˈme.ko ke ˈpju non ˈɛ ˈme.ko ˈei ˈven.ne‿a ˈstar ˈte.ko",
+   "words": [
+    [
+     "E'",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "coricino",
+     "little heart",
+     "ko.riˈtʃi.no"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "più",
+     "any more",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "meco,",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "più",
+     "any more",
+     "ˈpju"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "meco,",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "venne",
+     "came",
+     "ˈven.ne"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "star",
+     "stay",
+     "ˈstar"
+    ],
+    [
+     "teco,",
+     "with you",
+     "ˈte.ko"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "no longer"
+    },
+    {
+     "words": [
+      10,
+      11
+     ],
+     "gloss": "no longer"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "ei batte così, ei batte così, ei batte così, ei batte così.",
+   "translation": "it beats like this, it beats like this, it beats like this, it beats like this.",
+   "ipa": "ˈei ˈbat.te koˈzi ˈei ˈbat.te koˈzi ˈei ˈbat.te koˈzi ˈei ˈbat.te koˈzi",
+   "words": [
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così,",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così,",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così,",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così.",
+     "thus",
+     "koˈzi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d6",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "ei batte così, ei batte così, ei batte così, ei batte così.",
+   "translation": "it beats like this, it beats like this, it beats like this, it beats like this.",
+   "ipa": "ˈei ˈbat.te koˈzi ˈei ˈbat.te koˈzi ˈei ˈbat.te koˈzi ˈei ˈbat.te koˈzi",
+   "words": [
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così,",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così,",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così,",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "batte",
+     "beats",
+     "ˈbat.te"
+    ],
+    [
+     "così.",
+     "thus",
+     "koˈzi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g7",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "Qui lascia che il metta.",
+   "translation": "Let me put it here.",
+   "ipa": "ˈkwi ˈlaʃ.ʃa ke il ˈmet.ta",
+   "words": [
+    [
+     "Qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "lascia",
+     "let",
+     "ˈlaʃ.ʃa"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "il",
+     "it",
+     "il"
+    ],
+    [
+     "metta.",
+     "I put (subj.)",
+     "ˈmet.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d7",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "51",
+   "original": "Ei quì non può star.",
+   "translation": "It cannot stay here.",
+   "ipa": "ˈei ˈkwi non ˈpwɔ ˈstar",
+   "words": [
+    [
+     "Ei",
+     "it",
+     "ˈei"
+    ],
+    [
+     "quì",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "può",
+     "can",
+     "ˈpwɔ"
+    ],
+    [
+     "star.",
+     "stay",
+     "ˈstar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g8",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "T'intendo furbetta, t'intendo furbetta.",
+   "translation": "I understand you, little rogue, I understand you, little rogue.",
+   "ipa": "tinˈtɛn.do furˈbet.ta tinˈtɛn.do furˈbet.ta",
+   "words": [
+    [
+     "T'intendo",
+     "I understand you",
+     "tinˈtɛn.do"
+    ],
+    [
+     "furbetta,",
+     "little rogue",
+     "furˈbet.ta"
+    ],
+    [
+     "t'intendo",
+     "I understand you",
+     "tinˈtɛn.do"
+    ],
+    [
+     "furbetta.",
+     "little rogue",
+     "furˈbet.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d8",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "Che fai?",
+   "translation": "What are you doing?",
+   "ipa": "ke ˈfa.i",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "fai?",
+     "you do",
+     "ˈfa.i"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g9",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "Non guardar.",
+   "translation": "Don't look.",
+   "ipa": "non gwarˈdar",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "guardar.",
+     "look",
+     "gwarˈdar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "don't look (neg. imper.)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d9",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "61",
+   "original": "(Nel petto un Vesuvio d'avere mi par, nel petto un Vesuvio d'avere mi par.)",
+   "translation": "(I feel as if I had a Vesuvius in my breast, I feel as if I had a Vesuvius in my breast.)",
+   "ipa": "nel ˈpɛt.to‿un veˈzu.vjo daˈve.re mi ˈpar nel ˈpɛt.to‿un veˈzu.vjo daˈve.re mi ˈpar",
+   "words": [
+    [
+     "(Nel",
+     "in the",
+     "nel"
+    ],
+    [
+     "petto",
+     "breast",
+     "ˈpɛt.to"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "Vesuvio",
+     "Vesuvius",
+     "veˈzu.vjo"
+    ],
+    [
+     "d'avere",
+     "to have",
+     "daˈve.re"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "par,",
+     "it seems",
+     "ˈpar"
+    ],
+    [
+     "nel",
+     "in the",
+     "nel"
+    ],
+    [
+     "petto",
+     "breast",
+     "ˈpɛt.to"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "Vesuvio",
+     "Vesuvius",
+     "veˈzu.vjo"
+    ],
+    [
+     "d'avere",
+     "to have",
+     "daˈve.re"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "par.)",
+     "it seems",
+     "ˈpar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "I feel"
+    },
+    {
+     "words": [
+      12,
+      13
+     ],
+     "gloss": "I feel"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g10",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "63",
+   "original": "(Ferrando meschino, possibil non par.)",
+   "translation": "(Poor Ferrando, it doesn't seem possible.)",
+   "ipa": "ferˈran.do meˈski.no posˈsi.bil non ˈpar",
+   "words": [
+    [
+     "(Ferrando",
+     "Ferrando",
+     "ferˈran.do"
+    ],
+    [
+     "meschino,",
+     "wretched",
+     "meˈski.no"
+    ],
+    [
+     "possibil",
+     "possible",
+     "posˈsi.bil"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "par.)",
+     "seems",
+     "ˈpar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g11",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "71",
+   "original": "L'occhietto a me gira.",
+   "translation": "Turn your little eye to me.",
+   "ipa": "lokˈkjet.to‿a ˈme ˈdʒi.ra",
+   "words": [
+    [
+     "L'occhietto",
+     "the little eye",
+     "lokˈkjet.to"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "gira.",
+     "turn (imper.)",
+     "ˈdʒi.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d10",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "74",
+   "original": "Che brami?",
+   "translation": "What do you want?",
+   "ipa": "ke ˈbra.mi",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "brami?",
+     "you desire",
+     "ˈbra.mi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g12",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "75",
+   "original": "Rimira, rimira, se meglio può andar.",
+   "translation": "Look again, look again, see if it could go any better.",
+   "ipa": "riˈmi.ra riˈmi.ra se ˈmɛʎ.ʎo ˈpwɔ‿anˈdar",
+   "words": [
+    [
+     "Rimira,",
+     "look again",
+     "riˈmi.ra"
+    ],
+    [
+     "rimira,",
+     "look again",
+     "riˈmi.ra"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "meglio",
+     "better",
+     "ˈmɛʎ.ʎo"
+    ],
+    [
+     "può",
+     "can",
+     "ˈpwɔ"
+    ],
+    [
+     "andar.",
+     "go",
+     "anˈdar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "it can go better"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g13",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "81",
+   "original": "Oh cambio felice di cori e d'affetti,",
+   "translation": "Oh happy exchange of hearts and affections,",
+   "ipa": "ˈɔ ˈkam.bjo feˈli.tʃe di ˈkɔ.ri‿e dafˈfɛt.ti",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "cambio",
+     "exchange",
+     "ˈkam.bjo"
+    ],
+    [
+     "felice",
+     "happy",
+     "feˈli.tʃe"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "cori",
+     "hearts",
+     "ˈkɔ.ri"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "d'affetti,",
+     "of affections",
+     "dafˈfɛt.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d11",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "81",
+   "original": "Oh cambio felice di cori e d'affetti,",
+   "translation": "Oh happy exchange of hearts and affections,",
+   "ipa": "ˈɔ ˈkam.bjo feˈli.tʃe di ˈkɔ.ri‿e dafˈfɛt.ti",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "cambio",
+     "exchange",
+     "ˈkam.bjo"
+    ],
+    [
+     "felice",
+     "happy",
+     "feˈli.tʃe"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "cori",
+     "hearts",
+     "ˈkɔ.ri"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "d'affetti,",
+     "of affections",
+     "dafˈfɛt.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g14",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "87",
+   "original": "che nuovi diletti, che dolce penar, che nuovi diletti, che dolce penar,",
+   "translation": "what new delights, what sweet suffering, what new delights, what sweet suffering,",
+   "ipa": "ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d12",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "87",
+   "original": "che nuovi diletti, che dolce penar, che nuovi diletti, che dolce penar,",
+   "translation": "what new delights, what sweet suffering, what new delights, what sweet suffering,",
+   "ipa": "ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g15",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "97",
+   "original": "oh cambio felice di cori e d'affetti,",
+   "translation": "oh happy exchange of hearts and affections,",
+   "ipa": "ˈɔ ˈkam.bjo feˈli.tʃe di ˈkɔ.ri‿e dafˈfɛt.ti",
+   "words": [
+    [
+     "oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "cambio",
+     "exchange",
+     "ˈkam.bjo"
+    ],
+    [
+     "felice",
+     "happy",
+     "feˈli.tʃe"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "cori",
+     "hearts",
+     "ˈkɔ.ri"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "d'affetti,",
+     "of affections",
+     "dafˈfɛt.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d13",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "97",
+   "original": "oh cambio felice di cori e d'affetti,",
+   "translation": "oh happy exchange of hearts and affections,",
+   "ipa": "ˈɔ ˈkam.bjo feˈli.tʃe di ˈkɔ.ri‿e dafˈfɛt.ti",
+   "words": [
+    [
+     "oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "cambio",
+     "exchange",
+     "ˈkam.bjo"
+    ],
+    [
+     "felice",
+     "happy",
+     "feˈli.tʃe"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "cori",
+     "hearts",
+     "ˈkɔ.ri"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "d'affetti,",
+     "of affections",
+     "dafˈfɛt.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g16",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "103",
+   "original": "che nuovi diletti, che dolce penar, che nuovi diletti, che dolce penar,",
+   "translation": "what new delights, what sweet suffering, what new delights, what sweet suffering,",
+   "ipa": "ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d14",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "103",
+   "original": "che nuovi diletti, che dolce penar, che nuovi diletti, che dolce penar,",
+   "translation": "what new delights, what sweet suffering, what new delights, what sweet suffering,",
+   "ipa": "ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar ke ˈnwɔ.vi diˈlɛt.ti ke ˈdol.tʃe peˈnar",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "nuovi",
+     "new",
+     "ˈnwɔ.vi"
+    ],
+    [
+     "diletti,",
+     "delights",
+     "diˈlɛt.ti"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g17",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "che dolce penar, che dolce penar, che dolce penar!",
+   "translation": "what sweet suffering, what sweet suffering, what sweet suffering!",
+   "ipa": "ke ˈdol.tʃe peˈnar ke ˈdol.tʃe peˈnar ke ˈdol.tʃe peˈnar",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar!",
+     "suffering",
+     "peˈnar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d15",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "che dolce penar, che dolce penar, che dolce penar!",
+   "translation": "what sweet suffering, what sweet suffering, what sweet suffering!",
+   "ipa": "ke ˈdol.tʃe peˈnar ke ˈdol.tʃe peˈnar ke ˈdol.tʃe peˈnar",
+   "words": [
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar,",
+     "suffering",
+     "peˈnar"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "dolce",
+     "sweet",
+     "ˈdol.tʃe"
+    ],
+    [
+     "penar!",
+     "suffering",
+     "peˈnar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

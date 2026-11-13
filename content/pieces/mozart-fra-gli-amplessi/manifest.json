@@ -1,0 +1,140 @@
+{
+ "editionId": "mozart-fra-gli-amplessi",
+ "editionVersion": "1.0.0-peters",
+ "title": "Fra gli amplessi in pochi istanti",
+ "subtitle": "Fiordiligi and Ferrando: duet from Così fan tutte, Act 2 (No. 29)",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Fra gli amplessi · Oh che gioja · Ed intanto di dolore (Adagio, Con più moto)",
+   "start": "1",
+   "end": "20"
+  },
+  {
+   "id": "b",
+   "label": "Cosa veggio · Con quel ferro di tua mano · Taci, ahimè · Ah che omai la mia costanza (Allegro)",
+   "start": "21",
+   "end": "56"
+  },
+  {
+   "id": "c",
+   "label": "Sorgi, sorgi · Il tuo cor o la mia morte · Cedi, cara",
+   "start": "57",
+   "end": "75"
+  },
+  {
+   "id": "d",
+   "label": "Volgi a me pietoso il ciglio · Giusto ciel · Fa di me quel che ti par (Larghetto)",
+   "start": "76",
+   "end": "101"
+  },
+  {
+   "id": "e",
+   "label": "Abbracciamci, o caro bene (Andante, to the end)",
+   "start": "102",
+   "end": "142"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 12, No. 29 Duetto",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (gioja; quest' abito as two words; Dei without its accent; Fa without an apostrophe; Abbracciamci). The score is followed where it differs from the libretto: Fiordiligi's “in quest' abito verrò” (the libretto has morrò), and Ferrando's “la sua costanza” against Fiordiligi's “la mia costanza” (the libretto gives both “la mia”)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 296–304, bars 1–142 of No. 29",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in three page ranges, pp. 296–298, 299–301 and 302–304), a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). The German singing translation is left out. Ferrando's part, printed in the treble clef, sounds an octave lower. Adagio in ₵ (alla breve), Con più moto from bar 12, Allegro from bar 24, C major from bar 40, Larghetto in 3/4 and A major from bar 76, Andante in ₵ from bar 101; bars 138–142 are for the piano alone. The cut signs printed at “vi-” (bars 38, 105 and 121) and “-de” (bars 57, 115 and 131) are not written in the score. Playback tempo: Adagio at a half note = 25 (♩ = 50), Con più moto at a half note = 35 (♩ = 70), Allegro at a half note = 75 (♩ = 150), Larghetto at ♩ = 40, Andante at a half note = 60 (♩ = 120), fitted to Jacobs (6:14); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

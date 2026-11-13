@@ -1,0 +1,1624 @@
+{
+ "editionId": "mozart-ah-poveretto-me",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (Ah poveretto me, where the libretto has Oh; Dov' è, dell' Inferno, com' elle and un' ottava as two words; pur troppo as two words; l'eccezzione; spennacchiate; vo without an apostrophe). Don Alfonso's potea (bars 40–41) is printed “po-te_a”, with the last two syllables joined on one note; it is one word here. IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L62, IPA checked against Castel). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "g1",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Ah poveretto me, cosa ho veduto, cosa ho sentito mai.",
+   "translation": "Ah, poor me, what have I seen, what have I heard.",
+   "ipa": "ˈa po.veˈret.to ˈme ˈkɔ.za‿ˈɔ veˈdu.to ˈkɔ.za‿ˈɔ senˈti.to ˈma.i",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "poveretto",
+     "poor",
+     "po.veˈret.to"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "veduto,",
+     "seen",
+     "veˈdu.to"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "sentito",
+     "heard",
+     "senˈti.to"
+    ],
+    [
+     "mai.",
+     "ever",
+     "ˈma.i"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "have I seen"
+    },
+    {
+     "words": [
+      7,
+      8
+     ],
+     "gloss": "have I heard"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Per carità, silenzio!",
+   "translation": "For pity's sake, quiet!",
+   "ipa": "per ka.riˈta siˈlɛn.tsjo",
+   "words": [
+    [
+     "Per",
+     "for",
+     "per"
+    ],
+    [
+     "carità,",
+     "charity",
+     "ka.riˈta"
+    ],
+    [
+     "silenzio!",
+     "silence",
+     "siˈlɛn.tsjo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "for pity's sake"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Mi pelerei la barba, mi graffierei la pelle, e darei colle corna entro le stelle,",
+   "translation": "I could tear out my beard, I could claw my skin, and butt the stars with my horns,",
+   "ipa": "mi pe.leˈrɛi la ˈbar.ba mi graf.fjeˈrɛi la ˈpɛl.le e daˈrɛi ˈkol.le ˈkɔr.na‿ˈen.tro le ˈstel.le",
+   "words": [
+    [
+     "Mi",
+     "myself",
+     "mi"
+    ],
+    [
+     "pelerei",
+     "I would pluck",
+     "pe.leˈrɛi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "barba,",
+     "beard",
+     "ˈbar.ba"
+    ],
+    [
+     "mi",
+     "myself",
+     "mi"
+    ],
+    [
+     "graffierei",
+     "I would scratch",
+     "graf.fjeˈrɛi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "pelle,",
+     "skin",
+     "ˈpɛl.le"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "darei",
+     "I would strike",
+     "daˈrɛi"
+    ],
+    [
+     "colle",
+     "with the",
+     "ˈkol.le"
+    ],
+    [
+     "corna",
+     "horns",
+     "ˈkɔr.na"
+    ],
+    [
+     "entro",
+     "into",
+     "ˈen.tro"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "stelle,",
+     "stars",
+     "ˈstel.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      9,
+      10,
+      11
+     ],
+     "gloss": "butt with my horns"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "fu quella Fiordiligi, la Penelope, l'Artemisia del secolo, briccona, assassina… furfante… ladra… cagna…",
+   "translation": "that was Fiordiligi, the Penelope, the Artemisia of the age, the hussy, murderess… scoundrel… thief… bitch…",
+   "ipa": "ˈfu ˈkwel.la fjor.diˈli.dʒi la peˈnɛ.lo.pe lar.teˈmi.zja del ˈsɛ.ko.lo brikˈko.na as.sasˈsi.na furˈfan.te ˈla.dra ˈkaɲ.ɲa",
+   "words": [
+    [
+     "fu",
+     "was",
+     "ˈfu"
+    ],
+    [
+     "quella",
+     "that",
+     "ˈkwel.la"
+    ],
+    [
+     "Fiordiligi,",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "Penelope,",
+     "Penelope",
+     "peˈnɛ.lo.pe"
+    ],
+    [
+     "l'Artemisia",
+     "the Artemisia",
+     "lar.teˈmi.zja"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "secolo,",
+     "century",
+     "ˈsɛ.ko.lo"
+    ],
+    [
+     "briccona,",
+     "rogue",
+     "brikˈko.na"
+    ],
+    [
+     "assassina…",
+     "murderess",
+     "as.sasˈsi.na"
+    ],
+    [
+     "furfante…",
+     "scoundrel",
+     "furˈfan.te"
+    ],
+    [
+     "ladra…",
+     "thief",
+     "ˈla.dra"
+    ],
+    [
+     "cagna…",
+     "bitch",
+     "ˈkaɲ.ɲa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Lasciamolo sfogar…",
+   "translation": "Let him vent his rage…",
+   "ipa": "laʃˈʃa.mo.lo sfoˈgar",
+   "words": [
+    [
+     "Lasciamolo",
+     "let him",
+     "laʃˈʃa.mo.lo"
+    ],
+    [
+     "sfogar…",
+     "vent",
+     "sfoˈgar"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "let him let off steam"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Ebben!",
+   "translation": "Well!",
+   "ipa": "ebˈbɛn",
+   "words": [
+    [
+     "Ebben!",
+     "well then",
+     "ebˈbɛn"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Dov' è!",
+   "translation": "Where is she!",
+   "ipa": "dov ˈɛ",
+   "words": [
+    [
+     "Dov'",
+     "where",
+     "dov"
+    ],
+    [
+     "è!",
+     "is",
+     "ˈɛ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "where is she"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Chi, la tua Fiordiligi?",
+   "translation": "Who, your Fiordiligi?",
+   "ipa": "ˈki la ˈtu.a fjor.diˈli.dʒi",
+   "words": [
+    [
+     "Chi,",
+     "who",
+     "ˈki"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "Fiordiligi?",
+     "Fiordiligi",
+     "fjor.diˈli.dʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "La mia Fior… Fior di diavolo, che strozzi lei prima e dopo me!",
+   "translation": "My Fior… devil's flower, may the devil throttle her first and me after!",
+   "ipa": "la ˈmi.a ˈfjor ˈfjor di ˈdja.vo.lo ke ˈstrɔt.tsi ˈlɛi ˈpri.ma e ˈdo.po ˈme",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "Fior…",
+     "Fior-",
+     "ˈfjor"
+    ],
+    [
+     "Fior",
+     "flower",
+     "ˈfjor"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "diavolo,",
+     "devil",
+     "ˈdja.vo.lo"
+    ],
+    [
+     "che",
+     "who",
+     "ke"
+    ],
+    [
+     "strozzi",
+     "may strangle",
+     "ˈstrɔt.tsi"
+    ],
+    [
+     "lei",
+     "her",
+     "ˈlɛi"
+    ],
+    [
+     "prima",
+     "first",
+     "ˈpri.ma"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "dopo",
+     "after",
+     "ˈdo.po"
+    ],
+    [
+     "me!",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      7
+     ],
+     "gloss": "subjunctive: may (he) strangle"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Tu vedi bene, v'han delle differenze in ogni cosa, un poco di più merto…",
+   "translation": "You see very well, there are differences in everything: a little more merit…",
+   "ipa": "tu ˈve.di ˈbɛ.ne ˈvan ˈdel.le dif.feˈrɛn.tse‿in ˈoɲ.ɲi ˈkɔ.za un ˈpɔ.ko di ˈpju ˈmɛr.to",
+   "words": [
+    [
+     "Tu",
+     "you",
+     "tu"
+    ],
+    [
+     "vedi",
+     "see",
+     "ˈve.di"
+    ],
+    [
+     "bene,",
+     "well",
+     "ˈbɛ.ne"
+    ],
+    [
+     "v'han",
+     "there are",
+     "ˈvan"
+    ],
+    [
+     "delle",
+     "some",
+     "ˈdel.le"
+    ],
+    [
+     "differenze",
+     "differences",
+     "dif.feˈrɛn.tse"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "ogni",
+     "every",
+     "ˈoɲ.ɲi"
+    ],
+    [
+     "cosa,",
+     "thing",
+     "ˈkɔ.za"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "poco",
+     "little",
+     "ˈpɔ.ko"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "merto…",
+     "merit",
+     "ˈmɛr.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3
+     ],
+     "gloss": "there are"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Ah cessa, cessa di tormentarmi, ed una via piuttosto studiam di castigarle sonoramente.",
+   "translation": "Ah, stop, stop tormenting me, and let us rather think out a way to punish them resoundingly.",
+   "ipa": "ˈa ˈtʃɛs.sa ˈtʃɛs.sa di tor.menˈtar.mi ed ˈu.na ˈvi.a pjutˈtɔ.sto stuˈdjam di ka.stiˈgar.le so.no.raˈmen.te",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "cessa,",
+     "stop",
+     "ˈtʃɛs.sa"
+    ],
+    [
+     "cessa",
+     "stop",
+     "ˈtʃɛs.sa"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "tormentarmi,",
+     "tormenting me",
+     "tor.menˈtar.mi"
+    ],
+    [
+     "ed",
+     "and",
+     "ed"
+    ],
+    [
+     "una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "via",
+     "way",
+     "ˈvi.a"
+    ],
+    [
+     "piuttosto",
+     "rather",
+     "pjutˈtɔ.sto"
+    ],
+    [
+     "studiam",
+     "let us study",
+     "stuˈdjam"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "castigarle",
+     "punishing them",
+     "ka.stiˈgar.le"
+    ],
+    [
+     "sonoramente.",
+     "resoundingly",
+     "so.no.raˈmen.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1
+     ],
+     "gloss": "imperative: stop"
+    },
+    {
+     "words": [
+      2
+     ],
+     "gloss": "imperative: stop"
+    },
+    {
+     "words": [
+      9
+     ],
+     "gloss": "let us work out"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Io so qual è: sposarle.",
+   "translation": "I know what it is: marry them.",
+   "ipa": "ˈi.o ˈsɔ ˈkwal ˈɛ spoˈzar.le",
+   "words": [
+    [
+     "Io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "so",
+     "know",
+     "ˈsɔ"
+    ],
+    [
+     "qual",
+     "which",
+     "ˈkwal"
+    ],
+    [
+     "è:",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "sposarle.",
+     "to marry them",
+     "spoˈzar.le"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g7",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "Vorrei sposar piuttosto la barca di Caronte.",
+   "translation": "I would rather marry Charon's boat.",
+   "ipa": "vorˈrɛi spoˈzar pjutˈtɔ.sto la ˈbar.ka di kaˈron.te",
+   "words": [
+    [
+     "Vorrei",
+     "I would like",
+     "vorˈrɛi"
+    ],
+    [
+     "sposar",
+     "to marry",
+     "spoˈzar"
+    ],
+    [
+     "piuttosto",
+     "rather",
+     "pjutˈtɔ.sto"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "barca",
+     "boat",
+     "ˈbar.ka"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "Caronte.",
+     "Charon",
+     "kaˈron.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r4",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "La grotta di Vulcano.",
+   "translation": "Vulcan's cave.",
+   "ipa": "la ˈgrɔt.ta di vulˈka.no",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "grotta",
+     "cave",
+     "ˈgrɔt.ta"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "Vulcano.",
+     "Vulcan",
+     "vulˈka.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g8",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "La porta dell' Inferno.",
+   "translation": "The gate of hell.",
+   "ipa": "la ˈpɔr.ta dell inˈfɛr.no",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "porta",
+     "gate",
+     "ˈpɔr.ta"
+    ],
+    [
+     "dell'",
+     "of the",
+     "dell"
+    ],
+    [
+     "Inferno.",
+     "hell",
+     "inˈfɛr.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "of hell"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "Dunque restate celibi in eterno.",
+   "translation": "Then stay bachelors for ever.",
+   "ipa": "ˈduŋ.kwe reˈsta.te ˈtʃɛ.li.bi‿in eˈtɛr.no",
+   "words": [
+    [
+     "Dunque",
+     "then",
+     "ˈduŋ.kwe"
+    ],
+    [
+     "restate",
+     "remain",
+     "reˈsta.te"
+    ],
+    [
+     "celibi",
+     "bachelors",
+     "ˈtʃɛ.li.bi"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "eterno.",
+     "eternity",
+     "eˈtɛr.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1
+     ],
+     "gloss": "imperative: stay"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "for ever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r5",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "Mancheran forse donne ad uomin come noi?",
+   "translation": "Will there be any shortage of women for men like us?",
+   "ipa": "maŋ.keˈran ˈfor.se ˈdɔn.ne ad ˈwɔ.min ˈko.me ˈno.i",
+   "words": [
+    [
+     "Mancheran",
+     "will be lacking",
+     "maŋ.keˈran"
+    ],
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "donne",
+     "women",
+     "ˈdɔn.ne"
+    ],
+    [
+     "ad",
+     "to",
+     "ad"
+    ],
+    [
+     "uomin",
+     "men",
+     "ˈwɔ.min"
+    ],
+    [
+     "come",
+     "like",
+     "ˈko.me"
+    ],
+    [
+     "noi?",
+     "us",
+     "ˈno.i"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "Non c'è abbondanza d'altro.",
+   "translation": "There is no greater plenty of anything.",
+   "ipa": "non ˈtʃɛ‿ab.bonˈdan.tsa ˈdal.tro",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "c'è",
+     "there is",
+     "ˈtʃɛ"
+    ],
+    [
+     "abbondanza",
+     "abundance",
+     "ab.bonˈdan.tsa"
+    ],
+    [
+     "d'altro.",
+     "of anything else",
+     "ˈdal.tro"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "nothing is more plentiful"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a6",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "34",
+   "original": "Ma l'altre, che faran, se ciò fer queste?",
+   "translation": "But the others, what will they do, if these did this?",
+   "ipa": "ma ˈlal.tre ke faˈran se ˈtʃɔ ˈfer ˈkwe.ste",
+   "words": [
+    [
+     "Ma",
+     "but",
+     "ma"
+    ],
+    [
+     "l'altre,",
+     "the others",
+     "ˈlal.tre"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "faran,",
+     "will do",
+     "faˈran"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "ciò",
+     "this",
+     "ˈtʃɔ"
+    ],
+    [
+     "fer",
+     "did",
+     "ˈfer"
+    ],
+    [
+     "queste?",
+     "these",
+     "ˈkwe.ste"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a7",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "In fondo voi le amate queste vostre cornacchie spennacchiate.",
+   "translation": "At heart you love them, these plucked crows of yours.",
+   "ipa": "in ˈfon.do ˈvoi le‿aˈma.te ˈkwe.ste ˈvɔ.stre korˈnak.kje spen.nakˈkja.te",
+   "words": [
+    [
+     "In",
+     "in",
+     "in"
+    ],
+    [
+     "fondo",
+     "bottom",
+     "ˈfon.do"
+    ],
+    [
+     "voi",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "le",
+     "them",
+     "le"
+    ],
+    [
+     "amate",
+     "love",
+     "aˈma.te"
+    ],
+    [
+     "queste",
+     "these",
+     "ˈkwe.ste"
+    ],
+    [
+     "vostre",
+     "your",
+     "ˈvɔ.stre"
+    ],
+    [
+     "cornacchie",
+     "crows",
+     "korˈnak.kje"
+    ],
+    [
+     "spennacchiate.",
+     "plucked",
+     "spen.nakˈkja.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "at heart"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g9",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Ah pur troppo!",
+   "translation": "Ah, worse luck!",
+   "ipa": "ˈa pur ˈtrɔp.po",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "pur",
+     "only",
+     "pur"
+    ],
+    [
+     "troppo!",
+     "too (much)",
+     "ˈtrɔp.po"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "unfortunately (lit. only too much)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r6",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Pur troppo!",
+   "translation": "Worse luck!",
+   "ipa": "pur ˈtrɔp.po",
+   "words": [
+    [
+     "Pur",
+     "only",
+     "pur"
+    ],
+    [
+     "troppo!",
+     "too (much)",
+     "ˈtrɔp.po"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "unfortunately (lit. only too much)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a8",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "Ebben pigliatele com' elle son,",
+   "translation": "Well then, take them as they are,",
+   "ipa": "ebˈbɛn piʎˈʎa.te.le kom ˈel.le ˈson",
+   "words": [
+    [
+     "Ebben",
+     "well then",
+     "ebˈbɛn"
+    ],
+    [
+     "pigliatele",
+     "take them",
+     "piʎˈʎa.te.le"
+    ],
+    [
+     "com'",
+     "as",
+     "kom"
+    ],
+    [
+     "elle",
+     "they",
+     "ˈel.le"
+    ],
+    [
+     "son,",
+     "are",
+     "ˈson"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1
+     ],
+     "gloss": "imperative: take them"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "as they"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a9",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "40",
+   "original": "natura non potea fare l'eccezzione, il privilegio di creare due donne d'altra pasta per i vostri bei musi:",
+   "translation": "Nature could not make the exception, the privilege, of creating two women of different stuff for your pretty faces:",
+   "ipa": "naˈtu.ra non poˈte.a ˈfa.re let.tʃetˈtsjo.ne il pri.viˈlɛ.dʒo di kreˈa.re ˈdu.e ˈdɔn.ne ˈdal.tra ˈpa.sta per i ˈvɔ.stri ˈbɛi ˈmu.zi",
+   "words": [
+    [
+     "natura",
+     "Nature",
+     "naˈtu.ra"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "potea",
+     "could",
+     "poˈte.a"
+    ],
+    [
+     "fare",
+     "make",
+     "ˈfa.re"
+    ],
+    [
+     "l'eccezzione,",
+     "the exception",
+     "let.tʃetˈtsjo.ne"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "privilegio",
+     "privilege",
+     "pri.viˈlɛ.dʒo"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "creare",
+     "creating",
+     "kreˈa.re"
+    ],
+    [
+     "due",
+     "two",
+     "ˈdu.e"
+    ],
+    [
+     "donne",
+     "women",
+     "ˈdɔn.ne"
+    ],
+    [
+     "d'altra",
+     "of other",
+     "ˈdal.tra"
+    ],
+    [
+     "pasta",
+     "dough",
+     "ˈpa.sta"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "vostri",
+     "your",
+     "ˈvɔ.stri"
+    ],
+    [
+     "bei",
+     "fine",
+     "ˈbɛi"
+    ],
+    [
+     "musi:",
+     "snouts",
+     "ˈmu.zi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      11,
+      12
+     ],
+     "gloss": "of a different make"
+    },
+    {
+     "words": [
+      16,
+      17
+     ],
+     "gloss": "pretty faces (mocking)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a10",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "in ogni cosa ci vuol filosofia;",
+   "translation": "in everything you need philosophy;",
+   "ipa": "in ˈoɲ.ɲi ˈkɔ.za tʃi ˈvwɔl fi.lo.zoˈfi.a",
+   "words": [
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "ogni",
+     "every",
+     "ˈoɲ.ɲi"
+    ],
+    [
+     "cosa",
+     "thing",
+     "ˈkɔ.za"
+    ],
+    [
+     "ci",
+     "there",
+     "tʃi"
+    ],
+    [
+     "vuol",
+     "is needed",
+     "ˈvwɔl"
+    ],
+    [
+     "filosofia;",
+     "philosophy",
+     "fi.lo.zoˈfi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "one needs"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a11",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "venite meco; di combinar le cose studierem la maniera:",
+   "translation": "come with me; we'll work out the way to arrange matters:",
+   "ipa": "veˈni.te ˈme.ko di kom.biˈnar le ˈkɔ.ze stu.djeˈrem la maˈnjɛ.ra",
+   "words": [
+    [
+     "venite",
+     "come",
+     "veˈni.te"
+    ],
+    [
+     "meco;",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "combinar",
+     "arranging",
+     "kom.biˈnar"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "cose",
+     "things",
+     "ˈkɔ.ze"
+    ],
+    [
+     "studierem",
+     "we will study",
+     "stu.djeˈrem"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "maniera:",
+     "way",
+     "maˈnjɛ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0
+     ],
+     "gloss": "imperative: come"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a12",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "vo che ancor questa sera doppie nozze si facciano Frattanto un' ottava ascoltate:",
+   "translation": "I want a double wedding to be held this very evening. Meanwhile, listen to a stanza:",
+   "ipa": "ˈvɔ ke‿aŋˈkor ˈkwe.sta ˈse.ra ˈdop.pje ˈnɔt.tse si ˈfat.tʃa.no fratˈtan.to un otˈta.va‿a.skolˈta.te",
+   "words": [
+    [
+     "vo",
+     "I want",
+     "ˈvɔ"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "ancor",
+     "even",
+     "aŋˈkor"
+    ],
+    [
+     "questa",
+     "this",
+     "ˈkwe.sta"
+    ],
+    [
+     "sera",
+     "evening",
+     "ˈse.ra"
+    ],
+    [
+     "doppie",
+     "double",
+     "ˈdop.pje"
+    ],
+    [
+     "nozze",
+     "wedding",
+     "ˈnɔt.tse"
+    ],
+    [
+     "si",
+     "be",
+     "si"
+    ],
+    [
+     "facciano",
+     "made",
+     "ˈfat.tʃa.no"
+    ],
+    [
+     "Frattanto",
+     "meanwhile",
+     "fratˈtan.to"
+    ],
+    [
+     "un'",
+     "an",
+     "un"
+    ],
+    [
+     "ottava",
+     "eight-line stanza",
+     "otˈta.va"
+    ],
+    [
+     "ascoltate:",
+     "listen",
+     "a.skolˈta.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      7,
+      8
+     ],
+     "gloss": "subjunctive: be held"
+    },
+    {
+     "words": [
+      10,
+      11
+     ],
+     "gloss": "an eight-line stanza"
+    },
+    {
+     "words": [
+      12
+     ],
+     "gloss": "imperative: listen"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a13",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "felicissimi voi, se la imparate.",
+   "translation": "happy indeed you'll be, if you learn it.",
+   "ipa": "fe.liˈtʃis.si.mi ˈvoi se la‿im.paˈra.te",
+   "words": [
+    [
+     "felicissimi",
+     "most happy",
+     "fe.liˈtʃis.si.mi"
+    ],
+    [
+     "voi,",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "la",
+     "it",
+     "la"
+    ],
+    [
+     "imparate.",
+     "you learn",
+     "im.paˈra.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "editionId": "mozart-ah-lo-veggio",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ah lo veggio quell'anima bella",
+ "subtitle": "Ferrando: aria from Così fan tutte, Act 2 (No. 24)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ah lo veggio · In quel guardo · Già rispondi",
+   "start": "1",
+   "end": "42"
+  },
+  {
+   "id": "b",
+   "label": "Ah lo veggio (again) · In quel guardo · Già rispondi",
+   "start": "43",
+   "end": "93"
+  },
+  {
+   "id": "c",
+   "label": "Ma tu fuggi · Ah cessate, speranze fallaci (Allegro, to the end)",
+   "start": "94",
+   "end": "134"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 6, No. 24 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (quell' anima as two words; sà; a miei for a' miei; languir? with a question mark)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 247–252, bars 1–134 of No. 24",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges, pp. 247–249 and 250–252), a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (one error found and corrected: in bars 107–108 the words “con-dan-na a mo-rir” were one note late); the marks sweep also removed staccatos in the piano in bars 38, 40 and 57 that are not printed. The German singing translation is left out. Bar 1 is the half-bar upbeat, set as 2/4; then ¢ (alla breve), Allegretto, and Allegro from bar 101. The cut Peters marks from “vi-” (bar 58) to “-de” (bar 93) is not made: the whole aria is here. Playback tempo: Allegretto ♩ = 126 (a half note = 63), Allegro ♩ = 160 (a half note = 80), fitted to Jacobs (4:00); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "editionId": "mozart-oh-che-bella-giornata",
+ "editionVersion": "1.0.0-peters",
+ "title": "Oh che bella giornata!",
+ "subtitle": "Fiordiligi, Dorabella, Ferrando and Guglielmo: recitative from Così fan tutte, Act 2",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "62"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 5, recitative after No. 22",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (leggiadri. with a full stop; Eh via non fate. without the libretto's ellipsis; Io burlo, io burlo?; davvero as one word; Oh Dei!; the asides in brackets). Dorabella's “Due, se volete” is printed “Duc se volete” (bar 38), a misprint; the word keeps the printed letters, with the IPA and meaning of due."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 235–238, the recitative between No. 22 and No. 23 (62 bars)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). Where the print gives a second rhythm or extra notes for the German words (bars 4, 21, 24, 31, 34, 38–42, 45, 46, 48–50, 52 and 57), the Italian rhythm is kept. The German singing translation is left out. Bar 57, at the dotted barline on p. 238, is a 2/4 bar. It ends “segue Nr. 23 Duett”. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 80, from Jacobs (3:06)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

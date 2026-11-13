@@ -1,0 +1,505 @@
+# Nr. 24 Aria -- piano, part 1, printed pp. 247-249
+# page 247 system 1 starts bar 1
+# bar 1: Allegretto, cut time (2/2), B-flat major (2 flats); bar 1 is a pickup bar of a half note (encoded as 2/4)
+# JUDGE bar 1 X - pickup bar written as 2/4, no padding
+1 RH1: dyn:p F5:q F5:q
+# JUDGE bar 1 X - pickup bar 2/4: LH half rest
+# MARKS bar 1 LH1: p printed between the staves (both hands), placed on the bar-1 rest
+1 LH1: dyn:p r:h
+2 RH1: G5:e( F5:e Eb5:e D5:e) D5:e( C5:e Bb4:e A4:e)
+2 LH1: Bb3:e( F4:e D4:e F4:e C4:e F4:e Eb4:e F4:e)
+2 LH2: Bb3:q r:q F3:q r:q
+# JUDGE bar 3 Y - slur C-Bb, then a slur from the Bb half to D5 ending in this bar
+3 RH1: C5:e( Bb4:e) Bb4:h( C5:e D5:e)
+3 LH1: Bb3:e( F4:e D4:e F4:e Bb3:e F4:e D4:e F4:e)
+3 LH2: Bb3:q r:q Bb3:q r:q
+# JUDGE bar 4 OWN - new slur starts on the Eb5 quarter and ends on the first G5 (X: from bar 3; Y: from F5)
+4 RH1: Eb5:q( F5:e G5:e) G5:e( F5:e) F5:e( Eb5:e)
+# JUDGE bar 4 Y - upper notes have three ledger lines (G4), not F4 - ledger lines read at 400 dpi
+4 LH1: Bb3:e( G4:e Eb4:e G4:e C4:e F4:e Eb4:e F4:e)
+4 LH2: G3:q r:q A3:q r:q
+5 RH1: D5:q r:q F5:q. F5:e
+# JUDGE bar 5 Y - first group heads sit above the ledgers (F4, D4), not on them (Eb4, C4); Bb chord
+5 LH1: Bb3:e( F4:e D4:e F4:e Bb3:e D4:e A3:e C4:e)
+5 LH2: Bb3:q r:q F3:q( Eb3:q)
+# page 247 system 2 starts bar 6
+6 RH1: Bb5:e( A5:e G5:e F5:e Eb5:e D5:e C5:e Bb4:e)
+6 LH1: F3:e( Bb3:e F3:e Bb3:e F3:e Bb3:e F3:e Bb3:e)
+6 LH2: D3:q r:q D3:q r:q
+# JUDGE bar 7 Y - slur Eb5-G5 closes in this bar
+7 RH1: A4:e( G4:e) G4:q.( Bb4:e) Eb5:e( G5:e)
+7 LH1: G3:e( Eb4:e Bb3:e Eb4:e G3:e Eb4:e Bb3:e Eb4:e)
+7 LH2: Eb3:q r:q Eb3:q r:q
+# JUDGE bar 8 Y - slur G5 ... F5 within the bar
+8 RH1: G5:e( F5:e Eb5:e D5:e C5:e D5:e Eb5:e F5:e)
+8 LH1: Bb3:e( F4:e D4:e F4:e A3:e F4:e C4:e F4:e)
+8 LH2: F3:q r:q F3:q r:q
+9 RH1: Eb5:q( D5:q) F5:q. F5:e
+9 LH1: A3:e( C4:e Bb3:e D4:e Bb3:e D4:e A3:e C4:e)
+9 LH2: G3:q G3:q( F3:q Eb3:q)
+# page 247 system 3 starts bar 10
+10 RH1: Bb5:e( A5:e G5:e F5:e Eb5:e D5:e C5:e Bb4:e)
+10 LH1: F3:e( Bb3:e F3:e Bb3:e F3:e Bb3:e F3:e Bb3:e)
+10 LH2: D3:q r:q D3:q r:q
+# JUDGE bar 11 X - mfp printed between the staves: both hands
+11 RH1: dyn:mfp Bb4:e( G5:e) G5:h( Eb5:q)
+11 LH1: dyn:mfp G3:e( Eb4:e Bb3:e Eb4:e G3:e Eb4:e Bb3:e Eb4:e)
+11 LH2: Eb3:q r:q Eb3:q r:q
+# JUDGE bar 12 X - mfp printed between the staves: both hands
+12 RH1: dyn:mfp C5:e( A5:e) A5:h( G5:e F5:e)
+12 LH1: dyn:mfp A3:e( C4:e F3:e C4:e F3:e C4:e A3:e C4:e)
+12 LH2: Eb3:q r:q Eb3:q r:q
+13 RH1: Bb5:q r:q C5:q r:q
+13 LH1: F3:e( D4:e Bb3:e D4:e G3:e Eb4:e C4:e Eb4:e)
+13 LH2: D3:h( Eb3:h)
+# page 247 system 4 starts bar 14
+# MARKS bar 14 RH1: nested slur from the grace D5 to C5
+14 RH1: Bb4:h( g:D5:e[ C5:q.] Bb4:e)
+14 LH1: D4:e( F4:e D4:e F4:e A3:e Eb4:e A3:e Eb4:e)
+14 LH2: F3:q F3:q F3:q F3:q
+15 RH1: D4+Bb4:e C#4+C#5:q( D4+D5:q E4+E5:q F4+F5:e)
+15 LH1: Bb2+Bb3:q( F3:q Bb2+Bb3:q F3:q)
+16 RH1: r:e A4+A5:q( Bb4+Bb5:q C#5+C#6:q D5+D6:e)
+16 LH1: Bb2+Bb3:q( F3:q Bb2+Bb3:q F3:q)
+17 RH1: r:e B3+B4:q( C4+C5:q E4+E5:q F4+F5:e)
+17 LH1: A2+A3:q( F3:q A2+A3:q F3:q)
+# page 247 system 5 starts bar 18
+18 RH1: r:e G#4+G#5:q( A4+A5:q B4+B5:q C5+C6:e)
+18 LH1: A2+A3:q( F3:q A2+A3:q F3:q)
+19 RH1: r:e A3+A4:q( Bb3+Bb4:q C#4+C#5:q D4+D5:e)
+19 LH1: G2+G3:q( D3:q G2+G3:q D3:q)
+20 RH1: r:e E4+E5:q( G4+G5:q Bb4+Bb5:q Bb3+Bb4:e)
+20 LH1: C3:q( G3:q C3:q E3:q)
+21 RH1: r:e A3+A4:q( C4+C5:q F4+F5:q A4+A5:e)
+21 LH1: F3:q( A3:q F3:q A3:q)
+22 RH1: r:e B3+B4:q( D4+D5:q F4+F5:q B4+B5:e)
+22 LH1: D3:q( F3:q D3:q F3:q)
+# page 248 system 1 starts bar 23
+23 RH1: dyn:sf C5+C6:q r:q r:q dyn:p C5:e( Bb4:e)
+# JUDGE bar 23 X - sf and p printed between the staves; staccato dot under D4
+23 LH1: dyn:sf E3:e( C4:e B3:e C4:e D4:e* C4:e dyn:p E4:e C4:e)
+23 LH2: C3+E3:q r:q r:h
+24 RH1: A4:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 24 X - sfp printed between the staves: both hands
+24 LH1: F4:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+24 LH2: F3:q r:q C3:q r:q
+25 RH1: F5:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 25 X - sfp printed between the staves: both hands
+25 LH1: A3:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+25 LH2: F3:q r:q C3:q r:q
+26 RH1: F5:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 26 X - sfp printed between the staves: both hands
+26 LH1: A3:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+26 LH2: F3:q r:q C3:q r:q
+# page 248 system 2 starts bar 27
+27 RH1: F5:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 27 X - sfp printed between the staves: both hands
+27 LH1: A3:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+27 LH2: F3:q r:q C3:q r:q
+# JUDGE bar 28 X - p printed between the staves: both hands
+28 RH1: dyn:p F5:q.( G5:e A5:e E5:e F5:e D5:e)
+28 LH1: dyn:p F3+A3:q r:q r:h
+29 RH1: B4:q( C5:q) r:q D5:q(
+29 LH1: r:q A3:q( G3:q F#3:q)
+30 RH1: C5:q Bb4:q) r:q A4:q
+30 LH1: r:q G3:q( E3:q F3:q)
+31 RH1: D5:h.( E5:e F5:e)
+31 LH1: Bb2:e( G3:e F3:e G3:e Bb2:e G3:e F3:e G3:e)
+31 LH2: Bb2:q r:q Bb2:q r:q
+# page 248 system 3 starts bar 32
+32 RH1: A4:h G4:q.( C5:e)
+32 LH1: F3:e( A3:e F3:e A3:e E3:e Bb3:e E3:e Bb3:e)
+32 LH2: C3:q r:q C3:q r:q
+# bar 33: fermatas over the RH rest and the F-A chord (beats 2-3) and over the LH rest and F (beats 2-3)
+33 RH1: E4+G4+Bb4:q r:q! F4+A4:q! C5:e( Bb4:e)
+33 LH1: C3:q r:q! F3:q! r:q
+34 RH1: A4:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 34 X - sfp printed between the staves: both hands
+34 LH1: r:e C4:e( A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+34 LH2: F3:q r:q C3:q r:q
+35 RH1: F5:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 35 X - sfp printed between the staves: both hands
+35 LH1: A3:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+35 LH2: F3:q r:q C3:q r:q
+# page 248 system 4 starts bar 36
+36 RH1: F5:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 36 X - sfp printed between the staves: both hands
+36 LH1: A3:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+36 LH2: F3:q r:q C3:q r:q
+37 RH1: F5:e( C5:e F5:e A5:e) dyn:sfp A5:e( G5:e F5:e E5:e)
+# JUDGE bar 37 X - sfp printed between the staves: both hands
+37 LH1: A3:e( C4:e A3:e C4:e dyn:sfp Bb3:e C4:e G3:e C4:e)
+37 LH2: F3:q r:q C3:q r:q
+# JUDGE bar 38 X - p printed between the staves: both hands
+38 RH1: dyn:p F5:q.( G5:e A5:e E5:e F5:e D5:e)
+38 LH1: dyn:p F3+A3:q r:q r:h
+39 RH1: B4:q( C5:q) r:q D5:q(
+39 LH1: r:q A3:q( G3:q F#3:q)
+# page 248 system 5 starts bar 40
+40 RH1: C5:q Bb4:q) r:q A4:q
+40 LH1: r:q G3:q( E3:q F3:q)
+41 RH1: D5:h.( E5:e F5:e)
+41 LH1: Bb2:e( G3:e F3:e G3:e Bb2:e G3:e F3:e G3:e)
+41 LH2: Bb2:q r:q Bb2:q r:q
+42 RH1: A4:h G4:q.( C5:e)
+42 LH1: F3:e( A3:e F3:e A3:e E3:e Bb3:e E3:e Bb3:e)
+42 LH2: C3:q r:q C3:q r:q
+# bar 43: fermata over the rest on beat 2 in both hands; cue 'Kl.' over the RH eighths
+43 RH1: F4:q r:q! dyn:p E5:e( F5:e E5:e F5:e)
+# MARKS bar 43 LH1: p printed between the staves (both hands)
+43 LH1: F3+A3:q r:q! dyn:p r:h
+# page 249 system 1 starts bar 44
+44 RH1: G5:e( F5:e Eb5:e D5:e) D5:e( C5:e Bb4:e A4:e)
+# MARKS bar 44 LH1: removed slur (none printed on p.249)
+44 LH1: Bb3:e F4:e D4:e F4:e C4:e F4:e Eb4:e F4:e
+44 LH2: Bb3:q r:q F3:q r:q
+# JUDGE bar 45 Y - slur from the Bb half ends on D5 in this bar
+45 RH1: C5:e( Bb4:e) Bb4:h( C5:e D5:e)
+# MARKS bar 45 LH1: removed slur (none printed)
+45 LH1: Bb3:e F4:e D4:e F4:e Bb3:e F4:e D4:e F4:e
+45 LH2: Bb3:q r:q Bb3:q r:q
+# JUDGE bar 46 OWN - as bar 4: slur Eb5 quarter to first G5
+46 RH1: Eb5:q( F5:e G5:e) G5:e( F5:e) F5:e( Eb5:e)
+# MARKS bar 46 LH1: removed slur (none printed)
+46 LH1: G3:e Eb4:e Bb3:e Eb4:e A3:e F4:e C4:e F4:e
+46 LH2: G3:q r:q A3:q r:q
+47 RH1: D5:q r:q F5:q. F5:e
+# MARKS bar 47 LH1: removed slur (none printed)
+47 LH1: Bb3:e F4:e D4:e F4:e Bb3:e D4:e A3:e C4:e
+47 LH2: Bb3:q r:q F3:q( Eb3:q)
+# page 249 system 2 starts bar 48
+48 RH1: Bb5:e( A5:e G5:e F5:e Eb5:e D5:e C5:e Bb4:e)
+48 LH1: D3:e Bb3:e F3:e Bb3:e D3:e Bb3:e F3:e Bb3:e
+48 LH2: D3:q r:q D3:q r:q
+# JUDGE bar 49 Y - slur Eb5-G5 closes in this bar
+49 RH1: A4:e( G4:e) G4:q.( Bb4:e) Eb5:e( G5:e)
+49 LH1: Eb3:e Bb3:e G3:e Bb3:e Eb3:e Bb3:e G3:e Bb3:e
+49 LH2: Eb3:q r:q Eb3:q r:q
+# JUDGE bar 50 Y - slur G5 ... F5 within the bar
+50 RH1: G5:e( F5:e Eb5:e D5:e C5:e D5:e Eb5:e F5:e)
+50 LH1: F3:e D4:e Bb3:e D4:e F3:e C4:e A3:e C4:e
+50 LH2: F3:q r:q F3:q r:q
+51 RH1: Eb5:q( D5:q) F5:q. F5:e
+51 LH1: G3:e Bb3:e G3:e Bb3:e F3:e Bb3:e Eb3:e Bb3:e
+# JUDGE bar 51 X - small filled wedge printed under the first G3
+51 LH2: G3:qv G3:q( F3:q Eb3:q)
+# page 249 system 3 starts bar 52
+52 RH1: Bb5:e( A5:e G5:e F5:e Eb5:e D5:e C5:e Bb4:e)
+52 LH1: D3:e Bb3:e F3:e Bb3:e D3:e Bb3:e F3:e Bb3:e
+52 LH2: D3:q r:q D3:q r:q
+# bar 53: cue 'Fg.' over the LH eighths (ignored)
+53 RH1: Ab4:q F4+Ab4:h F4+Ab4:q(
+53 LH1: D3:e( B3:e F3+Ab3:e B3:e C3:e C4:e F3+Ab3:e C4:e)
+53 LH2: D3:q r:q C3:q r:q
+54 RH1: F4+G4:q) G5:h( F5:q)
+54 RH2: s:q G4:h.
+54 LH1: D4:e( G3:e F3:e G3:e D3:e G3:e F3:e G3:e)
+# JUDGE bar 54 Y - beat 3: the D3 head has its stem up into the LH1 beam (LH1 D3:e); only B2 is stem-down
+54 LH2: B2:q r:q B2:q r:q
+55 RH1: Bb4+E5:h( A4+Eb5:h)
+55 LH1: C3:e( Bb3:e G3:e Bb3:e F3:e C4:e A3:e C4:e)
+55 LH2: C3:q r:q F3:q r:q
+# page 249 system 4 starts bar 56
+56 RH1: Bb4+D5:q r:q G4+C5:q r:q
+56 LH1: Bb2:e( Bb3:e F3:e Bb3:e Eb3:e C4:e G3:e C4:e)
+56 LH2: Bb2:q r:q Eb3:q r:q
+# bar 57: cue 'Vl.' over the RH, 'Trp.' under the LH (ignored)
+57 RH1: Bb4:q( D5:q F5:q F4:q)
+57 LH1: F3:e( D4:e Bb3:e D4:e F3:e Eb4:e A3+C4:e Eb4:e)
+57 LH2: F3:q r:q F3:q r:q
+# bar 58: vi- (cut start)
+58 RH1: r:e C#4+C#5:q( D4+D5:q E4+E5:q F4+F5:e)
+58 LH1: Bb2+Bb3:q( F3:q Bb2+Bb3:q F3:q)
+59 RH1: r:e A4+A5:q( Bb4+Bb5:q C#5+C#6:q D5+D6:e)
+59 LH1: Bb2+Bb3:q( F3:q Bb2+Bb3:q F3:q)
+60 RH1: r:e B3+B4:q( C4+C5:q D4+D5:q Eb4+Eb5:e)
+60 LH1: A2+A3:q( F3:q A2+A3:q F3:q)
+# page 249 system 5 starts bar 61
+61 RH1: r:e B4+B5:q( C5+C6:q D5+D6:q Eb5+Eb6:e)
+61 LH1: A2+A3:q( F3:q A2+A3:q F3:q)
+62 RH1: r:e C#4+C#5:q( D4+D5:q F4+F5:q Bb4+Bb5:e)
+62 LH1: Bb2+Bb3:q( F3:q Bb2+Bb3:q F3:q)
+63 RH1: r:e Ab3+Ab4:q( D4+D5:q F4+F5:q Ab4+Ab5:e)
+63 LH1: D2+D3:q( Bb2:q D2+D3:q Bb2:q)
+64 RH1: r:e G3+G4:q( Bb3+Bb4:q Eb4+Eb5:q G4+G5:e)
+64 LH1: Eb2+Eb3:q( Bb2:q Eb2+Eb3:q B2:q)
+65 RH1: r:e C4+C5:q( G4+G5:q Bb4+Bb5:q Bb3+Bb4:e)
+65 LH1: Eb2+Eb3:q( C3:q E2+E3:q C3:q)
+# ---- end of chunk/PM_n24a.txt (bars 1-65)
+# page 250 system 1 starts bar 66
+# JUDGE bar 66 RH1: Y - p between the staves at beat 4 applies to the RH F5 too
+66 RH1: A3+A4:q r:q r:q dyn:p F5:e( Eb5:e)
+# JUDGE bar 66 LH1: OWN - sf printed at the slur start over F4 (2nd eighth, Y); p printed over the C4 (X), between the staves
+66 LH1: F2+F3:e dyn:sf F4:e( Eb4:e F4:e D4:e F4:e dyn:p C4:e F4:e)
+67 RH1: D5:e( F5:e Bb5:e D6:e) dyn:sfp Eb6:e( C6:e A5:e C6:e)
+# MARKS bar 67 LH1: sfp between the staves at beat 3 (both hands)
+67 LH1: Bb3:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+67 LH2: Bb3:q r:q F3:q r:q
+68 RH1: Bb5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# JUDGE bar 68 LH1: X - first LH note is a two-note cluster Bb3+D4 (bar 2/12 single Bb3)
+# MARKS bar 68 LH1: sfp between the staves at beat 3 (both hands)
+68 LH1: Bb3+D4:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+68 LH2: Bb3:q r:q F3:q r:q
+69 RH1: Bb5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# JUDGE bar 69 LH1: X - first LH note is a two-note cluster Bb3+D4 (bar 2/12 single Bb3)
+# MARKS bar 69 LH1: sfp between the staves at beat 3 (both hands)
+69 LH1: Bb3+D4:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+69 LH2: Bb3:q r:q F3:q r:q
+# page 250 system 2 starts bar 70
+70 RH1: Bb5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# JUDGE bar 70 LH1: X - first LH note is a two-note cluster Bb3+D4 (bar 2/12 single Bb3)
+# MARKS bar 70 LH1: sfp between the staves at beat 3 (both hands)
+70 LH1: Bb3+D4:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+70 LH2: Bb3:q r:q F3:q r:q
+# JUDGE bar 71 RH1: X - one voice: Bb5 q. then C5-G5 eighths all stems down; no second voice needed
+# MARKS bar 71 RH1: p between the staves at beat 1 (both hands)
+71 RH1: dyn:p Bb5:q. C5:e( D5:e Eb5:e F5:e G5:e)
+71 LH1: dyn:p Bb3+D4:q r:q r:h
+# JUDGE bar 72 RH1: Y - slur starts on the last C5 and runs into the next bar
+72 RH1: F5:q( E5:q) r:q C5:q(
+72 LH1: r:q G3+Bb3:q( Bb3+Db4:q A3+C4:q)
+# JUDGE bar 73 RH1: Y - slur from previous C5 ends on the D5 (beat 2)
+73 RH1: Eb5:q D5:q) r:q D5:q
+73 LH1: r:q F#3+A3:q( A3+C4:q G3+Bb3:q)
+74 RH1: C5:h( Eb5:q. G5:e)
+74 LH1: Eb3:e( C4:e G3:e C4:e Eb3:e C4:e G3:e C4:e)
+74 LH2: Eb3:q r:q Eb3:q r:q
+# page 250 system 3 starts bar 75
+75 RH1: Bb4:h( C5:h)
+75 LH1: F3:e( D4:e Bb3:e D4:e F3:e Eb4:e A3:e Eb4:e)
+75 LH2: F3:q r:q F3:q r:q
+# bar 76: fermatas on RH rest and Bb4+D5 chord, LH rest and Bb2 (fermata below)
+76 RH1: A4+C5+Eb5:q r:q! Bb4+D5:q! F5:e( Eb5:e)
+76 LH1: F3:q r:q! Bb2:q! r:q
+# MARKS bar 77 RH1: slur: one slur over the whole bar (print), not two
+77 RH1: D5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# MARKS bar 77 LH1: sfp between the staves at beat 3 (both hands)
+77 LH1: Bb3:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+77 LH2: Bb3:q r:q F3:q r:q
+78 RH1: Bb5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# JUDGE bar 78 LH1: X - first LH note is a two-note cluster Bb3+D4 (bar 2/12 single Bb3)
+# MARKS bar 78 LH1: sfp between the staves at beat 3 (both hands)
+78 LH1: Bb3+D4:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+78 LH2: Bb3:q r:q F3:q r:q
+# page 250 system 4 starts bar 79
+79 RH1: Bb5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# JUDGE bar 79 LH1: X - first LH note is a two-note cluster Bb3+D4 (bar 2/12 single Bb3)
+# MARKS bar 79 LH1: sfp between the staves at beat 3 (both hands)
+79 LH1: Bb3+D4:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+79 LH2: Bb3:q r:q F3:q r:q
+80 RH1: Bb5:e( F5:e Bb5:e D6:e dyn:sfp Eb6:e C6:e A5:e C6:e)
+# JUDGE bar 80 LH1: X - first LH note is a two-note cluster Bb3+D4 (bar 2/12 single Bb3)
+# MARKS bar 80 LH1: sfp between the staves at beat 3 (both hands)
+80 LH1: Bb3+D4:e( F4:e D4:e F4:e dyn:sfp C4:e F4:e Eb4:e F4:e)
+80 LH2: Bb3:q r:q F3:q r:q
+# JUDGE bar 81 RH1: X - one voice: Bb5 q. then C5-G5 eighths all stems down; no second voice needed
+# MARKS bar 81 RH1: p between the staves at beat 1 (both hands)
+81 RH1: dyn:p Bb5:q. C5:e( D5:e Eb5:e F5:e G5:e)
+81 LH1: dyn:p Bb3+D4:q r:q r:h
+# JUDGE bar 82 RH1: Y - slur starts on the last C5 and runs into the next bar
+82 RH1: F5:q( E5:q) r:q C5:q(
+82 LH1: r:q G3+Bb3:q( Bb3+Db4:q A3+C4:q)
+# JUDGE bar 83 RH1: Y - slur from previous C5 ends on the D5 (beat 2)
+83 RH1: Eb5:q D5:q) r:q D5:q
+83 LH1: r:q F#3+A3:q( A3+C4:q G3+Bb3:q)
+# page 250 system 5 starts bar 84
+84 RH1: C5:h( Eb5:q. G5:e)
+84 LH1: Eb3:e( C4:e G3:e C4:e Eb3:e C4:e G3:e C4:e)
+84 LH2: Eb3:q r:q Eb3:q r:q
+# JUDGE bar 85 RH1: X - slur A4 to F5 closes in this bar
+85 RH1: Bb4:h A4:q.( F5:e)
+# JUDGE bar 85 LH1: Y - first group heads sit on the C4 ledger = D4, middle note Bb3; second group C4 A3 C4
+85 LH1: F3:e( D4:e Bb3:e D4:e F3:e C4:e A3:e C4:e)
+# JUDGE bar 85 LH2: Y - beat 1 stem-down note is the shared F3; Eb3 only on beat 3
+85 LH2: F3:q r:q Eb3:q r:q
+# JUDGE bar 86 RH1: OWN - long slur starts on the F5 whole note (plus the tie) and runs to D5 in bar 22
+86 RH1: word:cresc. F5:w~(
+# MARKS bar 86 LH1: cresc. between the staves (both hands)
+86 LH1: word:cresc. F3:e( Bb3:e F3:e Bb3:e F3:e A3:e F3:e Bb3:e)
+# JUDGE bar 86 LH2: X - the F3 at beat 4 is the stem-up eighth of LH1; stem-down chord is Bb2+D3
+86 LH2: D3:h( C3+Eb3:q Bb2+D3:q)
+# JUDGE bar 87 RH1: Y - slur from bar 21 ends on D5; no new slur start
+# MARKS bar 87 RH1: fp between the staves (both hands); nested grace-note slur F5-Eb5
+87 RH1: dyn:fp F5:q G5:q g:F5:e[ Eb5:q] D5:q)
+# JUDGE bar 87 LH1: Y - slur starts at the first note C3
+87 LH1: dyn:fp C3:e( F3:e Eb3:e F3:e C3:e F3:e D3:e F3:e)
+# JUDGE bar 87 LH2: X - D3 at beat 4 is the LH1 eighth; stem-down note is Bb2 alone
+87 LH2: A2:h. Bb2:q
+# page 251 system 1 starts bar 88
+88 RH1: C5:q.( D5:s Eb5:s) Bb4:q( A4:q)
+88 LH1: Eb3:e( G3:e Eb3:e G3:e F3:e D4:e Eb4:e C4:e)
+88 LH2: Eb3:q r:q F3:q r:q
+# JUDGE bar 89 RH1: OWN - outer slur starts on the F5 whole note (with the tie) and ends on D5 in bar 25
+89 RH1: F5:w~(
+# JUDGE bar 89 RH2: Y - cresc. begins under the Bb4 (beat 2)
+89 RH2: r:q word:cresc. Bb4:q( A4+C5:q Bb4+D5:q)
+# JUDGE bar 89 LH1: Y - second group is Eb3 F3 D3 F3 (heads just under/at the F3 line), not F3 A3 F3 Bb3
+# MARKS bar 89 LH1: cresc. between the staves (both hands)
+89 LH1: F3:e( Bb3:e word:cresc. F3:e Bb3:e Eb3:e F3:e D3:e F3:e)
+89 LH2: D3:h( C3+Eb3:q Bb2+D3:q)
+# JUDGE bar 90 RH1: OWN - slur started in bar 24 ends here on D5
+# MARKS bar 90 RH1: fp between the staves (both hands); nested grace-note slur F5-Eb5
+90 RH1: dyn:fp F5:q G5:q g:F5:e[ Eb5:q] D5:q)
+90 RH2: C5+Eb5:h. Bb4:q
+# JUDGE bar 90 LH1: Y - slur starts on the first note C3
+90 LH1: dyn:fp C3:e( F3:e C3:e F3:e C3:e F3:e D3:e F3:e)
+# JUDGE bar 90 LH2: X - under-slur A2 to Bb2; D3 at beat 4 belongs to LH1
+90 LH2: A2:h.( Bb2:q)
+91 RH1: C5:h.( Eb5:e G5:e)
+91 LH1: Eb3:e( C4:e G3:e C4:e Eb3:e C4:e G3:e C4:e)
+91 LH2: Eb3:q r:q Eb3:q r:q
+# MARKS bar 92 RH1: grace-note slur D5-C5
+92 RH1: Bb4:h g:D5:e[ C5:q.]( Bb4:e)
+92 LH1: F3:e( D4:e Bb3:e D4:e F3:e Eb4:e A3:e Eb4:e)
+92 LH2: F3:q r:q F3:q r:q
+# page 251 system 2 starts bar 93
+# bar 93: -de (cut end) sign
+93 RH1: En5:w~
+93 RH2: G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e
+93 LH1: r:q dyn:sfp Db4:h( C4:q)
+94 RH1: En5:w~
+94 RH2: G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e
+94 LH1: r:q dyn:sfp Db4:h( C4:q)
+95 RH1: En5:w~
+95 RH2: G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e
+95 LH1: r:q dyn:sfp Db4:h( C4:q)
+96 RH1: En5:w
+96 RH2: G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e G4:e Bb4:e
+96 LH1: r:q dyn:sfp Db4:h( C4:q)
+97 RH1: dyn:sf C4+En4+G4+Bb4:e C4+En4+G4+Bb4:q C4+En4+G4+Bb4:q C4+En4+G4+Bb4:q dyn:p C4+En4+G4+Bb4:e
+97 LH1: r:q dyn:sf Bb3:q( G3:q dyn:p En3:q)
+# page 251 system 3 starts bar 98
+98 RH1: C4+En4+G4+Bb4:qv C4+En4+G4+Bb4:qv r:q Bb3+En4+G4:qv
+98 LH1: C3:q r:q C3:q r:q
+# bar 99: fermata on the half rest (both staves)
+# JUDGE bar 99 RH1: Y - heads: E4 (bottom line, natural), Bb3 (between ledgers), G3; no C4 head
+99 RH1: G3+Bb3+E4:qv r:q r:h!
+99 LH1: C3:q r:q r:h!
+# bar 100: fermata on quarter rest; Kl.Fg.Vl. upbeat F5
+100 RH1: A3+F4:q r:q! dyn:sfp F5:q. F5:e
+100 LH1: F2+F3:q r:q! r:h
+# bar 101: Allegro
+101 RH1: G5:e( F5:e) Eb5:e* D5:e* D5:e( C5:e) Bb4:e* A4:e*
+101 LH1: Bb3:e* F4:e* D4:e* F4:e* C4:e* F4:e* Eb4:e* F4:e*
+101 LH2: Bb3:q r:q F3:q r:q
+102 RH1: Bb4:e* F4:e* Bb4:e* D5:e* dyn:sfp F5:q. F5:e
+# MARKS bar 102 LH1: sfp between the staves at beat 3 (both hands)
+102 LH1: Bb3:e F4:e D4:e F4:e dyn:sfp Bb3:e F4:e D4:e F4:e
+102 LH2: Bb3:q r:q r:h
+# page 251 system 4 starts bar 103
+103 RH1: G5:e( F5:e) Eb5:e* D5:e* D5:e( C5:e) Bb4:e* A4:e*
+103 LH1: Bb3:e F4:e D4:e F4:e C4:e F4:e Eb4:e F4:e
+103 LH2: Bb3:q r:q F3:q r:q
+104 RH1: Bb4:e* F4:e* Bb4:e* D5:e* dyn:sfp F5:q. F5:e
+# MARKS bar 104 LH1: sfp between the staves at beat 3 (both hands)
+104 LH1: Bb3:e F4:e D4:e F4:e dyn:sfp Bb3:e F4:e D4:e F4:e
+104 LH2: Bb3:q r:q r:h
+105 RH1: G5:e( F5:e) Eb5:e* D5:e* D5:e( C5:e) Bb4:e* A4:e*
+105 LH1: Bb3:e F4:e D4:e F4:e C4:e F4:e Eb4:e F4:e
+105 LH2: Bb3:q r:q F3:q r:q
+106 RH1: Bb4:e* F4:e* D4:e* F4:e* Bb4:e* F4:e* D5:e* C5:e*
+106 LH1: Bb3+D4:q r:q r:h
+# page 251 system 5 starts bar 107
+107 RH1: A4:e( Bb4:e) Eb5:e* D5:e* Bn4:e( C5:e) F5:e* Eb5:e*
+107 LH1: Bb2:q Bb3:q A2:q A3+C4:q
+# bar 108: G.Orch.
+108 RH1: D5:e* Bb4:e* Eb5:e* C5:e* F5:e* D5:e* G5:e* Eb5:e*
+108 LH1: Bb2+Bb3:q C4+Eb4:q( D4+F4:q Eb4+G4:q)
+109 RH1: word:cresc. F5+Ab5:e* Eb5+G5:e* D5+F5:e* C5+Eb5:e* Bb4+D5:e* Ab4+C5:e* G4+Bb4:e* F4+Ab4:e*
+# MARKS bar 109 LH1: cresc. between the staves (both hands)
+109 LH1: word:cresc. Bb2+Bb3:w(
+110 RH1: Eb4+G4:q r:q dyn:f G4+D5+G5:q r:q
+# MARKS bar 110 LH1: f between the staves at beat 3 (both hands)
+110 LH1: Eb3+Bb3:q) r:q dyn:f Bn2+Bn3:q r:q
+# bar 111: fermata on half rest
+111 RH1: G4+C5+Eb5:q r:q r:h!
+111 LH1: C3+C4:q r:q r:h!
+# page 252 system 1 starts bar 112
+112 RH1: r:h dyn:sfp C5:q. C5:e
+# JUDGE bar 112 LH1: Y - A3 to Bb3 in bar 48: slur, not tie
+# MARKS bar 112 LH1: sfp between the staves at beat 3 (both hands)
+112 LH1: r:h dyn:sfp A3:q. A3:e(
+112 LH2: dyn:sfp F3:w~
+113 RH1: D5:e( A4:e) Bb4:e* D5:e* Eb5:e( Bn4:e) C5:e* En5:e*
+# JUDGE bar 113 LH1: Y - first note sits above the top line = Bb3; slur from bar 47 ends here
+113 LH1: Bb3:q) r:e B3:e( C4:q) r:e C#4:e(
+113 LH2: F3:w
+# JUDGE bar 114 RH1: Y - second note sits above the A5 ledger = Bb5 (flat is a courtesy)
+114 RH1: F5:e* Bb5:e* F5:e* D5:e* dyn:sfp C5:q. C5:e
+# JUDGE bar 114 LH1: X - sfp printed between the staves at beat 3 applies to LH too
+114 LH1: D4:q) r:q dyn:sfp A3:q. A3:e(
+# JUDGE bar 114 LH2: X - tie F3-F3 plus long slur to Eb3 in bar 50 both printed
+114 LH2: F3:w~(
+115 RH1: D5:e( A4:e) Bb4:e* D5:e* Eb5:e( Bn4:e) C5:e* En5:e*
+# JUDGE bar 115 LH1: Y - first note above the top line = Bb3 (courtesy flat), not Ab3
+115 LH1: Bb3:q) r:e B3:e( C4:q) r:e C#4:e(
+# JUDGE bar 115 LH2: X - long slur from bar 49 ends on Eb3
+115 LH2: F3:h. Eb3:q)
+# page 252 system 2 starts bar 116
+116 RH1: F5:q F4+Bb4:q r:q D4+F4+Bb4:q
+116 LH1: D3+D4:q) r:q D3:q r:q
+117 RH1: r:q C4+Eb4+G4:q r:q A3+C4+Eb4:q
+117 LH1: Eb3:q r:q Eb3:q r:q
+# JUDGE bar 118 RH1: OWN - cresc. printed starting under the 3rd eighth (Bb4); slur on D5 into bar 54 (Y)
+118 RH1: D4:e( F4:e word:cresc. Bb4:e F4:e) D5:h~(
+# MARKS bar 118 LH1: cresc. between the staves (both hands)
+118 LH1: F3:e* Bb3:e* word:cresc. D4:e* Bb3:e* D4:e* Bb3:e* D4:e* Bb3:e*
+118 LH2: F3:q F3:q F3:q F3:q
+# JUDGE bar 119 RH1: Y - slur started on D5 in bar 53 ends on C5
+119 RH1: dyn:p D5:q G5:e F5:e Eb5:e D5:e Eb5:e C5:e)
+# MARKS bar 119 LH1: p between the staves at beat 1 (both hands)
+119 LH1: dyn:p D4:e( Bb3:e Eb4:e D4:e C4:e Bb3:e C4:e A3:e)
+# MARKS bar 119 LH2: slur F3-Eb3
+119 LH2: F3:h.( Eb3:q)
+120 RH1: dyn:sfp Bb4+Bb5:e( A4+A5:e) G4+G5:e* F4+F5:e* Eb4+Eb5:e* D4+D5:e* C4+C5:e* Bb4:e*
+# JUDGE bar 120 LH1: Y - only D4-F4 slurred; C4 Bb3 A3 Bb3 all staccato, no slur
+# MARKS bar 120 LH1: sfp between the staves at beat 1 (both hands)
+120 LH1: dyn:sfp D4:e( F4:e) Eb4:e* D4:e* C4:e* Bb3:e* A3:e* Bb3:e*
+120 LH2: D3:q r:q r:h
+# page 252 system 3 starts bar 121
+# JUDGE bar 121 RH1: Y - chord heads: above top line (G5) and on the G4 line, not Bb4
+121 RH1: r:e G4+G5:e G4+G5:e G4+G5:e r:e A4:e A4:e A4:e
+121 LH1: Eb3:e Eb4:e Eb4:e Eb4:e F3:e A3+C4:e A3+C4:e A3+C4:e
+# MARKS bar 122 RH1: slur Eb-D (5th-6th eighths)
+122 RH1: dyn:sfp Bb4+Bb5:e( A4+A5:e) G4+G5:e* F4+F5:e* Eb4+Eb5:e( D4+D5:e) C4+C5:e* Bb4:e*
+# JUDGE bar 122 LH1: X - a slur is printed over C4-Bb3 here (unlike bars 55, 59)
+# MARKS bar 122 LH1: sfp between the staves at beat 1 (both hands)
+122 LH1: dyn:sfp D4:e( F4:e) Eb4:e* D4:e* C4:e( Bb3:e) A3:e* Bb3:e*
+122 LH2: D3:q r:q r:h
+# JUDGE bar 123 RH1: Y - chord heads: above top line (G5) and on the G4 line, not Bb4
+123 RH1: r:e G4+G5:e G4+G5:e G4+G5:e r:e A4:e A4:e A4:e
+123 LH1: Eb3:e Eb4:e Eb4:e Eb4:e F3:e A3+C4:e A3+C4:e A3+C4:e
+124 RH1: dyn:sfp Bb4+Bb5:e( A4+A5:e) G4+G5:e* F4+F5:e* Eb4+Eb5:e* D4+D5:e* C4+C5:e* Bb4:e*
+# JUDGE bar 124 LH1: Y - no slur over C4-Bb3; four staccato dots
+# MARKS bar 124 LH1: sfp between the staves at beat 1 (both hands)
+124 LH1: dyn:sfp D4:e( F4:e) Eb4:e* D4:e* C4:e* Bb3:e* A3:e* Bb3:e*
+124 LH2: D3:q r:q r:h
+# page 252 system 4 starts bar 125
+125 RH1: word:cresc. Eb5+G5:ev Eb5+G5:q( G5+Bb5:e) C5+Eb5:ev C5+Eb5:q( Eb5+G5:e)
+# MARKS bar 125 LH1: cresc. between the staves (both hands)
+125 LH1: word:cresc. Eb2:e Eb3:e Eb2:e Eb3:e Eb2:e Eb3:e Eb2:e Eb3:e
+# bar 126: G.Orch.
+126 RH1: dyn:f A4+C5:q r:q C5+Eb5+F5+A5:q r:q
+# MARKS bar 126 LH1: f between the staves at beat 1 (both hands)
+126 LH1: dyn:f F2:e F3:e F2:e F3:e F2:e F3:e F2:e F3:e
+127 RH1: Bb4+D5+Bb5:q r:q dyn:sfp A4+C#5+A5:q. A4+C#5+A5:e
+# MARKS bar 127 LH1: sfp between the staves at beat 3 (both hands)
+127 LH1: Bb2:e Bb3:e Bb2:e Bb3:e dyn:sfp Bb2:e Bb3:e Bb2:e Bb3:e
+128 RH1: Bb4+D5+Bb5:e F5:e F5:e Bn4+G#5+Bn5:e C5+A5+C6:e F5:e F5:e C#5+A5+C#6:e
+128 LH1: Bb2:e Bb3:e Bb2:e Bb3:e Bb2:e Bb3:e Bb2:e Bb3:e
+129 RH1: D5+Bb5+D6:q r:q dyn:sfp A4+C#5+A5:q. A4+C#5+A5:e
+# MARKS bar 129 LH1: sfp between the staves at beat 3 (both hands)
+129 LH1: Bb2:e Bb3:e Bb2:e Bb3:e dyn:sfp Bb2:e Bb3:e Bb2:e Bb3:e
+# page 252 system 5 starts bar 130
+130 RH1: Bb4+D5+Bb5:e F5:e F5:e Bn4+G#5+Bn5:e C5+A5+C6:e F5:e F5:e C#5+A5+C#6:e
+130 LH1: Bb2:e Bb3:e Bb2:e Bb3:e Bb2:e Bb3:e Bb2:e Bb3:e
+131 RH1: dyn:f D5+Bb5+D6:e( Bb5:e) D5+Bb5:e D5+Bb5:e G5+Bb5:e( Eb5+G5:e) Eb5+G5:e Eb5+G5:e
+# MARKS bar 131 LH1: f between the staves at beat 1 (both hands)
+131 LH1: dyn:f Bb2:e Bb3:e Bb2:e Bb3:e Eb2:e Eb3:e Eb2:e Eb3:e
+132 RH1: D5+F5:e( Bb4+D5:e) Bb4+D5:e Bb4+D5:e C5+Eb5:e Bb4+D5:e C5+Eb5:e A4+C5:e
+132 LH1: F2:e F3:e F2:e F3:e F2:e F3:e F2:e F3:e
+133 RH1: Bb4:q r:q F4+Bb4+D5:q Bb4+D5+F5:q
+133 LH1: Bb2:q r:q Bb2+Bb3:q Bb2+Bb3:q
+134 RH1: Bb4+D5+F5+Bb5:h r:h
+134 LH1: Bb1+Bb2:h r:h
+# ---- end of chunk/PM_n24b.txt (bars 66-134)

@@ -1,0 +1,114 @@
+{
+ "editionId": "mozart-ei-parte-per-pieta",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ei parte… Per pietà",
+ "subtitle": "Fiordiligi: recitative and rondò from Così fan tutte, Act 2 (No. 25)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ei parte (recitative)",
+   "start": "1",
+   "end": "26"
+  },
+  {
+   "id": "b",
+   "label": "Per pietà, ben mio, perdona · Svenerà quest'empia voglia (Adagio)",
+   "start": "27",
+   "end": "61"
+  },
+  {
+   "id": "c",
+   "label": "A chi mai mancò di fede · Per pietà (Allegro moderato)",
+   "start": "62",
+   "end": "107"
+  },
+  {
+   "id": "d",
+   "label": "A chi mai mancò di fede (again, to the end)",
+   "start": "108",
+   "end": "154"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 7, No. 25 Recitativo e Rondò",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (fà; all' error, d'un alma, quest' ombre and quest' empia as two words each; the dots printed after Ei parte, senti, ah no, pose and colpe given as one ellipsis each)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 253–261, bars 1–154 of No. 25",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung line and piano each read by two independent readers, every disagreement settled on the page by a judge (in three page ranges, pp. 253–255, 256–258 and 259–261), a separate sweep for dynamics, slurs and ties, then checked bar by bar by a fresh checker (clean). The German singing translation is left out. The accompanied recitative is bars 1–26 (bar 20, at a dotted barline, is set as 2/4); the Rondò starts at bar 27 with a 2/4 bar (Adagio, E major), Allegro moderato from bar 62. Not written in the score: two slurs in the right hand's lower voice (bars 135 and 137) that cross from one voice to another, the cut signs at “vi-” (bar 106) and “-de” (bar 121), and Peters' footnote at bars 66 and 96 that the autograph has G sharp where the print has A. Playback tempo: the recitative at ♩ = 66, the Adagio at ♩ = 40, the Allegro moderato at ♩ = 88, fitted to Jacobs (1:32 and 7:40); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

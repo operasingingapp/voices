@@ -1,0 +1,142 @@
+{
+ "editionId": "mozart-tutti-accusan-le-donne",
+ "editionVersion": "1.0.0-peters",
+ "title": "Tutti accusan le donne",
+ "subtitle": "Don Alfonso, Ferrando and Guglielmo: Andante from Così fan tutte, Act 2 (No. 30)",
+ "kind": "andante",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Don Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Tutti accusan le donne · L'amante che si trova alfin deluso",
+   "start": "1",
+   "end": "15"
+  },
+  {
+   "id": "b",
+   "label": "Già che giovani, vecchie · Così fan tutte (to the end)",
+   "start": "16",
+   "end": "26"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 13, No. 30 Andante",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (ripetete, where the libretto has ripetetel; Così fan tutte with a capital and an exclamation mark). Ferrando and Guglielmo sing the last “Così fan tutte!” with Don Alfonso."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 308–309, bars 1–26 of No. 30",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). Where the print adds stems for the German words (bar 15), the Italian rhythm is kept. The German singing translation is left out. Ferrando's part, printed in the treble clef, sounds an octave lower. Andante in ₵ (alla breve). Playback tempo: Andante, played at a half note ≈ 31½ (♩ = 63), from Jacobs (1:39); Mozart gives the word only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

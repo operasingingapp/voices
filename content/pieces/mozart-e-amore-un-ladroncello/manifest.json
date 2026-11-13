@@ -1,0 +1,108 @@
+{
+ "editionId": "mozart-e-amore-un-ladroncello",
+ "editionVersion": "1.0.0-peters",
+ "title": "È amore un ladroncello",
+ "subtitle": "Dorabella: aria from Così fan tutte, Act 2 (No. 28)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "È amore un ladroncello · Per gli occhi al seno",
+   "start": "1",
+   "end": "31"
+  },
+  {
+   "id": "b",
+   "label": "È amore un ladroncello (again) · Porta dolcezza e gusto",
+   "start": "32",
+   "end": "62"
+  },
+  {
+   "id": "c",
+   "label": "È amore un ladroncello (again) · Se nel tuo petto ei siede (to the end)",
+   "start": "63",
+   "end": "113"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 10, No. 28 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (ei toglie, where the libretto has che toglie; in catena as two words, where the libretto has incatena; quì; fa without an apostrophe; anch' io as two words). The printed slips “sc” (bar 46, for se) and “t'empic” (bar 59, for t'empie) are kept as printed."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 287–291, bars 1–113 of No. 28",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung line and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges, pp. 287–289 and 290–291), a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). The German singing translation is left out. Bar 1 is a one-eighth upbeat, set as 1/8; bars 108–113 are for the piano alone. Kept as printed: the misprinted syllables “sc” (bar 46, for se) and “pic” (bar 59, for pie). The cut signs at “vi-” (bars 33 and 80) and “-de” (bars 64 and 92) are not written in the score. Playback tempo: Allegretto vivace at a dotted quarter = 72 (♩ = 109), from Jacobs (3:07); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

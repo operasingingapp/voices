@@ -1,0 +1,114 @@
+{
+ "editionId": "mozart-donne-mie-la-fate-a-tanti",
+ "editionVersion": "1.0.0-peters",
+ "title": "Donne mie, la fate a tanti",
+ "subtitle": "Guglielmo: aria from Così fan tutte, Act 2 (No. 26)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Donne mie, la fate a tanti · Io vo bene al sesso vostro",
+   "start": "1",
+   "end": "49"
+  },
+  {
+   "id": "b",
+   "label": "Ma quel farla a tanti · Mille volte il brando presi",
+   "start": "50",
+   "end": "86"
+  },
+  {
+   "id": "c",
+   "label": "Siete vaghe, siete amabili · Ma la fate a tanti · Io vo bene",
+   "start": "87",
+   "end": "126"
+  },
+  {
+   "id": "d",
+   "label": "Ma la fate a tanti · Hanno certo un gran perchè (to the end)",
+   "start": "127",
+   "end": "176"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 8, No. 26 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (sà, perchè, diè, vo without its apostrophe; segno d'amistà where the libretto has marche; sino ai piè where it has fino; a tanti e tanti; Ma ma ma, printed Ma... ma... ma..., given without the dots, as the libretto has none)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 268–274, bars 1–176 of No. 26",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung line and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges), a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). The German singing translation is left out; in bar 125 a note that carries only a German syllable is left out. The cut signs at “vi-” (bar 59) and “-de” (bar 85), and again at bars 108 and 136, are not written in the score. Bars 1–11 and 170–176 are for the piano alone. Playback tempo ♩ = 112, estimated from Jacobs (3:33, which includes the end of the recitative); Mozart gives the word Allegretto only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

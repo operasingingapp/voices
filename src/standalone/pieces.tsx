@@ -4583,6 +4583,200 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ah-che-tutta-in-un-momento": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "D major (the last bar, the first of the Allegro, in G major)",
+      time: "2/4 (the last bar ¢)",
+      tempo: "Andante, played at ♩ = 60, the last bar at the Allegro's ♩ = 166, from Jacobs (whose track for the finale's first 291 bars lasts 7:35; this section about 2 minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "Two sisters, one long sigh: legato, sotto voce, the lines answering each other",
+    about: (
+      <>
+        <p>
+          The Act 1 finale opens in a little garden. Alone, Fiordiligi and Dorabella lament that their whole fate has changed in a single moment: life is now
+          a sea of torment. As long as the cruel stars left them their dear loves, they did not know what sorrow or pining was. They do not know that
+          Despina and Don Alfonso have a new plan for them.
+        </p>
+        <p>
+          Score: the first section of the Act 1 Finale, No. 18 (vocal score pages 148–152, bars 1–62 of 697), from Kurt Soldan's piano reduction in the
+          Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the whole
+          finale read in fifteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by a
+          judge, a separate sweep for dynamics and other marks, then checked by nine fresh proofreaders (three fixes). The last bar is the first bar of the
+          Allegro, because the sisters' last syllable falls on its first beat; it also opens “Si mora si, si mora”. Only the Italian words are kept, with
+          the print's spellings (Finchè, cos' eran, and the sisters' added “no!”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-si-mora-si-si-mora": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "G major",
+      time: "¢ (alla breve), then 4/4 from “Il tragico spettacolo” (bar 45)",
+      tempo: "Allegro, played at ♩ = 166 (a half note = 83), from Jacobs (whose track for the finale's first 291 bars lasts 7:35; this section about 2 minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "Mock tragedy played dead straight: the men's despair over the top, the sisters truly frightened",
+    about: (
+      <>
+        <p>
+          Off stage, the two 'Albanians' cry that they will die to satisfy the cruel women, while Don Alfonso begs them to wait: there is still hope. The
+          sisters are terrified by the shouting. The men burst in with cups, drink what they say is arsenic and throw the cups away; Don Alfonso confirms
+          the poison will kill them in a few moments, and they beg the cruel women at least to come near and pity them. The sisters find the tragic sight
+          freezes their hearts, and all five say the sunlight is growing dark and they tremble too much to speak. The audience knows the poison is a fake.
+        </p>
+        <p>
+          Score: the second section of the Act 1 Finale, No. 18 (vocal score pages 152–158, bars 62–137 of 697), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fifteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by nine fresh proofreaders (three fixes). The first bar is also the last bar
+          of “Ah che tutta in un momento”: the sisters' “me” on its first beat belongs to that section. Only the Italian words are kept, with the print's
+          spellings (Si mora si, oh Dei, Don Alfonso's “in pocchi istanti”, the officers' “il tristo effetto”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-giacche-a-morir-vicini": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "E♭ major",
+      time: "4/4",
+      tempo: "Allegro (no new word printed: the Allegro of “Si mora” goes on), played at ♩ = 166, from Jacobs (whose track for the finale's first 291 bars lasts 7:35; this section about 3¾ minutes)",
+    },
+    notePlaceholder: "Panic, then curiosity: the sisters edging closer, the officers barely keeping their faces straight",
+    about: (
+      <>
+        <p>
+          Since the poor men are about to die, Don Alfonso tells the sisters at least to show them some pity. The sisters call for help, then for Despina,
+          who comes in and thinks the two are dead or dying; Don Alfonso tells her they poisoned themselves in despair. Despina says it would be shameful to
+          abandon them: the sisters must hold them up while she and Alfonso run for a doctor and an antidote. Alone with the 'dying' men, the sisters are
+          dismayed, while the officers say aside that no comedy could be better. The sisters edge closer, admire the interesting faces, find the heads cold
+          and the pulses faint, and say these deaths would make them weep; aside, the officers note that the sisters' pity may end in love.
+        </p>
+        <p>
+          Score: the third section of the Act 1 Finale, No. 18 (vocal score pages 159–168, bars 138–291 of 697), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fifteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by nine fresh proofreaders (three fixes). It starts at the change to E♭
+          major, with Don Alfonso's first words. Only the Italian words are kept, with the print's spellings (Giacchè, “Nessuno o Dio”, pur troppo,
+          Dorabella's fredissima, gliel').
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-eccovi-il-medico": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "G major",
+      time: "3/4",
+      tempo: "Allegro, played at ♩ = 137, from Jacobs (3:00)",
+    },
+    notePlaceholder: "Despina's mock doctor: pompous Latin, a pedant's patter, then the magnet with a flourish",
+    about: (
+      <>
+        <p>
+          Don Alfonso brings in the doctor; aside, the officers recognise Despina in disguise. She greets the ladies in mock Latin and boasts that she
+          speaks Greek, Arabic, Turkish, Vandal, Swabian and Tartar; Alfonso tells her to keep her languages and look at the patients. She asks the cause
+          and nature of the potion, hot or cold, a little or a lot, at once or in doses, and the sisters and Alfonso explain: arsenic, out of love, in one
+          gulp. Despina touches the men with a magnet, the mesmeric stone first found in Germany and made famous in France; they twitch and shake while
+          the sisters hold their foreheads, then look around and recover, and the sisters and Alfonso declare the doctor worth a fortune.
+        </p>
+        <p>
+          Score: the fourth section of the Act 1 Finale, No. 18 (vocal score pages 169–177, bars 292–428 of 697), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fifteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by nine fresh proofreaders (three fixes). It ends with the bar of rest under
+          a fermata before the Andante. Only the Italian words are kept, with the print's spellings (Despina's “so il turco e il vandalo” and “lo sveco”,
+          Mesmerica, nell' Alemagna, corraggio, fù, sù) and the officers' aside in brackets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-dove-son-cosi": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "B♭ major",
+      time: "4/4",
+      tempo: "Andante, played at ♩ = 56, from Jacobs (3:58; about 4 minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "The men's mock-heroic awakening, the sisters prim, Despina and Alfonso soothing: everyone acting",
+    about: (
+      <>
+        <p>
+          The two men rise and ask where they are: before Jove's throne? Is this Pallas or Venus? No, each says, she is the goddess of his soul, known by
+          her sweet face and her hand. Despina and Don Alfonso tell the sisters not to be afraid: these are after-effects of the poison. The sisters say such
+          grimaces offend their honour, while the officers, aside, can hardly keep from laughing. When the men beg for a kind look, the sisters feel they
+          can resist no longer; Despina and Alfonso promise that the magnetism will end the fit within a few hours.
+        </p>
+        <p>
+          Score: the fifth section of the Act 1 Finale, No. 18 (vocal score pages 177–186, bars 429–484 of 697), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fifteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by nine fresh proofreaders (three fixes). The cut Peters marks from “vi-”
+          (bar 33) to “-de” (bar 48) is not made. Only the Italian words are kept, with the print's spellings (poss' io, poch' ore, bell' idol, “or or”,
+          printed “or-or”) and the asides in brackets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-dammi-un-bacio": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "D major",
+      time: "¢ (alla breve)",
+      tempo: "Allegro, played at a half note = 126 (♩ = 252), then Presto from bar 173 at ♩ = 300, from Jacobs (3:17; about 3¼ minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Fury against glee: the sisters' outrage in long lines, the other four chattering underneath",
+    about: (
+      <>
+        <p>
+          Each man begs the sister he is courting for one kiss, or he will die here. The sisters are outraged, but Despina and Don Alfonso tell them to
+          humour the men out of kindness. The sisters refuse: too much is asked of a faithful, honest lover, and their faith and hearts are insulted. Aside,
+          Despina and Alfonso laugh at the merriest little scene in the world and are sure such fire will turn to love; the officers cannot tell whether the
+          anger is feigned or real, and would not want it to end in love. The sisters tell the 'poisoned' men to go to the devil, or they will be sorry; the
+          act ends in this quarrel, with the sisters still faithful.
+        </p>
+        <p>
+          Score: the sixth and last section of the Act 1 Finale, No. 18 (vocal score pages 187–205, bars 485–697 of 697), from Kurt Soldan's piano
+          reduction in the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed
+          pages: the whole finale read in fifteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on
+          the page by a judge, a separate sweep for dynamics and other marks, then checked by nine fresh proofreaders (three fixes). The Presto starts at
+          bar 173, and the last six bars are for the piano alone. The cut Peters marks from “vi-” (bar 117) to “-de” (bar 145) is not made. Only the
+          Italian words are kept, with the print's spellings (quell' ira, Despina's “si cangerà”, Dorabella's “se cresce il mio furor”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-andate-la": {
     portrait: "cosi:despina",
     opera: "Così fan tutte",
@@ -4701,6 +4895,645 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then
           checked bar by bar by a fresh checker (clean). The first bar is the one-eighth upbeat, and the last four bars are for the piano alone. Only the
           Italian words are kept, with the print's spellings (vo un po, dell' altro).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-correte-al-giardino": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (Jacobs times this recitative together with No. 21; about ½ minute)",
+    },
+    notePlaceholder: "Speak it first: Alfonso bustling and full of promise, Dorabella curious",
+    about: (
+      <>
+        <p>
+          Don Alfonso hurries the sisters off to the garden: there is merriment, music and singing, a brilliant show, pure enchantment. Dorabella asks
+          what on earth it can be; they will soon see. They go out, and the curtain closes for the change to the garden by the sea. Fiordiligi is on
+          stage but does not sing.
+        </p>
+        <p>
+          Score: the recitative after No. 20 (vocal score page 223, 9 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed page: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by a fresh
+          checker (clean). Where the print gives a second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with
+          the print's punctuation. It ends “segue Nr. 21”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-secondate-aurette-amiche": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Duetto con Coro",
+    facts: {
+      key: "E♭ major",
+      time: "3/8",
+      tempo: "Andante, played at an eighth note = 76 (♩ = 38), from Jacobs (3:12 together with the recitative before it; about 3 minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "A serenade from a boat: two voices as one, smooth and tender, the chorus answering softly",
+    about: (
+      <>
+        <p>
+          In the garden by the sea, from a boat decked with flowers and with a band of musicians, Ferrando and Guglielmo, still disguised as the two
+          'Albanians', ask the friendly breezes to favour their desires and carry their sighs to the goddess of their hearts: the breezes have heard their
+          sorrows a thousand times, and should repeat it all to their beloved. The chorus of musicians takes up the request. As it ends, the two men step
+          ashore wearing chains of flowers, and Don Alfonso and Despina lead them before the sisters, who stand silent and amazed.
+        </p>
+        <p>
+          Score: No. 21, the Duetto con Coro (vocal score pages 224–227, 71 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by a fresh
+          checker (one staccato that is not printed removed). The chorus (sopranos, altos, tenors and basses) has its own staves and is heard with the
+          piano; where the print gives the basses no words they sing the tenors'. Only the Italian words are kept, with the print's spellings, including
+          its misprint “mici” for miei.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-il-tutto-deponete": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (no separate timing of this recitative was found; about 1 minute)",
+    },
+    notePlaceholder: "Speak it first: the suitors tongue-tied and overdoing it, the sisters cool, Alfonso losing patience",
+    about: (
+      <>
+        <p>
+          Don Alfonso has the servants put the flowers on the little tables and go back to the boat. The sisters ask what this masquerade is. Despina
+          urges the men to speak up: Ferrando trembles from head to foot, and Guglielmo says love ties a true lover's limbs. The sisters invite them to
+          say freely what they want, but each man tells the other to begin. Don Alfonso loses patience with such old-fashioned manners and tells Despina
+          to do with one sister what he will do with the other.
+        </p>
+        <p>
+          Score: the recitative after No. 21 (vocal score pages 227–228, 23 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by a fresh
+          checker (clean). Where the print gives a second rhythm for the German words, the Italian rhythm is kept. Only the Italian words are kept, with
+          the print's spellings (Cos' è, incorraggiteli). The last bar, two beats before “segue Nr. 22”, is set as 2/4.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-la-mano-a-me-date": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Quartetto",
+    facts: {
+      key: "D major",
+      time: "6/8, with 4/4 for the Allegro (bars 51–59) and the Presto (from bar 71)",
+      tempo: "Allegretto grazioso, played at a dotted quarter = 70 (♩ = 105), Allegro ♩ = 132, Tempo I ♩ = 105, then Presto ♩ = 200, fitted to Jacobs (2:18; about 2½ minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Mock-solemn and graceful: Alfonso pleads, the suitors echo him like sighing schoolboys, Despina briskly takes over",
+    about: (
+      <>
+        <p>
+          Don Alfonso takes one sister's hand and Despina the other's. Alfonso speaks for the suitors, who echo his last words: a trembling slave asks
+          pardon, he offended only for a moment; now he suffers in silence and leaves them in peace; he cannot have what he wants, so he will want what
+          he can. When the sisters only look and laugh, Despina answers for them: what is past is past, let the chain of servitude be broken; give your
+          arm and sigh no more. Then she and Alfonso slip away, telling each other quietly that the girls will surely fall now.
+        </p>
+        <p>
+          Score: No. 22, the Quartetto (vocal score pages 229–235, 91 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung lines and
+          the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar
+          by bar by two fresh checkers (clean). Despina's “Quello ch'è stato” is a short recitative inside the quartet (Allegro, Rezit., then a tempo),
+          before Tempo I and the closing Presto. Only the Italian words are kept, with the print's spellings (pò, un schiavo, scordiamci, nè).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-oh-che-bella-giornata": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 80, from Jacobs (3:06; about 3 minutes)",
+    },
+    notePlaceholder: "Speak it first: awkward small talk, then Guglielmo laying it on thick and Dorabella teasing, wavering, giving in",
+    about: (
+      <>
+        <p>
+          The four make small talk about the weather and the trees, and Fiordiligi and Ferrando go off for a walk (“here comes the great crisis”, Ferrando
+          whispers). Guglielmo tells Dorabella he feels so ill he could die; she suggests it is what is left of the poison, and teases him. He offers her
+          a little gift, a heart, the symbol of his own that burns for her. She tells him not to tempt a faithful heart, but he presses on, and after a
+          pause and a sigh she accepts it. Aside, Guglielmo is sorry for his friend (“poor Ferrando!”), but a soldier's honour is at stake.
+        </p>
+        <p>
+          Score: the recitative after No. 22 (vocal score pages 235–238, 62 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by a fresh
+          checker (clean). Where the print gives a second rhythm or extra notes for the German words, the Italian rhythm is kept; bar 57, at the dotted
+          barline, is a 2/4 bar. Only the Italian words are kept, with the print's spellings (davvero, Oh Dei, and its misprint “Duc” for Due) and the
+          asides in brackets. It ends “segue Nr. 23”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-il-core-vi-dono": {
+    portrait: "cosi:guglielmo",
+    opera: "Così fan tutte",
+    kind: "Duetto",
+    facts: {
+      key: "F major",
+      time: "3/8",
+      tempo: "Andante grazioso, played at an eighth note = 80 (♩ = 40), from Jacobs (4:36; about 4½ minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Graceful and flirtatious: the heartbeat in the music, Guglielmo coaxing, Dorabella giving way",
+    about: (
+      <>
+        <p>
+          Guglielmo gives Dorabella the heart and asks for hers; she takes his but says hers is no longer hers to give. Then why is it beating here? Each
+          says it is their own little heart, which has gone to live with the other, and beats like this. He wants to put his heart where she wears her
+          fiancé's portrait; she says it cannot stay there, but he tells her not to look, takes out the portrait and puts the heart in its place. Aside,
+          she feels a Vesuvius in her breast and he pities poor Ferrando; then both rejoice in the happy exchange of hearts.
+        </p>
+        <p>
+          Score: No. 23, the Duetto (vocal score pages 239–244, 121 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung lines and the piano
+          each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by
+          a fresh checker (clean, apart from one slur from the right hand's lower to its upper voice that cannot be written in the file). The first bar is
+          the one-eighth upbeat. Only the Italian words are kept, with the print's spellings (bell' idolo, me'l, quì) and the asides in brackets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-barbara-perche-fuggi": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "An accompanied recitative: played at ♩ = 70, Allegro ♩ = 110, Adagio ♩ = 45, fitted to Jacobs (1:28; about 1½ minutes)",
+    },
+    notePlaceholder: "Speak it first: Ferrando pursuing, Fiordiligi flustered and fleeing, then his sudden hope",
+    about: (
+      <>
+        <p>
+          Ferrando follows Fiordiligi: why does she run away? She has seen an asp, a hydra, a basilisk; he answers that she sees in him every monster of
+          the Libyan deserts. She says he wants to take away her peace; he says he wants to make her happy, and asks only for a look. She tells him to go,
+          but he will not until she looks at him less fiercely, and then he sees that she looks at him and sighs.
+        </p>
+        <p>
+          Score: the accompanied recitative before No. 24 (vocal score pages 245–246, 23 bars), from Kurt Soldan's piano reduction in the Edition Peters
+          vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the
+          piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by
+          bar by a fresh checker (clean). Allegro from bar 3, Adagio from bar 13. Where the print gives a second rhythm for the German words, the Italian
+          rhythm is kept. Only the Italian words are kept, with the print's spellings (perchè, Pàrtiti). It ends “segue Nr. 24”; a footnote in the print
+          says that by Mozart's autograph the aria is left out.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-lo-veggio": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Aria",
+    facts: {
+      key: "B♭ major",
+      time: "¢ (alla breve)",
+      tempo: "Allegretto, played at a half note = 63 (♩ = 126), then Allegro at a half note = 80 (♩ = 160), fitted to Jacobs (4:00; about 4 minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Ardent and hopeful, then crushed: long lyrical lines that must stay light",
+    about: (
+      <>
+        <p>
+          Ferrando is sure that Fiordiligi's lovely soul cannot resist his tears: it is not made to rebel against kindly pity. In her look and her sighs
+          a sweet ray of hope flashes into his heart; she is already answering his desires and yielding to love. But she flees and says nothing while he
+          pines. He gives up his false hopes: the cruel one has condemned him to die.
+        </p>
+        <p>
+          Score: No. 24, the Aria (vocal score pages 247–252, 134 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung line and the piano
+          each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar by
+          a fresh checker (one error corrected: the words in bars 107–108 were one note late). The first bar is the half-bar upbeat. The cut Peters marks
+          from “vi-” (bar 58) to “-de” (bar 93) is not made: the whole aria is here. Only the Italian words are kept, with the print's spellings (sà).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ei-parte-per-pieta": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Recitative and rondò",
+    facts: {
+      key: "E major (the rondò; the recitative has no key signature)",
+      time: "4/4 (the rondò opens with one bar of 2/4)",
+      tempo: "The recitative at ♩ = 66, then the rondò Adagio at ♩ = 40 and Allegro moderato at ♩ = 88, fitted to Jacobs (1:32 and 7:40; about 9¼ minutes in all); Mozart gives the words only",
+    },
+    notePlaceholder: "Remorse first, then resolve: a long, noble line that must never sound heavy",
+    about: (
+      <>
+        <p>
+          Alone, Fiordiligi lets Ferrando go: she wants the cause of her weakness out of her sight. She tells herself this torment is the reward for her
+          faults: she listened to a new lover's sighs and made a game of another's grief. What she now feels is no longer virtuous love but frenzy,
+          anguish, remorse, fickleness and betrayal. In the rondò she begs her absent beloved to forgive the error of a loving soul, which will stay
+          hidden among these trees; her courage and constancy will kill this wicked desire and wipe out the memory that shames her. Whom has this vain,
+          ungrateful heart ever betrayed? His sincerity deserved a better reward.
+        </p>
+        <p>
+          Score: No. 25, the Recitativo e Rondò (vocal score pages 253–261, 154 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal
+          score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: three page ranges, the sung line
+          and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and
+          ties, then checked bar by bar by a fresh checker (clean). The recitative, which Peters prints from a manuscript in Florence because it is
+          missing from the autograph, is bars 1–26; the rondò starts at bar 27. Two slurs in the right hand that cross from one voice to another, the cut
+          signs at bars 106 and 121 and Peters' footnote on the autograph's reading in bars 66 and 96 are not written in. Only the Italian words are
+          kept, with the print's spellings (fà, all' error, d'un alma).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-amico-abbiamo-vinto": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, with estimated tempos for the accompanied end (♩ = 60 senza tempo, then 120, 70 Andante and 120 Allegro), fitted to Jacobs (3:45; about 4 minutes)",
+    },
+    notePlaceholder: "Speak it first: Ferrando crowing, Guglielmo playing for time, then Ferrando's fury",
+    about: (
+      <>
+        <p>
+          Ferrando reports triumphantly to Guglielmo: he played the trembling, weeping, dying lover, and Fiordiligi laughed, joked, pretended pity, then
+          drove him away, keeping herself pure as a dove for her Guglielmo. Guglielmo embraces him as his faithful Mercury. Sure of Dorabella, Ferrando
+          asks how she behaved; Guglielmo hints at doubt, then shows him the little portrait she gave him as a pledge of her love. Ferrando recognises his
+          own portrait and wants to tear the heart from her breast; Guglielmo holds him back: is she worth it? Ferrando cannot understand how she forgot
+          so many promises so fast and begs for advice, which Guglielmo cannot give.
+        </p>
+        <p>
+          Score: the recitative after No. 25 (vocal score pages 262–268, 97 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung lines and the
+          piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks,
+          then checked bar by bar by a fresh checker (two errors corrected). Where the print gives a second rhythm for the German words, the Italian rhythm
+          is kept. From Ferrando's “Il mio ritratto!” (bar 63) the strings come in, and the recitative stays accompanied to the end. Only the Italian
+          words are kept, with the print's spellings (fù, sù, fè, pocchi, s'e diportata) and Guglielmo's asides in brackets. It ends “attacca Nr. 26”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-donne-mie-la-fate-a-tanti": {
+    portrait: "cosi:guglielmo",
+    opera: "Così fan tutte",
+    kind: "Aria",
+    facts: {
+      key: "G major",
+      time: "2/4",
+      tempo: "Allegretto, played at ♩ = 112, estimated from Jacobs (3:33, which includes the end of the recitative; about 3 minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "Mock-gallant and quick: every “a tanti” a little sharper than the last",
+    about: (
+      <>
+        <p>
+          Guglielmo turns to women in general: they play this trick on so many men that, to tell the truth, when lovers complain he begins to sympathise.
+          He is fond of women, everyone knows it, and he shows it every day; a thousand times he has drawn his sword for their honour and defended them
+          with his words and still more with his heart. They are pretty and lovable, heaven gave them treasures and the Graces surround them from head to
+          foot, but they do it to so many that it is past belief, and lovers who cry out certainly have good reason. He goes out.
+        </p>
+        <p>
+          Score: No. 26, the Aria (vocal score pages 268–274, 176 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung line and the piano
+          each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then
+          checked bar by bar by a fresh checker (clean). The cuts Peters marks (bars 59–85 and 108–136) are not made: the whole aria is here. Only the
+          Italian words are kept, with the print's spellings (sà, perchè, segno d'amistà, sino ai piè); Guglielmo's “Ma… ma… ma…” is given without the
+          dots.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-tradito-schernito": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Recitative and cavatina",
+    facts: {
+      key: "C minor (three flats), ending in C major (the recitative has no key signature)",
+      time: "4/4, then ¢ (alla breve) for the cavatina",
+      tempo: "The recitative at ♩ = 72, its Andante at ♩ = 60 (Jacobs 1:35), then the cavatina Allegro at ♩ = 125, estimated from Jacobs (6:08, which also includes the next recitatives); about 4 minutes in all; Mozart gives the words only",
+    },
+    notePlaceholder: "Rage that keeps turning into tenderness: let the “io sento” phrases sing",
+    about: (
+      <>
+        <p>
+          Alone, Ferrando is torn between thoughts and feelings he cannot sort out: his plight is so strange that no one, not even he, can advise him. Don
+          Alfonso will laugh at his stupidity; he will take revenge and wipe that wicked woman out of his heart. Wipe her out? His heart speaks too
+          strongly for her. In the cavatina, betrayed and scorned by her faithless heart, he feels that his soul still adores her and hears the voice of
+          love for her. Don Alfonso and Guglielmo come in and stand at the back, listening.
+        </p>
+        <p>
+          Score: No. 27, the Recitativo e Cavatina (vocal score pages 275–279, 103 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal
+          score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung line
+          and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other
+          marks, then checked bar by bar by a fresh checker (clean). The recitative is bars 1–29; the cavatina starts with a one-eighth upbeat (bar 30,
+          set as 1/8). Only the Italian words are kept, with the print's spellings (quell' iniqua, quest' alma).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-bravo-questa-e-costanza": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4, then 6/8 for the last six bars",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (no separate timing of this recitative was found; about 1⅓ minutes)",
+    },
+    notePlaceholder: "Speak it first: Alfonso amused, Ferrando wounded, Guglielmo smug",
+    about: (
+      <>
+        <p>
+          Don Alfonso mocks Ferrando's constancy and promises to give him back his old calm: Fiordiligi has stayed faithful to Guglielmo, Dorabella has not
+          to Ferrando, who calls it his shame. Guglielmo, pleased with himself, says one must make distinctions: could a bride fail a Guglielmo? He has
+          “a little more merit”, and claims his fifty zecchini. Don Alfonso will pay, but first wants one more experiment: until tomorrow they are his
+          slaves, on their word as soldiers. He will show them how foolish it is to sell the bird while it is still on the branch. They go out, and the
+          curtain closes.
+        </p>
+        <p>
+          Score: the recitative after No. 27 (vocal score pages 280–282, 35 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by
+          bar by a fresh checker (clean). Where the print gives a second rhythm for the German words, the Italian rhythm is kept. Don Alfonso's last
+          lines, from bar 30, are a short arioso in 6/8 with the orchestra. Only the Italian words are kept, with the print's spellings (fù, Guglielmo, and
+          Don Alfonso's “Venite; o spero”, where the libretto has io). It ends with the curtain.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ora-vedo-che-siete": {
+    portrait: "cosi:despina",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (no separate timing of this recitative was found; about 2½ minutes)",
+    },
+    notePlaceholder: "Speak it first: Despina approving, Dorabella giddy, Fiordiligi in turmoil",
+    about: (
+      <>
+        <p>
+          In a room of their house, Despina praises Dorabella for her good sense; Dorabella says she tried to resist, but that little devil could bring
+          down a stone, and Despina agrees that girls must seize what little happiness comes their way. Fiordiligi bursts in, blaming them for the state
+          she is in: she is in love, and not only with Guglielmo. Delighted, Dorabella pairs them off, the fair one for Fiordiligi and the dark one for
+          herself. Fiordiligi reminds her of the two who left only this morning; Dorabella answers that they may die in the war, and if they come back,
+          the sisters will be married and a thousand miles away. Fiordiligi says she will master herself; Despina tells her she will never manage it, and
+          Dorabella that she had better give in.
+        </p>
+        <p>
+          Score: the recitative before No. 28 (vocal score pages 282–286, 61 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score
+          (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by
+          bar by a fresh checker (clean). Where the print gives a second rhythm for the German words, the Italian rhythm is kept. From bar 56 Peters
+          prints the music from a manuscript in Dresden (the autograph's version is in its appendix). Only the Italian words are kept, with the print's
+          spellings (forestieri, muojano, pur troppo, Ma brava!). It ends “segue Nr. 28 Arie”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-e-amore-un-ladroncello": {
+    portrait: "cosi:dorabella",
+    opera: "Così fan tutte",
+    kind: "Aria",
+    facts: {
+      key: "B♭ major",
+      time: "6/8",
+      tempo: "Allegretto vivace, played at a dotted quarter = 72 (♩ = 109), from Jacobs (3:07; about 3 minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Light and knowing: Dorabella has given in and is enjoying it",
+    about: (
+      <>
+        <p>
+          Dorabella has already given in to her new suitor, and tells her sister to do the same. Love, she sings, is a little thief and a little serpent,
+          which takes away peace and gives it back as it pleases. It slips through the eyes into the heart, puts the soul in chains and takes away its
+          freedom. It brings sweetness and delight if you let it have its way, and fills you with bitterness if you fight it. If it settles in your breast
+          and pecks at your heart, do everything it asks: she will do the same. She goes out with Despina.
+        </p>
+        <p>
+          Score: No. 28, the Aria (vocal score pages 287–291, 113 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: two page ranges, the sung line and the piano
+          each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then
+          checked bar by bar by a fresh checker (clean). The first bar is the one-eighth upbeat, and the last six bars are for the piano alone. The cuts
+          Peters marks (“vi-” to “-de”, twice) are not made: the whole aria is here. Only the Italian words are kept, with the print's spellings (ei toglie,
+          in catena, quì) and its two misprinted syllables, “sc” for se (bar 46) and “t'empic” for t'empie (bar 59).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-come-tutto-congiura": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 89, from Jacobs (2:55; about 3 minutes)",
+    },
+    notePlaceholder: "Speak it first: Fiordiligi agitated, then decisive; Despina dry; the men's asides quick and low",
+    about: (
+      <>
+        <p>
+          Alone, Fiordiligi feels that everything conspires against her heart; she would rather die than give in, and regrets having opened her heart to
+          her sister and her maid. The stranger must never come near her again. Unseen, Guglielmo cheers his faithful “Artemisia”. Then she has an idea:
+          she sends Despina with the key to fetch two swords, two hats and two of their fiancés' uniforms, to order six post-horses and to send Dorabella
+          to her; Don Alfonso quietly tells Despina to do as she is told, and Despina thinks her mistress has lost her wits. Fiordiligi will wear
+          Ferrando's uniform, Dorabella Guglielmo's, and they will join their fiancés at the front, to fight and, if need be, die beside them. She throws
+          off her headdress and puts on the hat, while Guglielmo marvels at such love; she hardly recognises herself.
+        </p>
+        <p>
+          Score: the recitative between No. 28 and No. 29 (vocal score pages 292–296, 65 bars), from Kurt Soldan's piano reduction in the Edition Peters
+          vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the
+          piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker
+          (clean). Where the print gives a second rhythm for the German words, the Italian rhythm is kept. Bars 40–42 are bracketed in the print, perhaps
+          as an optional cut, and are kept. Peters prints this recitative from a manuscript in the Istituto musicale in Florence. Only the Italian words
+          are kept, with the print's spellings (minaccierò, molti uniformi, abregè, medesma) and its asides in brackets. It ends “segue Nr. 29 Duett”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-fra-gli-amplessi": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Duetto",
+    facts: {
+      key: "A major; C major from bar 40; A major again from the Larghetto (bar 76)",
+      time: "¢ (alla breve); 3/4 for the Larghetto (bar 76); ¢ again for the Andante (bar 101)",
+      tempo: "Adagio at a half note = 25 (♩ = 50), Con più moto at a half note = 35 (♩ = 70), Allegro at a half note = 75 (♩ = 150), Larghetto at ♩ = 40, Andante at a half note = 60 (♩ = 120), fitted to Jacobs (6:14; about 6¼ minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Fiordiligi's resolve giving way bar by bar; Ferrando pleading, then triumphant",
+    about: (
+      <>
+        <p>
+          In uniform, Fiordiligi imagines reaching her fiancé at the front, unrecognised, and his joy when he knows her. Ferrando comes in: meanwhile, he
+          says, he will die of grief. He offers her the sword to strike him with, and will guide her hand if she has not the strength. She begs him to stop:
+          she is tormented enough. Both sing that her constancy is beginning to waver; in this score Fiordiligi sings “la mia costanza” and Ferrando “la sua”.
+          He asks for her heart or his death, kneels, and offers himself as husband, lover and more; she calls on heaven, tells him he has won, and they
+          embrace, while Don Alfonso holds back Guglielmo, who has been watching.
+        </p>
+        <p>
+          Score: No. 29, the Duetto (vocal score pages 296–304, 142 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: three page ranges, the sung lines and the piano
+          each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then
+          checked bar by bar by a fresh checker (clean). Ferrando's part, printed in the treble clef, sounds an octave lower; the last five bars are for
+          the piano alone. The three cuts Peters marks (“vi-” to “-de”) are not made: the whole duet is here. Only the Italian words are kept, with the
+          print's spellings (gioja, Abbracciamci) and its readings “in quest' abito verrò” (the libretto has morrò) and Ferrando's “la sua costanza”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-poveretto-me": {
+    portrait: "cosi:guglielmo",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 98, from Jacobs (2:12; about 2¼ minutes)",
+    },
+    notePlaceholder: "Speak it first: Guglielmo furious, Ferrando mocking, Alfonso calm and amused",
+    about: (
+      <>
+        <p>
+          Guglielmo has seen and heard everything, and rages: he could tear out his beard and claw his skin. Fiordiligi, the Penelope and Artemisia of the
+          age, is a hussy, a thief, a bitch. Ferrando comes in and throws Guglielmo's boast of “a little more merit” back at him. They want to punish the
+          sisters; Don Alfonso's answer is to marry them. They would sooner marry Charon's boat, Vulcan's cave or the gate of hell. But at heart they love
+          their “plucked crows”, says Don Alfonso: nature could not make two women of different stuff just for them, so take them as they are. He will
+          arrange a double wedding this evening; first, they are to learn a verse.
+        </p>
+        <p>
+          Score: the recitative between No. 29 and No. 30 (vocal score pages 305–308, 54 bars), from Kurt Soldan's piano reduction in the Edition Peters
+          vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the
+          piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker
+          (clean). Where the print gives a second rhythm for the German words, the Italian rhythm is kept; bar 13, printed half a beat short, is filled
+          out with an eighth rest. Peters notes that this recitative is missing from the autograph and prints it from a manuscript in Florence. Only the
+          Italian words are kept, with the print's spellings (pur troppo, l'eccezzione, spennacchiate). It ends “segue Nr. 30. Andante”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-tutti-accusan-le-donne": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Andante",
+    facts: {
+      key: "C major",
+      time: "¢ (alla breve)",
+      tempo: "Andante, played at a half note ≈ 31½ (♩ = 63), from Jacobs (1:39; about 1⅔ minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "Worldly and unhurried: Alfonso's maxim, then the motto the officers have to repeat",
+    about: (
+      <>
+        <p>
+          Don Alfonso's verse: everyone blames women, but he excuses them if they change their love a thousand times a day. Some call it a vice, some a
+          habit; to him it is a need of the heart. A deceived lover should blame not someone else's error but his own, since young and old, beautiful and
+          ugly, all do it. “Repeat with me”, he says, and Ferrando and Guglielmo join him in the motto that gives the opera its title: “Così fan tutte!”
+        </p>
+        <p>
+          Score: No. 30, the Andante (vocal score pages 308–309, 26 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal score (Edition
+          Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar
+          by a fresh checker (clean). Ferrando's part, printed in the treble clef, sounds an octave lower. Only the Italian words are kept, with the
+          print's spellings (ripetete, where the libretto has ripetetel).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-vittoria-padroncini": {
+    portrait: "cosi:despina",
+    opera: "Così fan tutte",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (no separate timing of this recitative was found; about ½ minute)",
+    },
+    notePlaceholder: "Speak it first: Despina breathless and proud of herself; the men's “Contentissimi” together",
+    about: (
+      <>
+        <p>
+          Despina runs in with the news: victory! The ladies are willing to marry the two “Albanians”. In the men's name she has promised that they will
+          all leave together in about three days, and she has been sent to find a notary for the contract; the ladies are waiting in their room. Are they
+          happy? “Very happy”, answer Ferrando, Don Alfonso and Guglielmo together. Despina, who does not know who the strangers really are, is proud that
+          no plan fails once she is in it.
+        </p>
+        <p>
+          Score: the recitative between No. 30 and No. 31 (vocal score page 310, 15 bars), from Kurt Soldan's piano reduction in the Edition Peters vocal
+          score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed page: the sung lines and the piano each
+          read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker (clean). Where
+          the print gives a second rhythm for the German words, the Italian rhythm is kept. The three men's “Contentissimi” is printed as chords on one
+          staff and is given to them in the order the print names them. The last bar is for the piano alone, as the curtain closes. Only the Italian
+          words are kept, with the print's spellings (notajo). It ends “segue Nr. 31 Finale”.
         </p>
         <p>
           Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.

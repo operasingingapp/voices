@@ -1,0 +1,701 @@
+{
+ "editionId": "mozart-il-tutto-deponete",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1790). Words follow the Peters engraving's spelling and punctuation (Cos' è on two notes, Parlate!, Madama… and madame…, fa without its apostrophe). Don Alfonso's incorraggiteli (bar 12) is printed with a double r; its IPA and meaning are those of the libretto's incoraggiteli. Fiordiligi and Dorabella sing “Cos' è tal mascherata?” together, and each has her own phrase. IPA, word meanings and translations come from the app's reviewed Così libretto drafts (L44, IPA checked against Castel). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "a1",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Il tutto deponete sopra quei tavolini, e nella barca ritiratevi amici.",
+   "translation": "Put everything down on those little tables, and withdraw into the boat, my friends.",
+   "ipa": "il ˈtut.to de.poˈne.te ˈso.pra ˈkwei ta.voˈli.ni e ˈnel.la ˈbar.ka ri.tiˈra.te.vi aˈmi.tʃi",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "tutto",
+     "all",
+     "ˈtut.to"
+    ],
+    [
+     "deponete",
+     "put down",
+     "de.poˈne.te"
+    ],
+    [
+     "sopra",
+     "on",
+     "ˈso.pra"
+    ],
+    [
+     "quei",
+     "those",
+     "ˈkwei"
+    ],
+    [
+     "tavolini,",
+     "little tables",
+     "ta.voˈli.ni"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "nella",
+     "in the",
+     "ˈnel.la"
+    ],
+    [
+     "barca",
+     "boat",
+     "ˈbar.ka"
+    ],
+    [
+     "ritiratevi",
+     "withdraw (imper.)",
+     "ri.tiˈra.te.vi"
+    ],
+    [
+     "amici.",
+     "friends",
+     "aˈmi.tʃi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "f1",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Cos' è tal mascherata?",
+   "translation": "What is this masquerade?",
+   "ipa": "ˈkɔz ˈɛ ˈtal ma.skeˈra.ta",
+   "words": [
+    [
+     "Cos'",
+     "what",
+     "ˈkɔz"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "tal",
+     "such",
+     "ˈtal"
+    ],
+    [
+     "mascherata?",
+     "masquerade",
+     "ma.skeˈra.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "what is"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Cos' è tal mascherata?",
+   "translation": "What is this masquerade?",
+   "ipa": "ˈkɔz ˈɛ ˈtal ma.skeˈra.ta",
+   "words": [
+    [
+     "Cos'",
+     "what",
+     "ˈkɔz"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "tal",
+     "such",
+     "ˈtal"
+    ],
+    [
+     "mascherata?",
+     "masquerade",
+     "ma.skeˈra.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "what is"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e1",
+   "role": "despina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Animo, via, coraggio: avete perso l'uso della favella?",
+   "translation": "Come on, go on, courage: have you lost the use of speech?",
+   "ipa": "ˈa.ni.mo ˈvi.a koˈrad.dʒo aˈve.te ˈpɛr.so ˈlu.zo ˈdel.la faˈvɛl.la",
+   "words": [
+    [
+     "Animo,",
+     "courage",
+     "ˈa.ni.mo"
+    ],
+    [
+     "via,",
+     "come",
+     "ˈvi.a"
+    ],
+    [
+     "coraggio:",
+     "courage",
+     "koˈrad.dʒo"
+    ],
+    [
+     "avete",
+     "you have",
+     "aˈve.te"
+    ],
+    [
+     "perso",
+     "lost",
+     "ˈpɛr.so"
+    ],
+    [
+     "l'uso",
+     "the use",
+     "ˈlu.zo"
+    ],
+    [
+     "della",
+     "of the",
+     "ˈdel.la"
+    ],
+    [
+     "favella?",
+     "speech",
+     "faˈvɛl.la"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "come on"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "r1",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Io tremo, e palpito dalla testa alle piante.",
+   "translation": "I tremble and quiver from head to foot.",
+   "ipa": "ˈi.o ˈtrɛ.mo e ˈpal.pi.to ˈdal.la ˈtɛ.sta‿ˈal.le ˈpjan.te",
+   "words": [
+    [
+     "Io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "tremo,",
+     "tremble",
+     "ˈtrɛ.mo"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "palpito",
+     "throb",
+     "ˈpal.pi.to"
+    ],
+    [
+     "dalla",
+     "from the",
+     "ˈdal.la"
+    ],
+    [
+     "testa",
+     "head",
+     "ˈtɛ.sta"
+    ],
+    [
+     "alle",
+     "to the",
+     "ˈal.le"
+    ],
+    [
+     "piante.",
+     "soles",
+     "ˈpjan.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "from head to foot"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g1",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Amor lega le membra a vero amante.",
+   "translation": "Love binds the limbs of a true lover.",
+   "ipa": "aˈmor ˈle.ga le ˈmɛm.bra a ˈve.ro‿aˈman.te",
+   "words": [
+    [
+     "Amor",
+     "love",
+     "aˈmor"
+    ],
+    [
+     "lega",
+     "binds",
+     "ˈle.ga"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "membra",
+     "limbs",
+     "ˈmɛm.bra"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "vero",
+     "true",
+     "ˈve.ro"
+    ],
+    [
+     "amante.",
+     "lover",
+     "aˈman.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Da brave incorraggiteli.",
+   "translation": "Be good girls, encourage them.",
+   "ipa": "da ˈbra.ve‿iŋ.koˈrad.dʒi.te.li",
+   "words": [
+    [
+     "Da",
+     "like",
+     "da"
+    ],
+    [
+     "brave",
+     "good girls",
+     "ˈbra.ve"
+    ],
+    [
+     "incorraggiteli.",
+     "encourage them",
+     "iŋ.koˈrad.dʒi.te.li"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "like good girls"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "f2",
+   "role": "fiordiligi",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Parlate!",
+   "translation": "Speak!",
+   "ipa": "parˈla.te",
+   "words": [
+    [
+     "Parlate!",
+     "speak",
+     "parˈla.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2",
+   "role": "dorabella",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Liberi dite pur quel che bramate.",
+   "translation": "Say freely whatever you desire.",
+   "ipa": "ˈli.be.ri ˈdi.te pur ˈkwel ke braˈma.te",
+   "words": [
+    [
+     "Liberi",
+     "freely",
+     "ˈli.be.ri"
+    ],
+    [
+     "dite",
+     "say",
+     "ˈdi.te"
+    ],
+    [
+     "pur",
+     "then",
+     "pur"
+    ],
+    [
+     "quel",
+     "that",
+     "ˈkwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "bramate.",
+     "you desire",
+     "braˈma.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r2",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "Madama…",
+   "translation": "Madam…",
+   "ipa": "maˈda.ma",
+   "words": [
+    [
+     "Madama",
+     "madam",
+     "maˈda.ma"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Anzi madame…",
+   "translation": "Rather, ladies…",
+   "ipa": "ˈan.tsi maˈda.me",
+   "words": [
+    [
+     "Anzi",
+     "rather",
+     "ˈan.tsi"
+    ],
+    [
+     "madame",
+     "ladies",
+     "maˈda.me"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "r3",
+   "role": "ferrando",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Parla pur tu.",
+   "translation": "You speak.",
+   "ipa": "ˈpar.la pur tu",
+   "words": [
+    [
+     "Parla",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "pur",
+     "do",
+     "pur"
+    ],
+    [
+     "tu.",
+     "you",
+     "tu"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "guglielmo",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "No, no, parla pur tu.",
+   "translation": "No, no, you speak.",
+   "ipa": "ˈnɔ ˈnɔ ˈpar.la pur tu",
+   "words": [
+    [
+     "No,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "parla",
+     "speak",
+     "ˈpar.la"
+    ],
+    [
+     "pur",
+     "do",
+     "pur"
+    ],
+    [
+     "tu.",
+     "you",
+     "tu"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Oh cospetto del diavolo lasciate tali smorfie del secolo passato:",
+   "translation": "Oh, devil take it, leave off such affectations of the last century:",
+   "ipa": "ˈɔ koˈspɛt.to del ˈdja.vo.lo laʃˈʃa.te ˈta.li ˈzmɔr.fje del ˈsɛ.ko.lo pasˈsa.to",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "cospetto",
+     "in the face",
+     "koˈspɛt.to"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "diavolo",
+     "devil",
+     "ˈdja.vo.lo"
+    ],
+    [
+     "lasciate",
+     "leave",
+     "laʃˈʃa.te"
+    ],
+    [
+     "tali",
+     "such",
+     "ˈta.li"
+    ],
+    [
+     "smorfie",
+     "grimaces",
+     "ˈzmɔr.fje"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "secolo",
+     "century",
+     "ˈsɛ.ko.lo"
+    ],
+    [
+     "passato:",
+     "past",
+     "pasˈsa.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "devil take it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "alfonso",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Despinetta, terminiam questa festa, fa tu con lei, quel ch'io farò con questa.",
+   "translation": "Despinetta, let's finish this party: you do with her what I will do with this one.",
+   "ipa": "de.spiˈnet.ta ter.miˈnjam ˈkwe.sta ˈfɛ.sta ˈfa tu kon ˈlɛi ˈkwel ˈki.o faˈrɔ kon ˈkwe.sta",
+   "words": [
+    [
+     "Despinetta,",
+     "little Despina",
+     "de.spiˈnet.ta"
+    ],
+    [
+     "terminiam",
+     "let us end",
+     "ter.miˈnjam"
+    ],
+    [
+     "questa",
+     "this",
+     "ˈkwe.sta"
+    ],
+    [
+     "festa,",
+     "party",
+     "ˈfɛ.sta"
+    ],
+    [
+     "fa",
+     "do",
+     "ˈfa"
+    ],
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "lei,",
+     "her",
+     "ˈlɛi"
+    ],
+    [
+     "quel",
+     "that",
+     "ˈkwel"
+    ],
+    [
+     "ch'io",
+     "which I",
+     "ˈki.o"
+    ],
+    [
+     "farò",
+     "will do",
+     "faˈrɔ"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "questa.",
+     "this one",
+     "ˈkwe.sta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+# Act 2 Recitativo 'Ah correte al giardino', printed p. 223, piano (continuo, "Cont. Cemb.")
+# bar 1: Recitativo, 4/4 (C), C major
+# page 223 system 3 starts bar 1
+# JUDGE bar 1 RH: X - print shows one stemless whole-note chord C4+G4+C5 tied over (C5 only splits off as a stemmed half in bar 2); Y's two-voice split sounds the same
+1 RH1: C4+G4+C5:w~
+1 LH1: E3:w~
+2 RH1: C5:h Bb4:h
+2 RH2: C4+G4:w
+2 LH1: E3:w
+3 RH1: C4+F4+A4:h D4+G4+B4:h
+3 LH1: F3:w
+# page 223 system 4 starts bar 4
+4 RH1: C4+G4+C5:h C4+D4+A4:h~
+4 LH1: E3:h F#3:h~
+5 RH1: C4+D4+A4:w
+5 LH1: F#3:w
+6 RH1: B3+D4+G4:w~
+6 LH1: G3:w~
+# page 223 system 5 starts bar 7
+7 RH1: B3+D4+G4:w
+7 LH1: G3:w
+8 RH1: C4+G4+C5:h r:q A3+D4+F#4:q
+8 LH1: E3:h r:q D3:q
+9 RH1: B3+D4+G4:w
+9 LH1: G2:w
+# JUDGE checks (agreed, confirmed on 400 dpi): LH E3 in bars 1, 2, 4, 8 (head in the space between F3 and D3 lines, not C3); bar 4 RH 2nd chord C4+D4+A4; bar 8 cadence A3+D4+F#4 over D3
+# bar 9: final double bar (end of recitative); segue No. 21

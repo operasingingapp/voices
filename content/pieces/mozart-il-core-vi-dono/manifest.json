@@ -1,0 +1,134 @@
+{
+ "editionId": "mozart-il-core-vi-dono",
+ "editionVersion": "1.0.0-peters",
+ "title": "Il core vi dono",
+ "subtitle": "Dorabella and Guglielmo: duet from Così fan tutte, Act 2 (No. 23)",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Il core vi dono · Mel date, lo prendo · Se teco non l'hai · È il mio coricino",
+   "start": "1",
+   "end": "40"
+  },
+  {
+   "id": "b",
+   "label": "Ei batte così · Qui lascia che il metta · T'intendo, furbetta",
+   "start": "41",
+   "end": "56"
+  },
+  {
+   "id": "c",
+   "label": "Che fai? · Nel petto un Vesuvio · L'occhietto a me gira · Rimira",
+   "start": "57",
+   "end": "80"
+  },
+  {
+   "id": "d",
+   "label": "Oh cambio felice (to the end)",
+   "start": "81",
+   "end": "121"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 5, No. 23 Duetto",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (bell' idolo and anch' io as two words each; me'l; quì and qui as printed; perchè; E'il on one note, written E' il; the asides in brackets)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 239–244, bars 1–121 of No. 23",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges, pp. 239–241 and 242–244), a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean, apart from one slur in bars 118–119 that runs from the right hand's lower voice to its upper voice and cannot be written in the file, so it is left out). The German singing translation is left out. Bar 1 is the one-eighth upbeat, set as 1/8. The “NB” cut sign at the final barline (bar 121; usually the performance jumps from here to the recitative on p. 262) is not written in the score. Playback tempo: an eighth note = 80 (♩ = 40), from Jacobs (4:36); Mozart gives the words Andante grazioso only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

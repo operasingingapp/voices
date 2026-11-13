@@ -2353,12 +2353,14 @@ export const OPERAS: Opera[] = [
       "title": "Ei parte… Per pietà",
       "kind": "Recitative and rondò · Act 2",
       "id": "Act 2: Ei parte… Per pietà",
+      "editionId": "mozart-ei-parte-per-pieta",
       "when": "Act 2, Ferrando has gone; Fiordiligi is alone, frightened by what she now feels"
      },
      {
       "title": "Fra gli amplessi in pochi istanti",
       "kind": "Duetto · Act 2",
       "id": "Act 2: Fra gli amplessi in pochi istanti",
+      "editionId": "mozart-fra-gli-amplessi",
       "when": "Act 2, Fiordiligi has sent for the officers' uniforms and put on a hat, meaning to join her fiancé at the front; Guglielmo and Don Alfonso are watching unseen"
      },
      {
@@ -2451,6 +2453,83 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Sorella, cosa dici?",
       "editionId": "mozart-sorella-cosa-dici",
       "when": "Act 2, straight after “Una donna a quindici anni”: Despina has given the sisters her lesson and gone out, leaving them alone"
+     },
+     {
+      "title": "Ah che tutta in un momento",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Ah che tutta in un momento",
+      "editionId": "mozart-ah-che-tutta-in-un-momento",
+      "when": "Act 1, the start of the finale, in a little garden: alone, the sisters mourn their absent fiancés, not knowing that Despina and Don Alfonso have a new plan for them"
+     },
+     {
+      "title": "Si mora si, si mora",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Si mora si, si mora",
+      "editionId": "mozart-si-mora-si-si-mora",
+      "when": "Act 1, in the garden, straight after the sisters' lament: the two 'Albanians' are heard off stage, crying that they will die"
+     },
+     {
+      "title": "Giacché a morir vicini",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Giacché a morir vicini",
+      "editionId": "mozart-giacche-a-morir-vicini",
+      "when": "Act 1, the two 'Albanians' have swallowed 'arsenic' in front of the sisters and lie on the grass as if dying"
+     },
+     {
+      "title": "Eccovi il medico",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Eccovi il medico",
+      "editionId": "mozart-eccovi-il-medico",
+      "when": "Act 1, the sisters have been left holding up the 'dying' men; Don Alfonso comes back with a doctor, who is Despina in disguise"
+     },
+     {
+      "title": "Dove son",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dove son",
+      "editionId": "mozart-dove-son-cosi",
+      "when": "Act 1, the 'doctor' has drawn the 'poison' out with a magnet, and the two men slowly come round"
+     },
+     {
+      "title": "Dammi un bacio, o mio tesoro",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dammi un bacio, o mio tesoro",
+      "editionId": "mozart-dammi-un-bacio",
+      "when": "Act 1, the revived men are courting the sisters, who can hardly resist; Despina and Don Alfonso blame the magnetism, and the men ask for a kiss"
+     },
+     {
+      "title": "Il tutto deponete",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Il tutto deponete",
+      "editionId": "mozart-il-tutto-deponete",
+      "when": "Act 2, straight after “Secondate, aurette amiche”: in the garden by the sea the two 'Albanians' have stepped ashore wearing chains of flowers, and the sisters stand silent"
+     },
+     {
+      "title": "Oh che bella giornata!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Oh che bella giornata!",
+      "editionId": "mozart-oh-che-bella-giornata",
+      "when": "Act 2, straight after “La mano a me date”: Despina and Don Alfonso have slipped away, leaving Guglielmo arm in arm with Dorabella, and Ferrando and Fiordiligi apart"
+     },
+     {
+      "title": "Barbara, perchè fuggi?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Barbara, perchè fuggi?",
+      "editionId": "mozart-barbara-perche-fuggi",
+      "when": "Act 2, straight after “Il core vi dono”: Dorabella and Guglielmo have gone off arm in arm, and Fiordiligi comes in, running from Ferrando"
+     },
+     {
+      "title": "Ora vedo che siete una donna di garbo",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ora vedo che siete una donna di garbo",
+      "editionId": "mozart-ora-vedo-che-siete",
+      "when": "Act 2, a room in the sisters' house: Dorabella has just told Despina that she has given in to the dark-haired stranger"
+     },
+     {
+      "title": "Come tutto congiura",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Come tutto congiura",
+      "editionId": "mozart-come-tutto-congiura",
+      "when": "Act 2, straight after “È amore un ladroncello”: Dorabella has gone out with Despina, and Fiordiligi, left alone, regrets having confessed her feelings to them"
      }
     ]
    },
@@ -2506,12 +2585,14 @@ export const OPERAS: Opera[] = [
       "title": "Il core vi dono",
       "kind": "Duetto · Act 2",
       "id": "Act 2: Il core vi dono",
+      "editionId": "mozart-il-core-vi-dono",
       "when": "Act 2, walking in the garden, Dorabella has just accepted Guglielmo's little gift of a heart"
      },
      {
       "title": "È amore un ladroncello",
       "kind": "Aria · Act 2",
       "id": "Act 2: È amore un ladroncello",
+      "editionId": "mozart-e-amore-un-ladroncello",
       "when": "Act 2, Fiordiligi has confessed that she loves the fair stranger but says she will master herself; Dorabella tells her she had better give in"
      },
      {
@@ -2604,6 +2685,76 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Sorella, cosa dici?",
       "editionId": "mozart-sorella-cosa-dici",
       "when": "Act 2, straight after “Una donna a quindici anni”: Despina has given the sisters her lesson and gone out, leaving them alone"
+     },
+     {
+      "title": "Ah che tutta in un momento",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Ah che tutta in un momento",
+      "editionId": "mozart-ah-che-tutta-in-un-momento",
+      "when": "Act 1, the start of the finale, in a little garden: alone, the sisters mourn their absent fiancés, not knowing that Despina and Don Alfonso have a new plan for them"
+     },
+     {
+      "title": "Si mora si, si mora",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Si mora si, si mora",
+      "editionId": "mozart-si-mora-si-si-mora",
+      "when": "Act 1, in the garden, straight after the sisters' lament: the two 'Albanians' are heard off stage, crying that they will die"
+     },
+     {
+      "title": "Giacché a morir vicini",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Giacché a morir vicini",
+      "editionId": "mozart-giacche-a-morir-vicini",
+      "when": "Act 1, the two 'Albanians' have swallowed 'arsenic' in front of the sisters and lie on the grass as if dying"
+     },
+     {
+      "title": "Eccovi il medico",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Eccovi il medico",
+      "editionId": "mozart-eccovi-il-medico",
+      "when": "Act 1, the sisters have been left holding up the 'dying' men; Don Alfonso comes back with a doctor, who is Despina in disguise"
+     },
+     {
+      "title": "Dove son",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dove son",
+      "editionId": "mozart-dove-son-cosi",
+      "when": "Act 1, the 'doctor' has drawn the 'poison' out with a magnet, and the two men slowly come round"
+     },
+     {
+      "title": "Dammi un bacio, o mio tesoro",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dammi un bacio, o mio tesoro",
+      "editionId": "mozart-dammi-un-bacio",
+      "when": "Act 1, the revived men are courting the sisters, who can hardly resist; Despina and Don Alfonso blame the magnetism, and the men ask for a kiss"
+     },
+     {
+      "title": "Ah correte al giardino",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah correte al giardino",
+      "editionId": "mozart-ah-correte-al-giardino",
+      "when": "Act 2, straight after “Prenderò quel brunettino”: the sisters have shared out the two strangers and, on their way out, run into Don Alfonso"
+     },
+     {
+      "title": "Il tutto deponete",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Il tutto deponete",
+      "editionId": "mozart-il-tutto-deponete",
+      "when": "Act 2, straight after “Secondate, aurette amiche”: in the garden by the sea the two 'Albanians' have stepped ashore wearing chains of flowers, and the sisters stand silent"
+     },
+     {
+      "title": "Oh che bella giornata!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Oh che bella giornata!",
+      "editionId": "mozart-oh-che-bella-giornata",
+      "when": "Act 2, straight after “La mano a me date”: Despina and Don Alfonso have slipped away, leaving Guglielmo arm in arm with Dorabella, and Ferrando and Fiordiligi apart"
+     },
+     {
+      "title": "Ora vedo che siete una donna di garbo",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ora vedo che siete una donna di garbo",
+      "editionId": "mozart-ora-vedo-che-siete",
+      "when": "Act 2, a room in the sisters' house: Dorabella has just told Despina that she has given in to the dark-haired stranger"
      }
     ]
    },
@@ -2676,6 +2827,69 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Andate là, che siete due bizzarre ragazze!",
       "editionId": "mozart-andate-la",
       "when": "Act 2, curtain up: in a room of their house, Despina has lost patience with the sisters, who still will not look at the two 'Albanians'"
+     },
+     {
+      "title": "Giacché a morir vicini",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Giacché a morir vicini",
+      "editionId": "mozart-giacche-a-morir-vicini",
+      "when": "Act 1, the two 'Albanians' have swallowed 'arsenic' in front of the sisters and lie on the grass as if dying"
+     },
+     {
+      "title": "Eccovi il medico",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Eccovi il medico",
+      "editionId": "mozart-eccovi-il-medico",
+      "when": "Act 1, the sisters have been left holding up the 'dying' men; Don Alfonso comes back with a doctor, who is Despina in disguise"
+     },
+     {
+      "title": "Dove son",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dove son",
+      "editionId": "mozart-dove-son-cosi",
+      "when": "Act 1, the 'doctor' has drawn the 'poison' out with a magnet, and the two men slowly come round"
+     },
+     {
+      "title": "Dammi un bacio, o mio tesoro",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dammi un bacio, o mio tesoro",
+      "editionId": "mozart-dammi-un-bacio",
+      "when": "Act 1, the revived men are courting the sisters, who can hardly resist; Despina and Don Alfonso blame the magnetism, and the men ask for a kiss"
+     },
+     {
+      "title": "Il tutto deponete",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Il tutto deponete",
+      "editionId": "mozart-il-tutto-deponete",
+      "when": "Act 2, straight after “Secondate, aurette amiche”: in the garden by the sea the two 'Albanians' have stepped ashore wearing chains of flowers, and the sisters stand silent"
+     },
+     {
+      "title": "La mano a me date",
+      "kind": "Quartetto · Act 2",
+      "id": "Act 2: La mano a me date",
+      "editionId": "mozart-la-mano-a-me-date",
+      "when": "Act 2, the two 'Albanians' are too tongue-tied to speak, and Don Alfonso has told Despina to do with one sister what he does with the other"
+     },
+     {
+      "title": "Ora vedo che siete una donna di garbo",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ora vedo che siete una donna di garbo",
+      "editionId": "mozart-ora-vedo-che-siete",
+      "when": "Act 2, a room in the sisters' house: Dorabella has just told Despina that she has given in to the dark-haired stranger"
+     },
+     {
+      "title": "Come tutto congiura",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Come tutto congiura",
+      "editionId": "mozart-come-tutto-congiura",
+      "when": "Act 2, straight after “È amore un ladroncello”: Dorabella has gone out with Despina, and Fiordiligi, left alone, regrets having confessed her feelings to them"
+     },
+     {
+      "title": "Vittoria padroncini!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vittoria padroncini!",
+      "editionId": "mozart-vittoria-padroncini",
+      "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
      }
     ]
    },
@@ -2739,30 +2953,35 @@ export const OPERAS: Opera[] = [
       "title": "Secondate, aurette amiche",
       "kind": "Duetto con Coro · Act 2",
       "id": "Act 2: Secondate, aurette amiche",
+      "editionId": "mozart-secondate-aurette-amiche",
       "when": "Act 2, Don Alfonso has hurried the sisters to the garden by the sea, where the two 'Albanians' wait in a boat decked with flowers, with musicians"
      },
      {
       "title": "Ah lo veggio quell'anima bella",
       "kind": "Aria · Act 2",
       "id": "Act 2: Ah lo veggio quell'anima bella",
+      "editionId": "mozart-ah-lo-veggio",
       "when": "Act 2, Ferrando has followed Fiordiligi, who called him a snake and told him to go; he asks only for a kinder look, and sees her look at him and sigh"
      },
      {
       "title": "In qual fiero contrasto… Tradito, schernito",
       "kind": "Recitative and cavatina · Act 2",
       "id": "Act 2: In qual fiero contrasto… Tradito, schernito",
+      "editionId": "mozart-tradito-schernito",
       "when": "Act 2, Guglielmo has gone; Ferrando is alone, torn between revenge and his love for Dorabella"
      },
      {
       "title": "Fra gli amplessi in pochi istanti",
       "kind": "Duetto · Act 2",
       "id": "Act 2: Fra gli amplessi in pochi istanti",
+      "editionId": "mozart-fra-gli-amplessi",
       "when": "Act 2, Fiordiligi has sent for the officers' uniforms and put on a hat, meaning to join her fiancé at the front; Guglielmo and Don Alfonso are watching unseen"
      },
      {
       "title": "Tutti accusan le donne",
       "kind": "Andante · Act 2",
       "id": "Act 2: Tutti accusan le donne",
+      "editionId": "mozart-tutti-accusan-le-donne",
       "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
      },
      {
@@ -2834,6 +3053,97 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Si può sapere un poco",
       "editionId": "mozart-si-puo-sapere",
       "when": "Act 1, straight after “E voi ridete?”: the two officers are still laughing at Don Alfonso, sure that their sweethearts have already won them the bet"
+     },
+     {
+      "title": "Si mora si, si mora",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Si mora si, si mora",
+      "editionId": "mozart-si-mora-si-si-mora",
+      "when": "Act 1, in the garden, straight after the sisters' lament: the two 'Albanians' are heard off stage, crying that they will die"
+     },
+     {
+      "title": "Giacché a morir vicini",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Giacché a morir vicini",
+      "editionId": "mozart-giacche-a-morir-vicini",
+      "when": "Act 1, the two 'Albanians' have swallowed 'arsenic' in front of the sisters and lie on the grass as if dying"
+     },
+     {
+      "title": "Eccovi il medico",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Eccovi il medico",
+      "editionId": "mozart-eccovi-il-medico",
+      "when": "Act 1, the sisters have been left holding up the 'dying' men; Don Alfonso comes back with a doctor, who is Despina in disguise"
+     },
+     {
+      "title": "Dove son",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dove son",
+      "editionId": "mozart-dove-son-cosi",
+      "when": "Act 1, the 'doctor' has drawn the 'poison' out with a magnet, and the two men slowly come round"
+     },
+     {
+      "title": "Dammi un bacio, o mio tesoro",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dammi un bacio, o mio tesoro",
+      "editionId": "mozart-dammi-un-bacio",
+      "when": "Act 1, the revived men are courting the sisters, who can hardly resist; Despina and Don Alfonso blame the magnetism, and the men ask for a kiss"
+     },
+     {
+      "title": "Il tutto deponete",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Il tutto deponete",
+      "editionId": "mozart-il-tutto-deponete",
+      "when": "Act 2, straight after “Secondate, aurette amiche”: in the garden by the sea the two 'Albanians' have stepped ashore wearing chains of flowers, and the sisters stand silent"
+     },
+     {
+      "title": "La mano a me date",
+      "kind": "Quartetto · Act 2",
+      "id": "Act 2: La mano a me date",
+      "editionId": "mozart-la-mano-a-me-date",
+      "when": "Act 2, the two 'Albanians' are too tongue-tied to speak, and Don Alfonso has told Despina to do with one sister what he does with the other"
+     },
+     {
+      "title": "Oh che bella giornata!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Oh che bella giornata!",
+      "editionId": "mozart-oh-che-bella-giornata",
+      "when": "Act 2, straight after “La mano a me date”: Despina and Don Alfonso have slipped away, leaving Guglielmo arm in arm with Dorabella, and Ferrando and Fiordiligi apart"
+     },
+     {
+      "title": "Barbara, perchè fuggi?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Barbara, perchè fuggi?",
+      "editionId": "mozart-barbara-perche-fuggi",
+      "when": "Act 2, straight after “Il core vi dono”: Dorabella and Guglielmo have gone off arm in arm, and Fiordiligi comes in, running from Ferrando"
+     },
+     {
+      "title": "Amico, abbiamo vinto!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, abbiamo vinto!",
+      "editionId": "mozart-amico-abbiamo-vinto",
+      "when": "Act 2, Fiordiligi has gone out; Ferrando hurries to tell Guglielmo how she sent him away, not yet knowing that Dorabella has given in to Guglielmo"
+     },
+     {
+      "title": "Bravo, questa è costanza",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Bravo, questa è costanza",
+      "editionId": "mozart-bravo-questa-e-costanza",
+      "when": "Act 2, straight after “Tradito, schernito”: Don Alfonso and Guglielmo, who have been listening at the back, step forward"
+     },
+     {
+      "title": "Ah poveretto me!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah poveretto me!",
+      "editionId": "mozart-ah-poveretto-me",
+      "when": "Act 2, straight after “Fra gli amplessi in pochi istanti”: Guglielmo has watched Fiordiligi give in to Ferrando, and Don Alfonso has had to hold him back"
+     },
+     {
+      "title": "Vittoria padroncini!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vittoria padroncini!",
+      "editionId": "mozart-vittoria-padroncini",
+      "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
      }
     ]
    },
@@ -2904,24 +3214,28 @@ export const OPERAS: Opera[] = [
       "title": "Secondate, aurette amiche",
       "kind": "Duetto con Coro · Act 2",
       "id": "Act 2: Secondate, aurette amiche",
+      "editionId": "mozart-secondate-aurette-amiche",
       "when": "Act 2, Don Alfonso has hurried the sisters to the garden by the sea, where the two 'Albanians' wait in a boat decked with flowers, with musicians"
      },
      {
       "title": "Il core vi dono",
       "kind": "Duetto · Act 2",
       "id": "Act 2: Il core vi dono",
+      "editionId": "mozart-il-core-vi-dono",
       "when": "Act 2, walking in the garden, Dorabella has just accepted Guglielmo's little gift of a heart"
      },
      {
       "title": "Donne mie, la fate a tanti",
       "kind": "Aria · Act 2",
       "id": "Act 2: Donne mie, la fate a tanti",
+      "editionId": "mozart-donne-mie-la-fate-a-tanti",
       "when": "Act 2, Guglielmo has shown Ferrando the portrait of Ferrando that he took from Dorabella, saying she gave it to him as a pledge, and Ferrando begs him for advice that he cannot give"
      },
      {
       "title": "Tutti accusan le donne",
       "kind": "Andante · Act 2",
       "id": "Act 2: Tutti accusan le donne",
+      "editionId": "mozart-tutti-accusan-le-donne",
       "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
      },
      {
@@ -2986,6 +3300,97 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Si può sapere un poco",
       "editionId": "mozart-si-puo-sapere",
       "when": "Act 1, straight after “E voi ridete?”: the two officers are still laughing at Don Alfonso, sure that their sweethearts have already won them the bet"
+     },
+     {
+      "title": "Si mora si, si mora",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Si mora si, si mora",
+      "editionId": "mozart-si-mora-si-si-mora",
+      "when": "Act 1, in the garden, straight after the sisters' lament: the two 'Albanians' are heard off stage, crying that they will die"
+     },
+     {
+      "title": "Giacché a morir vicini",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Giacché a morir vicini",
+      "editionId": "mozart-giacche-a-morir-vicini",
+      "when": "Act 1, the two 'Albanians' have swallowed 'arsenic' in front of the sisters and lie on the grass as if dying"
+     },
+     {
+      "title": "Eccovi il medico",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Eccovi il medico",
+      "editionId": "mozart-eccovi-il-medico",
+      "when": "Act 1, the sisters have been left holding up the 'dying' men; Don Alfonso comes back with a doctor, who is Despina in disguise"
+     },
+     {
+      "title": "Dove son",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dove son",
+      "editionId": "mozart-dove-son-cosi",
+      "when": "Act 1, the 'doctor' has drawn the 'poison' out with a magnet, and the two men slowly come round"
+     },
+     {
+      "title": "Dammi un bacio, o mio tesoro",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dammi un bacio, o mio tesoro",
+      "editionId": "mozart-dammi-un-bacio",
+      "when": "Act 1, the revived men are courting the sisters, who can hardly resist; Despina and Don Alfonso blame the magnetism, and the men ask for a kiss"
+     },
+     {
+      "title": "Il tutto deponete",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Il tutto deponete",
+      "editionId": "mozart-il-tutto-deponete",
+      "when": "Act 2, straight after “Secondate, aurette amiche”: in the garden by the sea the two 'Albanians' have stepped ashore wearing chains of flowers, and the sisters stand silent"
+     },
+     {
+      "title": "La mano a me date",
+      "kind": "Quartetto · Act 2",
+      "id": "Act 2: La mano a me date",
+      "editionId": "mozart-la-mano-a-me-date",
+      "when": "Act 2, the two 'Albanians' are too tongue-tied to speak, and Don Alfonso has told Despina to do with one sister what he does with the other"
+     },
+     {
+      "title": "Oh che bella giornata!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Oh che bella giornata!",
+      "editionId": "mozart-oh-che-bella-giornata",
+      "when": "Act 2, straight after “La mano a me date”: Despina and Don Alfonso have slipped away, leaving Guglielmo arm in arm with Dorabella, and Ferrando and Fiordiligi apart"
+     },
+     {
+      "title": "Amico, abbiamo vinto!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, abbiamo vinto!",
+      "editionId": "mozart-amico-abbiamo-vinto",
+      "when": "Act 2, Fiordiligi has gone out; Ferrando hurries to tell Guglielmo how she sent him away, not yet knowing that Dorabella has given in to Guglielmo"
+     },
+     {
+      "title": "Bravo, questa è costanza",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Bravo, questa è costanza",
+      "editionId": "mozart-bravo-questa-e-costanza",
+      "when": "Act 2, straight after “Tradito, schernito”: Don Alfonso and Guglielmo, who have been listening at the back, step forward"
+     },
+     {
+      "title": "Come tutto congiura",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Come tutto congiura",
+      "editionId": "mozart-come-tutto-congiura",
+      "when": "Act 2, straight after “È amore un ladroncello”: Dorabella has gone out with Despina, and Fiordiligi, left alone, regrets having confessed her feelings to them"
+     },
+     {
+      "title": "Ah poveretto me!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah poveretto me!",
+      "editionId": "mozart-ah-poveretto-me",
+      "when": "Act 2, straight after “Fra gli amplessi in pochi istanti”: Guglielmo has watched Fiordiligi give in to Ferrando, and Don Alfonso has had to hold him back"
+     },
+     {
+      "title": "Vittoria padroncini!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vittoria padroncini!",
+      "editionId": "mozart-vittoria-padroncini",
+      "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
      }
     ]
    },
@@ -3048,6 +3453,7 @@ export const OPERAS: Opera[] = [
       "title": "Tutti accusan le donne",
       "kind": "Andante · Act 2",
       "id": "Act 2: Tutti accusan le donne",
+      "editionId": "mozart-tutti-accusan-le-donne",
       "when": "Act 2, both officers know that their fiancées have given in; Don Alfonso tells them to marry them anyway and asks them to learn a verse"
      },
      {
@@ -3161,6 +3567,90 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Oh la saria da ridere",
       "editionId": "mozart-oh-la-saria-da-ridere",
       "when": "Act 1, straight after “Un'aura amorosa”: the officers have gone to wait in the garden for Don Alfonso's orders, and he is left alone"
+     },
+     {
+      "title": "Si mora si, si mora",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Si mora si, si mora",
+      "editionId": "mozart-si-mora-si-si-mora",
+      "when": "Act 1, in the garden, straight after the sisters' lament: the two 'Albanians' are heard off stage, crying that they will die"
+     },
+     {
+      "title": "Giacché a morir vicini",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Giacché a morir vicini",
+      "editionId": "mozart-giacche-a-morir-vicini",
+      "when": "Act 1, the two 'Albanians' have swallowed 'arsenic' in front of the sisters and lie on the grass as if dying"
+     },
+     {
+      "title": "Eccovi il medico",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Eccovi il medico",
+      "editionId": "mozart-eccovi-il-medico",
+      "when": "Act 1, the sisters have been left holding up the 'dying' men; Don Alfonso comes back with a doctor, who is Despina in disguise"
+     },
+     {
+      "title": "Dove son",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dove son",
+      "editionId": "mozart-dove-son-cosi",
+      "when": "Act 1, the 'doctor' has drawn the 'poison' out with a magnet, and the two men slowly come round"
+     },
+     {
+      "title": "Dammi un bacio, o mio tesoro",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Dammi un bacio, o mio tesoro",
+      "editionId": "mozart-dammi-un-bacio",
+      "when": "Act 1, the revived men are courting the sisters, who can hardly resist; Despina and Don Alfonso blame the magnetism, and the men ask for a kiss"
+     },
+     {
+      "title": "Ah correte al giardino",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah correte al giardino",
+      "editionId": "mozart-ah-correte-al-giardino",
+      "when": "Act 2, straight after “Prenderò quel brunettino”: the sisters have shared out the two strangers and, on their way out, run into Don Alfonso"
+     },
+     {
+      "title": "Il tutto deponete",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Il tutto deponete",
+      "editionId": "mozart-il-tutto-deponete",
+      "when": "Act 2, straight after “Secondate, aurette amiche”: in the garden by the sea the two 'Albanians' have stepped ashore wearing chains of flowers, and the sisters stand silent"
+     },
+     {
+      "title": "La mano a me date",
+      "kind": "Quartetto · Act 2",
+      "id": "Act 2: La mano a me date",
+      "editionId": "mozart-la-mano-a-me-date",
+      "when": "Act 2, the two 'Albanians' are too tongue-tied to speak, and Don Alfonso has told Despina to do with one sister what he does with the other"
+     },
+     {
+      "title": "Bravo, questa è costanza",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Bravo, questa è costanza",
+      "editionId": "mozart-bravo-questa-e-costanza",
+      "when": "Act 2, straight after “Tradito, schernito”: Don Alfonso and Guglielmo, who have been listening at the back, step forward"
+     },
+     {
+      "title": "Come tutto congiura",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Come tutto congiura",
+      "editionId": "mozart-come-tutto-congiura",
+      "when": "Act 2, straight after “È amore un ladroncello”: Dorabella has gone out with Despina, and Fiordiligi, left alone, regrets having confessed her feelings to them"
+     },
+     {
+      "title": "Ah poveretto me!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah poveretto me!",
+      "editionId": "mozart-ah-poveretto-me",
+      "when": "Act 2, straight after “Fra gli amplessi in pochi istanti”: Guglielmo has watched Fiordiligi give in to Ferrando, and Don Alfonso has had to hold him back"
+     },
+     {
+      "title": "Vittoria padroncini!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Vittoria padroncini!",
+      "editionId": "mozart-vittoria-padroncini",
+      "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
      }
     ]
    }

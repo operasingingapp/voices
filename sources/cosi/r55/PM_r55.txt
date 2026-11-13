@@ -1,0 +1,181 @@
+# page 292 system 1 starts bar 1
+# Recitativo secco, 4/4, C major; piano = continuo as printed
+1 RH1: E4+G4+C5:w~
+1 LH1: C3:w~
+# JUDGE bar 2 RH: X - chord tied into bar 3 (arc visible)
+2 RH1: E4+G4+C5:w~
+2 LH1: C3:w~
+3 RH1: E4+G4+C5:h E4+B4:h
+3 LH1: C3:h G#3:h
+# page 292 system 2 starts bar 4
+4 RH1: E4+A4+C5:h r:h
+4 LH1: A3:w
+5 RH1: E4+A4+C#5:w~
+5 LH1: G3:w~
+6 RH1: E4+A4+C#5:h D4+A4+D5:h~
+6 LH1: G3:h F#3:h~
+# page 292 system 3 starts bar 7
+7 RH1: D4~+A4~+D5:w
+7 LH1: F#3:w~
+# bar 8 LH: F3 tied from F#3 of bar 7 (no accidental printed) - written F#3
+8 RH1: D4+A4+C5:w
+8 LH1: F#3:w
+# page 292 system 4 starts inside bar 9
+9 RH1: D4+G4+B4:q r:q D4+G4+B4:h~
+9 LH1: G3:h F3:h~
+10 RH1: D4+G4+B4:h C4+G4+C5:h~
+10 LH1: F3:h E3:h~
+11 RH1: C4~+G4~+C5:w
+# JUDGE bar 11 LH: X - tie arc to bar 12 (continues at system start)
+11 LH1: E3:w~
+# page 292 system 5 starts bar 12
+12 RH1: C4+G4+Bb4:w
+# JUDGE bar 12 LH: X - note in the E3 space (between D3 and F3 lines), tied from bar 11
+12 LH1: E3:w
+13 RH1: C4+F4+A4:q r:q C4+F4+A4:h
+13 LH1: F3:h Eb3:h
+14 RH1: Bb3+F4+Bb4:w~
+14 LH1: D3:w~
+# page 293 system 1 starts bar 15
+15 RH1: Bb3+F4+Bb4:h r:h
+15 LH1: D3:w~
+16 RH1: r:w
+16 LH1: D3:w~
+# page 293 system 2 starts inside bar 17
+# JUDGE bar 17 RH: X - top note on the D5 line (higher than the C5 of bar 18)
+17 RH1: r:h D4+A4+D5:h
+# JUDGE bar 17 LH: Y - F#3 tied into bar 18
+17 LH1: D3:h F#3:h~
+18 RH1: Eb4+A4~+C5~:w
+# JUDGE bar 18 LH: Y - tied from F#3 of bar 17, so F#3
+18 LH1: F#3:w~
+19 RH1: D4+A4+C5:h D4+G4+Bb4:q r:q
+# JUDGE bar 19 LH: Y - tied from F#3 of bar 18, so F#3
+19 LH1: F#3:h G3:h
+# page 293 system 3 starts bar 20
+# JUDGE bar 20 RH: X - ties into bar 21 visible
+20 RH1: C4+F4+C5:w~
+# JUDGE bar 20 LH: X - tie into bar 21 visible
+20 LH1: A3:w~
+21 RH1: C4+F4+C5:h D4+F4+Bb4:h~
+21 LH1: A3:h Bb3:h~
+22 RH1: D4+F4+Bb4:w~
+22 LH1: Bb3:w~
+# page 293 system 4 starts bar 23
+23 RH1: D4+F4+Bb4:h r:h
+23 LH1: Bb3:w~
+24 RH1: r:w
+# JUDGE bar 24 LH: Y - tie continues to bar 25 (arc at system start)
+24 LH1: Bb3:w~
+# page 293 system 5 starts bar 25
+25 RH1: r:w
+# JUDGE bar 25 LH: Y - accidental is a flat, note tied from bar 24
+25 LH1: Bb3:w~
+26 RH1: r:h C4+G4+C5:h~
+# JUDGE bar 26 LH: Y - first half tied from Bb3 of bar 25
+26 LH1: Bb3:h E3:h~
+# page 293 system 6 starts bar 27
+27 RH1: C4~+G4~+C5:w
+27 LH1: E3:w~
+28 RH1: C4+G4+Bb4:w
+28 LH1: E3:w
+# page 294 system 1 starts bar 29
+29 RH1: C4+F4+A4:w~
+29 LH1: F3:w~
+30 RH1: C4+F4+A4:w~
+# JUDGE bar 30 LH: Y - tie arc into bar 31 at system start
+30 LH1: F3:w~
+# page 294 system 2 starts bar 31
+31 RH1: C4+F4+A4:h D4+G4+B4:h
+31 LH1: F3:w
+32 RH1: r:q D4+G4+B4:q D4+A4+D5:h~
+32 LH1: r:q G3:q F#3:h~
+33 RH1: D4~+A4~+D5:w
+33 LH1: F#3:w~
+# page 294 system 3 starts bar 34
+34 RH1: D4+A4+C5:w
+34 LH1: F#3:w
+35 RH1: D4+G4+B4:w~
+35 LH1: G3:w~
+36 RH1: D4+G4+B4:h r:h
+36 LH1: G3:w
+# page 294 system 4 starts bar 37
+37 RH1: D4+G4+B4:w
+37 LH1: F3:w
+# JUDGE bar 38 RH: Y - all three notes tied (top arc C5 to C5 of bar 39)
+38 RH1: C4+G4+C5:w~
+38 LH1: E3:w~
+39 RH1: C5:h Bb4:h
+39 RH2: C4+G4:w
+39 LH1: E3:w
+# page 294 system 5 starts bar 40
+# bar 40-42: bracketed passage (optional cut?) in the voice staff
+40 RH1: C4+F4+A4:w~
+40 LH1: F3:w~
+41 RH1: C4+F4+A4:q r:q C4+F4+A4:h~
+41 LH1: F3:h Eb3:h~
+42 RH1: C4+F4+A4:h Bb3+F4+Bb4:q r:q
+42 LH1: Eb3:h D3:h
+# page 294 system 6 starts bar 43
+43 RH1: D4+A4:w
+43 LH1: F#3:w
+44 RH1: D4+G4+Bb4:w~
+44 LH1: G3:w~
+45 RH1: D4+G4+Bb4:h E4+Bb4+C#5:h
+45 LH1: G3:w
+# page 295 system 1 starts bar 46
+# JUDGE bar 46 RH: Y - E5 also tied (arc above to E5 of bar 47)
+46 RH1: r:q E4+A4+C#5:q E4+B4+E5:h~
+46 LH1: r:q A3:q G#3:h~
+47 RH1: E5:h D5:h
+47 RH2: E4+B4:w
+47 LH1: G#3:w
+# page 295 system 2 starts inside bar 48
+# JUDGE bar 48 RH: Y - no sharp printed on the first chord: C5 as printed
+48 RH1: E4+A4+C5:q r:q E4+A4+C#5:h~
+48 LH1: A3:h G3:h~
+# JUDGE bar 49 RH: Y - D5 also tied (arc above)
+49 RH1: E4+A4+C#5:h D4+A4+D5:h~
+49 LH1: G3:h F#3:h~
+50 RH1: D5:h C5:h
+50 RH2: D4+A4:w
+50 LH1: F#3:w
+# page 295 system 3 starts bar 51
+51 RH1: F#4+B4:w~
+51 LH1: D#3:w~
+52 RH1: F#4+B4:w
+52 LH1: D#3:w
+53 RH1: E4+B4:q r:q r:h
+53 LH1: G3:w
+# page 295 system 4 starts bar 54
+# JUDGE bar 54 RH: Y - D5 also tied (arc above)
+54 RH1: D4+A4+D5:w~
+54 LH1: F#3:w~
+55 RH1: D5:h C5:h
+55 RH2: D4+A4:w
+55 LH1: F#3:w
+56 RH1: D4+G4+B4:h r:h
+56 LH1: G3:w
+# page 295 system 5 starts bar 57
+57 RH1: D4+G4+B4:h C4+G4+C5:h~
+57 LH1: F3:h E3:h~
+58 RH1: C4+G4+C5:q r:q r:h
+58 LH1: E3:w
+# page 296 system 1 starts bar 59
+59 RH1: E4+B4:h~ E4+B4+D5:h
+59 LH1: G#3:w
+60 RH1: E4+A4+C5:q r:q E4+A4+C#5:h~
+60 LH1: A3:h G3:h~
+# page 296 system 2 starts bar 61
+61 RH1: E4+A4+C#5:h D4+A4+D5:q r:q
+61 LH1: G3:h F#3:h~
+62 RH1: r:h E4+B4:h~
+62 LH1: F#3:h G#3:h~
+# page 296 system 3 starts bar 63
+63 RH1: E4+B4+D5:h E4+A4+C#5:h~
+63 LH1: G#3:h A3:h~
+64 RH1: E4+A4+C#5:h D4+A4+D5:h
+64 LH1: A3:h F#3:h
+# bar 65: final double bar before No. 29
+65 RH1: r:q B3+E4+G#4:q C#4+E4+A4:h
+65 LH1: r:q E3:q A2:h

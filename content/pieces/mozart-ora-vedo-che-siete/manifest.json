@@ -1,0 +1,136 @@
+{
+ "editionId": "mozart-ora-vedo-che-siete",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ora vedo che siete una donna di garbo",
+ "subtitle": "Fiordiligi, Dorabella and Despina: recitative from Così fan tutte, Act 2",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "61"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 10, recitative before No. 28",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (fà; forestieri, where the libretto has forastieri; Guglielmo for Guilelmo; muojano; Madamigella; si without its accent in E che si; pur troppo as two words; Despina's Ma brava!, where the libretto has Mo brava!; tra un ben certo; c'è sempre un gran divario, with un; po without its apostrophe; un' eloquenza and com' hai as two words; se' innamorata and io 'l brunetto, each pair sung on one note)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 282–286, the recitative before No. 28 (61 bars)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). Where the print gives a second rhythm for the German words (bars 12, 16, 17, 22, 28, 36, 42, 44, 45, 47, 49, 51, 53, 54 and 56), the Italian rhythm is kept. The German singing translation is left out. From bar 56 Peters prints the music from a manuscript in Dresden (its footnote; the autograph's version is in its appendix, Anhang I, p. 367); this is Peters' text. It ends “segue Nr. 28 Arie”. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (no separate timing of this recitative was found; about 2½ minutes)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

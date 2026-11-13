@@ -1,0 +1,268 @@
+# page 224 system 1 starts bar 1
+# bar 1: Andante, 3/8, E-flat major (3 flats); "dolce" under the RH
+1 RH1: word:dolce G4+Bb4:e( Eb4+G4:e Ab4+C5:s. G4+Bb4:x)
+# JUDGE bar 1 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+1 LH1: Eb3:q.~
+2 RH1: G4+Bb4:e( Eb5+G5:e D5+F5:e
+# JUDGE bar 2 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+2 LH1: Eb3:q.~
+3 RH1: C5+Eb5:e Bb4+D5:s Ab4+C5:s G4+Bb4:s Ab4+C5:s)
+# JUDGE bar 3 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+3 LH1: Eb3:q.~
+4 RH1: Ab4+C5:e( G4+Bb4:e) r:e
+4 LH1: Eb3:e. Bb3:s G3:s Eb3:s
+# JUDGE bar 5 RH1: X - Bb4 tied into next bar plus long slur to Eb5
+5 RH1: Bb4:q.~(
+# JUDGE bar 5 RH2: X - lower slur D4+F4 to next bar Eb4+G4 is printed
+5 RH2: r:e D4+F4:e( Eb4+G4:e
+# JUDGE bar 5 LH1: OWN (both incomplete) - Bb2 tied to next bar AND a slur from it up to the C4 of the next bar
+5 LH1: Bb2:q.~(
+6 RH1: Bb4:e D5:e Eb5:e)
+# JUDGE bar 6 RH2: X - lower slur ends here
+6 RH2: F4+Ab4:q Eb4+G4:e)
+# JUDGE bar 6 LH1: OWN - X chords correct (Bn2/Bn3 and C3/C4 share one stem, so no 2nd voice as in Y) + slur from previous bar ends on C3+C4
+6 LH1: Bb2:e Bn2+Bn3:e C3+C4:e)
+# page 224 system 2 starts bar 7
+# JUDGE bar 7 RH1: X - staccato dot printed above the C5+Ab5 16th
+7 RH1: Ab4+F5:e C5+Ab5:s*( Bb4+G5:s Ab4+F5:s G4+Eb5:s)
+7 LH1: Ab2+Ab3:e F2+F3:s( G2+G3:s Ab2+Ab3:s An2+An3:s)
+8 RH1: G4+Eb5:e( F4+D5:e) r:e
+8 LH1: Bb3:e. G3:s Ab3:s F3:s
+8 LH2: Bb2:q r:e
+# bar 9: "(Vorhang auf)" stage direction
+9 RH1: G4+Bb4:e( Eb4+G4:e Ab4+C5:s. G4+Bb4:x)
+# JUDGE bar 9 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+9 LH1: Eb3:q.~
+10 RH1: G4+Bb4:e( Eb5+G5:e D5+F5:e
+# JUDGE bar 10 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+10 LH1: Eb3:q.~
+11 RH1: C5+Eb5:e Bb4+D5:s Ab4+C5:s G4+Bb4:s Ab4+C5:s)
+# JUDGE bar 11 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+11 LH1: Eb3:q.~
+12 RH1: Ab4+C5:e( G4+Bb4:e) r:e
+12 LH1: Eb3:e. Bb3:s G3:s Eb3:s
+# page 224 system 3 starts bar 13
+# JUDGE bar 13 RH1: X - Bb4 tied into next bar plus long slur to Eb5
+13 RH1: Bb4:q.~(
+# JUDGE bar 13 RH2: X - lower slur D4+F4 to next bar Eb4+G4 is printed
+13 RH2: r:e D4+F4:e( Eb4+G4:e
+# JUDGE bar 13 LH1: OWN (both incomplete) - Bb2 tied to next bar AND a slur from it up to the C4 of the next bar
+13 LH1: Bb2:q.~(
+14 RH1: Bb4:e D5:e Eb5:e)
+# JUDGE bar 14 RH2: X - lower slur ends here
+14 RH2: F4+Ab4:q Eb4+G4:e)
+# JUDGE bar 14 LH1: OWN - X chords correct (Bn2/Bn3 and C3/C4 share one stem, so no 2nd voice as in Y) + slur from previous bar ends on C3+C4
+14 LH1: Bb2:e Bn2+Bn3:e C3+C4:e)
+# JUDGE bar 15 RH1: OWN (=Y + slur) - two voices: upper F5/G5/Eb5/D5 stems up with own beams and slur, lower chords stems down with own slur below; last lower chord F4+Ab4
+15 RH1: F5:s.( G5:x Eb5:e D5:e)
+15 RH2: Ab4+C5:e( G4+Bb4:e F4+Ab4:e)
+# JUDGE bar 15 LH1: X - slur over first two chords, staccato on third
+15 LH1: Ab2+Ab3:e( Bb2+Bb3:e) Bb2+Bb3:e*
+16 RH1: F4+Ab4+D5:e( Eb4+G4+Eb5:e) r:e
+16 LH1: Bb3:e. Bb3:s G3:s Eb3:s
+16 LH2: Eb3:q r:e
+17 RH1: D5:e.( Bb4:s D5:s F5:s)
+17 LH1: Bb2:x D4:x Bb3:x D4:x F3:x D4:x Bb3:x D4:x F3:x D4:x Bb3:x D4:x
+# page 224 system 4 starts bar 18
+18 RH1: F5:x( Eb5:x D5:x C5:x) C5:e* r:e
+# JUDGE bar 18 LH1: X - same pitch (An3 = A3), explicit natural kept
+18 LH1: F2:x C4:x An3:x C4:x F3:x Eb4:x C4:x An3:x F3:x C4:x An3:x C4:x
+19 RH1: Eb5:e.( C5:s Eb5:s G5:s)
+# JUDGE bar 19 LH1: X - same pitch (An3 = A3)
+19 LH1: F3:x C4:x An3:x C4:x F3:x C4:x An3:x C4:x F3:x C4:x An3:x C4:x
+20 RH1: G5:x( F5:x Eb5:x D5:x) D5:e* r:e
+20 LH1: Bb2:x D4:x Bb3:x D4:x F3:x D4:x Bb3:x D4:x F3:x D4:x Bb3:x D4:x
+# page 224 system 5 starts bar 21
+21 RH1: Bb4:e.( An4:x Bb4:x C5:x Bb4:x Eb5:x D5:x)
+21 LH1: Bb2:s Bb3:s Bb2:s Bb3:s Bb2:s Bb3:s
+# JUDGE bar 22 RH1: Y - each bar 21/22/23 has its own slur, closed in the bar (Cn5 = C5)
+22 RH1: Bb4+D5:e.( An4+C#5:x Bb4+D5:x C5+Eb5:x Bb4+D5:x Eb5+G5:x D5+F5:x)
+22 LH1: Bb2:s Bb3:s Bb2:s Bb3:s Bb2:s Bb3:s
+# JUDGE bar 23 RH1: Y - slur starts on first chord of bar 23
+23 RH1: D5+F5:e.( C#5+En5:x D5+F5:x Eb5+G5:x D5+F5:x G5+Bb5:x F5+Ab5:x)
+23 LH1: Bb2:s Bb3:s Bb2:s Bb3:s Bb2:s Bb3:s
+# bar 24: fermatas on the RH first chord, the LH first chord and the final 16th rests of both staves
+24 RH1: dyn:f F5+Ab5:e.!( D5+F5:s) dyn:p Ab4+D5:s r:s!
+# MARKS bar 24 LH1: f and p printed between the staves (both hands)
+24 LH1: dyn:f Bb2+D3+F3+Bb3:q!~ dyn:p Bb2+D3+F3+Bb3:s r:s!
+# page 225 system 1 starts bar 25
+25 RH1: G4+Bb4:e( Eb4+G4:e Ab4+C5:s. G4+Bb4:x)
+# JUDGE bar 25 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+25 LH1: Eb3:q.~
+26 RH1: G4+Bb4:e( Eb5+G5:e D5+F5:e
+# JUDGE bar 26 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+26 LH1: Eb3:q.~
+27 RH1: C5+Eb5:e Bb4+D5:s Ab4+C5:s G4+Bb4:s Ab4+C5:s)
+# JUDGE bar 27 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+27 LH1: Eb3:q.~
+28 RH1: Ab4+C5:e( G4+Bb4:e) r:e
+28 LH1: Eb3:e. Bb3:s G3:s Eb3:s
+# JUDGE bar 29 RH1: X - Bb4 tied into next bar plus long slur to Eb5
+29 RH1: Bb4:q.~(
+# JUDGE bar 29 RH2: X - lower slur D4+F4 to next bar Eb4+G4 is printed
+29 RH2: r:e D4+F4:e( Eb4+G4:e
+# JUDGE bar 29 LH1: OWN (both incomplete) - Bb2 tied to next bar AND a slur from it up to the C4 of the next bar
+29 LH1: Bb2:q.~(
+30 RH1: Bb4:e D5:e Eb5:e)
+# JUDGE bar 30 RH2: X - lower slur ends here
+30 RH2: F4+Ab4:q Eb4+G4:e)
+# JUDGE bar 30 LH1: OWN - X chords correct (Bn2/Bn3 and C3/C4 share one stem, so no 2nd voice as in Y) + slur from previous bar ends on C3+C4
+30 LH1: Bb2:e Bn2+Bn3:e C3+C4:e)
+# page 225 system 2 starts bar 31
+# JUDGE bar 31 RH1: Y - no staccato dot on C5+Ab5 here (only a speck before the first chord)
+# FIX bar 31 RH1: fresh check: no staccato printed
+31 RH1: Ab4+F5:e C5+Ab5:s( Bb4+G5:s Ab4+F5:s G4+Eb5:s)
+31 LH1: Ab2+Ab3:e F2+F3:s( G2+G3:s Ab2+Ab3:s An2+An3:s)
+32 RH1: G4+Eb5:e( F4+D5:e) r:e
+32 LH1: Bb2+Bb3:e r:s Bb3:s( F3:s D3:s)
+33 RH1: r:e Bb4+D5:e Bb4+D5:e
+33 RH2: F4:q.~
+33 LH1: Bb2:e D3:e Bb2:e
+# JUDGE bar 34 RH1: X - same pitch (An4 = A4)
+# MARKS bar 34 RH1: staccato on An4+C5; slur moved to start on F4 (as printed)
+34 RH1: Bb4+D5:s.( C5+Eb5:x) An4+C5:s* F4:s( An4:s C5:s)
+34 RH2: F4:e s:q
+34 LH1: F3:e F2:e r:e
+35 RH1: C5+Eb5:e C5+Eb5:e C5+Eb5:e
+35 RH2: F4:q.~
+35 LH1: F3:e An3:e F3:e
+# MARKS bar 36 RH1: staccato on Bb4+D5; slur moved to start on D4+F4 (as printed)
+36 RH1: C5+Eb5:s.( D5+F5:x) Bb4+D5:s* D4+F4:s( F4+Bb4:s Bb4+D5:s)
+36 RH2: F4:e s:q
+36 LH1: Bb3:e Bb2:e r:e
+# page 225 system 3 starts bar 37
+# JUDGE bar 37 RH1: X - slur ends on Bn4+D5 inside bar 37
+37 RH1: D5+F5:e( C5+Eb5:e Bn4+D5:e)
+37 RH2: G4:q.
+37 LH1: Bn3+D4:e( C4+Eb4:e D4+F4:e)
+37 LH2: G3:q.
+# JUDGE bar 38 RH1: X - F4 and G4 are a second inside one up-stem chord (G4 displaced right), G4 tied to next chord; F4 quarter stem down from beat 2
+38 RH1: F4+G4~+Bn4+D5:s( Eb4+G4+C5+Eb5:s) C5+Eb5:e.( Bb4+D5:s)
+38 RH2: s:e F4:q
+38 LH1: D4:s( C4:s) An3:e( Bb3:e)
+38 LH2: C3:e( An2:e Bb2:e)
+# JUDGE bar 39 RH1: Y - slur ends on the 4th chord inside bar 39
+39 RH1: D5+F5:s( C5+Eb5:s F4+Bb4+D5:e F4+An4+C5:e)
+39 LH1: Eb3+G3:e( F3:e Eb3:e)
+40 RH1: F4+D5+F5:e( An4+C5+Eb5:e Bb4+D5:e)
+# MARKS bar 40 LH1: tie G3 into the G3 of the bar 41 chord (short arc under the long slur)
+40 LH1: D3:e( F#3:e G3:e~
+# JUDGE bar 41 RH1: X - last chord Eb4+F4+An4+C5 (F4 displaced right of stem)
+41 RH1: C5+Eb5:x( D5+F5:x Eb5+G5:x C5+Eb5:x Bb4+D5:e Eb4+F4+An4+C5:e)
+# JUDGE bar 41 LH1: X - same pitch (F3 = Fn3)
+41 LH1: Eb3+G3:e F3:e F2:e)
+42 RH1: D4+F4+Bb4:q r:e
+42 LH1: Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s
+# page 225 system 4 starts bar 43
+43 RH1: r:s D4+F4+Bb4:s D4+F4+Bb4:s D4+F4+Bb4:s D4+F4+Bb4:s D4+F4+Bb4:s
+43 LH1: r:s Bb3:s Bb3:s Bb3:s Bb3:s Bb3:s
+43 LH2: Bb2:q.~
+# JUDGE bar 44 RH1: Y - flat sits on the G4 line: Gb4 (dim. 7th A-C-Eb-Gb over Bb pedal)
+44 RH1: r:s Eb4+Gb4+C5:s Eb4+Gb4+C5:s Eb4+Gb4+C5:s Eb4+Gb4+C5:s Eb4+Gb4+C5:s
+44 LH1: r:s An3:s An3:s An3:s An3:s An3:s
+44 LH2: Bb2:q.~
+45 RH1: r:s F4+Bb4+D5:s F4+Bb4+D5:s F4+Bb4+D5:s F4+Bb4+D5:s F4+Bb4+D5:s
+45 LH1: r:s Ab3:s Ab3:s Ab3:s Ab3:s Ab3:s
+45 LH2: Bb2:q.~
+# bar 46: the LH lower Bb2 is tied into the first Bb2 of bar 47 (bar 47 LH is Bb2+Bb3 16ths)
+# JUDGE bar 46 RH1: OWN - rest is a plain 16th (the speck after it is no dot: the next chord has 2 flags = 16th, Y's r:s.+x is wrong); slur starts on the 2nd beamed chord
+46 RH1: r:s Bb4+Eb5:s Bb4+Eb5:s Bb4+Eb5:s( Eb5+G5:s Bb4+Eb5:s)
+# JUDGE bar 46 LH1: OWN - plain 16th rest + 16th G3 (X); slur starts on the 2nd beamed G3
+46 LH1: r:s G3:s G3:s G3:s( Eb3:s G3:s)
+# JUDGE bar 46 LH2: OWN (both wrong) - the arc from Bb2 ends on the first Bb2 of bar 47: tie
+46 LH2: Bb2:q.~
+47 RH1: G4+Bb4:e.( Ab4+C5:x G4+Bb4:x F4+Ab4:s Eb4+G4:s)
+47 LH1: Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s Bb2+Bb3:s
+# page 226 system 1 starts bar 48
+# JUDGE bar 48 RH1: X - same pitch (An4 = A4)
+48 RH1: G4+Bb4:s.( Eb4+G4:x) D4+F4:s( Eb4+G4:s F4+Ab4:s F#4+An4:s)
+48 LH1: Bb2+Bb3:e Bb2+Bb3:e r:e
+# JUDGE bar 49 RH1: X - one slur over the whole bar, as bar 1
+49 RH1: G4+Bb4:e( Eb4+G4:e Ab4+C5:s. G4+Bb4:x)
+# JUDGE bar 49 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+49 LH1: Eb3:q.~
+50 RH1: G4+Bb4:e( Eb5+G5:e D5+F5:e
+# JUDGE bar 50 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+50 LH1: Eb3:q.~
+51 RH1: C5+Eb5:e Bb4+D5:s Ab4+C5:s G4+Bb4:s Ab4+C5:s)
+# JUDGE bar 51 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+51 LH1: Eb3:q.~
+52 RH1: Ab4+C5:e( G4+Bb4:e) r:e
+52 LH1: Eb3:e. Bb3:s G3:s Eb3:s
+# page 226 system 2 starts bar 53
+# JUDGE bar 53 RH1: X - Bb4 tied into next bar plus long slur to Eb5
+53 RH1: Bb4:q.~(
+# JUDGE bar 53 RH2: X - lower slur D4+F4 to next bar Eb4+G4 is printed
+53 RH2: r:e D4+F4:e( Eb4+G4:e
+# JUDGE bar 53 LH1: OWN (both incomplete) - Bb2 tied to next bar AND a slur from it up to the C4 of the next bar
+53 LH1: Bb2:q.~(
+54 RH1: Bb4:e D5:e Eb5:e)
+# JUDGE bar 54 RH2: X - lower slur ends here
+54 RH2: F4+Ab4:q Eb4+G4:e)
+# JUDGE bar 54 LH1: OWN - X chords correct (Bn2/Bn3 and C3/C4 share one stem, so no 2nd voice as in Y) + slur from previous bar ends on C3+C4
+54 LH1: Bb2:e Bn2+Bn3:e C3+C4:e)
+# JUDGE bar 55 RH1: OWN (=Y + slur) - two voices: upper F5/G5/Eb5/D5 stems up with own beams and slur, lower chords stems down with own slur below; last lower chord F4+Bb4~ tied to next bar Bb4
+55 RH1: F5:s.( G5:x Eb5:e D5:e)
+55 RH2: Ab4+C5:e( G4+Bb4:e F4+Bb4~:e)
+55 LH1: Ab3:e( Bb3:e Ab3:e)
+56 RH1: Eb4+Eb5:e( F4+D5:e G4+C5:e)
+56 RH2: Bb4:q.
+56 LH1: G3:e( F3:e Eb3:e)
+57 RH1: F4+Bb4:e( D5+F5+Ab5:e Eb5+G5:e)
+57 LH1: D3:e( Bn3:e C4:e)
+58 RH1: Ab4+C5+F5:s* r:s G4+Bb4+Eb5:s* r:s F4+Ab4+D5:s* r:s
+58 LH1: Ab2+Ab3:s* r:s Bb2+Bb3:s* r:s Bb2:s* r:s
+# page 226 system 3 starts bar 59
+# JUDGE bar 59 RH1: X - Eb5 tied to bar 60 Eb5 plus long slur
+59 RH1: Eb5:q.~(
+59 RH2: G4+Bb4:e( Eb4+G4:e Ab4+C5:s. G4+Bb4:x)
+# JUDGE bar 59 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+59 LH1: Eb3:q.~
+60 RH1: G4+Bb4+Eb5:e Eb5+G5:e D5+F5:e
+# JUDGE bar 60 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+60 LH1: Eb3:q.~
+61 RH1: C5+Eb5:e Bb4+D5:s Ab4+C5:s G4+Bb4:s Ab4+C5:s)
+# JUDGE bar 61 LH1: X - arc joins identical Eb3 notes across the barline: tie, not slur
+61 LH1: Eb3:q.~
+62 RH1: Ab4+C5:e( G4+Bb4:e) r:e
+62 LH1: Eb3:e. Bb3:s G3:s Eb3:s
+# JUDGE bar 63 RH1: X - Bb4 tied into next bar plus long slur to Eb5
+63 RH1: Bb4:q.~(
+# JUDGE bar 63 RH2: X - lower slur D4+F4 to next bar Eb4+G4 is printed
+63 RH2: r:e D4+F4:e( Eb4+G4:e
+# JUDGE bar 63 LH1: OWN (both incomplete) - Bb2 tied to next bar AND a slur from it up to the C4 of the next bar
+63 LH1: Bb2:q.~(
+64 RH1: Bb4:e D5:e Eb5:e)
+# JUDGE bar 64 RH2: X - lower slur ends here
+64 RH2: F4+Ab4:q Eb4+G4:e)
+# JUDGE bar 64 LH1: OWN - X chords correct (Bn2/Bn3 and C3/C4 share one stem, so no 2nd voice as in Y) + slur from previous bar ends on C3+C4
+64 LH1: Bb2:e Bn2+Bn3:e C3+C4:e)
+# JUDGE bar 65 RH1: OWN (=Y + slur) - two voices: upper F5/G5/Eb5/D5 stems up with own beams and slur, lower chords stems down with own slur below; last lower chord F4+Bb4~ tied to next bar Bb4
+65 RH1: F5:s.( G5:x Eb5:e D5:e)
+65 RH2: Ab4+C5:e( G4+Bb4:e F4+Bb4~:e)
+65 LH1: Ab3:e( Bb3:e Ab3:e)
+# page 227 system 1 starts bar 66
+66 RH1: Eb4+Eb5:e( F4+D5:e G4+C5:e)
+66 RH2: Bb4:q.
+66 LH1: G3:e( F3:e Eb3:e)
+# JUDGE bar 67 RH1: X - upper slur Bb4..Bn4 closes in the bar
+# MARKS bar 67 RH1: tie Bb4 quarter to Bb4 16th (inner arc under the slur)
+67 RH1: Bb4:q~( Bb4:s Bn4:s)
+# JUDGE bar 67 RH2: X - lower slur over all three lower eighths
+67 RH2: F4+Ab4:e( Eb4+G4:e G4:e)
+67 LH1: D3:e( Eb3:q)
+# JUDGE bar 68 RH1: X - slur starts on the first chord
+68 RH1: Ab4+C5:s( Bb4+D5:x C5+Eb5:x) Eb4+G4:e( D4+F4:e)
+68 LH1: F3:e( Bb3:e Ab3:e)
+68 LH2: Ab2:e( Bb2:q)
+69 RH1: Eb4:s r:s Bb4:e.( D5:s)
+69 RH2: Eb4:s Eb4+G4:s Eb4+G4:s Eb4+G4:s D4+F4:s( F4+Ab4:s)
+# JUDGE bar 69 LH1: OWN - first event is two voices: G3 eighth stem up (upper) and Eb3 eighth stem down (lower), as Y; Bb3 tied (same pitch) to Bb3 of bar 70, as X
+69 LH1: G3:e Bb3:q~
+69 LH2: Eb3:e r:e Bb2:e
+# bar 70: LH changes to treble clef after its first chord
+70 RH1: G4+Eb5:s r:s Bb4+Bb5:e.( D5+D6:s)
+70 LH1: Eb3+Bb3:s clef:G Eb4+G4:s Eb4+G4:s Eb4+G4:s Bb3+D4+F4:s( Bb3+F4+Ab4:s*)
+# bar 71: LH back to bass clef after the first 16th rest; double bar (Rezitativ follows)
+71 RH1: Eb5+Eb6:s r:s G4+Eb5:s r:s r:e
+71 LH1: Eb4+G4:s r:s clef:F Eb3+Eb4:s r:s r:e

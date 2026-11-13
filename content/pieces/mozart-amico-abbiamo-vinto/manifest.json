@@ -1,0 +1,116 @@
+{
+ "editionId": "mozart-amico-abbiamo-vinto",
+ "editionVersion": "1.0.0-peters",
+ "title": "Amico, abbiamo vinto!",
+ "subtitle": "Ferrando and Guglielmo: recitative from Così fan tutte, Act 2",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "97"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 8, recitative after No. 25",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (fù, sù, fè, pocchi, Per Bacco as two words, s'e diportata without the accent; all' amor, ell' è, poch' ore and quest' è as two words each; Ferrando's Ah non ci ho neppur dubbio, where the libretto has Oh; the quotation marks round Pura come colomba … si serba; Guglielmo's asides in brackets)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 262–268, the recitative between No. 25 and No. 26 (97 bars)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges; the judge recounted every barline after one reader missed a system on p. 267), a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (two errors found and corrected: Guglielmo's “Cer-to” in bar 60 starts on D, and the tempo word in bar 65 is “Allegro, a tempo”). Where the print gives a second rhythm for the German words, the Italian rhythm is kept. The German singing translation is left out. The circle-cross over bar 1 ends the cut that Peters marks from the end of No. 23; it is not written in the score. The strings come in at bar 63 (“senza tempo”, Ferrando's “Il mio ritratto!”) and the recitative stays accompanied to the end: “Allegro, a tempo” at bar 65, Andante at bar 79, Allegro at bar 86. It ends “attacca Nr. 26”. Playback tempo: ♩ = 100 for the recitative with continuo, then estimated tempos for the accompanied sections (♩ = 60 senza tempo, 120 Allegro, 70 Andante, 120 Allegro), fitted to Jacobs (3:45)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

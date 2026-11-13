@@ -110,6 +110,40 @@
     }
   },
   {
+    "editionId": "mozart-ah-che-tutta-in-un-momento",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-che-tutta-in-un-momento@1.0.0-peters#79c7eb1d86",
+    "title": "Ah che tutta in un momento",
+    "subtitle": "Fiordiligi and Dorabella: Act 1 finale (No. 18), section 1, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 62,
+    "durationSec": 123,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 18,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-chi-mi-dice-mai",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-ah-chi-mi-dice-mai@1.0.0-schirmer#c25a65659b",
@@ -145,6 +179,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-ah-correte-al-giardino",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-correte-al-giardino@1.0.0-peters#c469805784",
+    "title": "Ah correte al giardino",
+    "subtitle": "Dorabella and Don Alfonso: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 9,
+    "durationSec": 22,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 5,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -207,6 +275,34 @@
     "time": "3/8",
     "languageStatus": {
       "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-ah-lo-veggio",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-lo-veggio@1.0.0-peters#3871c361b4",
+    "title": "Ah lo veggio quell'anima bella",
+    "subtitle": "Ferrando: aria from Così fan tutte, Act 2 (No. 24)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 134,
+    "durationSec": 241,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 22,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -287,6 +383,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 37,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-ah-poveretto-me",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ah-poveretto-me@1.0.0-peters#1486b74a8b",
+    "title": "Ah poveretto me!",
+    "subtitle": "Guglielmo, Don Alfonso and Ferrando: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 54,
+    "durationSec": 132,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 28,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -464,6 +600,40 @@
     }
   },
   {
+    "editionId": "mozart-amico-abbiamo-vinto",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-amico-abbiamo-vinto@1.0.0-peters#ab162c082e",
+    "title": "Amico, abbiamo vinto!",
+    "subtitle": "Ferrando and Guglielmo: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 97,
+    "durationSec": 233,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 41,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-andate-la",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-andate-la@1.0.0-peters#b3a2ae504f",
@@ -567,6 +737,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 33,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-barbara-perche-fuggi",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-barbara-perche-fuggi@1.0.0-peters#6fa9daa4c6",
+    "title": "Barbara, perchè fuggi?",
+    "subtitle": "Fiordiligi and Ferrando: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 23,
+    "durationSec": 87,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 12,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -767,6 +971,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 31,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-bravo-questa-e-costanza",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-bravo-questa-e-costanza@1.0.0-peters#80c3fd517c",
+    "title": "Bravo, questa è costanza",
+    "subtitle": "Don Alfonso, Ferrando and Guglielmo: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 35,
+    "durationSec": 80,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 12,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1074,6 +1318,52 @@
     }
   },
   {
+    "editionId": "mozart-come-tutto-congiura",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-come-tutto-congiura@1.0.0-peters#9e75084462",
+    "title": "Come tutto congiura",
+    "subtitle": "Fiordiligi, Despina, Don Alfonso and Guglielmo: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 65,
+    "durationSec": 175,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 33,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-cos-e-questa-commedia",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-cos-e-questa-commedia@1.0.0-klengel#ba07f302d8",
@@ -1311,6 +1601,64 @@
     }
   },
   {
+    "editionId": "mozart-dammi-un-bacio",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-dammi-un-bacio@1.0.0-peters#c7904f4689",
+    "title": "Dammi un bacio, o mio tesoro",
+    "subtitle": "Ferrando, Guglielmo, Fiordiligi, Dorabella, Despina and Don Alfonso: Act 1 finale (No. 18), section 6, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 213,
+    "durationSec": 197,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 102,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-deh-vieni-alla-finestra",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-deh-vieni-alla-finestra@1.0.0-schirmer#dea36effe5",
@@ -1443,6 +1791,34 @@
     }
   },
   {
+    "editionId": "mozart-donne-mie-la-fate-a-tanti",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-donne-mie-la-fate-a-tanti@1.0.0-peters#b108fb0e8f",
+    "title": "Donne mie, la fate a tanti",
+    "subtitle": "Guglielmo: aria from Così fan tutte, Act 2 (No. 26)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 176,
+    "durationSec": 189,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 14,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-dove-son",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-dove-son@1.0.0-peters#11425a0f4c",
@@ -1478,6 +1854,64 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-dove-son-cosi",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-dove-son-cosi@1.0.0-peters#9001a9dbdf",
+    "title": "Dove son",
+    "subtitle": "Ferrando, Guglielmo, Despina, Don Alfonso, Fiordiligi and Dorabella: Act 1 finale (No. 18), section 5, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 56,
+    "durationSec": 240,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 56,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1540,6 +1974,34 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 18,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-e-amore-un-ladroncello",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-e-amore-un-ladroncello@1.0.0-peters#3c88ef99b8",
+    "title": "È amore un ladroncello",
+    "subtitle": "Dorabella: aria from Così fan tutte, Act 2 (No. 28)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 113,
+    "durationSec": 185,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "1/8",
+    "languageStatus": {
+      "phrases": 16,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1815,6 +2277,64 @@
     }
   },
   {
+    "editionId": "mozart-eccovi-il-medico",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-eccovi-il-medico@1.0.0-peters#2f27636b93",
+    "title": "Eccovi il medico",
+    "subtitle": "Don Alfonso, Ferrando, Guglielmo, Despina, Fiordiligi and Dorabella: Act 1 finale (No. 18), section 4, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 137,
+    "durationSec": 180,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 33,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-eccovi-o-caro-amico",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-eccovi-o-caro-amico@1.0.0-klengel#ae4c3ae40d",
@@ -1959,6 +2479,34 @@
     }
   },
   {
+    "editionId": "mozart-ei-parte-per-pieta",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ei-parte-per-pieta@1.0.0-peters#a1127e8226",
+    "title": "Ei parte… Per pietà",
+    "subtitle": "Fiordiligi: recitative and rondò from Così fan tutte, Act 2 (No. 25)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      }
+    ],
+    "measures": 154,
+    "durationSec": 553,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 17,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-esci-omai-garzon-malnato",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-esci-omai-garzon-malnato@1.0.0-klengel#066a8136cf",
@@ -2094,6 +2642,40 @@
     }
   },
   {
+    "editionId": "mozart-fra-gli-amplessi",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-fra-gli-amplessi@1.0.0-peters#4341f2ed50",
+    "title": "Fra gli amplessi in pochi istanti",
+    "subtitle": "Fiordiligi and Ferrando: duet from Così fan tutte, Act 2 (No. 29)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 142,
+    "durationSec": 374,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-fuor-la-spada",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-fuor-la-spada@1.0.0-peters#6914cdd9ba",
@@ -2217,6 +2799,64 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 201,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-giacche-a-morir-vicini",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-giacche-a-morir-vicini@1.0.0-peters#18a1e4f200",
+    "title": "Giacché a morir vicini",
+    "subtitle": "Don Alfonso, Fiordiligi, Dorabella, Despina, Ferrando and Guglielmo: Act 1 finale (No. 18), section 3, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 154,
+    "durationSec": 223,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 56,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2481,6 +3121,40 @@
     }
   },
   {
+    "editionId": "mozart-il-core-vi-dono",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-il-core-vi-dono@1.0.0-peters#09f16af559",
+    "title": "Il core vi dono",
+    "subtitle": "Dorabella and Guglielmo: duet from Così fan tutte, Act 2 (No. 23)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 121,
+    "durationSec": 271,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "1/8",
+    "languageStatus": {
+      "phrases": 32,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-il-mio-tesoro",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-il-mio-tesoro@1.0.0-schirmer#bd65f2fafa",
@@ -2504,6 +3178,64 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-il-tutto-deponete",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-il-tutto-deponete@1.0.0-peters#12fd507a60",
+    "title": "Il tutto deponete",
+    "subtitle": "Fiordiligi, Dorabella, Despina, Ferrando, Don Alfonso and Guglielmo: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 23,
+    "durationSec": 54,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 15,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2674,6 +3406,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 6,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-la-mano-a-me-date",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-la-mano-a-me-date@1.0.0-peters#8ddbb5e07c",
+    "title": "La mano a me date",
+    "subtitle": "Despina, Don Alfonso, Ferrando and Guglielmo: quartet from Così fan tutte, Act 2 (No. 22)",
+    "kind": "quartetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 91,
+    "durationSec": 146,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 27,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -3241,6 +4019,52 @@
     }
   },
   {
+    "editionId": "mozart-oh-che-bella-giornata",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-oh-che-bella-giornata@1.0.0-peters#3079576c67",
+    "title": "Oh che bella giornata!",
+    "subtitle": "Fiordiligi, Dorabella, Ferrando and Guglielmo: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 62,
+    "durationSec": 185,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 45,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-oh-guarda-il-demonietto",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-oh-guarda-il-demonietto@1.0.0-klengel#58b2b46db8",
@@ -3366,6 +4190,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 75,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-ora-vedo-che-siete",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ora-vedo-che-siete@1.0.0-peters#c6dd4b7033",
+    "title": "Ora vedo che siete una donna di garbo",
+    "subtitle": "Fiordiligi, Dorabella and Despina: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      }
+    ],
+    "measures": 61,
+    "durationSec": 146,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 27,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -4109,6 +4973,40 @@
     }
   },
   {
+    "editionId": "mozart-secondate-aurette-amiche",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-secondate-aurette-amiche@1.0.0-peters#a26eeab990",
+    "title": "Secondate, aurette amiche",
+    "subtitle": "Ferrando and Guglielmo, with the chorus: duet from Così fan tutte, Act 2 (No. 21)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 71,
+    "durationSec": 168,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "3/8",
+    "languageStatus": {
+      "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-sento-o-dio",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-sento-o-dio@1.0.0-peters#05e5c78612",
@@ -4156,6 +5054,58 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 104,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-si-mora-si-si-mora",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-si-mora-si-si-mora@1.0.0-peters#05fc1ba19e",
+    "title": "Si mora si, si mora",
+    "subtitle": "Ferrando, Guglielmo, Don Alfonso, Fiordiligi and Dorabella: Act 1 finale (No. 18), section 2, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 76,
+    "durationSec": 110,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 38,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -4601,6 +5551,74 @@
     }
   },
   {
+    "editionId": "mozart-tradito-schernito",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-tradito-schernito@1.0.0-peters#df0d27351d",
+    "title": "In qual fiero contrasto… Tradito, schernito",
+    "subtitle": "Ferrando: recitative and cavatina from Così fan tutte, Act 2 (No. 27)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 103,
+    "durationSec": 240,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-tutti-accusan-le-donne",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-tutti-accusan-le-donne@1.0.0-peters#dd1dde8086",
+    "title": "Tutti accusan le donne",
+    "subtitle": "Don Alfonso, Ferrando and Guglielmo: Andante from Così fan tutte, Act 2 (No. 30)",
+    "kind": "andante",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 26,
+    "durationSec": 99,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 7,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-tutto-ancor-non-ho-perso",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-tutto-ancor-non-ho-perso@1.0.0-klengel#ddeb31415b",
@@ -4986,6 +6004,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 85,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-vittoria-padroncini",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-vittoria-padroncini@1.0.0-peters#93c6b1ccdc",
+    "title": "Vittoria padroncini!",
+    "subtitle": "Despina, Ferrando, Don Alfonso and Guglielmo: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 15,
+    "durationSec": 36,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 8,
       "withAudio": 0,
       "reviewed": 0
     }

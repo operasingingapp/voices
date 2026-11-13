@@ -1,0 +1,226 @@
+{
+ "editionId": "mozart-dammi-un-bacio",
+ "editionVersion": "1.0.0-peters",
+ "title": "Dammi un bacio, o mio tesoro",
+ "subtitle": "Ferrando, Guglielmo, Fiordiligi, Dorabella, Despina and Don Alfonso: Act 1 finale (No. 18), section 6, from Così fan tutte",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Don Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Dammi un bacio · Stelle, un bacio? · Secondate · Ah che troppo si richiede",
+   "start": "1",
+   "end": "31"
+  },
+  {
+   "id": "b",
+   "label": "Un quadretto più giocondo · Disperati, attossicati",
+   "start": "32",
+   "end": "73"
+  },
+  {
+   "id": "c",
+   "label": "Dammi un bacio (again) · Ah che troppo si richiede · Dalla voglia ch'ho di ridere",
+   "start": "74",
+   "end": "102"
+  },
+  {
+   "id": "d",
+   "label": "Un quadretto più giocondo · Disperati, attossicati (again)",
+   "start": "103",
+   "end": "144"
+  },
+  {
+   "id": "e",
+   "label": "Ch'io ben so · Nè vorrei che tanto foco · Se più cresce il mio furor",
+   "start": "145",
+   "end": "172"
+  },
+  {
+   "id": "f",
+   "label": "Presto, to the end of Act 1",
+   "start": "173",
+   "end": "213"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 16, No. 18 Finale, section 6 of 6",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score: quell' ira as two words, Despina's “si cangerà” (bars 153–170, not in the libretto), Dorabella's “se cresce il mio furor” without più, the officers' aside “Dalla voglia ch'ho di ridere” (bars 94–102, as printed, its bracket not closed), and nè."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 187–205, bars 485–697 of No. 18",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the No. 18 Finale (697 bars) read in fifteen page ranges, sung lines and piano each by two independent readers, every disagreement settled on the zoomed page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by nine fresh proofreaders (three fixes on pages 148–154, the rest clean). The German singing translation is left out. All the singers of this section have a staff throughout, with rests where the print leaves a staff out; singers who do not sing in this section are left out. Cut from the one-file finale at bars 485–697: from the Allegro (D major, alla breve) to the end of Act 1; the Presto from bar 173 (bar 657 of the finale; the print's double barline there is a single one in the file); bars 208–213 are for the piano alone. The cut Peters marks (“vi-” in bar 117 to “-de” in bar 145) is not made. Playback tempo ♩ = 252 (a half note = 126) from René Jacobs's recording (harmonia mundi), then ♩ = 300 from the Presto; Jacobs's track for bars 485–697 lasts 3:17."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

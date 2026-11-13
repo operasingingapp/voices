@@ -1,0 +1,116 @@
+{
+ "editionId": "mozart-ah-correte-al-giardino",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ah correte al giardino",
+ "subtitle": "Dorabella and Don Alfonso: recitative from Così fan tutte, Act 2",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "alfonso",
+   "name": "Don Alfonso",
+   "voiceType": "Bass-baritone",
+   "partKey": "alfonso"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfonso",
+   "label": "Don Alfonso (Bass-baritone)",
+   "shortLabel": "Don Alfonso",
+   "kind": "voice",
+   "roleId": "alfonso",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "9"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 3, recitative after No. 20",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (giardino with no comma; ragazze, allegria, musica and canto with commas where the libretto has exclamation marks)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 223 (systems 3–5), the recitative between No. 20 and No. 21 (9 bars)",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed page: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by a fresh checker (clean). Where the print gives a second rhythm for the German words (bar 5, “co-lo”), the Italian rhythm is kept. The German singing translation is left out. Fiordiligi is on stage but sings nothing here, and the print gives her no staff: the transcription's empty Fiordiligi staff is left out. It ends “segue Nr. 21 Duett mit Chor”. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 100, estimated (Jacobs times this recitative together with No. 21; about ½ minute)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
