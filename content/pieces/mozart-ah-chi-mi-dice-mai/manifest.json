@@ -1,0 +1,167 @@
+{
+ "editionId": "mozart-ah-chi-mi-dice-mai",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ah! chi mi dice mai",
+ "subtitle": "Donna Elvira, Don Giovanni and Leporello: trio from Don Giovanni, Act 1 (No. 3)",
+ "kind": "trio",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Introduction · Ah! chi mi dice mai … che mi mancò di fè?",
+   "start": "1",
+   "end": "23"
+  },
+  {
+   "id": "b",
+   "label": "Ah! se ritrovo l'empio … gli vo' cavar il cor · Udisti? qualche bella",
+   "start": "24",
+   "end": "40"
+  },
+  {
+   "id": "c",
+   "label": "Vo' farne orrendo scempio · Poverina! · Così ne consolò mille e otto cento",
+   "start": "41",
+   "end": "58"
+  },
+  {
+   "id": "d",
+   "label": "Ah! chi mi dice mai (again) … gli vo' cavar il cor",
+   "start": "59",
+   "end": "79"
+  },
+  {
+   "id": "e",
+   "label": "Poverina! (again) · gli vo' cavare il cor · Signorina! (to the end)",
+   "start": "80",
+   "end": "108"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 5, No. 3 Trio",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (dov' è on two notes; e a me non torna ancor, where the libretto has e se a me non torna ancor; Leporello's otto cento printed as two words, where the libretto has ottocento)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 32–37, bars 1–108 of No. 3",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation and the stage directions are left out. The last bar (bar 108, with the fermata on Giovanni's “Signorina!”) is also the first bar of the recitative that follows: Elvira's “Chi è” there is sung as the start of “Chi è là?” and is not part of this piece's words. Playback tempo: ♩ = 123, about 3:31, the median (3:30) of five complete recordings (Fricsay 1958 3:30, Giulini 1959 3:25, Böhm 1977 3:45, Haitink 1984 3:28, Karajan 1985 3:51); Mozart gives the word Allegro only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

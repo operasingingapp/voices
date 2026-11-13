@@ -70,6 +70,46 @@
     }
   },
   {
+    "editionId": "mozart-ah-chi-mi-dice-mai",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ah-chi-mi-dice-mai@1.0.0-schirmer#0c89d0d6ea",
+    "title": "Ah! chi mi dice mai",
+    "subtitle": "Donna Elvira, Don Giovanni and Leporello: trio from Don Giovanni, Act 1 (No. 3)",
+    "kind": "trio",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 108,
+    "durationSec": 211,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 38,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-fuggi-il-traditor",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-ah-fuggi-il-traditor@1.0.0-schirmer#624c0046fd",

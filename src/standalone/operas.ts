@@ -1351,7 +1351,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! chi mi dice mai",
       "kind": "Trio · Act 1",
-      "id": "Act 1: Ah! chi mi dice mai"
+      "id": "Act 1: Ah! chi mi dice mai",
+      "editionId": "mozart-ah-chi-mi-dice-mai"
      },
      {
       "title": "Chi è là?",
@@ -1523,7 +1524,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! chi mi dice mai",
       "kind": "Trio · Act 1",
-      "id": "Act 1: Ah! chi mi dice mai"
+      "id": "Act 1: Ah! chi mi dice mai",
+      "editionId": "mozart-ah-chi-mi-dice-mai"
      },
      {
       "title": "Chi è là?",
@@ -1766,7 +1768,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! chi mi dice mai",
       "kind": "Trio · Act 1",
-      "id": "Act 1: Ah! chi mi dice mai"
+      "id": "Act 1: Ah! chi mi dice mai",
+      "editionId": "mozart-ah-chi-mi-dice-mai"
      },
      {
       "title": "Chi è là?",

@@ -3020,6 +3020,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ah-chi-mi-dice-mai": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Trio",
+    facts: {
+      key: "E-flat major",
+      time: "4/4",
+      tempo: "Allegro, played at ♩ = 123, about 3½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); the fermata on Giovanni's last “Signorina!” is held; Mozart gives the word only",
+    },
+    notePlaceholder: "Elvira is furious, not tragic: keep the Allegro driving and the leaps clean, and let the men's asides stay light",
+    about: (
+      <>
+        <p>
+          Act 1. Before dawn, on a street in Seville, Don Giovanni scents a woman nearby and draws Leporello aside to watch. It is a
+          lady from Burgos, Donna Elvira, in travelling clothes: she asks who can tell her where the brute is whom she loved, to her
+          shame, and who broke his word to her. If she finds him and he will not come back to her, she will wreak dreadful havoc on
+          him and tear his heart out. Giovanni, who has not yet seen her face, decides that some poor girl left by her lover needs
+          consoling; Leporello mutters that this is how he has consoled eighteen hundred. Giovanni steps forward: “Signorina!”
+        </p>
+        <p>
+          Score: No. 3, the Trio (vocal score pages 32–37, 108 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          The last bar is also the first bar of the next piece: after the fermata it holds Elvira's “Chi è”, which is sung as the start
+          of “Chi è là?” and is not part of this piece's words. Only the Italian words are kept, with the print's spelling and
+          punctuation (“dov' è” on two notes, “e a me non torna ancor”, and Leporello's “otto cento” as two words).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
