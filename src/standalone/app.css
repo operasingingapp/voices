@@ -9302,3 +9302,10 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   .ex-actions { flex-direction: row; flex-wrap: wrap; align-items: center; }
   .ex-msg { flex-basis: 100%; }
 }
+.ex-zoom { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; gap: 2px; padding: 4px; border-radius: 999px; background: var(--canvas); box-shadow: var(--shadow-float); }
+.ex-zoom button { appearance: none; border: 0; min-width: 34px; height: 32px; padding: 0 10px; border-radius: 999px; background: transparent; color: var(--ink); font: 500 14px/1 var(--font-sans); font-variant-numeric: tabular-nums; cursor: pointer; }
+.ex-zoom button:hover:not([disabled]) { background: var(--fog); }
+.ex-zoom button[disabled] { opacity: 0.35; cursor: default; }
+.ex-zoom button[aria-pressed="true"] { background: var(--picked); }
+.ex-zoom .ex-zoom-pct { min-width: 64px; }
+.ex-zoom .ex-zoom-fit { border-left: 1px solid var(--fog-strong); border-radius: 0 999px 999px 0; padding-left: 12px; }

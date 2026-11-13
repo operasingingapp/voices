@@ -39,7 +39,7 @@ function loadOpts(): LibrettoOptions {
 const forPreview = (html: string) =>
   html.replace(
     "</body>",
-    `<style>.bar{display:none!important}body{overflow-x:hidden}</style><script>function fit(){var w=document.documentElement.clientWidth;document.documentElement.style.setProperty("--fit",String(Math.min(1.45,(w-40)/794)))}fit();addEventListener("resize",fit)</script></body>`,
+    `<style>.bar{display:none!important}</style><script>window.__zoom=null;function fit(){var w=document.documentElement.clientWidth,f=Math.min(1.45,(w-40)/794);window.__fit=f;document.documentElement.style.setProperty("--fit",String(window.__zoom||f));document.body.style.overflowX=window.__zoom&&window.__zoom>f?"auto":"hidden"}window.__setZoom=function(z){window.__zoom=z;fit()};fit();addEventListener("resize",fit)</script></body>`,
   );
 
 export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, hasNotes, ensemble, roleName, onClose }: Props) {
@@ -54,6 +54,26 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
   const [failed, setFailed] = useState(false);
   const [state, setState] = useState<"idle" | "saving" | "tab" | "blocked" | "noTab">("idle");
   const closeRef = useRef<HTMLButtonElement>(null);
+  // the preview's size: fitted to the window (null), or a size where 100% is the printed page at actual size
+  const [zoom, setZoom] = useState<number | null>(null);
+  const [fitPct, setFitPct] = useState(0);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  const applyZoom = () => {
+    const w = frameRef.current?.contentWindow as (Window & { __setZoom?: (z: number | null) => void; __fit?: number }) | null | undefined;
+    try {
+      w?.__setZoom?.(zoom);
+      if (w?.__fit) setFitPct(Math.round(w.__fit * 100));
+    } catch {
+      /* the preview is not reachable: it keeps its own size */
+    }
+  };
+  useEffect(applyZoom, [zoom]); // eslint-disable-line react-hooks/exhaustive-deps
+  const STEPS = [0.5, 0.75, 1, 1.25, 1.5, 2];
+  const current = zoom ?? fitPct / 100;
+  const step = (dir: 1 | -1) => {
+    const next = dir > 0 ? STEPS.find((z) => z > current + 0.01) : [...STEPS].reverse().find((z) => z < current - 0.01);
+    if (next) setZoom(next);
+  };
 
   useEffect(() => {
     closeRef.current?.focus();
@@ -218,7 +238,21 @@ export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, ha
           <div className="ex-preview" aria-label="Preview" aria-busy={!html}>
             {html ? (
               <>
-                <iframe title="Preview" srcDoc={forPreview(html)} className={stale ? "stale" : undefined} />
+                <iframe ref={frameRef} title="Preview" srcDoc={forPreview(html)} className={stale ? "stale" : undefined} onLoad={applyZoom} />
+                <div className="ex-zoom" role="group" aria-label="Preview size">
+                  <button type="button" onClick={() => step(-1)} aria-label="Smaller" disabled={current <= STEPS[0] + 0.01}>
+                    −
+                  </button>
+                  <button type="button" className="ex-zoom-pct" aria-pressed={zoom === 1} onClick={() => setZoom(1)} title="Actual size">
+                    {zoom === null ? `${fitPct || 100}%` : `${Math.round(zoom * 100)}%`}
+                  </button>
+                  <button type="button" onClick={() => step(1)} aria-label="Larger" disabled={current >= STEPS[STEPS.length - 1] - 0.01}>
+                    +
+                  </button>
+                  <button type="button" className="ex-zoom-fit" aria-pressed={zoom === null} onClick={() => setZoom(null)}>
+                    Fit
+                  </button>
+                </div>
                 {stale && <p className="ex-updating">{failed ? "Could not update. Try again." : "Updating…"}</p>}
               </>
             ) : (
