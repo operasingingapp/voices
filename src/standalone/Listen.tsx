@@ -2,13 +2,14 @@
  * An instrumental number (an overture) with its score: no one sings it, so this is the practice screen's music and
  * playback without the words, the parts or the voice. You hear it and follow the line; tap a bar to start there.
  */
-import { useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { Performance, beatInfo } from "../../shared/timeline";
 import { usePlayback } from "../audio/usePlayback";
 import { useLocalSetting, useTicker } from "../hooks";
 import { ScoreView, stripCrop, type CursorReading, type MarkerReading } from "../score/ScoreView";
 import type { ScoreLayout } from "../score/layout";
 import { pieceData } from "./pieces";
+import { grandPianoMap, grandPianoUrl } from "./grandPiano";
 import { MAX_FACTOR, MIN_FACTOR, stepFactor } from "./metronome";
 import { BeatNote, CROP_PAD, Icon, MAX_ZOOM, STANDARD_LINE_H, fmtTime } from "./Practice";
 
@@ -40,6 +41,22 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
   const pb = usePlayback(perf, parts);
   const engine = pb.engine;
   const playing = engine?.state === "playing";
+  // the recorded concert grand, where the piece has one (the app's piano fills in until it has loaded)
+  const [pianoSound] = useLocalSetting<"grand" | "app">("p:pianoSound", "grand");
+  const grandUrl = grandPianoUrl(editionId);
+  const pianoCh = parts.find((p) => p.kind === "piano")?.channel;
+  useEffect(() => {
+    const port = pb.port;
+    if (!port?.setRecording || pianoCh === undefined) return;
+    if (pianoSound === "grand" && grandUrl) {
+      port.keepRecordings?.([pianoCh]);
+      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, map: grandPianoMap(edition, perf) }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
+    } else {
+      port.setInstrument?.(pianoCh, "piano");
+      port.keepRecordings?.([]);
+    }
+    return () => port.keepRecordings?.([]);
+  }, [pb.port, perf, pianoSound, grandUrl]);
   const q = useTicker(() => Math.round((engine ? engine.displayQ() : 0) * 16) / 16, 80);
 
   const cursorRef = useRef<() => CursorReading | null>(() => null);

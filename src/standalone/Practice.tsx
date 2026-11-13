@@ -20,6 +20,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
+import { grandPianoMap, grandPianoUrl } from "./grandPiano";
 import { allNotes, MARKS, noteLabel, notesKey, NOTE_KEY_RE, type MarkId, type Note } from "./notes";
 import { annotateXml, circled, engravePages, fontFaceCss, openInTab, printDocument, printHtml } from "../score/printScore";
 
@@ -570,6 +571,10 @@ function PracticeScreen({
   const [pageView, setPageView] = useLocalSetting("p:pageView", false);
   const [hearVoice, setHearVoice] = useLocalSetting("p:hearVoice", true);
   const [hearPiano, setHearPiano] = useLocalSetting("p:hearPiano", true);
+  // the piano's sound: the recorded concert grand where the piece has one, or the app's own piano
+  const [pianoSound, setPianoSound] = useLocalSetting<"grand" | "app">("p:pianoSound", "grand");
+  const grandUrl = grandPianoUrl(edition.editionId);
+  const useGrand = pianoSound === "grand" && !!grandUrl;
   // an ensemble: each of the other singers' lines on its own (heard or not, how loud, on what, shown in the score or not),
   // the score's parts in the order you choose, and whose words the line card and the words view show
   const ens = edition.roles.length > 1;
@@ -1082,7 +1087,14 @@ function PracticeScreen({
     const port = pb.port;
     if (!port?.setRecording) return;
     // the port outlives the piece: drop any other piece's singers first, or they would sing along here
-    port.keepRecordings?.(voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel));
+    port.keepRecordings?.([...voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel), ...(useGrand ? [pianoPart.channel] : [])]);
+    // the grand piano: its recording plays the piano's channel (the app's piano fills in until it has loaded)
+    if (useGrand) {
+      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf) }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
+    } else {
+      port.setInstrument?.(pianoPart.channel, "piano");
+      void port.setRecording(pianoPart.channel, null);
+    }
     for (const p of voiceParts) {
       const recs = recordingsOf(p.key);
       if (!recs.length) continue;
@@ -1095,7 +1107,7 @@ function PracticeScreen({
       });
       track(port.setRecording(p.channel, placed)).catch(() => undefined);
     }
-  }, [pb.port, perf]);
+  }, [pb.port, perf, useGrand]);
   // leaving the piece: its singers go too
   useEffect(() => {
     const port = pb.port;
@@ -3443,7 +3455,16 @@ function PracticeScreen({
                           }}
                         />
                         {isPiano ? (
-                          <span className="mix-line-inst none" />
+                          grandUrl ? (
+                            <label className="mix-line-inst">
+                              <select value={pianoSound} onChange={(e) => setPianoSound(e.target.value as "grand" | "app")} aria-label="The piano is played on">
+                                <option value="grand">Grand piano</option>
+                                <option value="app">App piano</option>
+                              </select>
+                            </label>
+                          ) : (
+                            <span className="mix-line-inst none" />
+                          )
                         ) : (
                           <label className="mix-line-inst">
                             <select
