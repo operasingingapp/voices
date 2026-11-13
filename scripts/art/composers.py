@@ -9,7 +9,9 @@ named "Johannes Brahms" holds Verdi and "Frame 9" holds Brahms: the images are p
 import numpy as np, os, json, sys
 FIG, OUT = sys.argv[1], sys.argv[2]
 from PIL import Image, ImageFilter
-COLS = json.loads('{"handel": "#d30d0f", "mozart": "#921112", "vivaldi": "#790001", "faure": "#4a1b3e", "puccini": "#7f1012", "tchaikovsky": "#4d2d45", "bizet": "#615934", "rstrauss": "#112e2a", "wagner": "#595126", "rossini": "#565330", "brahms": "#660413", "beethoven": "#d10808", "haydn": "#056538", "verdi": "#033c26", "bach": "#9a0409"}')
+# backdrops: pale, distinct tints (each composer his own; a few soft reds), a quiet complement to the costume; the originals' own
+# backdrops were deep reds that looked alike side by side
+COLS = json.loads('{"handel": "#79aaa4", "mozart": "#9db7d6", "vivaldi": "#a3b996", "faure": "#b2a3d4", "puccini": "#d99a7c", "tchaikovsky": "#c7a3c0", "bizet": "#dcc47e", "rstrauss": "#93c6ae", "wagner": "#c07d78", "rossini": "#a9cfd2", "brahms": "#9fa7d9", "beethoven": "#b7c4cf", "haydn": "#e5aeb6", "verdi": "#e7c9a1", "bach": "#d48a78"}')
 CUT = {"handel":"38e4289f22ea","mozart":"ecf959a526d6","vivaldi":"27d33c8fb60d","faure":"ffdd2db6ba62","puccini":"d0d65df90166","tchaikovsky":"a218febde4e9","bizet":"24f075fbd806","rstrauss":"08d635be10fb","wagner":"b0c402cd1a7a","rossini":"c87a9944d0d0","brahms":"9e744d05b498","beethoven":"fd51184d3a32","haydn":"97549252bd2a","verdi":"ce265d70f0b1","bach":"317f7027ec20"}
 full = {h[:12]: h for h in os.listdir(os.path.join(FIG, 'images'))}
 def grain(size, seed, strength=7.0):

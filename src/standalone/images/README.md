@@ -27,8 +27,9 @@ Every picture is optimised before it goes in here. Never add an original export.
 
 - **Files:** `composer-<id>-portrait.webp` 720 × 964 (quality 80) and `composer-<id>-face.webp` 320 × 320 (quality
   82), for bach, beethoven, bizet, brahms, faure, handel, haydn, mozart, puccini, rossini, rstrauss, tchaikovsky,
-  verdi, vivaldi and wagner. Built like the character art: the cut-out over the colour of the portrait's original
-  backdrop, with the same paper grain.
+  verdi, vivaldi and wagner. Built like the character art: the cut-out over a backdrop with the same paper grain. Each
+  composer has his own pale tint (a few soft reds), set in `COLS` in `composers.py`; the originals' deep red
+  backdrops looked alike side by side.
 - **Portraits (and Bizet's face):** from the user's `composers.fig` (unzipped):
   `python3 scripts/art/composers.py <unzipped composers.fig> src/standalone/images`. The images are picked by their
   hash in the script, not by frame name: in that file the frame named "Johannes Brahms" holds Verdi and "Frame 9"
