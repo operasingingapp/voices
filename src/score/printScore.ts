@@ -103,8 +103,8 @@ function pageUnits(staves: number) {
   return { w, h: Math.round((w * 297) / 210), mm: w / 210 };
 }
 
-/** the title block on page 1 runs from 16 mm to about 39 mm; the music begins clear of it */
-const TITLE_ROOM_MM = 45;
+/** the title block on page 1 runs from 16 mm to about 44 mm; the music begins clear of it */
+const TITLE_ROOM_MM = 50;
 
 /** The engraved pages, and where the music begins on the first one (mm from the top), below its title block. */
 export interface Engraved {
@@ -415,8 +415,8 @@ export function headBlock(h: PrintHead, style = ""): string {
 /** The title block's type (the layout around it is the document's own) */
 export const HEAD_CSS = `.head { text-align: center; color: #1c1a17; }
 .head .eyebrow { font: 500 7pt/1.3 "Jost", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.24em; text-transform: uppercase; color: #8b7f70; }
-.head h1 { margin: 1.4mm 0 1.6mm; font: 600 25pt/1.04 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.005em; }
-.head .byline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 4mm; padding-top: 1.6mm; border-top: 0.2mm solid #d9d2c6; font: italic 8.6pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
+.head h1 { margin: 2mm 0 4.2mm; font: 600 25pt/1.04 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.005em; }
+.head .byline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 4mm; padding-top: 3.4mm; border-top: 0.2mm solid #ddd6ca; font: italic 8.6pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
 .head .byline span:first-child { text-align: left; }
 .head .byline span:last-child { text-align: right; font-style: normal; font-family: "Cormorant Garamond", Garamond, Georgia, serif; font-weight: 600; font-size: 10.5pt; letter-spacing: 0.02em; color: #2a2622; }
 .head .byline .role { font: 500 6.8pt/1.3 "Jost", Arial, sans-serif; font-style: normal; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }`;

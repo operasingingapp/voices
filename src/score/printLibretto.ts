@@ -28,6 +28,8 @@ export interface LibrettoDoc {
   mine: string;
   /** the language of the sung words (BCP 47), for hyphenation and the reader */
   lang: string;
+  /** its name, over the column of sung words */
+  langName: string;
   fontCss?: string;
   credits?: string;
 }
@@ -120,15 +122,16 @@ body { font-family: "Charis SIL", Charter, Georgia, serif; -webkit-print-color-a
 .doc { width: 210mm; }
 ${HEAD_CSS}
 .head { margin-bottom: 9mm; }
-.blk { margin: 0 0 6mm; }
-.blk h3 { margin: 0 0 2mm; font: 500 7.2pt/1.3 "Jost", Arial, sans-serif; letter-spacing: 0.22em; text-transform: uppercase; color: #8b7f70; break-after: avoid; page-break-after: avoid; }
+.blk { margin: 0 0 6.5mm; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; margin: 0 0 4mm; padding-bottom: 1.4mm; border-bottom: 0.2mm solid #e2dccf; font: 500 6.4pt/1.3 "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #9a9184; }
+.blk h3 { margin: 0 0 1.8mm; font: 600 10.5pt/1.2 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.14em; text-transform: uppercase; color: #2a2622; break-after: avoid; page-break-after: avoid; }
 .blk.you h3 { color: #1f5139; }
-.blk.you h3::after { content: "you"; margin-left: 2.2mm; padding: 0.3mm 1.6mm; border-radius: 3mm; background: #e3efe6; color: #1f5139; letter-spacing: 0.14em; font-size: 6pt; vertical-align: 0.3mm; }
+.blk.you h3::after { content: "you"; margin-left: 2.2mm; padding: 0.3mm 1.6mm; border-radius: 3mm; background: #e3efe6; color: #1f5139; font: 500 5.8pt/1 "Jost", Arial, sans-serif; letter-spacing: 0.14em; vertical-align: 0.6mm; }
 .ln { margin: 0 0 1.8mm; break-inside: avoid; page-break-inside: avoid; }
 .ln.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
 .orig { font: 12pt/1.4 "Charis SIL", Georgia, serif; }
 .ipa { margin-top: 0.2mm; font: 8.4pt/1.35 "Charis SIL", Georgia, serif; color: #8b8378; }
-.tr { font: italic 10.6pt/1.45 "Charis SIL", Georgia, serif; color: #4d4740; }
+.tr { font: italic 10.6pt/1.45 "Charis SIL", Georgia, serif; color: #5d564d; }
 .sung > .tr { margin-top: 0.4mm; }
 .ln.two > .tr { padding-top: 0.6mm; }
 .ln.two .orig + .ipa { margin-bottom: 0.6mm; }
@@ -147,6 +150,6 @@ ${HEAD_CSS}
   .doc { margin: 16px auto; padding: 22mm 22mm 20mm; min-height: 297mm; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.18); zoom: var(--fit, 1); }
 }
 </style></head><body>
-<div class="doc">${headBlock(d.head)}${body}${empty}${d.credits ? `<div class="credits">${esc(d.credits)}</div>` : ""}</div>
+<div class="doc">${headBlock(d.head)}${two && list.length ? `<div class="cols"><span>${esc(d.langName)}</span><span>English</span></div>` : ""}${body}${empty}${d.credits ? `<div class="credits">${esc(d.credits)}</div>` : ""}</div>
 </body></html>`;
 }

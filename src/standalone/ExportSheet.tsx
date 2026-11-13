@@ -92,11 +92,16 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
     setState(how === "dialog" ? "idle" : how);
   };
 
-  const toggle = (k: keyof LibrettoOptions, label: string, hint?: string) => (
-    <button type="button" className="cp-toggle ex-opt" aria-pressed={opts[k]} onClick={() => setOpts((o) => ({ ...o, [k]: !o[k] }))} title={hint}>
-      {label}
+  const row = (on: boolean, flip: () => void, label: string, hint: string) => (
+    <button type="button" className="ex-row" role="switch" aria-checked={on} onClick={flip}>
+      <span className="ex-row-text">
+        <span className="ex-row-label">{label}</span>
+        <span className="ex-row-hint">{hint}</span>
+      </span>
+      <span className="ex-switch" aria-hidden="true" />
     </button>
   );
+  const toggle = (k: keyof LibrettoOptions, label: string, hint: string) => row(opts[k], () => setOpts((o) => ({ ...o, [k]: !o[k] })), label, hint);
 
   return (
     <div className="ex-sheet" role="dialog" aria-modal="true" aria-labelledby="ex-h">
@@ -115,41 +120,52 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
         </header>
         <div className="ex-body">
           <aside className="ex-side">
-            <div className="cp-seg ex-kind" role="group" aria-label="What to save">
-              <button type="button" aria-pressed={kind === "score"} onClick={() => setKind("score")}>
-                Score
-              </button>
-              <button type="button" aria-pressed={kind === "libretto"} onClick={() => setKind("libretto")}>
-                Libretto
-              </button>
+            <div className="ex-group">
+              <p className="ex-label">Document</p>
+              <div className="cp-seg ex-seg" role="group" aria-label="What to save">
+                <button type="button" aria-pressed={kind === "score"} onClick={() => setKind("score")}>
+                  Score
+                </button>
+                <button type="button" aria-pressed={kind === "libretto"} onClick={() => setKind("libretto")}>
+                  Libretto
+                </button>
+              </div>
+              <p className="ex-hint">
+                {kind === "score" ? "Every voice and the piano, on A4 pages." : "The words of this piece, in the order they are sung."}
+              </p>
             </div>
             {kind === "score" ? (
-              <div className="ex-opts">
-                <p className="ex-note">The whole piece on A4, every voice and the piano, as a vocal score prints it.</p>
-                {hasNotes && (
-                  <button type="button" className="cp-toggle ex-opt" aria-pressed={withNotes} onClick={() => setWithNotes((v) => !v)}>
-                    Your notes and marks
-                  </button>
-                )}
-              </div>
+              hasNotes && (
+                <div className="ex-group">
+                  <p className="ex-label">Include</p>
+                  <div className="ex-rows">{row(withNotes, () => setWithNotes((v) => !v), "Your notes and marks", "Written in at their bar, listed at the end")}</div>
+                </div>
+              )
             ) : (
-              <div className="ex-opts">
-                <p className="ex-note">This piece’s words, in the order they are sung, each line under its character’s name.</p>
+              <>
                 {ensemble && (
-                  <div className="cp-seg ex-who" role="group" aria-label="Whose lines">
-                    <button type="button" aria-pressed={opts.everyone} onClick={() => setOpts((o) => ({ ...o, everyone: true }))}>
-                      Everyone
-                    </button>
-                    <button type="button" aria-pressed={!opts.everyone} onClick={() => setOpts((o) => ({ ...o, everyone: false }))}>
-                      Only {roleName}
-                    </button>
+                  <div className="ex-group">
+                    <p className="ex-label">Lines</p>
+                    <div className="cp-seg ex-seg" role="group" aria-label="Whose lines">
+                      <button type="button" aria-pressed={opts.everyone} onClick={() => setOpts((o) => ({ ...o, everyone: true }))}>
+                        Everyone’s
+                      </button>
+                      <button type="button" aria-pressed={!opts.everyone} onClick={() => setOpts((o) => ({ ...o, everyone: false }))} title={`Only ${roleName}’s lines`}>
+                        Only mine
+                      </button>
+                    </div>
                   </div>
                 )}
-                {toggle("translation", "English translation")}
-                {toggle("ipa", "IPA", "How each word is pronounced")}
-                {toggle("gloss", "Word by word", "Each word with its meaning under it")}
-                {toggle("repeats", "Repeated lines", "Every repetition, as sung")}
-              </div>
+                <div className="ex-group">
+                  <p className="ex-label">Include</p>
+                  <div className="ex-rows">
+                    {toggle("translation", "English translation", "Beside each line")}
+                    {toggle("ipa", "IPA", "How each word is pronounced")}
+                    {toggle("gloss", "Word by word", "Each word with its meaning")}
+                    {toggle("repeats", "Repeated lines", "Every repetition, as sung")}
+                  </div>
+                </div>
+              </>
             )}
             <div className="ex-actions">
               <button type="button" className="cp-btn cp-btn--ink" onClick={save} disabled={!html || state === "saving"}>

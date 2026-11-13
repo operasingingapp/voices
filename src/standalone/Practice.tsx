@@ -1033,6 +1033,7 @@ function PracticeScreen({
         names: Object.fromEntries(edition.roles.map((r) => [r.id, r.name])),
         mine: roleId,
         lang: LANG,
+        langName: ORIGINAL,
         fontCss: fontFaceCss(["Charis SIL", "Cormorant Garamond", "Jost"]),
       },
       o,
