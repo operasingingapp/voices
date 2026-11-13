@@ -14,13 +14,16 @@ import list from "./grandPiano.json";
 /** where the recordings are served (a public Cloudflare R2 bucket) */
 export const GRAND_BASE = "https://pub-d8d81ace089e4d0f9b94db0d9c548850.r2.dev/piano/";
 
-/** editionId -> file name of its piano recording */
-const FILES = list as Record<string, string>;
+/** editionId -> its piano recording (the Pianoteq master itself, lossless FLAC) and the gain that matches it to the
+ * app's own piano (the masters are left untouched; the level is set here) */
+const FILES = list as Record<string, { file: string; gainDb: number }>;
 
 /** the recorded grand under the sung lines: a full concert grand masks piano-sounding lines far more than the app's piano */
 export const GRAND_GAIN_DB = -6;
 
-export const grandPianoUrl = (editionId: string): string | undefined => (FILES[editionId] ? GRAND_BASE + FILES[editionId] : undefined);
+export const grandPianoUrl = (editionId: string): string | undefined => (FILES[editionId] ? GRAND_BASE + FILES[editionId].file : undefined);
+/** the recording's level against the app's piano (dB) */
+export const grandPianoGain = (editionId: string): number => FILES[editionId]?.gainDb ?? 0;
 
 /**
  * Where the recording's notes fall on the playing timeline: each piano onset's time in the performance playing now

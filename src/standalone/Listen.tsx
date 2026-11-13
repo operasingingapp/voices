@@ -9,7 +9,7 @@ import { useLocalSetting, useTicker } from "../hooks";
 import { ScoreView, stripCrop, type CursorReading, type MarkerReading } from "../score/ScoreView";
 import type { ScoreLayout } from "../score/layout";
 import { pieceData } from "./pieces";
-import { grandPianoMap, grandPianoUrl } from "./grandPiano";
+import { grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
 import { MAX_FACTOR, MIN_FACTOR, stepFactor } from "./metronome";
 import { BeatNote, CROP_PAD, Icon, MAX_ZOOM, STANDARD_LINE_H, fmtTime } from "./Practice";
 
@@ -50,7 +50,7 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
     if (!port?.setRecording || pianoCh === undefined) return;
     if (pianoSound === "grand" && grandUrl) {
       port.keepRecordings?.([pianoCh]);
-      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, map: grandPianoMap(edition, perf), gainDb: 0, exact: true }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
+      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, map: grandPianoMap(edition, perf), gainDb: grandPianoGain(editionId), exact: true }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
     } else {
       port.setInstrument?.(pianoCh, "piano");
       port.keepRecordings?.([]);

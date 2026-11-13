@@ -20,7 +20,7 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
-import { GRAND_GAIN_DB, grandPianoMap, grandPianoUrl } from "./grandPiano";
+import { GRAND_GAIN_DB, grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
 /** a concert grand seen from above, lid open: the badge of the recorded grand piano */
 const GRAND_ICON = (
   <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
@@ -1097,7 +1097,7 @@ function PracticeScreen({
     port.keepRecordings?.([...voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel), ...(useGrand ? [pianoPart.channel] : [])]);
     // the grand piano: its recording plays the piano's channel (the app's piano fills in until it has loaded)
     if (useGrand) {
-      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf), gainDb: GRAND_GAIN_DB, exact: true }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
+      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf), gainDb: GRAND_GAIN_DB + grandPianoGain(edition.editionId), exact: true }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
     } else {
       port.setInstrument?.(pianoPart.channel, "piano");
       void port.setRecording(pianoPart.channel, null);
