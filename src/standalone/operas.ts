@@ -1698,7 +1698,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
       "kind": "Recitative and aria · Act 1",
-      "id": "Act 1: Don Ottavio! son morta!… Or sai, chi l'onore"
+      "id": "Act 1: Don Ottavio! son morta!… Or sai, chi l'onore",
+      "editionId": "mozart-or-sai-chi-lonore"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",
@@ -2055,7 +2056,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
       "kind": "Recitative and aria · Act 1",
-      "id": "Act 1: Don Ottavio! son morta!… Or sai, chi l'onore"
+      "id": "Act 1: Don Ottavio! son morta!… Or sai, chi l'onore",
+      "editionId": "mozart-or-sai-chi-lonore"
      },
      {
       "title": "Come mai creder deggio",

@@ -1,0 +1,153 @@
+{
+ "editionId": "mozart-or-sai-chi-lonore",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
+ "subtitle": "Donna Anna and Don Ottavio: recitative and aria from Don Giovanni, Act 1 (No. 10a)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Recitative: Don Ottavio! son morta! … lo strano avvenimento",
+   "start": "1",
+   "end": "23"
+  },
+  {
+   "id": "b",
+   "label": "Era già alquanta avanzata la notte … ei più mi stringe, io grido! (Andante)",
+   "start": "24",
+   "end": "37"
+  },
+  {
+   "id": "c",
+   "label": "non viene alcun … da lui mi sciolsi! · Ohimè! respiro.",
+   "start": "38",
+   "end": "53"
+  },
+  {
+   "id": "d",
+   "label": "Allora rinforzo i stridi miei … col dargli morte.",
+   "start": "54",
+   "end": "69"
+  },
+  {
+   "id": "e",
+   "label": "Aria: Or sai, chi l'onore … d'un giusto furor!",
+   "start": "70",
+   "end": "99"
+  },
+  {
+   "id": "f",
+   "label": "Or sai chi l'onore (again) … vendetta ti chieggio (to the end)",
+   "start": "100",
+   "end": "140"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 13, No. 10a Recitativo accompagnato ed Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (Cosa è stato?, alquanta, sacre manto, sappressa and vaccorre without apostrophe, mi vuole abbracciar, non viene alcun, e l'indegno where the libretto has e l'iniquo, compie il misfatto suo sung twice without orrendo, chieggio, and che fù il traditore the first time)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 85–94, bars 1–140 of No. 10a",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation and the stage directions are left out. Don Ottavio's part, printed in the treble clef, is written at sounding pitch (treble clef with the octave below). In bar 28 the print gives Anna one sixteenth too many (the bar adds up to 4¼ beats); one of the repeated A sharps is left out so the bar fits. The word Andante printed again in bar 32 is a repeat, not a change. Playback tempo, from the median track lengths of five complete recordings (Fricsay 1958, Giulini 1959, Böhm 1977, Haitink 1984, Karajan 1985): the recitative (median 3:23) with its Allegro assai and Tempo I at ♩ = 114 and its two Andante passages at ♩ = 57 (half the speed, a proportion chosen for this app, as the tracks time the recitative only as a whole), the stringendo in bars 36–37 written out as a gradual quickening; the aria (median 2:50) Andante at ♩ = 100; Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

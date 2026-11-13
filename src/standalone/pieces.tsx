@@ -3222,6 +3222,42 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-or-sai-chi-lonore": {
+    portrait: "giovanni:anna",
+    opera: "Don Giovanni",
+    kind: "Recitative and aria",
+    facts: {
+      key: "D major (the aria; the recitative has no key signature)",
+      time: "4/4",
+      tempo: "The recitative's Allegro assai at ♩ = 114 and its two Andante passages at ♩ = 57 (half the speed, a proportion chosen for this app), the stringendo before the Tempo I played as a gradual quickening; then the aria Andante at ♩ = 100; about 6¼ minutes in all, from the median lengths of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan), which time the recitative and the aria separately; the fermatas are held; Mozart gives the words only",
+    },
+    notePlaceholder: "The recitative is a story told in shock: let the orchestra's outbursts drive it and the Andante narration hang; the aria is a command, broad and unbending",
+    about: (
+      <>
+        <p>
+          Act 1. Don Giovanni has just left Donna Anna and Don Ottavio, and his parting words have given him away: Anna cries out that
+          he is the man who killed her father. She tells Ottavio what happened that night. Late, alone in her rooms, she saw a man
+          wrapped in a cloak come in and took him at first for Ottavio; he came close without a word and tried to take her in his
+          arms. She struggled and screamed, no one came; he stopped her mouth with one hand and held her with the other until she
+          thought herself lost, but horror gave her strength and she tore herself free. She shouted for help and chased him into the
+          street; her father came running, challenged him, and the stronger man killed the old man. In the aria she reminds Ottavio
+          who tried to rob her of her honour and who took her father from her, bids him remember the wound and the bloodied ground,
+          and demands vengeance.
+        </p>
+        <p>
+          Score: No. 10a, the Recitativo accompagnato and Aria (vocal score pages 85–94, 140 bars), from the G. Schirmer vocal score
+          (New York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read
+          by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again
+          by a fresh checker. Don Ottavio's part, printed in the treble clef, is written at sounding pitch. In bar 28 the print gives
+          Anna one sixteenth too many, and one of her repeated A sharps is left out so the bar adds up. Only the Italian words are
+          kept, with the print's spelling and punctuation (“Cosa è stato?”, “alquanta”, “sacre manto”, “e l'indegno”, “chieggio”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
