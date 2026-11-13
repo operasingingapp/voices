@@ -1371,7 +1371,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Là ci darem la mano",
       "kind": "Duettino · Act 1",
-      "id": "Act 1: Là ci darem la mano"
+      "id": "Act 1: Là ci darem la mano",
+      "editionId": "mozart-la-ci-darem-la-mano"
      },
      {
       "title": "Fermati, scellerato!",
@@ -1915,7 +1916,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Là ci darem la mano",
       "kind": "Duettino · Act 1",
-      "id": "Act 1: Là ci darem la mano"
+      "id": "Act 1: Là ci darem la mano",
+      "editionId": "mozart-la-ci-darem-la-mano"
      },
      {
       "title": "Fermati, scellerato!",

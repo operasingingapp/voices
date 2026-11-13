@@ -2953,6 +2953,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-la-ci-darem-la-mano": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Duettino",
+    facts: {
+      key: "A major",
+      time: "2/4 (Andante) for bars 1–49; 6/8 (Allegro) from the one-eighth upbeat in bar 50 to the end",
+      tempo: "Andante, played at ♩ = 43, then Allegro at a dotted quarter ≈ 57 (♩ = 86), about 3½ minutes in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); their tracks are not split at the Allegro, so its eighth note is set to the Andante's sixteenth; the fermata on “Andiam!” is held; Mozart gives the words only",
+    },
+    notePlaceholder: "Zerlina's line warms as she gives in: keep the Andante unhurried and let the 6/8 dance",
+    about: (
+      <>
+        <p>
+          Act 1. Don Giovanni has sent Masetto away and is alone with Zerlina on her wedding day. He takes her hand: over there, in
+          his little house, she will say yes; it is not far, let them go. She wants to and does not want to; her heart trembles a
+          little, she would be happy, but he may be making a fool of her, and she is sorry for Masetto. He promises to change her
+          lot; she feels she cannot hold out much longer, and gives in. In the Allegro they sing together, arm in arm, of an innocent
+          love that will ease their sorrows.
+        </p>
+        <p>
+          Score: No. 7, the Duettino (vocal score pages 64–68, 83 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          The one-eighth upbeat to the Allegro is kept as its own short bar (bar 50), and in bar 49 the voices are completed with an
+          unprinted eighth rest. Only the Italian words are kept, with the print's spelling and punctuation (“cangierò”, and “tuo
+          sorte” where the libretto has “tua sorte”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

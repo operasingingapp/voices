@@ -2318,6 +2318,40 @@
     }
   },
   {
+    "editionId": "mozart-la-ci-darem-la-mano",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-la-ci-darem-la-mano@1.0.0-schirmer#01611700ed",
+    "title": "Là ci darem la mano",
+    "subtitle": "Don Giovanni and Zerlina: duettino from Don Giovanni, Act 1 (No. 7)",
+    "kind": "duettino",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      }
+    ],
+    "measures": 83,
+    "durationSec": 206,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 48,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-la-commedia-e-graziosa",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-la-commedia-e-graziosa@1.0.0-peters#55e5e2e219",
