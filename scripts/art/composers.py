@@ -12,7 +12,7 @@ from PIL import Image, ImageFilter
 # backdrops: pale, distinct tints, each the complement of the costume's main colour (a red coat on aqua, a green
 # coat on blush; black coats on warm tints, a few soft reds); the originals' own
 # backdrops were deep reds that looked alike side by side
-COLS = json.loads('{"handel": "#79aaa4", "mozart": "#9cc3cf", "vivaldi": "#a9c79a", "haydn": "#e5aeb6", "beethoven": "#a6d1bd", "rossini": "#a9cfd2", "verdi": "#e7c9a1", "wagner": "#b8bf8e", "brahms": "#9fa7d9", "puccini": "#a7bfdc", "bach": "#d6907a", "tchaikovsky": "#cd8a82", "faure": "#e6b892", "bizet": "#dfc781", "rstrauss": "#b5a6d6"}')
+COLS = json.loads('{"handel": "#6ea7a0", "mozart": "#8dbdcc", "vivaldi": "#9ec38c", "haydn": "#e49ca6", "beethoven": "#97cdb4", "rossini": "#9acace", "verdi": "#e7c08d", "wagner": "#b3bc81", "brahms": "#8e98d7", "puccini": "#96b4da", "bach": "#d78268", "tchaikovsky": "#cc7c72", "faure": "#e8ae7e", "bizet": "#e0c46e", "rstrauss": "#a996d3"}')
 CUT = {"handel":"38e4289f22ea","mozart":"ecf959a526d6","vivaldi":"27d33c8fb60d","faure":"ffdd2db6ba62","puccini":"d0d65df90166","tchaikovsky":"a218febde4e9","bizet":"24f075fbd806","rstrauss":"08d635be10fb","wagner":"b0c402cd1a7a","rossini":"c87a9944d0d0","brahms":"9e744d05b498","beethoven":"fd51184d3a32","haydn":"97549252bd2a","verdi":"ce265d70f0b1","bach":"317f7027ec20"}
 full = {h[:12]: h for h in os.listdir(os.path.join(FIG, 'images'))}
 def grain(size, seed, strength=7.0):
@@ -28,7 +28,7 @@ def grain(size, seed, strength=7.0):
 # the figures were painted for deep red backdrops: on pale ones they read heavy. A gentle lift (exposure), softer
 # blacks, a little less saturation (the red cheeks), and a breath of the backdrop's colour in the shadows so the
 # figure sits in its light.
-EXPOSURE, BLACKS, SAT, AMBIENT = 1.18, 0.07, 0.88, 0.10
+EXPOSURE, BLACKS, SAT, AMBIENT = 1.07, 0.02, 0.96, 0.07
 def tone(fig, bgc):
     luma = (fig * np.array([0.299, 0.587, 0.114], np.float32)).sum(-1, keepdims=True)
     fig = luma + (fig - luma) * SAT
