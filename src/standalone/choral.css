@@ -276,5 +276,6 @@
 }
 .name-plate b { font: italic 500 clamp(19px, 2vw, 28px)/1.1 var(--font-display); text-wrap: balance; }
 /* in a circle (a role's face): the initials */
-.name-plate--small { position: static; width: 100%; height: 100%; padding: 0; border-radius: inherit; }
-.name-plate--small b { font: 500 15px/1 var(--font-sans); letter-spacing: 0.04em; }
+.name-plate--small { position: static; width: 100%; height: 100%; padding: 0; border-radius: inherit; container-type: size; }
+/* the initials grow with the circle (a small face in a list, a large one on a role's page) */
+.name-plate--small b { font: italic 500 38cqmin/1 var(--font-display); }
