@@ -3119,6 +3119,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-mi-tradi": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Recitative and aria",
+    facts: {
+      key: "E♭ major (the aria; the recitative has no key signature)",
+      time: "4/4; the aria begins with a one-beat upbeat bar",
+      tempo: "The recitative Allegro assai at ♩ = 63, then the aria at ♩ = 133; about 6 minutes in all (the recitative about 2¼, the aria about 4), from the median lengths of five recordings with the two on separate tracks (Fricsay, Davis, Böhm, Haitink, Muti); the print gives no tempo word for the aria",
+    },
+    notePlaceholder: "Fury and pity in turn: declaim the recitative over the orchestra's outbursts, then keep the aria's long runs even and warm",
+    about: (
+      <>
+        <p>
+          Act 2. Alone, Donna Elvira is horrified by the crimes Don Giovanni has sunk into: heaven's anger cannot wait much longer, she
+          seems to hear the thunderbolt already falling on his head and to see the abyss opening beneath him. Then she wonders at the
+          conflict in her own heart. In the aria she admits that the ungrateful man betrayed her and made her unhappy, yet, betrayed and
+          abandoned, she still pities him: when she thinks of her own suffering her heart cries out for revenge, but when she sees the
+          danger he is in, it starts to pound for him.
+        </p>
+        <p>
+          Score: No. 21c, the Recitativo ed Aria added for the Vienna production of 1788 (vocal score pages 234–239, 166 bars), from the
+          G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung line and
+          the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and
+          checked again by a fresh checker (one correction: the flat printed above the first trill in bar 15). The recitative is bars
+          1–36; the aria starts in bar 37 with its one-beat upbeat, and its last five bars are for the piano alone. Only the Italian
+          words are kept, with the print's spelling and punctuation (“quest' ambascie”, where the libretto has “queste ambasce”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1788), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

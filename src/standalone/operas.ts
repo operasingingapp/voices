@@ -1873,7 +1873,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
       "kind": "Recitative and aria · Act 2",
-      "id": "Act 2: In quali eccessi, o Numi… Mi tradì quell'alma ingrata"
+      "id": "Act 2: In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
+      "editionId": "mozart-mi-tradi"
      },
      {
       "title": "L'ultima prova dell'amor mio",
@@ -4761,7 +4762,7 @@ export const OPERAS: Opera[] = [
 const ALIAS: Record<string, string> = {
   "Sull’aria": "Che soave zeffiretto",
   "Sull'aria… che soave zeffiretto": "Che soave zeffiretto",
-  "Mi tradì quell'alma ingrata": "In quali eccessi… Mi tradì",
+  "Mi tradì quell'alma ingrata": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
   "Pa-pa-pa": "Bald prangt, den Morgen zu verkünden",
   "Vecchia zimarra, senti": "Vecchia zimarra",
   "Che gelida manina": "Ah!… Che gelida manina",

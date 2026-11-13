@@ -1,0 +1,127 @@
+{
+ "editionId": "mozart-mi-tradi",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
+ "subtitle": "Donna Elvira: recitative and aria from Don Giovanni, Act 2 (No. 21c, Vienna 1788)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Recitative: In quali eccessi, o Numi … la giustizia tardar",
+   "start": "1",
+   "end": "16"
+  },
+  {
+   "id": "b",
+   "label": "Sentir già parmi la fatale saetta … e quest' ambascie?",
+   "start": "17",
+   "end": "36"
+  },
+  {
+   "id": "c",
+   "label": "Aria: Mi tradì quell'alma ingrata · Ma tradita e abbandonata",
+   "start": "37",
+   "end": "75"
+  },
+  {
+   "id": "d",
+   "label": "Mi tradì (again) · Quando sento il mio tormento … il cor mi va",
+   "start": "76",
+   "end": "117"
+  },
+  {
+   "id": "e",
+   "label": "Mi tradì (third time) · provo ancor per lui pietà (to the end)",
+   "start": "118",
+   "end": "166"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527, Act 2, No. 21c Recitativo ed Aria (K. 540c), added for the Vienna production of 1788",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (Vienna, 1788)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (quest' ambascie?, where the libretto has queste ambasce?, and o Dio! for oddio!)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 234–239, bars 1–166 of No. 21c",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker (one correction: the flat printed above the first trill in bar 15). The English singing translation, the stage direction and the instrument cues are left out. The recitative is bars 1–36 (no key signature); the aria starts at bar 37, the printed one-beat upbeat, in E♭ major; the last five bars are for the piano alone. Playback tempo: the recitative (Allegro assai) at ♩ = 63, about 2:17, and the aria at ♩ = 133, about 3:53, from the medians of five complete recordings with the two on separate tracks (Fricsay 1958 2:12 + 3:55, Davis 1973 2:18 + 3:54, Böhm 1977 2:04 + 4:36, Haitink 1984 2:20 + 3:47, Muti 1990 2:36 + 3:22); the print gives no tempo word for the aria."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}
