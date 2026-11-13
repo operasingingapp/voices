@@ -1,0 +1,121 @@
+{
+ "editionId": "mozart-il-mio-tesoro",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Il mio tesoro intanto",
+ "subtitle": "Don Ottavio: aria from Don Giovanni, Act 2 (No. 21)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Il mio tesoro intanto … cercate di asciugar",
+   "start": "1",
+   "end": "29"
+  },
+  {
+   "id": "b",
+   "label": "Ditele che i suoi torti … nunzio vogl'io tornar",
+   "start": "30",
+   "end": "48"
+  },
+  {
+   "id": "c",
+   "label": "Il mio tesoro intanto (again) … cercate di asciugar",
+   "start": "49",
+   "end": "70"
+  },
+  {
+   "id": "d",
+   "label": "Ditele (again), the fermata in bar 78 … nunzio vogl'io tornar (to the end)",
+   "start": "71",
+   "end": "101"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 21 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (di asciugar, where the libretto has d'asciugar; cìglio with the print's accent the first time; vogl'io split as vogl' io in bars 85–86)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 218–222, bars 1–101 of No. 21",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker (one correction: a stray p in the left hand of bar 91 removed). The English singing translation and the con sord. / senza sord. instrument directions are left out. Don Ottavio's part, printed in the treble clef, is written at sounding pitch (treble clef with the octave below). Bar 78 has the fermatas of the cadenza point; no cadenza is written, and none is added. Bars 94–101 are for the piano alone. Playback tempo: Andante grazioso at a half note = 46 (♩ = 92), about 4:23, from the median track length (4:25) of five complete recordings (Fricsay 1958 4:20, Davis 1973 4:25, Böhm 1977 live 5:02, Haitink 1984 4:21, Karajan 1985 4:45); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

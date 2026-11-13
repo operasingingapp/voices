@@ -3258,6 +3258,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-il-mio-tesoro": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "B♭ major",
+      time: "2/2 (cut time)",
+      tempo: "Andante grazioso, played at a half note = 46 (♩ = 92), about 4½ minutes, the median of five recordings (Fricsay, Davis, Böhm, Haitink, Karajan); the fermatas in bar 78 mark a cadenza point, held here with no cadenza added; Mozart gives the words only",
+    },
+    notePlaceholder: "Tender first, then resolute: keep the long lines smooth and the runs on “tornar” even, without forcing",
+    about: (
+      <>
+        <p>
+          Act 2. Leporello has slipped away after being unmasked, and the others now have no doubt that Don Giovanni killed the
+          Commendatore. Don Ottavio asks his friends to go and comfort his beloved Donna Anna in the meantime, and to dry the tears
+          from her eyes. Let them tell her that he has gone to avenge the wrongs done to her, and that he will come back only as the
+          bearer of news of slaughter and death.
+        </p>
+        <p>
+          Score: No. 21, the Aria (vocal score pages 218–222, 101 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker
+          (one correction: a stray p in the left hand of bar 91 removed). Don Ottavio's part, printed in the treble clef, is written
+          at sounding pitch. Bar 78 has the fermatas of the cadenza point; no cadenza is written. The last eight bars are for the
+          piano alone. Only the Italian words are kept, with the print's spelling and punctuation (“cìglio” with its accent the first
+          time, “di asciugar”, and “vogl' io” split over two notes in bars 85–86).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

@@ -2117,7 +2117,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Il mio tesoro intanto",
       "kind": "Aria · Act 2",
-      "id": "Act 2: Il mio tesoro intanto"
+      "id": "Act 2: Il mio tesoro intanto",
+      "editionId": "mozart-il-mio-tesoro"
      },
      {
       "title": "Calmatevi, idol mio",

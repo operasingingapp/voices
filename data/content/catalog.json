@@ -396,6 +396,46 @@
     }
   },
   {
+    "editionId": "mozart-andate-la",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-andate-la@1.0.0-peters#f2294bc683",
+    "title": "Andate là, che siete due bizzarre ragazze!",
+    "subtitle": "Despina, Fiordiligi and Dorabella: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 85,
+    "durationSec": 194,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 37,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-andiam-bel-paggio",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-andiam-bel-paggio@1.0.0-klengel#43d7b3f31a",
@@ -2345,6 +2385,34 @@
     }
   },
   {
+    "editionId": "mozart-il-mio-tesoro",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-il-mio-tesoro@1.0.0-schirmer#15fcabcc1d",
+    "title": "Il mio tesoro intanto",
+    "subtitle": "Don Ottavio: aria from Don Giovanni, Act 2 (No. 21)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 101,
+    "durationSec": 263,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-in-quegli-anni",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-in-quegli-anni@1.0.0-klengel#ceaa705997",
@@ -3043,6 +3111,40 @@
     }
   },
   {
+    "editionId": "mozart-oh-la-saria-da-ridere",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-oh-la-saria-da-ridere@1.0.0-peters#dc22a4ef47",
+    "title": "Oh la saria da ridere",
+    "subtitle": "Don Alfonso and Despina: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      }
+    ],
+    "measures": 65,
+    "durationSec": 158,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 22,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-or-bene-ascolta-e-taci",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-or-bene-ascolta-e-taci@1.0.0-klengel#aabc9c9303",
@@ -3346,6 +3448,40 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-prendero-quel-brunettino",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-prendero-quel-brunettino@1.0.0-peters#6320f16155",
+    "title": "Prenderò quel brunettino",
+    "subtitle": "Fiordiligi and Dorabella: duet from Così fan tutte, Act 2 (No. 20)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 78,
+    "durationSec": 155,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "1/8",
+    "languageStatus": {
+      "phrases": 18,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -3867,6 +4003,46 @@
     }
   },
   {
+    "editionId": "mozart-si-puo-sapere",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-si-puo-sapere@1.0.0-peters#e590047355",
+    "title": "Si può sapere un poco",
+    "subtitle": "Don Alfonso, Guglielmo and Ferrando: recitative from Così fan tutte, Act 1",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 27,
+    "durationSec": 64,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 14,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-signora-dorabella",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-signora-dorabella@1.0.0-peters#28c04a9852",
@@ -4034,6 +4210,40 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-sorella-cosa-dici",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-sorella-cosa-dici@1.0.0-peters#7c012aa9f3",
+    "title": "Sorella, cosa dici?",
+    "subtitle": "Fiordiligi and Dorabella: recitative from Così fan tutte, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      }
+    ],
+    "measures": 41,
+    "durationSec": 100,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 18,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -4398,6 +4608,62 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-una-donna-a-quindici-anni",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-una-donna-a-quindici-anni@1.0.0-peters#4616055d4c",
+    "title": "Una donna a quindici anni",
+    "subtitle": "Despina: aria from Così fan tutte, Act 2 (No. 19)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      }
+    ],
+    "measures": 99,
+    "durationSec": 208,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 15,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-unaura-amorosa",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-unaura-amorosa@1.0.0-peters#7b7581385f",
+    "title": "Un'aura amorosa",
+    "subtitle": "Ferrando: aria from Così fan tutte, Act 1 (No. 17)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      }
+    ],
+    "measures": 80,
+    "durationSec": 300,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "3/8",
+    "languageStatus": {
+      "phrases": 10,
       "withAudio": 0,
       "reviewed": 0
     }
