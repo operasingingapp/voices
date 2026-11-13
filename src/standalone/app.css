@@ -9241,3 +9241,16 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .note-card.at-tap .note-card-head b { font: 500 12px/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; color: #6b5a2a; }
 .note-card.at-tap textarea { min-height: 84px; border: 0; padding: 4px 2px; background: transparent; resize: none; outline: none; }
 .note-card.at-tap .note-card-actions .cp-btn { min-height: 38px; padding: 0 12px; font-size: 14px; }
+
+/* the recorded grand piano: a small gold badge beside the time (tap to switch to the app piano) */
+.grand-chip {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px 0 9px; margin-right: 12px;
+  border: 1px solid color-mix(in srgb, #b08a3e 45%, transparent); border-radius: 999px; background: color-mix(in srgb, #b08a3e 9%, var(--canvas, #fff));
+  color: #8a6a2a; font: 600 12.5px/1 var(--font-sans); letter-spacing: 0.02em; cursor: pointer; white-space: nowrap;
+}
+.grand-chip[aria-pressed="false"] { border-color: var(--fog-strong, #ddd); background: none; color: var(--ink-muted, #777); font-weight: 500; }
+.grand-chip svg { flex: none; }
+@media (max-width: 640px) {
+  .grand-chip { height: 28px; padding: 0 8px; margin-right: 8px; }
+  .grand-chip span { display: none; }
+}

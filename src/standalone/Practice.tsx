@@ -20,7 +20,14 @@ import { Avatar } from "./flow";
 import { useBackToClose } from "./nav";
 import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
-import { grandPianoMap, grandPianoUrl } from "./grandPiano";
+import { GRAND_GAIN_DB, grandPianoMap, grandPianoUrl } from "./grandPiano";
+/** a concert grand seen from above, lid open: the badge of the recorded grand piano */
+const GRAND_ICON = (
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path d="M5 20V8.5C5 5.5 7.4 3 10.4 3c2.6 0 4.6 1.8 5.1 4.3.3 1.5 1.3 2.4 2.7 2.9 1.1.4 1.8 1.4 1.8 2.6V20H5Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+    <path d="M5 16h15M8 16v4M11 16v4M14 16v4M17 16v4" fill="none" stroke="currentColor" strokeWidth="1.3" />
+  </svg>
+);
 import { allNotes, MARKS, noteLabel, notesKey, NOTE_KEY_RE, type MarkId, type Note } from "./notes";
 import { annotateXml, circled, engravePages, fontFaceCss, openInTab, printDocument, printHtml } from "../score/printScore";
 
@@ -1090,7 +1097,7 @@ function PracticeScreen({
     port.keepRecordings?.([...voiceParts.filter((p) => sungOf(p.key)).map((p) => p.channel), ...(useGrand ? [pianoPart.channel] : [])]);
     // the grand piano: its recording plays the piano's channel (the app's piano fills in until it has loaded)
     if (useGrand) {
-      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf) }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
+      track(port.setRecording(pianoPart.channel, [{ tempo: 1, url: grandUrl!, map: grandPianoMap(edition, perf), gainDb: GRAND_GAIN_DB }]).then(() => port.setInstrument?.(pianoPart.channel, "singer"))).catch(() => undefined);
     } else {
       port.setInstrument?.(pianoPart.channel, "piano");
       void port.setRecording(pianoPart.channel, null);
@@ -3137,6 +3144,19 @@ function PracticeScreen({
           })()}
           <span className="tl-head" style={{ left: `${pct}%` }} />
         </div>
+        {grandUrl && (
+          <button
+            type="button"
+            className="grand-chip"
+            aria-pressed={useGrand}
+            onClick={() => setPianoSound(useGrand ? "app" : "grand")}
+            aria-label={useGrand ? "Grand piano: a recorded concert grand plays the accompaniment. Switch to the app piano" : "App piano. Switch to the recorded grand piano"}
+            title={useGrand ? "Grand piano: a recorded concert grand" : "App piano: tap for the grand piano"}
+          >
+            {GRAND_ICON}
+            <span>{useGrand ? "Grand piano" : "App piano"}</span>
+          </button>
+        )}
         <div className="tl-time">
           {fmtTime(perf.qToSec(qNow) / tf)} <span>/ {fmtTime(total / tf)}</span>
         </div>

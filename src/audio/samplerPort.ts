@@ -139,6 +139,8 @@ interface Singer {
   /** where playback last (re)started: clock time, app-timeline seconds there, tempo factor */
   follow: { t: number; s: number; f: number } | null;
   playing: { src: AudioBufferSourceNode; env: GainNode }[];
+  /** a recording's own level against the singer's (dB; the recorded grand piano sits under the sung lines) */
+  gainDb?: number;
 }
 
 interface Sample {
@@ -781,7 +783,7 @@ export class SamplerPort implements SynthPort {
    */
   setRecording(
     ch: number,
-    recs: { tempo: number; url: string; map: RecordingMap }[] | null,
+    recs: { tempo: number; url: string; map: RecordingMap; gainDb?: number }[] | null,
   ): Promise<void> {
     const old = this.singers.get(ch);
     const key = recs?.map((r) => r.url).join("|");
@@ -799,6 +801,7 @@ export class SamplerPort implements SynthPort {
     const sg: Singer = {
       key: key!,
       sources: recs.map((r) => ({ ...r, line: null, load: null })),
+      gainDb: recs[0]?.gainDb,
       follow: null,
       playing: [],
       ready: Promise.resolve(),
@@ -857,7 +860,7 @@ export class SamplerPort implements SynthPort {
   private startSinger(ch: number, sg: Singer) {
     const fl = sg.follow;
     if (!fl || !sg.sources.some((x) => x.line)) return;
-    const level = 10 ** (SINGER_LEVEL_DB / 20);
+    const level = 10 ** ((SINGER_LEVEL_DB + (sg.gainDb ?? 0)) / 20);
     const FADE = 0.025;
     /** play buf from audio time a0, sounding from app time out0 to out1 (seconds at this tempo) */
     const play = (

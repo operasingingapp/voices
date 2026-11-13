@@ -17,6 +17,9 @@ export const GRAND_BASE = "https://pub-d8d81ace089e4d0f9b94db0d9c548850.r2.dev/p
 /** editionId -> file name of its piano recording */
 const FILES = list as Record<string, string>;
 
+/** the recorded grand under the sung lines: a full concert grand masks piano-sounding lines far more than the app's piano */
+export const GRAND_GAIN_DB = -6;
+
 export const grandPianoUrl = (editionId: string): string | undefined => (FILES[editionId] ? GRAND_BASE + FILES[editionId] : undefined);
 
 /**
