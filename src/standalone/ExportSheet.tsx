@@ -14,7 +14,9 @@ interface Props {
   initial: ExportKind;
   title: string;
   /** the score's print document; with your notes on it or without */
-  makeScore: (withNotes: boolean) => Promise<string>;
+  makeScore: (withNotes: boolean, parts: string[] | null) => Promise<string>;
+  /** the score's lines (MusicXML parts) in their order, yours marked */
+  parts: { id: string; label: string; you: boolean }[];
   makeLibretto: (o: LibrettoOptions) => string;
   hasNotes: boolean;
   /** more than one character sings in the piece */
@@ -40,10 +42,12 @@ const forPreview = (html: string) =>
     `<style>.bar{display:none!important}body{overflow-x:hidden}</style><script>function fit(){var w=document.documentElement.clientWidth;document.documentElement.style.setProperty("--fit",String(Math.min(1.45,(w-40)/794)))}fit();addEventListener("resize",fit)</script></body>`,
   );
 
-export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes, ensemble, roleName, onClose }: Props) {
+export function ExportSheet({ initial, title, makeScore, parts, makeLibretto, hasNotes, ensemble, roleName, onClose }: Props) {
   useBackToClose(true, onClose);
   const [kind, setKind] = useState<ExportKind>(initial);
   const [withNotes, setWithNotes] = useState(true);
+  const [shown, setShown] = useState<string[]>(() => parts.map((p) => p.id));
+  const mineShown = parts.some((p) => p.you && shown.includes(p.id));
   const [opts, setOpts] = useState<LibrettoOptions>(loadOpts);
   const [scoreHtml, setScoreHtml] = useState<{ key: string; html: string } | null>(null);
   const [busy, setBusy] = useState(false);
@@ -67,13 +71,13 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
   }, [opts]);
 
   // the score is engraved once per choice (it takes a moment); the libretto is made at once
-  const scoreKey = String(withNotes && hasNotes);
+  const scoreKey = `${withNotes && hasNotes && mineShown}|${shown.join()}`;
   useEffect(() => {
     if (kind !== "score" || scoreHtml?.key === scoreKey) return;
     let live = true;
     setBusy(true);
     setFailed(false);
-    makeScore(withNotes && hasNotes)
+    makeScore(withNotes && hasNotes && mineShown, shown.length === parts.length ? null : shown)
       .then((html) => live && setScoreHtml({ key: scoreKey, html }))
       .catch(() => live && setFailed(true))
       .finally(() => live && setBusy(false));
@@ -82,7 +86,9 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
     };
   }, [kind, scoreKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const html = kind === "score" ? (scoreHtml?.key === scoreKey ? scoreHtml.html : null) : makeLibretto(opts);
+  // while the score is engraved again the last preview stays, marked as updating
+  const stale = kind === "score" && scoreHtml?.key !== scoreKey;
+  const html = kind === "score" ? (scoreHtml?.html ?? null) : makeLibretto(opts);
   useEffect(() => setState("idle"), [kind, html]);
 
   const save = async () => {
@@ -96,7 +102,7 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
     <button type="button" className="ex-row" role="switch" aria-checked={on} onClick={flip}>
       <span className="ex-row-text">
         <span className="ex-row-label">{label}</span>
-        <span className="ex-row-hint">{hint}</span>
+        {hint && <span className="ex-row-hint">{hint}</span>}
       </span>
       <span className="ex-switch" aria-hidden="true" />
     </button>
@@ -131,16 +137,38 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
                 </button>
               </div>
               <p className="ex-hint">
-                {kind === "score" ? "Every voice and the piano, on A4 pages." : "The words of this piece, in the order they are sung."}
+                {kind === "score" ? "The music on A4 pages, with the lines you choose." : "The words of this piece, in the order they are sung."}
               </p>
             </div>
             {kind === "score" ? (
-              hasNotes && (
-                <div className="ex-group">
-                  <p className="ex-label">Include</p>
-                  <div className="ex-rows">{row(withNotes, () => setWithNotes((v) => !v), "Your notes and marks", "Written in at their bar, listed at the end")}</div>
-                </div>
-              )
+              <>
+                {parts.length > 1 && (
+                  <div className="ex-group">
+                    <p className="ex-label">Lines</p>
+                    <div className="ex-rows">
+                      {parts.map((p) =>
+                        row(
+                          shown.includes(p.id),
+                          () =>
+                            setShown((s) =>
+                              s.includes(p.id) ? (s.length > 1 ? s.filter((x) => x !== p.id) : s) : parts.map((x) => x.id).filter((x) => x === p.id || s.includes(x)),
+                            ),
+                          p.label,
+                          p.you ? "Your part" : "",
+                        ),
+                      )}
+                    </div>
+                  </div>
+                )}
+                {hasNotes && (
+                  <div className="ex-group">
+                    <p className="ex-label">Include</p>
+                    <div className="ex-rows">
+                      {row(withNotes && mineShown, () => setWithNotes((v) => !v), "Your notes and marks", mineShown ? "Written in at their bar, listed at the end" : "Shown over your part: include it")}
+                    </div>
+                  </div>
+                )}
+              </>
             ) : (
               <>
                 {ensemble && (
@@ -168,7 +196,7 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
               </>
             )}
             <div className="ex-actions">
-              <button type="button" className="cp-btn cp-btn--ink" onClick={save} disabled={!html || state === "saving"}>
+              <button type="button" className="cp-btn cp-btn--ink" onClick={save} disabled={!html || stale || state === "saving"}>
                 {state === "saving" ? "Opening…" : "Save as PDF"}
               </button>
               {state === "blocked" && (
@@ -189,7 +217,10 @@ export function ExportSheet({ initial, title, makeScore, makeLibretto, hasNotes,
           </aside>
           <div className="ex-preview" aria-label="Preview" aria-busy={!html}>
             {html ? (
-              <iframe title="Preview" srcDoc={forPreview(html)} />
+              <>
+                <iframe title="Preview" srcDoc={forPreview(html)} className={stale ? "stale" : undefined} />
+                {stale && <p className="ex-updating">{failed ? "Could not update. Try again." : "Updating…"}</p>}
+              </>
             ) : (
               <p className="ex-wait">{failed ? "The score could not be prepared. Try again." : busy ? "Engraving the score…" : ""}</p>
             )}

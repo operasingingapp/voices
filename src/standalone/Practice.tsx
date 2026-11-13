@@ -964,13 +964,14 @@ function PracticeScreen({
   // the score for print (Save as PDF), with your notes written on it: being made, or what became of it
   const [exportOpen, setExportOpen] = useState<ExportKind | null>(null);
   const printDoc = useRef<{ key: string; html: string } | null>(null);
-  const makeScoreHtml = async (withNotes: boolean): Promise<string> => {
+  const makeScoreHtml = async (withNotes: boolean, parts: string[] | null): Promise<string> => {
     {
       const mine = voicePart.source.xmlPartId;
       // every part, as the printed vocal score has them (all the voices and the piano's two staves, whatever the
       // screen hides), in the order you chose
-      const visible: string[] | null = null;
-      const sorted = withNotes ? [...notes].sort((a, b) => a.m - b.m || a.q - b.q) : [];
+      // (or the lines chosen in the Save as PDF window); your notes are written over your own line, so they go with it
+      const visible: string[] | null = parts && parts.length < orderedIds.length ? parts : null;
+      const sorted = withNotes && (!visible || visible.includes(mine)) ? [...notes].sort((a, b) => a.m - b.m || a.q - b.q) : [];
       const key = JSON.stringify([visible, orderedIds, sorted]);
       if (printDoc.current?.key !== key) {
         const list = sorted.map((n, i) => {
@@ -1008,7 +1009,7 @@ function PracticeScreen({
             opera: info.opera,
             kind: info.kind,
             title: edition.title,
-            role: roleName ? `${roleName}’s part` : undefined,
+            role: roleName && (!visible || visible.includes(mine)) ? `${roleName}’s part` : undefined,
             composer: edition.composer,
             librettist: edition.librettist,
           },
@@ -3771,6 +3772,7 @@ function PracticeScreen({
             initial={exportOpen}
             title={edition.title}
             makeScore={makeScoreHtml}
+            parts={orderedIds.map((x) => ({ id: x, label: lineName(partByXml(x)), you: x === voicePart.source.xmlPartId }))}
             makeLibretto={makeLibrettoHtml}
             hasNotes={notes.length > 0}
             ensemble={edition.roles.length > 1}

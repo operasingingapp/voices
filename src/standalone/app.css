@@ -9287,7 +9287,9 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .ex-actions { margin-top: auto; display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
 .ex-msg { margin: 2px 0 0; color: var(--ink-muted); font: 400 13px/1.4 var(--font-sans); }
 .ex-preview { position: relative; min-height: 0; background: #e7e7e3; }
-.ex-preview iframe { display: block; width: 100%; height: 100%; border: 0; }
+.ex-preview iframe { display: block; width: 100%; height: 100%; border: 0; transition: opacity 200ms var(--ease-standard); }
+.ex-preview iframe.stale { opacity: 0.45; }
+.ex-updating { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); margin: 0; padding: 6px 14px; border-radius: 999px; background: var(--ink); color: var(--on-ink); font: 500 13px/1.3 var(--font-sans); box-shadow: var(--shadow-float); }
 .ex-wait { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--ink-muted); font: 400 15px/1.4 var(--font-sans); }
 @media (max-width: 760px) {
   .ex-sheet { padding: 0; }
