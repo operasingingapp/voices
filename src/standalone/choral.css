@@ -244,3 +244,21 @@
 }
 /* the parts: two quiet groups of pills, the chorus first */
 .ch-page .part-solo + .part-solo { margin-top: 24px; }
+
+/* first visit, for someone who sings both: Opera | Choral on top; under Opera, a quieter choice of
+   characters or whole operas (text tabs with a rule under the chosen one) */
+.ob-sub { display: flex; justify-content: center; gap: 28px; margin-top: 14px; }
+.ob-sub button {
+  min-height: 44px;
+  padding: 0 2px;
+  border: 0;
+  background: none;
+  color: var(--ink-muted);
+  font: 500 15px/1 var(--font-sans);
+  cursor: pointer;
+  box-shadow: inset 0 -2px 0 transparent;
+  transition: color var(--duration-quick) var(--ease-standard), box-shadow var(--duration-quick) var(--ease-standard);
+}
+.ob-sub button:hover { color: var(--ink); }
+.ob-sub button[aria-selected="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); }
+.ob-sub button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }

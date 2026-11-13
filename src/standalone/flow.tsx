@@ -3967,28 +3967,63 @@ export function Onboarding({
                   ? "Choose an opera to read about it and meet its people."
                   : "Choose a choral work to see its parts. You can add an opera role later."}
             </p>
-            <div className="ob-mode" role="tablist" aria-label="Start from">
-              {(
-                [
-                  [1, "Characters"],
-                  [2, "Operas"],
-                  ...(both ? ([[4, "Choral"]] as const) : []),
-                ] as const
-              ).map(([n, label]) => (
-                <button
-                  key={n}
-                  type="button"
-                  role="tab"
-                  aria-selected={step === n}
-                  aria-controls="ob-choices"
-                  onClick={() =>
-                    step !== n && ctx.go(at(n, { opera: undefined }))
-                  }
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+            {both && (
+              <div
+                className="ob-mode"
+                role="tablist"
+                aria-label="What you sing"
+              >
+                {(
+                  [
+                    ["opera", "Opera"],
+                    ["choral", "Choral"],
+                  ] as const
+                ).map(([m, label]) => (
+                  <button
+                    key={m}
+                    type="button"
+                    role="tab"
+                    aria-selected={(step === 4) === (m === "choral")}
+                    aria-controls="ob-choices"
+                    onClick={() => {
+                      if (m === "choral" && step !== 4)
+                        ctx.go(at(4, { opera: undefined }));
+                      if (m === "opera" && step === 4)
+                        ctx.go(at(1, { opera: undefined }));
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
+            {step !== 4 && (
+              <div
+                className={both ? "ob-sub" : "ob-mode"}
+                role="tablist"
+                aria-label="Start from"
+              >
+                {(
+                  [
+                    [1, "Characters"],
+                    [2, "Whole operas"],
+                  ] as const
+                ).map(([n, label]) => (
+                  <button
+                    key={n}
+                    type="button"
+                    role="tab"
+                    aria-selected={step === n}
+                    aria-controls="ob-choices"
+                    onClick={() =>
+                      step !== n && ctx.go(at(n, { opera: undefined }))
+                    }
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div
             id="ob-choices"
