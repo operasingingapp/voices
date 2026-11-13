@@ -1,0 +1,133 @@
+{
+ "editionId": "mozart-ah-pieta-signori-miei",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ah, pietà! Signori miei!",
+ "subtitle": "Leporello: aria from Don Giovanni, Act 2 (No. 20)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ah, pietà! Signori miei! … Dò ragione a voi, a lei",
+   "start": "1",
+   "end": "14"
+  },
+  {
+   "id": "b",
+   "label": "Ma, ma, il delitto mio non è · Il padron con prepotenza l'innocenza mi rubò",
+   "start": "15",
+   "end": "33"
+  },
+  {
+   "id": "c",
+   "label": "Donna Elvira! compatite! · Voi capite come andò",
+   "start": "34",
+   "end": "44"
+  },
+  {
+   "id": "d",
+   "label": "Di Masetto non sò nulla … che con lei girando vo",
+   "start": "45",
+   "end": "64"
+  },
+  {
+   "id": "e",
+   "label": "Ah voi, Signore! · certo timore, certo accidente … poi qui celato",
+   "start": "65",
+   "end": "86"
+  },
+  {
+   "id": "f",
+   "label": "l'affar si sa · ma s'io sapeva, fuggia per quà! (to the end)",
+   "start": "87",
+   "end": "106"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scene 9, No. 20 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (Dò, sò and quà with their accents, Ah voi, Signore!, È un oretta, dentro oscuro, là porta, io me-ne vo hyphenated as one word, fuggia on two notes, and the full stop after per in bar 97; the libretto has Do, so, qua, A voi, signore, un'oretta, dentro scuro, la porta, me ne vo and fuggìa)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 213–217, bars 1–106 of No. 20",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker (clean). The English singing translation and the stage directions are left out; Donna Elvira, Zerlina, Don Ottavio and Masetto are on stage but do not sing. The piano's 8va passage in bars 6–7 is written at sounding pitch; stray printed dots in bars 26 and 86 are not read as dotted rhythms. In bar 55 the first C of the voice has only an English syllable under it and is kept as printed, with no Italian word. Playback tempo: Allegro assai ♩ = 242 (a half note = 121), about 1:45, from the median (1:45) of five complete recordings whose track holds the aria alone (Giulini 1959 1:52, Böhm 1967 1:45, Fricsay 1958 1:45, Haitink 1984 1:42, Jacobs 2006 1:42). Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

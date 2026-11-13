@@ -1608,7 +1608,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah, pietà! Signori miei!",
       "kind": "Aria · Act 2",
-      "id": "Act 2: Ah, pietà! Signori miei!"
+      "id": "Act 2: Ah, pietà! Signori miei!",
+      "editionId": "mozart-ah-pieta-signori-miei"
      },
      {
       "title": "Restati quà!",

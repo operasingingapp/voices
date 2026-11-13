@@ -3394,6 +3394,42 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ah-pieta-signori-miei": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "G major",
+      time: "4/4 (common time)",
+      tempo: "Allegro assai, played at ♩ = 242 (a half note = 121), about 1¾ minutes, the median of five recordings (Giulini, Böhm, Fricsay, Haitink, Jacobs); Mozart gives the words only",
+    },
+    notePlaceholder: "Quick and nervous, never shouted: each excuse to a different listener, the patter clear, edging towards the door",
+    about: (
+      <>
+        <p>
+          Act 2. Leporello, wearing his master's hat and cloak, has been caught in the dark courtyard by Donna Elvira, Zerlina,
+          Masetto and Don Ottavio, who take him for Don Giovanni and want to kill him. Unmasked, he begs them all for mercy. He
+          grants that they are right, but the wrong is not his: his master has robbed him of his innocence. Then he turns to each
+          in turn: to Elvira, that she will understand how it came about; about Masetto he knows nothing, and the girl can say that
+          he has spent the last hour roaming around with her; to Ottavio he stammers about a fright, a mishap, light outside and
+          dark inside, no way out, the door, the wall. While he talks he edges towards the door, and if he had only known, he
+          would have run off that way, and he does.
+        </p>
+        <p>
+          Score: No. 20, the Aria (vocal score pages 213–217, 106 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          In bar 55 the print gives the voice one extra note for the English words only; it is kept, with no Italian word. The
+          last four bars are for the piano alone. Only the Italian words are kept, with the print's spelling and punctuation
+          (“Dò”, “sò” and “quà” with their accents, “Ah voi, Signore!”, “È un oretta”, “dentro oscuro”, “là porta”, “io me-ne vo”
+          joined as one word, and the full stop after “per” in bar 97).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
