@@ -1466,7 +1466,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Metà di voi quà vadano",
       "kind": "Aria · Act 2",
-      "id": "Act 2: Metà di voi quà vadano"
+      "id": "Act 2: Metà di voi quà vadano",
+      "editionId": "mozart-meta-di-voi"
      },
      {
       "title": "Zitto, lascia ch'io senta!",

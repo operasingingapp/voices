@@ -1,0 +1,139 @@
+{
+ "editionId": "mozart-meta-di-voi",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Metà di voi quà vadano",
+ "subtitle": "Don Giovanni: aria from Don Giovanni, Act 2 (No. 17)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Metà di voi quà vadano … lontan non sia di quà",
+   "start": "1",
+   "end": "11"
+  },
+  {
+   "id": "b",
+   "label": "Se un uom' e una ragazza … il mio padron sarà!",
+   "start": "12",
+   "end": "20"
+  },
+  {
+   "id": "c",
+   "label": "In testa egli ha un cappello … e spada al fianco egli ha",
+   "start": "21",
+   "end": "34"
+  },
+  {
+   "id": "d",
+   "label": "Se un uom' e una ragazza (again) · ferite!",
+   "start": "35",
+   "end": "43"
+  },
+  {
+   "id": "e",
+   "label": "Metà di voi quà vadano (again) · Andate, fate presto!",
+   "start": "44",
+   "end": "56"
+  },
+  {
+   "id": "f",
+   "label": "Tu sol verrai con me · Noi far dobbiam il resto",
+   "start": "57",
+   "end": "65"
+  },
+  {
+   "id": "g",
+   "label": "noi far dobbiam il resto, e già vedrai cos'è (to the end)",
+   "start": "66",
+   "end": "85"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scene 4, No. 17 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (quà with its accent, lontan non sia di quà, no!, uom', passeggiam, dobbiam, fa-re al-la-mor hyphenated with no apostrophe in bar 15; the libretto has qua, non fia, uom, passeggian, dobbiamo and all'amor)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 177–182, bars 1–85 of No. 17",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation, the stage directions and the instrument cues are left out; Masetto and the peasants are on stage but do not sing. Don Giovanni, disguised as Leporello, sings in the bass clef at sounding pitch. Bar 1 is the printed one-sixteenth upbeat (Me-), written as a bar of 1/16 before the 4/4 from bar 2. The piano's left hand in bar 7 is garbled in the print and is written as in the parallel bar 50. Bars 78–85 are for the piano alone. Playback tempo: Andante con moto ♩ = 114, about 2:57, the median of five complete recordings whose track holds the aria alone (Fricsay 1958 2:54, Giulini 1959 3:12, Klemperer 1966 3:21, Böhm 1967 2:57, Karajan 1985 2:52); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

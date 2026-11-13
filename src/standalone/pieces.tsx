@@ -3430,6 +3430,40 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-meta-di-voi": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "F major",
+      time: "4/4 (common time), after a one-sixteenth upbeat",
+      tempo: "Andante con moto, played at ♩ = 114, about 3 minutes, the median of five recordings (Fricsay, Giulini, Klemperer, Böhm, Karajan); Mozart gives the words only",
+    },
+    notePlaceholder: "You are Giovanni playing Leporello: brisk and businesslike, giving orders with a straight face, enjoying the joke",
+    about: (
+      <>
+        <p>
+          Act 2. Don Giovanni, still in Leporello's hat and cloak, runs into Masetto and a band of armed peasants out hunting for him.
+          Passing himself off as his own servant, he takes charge: half of them are to go one way and half the other, and search
+          quietly, for the man cannot be far. If they find a man and a girl strolling in the square, or someone courting under a
+          window, they should strike: that will be his master, in a hat with white plumes, a great cloak and a sword at his side.
+          He hurries them off, and keeps Masetto alone with him: the two of them have the rest to do, and Masetto will soon see what.
+        </p>
+        <p>
+          Score: No. 17, the Aria (vocal score pages 177–182, 85 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          The aria begins with a one-sixteenth upbeat, written as a short first bar. The piano's left hand in bar 7 is garbled in the
+          print and is written as in the parallel bar 50. The last eight bars are for the piano alone. Only the Italian words are
+          kept, with the print's spelling and punctuation (“quà” with its accent, “sia” and the added “no!”, “uom'”, “passeggiam”,
+          “dobbiam”, and “allamor”, which the print divides al-la-mor without an apostrophe in bar 15).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
