@@ -2291,7 +2291,7 @@
   {
     "editionId": "mozart-ho-capito",
     "editionVersion": "1.0.0-schirmer",
-    "scoreVersionId": "mozart-ho-capito@1.0.0-schirmer#3a03bd4015",
+    "scoreVersionId": "mozart-ho-capito@1.0.0-schirmer#9bc1b972ef",
     "title": "Ho capito, Signor, sì!",
     "subtitle": "Masetto: aria from Don Giovanni, Act 1 (No. 6)",
     "kind": "aria",
@@ -2606,6 +2606,34 @@
     "time": "6/8",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-madamina",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-madamina@1.0.0-schirmer#6c2521aacd",
+    "title": "Madamina! Il catalogo è questo",
+    "subtitle": "Leporello: aria from Don Giovanni, Act 1 (No. 4)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 172,
+    "durationSec": 332,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 46,
       "withAudio": 0,
       "reviewed": 0
     }

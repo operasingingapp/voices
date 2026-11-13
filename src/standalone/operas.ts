@@ -2163,7 +2163,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ho capito, Signor, sì!",
       "kind": "Aria · Act 1",
-      "id": "Act 1: Ho capito, Signor, sì!"
+      "id": "Act 1: Ho capito, Signor, sì!",
+      "editionId": "mozart-ho-capito"
      },
      {
       "title": "Masetto, senti un po'!",

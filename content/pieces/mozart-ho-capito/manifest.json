@@ -1,0 +1,127 @@
+{
+ "editionId": "mozart-ho-capito",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ho capito, Signor, sì!",
+ "subtitle": "Masetto: aria from Don Giovanni, Act 1 (No. 6)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ho capito, Signor, sì! … altre repliche non fo",
+   "start": "1",
+   "end": "20"
+  },
+  {
+   "id": "b",
+   "label": "Cavalier voi siete già … che volete aver per me",
+   "start": "21",
+   "end": "32"
+  },
+  {
+   "id": "c",
+   "label": "Bricconaccia, malandrina … È una cosa molto onesta!",
+   "start": "33",
+   "end": "48"
+  },
+  {
+   "id": "d",
+   "label": "Faccia il nostro Cavaliere … È una cosa molto onesta (again)",
+   "start": "49",
+   "end": "70"
+  },
+  {
+   "id": "e",
+   "label": "Faccia il nostro Cavaliere (again) · Cavaliera ancora te (to the end)",
+   "start": "71",
+   "end": "96"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 8, No. 6 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (giacche and fo without accents, Bricconaccia, Cavaliera with a capital; the libretto has già che or giacchè, fo/fò and Briconaccia)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 58–61, bars 1–96 of No. 6",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation and the stage directions are left out; Don Giovanni, Zerlina and Leporello are on stage but do not sing. The time signature is a plain C (4/4), not alla breve. Where the print slurs the piano's recurring tied left-hand chords both above and below, only the lower slur is kept. Playback tempo: Allegro di molto ♩ = 235 (a half note ≈ 118), about 1:38, from the median (1:38) of five complete recordings (Fricsay 1958 1:35, Giulini 1959 1:38, Böhm 1977 1:38, Haitink 1984 1:37, Karajan 1985 1:38). Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

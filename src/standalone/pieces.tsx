@@ -3152,6 +3152,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ho-capito": {
+    portrait: "giovanni:masetto",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "F major",
+      time: "4/4 (C, four beats, not alla breve)",
+      tempo: "Allegro di molto, played at ♩ = 235 (a half note ≈ 118), about 1⅔ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only",
+    },
+    notePlaceholder: "Seething under the bows: clipped and quick, polite to the master's face, then the asides through clenched teeth",
+    about: (
+      <>
+        <p>
+          Act 1. Don Giovanni has taken a fancy to Zerlina on her wedding day and orders everyone off to his palace, keeping the bride
+          behind; Masetto refuses to leave her until Giovanni shows him his sword. Masetto gives in, bowing and scraping: he has
+          understood, he will make no more objections, a gentleman is a gentleman and must be obeyed. Under his breath he calls Zerlina
+          a hussy who was always his ruin, tells Leporello he is coming and Zerlina to stay, it is all very decent, and sneers that the
+          gentleman will make a lady of her too. Don Giovanni, Zerlina and Leporello are on stage but do not sing.
+        </p>
+        <p>
+          Score: No. 6, the Aria (vocal score pages 58–61, 96 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. Where the
+          print slurs the piano's recurring tied left-hand chords both above and below, only the lower slur is kept. Only the Italian
+          words are kept, with the print's spelling and punctuation (“giacche” and “fo” without accents, “Bricconaccia”, and
+          “Cavaliera” with a capital).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
