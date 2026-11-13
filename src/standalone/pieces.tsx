@@ -2890,6 +2890,38 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ah-fuggi-il-traditor": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "D major",
+      time: "3/4",
+      tempo: "Allegro, played at ♩ = 105, about 1¼ minutes, the median of five recordings (Fricsay, Giulini, Davis, Böhm, Karajan); Mozart gives the word only",
+    },
+    notePlaceholder: "Firm and urgent, in strict time: the dotted rhythms drive the warning, so keep them crisp to the end",
+    about: (
+      <>
+        <p>
+          Act 1. Don Giovanni has just talked the peasant bride Zerlina into following him to his house when Donna Elvira, the lady
+          he abandoned, steps between them. Giovanni whispers to Zerlina that the poor woman is in love with him and must be humoured,
+          but Elvira turns to the girl: run from the traitor and do not let him speak; his lips lie and his eyes deceive. Let her own
+          suffering teach Zerlina how far to trust that heart, and let her danger make the girl afraid. She leads Zerlina away,
+          leaving Giovanni alone.
+        </p>
+        <p>
+          Score: No. 8, the Aria (vocal score pages 69–71, 45 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The last
+          three bars are for the piano alone. Only the Italian words are kept, with the print's spelling and punctuation (“Da miei”,
+          where the libretto has “Da' miei”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

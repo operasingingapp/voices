@@ -1784,7 +1784,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! fuggi il traditor!",
       "kind": "Aria · Act 1",
-      "id": "Act 1: Ah! fuggi il traditor!"
+      "id": "Act 1: Ah! fuggi il traditor!",
+      "editionId": "mozart-ah-fuggi-il-traditor"
      },
      {
       "title": "Mi par ch'oggi il demonio si diverta",
