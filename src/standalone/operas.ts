@@ -1537,7 +1537,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Madamina! Il catalogo è questo",
       "kind": "Aria · Act 1",
-      "id": "Act 1: Madamina! Il catalogo è questo"
+      "id": "Act 1: Madamina! Il catalogo è questo",
+      "editionId": "mozart-madamina"
      },
      {
       "title": "Manco male, è partita",

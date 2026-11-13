@@ -3185,6 +3185,43 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-madamina": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "D major",
+      time: "4/4 (Allegro) for bars 1–84; 3/4 (Andante con moto) from bar 85 (“Nella bionda”) to the end",
+      tempo: "Allegro, played at ♩ = 156 (a half note = 78), then Andante con moto at ♩ = 78, about 5½ minutes in all, the median of four recordings (Giulini, Haitink, Karajan, Jacobs); their tracks are not split at the Andante, so its quarter note is set to the Allegro's half note; the fermatas on “ma, in Ispagna”, “Ispagna!” and “maestosa” are held; Mozart gives the words only",
+    },
+    notePlaceholder: "Patter, not bluster: keep the Allegro's numbers quick and clear, then let the 3/4 turn smooth and confiding",
+    about: (
+      <>
+        <p>
+          Act 1. Don Giovanni has slipped away and left his servant to deal with Donna Elvira, the lady from Burgos he deserted.
+          Leporello tells her she is neither the first nor the last, and shows her his master's catalogue of conquests, a list he
+          drew up himself: in Italy six hundred and forty, in Germany two hundred and thirty-one, a hundred in France, ninety-one in
+          Turkey, but in Spain already a thousand and three, women of every rank, every figure, every age. Then, more slowly, he
+          describes his master's tastes: he praises a blonde for her graciousness, a brunette for her faithfulness, a pale one for
+          her softness; in winter he likes them plump, in summer thin; the tall ones are stately, the tiny ones always pretty; old
+          women he wins over for the pleasure of adding them to the list, but what he craves most is the young beginner. Rich or
+          poor, ugly or lovely, as long as she wears a petticoat, you know what he does. Elvira is on stage but does not sing.
+        </p>
+        <p>
+          Score: No. 4, the Aria (vocal score pages 42–49, 172 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. Where the
+          print adds stems for the English words under the Italian, the Italian rhythm is kept, and in bar 82, where the voice is
+          printed in octaves, the lower notes are kept as the sung line. Only the Italian words are kept, with the print's spelling and
+          punctuation (“amo” without its accent, “Almagna”, the numbers divided as printed, “sei cento”, “trent' una”, “di lodarla la
+          gentilezza”, “citadine” once, and both “purchè” and “pur che”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
