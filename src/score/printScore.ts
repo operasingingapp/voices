@@ -382,20 +382,40 @@ export interface PrintDoc {
   /** @font-face rules for the fonts the print uses (the app's: Cormorant Garamond, Jost, Charis SIL) */
   fontCss?: string;
   /** the title block on the first page */
-  head?: { eyebrow: string; title: string; role?: string; composer?: string; librettist?: string };
+  head?: PrintHead;
   /** where the music begins on the first page (mm from the top): the title block sits above it */
   firstTopMm?: number;
 }
+
+export interface PrintHead {
+  eyebrow: string;
+  title: string;
+  role?: string;
+  composer?: string;
+  librettist?: string;
+}
+
+/** The title block of a printed page, in the app's type: the opera and kind, the title, then librettist, part and composer. */
+export function headBlock(h: PrintHead, style = ""): string {
+  return `<header class="head"${style ? ` style="${style}"` : ""}><div class="eyebrow">${esc(h.eyebrow)}</div><h1>${esc(h.title)}</h1><div class="byline"><span>${
+    h.librettist ? `Libretto by ${esc(h.librettist)}` : ""
+  }</span><span class="role">${h.role ? esc(h.role) : ""}</span><span>${h.composer ? esc(h.composer) : ""}</span></div></header>`;
+}
+
+/** The title block's type (the layout around it is the document's own) */
+export const HEAD_CSS = `.head { text-align: center; color: #1c1a17; }
+.head .eyebrow { font: 500 7pt/1.3 "Jost", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.24em; text-transform: uppercase; color: #8b7f70; }
+.head h1 { margin: 1.4mm 0 1.6mm; font: 600 25pt/1.04 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.005em; }
+.head .byline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 4mm; padding-top: 1.6mm; border-top: 0.2mm solid #d9d2c6; font: italic 8.6pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
+.head .byline span:first-child { text-align: left; }
+.head .byline span:last-child { text-align: right; font-style: normal; font-family: "Cormorant Garamond", Garamond, Georgia, serif; font-weight: 600; font-size: 10.5pt; letter-spacing: 0.02em; color: #2a2622; }
+.head .byline .role { font: 500 6.8pt/1.3 "Jost", Arial, sans-serif; font-style: normal; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }`;
 
 /** The print document: A4 sheets with page numbers, then the notes in full. Self-contained, so it can open anywhere. */
 export function printHtml(d: PrintDoc): string {
   const total = d.pages.length;
   const h = d.head;
-  const headHtml = h
-    ? `<header class="head" style="height:${Math.max(14, (d.firstTopMm ?? 28) - 3 - 9).toFixed(1)}mm"><div class="eyebrow">${esc(h.eyebrow)}</div><h1>${esc(h.title)}</h1><div class="byline"><span>${
-        h.librettist ? `Libretto by ${esc(h.librettist)}` : ""
-      }</span><span class="role">${h.role ? esc(h.role) : ""}</span><span>${h.composer ? esc(h.composer) : ""}</span></div></header>`
-    : "";
+  const headHtml = h ? headBlock(h, `height:${Math.max(14, (d.firstTopMm ?? 28) - 5 - 9).toFixed(1)}mm`) : "";
   const sheets = d.pages
     .map(
       (svg, i) =>
@@ -427,13 +447,8 @@ body { font-family: "Charis SIL", Charter, Georgia, "Times New Roman", serif; -w
 .sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #fff; break-after: page; page-break-after: always; break-inside: avoid; }
 .sheet:last-of-type { break-after: auto; page-break-after: auto; }
 .sheet > svg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
-.head { position: absolute; left: 16mm; right: 16mm; top: 9mm; display: flex; flex-direction: column; justify-content: flex-end; text-align: center; color: #1c1a17; }
-.head .eyebrow { font: 500 7pt/1.3 "Jost", "Helvetica Neue", Arial, sans-serif; letter-spacing: 0.24em; text-transform: uppercase; color: #8b7f70; }
-.head h1 { margin: 1.4mm 0 1.6mm; font: 600 25pt/1.04 "Cormorant Garamond", Garamond, Georgia, serif; letter-spacing: 0.005em; }
-.head .byline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline; gap: 4mm; padding-top: 1.6mm; border-top: 0.2mm solid #d9d2c6; font: italic 8.6pt/1.3 "Charis SIL", Charter, Georgia, serif; color: #4d4740; }
-.head .byline span:first-child { text-align: left; }
-.head .byline span:last-child { text-align: right; font-style: normal; font-family: "Cormorant Garamond", Garamond, Georgia, serif; font-weight: 600; font-size: 10.5pt; letter-spacing: 0.02em; color: #2a2622; }
-.head .byline .role { font: 500 6.8pt/1.3 "Jost", Arial, sans-serif; font-style: normal; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }
+.head { position: absolute; left: 16mm; right: 16mm; top: 9mm; display: flex; flex-direction: column; justify-content: flex-end; }
+${HEAD_CSS}
 .folio { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; align-items: baseline; justify-content: space-between; gap: 8mm; padding-top: 1.8mm; border-top: 0.2mm solid #e2dccf; font: 7pt/1.4 "Charis SIL", Charter, Georgia, serif; color: #7a7268; }
 .folio .credits { max-width: 140mm; font-style: italic; }
 .folio .run { font: 500 6.6pt/1.4 "Jost", Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: #8b7f70; }

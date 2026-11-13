@@ -29,7 +29,9 @@ const GRAND_ICON = (
   </svg>
 );
 import { allNotes, MARKS, noteLabel, notesKey, NOTE_KEY_RE, type MarkId, type Note } from "./notes";
-import { annotateXml, circled, engravePages, fontFaceCss, openInTab, printDocument, printHtml } from "../score/printScore";
+import { annotateXml, circled, engravePages, fontFaceCss, printHtml } from "../score/printScore";
+import { librettoHtml, type LibrettoOptions } from "../score/printLibretto";
+import { ExportSheet, type ExportKind } from "./ExportSheet";
 
 /*
  * The piece on screen. Only one practice screen is open at a time, so the piece's data lives here, set by
@@ -127,7 +129,7 @@ let pianoPart: CompiledEdition["parts"][number];
  * - Elided syllables arrive as separate <text> pieces joined by the SMuFL glyph U+E551, which the
  *   renderer cannot draw; they are shown as one syllable with the undertie ‿.
  */
-function prepareForDisplay(xml: string): string {
+function prepareForDisplay(xml: string, forPrint = false): string {
   try {
     const doc = new DOMParser().parseFromString(xml, "application/xml");
     if (doc.getElementsByTagName("parsererror").length) return xml;
@@ -151,7 +153,8 @@ function prepareForDisplay(xml: string): string {
       // piano pedal brackets: a pianist's marking; drawn far below the bass staff they cost the whole line
       // its size, and a singer reading along does not use them
       const pedalOnly = types.length > 0 && types.every((dt) => Array.from(dt.children).every((c) => c.nodeName === "pedal"));
-      if (playbackOnly || (inVoice && tempoMark) || stageDirection || heading || pedalOnly) dir.parentNode?.removeChild(dir);
+      // in print the tempo marks stay over the music, where an engraved score has them
+      if (playbackOnly || (inVoice && tempoMark && !forPrint) || stageDirection || heading || pedalOnly) dir.parentNode?.removeChild(dir);
     }
     for (const lyric of Array.from(doc.getElementsByTagName("lyric"))) {
       const texts = Array.from(lyric.children).filter((c) => c.nodeName === "text");
@@ -176,6 +179,8 @@ function prepareForDisplay(xml: string): string {
   }
 }
 let displayXml = "";
+/** the score as supplied (the print prepares its own copy, keeping the tempo marks) */
+let rawXml = "";
 
 /** The score with its parts in another order (top to bottom), for an ensemble arranged the way you want to read it. */
 function reorderXml(xml: string, order: string[]): string {
@@ -276,6 +281,7 @@ function loadPiece(id: string, character?: string) {
   setSpeechLanguage(LANG);
   voices = (d.voices as VoiceManifest[]).filter((m) => m.voiceId);
   pianoPart = edition.parts.find((p) => p.kind === "piano")!;
+  rawXml = d.scoreXml;
   if (!displayCache.has(id)) displayCache.set(id, prepareForDisplay(d.scoreXml));
   displayXml = displayCache.get(id)!;
   xmlOrder = [...displayXml.matchAll(/<score-part id="([^"]+)"/g)].map((m) => m[1]);
@@ -953,17 +959,15 @@ function PracticeScreen({
   }, []);
   const [notesMsg, setNotesMsg] = useState("");
   // the score for print (Save as PDF), with your notes written on it: being made, or what became of it
-  const [printState, setPrintState] = useState<"idle" | "busy" | "tab" | "blocked" | "noTab" | "failed">("idle");
+  const [exportOpen, setExportOpen] = useState<ExportKind | null>(null);
   const printDoc = useRef<{ key: string; html: string } | null>(null);
-  const printScore = async () => {
-    if (printState === "busy") return;
-    setPrintState("busy");
-    try {
+  const makeScoreHtml = async (withNotes: boolean): Promise<string> => {
+    {
       const mine = voicePart.source.xmlPartId;
       // every part, as the printed vocal score has them (all the voices and the piano's two staves, whatever the
       // screen hides), in the order you chose
       const visible: string[] | null = null;
-      const sorted = [...notes].sort((a, b) => a.m - b.m || a.q - b.q);
+      const sorted = withNotes ? [...notes].sort((a, b) => a.m - b.m || a.q - b.q) : [];
       const key = JSON.stringify([visible, orderedIds, sorted]);
       if (printDoc.current?.key !== key) {
         const list = sorted.map((n, i) => {
@@ -985,7 +989,8 @@ function PracticeScreen({
             text: n.body,
           };
         });
-        const xml = annotateXml(shownXml, mine, list.filter((x) => edition.measures[x.m]));
+        const printXml = prepareForDisplay(rawXml, true);
+        const xml = annotateXml(orderedIds.join() === xmlOrder.join() ? printXml : reorderXml(printXml, orderedIds), mine, list.filter((x) => edition.measures[x.m]));
         const { pages, firstTopMm } = await engravePages(xml, visible);
         const rights = /<rights[^>]*>([^<]*)<\/rights>/.exec(displayXml)?.[1];
         const credits = rights ? new DOMParser().parseFromString(`<r>${rights}</r>`, "application/xml").documentElement.textContent ?? "" : "";
@@ -1007,12 +1012,28 @@ function PracticeScreen({
         });
         printDoc.current = { key, html };
       }
-      const how = await printDocument(printDoc.current.html);
-      setPrintState(how === "dialog" ? "idle" : how);
-    } catch {
-      setPrintState("failed");
+      return printDoc.current.html;
     }
   };
+  const makeLibrettoHtml = (o: LibrettoOptions): string =>
+    librettoHtml(
+      {
+        head: {
+          eyebrow: [info.opera, info.kind, "Libretto"].filter(Boolean).join(" · "),
+          title: edition.title,
+          role: o.everyone && edition.roles.length > 1 ? undefined : `${roleName}'s lines`,
+          composer: edition.composer,
+          librettist: edition.librettist,
+        },
+        running: `${edition.title} · libretto`,
+        phrases: language.phrases,
+        names: Object.fromEntries(edition.roles.map((r) => [r.id, r.name])),
+        mine: roleId,
+        lang: LANG,
+        fontCss: fontFaceCss(["Charis SIL", "Cormorant Garamond", "Jost"]),
+      },
+      o,
+    );
   const [, setVoicesTick] = useState(0);
   const layoutRef = useRef<ScoreLayout | null>(null);
 
@@ -2518,6 +2539,12 @@ function PracticeScreen({
           </p>
         </div>
         <div className="p-tools">
+          <button type="button" className="cp-icon-btn cp-icon-btn--ghost p-pdf" onClick={() => setExportOpen("score")} aria-label="Save the score or the libretto as a PDF" title="Score or libretto as PDF">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 3.5h7l4.5 4.5v11a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+              <path d="M13.5 3.5V8.5h5M12 11v6M9.5 14.5 12 17l2.5-2.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
           <div className="cp-seg view-switch" role="group" aria-label="What to show">
             <button type="button" aria-pressed={view === "music"} onClick={() => setView("music")}>
               {Icon.music}
@@ -3723,32 +3750,28 @@ function PracticeScreen({
             >
               All notes
             </button>
-            <button type="button" className="cp-btn cp-btn--ghost" onClick={printScore} disabled={printState === "busy"} aria-busy={printState === "busy"}>
-              {printState === "busy" ? "Preparing…" : "Score as PDF"}
+            <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setExportOpen("score")}>
+              Score as PDF
             </button>
-            {printState === "blocked" && (
-              <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setPrintState(printDoc.current && openInTab(printDoc.current.html) ? "tab" : "noTab")}>
-                Open in a new tab
-              </button>
-            )}
             <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setNotePick(false)}>
               Cancel
             </button>
-            {printState !== "idle" && printState !== "busy" && (
-              <span className="note-pick-msg" role="status">
-                {printState === "tab"
-                  ? "The score opened in a new tab: print it there and choose Save as PDF."
-                  : printState === "blocked"
-                    ? "Printing is blocked here: open the score in a new tab."
-                    : printState === "noTab"
-                      ? "Open Sottovoce in its own browser tab, then try again."
-                      : "The score could not be prepared. Try again."}
-              </span>
-            )}
           </div>
         )}
       </footer>
 
+        {exportOpen && (
+          <ExportSheet
+            initial={exportOpen}
+            title={edition.title}
+            makeScore={makeScoreHtml}
+            makeLibretto={makeLibrettoHtml}
+            hasNotes={notes.length > 0}
+            ensemble={edition.roles.length > 1}
+            roleName={roleName}
+            onClose={() => setExportOpen(null)}
+          />
+        )}
         {noteEdit &&
           (() => {
             const ed = noteEdit;
@@ -3962,33 +3985,13 @@ function PracticeScreen({
                       {notes.length
                         ? `The whole score on A4 pages, with your ${notes.length === 1 ? "note" : `${notes.length} notes and marks`} written in at ${notes.length === 1 ? "its" : "their"} bar and listed in full at the end.`
                         : "You have no notes for this piece yet, so the PDF is just the score."}{" "}
-                      In the print window, choose Save as PDF.
+                      You see it before you save it.
                     </p>
                     <div className="notes-backup-row">
-                      <button type="button" className="cp-btn cp-btn--ghost" onClick={printScore} disabled={printState === "busy"} aria-busy={printState === "busy"}>
-                        {printState === "busy" ? "Preparing the score…" : "Download score (PDF)"}
+                      <button type="button" className="cp-btn cp-btn--ghost" onClick={() => setExportOpen("score")}>
+                        Score as PDF…
                       </button>
-                      {printState === "blocked" && (
-                        <button
-                          type="button"
-                          className="cp-btn cp-btn--ghost"
-                          onClick={() => setPrintState(printDoc.current && openInTab(printDoc.current.html) ? "tab" : "noTab")}
-                        >
-                          Open it in a new tab
-                        </button>
-                      )}
                     </div>
-                    {printState !== "idle" && printState !== "busy" && (
-                      <p className="wc-note" role="status">
-                        {printState === "tab"
-                          ? "The score opened in a new tab. Print it there and choose Save as PDF."
-                          : printState === "blocked"
-                            ? "This page may not open the print window here. Open the score in a new tab and print it from there."
-                            : printState === "noTab"
-                              ? "This page may not open a new tab either. Open Sottovoce in its own browser tab, then try again."
-                              : "The score could not be prepared for print. Try again in a moment."}
-                      </p>
-                    )}
                   </section>
                   <section className="notes-backup" aria-label="Keep your notes safe">
                     <p className="cp-eyebrow">Keep them safe</p>
