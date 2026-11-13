@@ -117,7 +117,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -143,7 +143,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -170,7 +170,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -196,7 +196,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -222,7 +222,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -253,7 +253,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -283,7 +283,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -312,7 +312,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -343,7 +343,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -381,7 +381,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -419,7 +419,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -456,7 +456,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -489,7 +489,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -522,7 +522,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -562,7 +562,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -601,7 +601,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -636,7 +636,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -672,7 +672,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -708,7 +708,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -745,7 +745,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -782,7 +782,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -820,7 +820,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -856,7 +856,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -892,7 +892,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -926,7 +926,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -965,7 +965,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1003,7 +1003,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1040,7 +1040,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1076,7 +1076,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1115,7 +1115,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
         </p>
         <p>
           Music by Giacomo Puccini and text by Luigi Illica and Giuseppe Giacosa (1896), both public domain. The IPA, word meanings and translation were
-          written for this app and have not yet been reviewed by a diction coach.
+          written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1138,8 +1138,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           syllables use ‿.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1162,8 +1161,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1186,8 +1184,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1210,8 +1207,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1234,8 +1230,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (perchè, gioja, si for sì).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1258,8 +1253,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1282,8 +1276,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1306,8 +1299,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1330,8 +1322,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1354,8 +1345,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1378,8 +1368,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1402,8 +1391,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1426,8 +1414,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1450,8 +1437,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1474,8 +1460,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1498,8 +1483,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1522,8 +1506,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1546,8 +1529,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1570,8 +1552,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1594,8 +1575,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1618,8 +1598,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1642,8 +1621,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1666,8 +1644,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1690,8 +1667,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1714,8 +1690,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1738,8 +1713,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1762,8 +1736,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1786,8 +1759,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1810,8 +1782,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1834,8 +1805,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1858,8 +1828,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1882,8 +1851,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1906,8 +1874,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1930,8 +1897,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1954,8 +1920,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -1978,8 +1943,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           box and joined syllables use ‿.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2003,8 +1967,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           capello).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2026,8 +1989,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           duettino, read from the scan and corrected against the printed pages.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2050,8 +2012,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           bar, and the whole checked until a full round, an accidentals pass and a fresh checker found nothing. Only the Italian words are kept.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2074,8 +2035,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           bar, and the whole checked until a full round, an accidentals pass and a fresh checker found nothing. Only the Italian words are kept.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2098,8 +2058,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           bar, and the whole checked until a full round, an accidentals pass and a fresh checker found nothing. Only the Italian words are kept.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2124,8 +2083,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           split bar; it is played here as B natural, which the harmony needs.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2149,8 +2107,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2174,8 +2131,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2199,8 +2155,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2224,8 +2179,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2249,8 +2203,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2274,8 +2227,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2299,8 +2251,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2324,8 +2275,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2349,8 +2299,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2373,8 +2322,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (sò).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2398,8 +2346,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2423,8 +2370,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2448,8 +2394,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings. The opening upbeat counts as bar 1. In bar 40 the piano's C is printed without the sharp it has in bar 50; it is kept as printed.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2472,8 +2417,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2496,8 +2440,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2520,8 +2463,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (quì, sò, gia).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2544,8 +2486,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by independent checkers. Only the Italian words are kept, with the engraving's spellings (“credera” for crederà, “cos' è”).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2568,8 +2509,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2592,8 +2532,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2616,8 +2555,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2640,8 +2578,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2664,8 +2601,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2688,8 +2624,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2713,8 +2648,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings. The rest of the Finale follows section by section.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2737,8 +2671,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (quì, ajutarti, jer).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2761,8 +2694,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checked bar by bar against the page by an independent checker and corrected. Only the Italian words are kept, with the engraving's spellings (quì, rè, sò). Cherubino hides here and does not sing.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2786,8 +2718,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings. In bar 54 the Count's “parlate?” is printed half a beat too long; it is read as eighths so the bar adds up.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2811,8 +2742,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings. Marcellina's French “l'argent fait tout” is as printed.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2836,8 +2766,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           Only the Italian words are kept, with the engraving's spellings. The print has two slips that are kept as printed: “sa i” for “so i” (bar 19, Marcellina) and “Sibila” for “Sibilla” (bar 61, Susanna). Where the print gives a pickup note only to the German words, the Italian line rests, as printed.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2861,8 +2790,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           checkers found nothing. Only the Italian words are kept.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2886,8 +2814,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           engraving's spellings (quà, pugnendo, rovescierò).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1786), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications), wherever his printed transcription is legible; this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2939,8 +2866,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           with the print's spelling and punctuation.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -2998,8 +2924,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           eighths of the last bar, beamed in threes, are read as triplets.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3030,8 +2955,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           sciegliete, perchè). The last bar is printed as a half bar, leading straight into No. 2.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3061,8 +2985,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           stage directions and instrument cues are left out. The last bar, a single beat, holds Ferrando's first syllables of the next recitative.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3095,8 +3018,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           runs on into No. 3.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3126,8 +3048,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           syllables of the recitative before, where the print has them.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3157,8 +3078,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           bar by fresh checkers. Only the Italian words are kept, and the grace notes are written as Peters prints them.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3191,8 +3111,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           his line.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3222,8 +3141,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           line “Barbaro fato!”, which begins in the last bar of the recitative before; the print sets it at the start of the aria.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3254,8 +3172,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           dunque?, Nè).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3288,8 +3205,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           be written in the file and are left out.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3319,8 +3235,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           print's spellings (Non piangere, cagion, Dei).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3350,8 +3265,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           bar 8, and spere for spero in bar 23). A possible small turn over Guglielmo's part in bar 32 is too uncertain on the page to write.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3380,8 +3294,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           and comedia has one m.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3412,8 +3325,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           basses. The first bar is the one-beat upbeat. Only the Italian words are kept, with the print's spellings.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3443,8 +3355,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           accent, Muojo). The sisters' last words, “Muojo d'affanno”, run on into No. 9, which begins on the same page: this piece ends on “d'af-”.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3476,8 +3387,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           to the left in bars 7–8 cannot be written in the file and is left out.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3506,8 +3416,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           are kept, with the print's spellings (Oh Dei). It leads straight into No. 10.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3538,8 +3447,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           (femmina) and its quotation marks around the proverb.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3571,8 +3479,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           No. 11.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3603,8 +3510,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           written in.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3636,8 +3542,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           ora, più tosto, perchè, and Fiordiligi's “Divertirvi?”). The last bar, three beats, leads straight into No. 12.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3669,8 +3574,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           written in the left hand only.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3702,8 +3606,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           “attacca Nr. 13”, is filled out with rests.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3735,8 +3638,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           the Italian words are kept, with the print's spellings (o ti so pentir, Mi da, quì, and Don Alfonso's “non ci ravvisa”).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3768,8 +3670,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           which begins on the same page: this piece ends on “fac-”.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3801,8 +3702,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           them “speraza” for the long run on speranza in bars 119–126.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3833,8 +3733,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           including its misprint “babara” for barbara in bar 2. It leads into No. 15.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3864,8 +3763,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           wrote this aria to replace “Rivolgete a lui lo sguardo” (No. 15a), which Peters prints after it.
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3897,8 +3795,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           with the print's spellings (confronte, usignuolo, Pich ne).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
@@ -3928,8 +3825,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
           misprint “ri” for vi in bar 18).
         </p>
         <p>
-          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for
-          this app and have not yet been reviewed by a diction coach.
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
         </p>
       </>
     ),
