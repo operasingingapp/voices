@@ -68,7 +68,7 @@ export function voiceTone(voice: string): Tone {
   const v = voice.toLowerCase();
   if (v.startsWith("mezzo")) return "lilac";
   if (v.startsWith("contralto")) return "peach";
-  if (v.startsWith("soprano")) return "pink";
+  if (v.startsWith("soprano") || v.startsWith("treble")) return "pink";
   if (v.startsWith("tenor")) return "sky";
   if (v.startsWith("bass") && !v.includes("baritone")) return "butter";
   return "mint";
@@ -289,7 +289,8 @@ export function voiceGroup(voice: string): string {
   const v = voice.toLowerCase();
   if (v.startsWith("mezzo")) return "Mezzo-soprano";
   if (v.startsWith("contralto")) return "Contralto";
-  if (v.startsWith("soprano")) return "Soprano";
+  // a treble (a boy soprano) sings the soprano line
+  if (v.startsWith("soprano") || v.startsWith("treble")) return "Soprano";
   if (v.startsWith("tenor")) return "Tenor";
   if (v.startsWith("bass") && !v.includes("baritone")) return "Bass";
   return "Baritone";

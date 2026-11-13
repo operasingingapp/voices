@@ -136,11 +136,11 @@ export const ARCS: Record<string, ArcStep[]> = {
   ],
   "zauberfloete:pamina": [
     { act: "Act 1", text: "Held in Sarastro's realm and guarded by Monostatos, Pamina learns from Papageno that a prince loves her, and they sing of love (“Bei Männern”). Caught trying to escape, she tells Sarastro the truth, and meets Tamino." },
-    { act: "Act 2", text: "Her mother gives her a dagger to kill Sarastro. Tamino's silence makes her think he no longer loves her (“Ach, ich fühl's”), and she is about to take her life when the Spirits stop her. She walks with Tamino through fire and water." },
+    { act: "Act 2", text: "Her mother gives her a dagger to kill Sarastro. Tamino's silence makes her think he no longer loves her (“Ach, ich fühl's”), and she is about to take her life when the three boys stop her. She walks with Tamino through fire and water." },
   ],
   "zauberfloete:papageno": [
     { act: "Act 1", text: "The bird-catcher (“Der Vogelfänger bin ich ja”) claims he killed the serpent and gets his mouth padlocked. Sent with Tamino and a set of magic bells, he finds Pamina and sings with her of love; his bells save them from Monostatos." },
-    { act: "Act 2", text: "He fails the trial of silence but is promised a wife. Alone and despairing, he is about to hang himself when the Spirits remind him of his bells; Papagena appears (“Pa-pa-pa”)." },
+    { act: "Act 2", text: "He fails the trial of silence but is promised a wife. Alone and despairing, he is about to hang himself when the three boys remind him of his bells; Papagena appears (“Pa-pa-pa”)." },
   ],
   "zauberfloete:queen": [
     { act: "Act 1", text: "The Queen of the Night appears to Tamino, grieving for her daughter, taken by Sarastro, and promises Pamina to him if he rescues her (“O zittre nicht”)." },

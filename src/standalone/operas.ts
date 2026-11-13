@@ -3669,12 +3669,67 @@ export const OPERAS: Opera[] = [
     "id": "tamino",
     "name": "Tamino",
     "voice": "Tenor",
-    "desc": "A prince.",
+    "desc": "A prince, a king's son, who sets out to rescue Pamina and seeks initiation in Sarastro's temple.",
     "avatar": "curls",
     "pieces": [
      {
       "title": "Dies Bildnis ist bezaubernd schön",
       "kind": "Aria · Act 1"
+     },
+     {
+      "title": "Zu Hülfe! zu Hülfe!",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Zu Hilfe! Zu Hilfe!"
+     },
+     {
+      "title": "Hm! hm! hm!",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Hm! hm! hm!"
+     },
+     {
+      "title": "Drei Knäbchen, jung, schön, hold und weise",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+     },
+     {
+      "title": "Zum Ziele führt dich diese Bahn",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Die Weisheitslehre dieser Knaben",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Die Weisheitslehre dieser Knaben"
+     },
+     {
+      "title": "Wie stark ist nicht dein Zauberton",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Wie stark ist nicht dein Zauberton"
+     },
+     {
+      "title": "Nun stolzer Jüngling, nur hieher!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+     },
+     {
+      "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+      "kind": "Quintet · Act 2",
+      "id": "Act 2: Wie? Wie? Wie?"
+     },
+     {
+      "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?"
+     },
+     {
+      "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+     },
+     {
+      "title": "Tamino mein! O welch' ein Glück!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Tamino mein! O welch' ein Glück!"
      }
     ]
    },
@@ -3682,7 +3737,7 @@ export const OPERAS: Opera[] = [
     "id": "pamina",
     "name": "Pamina",
     "voice": "Soprano",
-    "desc": "The Queen of the Night's daughter.",
+    "desc": "The Queen of the Night's daughter, kept in Sarastro's palace.",
     "avatar": "long",
     "pieces": [
      {
@@ -3692,6 +3747,51 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ach, ich fühl's",
       "kind": "Aria · Act 2"
+     },
+     {
+      "title": "Du feines Täubchen, nur herein!",
+      "kind": "Trio · Act 1",
+      "id": "Act 1: Du feines Täubchen, nur herein"
+     },
+     {
+      "title": "Schnelle Füsse, rascher Muth",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Es lebe Sarastro! Sarastro lebe!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Es lebe Sarastro! Sarastro lebe!"
+     },
+     {
+      "title": "Herr! ich bin zwar Verbrecherin!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Herr! ich bin zwar Verbrecherin!"
+     },
+     {
+      "title": "Nun stolzer Jüngling, nur hieher!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+     },
+     {
+      "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?"
+     },
+     {
+      "title": "Bald prangt, den Morgen zu verkünden",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+     },
+     {
+      "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde"
+     },
+     {
+      "title": "Tamino mein! O welch' ein Glück!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Tamino mein! O welch' ein Glück!"
      }
     ]
    },
@@ -3699,7 +3799,7 @@ export const OPERAS: Opera[] = [
     "id": "papageno",
     "name": "Papageno",
     "voice": "Baritone",
-    "desc": "A bird-catcher.",
+    "desc": "A bird-catcher who supplies the Queen of the Night and her ladies with birds. (The score lists him as Bass.)",
     "avatar": "hat",
     "pieces": [
      {
@@ -3717,6 +3817,55 @@ export const OPERAS: Opera[] = [
      {
       "title": "Pa-pa-pa",
       "kind": "Duet with Papagena · Act 2"
+     },
+     {
+      "title": "Hm! hm! hm!",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Hm! hm! hm!"
+     },
+     {
+      "title": "Drei Knäbchen, jung, schön, hold und weise",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+     },
+     {
+      "title": "Du feines Täubchen, nur herein!",
+      "kind": "Trio · Act 1",
+      "id": "Act 1: Du feines Täubchen, nur herein"
+     },
+     {
+      "title": "Schnelle Füsse, rascher Muth",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Es lebe Sarastro! Sarastro lebe!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Es lebe Sarastro! Sarastro lebe!"
+     },
+     {
+      "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+      "kind": "Quintet · Act 2",
+      "id": "Act 2: Wie? Wie? Wie?"
+     },
+     {
+      "title": "Papagena, Papagena, Papagena!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Papagena, Papagena, Papagena!"
+     }
+    ]
+   },
+   {
+    "id": "papagena",
+    "name": "Papagena",
+    "voice": "Soprano",
+    "desc": "The young woman meant for Papageno; she first comes to him disguised as an old woman (“ein altes Weib”).",
+    "avatar": "bun",
+    "pieces": [
+     {
+      "title": "Pa-pa-pa-pa-pa-pa-Papagena!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Pa-pa-pa-pa-pa-pa-Papagena!"
      }
     ]
    },
@@ -3724,7 +3873,7 @@ export const OPERAS: Opera[] = [
     "id": "queen",
     "name": "The Queen of the Night",
     "voice": "Soprano",
-    "desc": "Pamina's mother.",
+    "desc": "Pamina's mother, the “star-blazing queen”.",
     "avatar": "crown",
     "pieces": [
      {
@@ -3738,6 +3887,11 @@ export const OPERAS: Opera[] = [
       "editionId": "mozart-der-holle-rache",
       "when": "Act 2, at night in Sarastro's grounds, to Pamina",
       "context": "The Queen of the Night appears to her daughter Pamina, who lies sleeping in Sarastro's garden, and drives off Monostatos. She learns that Tamino has joined Sarastro's brotherhood, and she has lost the power of the sun circle that her husband left to Sarastro. She gives Pamina a dagger and orders her to kill Sarastro: if she will not, the Queen will disown her for ever and break every bond of nature between them. She ends by calling on the gods of vengeance to hear a mother's oath."
+     },
+     {
+      "title": "Nur stille, stille, stille, stille!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
      }
     ]
    },
@@ -3745,7 +3899,7 @@ export const OPERAS: Opera[] = [
     "id": "sarastro",
     "name": "Sarastro",
     "voice": "Bass",
-    "desc": "Leader of the priests of Isis and Osiris.",
+    "desc": "Leader of the priests of Isis and Osiris, who has taken Pamina from her mother.",
     "avatar": "beard",
     "pieces": [
      {
@@ -3755,6 +3909,344 @@ export const OPERAS: Opera[] = [
      {
       "title": "In diesen heil'gen Hallen",
       "kind": "Aria · Act 2"
+     },
+     {
+      "title": "Herr! ich bin zwar Verbrecherin!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Nun stolzer Jüngling, nur hieher!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+     },
+     {
+      "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?"
+     },
+     {
+      "title": "Die Strahlen der Sonne vertreiben die Nacht",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+     }
+    ]
+   },
+   {
+    "id": "monostatos",
+    "name": "Monostatos",
+    "voice": "Tenor",
+    "desc": "A Moor in Sarastro's service, Pamina's guard.",
+    "avatar": "short",
+    "pieces": [
+     {
+      "title": "Du feines Täubchen, nur herein!",
+      "kind": "Trio · Act 1",
+      "id": "Act 1: Du feines Täubchen, nur herein!"
+     },
+     {
+      "title": "Schnelle Füsse, rascher Muth",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Schnelle Füsse, rascher Muth"
+     },
+     {
+      "title": "Nun stolzer Jüngling, nur hieher!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+     },
+     {
+      "title": "Alles fühlt der Liebe Freuden",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Alles fühlt der Liebe Freuden"
+     },
+     {
+      "title": "Nur stille, stille, stille, stille!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Nur stille, stille, stille, stille!"
+     }
+    ]
+   },
+   {
+    "id": "speaker",
+    "name": "The Speaker",
+    "voice": "Bass-baritone",
+    "desc": "A senior priest of the temple, who receives Tamino and Papageno and leads them to their trials. In the Act 1 Finale the score calls him “Priester”, an old priest. (The score lists him as Bass.)",
+    "avatar": "beard",
+    "pieces": [
+     {
+      "title": "Die Weisheitslehre dieser Knaben",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Die Weisheitslehre dieser Knaben"
+     }
+    ]
+   },
+   {
+    "id": "dame1",
+    "name": "First Lady",
+    "voice": "Soprano",
+    "desc": "One of the three Ladies of the Queen of the Night.",
+    "avatar": "hood",
+    "pieces": [
+     {
+      "title": "Zu Hülfe! zu Hülfe!",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Zu Hülfe! zu Hülfe!"
+     },
+     {
+      "title": "Ich sollte fort?",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Ich sollte fort?"
+     },
+     {
+      "title": "Hm! hm! hm!",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Hm! hm! hm!"
+     },
+     {
+      "title": "Drei Knäbchen, jung, schön, hold und weise",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+     },
+     {
+      "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+      "kind": "Quintet · Act 2",
+      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?"
+     },
+     {
+      "title": "Nur stille, stille, stille, stille!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Nur stille, stille, stille, stille!"
+     }
+    ]
+   },
+   {
+    "id": "dame2",
+    "name": "Second Lady",
+    "voice": "Mezzo-soprano",
+    "desc": "One of the three Ladies of the Queen of the Night. (The score lists her as Soprano.)",
+    "avatar": "hood",
+    "pieces": [
+     {
+      "title": "Zu Hülfe! zu Hülfe!",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Zu Hülfe! zu Hülfe!"
+     },
+     {
+      "title": "Ich sollte fort?",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Ich sollte fort?"
+     },
+     {
+      "title": "Hm! hm! hm!",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Hm! hm! hm!"
+     },
+     {
+      "title": "Drei Knäbchen, jung, schön, hold und weise",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+     },
+     {
+      "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+      "kind": "Quintet · Act 2",
+      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?"
+     },
+     {
+      "title": "Nur stille, stille, stille, stille!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Nur stille, stille, stille, stille!"
+     }
+    ]
+   },
+   {
+    "id": "dame3",
+    "name": "Third Lady",
+    "voice": "Mezzo-soprano or contralto",
+    "desc": "One of the three Ladies of the Queen of the Night. (The score lists her as Soprano.)",
+    "avatar": "hood",
+    "pieces": [
+     {
+      "title": "Zu Hülfe! zu Hülfe!",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Zu Hülfe! zu Hülfe!"
+     },
+     {
+      "title": "Ich sollte fort?",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Ich sollte fort?"
+     },
+     {
+      "title": "Hm! hm! hm!",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Hm! hm! hm!"
+     },
+     {
+      "title": "Drei Knäbchen, jung, schön, hold und weise",
+      "kind": "Quintet · Act 1",
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+     },
+     {
+      "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+      "kind": "Quintet · Act 2",
+      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?"
+     },
+     {
+      "title": "Nur stille, stille, stille, stille!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Nur stille, stille, stille, stille!"
+     }
+    ]
+   },
+   {
+    "id": "knabe1",
+    "name": "First Boy",
+    "voice": "Treble or soprano",
+    "desc": "One of the three boys who guide Tamino and Papageno.",
+    "avatar": "curls",
+    "pieces": [
+     {
+      "title": "Zum Ziele führt dich diese Bahn",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Seid uns zum zweitenmal willkommen",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Seid uns zum zweitenmal willkommen"
+     },
+     {
+      "title": "Bald prangt, den Morgen zu verkünden",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+     },
+     {
+      "title": "Papagena, Papagena, Papagena!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Papagena, Papagena, Papagena!"
+     }
+    ]
+   },
+   {
+    "id": "knabe2",
+    "name": "Second Boy",
+    "voice": "Treble or soprano",
+    "desc": "One of the three boys who guide Tamino and Papageno.",
+    "avatar": "curls",
+    "pieces": [
+     {
+      "title": "Zum Ziele führt dich diese Bahn",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Seid uns zum zweitenmal willkommen",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Seid uns zum zweitenmal willkommen"
+     },
+     {
+      "title": "Bald prangt, den Morgen zu verkünden",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+     },
+     {
+      "title": "Papagena, Papagena, Papagena!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Papagena, Papagena, Papagena!"
+     }
+    ]
+   },
+   {
+    "id": "knabe3",
+    "name": "Third Boy",
+    "voice": "Treble or mezzo-soprano",
+    "desc": "One of the three boys who guide Tamino and Papageno. (The score lists him as Soprano.)",
+    "avatar": "curls",
+    "pieces": [
+     {
+      "title": "Zum Ziele führt dich diese Bahn",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+     },
+     {
+      "title": "Seid uns zum zweitenmal willkommen",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Seid uns zum zweitenmal willkommen"
+     },
+     {
+      "title": "Bald prangt, den Morgen zu verkünden",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+     },
+     {
+      "title": "Papagena, Papagena, Papagena!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Papagena, Papagena, Papagena!"
+     }
+    ]
+   },
+   {
+    "id": "priest1",
+    "name": "First Priest",
+    "voice": "Tenor",
+    "desc": "A priest of the temple; sings the upper line of “Bewahret euch vor Weibertücken”. (The score lists the priests as Bass.)",
+    "avatar": "hood",
+    "pieces": [
+     {
+      "title": "Bewahret euch vor Weibertücken",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Bewahret euch vor Weibertücken"
+     }
+    ]
+   },
+   {
+    "id": "priest2",
+    "name": "Second Priest",
+    "voice": "Bass",
+    "desc": "A priest of the temple, who prepares Papageno for the trials.",
+    "avatar": "beard",
+    "pieces": [
+     {
+      "title": "Bewahret euch vor Weibertücken",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Bewahret euch vor Weibertücken"
+     }
+    ]
+   },
+   {
+    "id": "armored1",
+    "name": "First Armed Man",
+    "voice": "Tenor",
+    "desc": "One of the two men in armour who guard the gates of fire and water.",
+    "avatar": "cap",
+    "pieces": [
+     {
+      "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde"
+     },
+     {
+      "title": "Tamino mein! O welch' ein Glück!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Tamino mein! O welch' ein Glück!"
+     }
+    ]
+   },
+   {
+    "id": "armored2",
+    "name": "Second Armed Man",
+    "voice": "Bass",
+    "desc": "One of the two men in armour who guard the gates of fire and water.",
+    "avatar": "cap",
+    "pieces": [
+     {
+      "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde"
+     },
+     {
+      "title": "Tamino mein! O welch' ein Glück!",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Tamino mein! O welch' ein Glück!"
      }
     ]
    }
@@ -5340,7 +5832,7 @@ const ALIAS: Record<string, string> = {
   "Sull’aria": "Che soave zeffiretto",
   "Sull'aria… che soave zeffiretto": "Che soave zeffiretto",
   "Mi tradì quell'alma ingrata": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
-  "Pa-pa-pa": "Bald prangt, den Morgen zu verkünden",
+  "Pa-pa-pa": "Pa-pa-pa-pa-pa-pa-Papagena!",
   "Vecchia zimarra, senti": "Vecchia zimarra",
   "Che gelida manina": "Ah!… Che gelida manina",
   "Sì, mi chiamano Mimì": "Si. Mi chiamano Mimì",
@@ -5577,3 +6069,15 @@ const COSI_V2: Record<string, string[]> = {
   "cosi:alfonso": ["Act 1: La mia Dorabella capace non è", "Act 1: È la fede delle femmine", "Act 1: Una bella serenata", "Act 1: Vorrei dir, e cor non ho", "Act 1: Sento, o Dio, che questo piede", "Act 1: Di scrivermi ogni giorno", "Soave sia il vento", "Act 1: Nel mare solca", "Act 1: Che silenzio!", "Act 1: Alla bella Despinetta", "Act 1: E voi ridete?", "Act 1: Oh, la saria da ridere!", "Act 1: Ah, che tutta in un momento", "Act 2: La mano a me date", "Act 2: Tutti accusan le donne", "Act 2: Fate presto, o cari amici"],
 };
 Object.assign(V2_KEYS, COSI_V2);
+
+// Die Zauberflöte's running order has since been rebuilt from the vocal score section by section, with the new cast,
+// so its old lists are kept as they were (the five characters the app had then) rather than rebuilt from today's running order
+const ZAUBER_V2: Record<string, string[]> = {
+  "zauberfloete:tamino": ["Act 1: Zu Hilfe! Zu Hilfe!", "Dies Bildnis ist bezaubernd schön", "Act 1: Hm! hm! hm!", "Act 1: Zum Ziele führt dich diese Bahn", "Act 2: Wie? Wie? Wie?", "Act 2: Soll ich dich, Teurer, nicht mehr sehn?", "Act 2: Bald prangt, den Morgen zu verkünden"],
+  "zauberfloete:pamina": ["Act 1: Du feines Täubchen, nur herein", "Bei Männern, welche Liebe fühlen", "Act 1: Zum Ziele führt dich diese Bahn", "Ach, ich fühl's", "Act 2: Soll ich dich, Teurer, nicht mehr sehn?", "Act 2: Bald prangt, den Morgen zu verkünden"],
+  "zauberfloete:papageno": ["Der Vogelfänger bin ich ja", "Act 1: Hm! hm! hm!", "Act 1: Du feines Täubchen, nur herein", "Bei Männern, welche Liebe fühlen", "Act 1: Zum Ziele führt dich diese Bahn", "Act 2: Wie? Wie? Wie?", "Ein Mädchen oder Weibchen", "Pa-pa-pa"],
+  "zauberfloete:queen": ["O zittre nicht, mein lieber Sohn", "Der Hölle Rache kocht in meinem Herzen", "Act 2: Bald prangt, den Morgen zu verkünden"],
+  "zauberfloete:sarastro": ["Act 1: Zum Ziele führt dich diese Bahn", "O Isis und Osiris", "In diesen heil'gen Hallen", "Act 2: Soll ich dich, Teurer, nicht mehr sehn?", "Act 2: Bald prangt, den Morgen zu verkünden"],
+};
+Object.assign(V2_KEYS, ZAUBER_V2);
+for (const id of ["papagena", "monostatos", "speaker", "dame1", "dame2", "dame3", "knabe1", "knabe2", "knabe3", "priest1", "priest2", "armored1", "armored2"]) V2_KEYS[`zauberfloete:${id}`] = [];
