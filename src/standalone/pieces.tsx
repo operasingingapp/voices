@@ -3074,7 +3074,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 117, from the only two separate recordings of it found (Böhm 1:04, Gardiner 1:35; about 1½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 103, from the median length of seven recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis, Gardiner, Marriner; about 1½ minutes)",
     },
     notePlaceholder: "Speak it first: the officers quick and sure of themselves, Alfonso amused",
     about: (
@@ -3170,7 +3170,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 110, from the only separate recording of it found (Böhm, about 1 minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 94, from the median length of five recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis; about 1¼ minutes)",
     },
     notePlaceholder: "Speak it first: the sisters playful, then alarmed when Alfonso comes in alone",
     about: (
@@ -3301,7 +3301,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 90, a nominal estimate rather than a recording's pace (about 45 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 75, from the median length of five recordings (Haitink, Solti, Nézet-Séguin, Currentzis, Marriner; just under a minute)",
     },
     notePlaceholder: "Speak it first: tender goodbyes, then the sisters' dark talk of swords and dying",
     about: (
@@ -3332,7 +3332,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B♭ major",
       time: "2/4",
-      tempo: "Andante, played at ♩ = 51 (about 1½ minutes), from Kuijken's recording: his track also holds the recitative that follows, so Böhm's 23 seconds for that recitative were taken off; Mozart gives the word only",
+      tempo: "Andante, played at ♩ = 56 (about 1½ minutes, the median of five recordings: Haitink, Solti, Nézet-Séguin, Currentzis, Marriner); Mozart gives the word only",
     },
     notePlaceholder: "Smooth and tender, the two voices moving together; the men are in on the joke",
     about: (
@@ -3363,7 +3363,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 83, from Böhm's recording (under half a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 70, from the median length of six recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis, Marriner; about half a minute)",
     },
     notePlaceholder: "Speak it first: Alfonso amused aside, Ferrando theatrical, the sisters fainting",
     about: (
@@ -3394,7 +3394,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major",
       time: "¢ (alla breve)",
-      tempo: "Maestoso, played at a half note = 56 (♩ = 113), about 1¾ minutes, from Böhm's recording; Mozart gives the word only",
+      tempo: "Maestoso, played at a half note = 67 (♩ = 134), about 1½ minutes, the median of six recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis, Marriner); Mozart gives the word only",
     },
     notePlaceholder: "Bright and martial: a march heard from afar as the boat comes in",
     about: (
@@ -3456,7 +3456,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major, then D major for the chorus",
       time: "4/4, then ¢ (alla breve) for the chorus",
-      tempo: "Andante, played at ♩ = 53, then the chorus Maestoso at a half note ≈ 58 (♩ = 115); about 3 minutes in all, from two recordings (Rattle 1:55 and 0:48, Klemperer 2:06 and 0:57); Mozart gives the words only",
+      tempo: "Andante, played at ♩ = 53, then the chorus Maestoso at a half note = 67 (♩ = 134, the pace of “Bella vita militar”); about 2¾ minutes in all, from the median lengths of five recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis); Mozart gives the words only",
     },
     notePlaceholder: "Broken by sobs: the sisters mean every word, the officers are acting, Alfonso can hardly keep a straight face",
     about: (
@@ -3489,7 +3489,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 64, from two recordings (Rattle 1:05, Klemperer 1:03; about 1 minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 75, from the median length of five recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis; just under a minute)",
     },
     notePlaceholder: "Speak it first: Dorabella dazed, Alfonso brisk, Fiordiligi watching the boat go",
     about: (
@@ -3519,7 +3519,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, kept for the closing Allegro moderato too, from two recordings (Rattle 1:03, Klemperer 1:14; just over a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, kept for the closing Allegro moderato too, from the median length of five recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis; about 1 minute)",
     },
     notePlaceholder: "Speak it first: Alfonso alone and pleased with himself, then the proverb sung out",
     about: (
@@ -3552,7 +3552,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 85, from two recordings (Rattle 1:05, Klemperer 1:03; about 1 minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 94, from the median length of five recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis; about 1 minute)",
     },
     notePlaceholder: "Speak it first: Despina grumbling, then the sisters bursting in",
     about: (
@@ -3584,7 +3584,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E♭ major (the aria; the recitative has no key signature)",
       time: "4/4, then ¢ (alla breve) for the aria",
-      tempo: "The recitative at ♩ = 79, then the aria Allegro agitato at a half note ≈ 87 (♩ = 175); about 3½ minutes in all, from two recordings (Rattle 1:03 and 2:00, Klemperer 1:19 and 2:40); the recitative's Allegro assai and Maestoso keep its pace; Mozart gives the words only",
+      tempo: "The recitative at ♩ = 89, then the aria Allegro agitato at a half note = 107 (♩ = 214); about 3 minutes in all, from the median lengths of six recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis, and Gardiner for the recitative); the recitative's Allegro assai and Maestoso keep its pace; Mozart gives the words only",
     },
     notePlaceholder: "Over the top on purpose: real grief, played as grand tragedy",
     about: (
@@ -3748,7 +3748,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, estimated (no separate timing of this recitative was found; just under 2 minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 82, from the median of six recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis, Marriner; most of their tracks run on into “Temerari”, so this recitative's share was taken in proportion; about 2 minutes)",
     },
     notePlaceholder: "Speak it first: Alfonso playing innocent, the officers overdoing it, the sisters scandalised",
     about: (
@@ -3814,7 +3814,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 81, from a recording (Jacobs 1:08; about 1 minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, from the median length of five recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis; about 1 minute)",
     },
     notePlaceholder: "Speak it first: the officers pleading, Alfonso coaxing, the sisters icy",
     about: (
@@ -3846,7 +3846,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "2/4",
-      tempo: "Andantino, played at ♩ = 76, estimated (about 1¾ minutes; no separate timing was found); Mozart gives the word only",
+      tempo: "Andantino, played at ♩ = 88, about 1½ minutes, the median of seven recordings (Böhm, Haitink, Solti, Nézet-Séguin, Currentzis, Gardiner, Marriner); Mozart gives the word only",
     },
     notePlaceholder: "Light and swaggering: Guglielmo is enjoying the joke",
     about: (
