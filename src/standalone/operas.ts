@@ -1334,16 +1334,164 @@ export const OPERAS: Opera[] = [
     "avatar": "short",
     "pieces": [
      {
+      "title": "Notte e giorno faticar",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Notte e giorno faticar"
+     },
+     {
+      "title": "Leporello, ove sei?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Leporello, ove sei?"
+     },
+     {
+      "title": "Orsù, spicciati presto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Orsù, spicciati presto"
+     },
+     {
+      "title": "Ah! chi mi dice mai",
+      "kind": "Trio · Act 1",
+      "id": "Act 1: Ah! chi mi dice mai"
+     },
+     {
+      "title": "Chi è là?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Chi è là?"
+     },
+     {
+      "title": "Manco male, è partita",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Manco male, è partita"
+     },
+     {
+      "title": "Alfin siam liberati, Zerlinetta gentil",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Alfin siam liberati, Zerlinetta gentil"
+     },
+     {
       "title": "Là ci darem la mano",
-      "kind": "Duet with Zerlina · Act 1"
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Là ci darem la mano"
      },
      {
-      "title": "Fin ch'han dal vino",
-      "kind": "Aria · Act 1"
+      "title": "Fermati, scellerato!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Fermati, scellerato!"
      },
      {
-      "title": "Deh, vieni alla finestra",
-      "kind": "Canzonetta · Act 2"
+      "title": "Mi par ch'oggi il demonio si diverta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+     },
+     {
+      "title": "Non ti fidar, o misera",
+      "kind": "Quartet · Act 1",
+      "id": "Act 1: Non ti fidar, o misera"
+     },
+     {
+      "title": "Povera sventurata!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Povera sventurata!"
+     },
+     {
+      "title": "Io deggio ad ogni patto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Io deggio ad ogni patto"
+     },
+     {
+      "title": "Finch'han dal vino calda la testa",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Finch'han dal vino calda la testa"
+     },
+     {
+      "title": "Guarda un po', come seppe questa strega",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Guarda un po', come seppe questa strega"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "Eh via, buffone",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Eh via, buffone"
+     },
+     {
+      "title": "Leporello! Signore!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Leporello! Signore!"
+     },
+     {
+      "title": "Ah, taci, ingiusto core!",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Ah, taci, ingiusto core!"
+     },
+     {
+      "title": "Amico, che ti par?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, che ti par?"
+     },
+     {
+      "title": "Deh vieni alla finestra",
+      "kind": "Canzonetta · Act 2",
+      "id": "Act 2: Deh vieni alla finestra"
+     },
+     {
+      "title": "V'è gente alla finestra",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: V'è gente alla finestra"
+     },
+     {
+      "title": "Metà di voi quà vadano",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Metà di voi quà vadano"
+     },
+     {
+      "title": "Zitto, lascia ch'io senta!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Zitto, lascia ch'io senta!"
+     },
+     {
+      "title": "Ah, ah, ah, ah, questa è buona",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah, ah, ah, ah, questa è buona"
+     },
+     {
+      "title": "O statua gentilissima",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: O statua gentilissima"
+     },
+     {
+      "title": "Già la mensa è preparata",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Già la mensa è preparata"
+     },
+     {
+      "title": "L'ultima prova dell'amor mio",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: L'ultima prova dell'amor mio"
+     },
+     {
+      "title": "Don Giovanni! a cenar teco",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Don Giovanni! a cenar teco"
      }
     ]
    },
@@ -1356,11 +1504,158 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Notte e giorno faticar",
-      "kind": "Introduction · Act 1"
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Notte e giorno faticar"
      },
      {
-      "title": "Madamina, il catalogo è questo",
-      "kind": "Aria · Act 1"
+      "title": "Leporello, ove sei?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Leporello, ove sei?"
+     },
+     {
+      "title": "Orsù, spicciati presto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Orsù, spicciati presto"
+     },
+     {
+      "title": "Ah! chi mi dice mai",
+      "kind": "Trio · Act 1",
+      "id": "Act 1: Ah! chi mi dice mai"
+     },
+     {
+      "title": "Chi è là?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Chi è là?"
+     },
+     {
+      "title": "Madamina! Il catalogo è questo",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Madamina! Il catalogo è questo"
+     },
+     {
+      "title": "Manco male, è partita",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Manco male, è partita"
+     },
+     {
+      "title": "Io deggio ad ogni patto",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Io deggio ad ogni patto"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "Eh via, buffone",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Eh via, buffone"
+     },
+     {
+      "title": "Leporello! Signore!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Leporello! Signore!"
+     },
+     {
+      "title": "Ah, taci, ingiusto core!",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Ah, taci, ingiusto core!"
+     },
+     {
+      "title": "Amico, che ti par?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, che ti par?"
+     },
+     {
+      "title": "Di molte faci il lume s'avvicina",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Di molte faci il lume s'avvicina"
+     },
+     {
+      "title": "Sola, sola in bujo loco",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Sola, sola in bujo loco"
+     },
+     {
+      "title": "Mille torbidi pensieri",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Mille torbidi pensieri"
+     },
+     {
+      "title": "Ah, pietà! Signori miei!",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Ah, pietà! Signori miei!"
+     },
+     {
+      "title": "Restati quà!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Restati quà!"
+     },
+     {
+      "title": "Per queste tue manine",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Per queste tue manine"
+     },
+     {
+      "title": "Amico, per pietà",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, per pietà"
+     },
+     {
+      "title": "Ah, ah, ah, ah, questa è buona",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah, ah, ah, ah, questa è buona"
+     },
+     {
+      "title": "O statua gentilissima",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: O statua gentilissima"
+     },
+     {
+      "title": "Già la mensa è preparata",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Già la mensa è preparata"
+     },
+     {
+      "title": "L'ultima prova dell'amor mio",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: L'ultima prova dell'amor mio"
+     },
+     {
+      "title": "Don Giovanni! a cenar teco",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Don Giovanni! a cenar teco"
+     },
+     {
+      "title": "Ah! dov'è il perfido?",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! dov'è il perfido?"
+     },
+     {
+      "title": "Or che tutti, o mio tesoro",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Or che tutti, o mio tesoro"
+     },
+     {
+      "title": "Questo è il fin di chi fa mal",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Questo è il fin di chi fa mal"
      }
     ]
    },
@@ -1372,12 +1667,89 @@ export const OPERAS: Opera[] = [
     "avatar": "bun",
     "pieces": [
      {
-      "title": "Or sai chi l'onore",
-      "kind": "Aria · Act 1"
+      "title": "Notte e giorno faticar",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Notte e giorno faticar"
      },
      {
-      "title": "Non mi dir",
-      "kind": "Aria · Act 2"
+      "title": "Ma qual mai s'offre, oh Dei",
+      "kind": "Recitative and duet · Act 1",
+      "id": "Act 1: Ma qual mai s'offre, oh Dei"
+     },
+     {
+      "title": "Mi par ch'oggi il demonio si diverta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+     },
+     {
+      "title": "Non ti fidar, o misera",
+      "kind": "Quartet · Act 1",
+      "id": "Act 1: Non ti fidar, o misera"
+     },
+     {
+      "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
+      "kind": "Recitative and aria · Act 1",
+      "id": "Act 1: Don Ottavio! son morta!… Or sai, chi l'onore"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Protegga il giusto cielo",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Protegga il giusto cielo"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "Sola, sola in bujo loco",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Sola, sola in bujo loco"
+     },
+     {
+      "title": "Mille torbidi pensieri",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Mille torbidi pensieri"
+     },
+     {
+      "title": "Calmatevi, idol mio",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Calmatevi, idol mio"
+     },
+     {
+      "title": "Crudele? Ah no, mio bene!… Non mi dir",
+      "kind": "Recitative and rondo · Act 2",
+      "id": "Act 2: Crudele? Ah no, mio bene!… Non mi dir"
+     },
+     {
+      "title": "Ah! dov'è il perfido?",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! dov'è il perfido?"
+     },
+     {
+      "title": "Or che tutti, o mio tesoro",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Or che tutti, o mio tesoro"
+     },
+     {
+      "title": "Questo è il fin di chi fa mal",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Questo è il fin di chi fa mal"
      }
     ]
    },
@@ -1389,12 +1761,129 @@ export const OPERAS: Opera[] = [
     "avatar": "hat",
     "pieces": [
      {
-      "title": "Ah, chi mi dice mai",
-      "kind": "Aria · Act 1"
+      "title": "Ah! chi mi dice mai",
+      "kind": "Trio · Act 1",
+      "id": "Act 1: Ah! chi mi dice mai"
      },
      {
-      "title": "Mi tradì quell'alma ingrata",
-      "kind": "Aria · Act 2"
+      "title": "Chi è là?",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Chi è là?"
+     },
+     {
+      "title": "In questa forma dunque",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: In questa forma dunque"
+     },
+     {
+      "title": "Fermati, scellerato!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Fermati, scellerato!"
+     },
+     {
+      "title": "Ah! fuggi il traditor!",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Ah! fuggi il traditor!"
+     },
+     {
+      "title": "Mi par ch'oggi il demonio si diverta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+     },
+     {
+      "title": "Non ti fidar, o misera",
+      "kind": "Quartet · Act 1",
+      "id": "Act 1: Non ti fidar, o misera"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Protegga il giusto cielo",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Protegga il giusto cielo"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "Ah, taci, ingiusto core!",
+      "kind": "Trio · Act 2",
+      "id": "Act 2: Ah, taci, ingiusto core!"
+     },
+     {
+      "title": "Amico, che ti par?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, che ti par?"
+     },
+     {
+      "title": "Di molte faci il lume s'avvicina",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Di molte faci il lume s'avvicina"
+     },
+     {
+      "title": "Sola, sola in bujo loco",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Sola, sola in bujo loco"
+     },
+     {
+      "title": "Mille torbidi pensieri",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Mille torbidi pensieri"
+     },
+     {
+      "title": "Dunque quello sei tu",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Dunque quello sei tu"
+     },
+     {
+      "title": "Ferma, perfido, ferma!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ferma, perfido, ferma!"
+     },
+     {
+      "title": "Amico, per pietà",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, per pietà"
+     },
+     {
+      "title": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
+      "kind": "Recitative and aria · Act 2",
+      "id": "Act 2: In quali eccessi, o Numi… Mi tradì quell'alma ingrata"
+     },
+     {
+      "title": "L'ultima prova dell'amor mio",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: L'ultima prova dell'amor mio"
+     },
+     {
+      "title": "Ah! dov'è il perfido?",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! dov'è il perfido?"
+     },
+     {
+      "title": "Or che tutti, o mio tesoro",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Or che tutti, o mio tesoro"
+     },
+     {
+      "title": "Questo è il fin di chi fa mal",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Questo è il fin di chi fa mal"
      }
     ]
    },
@@ -1406,16 +1895,124 @@ export const OPERAS: Opera[] = [
     "avatar": "long",
     "pieces": [
      {
+      "title": "Giovinette, che fate all'amore",
+      "kind": "Duet and chorus · Act 1",
+      "id": "Act 1: Giovinette, che fate all'amore"
+     },
+     {
+      "title": "Manco male, è partita",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Manco male, è partita"
+     },
+     {
+      "title": "Alfin siam liberati, Zerlinetta gentil",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Alfin siam liberati, Zerlinetta gentil"
+     },
+     {
       "title": "Là ci darem la mano",
-      "kind": "Duet with Don Giovanni · Act 1"
+      "kind": "Duettino · Act 1",
+      "id": "Act 1: Là ci darem la mano"
+     },
+     {
+      "title": "Fermati, scellerato!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Fermati, scellerato!"
+     },
+     {
+      "title": "Masetto, senti un po'!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Masetto, senti un po'!"
      },
      {
       "title": "Batti, batti, o bel Masetto",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Batti, batti, o bel Masetto"
+     },
+     {
+      "title": "Guarda un po', come seppe questa strega",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Guarda un po', come seppe questa strega"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "Zitto, lascia ch'io senta!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Zitto, lascia ch'io senta!"
      },
      {
       "title": "Vedrai, carino",
-      "kind": "Aria · Act 2"
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Vedrai, carino"
+     },
+     {
+      "title": "Sola, sola in bujo loco",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Sola, sola in bujo loco"
+     },
+     {
+      "title": "Mille torbidi pensieri",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Mille torbidi pensieri"
+     },
+     {
+      "title": "Dunque quello sei tu",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Dunque quello sei tu"
+     },
+     {
+      "title": "Ferma, perfido, ferma!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ferma, perfido, ferma!"
+     },
+     {
+      "title": "Restati quà!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Restati quà!"
+     },
+     {
+      "title": "Per queste tue manine",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Per queste tue manine"
+     },
+     {
+      "title": "Amico, per pietà",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, per pietà"
+     },
+     {
+      "title": "Ah! dov'è il perfido?",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! dov'è il perfido?"
+     },
+     {
+      "title": "Or che tutti, o mio tesoro",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Or che tutti, o mio tesoro"
+     },
+     {
+      "title": "Questo è il fin di chi fa mal",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Questo è il fin di chi fa mal"
      }
     ]
    },
@@ -1427,12 +2024,109 @@ export const OPERAS: Opera[] = [
     "avatar": "curls",
     "pieces": [
      {
-      "title": "Dalla sua pace",
-      "kind": "Aria · Act 1"
+      "title": "Ma qual mai s'offre, oh Dei",
+      "kind": "Recitative and duet · Act 1",
+      "id": "Act 1: Ma qual mai s'offre, oh Dei"
      },
      {
-      "title": "Il mio tesoro",
-      "kind": "Aria · Act 2"
+      "title": "Mi par ch'oggi il demonio si diverta",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+     },
+     {
+      "title": "Non ti fidar, o misera",
+      "kind": "Quartet · Act 1",
+      "id": "Act 1: Non ti fidar, o misera"
+     },
+     {
+      "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
+      "kind": "Recitative and aria · Act 1",
+      "id": "Act 1: Don Ottavio! son morta!… Or sai, chi l'onore"
+     },
+     {
+      "title": "Come mai creder deggio",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Come mai creder deggio"
+     },
+     {
+      "title": "Dalla sua pace",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Dalla sua pace"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Protegga il giusto cielo",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Protegga il giusto cielo"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "Sola, sola in bujo loco",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Sola, sola in bujo loco"
+     },
+     {
+      "title": "Mille torbidi pensieri",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Mille torbidi pensieri"
+     },
+     {
+      "title": "Dunque quello sei tu",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Dunque quello sei tu"
+     },
+     {
+      "title": "Ferma, perfido, ferma!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ferma, perfido, ferma!"
+     },
+     {
+      "title": "Il mio tesoro intanto",
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Il mio tesoro intanto"
+     },
+     {
+      "title": "Calmatevi, idol mio",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Calmatevi, idol mio"
+     },
+     {
+      "title": "Ah, si segua il suo passo",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah, si segua il suo passo"
+     },
+     {
+      "title": "Ah! dov'è il perfido?",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! dov'è il perfido?"
+     },
+     {
+      "title": "Or che tutti, o mio tesoro",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Or che tutti, o mio tesoro"
+     },
+     {
+      "title": "Questo è il fin di chi fa mal",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Questo è il fin di chi fa mal"
      }
     ]
    },
@@ -1444,8 +2138,99 @@ export const OPERAS: Opera[] = [
     "avatar": "cap",
     "pieces": [
      {
-      "title": "Ho capito, signor sì",
-      "kind": "Aria · Act 1"
+      "title": "Giovinette, che fate all'amore",
+      "kind": "Duet and chorus · Act 1",
+      "id": "Act 1: Giovinette, che fate all'amore"
+     },
+     {
+      "title": "Manco male, è partita",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Manco male, è partita"
+     },
+     {
+      "title": "Ho capito, Signor, sì!",
+      "kind": "Aria · Act 1",
+      "id": "Act 1: Ho capito, Signor, sì!"
+     },
+     {
+      "title": "Masetto, senti un po'!",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Masetto, senti un po'!"
+     },
+     {
+      "title": "Guarda un po', come seppe questa strega",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Guarda un po', come seppe questa strega"
+     },
+     {
+      "title": "Presto, presto, pria ch'ei venga",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Presto, presto, pria ch'ei venga"
+     },
+     {
+      "title": "Riposate, vezzose ragazze!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Riposate, vezzose ragazze!"
+     },
+     {
+      "title": "Meco tu dei ballare",
+      "kind": "Finale (Minuetto) · Act 1",
+      "id": "Act 1: Meco tu dei ballare"
+     },
+     {
+      "title": "Trema, trema, scellerato!",
+      "kind": "Finale · Act 1",
+      "id": "Act 1: Trema, trema, scellerato!"
+     },
+     {
+      "title": "V'è gente alla finestra",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: V'è gente alla finestra"
+     },
+     {
+      "title": "Zitto, lascia ch'io senta!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Zitto, lascia ch'io senta!"
+     },
+     {
+      "title": "Sola, sola in bujo loco",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Sola, sola in bujo loco"
+     },
+     {
+      "title": "Mille torbidi pensieri",
+      "kind": "Sextet · Act 2",
+      "id": "Act 2: Mille torbidi pensieri"
+     },
+     {
+      "title": "Dunque quello sei tu",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Dunque quello sei tu"
+     },
+     {
+      "title": "Ferma, perfido, ferma!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ferma, perfido, ferma!"
+     },
+     {
+      "title": "Amico, per pietà",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Amico, per pietà"
+     },
+     {
+      "title": "Ah! dov'è il perfido?",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ah! dov'è il perfido?"
+     },
+     {
+      "title": "Or che tutti, o mio tesoro",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Or che tutti, o mio tesoro"
+     },
+     {
+      "title": "Questo è il fin di chi fa mal",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Questo è il fin di chi fa mal"
      }
     ]
    },
@@ -1457,12 +2242,24 @@ export const OPERAS: Opera[] = [
     "avatar": "beard",
     "pieces": [
      {
-      "title": "O statua gentilissima",
-      "kind": "Duet with Leporello and Don Giovanni · Act 2"
+      "title": "Notte e giorno faticar",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Notte e giorno faticar"
      },
      {
-      "title": "Già la mensa è preparata",
-      "kind": "Finale · Act 2"
+      "title": "Ah, ah, ah, ah, questa è buona",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Ah, ah, ah, ah, questa è buona"
+     },
+     {
+      "title": "O statua gentilissima",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: O statua gentilissima"
+     },
+     {
+      "title": "Don Giovanni! a cenar teco",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Don Giovanni! a cenar teco"
      }
     ]
    }
