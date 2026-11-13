@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { gzipSync } from "node:zlib";
 import { createRequire } from "node:module";
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
@@ -32,9 +33,28 @@ function patchSpessaProcessor(): Plugin {
   };
 }
 
+
+/**
+ * A piece's score and data imported with "?z" arrive gzip-compressed and base64-encoded (inflated in the browser by
+ * pieces.tsx). MusicXML and the compiled data compress about tenfold: without this the published app outgrew the
+ * artifact's size limit as operas were added.
+ */
+function gzipData(): Plugin {
+  return {
+    name: "gzip-piece-data",
+    enforce: "pre",
+    load(id) {
+      if (!id.endsWith("?z")) return null;
+      const file = id.slice(0, -2);
+      const b64 = gzipSync(readFileSync(file), { level: 9 }).toString("base64");
+      return `export default ${JSON.stringify(b64)};`;
+    },
+  };
+}
+
 /** Builds the server-free practice app (published as a claude.ai artifact). */
 export default defineConfig({
-  plugins: [patchSpessaProcessor(), react()],
+  plugins: [gzipData(), patchSpessaProcessor(), react()],
   base: "./",
   build: {
     outDir: "dist-standalone",
@@ -56,8 +76,8 @@ export default defineConfig({
           // (one file per piece: its words, data, score and voice timings, so the published file count stays low as pieces are added)
           const words =
             /\/content\/pieces\/([^/]+)\/voice\/[^/]+\/manifest\.json$/.exec(id) ??
-            /\/data\/content\/([^/]+)\/(?:language|edition)\.json$/.exec(id) ??
-            /\/data\/content\/([^/]+)\/score\.musicxml\?raw$/.exec(id);
+            /\/data\/content\/([^/]+)\/(?:language|edition)\.json(?:\?z)?$/.exec(id) ??
+            /\/data\/content\/([^/]+)\/score\.musicxml\?(?:raw|z)$/.exec(id);
           if (words) return `words-${words[1]}`;
           if (/voicepacks\//.test(id)) return "voicedata";
           return undefined;

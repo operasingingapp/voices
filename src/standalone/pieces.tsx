@@ -7,21 +7,37 @@ import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
 
 // Each piece's data loads only when the piece opens (one small file per piece), so the app starts at once however
 // many pieces it holds.
-const editions = import.meta.glob(["../../data/content/*/edition.json", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], { import: "default" }) as Record<
-  string,
-  () => Promise<CompiledEdition>
->;
-const languages = import.meta.glob(["../../data/content/*/language.json", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], { import: "default" }) as Record<
-  string,
-  () => Promise<CompiledLanguage>
->;
+// Each file arrives gzip-compressed as base64 (the "?z" import, vite.standalone.config.ts) and is inflated here.
+async function inflate(b64: string): Promise<string> {
+  const bin = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  const stream = new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"));
+  return new Response(stream).text();
+}
+const zipped = (rec: Record<string, () => Promise<string>>) =>
+  Object.fromEntries(Object.entries(rec).map(([k, load]) => [k, () => load().then(inflate)])) as Record<string, () => Promise<string>>;
+const zjson = <T,>(rec: Record<string, () => Promise<string>>) =>
+  Object.fromEntries(Object.entries(zipped(rec)).map(([k, load]) => [k, () => load().then((t) => JSON.parse(t) as T)])) as Record<string, () => Promise<T>>;
+const editions = zjson<CompiledEdition>(
+  import.meta.glob(["../../data/content/*/edition.json", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], { query: "?z", import: "default" }) as Record<
+    string,
+    () => Promise<string>
+  >,
+);
+const languages = zjson<CompiledLanguage>(
+  import.meta.glob(["../../data/content/*/language.json", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], { query: "?z", import: "default" }) as Record<
+    string,
+    () => Promise<string>
+  >,
+);
 const editionData = new Map<string, CompiledEdition>();
 const languageData = new Map<string, CompiledLanguage>();
 // the scores travel in each piece's own file, loaded when the piece opens (bundled into the app, they made it too large to publish)
-const scores = import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], {
-  query: "?raw",
-  import: "default",
-}) as Record<string, () => Promise<string>>;
+const scores = zipped(
+  import.meta.glob(["../../data/content/*/score.musicxml", "!../../data/content/cp-fx-*/**", "!../../data/content/site-*/**"], {
+    query: "?z",
+    import: "default",
+  }) as Record<string, () => Promise<string>>,
+);
 // the recorded voices' timings for each piece (word by word), fetched with the piece's words
 const voiceManifests = import.meta.glob("../../content/pieces/*/voice/*/manifest.json", { import: "default" }) as Record<string, () => Promise<unknown>>;
 const voiceData = new Map<string, unknown[]>();
