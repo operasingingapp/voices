@@ -3053,6 +3053,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-giovanni-ouverture": {
+    // no one sings it: the opera's own picture (the title role, first in the cast list) stands for it
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Overture",
+    facts: {
+      key: "D minor (Andante, bars 1–30), then D major; the last bars turn towards F major and stop on a C major chord",
+      time: "C (common time) throughout, as printed (Mozart writes alla breve)",
+      tempo: "Andante ♩ = 58, then the fast section at a half note = 127, about 6 minutes in all, from the median (6:11) of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          The orchestra plays alone before the curtain rises: a slow, dark Andante in D minor, whose heavy chords return when the
+          Commendatore's statue comes to supper, then a quick, bright section in D major. Its last bars turn aside and stop on a held
+          chord, and the first scene, Leporello's “Notte e giorno faticar”, follows straight on.
+        </p>
+        <p>
+          Score: the Overture (vocal score pages 1–7, 292 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP #68957),
+          public domain. Written out from the printed pages: each page range read by two independent readers, every disagreement
+          settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar by fresh
+          checkers. This print heads the fast section “Moderato.”, where most scores have Molto allegro; the word is kept as printed.
+          Two accidentals missing in the print are supplied: C natural in the right hand in bar 152, and B-flat in the right hand in
+          bar 166 (in unison with the left hand). The instrument cues printed over the staves are left off. Mozart gives no metronome
+          number; the tempos are taken from the lengths of five complete recordings.
+        </p>
+        <p>Music by Wolfgang Amadeus Mozart (1787), public domain.</p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

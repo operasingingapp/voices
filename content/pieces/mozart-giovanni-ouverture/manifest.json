@@ -1,0 +1,54 @@
+{
+ "editionId": "mozart-giovanni-ouverture",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ouverture",
+ "subtitle": "The overture to Don Giovanni, in the G. Schirmer vocal score's piano reduction",
+ "kind": "overture",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P1",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.8
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Ouverture (overture; “Overture” in this score), before Act 1 No. 1",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 1–7, 292 bars",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: each page range read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar by fresh checkers (clean). The fast section from bar 31 keeps the print's heading “Moderato.” (most scores have Molto allegro). Two accidentals missing in the print are supplied: the right hand's low C in bar 152 is C natural (as in bar 151, over the F in the bass), and the right hand's first B in bar 166 is B-flat (in unison with the left hand's B-flat). Both sections are in C as printed (Mozart writes alla breve). Instrument cues (Tutti, Strings, Fl., Ob., Cl., Fag., Cor., Vl., Wind …) and a stray “1” over bar 76 are left out; grace notes are sixteenths; the left hand's tremolos are kept as tremolos. The last bars turn towards F major and stop on a held C major chord, as the Overture runs straight on into No. 1. Playback tempo: Andante ♩ = 58, then the fast section at a half note = 127, about 6:10, the median (6:11) of five complete recordings (Fricsay 1958 6:05, Giulini 1959 6:18, Böhm 1977 6:17, Haitink 1984 6:11, Karajan 1985 6:07); the tracks are not split at the fast section, so the Andante is set to the broad pace these recordings take (about two minutes) and the fast section fills the rest. Mozart gives the words only."
+  }
+ ]
+}
