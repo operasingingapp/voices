@@ -103,6 +103,9 @@ function pageUnits(staves: number) {
   return { w, h: Math.round((w * 297) / 210), mm: w / 210 };
 }
 
+/** the title block on page 1 runs from 16 mm to about 39 mm; the music begins clear of it */
+const TITLE_ROOM_MM = 45;
+
 /** The engraved pages, and where the music begins on the first one (mm from the top), below its title block. */
 export interface Engraved {
   pages: string[];
@@ -122,10 +125,11 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
       .replace(/<work>[\s\S]*?<\/work>/, "")
       .replace(/<movement-(?:title|number)>[\s\S]*?<\/movement-(?:title|number)>/g, "")
       .replace(/<creator\b[^>]*>[\s\S]*?<\/creator>/g, "")
-      .replace(/(<score-partwise\b[^>]*>)/, "$1<movement-title>Title</movement-title>")
-      .replace(/<identification>/, '<identification><creator type="lyricist">.</creator><creator type="composer">.</creator><creator type="composer">.</creator>');
-    if (!/<identification>/.test(xml)) xml = xml.replace(/(<part-list>)/, '<identification><creator type="lyricist">.</creator><creator type="composer">.</creator><creator type="composer">.</creator></identification>$1');
-    const f = filterXml(xml, visibleParts, false);
+      .replace(/(<score-partwise\b[^>]*>)/, "$1<movement-title>Title</movement-title>");
+    if (!/<identification>/.test(xml)) xml = xml.replace(/(<part-list>)/, "<identification></identification>$1");
+    // the placeholder's height: one creator line after another until the music starts below the title block
+    const withLines = (k: number) => xml.replace(/<identification>/, `<identification>${'<creator type="composer">.</creator>'.repeat(k)}`);
+    const f = filterXml(withLines(2), visibleParts, false);
     const staves = f.parts.reduce((n, p) => n + p.staves, 0);
     const { w, h, mm } = pageUnits(staves);
     tk.setOptions({
@@ -154,28 +158,34 @@ export async function engravePages(xml: string, visibleParts: string[] | null): 
         "g.tempo text{font-family:'Cormorant Garamond',Garamond,Georgia,serif;font-weight:600}" +
         "g.mNum text{font-family:'Cormorant Garamond',Garamond,Georgia,serif;font-style:italic;fill:#6b6560}",
     });
-    tk.loadData(f.xml);
-    const n = tk.getPageCount() as number;
     // each page is put in the document out of sight, to measure the notes written on it
     const host = document.createElement("div");
     host.setAttribute("aria-hidden", "true");
     host.style.cssText = "position:absolute;left:-100000px;top:0;visibility:hidden;pointer-events:none";
     document.body.appendChild(host);
     const pages: string[] = [];
-    let firstTopMm = 34;
+    let firstTopMm = TITLE_ROOM_MM;
+    /** where the first system's highest mark sits on page 1 (mm; the page is A4, 297 mm high) */
+    const firstTop = (svg: SVGSVGElement) => {
+      const sys = svg.querySelector("g.system");
+      const page = svg.getBoundingClientRect();
+      return sys && page.height > 0 ? ((sys.getBoundingClientRect().top - page.top) / page.height) * 297 : TITLE_ROOM_MM;
+    };
     try {
+      for (let k = 2; ; k++) {
+        tk.loadData(k === 2 ? f.xml : filterXml(withLines(k), visibleParts, false).xml);
+        host.innerHTML = tk.renderToSVG(1) as string;
+        const svg = host.querySelector("svg");
+        firstTopMm = svg ? firstTop(svg) : TITLE_ROOM_MM;
+        if (firstTopMm >= TITLE_ROOM_MM || k >= 12) break;
+      }
+      const n = tk.getPageCount() as number;
       for (let i = 1; i <= n; i++) {
         host.innerHTML = tk.renderToSVG(i) as string;
         const svg = host.querySelector("svg");
         if (!svg) continue;
         // the placeholder heading only kept the room: printHtml writes the title block there
         for (const g of svg.querySelectorAll("g.pgHead")) g.remove();
-        if (i === 1) {
-          // where the first system's highest mark sits, as a share of the page's height (the page is A4: 297 mm)
-          const sys = svg.querySelector("g.system");
-          const page = svg.getBoundingClientRect();
-          if (sys && page.height > 0) firstTopMm = Math.max(24, ((sys.getBoundingClientRect().top - page.top) / page.height) * 297);
-        }
         spreadNotes(svg);
         // fill the page box it is put in (the drawing keeps its own proportions, which are A4's)
         svg.setAttribute("width", "100%");
@@ -415,7 +425,7 @@ export const HEAD_CSS = `.head { text-align: center; color: #1c1a17; }
 export function printHtml(d: PrintDoc): string {
   const total = d.pages.length;
   const h = d.head;
-  const headHtml = h ? headBlock(h, `height:${Math.max(14, (d.firstTopMm ?? 34) - 6 - 15).toFixed(1)}mm`) : "";
+  const headHtml = h ? headBlock(h) : "";
   const sheets = d.pages
     .map(
       (svg, i) =>
@@ -447,7 +457,7 @@ body { font-family: "Charis SIL", Charter, Georgia, "Times New Roman", serif; -w
 .sheet { position: relative; width: 210mm; height: 297mm; overflow: hidden; background: #fff; break-after: page; page-break-after: always; break-inside: avoid; }
 .sheet:last-of-type { break-after: auto; page-break-after: auto; }
 .sheet > svg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
-.head { position: absolute; left: 16mm; right: 16mm; top: 15mm; display: flex; flex-direction: column; justify-content: flex-end; }
+.head { position: absolute; left: 16mm; right: 16mm; top: 16mm; }
 ${HEAD_CSS}
 .folio { position: absolute; left: 16mm; right: 16mm; bottom: 8mm; display: flex; align-items: baseline; justify-content: space-between; gap: 8mm; padding-top: 1.8mm; border-top: 0.2mm solid #e2dccf; font: 7pt/1.4 "Charis SIL", Charter, Georgia, serif; color: #7a7268; }
 .folio .credits { max-width: 140mm; font-style: italic; }
