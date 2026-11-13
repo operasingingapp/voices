@@ -3291,6 +3291,76 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-dalla-sua-pace": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Aria",
+    facts: {
+      key: "G major",
+      time: "2/4",
+      tempo: "No tempo word in this print (most editions have Andante sostenuto), played at ♩ = 34 (an eighth note = 68), about 4¼ minutes, the median of five recordings (Fricsay, Giulini, Davis, Haitink, Karajan); the fermata in bar 36 is held, and its short lead-in is played as grace notes",
+    },
+    notePlaceholder: "Keep it hushed and long-breathed: one unbroken line over the slow pulse, and let the minor-key middle darken without pushing",
+    about: (
+      <>
+        <p>
+          Act 1. Donna Anna has left Don Ottavio alone after telling him that Don Giovanni is the man who killed her father. He can
+          hardly believe a nobleman capable of such a crime, but resolves to find out the truth and either free her of her
+          suspicion or avenge her. In the aria he sings that his peace of heart hangs on hers: what pleases her brings him back to
+          life, what troubles her is his death. When she sighs he sighs with her, her anger and her tears are his own, and there is
+          no joy for him while she has none. Mozart wrote the aria for the Vienna performances of 1788, for the tenor Francesco
+          Morella; it was not part of the Prague première.
+        </p>
+        <p>
+          Score: No. 10b, the Aria (vocal score pages 95–97, 74 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung line and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          Don Ottavio's part, printed in the treble clef, is written at sounding pitch. After the fermata in bar 36 the print gives a
+          short unmeasured lead-in in small notes, written here as grace notes. In bar 21 the right hand's F is an F natural, which
+          the print leaves unmarked. The last four bars are for the piano alone. Only the Italian words are kept, with the print's
+          spelling and punctuation (“quell' ira”, “le incresce”, and “ch'a lei” once in bar 41).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787; this aria 1788), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-non-mi-dir": {
+    portrait: "giovanni:anna",
+    opera: "Don Giovanni",
+    kind: "Recitative and rondo",
+    facts: {
+      key: "F major (the rondo; the recitative has no key signature)",
+      time: "4/4 for the recitative; the rondo's Larghetto in 2/4, its Allegretto moderato in 4/4",
+      tempo: "The recitative's Risoluto opening at ♩ = 84 and its Larghetto at ♩ = 28 (three times slower, a proportion chosen for this app), then the rondo's Larghetto at ♩ = 30 and Allegretto moderato at ♩ = 104; about 7 minutes in all (the recitative about 2, the rondo about 5¼), from the median lengths of five recordings with the recitative and the rondo on separate tracks (Busch, Fricsay, Giulini, Davis, Böhm), the rondo divided between its two sections as in Haitink's and Muti's, which put the Allegretto moderato on its own track",
+    },
+    notePlaceholder: "Tender, not cold: let the Larghetto breathe and keep the Allegretto's runs light, as a promise rather than a display",
+    about: (
+      <>
+        <p>
+          Act 2. Don Ottavio has just called Donna Anna cruel for putting off their wedding. No, she answers: it grieves her too
+          much to keep from him the happiness they have both wanted for so long, but what would the world say? He must not tempt
+          her constancy; love pleads for him in her heart already. In the rondo she begs him not to call her cruel: he knows how she
+          has loved him and how faithful she is. He must calm his torment if he does not want her to die of grief; perhaps one day
+          heaven will take pity on her.
+        </p>
+        <p>
+          Score: No. 23, the Recitativo e Rondo (vocal score pages 251–256, 116 bars), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a
+          fresh checker (two corrections: the syllable “non” in bar 43, and no staccato dots in the left hand in bar 30). The first
+          bar is also the last bar of the recitative before: it opens with Don Ottavio's “-dele!”, the end of his “Crudele!”, and
+          he sings nothing else here. The recitative is bars 1–15; the rondo starts at bar 16 (Larghetto) and turns to Allegretto
+          moderato at bar 64; its last four bars are for the piano alone. Only the Italian words are kept, with the print's
+          spelling and punctuation (“oh Dio!”, “nostr' alma”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

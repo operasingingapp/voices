@@ -1,0 +1,121 @@
+{
+ "editionId": "mozart-dalla-sua-pace",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Dalla sua pace",
+ "subtitle": "Don Ottavio: aria from Don Giovanni, Act 1 (No. 10b)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Dalla sua pace … morte mi dà",
+   "start": "1",
+   "end": "17"
+  },
+  {
+   "id": "b",
+   "label": "S'ella sospira … s'ella non l'ha! (the fermata and lead-in)",
+   "start": "18",
+   "end": "36"
+  },
+  {
+   "id": "c",
+   "label": "Dalla sua pace (again) … morte mi dà",
+   "start": "37",
+   "end": "51"
+  },
+  {
+   "id": "d",
+   "label": "dalla sua pace (quicker restatement) … morte mi dà! (to the end)",
+   "start": "52",
+   "end": "74"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 14, No. 10b Aria (K. 540a, added for Vienna, 1788)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787; aria text for the Vienna performances, 1788)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (le incresce, where the libretto has l'incresce; quell' ira with the apostrophe word on its own note; ch'a lei in bar 41, che a lei elsewhere)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 95–97, bars 1–74 of No. 10b",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung line and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The English singing translation is left out. Don Ottavio's part, printed in the treble clef, is written at sounding pitch (treble clef with the octave below). Bar 36 has the fermata on \"l'ha!\" and the printed unmeasured lead-in (four small notes) written as grace notes. In bar 21 the right hand's F is played as F natural: the print omits the natural, harmony and context confirm it. Bars 71–74 are for the piano alone. The print gives no tempo word (only \"Aria.\"). Playback tempo: ♩ = 34 (an eighth note = 68), about 4:21, from the median track length (4:24) of five complete recordings (Fricsay 1958 4:34, Giulini 1959 4:21, Davis 1973 4:20, Haitink 1984 4:31, Karajan 1985 4:24)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

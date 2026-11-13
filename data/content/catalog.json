@@ -1215,6 +1215,34 @@
     }
   },
   {
+    "editionId": "mozart-dalla-sua-pace",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-dalla-sua-pace@1.0.0-schirmer#318564cb78",
+    "title": "Dalla sua pace",
+    "subtitle": "Don Ottavio: aria from Don Giovanni, Act 1 (No. 10b)",
+    "kind": "aria",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 74,
+    "durationSec": 261,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/4",
+    "languageStatus": {
+      "phrases": 34,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-deh-vieni-alla-finestra",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-deh-vieni-alla-finestra@1.0.0-schirmer#42f0555b61",
@@ -2816,6 +2844,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 27,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-non-mi-dir",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-non-mi-dir@1.0.0-schirmer#41067e1d92",
+    "title": "Crudele? Ah no, mio bene!… Non mi dir",
+    "subtitle": "Donna Anna: recitative and rondo from Don Giovanni, Act 2 (No. 23)",
+    "kind": "rondo",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 116,
+    "durationSec": 429,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 31,
       "withAudio": 0,
       "reviewed": 0
     }

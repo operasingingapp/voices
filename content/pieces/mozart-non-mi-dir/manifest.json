@@ -1,0 +1,147 @@
+{
+ "editionId": "mozart-non-mi-dir",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Crudele? Ah no, mio bene!… Non mi dir",
+ "subtitle": "Donna Anna: recitative and rondo from Don Giovanni, Act 2 (No. 23)",
+ "kind": "rondo",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Recitative: Crudele? Ah no, mio bene! … mi parla amore!",
+   "start": "1",
+   "end": "15"
+  },
+  {
+   "id": "b",
+   "label": "Rondo (Larghetto): Non mi dir, bell' idol mio · tu conosci la mia fè · Calma il tuo tormento",
+   "start": "16",
+   "end": "47"
+  },
+  {
+   "id": "c",
+   "label": "Non mi dir (again) · se di duol non vuoi ch'io mora",
+   "start": "48",
+   "end": "63"
+  },
+  {
+   "id": "d",
+   "label": "Allegretto moderato: Forse un giorno il cielo ancora sentirà pietà di me",
+   "start": "64",
+   "end": "90"
+  },
+  {
+   "id": "e",
+   "label": "pietà di me · forse il cielo un giorno (to the end)",
+   "start": "91",
+   "end": "116"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (Prague, 1787), Act 2, No. 23 Recitativo e Rondo",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (Prague, 1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (oh Dio! for oddio!; nostr' alma, bell' idol and quant' io as two words on two notes)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 251–256, bars 1–116 of No. 23",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar and checked again by a fresh checker (two corrections: the syllable non in bar 43 moved to the F, and no staccato dots in the piano's left hand in bar 30). The English singing translation, the stage directions and the instrument cues are left out. The first bar is also the last bar of the recitative before: Don Ottavio's -dele! ends his Crudele!. The accompanied recitative is bars 1–15 (Risoluto, Larghetto from the third beat of bar 3; no key signature); the rondo is in F major, Larghetto in 2/4 (bars 16–63), then Allegretto moderato in 4/4 (bars 64–116); the last four bars are for the piano alone. Playback tempo, from five complete recordings with the recitative and the rondo on separate tracks (Busch 1936 2:02 + 5:16, Fricsay 1958 1:54 + 5:36, Giulini 1959 1:51 + 5:01, Davis 1973 1:43 + 5:24 with Ottavio's following recitative, Böhm 1977 1:55 + 5:38): the recitative's median 1:54 gives the Larghetto ♩ = 28 with the Risoluto opening at three times that pace (♩ = 84); the rondo's median 5:16 is divided between its two sections as in the two recordings that put the Allegretto moderato on its own track (Haitink 1984 1:50, Muti 1990 2:03): Larghetto ♩ = 30, Allegretto moderato ♩ = 104."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

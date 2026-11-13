@@ -1,0 +1,1449 @@
+{
+ "editionId": "mozart-non-mi-dir",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling and punctuation: nostr' alma, bell' idol and quant' io as two words on two notes; oh Dio! (the libretto has oddio!); the print's commas, semicolons and exclamation marks. The first sung syllables, -dele! (bar 1, Don Ottavio), end his Crudele! from the recitative before (Calmatevi, idol mio), so they are left out of the phrases here; Ottavio sings nothing else in this piece. IPA, word meanings and translations were drafted for this app (S56) and the IPA was checked against Castel. In the rondo Anna repeats Non mi dir, Calma il tuo tormento and se di duol non vuoi ch'io mora, and in the Allegretto moderato sings sentirà pietà di me many times; the score's repeats are their own phrases. io is jo where it is sung on one note (bar 29) and ˈi.o where the score gives it two (bars 25, 53); sai is ˈsa.i (two notes). IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "a1",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Crudele? Ah no, mio bene!",
+   "translation": "Cruel? Ah no, my dearest!",
+   "ipa": "kruˈdɛ.le ˈa ˈnɔ ˈmi.o ˈbɛ.ne",
+   "words": [
+    [
+     "Crudele?",
+     "cruel",
+     "kruˈdɛ.le"
+    ],
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "bene!",
+     "dear one",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "my dearest"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Troppo mi spiace allontanarti un ben",
+   "translation": "It grieves me too much to keep from you a happiness",
+   "ipa": "ˈtrɔp.po mi ˈspja.tʃe al.lon.taˈnar.ti‿un ˈbɛn",
+   "words": [
+    [
+     "Troppo",
+     "too much",
+     "ˈtrɔp.po"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "spiace",
+     "displeases",
+     "ˈspja.tʃe"
+    ],
+    [
+     "allontanarti",
+     "to keep from you",
+     "al.lon.taˈnar.ti"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "ben",
+     "happiness",
+     "ˈbɛn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "it grieves me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "che lungamente la nostr' alma desia.",
+   "translation": "that our souls have longed for so long.",
+   "ipa": "ke luŋ.gaˈmen.te la ˈnɔstr ˈal.ma deˈzi.a",
+   "words": [
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "lungamente",
+     "for so long",
+     "luŋ.gaˈmen.te"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "nostr'",
+     "our",
+     "ˈnɔstr"
+    ],
+    [
+     "alma",
+     "soul",
+     "ˈal.ma"
+    ],
+    [
+     "desia.",
+     "longs for",
+     "deˈzi.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "our soul"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Ma il mondo, oh Dio!",
+   "translation": "But the world, oh God!",
+   "ipa": "ma‿il ˈmon.do ˈɔ ˈdi.o",
+   "words": [
+    [
+     "Ma",
+     "but",
+     "ma"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "mondo,",
+     "world",
+     "ˈmon.do"
+    ],
+    [
+     "oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "Dio!",
+     "God",
+     "ˈdi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "non sedur la costanza",
+   "translation": "Do not lead astray the constancy",
+   "ipa": "non seˈdur la koˈstan.tsa",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "sedur",
+     "lead astray",
+     "seˈdur"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "costanza",
+     "constancy",
+     "koˈstan.tsa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a6",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "del sensibil mio core;",
+   "translation": "of my tender heart;",
+   "ipa": "del senˈsi.bil ˈmi.o ˈkɔ.re",
+   "words": [
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "sensibil",
+     "tender",
+     "senˈsi.bil"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "core;",
+     "heart",
+     "ˈkɔ.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a7",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "abbastanza per te mi parla amore!",
+   "translation": "love already pleads your cause in me strongly enough!",
+   "ipa": "ab.baˈstan.tsa per ˈte mi ˈpar.la‿aˈmo.re",
+   "words": [
+    [
+     "abbastanza",
+     "enough",
+     "ab.baˈstan.tsa"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "te",
+     "you",
+     "ˈte"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "parla",
+     "speaks",
+     "ˈpar.la"
+    ],
+    [
+     "amore!",
+     "love",
+     "aˈmo.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "on your behalf"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a8",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Non mi dir, bell' idol mio,",
+   "translation": "Do not tell me, my fair beloved,",
+   "ipa": "non mi ˈdir ˈbɛl ˈi.dol ˈmi.o",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "dir,",
+     "tell",
+     "ˈdir"
+    ],
+    [
+     "bell'",
+     "fair",
+     "ˈbɛl"
+    ],
+    [
+     "idol",
+     "idol",
+     "ˈi.dol"
+    ],
+    [
+     "mio,",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "do not tell me"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "my fair beloved"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a9",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "che son io crudel con te,",
+   "translation": "that I am cruel to you,",
+   "ipa": "ke ˈson ˈi.o kruˈdɛl kon ˈte",
+   "words": [
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "son",
+     "am",
+     "ˈson"
+    ],
+    [
+     "io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "crudel",
+     "cruel",
+     "kruˈdɛl"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "te,",
+     "you",
+     "ˈte"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "to you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a10",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "tu ben sai quant' io t'amai,",
+   "translation": "you know full well how I have loved you,",
+   "ipa": "tu ˈbɛn ˈsa.i kwant jo taˈmai",
+   "words": [
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "ben",
+     "happiness",
+     "ˈbɛn"
+    ],
+    [
+     "sai",
+     "know",
+     "ˈsa.i"
+    ],
+    [
+     "quant'",
+     "how much",
+     "kwant"
+    ],
+    [
+     "io",
+     "I",
+     "jo"
+    ],
+    [
+     "t'amai,",
+     "I loved you",
+     "taˈmai"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a11",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "tu conosci la mia fè,",
+   "translation": "you know how true I am,",
+   "ipa": "tu koˈnɔʃ.ʃi la ˈmi.a ˈfɛ",
+   "words": [
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "conosci",
+     "know",
+     "koˈnɔʃ.ʃi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "fè,",
+     "faith",
+     "ˈfɛ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "my faithfulness"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a12",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "tu conosci la mia fè.",
+   "translation": "you know how true I am.",
+   "ipa": "tu koˈnɔʃ.ʃi la ˈmi.a ˈfɛ",
+   "words": [
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "conosci",
+     "know",
+     "koˈnɔʃ.ʃi"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "fè.",
+     "faith",
+     "ˈfɛ"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "my faithfulness"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a13",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Calma, calma il tuo tormento,",
+   "translation": "Soothe, soothe your torment,",
+   "ipa": "ˈkal.ma ˈkal.ma‿il ˈtu.o torˈmen.to",
+   "words": [
+    [
+     "Calma,",
+     "soothe",
+     "ˈkal.ma"
+    ],
+    [
+     "calma",
+     "soothe",
+     "ˈkal.ma"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "tuo",
+     "your",
+     "ˈtu.o"
+    ],
+    [
+     "tormento,",
+     "torment",
+     "torˈmen.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a14",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "42",
+   "original": "Se di duol non vuoi ch'io mora,",
+   "translation": "if you do not want me to die of grief,",
+   "ipa": "se di ˈdwɔl non ˈvwɔi kjo ˈmɔ.ra",
+   "words": [
+    [
+     "Se",
+     "if",
+     "se"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "duol",
+     "grief",
+     "ˈdwɔl"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vuoi",
+     "you want",
+     "ˈvwɔi"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "mora,",
+     "die",
+     "ˈmɔ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "that I should die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a15",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "se di duol non vuoi ch'io mora,",
+   "translation": "if you do not want me to die of grief,",
+   "ipa": "se di ˈdwɔl non ˈvwɔi kjo ˈmɔ.ra",
+   "words": [
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "duol",
+     "grief",
+     "ˈdwɔl"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vuoi",
+     "you want",
+     "ˈvwɔi"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "mora,",
+     "die",
+     "ˈmɔ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "that I should die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a16",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "non vuoi ch'io mora.",
+   "translation": "you do not want me to die.",
+   "ipa": "non ˈvwɔi kjo ˈmɔ.ra",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vuoi",
+     "you want",
+     "ˈvwɔi"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "mora.",
+     "die",
+     "ˈmɔ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "that I should die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a17",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "Non mi dir, bell' idol mio,",
+   "translation": "Do not tell me, my fair beloved,",
+   "ipa": "non mi ˈdir ˈbɛl ˈi.dol ˈmi.o",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "dir,",
+     "tell",
+     "ˈdir"
+    ],
+    [
+     "bell'",
+     "fair",
+     "ˈbɛl"
+    ],
+    [
+     "idol",
+     "idol",
+     "ˈi.dol"
+    ],
+    [
+     "mio,",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "do not tell me"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "my fair beloved"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a18",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "che son io crudel con te;",
+   "translation": "that I am cruel to you;",
+   "ipa": "ke ˈson ˈi.o kruˈdɛl kon ˈte",
+   "words": [
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "son",
+     "am",
+     "ˈson"
+    ],
+    [
+     "io",
+     "I",
+     "ˈi.o"
+    ],
+    [
+     "crudel",
+     "cruel",
+     "kruˈdɛl"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "te;",
+     "you",
+     "ˈte"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "to you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a19",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "55",
+   "original": "calma, calma il tuo tormento,",
+   "translation": "soothe, soothe your torment,",
+   "ipa": "ˈkal.ma ˈkal.ma il ˈtu.o torˈmen.to",
+   "words": [
+    [
+     "calma,",
+     "soothe",
+     "ˈkal.ma"
+    ],
+    [
+     "calma",
+     "soothe",
+     "ˈkal.ma"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "tuo",
+     "your",
+     "ˈtu.o"
+    ],
+    [
+     "tormento,",
+     "torment",
+     "torˈmen.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a20",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "57",
+   "original": "se di duol non vuoi ch'io mora,",
+   "translation": "if you do not want me to die of grief,",
+   "ipa": "se di ˈdwɔl non ˈvwɔi kjo ˈmɔ.ra",
+   "words": [
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "duol",
+     "grief",
+     "ˈdwɔl"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vuoi",
+     "you want",
+     "ˈvwɔi"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "mora,",
+     "die",
+     "ˈmɔ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "that I should die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a21",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "non vuoi ch'io mora!",
+   "translation": "you do not want me to die!",
+   "ipa": "non ˈvwɔi kjo ˈmɔ.ra",
+   "words": [
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vuoi",
+     "you want",
+     "ˈvwɔi"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "mora!",
+     "die",
+     "ˈmɔ.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "that I should die"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a22",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "72",
+   "original": "Forse, forse un giorno il cielo ancora",
+   "translation": "Perhaps, perhaps one day heaven will yet",
+   "ipa": "ˈfor.se ˈfor.se‿un ˈdʒor.no‿il ˈtʃɛ.lo aŋˈko.ra",
+   "words": [
+    [
+     "Forse,",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "giorno",
+     "day",
+     "ˈdʒor.no"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cielo",
+     "heaven",
+     "ˈtʃɛ.lo"
+    ],
+    [
+     "ancora",
+     "yet",
+     "aŋˈko.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a23",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "76",
+   "original": "sentirà, sentirà pietà di me!",
+   "translation": "take pity, take pity on me!",
+   "ipa": "sen.tiˈra sen.tiˈra pjeˈta di ˈme",
+   "words": [
+    [
+     "sentirà,",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "sentirà",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me!",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will take pity on me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a24",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "79",
+   "original": "forse un giorno il cielo ancora",
+   "translation": "perhaps one day heaven will yet",
+   "ipa": "ˈfor.se‿un ˈdʒor.no il ˈtʃɛ.lo‿aŋˈko.ra",
+   "words": [
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "giorno",
+     "day",
+     "ˈdʒor.no"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cielo",
+     "heaven",
+     "ˈtʃɛ.lo"
+    ],
+    [
+     "ancora",
+     "yet",
+     "aŋˈko.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a25",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "81",
+   "original": "sentirà pietà di me,",
+   "translation": "take pity on me,",
+   "ipa": "sen.tiˈra pjeˈta di ˈme",
+   "words": [
+    [
+     "sentirà",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "will take pity on me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a26",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "93",
+   "original": "sentirà pietà, pietà di me,",
+   "translation": "take pity, pity on me,",
+   "ipa": "sen.tiˈra pjeˈta pjeˈta di ˈme",
+   "words": [
+    [
+     "sentirà",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "pietà,",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a27",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "sentirà pietà di me,",
+   "translation": "take pity on me,",
+   "ipa": "sen.tiˈra pjeˈta di ˈme",
+   "words": [
+    [
+     "sentirà",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "will take pity on me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a28",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "101",
+   "original": "forse, forse il cielo un giorno",
+   "translation": "perhaps, perhaps heaven some day",
+   "ipa": "ˈfor.se ˈfor.se il ˈtʃɛ.lo un ˈdʒor.no",
+   "words": [
+    [
+     "forse,",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cielo",
+     "heaven",
+     "ˈtʃɛ.lo"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "giorno",
+     "day",
+     "ˈdʒor.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a29",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "sentirà pietà di me,",
+   "translation": "will take pity on me,",
+   "ipa": "sen.tiˈra pjeˈta di ˈme",
+   "words": [
+    [
+     "sentirà",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "will take pity on me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a30",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "108",
+   "original": "sentirà pietà di me,",
+   "translation": "will take pity on me,",
+   "ipa": "sen.tiˈra pjeˈta di ˈme",
+   "words": [
+    [
+     "sentirà",
+     "will feel",
+     "sen.tiˈra"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "will take pity on me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a31",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "110",
+   "original": "pietà di me.",
+   "translation": "pity on me.",
+   "ipa": "pjeˈta di ˈme",
+   "words": [
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "di",
+     "on",
+     "di"
+    ],
+    [
+     "me.",
+     "me",
+     "ˈme"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

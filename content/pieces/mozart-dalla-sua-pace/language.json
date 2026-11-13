@@ -1,0 +1,1290 @@
+{
+ "editionId": "mozart-dalla-sua-pace",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787; this aria was added for the Vienna performances of 1788). Words follow the Schirmer vocal score's spelling and punctuation: \"quell' ira\" printed with the apostrophe word on its own note (two words, kwel + ˈi.ra, as the app's other quell' tokens); \"le incresce\" sung le‿in on one note (libretto \"l'incresce\"); \"quel che a lei\" sung che‿a on one note, except in bar 41 where the print has \"ch'a\" on one syllable; the repeats (\"morte, morte mi dà\", \"e non ho bene, s'ella non l'ha\" three times, the quick restatement of the first four lines from bar 52, and the closing \"morte mi dà\" and \"quel che le incresce\") as printed. IPA, word meanings and translations were drafted for this app (S22) and the IPA was checked against Castel. Don Ottavio sings the first stanza, the middle stanza and the first stanza again. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ; \"lei\" on a single note is ˈlei. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "o1",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Dalla sua pace",
+   "translation": "It is on her peace",
+   "ipa": "ˈdal.la ˈsu.a ˈpa.tʃe",
+   "words": [
+    [
+     "Dalla",
+     "from the",
+     "ˈdal.la"
+    ],
+    [
+     "sua",
+     "her",
+     "ˈsu.a"
+    ],
+    [
+     "pace",
+     "peace",
+     "ˈpa.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o2",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "la mia dipende,",
+   "translation": "that my own peace hangs;",
+   "ipa": "la ˈmi.a diˈpɛn.de",
+   "words": [
+    [
+     "la",
+     "the (one)",
+     "la"
+    ],
+    [
+     "mia",
+     "my own",
+     "ˈmi.a"
+    ],
+    [
+     "dipende,",
+     "hangs",
+     "diˈpɛn.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "my own (peace)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o3",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "quel che a lei piace",
+   "translation": "what gives her pleasure",
+   "ipa": "kwel ke‿a ˈlei ˈpja.tʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "lei",
+     "her",
+     "ˈlei"
+    ],
+    [
+     "piace",
+     "is pleasing",
+     "ˈpja.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o4",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "vita mi rende,",
+   "translation": "brings me back to life;",
+   "ipa": "ˈvi.ta mi ˈrɛn.de",
+   "words": [
+    [
+     "vita",
+     "life",
+     "ˈvi.ta"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "rende,",
+     "gives back",
+     "ˈrɛn.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "gives back to me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o5",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "quel che le incresce,",
+   "translation": "what troubles her",
+   "ipa": "kwel ke le‿iŋˈkrɛʃ.ʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "le",
+     "to her",
+     "le"
+    ],
+    [
+     "incresce,",
+     "is distressing",
+     "iŋˈkrɛʃ.ʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o6",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "morte mi dà,",
+   "translation": "is my death,",
+   "ipa": "ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà,",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o7",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "morte, morte mi dà.",
+   "translation": "is death, death to me.",
+   "ipa": "ˈmɔr.te ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte,",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà.",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o8",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "S'ella sospira,",
+   "translation": "When she sighs,",
+   "ipa": "ˈsel.la soˈspi.ra",
+   "words": [
+    [
+     "S'ella",
+     "if she",
+     "ˈsel.la"
+    ],
+    [
+     "sospira,",
+     "sighs",
+     "soˈspi.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o9",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "sospiro anch'io,",
+   "translation": "I sigh with her;",
+   "ipa": "soˈspi.ro‿aŋˈki.o",
+   "words": [
+    [
+     "sospiro",
+     "I sigh",
+     "soˈspi.ro"
+    ],
+    [
+     "anch'io,",
+     "I as well",
+     "aŋˈki.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o10",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "è mia quell' ira,",
+   "translation": "that anger is my own,",
+   "ipa": "ˈɛ ˈmi.a kwel ˈi.ra",
+   "words": [
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "mia",
+     "my own",
+     "ˈmi.a"
+    ],
+    [
+     "quell'",
+     "that",
+     "kwel"
+    ],
+    [
+     "ira,",
+     "anger",
+     "ˈi.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o11",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "quel pianto è mio;",
+   "translation": "those tears belong to me;",
+   "ipa": "kwel ˈpjan.to‿ˈɛ ˈmi.o",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "pianto",
+     "tears",
+     "ˈpjan.to"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "mio;",
+     "my own",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o12",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "e non ho bene,",
+   "translation": "and there is no joy for me",
+   "ipa": "e non ˈɔ ˈbɛ.ne",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "bene,",
+     "joy",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "I have no good"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o13",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "s'ella non l'ha,",
+   "translation": "while she has none,",
+   "ipa": "ˈsel.la non ˈla",
+   "words": [
+    [
+     "s'ella",
+     "if she",
+     "ˈsel.la"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "l'ha,",
+     "has it",
+     "ˈla"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "lacks it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o14",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "e non ho bene,",
+   "translation": "and there is no joy for me",
+   "ipa": "e non ˈɔ ˈbɛ.ne",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "bene,",
+     "joy",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "I have no good"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o15",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "s'ella non l'ha,",
+   "translation": "while she has none,",
+   "ipa": "ˈsel.la non ˈla",
+   "words": [
+    [
+     "s'ella",
+     "if she",
+     "ˈsel.la"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "l'ha,",
+     "has it",
+     "ˈla"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "lacks it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o16",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "e non ho bene,",
+   "translation": "and there is no joy for me",
+   "ipa": "e non ˈɔ ˈbɛ.ne",
+   "words": [
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "ho",
+     "I have",
+     "ˈɔ"
+    ],
+    [
+     "bene,",
+     "joy",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "I have no good"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o17",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "s'ella non l'ha!",
+   "translation": "while she has none!",
+   "ipa": "ˈsel.la non ˈla",
+   "words": [
+    [
+     "s'ella",
+     "if she",
+     "ˈsel.la"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "l'ha!",
+     "has it",
+     "ˈla"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "lacks it"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o18",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "Dalla sua pace",
+   "translation": "It is on her peace",
+   "ipa": "ˈdal.la ˈsu.a ˈpa.tʃe",
+   "words": [
+    [
+     "Dalla",
+     "from the",
+     "ˈdal.la"
+    ],
+    [
+     "sua",
+     "her",
+     "ˈsu.a"
+    ],
+    [
+     "pace",
+     "peace",
+     "ˈpa.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o19",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "la mia dipende,",
+   "translation": "that my own peace hangs;",
+   "ipa": "la ˈmi.a diˈpɛn.de",
+   "words": [
+    [
+     "la",
+     "the (one)",
+     "la"
+    ],
+    [
+     "mia",
+     "my own",
+     "ˈmi.a"
+    ],
+    [
+     "dipende,",
+     "hangs",
+     "diˈpɛn.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "my own (peace)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o20",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "quel ch'a lei piace,",
+   "translation": "what gives her pleasure",
+   "ipa": "kwel ka ˈlei ˈpja.tʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "ch'a",
+     "which to",
+     "ka"
+    ],
+    [
+     "lei",
+     "her",
+     "ˈlei"
+    ],
+    [
+     "piace,",
+     "is pleasing",
+     "ˈpja.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o21",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "vita mi rende,",
+   "translation": "brings me back to life;",
+   "ipa": "ˈvi.ta mi ˈrɛn.de",
+   "words": [
+    [
+     "vita",
+     "life",
+     "ˈvi.ta"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "rende,",
+     "gives back",
+     "ˈrɛn.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "gives back to me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o22",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "quel che le incresce,",
+   "translation": "what troubles her",
+   "ipa": "kwel ke le‿iŋˈkrɛʃ.ʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "le",
+     "to her",
+     "le"
+    ],
+    [
+     "incresce,",
+     "is distressing",
+     "iŋˈkrɛʃ.ʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o23",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "morte mi dà,",
+   "translation": "is my death,",
+   "ipa": "ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà,",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o24",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "morte, morte mi dà;",
+   "translation": "is death, death to me;",
+   "ipa": "ˈmɔr.te ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte,",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà;",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o25",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "dalla sua pace",
+   "translation": "on her peace",
+   "ipa": "ˈdal.la ˈsu.a ˈpa.tʃe",
+   "words": [
+    [
+     "dalla",
+     "from the",
+     "ˈdal.la"
+    ],
+    [
+     "sua",
+     "her",
+     "ˈsu.a"
+    ],
+    [
+     "pace",
+     "peace",
+     "ˈpa.tʃe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o26",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "la mia dipende,",
+   "translation": "my own peace hangs;",
+   "ipa": "la ˈmi.a diˈpɛn.de",
+   "words": [
+    [
+     "la",
+     "the (one)",
+     "la"
+    ],
+    [
+     "mia",
+     "my own",
+     "ˈmi.a"
+    ],
+    [
+     "dipende,",
+     "hangs",
+     "diˈpɛn.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "my own (peace)"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o27",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "54",
+   "original": "quel che a lei piace,",
+   "translation": "what gives her pleasure",
+   "ipa": "kwel ke‿a ˈlei ˈpja.tʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "lei",
+     "her",
+     "ˈlei"
+    ],
+    [
+     "piace,",
+     "is pleasing",
+     "ˈpja.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o28",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "55",
+   "original": "vita mi rende,",
+   "translation": "brings me back to life;",
+   "ipa": "ˈvi.ta mi ˈrɛn.de",
+   "words": [
+    [
+     "vita",
+     "life",
+     "ˈvi.ta"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "rende,",
+     "gives back",
+     "ˈrɛn.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "gives back to me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o29",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "57",
+   "original": "quel che le incresce,",
+   "translation": "what troubles her",
+   "ipa": "kwel ke le‿iŋˈkrɛʃ.ʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "le",
+     "to her",
+     "le"
+    ],
+    [
+     "incresce,",
+     "is distressing",
+     "iŋˈkrɛʃ.ʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o30",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "59",
+   "original": "morte mi dà,",
+   "translation": "is my death,",
+   "ipa": "ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà,",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o31",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "61",
+   "original": "morte, morte mi dà,",
+   "translation": "is death, death to me,",
+   "ipa": "ˈmɔr.te ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte,",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà,",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o32",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "morte mi dà,",
+   "translation": "is my death,",
+   "ipa": "ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà,",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o33",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "67",
+   "original": "quel che le incresce,",
+   "translation": "what troubles her",
+   "ipa": "kwel ke le‿iŋˈkrɛʃ.ʃe",
+   "words": [
+    [
+     "quel",
+     "that",
+     "kwel"
+    ],
+    [
+     "che",
+     "which",
+     "ke"
+    ],
+    [
+     "le",
+     "to her",
+     "le"
+    ],
+    [
+     "incresce,",
+     "is distressing",
+     "iŋˈkrɛʃ.ʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "whatever"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o34",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "69",
+   "original": "morte mi dà!",
+   "translation": "is my death!",
+   "ipa": "ˈmɔr.te mi ˈda",
+   "words": [
+    [
+     "morte",
+     "death",
+     "ˈmɔr.te"
+    ],
+    [
+     "mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "dà!",
+     "gives",
+     "ˈda"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "deals me"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

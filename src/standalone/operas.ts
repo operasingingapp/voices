@@ -1744,7 +1744,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Crudele? Ah no, mio bene!… Non mi dir",
       "kind": "Recitative and rondo · Act 2",
-      "id": "Act 2: Crudele? Ah no, mio bene!… Non mi dir"
+      "id": "Act 2: Crudele? Ah no, mio bene!… Non mi dir",
+      "editionId": "mozart-non-mi-dir"
      },
      {
       "title": "Ah! dov'è il perfido?",
@@ -2067,7 +2068,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Dalla sua pace",
       "kind": "Aria · Act 1",
-      "id": "Act 1: Dalla sua pace"
+      "id": "Act 1: Dalla sua pace",
+      "editionId": "mozart-dalla-sua-pace"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",
