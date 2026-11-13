@@ -2338,6 +2338,7 @@ export const OPERAS: Opera[] = [
       "title": "Prenderò quel brunettino",
       "kind": "Duetto · Act 2",
       "id": "Act 2: Prenderò quel brunettino",
+      "editionId": "mozart-prendero-quel-brunettino",
       "when": "Act 2, Dorabella has persuaded Fiordiligi that a little amusement is no breach of faith, and asks which of the two strangers she wants; she has already chosen hers"
      },
      {
@@ -2428,6 +2429,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Ah non partite!",
       "editionId": "mozart-ah-non-partite",
       "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
+     },
+     {
+      "title": "Andate là, che siete due bizzarre ragazze!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Andate là, che siete due bizzarre ragazze!",
+      "editionId": "mozart-andate-la",
+      "when": "Act 2, curtain up: in a room of their house, Despina has lost patience with the sisters, who still will not look at the two 'Albanians'"
+     },
+     {
+      "title": "Sorella, cosa dici?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Sorella, cosa dici?",
+      "editionId": "mozart-sorella-cosa-dici",
+      "when": "Act 2, straight after “Una donna a quindici anni”: Despina has given the sisters her lesson and gone out, leaving them alone"
      }
     ]
    },
@@ -2476,6 +2491,7 @@ export const OPERAS: Opera[] = [
       "title": "Prenderò quel brunettino",
       "kind": "Duetto · Act 2",
       "id": "Act 2: Prenderò quel brunettino",
+      "editionId": "mozart-prendero-quel-brunettino",
       "when": "Act 2, Dorabella has persuaded Fiordiligi that a little amusement is no breach of faith, and asks which of the two strangers she wants; she has already chosen hers"
      },
      {
@@ -2566,6 +2582,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Ah non partite!",
       "editionId": "mozart-ah-non-partite",
       "when": "Act 1, straight after “Come scoglio”: Fiordiligi has sworn to stay true until death, and the sisters turn to leave"
+     },
+     {
+      "title": "Andate là, che siete due bizzarre ragazze!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Andate là, che siete due bizzarre ragazze!",
+      "editionId": "mozart-andate-la",
+      "when": "Act 2, curtain up: in a room of their house, Despina has lost patience with the sisters, who still will not look at the two 'Albanians'"
+     },
+     {
+      "title": "Sorella, cosa dici?",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Sorella, cosa dici?",
+      "editionId": "mozart-sorella-cosa-dici",
+      "when": "Act 2, straight after “Una donna a quindici anni”: Despina has given the sisters her lesson and gone out, leaving them alone"
      }
     ]
    },
@@ -2587,6 +2617,7 @@ export const OPERAS: Opera[] = [
       "title": "Una donna a quindici anni",
       "kind": "Aria · Act 2",
       "id": "Act 2: Una donna a quindici anni",
+      "editionId": "mozart-una-donna-a-quindici-anni",
       "when": "Act 2, Despina is urging the sisters to let the two rich strangers adore them; asked what they should do, she answers: whatever they like, are they flesh and blood or not?"
      },
      {
@@ -2623,6 +2654,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: Che susurro, che strepito",
       "editionId": "mozart-che-susurro",
       "when": "Act 1, straight after “Alla bella Despinetta”: the sisters are raging at the two strangers in their house, and Don Alfonso comes in as if drawn by the noise"
+     },
+     {
+      "title": "Oh la saria da ridere",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Oh la saria da ridere",
+      "editionId": "mozart-oh-la-saria-da-ridere",
+      "when": "Act 1, straight after “Un'aura amorosa”: the officers have gone to wait in the garden for Don Alfonso's orders, and he is left alone"
+     },
+     {
+      "title": "Andate là, che siete due bizzarre ragazze!",
+      "kind": "Recitative · Act 2",
+      "id": "Act 2: Andate là, che siete due bizzarre ragazze!",
+      "editionId": "mozart-andate-la",
+      "when": "Act 2, curtain up: in a room of their house, Despina has lost patience with the sisters, who still will not look at the two 'Albanians'"
      }
     ]
    },
@@ -2679,6 +2724,7 @@ export const OPERAS: Opera[] = [
       "title": "Un'aura amorosa",
       "kind": "Aria · Act 1",
       "id": "Act 1: Un'aura amorosa",
+      "editionId": "mozart-unaura-amorosa",
       "when": "Act 1, Don Alfonso sends the officers to wait in the garden for his orders; Guglielmo asks whether there will be no dinner, and Ferrando answers that supper will taste better after the battle"
      },
      {
@@ -2773,6 +2819,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: E voi ridete?",
       "editionId": "mozart-e-voi-ridete",
       "when": "Act 1, straight after “Non siate ritrosi”: the sisters have stormed out, leaving the two officers alone with Don Alfonso"
+     },
+     {
+      "title": "Si può sapere un poco",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Si può sapere un poco",
+      "editionId": "mozart-si-puo-sapere",
+      "when": "Act 1, straight after “E voi ridete?”: the two officers are still laughing at Don Alfonso, sure that their sweethearts have already won them the bet"
      }
     ]
    },
@@ -2918,6 +2971,13 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: E voi ridete?",
       "editionId": "mozart-e-voi-ridete",
       "when": "Act 1, straight after “Non siate ritrosi”: the sisters have stormed out, leaving the two officers alone with Don Alfonso"
+     },
+     {
+      "title": "Si può sapere un poco",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Si può sapere un poco",
+      "editionId": "mozart-si-puo-sapere",
+      "when": "Act 1, straight after “E voi ridete?”: the two officers are still laughing at Don Alfonso, sure that their sweethearts have already won them the bet"
      }
     ]
    },
@@ -3079,6 +3139,20 @@ export const OPERAS: Opera[] = [
       "id": "Act 1: E voi ridete?",
       "editionId": "mozart-e-voi-ridete",
       "when": "Act 1, straight after “Non siate ritrosi”: the sisters have stormed out, leaving the two officers alone with Don Alfonso"
+     },
+     {
+      "title": "Si può sapere un poco",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Si può sapere un poco",
+      "editionId": "mozart-si-puo-sapere",
+      "when": "Act 1, straight after “E voi ridete?”: the two officers are still laughing at Don Alfonso, sure that their sweethearts have already won them the bet"
+     },
+     {
+      "title": "Oh la saria da ridere",
+      "kind": "Recitative · Act 1",
+      "id": "Act 1: Oh la saria da ridere",
+      "editionId": "mozart-oh-la-saria-da-ridere",
+      "when": "Act 1, straight after “Un'aura amorosa”: the officers have gone to wait in the garden for Don Alfonso's orders, and he is left alone"
      }
     ]
    }

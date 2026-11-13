@@ -1,0 +1,115 @@
+# Recitativo "Sorella, cosa dici?", Peters pp. 216-218, continuo (Cont. Cemb.) as printed.
+# bar 1: 4/4 (C), C major; no tempo, key or time changes inside the chunk.
+# page 216 system 1 starts bar 1
+1 RH1: D4+G4:w~
+# JUDGE bar 1 LH1: Y - whole note centred on 2nd line of bass staff = B2 (measured at 400 dpi), not G2
+1 LH1: B2:w~
+2 RH1: D4+G4:w~
+# JUDGE bar 2 LH1: Y - same B2 tied on
+2 LH1: B2:w~
+3 RH1: D4+G4:w
+# JUDGE bar 3 LH1: Y - same B2
+3 LH1: B2:w
+# page 216 system 2 starts bar 4
+4 RH1: C4+G4+C5:h r:h
+4 LH1: E3:w~
+5 RH1: r:w
+5 LH1: E3:w
+6 RH1: E5:h D5:h
+6 RH2: E4+B4:w
+6 LH1: G#3:w
+# page 216 system 3 starts bar 7
+7 RH1: E4+A4+C5:w~
+7 LH1: A3:w~
+8 RH1: E4+A4+C5:q r:q r:h
+8 LH1: A3:w
+9 RH1: B3~+F#4~+B4:h B3+F#4+A4:h~
+9 LH1: D#3:h~ D#3:h~
+# page 216 system 4 starts inside bar 9 (chord re-struck after the system break with B4 -> A4)
+# JUDGE bar 10 RH1: Y - no tie from the first B3 to the second chord; only the incoming ties from bar 9
+10 RH1: B3+F#4+A4:h B3+E4+G4:h~
+10 LH1: D#3:h E3:h~
+11 RH1: B3+E4+G4:h C#4+F#4+C#5:h~
+11 LH1: E3:h A#2:h~
+# page 216 system 5 starts bar 12
+12 RH1: C#4+F#4+C#5:h r:h
+12 LH1: A#2:w~
+13 RH1: r:w
+13 LH1: A#2:w
+14 RH1: B3+F#4+B4:h r:h
+14 LH1: D3:w~
+# page 217 system 1 starts bar 15
+15 RH1: r:h C#4+G#4+C#5:h~
+15 LH1: D3:h E#3:h~
+16 RH1: C#5:h B4:h
+16 RH2: C#4+G#4:w
+16 LH1: E#3:w
+17 RH1: C#4+F#4+A4:h E4+B4:h~
+17 LH1: F#3:h G#3:h~
+# page 217 system 2 starts inside bar 17
+18 RH1: E4+B4:h r:h
+18 LH1: G#3:w~
+19 RH1: r:w
+19 LH1: G#3:w
+# page 217 system 3 starts bar 20
+20 RH1: E4+A4:w
+20 LH1: C#3:w
+21 RH1: E4+A4+C#5:w~
+21 LH1: G3:w~
+# page 217 system 4 starts bar 22
+22 RH1: E4+A4+C#5:w
+22 LH1: G3:w
+23 RH1: D4+A4+D5:w~
+23 LH1: F#3:w~
+24 RH1: D4~+A4~+D5:h D4+A4+C5:h~
+24 LH1: F#3:h~ F#3:h~
+# page 217 system 5 starts inside bar 24
+25 RH1: D4+A4+C5:h D4+G4+B4:q r:q
+25 LH1: F#3:h G3:h
+26 RH1: D4+G4+B4:w
+26 LH1: F3:w
+# page 217 system 6 starts bar 27
+# JUDGE bar 27 RH1: X - ties visible on C5 (above) and on G4 and C4 (below) into bar 28
+27 RH1: C4+G4+C5:w~
+27 LH1: E3:w~
+28 RH1: C5:h Bb4:h~
+# JUDGE bar 28 RH2: X - C4 and G4 both tied into bar 29 (two separate tie curves)
+28 RH2: C4+G4:w~
+28 LH1: E3:w~
+# page 218 system 1 starts bar 29
+29 RH1: C4+G4+Bb4:w~
+29 LH1: E3:w~
+30 RH1: C4+G4+Bb4:h C4+F4+A4:h~
+30 LH1: E3:h F3:h~
+# page 218 system 2 starts bar 31
+31 RH1: C4+F4+A4:q r:q C4+F4+A4:h~
+31 LH1: F3:h Eb3:h~
+32 RH1: C4+F4+A4:h Bb3+F4+Bb4:h~
+32 LH1: Eb3:h D3:h~
+33 RH1: Bb3+F4+Bb4:h r:h
+33 LH1: D3:w~
+# page 218 system 3 starts bar 34
+34 RH1: r:h D4+A4+D5:h~
+34 LH1: D3:h F#3:h~
+# JUDGE bar 35 RH1: X - ties from A4 and D4 reach the bar-36 chord D4+A4+C5; no tie on D5
+35 RH1: D4~+A4~+D5:w
+# JUDGE bar 35 LH1: X - tie from F#3 into bar 36 F#3 half
+35 LH1: F#3:w~
+# JUDGE bar 36 RH1: X - first chord measured D4 (space below staff), A4 (2nd space), C5 (3rd space): D4+A4+C5, no B/Bb in it
+36 RH1: D4+A4+C5:h D4+G4+Bb4:h
+# JUDGE bar 36 LH1: X - first half note on F3 line (F#3, tied from bar 35), then G3
+36 LH1: F#3:h G3:h
+# page 218 system 4 starts inside bar 36
+37 RH1: Bb3+F4+Ab4:w~
+37 LH1: D3:w~
+38 RH1: Bb3+F4+Ab4:w~
+38 LH1: D3:w~
+# page 218 system 5 starts bar 39
+39 RH1: Bb3+F4+Ab4:h Bb3+Eb4+G4:h~
+39 LH1: D3:h Eb3:h~
+40 RH1: Bb3+Eb4+G4:w
+40 LH1: Eb3:w
+# JUDGE bar 41 RH1: Y - quarter chord has a seconds-displaced F4 head right of the stem: C4+Eb4+F4+A4 (F7)
+41 RH1: r:q C4+Eb4+F4+A4:q D4+F4+Bb4:h
+41 LH1: r:q F3:q Bb2:h
+# bar 41: final bar before the double bar; A natural printed in the RH quarter chord (F7)

@@ -1,0 +1,108 @@
+{
+ "editionId": "mozart-una-donna-a-quindici-anni",
+ "editionVersion": "1.0.0-peters",
+ "title": "Una donna a quindici anni",
+ "subtitle": "Despina: aria from Così fan tutte, Act 2 (No. 19)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "despina",
+   "name": "Despina",
+   "voiceType": "Soprano",
+   "partKey": "despina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "despina",
+   "label": "Despina (Soprano)",
+   "shortLabel": "Despina",
+   "kind": "voice",
+   "roleId": "despina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Una donna a quindici anni (Andante)",
+   "start": "1",
+   "end": "21"
+  },
+  {
+   "id": "b",
+   "label": "Dee in un momento · e qual regina · Par ch'abbian gusto (Allegretto)",
+   "start": "22",
+   "end": "52"
+  },
+  {
+   "id": "c",
+   "label": "Dee in un momento (again, to the end)",
+   "start": "53",
+   "end": "99"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 1, No. 19 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (quindici, where the libretto has quindeci; Dee; perchè; si without its accent; dall' alto as two words; the aside (Par ch'abbian gusto…) in brackets)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 211–215, bars 1–99 of No. 19",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge (in two page ranges, pp. 211–213 and 214–215), a separate sweep for dynamics and other marks, then checked bar by bar by two fresh checkers (bars 1–60 clean; in bars 61–99 one error found and corrected: in bars 69 and 73 the D–B on “vo-” is one syllable, so the following syllables each move one note later). The German singing translation is left out. Andante to bar 21, Allegretto from bar 22. Kept as printed: the E sharp and G sharp chords in bars 34–36 and 64–66. The cut signs at “vi-” (bar 36) and “-de” (bar 66) are not written in the score. Playback tempo ♩ = 60, and a dotted quarter = 65 (♩ = 97) from the Allegretto (bar 22), from Jacobs (3:28); Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

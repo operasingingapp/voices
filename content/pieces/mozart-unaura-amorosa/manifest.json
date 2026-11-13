@@ -1,0 +1,108 @@
+{
+ "editionId": "mozart-unaura-amorosa",
+ "editionVersion": "1.0.0-peters",
+ "title": "Un'aura amorosa",
+ "subtitle": "Ferrando: aria from Così fan tutte, Act 1 (No. 17)",
+ "kind": "aria",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Un'aura amorosa",
+   "start": "1",
+   "end": "22"
+  },
+  {
+   "id": "b",
+   "label": "Al cor che nudrito · d'un esca migliore",
+   "start": "23",
+   "end": "40"
+  },
+  {
+   "id": "c",
+   "label": "Un'aura amorosa (again, to the end)",
+   "start": "41",
+   "end": "80"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 1 scene 12, No. 17 Aria",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score (Un' aura and d'un esca as two words; á-morosa with the print's accent in bar 10; da speme d'amore without the libretto's comma)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 141–143, bars 1–80 of No. 17",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: sung lines and piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, hairpins, slurs and ties, then checked bar by bar by a fresh checker (clean). The German singing translation is left out. Bars 74–80 are for the piano alone. In bars 23–28 the print gives the right hand a trilled dotted 32nd followed by two 128th notes, which the file cannot hold: the trilled note is written as a 16th with a trill, and the two tiny notes as grace notes before the next note. The cut signs printed above the barlines at bars 63 and 67 are not written in the score. Playback tempo: an eighth note = 48 (♩ = 24), from Jacobs (4:59); Mozart gives the words Andante cantabile only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
