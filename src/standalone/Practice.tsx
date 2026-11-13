@@ -129,6 +129,7 @@ let pianoPart: CompiledEdition["parts"][number];
  * - Elided syllables arrive as separate <text> pieces joined by the SMuFL glyph U+E551, which the
  *   renderer cannot draw; they are shown as one syllable with the undertie ‿.
  */
+const TEMPO_WORD = /^(tempo|a tempo|allegr|andant|adagi|larg|lent|grave|modera|prest|vivac|vivo|maestos|sostenut|recit|più|meno|poco|l'istesso|lo stesso)/i;
 function prepareForDisplay(xml: string, forPrint = false): string {
   try {
     const doc = new DOMParser().parseFromString(xml, "application/xml");
@@ -147,7 +148,9 @@ function prepareForDisplay(xml: string, forPrint = false): string {
         types.some((dt) => Array.from(dt.children).some((c) => c.nodeName === "rehearsal" || c.nodeName === "metronome"));
       // stage directions under the voice ("Lauretta (in ginocchio…)") would push the syllables down along the whole line
       const words = types.flatMap((dt) => Array.from(dt.children)).map((c) => (c.nodeName === "words" ? (c.textContent ?? "").trim() : null));
-      const stageDirection = inVoice && words.length > 0 && words.every((w) => w !== null && (w.length > 20 || /^[A-Z][a-z]+$/.test(w)));
+      // (a single capitalised word may be a tempo, "Allegro": print keeps those, as an engraved score has them)
+      const tempoWord = forPrint && (tempoMark || words.some((w) => w !== null && TEMPO_WORD.test(w)));
+      const stageDirection = inVoice && !tempoWord && words.length > 0 && words.every((w) => w !== null && (w.length > 20 || /^[A-Z][a-z]+$/.test(w)));
       // the number's heading printed over the first staff ("Nr. 10. Terzettino"): the title says it already
       const heading = inVoice && words.length > 0 && words.every((w) => w !== null && /^(Nr|No|N)\.?\s*\d+/.test(w));
       // piano pedal brackets: a pianist's marking; drawn far below the bass staff they cost the whole line
