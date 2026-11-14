@@ -36,10 +36,11 @@ const PIANO = NOCT as unknown as {
 };
 /** each piano layer's file, fetched once per visit and kept (about 2.5 MB each, only the layers in use) */
 const layerFiles = new Map<string, Promise<ArrayBuffer>>();
-function layerBytes(url: string): Promise<ArrayBuffer> {
+/** low: a layer fetched ahead or in the background, which must not hold up the page, the score or the first layer */
+function layerBytes(url: string, low = false): Promise<ArrayBuffer> {
   let p = layerFiles.get(url);
   if (!p) {
-    p = fetch(url).then((r) => {
+    p = fetch(url, low ? ({ priority: "low" } as RequestInit) : undefined).then((r) => {
       if (!r.ok) throw new Error("A piano layer could not be loaded");
       return r.arrayBuffer();
     });
@@ -48,13 +49,43 @@ function layerBytes(url: string): Promise<ArrayBuffer> {
   }
   return p;
 }
-/** Fetch the piano's most used layers ahead (while Home or a role page is open), so a piece starts sooner. */
-export function warmPiano(layers: number[] = [8, 7]) {
-  for (const l of layers) {
-    const url = Object.entries(files).find(([k]) => k.endsWith(`/${PIANO.layers[String(l)]?.file}`) || k.endsWith(`noct-v${String(l).padStart(2, "0")}.mp3`))?.[1];
-    if (url) layerBytes(url).catch(() => undefined);
-  }
+/** decode a whole layer at the piano's rate (an offline context decodes at its own rate; it needs no user gesture) */
+function decodeLayer(bytes: ArrayBuffer): Promise<AudioBuffer> {
+  // a copy: decoding takes the buffer over, and the bytes stay cached for the next keys or piece
+  return new OfflineAudioContext(2, 1, PIANO_RATE).decodeAudioData(bytes.slice(0));
 }
+/** a layer decoded ahead in idle time (the whole-keyboard layer), taken once by the first piano that loads it */
+const decodedAhead = new Map<string, Promise<AudioBuffer>>();
+const idle = (fn: () => void) =>
+  typeof requestIdleCallback === "function" ? requestIdleCallback(fn, { timeout: 3000 }) : setTimeout(fn, 200);
+const layerUrl = (l: number) =>
+  Object.entries(files).find(([k]) => k.endsWith(`/${PIANO.layers[String(l)]?.file}`) || k.endsWith(`noct-v${String(l).padStart(2, "0")}.mp3`))?.[1];
+/**
+ * Fetch the piano's most used layers ahead (while Home or a role page is open), so a piece starts sooner; the
+ * first (the whole-keyboard layer every piece starts on) is also decoded once the page is idle, so the piano is
+ * ready when a piece opens instead of decoding then, beside the score's engraving. The others load at low priority.
+ */
+export function warmPiano(layers: number[] = [8, 7]) {
+  layers.forEach((l, i) => {
+    const url = layerUrl(l);
+    if (!url) return;
+    const bytes = layerBytes(url, i > 0);
+    if (i === 0 && !decodedAhead.has(url) && typeof OfflineAudioContext !== "undefined")
+      bytes
+        .then(() => new Promise<void>((r) => idle(() => r())))
+        .then(() => {
+          // a piano made meanwhile has decoded the layer itself
+          if (pianoMade) return;
+          const p = bytes.then(decodeLayer);
+          p.catch(() => decodedAhead.delete(url));
+          decodedAhead.set(url, p);
+          // a decoded layer is large (about 65 MB): if no piece has taken it within a few minutes, let it go
+          setTimeout(() => decodedAhead.get(url) === p && decodedAhead.delete(url), 180_000);
+        })
+        .catch(() => undefined);
+  });
+}
+let pianoMade = false;
 /** the lowest velocity of each of the 16 layers (the Accurate-Salamander SFZ's mapping) */
 const LAYER_FROM = [
   1, 27, 33, 38, 43, 48, 53, 59, 65, 72, 80, 88, 96, 104, 112, 120,
@@ -591,6 +622,7 @@ export class SamplerPort implements SynthPort {
     onProgress?: (msg: string) => void,
   ): Promise<SamplerPort> {
     const ctx = new AudioContext({ latencyHint: "interactive" });
+    pianoMade = true;
     const port = new SamplerPort(ctx);
     if (!Object.keys(files).length)
       throw new Error("The piano samples are missing");
@@ -625,16 +657,18 @@ export class SamplerPort implements SynthPort {
     const prev = L.loading ?? Promise.resolve();
     const layerRef = L;
     const run = prev.then(async () => {
-      // a copy: decoding takes the buffer over, and the bytes stay cached for the next keys or piece
-      const data = (await layerBytes(this.fileUrl(layer))).slice(0);
-      // decode at 32 kHz (an offline context decodes at its own rate), then keep only the notes asked for
+      const url = this.fileUrl(layer);
+      // the whole-keyboard layer may have been decoded ahead (warmPiano): taken once, then let go
+      const ahead = decodedAhead.get(url);
+      decodedAhead.delete(url);
+      // other layers than the first are background work: fetched at low priority
+      const bytes = await layerBytes(url, layer !== 8);
+      // decode at 32 kHz, then keep only the notes asked for
       let whole: AudioBuffer;
       try {
-        whole = await new OfflineAudioContext(2, 1, PIANO_RATE).decodeAudioData(
-          data,
-        );
+        whole = await (ahead?.catch(() => decodeLayer(bytes)) ?? decodeLayer(bytes));
       } catch {
-        whole = await this.ctx.decodeAudioData(data);
+        whole = await this.ctx.decodeAudioData(bytes.slice(0));
       }
       const rate = whole.sampleRate;
       for (const n of PIANO.layers[String(layer)].notes) {
