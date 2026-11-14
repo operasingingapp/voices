@@ -20,7 +20,7 @@
  * voice.config.json; the old voice's files stay until removed.
  *
  *   npx tsx scripts/voices.ts --dry-run                 list what would be made, and the characters it costs
- *   npx tsx scripts/voices.ts --piece <id|all> [--redo l03,w:bello] [--voice <voiceId>]
+ *   npx tsx scripts/voices.ts --piece <id|id,id|all|operas|songs> [--redo l03,w:bello] [--voice <voiceId>]
  */
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
@@ -148,7 +148,12 @@ function pieces(): string[] {
   const all = readdirSync(join(ROOT, "data/content")).filter((d) => existsSync(join(ROOT, "data/content", d, "language.json")));
   // the fixtures used by tests are invented text: no voices for them
   const real = all.filter((d) => !d.startsWith("cp-fx-"));
-  return pieceArg === "all" ? real : real.filter((d) => d === pieceArg);
+  if (pieceArg === "all") return real;
+  // "operas" (every piece that is not a song), "songs", or a comma-separated list of pieces
+  if (pieceArg === "operas") return real.filter((d) => !d.startsWith("song-"));
+  if (pieceArg === "songs") return real.filter((d) => d.startsWith("song-"));
+  const want = new Set(pieceArg.split(","));
+  return real.filter((d) => want.has(d));
 }
 
 /** when each sung note starts, in quarter notes from the top of the piece */

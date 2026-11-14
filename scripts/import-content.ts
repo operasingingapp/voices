@@ -398,14 +398,17 @@ function alignPhrase(
     problems.push(`phrase ${ph.id}: no verse-${ph.verse} lyrics from m. ${ph.startMeasure}`);
     return null;
   }
-  let firstProblems: string[] | null = null;
+  const allProblems: string[] = [];
   for (const t of tries) {
     const probs: string[] = [];
     const r = attempt(t.idx, probs);
     if (r && !probs.length) return r;
-    firstProblems ??= probs;
+    // every start tried is reported, each with the syllable it started on, so the real cause is not hidden behind the
+    // first (often wrong) start
+    const first = lyricFor(t.n)?.syllables[0]?.text ?? "";
+    allProblems.push(...probs.map((p) => (tries.length > 1 ? `${p} (starting on '${first}')` : p)));
   }
-  problems.push(...(firstProblems ?? []));
+  problems.push(...allProblems);
   return null;
 
   // Words are matched by their letters, not by the syllabic flags: engravers' files often mark
@@ -643,7 +646,9 @@ function importPiece(dir: string) {
 
 function main() {
   mkdirSync(OUT, { recursive: true });
-  const dirs = readdirSync(SRC).filter((d) => existsSync(join(SRC, d, "manifest.json")));
+  // IMPORT_ONLY=a,b imports just those pieces (to check them quickly); the catalog and the report are then left as they are
+  const only = process.env.IMPORT_ONLY?.split(",").filter(Boolean);
+  const dirs = readdirSync(SRC).filter((d) => existsSync(join(SRC, d, "manifest.json")) && (!only || only.includes(d)));
   const catalog: CatalogEntry[] = [];
   const reports = [];
   let failed = false;
@@ -661,8 +666,10 @@ function main() {
       console.error(`✘ ${d}: ${(e as Error).message}`);
     }
   }
-  writeFileSync(join(OUT, "catalog.json"), JSON.stringify(catalog, null, 2));
-  writeFileSync(join(OUT, "import-report.json"), JSON.stringify(reports, null, 2));
+  if (!only) {
+    writeFileSync(join(OUT, "catalog.json"), JSON.stringify(catalog, null, 2));
+    writeFileSync(join(OUT, "import-report.json"), JSON.stringify(reports, null, 2));
+  }
   if (failed) process.exit(1);
 }
 

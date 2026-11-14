@@ -4,6 +4,9 @@ sung note of the voice part, cue notes left out) read from content/pieces/song-<
 import json, os, re, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from context_data import CYCLES, SONGS
+from context_data2 import CYCLES2, SONGS2
+CYCLES = {**CYCLES, **CYCLES2}
+SONGS = {**SONGS, **{k: {kk: vv for kk, vv in v.items() if vv is not None} for k, v in SONGS2.items()}}
 import xml.etree.ElementTree as ET
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 STEPS = {"C": 0, "D": 2, "E": 4, "F": 5, "G": 7, "A": 9, "B": 11}
@@ -28,6 +31,8 @@ def rng(score, voice):
 out = {"cycles": CYCLES, "songs": {}}
 for sid, c in SONGS.items():
     d = f"{REPO}/content/pieces/song-{sid}"
+    if not os.path.isdir(d):
+        print("no piece:", sid); continue
     man = json.load(open(f"{d}/manifest.json"))
     pid = next(m["source"]["xmlPartId"] for m in man["partMapping"] if m["key"] == "voice")
     out["songs"][sid] = {**c, "range": rng(f"{d}/score.musicxml", pid)}
