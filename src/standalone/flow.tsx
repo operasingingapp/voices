@@ -39,6 +39,8 @@ import {
 } from "./operas";
 import { composerNamed } from "./composers";
 import { ComposerRow, ModeSwitch, WorksGrid, type Mode } from "./choralParts";
+import { SongList } from "./songParts";
+import { SONGS } from "./songs";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
 export type Tone = "pink" | "lilac" | "peach" | "sky" | "mint" | "butter";
@@ -238,17 +240,23 @@ export type PiecePlace = {
   piece: number;
 };
 export type Place =
-  /** step 0: what you sing (opera or choral); 1, 2: which role (characters, operas); 3: the chosen opera's cast;
-   *  4: choral works (offered beside 1 and 2 to someone who sings both) */
+  /** step 0: what you sing (opera, songs, choral: one or more); 1, 2: which role (characters, operas); 3: the chosen
+   *  opera's cast; 4: choral works; 5: songs (4 and 5 offered beside 1 and 2 to someone who sings more than one) */
   | {
       screen: "onboarding";
-      step: 0 | 1 | 2 | 3 | 4;
+      step: 0 | 1 | 2 | 3 | 4 | 5;
       role?: RoleRef;
       by?: "voice" | "opera";
       opera?: string;
       sing?: boolean;
+      /** what was chosen at step 0, when more than one ("I sing both" from before is opera and choral) */
+      modes?: Mode[];
       both?: boolean;
     }
+  /** Songs: find your song (the songs home) */
+  | { screen: "songs" }
+  /** a song's page */
+  | { screen: "song"; song: string }
   /** Choral: find your part (the choral home) */
   | { screen: "choral" }
   /** a choral work, where you choose your part */
@@ -679,12 +687,14 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
   const atHome = place.screen === "home";
   // choral: your parts (none can be kept yet: no work has music), and the way to find one
   const choral = ctx.mode === "choral";
+  const songs = ctx.mode === "songs";
   const inChoral = place.screen === "choral" || place.screen === "work";
+  const inSongs = place.screen === "songs" || place.screen === "song";
   return (
     <aside
       className="rail"
       aria-label={
-        choral ? "Home, search and your parts" : "Home, search and your roles"
+        choral ? "Home, search and your parts" : songs ? "Home, search and your songs" : "Home, search and your roles"
       }
     >
       <ModeSwitch
@@ -708,7 +718,8 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
           aria-current={
             (place.screen === "explore" && !atHome) ||
             place.screen === "opera" ||
-            inChoral
+            inChoral ||
+            inSongs
               ? "page"
               : undefined
           }
@@ -716,7 +727,9 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
             go(
               choral
                 ? { screen: "choral" }
-                : { screen: "explore", by: "opera" },
+                : songs
+                  ? { screen: "songs" }
+                  : { screen: "explore", by: "opera" },
             )
           }
         >
@@ -726,9 +739,24 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
       </nav>
       <span className="rail-rule" aria-hidden="true" />
       <p className="rail-label" id="rail-roles">
-        {choral ? "Parts" : "Roles"}
+        {choral ? "Parts" : songs ? "Songs" : "Roles"}
       </p>
-      {choral ? (
+      {songs ? (
+        <div className="rail-roles">
+          <button
+            type="button"
+            className="rail-add"
+            aria-label="Add a song"
+            title="Add a song"
+            onClick={() => go({ screen: "songs" })}
+          >
+            <span className="rail-add-ring">
+              <Plus />
+            </span>
+            <span className="rail-role-name">Add a song</span>
+          </button>
+        </div>
+      ) : choral ? (
         <div className="rail-roles">
           <button
             type="button"
@@ -3831,24 +3859,30 @@ export function Onboarding({
   opera: operaId,
   sing,
   both,
+  modes: modesAsked,
 }: {
   ctx: Ctx;
-  step: 0 | 1 | 2 | 3 | 4;
+  step: 0 | 1 | 2 | 3 | 4 | 5;
   role?: RoleRef;
   by?: "voice" | "opera";
   opera?: string;
   /** came through "What do you sing?" (step 0): the opera path then has three steps, not two */
   sing?: boolean;
-  /** "I sing both": the choices then include the choral works */
+  /** "I sing both" (from before: opera and choral) */
   both?: boolean;
+  /** what was chosen at step 0, when more than one: the choices then offer each */
+  modes?: Mode[];
 }) {
+  const modes: Mode[] | undefined =
+    modesAsked && modesAsked.length > 1 ? modesAsked : both ? ["opera", "choral"] : undefined;
+  const multi = !!modes;
   // a first visit asks what you sing (step 0); opera then has two steps: a character (or an opera) on the welcome
   // screen, then that opera's cast to confirm. Choral goes straight to its home.
   const chosenOpera = operaId
     ? OPERAS.find((o) => o.id === operaId)
     : undefined;
   const at = (
-    step: 0 | 1 | 2 | 3 | 4,
+    step: 0 | 1 | 2 | 3 | 4 | 5,
     extra: { role?: RoleRef; opera?: string } = {},
   ): Place => ({
     screen: "onboarding",
@@ -3856,7 +3890,7 @@ export function Onboarding({
     by: "opera",
     opera: operaId,
     ...(sing ? { sing: true } : {}),
-    ...(both ? { both: true } : {}),
+    ...(modes ? { modes } : {}),
     ...extra,
   });
   const skip = () => ctx.finishOnboarding({ screen: "explore", by: "opera" });
@@ -3882,9 +3916,25 @@ export function Onboarding({
       ? roles.length
         ? 3
         : 1
-      : stepAsked === 4 && !both
+      : (stepAsked === 4 && !modes?.includes("choral")) || (stepAsked === 5 && !modes?.includes("songs"))
         ? 1
         : stepAsked;
+  // at step 0, what you have tapped so far (one or more)
+  const [chosen, setChosen] = useState<Mode[]>([]);
+  const toggle = (m: Mode) => setChosen((c) => (c.includes(m) ? c.filter((x) => x !== m) : [...c, m]));
+  const begin = () => {
+    const order: Mode[] = (["opera", "songs", "choral"] as Mode[]).filter((m) => chosen.includes(m));
+    if (order.length === 1 && order[0] === "choral") return ctx.finishOnboarding({ screen: "choral" });
+    if (order.length === 1 && order[0] === "songs") return ctx.finishOnboarding({ screen: "songs" });
+    const first = order[0] === "opera" ? 1 : order[0] === "songs" ? 5 : 4;
+    ctx.go({
+      screen: "onboarding",
+      step: first,
+      by: "opera",
+      sing: true,
+      ...(order.length > 1 ? { modes: order } : {}),
+    });
+  };
   // the count stays honest for the path taken: "What do you sing?" is step 1 of 3 (choral ends there)
   const total = step === 0 || sing ? 3 : 2;
   const stepNo = step === 0 ? 1 : (step === 3 ? 2 : 1) + (total === 3 ? 1 : 0);
@@ -3933,78 +3983,71 @@ export function Onboarding({
               time.
             </p>
           </div>
-          <div className="ob-sing-grid">
-            <button
-              type="button"
-              className="ob-sing-card"
-              onClick={() =>
-                ctx.go({
-                  screen: "onboarding",
-                  step: 1,
-                  by: "opera",
-                  sing: true,
-                })
-              }
-            >
-              <span className="ob-sing-pic">
-                {ART.figaro ? <img src={ART.figaro.square} alt="" /> : null}
-              </span>
-              <b>Opera</b>
-              <span>Your role in arias, duets and ensembles</span>
-            </button>
-            <button
-              type="button"
-              className="ob-sing-card"
-              onClick={() => ctx.finishOnboarding({ screen: "choral" })}
-            >
-              <span className="ob-sing-pic ob-sing-portrait">
-                {composerNamed("Handel").portrait ? (
-                  <img src={composerNamed("Handel").portrait} alt="" />
-                ) : null}
-              </span>
-              <b>Choral</b>
-              <span>Your part in requiems, masses and oratorios</span>
-            </button>
+          <div className="ob-sing-grid" role="group" aria-label="What you sing">
+            {(
+              [
+                ["opera", "Opera", "Your role in arias, duets and ensembles", ART.figaro?.square, false],
+                ["songs", "Songs", "Italian songs, Lieder and mélodies with piano", composerNamed("Schubert").portrait ?? composerNamed("Fauré").portrait, true],
+                ["choral", "Choral", "Your part in requiems, masses and oratorios", composerNamed("Handel").portrait, true],
+              ] as const
+            ).map(([m, label, line, img, portrait]) => (
+              <button
+                key={m}
+                type="button"
+                className="ob-sing-card"
+                aria-pressed={chosen.includes(m)}
+                onClick={() => toggle(m)}
+              >
+                <span className={`ob-sing-pic${portrait ? " ob-sing-portrait" : ""}`}>
+                  {img ? <img src={img} alt="" /> : null}
+                  <span className="ob-sing-tick" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" width="14" height="14"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </span>
+                </span>
+                <span className="ob-sing-words">
+                  <b>{label}</b>
+                  <span>{line}</span>
+                </span>
+              </button>
+            ))}
           </div>
+          <p className="ob-sing-hint">Choose one or more.</p>
           <button
             type="button"
-            className="cp-btn ob-both"
-            onClick={() =>
-              ctx.go({
-                screen: "onboarding",
-                step: 1,
-                by: "opera",
-                sing: true,
-                both: true,
-              })
-            }
+            className="cp-btn cp-btn--ink ob-begin"
+            disabled={!chosen.length}
+            onClick={begin}
           >
-            I sing both
+            Continue
           </button>
         </main>
       )}
 
-      {(step === 1 || step === 2 || step === 4) && (
+      {(step === 1 || step === 2 || step === 4 || step === 5) && (
         <main
-          className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}${step === 4 ? " ob-works" : ""}`}
+          className={`ob-body ob-welcome${step === 2 ? " ob-opera-list" : ""}${step === 4 ? " ob-works" : ""}${step === 5 ? " ob-songs" : ""}`}
           key="s12"
         >
           <div className="ob-hero gutter">
             <h1>
               {step === 4
                 ? "Which work do you sing?"
-                : both
-                  ? "Where would you like to begin?"
-                  : "Which role is yours?"}
+                : step === 5
+                  ? "Which song are you singing?"
+                  : multi
+                    ? "Where would you like to begin?"
+                    : "Which role is yours?"}
             </h1>
             <p className="lede">
               {step === 1
                 ? "Choose a character to begin. “Ready to sing” means its music is here to practise."
                 : step === 2
                   ? "Choose an opera to read about it and meet its people."
-                  : "Choose a choral work to see its parts. You can add an opera role later."}
+                  : step === 5
+                    ? "Choose a song to open it. You can add more, and a role or a part, any time."
+                    : "Choose a choral work to see its parts. You can add an opera role later."}
             </p>
-            {both && (
+            {multi && (
               <div
                 className="ob-mode"
                 role="tablist"
@@ -4012,31 +4055,32 @@ export function Onboarding({
               >
                 {(
                   [
-                    ["opera", "Opera"],
-                    ["choral", "Choral"],
+                    ["opera", "Opera", 1],
+                    ["songs", "Songs", 5],
+                    ["choral", "Choral", 4],
                   ] as const
-                ).map(([m, label]) => (
-                  <button
-                    key={m}
-                    type="button"
-                    role="tab"
-                    aria-selected={(step === 4) === (m === "choral")}
-                    aria-controls="ob-choices"
-                    onClick={() => {
-                      if (m === "choral" && step !== 4)
-                        ctx.go(at(4, { opera: undefined }));
-                      if (m === "opera" && step === 4)
-                        ctx.go(at(1, { opera: undefined }));
-                    }}
-                  >
-                    {label}
-                  </button>
-                ))}
+                )
+                  .filter(([m]) => modes!.includes(m))
+                  .map(([m, label, n]) => {
+                    const on = n === 1 ? step === 1 || step === 2 : step === n;
+                    return (
+                      <button
+                        key={m}
+                        type="button"
+                        role="tab"
+                        aria-selected={on}
+                        aria-controls="ob-choices"
+                        onClick={() => !on && ctx.go(at(n, { opera: undefined }))}
+                      >
+                        {label}
+                      </button>
+                    );
+                  })}
               </div>
             )}
-            {step !== 4 && (
+            {step !== 4 && step !== 5 && (
               <div
-                className={both ? "ob-sub" : "ob-mode"}
+                className={multi ? "ob-sub" : "ob-mode"}
                 role="tablist"
                 aria-label="Start from"
               >
@@ -4067,7 +4111,11 @@ export function Onboarding({
             role="tabpanel"
             className={`ob-choices${showAll ? " is-all" : ""}`}
           >
-            {step === 4 ? (
+            {step === 5 ? (
+              <div className="gutter ob-songs-list">
+                <SongList songs={SONGS} onPick={(id) => ctx.finishOnboarding({ screen: "song", song: id })} />
+              </div>
+            ) : step === 4 ? (
               <div className="gutter ob-works-grid">
                 <WorksGrid
                   onPick={(w) =>

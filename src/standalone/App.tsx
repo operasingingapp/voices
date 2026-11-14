@@ -27,6 +27,8 @@ import { hasPiece, loadScore, pieceTitle, scoreReady } from "./pieces";
 import { reloadIfStale } from "./staleReload";
 import { ChoralHome, WorkPage } from "./Choral";
 import { findWork } from "./choral";
+import { SongsHome, SongPage } from "./Songs";
+import { findSong } from "./songs";
 import type { Mode } from "./choralParts";
 
 const K = {
@@ -116,7 +118,12 @@ function migrate(p: unknown): Place | null {
     case "profile":
     case "onboarding":
     case "choral":
+    case "songs":
       return o as Place;
+    case "song": {
+      const sg = (o as { song?: string }).song;
+      return sg && findSong(sg) ? { screen: "song", song: sg } : { screen: "songs" };
+    }
     case "work": {
       const w = (o as { work?: string }).work;
       return w && findWork(w) ? { screen: "work", work: w } : { screen: "choral" };
@@ -154,6 +161,10 @@ function titleOf(place: Place): string {
       return `Home${tail}`;
     case "choral":
       return `Choral${tail}`;
+    case "songs":
+      return `Songs${tail}`;
+    case "song":
+      return `${findSong(place.song)?.title ?? "Songs"}${tail}`;
     case "work":
       return `${findWork(place.work)?.title ?? "Choral"}${tail}`;
     case "listen":
@@ -178,8 +189,11 @@ export function App() {
   const [, setScoreTick] = useState(0);
   const [profile, setProfile] = useState<Profile>(() => read<Profile>(K.profile, { voices: [], notSinger: false }));
   const [onboarded, setOnboarded] = useState<boolean>(() => read<boolean | null>(K.onboarded, null) ?? roles.length > 0);
-  const [mode, setModeState] = useState<Mode>(() => (read<string | null>(K.mode, null) === "choral" ? "choral" : "opera"));
-  const home = (): Place => (mode === "choral" ? { screen: "choral" } : roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
+  const [mode, setModeState] = useState<Mode>(() => {
+    const m = read<string | null>(K.mode, null);
+    return m === "choral" || m === "songs" ? m : "opera";
+  });
+  const home = (): Place => (mode === "choral" ? { screen: "choral" } : mode === "songs" ? { screen: "songs" } : roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
   // a role just learned in full: the celebration shows over whatever screen you are on
   const [bravo, setBravo] = useState<RoleRef | null>(null);
   // the side panel over the practice screen
@@ -211,6 +225,7 @@ export function App() {
   useEffect(() => {
     const s = place.screen;
     if (s === "choral" || s === "work") setModeState("choral");
+    else if (s === "songs" || s === "song") setModeState("songs");
     else if (s !== "onboarding" && s !== "profile") setModeState("opera");
   }, [place]);
 
@@ -314,14 +329,14 @@ export function App() {
     mode,
     setMode: (m) => {
       setModeState(m);
-      go(m === "choral" ? { screen: "choral" } : roles.length ? { screen: "home" } : { screen: "explore", by: "opera" });
+      go(m === "choral" ? { screen: "choral" } : m === "songs" ? { screen: "songs" } : roles.length ? { screen: "home" } : { screen: "explore", by: "opera" });
     },
   };
 
   const bravoEl = bravo ? <Bravo ctx={ctx} r={bravo} onClose={() => setBravo(null)} /> : null;
 
   if (place.screen === "home" && !roles.length) return <Onboarding ctx={ctx} step={1} />;
-  if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} both={place.both} />;
+  if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} both={place.both} modes={place.modes} />;
 
   // a piece's score is fetched when it opens: show a short wait until it is here
   const wantScore = place.screen === "piece" ? findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId : place.screen === "listen" ? place.edition : undefined;
@@ -400,6 +415,11 @@ export function App() {
     page = <RolePage ctx={ctx} opera={opera} ch={findCharacter(opera, place.character)} />;
   } else if (place.screen === "home") page = <HomePage ctx={ctx} />;
   else if (place.screen === "choral") page = <ChoralHome ctx={ctx} />;
+  else if (place.screen === "songs") page = <SongsHome ctx={ctx} />;
+  else if (place.screen === "song") {
+    const sg = findSong(place.song);
+    page = sg ? <SongPage key={sg.id} ctx={ctx} song={sg} /> : <SongsHome ctx={ctx} />;
+  }
   else if (place.screen === "work") {
     const w = findWork(place.work);
     page = w ? <WorkPage key={w.id} ctx={ctx} work={w} /> : <ChoralHome ctx={ctx} />;

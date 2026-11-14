@@ -3,10 +3,10 @@ import { composerNamed } from "./composers";
 import { CHORAL_WORKS, type ChoralWork } from "./choral";
 import type { Tone } from "./flow";
 
-export type Mode = "opera" | "choral";
+export type Mode = "opera" | "songs" | "choral";
 
 /**
- * What you sing: Opera or Choral, the raised ivory segment on a fog track (as every switch in the app). In the top
+ * What you sing: Opera, Songs or Choral, the raised ivory segment on a fog track (as every switch in the app). In the top
  * bar on a phone, at the head of the rail from a tablet up.
  */
 export function ModeSwitch({
@@ -27,6 +27,7 @@ export function ModeSwitch({
       {(
         [
           ["opera", "Opera"],
+          ["songs", "Songs"],
           ["choral", "Choral"],
         ] as const
       ).map(([m, label]) => (

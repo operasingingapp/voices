@@ -193,7 +193,7 @@
 .ob-sing .ob-hero { text-align: center; max-width: 560px; }
 .ob-sing .ob-hero h1 { font-size: clamp(34px, 4.6vw, 56px); }
 .ob-sing .ob-hero .lede { margin: 0; }
-.ob-sing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; width: 100%; max-width: 620px; }
+.ob-sing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; width: 100%; max-width: 860px; }
 .ob-sing-card {
   display: flex;
   flex-direction: column;
@@ -208,6 +208,7 @@
   cursor: pointer;
 }
 .ob-sing-pic {
+  position: relative;
   display: block;
   aspect-ratio: 3 / 4;
   margin-bottom: 6px;
@@ -215,20 +216,46 @@
   overflow: hidden;
   background: var(--fog-strong);
   box-shadow: 0 2px 10px rgba(40, 30, 60, 0.1);
+  transition: box-shadow var(--duration-settle) var(--ease-standard);
 }
 .ob-sing-pic img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--duration-settle) var(--ease-standard); }
 .ob-sing-portrait img { object-position: 50% 10%; }
 .ob-sing-card:hover .ob-sing-pic img { transform: scale(1.03); }
 .ob-sing-card:focus-visible { outline: none; }
 .ob-sing-card:focus-visible .ob-sing-pic { outline: 2px solid var(--focus); outline-offset: 4px; }
+.ob-sing-words { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .ob-sing-card b { font: italic 500 30px/1 var(--font-display); }
-.ob-sing-card > span:last-child { color: var(--ink-muted); font-size: 15px; line-height: 1.4; }
-.ob-both.cp-btn { margin-top: 28px; min-height: 44px; padding: 0 20px; background: var(--fog); color: var(--ink); }
-.ob-both.cp-btn:hover { background: var(--fog-strong); }
+.ob-sing-words > span { color: var(--ink-muted); font-size: 15px; line-height: 1.4; }
+/* chosen: a dark ring round the picture and a tick in its corner */
+.ob-sing-tick {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--canvas);
+  color: var(--canvas);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.9), 0 1px 4px rgba(0, 0, 0, 0.18);
+  opacity: 0.85;
+  transition: background var(--duration-fast, 120ms) ease, opacity var(--duration-fast, 120ms) ease;
+}
+.ob-sing-card[aria-pressed="true"] .ob-sing-pic { box-shadow: 0 0 0 2px var(--canvas), 0 0 0 4px var(--ink); }
+.ob-sing-card[aria-pressed="true"] .ob-sing-tick { background: var(--ink); color: var(--canvas); opacity: 1; }
+.ob-sing-hint { margin: 22px 0 0; color: var(--ink-muted); font-size: 14px; }
+.ob-begin.cp-btn { margin-top: 12px; min-height: 46px; min-width: 180px; padding: 0 24px; }
+.ob-begin.cp-btn:disabled { opacity: 0.4; cursor: default; }
+/* on a phone the three choices stack as rows: the picture at the left, the words beside it */
 @media (max-width: 640px) {
-  .ob-sing-grid { gap: 14px; }
-  .ob-sing-card b { font-size: 26px; }
-  .ob-sing-card > span:last-child { font-size: 14px; }
+  .ob-sing-grid { grid-template-columns: 1fr; gap: 12px; max-width: 520px; }
+  .ob-sing-card { flex-direction: row; align-items: center; gap: 16px; }
+  .ob-sing-pic { flex: none; width: 104px; aspect-ratio: 1; margin: 0; }
+  .ob-sing-tick { top: 6px; right: 6px; width: 22px; height: 22px; }
+  .ob-sing-card b { font-size: 28px; }
+  .ob-sing-words > span { font-size: 14px; }
+  .ob-begin.cp-btn { align-self: stretch; }
 }
 
 /* the choral works in the first-visit choices: the full width of the page, as the opera grid elsewhere (a shrink-wrapped
@@ -286,4 +313,51 @@
   .shell { grid-template-columns: clamp(300px, calc(100vw - 1280px), 460px) minmax(0, 1fr); }
   .shell > .rail { width: 100%; box-sizing: border-box; }
   .shell > .rail .rail-mode { margin-bottom: 18px; }
+}
+
+/* ---------- songs ---------- */
+.sg-filters { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.sg-chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.sg-chip.part-pill { min-height: 34px; padding: 0 14px; font-size: 14px; }
+.sg-list { display: flex; flex-direction: column; gap: 28px; margin-top: 8px; }
+.sg-group-h { display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px; font: italic 500 26px/1.1 var(--font-display); color: var(--ink); }
+.sg-group-h span { font: 400 13px/1 var(--font-body, inherit); color: var(--ink-muted); font-style: normal; font-variant-numeric: tabular-nums; }
+.sg-rows { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 2px 20px; }
+.sg-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 8px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+.sg-row:hover { background: var(--fog); }
+.sg-row:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.sg-face { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; background: #b9b4aa; }
+.sg-face img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sg-face i { color: #fff; font: italic 500 22px/1 var(--font-display); }
+.sg-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.sg-text b { font: italic 500 21px/1.15 var(--font-display); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sg-text span { color: var(--ink-muted); font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sg-ready { flex: none; padding: 3px 8px; border-radius: 999px; background: var(--now-soft); color: var(--on-pastel); font-size: 12px; }
+.ob-songs-list { align-self: stretch; width: 100%; max-width: 1100px; margin-inline: auto; box-sizing: border-box; padding-bottom: 32px; }
+.sg-page .oh.no-art .oh-text { max-width: 680px; }
+/* a song without its composer's portrait: the dark title plate, its line legible on it */
+.oh.no-art .oh-titleblock .oh-meta { position: relative; color: rgba(251, 250, 247, 0.78); }
+/* an unchosen card's tick is only a ring */
+.ob-sing-card[aria-pressed="false"] .ob-sing-tick { background: rgba(255, 255, 255, 0.28); color: transparent; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.95), 0 1px 4px rgba(0, 0, 0, 0.18); }
+@media (max-width: 640px) {
+  /* the filters as two lines that scroll sideways, so the songs start on the first screen */
+  .sg-chips { flex-wrap: nowrap; overflow-x: auto; margin-inline: -16px; padding-inline: 16px; scrollbar-width: none; }
+  .sg-chips::-webkit-scrollbar { display: none; }
+  .sg-chips > * { flex: none; }
+  /* Continue stays in reach under the three choices */
+  .ob-sing .ob-begin.cp-btn { position: sticky; bottom: max(16px, env(safe-area-inset-bottom, 0px)); box-shadow: 0 6px 20px rgba(40, 30, 60, 0.12); }
 }
