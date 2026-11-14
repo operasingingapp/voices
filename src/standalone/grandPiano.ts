@@ -22,7 +22,7 @@ const FILES = list as Record<string, { file: string; gainDb: number; lines?: Rec
 export const GRAND_GAIN_DB = 2;
 /** a singer's line played on the grand, under the accompaniment: normalised to the same level as the whole piece, a single
  * line on its own sounds far louder than it should against the accompaniment, so it sits this far below */
-export const GRAND_LINE_DB = -14;
+export const GRAND_LINE_DB = -10;
 
 export const grandPianoUrl = (editionId: string): string | undefined => (FILES[editionId] ? GRAND_BASE + FILES[editionId].file : undefined);
 /** the recording's level against the app's piano (dB) */
