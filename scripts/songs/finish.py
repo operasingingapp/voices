@@ -49,11 +49,15 @@ t = filled["tempo"]; mult = {"quarter": 1, "half": 2, "eighth": 0.5, "dotted-qua
 q = round(t["bpm"] * mult, 2)
 p = f"{ROOT}/content/pieces/{eid}/score.musicxml"
 x = open(p, encoding="utf-8").read()
+x = re.sub(r'<direction placement="above"><direction-type><words/></direction-type><sound tempo="[\d.]+"/></direction>', "", x)  # ours, from a run before
 x = re.sub(r'<sound tempo="[\d.]+"\s*/>', "", x)
 m = re.search(r'(<part id="[^"]+">\s*<measure[^>]*>)', x)
 x = x[:m.end()] + f'<direction placement="above"><direction-type><words/></direction-type><sound tempo="{q}"/></direction>' + x[m.end():]
 open(p, "w", encoding="utf-8").write(x)
 meta_p = f"{ROOT}/src/standalone/songMeta.json"
+import fcntl
+lock = open("/tmp/songmeta.lock", "w")
+fcntl.flock(lock, fcntl.LOCK_EX)  # several helpers may finish songs at once
 try:
     meta = json.load(open(meta_p))
 except FileNotFoundError:
