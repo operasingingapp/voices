@@ -139,7 +139,7 @@
       </score-part>
     </part-list>
   <part id="P1">
-    <measure number="1" width="464.41"><direction placement="above"><direction-type><words/></direction-type><sound tempo="138"/></direction>
+    <measure number="1" width="464.41">
       <print>
         <system-layout>
           <system-margins>
@@ -175,7 +175,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="271.87" default-y="-10">
+      <direction placement="above" id="t0"><direction-type><words/></direction-type><sound tempo="140.15"/></direction><note default-x="271.87" default-y="-10">
         <rest measure="yes"/>
         <duration>48</duration>
         <voice>1</voice>
@@ -3728,7 +3728,7 @@
         <stem>down</stem>
         <lyric number="1" default-x="6.5" default-y="-47.27" relative-y="-30">
           <syllabic>begin</syllabic>
-          <text>sing</text>
+          <text>sin</text>
           </lyric>
         </note>
       <note default-x="85.49" default-y="-10">
@@ -5996,7 +5996,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="13.32" default-y="-20">
+      <direction placement="above" id="t1"><direction-type><words/></direction-type><sound tempo="84.83"/></direction><note default-x="13.32" default-y="-20">
         <rest/>
         <duration>12</duration>
         <voice>1</voice>
@@ -6154,7 +6154,7 @@
           </lyric>
         </note>
       
-      <note default-x="189.35" default-y="-20">
+      <direction placement="above" id="t2"><direction-type><words/></direction-type><sound tempo="84.83"/></direction><note default-x="189.35" default-y="-20">
         <rest/>
         <duration>12</duration>
         <voice>1</voice>

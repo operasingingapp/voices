@@ -57,7 +57,7 @@
     <part-group type="stop" number="1"/>
     </part-list>
   <part id="P1">
-    <measure number="1"><direction placement="above"><direction-type><words/></direction-type><sound tempo="76"/></direction>
+    <measure number="1">
       <attributes>
         <divisions>12</divisions>
         <key>
@@ -78,7 +78,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t0"><direction-type><words/></direction-type><sound tempo="73.97"/></direction><note>
         <rest measure="yes"/>
         <duration>48</duration>
         <voice>1</voice>
@@ -440,7 +440,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t1"><direction-type><words/></direction-type><sound tempo="78.9"/></direction><note>
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -1529,7 +1529,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t2"><direction-type><words/></direction-type><sound tempo="73.97"/></direction><note>
         <pitch>
           <step>E</step>
           <octave>4</octave>

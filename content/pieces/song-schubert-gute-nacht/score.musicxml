@@ -136,7 +136,7 @@
       </score-part>
     </part-list>
   <part id="P1">
-    <measure number="1" width="267.53"><direction placement="above"><direction-type><words/></direction-type><sound tempo="51"/></direction>
+    <measure number="1" width="267.53">
       <print>
         <system-layout>
           <system-margins>
@@ -166,7 +166,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="166.36" default-y="-10">
+      <direction placement="above" id="t0"><direction-type><words/></direction-type><sound tempo="51.0"/></direction><note default-x="166.36" default-y="-10">
         <rest measure="yes"/>
         <duration>16</duration>
         <voice>1</voice>
@@ -5095,7 +5095,7 @@
         <type>eighth</type>
         </note>
       
-      <note default-x="187.48" default-y="-25">
+      <direction placement="above" id="t1"><direction-type><words/></direction-type><sound tempo="53.27"/></direction><note default-x="187.48" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -5117,7 +5117,7 @@
           <words font-family="Edwin" font-size="12" font-weight="bold" default-y="23.15">un poco ritard.</words>
           </direction-type>
         </direction>
-      <note default-x="14.34" default-y="-25">
+      <direction placement="above" id="t2"><direction-type><words/></direction-type><sound tempo="51.0"/></direction><note default-x="14.34" default-y="-25">
         <pitch>
           <step>A</step>
           <octave>4</octave>
@@ -5132,7 +5132,7 @@
           </lyric>
         </note>
       
-      <note default-x="72.83" default-y="0">
+      <direction placement="above" id="t3"><direction-type><words/></direction-type><sound tempo="48.73"/></direction><note default-x="72.83" default-y="0">
         <pitch>
           <step>F</step>
           <octave>5</octave>
@@ -5148,7 +5148,7 @@
           </lyric>
         </note>
       
-      <note default-x="131.32" default-y="-5">
+      <direction placement="above" id="t4"><direction-type><words/></direction-type><sound tempo="46.47"/></direction><note default-x="131.32" default-y="-5">
         <pitch>
           <step>E</step>
           <octave>5</octave>
@@ -5163,7 +5163,7 @@
           </lyric>
         </note>
       
-      <note default-x="189.81" default-y="-15">
+      <direction placement="above" id="t5"><direction-type><words/></direction-type><sound tempo="44.2"/></direction><note default-x="189.81" default-y="-15">
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -5204,7 +5204,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="77.88" default-y="-10">
+      <direction placement="above" id="t6"><direction-type><words/></direction-type><sound tempo="53.27"/></direction><note default-x="77.88" default-y="-10">
         <pitch>
           <step>D</step>
           <octave>5</octave>

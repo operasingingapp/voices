@@ -119,7 +119,7 @@
       </score-part>
     </part-list>
   <part id="P1">
-    <measure number="1" width="466.8"><direction placement="above"><direction-type><words/></direction-type><sound tempo="47"/></direction>
+    <measure number="1" width="466.8">
       <print>
         <system-layout>
           <system-margins>
@@ -149,7 +149,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="268.32" default-y="-10">
+      <direction placement="above" id="t0"><direction-type><words/></direction-type><sound tempo="46.32"/></direction><note default-x="268.32" default-y="-10">
         <rest measure="yes"/>
         <duration>16</duration>
         <voice>1</voice>
@@ -177,7 +177,7 @@
           <words default-x="16.33" default-y="18.73" relative-y="15" font-style="italic">très expressif et avec accablement</words>
           </direction-type>
         </direction>
-      <note default-x="10" default-y="-40">
+      <direction placement="above" id="t1"><direction-type><words/></direction-type><sound tempo="46.32"/></direction><note default-x="10" default-y="-40">
         <pitch>
           <step>E</step>
           <octave>4</octave>
@@ -1003,7 +1003,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="10" default-y="-20">
+      <direction placement="above" id="t2"><direction-type><words/></direction-type><sound tempo="49.75"/></direction><note default-x="10" default-y="-20">
         <pitch>
           <step>B</step>
           <octave>4</octave>
@@ -1408,7 +1408,7 @@
           </direction-type>
         <sound dynamics="88.89"/>
         </direction>
-      <note default-x="44.62" default-y="-20">
+      <direction placement="above" id="t3"><direction-type><words/></direction-type><sound tempo="46.32"/></direction><note default-x="44.62" default-y="-20">
         <rest/>
         <duration>2</duration>
         <voice>1</voice>
@@ -1818,7 +1818,7 @@
           </notations>
         <lyric number="1" default-x="6.5" default-y="-55.13" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>cœr</text>
+          <text>cœur</text>
           </lyric>
         </note>
       <note default-x="72.6" default-y="0">
@@ -2040,7 +2040,7 @@
           </direction-type>
         <sound dynamics="36.67"/>
         </direction>
-      <note default-x="81.11" default-y="-40">
+      <direction placement="above" id="t4"><direction-type><words/></direction-type><sound tempo="46.32"/></direction><note default-x="81.11" default-y="-40">
         <pitch>
           <step>E</step>
           <octave>4</octave>

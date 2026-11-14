@@ -52,7 +52,7 @@
       </score-part>
     </part-list>
   <part id="P1">
-    <measure number="1"><direction placement="above"><direction-type><words /></direction-type><sound tempo="92" /></direction>
+    <measure number="1"><direction placement="above"><direction-type><words /></direction-type></direction>
       <attributes>
         <divisions>4</divisions>
         <key>
@@ -73,7 +73,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t0"><direction-type><words/></direction-type><sound tempo="94.93"/></direction><note>
         <rest measure="yes" />
         <duration>12</duration>
         <voice>1</voice>
@@ -1663,7 +1663,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t1"><direction-type><words/></direction-type><sound tempo="83.06"/></direction><note>
         <rest />
         <duration>4</duration>
         <voice>1</voice>
@@ -2055,7 +2055,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t2"><direction-type><words/></direction-type><sound tempo="94.93"/></direction><note>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -2478,7 +2478,7 @@
           <wedge type="crescendo" number="1" />
           </direction-type>
         </direction>
-      <note>
+      <direction placement="above" id="t3"><direction-type><words/></direction-type><sound tempo="76.28"/></direction><note>
         <pitch>
           <step>C</step>
           <alter>1</alter>
@@ -2670,7 +2670,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t4"><direction-type><words/></direction-type><sound tempo="94.93"/></direction><note>
         <pitch>
           <step>D</step>
           <alter>1</alter>
@@ -2756,7 +2756,7 @@
           </direction-type>
         
         </direction>
-      <note>
+      <direction placement="above" id="t5"><direction-type><words/></direction-type><sound tempo="94.93"/></direction><note>
         <rest measure="yes" />
         <duration>12</duration>
         <voice>1</voice>

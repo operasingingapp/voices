@@ -131,7 +131,7 @@
       </score-part>
     </part-list>
   <part id="P1">
-    <measure number="1" width="426.61"><direction placement="above"><direction-type><words/></direction-type><sound tempo="62"/></direction>
+    <measure number="1" width="426.61">
       <print>
         <system-layout>
           <system-margins>
@@ -161,7 +161,7 @@
           </direction-type>
         
         </direction>
-      <note default-x="247.41" default-y="-10">
+      <direction placement="above" id="t0"><direction-type><words/></direction-type><sound tempo="62.78"/></direction><note default-x="247.41" default-y="-10">
         <rest measure="yes"/>
         <duration>48</duration>
         <voice>1</voice>
@@ -860,7 +860,7 @@
         <stem>down</stem>
         <lyric number="1" default-x="6.5" default-y="-42.71" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>lui</text>
+          <text>luit</text>
           </lyric>
         </note>
       <note default-x="324.03" default-y="-5">
@@ -1584,7 +1584,7 @@
       </measure>
     <measure number="19" width="210.87">
       
-      <note default-x="10" default-y="-35">
+      <direction placement="above" id="t1"><direction-type><words/></direction-type><sound tempo="62.78"/></direction><note default-x="10" default-y="-35">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -2261,7 +2261,7 @@
         <stem>down</stem>
         <lyric number="1" default-x="8.12" default-y="-47.71" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>meur,</text>
+          <text>meurs,</text>
           </lyric>
         </note>
       <note default-x="322.5" default-y="-5">
@@ -2542,7 +2542,7 @@
         <stem>up</stem>
         <lyric number="1" default-x="6.5" default-y="-47.71" relative-y="-30">
           <syllabic>single</syllabic>
-          <text>Ò</text>
+          <text>Ô</text>
           </lyric>
         </note>
       <note default-x="137.2" default-y="-25">
@@ -2873,7 +2873,7 @@
           <wedge type="diminuendo" default-y="36.61" number="1"/>
           </direction-type>
         </direction>
-      <note default-x="168.56" default-y="-5">
+      <direction placement="above" id="t2"><direction-type><words/></direction-type><sound tempo="53.36"/></direction><note default-x="168.56" default-y="-5">
         <pitch>
           <step>E</step>
           <alter>-1</alter>
@@ -2998,7 +2998,7 @@
           </system-layout>
         </print>
       
-      <note default-x="79.47" default-y="-35">
+      <direction placement="above" id="t3"><direction-type><words/></direction-type><sound tempo="62.78"/></direction><note default-x="79.47" default-y="-35">
         <pitch>
           <step>F</step>
           <octave>4</octave>
@@ -3039,7 +3039,7 @@
         <duration>48</duration>
         <voice>1</voice>
         </note>
-      </measure>
+      <direction placement="above" id="t4"><direction-type><words/></direction-type><sound tempo="47.08"/></direction></measure>
     <measure number="41" width="213.26">
       <note default-x="94.81" default-y="-10">
         <rest measure="yes"/>
