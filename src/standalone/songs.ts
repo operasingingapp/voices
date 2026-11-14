@@ -1,6 +1,6 @@
 /**
  * Songs: art songs and arie antiche for one voice and piano, the repertoire a singer learns beside (and often before)
- * opera roles. Written for this app from the plan of the first hundred (the "100 Songs" sheet). None has music here
+ * opera roles. Written for this app from the plan (the "100 Songs" sheet, now longer). None has music here
  * yet: `editionId` is set once a song's score can be practised (content/pieces/<editionId>/).
  */
 export type SongLevel = "Beginner" | "Intermediate" | "Advanced";
@@ -12,7 +12,8 @@ export type SongGroup =
   | "French mélodie"
   | "English song"
   | "Spanish song"
-  | "Russian song";
+  | "Russian song"
+  | "Nordic and Czech song";
 
 export interface Song {
   id: string;
@@ -40,6 +41,9 @@ export const SONG_LANGUAGES: [string, string][] = [
   ["en", "English"],
   ["es", "Spanish"],
   ["ru", "Russian"],
+  ["da", "Danish"],
+  ["cs", "Czech"],
+  ["arc", "Aramaic"],
   ["zxx", "No words"],
 ];
 export const songLanguage = (lang: string) => SONG_LANGUAGES.find(([l]) => l === lang)?.[1] ?? lang;
@@ -53,6 +57,7 @@ export const SONG_GROUPS: SongGroup[] = [
   "English song",
   "Spanish song",
   "Russian song",
+  "Nordic and Czech song",
 ];
 
 export const SONGS: Song[] = [
@@ -156,6 +161,62 @@ export const SONGS: Song[] = [
   { id: "granados-la-maja-dolorosa-no-1", title: "La maja dolorosa No. 1", composer: "Granados", composerFull: "Enrique Granados", lang: "es", level: "Advanced", group: "Spanish song", note: "From the Tonadillas" },
   { id: "rachmaninoff-vocalise", title: "Vocalise", composer: "Rachmaninoff", composerFull: "Sergei Rachmaninoff", lang: "zxx", level: "Advanced", group: "Russian song", note: "Sung on one vowel, with no words" },
   { id: "rachmaninoff-how-fair-this-spot", title: "How fair this spot (Zdes' khorosho)", composer: "Rachmaninoff", composerFull: "Sergei Rachmaninoff", lang: "ru", level: "Advanced", group: "Russian song" },
+  { id: "schubert-der-tod-und-das-madchen", title: "Der Tod und das Mädchen", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Intermediate", group: "German Lied", note: "Popular with low voices" },
+  { id: "schubert-gute-nacht", title: "Gute Nacht", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Intermediate", group: "German Lied", note: "Winterreise, No. 1" },
+  { id: "schubert-der-leiermann", title: "Der Leiermann", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Intermediate", group: "German Lied", note: "The last song of Winterreise" },
+  { id: "schubert-das-wandern", title: "Das Wandern", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Beginner", group: "German Lied", note: "Die schöne Müllerin, No. 1" },
+  { id: "schubert-wohin", title: "Wohin?", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Intermediate", group: "German Lied", note: "From Die schöne Müllerin" },
+  { id: "schubert-auf-dem-wasser-zu-singen", title: "Auf dem Wasser zu singen", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Advanced", group: "German Lied" },
+  { id: "schubert-der-musensohn", title: "Der Musensohn", composer: "Schubert", composerFull: "Franz Schubert", lang: "de", level: "Intermediate", group: "German Lied", note: "Words by Goethe" },
+  { id: "schumann-die-beiden-grenadiere", title: "Die beiden Grenadiere", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "Words by Heine; popular with low voices" },
+  { id: "schumann-der-nussbaum", title: "Der Nussbaum", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "From Myrthen" },
+  { id: "schumann-die-lotosblume", title: "Die Lotosblume", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "From Myrthen" },
+  { id: "schumann-fruhlingsnacht", title: "Frühlingsnacht", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Advanced", group: "German Lied", note: "From Liederkreis, Op. 39" },
+  { id: "schumann-waldesgesprach", title: "Waldesgespräch", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "From Liederkreis, Op. 39" },
+  { id: "schumann-im-rhein-im-heiligen-strome", title: "Im Rhein, im heiligen Strome", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "From Dichterliebe" },
+  { id: "schumann-seit-ich-ihn-gesehen", title: "Seit ich ihn gesehen", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Beginner", group: "German Lied", note: "Frauenliebe und -leben, No. 1" },
+  { id: "schumann-du-ring-an-meinem-finger", title: "Du Ring an meinem Finger", composer: "Schumann", composerFull: "Robert Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "From Frauenliebe und -leben" },
+  { id: "brahms-vergebliches-standchen", title: "Vergebliches Ständchen", composer: "Brahms", composerFull: "Johannes Brahms", lang: "de", level: "Intermediate", group: "German Lied" },
+  { id: "brahms-sapphische-ode", title: "Sapphische Ode", composer: "Brahms", composerFull: "Johannes Brahms", lang: "de", level: "Intermediate", group: "German Lied" },
+  { id: "brahms-immer-leiser-wird-mein-schlummer", title: "Immer leiser wird mein Schlummer", composer: "Brahms", composerFull: "Johannes Brahms", lang: "de", level: "Advanced", group: "German Lied" },
+  { id: "wolf-verborgenheit", title: "Verborgenheit", composer: "Wolf", composerFull: "Hugo Wolf", lang: "de", level: "Intermediate", group: "German Lied", note: "From the Mörike-Lieder" },
+  { id: "wolf-das-verlassene-magdlein", title: "Das verlassene Mägdlein", composer: "Wolf", composerFull: "Hugo Wolf", lang: "de", level: "Intermediate", group: "German Lied", note: "From the Mörike-Lieder" },
+  { id: "wolf-der-feuerreiter", title: "Der Feuerreiter", composer: "Wolf", composerFull: "Hugo Wolf", lang: "de", level: "Advanced", group: "German Lied", note: "From the Mörike-Lieder" },
+  { id: "wolf-fussreise", title: "Fußreise", composer: "Wolf", composerFull: "Hugo Wolf", lang: "de", level: "Intermediate", group: "German Lied", note: "From the Mörike-Lieder" },
+  { id: "wolf-auf-ein-altes-bild", title: "Auf ein altes Bild", composer: "Wolf", composerFull: "Hugo Wolf", lang: "de", level: "Intermediate", group: "German Lied", note: "From the Mörike-Lieder" },
+  { id: "wolf-verschwiegene-liebe", title: "Verschwiegene Liebe", composer: "Wolf", composerFull: "Hugo Wolf", lang: "de", level: "Intermediate", group: "German Lied", note: "From the Eichendorff-Lieder" },
+  { id: "strauss-standchen", title: "Ständchen (Mach auf, mach auf)", composer: "Strauss", composerFull: "Richard Strauss", lang: "de", level: "Advanced", group: "German Lied" },
+  { id: "strauss-die-nacht", title: "Die Nacht", composer: "Strauss", composerFull: "Richard Strauss", lang: "de", level: "Intermediate", group: "German Lied" },
+  { id: "strauss-cacilie", title: "Cäcilie", composer: "Strauss", composerFull: "Richard Strauss", lang: "de", level: "Advanced", group: "German Lied" },
+  { id: "mahler-ich-bin-der-welt-abhanden-gekommen", title: "Ich bin der Welt abhanden gekommen", composer: "Mahler", composerFull: "Gustav Mahler", lang: "de", level: "Advanced", group: "German Lied", note: "From the Rückert-Lieder" },
+  { id: "mahler-liebst-du-um-schonheit", title: "Liebst du um Schönheit", composer: "Mahler", composerFull: "Gustav Mahler", lang: "de", level: "Intermediate", group: "German Lied", note: "From the Rückert-Lieder" },
+  { id: "mahler-ging-heut-morgen-ubers-feld", title: "Ging heut' morgen übers Feld", composer: "Mahler", composerFull: "Gustav Mahler", lang: "de", level: "Intermediate", group: "German Lied", note: "From Lieder eines fahrenden Gesellen" },
+  { id: "mendelssohn-auf-flugeln-des-gesanges", title: "Auf Flügeln des Gesanges", composer: "Mendelssohn", composerFull: "Felix Mendelssohn", lang: "de", level: "Beginner", group: "German Lied", note: "Words by Heine" },
+  { id: "beethoven-adelaide", title: "Adelaide", composer: "Beethoven", composerFull: "Ludwig van Beethoven", lang: "de", level: "Advanced", group: "German Lied" },
+  { id: "wagner-traume", title: "Träume", composer: "Wagner", composerFull: "Richard Wagner", lang: "de", level: "Advanced", group: "German Lied", note: "From the Wesendonck-Lieder" },
+  { id: "clara-schumann-liebst-du-um-schonheit", title: "Liebst du um Schönheit", composer: "Clara Schumann", composerFull: "Clara Schumann", lang: "de", level: "Intermediate", group: "German Lied", note: "Words by Rückert" },
+  { id: "faure-les-roses-d-ispahan", title: "Les roses d'Ispahan", composer: "Fauré", composerFull: "Gabriel Fauré", lang: "fr", level: "Intermediate", group: "French mélodie" },
+  { id: "faure-nell", title: "Nell", composer: "Fauré", composerFull: "Gabriel Fauré", lang: "fr", level: "Intermediate", group: "French mélodie" },
+  { id: "faure-mandoline", title: "Mandoline", composer: "Fauré", composerFull: "Gabriel Fauré", lang: "fr", level: "Intermediate", group: "French mélodie", note: "Words by Verlaine" },
+  { id: "faure-ici-bas", title: "Ici-bas!", composer: "Fauré", composerFull: "Gabriel Fauré", lang: "fr", level: "Beginner", group: "French mélodie" },
+  { id: "faure-en-priere", title: "En prière", composer: "Fauré", composerFull: "Gabriel Fauré", lang: "fr", level: "Beginner", group: "French mélodie" },
+  { id: "duparc-phidyle", title: "Phidylé", composer: "Duparc", composerFull: "Henri Duparc", lang: "fr", level: "Advanced", group: "French mélodie" },
+  { id: "duparc-extase", title: "Extase", composer: "Duparc", composerFull: "Henri Duparc", lang: "fr", level: "Advanced", group: "French mélodie" },
+  { id: "duparc-la-vie-anterieure", title: "La vie antérieure", composer: "Duparc", composerFull: "Henri Duparc", lang: "fr", level: "Advanced", group: "French mélodie", note: "Words by Baudelaire" },
+  { id: "debussy-c-est-l-extase-langoureuse", title: "C'est l'extase langoureuse", composer: "Debussy", composerFull: "Claude Debussy", lang: "fr", level: "Advanced", group: "French mélodie", note: "From Ariettes oubliées" },
+  { id: "debussy-il-pleure-dans-mon-c-ur", title: "Il pleure dans mon cœur", composer: "Debussy", composerFull: "Claude Debussy", lang: "fr", level: "Advanced", group: "French mélodie", note: "From Ariettes oubliées" },
+  { id: "debussy-green", title: "Green", composer: "Debussy", composerFull: "Claude Debussy", lang: "fr", level: "Advanced", group: "French mélodie", note: "From Ariettes oubliées" },
+  { id: "berlioz-villanelle", title: "Villanelle", composer: "Berlioz", composerFull: "Hector Berlioz", lang: "fr", level: "Intermediate", group: "French mélodie", note: "From Les nuits d'été" },
+  { id: "berlioz-absence", title: "Absence", composer: "Berlioz", composerFull: "Hector Berlioz", lang: "fr", level: "Intermediate", group: "French mélodie", note: "From Les nuits d'été" },
+  { id: "chausson-le-colibri", title: "Le colibri", composer: "Chausson", composerFull: "Ernest Chausson", lang: "fr", level: "Intermediate", group: "French mélodie" },
+  { id: "ravel-kaddisch", title: "Kaddisch", composer: "Ravel", composerFull: "Maurice Ravel", lang: "arc", level: "Advanced", group: "French mélodie", note: "From Deux mélodies hébraïques" },
+  { id: "tchaikovsky-none-but-the-lonely-heart", title: "None but the lonely heart (Net, tol'ko tot, kto znal)", composer: "Tchaikovsky", composerFull: "Pyotr Ilyich Tchaikovsky", lang: "ru", level: "Intermediate", group: "Russian song", note: "Words by Goethe, in Russian" },
+  { id: "tchaikovsky-at-the-ball", title: "At the ball (Sred' shumnogo bala)", composer: "Tchaikovsky", composerFull: "Pyotr Ilyich Tchaikovsky", lang: "ru", level: "Intermediate", group: "Russian song" },
+  { id: "rachmaninoff-lilacs", title: "Lilacs (Siren')", composer: "Rachmaninoff", composerFull: "Sergei Rachmaninoff", lang: "ru", level: "Intermediate", group: "Russian song" },
+  { id: "rachmaninoff-in-the-silence-of-the-secret-night", title: "In the silence of the secret night (V molchan'i nochi taynoy)", composer: "Rachmaninoff", composerFull: "Sergei Rachmaninoff", lang: "ru", level: "Advanced", group: "Russian song" },
+  { id: "grieg-jeg-elsker-dig", title: "Jeg elsker dig", composer: "Grieg", composerFull: "Edvard Grieg", lang: "da", level: "Beginner", group: "Nordic and Czech song", note: "Words by Hans Christian Andersen" },
+  { id: "dvorak-songs-my-mother-taught-me", title: "Songs my mother taught me (Když mne stará matka)", composer: "Dvořák", composerFull: "Antonín Dvořák", lang: "cs", level: "Intermediate", group: "Nordic and Czech song", note: "From Gypsy Songs" },
+  { id: "ives-the-circus-band", title: "The Circus Band", composer: "Ives", composerFull: "Charles Ives", lang: "en", level: "Intermediate", group: "English song" },
 ];
 
 export const findSong = (id: string) => SONGS.find((s) => s.id === id);
