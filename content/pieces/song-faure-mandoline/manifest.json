@@ -1,0 +1,89 @@
+{
+ "editionId": "song-faure-mandoline",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Mandoline",
+ "subtitle": "Gabriel Fauré: song, words by Paul Verlaine",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Gabriel Fauré",
+ "librettist": "Paul Verlaine",
+ "language": "fr",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Gabriel Fauré, Mandoline",
+   "author": "Gabriel Fauré",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Mandoline",
+   "author": "Paul Verlaine",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Fauré,_Gabriel/Cinq_Mélodies,_Op.58/1_Mandoline)",
+   "author": "Transcribed by Vinckenbosch from IMSLP #24127.  Source: https://imslp.org/wiki/5_M%C3%A9lodies%2C_Op.58_(Faur%C3%A9%2C_Gabriel)",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
