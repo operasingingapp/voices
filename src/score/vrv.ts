@@ -24,6 +24,52 @@ export function loadVerovio(): Promise<Toolkit> {
   return toolkit;
 }
 
+/** set once a score has been loaded into the shared toolkit: from then on the warm-up must leave it alone */
+let scoreLoaded = false;
+let warmed = false;
+
+/** A few bars with words, engraved with the options the app uses: enough to set up the engraver's font and text
+ *  measuring and to let the browser optimise the engine's hot code, so the first real score is not the slow one. */
+const WARM_XML = `<?xml version="1.0" encoding="UTF-8"?><score-partwise version="3.1"><part-list><score-part id="P1"><part-name>V</part-name></score-part></part-list><part id="P1">${[0, 1, 2, 3]
+  .map(
+    (m) =>
+      `<measure number="${m + 1}">${m ? "" : "<attributes><divisions>1</divisions><key><fifths>-1</fifths></key><time><beats>4</beats><beat-type>4</beat-type></time><clef><sign>G</sign><line>2</line></clef></attributes>"}${["C", "D", "E", "F"]
+        .map((st, i) => `<note><pitch><step>${st}</step><octave>${5 - (m % 2)}</octave></pitch><duration>1</duration><type>quarter</type><stem>up</stem><lyric><syllabic>single</syllabic><text>la${i}</text></lyric></note>`)
+        .join("")}</measure>`,
+  )
+  .join("")}</part></score-partwise>`;
+
+/**
+ * Once the engine has loaded and the page is idle, engrave a tiny score once (a fraction of a second). Skipped when
+ * a real score got there first; the idle callback has no time limit (it runs only when nothing else is waiting), so a
+ * tap is never held up for longer than this short engraving.
+ */
+export function warmVerovio(): void {
+  if (warmed) return;
+  warmed = true;
+  void loadVerovio()
+    .then(
+      (tk) =>
+        new Promise<void>((resolve) => {
+          const run = () => {
+            if (!scoreLoaded)
+              try {
+                tk.setOptions({ scale: 56, breaks: "auto", pageWidth: 1400, pageHeight: 60000, adjustPageHeight: true, header: "none", footer: "none", font: "Leipzig", lyricSize: 4.2, svgAdditionalAttribute: STAFF_ATTRS });
+                tk.loadData(WARM_XML);
+                tk.renderToTimemap({ includeMeasures: true, includeRests: true });
+                tk.renderToSVG(1);
+              } catch {
+                /* only a warm-up */
+              }
+            resolve();
+          };
+          if (typeof requestIdleCallback === "function") requestIdleCallback(run);
+          else setTimeout(run, 500);
+        }),
+    )
+    .catch(() => undefined);
+}
+
 /** a toolkit of its own (e.g. for printing), so the score on screen keeps what it has loaded */
 export async function newVerovioToolkit(): Promise<Toolkit> {
   const { mod, esm } = await loadModule();
@@ -126,6 +172,8 @@ export class VrvScore {
   private times: TimeEntry[] = [];
   /** per bar (index), per part: onsets with the notes that start there (empty = a rest) */
   private onsets = new Map<number, Map<string, { q: number; ids: string[] }[]>>();
+  /** the single line as last drawn: its scale and margins, and the options that shape it (all but its size) */
+  private drawnLine: { svg: SVGSVGElement; shape: string; scale: number; left: number; top: number } | null = null;
   constructor(
     private tk: Toolkit,
     private host: HTMLElement,
@@ -162,8 +210,18 @@ export class VrvScore {
       svgAdditionalAttribute: STAFF_ATTRS,
       svgCss: "g.verse text{font-family:'Charis SIL',Charter,Georgia,serif} g.dir text,g.tempo text,g.dynam text,g.mNum text{font-family:'Charis SIL',Charter,Georgia,serif}",
     };
+    // The single line at another size only (a phone turned: the line is fitted to the new height): Verovio lays the
+    // music out in its own units whatever the scale, only the margins (kept in pixels) differ. The drawing on screen
+    // is scaled and its margins set, instead of engraving the whole piece again (seconds on a phone).
+    const shape = JSON.stringify({ ...options, scale: 0, pageMarginTop: 0, pageMarginLeft: 0, spacingSystem: 0, key });
+    const line = this.drawnLine;
+    if (o.strip && key === this.loadedKey && line && line.shape === shape && line.svg.parentNode === this.host) {
+      if (this.rescaleLine(line, scale, options.pageMarginLeft, options.pageMarginTop)) return line.svg;
+    }
+    this.drawnLine = null;
     this.tk.setOptions(options);
     if (key !== this.loadedKey) {
+      scoreLoaded = true;
       // the names are drawn beside the staves by the app (in the line and on the page), not engraved
       const f = filterXml(this.xml, o.visibleParts, true);
       this.parts = f.parts;
@@ -200,7 +258,28 @@ export class VrvScore {
     this.tagByPlace();
     this.declutter();
     this.indexOnsets();
+    if (o.strip && svg) this.drawnLine = { svg, shape, scale, left: options.pageMarginLeft, top: options.pageMarginTop };
     return svg;
+  }
+
+  /** the drawn line at another scale, with the margins Verovio would give it there; false if it cannot be done */
+  private rescaleLine(line: NonNullable<VrvScore["drawnLine"]>, scale: number, left: number, top: number): boolean {
+    const inner = line.svg.querySelector<SVGSVGElement>(":scope > svg.definition-scale");
+    const margin = inner?.querySelector<SVGGElement>(":scope > g.page-margin");
+    const vb = inner?.viewBox.baseVal;
+    const at = /translate\(\s*([-\d.]+)[ ,]+([-\d.]+)\s*\)/.exec(margin?.getAttribute("transform") ?? "");
+    if (!inner || !margin || !vb || !vb.width || !at) return false;
+    // the drawing's units are a tenth of Verovio's (its "definition scale")
+    const dx = (left - line.left) * 10;
+    const dy = (top - line.top) * 10;
+    const w = vb.width + dx;
+    const h = vb.height + dy;
+    inner.setAttribute("viewBox", `${vb.x} ${vb.y} ${w} ${h}`);
+    margin.setAttribute("transform", `translate(${Number(at[1]) + dx}, ${Number(at[2]) + dy})`);
+    line.svg.setAttribute("width", `${Math.ceil((w * scale) / 1000)}px`);
+    line.svg.setAttribute("height", `${Math.ceil((h * scale) / 1000)}px`);
+    Object.assign(line, { scale, left, top });
+    return true;
   }
 
   /**

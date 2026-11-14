@@ -628,6 +628,10 @@ export function ScoreView(props: Props) {
   const [loadTick, setLoadTick] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [width, setWidth] = useState(0);
+  // while the window is being resized (until 250 ms after the last change), the page view is not engraved again: the
+  // width and the zoom that follows it both settle first, then it is drawn once
+  const resizingUntil = useRef(0);
+  const [settled, setSettled] = useState(0);
   const layoutRef = useRef<ScoreLayout | null>(null);
   const progScrollAt = useRef(0);
   const userScrollAt = useRef(0);
@@ -773,13 +777,27 @@ export function ScoreView(props: Props) {
     return () => el.removeEventListener("wheel", onWheel);
   }, [strip]);
 
-  // width tracking
+  // width tracking: the first width at once (the score is drawn with it); later changes (a phone turned, a window
+  // dragged) only once they have settled, so the page is not engraved again for every step of a resize
   useLayoutEffect(() => {
     const el = scrollRef.current!;
-    const ro = new ResizeObserver(() => setWidth(Math.round(el.clientWidth / 24) * 24));
+    const measure = () => Math.round(el.clientWidth / 24) * 24;
+    let timer = 0;
+    const ro = new ResizeObserver(() => {
+      window.clearTimeout(timer);
+      resizingUntil.current = performance.now() + 250;
+      timer = window.setTimeout(() => {
+        setWidth((w) => (w ? measure() : w));
+        setSettled((n) => n + 1);
+      }, 250);
+      setWidth((w) => (w ? w : measure()));
+    });
     ro.observe(el);
-    setWidth(Math.round(el.clientWidth / 24) * 24);
-    return () => ro.disconnect();
+    setWidth(measure());
+    return () => {
+      window.clearTimeout(timer);
+      ro.disconnect();
+    };
   }, []);
 
   // render (view / zoom / width)
@@ -789,9 +807,18 @@ export function ScoreView(props: Props) {
   const crop = strip && layout ? stripCrop(layout) : null;
   const rowSrc = hasLyrics ? props.lyricRows : props.bandRows;
   const rowsKey = `${rowSrc?.ipa ? "i" : ""}${rowSrc?.translation ? "t" : ""}`;
+  // the single line drawn by Verovio is as long as the piece whatever the screen's width: turning a phone must not
+  // engrave it again (only the page view flows its systems to the width)
+  const layoutWidth = useVrv && strip ? (width ? 1 : 0) : width;
+  const renderedKey = useRef("");
   useEffect(() => {
     const vrv = vrvRef.current;
     if (vrv && loaded && width) {
+      // the page view mid-resize: drawn once the size has settled (the timer above renders it then)
+      if (!strip && layoutRef.current && performance.now() < resizingUntil.current) return;
+      const key = [loadTick, visKey, zoom, layoutWidth, hasBands, hasLyrics, rowsKey, props.ink ?? ""].join("|");
+      if (key === renderedKey.current && layoutRef.current) return;
+      renderedKey.current = key;
       const rows = hasLyrics ? rowsHeight({ ipa: rowsKey.includes("i"), translation: rowsKey.includes("t") }) : 0;
       const bandPx = hasBands ? 70 + (rowsKey.includes("t") ? 22 : 0) + (rowsKey.includes("i") ? 20 : 0) : 0;
       try {
@@ -862,7 +889,7 @@ export function ScoreView(props: Props) {
       setError(`The score could not be displayed: ${(e as Error).message}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [loaded, loadTick, visKey, zoom, width, hasBands, hasLyrics, rowsKey, props.ink]);
+  }, [loaded, loadTick, visKey, zoom, layoutWidth, hasBands, hasLyrics, rowsKey, props.ink, settled]);
 
   // animation loop: cursor, marker, auto-scroll
   useEffect(() => {

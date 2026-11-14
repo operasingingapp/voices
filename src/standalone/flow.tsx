@@ -27,7 +27,7 @@ import { SYNOPSES, Story, storyOf } from "./synopses";
 import { ARCS } from "./arcs";
 import { useBackToClose } from "./nav";
 import { AUTO_NOTE, LINE_SOUNDS, type LineChoice } from "./settings";
-import { hasPiece } from "./pieces";
+import { hasPiece, loadScore, scoreReady } from "./pieces";
 import { allNotes, MARKS, parseNotesKey, type Note } from "./notes";
 import {
   OPERAS,
@@ -1348,6 +1348,22 @@ export function RolePage({
   const [story, setStory] = useState(false);
   const phone = usePhone();
   const go = continueTarget(ctx, opera, ch);
+  // the piece "Learn next" (or "Continue") points to: its score and words fetched once the page is idle, so a tap on
+  // it opens sooner; nothing is fetched if the page is left first
+  const nextEdition = go ? ch.pieces[go.place.piece]?.editionId : undefined;
+  useEffect(() => {
+    if (!nextEdition || !hasPiece(nextEdition) || scoreReady(nextEdition)) return;
+    let idleId = 0;
+    const t = window.setTimeout(() => {
+      const run = () => void loadScore(nextEdition).catch(() => undefined);
+      if (typeof requestIdleCallback === "function") idleId = requestIdleCallback(run, { timeout: 5000 });
+      else run();
+    }, 2500);
+    return () => {
+      window.clearTimeout(t);
+      if (idleId) cancelIdleCallback(idleId);
+    };
+  }, [nextEdition]);
   const ready = ch.pieces.filter((p) => p.editionId).length;
   const recs = savedPlaces();
   const rk = `${opera.id}:${ch.id}`;
