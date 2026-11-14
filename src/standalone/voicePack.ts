@@ -2,8 +2,8 @@
  * The spoken and sung word recordings, packed one file per voice (scripts/pack-voices.mjs) so the app is a few
  * files rather than hundreds. A clip is named "pack:<file>"; resolveAudio turns that into a playable URL, at once
  * when the voice's pack is already loaded (preloadVoicePacks warms them), otherwise once it has been fetched.
+ * The packs' index (where each clip sits) is large, so it loads with the first recording asked for.
  */
-const indexes = import.meta.glob("./voicepacks/*.json", { eager: true, import: "default" }) as Record<string, Record<string, [number, number]>>;
 // The packs themselves live in the artifact's file store (uploaded beside the app, outside its size limit), at
 // full quality; voiceblobs.json maps each pack to its stored address.
 import blobMap from "./voiceblobs.json";
@@ -14,11 +14,18 @@ const inArtifact = typeof location !== "undefined" && /claude/i.test(location.ho
 for (const [name, v] of Object.entries(blobMap as Record<string, { url: string; sha1: string }>))
   bins[`./voicepacks/${name}`] = inArtifact ? v.url : `${VOICE_BASE}${v.sha1}.mp3`;
 
-const where = new Map<string, { pack: string; off: number; len: number }>();
-for (const [p, idx] of Object.entries(indexes)) {
-  const pack = p.replace(/\.json$/, ".mp3");
-  for (const [file, [off, len]] of Object.entries(idx)) where.set(file, { pack, off, len });
+let where: Map<string, { pack: string; off: number; len: number }> | null = null;
+let whereLoad: Promise<void> | null = null;
+/** the packs' index, loaded once (a failed load is tried again next time) */
+function loadIndex(): Promise<void> {
+  if (!whereLoad) {
+    whereLoad = import("./voiceIndex").then((m) => void (where = m.where));
+    whereLoad.catch(() => (whereLoad = null));
+  }
+  return whereLoad;
 }
+/** the clip's place in its pack (only once the index has loaded) */
+const placeOf = (file: string) => where?.get(file);
 const loaded = new Map<string, Promise<ArrayBuffer>>();
 const ready = new Map<string, ArrayBuffer>();
 const urls = new Map<string, string>();
@@ -26,8 +33,9 @@ const urls = new Map<string, string>();
 const clipLoads = new Map<string, Promise<ArrayBuffer>>();
 const clipReady = new Map<string, ArrayBuffer>();
 
-/** "pack:<file>" for a packed recording, or undefined */
-export const packedUrl = (file?: string) => (file && where.has(file) ? `pack:${file}` : undefined);
+/** "pack:<file>" for a packed recording, or undefined. Until the index has loaded every recorded file counts as
+    packed (they all are once uploaded); one that turns out not to be is played by the device's voice instead. */
+export const packedUrl = (file?: string) => (file && (!where || where.has(file)) ? `pack:${file}` : undefined);
 
 const lowPriority = { priority: "low" } as RequestInit;
 
@@ -86,7 +94,7 @@ function loadClips(files: string[], low: boolean) {
   const byPack = new Map<string, { file: string; off: number; len: number }[]>();
   for (const file of new Set(files)) {
     if (clipLoads.has(file)) continue;
-    const w = where.get(file);
+    const w = placeOf(file);
     if (!w || !hasBin(w.pack) || ready.has(w.pack)) continue;
     const list = byPack.get(w.pack) ?? [];
     list.push({ file, off: w.off, len: w.len });
@@ -134,9 +142,11 @@ function loadClips(files: string[], low: boolean) {
     40 to 125 MB per piece and starved the piano, the score and the singers. If the store cannot send ranges,
     nothing is fetched ahead: a clip's pack loads when it is first asked for. */
 export function preloadVoicePacks(files: string[]) {
-  void rangesWork().then((ok) => {
-    if (ok) loadClips(files.filter((f) => where.has(f)), true);
-  });
+  void Promise.all([rangesWork(), loadIndex()])
+    .then(([ok]) => {
+      if (ok) loadClips(files.filter((f) => placeOf(f)), true);
+    })
+    .catch(() => undefined);
 }
 /** packs that have no stored address yet are skipped (their words are simply silent until uploaded) */
 function hasBin(pack: string) {
@@ -151,13 +161,15 @@ function urlFor(file: string, bytes: ArrayBuffer) {
   return u;
 }
 function clipUrl(file: string, buf: ArrayBuffer) {
-  const w = where.get(file)!;
+  const w = placeOf(file)!;
   return urls.get(file) ?? urlFor(file, buf.slice(w.off, w.off + w.len));
 }
-/** a playable URL: plain URLs pass through; packed clips resolve from their pack, or from their own range */
+/** a playable URL: plain URLs pass through; packed clips resolve from their pack, or from their own range. "" when
+    the clip is in no pack (known only once the index has loaded): the caller then speaks the words another way. */
 export function resolveAudio(u: string): string | Promise<string> {
   if (!u.startsWith("pack:")) return u;
   const file = u.slice(5);
+  if (!where) return loadIndex().then(() => (where!.has(file) ? resolveAudio(u) : ""));
   const w = where.get(file);
   if (!w || !hasBin(w.pack)) return u;
   const done = urls.get(file);

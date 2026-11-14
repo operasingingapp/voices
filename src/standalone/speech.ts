@@ -73,7 +73,12 @@ export function speak(src: SpeakSource, slow: boolean, onTime?: (sec: number) =>
   const rec = slow ? src.recorded?.slow : src.recorded?.normal;
   if (rec) {
     const r = resolveAudio(rec);
-    if (typeof r !== "string") return r.then((u) => speak({ ...src, recorded: { normal: u, slow: src.recorded?.slow === src.recorded?.normal ? u : src.recorded?.slow } }, slow, onTime), () => undefined);
+    if (typeof r !== "string")
+      return r.then(
+        // "": the clip is in no voice pack after all (known once their index has loaded): the device's voice speaks
+        (u) => speak(u ? { ...src, recorded: { normal: u, slow: src.recorded?.slow === src.recorded?.normal ? u : src.recorded?.slow } } : { ...src, recorded: undefined }, slow, onTime),
+        () => undefined,
+      );
     return new Promise((resolve) => {
       const a = new Audio(r);
       // single words have one recording: the tortoise plays it slower, keeping the pitch

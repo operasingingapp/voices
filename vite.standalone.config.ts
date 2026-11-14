@@ -79,7 +79,8 @@ export default defineConfig({
             /\/data\/content\/([^/]+)\/(?:language|edition)\.json(?:\?z)?$/.exec(id) ??
             /\/data\/content\/([^/]+)\/score\.musicxml\?(?:raw|z)$/.exec(id);
           if (words) return `words-${words[1]}`;
-          if (/voicepacks\//.test(id)) return "voicedata";
+          // the voice packs' index and the module that reads it, loaded together with the first recording asked for
+          if (/voicepacks\/|\/voiceIndex\.ts$/.test(id)) return "voicedata";
           return undefined;
         },
         entryFileNames: "assets/app-[hash:8].js", chunkFileNames: "assets/[name]-[hash:8].js", assetFileNames: (a) => ((a.names?.[0] ?? a.name ?? "").endsWith(".musicxml") ? "assets/[name]-[hash:8].xml" : "assets/[name]-[hash:8][extname]") },
