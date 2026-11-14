@@ -376,17 +376,23 @@ function alignPhrase(
     problems.push(`phrase ${ph.id}: measure ${ph.startMeasure} not found`);
     return null;
   }
-  // single melodic line: one entry per onset (chord notes collapse onto the first)
-  const line = edition.notes
-    .filter((n) => n.part === partKey)
-    .sort((a, b) => a.m - b.m || a.q - b.q)
-    .filter((n, i, arr) => i === 0 || !(arr[i - 1].m === n.m && Math.abs(arr[i - 1].q - n.q) < 1e-6));
+  const lyricFor = (n: NoteInfo) => n.lyrics?.find((l) => l.verse === ph.verse);
+  // single melodic line: one entry per onset. Chord notes collapse onto one; where a strophic song writes one verse's
+  // own rhythm as a second voice on the staff, the note that carries this verse's syllable is the one kept.
+  const line: NoteInfo[] = [];
+  for (const n of edition.notes.filter((x) => x.part === partKey).sort((a, b) => a.m - b.m || a.q - b.q)) {
+    const prev = line[line.length - 1];
+    if (prev && prev.m === n.m && Math.abs(prev.q - n.q) < 1e-6) {
+      if (!lyricFor(prev) && lyricFor(n)) line[line.length - 1] = n;
+      continue;
+    }
+    line.push(n);
+  }
   const restsBetween = (a: NoteInfo, b: NoteInfo) => {
     const aEnd = edition.measures[a.m].startQ + a.q + a.dur;
     const bStart = edition.measures[b.m].startQ + b.q;
     return bStart - aEnd > 1e-6;
   };
-  const lyricFor = (n: NoteInfo) => n.lyrics?.find((l) => l.verse === ph.verse);
   // A phrase may begin mid-bar (e.g. on a pickup after the previous phrase's last word):
   // try every word start in the starting bar and keep the first clean alignment.
   const candidates = line

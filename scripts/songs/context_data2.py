@@ -693,3 +693,43 @@ SONGS2["schumann-lieder-der-braut-i-mutter-mutter"] = S(MY, 11,
     "Mother, mother, do not think that because I love him I love you less. Ever since I have known him, I love you more: "
     "you gave me the heart that learned to love him.",
     "Tender and simple, a daughter's quiet reassurance.", poem="Words by Friedrich Rückert, from his Liebesfrühling.")
+
+# the songs released after their lyric fixes (scripts in the commit that added them)
+SONGS2.update({
+    "mahler-ich-hab-ein-gluhend-messer": S("gesellen", 3,
+        "He has a glowing knife in his breast: it cuts into every joy. Day and night it gives him no rest. When he looks at "
+        "the sky he sees her blue eyes; in the yellow fields, her blond hair blowing. He wishes he lay on the black bier, "
+        "never to open his eyes again.",
+        "Wild and violent, with a raging accompaniment; the end collapses into a quiet, exhausted funeral tread."),
+    "schubert-am-meer": S(SG, 12,
+        "The sea glittered in the last evening light; the lovers sat by a lonely fisherman's hut. She wept, and he knelt and "
+        "drank the tears from her hand. Since that hour he has been wasting away: the unhappy woman has poisoned him with "
+        "her tears.",
+        "Opens and closes with the same mysterious two chords; the calm verses alternate with storms of tremolo in the piano.",
+        poem="Words by Heinrich Heine, from Die Heimkehr in his Buch der Lieder (1827)."),
+    "schubert-des-baches-wiegenlied": S(M, 20,
+        "The end of the cycle: the brook sings the drowned miller to sleep. Rest, weary wanderer, you are home; here is "
+        "faithfulness. Sleep until the sea drinks up the brooks; the full moon rises, the mist parts, and the sky above is "
+        "so wide.",
+        "A gentle, rocking lullaby in E major, five verses to the same music; it needs a perfectly steady, quiet line."),
+    "schubert-fruhlingssehnsucht": S(SG, 3,
+        "Rustling breezes, brooks hurrying to the river, the gold of the sun: everything in spring draws towards love. Why "
+        "does his heart alone stay restless? Only you can set free the spring in my heart.",
+        "Breathless and eager, with a question ('Wohin? Wohin?') at the end of each verse, and a rising passion through the "
+        "five verses.", poem="Words by Ludwig Rellstab (1799-1860)."),
+    "schumann-hochlanders-abschied": S(MY, 13,
+        "My heart's in the Highlands, my heart is not here; it is chasing the deer. Farewell to the mountains, the valleys, "
+        "the torrents: wherever I wander, my heart is in the Highlands.",
+        "A vigorous, swinging song with a horn-call rhythm in the piano.",
+        poem="Words by Robert Burns ('My Heart's in the Highlands'), in Wilhelm Gerhard's German translation."),
+    "schumann-weit-weit": S(MY, 20,
+        "How can I be merry, how can I dance, when my love is far, far away? He gave me gloves, a coloured scarf and a silk "
+        "dress; but what are they to me when he is far away?",
+        "Simple and folk-like, with a lilting 6/8 and a little sigh on 'weit, weit'.",
+        poem="Words by Robert Burns ('O How Can I Be Blythe and Glad'), in Wilhelm Gerhard's German translation."),
+    "brahms-o-liebliche-wangen": dict(year="1868", written="Composed around 1868 (Op. 47 No. 4); published in 1868",
+        story="O lovely cheeks, you make me long to see you, to greet you, to touch you, to kiss you. O fairest of the fair: "
+        "come quickly, take my longing away, or I will die of it.",
+        poem="Words by Paul Fleming (1609-1640), a German Baroque poet.",
+        music="Fast and ardent, with a surging accompaniment that grows more urgent as he pleads."),
+})
