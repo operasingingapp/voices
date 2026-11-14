@@ -9,7 +9,7 @@ import { useLocalSetting, useTicker } from "../hooks";
 import { ScoreView, stripCrop, type CursorReading, type MarkerReading } from "../score/ScoreView";
 import type { ScoreLayout } from "../score/layout";
 import { pieceData } from "./pieces";
-import { grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
+import { grandPianoChunks, grandPianoGain, grandPianoMap, grandPianoUrl } from "./grandPiano";
 import { MAX_FACTOR, MIN_FACTOR, stepFactor } from "./metronome";
 import { BeatNote, CROP_PAD, Icon, MAX_ZOOM, STANDARD_LINE_H, fmtTime } from "./Practice";
 
@@ -45,18 +45,39 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
   const [pianoSound] = useLocalSetting<"grand" | "app">("p:pianoSound", "grand");
   const grandUrl = grandPianoUrl(editionId);
   const pianoCh = parts.find((p) => p.kind === "piano")?.channel;
+  // an instrumental number (no one sings) with a grand recording plays that recording and nothing else: no app piano
+  // while it loads (play waits: about a second), none at another tempo (the tempo stays as recorded), no sound choice
+  const grandOnly = !!grandUrl && !edition.parts.some((p) => p.kind === "voice" || p.kind === "chorus");
+  const [grandReady, setGrandReady] = useState(false);
+  useEffect(() => {
+    if (grandOnly) engine?.setTempoFactor(1);
+  }, [engine, grandOnly]);
   useEffect(() => {
     const port = pb.port;
     if (!port?.setRecording || pianoCh === undefined) return;
+    if (grandOnly) {
+      let alive = true;
+      setGrandReady(false);
+      port.keepRecordings?.([pianoCh]);
+      const ready = port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl!, chunks: grandPianoChunks(editionId), map: grandPianoMap(edition, perf), gainDb: grandPianoGain(editionId), exact: true, only: true }]);
+      void port.setInstrument?.(pianoCh, "singer");
+      ready.then(() => alive && setGrandReady(true)).catch(() => undefined);
+      return () => {
+        alive = false;
+        port.keepRecordings?.([]);
+      };
+    }
     if (pianoSound === "grand" && grandUrl) {
       port.keepRecordings?.([pianoCh]);
-      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, map: grandPianoMap(edition, perf), gainDb: grandPianoGain(editionId), exact: true }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
+      port.setRecording(pianoCh, [{ tempo: 1, url: grandUrl, chunks: grandPianoChunks(editionId), map: grandPianoMap(edition, perf), gainDb: grandPianoGain(editionId), exact: true }]).then(() => port.setInstrument?.(pianoCh, "singer")).catch(() => undefined);
     } else {
       port.setInstrument?.(pianoCh, "piano");
       port.keepRecordings?.([]);
     }
     return () => port.keepRecordings?.([]);
-  }, [pb.port, perf, pianoSound, grandUrl]);
+  }, [pb.port, perf, pianoSound, grandUrl, grandOnly]);
+  const canPlay = pb.status === "ready" && (!grandOnly || grandReady);
+  const loadingGrand = grandOnly && pb.status === "ready" && !grandReady;
   const q = useTicker(() => Math.round((engine ? engine.displayQ() : 0) * 16) / 16, 80);
 
   const cursorRef = useRef<() => CursorReading | null>(() => null);
@@ -245,7 +266,7 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
               engine.seek(0);
               if (engine.state !== "playing") await play();
             }}
-            disabled={pb.status !== "ready"}
+            disabled={!canPlay}
             aria-label="Play from the start"
             title="From the start"
           >
@@ -259,12 +280,33 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
               {Icon.pause}
             </button>
           ) : (
-            <button type="button" className="cp-icon-btn cp-icon-btn--ink cp-icon-btn--stand" onClick={play} disabled={pb.status !== "ready"} aria-label="Play" data-testid="play">
+            <button
+              type="button"
+              className={`cp-icon-btn cp-icon-btn--ink cp-icon-btn--stand${loadingGrand ? " is-loading" : ""}`}
+              onClick={play}
+              disabled={!canPlay}
+              aria-busy={loadingGrand || undefined}
+              aria-label={loadingGrand ? "Loading the grand piano" : "Play"}
+              title={loadingGrand ? "Loading the grand piano…" : undefined}
+              data-testid="play"
+            >
               {Icon.play}
             </button>
           )}
         </div>
         <div className="bar-right">
+          {grandOnly ? (
+            // the recorded grand plays at its own tempo only: shown, not changed
+            <div className="cp-tempo">
+              <div className="cp-speed" role="group" aria-label="Tempo">
+                <span className="cp-tempo__value" data-testid="tempo" aria-label={`Tempo ${printedBpm} beats a minute, as recorded`} title="The grand piano plays at its recorded tempo">
+                  <BeatNote symbol={beatSymbol} />
+                  <span className="cp-eq">=</span>
+                  <b>{printedBpm}</b>
+                </span>
+              </div>
+            </div>
+          ) : (
           <div className="cp-tempo">
             <div className="cp-speed" role="group" aria-label="Tempo">
               <button type="button" className="cp-icon-btn" aria-label="Slower" onClick={slower} disabled={tf <= MIN_FACTOR + 1e-3}>
@@ -288,6 +330,7 @@ export function Listen({ editionId, onBack, onOpera, operaTitle }: { editionId: 
               </button>
             </div>
           </div>
+          )}
         </div>
       </footer>
     </div>

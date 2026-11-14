@@ -1,0 +1,11 @@
+# Cloudflare Pages project "sottovoce": the site (the standalone build, assembled in ../serve-pub) and its
+# functions (./functions: the password middleware, /a/* for the audio). With this file the project's bindings come
+# from here on every deploy (secrets such as SITE_PASSWORD stay as set in the dashboard).
+name = "sottovoce"
+pages_build_output_dir = "../serve-pub"
+compatibility_date = "2026-11-13"
+
+# the app's audio (grand piano chunks under piano/v2/), served by functions/a/[[path]].js
+[[r2_buckets]]
+binding = "AUDIO"
+bucket_name = "sottovoce-audio"
