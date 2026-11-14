@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import { resolve } from "node:path";
 import { gzipSync } from "node:zlib";
 import { createRequire } from "node:module";
 import { defineConfig, type Plugin } from "vite";
@@ -53,6 +54,20 @@ function gzipData(): Plugin {
 }
 
 /** Builds the server-free practice app (published as a claude.ai artifact). */
+/** Songs travel eight to a file, by composer (words-songs-schubert-3): one file per song would pass the published
+ *  app's file limit as the song list grows, and a song's words, score and timings are small (about 40 kB). */
+const SONG_BUNDLE = (() => {
+  const ids = readdirSync(resolve(import.meta.dirname, "content/pieces")).filter((d) => d.startsWith("song-")).sort();
+  const byComposer = new Map<string, string[]>();
+  for (const id of ids) {
+    const c = id.slice(5).split("-")[0];
+    byComposer.set(c, [...(byComposer.get(c) ?? []), id]);
+  }
+  const out = new Map<string, string>();
+  for (const [c, list] of byComposer) list.forEach((id, k) => out.set(id, `words-songs-${c}-${Math.floor(k / 8) + 1}`));
+  return out;
+})();
+
 export default defineConfig({
   plugins: [gzipData(), patchSpessaProcessor(), react()],
   base: "./",
@@ -78,7 +93,7 @@ export default defineConfig({
             /\/content\/pieces\/([^/]+)\/voice\/[^/]+\/manifest\.json$/.exec(id) ??
             /\/data\/content\/([^/]+)\/(?:language|edition)\.json(?:\?z)?$/.exec(id) ??
             /\/data\/content\/([^/]+)\/score\.musicxml\?(?:raw|z)$/.exec(id);
-          if (words) return `words-${words[1]}`;
+          if (words) return SONG_BUNDLE.get(words[1]) ?? `words-${words[1]}`;
           // the voice packs' index and the module that reads it, loaded together with the first recording asked for
           if (/voicepacks\/|\/voiceIndex\.ts$/.test(id)) return "voicedata";
           return undefined;
