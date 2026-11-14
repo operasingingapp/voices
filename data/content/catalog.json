@@ -8611,5 +8611,33 @@
       "withAudio": 0,
       "reviewed": 0
     }
+  },
+  {
+    "editionId": "song-schubert-an-die-musik",
+    "editionVersion": "1.0.0-openscore",
+    "scoreVersionId": "song-schubert-an-die-musik@1.0.0-openscore#abf4c5a479",
+    "title": "An die Musik",
+    "subtitle": "Franz Schubert: song, words by Franz von Schober",
+    "kind": "song",
+    "fixture": false,
+    "composer": "Franz Schubert",
+    "roles": [
+      {
+        "id": "voice",
+        "name": "Voice",
+        "voiceType": "Voice",
+        "partKey": "voice"
+      }
+    ],
+    "measures": 23,
+    "durationSec": 161,
+    "hasRepeats": true,
+    "keySignature": "D major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
   }
 ]

@@ -361,3 +361,4 @@
   /* Continue stays in reach under the three choices */
   .ob-sing .ob-begin.cp-btn { position: sticky; bottom: max(16px, env(safe-area-inset-bottom, 0px)); box-shadow: 0 6px 20px rgba(40, 30, 60, 0.12); }
 }
+.sg-practise.cp-btn { min-height: 46px; padding: 0 24px; align-self: flex-start; }

@@ -257,6 +257,8 @@ export type Place =
   | { screen: "songs" }
   /** a song's page */
   | { screen: "song"; song: string }
+  /** a song, open to practise */
+  | { screen: "sing"; song: string }
   /** Choral: find your part (the choral home) */
   | { screen: "choral" }
   /** a choral work, where you choose your part */

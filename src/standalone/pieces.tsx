@@ -4,6 +4,7 @@
  */
 import type { ReactNode } from "react";
 import type { CompiledEdition, CompiledLanguage } from "../../shared/types";
+import { SONG_PIECE_INFO } from "./songInfo";
 
 // Each piece's data loads only when the piece opens (one small file per piece), so the app starts at once however
 // many pieces it holds.
@@ -6381,6 +6382,8 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     ),
   },
 };
+// the songs with music in the app (songInfo.tsx)
+Object.assign(PIECE_INFO, SONG_PIECE_INFO);
 
 export interface PieceData {
   id: string;

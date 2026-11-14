@@ -3,6 +3,8 @@
  * opera roles. Written for this app from the plan (the "100 Songs" sheet, now longer). None has music here
  * yet: `editionId` is set once a song's score can be practised (content/pieces/<editionId>/).
  */
+import META from "./songMeta.json";
+
 export type SongLevel = "Beginner" | "Intermediate" | "Advanced";
 export type SongGroup =
   | "Arie antiche"
@@ -218,5 +220,11 @@ export const SONGS: Song[] = [
   { id: "dvorak-songs-my-mother-taught-me", title: "Songs my mother taught me (Když mne stará matka)", composer: "Dvořák", composerFull: "Antonín Dvořák", lang: "cs", level: "Intermediate", group: "Nordic and Czech song", note: "From Gypsy Songs" },
   { id: "ives-the-circus-band", title: "The Circus Band", composer: "Ives", composerFull: "Charles Ives", lang: "en", level: "Intermediate", group: "English song" },
 ];
+
+// the songs whose music is in the app (written by scripts/songs/finish.py)
+for (const s of SONGS) {
+  const m = (META as Record<string, { editionId: string }>)[s.id];
+  if (m) s.editionId = m.editionId;
+}
 
 export const findSong = (id: string) => SONGS.find((s) => s.id === id);

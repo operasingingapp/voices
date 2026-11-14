@@ -29,6 +29,9 @@ import { ChoralHome, WorkPage } from "./Choral";
 import { findWork } from "./choral";
 import { SongsHome, SongPage } from "./Songs";
 import { findSong } from "./songs";
+
+/** the songs ticked as learned, kept beside the roles' lists under their own key */
+const SONGS_LEARNED = "songs:learned";
 import type { Mode } from "./choralParts";
 
 const K = {
@@ -120,6 +123,11 @@ function migrate(p: unknown): Place | null {
     case "choral":
     case "songs":
       return o as Place;
+    case "sing": {
+      const sg = (o as { song?: string }).song;
+      const s = sg ? findSong(sg) : undefined;
+      return s ? (s.editionId ? { screen: "sing", song: s.id } : { screen: "song", song: s.id }) : { screen: "songs" };
+    }
     case "song": {
       const sg = (o as { song?: string }).song;
       return sg && findSong(sg) ? { screen: "song", song: sg } : { screen: "songs" };
@@ -164,6 +172,7 @@ function titleOf(place: Place): string {
     case "songs":
       return `Songs${tail}`;
     case "song":
+    case "sing":
       return `${findSong(place.song)?.title ?? "Songs"}${tail}`;
     case "work":
       return `${findWork(place.work)?.title ?? "Choral"}${tail}`;
@@ -225,7 +234,7 @@ export function App() {
   useEffect(() => {
     const s = place.screen;
     if (s === "choral" || s === "work") setModeState("choral");
-    else if (s === "songs" || s === "song") setModeState("songs");
+    else if (s === "songs" || s === "song" || s === "sing") setModeState("songs");
     else if (s !== "onboarding" && s !== "profile") setModeState("opera");
   }, [place]);
 
@@ -339,7 +348,14 @@ export function App() {
   if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} both={place.both} modes={place.modes} />;
 
   // a piece's score is fetched when it opens: show a short wait until it is here
-  const wantScore = place.screen === "piece" ? findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId : place.screen === "listen" ? place.edition : undefined;
+  const wantScore =
+    place.screen === "piece"
+      ? findCharacter(findOpera(place.opera), place.character).pieces[place.piece]?.editionId
+      : place.screen === "listen"
+        ? place.edition
+        : place.screen === "sing"
+          ? findSong(place.song)?.editionId
+          : undefined;
   if (wantScore && hasPiece(wantScore) && !scoreReady(wantScore)) {
     loadScore(wantScore).then(
       () => setScoreTick((n) => n + 1),
@@ -351,6 +367,32 @@ export function App() {
         Opening the score…
       </div>
     );
+  }
+  if (place.screen === "sing") {
+    const sg = findSong(place.song);
+    if (sg && hasPiece(sg.editionId)) {
+      const done = (learned[SONGS_LEARNED] ?? []).includes(sg.id);
+      return (
+        <>
+          <SideDrawer ctx={ctx} open={drawerOpen} onClose={closeDrawer} />
+          <Practice
+            onMenu={() => setDrawerOpen(true)}
+            onOpera={() => go({ screen: "song", song: sg.id })}
+            editionId={sg.editionId}
+            character="voice"
+            roleName="Voice"
+            onBack={() => go({ screen: "song", song: sg.id })}
+            learned={done}
+            onToggleLearned={() =>
+              setLearned((all) => {
+                const had = all[SONGS_LEARNED] ?? [];
+                return { ...all, [SONGS_LEARNED]: done ? had.filter((x) => x !== sg.id) : [...had, sg.id] };
+              })
+            }
+          />
+        </>
+      );
+    }
   }
   if (place.screen === "piece") {
     const opera = findOpera(place.opera);

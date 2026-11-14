@@ -157,7 +157,11 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
             Practise
           </h2>
         </div>
-        {s.editionId ? null : (
+        {s.editionId ? (
+          <button type="button" className="cp-btn cp-btn--ink sg-practise" onClick={() => ctx.go({ screen: "sing", song: s.id })}>
+            Practise this song
+          </button>
+        ) : (
           <p className="part-note" role="status">
             The music for this song is being prepared.
           </p>
