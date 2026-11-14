@@ -1,0 +1,232 @@
+{
+ "editionId": "mozart-benedetti-i-doppi-coniugi",
+ "editionVersion": "1.0.0-peters",
+ "title": "Benedetti i doppi coniugi",
+ "subtitle": "Fiordiligi, Dorabella, Ferrando and Guglielmo, with the chorus: Act 2 finale (No. 31), section 2, from Così fan tutte",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "fiordiligi",
+   "name": "Fiordiligi",
+   "voiceType": "Soprano",
+   "partKey": "fiordiligi"
+  },
+  {
+   "id": "dorabella",
+   "name": "Dorabella",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dorabella"
+  },
+  {
+   "id": "ferrando",
+   "name": "Ferrando",
+   "voiceType": "Tenor",
+   "partKey": "ferrando"
+  },
+  {
+   "id": "guglielmo",
+   "name": "Guglielmo",
+   "voiceType": "Baritone",
+   "partKey": "guglielmo"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P9",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "fiordiligi",
+   "label": "Fiordiligi (Soprano)",
+   "shortLabel": "Fiordiligi",
+   "kind": "voice",
+   "roleId": "fiordiligi",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dorabella",
+   "label": "Dorabella (Mezzo-soprano)",
+   "shortLabel": "Dorabella",
+   "kind": "voice",
+   "roleId": "dorabella",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ferrando",
+   "label": "Ferrando (Tenor)",
+   "shortLabel": "Ferrando",
+   "kind": "voice",
+   "roleId": "ferrando",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "guglielmo",
+   "label": "Guglielmo (Baritone)",
+   "shortLabel": "Guglielmo",
+   "kind": "voice",
+   "roleId": "guglielmo",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos",
+   "shortLabel": "Chorus S.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-altos",
+   "label": "Chorus altos",
+   "shortLabel": "Chorus A.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Benedetti i doppi conjugi (the chorus)",
+   "start": "1",
+   "end": "23"
+  },
+  {
+   "id": "b",
+   "label": "Come par che qui prometta · Della cara Despinetta",
+   "start": "24",
+   "end": "47"
+  },
+  {
+   "id": "c",
+   "label": "Raddoppiate il lieto suono",
+   "start": "48",
+   "end": "58"
+  },
+  {
+   "id": "d",
+   "label": "Benedetti i doppi conjugi (the chorus again)",
+   "start": "59",
+   "end": "87"
+  },
+  {
+   "id": "e",
+   "label": "Tutto, tutto, o vita mia · Sei pur bella · Tocca e bevi",
+   "start": "88",
+   "end": "107"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Così fan tutte, K. 588 (1790), Act 2 scene 16, No. 31 Finale, section 2 of 9",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Così fan tutte (1790)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Peters vocal score: conjugi (the chorus), gioja, Fiordiligi's “cresce, cresce” and Dorabella's single “cresce”, and the sisters' and officers' toasts as printed (“Tocca e bevi”, “Bevi e tocca”, each sung several times)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score (Edition Peters Nr. 4474, plate 11446, edited by Georg Schünemann), pages 316–325, bars 66–172 of No. 31",
+   "author": "Kurt Soldan (1891–1946), piano reduction",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the No. 31 Finale (671 bars) read in fourteen page ranges, sung lines and piano each by two independent readers, every disagreement settled on the zoomed page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar by eight fresh proofreaders (pages 311–324 clean). The German singing translation is left out. All the singers of this section have a staff throughout, with rests where the print leaves a staff out; singers who do not sing in this section are left out. The chorus (sopranos, altos, tenors and basses; servants and musicians) has a staff for each part and is heard with the piano; it has no role here. Where the print gives the basses no words, they sing the tenors' words. Cut from the one-file finale at bars 66–172: from the Andante (E♭ major, alla breve) to the bar with the fermata before the Larghetto. The cut Peters marks (“vi-” in bar 2 to “-de” in bar 60) is not made. In bar 87 a slur printed between the two voices of the right hand is not encoded. Playback tempo ♩ = 106 (a half note = 53) from René Jacobs's recording (harmonia mundi), 4:03."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's reviewed Così libretto drafts)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

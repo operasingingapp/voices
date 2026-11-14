@@ -5541,6 +5541,294 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-fate-presto-o-cari-amici": {
+    portrait: "cosi:despina",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "C major",
+      time: "4/4",
+      tempo: "Allegro assai, played at ♩ = 173, from Jacobs (1:30); Mozart gives the word only",
+    },
+    notePlaceholder: "Bustle and brightness: Despina's orders crisp and quick, Don Alfonso pleased with himself",
+    about: (
+      <>
+        <p>
+          The Act 2 finale opens in a brightly lit hall, with a table laid for four. Despina hurries the servants: light the torches and lay the table
+          richly, for her young mistresses' weddings are arranged; she sends the musicians to their places, and the chorus of servants and musicians
+          repeats her orders. Don Alfonso comes in, praises the plenty and the elegance, and promises them a good tip from each bridegroom. The two
+          couples are coming: let glad music greet them. As they go, Despina and Don Alfonso agree that no one has ever seen a finer little comedy.
+        </p>
+        <p>
+          Score: the first section of the Act 2 Finale, No. 31 (vocal score pages 311–315, bars 1–65 of 671), from Kurt Soldan's piano reduction in the
+          Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the whole
+          finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by a
+          judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes). The chorus of servants and
+          musicians has its own staves and is heard with the piano. Only the Italian words are kept, with the print's spellings (giá, finchè, quà,
+          comediola, Don Alfonso's “s'avanzano”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-benedetti-i-doppi-coniugi": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "E♭ major",
+      time: "¢ (alla breve)",
+      tempo: "Andante, played at ♩ = 106 (a half note = 53), from Jacobs (4:03); Mozart gives the word only",
+    },
+    notePlaceholder: "A wedding march: the chorus warm and stately, the four lovers sweet on top, then the quick toasts",
+    about: (
+      <>
+        <p>
+          The chorus blesses the double couple and the charming brides, and wishes them children as beautiful as their mothers. The four lovers sing that
+          everything here promises joy and love, and that the credit is dear Despina's; they call for more music while they sit down, and the chorus
+          blesses them again. At table the 'Albanians' and the sisters trade compliments (“How lovely you are!”, “What eyes!”, “What a mouth!”) and
+          clink glasses. The audience knows that each bridegroom is the other sister's fiancé.
+        </p>
+        <p>
+          Score: the second section of the Act 2 Finale, No. 31 (vocal score pages 316–325, bars 66–172 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes). The chorus has its own staves and
+          is heard with the piano. The cut Peters marks from “vi-” (bar 2) to “-de” (bar 60) is not made. Only the Italian words are kept, with the
+          print's spellings (conjugi, gioja).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-e-nel-tuo-nel-mio-bicchiero": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "E♭ major",
+      time: "3/4 (the last bar ¢)",
+      tempo: "Larghetto, played at ♩ = 50, the last bar at the Allegro's ♩ = 186, from Jacobs (whose track for the canon and the notary scene lasts 3:43; this section about 2 minutes); Mozart gives the word only",
+    },
+    notePlaceholder: "A canon: each voice the same tune, legato and dreamy; Guglielmo's aside muttered against it",
+    about: (
+      <>
+        <p>
+          Fiordiligi proposes a toast: in your glass and mine let every thought be drowned, and let no memory of the past remain in our hearts. Ferrando and
+          then Dorabella take up the same tune, one after the other, in a canon. Guglielmo will not join in: under his breath he wishes the two vixens
+          were drinking poison. They drink.
+        </p>
+        <p>
+          Score: the third section of the Act 2 Finale, No. 31 (vocal score pages 325–328, bars 173–204 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes, one of them a tie in bar 3). The
+          last bar is the first bar of the Allegro, because the toast's last syllables fall on its first beat; it also opens “Miei signori, tutto è
+          fatto”. Only the Italian words are kept, with the print's spellings (the added “ah no” and nò) and Guglielmo's aside in brackets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-miei-signori-tutto-e-fatto": {
+    portrait: "cosi:alfonso",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "E major (the first bar, the end of the toast, in E♭ major)",
+      time: "¢ (alla breve)",
+      tempo: "Allegro, played at ♩ = 186 (a half note = 93), from Jacobs (whose track for the canon and the notary scene lasts 3:43; this section about 2 minutes)",
+    },
+    notePlaceholder: "Mock solemnity: Despina's nasal notary droning, the lovers too impatient to listen",
+    about: (
+      <>
+        <p>
+          Don Alfonso announces that all is ready: the notary is on the stairs with the marriage contract. He fetches him, and in comes Despina, disguised
+          as the notary Beccavivi, wishing them every happiness with professional dignity. Speaking through her nose, she reads out the contract:
+          Fiordiligi is joined in marriage to Sempronio and her sister Dorabella to Tizio, ladies of Ferrara and noblemen of Albania. When she reaches the
+          dowries, the four cut her short and call for the pen, and Despina and Don Alfonso applaud.
+        </p>
+        <p>
+          Score: the fourth section of the Act 2 Finale, No. 31 (vocal score pages 328–333, bars 204–289 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes, one of them in bar 6). The first bar
+          is also the last bar of “E nel tuo, nel mio bicchiero”: the words on its first beat belong to that section. Only the Italian words are kept,
+          with the print's spellings (notajo, coll' usata, giudiziarie, legitima, soscriviam, Don Alfonso's “eccola”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-bella-vita-militar-finale": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "D major, then E♭ major from the Allegro (bar 21)",
+      time: "¢ (alla breve); 3/4 from bar 21; ¢ again from bar 67",
+      tempo: "Maestoso, played at ♩ = 90, then Allegro at ♩ = 128, from Jacobs (2:28); Mozart gives the words only",
+    },
+    notePlaceholder: "Panic in short breaths: Don Alfonso's mock horror, the sisters' frantic whispers, then their long worried line",
+    about: (
+      <>
+        <p>
+          Off stage, the soldiers' chorus heard in Act 1 sings again of the fine military life. What is that noise? Don Alfonso goes to look and cries out
+          in mock horror: the sisters' fiancés are back and already landing. Everyone is in turmoil. The sisters push the two 'Albanians' into another
+          room while Despina and Don Alfonso, and the men, ask what happens if they are seen. Don Alfonso tells the sisters to calm down and trust him,
+          while they fear what will become of them if the deception is discovered. The audience knows the returning fiancés are the two men at the table.
+        </p>
+        <p>
+          Score: the fifth section of the Act 2 Finale, No. 31 (vocal score pages 334–340, bars 290–371 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes). The soldiers' chorus off stage has
+          its own staves and is heard with the piano. Only the Italian words are kept, with the print's spellings (rumor, sung by Despina too, tornaro,
+          vò) and the print's li and ci.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-sani-e-salvi": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "B♭ major",
+      time: "¢ (alla breve)",
+      tempo: "Andante, played at ♩ = 88, then Con più moto from bar 48 at ♩ = 120, from Jacobs (2:45); Mozart gives the words only",
+    },
+    notePlaceholder: "The officers hearty and innocent-seeming, the sisters barely breathing, Despina brazen",
+    about: (
+      <>
+        <p>
+          Ferrando and Guglielmo, themselves again, return safe and sound to the arms of their most faithful brides: a royal counter-order has called them
+          back. Don Alfonso greets them with pretended surprise. Why so pale and silent? Overcome with joy, says Don Alfonso, while aside the sisters feel
+          they may die. Having his trunk put in the next room, Guglielmo finds a notary hidden there; Despina steps out and says she is back from a masked
+          ball and came in to change. The men marvel at such a cunning girl, and she at herself; the sisters cannot understand it. Don Alfonso quietly drops
+          the contract, and the men pick it up: a marriage contract?
+        </p>
+        <p>
+          Score: the sixth section of the Act 2 Finale, No. 31 (vocal score pages 341–347, bars 372–440 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes, two of them in bars 6 and 24). Only
+          the Italian words are kept, with the print's spellings (gioja, Guglielmo, cos' è, perchè, stà, notajo, Guglielmo's “cantratto”) and the
+          sisters' aside in brackets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-giusto-ciel-voi-qui-scriveste": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "B♭ major",
+      time: "4/4",
+      tempo: "Allegro, played at ♩ = 140, then Andante from bar 26 at ♩ = 70, from Jacobs (whose track for this section and “A voi s'inchina” lasts 4:45; this section about 2½ minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Mock fury from the men, then the sisters' broken, pleading Andante",
+    about: (
+      <>
+        <p>
+          The men read the sisters' signatures: treachery! It is no use denying it, and rivers of blood will flow. They make for the other room, but the
+          sisters stop them: they deserve death and ask for it; they see their fault too late, and beg the men to strike with the sword. Asked what
+          happened, Fiordiligi points at Don Alfonso and Despina, the cruel one and the seductress. Don Alfonso says it is all too true, and the proof is
+          shut in that room. The sisters tremble: why did he give the hidden strangers away?
+        </p>
+        <p>
+          Score: the seventh section of the Act 2 Finale, No. 31 (vocal score pages 347–351, bars 441–495 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes, one of them in bar 17). Despina is
+          on stage but does not sing. Only the Italian words are kept, with the print's spellings (contradirci, il scoprimento, the men's “si”, fù,
+          perchè).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-a-voi-sinchina": {
+    portrait: "cosi:ferrando",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "B♭ major, then C major from bar 25",
+      time: "4/4; 3/8 from bar 6; ¢ (alla breve) from bar 36",
+      tempo: "Allegretto, played at ♩ = 100, Andante (3/8) at ♩ = 60, Allegretto at ♩ = 100, then Andante con moto at ♩ = 120 (a half note = 60), from Jacobs (whose track for “Giusto ciel” and this section lasts 4:45; this section about 2¼ minutes); Mozart gives the words only",
+    },
+    notePlaceholder: "Exaggerated bows and mock gallantry from the men, the sisters thunderstruck, then a gentle, forgiving close",
+    about: (
+      <>
+        <p>
+          The men come back half in their 'Albanian' costume. With exaggerated bows Ferrando greets Fiordiligi as the knight from Albania; Guglielmo gives
+          Dorabella back her portrait in exchange for the little heart; together they salute the magnetic doctor, Despina's disguise in Act 1. The sisters
+          and Despina are thunderstruck, and the sisters point at Don Alfonso, who deceived them. He answers that his deception has undeceived their
+          lovers, joins the couples' hands, and tells all four to embrace, be quiet and laugh, as he has. The sisters promise to make it up with faith and
+          love; the men believe them but will not put it to the test. Despina does not know whether she is awake or dreaming: at least she has played the
+          same trick on plenty of others.
+        </p>
+        <p>
+          Score: the eighth section of the Act 2 Finale, No. 31 (vocal score pages 352–358, bars 496–575 of 671), from Kurt Soldan's piano reduction in
+          the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed pages: the
+          whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on the page by
+          a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes). The natural signs the print puts
+          on the trills in bars 19 and 22 are not shown. Only the Italian words are kept, with the print's spellings (dell' Albania, coll' amore, molt'
+          altri, gioja, vò, fò, the sisters' “babaro”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-fortunato-luom-che-prende": {
+    portrait: "cosi:fiordiligi",
+    opera: "Così fan tutte",
+    kind: "Finale",
+    facts: {
+      key: "C major",
+      time: "¢ (alla breve)",
+      tempo: "Allegro molto, played at ♩ = 222 (a half note = 111), from Jacobs (1:44); Mozart gives the words only",
+    },
+    notePlaceholder: "Sotto voce at first, then full and bright: six voices as one, quick and light to the end",
+    about: (
+      <>
+        <p>
+          All six sing the moral together: happy is the man who takes everything the right way, and lets reason guide him through all that happens. What
+          makes others weep will make him laugh, and amid the storms of the world he will find calm. The curtain falls.
+        </p>
+        <p>
+          Score: the ninth and last section of the Act 2 Finale, No. 31 (vocal score pages 358–366, bars 576–671 of 671), from Kurt Soldan's piano
+          reduction in the Edition Peters vocal score (Edition Peters Nr. 4474, edited by Georg Schünemann), public domain. Written out from the printed
+          pages: the whole finale read in fourteen page ranges, the sung lines and the piano each by two independent readers, every disagreement settled on
+          the page by a judge, a separate sweep for dynamics and other marks, then checked by eight fresh proofreaders (five fixes). The voices enter sotto
+          voce at bar 9, and the last eight bars are for the piano alone. Only the Italian words are kept, with the print's spellings (fà, “si troverà”,
+          Don Alfonso's “belba”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1790), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

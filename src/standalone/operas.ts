@@ -2530,6 +2530,62 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Come tutto congiura",
       "editionId": "mozart-come-tutto-congiura",
       "when": "Act 2, straight after “È amore un ladroncello”: Dorabella has gone out with Despina, and Fiordiligi, left alone, regrets having confessed her feelings to them"
+     },
+     {
+      "title": "Benedetti i doppi coniugi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Benedetti i doppi coniugi",
+      "editionId": "mozart-benedetti-i-doppi-coniugi",
+      "when": "Act 2, the hall is ready: the sisters and their 'Albanians' come in for the wedding feast, greeted by the chorus"
+     },
+     {
+      "title": "E nel tuo, nel mio bicchiero",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: E nel tuo, nel mio bicchiero",
+      "editionId": "mozart-e-nel-tuo-nel-mio-bicchiero",
+      "when": "Act 2, at the wedding table: the two couples have exchanged compliments and clinked glasses, and Fiordiligi proposes a toast"
+     },
+     {
+      "title": "Miei signori, tutto è fatto",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Miei signori, tutto è fatto",
+      "editionId": "mozart-miei-signori-tutto-e-fatto",
+      "when": "Act 2, straight after the toast: Don Alfonso comes back to say the notary is here, and Despina comes in disguised as the notary"
+     },
+     {
+      "title": "Bella vita militar",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bella vita militar",
+      "editionId": "mozart-bella-vita-militar-finale",
+      "when": "Act 2, the sisters have just signed the marriage contract when drums and the soldiers' song from Act 1 are heard outside"
+     },
+     {
+      "title": "Sani e salvi agli amplessi amorosi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Sani e salvi agli amplessi amorosi",
+      "editionId": "mozart-sani-e-salvi",
+      "when": "Act 2, the 'Albanians' have been hidden in the next room and the sisters are frantic: Ferrando and Guglielmo come in as themselves, in uniform"
+     },
+     {
+      "title": "Giusto ciel! Voi qui scriveste",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Giusto ciel! Voi qui scriveste",
+      "editionId": "mozart-giusto-ciel-voi-qui-scriveste",
+      "when": "Act 2, Don Alfonso has let the marriage contract fall, and the officers have picked it up and found the sisters' signatures"
+     },
+     {
+      "title": "A voi s'inchina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: A voi s'inchina",
+      "editionId": "mozart-a-voi-sinchina",
+      "when": "Act 2, the officers have gone into the room where the 'Albanians' were hidden and come back half in their disguise, to the sisters' horror"
+     },
+     {
+      "title": "Fortunato l'uom che prende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fortunato l'uom che prende",
+      "editionId": "mozart-fortunato-luom-che-prende",
+      "when": "Act 2, the end of the opera: Don Alfonso has joined the couples' hands, the sisters have promised to make amends, and Despina has laughed off being tricked herself"
      }
     ]
    },
@@ -2755,6 +2811,62 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Ora vedo che siete una donna di garbo",
       "editionId": "mozart-ora-vedo-che-siete",
       "when": "Act 2, a room in the sisters' house: Dorabella has just told Despina that she has given in to the dark-haired stranger"
+     },
+     {
+      "title": "Benedetti i doppi coniugi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Benedetti i doppi coniugi",
+      "editionId": "mozart-benedetti-i-doppi-coniugi",
+      "when": "Act 2, the hall is ready: the sisters and their 'Albanians' come in for the wedding feast, greeted by the chorus"
+     },
+     {
+      "title": "E nel tuo, nel mio bicchiero",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: E nel tuo, nel mio bicchiero",
+      "editionId": "mozart-e-nel-tuo-nel-mio-bicchiero",
+      "when": "Act 2, at the wedding table: the two couples have exchanged compliments and clinked glasses, and Fiordiligi proposes a toast"
+     },
+     {
+      "title": "Miei signori, tutto è fatto",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Miei signori, tutto è fatto",
+      "editionId": "mozart-miei-signori-tutto-e-fatto",
+      "when": "Act 2, straight after the toast: Don Alfonso comes back to say the notary is here, and Despina comes in disguised as the notary"
+     },
+     {
+      "title": "Bella vita militar",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bella vita militar",
+      "editionId": "mozart-bella-vita-militar-finale",
+      "when": "Act 2, the sisters have just signed the marriage contract when drums and the soldiers' song from Act 1 are heard outside"
+     },
+     {
+      "title": "Sani e salvi agli amplessi amorosi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Sani e salvi agli amplessi amorosi",
+      "editionId": "mozart-sani-e-salvi",
+      "when": "Act 2, the 'Albanians' have been hidden in the next room and the sisters are frantic: Ferrando and Guglielmo come in as themselves, in uniform"
+     },
+     {
+      "title": "Giusto ciel! Voi qui scriveste",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Giusto ciel! Voi qui scriveste",
+      "editionId": "mozart-giusto-ciel-voi-qui-scriveste",
+      "when": "Act 2, Don Alfonso has let the marriage contract fall, and the officers have picked it up and found the sisters' signatures"
+     },
+     {
+      "title": "A voi s'inchina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: A voi s'inchina",
+      "editionId": "mozart-a-voi-sinchina",
+      "when": "Act 2, the officers have gone into the room where the 'Albanians' were hidden and come back half in their disguise, to the sisters' horror"
+     },
+     {
+      "title": "Fortunato l'uom che prende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fortunato l'uom che prende",
+      "editionId": "mozart-fortunato-luom-che-prende",
+      "when": "Act 2, the end of the opera: Don Alfonso has joined the couples' hands, the sisters have promised to make amends, and Despina has laughed off being tricked herself"
      }
     ]
    },
@@ -2890,6 +3002,48 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Vittoria padroncini!",
       "editionId": "mozart-vittoria-padroncini",
       "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
+     },
+     {
+      "title": "Fate presto, o cari amici",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fate presto, o cari amici",
+      "editionId": "mozart-fate-presto-o-cari-amici",
+      "when": "Act 2, the start of the finale, in a brightly lit hall with a table laid for four: Despina, who was sent for a notary, gets the servants and musicians ready for the double wedding"
+     },
+     {
+      "title": "Miei signori, tutto è fatto",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Miei signori, tutto è fatto",
+      "editionId": "mozart-miei-signori-tutto-e-fatto",
+      "when": "Act 2, straight after the toast: Don Alfonso comes back to say the notary is here, and Despina comes in disguised as the notary"
+     },
+     {
+      "title": "Bella vita militar",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bella vita militar",
+      "editionId": "mozart-bella-vita-militar-finale",
+      "when": "Act 2, the sisters have just signed the marriage contract when drums and the soldiers' song from Act 1 are heard outside"
+     },
+     {
+      "title": "Sani e salvi agli amplessi amorosi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Sani e salvi agli amplessi amorosi",
+      "editionId": "mozart-sani-e-salvi",
+      "when": "Act 2, the 'Albanians' have been hidden in the next room and the sisters are frantic: Ferrando and Guglielmo come in as themselves, in uniform"
+     },
+     {
+      "title": "A voi s'inchina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: A voi s'inchina",
+      "editionId": "mozart-a-voi-sinchina",
+      "when": "Act 2, the officers have gone into the room where the 'Albanians' were hidden and come back half in their disguise, to the sisters' horror"
+     },
+     {
+      "title": "Fortunato l'uom che prende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fortunato l'uom che prende",
+      "editionId": "mozart-fortunato-luom-che-prende",
+      "when": "Act 2, the end of the opera: Don Alfonso has joined the couples' hands, the sisters have promised to make amends, and Despina has laughed off being tricked herself"
      }
     ]
    },
@@ -3144,6 +3298,62 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Vittoria padroncini!",
       "editionId": "mozart-vittoria-padroncini",
       "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
+     },
+     {
+      "title": "Benedetti i doppi coniugi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Benedetti i doppi coniugi",
+      "editionId": "mozart-benedetti-i-doppi-coniugi",
+      "when": "Act 2, the hall is ready: the sisters and their 'Albanians' come in for the wedding feast, greeted by the chorus"
+     },
+     {
+      "title": "E nel tuo, nel mio bicchiero",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: E nel tuo, nel mio bicchiero",
+      "editionId": "mozart-e-nel-tuo-nel-mio-bicchiero",
+      "when": "Act 2, at the wedding table: the two couples have exchanged compliments and clinked glasses, and Fiordiligi proposes a toast"
+     },
+     {
+      "title": "Miei signori, tutto è fatto",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Miei signori, tutto è fatto",
+      "editionId": "mozart-miei-signori-tutto-e-fatto",
+      "when": "Act 2, straight after the toast: Don Alfonso comes back to say the notary is here, and Despina comes in disguised as the notary"
+     },
+     {
+      "title": "Bella vita militar",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bella vita militar",
+      "editionId": "mozart-bella-vita-militar-finale",
+      "when": "Act 2, the sisters have just signed the marriage contract when drums and the soldiers' song from Act 1 are heard outside"
+     },
+     {
+      "title": "Sani e salvi agli amplessi amorosi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Sani e salvi agli amplessi amorosi",
+      "editionId": "mozart-sani-e-salvi",
+      "when": "Act 2, the 'Albanians' have been hidden in the next room and the sisters are frantic: Ferrando and Guglielmo come in as themselves, in uniform"
+     },
+     {
+      "title": "Giusto ciel! Voi qui scriveste",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Giusto ciel! Voi qui scriveste",
+      "editionId": "mozart-giusto-ciel-voi-qui-scriveste",
+      "when": "Act 2, Don Alfonso has let the marriage contract fall, and the officers have picked it up and found the sisters' signatures"
+     },
+     {
+      "title": "A voi s'inchina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: A voi s'inchina",
+      "editionId": "mozart-a-voi-sinchina",
+      "when": "Act 2, the officers have gone into the room where the 'Albanians' were hidden and come back half in their disguise, to the sisters' horror"
+     },
+     {
+      "title": "Fortunato l'uom che prende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fortunato l'uom che prende",
+      "editionId": "mozart-fortunato-luom-che-prende",
+      "when": "Act 2, the end of the opera: Don Alfonso has joined the couples' hands, the sisters have promised to make amends, and Despina has laughed off being tricked herself"
      }
     ]
    },
@@ -3391,6 +3601,62 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Vittoria padroncini!",
       "editionId": "mozart-vittoria-padroncini",
       "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
+     },
+     {
+      "title": "Benedetti i doppi coniugi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Benedetti i doppi coniugi",
+      "editionId": "mozart-benedetti-i-doppi-coniugi",
+      "when": "Act 2, the hall is ready: the sisters and their 'Albanians' come in for the wedding feast, greeted by the chorus"
+     },
+     {
+      "title": "E nel tuo, nel mio bicchiero",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: E nel tuo, nel mio bicchiero",
+      "editionId": "mozart-e-nel-tuo-nel-mio-bicchiero",
+      "when": "Act 2, at the wedding table: the two couples have exchanged compliments and clinked glasses, and Fiordiligi proposes a toast"
+     },
+     {
+      "title": "Miei signori, tutto è fatto",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Miei signori, tutto è fatto",
+      "editionId": "mozart-miei-signori-tutto-e-fatto",
+      "when": "Act 2, straight after the toast: Don Alfonso comes back to say the notary is here, and Despina comes in disguised as the notary"
+     },
+     {
+      "title": "Bella vita militar",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bella vita militar",
+      "editionId": "mozart-bella-vita-militar-finale",
+      "when": "Act 2, the sisters have just signed the marriage contract when drums and the soldiers' song from Act 1 are heard outside"
+     },
+     {
+      "title": "Sani e salvi agli amplessi amorosi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Sani e salvi agli amplessi amorosi",
+      "editionId": "mozart-sani-e-salvi",
+      "when": "Act 2, the 'Albanians' have been hidden in the next room and the sisters are frantic: Ferrando and Guglielmo come in as themselves, in uniform"
+     },
+     {
+      "title": "Giusto ciel! Voi qui scriveste",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Giusto ciel! Voi qui scriveste",
+      "editionId": "mozart-giusto-ciel-voi-qui-scriveste",
+      "when": "Act 2, Don Alfonso has let the marriage contract fall, and the officers have picked it up and found the sisters' signatures"
+     },
+     {
+      "title": "A voi s'inchina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: A voi s'inchina",
+      "editionId": "mozart-a-voi-sinchina",
+      "when": "Act 2, the officers have gone into the room where the 'Albanians' were hidden and come back half in their disguise, to the sisters' horror"
+     },
+     {
+      "title": "Fortunato l'uom che prende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fortunato l'uom che prende",
+      "editionId": "mozart-fortunato-luom-che-prende",
+      "when": "Act 2, the end of the opera: Don Alfonso has joined the couples' hands, the sisters have promised to make amends, and Despina has laughed off being tricked herself"
      }
     ]
    },
@@ -3651,6 +3917,55 @@ export const OPERAS: Opera[] = [
       "id": "Act 2: Vittoria padroncini!",
       "editionId": "mozart-vittoria-padroncini",
       "when": "Act 2, straight after “Tutti accusan le donne”: the officers have just learned Don Alfonso's verse, and Despina runs in with news"
+     },
+     {
+      "title": "Fate presto, o cari amici",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fate presto, o cari amici",
+      "editionId": "mozart-fate-presto-o-cari-amici",
+      "when": "Act 2, the start of the finale, in a brightly lit hall with a table laid for four: Despina, who was sent for a notary, gets the servants and musicians ready for the double wedding"
+     },
+     {
+      "title": "Miei signori, tutto è fatto",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Miei signori, tutto è fatto",
+      "editionId": "mozart-miei-signori-tutto-e-fatto",
+      "when": "Act 2, straight after the toast: Don Alfonso comes back to say the notary is here, and Despina comes in disguised as the notary"
+     },
+     {
+      "title": "Bella vita militar",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Bella vita militar",
+      "editionId": "mozart-bella-vita-militar-finale",
+      "when": "Act 2, the sisters have just signed the marriage contract when drums and the soldiers' song from Act 1 are heard outside"
+     },
+     {
+      "title": "Sani e salvi agli amplessi amorosi",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Sani e salvi agli amplessi amorosi",
+      "editionId": "mozart-sani-e-salvi",
+      "when": "Act 2, the 'Albanians' have been hidden in the next room and the sisters are frantic: Ferrando and Guglielmo come in as themselves, in uniform"
+     },
+     {
+      "title": "Giusto ciel! Voi qui scriveste",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Giusto ciel! Voi qui scriveste",
+      "editionId": "mozart-giusto-ciel-voi-qui-scriveste",
+      "when": "Act 2, Don Alfonso has let the marriage contract fall, and the officers have picked it up and found the sisters' signatures"
+     },
+     {
+      "title": "A voi s'inchina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: A voi s'inchina",
+      "editionId": "mozart-a-voi-sinchina",
+      "when": "Act 2, the officers have gone into the room where the 'Albanians' were hidden and come back half in their disguise, to the sisters' horror"
+     },
+     {
+      "title": "Fortunato l'uom che prende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Fortunato l'uom che prende",
+      "editionId": "mozart-fortunato-luom-che-prende",
+      "when": "Act 2, the end of the opera: Don Alfonso has joined the couples' hands, the sisters have promised to make amends, and Despina has laughed off being tricked herself"
      }
     ]
    }

@@ -110,6 +110,64 @@
     }
   },
   {
+    "editionId": "mozart-a-voi-sinchina",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-a-voi-sinchina@1.0.0-peters#7b6219a904",
+    "title": "A voi s'inchina",
+    "subtitle": "Ferrando, Guglielmo, Fiordiligi, Dorabella, Despina and Don Alfonso: Act 2 finale (No. 31), section 8, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 80,
+    "durationSec": 134,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 42,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-che-tutta-in-un-momento",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-ah-che-tutta-in-un-momento@1.0.0-peters#79c7eb1d86",
@@ -931,6 +989,110 @@
     "time": "1/4",
     "languageStatus": {
       "phrases": 27,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-bella-vita-militar-finale",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-bella-vita-militar-finale@1.0.0-peters#b29b7f3d84",
+    "title": "Bella vita militar",
+    "subtitle": "Fiordiligi, Dorabella, Despina, Ferrando, Guglielmo and Don Alfonso, with the chorus: Act 2 finale (No. 31), section 5, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 82,
+    "durationSec": 148,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 31,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-benedetti-i-doppi-coniugi",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-benedetti-i-doppi-coniugi@1.0.0-peters#4dd9c98111",
+    "title": "Benedetti i doppi coniugi",
+    "subtitle": "Fiordiligi, Dorabella, Ferrando and Guglielmo, with the chorus: Act 2 finale (No. 31), section 2, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 107,
+    "durationSec": 242,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 37,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2099,6 +2261,52 @@
     }
   },
   {
+    "editionId": "mozart-e-nel-tuo-nel-mio-bicchiero",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-e-nel-tuo-nel-mio-bicchiero@1.0.0-peters#9dec806208",
+    "title": "E nel tuo, nel mio bicchiero",
+    "subtitle": "Fiordiligi, Ferrando, Dorabella and Guglielmo: Act 2 finale (No. 31), section 3, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 32,
+    "durationSec": 113,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 11,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-e-perche-fosti-meco",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-e-perche-fosti-meco@1.0.0-klengel#d5d9aa4da9",
@@ -2593,6 +2801,40 @@
     }
   },
   {
+    "editionId": "mozart-fate-presto-o-cari-amici",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-fate-presto-o-cari-amici@1.0.0-peters#f63d0d93dd",
+    "title": "Fate presto, o cari amici",
+    "subtitle": "Despina and Don Alfonso, with the chorus: Act 2 finale (No. 31), section 1, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      }
+    ],
+    "measures": 65,
+    "durationSec": 90,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 13,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-figaro-sinfonia",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-figaro-sinfonia@1.0.0-klengel#5054852cbc",
@@ -2637,6 +2879,64 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 28,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-fortunato-luom-che-prende",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-fortunato-luom-che-prende@1.0.0-peters#a9de063442",
+    "title": "Fortunato l'uom che prende",
+    "subtitle": "Fiordiligi, Dorabella, Despina, Ferrando, Don Alfonso and Guglielmo: Act 2 finale (No. 31), section 9, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 96,
+    "durationSec": 104,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 48,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2998,6 +3298,58 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 19,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-giusto-ciel-voi-qui-scriveste",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-giusto-ciel-voi-qui-scriveste@1.0.0-peters#e5997f155b",
+    "title": "Giusto ciel! Voi qui scriveste",
+    "subtitle": "Ferrando, Guglielmo, Fiordiligi, Dorabella and Don Alfonso: Act 2 finale (No. 31), section 7, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 55,
+    "durationSec": 146,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 23,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -3672,6 +4024,64 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 34,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-miei-signori-tutto-e-fatto",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-miei-signori-tutto-e-fatto@1.0.0-peters#fb5c9d4c1a",
+    "title": "Miei signori, tutto è fatto",
+    "subtitle": "Don Alfonso, Fiordiligi, Dorabella, Ferrando, Guglielmo and Despina: Act 2 finale (No. 31), section 4, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 86,
+    "durationSec": 111,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 22,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -4866,6 +5276,64 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 23,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-sani-e-salvi",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-sani-e-salvi@1.0.0-peters#eba23a6bbc",
+    "title": "Sani e salvi agli amplessi amorosi",
+    "subtitle": "Ferrando, Guglielmo, Don Alfonso, Fiordiligi, Dorabella and Despina: Act 2 finale (No. 31), section 6, from Così fan tutte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "fiordiligi",
+        "name": "Fiordiligi",
+        "voiceType": "Soprano",
+        "partKey": "fiordiligi"
+      },
+      {
+        "id": "dorabella",
+        "name": "Dorabella",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dorabella"
+      },
+      {
+        "id": "despina",
+        "name": "Despina",
+        "voiceType": "Soprano",
+        "partKey": "despina"
+      },
+      {
+        "id": "ferrando",
+        "name": "Ferrando",
+        "voiceType": "Tenor",
+        "partKey": "ferrando"
+      },
+      {
+        "id": "alfonso",
+        "name": "Don Alfonso",
+        "voiceType": "Bass-baritone",
+        "partKey": "alfonso"
+      },
+      {
+        "id": "guglielmo",
+        "name": "Guglielmo",
+        "voiceType": "Baritone",
+        "partKey": "guglielmo"
+      }
+    ],
+    "measures": 69,
+    "durationSec": 172,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 31,
       "withAudio": 0,
       "reviewed": 0
     }
