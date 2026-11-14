@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.1 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="3.1">
   <work>
@@ -49,7 +49,7 @@ Creative Commons licens BY-NC-ND</rights>
     </credit>
   <credit page="1">
     <credit-type>subtitle</credit-type>
-    <credit-words default-x="763.637" default-y="1978.18" justify="center" valign="top" font-size="12">from &quot;Gianni Schicchi&quot;</credit-words>
+    <credit-words default-x="763.637" default-y="1978.18" justify="center" valign="top" font-size="12">from "Gianni Schicchi"</credit-words>
     </credit>
   <credit page="1">
     <credit-type>composer</credit-type>
@@ -80,7 +80,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       <score-instrument id="P1-I1">
         <instrument-name>Sopran</instrument-name>
         </score-instrument>
-      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-device id="P1-I1" port="1"/>
       <midi-instrument id="P1-I1">
         <midi-channel>1</midi-channel>
         <midi-program>53</midi-program>
@@ -93,7 +93,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       <score-instrument id="P2-I1">
         <instrument-name>Piano</instrument-name>
         </score-instrument>
-      <midi-device id="P2-I1" port="1"></midi-device>
+      <midi-device id="P2-I1" port="1"/>
       <midi-instrument id="P2-I1">
         <midi-channel>2</midi-channel>
         <midi-program>1</midi-program>
@@ -149,13 +149,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="4" width="306.82">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="46.77" relative-y="20.00">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>120</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="120"/>
+        <direction-type><words/></direction-type><sound tempo="120"/>
         </direction>
       <note>
         <rest measure="yes"/>
@@ -163,66 +157,19 @@ Creative Commons licens BY-NC-ND</credit-words>
         <voice>1</voice>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="46.77" relative-y="20.00">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>79</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="46.77" relative-y="20.00" font-weight="bold" font-size="12">.4</words>
-          </direction-type>
-        <offset>-10</offset>
-        <sound tempo="79.4"/>
+        <direction-type><words/></direction-type><sound tempo="79.4"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="46.77" relative-y="20.00">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>62</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="46.77" relative-y="20.00" font-weight="bold" font-size="12">.8</words>
-          </direction-type>
-        <offset>-8</offset>
-        <sound tempo="62.8"/>
+        <direction-type><words/></direction-type><sound tempo="62.8"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="46.77" relative-y="20.00">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>50</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="46.77" relative-y="20.00" font-weight="bold" font-size="12">.1</words>
-          </direction-type>
-        <offset>-6</offset>
-        <sound tempo="50.1"/>
+        <direction-type><words/></direction-type><sound tempo="50.1"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="46.77" relative-y="20.00">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>39</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="46.77" relative-y="20.00" font-weight="bold" font-size="12">.4</words>
-          </direction-type>
-        <offset>-4</offset>
-        <sound tempo="39.4"/>
+        <direction-type><words/></direction-type><sound tempo="39.4"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="13.48" relative-y="20.00">
-            <beat-unit>quarter</beat-unit>
-            <per-minute>30</per-minute>
-            </metronome>
-          </direction-type>
-        <offset>-2</offset>
-        <sound tempo="30"/>
+        <direction-type><words/></direction-type><sound tempo="30"/>
         </direction>
       <barline location="right">
         <bar-style>light-light</bar-style>
@@ -271,12 +218,12 @@ Creative Commons licens BY-NC-ND</credit-words>
         </direction>
       <direction placement="above">
         <direction-type>
-          <words relative-x="6.78" relative-y="44.31" font-style="italic">(in ginocchío, dinansi a Gianni Schicchi)</words>
+          <words relative-x="6.78" relative-y="66" font-style="italic">(in ginocchio, dinanzi a Gianni Schicchi)</words>
           </direction-type>
         </direction>
       <direction placement="above">
         <direction-type>
-          <dynamics default-x="6.50" default-y="5.23" relative-y="15.00">
+          <dynamics default-x="6.50" default-y="5.23" relative-y="37">
             <p/>
             </dynamics>
           </direction-type>
@@ -466,13 +413,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.23" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>40</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="20"/>
+        <direction-type><words/></direction-type><sound tempo="20"/>
         </direction>
       <note default-x="250.80" default-y="10.00">
         <pitch>
@@ -497,13 +438,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="8" width="269.15">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-x="16.95" relative-y="59.17">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>80</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="40"/>
+        <direction-type><words/></direction-type><sound tempo="40"/>
         </direction>
       <direction placement="above">
         <direction-type>
@@ -532,13 +467,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </direction-type>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>90</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="45"/>
+        <direction-type><words/></direction-type><sound tempo="45"/>
         </direction>
       <note default-x="139.99" default-y="-5.00">
         <pitch>
@@ -559,13 +488,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>100</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="50"/>
+        <direction-type><words/></direction-type><sound tempo="50"/>
         </direction>
       <note default-x="218.75" default-y="-15.00">
         <pitch>
@@ -790,13 +713,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>80</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="40"/>
+        <direction-type><words/></direction-type><sound tempo="40"/>
         </direction>
       <note default-x="154.87" default-y="-20.00">
         <pitch>
@@ -817,13 +734,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>100</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="50"/>
+        <direction-type><words/></direction-type><sound tempo="50"/>
         </direction>
       <note default-x="243.71" default-y="-40.00">
         <pitch>
@@ -992,13 +903,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.13" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>80</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="40"/>
+        <direction-type><words/></direction-type><sound tempo="40"/>
         </direction>
       <note default-x="102.84" default-y="-15.00">
         <pitch>
@@ -1030,13 +935,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.13" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>40</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="20"/>
+        <direction-type><words/></direction-type><sound tempo="20"/>
         </direction>
       <note default-x="232.36" default-y="10.00">
         <pitch>
@@ -1063,13 +962,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="16" width="285.05">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="36.10" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>76</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="38"/>
+        <direction-type><words/></direction-type><sound tempo="38"/>
         </direction>
       <direction placement="above">
         <direction-type>
@@ -1098,13 +991,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </direction-type>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>90</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="45"/>
+        <direction-type><words/></direction-type><sound tempo="45"/>
         </direction>
       <note default-x="150.22" default-y="-5.00">
         <pitch>
@@ -1214,13 +1101,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="18" width="277.52">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="30.71" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>110</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="55"/>
+        <direction-type><words/></direction-type><sound tempo="55"/>
         </direction>
       <note default-x="25.45" default-y="-5.00">
         <pitch>
@@ -1259,13 +1140,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="19" width="300.41">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="12.17" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>100</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="50"/>
+        <direction-type><words/></direction-type><sound tempo="50"/>
         </direction>
       <note default-x="22.12" default-y="-25.00">
         <pitch>
@@ -1364,13 +1239,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>82</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="41"/>
+        <direction-type><words/></direction-type><sound tempo="41"/>
         </direction>
       <note default-x="156.92" default-y="-25.00">
         <pitch>
@@ -1397,13 +1266,7 @@ Creative Commons licens BY-NC-ND</credit-words>
         <type>eighth</type>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="7.97" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>88</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="44"/>
+        <direction-type><words/></direction-type><sound tempo="44"/>
         </direction>
       <note default-x="237.75" default-y="0.00">
         <pitch>
@@ -1454,13 +1317,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="56.40" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>88</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="44"/>
+        <direction-type><words/></direction-type><sound tempo="44"/>
         </direction>
       <note default-x="201.40" default-y="0.00">
         <pitch>
@@ -1537,13 +1394,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="42.00" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>80</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="40"/>
+        <direction-type><words/></direction-type><sound tempo="40"/>
         </direction>
       <direction placement="above">
         <direction-type>
@@ -1565,13 +1416,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </notations>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="42.00" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>60</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="30"/>
+        <direction-type><words/></direction-type><sound tempo="30"/>
         </direction>
       <note default-x="139.18" default-y="-10.00">
         <pitch>
@@ -1621,13 +1466,7 @@ Creative Commons licens BY-NC-ND</credit-words>
         <sound dynamics="45.56"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="42.04" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>70</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="35"/>
+        <direction-type><words/></direction-type><sound tempo="35"/>
         </direction>
       <note default-x="35.69" default-y="0.00">
         <pitch>
@@ -1670,13 +1509,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="20.20" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>60</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="30"/>
+        <direction-type><words/></direction-type><sound tempo="30"/>
         </direction>
       <note default-x="100.30" default-y="-10.00">
         <pitch>
@@ -1694,16 +1527,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="15.48" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>58</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="15.48" relative-y="20.00" font-weight="bold" font-size="12">.4</words>
-          </direction-type>
-        <sound tempo="29.2"/>
+        <direction-type><words/></direction-type><sound tempo="29.2"/>
         </direction>
       <note default-x="154.75" default-y="-15.00">
         <pitch>
@@ -1720,16 +1544,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="8.98" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>57</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="8.98" relative-y="20.00" font-weight="bold" font-size="12">.2</words>
-          </direction-type>
-        <sound tempo="28.6"/>
+        <direction-type><words/></direction-type><sound tempo="28.6"/>
         </direction>
       <note default-x="200.84" default-y="-20.00">
         <pitch>
@@ -1747,17 +1562,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="18.82" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>58</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="18.82" relative-y="20.00" font-weight="bold" font-size="12">.8</words>
-          </direction-type>
-        <offset>-7</offset>
-        <sound tempo="29.4"/>
+        <direction-type><words/></direction-type><sound tempo="29.4"/>
         </direction>
       </measure>
     <measure number="25" width="406.54">
@@ -1771,16 +1576,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </system-layout>
         </print>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>56</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.7</words>
-          </direction-type>
-        <sound tempo="28.4"/>
+        <direction-type><words/></direction-type><sound tempo="28.4"/>
         </direction>
       <note default-x="132.17" default-y="-25.00">
         <pitch>
@@ -1801,13 +1597,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>56</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="28"/>
+        <direction-type><words/></direction-type><sound tempo="28"/>
         </direction>
       <note>
         <rest/>
@@ -1816,132 +1606,36 @@ Creative Commons licens BY-NC-ND</credit-words>
         <type>half</type>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>56</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.5</words>
-          </direction-type>
-        <offset>-11</offset>
-        <sound tempo="28.3"/>
+        <direction-type><words/></direction-type><sound tempo="28.3"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>56</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.3</words>
-          </direction-type>
-        <offset>-10</offset>
-        <sound tempo="28.2"/>
+        <direction-type><words/></direction-type><sound tempo="28.2"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>56</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.2</words>
-          </direction-type>
-        <offset>-9</offset>
-        <sound tempo="28.1"/>
+        <direction-type><words/></direction-type><sound tempo="28.1"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>64</per-minute>
-            </metronome>
-          </direction-type>
-        <offset>-6</offset>
-        <sound tempo="32"/>
+        <direction-type><words/></direction-type><sound tempo="32"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>77</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.8</words>
-          </direction-type>
-        <offset>-5</offset>
-        <sound tempo="38.9"/>
+        <direction-type><words/></direction-type><sound tempo="38.9"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>83</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.4</words>
-          </direction-type>
-        <offset>-4</offset>
-        <sound tempo="41.7"/>
+        <direction-type><words/></direction-type><sound tempo="41.7"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>87</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.8</words>
-          </direction-type>
-        <offset>-3</offset>
-        <sound tempo="43.9"/>
+        <direction-type><words/></direction-type><sound tempo="43.9"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>91</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.4</words>
-          </direction-type>
-        <offset>-2</offset>
-        <sound tempo="45.7"/>
+        <direction-type><words/></direction-type><sound tempo="45.7"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>94</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.6</words>
-          </direction-type>
-        <offset>-1</offset>
-        <sound tempo="47.3"/>
+        <direction-type><words/></direction-type><sound tempo="47.3"/>
         </direction>
       </measure>
     <measure number="26" width="263.57">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>97</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.5</words>
-          </direction-type>
-        <sound tempo="48.7"/>
+        <direction-type><words/></direction-type><sound tempo="48.7"/>
         </direction>
       <note>
         <rest measure="yes"/>
@@ -1949,152 +1643,42 @@ Creative Commons licens BY-NC-ND</credit-words>
         <voice>1</voice>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>100</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.1</words>
-          </direction-type>
-        <offset>-11</offset>
-        <sound tempo="50.1"/>
+        <direction-type><words/></direction-type><sound tempo="50.1"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>102</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.6</words>
-          </direction-type>
-        <offset>-10</offset>
-        <sound tempo="51.3"/>
+        <direction-type><words/></direction-type><sound tempo="51.3"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>104</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.9</words>
-          </direction-type>
-        <offset>-9</offset>
-        <sound tempo="52.4"/>
+        <direction-type><words/></direction-type><sound tempo="52.4"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>107</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.1</words>
-          </direction-type>
-        <offset>-8</offset>
-        <sound tempo="53.5"/>
+        <direction-type><words/></direction-type><sound tempo="53.5"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>109</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.2</words>
-          </direction-type>
-        <offset>-7</offset>
-        <sound tempo="54.6"/>
+        <direction-type><words/></direction-type><sound tempo="54.6"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>111</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.1</words>
-          </direction-type>
-        <offset>-6</offset>
-        <sound tempo="55.6"/>
+        <direction-type><words/></direction-type><sound tempo="55.6"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>113</per-minute>
-            </metronome>
-          </direction-type>
-        <offset>-5</offset>
-        <sound tempo="56.5"/>
+        <direction-type><words/></direction-type><sound tempo="56.5"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>114</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-y="20.00" font-weight="bold" font-size="12">.9</words>
-          </direction-type>
-        <offset>-4</offset>
-        <sound tempo="57.4"/>
+        <direction-type><words/></direction-type><sound tempo="57.4"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.11" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>116</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words default-y="38.11" relative-y="20.00" font-weight="bold" font-size="12">.6</words>
-          </direction-type>
-        <offset>-3</offset>
-        <sound tempo="58.3"/>
+        <direction-type><words/></direction-type><sound tempo="58.3"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-x="-49.15" relative-y="57.69">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>118</per-minute>
-            </metronome>
-          </direction-type>
-        <direction-type>
-          <words relative-x="-49.15" relative-y="57.69" font-weight="bold" font-size="12">.3</words>
-          </direction-type>
-        <offset>-2</offset>
-        <sound tempo="59.2"/>
+        <direction-type><words/></direction-type><sound tempo="59.2"/>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-x="-25.42" relative-y="76.33">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>120</per-minute>
-            </metronome>
-          </direction-type>
-        <offset>-1</offset>
-        <sound tempo="60"/>
+        <direction-type><words/></direction-type><sound tempo="60"/>
         </direction>
       </measure>
     <measure number="27" width="279.65">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="0.42" relative-x="-1.69" relative-y="33.96">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>86</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="43"/>
+        <direction-type><words/></direction-type><sound tempo="43"/>
         </direction>
       <direction placement="above">
         <direction-type>
@@ -2149,13 +1733,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.11" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>72</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="36"/>
+        <direction-type><words/></direction-type><sound tempo="36"/>
         </direction>
       <note default-x="148.44" default-y="-25.00">
         <pitch>
@@ -2173,13 +1751,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-x="-10.17" relative-y="57.69">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>20</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="10"/>
+        <direction-type><words/></direction-type><sound tempo="10"/>
         </direction>
       <note default-x="229.57" default-y="10.00">
         <pitch>
@@ -2204,13 +1776,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="28" width="302.02">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="16.00" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>72</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="36"/>
+        <direction-type><words/></direction-type><sound tempo="36"/>
         </direction>
       <note default-x="35.69" default-y="-5.00">
         <pitch>
@@ -2268,13 +1834,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </direction-type>
         </direction>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.34" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>80</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="40"/>
+        <direction-type><words/></direction-type><sound tempo="40"/>
         </direction>
       <note default-x="112.98" default-y="-25.00">
         <pitch>
@@ -2295,13 +1855,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="38.34" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>60</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="30"/>
+        <direction-type><words/></direction-type><sound tempo="30"/>
         </direction>
       <note default-x="174.96" default-y="-20.00">
         <pitch>
@@ -2333,13 +1887,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="18.13" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>56</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="28"/>
+        <direction-type><words/></direction-type><sound tempo="28"/>
         </direction>
       <note default-x="298.92" default-y="-25.00">
         <pitch>
@@ -2357,13 +1905,7 @@ Creative Commons licens BY-NC-ND</credit-words>
           </lyric>
         </note>
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" default-y="14.35" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>30</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="15"/>
+        <direction-type><words/></direction-type><sound tempo="15"/>
         </direction>
       <note default-x="422.89" default-y="-35.00">
         <pitch>
@@ -2382,13 +1924,7 @@ Creative Commons licens BY-NC-ND</credit-words>
       </measure>
     <measure number="30" width="462.56">
       <direction placement="above">
-        <direction-type>
-          <metronome parentheses="no" relative-y="20.00">
-            <beat-unit>eighth</beat-unit>
-            <per-minute>44</per-minute>
-            </metronome>
-          </direction-type>
-        <sound tempo="22"/>
+        <direction-type><words/></direction-type><sound tempo="22"/>
         </direction>
       <note default-x="16.94" default-y="-25.00">
         <pitch>

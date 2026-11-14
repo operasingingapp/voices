@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="4.0">
   <work>
@@ -29,7 +29,7 @@
         <instrument-name>Voice</instrument-name>
         <instrument-sound>voice.vocals</instrument-sound>
         </score-instrument>
-      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-device id="P1-I1" port="1"/>
       <midi-instrument id="P1-I1">
         <midi-channel>1</midi-channel>
         <midi-program>69</midi-program>
@@ -46,7 +46,7 @@
         <instrument-name>Piano</instrument-name>
         <instrument-sound>keyboard.piano</instrument-sound>
         </score-instrument>
-      <midi-device id="P2-I1" port="1"></midi-device>
+      <midi-device id="P2-I1" port="1"/>
       <midi-instrument id="P2-I1">
         <midi-channel>2</midi-channel>
         <midi-program>1</midi-program>
@@ -1383,7 +1383,7 @@
     <measure number="30">
       <direction>
         <direction-type>
-          <words font-style="italic" font-size="12">poco rit.</words>
+          <words font-style="italic" font-size="12" relative-y="22">poco rit.</words>
           </direction-type>
         </direction>
       <note>

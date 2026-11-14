@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 4.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
 <score-partwise version="4.0">
   <work>
@@ -28,7 +28,7 @@
         <instrument-name>Voice</instrument-name>
         <instrument-sound>voice.vocals</instrument-sound>
         </score-instrument>
-      <midi-device id="P1-I1" port="1"></midi-device>
+      <midi-device id="P1-I1" port="1"/>
       <midi-instrument id="P1-I1">
         <midi-channel>1</midi-channel>
         <midi-program>69</midi-program>
@@ -42,7 +42,7 @@
         <instrument-name>Piano</instrument-name>
         <instrument-sound>keyboard.piano</instrument-sound>
         </score-instrument>
-      <midi-device id="P2-I1" port="1"></midi-device>
+      <midi-device id="P2-I1" port="1"/>
       <midi-instrument id="P2-I1">
         <midi-channel>2</midi-channel>
         <midi-program>1</midi-program>
@@ -123,7 +123,7 @@
         </note>
       <direction>
         <direction-type>
-          <words font-style="italic" font-size="12">joyeux et tendre</words>
+          <words font-style="italic" font-size="12" relative-y="22">joyeux et tendre</words>
           </direction-type>
         </direction>
       <note>
@@ -1121,7 +1121,7 @@
         </direction>
       <direction placement="below">
         <direction-type>
-          <words font-family="FreeSerif" font-size="12" font-style="italic">diminuendo.</words>
+          <words font-family="FreeSerif" font-size="12" font-style="italic" relative-y="-22">diminuendo.</words>
           </direction-type>
         <direction-type>
           <dashes type="start" number="1"/>
@@ -2608,7 +2608,7 @@
     <measure number="38">
       <direction>
         <direction-type>
-          <words font-size="12">Encore plus retenu</words>
+          <words font-size="12" relative-y="22">Encore plus retenu</words>
           </direction-type>
         </direction>
       <direction placement="below">
@@ -9849,7 +9849,7 @@
         </note>
       <direction placement="below">
         <direction-type>
-          <dynamics>
+          <dynamics relative-y="-22">
             <pp/>
             </dynamics>
           </direction-type>
@@ -14536,7 +14536,7 @@
     <measure number="46">
       <direction placement="below">
         <direction-type>
-          <dynamics>
+          <dynamics relative-y="-22">
             <p/>
             </dynamics>
           </direction-type>
