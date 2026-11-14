@@ -49,9 +49,11 @@ import { OPERAS } from "./operas";
 import { lineSounds, resolveLine, type LineChoice } from "./settings";
 import {
   GRAND_GAIN_DB,
+  grandLineChunks,
   grandLineGain,
   grandLineMap,
   grandLineUrl,
+  grandPianoChunks,
   grandPianoGain,
   grandPianoMap,
   grandPianoUrl,
@@ -1863,6 +1865,7 @@ function PracticeScreen({
             {
               tempo: 1,
               url: grandUrl!,
+              chunks: grandPianoChunks(edition.editionId),
               map: grandPianoMap(edition, perf),
               gainDb: GRAND_GAIN_DB + grandPianoGain(edition.editionId),
               exact: true,
@@ -1877,17 +1880,20 @@ function PracticeScreen({
     for (const p of voiceParts) {
       const gl = grandLine(p);
       if (gl) {
-        track(
-          port.setRecording(p.channel, [
-            {
-              tempo: 1,
-              url: gl,
-              map: grandLineMap(edition, perf, p.key),
-              gainDb: grandLineGain(edition.editionId, p.key),
-              exact: true,
-            },
-          ]),
-        ).catch(() => undefined);
+        // the singer's own line loads with the accompaniment and play waits for its first seconds; the other
+        // singers' lines come after, and the app plays their notes until they are in
+        const own = p === voicePart;
+        const loading = port.setRecording(p.channel, [
+          {
+            tempo: 1,
+            url: gl,
+            chunks: grandLineChunks(edition.editionId, p.key, own ? 0 : 1),
+            map: grandLineMap(edition, perf, p.key),
+            gainDb: grandLineGain(edition.editionId, p.key),
+            exact: true,
+          },
+        ]);
+        (own ? track(loading) : loading).catch(() => undefined);
         continue;
       }
       const recs = recordingsOf(p.key);
@@ -1960,12 +1966,12 @@ function PracticeScreen({
       const ms = edition.notes
         .filter((n) => n.part === p.key)
         .map((n) => n.midi);
-      track(
-        port.setInstrument(p.channel, grandLine(p) ? "singer" : instOf(p), [
-          Math.min(...ms),
-          Math.max(...ms),
-        ]),
-      ).catch(() => undefined);
+      const ready = port.setInstrument(p.channel, grandLine(p) ? "singer" : instOf(p), [
+        Math.min(...ms),
+        Math.max(...ms),
+      ]);
+      // a recorded line on the grand joins in when it has loaded (play does not wait for it)
+      (grandLine(p) ? ready : track(ready)).catch(() => undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pb.port, instKey, grandLineKey]);

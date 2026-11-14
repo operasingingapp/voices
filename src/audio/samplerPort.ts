@@ -14,6 +14,7 @@
  */
 import type { SynthPort } from "./engine";
 import { RecordedLine, type RecordingMap } from "./recordedLine";
+import type { ChunkedRecording, ChunkedSpec } from "./chunkedAudio";
 import type { PlaybackPart } from "../../shared/types";
 
 import NOCT from "../standalone/piano/noct.json";
@@ -127,6 +128,8 @@ interface SingerSource {
   /** the tempo factor it was rendered at (1: the score's tempo) */
   tempo: number;
   url: string;
+  /** served in chunks (the grand piano): where they are and how they are laid out */
+  chunks?: ChunkedSpec;
   map: RecordingMap;
   line: RecordedLine | null;
   load: Promise<RecordedLine> | null;
@@ -143,7 +146,22 @@ interface Singer {
   gainDb?: number;
   /** played only at the tempi it was recorded at (the grand piano): elsewhere the channel's live sound plays */
   exact?: boolean;
+  /** clock intervals the recording is scheduled to sound in (the channel's own notes stay silent there) */
+  cover: [number, number][];
+  /** the blocks being scheduled for the current start */
+  run: { fl: { t: number; s: number; f: number }; stop(): void } | null;
+  /** when it first sounded (performance.now()) and how many chunks were in then */
+  firstSound?: { ms: number; chunks: number };
 }
+
+/** a recorded singer starts once this much (seconds) from where play starts is laid out */
+const START_AHEAD = 2;
+/** blocks are scheduled this far ahead of the clock (seconds) */
+const HORIZON = 20;
+/** the longest block (seconds) */
+const BLOCK = 10;
+/** consecutive blocks cross-fade over this many samples */
+const SEAM_OUT = 512;
 
 interface Sample {
   midi: number;
@@ -360,6 +378,8 @@ export class SamplerPort implements SynthPort {
 
   private constructor(ctx: AudioContext) {
     this.ctx = ctx;
+    // for tests and the console: what the recorded singers are doing (singerState)
+    (globalThis as { __svPort?: SamplerPort }).__svPort = this;
     this.master = ctx.createGain();
     // a little make-up gain into a gentle limiter, so chords never clip on a tablet speaker
     const makeup = ctx.createGain();
@@ -710,8 +730,11 @@ export class SamplerPort implements SynthPort {
     this.channelShift.set(ch, 0);
     this.channelRange.set(ch, range);
     if (kit === "piano") return Promise.resolve();
-    if (kit === "singer")
-      return this.singers.get(ch)?.ready ?? Promise.resolve();
+    if (kit === "singer") {
+      const sg = this.singers.get(ch);
+      if (sg) this.joinPlayback(ch, sg);
+      return sg?.ready ?? Promise.resolve();
+    }
     let load = this.kitLoads.get(kit);
     if (!load) {
       const packed = Object.entries(packedKits).find(([path]) =>
@@ -781,11 +804,12 @@ export class SamplerPort implements SynthPort {
   /**
    * The recordings a channel sings when its instrument is "singer" (null: none): one per tempo it was rendered at
    * (the score's own, and 70%). The one nearest the tempo plays, so it is barely re-timed. Each is fetched the
-   * first time it is needed. Resolves once the line can play at the score's tempo.
+   * first time it is needed; a chunked one (the grand piano) plays as it arrives. Resolves once the line can start
+   * at the score's tempo (a chunked one: once its first seconds are in).
    */
   setRecording(
     ch: number,
-    recs: { tempo: number; url: string; map: RecordingMap; gainDb?: number; exact?: boolean }[] | null,
+    recs: { tempo: number; url: string; chunks?: ChunkedSpec; map: RecordingMap; gainDb?: number; exact?: boolean }[] | null,
   ): Promise<void> {
     const old = this.singers.get(ch);
     const key = recs?.map((r) => r.url).join("|");
@@ -797,7 +821,7 @@ export class SamplerPort implements SynthPort {
       }
       return old.ready;
     }
-    if (old) this.stopSinger(old, this.ctx.currentTime);
+    if (old) this.dropSinger(old);
     this.singers.delete(ch);
     if (!recs?.length) return Promise.resolve();
     const sg: Singer = {
@@ -807,51 +831,78 @@ export class SamplerPort implements SynthPort {
       exact: recs[0]?.exact,
       follow: null,
       playing: [],
+      cover: [],
+      run: null,
       ready: Promise.resolve(),
     };
     sg.ready = this.lineFor(sg, sg.follow?.f ?? 1).then(async (line) => {
       // lay it out for the tempo now, so pressing play does not wait for it
-      await line.timed(this.ctx, sg.follow?.f ?? 1).catch(() => undefined);
+      const tl = line.timed(sg.follow?.f ?? 1);
+      await tl.whenFinal(0, START_AHEAD * tl.rate).catch(() => undefined);
       if (sg.follow && !SamplerPort.offTempo(sg)) this.startSinger(ch, sg); // playback may already be running: join in where it is now
     });
     sg.ready.catch(
       () => this.singers.get(ch) === sg && this.singers.delete(ch),
     );
     this.singers.set(ch, sg);
+    this.joinPlayback(ch, sg);
     return sg.ready;
+  }
+
+  /** the timeline as the engine last started it, while it plays (null: stopped) */
+  private following: { t: number; s: number; f: number } | null = null;
+
+  /** a singer set up while the music plays joins in where it is (as far as its recording has loaded) */
+  private joinPlayback(ch: number, sg: Singer) {
+    if (!this.following || sg.follow || this.channelKit.get(ch) !== "singer") return;
+    sg.follow = { ...this.following };
+    if (!SamplerPort.offTempo(sg)) this.startSinger(ch, sg);
   }
 
   /** forget the recorded singers on every channel but these (the port outlives a piece) */
   keepRecordings(channels: number[]) {
     for (const [ch, sg] of [...this.singers]) {
       if (channels.includes(ch)) continue;
-      this.stopSinger(sg, this.ctx.currentTime);
+      this.dropSinger(sg);
       this.singers.delete(ch);
+    }
+  }
+
+  /** stop a singer for good: its sound, its loading */
+  private dropSinger(sg: Singer) {
+    this.stopSinger(sg, this.ctx.currentTime);
+    for (const s of sg.sources) {
+      s.line?.dispose();
+      s.line = null;
+      s.load = null;
     }
   }
 
   /** the recording to use at tempo f (the one rendered nearest it), loaded; the others are let go (memory) */
   private lineFor(sg: Singer, f: number): Promise<RecordedLine> {
-    const src = sg.sources.reduce((a, b) =>
-      Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a,
-    );
+    const src = this.sourceFor(sg, f);
     if (!src.load) {
-      src.load = RecordedLine.load(this.ctx, src.url, src.map, src.tempo).then(
-        (line) => {
-          line.setMap(src.map); // the map may have changed while it loaded
-          src.line = line;
-          for (const o of sg.sources)
-            if (o !== src) ((o.line = null), (o.load = null));
-          return line;
-        },
-      );
+      const keep = (line: RecordedLine) => {
+        line.setMap(src.map); // the map may have changed while it loaded
+        src.line = line;
+        for (const o of sg.sources)
+          if (o !== src) (o.line?.dispose(), (o.line = null), (o.load = null));
+        return line;
+      };
+      if (src.chunks) src.load = Promise.resolve(keep(RecordedLine.chunked(src.chunks, src.map, src.tempo)));
+      else src.load = RecordedLine.load(this.ctx, src.url, src.map, src.tempo).then(keep);
       src.load.catch(() => (src.load = null));
     }
     return src.load;
   }
 
+  private sourceFor(sg: Singer, f: number) {
+    return sg.sources.reduce((a, b) => (Math.abs(b.tempo - f) < Math.abs(a.tempo - f) ? b : a));
+  }
+
   /** the engine (re)starts the timeline: at clock time t, app-timeline seconds s, at tempo f */
   follow(t: number, s: number, f: number) {
+    this.following = { t, s, f };
     for (const [ch, sg] of this.singers) {
       if (this.channelKit.get(ch) !== "singer") continue;
       this.stopSinger(sg, t);
@@ -861,64 +912,122 @@ export class SamplerPort implements SynthPort {
     }
   }
 
+  /**
+   * Play the recording along the timeline from where it is now, as far as it has been laid out, in blocks: each
+   * block after the first starts SEAM_OUT samples before the last one ends and the two cross-fade there (the same
+   * samples, so the sum is the recording itself, whatever the clock's rounding). Blocks are scheduled up to
+   * HORIZON ahead; when the recording runs out (still loading), the last block fades and the app's piano plays
+   * that channel's notes (sung() goes by what is scheduled) until it can join again.
+   */
   private startSinger(ch: number, sg: Singer) {
     const fl = sg.follow;
-    if (!fl || !sg.sources.some((x) => x.line)) return;
+    if (!fl) return;
+    const line = this.sourceFor(sg, fl.f).line;
+    if (!line) {
+      // a whole file still loading: join in once it is in
+      this.lineFor(sg, fl.f).then(
+        () => sg.follow === fl && !SamplerPort.offTempo(sg) && this.startSinger(ch, sg),
+        () => undefined,
+      );
+      return;
+    }
+    if (sg.run?.fl === fl) return; // already playing for this start
+    sg.run?.stop();
+    const tl = line.timed(fl.f);
+    const R = tl.rate;
     const level = 10 ** ((SINGER_LEVEL_DB + (sg.gainDb ?? 0)) / 20);
     const FADE = 0.025;
-    /** play buf from audio time a0, sounding from app time out0 to out1 (seconds at this tempo) */
-    const play = (
-      buf: AudioBuffer,
-      out0: number,
-      out1: number,
-      a0: number,
-      tail: boolean,
-    ) => {
-      const now = this.ctx.currentTime + 0.03;
-      const pos = fl.s / fl.f; // app time at clock fl.t
-      let t0 = fl.t + (out0 - pos);
-      let off = a0;
-      if (t0 < now) ((off += now - t0), (t0 = now));
-      if (off < 0) ((t0 -= off), (off = 0));
-      const t1 = fl.t + (out1 - pos) + (tail ? 0 : FADE);
-      if (t1 <= t0 + 0.01 || off >= buf.duration) return;
+    const XF = SEAM_OUT;
+    const pos = fl.s / fl.f; // app time at clock fl.t
+    const clockOf = (smp: number) => fl.t + (smp / R - pos);
+    /** where the next block continues (output samples), or null: nothing playing to continue */
+    let next: number | null = null;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let dead = false;
+    const block = (b0: number, b1: number, seam: boolean) => {
+      const buf = this.ctx.createBuffer(tl.ys.length, b1 - b0, R);
+      tl.ys.forEach((y, c) => buf.copyToChannel(y.subarray(b0, b1) as Float32Array<ArrayBuffer>, c));
+      const now = this.ctx.currentTime;
+      let t0 = clockOf(b0);
+      let off = 0;
+      if (t0 < now) ((off = now - t0), (t0 = now));
+      const t1 = clockOf(b1);
+      const last = b1 >= tl.length;
       const src = this.ctx.createBufferSource();
       src.buffer = buf;
       const env = this.ctx.createGain();
       env.gain.setValueAtTime(0, t0);
-      env.gain.linearRampToValueAtTime(level, t0 + FADE);
-      if (!tail) {
-        env.gain.setValueAtTime(level, t1 - FADE);
+      env.gain.linearRampToValueAtTime(level, t0 + (seam ? XF / R : FADE));
+      if (!last) {
+        env.gain.setValueAtTime(level, t1 - XF / R);
         env.gain.linearRampToValueAtTime(0, t1);
       }
       src.connect(env).connect(this.dryChannel(ch));
       src.start(t0, off);
-      if (!tail) src.stop(t1 + 0.01);
+      if (!last) src.stop(t1 + 0.01);
       const item = { src, env };
       src.onended = () => {
         env.disconnect();
         sg.playing = sg.playing.filter((x) => x !== item);
       };
       sg.playing.push(item);
+      const keepFrom = now - 1;
+      sg.cover = sg.cover.filter((c) => c[1] > keepFrom);
+      sg.cover.push([t0, last ? Infinity : t1 - XF / R]);
+      if (!sg.firstSound) {
+        const rec = line.source as { rec?: { stitcher: { loaded: Uint8Array } } };
+        sg.firstSound = {
+          ms: performance.now(),
+          chunks: rec.rec ? rec.rec.stitcher.loaded.reduce((a, b) => a + b, 0) : -1,
+        };
+      }
     };
-    this.lineFor(sg, fl.f).then(
-      (line) => {
-        if (sg.follow !== fl) return; // stopped or restarted meanwhile
-        const go = (buf: AudioBuffer) =>
-          sg.follow === fl && play(buf, 0, buf.duration, 0, true);
-        const ready = line.ready(fl.f);
-        if (ready) go(ready);
-        else line.timed(this.ctx, fl.f).then(go, () => undefined);
+    const pump = () => {
+      if (dead || sg.follow !== fl) return;
+      clearTimeout(timer);
+      for (let guard = 0; guard < 256; guard++) {
+        const now = this.ctx.currentTime + 0.03;
+        const head = Math.ceil((pos + Math.max(0, now - fl.t)) * R); // output sample at `now` (or where play starts)
+        const cont = next !== null && clockOf(next - XF) >= now;
+        const from = cont ? next! : head;
+        if (from >= tl.length) return;
+        if (clockOf(from) > now + HORIZON) {
+          timer = setTimeout(pump, (clockOf(from) - now - HORIZON / 2) * 1000);
+          return;
+        }
+        const avail = tl.finalEnd(from);
+        const enough = avail >= tl.length || avail - from >= (cont ? 0.25 : START_AHEAD) * R;
+        if (!enough) {
+          if (!cont) tl.focus(from);
+          return; // tl's progress calls pump again
+        }
+        const end = Math.min(avail, from + BLOCK * R);
+        if (cont) block(from - XF, end, true);
+        else block(from, end, false);
+        next = end;
+      }
+    };
+    const offProgress = tl.onProgress(pump);
+    sg.run = {
+      fl,
+      stop: () => {
+        dead = true;
+        clearTimeout(timer);
+        offProgress();
       },
-      () => undefined,
-    );
+    };
+    tl.focus(Math.ceil((pos + Math.max(0, this.ctx.currentTime + 0.03 - fl.t)) * R));
+    pump();
   }
 
   private stopSinger(sg: Singer, time: number) {
     sg.follow = null;
+    sg.run?.stop();
+    sg.run = null;
     const list = sg.playing;
     sg.playing = [];
     const t = Math.max(time, this.ctx.currentTime);
+    sg.cover = sg.cover.filter((c) => c[0] < t).map((c) => [c[0], Math.min(c[1], t)] as [number, number]);
     for (const p of list) {
       p.env.gain.cancelScheduledValues(t);
       p.env.gain.setValueAtTime(p.env.gain.value, t);
@@ -929,6 +1038,22 @@ export class SamplerPort implements SynthPort {
         /* already stopped */
       }
     }
+  }
+
+  /** what the recorded singers are doing (for tests and the console) */
+  singerState() {
+    return [...this.singers].map(([ch, sg]) => {
+      const line = sg.sources.find((s) => s.line)?.line;
+      const rec = (line?.source as { rec?: ChunkedRecording } | undefined)?.rec;
+      return {
+        ch,
+        url: sg.key,
+        firstSound: sg.firstSound ?? null,
+        cover: sg.cover,
+        chunks: rec ? { n: rec.stitcher.n, loaded: [...rec.stitcher.loaded], arrivals: rec.arrivals, log: rec.stitcher.log } : null,
+        stitcher: rec?.stitcher ?? null,
+      };
+    });
   }
 
   /**
@@ -947,10 +1072,11 @@ export class SamplerPort implements SynthPort {
     return g;
   }
 
-  /** is this channel's line sung by its recording (so its notes stay silent)? */
-  private sung(ch: number) {
+  /** is this channel's line sung by its recording at clock time `time` (so its notes stay silent there)? */
+  private sung(ch: number, time: number) {
     const sg = this.singers.get(ch);
-    return this.channelKit.get(ch) === "singer" && !!sg?.sources.some((x) => x.line) && !SamplerPort.offTempo(sg);
+    if (this.channelKit.get(ch) !== "singer" || !sg || SamplerPort.offTempo(sg)) return false;
+    return sg.cover.some((c) => time >= c[0] && time < c[1]);
   }
 
   /** a recording played only at its own tempi, and the tempo now is another */
@@ -1134,7 +1260,7 @@ export class SamplerPort implements SynthPort {
   }
 
   noteOn(ch: number, midi: number, vel: number, time: number, held = false) {
-    if (this.sung(ch)) return;
+    if (this.sung(ch, time)) return;
     const line = this.pickLine(ch, midi, vel);
     const picked = line ?? this.pick(midi, vel);
     if (!picked) return;
@@ -1199,6 +1325,7 @@ export class SamplerPort implements SynthPort {
   }
 
   allSoundOff(ch: number, time: number) {
+    this.following = null; // the engine stopped
     for (const v of this.voices) if (v.ch === ch) this.release(v, time, 0.01);
     const sg = this.singers.get(ch);
     if (sg) this.stopSinger(sg, time);

@@ -5,24 +5,54 @@
   "lines": {
    "antonio": {
     "file": "lines/mozart-ah-signor-signor/antonio.m4a",
-    "gainDb": -3.4
+    "gainDb": -3.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/mozart-ah-signor-signor/antonio/",
+     "samples": 16255744
+    }
    },
    "count": {
     "file": "lines/mozart-ah-signor-signor/count.m4a",
-    "gainDb": -3.2
+    "gainDb": -3.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/mozart-ah-signor-signor/count/",
+     "samples": 16255744
+    }
    },
    "countess": {
     "file": "lines/mozart-ah-signor-signor/countess.m4a",
-    "gainDb": -2.5
+    "gainDb": -2.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/mozart-ah-signor-signor/countess/",
+     "samples": 16255744
+    }
    },
    "figaro": {
     "file": "lines/mozart-ah-signor-signor/figaro.m4a",
-    "gainDb": -1.4
+    "gainDb": -1.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/mozart-ah-signor-signor/figaro/",
+     "samples": 16255744
+    }
    },
    "susanna": {
     "file": "lines/mozart-ah-signor-signor/susanna.m4a",
-    "gainDb": -1.5
+    "gainDb": -1.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/mozart-ah-signor-signor/susanna/",
+     "samples": 16255744
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/mozart-ah-signor-signor/",
+   "samples": 16255744
   }
  },
  "mozart-andiam-bel-paggio": {
@@ -1291,20 +1321,45 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-addio-dolce-svegliare/marcello.m4a",
-    "gainDb": 0.2
+    "gainDb": 0.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-addio-dolce-svegliare/marcello/",
+     "samples": 9097216
+    }
    },
    "mimi": {
     "file": "lines/puccini-addio-dolce-svegliare/mimi.m4a",
-    "gainDb": -2.7
+    "gainDb": -2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-addio-dolce-svegliare/mimi/",
+     "samples": 9097216
+    }
    },
    "musetta": {
     "file": "lines/puccini-addio-dolce-svegliare/musetta.m4a",
-    "gainDb": -0.9
+    "gainDb": -0.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-addio-dolce-svegliare/musetta/",
+     "samples": 9097216
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-addio-dolce-svegliare/rodolfo.m4a",
-    "gainDb": -2.8
+    "gainDb": -2.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-addio-dolce-svegliare/rodolfo/",
+     "samples": 9097216
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-addio-dolce-svegliare/",
+   "samples": 9107712
   }
  },
  "puccini-ahi-qual-dolore": {
@@ -1313,32 +1368,72 @@
   "lines": {
    "alcindoro": {
     "file": "lines/puccini-ahi-qual-dolore/alcindoro.m4a",
-    "gainDb": -3.5
+    "gainDb": -3.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/alcindoro/",
+     "samples": 2819328
+    }
    },
    "colline": {
     "file": "lines/puccini-ahi-qual-dolore/colline.m4a",
-    "gainDb": -3.6
+    "gainDb": -3.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/colline/",
+     "samples": 2819328
+    }
    },
    "marcello": {
     "file": "lines/puccini-ahi-qual-dolore/marcello.m4a",
-    "gainDb": -3.7
+    "gainDb": -3.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/marcello/",
+     "samples": 2819328
+    }
    },
    "mimi": {
     "file": "lines/puccini-ahi-qual-dolore/mimi.m4a",
-    "gainDb": -1.7
+    "gainDb": -1.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/mimi/",
+     "samples": 2819328
+    }
    },
    "musetta": {
     "file": "lines/puccini-ahi-qual-dolore/musetta.m4a",
-    "gainDb": 0.0
+    "gainDb": 0.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/musetta/",
+     "samples": 2819328
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-ahi-qual-dolore/rodolfo.m4a",
-    "gainDb": -3.5
+    "gainDb": -3.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/rodolfo/",
+     "samples": 2819328
+    }
    },
    "schaunard": {
     "file": "lines/puccini-ahi-qual-dolore/schaunard.m4a",
-    "gainDb": -3.4
+    "gainDb": -3.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ahi-qual-dolore/schaunard/",
+     "samples": 2819328
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-ahi-qual-dolore/",
+   "samples": 2820352
   }
  },
  "puccini-al-quartiere-latin": {
@@ -1347,20 +1442,45 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-al-quartiere-latin/colline.m4a",
-    "gainDb": -1.3
+    "gainDb": -1.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-al-quartiere-latin/colline/",
+     "samples": 3613184
+    }
    },
    "marcello": {
     "file": "lines/puccini-al-quartiere-latin/marcello.m4a",
-    "gainDb": -3.3
+    "gainDb": -3.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-al-quartiere-latin/marcello/",
+     "samples": 3613184
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-al-quartiere-latin/rodolfo.m4a",
-    "gainDb": -2.9
+    "gainDb": -2.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-al-quartiere-latin/rodolfo/",
+     "samples": 3613184
+    }
    },
    "schaunard": {
     "file": "lines/puccini-al-quartiere-latin/schaunard.m4a",
-    "gainDb": -2.4
+    "gainDb": -2.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-al-quartiere-latin/schaunard/",
+     "samples": 3613184
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-al-quartiere-latin/",
+   "samples": 3613184
   }
  },
  "puccini-aranci-datteri": {
@@ -1369,44 +1489,99 @@
   "lines": {
    "chorus-basses-1": {
     "file": "lines/puccini-aranci-datteri/chorus-basses-1.m4a",
-    "gainDb": -2.7
+    "gainDb": -2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/chorus-basses-1/",
+     "samples": 7674880
+    }
    },
    "chorus-basses-2": {
     "file": "lines/puccini-aranci-datteri/chorus-basses-2.m4a",
-    "gainDb": -4.6
+    "gainDb": -4.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/chorus-basses-2/",
+     "samples": 7674880
+    }
    },
    "chorus-children": {
     "file": "lines/puccini-aranci-datteri/chorus-children.m4a",
-    "gainDb": -2.6
+    "gainDb": -2.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/chorus-children/",
+     "samples": 7674880
+    }
    },
    "chorus-sopranos": {
     "file": "lines/puccini-aranci-datteri/chorus-sopranos.m4a",
-    "gainDb": 0.8
+    "gainDb": 0.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/chorus-sopranos/",
+     "samples": 7674880
+    }
    },
    "chorus-tenors": {
     "file": "lines/puccini-aranci-datteri/chorus-tenors.m4a",
-    "gainDb": 0.9
+    "gainDb": 0.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/chorus-tenors/",
+     "samples": 7674880
+    }
    },
    "colline": {
     "file": "lines/puccini-aranci-datteri/colline.m4a",
-    "gainDb": -4.5
+    "gainDb": -4.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/colline/",
+     "samples": 7674880
+    }
    },
    "marcello": {
     "file": "lines/puccini-aranci-datteri/marcello.m4a",
-    "gainDb": -2.7
+    "gainDb": -2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/marcello/",
+     "samples": 7674880
+    }
    },
    "mimi": {
     "file": "lines/puccini-aranci-datteri/mimi.m4a",
-    "gainDb": -5.4
+    "gainDb": -5.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/mimi/",
+     "samples": 7674880
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-aranci-datteri/rodolfo.m4a",
-    "gainDb": -4.9
+    "gainDb": -4.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/rodolfo/",
+     "samples": 7674880
+    }
    },
    "schaunard": {
     "file": "lines/puccini-aranci-datteri/schaunard.m4a",
-    "gainDb": -1.5
+    "gainDb": -1.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-aranci-datteri/schaunard/",
+     "samples": 7674880
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-aranci-datteri/",
+   "samples": 7676672
   }
  },
  "puccini-caro": {
@@ -1415,44 +1590,99 @@
   "lines": {
    "chorus-basses": {
     "file": "lines/puccini-caro/chorus-basses.m4a",
-    "gainDb": -0.3
+    "gainDb": -0.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/chorus-basses/",
+     "samples": 5824000
+    }
    },
    "chorus-children": {
     "file": "lines/puccini-caro/chorus-children.m4a",
-    "gainDb": -4.1
+    "gainDb": -4.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/chorus-children/",
+     "samples": 5824000
+    }
    },
    "chorus-sopranos": {
     "file": "lines/puccini-caro/chorus-sopranos.m4a",
-    "gainDb": 3.5
+    "gainDb": 3.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/chorus-sopranos/",
+     "samples": 5824000
+    }
    },
    "chorus-tenors": {
     "file": "lines/puccini-caro/chorus-tenors.m4a",
-    "gainDb": 2.7
+    "gainDb": 2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/chorus-tenors/",
+     "samples": 5824000
+    }
    },
    "colline": {
     "file": "lines/puccini-caro/colline.m4a",
-    "gainDb": -1.6
+    "gainDb": -1.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/colline/",
+     "samples": 5824000
+    }
    },
    "marcello": {
     "file": "lines/puccini-caro/marcello.m4a",
-    "gainDb": -1.5
+    "gainDb": -1.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/marcello/",
+     "samples": 5824000
+    }
    },
    "mimi": {
     "file": "lines/puccini-caro/mimi.m4a",
-    "gainDb": -4.5
+    "gainDb": -4.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/mimi/",
+     "samples": 5824000
+    }
    },
    "musetta": {
     "file": "lines/puccini-caro/musetta.m4a",
-    "gainDb": -3.2
+    "gainDb": -3.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/musetta/",
+     "samples": 5824000
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-caro/rodolfo.m4a",
-    "gainDb": -0.3
+    "gainDb": -0.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/rodolfo/",
+     "samples": 5824000
+    }
    },
    "schaunard": {
     "file": "lines/puccini-caro/schaunard.m4a",
-    "gainDb": -3.1
+    "gainDb": -3.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-caro/schaunard/",
+     "samples": 5824000
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-caro/",
+   "samples": 5840640
   }
  },
  "puccini-che-gelida-manina": {
@@ -1461,12 +1691,27 @@
   "lines": {
    "mimi": {
     "file": "lines/puccini-che-gelida-manina/mimi.m4a",
-    "gainDb": -4.1
+    "gainDb": -4.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-gelida-manina/mimi/",
+     "samples": 11532288
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-che-gelida-manina/rodolfo.m4a",
-    "gainDb": -1.6
+    "gainDb": -1.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-gelida-manina/rodolfo/",
+     "samples": 11532288
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-che-gelida-manina/",
+   "samples": 11532288
   }
  },
  "puccini-che-ha-detto-il-medico": {
@@ -1475,24 +1720,54 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-che-ha-detto-il-medico/colline.m4a",
-    "gainDb": -6.8
+    "gainDb": -6.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ha-detto-il-medico/colline/",
+     "samples": 6884608
+    }
    },
    "marcello": {
     "file": "lines/puccini-che-ha-detto-il-medico/marcello.m4a",
-    "gainDb": -7.7
+    "gainDb": -7.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ha-detto-il-medico/marcello/",
+     "samples": 6884608
+    }
    },
    "musetta": {
     "file": "lines/puccini-che-ha-detto-il-medico/musetta.m4a",
-    "gainDb": -2.8
+    "gainDb": -2.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ha-detto-il-medico/musetta/",
+     "samples": 6884608
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-che-ha-detto-il-medico/rodolfo.m4a",
-    "gainDb": -6.3
+    "gainDb": -6.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ha-detto-il-medico/rodolfo/",
+     "samples": 6884608
+    }
    },
    "schaunard": {
     "file": "lines/puccini-che-ha-detto-il-medico/schaunard.m4a",
-    "gainDb": -7.0
+    "gainDb": -7.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ha-detto-il-medico/schaunard/",
+     "samples": 6884608
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-che-ha-detto-il-medico/",
+   "samples": 6884608
   }
  },
  "puccini-che-ora-sia": {
@@ -1501,20 +1776,45 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-che-ora-sia/colline.m4a",
-    "gainDb": -3.1
+    "gainDb": -3.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ora-sia/colline/",
+     "samples": 10902272
+    }
    },
    "marcello": {
     "file": "lines/puccini-che-ora-sia/marcello.m4a",
-    "gainDb": -1.6
+    "gainDb": -1.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ora-sia/marcello/",
+     "samples": 10902272
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-che-ora-sia/rodolfo.m4a",
-    "gainDb": -2.8
+    "gainDb": -2.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ora-sia/rodolfo/",
+     "samples": 10902272
+    }
    },
    "schaunard": {
     "file": "lines/puccini-che-ora-sia/schaunard.m4a",
-    "gainDb": -1.4
+    "gainDb": -1.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-che-ora-sia/schaunard/",
+     "samples": 10902272
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-che-ora-sia/",
+   "samples": 10942976
   }
  },
  "puccini-chi-guardi": {
@@ -1523,44 +1823,99 @@
   "lines": {
    "chorus-children": {
     "file": "lines/puccini-chi-guardi/chorus-children.m4a",
-    "gainDb": -4.0
+    "gainDb": -4.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/chorus-children/",
+     "samples": 8143872
+    }
    },
    "chorus-children-2": {
     "file": "lines/puccini-chi-guardi/chorus-children-2.m4a",
-    "gainDb": -5.0
+    "gainDb": -5.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/chorus-children-2/",
+     "samples": 8143872
+    }
    },
    "chorus-sopranos": {
     "file": "lines/puccini-chi-guardi/chorus-sopranos.m4a",
-    "gainDb": -2.4
+    "gainDb": -2.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/chorus-sopranos/",
+     "samples": 8143872
+    }
    },
    "chorus-tenors": {
     "file": "lines/puccini-chi-guardi/chorus-tenors.m4a",
-    "gainDb": -5.9
+    "gainDb": -5.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/chorus-tenors/",
+     "samples": 8143872
+    }
    },
    "colline": {
     "file": "lines/puccini-chi-guardi/colline.m4a",
-    "gainDb": -3.4
+    "gainDb": -3.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/colline/",
+     "samples": 8143872
+    }
    },
    "marcello": {
     "file": "lines/puccini-chi-guardi/marcello.m4a",
-    "gainDb": -3.4
+    "gainDb": -3.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/marcello/",
+     "samples": 8143872
+    }
    },
    "mimi": {
     "file": "lines/puccini-chi-guardi/mimi.m4a",
-    "gainDb": -5.2
+    "gainDb": -5.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/mimi/",
+     "samples": 8143872
+    }
    },
    "parpignol": {
     "file": "lines/puccini-chi-guardi/parpignol.m4a",
-    "gainDb": -2.3
+    "gainDb": -2.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/parpignol/",
+     "samples": 8143872
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-chi-guardi/rodolfo.m4a",
-    "gainDb": -2.2
+    "gainDb": -2.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/rodolfo/",
+     "samples": 8143872
+    }
    },
    "schaunard": {
     "file": "lines/puccini-chi-guardi/schaunard.m4a",
-    "gainDb": -2.5
+    "gainDb": -2.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-chi-guardi/schaunard/",
+     "samples": 8143872
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-chi-guardi/",
+   "samples": 8151552
   }
  },
  "puccini-donde-lieta-usci": {
@@ -1583,24 +1938,54 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-ehi-rodolfo/colline.m4a",
-    "gainDb": -1.6
+    "gainDb": -1.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ehi-rodolfo/colline/",
+     "samples": 1722624
+    }
    },
    "marcello": {
     "file": "lines/puccini-ehi-rodolfo/marcello.m4a",
-    "gainDb": -1.9
+    "gainDb": -1.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ehi-rodolfo/marcello/",
+     "samples": 1718528
+    }
    },
    "mimi": {
     "file": "lines/puccini-ehi-rodolfo/mimi.m4a",
-    "gainDb": -8.4
+    "gainDb": -8.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ehi-rodolfo/mimi/",
+     "samples": 1718528
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-ehi-rodolfo/rodolfo.m4a",
-    "gainDb": -2.8
+    "gainDb": -2.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ehi-rodolfo/rodolfo/",
+     "samples": 1718528
+    }
    },
    "schaunard": {
     "file": "lines/puccini-ehi-rodolfo/schaunard.m4a",
-    "gainDb": -0.5
+    "gainDb": -0.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ehi-rodolfo/schaunard/",
+     "samples": 1722624
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-ehi-rodolfo/",
+   "samples": 1718528
   }
  },
  "puccini-in-un-coupe": {
@@ -1609,12 +1994,27 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-in-un-coupe/marcello.m4a",
-    "gainDb": -3.0
+    "gainDb": -3.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-in-un-coupe/marcello/",
+     "samples": 3912960
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-in-un-coupe/rodolfo.m4a",
-    "gainDb": -2.4
+    "gainDb": -2.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-in-un-coupe/rodolfo/",
+     "samples": 3912960
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-in-un-coupe/",
+   "samples": 3912960
   }
  },
  "puccini-legna": {
@@ -1623,20 +2023,45 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-legna/colline.m4a",
-    "gainDb": -1.9
+    "gainDb": -1.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-legna/colline/",
+     "samples": 10128896
+    }
    },
    "marcello": {
     "file": "lines/puccini-legna/marcello.m4a",
-    "gainDb": -1.3
+    "gainDb": -1.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-legna/marcello/",
+     "samples": 10128896
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-legna/rodolfo.m4a",
-    "gainDb": -1.1
+    "gainDb": -1.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-legna/rodolfo/",
+     "samples": 10128896
+    }
    },
    "schaunard": {
     "file": "lines/puccini-legna/schaunard.m4a",
-    "gainDb": -0.6
+    "gainDb": -0.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-legna/schaunard/",
+     "samples": 10128896
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-legna/",
+   "samples": 10139648
   }
  },
  "puccini-marcello-finalmente": {
@@ -1645,16 +2070,36 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-marcello-finalmente/marcello.m4a",
-    "gainDb": -2.8
+    "gainDb": -2.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-marcello-finalmente/marcello/",
+     "samples": 5552128
+    }
    },
    "mimi": {
     "file": "lines/puccini-marcello-finalmente/mimi.m4a",
-    "gainDb": -5.9
+    "gainDb": -5.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-marcello-finalmente/mimi/",
+     "samples": 5552128
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-marcello-finalmente/rodolfo.m4a",
-    "gainDb": -2.3
+    "gainDb": -2.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-marcello-finalmente/rodolfo/",
+     "samples": 5552128
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-marcello-finalmente/",
+   "samples": 5552128
   }
  },
  "puccini-mi-chiamano-mimi": {
@@ -1663,12 +2108,27 @@
   "lines": {
    "mimi": {
     "file": "lines/puccini-mi-chiamano-mimi/mimi.m4a",
-    "gainDb": -4.3
+    "gainDb": -4.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mi-chiamano-mimi/mimi/",
+     "samples": 11524352
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-mi-chiamano-mimi/rodolfo.m4a",
-    "gainDb": -7.2
+    "gainDb": -7.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mi-chiamano-mimi/rodolfo/",
+     "samples": 11524352
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-mi-chiamano-mimi/",
+   "samples": 11524352
   }
  },
  "puccini-mimi-e-tanto-malata": {
@@ -1677,16 +2137,36 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-mimi-e-tanto-malata/marcello.m4a",
-    "gainDb": -2.7
+    "gainDb": -2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mimi-e-tanto-malata/marcello/",
+     "samples": 7930624
+    }
    },
    "mimi": {
     "file": "lines/puccini-mimi-e-tanto-malata/mimi.m4a",
-    "gainDb": -4.6
+    "gainDb": -4.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mimi-e-tanto-malata/mimi/",
+     "samples": 7930624
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-mimi-e-tanto-malata/rodolfo.m4a",
-    "gainDb": -3.0
+    "gainDb": -3.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mimi-e-tanto-malata/rodolfo/",
+     "samples": 7930624
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-mimi-e-tanto-malata/",
+   "samples": 7932416
   }
  },
  "puccini-mimi-marcello": {
@@ -1695,12 +2175,27 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-mimi-marcello/marcello.m4a",
-    "gainDb": -1.8
+    "gainDb": -1.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mimi-marcello/marcello/",
+     "samples": 14440192
+    }
    },
    "mimi": {
     "file": "lines/puccini-mimi-marcello/mimi.m4a",
-    "gainDb": -1.8
+    "gainDb": -1.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-mimi-marcello/mimi/",
+     "samples": 14440192
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-mimi-marcello/",
+   "samples": 14458368
   }
  },
  "puccini-musetta": {
@@ -1709,28 +2204,63 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-musetta/colline.m4a",
-    "gainDb": -6.5
+    "gainDb": -6.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-musetta/colline/",
+     "samples": 12323328
+    }
    },
    "marcello": {
     "file": "lines/puccini-musetta/marcello.m4a",
-    "gainDb": -2.8
+    "gainDb": -2.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-musetta/marcello/",
+     "samples": 12323328
+    }
    },
    "mimi": {
     "file": "lines/puccini-musetta/mimi.m4a",
-    "gainDb": -3.5
+    "gainDb": -3.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-musetta/mimi/",
+     "samples": 12323328
+    }
    },
    "musetta": {
     "file": "lines/puccini-musetta/musetta.m4a",
-    "gainDb": -2.6
+    "gainDb": -2.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-musetta/musetta/",
+     "samples": 12323328
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-musetta/rodolfo.m4a",
-    "gainDb": -4.1
+    "gainDb": -4.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-musetta/rodolfo/",
+     "samples": 12323328
+    }
    },
    "schaunard": {
     "file": "lines/puccini-musetta/schaunard.m4a",
-    "gainDb": -3.4
+    "gainDb": -3.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-musetta/schaunard/",
+     "samples": 12323328
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-musetta/",
+   "samples": 12323328
   }
  },
  "puccini-non-sono-in-vena": {
@@ -1739,12 +2269,27 @@
   "lines": {
    "mimi": {
     "file": "lines/puccini-non-sono-in-vena/mimi.m4a",
-    "gainDb": -5.2
+    "gainDb": -5.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-non-sono-in-vena/mimi/",
+     "samples": 9642240
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-non-sono-in-vena/rodolfo.m4a",
-    "gainDb": -3.4
+    "gainDb": -3.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-non-sono-in-vena/rodolfo/",
+     "samples": 9642240
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-non-sono-in-vena/",
+   "samples": 9651712
   }
  },
  "puccini-o-mimi-tu-piu-non-torni": {
@@ -1753,12 +2298,27 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-o-mimi-tu-piu-non-torni/marcello.m4a",
-    "gainDb": -2.7
+    "gainDb": -2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-o-mimi-tu-piu-non-torni/marcello/",
+     "samples": 4300544
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-o-mimi-tu-piu-non-torni/rodolfo.m4a",
-    "gainDb": -2.0
+    "gainDb": -2.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-o-mimi-tu-piu-non-torni/rodolfo/",
+     "samples": 4300544
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-o-mimi-tu-piu-non-torni/",
+   "samples": 4300544
   }
  },
  "puccini-o-soave-fanciulla": {
@@ -1767,16 +2327,36 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-o-soave-fanciulla/marcello.m4a",
-    "gainDb": -4.2
+    "gainDb": -4.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-o-soave-fanciulla/marcello/",
+     "samples": 9251072
+    }
    },
    "mimi": {
     "file": "lines/puccini-o-soave-fanciulla/mimi.m4a",
-    "gainDb": -3.7
+    "gainDb": -3.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-o-soave-fanciulla/mimi/",
+     "samples": 9251072
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-o-soave-fanciulla/rodolfo.m4a",
-    "gainDb": -2.7
+    "gainDb": -2.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-o-soave-fanciulla/rodolfo/",
+     "samples": 9251072
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-o-soave-fanciulla/",
+   "samples": 9251072
   }
  },
  "puccini-oh-dio-mimi": {
@@ -1785,24 +2365,54 @@
   "lines": {
    "marcello": {
     "file": "lines/puccini-oh-dio-mimi/marcello.m4a",
-    "gainDb": -3.0
+    "gainDb": -3.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-oh-dio-mimi/marcello/",
+     "samples": 6809856
+    }
    },
    "mimi": {
     "file": "lines/puccini-oh-dio-mimi/mimi.m4a",
-    "gainDb": -4.7
+    "gainDb": -4.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-oh-dio-mimi/mimi/",
+     "samples": 6809856
+    }
    },
    "musetta": {
     "file": "lines/puccini-oh-dio-mimi/musetta.m4a",
-    "gainDb": -7.2
+    "gainDb": -7.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-oh-dio-mimi/musetta/",
+     "samples": 6809856
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-oh-dio-mimi/rodolfo.m4a",
-    "gainDb": -3.0
+    "gainDb": -3.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-oh-dio-mimi/rodolfo/",
+     "samples": 6809856
+    }
    },
    "schaunard": {
     "file": "lines/puccini-oh-dio-mimi/schaunard.m4a",
-    "gainDb": -6.0
+    "gainDb": -6.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-oh-dio-mimi/schaunard/",
+     "samples": 6809856
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-oh-dio-mimi/",
+   "samples": 6809856
   }
  },
  "puccini-ohe-la-le-guardie": {
@@ -1811,24 +2421,54 @@
   "lines": {
    "chorus-basses": {
     "file": "lines/puccini-ohe-la-le-guardie/chorus-basses.m4a",
-    "gainDb": -2.3
+    "gainDb": -2.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ohe-la-le-guardie/chorus-basses/",
+     "samples": 9026304
+    }
    },
    "chorus-sopranos": {
     "file": "lines/puccini-ohe-la-le-guardie/chorus-sopranos.m4a",
-    "gainDb": -1.4
+    "gainDb": -1.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ohe-la-le-guardie/chorus-sopranos/",
+     "samples": 9026304
+    }
    },
    "chorus-tenors": {
     "file": "lines/puccini-ohe-la-le-guardie/chorus-tenors.m4a",
-    "gainDb": -6.2
+    "gainDb": -6.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ohe-la-le-guardie/chorus-tenors/",
+     "samples": 9026304
+    }
    },
    "doganiere": {
     "file": "lines/puccini-ohe-la-le-guardie/doganiere.m4a",
-    "gainDb": -4.1
+    "gainDb": -4.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ohe-la-le-guardie/doganiere/",
+     "samples": 9026304
+    }
    },
    "musetta": {
     "file": "lines/puccini-ohe-la-le-guardie/musetta.m4a",
-    "gainDb": -1.7
+    "gainDb": -1.7,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-ohe-la-le-guardie/musetta/",
+     "samples": 9026304
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-ohe-la-le-guardie/",
+   "samples": 9027328
   }
  },
  "puccini-quando-men-vo": {
@@ -1837,32 +2477,72 @@
   "lines": {
    "alcindoro": {
     "file": "lines/puccini-quando-men-vo/alcindoro.m4a",
-    "gainDb": -2.1
+    "gainDb": -2.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/alcindoro/",
+     "samples": 6791936
+    }
    },
    "colline": {
     "file": "lines/puccini-quando-men-vo/colline.m4a",
-    "gainDb": -4.0
+    "gainDb": -4.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/colline/",
+     "samples": 6791936
+    }
    },
    "marcello": {
     "file": "lines/puccini-quando-men-vo/marcello.m4a",
-    "gainDb": -4.8
+    "gainDb": -4.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/marcello/",
+     "samples": 6791936
+    }
    },
    "mimi": {
     "file": "lines/puccini-quando-men-vo/mimi.m4a",
-    "gainDb": -1.2
+    "gainDb": -1.2,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/mimi/",
+     "samples": 6791936
+    }
    },
    "musetta": {
     "file": "lines/puccini-quando-men-vo/musetta.m4a",
-    "gainDb": -1.5
+    "gainDb": -1.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/musetta/",
+     "samples": 6791936
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-quando-men-vo/rodolfo.m4a",
-    "gainDb": -3.6
+    "gainDb": -3.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/rodolfo/",
+     "samples": 6791936
+    }
    },
    "schaunard": {
     "file": "lines/puccini-quando-men-vo/schaunard.m4a",
-    "gainDb": -3.0
+    "gainDb": -3.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-quando-men-vo/schaunard/",
+     "samples": 6791936
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-quando-men-vo/",
+   "samples": 6796032
   }
  },
  "puccini-questo-mar-rosso": {
@@ -1871,16 +2551,36 @@
   "lines": {
    "colline": {
     "file": "lines/puccini-questo-mar-rosso/colline.m4a",
-    "gainDb": -1.4
+    "gainDb": -1.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-questo-mar-rosso/colline/",
+     "samples": 13122816
+    }
    },
    "marcello": {
     "file": "lines/puccini-questo-mar-rosso/marcello.m4a",
-    "gainDb": -1.1
+    "gainDb": -1.1,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-questo-mar-rosso/marcello/",
+     "samples": 13122816
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-questo-mar-rosso/rodolfo.m4a",
-    "gainDb": -0.8
+    "gainDb": -0.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-questo-mar-rosso/rodolfo/",
+     "samples": 13122560
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-questo-mar-rosso/",
+   "samples": 13122560
   }
  },
  "puccini-sa-dirmi": {
@@ -1889,16 +2589,36 @@
   "lines": {
    "doganiere": {
     "file": "lines/puccini-sa-dirmi/doganiere.m4a",
-    "gainDb": -6.0
+    "gainDb": -6.0,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-sa-dirmi/doganiere/",
+     "samples": 3654656
+    }
    },
    "mimi": {
     "file": "lines/puccini-sa-dirmi/mimi.m4a",
-    "gainDb": -4.8
+    "gainDb": -4.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-sa-dirmi/mimi/",
+     "samples": 3654656
+    }
    },
    "sergente": {
     "file": "lines/puccini-sa-dirmi/sergente.m4a",
-    "gainDb": -5.4
+    "gainDb": -5.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-sa-dirmi/sergente/",
+     "samples": 3654656
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-sa-dirmi/",
+   "samples": 3659776
   }
  },
  "puccini-si-puo": {
@@ -1907,24 +2627,54 @@
   "lines": {
    "benoit": {
     "file": "lines/puccini-si-puo/benoit.m4a",
-    "gainDb": -0.5
+    "gainDb": -0.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-si-puo/benoit/",
+     "samples": 12067072
+    }
    },
    "colline": {
     "file": "lines/puccini-si-puo/colline.m4a",
-    "gainDb": -0.4
+    "gainDb": -0.4,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-si-puo/colline/",
+     "samples": 12067072
+    }
    },
    "marcello": {
     "file": "lines/puccini-si-puo/marcello.m4a",
-    "gainDb": -1.5
+    "gainDb": -1.5,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-si-puo/marcello/",
+     "samples": 12067072
+    }
    },
    "rodolfo": {
     "file": "lines/puccini-si-puo/rodolfo.m4a",
-    "gainDb": -2.3
+    "gainDb": -2.3,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-si-puo/rodolfo/",
+     "samples": 12067072
+    }
    },
    "schaunard": {
     "file": "lines/puccini-si-puo/schaunard.m4a",
-    "gainDb": -0.8
+    "gainDb": -0.8,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-si-puo/schaunard/",
+     "samples": 12067072
+    }
    }
+  },
+  "v2": {
+   "channels": 2,
+   "dir": "v2/puccini-si-puo/",
+   "samples": 12067072
   }
  },
  "puccini-signorina-mimi": {
@@ -1933,11 +2683,21 @@
   "lines": {
    "alcindoro": {
     "file": "lines/puccini-signorina-mimi/alcindoro.m4a",
-    "gainDb": -1.6
+    "gainDb": -1.6,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-signorina-mimi/alcindoro/",
+     "samples": 11576064
+    }
    },
    "chorus-sopranos": {
     "file": "lines/puccini-signorina-mimi/chorus-sopranos.m4a",
-    "gainDb": -1.9
+    "gainDb": -1.9,
+    "v2": {
+     "channels": 1,
+     "dir": "v2/lines/puccini-signorina-mimi/chorus-sopranos/",
+     "samples": 11576064
+    }
    },
    "chorus-tenors": {
     "file": "lines/puccini-signorina-mimi/chorus-tenors.m4a",
