@@ -6,8 +6,11 @@ import "./app.css";
 import "./premium.css";
 import "./engraved.css";
 import "./choral.css";
-import "@fontsource/caveat/latin-500.css";
 import { App } from "./App";
+import { installStaleReload } from "./staleReload";
+
+// a tab left open across a deploy reloads once if a file of its build is gone (instead of a piece that will not open)
+installStaleReload();
 
 // The practice app accompanies on a sampled grand piano (Noct-Salamander, from the Salamander Grand Piano V3; CC BY 3.0).
 setPortFactory((onProgress) => SamplerPort.create(onProgress));
@@ -21,5 +24,6 @@ const idle = (fn: () => void, ms: number) =>
   window.setTimeout(() => ("requestIdleCallback" in window ? window.requestIdleCallback(fn, { timeout: 4000 }) : fn()), ms);
 window.addEventListener("load", () => {
   idle(() => warmPiano(), 800);
-  idle(() => void import("../score/vrv").then((m) => m.loadVerovio()).catch(() => undefined), 1800);
+  // the engine, then (when the page is idle again) one tiny engraving, so the first real score is not the slow one
+  idle(() => void import("../score/vrv").then((m) => m.warmVerovio()).catch(() => undefined), 1800);
 });

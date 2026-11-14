@@ -24,6 +24,7 @@ import { FIRST_PASS_KEYS, OPERAS, RUNNING, V2_KEYS } from "./operas";
 import { Practice } from "./Practice";
 import { Listen } from "./Listen";
 import { hasPiece, loadScore, pieceTitle, scoreReady } from "./pieces";
+import { reloadIfStale } from "./staleReload";
 import { ChoralHome, WorkPage } from "./Choral";
 import { findWork } from "./choral";
 import type { Mode } from "./choralParts";
@@ -327,7 +328,8 @@ export function App() {
   if (wantScore && hasPiece(wantScore) && !scoreReady(wantScore)) {
     loadScore(wantScore).then(
       () => setScoreTick((n) => n + 1),
-      () => setScoreTick((n) => n + 1),
+      // a tab opened before a deploy may ask for a piece file that is gone: reload once into the current build
+      (e) => reloadIfStale(e) || setScoreTick((n) => n + 1),
     );
     return (
       <div className="score-wait" role="status">
