@@ -1,0 +1,169 @@
+{
+ "editionId": "mozart-mi-par-choggi-il-demonio",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Mi par ch'oggi il demonio si diverta",
+ "subtitle": "Don Giovanni, Donna Anna, Don Ottavio and Donna Elvira: recitative from Don Giovanni, Act 1",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Mi par ch'oggi il demonio si diverta … Che domanda! perchè?",
+   "start": "1",
+   "end": "12"
+  },
+  {
+   "id": "b",
+   "label": "Bisogno abbiamo della vostra amicizia … perfido mostro? (to the end)",
+   "start": "13",
+   "end": "24"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scenes 11–12, recitative after No. 8",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (a' miei; perchè and fù with the print's accents; Donn' Anna on two notes; Oh Don Giovanni!, where the libretto has Ah). In bar 19 the print has ser-vi-vi, a misprint for servirvi; the word is kept as printed and its IPA is servirvi as sung. The print gives Bisogno abbiamo della vostra amicizia to Donna Anna (some libretto editions give it to Don Ottavio)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 71–73, the recitative between No. 8 and No. 9 (24 bars)",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker (clean). The English singing translation and the stage directions are left out. Secco recitative: the piano part is the printed chords; no performance marks are printed. Don Ottavio's part, printed in the treble clef an octave above sounding pitch, is written at sounding pitch. The fermata in the last bar (Donna Elvira, perfido) is printed; the bar leads into No. 9. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 83 (about 1:09), from the median length of four complete recordings with this recitative on its own track (Fricsay 1958 1:09, Giulini 1959 0:52, Böhm 1977 1:12, Karajan 1985 1:09 + 0:08, Donna Elvira's line on a track of its own; median 1:10½), less 1.5 s of track silence, as sources/cosi/TEMPI.md does."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+# JUDGE: piano readers agree in every bar (bar 1 RH slur end from the previous chunk dropped, as X)
+# S03 Recit. "Leporello, ove sei?" pp.19-20, piano (continuo chords as printed)
+# page 019 system 1 starts bar 1
+# bar 1: Recit., 4/4, F major (1 flat); naturals (key change to C major) at the end of bar 1. Incoming ties from the previous bar belong to S02c.
+1 RH1: G4+D5+G5:h r:h
+1 LH1: B2+G3+D4:w~
+# page 019 system 2 starts bar 2
+# bars 2-13: only ONE piano staff printed (bass clef); chords written in LH1, RH1 = full-bar rest
+2 RH1: s:w
+2 LH1: B2+G3+D4:w~
+3 RH1: s:w
+3 LH1: B2+G3+D4:h C3+G3+C4+E4:h~
+# page 019 system 3 starts bar 4
+4 RH1: s:w
+4 LH1: C3+G3+C4+E4:w~
+5 RH1: s:w
+5 LH1: C3+G3+C4+E4:w~
+# page 019 system 4 starts bar 6
+6 RH1: s:w
+6 LH1: C3+G3+C4+E4:h. A2+F3+C4+F4:q~
+7 RH1: s:w
+7 LH1: A2+F3+C4+F4:w~
+# page 019 system 5 starts bar 8
+8 RH1: s:w
+8 LH1: A2+F3+C4+F4:h. D3+F3+Bb3+F4:q~
+9 RH1: s:w
+9 LH1: D3+F3+Bb3+F4:w~
+# page 019 system 6 starts bar 10
+10 RH1: s:w
+10 LH1: D3+F3+Bb3+F4:w~
+11 RH1: s:w
+11 LH1: D3+F3+Bb3+F4:h. Eb3+Bb3+G4:q~
+# page 019 system 7 starts bar 12
+12 RH1: s:w
+12 LH1: Eb3+Bb3+G4:w
+# bar 13: double bar at the end of p.19
+13 RH1: s:w
+13 LH1: r:q F3+C4+Eb4+A4:q Bb2+D4+Bb4:h
+# page 020 system 1 starts bar 14
+# bar 14: C (4/4) reprinted, C major; single bass staff (LH1), RH1 = rest
+14 RH1: s:w
+14 LH1: F#3+A3+D4+A4:w~
+15 RH1: s:w
+15 LH1: F#3+A3+D4+A4:w~
+# page 020 system 2 starts bar 16
+16 RH1: s:w
+16 LH1: F#3+A3+D4+A4:h G3+B3+D4:h~
+# bar 17: double bar ("Attacca" No. 2)
+17 RH1: s:w
+17 LH1: G3+B3+D4:w

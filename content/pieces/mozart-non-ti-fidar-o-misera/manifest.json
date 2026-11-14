@@ -1,0 +1,193 @@
+{
+ "editionId": "mozart-non-ti-fidar-o-misera",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Non ti fidar, o misera",
+ "subtitle": "Donna Elvira, Donna Anna, Don Ottavio and Don Giovanni: quartet from Don Giovanni, Act 1 (No. 9)",
+ "kind": "quartet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Introduction · Non ti fidar, o misera … te vuol tradir ancor",
+   "start": "1",
+   "end": "9"
+  },
+  {
+   "id": "b",
+   "label": "Cieli! che aspetto nobile! · La povera ragazza è pazza",
+   "start": "10",
+   "end": "27"
+  },
+  {
+   "id": "c",
+   "label": "Ah! non credete al perfido! · A chi si crederà?",
+   "start": "28",
+   "end": "35"
+  },
+  {
+   "id": "d",
+   "label": "Certo moto d'ignoto tormento · Sdegno, rabbia, dispetto, pavento",
+   "start": "36",
+   "end": "49"
+  },
+  {
+   "id": "e",
+   "label": "Io di quà non vado via · Da quel ceffo · È un traditore · Incomincio a dubitar",
+   "start": "50",
+   "end": "67"
+  },
+  {
+   "id": "f",
+   "label": "Zitta, zitta · Non sperarlo, o scelerato · Quegli accenti sì sommessi (to the end)",
+   "start": "68",
+   "end": "88"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 12, No. 9 Quartet",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, which differ from the libretto in places: Il suo dolor (libretto pallor); Restate, oh Dei (libretto Restate ancor); Elvira's pavento and Giovanni's tormento; se non so com' è l'affar; il suo tratto (libretto volto); si dovria; ho perduta; scelerato with one l; Giovanni's Zitta, zitta, later zitto, zitto."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 73–84, bars 1–88 of No. 9",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar and checked again by a fresh checker (clean). Don Ottavio's part, printed in the treble clef, is written at sounding pitch. A few piano slurs that pass from one voice to another (bars 9–11, 14–20, 17–19, 26–28) cannot be written in this format and are left out. The English singing translation and the stage directions are left out. Playback tempo: ♩ = 85, about 4 minutes, the median (4:08) of five complete recordings (Fricsay 1958 4:08, Giulini 1959 3:55, Böhm 1977 4:27, Haitink 1984 3:51, Karajan 1985 4:23); Mozart gives the word Andante only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

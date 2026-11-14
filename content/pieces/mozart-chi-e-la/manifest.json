@@ -1,0 +1,167 @@
+{
+ "editionId": "mozart-chi-e-la",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Chi è là?",
+ "subtitle": "Donna Elvira, Don Giovanni and Leporello: recitative from Don Giovanni, Act 1",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "là? · Stelle! che vedo! · Don Giovanni! sei qui? · Via, cara Donna Elvira",
+   "start": "1",
+   "end": "9"
+  },
+  {
+   "id": "b",
+   "label": "Cosa puoi dire … per pena forse che t'amai cotanto · Pare un libro stampato!",
+   "start": "10",
+   "end": "24"
+  },
+  {
+   "id": "c",
+   "label": "Oh in quanto a questo ebbi le mie ragioni · E quali sono … le mie vendette",
+   "start": "25",
+   "end": "32"
+  },
+  {
+   "id": "d",
+   "label": "Eh via, siate più ragionevole · Salvo il vero · Ebben, fa presto! · Madama, veramente",
+   "start": "33",
+   "end": "42"
+  },
+  {
+   "id": "e",
+   "label": "Sciagurato! … l'iniquo fuggi! · Eh, consolatevi! … donnesche imprese (to the end)",
+   "start": "43",
+   "end": "60"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 5, recitative between No. 3 and No. 4",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (sei qui; azion si nera; calmate questa collera, where the libretto has quella; del ciel; e lasci in preda, where the libretto has e mi lasci; per pena; Leporello's conciossiacosa quando fosse che Il quadro, as printed; fuggi! and m'inganno, printed without the accents of fuggì and ingannò). Elvira's Chi è, the first two words of her line Chi è là?, are sung in the last bar of No. 3 (Ah! chi mi dice mai) and are not in this score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 38–41, the recitative between No. 3 and No. 4 (60 bars)",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the continuo each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for marks, then checked bar by bar and checked again by a fresh checker. The continuo is printed on one bass staff and is written here in the piano's left hand. Where the print adds a note for the English words (Leporello, bar 24), the Italian rhythm is kept; in bar 32 the print gives Elvira a sixteenth too many, and the eighth on le is read as a sixteenth so the bar adds up. The English singing translation and the stage directions are left out. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 87, from the median length of five recordings (Fricsay 1958 2:35, Giulini 1959 2:26, Böhm 1977 2:59, Haitink 1984 2:56, Karajan 1985 2:45; about 2¾ minutes)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

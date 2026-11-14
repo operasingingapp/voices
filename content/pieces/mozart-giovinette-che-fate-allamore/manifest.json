@@ -1,0 +1,193 @@
+{
+ "editionId": "mozart-giovinette-che-fate-allamore",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Giovinette, che fate all'amore",
+ "subtitle": "Zerlina and Masetto, with the chorus: duet and chorus from Don Giovanni, Act 1 (No. 5)",
+ "kind": "duet and chorus",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos",
+   "shortLabel": "Chorus S.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-altos",
+   "label": "Chorus altos",
+   "shortLabel": "Chorus A.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Giovinette, che fate all'amore (Zerlina, then the chorus)",
+   "start": "1",
+   "end": "40"
+  },
+  {
+   "id": "b",
+   "label": "Giovinetti leggieri di testa (Masetto, then the chorus)",
+   "start": "41",
+   "end": "63"
+  },
+  {
+   "id": "c",
+   "label": "Vieni, vieni carino · che piacer che sarà (together)",
+   "start": "64",
+   "end": "75"
+  },
+  {
+   "id": "d",
+   "label": "Ah, che piacer · la la re la la (the chorus, to the end)",
+   "start": "76",
+   "end": "87"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 7, No. 5 Duetto e Coro",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (Giovinetti leggieri, where the libretto has Giovinotti leggeri; vieni carino for both singers; e suoniamo, where the libretto has e saltiamo; quà)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 50–54, bars 1–87 of No. 5",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar and checked again by a fresh checker (one error found in bar 62, the right hand's first note, and corrected). The English singing translation and the stage directions are left out. Bar 1 is the piano's one-beat upbeat, set as a 2/8 bar; the 6/8 begins in bar 2. In bar 18 the printed rests of both piano hands add up to only five eighths, so one unprinted eighth rest is added. The chorus of peasants is printed on two staves (sopranos and altos, tenors and basses) and is written out as four parts; where two parts share a notehead both sing it. It is heard with the piano and has no role here. Playback tempo: Allegro ♩ = 181 (a dotted quarter ≈ 60), about 1:26, from the median (1:26) of five complete recordings (Fricsay 1958 1:24, Giulini 1959 1:29, Böhm 1977 1:33, Haitink 1984 1:25, Karajan 1985 1:26). Mozart gives the word only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

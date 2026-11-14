@@ -1,0 +1,135 @@
+{
+ "editionId": "mozart-alfin-siam-liberati",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Alfin siam liberati, Zerlinetta gentil",
+ "subtitle": "Don Giovanni and Zerlina: recitative from Don Giovanni, Act 1",
+ "kind": "recitative",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Alfin siam liberati · Chi? colui? · Ma Signor, io gli diedi parola",
+   "start": "1",
+   "end": "12"
+  },
+  {
+   "id": "b",
+   "label": "Tal parola non vale un zero · Ah, non vorrei",
+   "start": "13",
+   "end": "24"
+  },
+  {
+   "id": "c",
+   "label": "Eh, un impostura · Orsù, non perdiam tempo (to the end)",
+   "start": "25",
+   "end": "35"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 9, recitative after No. 6",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (siam; qual scioccone, qual visetto and qual viso, where the libretto has quel; un altra and un impostura without apostrophes; si belli without an accent; dituccia; raro; giojello; Eh, un impostura, where the libretto has È un'impostura)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 61–63, the recitative between No. 6 and No. 7 (35 bars)",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics and other marks, then checked bar by bar and checked again by a fresh checker (clean). Secco recitative, printed without a key signature. The English singing translation and the stage directions are left out. In bar 18 a small dot after Don Giovanni's last note is read as a stray mark. Playback tempo: Free, as recitative is sung: played here at a speaking pace, ♩ = 69, from the median length (2:01) of five complete recordings, which give this recitative a track of its own (Fricsay 1958 1:53, Giulini 1959 1:34, Böhm 1977 2:01, Haitink 1984 2:02, Karajan 1985 2:06). Schirmer prints Recit. only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

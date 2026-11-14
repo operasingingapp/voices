@@ -1,0 +1,103 @@
+# S05 Recit. "Orsù, spicciati presto", printed pp. 30-32. Piano (continuo).
+# The recitative prints ONE piano staff only (bass clef) carrying the held continuo chords: they are written as LH1;
+# RH1 is a hidden filler (s:w) because no right-hand staff is printed.
+# page 30 system 1 starts bar 1
+# bar 1: Recit., C (4/4), C major (no key signature)
+1 RH1: s:w
+1 LH1: G#3+B3+E4:w~
+2 RH1: s:w
+2 LH1: G#3+B3+E4:w~
+# page 30 system 2 starts bar 3
+3 RH1: s:w
+3 LH1: G#3+B3+E4:h C#3+E3+A3+E4:h~
+4 RH1: s:w
+4 LH1: C#3+E3+A3+E4:w~
+# page 30 system 3 starts bar 5
+5 RH1: s:w
+5 LH1: C#3+E3+A3+E4:w~
+6 RH1: s:w
+6 LH1: C#3+E3+A3+E4:h D3+A3+F#4:h~
+# page 30 system 4 starts bar 7
+7 RH1: s:w
+7 LH1: D3+A3+F#4:w~
+8 RH1: s:w
+8 LH1: D3+A3+F#4:w~
+# page 30 system 5 starts bar 9
+9 RH1: s:w
+9 LH1: D3+A3+F#4:w~
+10 RH1: s:w
+10 LH1: D3+A3+F#4:w~
+# page 30 system 6 starts bar 11
+11 RH1: s:w
+11 LH1: D3+A3+F#4:w~
+12 RH1: s:w
+12 LH1: D3+A3+F#4:w~
+13 RH1: s:w
+13 LH1: D3+A3+F#4:h G2+D3+B3:h~
+# page 30 system 7 starts bar 14
+14 RH1: s:w
+14 LH1: G2+D3+B3:w
+15 RH1: s:w
+15 LH1: r:h r:q G3+A3+C#4+E4:q
+16 RH1: s:w
+16 LH1: F3+A3+D4:w~
+# 16: printed natural on F3
+# page 30 system 8 starts bar 17
+17 RH1: s:w
+17 LH1: F3+A3+D4:w
+18 RH1: s:w
+18 LH1: E3+C4+G4:w~
+# page 31 system 1 starts bar 19
+19 RH1: s:w
+19 LH1: E3+C4+G4:w~
+20 RH1: s:w
+20 LH1: E3+C4+G4:w
+# page 31 system 2 starts bar 21
+21 RH1: s:w
+21 LH1: F3+A3+C4+F4:w~
+22 RH1: s:w
+22 LH1: F3+A3+C4+F4:w~
+# page 31 system 3 starts bar 23
+23 RH1: s:w
+23 LH1: F3+A3+C4+F4:w~
+24 RH1: s:w
+24 LH1: F3+A3+C4+F4:w~
+25 RH1: s:w
+25 LH1: F3+A3+C4+F4:h D3+Bb3+F4:h~
+# page 31 system 4 starts bar 26
+26 RH1: s:w
+26 LH1: D3+Bb3+F4:w~
+27 RH1: s:w
+27 LH1: D3+Bb3+F4:w~
+# page 31 system 5 starts bar 28
+28 RH1: s:w
+28 LH1: D3+Bb3+F4:w
+29 RH1: s:w
+29 LH1: Eb3+G3+Bb3+Eb4:w~
+# page 31 system 6 starts bar 30
+30 RH1: s:w
+30 LH1: Eb3+G3+Bb3+Eb4:w~
+31 RH1: s:w
+31 LH1: Eb3+G3+Bb3+Eb4:w
+32 RH1: s:w
+32 LH1: C3+Ab3+Eb4:w~
+# page 31 system 7 starts bar 33
+33 RH1: s:w
+33 LH1: C3+Ab3+Eb4:w~
+# 34: a third curve leaves the C3 toward bar 35, but bar 35's low note is E(b)3, so only Ab3 and Eb4 are tied
+34 RH1: s:w
+34 LH1: C3+Ab3~+Eb4~:w
+# page 31 system 8 starts bar 35
+# 35: the low note of the first chord (E3 space) has no flat printed; read as Eb3 (Ab/Eb harmony, Eb4 above), possibly a missing accidental
+35 RH1: s:w
+# FIX bar 35 LH1: fresh check: bass E printed without flat (edition misprint for Eb3), kept as printed
+35 LH1: E3+Ab3+Eb4:h D3+F3+Bb3:h~
+# page 32 system 1 starts bar 36
+36 RH1: s:w
+36 LH1: D3+F3+Bb3:w~
+37 RH1: s:w
+# JUDGE bar 37 LH: X - last chord: noteheads on the top line (A3) and 2nd line (F3), plus a flatted note on the 2nd ledger line (Eb4) = F7, V7 of B-flat
+37 LH1: D3+F3+Bb3:q Eb3+G3+Bb3:q r:q F3+A3+Eb4:q
+# 38: final cadence chord, then rests; double bar (end of the recitative)
+38 RH1: s:w
+38 LH1: Bb2+F3+Bb3+D4:q r:q r:h

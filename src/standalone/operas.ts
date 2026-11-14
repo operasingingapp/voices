@@ -1342,12 +1342,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Leporello, ove sei?",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Leporello, ove sei?"
+      "id": "Act 1: Leporello, ove sei?",
+      "editionId": "mozart-leporello-ove-sei"
      },
      {
       "title": "Orsù, spicciati presto",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Orsù, spicciati presto"
+      "id": "Act 1: Orsù, spicciati presto",
+      "editionId": "mozart-orsu-spicciati-presto"
      },
      {
       "title": "Ah! chi mi dice mai",
@@ -1358,17 +1360,20 @@ export const OPERAS: Opera[] = [
      {
       "title": "Chi è là?",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Chi è là?"
+      "id": "Act 1: Chi è là?",
+      "editionId": "mozart-chi-e-la"
      },
      {
       "title": "Manco male, è partita",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Manco male, è partita"
+      "id": "Act 1: Manco male, è partita",
+      "editionId": "mozart-manco-male-e-partita"
      },
      {
       "title": "Alfin siam liberati, Zerlinetta gentil",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Alfin siam liberati, Zerlinetta gentil"
+      "id": "Act 1: Alfin siam liberati, Zerlinetta gentil",
+      "editionId": "mozart-alfin-siam-liberati"
      },
      {
       "title": "Là ci darem la mano",
@@ -1379,27 +1384,32 @@ export const OPERAS: Opera[] = [
      {
       "title": "Fermati, scellerato!",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Fermati, scellerato!"
+      "id": "Act 1: Fermati, scellerato!",
+      "editionId": "mozart-fermati-scellerato"
      },
      {
       "title": "Mi par ch'oggi il demonio si diverta",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta",
+      "editionId": "mozart-mi-par-choggi-il-demonio"
      },
      {
       "title": "Non ti fidar, o misera",
       "kind": "Quartet · Act 1",
-      "id": "Act 1: Non ti fidar, o misera"
+      "id": "Act 1: Non ti fidar, o misera",
+      "editionId": "mozart-non-ti-fidar-o-misera"
      },
      {
       "title": "Povera sventurata!",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Povera sventurata!"
+      "id": "Act 1: Povera sventurata!",
+      "editionId": "mozart-povera-sventurata"
      },
      {
       "title": "Io deggio ad ogni patto",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Io deggio ad ogni patto"
+      "id": "Act 1: Io deggio ad ogni patto",
+      "editionId": "mozart-io-deggio-ad-ogni-patto"
      },
      {
       "title": "Finch'han dal vino calda la testa",
@@ -1410,7 +1420,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Guarda un po', come seppe questa strega",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Guarda un po', come seppe questa strega"
+      "id": "Act 1: Guarda un po', come seppe questa strega",
+      "editionId": "mozart-guarda-un-po-come-seppe"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",
@@ -1518,12 +1529,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Leporello, ove sei?",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Leporello, ove sei?"
+      "id": "Act 1: Leporello, ove sei?",
+      "editionId": "mozart-leporello-ove-sei"
      },
      {
       "title": "Orsù, spicciati presto",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Orsù, spicciati presto"
+      "id": "Act 1: Orsù, spicciati presto",
+      "editionId": "mozart-orsu-spicciati-presto"
      },
      {
       "title": "Ah! chi mi dice mai",
@@ -1534,7 +1547,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Chi è là?",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Chi è là?"
+      "id": "Act 1: Chi è là?",
+      "editionId": "mozart-chi-e-la"
      },
      {
       "title": "Madamina! Il catalogo è questo",
@@ -1545,12 +1559,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Manco male, è partita",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Manco male, è partita"
+      "id": "Act 1: Manco male, è partita",
+      "editionId": "mozart-manco-male-e-partita"
      },
      {
       "title": "Io deggio ad ogni patto",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Io deggio ad ogni patto"
+      "id": "Act 1: Io deggio ad ogni patto",
+      "editionId": "mozart-io-deggio-ad-ogni-patto"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",
@@ -1687,17 +1703,20 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ma qual mai s'offre, oh Dei",
       "kind": "Recitative and duet · Act 1",
-      "id": "Act 1: Ma qual mai s'offre, oh Dei"
+      "id": "Act 1: Ma qual mai s'offre, oh Dei",
+      "editionId": "mozart-ma-qual-mai-soffre"
      },
      {
       "title": "Mi par ch'oggi il demonio si diverta",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta",
+      "editionId": "mozart-mi-par-choggi-il-demonio"
      },
      {
       "title": "Non ti fidar, o misera",
       "kind": "Quartet · Act 1",
-      "id": "Act 1: Non ti fidar, o misera"
+      "id": "Act 1: Non ti fidar, o misera",
+      "editionId": "mozart-non-ti-fidar-o-misera"
      },
      {
       "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
@@ -1784,17 +1803,20 @@ export const OPERAS: Opera[] = [
      {
       "title": "Chi è là?",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Chi è là?"
+      "id": "Act 1: Chi è là?",
+      "editionId": "mozart-chi-e-la"
      },
      {
       "title": "In questa forma dunque",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: In questa forma dunque"
+      "id": "Act 1: In questa forma dunque",
+      "editionId": "mozart-in-questa-forma-dunque"
      },
      {
       "title": "Fermati, scellerato!",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Fermati, scellerato!"
+      "id": "Act 1: Fermati, scellerato!",
+      "editionId": "mozart-fermati-scellerato"
      },
      {
       "title": "Ah! fuggi il traditor!",
@@ -1805,12 +1827,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mi par ch'oggi il demonio si diverta",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta",
+      "editionId": "mozart-mi-par-choggi-il-demonio"
      },
      {
       "title": "Non ti fidar, o misera",
       "kind": "Quartet · Act 1",
-      "id": "Act 1: Non ti fidar, o misera"
+      "id": "Act 1: Non ti fidar, o misera",
+      "editionId": "mozart-non-ti-fidar-o-misera"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",
@@ -1915,17 +1939,20 @@ export const OPERAS: Opera[] = [
      {
       "title": "Giovinette, che fate all'amore",
       "kind": "Duet and chorus · Act 1",
-      "id": "Act 1: Giovinette, che fate all'amore"
+      "id": "Act 1: Giovinette, che fate all'amore",
+      "editionId": "mozart-giovinette-che-fate-allamore"
      },
      {
       "title": "Manco male, è partita",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Manco male, è partita"
+      "id": "Act 1: Manco male, è partita",
+      "editionId": "mozart-manco-male-e-partita"
      },
      {
       "title": "Alfin siam liberati, Zerlinetta gentil",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Alfin siam liberati, Zerlinetta gentil"
+      "id": "Act 1: Alfin siam liberati, Zerlinetta gentil",
+      "editionId": "mozart-alfin-siam-liberati"
      },
      {
       "title": "Là ci darem la mano",
@@ -1936,12 +1963,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Fermati, scellerato!",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Fermati, scellerato!"
+      "id": "Act 1: Fermati, scellerato!",
+      "editionId": "mozart-fermati-scellerato"
      },
      {
       "title": "Masetto, senti un po'!",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Masetto, senti un po'!"
+      "id": "Act 1: Masetto, senti un po'!",
+      "editionId": "mozart-masetto-senti-un-po"
      },
      {
       "title": "Batti, batti, o bel Masetto",
@@ -1952,7 +1981,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Guarda un po', come seppe questa strega",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Guarda un po', come seppe questa strega"
+      "id": "Act 1: Guarda un po', come seppe questa strega",
+      "editionId": "mozart-guarda-un-po-come-seppe"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",
@@ -2047,17 +2077,20 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ma qual mai s'offre, oh Dei",
       "kind": "Recitative and duet · Act 1",
-      "id": "Act 1: Ma qual mai s'offre, oh Dei"
+      "id": "Act 1: Ma qual mai s'offre, oh Dei",
+      "editionId": "mozart-ma-qual-mai-soffre"
      },
      {
       "title": "Mi par ch'oggi il demonio si diverta",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Mi par ch'oggi il demonio si diverta"
+      "id": "Act 1: Mi par ch'oggi il demonio si diverta",
+      "editionId": "mozart-mi-par-choggi-il-demonio"
      },
      {
       "title": "Non ti fidar, o misera",
       "kind": "Quartet · Act 1",
-      "id": "Act 1: Non ti fidar, o misera"
+      "id": "Act 1: Non ti fidar, o misera",
+      "editionId": "mozart-non-ti-fidar-o-misera"
      },
      {
       "title": "Don Ottavio! son morta!… Or sai, chi l'onore",
@@ -2068,7 +2101,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Come mai creder deggio",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Come mai creder deggio"
+      "id": "Act 1: Come mai creder deggio",
+      "editionId": "mozart-come-mai-creder-deggio"
      },
      {
       "title": "Dalla sua pace",
@@ -2164,12 +2198,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Giovinette, che fate all'amore",
       "kind": "Duet and chorus · Act 1",
-      "id": "Act 1: Giovinette, che fate all'amore"
+      "id": "Act 1: Giovinette, che fate all'amore",
+      "editionId": "mozart-giovinette-che-fate-allamore"
      },
      {
       "title": "Manco male, è partita",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Manco male, è partita"
+      "id": "Act 1: Manco male, è partita",
+      "editionId": "mozart-manco-male-e-partita"
      },
      {
       "title": "Ho capito, Signor, sì!",
@@ -2180,12 +2216,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Masetto, senti un po'!",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Masetto, senti un po'!"
+      "id": "Act 1: Masetto, senti un po'!",
+      "editionId": "mozart-masetto-senti-un-po"
      },
      {
       "title": "Guarda un po', come seppe questa strega",
       "kind": "Recitative · Act 1",
-      "id": "Act 1: Guarda un po', come seppe questa strega"
+      "id": "Act 1: Guarda un po', come seppe questa strega",
+      "editionId": "mozart-guarda-un-po-come-seppe"
      },
      {
       "title": "Presto, presto, pria ch'ei venga",

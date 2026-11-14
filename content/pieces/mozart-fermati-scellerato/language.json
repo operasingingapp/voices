@@ -1,0 +1,637 @@
+{
+ "editionId": "mozart-fermati-scellerato",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling and punctuation: queste misera innocente (bar 4; the libretto has questa), sò with an accent, Don Giovanni's aside (Amor, consiglio!) in brackets, and E per pietà with a capital. IPA, word meanings and translations were drafted for this app (S15) and the IPA was checked against Castel. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ; io sung on one note is jo. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "e1",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Fermati, scellerato! il ciel mi fece udir le tue perfidie;",
+   "translation": "Stop, you villain! Heaven let me overhear your treachery;",
+   "ipa": "ˈfɛr.ma.ti ʃel.leˈra.to il ˈtʃɛl mi ˈfe.tʃe‿uˈdir le ˈtu.e perˈfi.dje",
+   "words": [
+    [
+     "Fermati,",
+     "stop",
+     "ˈfɛr.ma.ti"
+    ],
+    [
+     "scellerato!",
+     "villain",
+     "ʃel.leˈra.to"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "ciel",
+     "heaven",
+     "ˈtʃɛl"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "fece",
+     "made",
+     "ˈfe.tʃe"
+    ],
+    [
+     "udir",
+     "hear",
+     "uˈdir"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "tue",
+     "your",
+     "ˈtu.e"
+    ],
+    [
+     "perfidie;",
+     "betrayals",
+     "perˈfi.dje"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "heaven let me hear"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e2",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "io sono a tempo di salvar queste misera innocente",
+   "translation": "I've come in time to rescue this poor innocent girl",
+   "ipa": "jo ˈso.no‿a ˈtɛm.po di salˈvar ˈkwe.ste ˈmi.ze.ra‿in.noˈtʃɛn.te",
+   "words": [
+    [
+     "io",
+     "I",
+     "jo"
+    ],
+    [
+     "sono",
+     "am",
+     "ˈso.no"
+    ],
+    [
+     "a",
+     "in",
+     "a"
+    ],
+    [
+     "tempo",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "salvar",
+     "rescue",
+     "salˈvar"
+    ],
+    [
+     "queste",
+     "this (printed queste)",
+     "ˈkwe.ste"
+    ],
+    [
+     "misera",
+     "wretched",
+     "ˈmi.ze.ra"
+    ],
+    [
+     "innocente",
+     "innocent girl",
+     "in.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "I am in time"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e3",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "dal tuo barbaro artiglio!",
+   "translation": "from your savage claws!",
+   "ipa": "dal ˈtu.o ˈbar.ba.ro‿arˈtiʎ.ʎo",
+   "words": [
+    [
+     "dal",
+     "from",
+     "dal"
+    ],
+    [
+     "tuo",
+     "your",
+     "ˈtu.o"
+    ],
+    [
+     "barbaro",
+     "savage",
+     "ˈbar.ba.ro"
+    ],
+    [
+     "artiglio!",
+     "talons",
+     "arˈtiʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z1",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Meschina! cosa sento!",
+   "translation": "Oh, misery! What's this I hear!",
+   "ipa": "meˈski.na ˈkɔ.za ˈsɛn.to",
+   "words": [
+    [
+     "Meschina!",
+     "wretched me",
+     "meˈski.na"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "sento!",
+     "do I hear",
+     "ˈsɛn.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g1",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "(Amor, consiglio!)",
+   "translation": "(Love, help me out here!)",
+   "ipa": "aˈmor konˈsiʎ.ʎo",
+   "words": [
+    [
+     "(Amor,",
+     "Love",
+     "aˈmor"
+    ],
+    [
+     "consiglio!)",
+     "counsel (me)",
+     "konˈsiʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Idol mio, non vedete, ch'io voglio divertirmi?",
+   "translation": "My darling, can't you see I only mean to have some fun?",
+   "ipa": "ˈi.dol ˈmi.o non veˈde.te kjo ˈvɔʎ.ʎo di.verˈtir.mi",
+   "words": [
+    [
+     "Idol",
+     "idol",
+     "ˈi.dol"
+    ],
+    [
+     "mio,",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "vedete,",
+     "do you see",
+     "veˈde.te"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "voglio",
+     "want",
+     "ˈvɔʎ.ʎo"
+    ],
+    [
+     "divertirmi?",
+     "to have some fun",
+     "di.verˈtir.mi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "my darling"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e4",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Divertirti? è vero! divertirti!",
+   "translation": "Have some fun? Of course! Have some fun!",
+   "ipa": "di.verˈtir.ti ˈɛ ˈve.ro di.verˈtir.ti",
+   "words": [
+    [
+     "Divertirti?",
+     "have some fun",
+     "di.verˈtir.ti"
+    ],
+    [
+     "è",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "vero!",
+     "true",
+     "ˈve.ro"
+    ],
+    [
+     "divertirti!",
+     "have some fun",
+     "di.verˈtir.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "so it is"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e5",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "io sò, crudele, come tu ti diverti.",
+   "translation": "I know, heartless man, just how you have your fun.",
+   "ipa": "jo ˈsɔ kruˈdɛ.le ˈko.me tu ti diˈvɛr.ti",
+   "words": [
+    [
+     "io",
+     "I",
+     "jo"
+    ],
+    [
+     "sò,",
+     "know",
+     "ˈsɔ"
+    ],
+    [
+     "crudele,",
+     "heartless man",
+     "kruˈdɛ.le"
+    ],
+    [
+     "come",
+     "how",
+     "ˈko.me"
+    ],
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "ti",
+     "yourself",
+     "ti"
+    ],
+    [
+     "diverti.",
+     "amuse",
+     "diˈvɛr.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "you amuse yourself"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z2",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Ma, Signor Cavaliere, è ver quel ch'ella dice?",
+   "translation": "But, sir, is it true, what she's telling me?",
+   "ipa": "ma siɲˈɲor ka.vaˈljɛ.re ˈɛ ˈver kwel ˈkel.la ˈdi.tʃe",
+   "words": [
+    [
+     "Ma,",
+     "but",
+     "ma"
+    ],
+    [
+     "Signor",
+     "sir",
+     "siɲˈɲor"
+    ],
+    [
+     "Cavaliere,",
+     "knight",
+     "ka.vaˈljɛ.re"
+    ],
+    [
+     "è",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "ver",
+     "true",
+     "ˈver"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "ch'ella",
+     "that she",
+     "ˈkel.la"
+    ],
+    [
+     "dice?",
+     "says",
+     "ˈdi.tʃe"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "my lord, good sir"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "La povera infelice è di me innamorata,",
+   "translation": "The poor wretched thing has fallen in love with me,",
+   "ipa": "la ˈpɔ.ve.ra in.feˈli.tʃe ˈɛ di ˈme‿in.na.moˈra.ta",
+   "words": [
+    [
+     "La",
+     "the",
+     "la"
+    ],
+    [
+     "povera",
+     "poor",
+     "ˈpɔ.ve.ra"
+    ],
+    [
+     "infelice",
+     "wretched woman",
+     "in.feˈli.tʃe"
+    ],
+    [
+     "è",
+     "it is",
+     "ˈɛ"
+    ],
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "innamorata,",
+     "in love",
+     "in.na.moˈra.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "is in love with me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "E per pietà deggio fingere amore;",
+   "translation": "and out of pity I have to pretend to love her;",
+   "ipa": "e per pjeˈta ˈdɛd.dʒo ˈfin.dʒe.re‿aˈmo.re",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "per",
+     "out of",
+     "per"
+    ],
+    [
+     "pietà",
+     "pity",
+     "pjeˈta"
+    ],
+    [
+     "deggio",
+     "I must",
+     "ˈdɛd.dʒo"
+    ],
+    [
+     "fingere",
+     "feign",
+     "ˈfin.dʒe.re"
+    ],
+    [
+     "amore;",
+     "love",
+     "aˈmo.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "ch'io son per mia disgrazia uom di buon core.",
+   "translation": "for I am, to my cost, a soft-hearted man.",
+   "ipa": "kjo son per ˈmi.a dizˈgrat.tsja ˈwɔm di ˈbwɔn ˈkɔ.re",
+   "words": [
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "son",
+     "am",
+     "son"
+    ],
+    [
+     "per",
+     "out of",
+     "per"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "disgrazia",
+     "misfortune",
+     "dizˈgrat.tsja"
+    ],
+    [
+     "uom",
+     "man",
+     "ˈwɔm"
+    ],
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "buon",
+     "good",
+     "ˈbwɔn"
+    ],
+    [
+     "core.",
+     "heart",
+     "ˈkɔ.re"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "to my cost"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "kind-hearted"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

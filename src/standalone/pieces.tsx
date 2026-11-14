@@ -3501,6 +3501,532 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-leporello-ove-sei": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "One flat in the first bar, carried over from the Introduction; from bar 2 no key signature, as the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 107, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; under 40 seconds)",
+    },
+    notePlaceholder: "Speak it first: two hushed voices in the dark, then Anna and Ottavio bursting in",
+    about: (
+      <>
+        <p>
+          Act 1, straight after the Commendatore's death. In the dark Don Giovanni calls softly for his servant. Leporello wants to know
+          who is dead, his master or the old man; Giovanni snaps at the stupid question. Leporello congratulates him on a fine night's
+          work, forcing the daughter and killing the father; Giovanni says the old man asked for it, and when Leporello asks what Donna
+          Anna asked for, he tells him to keep quiet and come away, unless he wants something too. The last four bars begin the next scene:
+          Donna Anna returns with Don Ottavio to help her father, and Ottavio swears to shed his blood: where is the villain?
+        </p>
+        <p>
+          Score: the recitative after No. 1 (vocal score pages 19–20, 17 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker (clean). Only
+          the Italian words are kept, with the print's spelling (“quì”, “amazzar”, “scelerato”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ma-qual-mai-soffre": {
+    portrait: "giovanni:anna",
+    opera: "Don Giovanni",
+    kind: "Recitative and duet",
+    facts: {
+      key: "No key signature for the accompanied recitative, which moves through several keys; D minor (one flat) for the duet",
+      time: "4/4, the duet starting with Anna's two-beat upbeat bar",
+      tempo: "The recitative's Allegro assai at ♩ = 118 and its Maestoso and Andante at ♩ = 59 (half the speed, a proportion chosen for this app); the duet's Allegro and Tempo I at ♩ = 168, its Maestoso at ♩ = 84 and Adagio at ♩ = 56; about 6¾ minutes in all, from the median lengths of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan), which time the recitative and the duet separately; the fermatas are held; Mozart gives the words only",
+    },
+    notePlaceholder: "Anna's horror breaks over the orchestra in the recitative; in the duet, push Fuggi, crudele forward and let the oath ring out",
+    about: (
+      <>
+        <p>
+          Act 1, in front of the Commendatore's house. Donna Anna comes back with Don Ottavio and servants with torches and finds her
+          father lying dead in his blood. She cries out over his wounds and his deathly face and faints. Ottavio sends for smelling
+          salts and has the body carried away. When she comes round she pushes him off, taking him for the murderer, and begs to die
+          too; he asks her to look at him, her own love. She asks his pardon, then where her father is; he tells her to put the bitter
+          memory aside: in him she has both husband and father. She makes him swear to avenge her father's blood, and he swears it by
+          her eyes and by their love, while their hearts are tossed between a hundred feelings.
+        </p>
+        <p>
+          Score: No. 2, Recitativo e Duetto (vocal score pages 20–29, 222 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. Don Ottavio's
+          part is written at sounding pitch. Kept as printed: the G sharp in the right hand in bar 74 (probably meant as G natural). Only
+          the Italian words are kept, with the print's spelling (“del color di morte”, “fredde le membra”, “Ora ch'è morte”, “ajuti”,
+          “rimembrenza” the second time).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-orsu-spicciati-presto": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 104, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 1½ minutes)",
+    },
+    notePlaceholder: "Speak it first: Leporello working up his courage, Giovanni brushing him off, then sniffing the air",
+    about: (
+      <>
+        <p>
+          Act 1, a street at dawn. Leporello has something important to say, but first makes his master swear not to get angry, and
+          checks that nobody is listening. Then he tells him plainly that he lives like a scoundrel. Giovanni flares up, oath or no oath,
+          and Leporello backs down at once. Friends again, Giovanni explains why he is here: he has fallen for a lady who is coming to his
+          villa tonight. Suddenly he smells a woman nearby; Leporello marvels at his nose, and the two step aside to watch.
+        </p>
+        <p>
+          Score: the recitative before No. 3 (vocal score pages 30–32, 38 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker. The bass E in
+          bar 35 is kept without the flat it probably needs, as printed. Only the Italian words are kept, with the print's spelling and
+          punctuation (“Siamo soli?”, “Non, ne sò nulla”, “grand' uom”, Leporello's asides in brackets).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-chi-e-la": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 87, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2¾ minutes)",
+    },
+    notePlaceholder: "Speak it first: Elvira's charge sheet in one breath, Giovanni smooth and evasive, Leporello's asides dry",
+    about: (
+      <>
+        <p>
+          Act 1, on a street in Seville. Don Giovanni has stepped forward to console the unknown lady, and she turns: it is Donna
+          Elvira. She calls him a monster, a villain, a nest of lies; Leporello admires her choice of words. Giovanni begs her to
+          calm down and let him speak, but she lists his crimes: he crept into her house, won her with cunning, vows and flattery,
+          called her his wife, and after three days left Burgos and abandoned her. Giovanni says he had his reasons, and Leporello
+          agrees. Telling her to ask his servant, Giovanni slips away while Leporello begins a pompous speech. Elvira finds him gone;
+          Leporello tells her he is not worth a thought, that she is neither the first nor the last, and points to his book, full
+          of the names of his master's conquests in every village and town.
+        </p>
+        <p>
+          Score: the recitative between No. 3 and No. 4 (vocal score pages 38–41, 60 bars), from the G. Schirmer vocal score (New
+          York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the continuo each read by
+          two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by
+          a fresh checker. The continuo is printed on one bass staff and is written here in the piano's left hand. Where the print
+          adds a note for the English words, the Italian rhythm is kept, and in bar 32, where Elvira's bar is printed a sixteenth
+          too long, one eighth is read as a sixteenth. Elvira's first words, “Chi è”, are sung in the last bar of the Trio before,
+          so this piece begins with her “là?”. Only the Italian words are kept, with the print's spelling and punctuation (“sei
+          qui”, “azion si nera”, “fuggi” and “m'inganno” without their accents, and Leporello's “conciossiacosa quando fosse che
+          Il quadro non è tondo”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-in-questa-forma-dunque": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 73, from the median length of five recordings (Giulini, Haitink, Karajan, Nézet-Séguin, Currentzis; about half a minute)",
+    },
+    notePlaceholder: "Speak it first: shock turning to fury, and the last lines already looking ahead to revenge",
+    about: (
+      <>
+        <p>
+          Act 1. Leporello has read Donna Elvira his master's catalogue of conquests and left her alone in the street. She sees
+          now how she has been treated: the man she loved has betrayed her, and this is the reward that brute gives for her love.
+          She wants revenge for her deceived heart. Before he can get away from her she must act and go after him; she feels
+          nothing in her breast but vengeance, rage and spite.
+        </p>
+        <p>
+          Score: the recitative between No. 4 and No. 5 (vocal score page 50, 10 bars), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed page: the sung line and the continuo each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. The
+          continuo is printed on one bass staff and is written here in the piano's left hand. In bar 3 the print gives Elvira one
+          sixteenth too many; the note on “amor” is read as a sixteenth so the bar adds up. Only the Italian words are kept, with
+          the print's spelling and punctuation (“il scellerato”, “all' amor mio!”). Many performances leave this recitative out.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-giovinette-che-fate-allamore": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Duet and chorus",
+    facts: {
+      key: "G major",
+      time: "6/8 (after a one-beat upbeat for the piano)",
+      tempo: "Allegro, played at ♩ = 181 (a dotted quarter ≈ 60), about 1½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the word only",
+    },
+    notePlaceholder: "A country dance: light and bouncy in two, the chorus answering with la la re la la",
+    about: (
+      <>
+        <p>
+          Act 1. In the open country near Don Giovanni's palace, the peasants are celebrating the wedding of Zerlina and Masetto with
+          singing and dancing. Zerlina tells the girls not to let their youth slip by: if your heart is bubbling over, here is the
+          cure. Masetto tells the young men not to go roaming about: a madcap's fun soon ends, but his has hardly started. Each verse
+          ends with the chorus's “Ah, che piacer, che piacer che sarà!” and a refrain of la la re la la, and the two sing the last
+          verse together.
+        </p>
+        <p>
+          Score: No. 5, the Duetto e Coro (vocal score pages 50–54, 87 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker
+          (one piano note corrected). The chorus is printed on two staves and written out as four parts; it is heard with the piano.
+          Only the Italian words are kept, with the print's spelling (Giovinetti leggieri, vieni carino for both singers, e suoniamo,
+          quà).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-manco-male-e-partita": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4 (C)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 94, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2¼ minutes)",
+    },
+    notePlaceholder: "Speak it first: Giovanni all charm, Leporello aside, Zerlina flattered, Masetto stubborn until he sees the sword",
+    about: (
+      <>
+        <p>
+          Act 1. Glad to be rid of Elvira, Don Giovanni comes upon the wedding party and greets the peasants: is this a wedding?
+          Zerlina says she is the bride, Masetto that he is the groom, at the gentleman's service. Giovanni wants them all to be
+          friends and offers them his protection, while Leporello eyes the girls. He orders Leporello to take everyone to his palace,
+          give them chocolate, coffee, wine and ham, show them the garden, and above all keep Masetto happy. Masetto will not leave
+          Zerlina; she tells him to go, she is in a gentleman's hands. When he protests, Giovanni silences him: if he does not go at
+          once, he will be sorry.
+        </p>
+        <p>
+          Score: the recitative between No. 5 and No. 6 (vocal score pages 55–57, 53 bars), from the G. Schirmer vocal score (New
+          York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a
+          fresh checker. Where the print gives a second rhythm for the English words, the Italian rhythm is kept. Only the Italian
+          words are kept, as printed: the asides are in brackets, and the print has C'e without an accent, prescuitti and galeria.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-alfin-siam-liberati": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4 (C)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 69, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2 minutes)",
+    },
+    notePlaceholder: "Speak it first: Giovanni smooth and flattering, Zerlina tempted but wary",
+    about: (
+      <>
+        <p>
+          Act 1. Alone at last with Zerlina, Don Giovanni asks whether he did not get rid of that booby neatly. When she protests that
+          Masetto is her husband, he scoffs: how could a nobleman bear to see such a sweet face ill-used by a country lout? Her
+          promise is worth nothing; her eyes, lips and dainty fingers were made for another life. Zerlina hesitates: she has heard
+          that gentlemen are seldom honest with women. Common people's slander, he says; he will marry her this very moment, in his
+          little house nearby.
+        </p>
+        <p>
+          Score: the recitative between No. 6 and No. 7 (vocal score pages 61–63, 35 bars), from the G. Schirmer vocal score (New
+          York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a
+          fresh checker. Only the Italian words are kept, with the print's spelling (qual for quel, un altra, si belli, giojello).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-fermati-scellerato": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4 (C)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 83, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 45 seconds)",
+    },
+    notePlaceholder: "Speak it first: Elvira bursting in, Giovanni whispering to each woman in turn, Zerlina caught between them",
+    about: (
+      <>
+        <p>
+          Act 1. As Don Giovanni leads Zerlina away, Donna Elvira bars his path: heaven let her overhear his treachery, and she has
+          come in time to save this innocent girl from his clutches. Zerlina is dismayed. Giovanni whispers to Elvira that he is only
+          amusing himself, and Elvira answers aloud that she knows all too well how he amuses himself. When Zerlina asks whether it is
+          true, he tells her softly that the poor woman is in love with him and that, being too kind-hearted, he has to pretend to love
+          her back. The recitative runs straight on into Elvira's aria.
+        </p>
+        <p>
+          Score: the recitative between No. 7 and No. 8 (vocal score pages 68–69, 16 bars), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh
+          checker. Only the Italian words are kept, as printed: Don Giovanni's aside is in brackets, and the print has “queste misera
+          innocente” where the libretto has questa.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-mi-par-choggi-il-demonio": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 83, from the median length of four recordings (Fricsay, Giulini, Böhm, Karajan; just over a minute); the fermata in the last bar is held",
+    },
+    notePlaceholder: "Speak it first: Giovanni's grumbling asides against his smooth offer of help, then Elvira's outburst",
+    about: (
+      <>
+        <p>
+          Act 1. Don Giovanni grumbles that the devil seems to be enjoying himself today, setting himself against all his pleasant
+          plans. Don Ottavio and Donna Anna, in mourning, come in: Ottavio says that tears are no use now and that they must think of
+          vengeance, and Anna asks Giovanni, as a friend with a generous heart, for his help. Giovanni, relieved that they suspect
+          nothing, puts his family, his sword, his possessions and his blood at their service, and asks Anna who has troubled her
+          peace. At that moment Donna Elvira comes back and finds him again.
+        </p>
+        <p>
+          Score: the recitative between No. 8 and No. 9 (vocal score pages 71–73, 24 bars), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Only the
+          Italian words are kept, with the print's spellings (“a' miei”, “perchè”, “fù”, “Donn' Anna”). In bar 19 the print has
+          “servivi”, a misprint for “servirvi”: the word is kept as printed and its pronunciation is given as sung. Don Ottavio's
+          part, printed in the treble clef an octave above his voice, is written at sounding pitch. The last bar, with Elvira's
+          fermata, leads into the quartet “Non ti fidar, o misera”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-non-ti-fidar-o-misera": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Quartet",
+    facts: {
+      key: "B-flat major",
+      time: "4/4",
+      tempo: "Andante, played at ♩ = 85, about 4 minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the word only",
+    },
+    notePlaceholder: "Elvira's line is noble, not hysterical: that is what makes Anna and Ottavio doubt. Keep Giovanni's asides quick and quiet",
+    about: (
+      <>
+        <p>
+          Act 1. Donna Anna and Don Ottavio have just asked Don Giovanni, as a friend, to help them find her father's murderer, when
+          Donna Elvira comes back. She warns Anna not to trust that scoundrel's heart: he has already betrayed her and means to
+          betray Anna too. Anna and Ottavio are struck by her noble bearing and her grief. Giovanni tells them the poor girl is out
+          of her mind and asks to be left alone with her; Elvira begs them not to believe him. Anna and Ottavio feel a strange
+          unease and do not know whom to believe. Ottavio will not leave until he knows the truth; Anna sees no sign of madness in
+          Elvira's manner. Giovanni, afraid that going would make them suspicious, hushes Elvira, since people are gathering, while
+          she declares that she has lost all caution and will tell everyone what he has done. His lowered voice and changing
+          colour begin to decide Anna and Ottavio.
+        </p>
+        <p>
+          Score: No. 9, the Quartet (vocal score pages 73–84, 88 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          Don Ottavio's part, printed in the treble clef, is written at sounding pitch. A few piano slurs that pass from one voice
+          to another cannot be written in this format and are left out. Only the Italian words are kept, with the print's spelling
+          and punctuation (“Il suo dolor”, “Restate, oh Dei”, Elvira's “pavento”, Ottavio's “se non so com' è l'affar”, “il suo
+          tratto”, “scelerato”, and Giovanni's “Zitta, zitta”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-povera-sventurata": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 70, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; under half a minute)",
+    },
+    notePlaceholder: "Speak it first: smooth concern for Elvira, gallant to Anna, then off in a hurry",
+    about: (
+      <>
+        <p>
+          Act 1, after the quartet. Donna Elvira has stormed off, and Don Giovanni makes his excuses: the poor unhappy woman must be
+          followed, so that she does nothing desperate. He begs the lovely Donna Anna's pardon, offers his services and says he will
+          expect her and Ottavio at his house, then bids his friends goodbye and hurries after Elvira.
+        </p>
+        <p>
+          Score: the recitative after No. 9 (vocal score page 85, 7 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed page: the sung line and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker (clean). It
+          runs straight on (“attacca”) into No. 10a. Only the Italian words are kept, with the print's spelling.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-come-mai-creder-deggio": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 73, from the median length of five recordings (Fricsay, Giulini, Haitink, Karajan, Nézet-Séguin; about half a minute)",
+    },
+    notePlaceholder: "Thinking aloud: disbelief first, then the resolve of the last line, which leads into Dalla sua pace",
+    about: (
+      <>
+        <p>
+          Act 1. Donna Anna has told Don Ottavio that Don Giovanni is the man who killed her father, demanded vengeance and left.
+          Alone, Ottavio cannot believe that a nobleman could be capable of so dark a crime. Every means must be tried to bring the
+          truth to light: as her bridegroom and as her friend he feels it is his duty. He will either free her from her mistake
+          or avenge her.
+        </p>
+        <p>
+          Score: the recitative between No. 10a and No. 10b (vocal score page 94, 10 bars), from the G. Schirmer vocal score (New
+          York, 1900; IMSLP #68957), public domain. Written out from the printed page: the sung line and the continuo each read by
+          two independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker.
+          Don Ottavio's part, printed in the treble clef, is written at sounding pitch; the continuo is printed on one bass staff
+          and is written here in the piano's left hand. Only the Italian words are kept, with the print's spelling (“cavaliere”,
+          “discoprire”, “Disingannar la voglio”). Mozart wrote this recitative, with the aria “Dalla sua pace” that follows, for
+          the Vienna performances of 1788.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787; this recitative 1788), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-io-deggio-ad-ogni-patto": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 116, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; about 1½ minutes)",
+    },
+    notePlaceholder: "Tell it as a story: Leporello's report runs on, Giovanni's “Bravo!” lands drier each time",
+    about: (
+      <>
+        <p>
+          Act 1. Leporello has made up his mind to leave his mad master for good, but here he comes, as carefree as ever. Giovanni asks
+          whether all is going well; it is all going wrong, says Leporello, and tells him the story. He took the peasants to the house,
+          kept them busy with chatter, sweet talk and lies, talked Masetto out of his jealousy and got everyone half drunk; then, just
+          when the party was at its height, Zerlina turned up with Donna Elvira, who said every bad thing she could think of about
+          Giovanni. Leporello let her rage, led her gently out of the garden, locked the door and left her in the street. Giovanni
+          cannot praise him enough: Leporello began the job, and he will finish it with the country girls before night falls.
+        </p>
+        <p>
+          Score: the recitative between No. 10b and No. 11 (vocal score pages 97–99, 45 bars), from the G. Schirmer vocal score (New
+          York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Where the
+          print gives a second rhythm for the English words (bar 12), the Italian rhythm is kept. Only the Italian words are kept, with
+          the print's spellings (“quì”, “Giovanino”, “chiacchere”, “ubbriacchi”); where the libretto has “io mi cavai”, the print sets
+          “a chiave a mi sottrai”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-masetto-senti-un-po": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4, with a one-beat last bar that leads straight into “Batti, batti”",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 77, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; about 1¼ minutes)",
+    },
+    notePlaceholder: "Zerlina coaxing, Masetto sulking and then exploding; let her end soft enough to lead into “Batti, batti”",
+    about: (
+      <>
+        <p>
+          Act 1, in a garden. Zerlina tries to make up with Masetto, but he will not let her touch him: how could she, on their wedding
+          day, go off alone with a stranger and put a mark of shame on an honest peasant? If it were not for the scandal, he would… She
+          protests that she was deceived and is not to blame: the gentleman did not so much as touch her fingertips. Let him vent his
+          anger on her, kill her if he likes, do anything he wants with her, so long as afterwards they make peace. Her last words lead
+          straight into her aria “Batti, batti, o bel Masetto”.
+        </p>
+        <p>
+          Score: the recitative between No. 11 and No. 12 (vocal score pages 104–105, 26 bars), from the G. Schirmer vocal score (New
+          York, 1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. The last
+          bar is the printed one-beat bar before the aria. Only the Italian words are kept, with the print's spellings (“perchè”, and
+          “quelche” as one word); in bar 22 the print has “amazzami”, a misprint for “ammazzami”: the word is kept as printed and its
+          pronunciation is given as sung.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-guarda-un-po-come-seppe": {
+    portrait: "giovanni:masetto",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: it moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; under 40 seconds)",
+    },
+    notePlaceholder: "Masetto's mood turns in a moment: rueful at first, then suspicious once he sees Zerlina's fear",
+    about: (
+      <>
+        <p>
+          Act 1. Masetto marvels at how the little witch has talked him round: men really are weak in the head. From inside the house
+          Don Giovanni is heard ordering everything to be got ready for a great feast. Zerlina is frightened at the voice of the
+          gentleman: he will come, and she wishes she could find a hole to hide in. Masetto's suspicion comes back at once: why is she
+          afraid, why has she gone pale? Now he understands: she is afraid he will find out what really went on between them.
+        </p>
+        <p>
+          Score: the recitative between No. 12 and No. 13 (vocal score page 111, 16 bars), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed page: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar by a fresh checker. Don
+          Giovanni sings his line from within the house. Only the Italian words are kept, with the print's spellings (“Monsù”,
+          “perchè”, “com' è”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

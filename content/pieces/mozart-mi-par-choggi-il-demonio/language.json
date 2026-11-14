@@ -1,0 +1,891 @@
+{
+ "editionId": "mozart-mi-par-choggi-il-demonio",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling and punctuation (a' miei, perchè, fù, questo in ver as two words, Donn' Anna on two notes, Oh Don Giovanni! where the libretto has Ah). In bar 19 the print has ser-vi-vi, a misprint for servirvi: the word is kept as printed and its IPA is servirvi as sung. The print gives Bisogno abbiamo della vostra amicizia to Donna Anna. IPA, word meanings and translations were drafted for this app (S17) and the IPA was checked against Castel. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "g1",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Mi par ch'oggi il demonio si diverta",
+   "translation": "I think the devil is out to have his fun with me today",
+   "ipa": "mi ˈpar ˈkɔd.dʒi‿il deˈmɔ.njo si diˈvɛr.ta",
+   "words": [
+    [
+     "Mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "par",
+     "seems",
+     "ˈpar"
+    ],
+    [
+     "ch'oggi",
+     "that … today",
+     "ˈkɔd.dʒi"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "demonio",
+     "devil",
+     "deˈmɔ.njo"
+    ],
+    [
+     "si",
+     "himself",
+     "si"
+    ],
+    [
+     "diverta",
+     "amuses",
+     "diˈvɛr.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "I think"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "d'opporsi a' miei piacevoli progressi;",
+   "translation": "setting himself against my pleasant designs;",
+   "ipa": "dopˈpor.si‿a ˈmjɛi pjaˈtʃe.vo.li proˈgrɛs.si",
+   "words": [
+    [
+     "d'opporsi",
+     "in opposing himself",
+     "dopˈpor.si"
+    ],
+    [
+     "a'",
+     "to",
+     "a"
+    ],
+    [
+     "miei",
+     "my",
+     "ˈmjɛi"
+    ],
+    [
+     "piacevoli",
+     "pleasant",
+     "pjaˈtʃe.vo.li"
+    ],
+    [
+     "progressi;",
+     "advances",
+     "proˈgrɛs.si"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "vanno mal tutti quanti.",
+   "translation": "nothing at all is going right.",
+   "ipa": "ˈvan.no ˈmal ˈtut.ti ˈkwan.ti",
+   "words": [
+    [
+     "vanno",
+     "they go",
+     "ˈvan.no"
+    ],
+    [
+     "mal",
+     "badly",
+     "ˈmal"
+    ],
+    [
+     "tutti",
+     "all",
+     "ˈtut.ti"
+    ],
+    [
+     "quanti.",
+     "of them",
+     "ˈkwan.ti"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "every one of them"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o1",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Ah ch'ora, idolo mio, son vani i pianti,",
+   "translation": "Ah, now, my dearest, tears are of no use;",
+   "ipa": "ˈa ˈko.ra‿ˈi.do.lo ˈmi.o son ˈva.ni‿i ˈpjan.ti",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "ch'ora,",
+     "for now",
+     "ˈko.ra"
+    ],
+    [
+     "idolo",
+     "idol",
+     "ˈi.do.lo"
+    ],
+    [
+     "mio,",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "son",
+     "are",
+     "son"
+    ],
+    [
+     "vani",
+     "vain",
+     "ˈva.ni"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "pianti,",
+     "tears",
+     "ˈpjan.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o2",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "di vendetta si parli! Oh Don Giovanni!",
+   "translation": "it is vengeance we must speak of! Oh, Don Giovanni!",
+   "ipa": "di venˈdet.ta si ˈpar.li ˈɔ don dʒoˈvan.ni",
+   "words": [
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "vendetta",
+     "vengeance",
+     "venˈdet.ta"
+    ],
+    [
+     "si",
+     "one",
+     "si"
+    ],
+    [
+     "parli!",
+     "speak",
+     "ˈpar.li"
+    ],
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "Don",
+     "Don",
+     "don"
+    ],
+    [
+     "Giovanni!",
+     "Giovanni",
+     "dʒoˈvan.ni"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "one should speak"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "(Mancava questo in ver!)",
+   "translation": "(As if I didn't have enough already!)",
+   "ipa": "maŋˈka.va ˈkwe.sto‿in ˈver",
+   "words": [
+    [
+     "(Mancava",
+     "was missing",
+     "maŋˈka.va"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "ver!)",
+     "truth",
+     "ˈver"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "indeed"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a1",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Signore, a tempo vi ritroviam:",
+   "translation": "Sir, how timely to find you here:",
+   "ipa": "siɲˈɲo.re a ˈtɛm.po vi ri.troˈvjam",
+   "words": [
+    [
+     "Signore,",
+     "sir",
+     "siɲˈɲo.re"
+    ],
+    [
+     "a",
+     "in",
+     "a"
+    ],
+    [
+     "tempo",
+     "time",
+     "ˈtɛm.po"
+    ],
+    [
+     "vi",
+     "you",
+     "vi"
+    ],
+    [
+     "ritroviam:",
+     "we find again",
+     "ri.troˈvjam"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "avete core? avete anima generosa?",
+   "translation": "is there a heart in you? a generous spirit?",
+   "ipa": "aˈve.te ˈkɔ.re aˈve.te ˈa.ni.ma dʒe.neˈro.za",
+   "words": [
+    [
+     "avete",
+     "have you",
+     "aˈve.te"
+    ],
+    [
+     "core?",
+     "heart",
+     "ˈkɔ.re"
+    ],
+    [
+     "avete",
+     "have you",
+     "aˈve.te"
+    ],
+    [
+     "anima",
+     "soul",
+     "ˈa.ni.ma"
+    ],
+    [
+     "generosa?",
+     "generous",
+     "dʒe.neˈro.za"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "(Sta a vedere che il diavolo le ha detto qualche cosa.)",
+   "translation": "(Just watch: the devil has whispered something to her.)",
+   "ipa": "ˈsta‿a veˈde.re ke‿il ˈdja.vo.lo le‿ˈa ˈdet.to ˈkwal.ke ˈkɔ.za",
+   "words": [
+    [
+     "(Sta",
+     "stand",
+     "ˈsta"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "vedere",
+     "see",
+     "veˈde.re"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "diavolo",
+     "devil",
+     "ˈdja.vo.lo"
+    ],
+    [
+     "le",
+     "to her",
+     "le"
+    ],
+    [
+     "ha",
+     "has",
+     "ˈa"
+    ],
+    [
+     "detto",
+     "told",
+     "ˈdet.to"
+    ],
+    [
+     "qualche",
+     "some",
+     "ˈkwal.ke"
+    ],
+    [
+     "cosa.)",
+     "thing",
+     "ˈkɔ.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "just watch"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Che domanda! perchè?",
+   "translation": "What a thing to ask! Why so?",
+   "ipa": "ke doˈman.da perˈke",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "domanda!",
+     "question",
+     "doˈman.da"
+    ],
+    [
+     "perchè?",
+     "why",
+     "perˈke"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Bisogno abbiamo della vostra amicizia.",
+   "translation": "It is your friendship that we need.",
+   "ipa": "biˈzoɲ.ɲo‿abˈbja.mo ˈdel.la ˈvɔ.stra‿a.miˈtʃit.tsja",
+   "words": [
+    [
+     "Bisogno",
+     "need",
+     "biˈzoɲ.ɲo"
+    ],
+    [
+     "abbiamo",
+     "we have",
+     "abˈbja.mo"
+    ],
+    [
+     "della",
+     "of the",
+     "ˈdel.la"
+    ],
+    [
+     "vostra",
+     "your",
+     "ˈvɔ.stra"
+    ],
+    [
+     "amicizia.",
+     "friendship",
+     "a.miˈtʃit.tsja"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g7",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "(Mi torna il fiato in corpo.)",
+   "translation": "(Now I can breathe once more.)",
+   "ipa": "mi ˈtor.na‿il ˈfja.to‿in ˈkɔr.po",
+   "words": [
+    [
+     "(Mi",
+     "to me",
+     "mi"
+    ],
+    [
+     "torna",
+     "returns",
+     "ˈtor.na"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "fiato",
+     "breath",
+     "ˈfja.to"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "corpo.)",
+     "body",
+     "ˈkɔr.po"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g8",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Comandate; i congiunti; i parenti,",
+   "translation": "Give your orders; my family, my kindred,",
+   "ipa": "ko.manˈda.te i konˈdʒun.ti i paˈrɛn.ti",
+   "words": [
+    [
+     "Comandate;",
+     "give orders",
+     "ko.manˈda.te"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "congiunti;",
+     "kinsmen",
+     "konˈdʒun.ti"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "parenti,",
+     "relatives",
+     "paˈrɛn.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g9",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "questa man, questo ferro, i beni, il sangue",
+   "translation": "this hand, this sword, my fortune, my blood",
+   "ipa": "ˈkwe.sta ˈman ˈkwe.sto ˈfɛr.ro i ˈbɛ.ni il ˈsaŋ.gwe",
+   "words": [
+    [
+     "questa",
+     "this",
+     "ˈkwe.sta"
+    ],
+    [
+     "man,",
+     "hand",
+     "ˈman"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "ferro,",
+     "sword",
+     "ˈfɛr.ro"
+    ],
+    [
+     "i",
+     "the",
+     "i"
+    ],
+    [
+     "beni,",
+     "possessions",
+     "ˈbɛ.ni"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "sangue",
+     "blood",
+     "ˈsaŋ.gwe"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g10",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "spenderò per servivi:",
+   "translation": "I will spend in your service.",
+   "ipa": "spen.deˈrɔ per serˈvir.vi",
+   "words": [
+    [
+     "spenderò",
+     "I will spend",
+     "spen.deˈrɔ"
+    ],
+    [
+     "per",
+     "to",
+     "per"
+    ],
+    [
+     "servivi:",
+     "serve you",
+     "serˈvir.vi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g11",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "ma voi, bella Donn' Anna,",
+   "translation": "but you, fair Donna Anna,",
+   "ipa": "ma ˈvoi ˈbɛl.la dɔn ˈan.na",
+   "words": [
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "voi,",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "bella",
+     "beautiful",
+     "ˈbɛl.la"
+    ],
+    [
+     "Donn'",
+     "Donna (lady)",
+     "dɔn"
+    ],
+    [
+     "Anna,",
+     "Anna",
+     "ˈan.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g12",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "perchè così piangete?",
+   "translation": "why all these tears?",
+   "ipa": "perˈke koˈzi pjanˈdʒe.te",
+   "words": [
+    [
+     "perchè",
+     "why",
+     "perˈke"
+    ],
+    [
+     "così",
+     "so",
+     "koˈzi"
+    ],
+    [
+     "piangete?",
+     "you weep",
+     "pjanˈdʒe.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g13",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "il crudele chi fù che osò la calma",
+   "translation": "who was the heartless one who made bold",
+   "ipa": "il kruˈdɛ.le ki ˈfu ke‿oˈzɔ la ˈkal.ma",
+   "words": [
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "crudele",
+     "cruel one",
+     "kruˈdɛ.le"
+    ],
+    [
+     "chi",
+     "who",
+     "ki"
+    ],
+    [
+     "fù",
+     "was",
+     "ˈfu"
+    ],
+    [
+     "che",
+     "who",
+     "ke"
+    ],
+    [
+     "osò",
+     "dared",
+     "oˈzɔ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "calma",
+     "calm",
+     "ˈkal.ma"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g14",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "turbar del viver vostro?",
+   "translation": "to trouble the peace of your days?",
+   "ipa": "turˈbar del ˈvi.ver ˈvɔ.stro",
+   "words": [
+    [
+     "turbar",
+     "disturb",
+     "turˈbar"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "viver",
+     "living",
+     "ˈvi.ver"
+    ],
+    [
+     "vostro?",
+     "your",
+     "ˈvɔ.stro"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e1",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "Ah, ti ritrovo ancor, perfido mostro?",
+   "translation": "Ah, so I meet you once more, treacherous monster?",
+   "ipa": "ˈa ti riˈtrɔ.vo‿aŋˈkor ˈpɛr.fi.do ˈmo.stro",
+   "words": [
+    [
+     "Ah,",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "ti",
+     "you",
+     "ti"
+    ],
+    [
+     "ritrovo",
+     "I find again",
+     "riˈtrɔ.vo"
+    ],
+    [
+     "ancor,",
+     "still",
+     "aŋˈkor"
+    ],
+    [
+     "perfido",
+     "faithless",
+     "ˈpɛr.fi.do"
+    ],
+    [
+     "mostro?",
+     "monster",
+     "ˈmo.stro"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

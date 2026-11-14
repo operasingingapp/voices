@@ -1,0 +1,159 @@
+{
+ "editionId": "mozart-ma-qual-mai-soffre",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ma qual mai s'offre, oh Dei",
+ "subtitle": "Donna Anna and Don Ottavio: recitative and duet from Don Giovanni, Act 1 (No. 2)",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ma qual mai s'offre, oh Dei … io manco! io moro!",
+   "start": "1",
+   "end": "43"
+  },
+  {
+   "id": "b",
+   "label": "Ah! soccorrete amici … fa core! (Ottavio)",
+   "start": "44",
+   "end": "62"
+  },
+  {
+   "id": "c",
+   "label": "Allegro: Fuggi, crudele, fuggi! · Senti, cor mio · Tu sei, perdon",
+   "start": "63",
+   "end": "92"
+  },
+  {
+   "id": "d",
+   "label": "Il padre? Lascia, o cara · Ah! vendicar, se il puoi",
+   "start": "93",
+   "end": "127"
+  },
+  {
+   "id": "e",
+   "label": "Lo giuro (Maestoso and Adagio)",
+   "start": "128",
+   "end": "135"
+  },
+  {
+   "id": "f",
+   "label": "Che giuramento, oh Dei! (first time)",
+   "start": "136",
+   "end": "169"
+  },
+  {
+   "id": "g",
+   "label": "Che giuramento, oh Dei! (again, to the end)",
+   "start": "170",
+   "end": "222"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scene 3, No. 2 Recitativo e Duetto",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (Il Padre, del color di morte, fredde le membra, Ora ch'è morte, ajuti, La rimembrenza the second time, and Ottavio's ondeggiando al cor in bar 154)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 20–29, bars 1–222 of No. 2",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. The English singing translation and the stage directions are left out. Don Ottavio's part, printed in the treble clef, is written at sounding pitch (treble clef with the octave below). The accompanied recitative (Allegro assai, Maestoso, Andante from the middle of bar 48) runs to bar 62; the duet (Allegro, then Maestoso, Adagio in tempo and Tempo I) starts with Anna's two-beat upbeat bar 63. Kept as printed: the right hand's G sharp on the fifth eighth of bar 74 (probably meant as G natural). In bar 133 Ottavio's fermata note is printed without a flag and read as an eighth so the bar adds up; the left hand's tremolo half notes in bars 215–216 are written out as repeated eighths. Playback tempo, from the median track lengths of five complete recordings (Fricsay 1958, Giulini 1959, Böhm 1977, Haitink 1984, Karajan 1985), which time the recitative and the duet separately: the recitative (median 2:43; Giulini's and Haitink's tracks also hold \"Ah! del padre in periglio\", whose share was taken off in proportion) with its Allegro assai at ♩ = 118 and its Maestoso and Andante at ♩ = 59; the duet (median 4:02) Allegro and Tempo I at ♩ = 168, Maestoso at ♩ = 84 and Adagio at ♩ = 56. The tracks do not time these sections, so the proportions were chosen for this app (Maestoso and Andante at half the speed, the Adagio at a third); the fermatas are held. Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

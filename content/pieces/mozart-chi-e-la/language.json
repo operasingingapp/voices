@@ -1,0 +1,2198 @@
+{
+ "editionId": "mozart-chi-e-la",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling and punctuation: Elvira's \"Chi è\" is sung in the last bar of the Trio before (Ah! chi mi dice mai) and is not in this score, so her first phrase is \"là?\"; \"sei qui?\", \"azion si nera\", \"calmate questa collera\" (libretto quella), \"del ciel\", \"e lasci in preda\" (libretto e mi lasci), \"per pena\", \"sono\", \"volle\", \"fa presto\", Leporello's \"conciossiacosa quando fosse che Il quadro\" as printed (four words, capital Il), \"fuggi!\" and \"m'inganno,\" without the accents of fuggì and ingannò (IPA as sung: fudˈdʒi, miŋ.ganˈnɔ). The asides keep the print's brackets. IPA, word meanings and translations were drafted for this app (S07) and the IPA was checked against Castel. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "e1",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "là?",
+   "translation": "(Who is) there?",
+   "ipa": "ˈla",
+   "words": [
+    [
+     "là?",
+     "there",
+     "ˈla"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g1",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "Stelle! che vedo!",
+   "translation": "Good heavens! What's this I see!",
+   "ipa": "ˈstel.le ke ˈve.do",
+   "words": [
+    [
+     "Stelle!",
+     "heavens",
+     "ˈstel.le"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "vedo!",
+     "I see",
+     "ˈve.do"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "what do I see"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l1",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "1",
+   "original": "O bella! Donna Elvira!",
+   "translation": "Well, this is nice! Donna Elvira!",
+   "ipa": "ˈɔ ˈbɛl.la ˈdɔn.na‿elˈvi.ra",
+   "words": [
+    [
+     "O",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "bella!",
+     "fine",
+     "ˈbɛl.la"
+    ],
+    [
+     "Donna",
+     "Donna",
+     "ˈdɔn.na"
+    ],
+    [
+     "Elvira!",
+     "Elvira",
+     "elˈvi.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "well, well"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e2",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "2",
+   "original": "Don Giovanni! sei qui? mostro! fellon! nido d'inganni!",
+   "translation": "Don Giovanni! You, here? Monster! Villain! Nest of lies!",
+   "ipa": "don dʒoˈvan.ni ˈsei ˈkwi ˈmo.stro felˈlon ˈni.do diŋˈgan.ni",
+   "words": [
+    [
+     "Don",
+     "Don",
+     "don"
+    ],
+    [
+     "Giovanni!",
+     "Giovanni",
+     "dʒoˈvan.ni"
+    ],
+    [
+     "sei",
+     "you are",
+     "ˈsei"
+    ],
+    [
+     "qui?",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "mostro!",
+     "monster",
+     "ˈmo.stro"
+    ],
+    [
+     "fellon!",
+     "villain",
+     "felˈlon"
+    ],
+    [
+     "nido",
+     "nest",
+     "ˈni.do"
+    ],
+    [
+     "d'inganni!",
+     "of lies",
+     "diŋˈgan.ni"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l2",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Che titoli cruscanti!",
+   "translation": "What highbrow names she calls him!",
+   "ipa": "ke ˈti.to.li krusˈkan.ti",
+   "words": [
+    [
+     "Che",
+     "what",
+     "ke"
+    ],
+    [
+     "titoli",
+     "titles",
+     "ˈti.to.li"
+    ],
+    [
+     "cruscanti!",
+     "highbrow",
+     "krusˈkan.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l3",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "manco male che lo conosce bene.",
+   "translation": "At least she knows him well.",
+   "ipa": "ˈmaŋ.ko ˈma.le ke lo koˈnoʃ.ʃe ˈbɛ.ne",
+   "words": [
+    [
+     "manco",
+     "less",
+     "ˈmaŋ.ko"
+    ],
+    [
+     "male",
+     "bad",
+     "ˈma.le"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "lo",
+     "him",
+     "lo"
+    ],
+    [
+     "conosce",
+     "knows",
+     "koˈnoʃ.ʃe"
+    ],
+    [
+     "bene.",
+     "well",
+     "ˈbɛ.ne"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "just as well"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Via, cara Donna Elvira, calmate questa collera!",
+   "translation": "Come, dear Donna Elvira, calm this anger of yours!",
+   "ipa": "ˈvi.a ˈka.ra ˈdɔn.na‿elˈvi.ra kalˈma.te ˈkwe.sta ˈkɔl.le.ra",
+   "words": [
+    [
+     "Via,",
+     "come",
+     "ˈvi.a"
+    ],
+    [
+     "cara",
+     "dear",
+     "ˈka.ra"
+    ],
+    [
+     "Donna",
+     "Donna",
+     "ˈdɔn.na"
+    ],
+    [
+     "Elvira,",
+     "Elvira",
+     "elˈvi.ra"
+    ],
+    [
+     "calmate",
+     "calm",
+     "kalˈma.te"
+    ],
+    [
+     "questa",
+     "this",
+     "ˈkwe.sta"
+    ],
+    [
+     "collera!",
+     "anger",
+     "ˈkɔl.le.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "sentite, lasciatemi parlar!",
+   "translation": "hear me out, let me have my say!",
+   "ipa": "senˈti.te laʃˈʃa.te.mi parˈlar",
+   "words": [
+    [
+     "sentite,",
+     "listen",
+     "senˈti.te"
+    ],
+    [
+     "lasciatemi",
+     "let me",
+     "laʃˈʃa.te.mi"
+    ],
+    [
+     "parlar!",
+     "speak",
+     "parˈlar"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e3",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Cosa puoi dire, dopo azion si nera?",
+   "translation": "What have you got to say, after so foul a deed?",
+   "ipa": "ˈkɔ.za ˈpwɔi ˈdi.re ˈdo.po‿atˈtsjon ˈsi ˈne.ra",
+   "words": [
+    [
+     "Cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "puoi",
+     "can you",
+     "ˈpwɔi"
+    ],
+    [
+     "dire,",
+     "say",
+     "ˈdi.re"
+    ],
+    [
+     "dopo",
+     "after",
+     "ˈdo.po"
+    ],
+    [
+     "azion",
+     "deed",
+     "atˈtsjon"
+    ],
+    [
+     "si",
+     "so",
+     "ˈsi"
+    ],
+    [
+     "nera?",
+     "black",
+     "ˈne.ra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "so foul a deed"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e4",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "In casa mia entri furtivamente,",
+   "translation": "You creep into my house by stealth,",
+   "ipa": "in ˈka.za ˈmi.a ˈen.tri fur.ti.vaˈmen.te",
+   "words": [
+    [
+     "In",
+     "in",
+     "in"
+    ],
+    [
+     "casa",
+     "house",
+     "ˈka.za"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "entri",
+     "you come in",
+     "ˈen.tri"
+    ],
+    [
+     "furtivamente,",
+     "by stealth",
+     "fur.ti.vaˈmen.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e5",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "a forza d'arte, di giuramenti e di lusinghe arrivi a sedurre il cor mio;",
+   "translation": "with craft, with vows and with flattery you succeed in winning my heart;",
+   "ipa": "a ˈfɔr.tsa ˈdar.te di dʒu.raˈmen.ti‿e di luˈziŋ.ge arˈri.vi a seˈdur.re‿il ˈkɔr ˈmi.o",
+   "words": [
+    [
+     "a",
+     "by",
+     "a"
+    ],
+    [
+     "forza",
+     "force",
+     "ˈfɔr.tsa"
+    ],
+    [
+     "d'arte,",
+     "of craft",
+     "ˈdar.te"
+    ],
+    [
+     "di",
+     "with",
+     "di"
+    ],
+    [
+     "giuramenti",
+     "vows",
+     "dʒu.raˈmen.ti"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "di",
+     "with",
+     "di"
+    ],
+    [
+     "lusinghe",
+     "flattery",
+     "luˈziŋ.ge"
+    ],
+    [
+     "arrivi",
+     "you succeed",
+     "arˈri.vi"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "sedurre",
+     "seducing",
+     "seˈdur.re"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "cor",
+     "heart",
+     "ˈkɔr"
+    ],
+    [
+     "mio;",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "by means of craft"
+    },
+    {
+     "words": [
+      8,
+      9,
+      10
+     ],
+     "gloss": "you succeed in seducing"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e6",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "m'innamori, o crudele!",
+   "translation": "you win my love, you cruel man!",
+   "ipa": "min.naˈmo.ri‿o kruˈdɛ.le",
+   "words": [
+    [
+     "m'innamori,",
+     "you make me love you",
+     "min.naˈmo.ri"
+    ],
+    [
+     "o",
+     "oh",
+     "o"
+    ],
+    [
+     "crudele!",
+     "cruel one",
+     "kruˈdɛ.le"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e7",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "mi dichiari tua sposa, e poi, mancando della terra e del ciel al santo dritto,",
+   "translation": "you call me your wife, and then, breaking the sacred law of earth and heaven,",
+   "ipa": "mi diˈkja.ri ˈtu.a ˈspɔ.za e ˈpɔi maŋˈkan.do ˈdel.la ˈtɛr.ra‿e del ˈtʃɛl al ˈsan.to ˈdrit.to",
+   "words": [
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "dichiari",
+     "you declare",
+     "diˈkja.ri"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "sposa,",
+     "wife",
+     "ˈspɔ.za"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "poi,",
+     "then",
+     "ˈpɔi"
+    ],
+    [
+     "mancando",
+     "failing",
+     "maŋˈkan.do"
+    ],
+    [
+     "della",
+     "of the",
+     "ˈdel.la"
+    ],
+    [
+     "terra",
+     "earth",
+     "ˈtɛr.ra"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "del",
+     "of the",
+     "del"
+    ],
+    [
+     "ciel",
+     "heaven",
+     "ˈtʃɛl"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "santo",
+     "holy",
+     "ˈsan.to"
+    ],
+    [
+     "dritto,",
+     "law",
+     "ˈdrit.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "you declare me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e8",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "con enorme delitto dopo tre dì da Burgos t'allontani,",
+   "translation": "in an outrageous crime you slip away from Burgos three days later,",
+   "ipa": "kon eˈnor.me deˈlit.to ˈdo.po ˈtre ˈdi da ˈbur.gos tal.lonˈta.ni",
+   "words": [
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "enorme",
+     "monstrous",
+     "eˈnor.me"
+    ],
+    [
+     "delitto",
+     "crime",
+     "deˈlit.to"
+    ],
+    [
+     "dopo",
+     "after",
+     "ˈdo.po"
+    ],
+    [
+     "tre",
+     "three",
+     "ˈtre"
+    ],
+    [
+     "dì",
+     "days",
+     "ˈdi"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "Burgos",
+     "Burgos",
+     "ˈbur.gos"
+    ],
+    [
+     "t'allontani,",
+     "you go away",
+     "tal.lonˈta.ni"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e9",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "m'abbandoni, mi fuggi, e lasci in preda al rimorso ed al pianto",
+   "translation": "you desert me, you escape me, and leave me to remorse and tears",
+   "ipa": "mab.banˈdo.ni mi ˈfud.dʒi e ˈlaʃ.ʃi‿in ˈprɛ.da‿al riˈmɔr.so ed al ˈpjan.to",
+   "words": [
+    [
+     "m'abbandoni,",
+     "you desert me",
+     "mab.banˈdo.ni"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "fuggi,",
+     "you run from",
+     "ˈfud.dʒi"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "lasci",
+     "you leave",
+     "ˈlaʃ.ʃi"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "preda",
+     "prey",
+     "ˈprɛ.da"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "rimorso",
+     "remorse",
+     "riˈmɔr.so"
+    ],
+    [
+     "ed",
+     "and",
+     "ed"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "pianto",
+     "tears",
+     "ˈpjan.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "you run from me"
+    },
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "a prey"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e10",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "23",
+   "original": "per pena forse che t'amai cotanto.",
+   "translation": "perhaps as the price of loving you so dearly.",
+   "ipa": "per ˈpe.na ˈfor.se ke taˈmai koˈtan.to",
+   "words": [
+    [
+     "per",
+     "as",
+     "per"
+    ],
+    [
+     "pena",
+     "punishment",
+     "ˈpe.na"
+    ],
+    [
+     "forse",
+     "perhaps",
+     "ˈfor.se"
+    ],
+    [
+     "che",
+     "because",
+     "ke"
+    ],
+    [
+     "t'amai",
+     "I loved you",
+     "taˈmai"
+    ],
+    [
+     "cotanto.",
+     "so dearly",
+     "koˈtan.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "as a punishment"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l4",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "(Pare un libro stampato!)",
+   "translation": "(She talks like a book!)",
+   "ipa": "ˈpa.re‿un ˈli.bro stamˈpa.to",
+   "words": [
+    [
+     "(Pare",
+     "she seems",
+     "ˈpa.re"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "libro",
+     "book",
+     "ˈli.bro"
+    ],
+    [
+     "stampato!)",
+     "printed",
+     "stamˈpa.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Oh in quanto a questo ebbi le mie ragioni!",
+   "translation": "Oh, on that score I had reasons of my own!",
+   "ipa": "ˈɔ‿in ˈkwan.to‿a ˈkwe.sto ˈɛb.bi le ˈmi.e raˈdʒo.ni",
+   "words": [
+    [
+     "Oh",
+     "oh",
+     "ˈɔ"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "quanto",
+     "as much",
+     "ˈkwan.to"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "ebbi",
+     "I had",
+     "ˈɛb.bi"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "mie",
+     "my",
+     "ˈmi.e"
+    ],
+    [
+     "ragioni!",
+     "reasons",
+     "raˈdʒo.ni"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "as for this"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "è vero?",
+   "translation": "Isn't that so?",
+   "ipa": "ˈɛ ˈve.ro",
+   "words": [
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "vero?",
+     "truth",
+     "ˈve.ro"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l5",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "È vero! e che ragioni forti!",
+   "translation": "So it is! And such weighty reasons!",
+   "ipa": "ˈɛ ˈve.ro e ke raˈdʒo.ni ˈfɔr.ti",
+   "words": [
+    [
+     "È",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "vero!",
+     "truth",
+     "ˈve.ro"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "che",
+     "what",
+     "ke"
+    ],
+    [
+     "ragioni",
+     "reasons",
+     "raˈdʒo.ni"
+    ],
+    [
+     "forti!",
+     "strong",
+     "ˈfɔr.ti"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e11",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "E quali sono, se non la tua perfidia, la leggerezza tua?",
+   "translation": "And what might they be, if not your treachery, your fickleness?",
+   "ipa": "e ˈkwa.li ˈso.no se non la ˈtu.a perˈfi.dja la led.dʒeˈret.tsa ˈtu.a",
+   "words": [
+    [
+     "E",
+     "and",
+     "e"
+    ],
+    [
+     "quali",
+     "which",
+     "ˈkwa.li"
+    ],
+    [
+     "sono,",
+     "are",
+     "ˈso.no"
+    ],
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "perfidia,",
+     "treachery",
+     "perˈfi.dja"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "leggerezza",
+     "fickleness",
+     "led.dʒeˈret.tsa"
+    ],
+    [
+     "tua?",
+     "your",
+     "ˈtu.a"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "if not"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e12",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "Ma il giusto cielo volle ch'io ti trovassi, per far le sue, le mie vendette.",
+   "translation": "But a just heaven has let me find you, to wreak its vengeance and mine.",
+   "ipa": "ma‿il ˈdʒu.sto ˈtʃɛ.lo ˈvɔl.le kjo ti troˈvas.si per ˈfar le ˈsu.e le ˈmi.e venˈdet.te",
+   "words": [
+    [
+     "Ma",
+     "but",
+     "ma"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "giusto",
+     "just",
+     "ˈdʒu.sto"
+    ],
+    [
+     "cielo",
+     "heaven",
+     "ˈtʃɛ.lo"
+    ],
+    [
+     "volle",
+     "willed",
+     "ˈvɔl.le"
+    ],
+    [
+     "ch'io",
+     "that I",
+     "kjo"
+    ],
+    [
+     "ti",
+     "you",
+     "ti"
+    ],
+    [
+     "trovassi,",
+     "should find",
+     "troˈvas.si"
+    ],
+    [
+     "per",
+     "to",
+     "per"
+    ],
+    [
+     "far",
+     "to make",
+     "ˈfar"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "sue,",
+     "its",
+     "ˈsu.e"
+    ],
+    [
+     "le",
+     "the",
+     "le"
+    ],
+    [
+     "mie",
+     "my",
+     "ˈmi.e"
+    ],
+    [
+     "vendette.",
+     "revenge",
+     "venˈdet.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      8,
+      9
+     ],
+     "gloss": "to take"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "Eh via, siate più ragionevole:",
+   "translation": "Oh come, be more sensible:",
+   "ipa": "ˈɛ ˈvi.a ˈsja.te ˈpju ra.dʒoˈne.vo.le",
+   "words": [
+    [
+     "Eh",
+     "eh",
+     "ˈɛ"
+    ],
+    [
+     "via,",
+     "come",
+     "ˈvi.a"
+    ],
+    [
+     "siate",
+     "be",
+     "ˈsja.te"
+    ],
+    [
+     "più",
+     "more",
+     "ˈpju"
+    ],
+    [
+     "ragionevole:",
+     "reasonable",
+     "ra.dʒoˈne.vo.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "oh come"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g7",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "34",
+   "original": "(mi pone a cimento costei.)",
+   "translation": "(This woman is trying my patience.)",
+   "ipa": "mi ˈpo.ne‿a tʃiˈmen.to koˈstɛi",
+   "words": [
+    [
+     "(mi",
+     "me",
+     "mi"
+    ],
+    [
+     "pone",
+     "puts",
+     "ˈpo.ne"
+    ],
+    [
+     "a",
+     "to the",
+     "a"
+    ],
+    [
+     "cimento",
+     "test",
+     "tʃiˈmen.to"
+    ],
+    [
+     "costei.)",
+     "this woman",
+     "koˈstɛi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "puts me to the test"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g8",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "se non credete al labbro mio, credete a questo galantuomo.",
+   "translation": "If you won't take my word for it, take this honest fellow's.",
+   "ipa": "se non kreˈde.te‿al ˈlab.bro ˈmi.o kreˈde.te‿a ˈkwe.sto ga.lanˈtwɔ.mo",
+   "words": [
+    [
+     "se",
+     "if",
+     "se"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "credete",
+     "you believe",
+     "kreˈde.te"
+    ],
+    [
+     "al",
+     "to the",
+     "al"
+    ],
+    [
+     "labbro",
+     "lip",
+     "ˈlab.bro"
+    ],
+    [
+     "mio,",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "credete",
+     "you believe",
+     "kreˈde.te"
+    ],
+    [
+     "a",
+     "to",
+     "a"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "galantuomo.",
+     "honest man",
+     "ga.lanˈtwɔ.mo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l6",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "(Salvo il vero.)",
+   "translation": "(Truth excepted.)",
+   "ipa": "ˈsal.vo‿il ˈve.ro",
+   "words": [
+    [
+     "(Salvo",
+     "save",
+     "ˈsal.vo"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "vero.)",
+     "truth",
+     "ˈve.ro"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "all but the truth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g9",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "Via, dille un poco.",
+   "translation": "Go on, tell her a thing or two.",
+   "ipa": "ˈvi.a ˈdil.le‿un ˈpɔ.ko",
+   "words": [
+    [
+     "Via,",
+     "come",
+     "ˈvi.a"
+    ],
+    [
+     "dille",
+     "tell her",
+     "ˈdil.le"
+    ],
+    [
+     "un",
+     "a",
+     "un"
+    ],
+    [
+     "poco.",
+     "little",
+     "ˈpɔ.ko"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "a little"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l7",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "(E cosa devo dirle?)",
+   "translation": "(And what am I supposed to tell her?)",
+   "ipa": "e ˈkɔ.za ˈde.vo ˈdir.le",
+   "words": [
+    [
+     "(E",
+     "and",
+     "e"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "devo",
+     "must I",
+     "ˈde.vo"
+    ],
+    [
+     "dirle?)",
+     "tell her",
+     "ˈdir.le"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g10",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Sì, sì, dille pur tutto.",
+   "translation": "Yes, yes, go ahead, tell her the lot.",
+   "ipa": "ˈsi ˈsi ˈdil.le pur ˈtut.to",
+   "words": [
+    [
+     "Sì,",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "sì,",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "dille",
+     "tell her",
+     "ˈdil.le"
+    ],
+    [
+     "pur",
+     "just",
+     "pur"
+    ],
+    [
+     "tutto.",
+     "all",
+     "ˈtut.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e13",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "Ebben, fa presto!",
+   "translation": "Well, hurry up!",
+   "ipa": "ebˈbɛn ˈfa ˈprɛ.sto",
+   "words": [
+    [
+     "Ebben,",
+     "well then",
+     "ebˈbɛn"
+    ],
+    [
+     "fa",
+     "do",
+     "ˈfa"
+    ],
+    [
+     "presto!",
+     "quickly",
+     "ˈprɛ.sto"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "be quick"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l8",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "40",
+   "original": "Madama, veramente, in questo mondo conciossiacosa quando fosse che Il quadro non è tondo!",
+   "translation": "Madam, to be honest, in this world of ours, forasmuch as it so be that the square is not round!",
+   "ipa": "maˈda.ma ve.raˈmen.te in ˈkwe.sto ˈmon.do kon.tʃos.sjaˈkɔ.za ˈkwan.do ˈfos.se ke il ˈkwa.dro non ˈɛ ˈton.do",
+   "words": [
+    [
+     "Madama,",
+     "madam",
+     "maˈda.ma"
+    ],
+    [
+     "veramente,",
+     "truly",
+     "ve.raˈmen.te"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "mondo",
+     "world",
+     "ˈmon.do"
+    ],
+    [
+     "conciossiacosa",
+     "whereas",
+     "kon.tʃos.sjaˈkɔ.za"
+    ],
+    [
+     "quando",
+     "when",
+     "ˈkwan.do"
+    ],
+    [
+     "fosse",
+     "it were",
+     "ˈfos.se"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "quadro",
+     "square",
+     "ˈkwa.dro"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "tondo!",
+     "round",
+     "ˈton.do"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "whereas it so be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e14",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "Sciagurato! Così del mio dolor gioco ti prendi?",
+   "translation": "Scoundrel! Is this how you make a game of my grief?",
+   "ipa": "ʃa.guˈra.to koˈzi del ˈmi.o doˈlor ˈdʒɔ.ko ti ˈprɛn.di",
+   "words": [
+    [
+     "Sciagurato!",
+     "scoundrel",
+     "ʃa.guˈra.to"
+    ],
+    [
+     "Così",
+     "thus",
+     "koˈzi"
+    ],
+    [
+     "del",
+     "of",
+     "del"
+    ],
+    [
+     "mio",
+     "my",
+     "ˈmi.o"
+    ],
+    [
+     "dolor",
+     "grief",
+     "doˈlor"
+    ],
+    [
+     "gioco",
+     "game",
+     "ˈdʒɔ.ko"
+    ],
+    [
+     "ti",
+     "(yourself)",
+     "ti"
+    ],
+    [
+     "prendi?",
+     "you take",
+     "ˈprɛn.di"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "you make a game"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e15",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "Ah voi! stelle! l'iniquo fuggi!",
+   "translation": "Ah, you…! Heavens! The villain has run off!",
+   "ipa": "ˈa ˈvoi ˈstel.le liˈni.kwo fudˈdʒi",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "voi!",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "stelle!",
+     "heavens",
+     "ˈstel.le"
+    ],
+    [
+     "l'iniquo",
+     "the wicked man",
+     "liˈni.kwo"
+    ],
+    [
+     "fuggi!",
+     "has fled",
+     "fudˈdʒi"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e16",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "misera me! dove? in qual parte?",
+   "translation": "Oh, wretched me! Where? Which way did he go?",
+   "ipa": "ˈmi.ze.ra ˈme ˈdo.ve in kwal ˈpar.te",
+   "words": [
+    [
+     "misera",
+     "wretched",
+     "ˈmi.ze.ra"
+    ],
+    [
+     "me!",
+     "me",
+     "ˈme"
+    ],
+    [
+     "dove?",
+     "where",
+     "ˈdo.ve"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "qual",
+     "which",
+     "kwal"
+    ],
+    [
+     "parte?",
+     "direction",
+     "ˈpar.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "poor me"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "which way"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l9",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "48",
+   "original": "Eh, lasciate che vada; egli non merta che di lui ci pensiate.",
+   "translation": "Oh, let him go; he isn't worth a thought from you.",
+   "ipa": "ˈɛ laʃˈʃa.te ke ˈva.da ˈeʎ.ʎi non ˈmɛr.ta ke di ˈlui tʃi penˈsja.te",
+   "words": [
+    [
+     "Eh,",
+     "eh",
+     "ˈɛ"
+    ],
+    [
+     "lasciate",
+     "let",
+     "laʃˈʃa.te"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "vada;",
+     "he go",
+     "ˈva.da"
+    ],
+    [
+     "egli",
+     "he",
+     "ˈeʎ.ʎi"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "merta",
+     "deserves",
+     "ˈmɛr.ta"
+    ],
+    [
+     "che",
+     "that",
+     "ke"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "lui",
+     "him",
+     "ˈlui"
+    ],
+    [
+     "ci",
+     "about it",
+     "tʃi"
+    ],
+    [
+     "pensiate.",
+     "you think",
+     "penˈsja.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "let him go"
+    },
+    {
+     "words": [
+      5,
+      6
+     ],
+     "gloss": "does not deserve"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e17",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "50",
+   "original": "Il scellerato m'inganno, mi tradì!",
+   "translation": "The villain has tricked me, betrayed me!",
+   "ipa": "il ʃel.leˈra.to miŋ.ganˈnɔ mi traˈdi",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "scellerato",
+     "villain",
+     "ʃel.leˈra.to"
+    ],
+    [
+     "m'inganno,",
+     "deceived me",
+     "miŋ.ganˈnɔ"
+    ],
+    [
+     "mi",
+     "me",
+     "mi"
+    ],
+    [
+     "tradì!",
+     "betrayed",
+     "traˈdi"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "betrayed me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l10",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "Eh, consolatevi! non siete voi, non foste, e non sarete nè la prima, nè l'ultima;",
+   "translation": "Come, take heart! You are not, never were and never will be the first or the last;",
+   "ipa": "ˈɛ kon.soˈla.te.vi non ˈsjɛ.te ˈvoi non ˈfo.ste e non saˈre.te ne la ˈpri.ma ne ˈlul.ti.ma",
+   "words": [
+    [
+     "Eh,",
+     "eh",
+     "ˈɛ"
+    ],
+    [
+     "consolatevi!",
+     "take comfort",
+     "kon.soˈla.te.vi"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "siete",
+     "are",
+     "ˈsjɛ.te"
+    ],
+    [
+     "voi,",
+     "you",
+     "ˈvoi"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "foste,",
+     "were",
+     "ˈfo.ste"
+    ],
+    [
+     "e",
+     "and",
+     "e"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "sarete",
+     "will be",
+     "saˈre.te"
+    ],
+    [
+     "nè",
+     "neither",
+     "ne"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "prima,",
+     "first",
+     "ˈpri.ma"
+    ],
+    [
+     "nè",
+     "neither",
+     "ne"
+    ],
+    [
+     "l'ultima;",
+     "the last",
+     "ˈlul.ti.ma"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l11",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "55",
+   "original": "guardate, questo non picciol libro è tutto pieno dei nomi di sue belle;",
+   "translation": "look: this book, and it's no small one, is filled with the names of his lovers;",
+   "ipa": "gwarˈda.te ˈkwe.sto non ˈpit.tʃol ˈli.bro ˈɛ ˈtut.to ˈpjɛ.no dei ˈno.mi di ˈsu.e ˈbɛl.le",
+   "words": [
+    [
+     "guardate,",
+     "look",
+     "gwarˈda.te"
+    ],
+    [
+     "questo",
+     "this",
+     "ˈkwe.sto"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "picciol",
+     "small",
+     "ˈpit.tʃol"
+    ],
+    [
+     "libro",
+     "book",
+     "ˈli.bro"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "tutto",
+     "all",
+     "ˈtut.to"
+    ],
+    [
+     "pieno",
+     "full",
+     "ˈpjɛ.no"
+    ],
+    [
+     "dei",
+     "of the",
+     "dei"
+    ],
+    [
+     "nomi",
+     "names",
+     "ˈno.mi"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "sue",
+     "its",
+     "ˈsu.e"
+    ],
+    [
+     "belle;",
+     "beauties",
+     "ˈbɛl.le"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "not small"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "is full"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l12",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "57",
+   "original": "Ogni villa, ogni borgo, ogni paese, È testimon di sue donnesche imprese.",
+   "translation": "every village, every hamlet, every country has seen his exploits with the ladies.",
+   "ipa": "ˈoɲ.ɲi ˈvil.la ˈoɲ.ɲi ˈbor.go ˈoɲ.ɲi paˈe.ze ˈɛ te.stiˈmon di ˈsu.e donˈne.ske‿imˈpre.ze",
+   "words": [
+    [
+     "Ogni",
+     "every",
+     "ˈoɲ.ɲi"
+    ],
+    [
+     "villa,",
+     "village",
+     "ˈvil.la"
+    ],
+    [
+     "ogni",
+     "every",
+     "ˈoɲ.ɲi"
+    ],
+    [
+     "borgo,",
+     "small town",
+     "ˈbor.go"
+    ],
+    [
+     "ogni",
+     "every",
+     "ˈoɲ.ɲi"
+    ],
+    [
+     "paese,",
+     "country",
+     "paˈe.ze"
+    ],
+    [
+     "È",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "testimon",
+     "witness",
+     "te.stiˈmon"
+    ],
+    [
+     "di",
+     "of",
+     "di"
+    ],
+    [
+     "sue",
+     "its",
+     "ˈsu.e"
+    ],
+    [
+     "donnesche",
+     "amorous",
+     "donˈne.ske"
+    ],
+    [
+     "imprese.",
+     "exploits",
+     "imˈpre.ze"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "is witness"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}
