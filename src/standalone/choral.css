@@ -362,3 +362,13 @@
   .ob-sing .ob-begin.cp-btn { position: sticky; bottom: max(16px, env(safe-area-inset-bottom, 0px)); box-shadow: 0 6px 20px rgba(40, 30, 60, 0.12); }
 }
 .sg-practise.cp-btn { min-height: 46px; padding: 0 24px; align-self: flex-start; }
+/* a song's page: when, the words, the music as three short blocks; then its cycle */
+.sg-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.sg-facts h3 { margin: 0 0 6px; font: 600 12.5px/1.3 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.sg-facts p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink); }
+.sg-cycle-text { margin: 0; max-width: 760px; font-size: 16.5px; line-height: 1.65; color: var(--ink); }
+.sg-cycle .cx-label { margin-top: 20px; }
+.sg-cycle .sg-list { max-width: 760px; }
+@media (max-width: 860px) {
+  .sg-facts { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}

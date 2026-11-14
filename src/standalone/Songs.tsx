@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { composerNamed } from "./composers";
 import { SongList } from "./songParts";
 import { SONGS, SONG_LANGUAGES, SONG_LEVELS, songLanguage, type Song, type SongLevel } from "./songs";
+import { SONG_CONTEXT, SONG_CYCLES, rangeText } from "./songContext";
+import { SONG_META } from "./songInfo";
 import { CloseIcon, Crumbs, SearchIcon, type Ctx } from "./flow";
 
 /**
@@ -109,9 +111,20 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
   );
 }
 
-/** A song: its composer's portrait, what it is, then where its practice will be. */
+/**
+ * A song: its composer's portrait, what it is about and when it was written, the way into its practice, then where
+ * its words come from, what to listen for, and the cycle it belongs to with its other songs in the app.
+ */
 export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
   const c = composerNamed(s.composer);
+  const x = SONG_CONTEXT[s.id];
+  const poet = SONG_META[s.id]?.poet;
+  const cycle = x?.cycle ? SONG_CYCLES[x.cycle] : undefined;
+  const siblings = x?.cycle
+    ? SONGS.filter((o) => o.id !== s.id && SONG_CONTEXT[o.id]?.cycle === x.cycle).sort(
+        (a, b) => (SONG_CONTEXT[a.id].no ?? 0) - (SONG_CONTEXT[b.id].no ?? 0),
+      )
+    : [];
   const sungIn = s.lang === "zxx" ? "No words: sung on a vowel" : songLanguage(s.lang);
   return (
     <main className="screen-body gutter page op-page ch-page sg-page">
@@ -134,39 +147,83 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
               {s.title}
             </h1>
             <p className="oh-meta">
-              {s.group} · {s.level}
+              {[s.group, x?.year, s.level].filter(Boolean).join(" · ")}
             </p>
           </div>
-          {s.note && <p className="oh-story">{s.note}.</p>}
+          {x ? <p className="oh-story">{x.story}</p> : s.note && <p className="oh-story">{s.note}.</p>}
           <div className="oh-credits" aria-label="About this song">
             <p>
               <i>Music by</i> {s.composerFull}
             </p>
+            {poet && (
+              <p>
+                <i>Words by</i> {poet}
+              </p>
+            )}
+            {cycle && (
+              <p>
+                <i>From</i> {cycle.title}, No. {x!.no} of {cycle.count}
+              </p>
+            )}
             <p>
               <i>Sung in</i> {sungIn}
             </p>
-            <p>
-              <i>For</i> one voice and piano
-            </p>
+            {x && (
+              <p>
+                <i>Range</i> {rangeText(x.range)}
+              </p>
+            )}
           </div>
+          {s.editionId ? (
+            <button type="button" className="cp-btn cp-btn--ink sg-practise" onClick={() => ctx.go({ screen: "sing", song: s.id })}>
+              Practise this song
+            </button>
+          ) : (
+            <p className="part-note" role="status">
+              The music for this song is being prepared.
+            </p>
+          )}
         </div>
       </section>
-      <section className="oh-cast" aria-labelledby="sg-practice-h">
-        <div className="pv-sec-head">
-          <h2 className="pv-h2" id="sg-practice-h">
-            Practise
-          </h2>
-        </div>
-        {s.editionId ? (
-          <button type="button" className="cp-btn cp-btn--ink sg-practise" onClick={() => ctx.go({ screen: "sing", song: s.id })}>
-            Practise this song
-          </button>
-        ) : (
-          <p className="part-note" role="status">
-            The music for this song is being prepared.
-          </p>
-        )}
-      </section>
+      {x && (
+        <section className="oh-cast sg-about" aria-labelledby="sg-about-h">
+          <div className="pv-sec-head">
+            <h2 className="pv-h2" id="sg-about-h">
+              About the song
+            </h2>
+          </div>
+          <div className="sg-facts">
+            <div>
+              <h3>Written</h3>
+              <p>{x.written}.</p>
+            </div>
+            <div>
+              <h3>The words</h3>
+              <p>{x.poem}</p>
+            </div>
+            <div>
+              <h3>The music</h3>
+              <p>{x.music}</p>
+            </div>
+          </div>
+        </section>
+      )}
+      {cycle && (
+        <section className="oh-cast sg-cycle" aria-labelledby="sg-cycle-h">
+          <div className="pv-sec-head">
+            <h2 className="pv-h2" id="sg-cycle-h">
+              {cycle.title}
+            </h2>
+          </div>
+          <p className="sg-cycle-text">{cycle.overview}</p>
+          {siblings.length > 0 && (
+            <>
+              <p className="cx-label">Also from {cycle.title} in the app</p>
+              <SongList songs={siblings} grouped={false} onPick={(id) => ctx.go({ screen: "song", song: id })} />
+            </>
+          )}
+        </section>
+      )}
     </main>
   );
 }

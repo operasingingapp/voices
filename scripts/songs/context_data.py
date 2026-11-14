@@ -1,0 +1,720 @@
+# -*- coding: utf-8 -*-
+"""
+The context of each song in the app, written for Sottovoce (facts checked against IMSLP's work pages, the composers'
+catalogues and the poems' first publications; the prose is our own, nothing copied from programme notes, booklets or
+published translations). build_context.py adds each song's vocal range from its score and writes
+src/standalone/songContext.json.
+
+Per song: year (when it was written, as shown in lists), written (composition and publication, one line),
+cycle (key into CYCLES) and no, story (what the song is about), poem (the words' origin), music (what to listen for).
+"""
+
+CYCLES = {
+    "winterreise": {
+        "title": "Winterreise",
+        "composer": "Schubert",
+        "count": 24,
+        "overview": "Twenty-four songs to poems by Wilhelm Müller, written in 1827, the year before Schubert died. A young man "
+        "leaves the town where the girl he loved has chosen someone richer, and walks out into the winter. There is no plot "
+        "beyond that walk: frozen rivers, a weather vane, a lime tree, crows, a signpost, a graveyard that will not take "
+        "him in. Each song is a station of the journey and of his mind, and the cycle ends, without consolation, with an "
+        "old organ-grinder in the snow.",
+    },
+    "muellerin": {
+        "title": "Die schöne Müllerin",
+        "composer": "Schubert",
+        "count": 20,
+        "overview": "Twenty songs to poems by Wilhelm Müller, written in 1823. A young miller sets out on his travels, follows "
+        "a brook to a mill and falls in love with the miller's daughter. For a while she seems to return his love; then a "
+        "huntsman in green arrives and she turns to him. The brook is his companion from the first song to the last, "
+        "when he lies down in it and the brook sings him to sleep.",
+    },
+    "schwanengesang": {
+        "title": "Schwanengesang",
+        "composer": "Schubert",
+        "count": 14,
+        "overview": "Not a cycle Schubert planned but the songs of his last months, 1828, gathered after his death by his "
+        "publisher Tobias Haslinger and given the title 'Swan Song'. Seven are to poems by Ludwig Rellstab, six to Heinrich "
+        "Heine, and the last, Die Taubenpost, to Johann Gabriel Seidl.",
+    },
+    "dichterliebe": {
+        "title": "Dichterliebe",
+        "composer": "Schumann",
+        "count": 16,
+        "overview": "Sixteen songs to poems from Heinrich Heine's Lyrisches Intermezzo, written in a few days in late May 1840, "
+        "Schumann's 'year of song', the year he was finally allowed to marry Clara Wieck. A poet falls in love in May, is "
+        "rejected, and goes through bitterness, irony, dreams and tears, until he buries his love and his songs in a "
+        "giant coffin and sinks it in the sea. The piano often has the last and most tender word.",
+    },
+    "liederkreis39": {
+        "title": "Liederkreis, Op. 39",
+        "composer": "Schumann",
+        "count": 12,
+        "overview": "Twelve songs to poems by Joseph von Eichendorff, written in May 1840. There is no story, but one world: "
+        "forests at night, distant castles, homesickness, moonlight, strange voices and sudden joy. Schumann called it his "
+        "most romantic music. It moves from loneliness in a foreign land to the rushing happiness of the last song, "
+        "Frühlingsnacht.",
+    },
+    "myrthen": {
+        "title": "Myrthen",
+        "composer": "Schumann",
+        "count": 26,
+        "overview": "Twenty-six songs to poems by Goethe, Rückert, Heine, Byron, Burns, Mosen and others, which Schumann had "
+        "bound as a wedding present for Clara in September 1840. Myrtle was the flower of a German bride's wreath. The "
+        "book opens with Widmung (Dedication) and ends with a second Rückert song, as a frame of love around the whole.",
+    },
+    "frauenliebe": {
+        "title": "Frauenliebe und -leben",
+        "composer": "Schumann",
+        "count": 8,
+        "overview": "Eight songs to poems by Adelbert von Chamisso, written in July 1840. A woman tells her life in love: she "
+        "first sees him, admires him from afar, is chosen, receives his ring, marries, tells him she is expecting a "
+        "child, holds the child, and loses her husband. The piano's long postlude brings back the music of the first "
+        "song, as a memory.",
+    },
+    "gesellen": {
+        "title": "Lieder eines fahrenden Gesellen",
+        "composer": "Mahler",
+        "count": 4,
+        "overview": "Songs of a Wayfarer: four songs to Mahler's own words, written in 1884-85 after an unhappy love, and "
+        "published in 1897. A young journeyman whose sweetheart has married another man walks out into the world: the "
+        "wedding day, a bright morning in the fields, a knife in his heart, and at last rest under a lime tree. Mahler used "
+        "music from the second and fourth songs in his First Symphony.",
+    },
+    "wesendonck": {
+        "title": "Wesendonck-Lieder",
+        "composer": "Wagner",
+        "count": 5,
+        "overview": "Five songs to poems by Mathilde Wesendonck, written in 1857-58 while Wagner, living as a guest of her "
+        "husband in Zurich, was composing Tristan und Isolde and in love with her. Two of them, Im Treibhaus and Träume, "
+        "are marked 'study for Tristan und Isolde', and their music passed into the opera.",
+    },
+    "ariettes": {
+        "title": "Ariettes oubliées",
+        "composer": "Debussy",
+        "count": 6,
+        "overview": "'Forgotten little airs': six songs to poems from Paul Verlaine's Romances sans paroles (1874), written "
+        "by the young Debussy in 1885-87 and published in 1888; he revised them in 1903 and dedicated the new edition to "
+        "Mary Garden, his first Mélisande. Rain, wooden horses at a fair, a landscape in Belgium, a gift of fruit and "
+        "flowers: moods rather than a story.",
+    },
+    "nuitsdete": {
+        "title": "Les nuits d'été",
+        "composer": "Berlioz",
+        "count": 6,
+        "overview": "Summer Nights: six songs to poems by Théophile Gautier, from his collection La comédie de la mort (1838). "
+        "Berlioz wrote them for voice and piano in 1840-41 and later scored them for orchestra. From the spring walk of "
+        "Villanelle through death, absence and a churchyard to the sailor's question in L'île inconnue: 'Where would you "
+        "like to go, my pretty one?'",
+    },
+    "shropshire": {
+        "title": "Six Songs from A Shropshire Lad",
+        "composer": "Butterworth",
+        "count": 6,
+        "overview": "Six poems from A. E. Housman's A Shropshire Lad (1896), set by George Butterworth and published in 1911. "
+        "Housman's country lads fall in love, play football and go to war, and many die young. Butterworth himself was "
+        "killed on the Somme in August 1916, at 31, which gives the songs a weight he could not have intended.",
+    },
+}
+
+SONGS = {
+    "tosti-ideale": dict(
+        year="1882",
+        written="Written and published in 1882 (Ricordi, Milan), dedicated to Jules Devaux",
+        story="A man speaks to a woman who is both real and dreamed. He followed her like a rainbow of peace, heard her voice "
+        "and felt her near, and now, with her gone, begs her to come back to him: with her the bright day would return.",
+        poem="Words by Carmelo Errico (1848-1892), a Neapolitan poet and novelist, in Italian.",
+        music="One of Tosti's best-loved salon romanze. The melody rises in long, singing arcs over a gentle accompaniment, "
+        "and the final plea, 'Torna, caro ideal', is the climax: give it the broadest line, not the loudest sound.",
+    ),
+    "schubert-an-die-musik": dict(
+        year="1817",
+        written="Composed in March 1817 (D 547); published in 1827 as Op. 88 No. 4",
+        story="A hymn of thanks to music itself. In grey hours, when life's wild round has caught you, music has lifted the "
+        "heart into a better world; a sigh from the harp, a sweet chord, has opened heaven. The singer simply says: "
+        "thank you.",
+        poem="Words by Franz von Schober (1796-1882), Schubert's close friend, poet and fellow member of the 'Schubertiade' "
+        "evenings.",
+        music="Two verses to the same music. Listen to the piano's bass line: it moves under the voice like a second "
+        "melody, almost a duet. The quiet, warm repetition of 'ich danke dir dafür' is the heart of the song.",
+    ),
+    "schubert-standchen": dict(
+        year="1828",
+        written="Composed in August 1828 (D 957 No. 4); published in 1829 in Schwanengesang",
+        cycle="schwanengesang",
+        no=4,
+        story="A serenade sung at night under a window. The lover begs the girl to come down to the quiet grove; the "
+        "nightingales are pleading for him, the treetops rustle, nobody will betray them. His longing grows until the "
+        "last 'Komm, beglücke mich!': come, make me happy.",
+        poem="Words by Ludwig Rellstab (1799-1860), a Berlin poet and music critic, who had first offered his poems to "
+        "Beethoven.",
+        music="The piano is a guitar or lute plucked under the window, and it answers each of the voice's phrases like an "
+        "echo. The song is in minor but keeps turning towards major as hope rises.",
+    ),
+    "schubert-heidenroslein": dict(
+        year="1815",
+        written="Composed on 19 August 1815 (D 257); published in 1821 as Op. 3 No. 3",
+        story="A boy sees a little rose on the heath and says he will pick it. The rose answers that she will prick him so "
+        "he never forgets her. He picks it anyway; she pricks him, but it does no good: she has to suffer it. A folk song "
+        "on the surface, with a darker story underneath.",
+        poem="Words by Johann Wolfgang von Goethe, written in 1771 in the style of a folk song and published in 1789.",
+        music="Three short verses to the same tune, as simple as a folk song. Schubert wrote it at 18, on a day he wrote "
+        "several songs. Keep it light; the story is told by the words, not by drama in the voice.",
+    ),
+    "schubert-die-forelle": dict(
+        year="1817",
+        written="Composed in 1817 (D 550), revised several times until 1821; first published in 1820",
+        story="On a clear brook the singer watches a lively trout darting about. A fisherman stands on the bank; as long as "
+        "the water is clear, the trout is safe. But he grows impatient, stirs up the water, and catches it. The singer "
+        "watches the betrayed fish with anger.",
+        poem="Words by Christian Friedrich Daniel Schubart (1739-1791). His poem has a fourth verse, a moral warning "
+        "young women against seducers, which Schubert left out.",
+        music="The piano's rippling figure is the bright water and the darting fish. The first two verses share the same "
+        "music; in the third the music clouds over with the water, then clears again. Schubert later used the melody for "
+        "the variations of his 'Trout' Quintet (1819).",
+    ),
+    "schubert-du-bist-die-ruh": dict(
+        year="1823",
+        written="Composed in 1823 (D 776); published in 1826 as Op. 59 No. 3",
+        story="The beloved is peace and longing itself. The singer offers his heart and eyes to her as a dwelling: come in, "
+        "close the doors behind you, drive out every other pain. The tent of his eyes is lit by her light alone.",
+        poem="Words by Friedrich Rückert (1788-1866), from his collection Östliche Rosen (Eastern Roses, 1822), in the "
+        "style of Persian poetry.",
+        music="One of the hardest simple songs: slow, quiet and long-breathed. The phrases rise step by step to the "
+        "climax at 'Dies Augenzelt', which Schubert writes twice. It needs breath control and a steady soft tone more "
+        "than power.",
+    ),
+    "schubert-ave-maria": dict(
+        year="1825",
+        written="Composed in 1825 (D 839); published in 1826 as Op. 52 No. 6",
+        story="Ellen Douglas, hiding in a mountain cave with her exiled father, prays at evening to the Virgin Mary: hear a "
+        "maiden's prayer, guard us through the night though we are outcasts. It is a prayer for protection, not a church "
+        "piece: Schubert set it as a song, 'Ellen's third song'.",
+        poem="From Sir Walter Scott's narrative poem The Lady of the Lake (1810), in Adam Storck's German translation, "
+        "which is what Schubert set. The Latin 'Ave Maria' words often sung today were fitted to his melody later.",
+        music="The piano's arpeggios are a harp: in Scott's poem the old minstrel Allan-bane accompanies Ellen. Three "
+        "verses to the same music; keep the long line floating over the harp.",
+    ),
+    "schubert-gretchen-am-spinnrade": dict(
+        year="1814",
+        written="Composed on 19 October 1814 (D 118), when Schubert was 17; published in 1821 as Op. 2",
+        story="Gretchen sits alone at her spinning wheel. Since she met Faust her peace is gone and her heart is heavy. She "
+        "pictures him, his walk, his smile, his eyes, his words, and his kiss, and her longing grows until she wishes she "
+        "could hold him and die of his kisses.",
+        poem="From Goethe's Faust, Part One (1808), the scene 'Gretchen's room'. Schubert repeats her first lines as a "
+        "refrain, and adds them once more at the end.",
+        music="The piano is the spinning wheel: the right hand turns, the left hand works the treadle. When she remembers "
+        "his kiss, the wheel stops; then it starts again, haltingly. The song builds in waves, and each return of 'Meine "
+        "Ruh ist hin' is a little more desperate.",
+    ),
+    "schubert-der-lindenbaum": dict(
+        year="1827",
+        written="Composed in February 1827 (D 911 No. 5); published in 1828 in Winterreise",
+        cycle="winterreise",
+        no=5,
+        story="At the town gate stands a lime tree where the wanderer once dreamed sweet dreams and carved words of love. "
+        "Tonight he passes it in the dark and its branches seem to call him to rest there. A cold wind blows his hat off; "
+        "he does not turn back. Now, far away, he still hears the rustling: you would find peace here.",
+        poem="Words by Wilhelm Müller (1794-1827), from his Winterreise poems (1823-24).",
+        music="The piano's murmuring triplets are the rustling leaves. The memory of the tree is in major and sounds like a "
+        "folk song; the cold present is in minor, with the wind in the piano. Many people know it as a folk song without "
+        "knowing it is Schubert's.",
+    ),
+    "schubert-erlkonig": dict(
+        year="1815",
+        written="Composed in 1815 (D 328), at 18; published in 1821 as Op. 1",
+        story="A father rides through the night and wind with his sick son in his arms. The boy sees the Erlking, king of "
+        "the elves, who lures him with games, flowers and his daughters; the father sees only mist, willows and dead "
+        "leaves. The Erlking takes the boy by force. The father reaches home; in his arms the child is dead.",
+        poem="A ballad by Goethe, written in 1782 for his play Die Fischerin.",
+        music="One singer plays four characters: the narrator, the calm father (low), the frightened son (higher, his cry "
+        "rising each time) and the Erlking (sweet and seductive). The piano's hammering triplets are the galloping horse; "
+        "they stop for the last line, spoken almost bare: 'war tot'. The right hand's octaves are notoriously tiring for "
+        "the pianist.",
+    ),
+    "schumann-widmung": dict(
+        year="1840",
+        written="Composed in 1840 (Op. 25 No. 1); published in 1840 as the first song of Myrthen",
+        cycle="myrthen",
+        no=1,
+        story="A declaration of love that cannot find enough names for the beloved: my soul, my heart, my joy, my pain, my "
+        "world, my grave. In the middle it grows calm: you are rest and peace, heaven given to me; your love lifts me "
+        "above myself.",
+        poem="Words by Friedrich Rückert, from his Liebesfrühling (Love's Spring, 1821-1823).",
+        music="Schumann's dedication of the whole book to Clara. The outer parts surge; the middle moves to a distant key "
+        "and quiet, steady chords for 'Du bist die Ruh'. In the last bars the piano quotes the melody of Schubert's Ave "
+        "Maria.",
+    ),
+    "schumann-im-wunderschonen-monat-mai": dict(
+        year="1840",
+        written="Composed in May 1840 (Op. 48 No. 1); published in 1844",
+        cycle="dichterliebe",
+        no=1,
+        story="In the beautiful month of May, when the buds burst, love opened in his heart; when the birds were singing, "
+        "he told her his longing. Two short verses, and nothing is said of her answer.",
+        poem="Words by Heinrich Heine, from the Lyrisches Intermezzo in his Buch der Lieder (1827).",
+        music="The piano begins as if in the middle of a thought and ends on an unresolved chord, as if asking a question. "
+        "The song never settles in its key, like the poet's hope. Sing it simply, without heaviness: it is only the "
+        "beginning.",
+    ),
+    "schumann-ich-grolle-nicht": dict(
+        year="1840",
+        written="Composed in May 1840 (Op. 48 No. 7); published in 1844",
+        cycle="dichterliebe",
+        no=7,
+        story="'I bear no grudge, even if my heart breaks.' The poet tells his lost love he does not blame her, then says "
+        "what he saw in a dream: the night in her heart, the snake gnawing at it, how wretched she is. The forgiveness is "
+        "bitter and not quite true.",
+        poem="Words by Heinrich Heine, from the Lyrisches Intermezzo.",
+        music="Steady, throbbing chords in the piano from the first bar to the last, like a heartbeat that will not calm "
+        "down. The voice climbs to its climax at the second 'ich grolle nicht'; Schumann prints an optional higher note "
+        "there for singers who have it.",
+    ),
+    "schumann-mondnacht": dict(
+        year="1840",
+        written="Composed in May 1840 (Op. 39 No. 5); published in 1842",
+        cycle="liederkreis39",
+        no=5,
+        story="A moonlit night so still it seems the sky has quietly kissed the earth. A breeze moves over the fields, the "
+        "woods rustle softly, the night is full of stars. And the soul spreads its wings and flies over the silent land, as "
+        "if flying home.",
+        poem="Words by Joseph von Eichendorff, published in 1837.",
+        music="The piano's soft, high repeated notes are the shimmer of moonlight. The voice sings almost the same phrase "
+        "again and again, as if holding its breath; only in the last verse, when the soul spreads its wings, does the "
+        "melody open out.",
+    ),
+    "brahms-wiegenlied": dict(
+        year="1868",
+        written="Composed in 1868 (Op. 49 No. 4) for the birth of Bertha Faber's second son; published by Simrock in 1868",
+        story="Good evening, good night: a mother sings her child to sleep under a cover of roses and carnations. In the "
+        "second verse angels watch over him and show him the Christmas tree in his dreams.",
+        poem="The first verse is from the folk-poem collection Des Knaben Wunderhorn. Brahms added the second verse later, "
+        "adapted from an 1849 poem by Georg Scherer.",
+        music="Brahms wrote it for Bertha Faber, a singer he had known in Hamburg. The piano's gently offbeat accompaniment "
+        "rocks the cradle and hides an Austrian song she used to sing to him. Keep it simple and warm.",
+    ),
+    "brahms-von-ewiger-liebe": dict(
+        year="1864",
+        written="Composed in 1864 (Op. 43 No. 1); published in 1868",
+        story="At dusk a young man walks his girl home through the dark fields. He says: if you suffer shame because of me, "
+        "let our love end as quickly as it began. She answers: our love will not end. Iron and steel can be reforged, "
+        "but our love must last for ever.",
+        poem="Brahms believed the poem was a Wendish (Sorbian) folk text translated by Josef Wenzig; it is in fact by "
+        "August Heinrich Hoffmann von Fallersleben.",
+        music="A small drama in three parts: a dark, restless opening for the evening walk, the boy's anxious words, and the "
+        "girl's answer in major and in a new, broader metre that grows to a great climax on 'unsere Liebe muss ewig "
+        "bestehn'.",
+    ),
+    "brahms-die-mainacht": dict(
+        year="1866",
+        written="Composed in 1866 (Op. 43 No. 2); published in 1868",
+        story="On a May night, under a silver moon, the lonely singer wanders through the bushes. A pair of doves coo to "
+        "each other; he turns away and looks for darker shade. When will the smiling face that shines like dawn into his "
+        "soul appear to him? A lonely tear runs down his cheek.",
+        poem="Words by Ludwig Hölty (1748-1776), written in 1774. Brahms set three of the poem's four verses.",
+        music="Long, slow phrases that need great breath. The middle verse is more agitated and moves to a distant key; "
+        "the first melody returns for the lonely tear, and the climax, 'die einsame Träne', is the song's peak.",
+    ),
+    "strauss-morgen": dict(
+        year="1894",
+        written="Composed in May 1894 (Op. 27 No. 4); published in 1894 as a wedding present to Pauline de Ahna",
+        story="Tomorrow the sun will shine again, and on the path we take it will unite us, the happy ones. We will go down "
+        "to the wide shore, look silently into each other's eyes, and the silence of happiness will sink over us.",
+        poem="Words by John Henry Mackay (1864-1933), a Scottish-born German poet.",
+        music="The piano plays the whole melody first; the voice enters as if joining a thought already begun, and then "
+        "speaks almost in recitative above it. The last words fall to silence. In Strauss's orchestral version the piano's "
+        "melody is a solo violin.",
+    ),
+    "faure-apres-un-reve": dict(
+        year="c. 1877",
+        written="Composed in the 1870s (Op. 7 No. 1); published in 1878",
+        story="In a dream the singer saw the beloved: they fled together towards the light, heaven opened its clouds for "
+        "them. Then the waking: the dream is gone. He begs the night to come back, with its illusions, and give him back "
+        "the dream.",
+        poem="Words by Romain Bussine (1830-1899), a singing teacher at the Paris Conservatoire, freely adapted from an "
+        "anonymous Italian poem.",
+        music="Steady repeated chords in the piano under a long, floating melody that seems to have no place to breathe. "
+        "The climax comes at the cry 'Reviens, reviens', and then the line sinks back into the night.",
+    ),
+    "faure-lydia": dict(
+        year="1870",
+        written="Composed in 1870 (Op. 4 No. 2); published in 1871",
+        story="The singer praises Lydia's beauty: her rosy cheeks, her white neck, her hair, the morning light of her "
+        "youth. Forget the dead, he says, let us love; and he ends by giving her his soul in a kiss.",
+        poem="Words by Charles Leconte de Lisle (1818-1894), the leading poet of the Parnassians, who wrote in the manner "
+        "of classical Greek and Latin verse.",
+        music="The melody uses a raised fourth note of the scale, the old Lydian mode, a pun on Lydia's name, which gives "
+        "it its pure, antique colour. Sing it with an even, unforced line.",
+    ),
+    "debussy-mandoline": dict(
+        year="1882",
+        written="Composed on 15 November 1882; published in 1890, dedicated to Madame Vasnier",
+        story="The singers of serenades and their lovely listeners exchange idle words under the singing branches: Tircis "
+        "and Aminte, Clitandre and Damis. Their silk jackets and long trains, their elegance and their blue shadows whirl "
+        "in the moonlight to the chatter of a mandolin.",
+        poem="Words by Paul Verlaine, from Fêtes galantes (1869), poems inspired by Watteau's paintings of courtly picnics "
+        "and masked lovers.",
+        music="The piano strums like a mandolin with open fifths. Debussy wrote it at 20 for Marie Vasnier, a singer with a "
+        "light high soprano. The 'la, la, la' at the end is a little vocalise: keep it light and playful.",
+    ),
+    "hahn-a-chloris": dict(
+        year="1916",
+        written="Published in 1916 (Heugel, Paris)",
+        story="A lover tells Chloris that if it is true she loves him, he will never envy even a king's fortune. His "
+        "happiness is so complete that death could not frighten him: it would only make him lose a little.",
+        poem="Words by Théophile de Viau (1590-1626), a poet of the early seventeenth century.",
+        music="Hahn writes in the style of a Baroque air: a slow, walking bass line and a calm, ornamented melody above it, "
+        "a deliberate homage to Bach. Sing it with a pure, even tone and no romantic swelling.",
+    ),
+    "hahn-l-heure-exquise": dict(
+        year="1890",
+        written="Composed between 1887 and 1890 as No. 5 of Chansons grises; published in 1891 (Heugel)",
+        story="The white moon shines in the woods, and from every branch comes a voice under the leaves: O beloved. The "
+        "pond reflects the silhouette of the willow where the wind is weeping. A vast tenderness seems to come down from "
+        "the sky. It is the exquisite hour.",
+        poem="Words by Paul Verlaine, the poem 'La lune blanche' from La bonne chanson (1870).",
+        music="Hahn wrote it as a teenager. The piano's quiet, rippling figures are the moonlit water. Each verse ends with "
+        "a hushed refrain; the last, 'C'est l'heure exquise', must be the softest of all.",
+    ),
+    "gounod-serenade": dict(
+        year="1857",
+        written="Composed in 1855-57; published in 1857",
+        story="A serenade: when you sing, cradled in my arms at evening, do you hear my heart answering? When you laugh, when "
+        "you sleep, may your dream of me be sweet. A lover's gentle wish over his beloved.",
+        poem="Words by Victor Hugo, a serenade from his play Marie Tudor (1833).",
+        music="A lilting, swaying song in the style of a barcarolle, with a light, flowing accompaniment. Gounod's melody "
+        "made it one of the most popular French songs of the century, arranged for every instrument.",
+    ),
+    "massenet-elegie": dict(
+        year="c. 1872",
+        written="Arranged as a song around 1872; published in 1875 in Massenet's 20 Mélodies",
+        story="A lament for the past: sweet spring of other days, green seasons, you have gone for ever. The sky looks "
+        "dark, the birds no longer sing, the heart is weeping. Without the beloved there is no happy season left.",
+        poem="Words by Louis Gallet (1835-1898), a librettist who wrote many of the period's opera texts.",
+        music="Massenet's melody began as a piano piece, Mélodie Op. 10 No. 5, and also became the 'Invocation' in his "
+        "music for Leconte de Lisle's play Les Érinnyes (1873). As a song it was often sung with a cello obbligato. "
+        "Keep the line legato and the sorrow restrained.",
+    ),
+    "butterworth-loveliest-of-trees": dict(
+        year="1911",
+        written="Published in 1911 as No. 2 of Six Songs from A Shropshire Lad",
+        cycle="shropshire",
+        no=2,
+        story="At Eastertide the cherry tree is hung with white blossom along the woodland ride. The young man counts: he "
+        "is twenty, and of his seventy years twenty will not come again. Fifty springs are little room to look at things "
+        "in bloom, so he will go out to see the cherry hung with snow.",
+        poem="Words by A. E. Housman (1859-1936), poem II of A Shropshire Lad (1896).",
+        music="A plain, folk-like melody over quietly moving harmonies; Butterworth collected English folk songs. Butterworth "
+        "was killed in 1916, at 31; it is hard now to hear the counting of springs without thinking of it.",
+    ),
+    "obradors-del-cabello-mas-sutil": dict(
+        year="1921",
+        written="Published in 1921 in Canciones clásicas españolas, Vol. 1 (Unión Musical Española, Madrid)",
+        story="A lover's song: from the finest hair of your braid I would make a little chain to keep you by my side. I "
+        "would like to be the water jug in your house, to kiss your mouth when you go to drink.",
+        poem="A traditional Spanish popular verse; Obradors called the song one of two 'cantares populares'.",
+        music="A slow, intimate melody over a rocking accompaniment. Obradors arranged old and popular Spanish songs in a "
+        "refined style; this one needs long, warm phrases and a very quiet ending.",
+    ),
+    "schubert-gute-nacht": dict(
+        year="1827",
+        written="Composed in February 1827 (D 911 No. 1); published in 1828 in Winterreise",
+        cycle="winterreise",
+        no=1,
+        story="A stranger he came and a stranger he leaves. In May the girl spoke of love, her mother even of marriage; now "
+        "the world is gloomy and the road is covered in snow. He sets off at night, writes 'good night' on her gate as he "
+        "passes, so she will see he thought of her.",
+        poem="Words by Wilhelm Müller, the opening poem of Winterreise.",
+        music="The piano's steady eighth notes are his walking steps, and they never stop. Four verses: the last turns to "
+        "major as he tiptoes past her door, 'I will not disturb your dreams', then back to minor.",
+    ),
+    "schubert-der-leiermann": dict(
+        year="1827",
+        written="Composed in autumn 1827 (D 911 No. 24); published in 1828 in Winterreise",
+        cycle="winterreise",
+        no=24,
+        story="Beyond the village stands an old organ-grinder, turning his hurdy-gurdy with frozen fingers. Barefoot on "
+        "the ice, his little plate stays empty; nobody listens, dogs growl at him; he lets it all go on. The wanderer "
+        "asks him: strange old man, shall I go with you? Will you play my songs on your hurdy-gurdy?",
+        poem="Words by Wilhelm Müller, the last poem of Winterreise.",
+        music="The piano's open fifths in the bass are the drone of the hurdy-gurdy, and a little circling tune repeats in "
+        "the right hand. The voice is bare and almost still. The cycle ends with a question that is never answered.",
+    ),
+    "schubert-das-wandern": dict(
+        year="1823",
+        written="Composed in 1823 (D 795 No. 1); published in 1824 in Die schöne Müllerin",
+        cycle="muellerin",
+        no=1,
+        story="Wandering is the miller's joy. He learned it from the water that never rests, from the mill wheels, from the "
+        "millstones that dance around. O wandering, his delight! Master and mistress, let me go my way in peace.",
+        poem="Words by Wilhelm Müller, the opening poem of Die schöne Müllerin (1820).",
+        music="Five verses to the same cheerful tune. The piano's running sixteenth notes are the water and the turning "
+        "wheel. Sing it fresh and rhythmic, like a young man setting out.",
+    ),
+    "schubert-wohin": dict(
+        year="1823",
+        written="Composed in 1823 (D 795 No. 2); published in 1824 in Die schöne Müllerin",
+        cycle="muellerin",
+        no=2,
+        story="The young miller hears a brook rushing from its spring and follows it down the valley, not knowing why. Is "
+        "this my path? Is it the nymphs singing beneath the water? Let it sing, and follow: there are mill wheels turning "
+        "in every clear brook.",
+        poem="Words by Wilhelm Müller, from Die schöne Müllerin.",
+        music="The piano ripples from the first bar to the last: this is the brook that will be the miller's companion "
+        "through the whole cycle. The voice floats lightly on top, curious and eager.",
+    ),
+    "schubert-auf-dem-wasser-zu-singen": dict(
+        year="1823",
+        written="Composed in 1823 (D 774); published in 1827 as Op. 72",
+        story="In the glow of evening a boat glides over the shimmering waves like a swan. Joy shimmers on the water and in "
+        "the soul; the red evening light falls on the trees. Time flies away on dewy wings, as it did yesterday and will "
+        "tomorrow, until I too vanish on its wings.",
+        poem="Words by Friedrich Leopold zu Stolberg-Stolberg (1750-1819), written in 1782.",
+        music="The piano's falling sixteenth-note figures are the sparkling light on the waves. Each verse begins in minor "
+        "and turns to major, as the light changes. The vocal line is fast and needs very easy breath and clear words.",
+    ),
+    "schubert-der-musensohn": dict(
+        year="1822",
+        written="Composed in December 1822 (D 764); published in 1828 as Op. 92 No. 1",
+        story="The son of the Muses roams through field and forest, piping his little song; everything moves to his "
+        "beat. In winter he sings of blossom; young people dance to his tune. But when will he rest in the arms of the one "
+        "he loves?",
+        poem="Words by Johann Wolfgang von Goethe, written in 1799.",
+        music="A dancing 6/8 that never stops. The middle verses shift to a brighter key and back. The song needs energy, "
+        "lightness and very clear German at speed.",
+    ),
+    "schumann-der-nussbaum": dict(
+        year="1840",
+        written="Composed in 1840 (Op. 25 No. 3); published in 1840 in Myrthen",
+        cycle="myrthen",
+        no=3,
+        story="A walnut tree in front of the house spreads its leafy branches. Its blossoms whisper to each other of a "
+        "girl who dreams day and night of a bridegroom she does not yet know. She listens, smiles, and falls asleep into "
+        "dreams.",
+        poem="Words by Julius Mosen (1803-1867), a Saxon poet.",
+        music="The piano's rippling figure is the rustling of the leaves, and the voice and piano pass the melody between "
+        "them as if whispering. The ending, as she drifts into sleep, should be the quietest moment.",
+    ),
+    "schumann-die-lotosblume": dict(
+        year="1840",
+        written="Composed in 1840 (Op. 25 No. 7); published in 1840 in Myrthen",
+        cycle="myrthen",
+        no=7,
+        story="The lotus flower is afraid of the sun's light and waits with bowed head for the night. The moon is her "
+        "lover; he wakes her with his light, and she opens her face to him. She blooms, glows and trembles with love and "
+        "love's pain.",
+        poem="Words by Heinrich Heine, from Buch der Lieder (1827).",
+        music="Slow repeated chords in the piano, calm and dense. The song rises gradually to the climax, 'vor Liebe und "
+        "Liebesweh', and sinks back.",
+    ),
+    "schumann-fruhlingsnacht": dict(
+        year="1840",
+        written="Composed in May 1840 (Op. 39 No. 12); published in 1842",
+        cycle="liederkreis39",
+        no=12,
+        story="Over the garden, through the air, migrating birds pass overhead: spring is coming. Everything begins to "
+        "bloom. The singer wants to laugh and to weep; it cannot be true. The moon and stars say it, and the nightingales "
+        "sing it: she is yours!",
+        poem="Words by Joseph von Eichendorff.",
+        music="The last song of the Liederkreis: the piano's rushing triplet chords never stop, like a heart racing with "
+        "joy. Breath must be planned carefully, as the voice also hardly pauses.",
+    ),
+    "schumann-waldesgesprach": dict(
+        year="1840",
+        written="Composed in May 1840 (Op. 39 No. 3); published in 1842",
+        cycle="liederkreis39",
+        no=3,
+        story="A conversation in the forest. A rider meets a beautiful woman riding alone at night and offers to take her "
+        "home. She warns him: men are deceivers, flee. Then he recognises her: she is the Loreley, the witch of the "
+        "Rhine. She tells him he will never leave the forest again.",
+        poem="Words by Joseph von Eichendorff, from his novel Ahnung und Gegenwart (1815).",
+        music="The piano's horn calls belong to the rider, a hunting world. The Loreley's answer moves into a different "
+        "key and a softer colour. The singer plays both: a confident man and a woman who is more than she seems.",
+    ),
+    "schumann-im-rhein-im-heiligen-strome": dict(
+        year="1840",
+        written="Composed in May 1840 (Op. 48 No. 6); published in 1844",
+        cycle="dichterliebe",
+        no=6,
+        story="In the holy river Rhine is reflected the great cathedral of Cologne. In it hangs a painting of the Virgin on "
+        "golden leather, and her eyes, lips and cheeks are exactly like those of the poet's beloved.",
+        poem="Words by Heinrich Heine, from the Lyrisches Intermezzo.",
+        music="The piano's heavy dotted rhythms and old-fashioned counterpoint evoke the stone of the cathedral and old "
+        "church music. The long postlude says what the poet does not: the solemnity is also a little ironic.",
+    ),
+    "schumann-seit-ich-ihn-gesehen": dict(
+        year="1840",
+        written="Composed in July 1840 (Op. 42 No. 1); published in 1843",
+        cycle="frauenliebe",
+        no=1,
+        story="Since she first saw him, she thinks she is blind: wherever she looks, she sees only him. His image floats "
+        "before her as in a waking dream. She no longer wants to play with her sisters; she would rather weep quietly in "
+        "her room.",
+        poem="Words by Adelbert von Chamisso (1781-1838), from Frauen-Liebe und Leben (1830).",
+        music="Slow, hushed chords like a dream. The voice moves calmly within a small range. This music returns at the "
+        "very end of the cycle, in the piano's postlude, as a memory.",
+    ),
+    "schumann-du-ring-an-meinem-finger": dict(
+        year="1840",
+        written="Composed in July 1840 (Op. 42 No. 4); published in 1843",
+        cycle="frauenliebe",
+        no=4,
+        story="She speaks to the golden ring on her finger and presses it devoutly to her lips. She had dreamed the "
+        "peaceful dream of childhood and was lost; the ring has taught her life's true worth. She will serve him and live "
+        "for him alone.",
+        poem="Words by Adelbert von Chamisso.",
+        music="A warm, tender song in which the opening melody returns between the verses like a refrain, as she keeps "
+        "coming back to the ring. Keep the line steady and intimate.",
+    ),
+    "wolf-verborgenheit": dict(
+        year="1888",
+        written="Composed in 1888 (Mörike-Lieder No. 12); published in 1889",
+        story="'Leave me, world, leave me be!' The singer does not want to be tempted by gifts of love; let this heart have "
+        "its own joy and its own pain. He does not know why he weeps; through the tears he sees the light of the sun. "
+        "Joy flashes through the heaviness in his breast.",
+        poem="Words by Eduard Mörike (1804-1875), written in 1832.",
+        music="The quiet plea of the outer verses frames a middle section where the music swells with unexplained joy and "
+        "pain to a powerful climax. One of Wolf's most often sung songs.",
+    ),
+    "wolf-verschwiegene-liebe": dict(
+        year="1888",
+        written="Composed in 1888 (Eichendorff-Lieder No. 3); published in 1889",
+        story="Over the treetops and the corn, his thoughts fly out into the night: who could guess them? Thoughts are "
+        "free. If only she could guess who is thinking of her, while the forests rustle; nobody but the night knows it. "
+        "Secret love.",
+        poem="Words by Joseph von Eichendorff.",
+        music="A gently flowing 12/8, quiet throughout, with the harmony changing key often, like thoughts drifting. Wolf "
+        "marks it softly; the whole song is a whisper.",
+    ),
+    "strauss-cacilie": dict(
+        year="1894",
+        written="Composed on 9 September 1894 (Op. 27 No. 2), the day before Strauss's wedding to Pauline de Ahna",
+        story="'If you knew what it is to dream of burning kisses, of wandering and resting with the beloved... if you knew, "
+        "you would come to me.' Each verse ends with the same urgent wish: if you knew, you would live with me.",
+        poem="Words by Heinrich Hart (1855-1906), a Berlin critic and poet.",
+        music="Ecstatic and fast, with surging arpeggios in the piano. It needs full voice and great stamina; the climax "
+        "on the last 'du lebtest mit mir!' is one of the high points of Strauss's songs.",
+    ),
+    "mahler-ging-heut-morgen-ubers-feld": dict(
+        year="1885",
+        written="Composed in 1884-85 (Lieder eines fahrenden Gesellen No. 2); published in 1897",
+        cycle="gesellen",
+        no=2,
+        story="He walked across the field this morning: dew on the grass, a finch calling 'Good morning, isn't the world "
+        "beautiful?', bluebells ringing, the sun making everything sparkle. Will my happiness begin now too? No, no: what "
+        "I mean, it can never bloom for me.",
+        poem="Words by Gustav Mahler, written after an unhappy love affair in Kassel.",
+        music="A bright, walking melody, the one Mahler used to begin the first movement of his First Symphony. Each "
+        "verse grows more radiant, until the last lines, where the happiness drains away and the song ends quietly.",
+    ),
+    "wagner-traume": dict(
+        year="1857",
+        written="Composed in December 1857 (Wesendonck-Lieder No. 5); published in 1862",
+        cycle="wesendonck",
+        no=5,
+        story="What wonderful dreams hold my mind: dreams that grow, bloom and fade each day, and leave a scent in the "
+        "heart, then sink into the grave.",
+        poem="Words by Mathilde Wesendonck (1828-1902).",
+        music="Marked 'study for Tristan und Isolde': its harmonies and its melody return in the love duet of Act 2. "
+        "Wagner arranged it for violin and small orchestra and had it played under Mathilde's window for her birthday.",
+    ),
+    "clara-schumann-liebst-du-um-schonheit": dict(
+        year="1841",
+        written="Composed in 1841; published in 1841 as Op. 12 No. 2, in a joint set with Robert Schumann's Op. 37",
+        story="If you love for beauty, do not love me: love the sun with its golden hair. If you love for youth, love the "
+        "spring; for treasure, love the mermaid with her pearls. If you love for love, then love me: I will love you "
+        "always.",
+        poem="Words by Friedrich Rückert, from Liebesfrühling. Clara and Robert published their settings of Rückert poems "
+        "together, a year after their marriage.",
+        music="A light, graceful song with a warm turn at the last verse. Gustav Mahler set the same poem in 1902.",
+    ),
+    "faure-les-roses-d-ispahan": dict(
+        year="1884",
+        written="Composed in 1884 (Op. 39 No. 4); published in 1884",
+        story="The roses of Ispahan in their mossy sheath, the jasmine of Mosul, the orange blossom: none is as sweet as "
+        "the breath of young Leïlah. But her heart has turned away; let the light, the songs and the roses return with "
+        "her love.",
+        poem="Words by Charles Leconte de Lisle, in his exotic, oriental manner (published in 1884).",
+        music="A flowing, perfumed accompaniment and a melody that moves in long, supple phrases. The harmony shifts in "
+        "subtle ways that make the scent and the sadness hard to separate.",
+    ),
+    "faure-mandoline": dict(
+        year="1891",
+        written="Composed in 1891 in Venice (Op. 58 No. 1, Cinq mélodies 'de Venise'); published in 1891",
+        story="The same Verlaine poem Debussy set: serenaders and their ladies exchange idle words under the branches, in "
+        "silk and lace, whirling in the moonlight to the chatter of a mandolin.",
+        poem="Words by Paul Verlaine, from Fêtes galantes (1869).",
+        music="Fauré wrote the set while staying in Venice. The piano's crisp chords are the mandolin; the voice is elegant "
+        "and detached. Compare it with Debussy's setting of the same poem.",
+    ),
+    "debussy-c-est-l-extase-langoureuse": dict(
+        year="1887",
+        written="Composed in 1885-87 (Ariettes oubliées No. 1); published in 1888, revised in 1903",
+        cycle="ariettes",
+        no=1,
+        story="It is languorous ecstasy, amorous tiredness, the shiver of the woods in the wind, the chorus of small "
+        "voices in the grey branches. This plaintive soul, mine and yours, breathes out its humble song in the warm "
+        "evening.",
+        poem="Words by Paul Verlaine, from Romances sans paroles (1874).",
+        music="Shimmering, sensual harmonies in the piano and a voice that murmurs more than sings. Debussy uses colour "
+        "and stillness rather than a clear tune.",
+    ),
+    "debussy-il-pleure-dans-mon-c-ur": dict(
+        year="1887",
+        written="Composed in 1885-87 (Ariettes oubliées No. 2); published in 1888, revised in 1903",
+        cycle="ariettes",
+        no=2,
+        story="It weeps in my heart as it rains on the town. What is this languor that pierces my heart? There is no reason "
+        "for this grief: neither love nor hate, and that is the worst pain of all, not to know why.",
+        poem="Words by Paul Verlaine, from Romances sans paroles (1874), with an epigraph from Rimbaud: 'It is raining "
+        "softly on the town.'",
+        music="The piano's constant, falling figures are the rain. In the middle, without a key signature, the music "
+        "becomes almost bare as the singer searches for a reason.",
+    ),
+    "debussy-green": dict(
+        year="1887",
+        written="Composed in 1885-87 (Ariettes oubliées No. 5); published in 1888, revised in 1903",
+        cycle="ariettes",
+        no=5,
+        story="Here are fruits, flowers, leaves and branches, and here is my heart, which beats only for you. He arrives "
+        "covered with dew from the morning, and asks to rest at her feet and sleep a little while she rests.",
+        poem="Words by Paul Verlaine, from the 'Aquarelles' (Watercolours) of Romances sans paroles (1874). The English "
+        "title is Verlaine's.",
+        music="Breathless and eager: the piano's rushing figures and the voice's quick phrases show the lover arriving out "
+        "of breath. The end slows to rest.",
+    ),
+    "berlioz-villanelle": dict(
+        year="1841",
+        written="Composed in 1840-41 (Les nuits d'été No. 1); published in 1841, later orchestrated",
+        cycle="nuitsdete",
+        no=1,
+        story="When the new season comes and the cold has gone, the lovers will go to the woods together to pick lilies of "
+        "the valley and wild strawberries. They will listen to the blackbirds, talk of love, and come home with baskets "
+        "full of strawberries.",
+        poem="Words by Théophile Gautier (1811-1872), from La comédie de la mort (1838).",
+        music="Three verses to light, staccato chords that skip like footsteps through the woods. Each verse varies the "
+        "accompaniment a little. Keep it bright, playful and young.",
+    ),
+    "berlioz-absence": dict(
+        year="1841",
+        written="Composed in 1840-41 (Les nuits d'été No. 4); published in 1841, orchestrated in 1843",
+        cycle="nuitsdete",
+        no=4,
+        story="'Come back, my beloved!' Like a flower far from the sun, the flower of his life is closed far from her. "
+        "Between them so much distance, so many fields, towns and villages. The refrain returns each time with more "
+        "longing.",
+        poem="Words by Théophile Gautier, from La comédie de la mort (1838).",
+        music="The refrain 'Reviens, reviens' is slow, high and held, and it needs great control of soft singing. Berlioz "
+        "orchestrated this song first, for a singer to perform in concert.",
+    ),
+    "chausson-le-colibri": dict(
+        year="1882",
+        written="Composed in 1879-82 (Op. 2 No. 7); published in 1882 (Hamelle)",
+        story="The green hummingbird, king of the hills, flies to a rose and drinks from it so much love that it dies, not "
+        "knowing whether it could drink it all up. So on the lips of the beloved, the singer would like to die of the "
+        "first kiss.",
+        poem="Words by Charles Leconte de Lisle.",
+        music="Written in 5/4, an unusual metre that gives the song its floating, uneven rhythm, like the darting bird. "
+        "The melody is long-breathed and the harmonies rich; the ending dies away.",
+    ),
+}

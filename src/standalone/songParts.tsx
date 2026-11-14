@@ -1,9 +1,11 @@
 import { composerNamed } from "./composers";
+import { SONG_CONTEXT } from "./songContext";
 import { SONG_GROUPS, songLanguage, type Song } from "./songs";
 
 /**
  * The songs as a list, grouped as a singer thinks of them (arie antiche, Lieder, mélodies…): the composer's face (his
- * initial where there is no portrait), the title in its own language, then who wrote it, its language and its level.
+ * initial where there is no portrait), the title in its own language, then who wrote it, when (where known), its
+ * language and its level.
  */
 export function SongList({
   songs,
@@ -38,7 +40,7 @@ export function SongList({
                     <span className="sg-text">
                       <b lang={s.lang === "zxx" ? undefined : s.lang}>{s.title}</b>
                       <span>
-                        {s.composer} · {songLanguage(s.lang)} · {s.level}
+                        {[s.composer, SONG_CONTEXT[s.id]?.year, songLanguage(s.lang), s.level].filter(Boolean).join(" · ")}
                       </span>
                     </span>
                     {s.editionId ? <span className="sg-ready">Ready to sing</span> : null}
