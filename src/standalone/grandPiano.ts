@@ -19,10 +19,10 @@ export const GRAND_BASE = "https://pub-d8d81ace089e4d0f9b94db0d9c548850.r2.dev/p
 const FILES = list as Record<string, { file: string; gainDb: number; lines?: Record<string, string | { file: string; gainDb: number }> }>;
 
 /** the recorded grand under the sung lines, at its own level (the lines sit below it: GRAND_LINE_DB) */
-export const GRAND_GAIN_DB = 0;
+export const GRAND_GAIN_DB = 2;
 /** a singer's line played on the grand, under the accompaniment: normalised to the same level as the whole piece, a single
  * line on its own sounds far louder than it should against the accompaniment, so it sits this far below */
-export const GRAND_LINE_DB = -7;
+export const GRAND_LINE_DB = -14;
 
 export const grandPianoUrl = (editionId: string): string | undefined => (FILES[editionId] ? GRAND_BASE + FILES[editionId].file : undefined);
 /** the recording's level against the app's piano (dB) */
