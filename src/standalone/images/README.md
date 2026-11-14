@@ -1,6 +1,3 @@
-> **2026-11-14:** the character portraits and faces were taken out of the app and kept in `art-archive/characters/`
-> (see its README to bring them back). The opera covers and the composers stay here.
-
 # Illustrations
 
 Every picture is optimised before it goes in here. Never add an original export.

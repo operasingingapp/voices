@@ -649,3 +649,16 @@
 }
 @media (prefers-reduced-motion: reduce) { .rp-row.open .rp-play, .numbers .num.open .num-go.cp-btn { animation: none; } }
 .numbers .num.ready, .numbers .num.linked { cursor: pointer; }
+
+/* ---- Phone: the staff names stay small so they never reach the clef; the drag grips go (reorder from Arrange) ---- */
+@media (max-width: 640px) {
+  .page-label .page-grip { display: none; }
+  .score-overlay > .page-label { left: 2px; height: 22px; }
+  .page-label .page-name, .page-label:not(:has(.page-grip)) .page-name { max-width: 34px; padding: 0 6px; font-size: 12px; }
+  .lane-label.lane-label--side { left: 2px; padding: 0 5px; }
+  .lane-label.lane-label--side svg { display: none; }
+  .lane-label.lane-label--side.has-abbr { padding: 0 5px; }
+  .lane-abbr { font-size: 12px; }
+  /* the piece's name under the header's buttons: room to breathe */
+  .practice > .p-head .p-title { margin-top: 12px; }
+}
