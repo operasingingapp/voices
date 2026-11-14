@@ -2,7 +2,6 @@ import { useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { PlaybackEngine, type SynthPort } from "./engine";
 import type { Performance } from "../../shared/timeline";
 import type { PlaybackPart } from "../../shared/types";
-import type { ChunkedSpec } from "./chunkedAudio";
 
 /** What the practice screens need from a sound source, beyond the engine's SynthPort. */
 export interface AudioPort extends SynthPort {
@@ -13,7 +12,7 @@ export interface AudioPort extends SynthPort {
   /** play a channel on another instrument (when the sound source has others); resolves once it is ready */
   setInstrument?(channel: number, id: string, range?: [number, number]): Promise<void>;
   /** recordings of a channel's line (one per tempo rendered), sung when its instrument is "singer"; resolves once it can play */
-  setRecording?(channel: number, recs: { tempo: number; url: string; chunks?: ChunkedSpec; map: { perf: number[]; audio: number[]; ends?: number[] }; gainDb?: number; exact?: boolean }[] | null): Promise<void>;
+  setRecording?(channel: number, recs: { tempo: number; url: string; map: { perf: number[]; audio: number[]; ends?: number[] }; gainDb?: number; exact?: boolean }[] | null): Promise<void>;
   /** forget the recorded singers on every channel but these (another piece's must not sing along) */
   keepRecordings?(channels: number[]): void;
   /** the piece's notes, at the velocity they will sound: lets a sampled instrument load what the piece uses */
