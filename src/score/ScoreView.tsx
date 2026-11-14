@@ -348,7 +348,7 @@ export function ScoreView(props: Props) {
   const labelTop = (l: ScoreLayout["lanes"][number]) => {
     // Verovio's line: the name stands in the gutter beside its staff, level with its middle, so it covers nothing
     if (useVrvRef.current) return Math.round((l.top + l.bottom) / 2 - 12);
-    const want = l.top - Math.round(2.1 * 10 * props.zoom) - 23;
+    const want = l.top - Math.round(2.1 * 10 * zoom) - 23;
     return Math.round(want);
   };
   const laneLabelEls = (layout: ScoreLayout) =>
@@ -462,7 +462,11 @@ export function ScoreView(props: Props) {
       const bs = strip ? [laneBand(layout, pid)] : pageBands(layout, pid, "tint");
       return bs.map((b, k) => (b ? <div key={`tint-${pid}-${k}`} className="ov-you" style={{ position: "absolute", left: 0, top: b.top, width: "100%", height: b.height }} /> : null));
     });
-  const { xml, visibleXmlParts, zoom } = props;
+  const { xml, visibleXmlParts } = props;
+  // page view: the music is drawn smaller when a system (every staff of it, with its words and markings) would not
+  // fit the height of the view, so a whole system can always be seen at once; 1 = the zoom asked for
+  const [fit, setFit] = useState(1);
+  const zoom = props.strip ? props.zoom : Math.round(props.zoom * fit * 1000) / 1000;
   const svId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
   /** Verovio: a faded part is drawn lighter element by element (see VrvScore.applyFade): nothing of a neighbouring
    *  part is covered, and every system fades the same way */
@@ -891,6 +895,21 @@ export function ScoreView(props: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loaded, loadTick, visKey, zoom, layoutWidth, hasBands, hasLyrics, rowsKey, props.ink, settled]);
 
+  // page view: the tallest system, from the room kept above it to its lowest words, must fit the view's height; the
+  // zoom follows (down to half the size asked for, in steps of 5 % so it settles), and grows back when there is room
+  useEffect(() => {
+    const sc = scrollRef.current;
+    if (strip || !layout || !sc || !sc.clientHeight || !layout.systems.length) return;
+    const tallest = Math.max(...layout.systems.map((s) => s.extentBottom + 30 - (Math.min(s.top, s.extentTop) - 40)));
+    if (tallest <= 0) return;
+    const room = sc.clientHeight - 8;
+    let target = Math.floor(((fit * room) / tallest) * 20) / 20;
+    target = Math.max(0.5, Math.min(1, target));
+    // only shrink when it does not fit, only grow when the larger size would still fit
+    if ((tallest > room && target < fit) || (target > fit && (tallest * target) / fit <= room)) setFit(target);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [layout, settled]);
+
   // animation loop: cursor, marker, auto-scroll
   useEffect(() => {
     let raf = 0;
@@ -1002,7 +1021,9 @@ export function ScoreView(props: Props) {
         const out = tall ? top < viewTop - 2 || top > viewBottom - 80 : top < viewTop || bottom > viewBottom;
         if ((out || (changed && !tall && bottom > viewBottom - sc.clientHeight * 0.25)) && performance.now() - progScrollAt.current > 350) {
           progScrollAt.current = performance.now();
-          sc.scrollTo({ top: Math.max(0, top - (tall ? 0 : sc.clientHeight * 0.12)), behavior: "smooth" });
+          // a little room above the system, never so much that its lowest staff or words drop out of view
+          const above = tall ? 0 : Math.min(sc.clientHeight * 0.12, Math.max(0, sc.clientHeight - (bottom - top)));
+          sc.scrollTo({ top: Math.max(0, top - above), behavior: "smooth" });
         }
         lastSystem.current = target.sys.id;
       }
