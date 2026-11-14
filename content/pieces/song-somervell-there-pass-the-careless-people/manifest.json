@@ -1,0 +1,89 @@
+{
+ "editionId": "song-somervell-there-pass-the-careless-people",
+ "editionVersion": "1.0.0-openscore",
+ "title": "There pass the careless People",
+ "subtitle": "Arthur Somervell: song, words by A. E. Housman",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Arthur Somervell",
+ "librettist": "A. E. Housman",
+ "language": "en",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Arthur Somervell, There pass the careless People",
+   "author": "Arthur Somervell",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "There pass the careless People",
+   "author": "A. E. Housman",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Somervell,_Arthur/A_Shropshire_Lad/03_There_pass_the_careless_People)",
+   "author": "Transcribed by markpearse from IMSLP #529227.  Source: https://imslp.org/wiki/A_Shropshire_Lad_(Somervell,_Arthur)",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

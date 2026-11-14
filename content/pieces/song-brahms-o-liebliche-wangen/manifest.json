@@ -1,0 +1,89 @@
+{
+ "editionId": "song-brahms-o-liebliche-wangen",
+ "editionVersion": "1.0.0-openscore",
+ "title": "O liebliche Wangen",
+ "subtitle": "Johannes Brahms: song, words by Paul Flemming",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Johannes Brahms",
+ "librettist": "Paul Flemming",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Johannes Brahms, O liebliche Wangen",
+   "author": "Johannes Brahms",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "O liebliche Wangen",
+   "author": "Paul Flemming",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Brahms,_Johannes/5_Lieder,_Op.47/4_O_liebliche_Wangen)",
+   "author": "Transcribed from IMSLP #81904.  Source: https://imslp.org/wiki/5_Lieder,_Op.47_(Brahms,_Johannes)",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

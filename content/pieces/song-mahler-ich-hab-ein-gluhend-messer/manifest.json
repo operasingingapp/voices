@@ -1,0 +1,89 @@
+{
+ "editionId": "song-mahler-ich-hab-ein-gluhend-messer",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Ich hab' ein glühend Messer",
+ "subtitle": "Gustav Mahler: song, words by Gustav Mahler",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Gustav Mahler",
+ "librettist": "Gustav Mahler",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Gustav Mahler, Ich hab' ein glühend Messer",
+   "author": "Gustav Mahler",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Ich hab' ein glühend Messer",
+   "author": "Gustav Mahler",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Mahler,_Gustav/Lieder_eines_fahrenden_Gesellen/3_Ich_hab%E2%80%99_ein_gl%C3%BChend_Messer)",
+   "author": "Transcribed by Eloge from IMSLP #20510.",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

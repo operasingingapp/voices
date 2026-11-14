@@ -1,0 +1,89 @@
+{
+ "editionId": "song-chausson-fauves-las",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Fauves las",
+ "subtitle": "Ernest Chausson: song, words by Maurice Maeterlinck",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Ernest Chausson",
+ "librettist": "Maurice Maeterlinck",
+ "language": "fr",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Ernest Chausson, Fauves las",
+   "author": "Ernest Chausson",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Fauves las",
+   "author": "Maurice Maeterlinck",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Chausson,_Ernest/Serres_chaudes,_Op.24/4_Fauves_las)",
+   "author": "Transcribed by Ads20000 from IMSLP #26882.  Source: https://imslp.org/wiki/Serres_chaudes,_Op.24_(Chausson,_Ernest)",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

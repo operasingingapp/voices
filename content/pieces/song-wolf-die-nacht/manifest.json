@@ -1,0 +1,89 @@
+{
+ "editionId": "song-wolf-die-nacht",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Die Nacht",
+ "subtitle": "Hugo Wolf: song, words by Joseph von Eichendorff",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Hugo Wolf",
+ "librettist": "Joseph von Eichendorff",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Hugo Wolf, Die Nacht",
+   "author": "Hugo Wolf",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Die Nacht",
+   "author": "Joseph von Eichendorff",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Wolf,_Hugo/Eichendorff-Lieder/19_Die_Nacht)",
+   "author": "Transcribed by DanielR from IMSLP #23172.  Source: https://imslp.org/wiki/Eichendorff-Lieder_(Wolf%2C_Hugo)",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

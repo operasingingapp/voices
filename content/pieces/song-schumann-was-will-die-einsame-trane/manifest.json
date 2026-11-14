@@ -1,0 +1,89 @@
+{
+ "editionId": "song-schumann-was-will-die-einsame-trane",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Was will die einsame Träne",
+ "subtitle": "Robert Schumann: song, words by Heinrich Heine",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Robert Schumann",
+ "librettist": "Heinrich Heine",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Robert Schumann, Was will die einsame Träne",
+   "author": "Robert Schumann",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Was will die einsame Träne",
+   "author": "Heinrich Heine",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Schumann,_Robert/Myrthen,_Op.25/21_Was_will_die_einsame_Tr%C3%A4ne)",
+   "author": "Transcribed by mooing from IMSLP #270905.  Source: https://imslp.org/wiki/Special:ReverseLookup/270905",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

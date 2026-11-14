@@ -2,7 +2,7 @@
 """
 chunk-grand.py: the grand-piano recordings, cut into short chunks so the app can start playing within a second.
 
-Source: the Pianoteq masters (private R2 bucket sottovoce-masters, prefixes boheme-normalized/ and figaro-normalized/,
+Source: the Pianoteq masters (private R2 bucket sottovoce-masters, prefixes boheme-normalized/, figaro-normalized/ and cosi-normalized/,
 FLAC 48 kHz): "<folder>/<Piece>__Piano.flac" is a piece's accompaniment, "<folder>/<Piece>__<Role>.flac" one singer's line.
 Folder names map to editionIds through the title lists (--titles, "editionId<TAB>title" per line, as convert.py),
 roles to partKeys through each edition's parts (data/content/<eid>/edition.json, as lines.py named them).
@@ -44,7 +44,7 @@ API = f'https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/r2/buckets'
 RATE = 48000
 CHUNK = 10 * RATE  # 10 s
 OVERLAP = RATE // 4  # 0.25 s each side
-PREFIXES = ('boheme-normalized/', 'figaro-normalized/')
+PREFIXES = ('boheme-normalized/', 'figaro-normalized/', 'cosi-normalized/')
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 MAPF = os.path.join(REPO, 'src/standalone/grandPiano.json')
 SETTINGS = {2: ['-b:a', '160k'], 1: ['-b:a', '96k']}

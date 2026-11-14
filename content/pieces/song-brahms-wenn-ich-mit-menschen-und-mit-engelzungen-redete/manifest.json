@@ -1,0 +1,89 @@
+{
+ "editionId": "song-brahms-wenn-ich-mit-menschen-und-mit-engelzungen-redete",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Wenn ich mit Menschen- und mit Engelzungen redete",
+ "subtitle": "Johannes Brahms: song, words by Martin Luther",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Johannes Brahms",
+ "librettist": "Martin Luther",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Johannes Brahms, Wenn ich mit Menschen- und mit Engelzungen redete",
+   "author": "Johannes Brahms",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Wenn ich mit Menschen- und mit Engelzungen redete",
+   "author": "Martin Luther",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Brahms,_Johannes/4_Serious_Songs,_Op.121/4_Wenn_ich_mit_Menschen-_und_mit_Engelzungen_redete)",
+   "author": "Transcribed by markpearse from IMSLP #85424. Source: https://imslp.org/wiki/Special:ReverseLookup/85424",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
