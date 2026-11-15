@@ -7,29 +7,27 @@ import { SONG_META } from "./songInfo";
 import { CloseIcon, Crumbs, SearchIcon, type Ctx } from "./flow";
 
 /**
- * Songs: "Find your song", every song by its title, composer, language or level, grouped as a singer thinks of them;
- * and each song's page. No song has music here yet, and its page says so plainly where the practice will be.
+ * Songs: "Find your song", every song whose music is in the app, by its title, composer, language or level, grouped
+ * as a singer thinks of them; and each song's page.
  */
 
 /** folded for matching: no accents, no case ("faure" finds Fauré, "standchen" Ständchen) */
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 /** kept while you move between the song pages, as Search keeps its own */
-const prefs: { q: string; lang: string | null; level: SongLevel | null; music: boolean } = {
+const prefs: { q: string; lang: string | null; level: SongLevel | null } = {
   q: "",
   lang: null,
   level: null,
-  music: false,
 };
 
 export function SongsHome({ ctx }: { ctx: Ctx }) {
   const [q, setQ] = useState(prefs.q);
   const [lang, setLang] = useState<string | null>(prefs.lang);
   const [level, setLevel] = useState<SongLevel | null>(prefs.level);
-  const [music, setMusic] = useState(prefs.music);
   useEffect(() => {
-    Object.assign(prefs, { q, lang, level, music });
-  }, [q, lang, level, music]);
+    Object.assign(prefs, { q, lang, level });
+  }, [q, lang, level]);
   const t = fold(q.trim());
   const words = t.split(/\s+/).filter(Boolean);
   // a match is on the start of words, in the title, the composer (short or in full) or the language
@@ -37,10 +35,11 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
     const ws = fold([s.title, s.composer, s.composerFull, songLanguage(s.lang), s.group].join(" ")).split(/[\s,.'’\-–()!]+/);
     return words.every((x) => ws.some((v) => v.startsWith(x)));
   };
-  const langs = SONG_LANGUAGES.filter(([l]) => SONGS.some((s) => s.lang === l));
-  const list = SONGS.filter(
-    (s) => (!t || matches(s)) && (!lang || s.lang === lang) && (!level || s.level === level) && (!music || !!s.editionId),
-  );
+  // only the songs whose music is in the app are listed; the languages offered are the ones they are sung in, so a
+  // new language appears by itself when its first song arrives
+  const ready = SONGS.filter((s) => !!s.editionId);
+  const langs = SONG_LANGUAGES.filter(([l]) => ready.some((s) => s.lang === l));
+  const list = ready.filter((s) => (!t || matches(s)) && (!lang || s.lang === lang) && (!level || s.level === level));
   return (
     <main className="screen-body gutter page sx sg-home">
       <section className="sx-head">
@@ -88,18 +87,13 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
                 {v}
               </button>
             ))}
-            <button type="button" className="cp-toggle sx-music" aria-pressed={music} onClick={() => setMusic(!music)}>
-              With music only
-            </button>
           </div>
         </div>
       </section>
       {list.length === 0 ? (
         <div className="empty-field">
           <p>
-            {music
-              ? "No songs with music yet. Turn off “With music only” to see every one."
-              : t
+            {t
                 ? `Nothing called “${q.trim()}” yet. Try a composer, a language or the first words of a song.`
                 : "No songs match these filters."}
           </p>
