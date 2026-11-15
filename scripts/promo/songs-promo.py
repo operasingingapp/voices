@@ -31,10 +31,50 @@ def disc(i, d):
     im = Image.open(f'{IMG}/composer-{i}-face.webp').convert('RGB').resize((d, d), Image.LANCZOS)
     m = Image.new('L', (d * 4, d * 4), 0); ImageDraw.Draw(m).ellipse((0, 0, d * 4 - 1, d * 4 - 1), fill=255)
     im.putalpha(m.resize((d, d), Image.LANCZOS)); return im
-FACE = {i: disc(i, D) for i in ids}
+from PIL import ImageFilter, ImageChops
+LEVELS = 7  # how high a coin is off the table, 0 = resting
+def coin(i, d):
+    """a face as a little printed coin: a paper rim, light from the top left, a darker edge"""
+    rim = max(2, int(d * 0.035))
+    f = disc(i, d - 2 * rim)
+    c = Image.new('RGBA', (d, d), (0, 0, 0, 0))
+    m = Image.new('L', (d * 4, d * 4), 0); ImageDraw.Draw(m).ellipse((0, 0, d * 4 - 1, d * 4 - 1), fill=255); m = m.resize((d, d), Image.LANCZOS)
+    c.paste(Image.new('RGBA', (d, d), (253, 252, 249, 255)), (0, 0), m)
+    c.paste(f, (rim, rim), f)
+    # shading: a soft light from the top left, shade towards the bottom right, and a fine dark edge
+    g = Image.new('L', (d, d), 0); gd = ImageDraw.Draw(g)
+    for k in range(40):
+        r = d * (0.75 - k * 0.015); cx, cy = d * 0.32, d * 0.28
+        gd.ellipse((cx - r, cy - r, cx + r, cy + r), fill=int(k * 2.2))
+    g = g.filter(ImageFilter.GaussianBlur(d * 0.08))
+    light = Image.new('RGBA', (d, d), (255, 255, 255, 0)); light.putalpha(ImageChops.multiply(g, m).point(lambda v: int(v * 0.5)))
+    sh = Image.new('L', (d, d), 0); sd = ImageDraw.Draw(sh)
+    sd.ellipse((-d * 0.18, -d * 0.2, d * 1.0, d * 0.98), fill=0); sh = Image.new('L', (d, d), 255); ImageDraw.Draw(sh).ellipse((-d * 0.12, -d * 0.14, d * 0.98, d * 0.96), fill=0)
+    sh = sh.filter(ImageFilter.GaussianBlur(d * 0.06))
+    dark = Image.new('RGBA', (d, d), (40, 30, 20, 0)); dark.putalpha(ImageChops.multiply(sh, m).point(lambda v: int(v * 0.42)))
+    c = Image.alpha_composite(c, dark); c = Image.alpha_composite(c, light)
+    edge = Image.new('RGBA', (d, d), (0, 0, 0, 0)); ImageDraw.Draw(edge).ellipse((0, 0, d - 1, d - 1), outline=(60, 50, 40, 70), width=max(1, int(d * 0.006)))
+    return Image.alpha_composite(c, edge)
+BASE = {i: coin(i, D) for i in ids}
+SPR = {}
+def sprite(i, lv):
+    if (i, lv) not in SPR:
+        sc = 1 + 0.14 * lv / (LEVELS - 1)
+        d = int(D * sc)
+        SPR[(i, lv)] = BASE[i].resize((d, d), Image.LANCZOS) if lv else BASE[i]
+    return SPR[(i, lv)]
+SHD = {}
+def shadow(lv):
+    if lv not in SHD:
+        h = lv / (LEVELS - 1)
+        d = int(D * (1 + 0.14 * h)); blur = 6 * S + 26 * S * h; pad = int(blur * 3)
+        im = Image.new('RGBA', (d + 2 * pad, d + 2 * pad), (0, 0, 0, 0))
+        ImageDraw.Draw(im).ellipse((pad, pad, pad + d, pad + d), fill=(45, 35, 25, int(120 - 55 * h)))
+        SHD[lv] = (im.filter(ImageFilter.GaussianBlur(blur)), pad, 5 * S + 34 * S * h)
+    return SHD[lv]
 
 # ---- physics: no gravity; every face is pulled to the centre and settles into a tight packing ----
-space = pymunk.Space(); space.gravity = (0, 0); space.damping = 0.25
+space = pymunk.Space(); space.gravity = (0, 0); space.damping = 0.25; space.iterations = 60
 C = pymunk.Vec2d(W / 2, H / 2)
 half_diag = math.hypot(W, H) / 2 + R * 0.6
 count = int(math.pi * half_diag ** 2 / (2 * math.sqrt(3) * R * R))
@@ -47,7 +87,7 @@ for n in range(count):
     dist = min(tx, ty) + rnd.uniform(0, 500 * S) + R
     b = pymunk.Body(1, float('inf'))  # never turns: the faces stay upright
     b.position = C + (dx * dist, dy * dist)
-    sh = pymunk.Circle(b, R - 1.5 * S); sh.elasticity, sh.friction = 0.15, 0.4
+    sh = pymunk.Circle(b, R + 5 * S); sh.elasticity, sh.friction = 0.15, 0.4
     bodies.append([b, sh, ids[n % len(ids)], rnd.uniform(0, T_IN), False])
 bodies.sort(key=lambda x: x[3])
 
@@ -153,11 +193,22 @@ for fr in range(N):
         space.step(1 / FPS / SUB)
     im = Image.new('RGB', (W, H), PAPER)
     if t >= T_HEAD - 0.1: draw_text(im, t)
+    drawn = []
     for b, sh, i, t0, live in bodies:
         if not live: continue
         x, y = b.position
-        if x < -R or x > W + R or y < -R or y > H + R: continue
-        im.paste(FACE[i], (int(round(x - R)), int(round(y - R))), FACE[i])
+        if x < -2 * R or x > W + 2 * R or y < -2 * R or y > H + 2 * R: continue
+        # a coin in flight is higher: bigger, its shadow further off and softer
+        lift = min(1, b.velocity.length / (1400 * S))
+        lv = int(round(lift * (LEVELS - 1)))
+        drawn.append((lv, x, y, i))
+    drawn.sort()
+    for lv, x, y, i in drawn:
+        sp, pad, off = shadow(lv)
+        im.paste(sp, (int(x - sp.width / 2), int(y - sp.height / 2 + off)), sp)
+    for lv, x, y, i in drawn:
+        f = sprite(i, lv)
+        im.paste(f, (int(round(x - f.width / 2)), int(round(y - f.height / 2))), f)
     if t >= T_LOGO + 0.6: draw_row(im, t)
     if STILLS:
         if fr in STILLS: im.save(f'{OUT}-{fr}.png')
