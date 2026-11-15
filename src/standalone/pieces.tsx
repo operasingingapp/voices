@@ -1105,7 +1105,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "Two sharps from figure (29) (it opens on a B minor chord) to bar 33; four sharps from figure (31) (bar 34, “Coraggio”) to the end, which closes on C-sharp minor chords",
       time: "2/4 from figure (29); one bar of 6/8 (bar 18, “Non credo”, “Marcello, è spirata…”); 2/4 again from figure (30) (bar 19); 4/4 at figure (31) (bar 34), 3/4 for bars 35-36, 4/4 from bar 37 to the end",
-      tempo: "No metronome mark is printed in this piece. Chosen and timed against complete recordings (about 2½ min, with the pauses the map does not play): Andante lento e sostenuto at figure (29) ♩ = 52, the score’s printed Andante lento in common time (Act 1, “Che gelida manina”), as the recordings take this part well above the 2/4 Andante lento’s ♩ = 40; the a tempo at figure (30) returns to it; Largo sostenuto at figure (31) (bar 34) ♩ = 46, broader than the score’s other Largo sostenuto (♩ = 58), as the recordings take the last page; Grave (bar 42) ♩ = 40. Musetta’s quasi a piacere aside and Colline’s a piacere words keep the running tempo. The written rall. (bar 18) and poco rall. (bar 41) are played as a gradual change, then back to the tempo; fermatas, including the lunga pause of bar 30, are held",
+      tempo: "No metronome mark is printed in this piece. Chosen and timed against complete recordings (about 2½ min, with the pauses the map does not play): Andante lento e sostenuto at figure (29) ♩ = 54, the score’s printed Andante lento in common time (Act 1, “Che gelida manina”), as the recordings take this part well above the 2/4 Andante lento’s ♩ = 42; the a tempo at figure (30) returns to it; Largo sostenuto at figure (31) (bar 34) ♩ = 48, broader than the score’s other Largo sostenuto (♩ = 60), as the recordings take the last page; Grave (bar 42) ♩ = 42 Musetta’s quasi a piacere aside and Colline’s a piacere words keep the running tempo. The written rall. (bar 18) and poco rall. (bar 41) are played as a gradual change, then back to the tempo; fermatas, including the lunga pause of bar 30, are held; played 4% quicker than that, since the app holds the fermatas, slows into the last bar and takes its time at the written slowings, so it lasts as long as the recordings",
     },
     notePlaceholder: "Musetta prays for Mimì while the friends whisper; Schaunard finds that she has died, and Rodolfo is the last to understand",
     about: (
@@ -3804,7 +3804,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 83, from the median length of four recordings (Fricsay, Giulini, Böhm, Karajan; just over a minute); the fermata in the last bar is held",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 87, from the median length of four recordings (Fricsay, Giulini, Böhm, Karajan; just over a minute); the fermata in the last bar is held; played 4% quicker than that, since the app holds the fermatas, slows into the last bar and takes its time at the written slowings, so it lasts as long as the recordings",
     },
     notePlaceholder: "Speak it first: Giovanni's grumbling asides against his smooth offer of help, then Elvira's outburst",
     about: (
@@ -4153,7 +4153,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E major",
       time: "¢ (alla breve)",
-      tempo: "Allegro, played at a half note = 97 (♩ = 194), about 1 minute: the median length of three complete recordings (Böhm, Gardiner, Barenboim); Mozart gives the word only",
+      tempo: "Allegro, played at a half note = 100 (♩ = 200), about 1 minute: the median length of three complete recordings (Böhm, Gardiner, Barenboim); Mozart gives the word only; played 3% quicker than that, since the app holds the fermatas, slows into the last bar and takes its time at the written slowings, so it lasts as long as the recordings",
     },
     notePlaceholder: "Alfonso teases lightly; the officers answer with fire",
     about: (
@@ -4433,7 +4433,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B♭ major",
       time: "2/4",
-      tempo: "Andante, played at ♩ = 56 (about 1½ minutes, the median of five recordings: Haitink, Solti, Nézet-Séguin, Currentzis, Marriner); Mozart gives the word only",
+      tempo: "Andante, played at ♩ = 58 (about 1½ minutes, the median of five recordings: Haitink, Solti, Nézet-Séguin, Currentzis, Marriner); Mozart gives the word only; played 3% quicker than that, since the app holds the fermatas, slows into the last bar and takes its time at the written slowings, so it lasts as long as the recordings",
     },
     notePlaceholder: "Smooth and tender, the two voices moving together; the men are in on the joke",
     about: (
@@ -5592,7 +5592,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "3/8",
-      tempo: "Andante grazioso, played at an eighth note = 80 (♩ = 40), from Jacobs (4:36; about 4½ minutes); Mozart gives the words only",
+      tempo: "Andante grazioso, played at an eighth note = 82 (♩ = 41), from Jacobs (4:36; about 4½ minutes); Mozart gives the words only; played 3% quicker than that, since the app holds the fermatas, slows into the last bar and takes its time at the written slowings, so it lasts as long as the recordings",
     },
     notePlaceholder: "Graceful and flirtatious: the heartbeat in the music, Guglielmo coaxing, Dorabella giving way",
     about: (
@@ -6299,7 +6299,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B♭ major, then C major from bar 25",
       time: "4/4; 3/8 from bar 6; ¢ (alla breve) from bar 36",
-      tempo: "Allegretto, played at ♩ = 100, Andante (3/8) at ♩ = 60, Allegretto at ♩ = 100, then Andante con moto at ♩ = 120 (a half note = 60), from Jacobs (whose track for “Giusto ciel” and this section lasts 4:45; this section about 2¼ minutes); Mozart gives the words only",
+      tempo: "Allegretto, played at ♩ = 104, Andante (3/8) at ♩ = 63, Allegretto at ♩ = 104, then Andante con moto at ♩ = 125 (a half note = 63), from Jacobs (whose track for “Giusto ciel” and this section lasts 4:45; this section about 2¼ minutes); Mozart gives the words only; played 4% quicker than that, since the app holds the fermatas, slows into the last bar and takes its time at the written slowings, so it lasts as long as the recordings",
     },
     notePlaceholder: "Exaggerated bows and mock gallantry from the men, the sisters thunderstruck, then a gentle, forgiving close",
     about: (

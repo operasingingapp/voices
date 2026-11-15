@@ -13,6 +13,7 @@ for (const id of readdirSync("data/content")) {
   if (!existsSync(f)) continue;
   const ed = JSON.parse(readFileSync(f, "utf8")) as CompiledEdition;
   const perf = new Performance(ed, [], { tempo: "steady", pedal: false });
+  const plain = new Performance(ed, [], { tempo: "score", pedal: false });
   // extra time for each written slowing: the next two bars (or up to the next tempo word) about a quarter slower
   let extra = 0;
   let slowings = 0;
@@ -35,7 +36,7 @@ for (const id of readdirSync("data/content")) {
     }
   }
   const tempos = ed.measures.flatMap((m) => m.tempos.map((t) => t.bpm));
-  out[id] = { steadySec: +perf.totalSec.toFixed(2), extraSec: +extra.toFixed(2), slowings, firstBpm: tempos[0] ?? null, tempoCount: new Set(tempos).size };
+  out[id] = { plainSec: +plain.totalSec.toFixed(2), steadySec: +perf.totalSec.toFixed(2), extraSec: +extra.toFixed(2), slowings, firstBpm: tempos[0] ?? null, tempoCount: new Set(tempos).size };
 }
 writeFileSync("/tmp/claude-0/-home-claude/3ebe1904-2cd5-5bf6-b252-ae0b967f4c22/scratchpad/tempo_measure.json", JSON.stringify(out, null, 1));
 console.log(Object.keys(out).length, "pieces");
