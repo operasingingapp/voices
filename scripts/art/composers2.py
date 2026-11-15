@@ -65,11 +65,14 @@ def render(fig, frame, nodes, W, H):
 os.makedirs(OUT, exist_ok=True)
 done = {}
 k = 0
-for f in ['composers_1_1', 'composers_2', 'composers_3']:
+# the later files win over the earlier ones; mozart.fig's frames kept the name of the page they were copied from
+FILES = [('composers_1_1', None), ('composers_2', None), ('composers_3', None), ('mozart_new', 'Mozart')]
+for f, rename in FILES:
     fig = f'{FIGS}/{f}'
+    if not os.path.exists(f'{fig}/nodes.json'): continue
     nodes = json.load(open(f'{fig}/nodes.json'))
     for fr in [x for x in nodes if x['type'] == 'FRAME' and x.get('size')]:
-        name = fr['name'].replace('⁠', '').strip()
+        name = rename or fr['name'].replace('⁠', '').strip()
         if name not in NAMES: continue
         cid, short = NAMES[name]
         if cid not in COLS:
