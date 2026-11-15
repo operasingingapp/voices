@@ -68,6 +68,20 @@ const SONG_BUNDLE = (() => {
   return out;
 })();
 
+/** Opera numbers travel five to a file, by opera and in the opera's order (words-giovanni-3): one file per number
+ *  passed the published app's file limit once the composer portraits were added. */
+const OPERA_BUNDLE = (() => {
+  const src = readFileSync(resolve(import.meta.dirname, "src/standalone/operas.ts"), "utf8");
+  const starts = [...src.matchAll(/\n  "id": "([a-z0-9-]+)",\n  "title": "/g)];
+  const out = new Map<string, string>();
+  starts.forEach((m, i) => {
+    const seg = src.slice(m.index, i + 1 < starts.length ? starts[i + 1].index : src.length);
+    const ids = [...new Set([...seg.matchAll(/"editionId": "([^"]+)"/g)].map((x) => x[1]))];
+    ids.forEach((id, k) => out.has(id) || out.set(id, `words-${m[1]}-${Math.floor(k / 5) + 1}`));
+  });
+  return out;
+})();
+
 export default defineConfig({
   plugins: [gzipData(), patchSpessaProcessor(), react()],
   base: "./",
@@ -93,7 +107,7 @@ export default defineConfig({
             /\/content\/pieces\/([^/]+)\/voice\/[^/]+\/manifest\.json$/.exec(id) ??
             /\/data\/content\/([^/]+)\/(?:language|edition)\.json(?:\?z)?$/.exec(id) ??
             /\/data\/content\/([^/]+)\/score\.musicxml\?(?:raw|z)$/.exec(id);
-          if (words) return SONG_BUNDLE.get(words[1]) ?? `words-${words[1]}`;
+          if (words) return SONG_BUNDLE.get(words[1]) ?? OPERA_BUNDLE.get(words[1]) ?? `words-${words[1]}`;
           // the voice packs' index and the module that reads it, loaded together with the first recording asked for
           if (/voicepacks\/|\/voiceIndex\.ts$/.test(id)) return "voicedata";
           return undefined;
