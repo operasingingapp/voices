@@ -1,4 +1,4 @@
-"""The composer portraits from the user's later Figma files (composers_1_1, composers_2, composers_3): each frame named
+"""The composer portraits from the user's later Figma files (composers_1_1, composers_2, composers_3, CHANGE): each frame named
 after its composer, a 1792 x 2400 portrait and a 1000 x 1000 face, holding the cut-out exactly as placed. Each is drawn
 over its own pale backdrop with the same tone and paper grain as composers.py, at the app's two sizes.
 
@@ -33,9 +33,12 @@ NAMES = {
  'Christoph Willibald Gluck': ('gluck', 'Gluck'), 'Henri Duparc': ('duparc', 'Duparc'), 'Maurice Ravel': ('ravel', 'Ravel'),
  'Manuel de Falla': ('falla', 'Falla'), 'Enrique Granados': ('granados', 'Granados'), 'Antonín Dvořák': ('dvorak', 'Dvořák'),
  'Edvard Grieg': ('grieg', 'Grieg'), 'Sergei Rachmaninoff': ('rachmaninoff', 'Rachmaninoff'), 'Charles Ives': ('ives', 'Ives'),
+ 'Schubert': ('schubert', 'Schubert'), 'Liszt': ('liszt', 'Liszt'), 'Leoncavallo': ('leoncavallo', 'Leoncavallo'),
+ 'Chaminade': ('chaminade', 'Chaminade'), 'Ange Flégier': ('flegier', 'Flégier'), 'Frank Bridge': ('bridge', 'Bridge'),
 }
 FULL = {'Mahler': 'Gustav Mahler', 'Mozart': 'Wolfgang Amadeus Mozart', 'Verdi': 'Giuseppe Verdi', 'Monteverdi': 'Claudio Monteverdi',
-        'ntonio Lotti': 'Antonio Lotti', 'alessandro Parisotti': 'Alessandro Parisotti'}
+        'ntonio Lotti': 'Antonio Lotti', 'alessandro Parisotti': 'Alessandro Parisotti',
+        'Schubert': 'Franz Schubert', 'Liszt': 'Franz Liszt', 'Leoncavallo': 'Ruggero Leoncavallo', 'Chaminade': 'Cécile Chaminade'}
 # pale backdrops, each composer his own, in turn (the ones the first portraits had are kept)
 PALE = ['#a9c4e0', '#e8b4b8', '#b9d3a8', '#e6c27a', '#c4b0dc', '#9fcfc0', '#e0a98c', '#b4bfe0', '#d6c08a', '#a6d0cf',
         '#d8b4d4', '#c2d2a4', '#e9c99a', '#8fc1bd', '#e3b38f', '#b3c7e8', '#c9b48a', '#d9a3a0', '#a7c9dd', '#c7c49a']
@@ -66,7 +69,7 @@ os.makedirs(OUT, exist_ok=True)
 done = {}
 k = 0
 # the later files win over the earlier ones; mozart.fig's frames kept the name of the page they were copied from
-FILES = [('composers_1_1', None), ('composers_2', None), ('composers_3', None), ('mozart_new', 'Mozart')]
+FILES = [('composers_1_1', None), ('composers_2', None), ('composers_3', None), ('mozart_new', 'Mozart'), ('change', None)]
 for f, rename in FILES:
     fig = f'{FIGS}/{f}'
     if not os.path.exists(f'{fig}/nodes.json'): continue
