@@ -4035,7 +4035,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E major",
       time: "¢ (alla breve)",
-      tempo: "Andante (in Peters' brackets), played at a half note ≈ 27 (♩ = 53), about 3 minutes, from two recordings (Rattle 2:56, Klemperer 3:15); Mozart gives the word only",
+      tempo: "Andante (in Peters' brackets), played at a half note = 31 (♩ = 62), about 2 minutes 40 seconds: a little quicker than complete recordings (Rattle 2:56, Klemperer 3:15, Jacobs 3:36), whose timings include breaths, fermatas and the closing ritardando that a steady playback leaves out; Mozart gives the word only",
     },
     notePlaceholder: "Keep the line smooth and quiet, and listen to the other two",
     about: (
