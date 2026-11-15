@@ -36,6 +36,14 @@ interface V2 {
 /** editionId -> its piano recording and the gain that matches it to the app's own piano (the recordings are left
  * untouched; the level is set here), and the singers' lines rendered with it */
 const FILES = list as Record<string, { file: string; gainDb: number; v2?: V2; lines?: Record<string, { file: string; gainDb: number; v2?: V2 }> }>;
+/**
+ * Pieces whose score tempo was changed after their recording was rendered: the score's tempo now over the tempo the
+ * recording was made at, so the recording's times are the score-tempo times scaled by this factor.
+ */
+const RENDERED_SCALE: Record<string, number> = {
+  // Soave sia il vento: rendered at quarter = 53, the score now plays at 62
+  "mozart-soave-sia-il-vento": 62 / 53,
+};
 
 /** how the chunks are cut (chunk-grand.py): 48 kHz, 10 s each, with 0.25 s of each neighbour on either side */
 const RATE = 48000;
@@ -91,8 +99,9 @@ export const grandLineGain = (editionId: string, partKey: string): number => {
 /** where a sung line's notes fall on the playing timeline against the recording (as grandPianoMap, for one part) */
 export function grandLineMap(edition: CompiledEdition, playing: Performance, partKey: string): RecordingMap {
   const rendered = new Performance(edition, [], { tempo: "score", pedal: true });
+  const k = RENDERED_SCALE[edition.editionId] ?? 1;
   const at = new Map<string, number>();
-  for (const n of rendered.notes) if (n.part === partKey && !at.has(n.ids[0])) at.set(n.ids[0], rendered.qToSec(n.onQ));
+  for (const n of rendered.notes) if (n.part === partKey && !at.has(n.ids[0])) at.set(n.ids[0], rendered.qToSec(n.onQ) * k);
   const pairs: [number, number, number][] = [];
   for (const n of playing.notes) {
     if (n.part !== partKey) continue;
@@ -111,8 +120,9 @@ export function grandLineMap(edition: CompiledEdition, playing: Performance, par
 export function grandPianoMap(edition: CompiledEdition, playing: Performance): RecordingMap {
   const rendered = new Performance(edition, [], { tempo: "score", pedal: true });
   const pianoParts = new Set(edition.parts.filter((p) => p.kind === "piano").map((p) => p.key));
+  const k = RENDERED_SCALE[edition.editionId] ?? 1;
   const at = new Map<string, number>();
-  for (const n of rendered.notes) if (pianoParts.has(n.part) && !at.has(n.ids[0])) at.set(n.ids[0], rendered.qToSec(n.onQ));
+  for (const n of rendered.notes) if (pianoParts.has(n.part) && !at.has(n.ids[0])) at.set(n.ids[0], rendered.qToSec(n.onQ) * k);
   const pairs: [number, number, number][] = [];
   for (const n of playing.notes) {
     if (!pianoParts.has(n.part)) continue;
