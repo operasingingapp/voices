@@ -30,8 +30,8 @@ const back = (x) => { x = clamp(x); const c = 2.2; return 1 + (c + 1) * (x - 1) 
 // timeline (seconds)
 const T_RAIN1 = [0.0, 1.5], T_BURST = 2.9;
 const T_W = [3.25, 3.75, 4.25];            // the headline's three beats
-const T_CARD = 5.6, FEAT_D = 0.78;        // the green card, and how long each line holds
-const FEATS = [['Every word', 'translated.'], ['IPA for', 'every word.'], ['Every word', 'spoken aloud.'], ['A piano that', 'slows down.'], ['And loops', 'the hard bits.'], ['Score and texts', 'as PDF.']];
+const T_CARD = 5.6, FEAT_D = 1.3;        // the green card, and how long each line holds
+const FEATS = [['Every line', 'translated.'], ['IPA for', 'every word.'], ['Tap a word', 'to hear it said.'], ['A piano that', 'slows down.'], ['Loop', 'the hard bits.'], ['Score and texts', 'as PDF.']];
 const T_CARD_OUT = T_CARD + 0.3 + FEATS.length * FEAT_D;
 const T_RAIN2 = T_CARD_OUT - 0.55, T_LOGO = T_CARD_OUT + 0.55, T_END = T_LOGO + 2.6;
 window.duration = T_END;
@@ -56,23 +56,36 @@ function drawHead(t) {
     X.restore();
   });
 }
-const featPx = Math.min(...FEATS.flat().map((s) => fitSize(s, (px) => `500 ${px}px Jost`, W * (PORT ? 0.6 : 0.4), 92 * U)));
+const featPx = Math.min(...FEATS.flat().map((s) => fitSize(s, (px) => `500 ${px}px Jost`, W * (PORT ? 0.62 : 0.36), 84 * U)));
+const shots = await Promise.all([1, 2, 3, 4, 5, 6].map((n) => new Promise((ok) => { const im = new Image(); im.onload = () => ok(im); im.src = `feats/m${n}.webp`; })));
+function rrect(x, y, w, h, r) { X.beginPath(); X.moveTo(x + r, y); X.arcTo(x + w, y, x + w, y + h, r); X.arcTo(x + w, y + h, x, y + h, r); X.arcTo(x, y + h, x, y, r); X.arcTo(x, y, x + w, y, r); X.closePath(); }
 function drawCard(t) {
-  // in from the bottom, out through the top
   const pin = ease((t - T_CARD) / 0.3), pout = ease((t - T_CARD_OUT) / 0.35);
   if (pin <= 0 || pout >= 1) return;
-  const top = H * (1 - pin) - H * pout * 0, bot = H - H * pout;
+  const top = H * (1 - pin), bot = H - H * pout;
   X.fillStyle = GO; X.fillRect(0, Math.max(0, top), W, Math.max(0, bot - top));
   X.save(); X.beginPath(); X.rect(0, top, W, bot - top); X.clip();
   FEATS.forEach(([a, b], n) => {
-    const t0 = T_CARD + 0.3 + n * FEAT_D, p = (t - t0) / 0.28, q = (t - t0 - FEAT_D + 0.16) / 0.16;
+    const t0 = T_CARD + 0.3 + n * FEAT_D, p = (t - t0) / 0.32, q = (t - t0 - FEAT_D + 0.2) / 0.2;
     if (p <= 0 || q >= 1) return;
-    const k = back(p), y = H / 2 + (1 - k) * featPx * 1.4 - ease(q) * featPx * 1.4;
-    X.globalAlpha = clamp(p * 2.5) * (1 - clamp(q));
-    X.textAlign = 'center';
-    X.font = `500 ${featPx * 0.4}px Jost`; X.fillStyle = MINT; X.fillText(String(n + 1).padStart(2, '0'), W / 2, y - featPx * 1.3);
-    X.font = `500 ${featPx}px Jost`; X.fillStyle = PAPER; X.fillText(a, W / 2, y - featPx * 0.05);
-    X.font = `500 ${featPx}px Jost`; X.fillStyle = MINT; X.fillText(b, W / 2, y + featPx * 1.15);
+    const k = back(p), fade = clamp(p * 2.5) * (1 - clamp(q)), lift = ease(q) * featPx * 1.2;
+    // the words: above the picture on a phone-shaped frame, beside it on a wide one
+    const tx = PORT ? W / 2 : W * 0.27, ty = PORT ? H * 0.2 : H / 2 - featPx * 0.4;
+    X.globalAlpha = fade; X.textAlign = 'center';
+    const dy = (1 - k) * featPx * 1.2 - lift;
+    X.font = `500 ${featPx * 0.4}px Jost`; X.fillStyle = MINT; X.fillText(String(n + 1).padStart(2, '0'), tx, ty + dy - featPx * 1.3);
+    X.font = `500 ${featPx}px Jost`; X.fillStyle = PAPER; X.fillText(a, tx, ty + dy - featPx * 0.05);
+    X.fillStyle = MINT; X.fillText(b, tx, ty + dy + featPx * 1.15);
+    // the app itself, on a card that rises in a beat later
+    const im = shots[n], pk = back((t - t0 - 0.08) / 0.42);
+    const bw = PORT ? W * 0.84 : W * 0.44, bh = PORT ? H * 0.52 : H * 0.78;
+    const sc = Math.min(bw / im.width, bh / im.height), w = im.width * sc, h = im.height * sc;
+    const cx = PORT ? W / 2 : W * 0.7, cy = PORT ? H * 0.6 : H / 2;
+    const yy = cy - h / 2 + (1 - pk) * H * 0.25 - lift * 1.5;
+    X.globalAlpha = clamp((t - t0 - 0.08) * 5) * (1 - clamp(q));
+    X.save(); X.shadowColor = 'rgba(0,0,0,.35)'; X.shadowBlur = 60 * U; X.shadowOffsetY = 24 * U;
+    rrect(cx - w / 2, yy, w, h, 18 * U); X.fillStyle = PAPER; X.fill(); X.restore();
+    X.save(); rrect(cx - w / 2, yy, w, h, 18 * U); X.clip(); X.drawImage(im, cx - w / 2, yy, w, h); X.restore();
   });
   X.restore(); X.globalAlpha = 1;
 }
@@ -96,7 +109,8 @@ renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
 renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.NoToneMapping;
 const scene = new THREE.Scene();
 const VW = W / 100, VH = H / 100;
-const camera = new THREE.PerspectiveCamera(34, W / H, 1, 200);
+const FOV = 13;
+const camera = new THREE.PerspectiveCamera(FOV, W / H, 10, 400);
 const table = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.ShadowMaterial({ color: 0x2a1e12, opacity: 0.27 }));
 table.rotation.x = -Math.PI / 2; table.receiveShadow = true; scene.add(table);
 scene.add(new THREE.HemisphereLight(0xffffff, 0xe6ddd0, 1.6));
@@ -106,19 +120,18 @@ const sc = sun.shadow.camera; const SPAN = Math.max(VW, VH) * 1.2; sc.left = -SP
 sun.shadow.mapSize.set(2048, 2048); sun.shadow.radius = 7; sun.shadow.bias = -0.0004;
 scene.add(sun);
 
-// the camera: tilted over the table, swinging round and pushing in, then pulling back for the blast
-const camDist = (VH / 2) / Math.tan((34 / 2) * Math.PI / 180);
+// the camera: straight down through a long lens; a slow push in and a slight turn, a step back for the blast
+const camDist = (VH / 2) / Math.tan((FOV / 2) * Math.PI / 180);
 const shake = { amp: 0, t: 0 };
 function poseCamera(t) {
-  let yaw, elev, dist;
-  if (t < T_BURST) { const p = ease(t / T_BURST); yaw = -14 + 18 * p; elev = 58 + 8 * p; dist = camDist * (1.25 - 0.22 * p); }
-  else if (t < T_CARD_OUT) { const p = ease((t - T_BURST) / 1.2); yaw = 4 + 6 * p; elev = 66 + 6 * p; dist = camDist * (1.03 + 0.25 * p); }
-  else { const p = ease((t - T_CARD_OUT) / 2.5); yaw = -4 + 4 * p; elev = 72 + 6 * p; dist = camDist * (1.12 - 0.06 * p); }
-  const y = yaw * Math.PI / 180, e = elev * Math.PI / 180;
-  camera.position.set(Math.sin(y) * Math.cos(e) * dist, Math.sin(e) * dist, Math.cos(y) * Math.cos(e) * dist);
-  const s = shake.amp * Math.exp(-(t - shake.t) * 7);
-  camera.position.x += (rnd() - .5) * s; camera.position.z += (rnd() - .5) * s;
-  camera.lookAt((rnd() - .5) * s * 0.3, 0, (rnd() - .5) * s * 0.3);
+  let dist, roll;
+  if (t < T_BURST) { const p = ease(t / T_BURST); dist = camDist * (1.14 - 0.1 * p); roll = -3 + 3 * p; }
+  else if (t < T_CARD_OUT) { const p = ease((t - T_BURST) / 1.4); dist = camDist * (1.04 + 0.12 * p); roll = 0 + 1.5 * p; }
+  else { const p = ease((t - T_CARD_OUT) / 2.6); dist = camDist * (1.1 - 0.06 * p); roll = 1 - 1 * p; }
+  const s = shake.amp * Math.exp(-(t - shake.t) * 8);
+  camera.position.set((rnd() - .5) * s, dist, (rnd() - .5) * s);
+  const r = roll * Math.PI / 180; camera.up.set(Math.sin(r), 0, -Math.cos(r));
+  camera.lookAt(camera.position.x, 0, camera.position.z);
 }
 
 // coins: the face edge to edge, the edge in the face's own colour, darker
@@ -163,7 +176,7 @@ function makeCoin(sx, sz, vx, vz, t0, wave) {
   coins.push({ g, sx, sz, vx, vz, t0, wave, body: null, spin: (rnd() - .5) * 2.5 });
 }
 // volley 1: fired hard from every side at the middle; they keep being pulled there, and shove for room
-const area1 = footprintArea(T_BURST - 0.3);
+const area1 = VW * VH * 1.3;
 const N1 = Math.round(area1 / (2 * Math.sqrt(3) * R * R) * 1.25);
 for (let n = 0; n < N1; n++) {
   const a = rnd() * Math.PI * 2, out = 26 + rnd() * 6;
@@ -214,10 +227,15 @@ function burst() {
     c.body.applyImpulse({ x: p.x / d * outv, y: up, z: p.z / d * outv }, true);
     c.body.applyTorqueImpulse({ x: (rnd() - .5) * 6 * m, y: (rnd() - .5) * 2 * m, z: (rnd() - .5) * 6 * m }, true);
   }
-  shake.amp = 1.6; shake.t = T_BURST;
+  shake.amp = 0.5; shake.t = T_BURST;
 }
 function clearWave1() { ground.setFriction(0.4); for (const c of coins) if (c.wave === 1 && c.body) { world.removeRigidBody(c.body); c.body = null; c.g.visible = false; c.gone = true; } }
 
+const VIG = document.createElement('canvas'); VIG.width = W; VIG.height = H;
+{ const v = VIG.getContext('2d'); const g = v.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.35, W / 2, H / 2, Math.hypot(W, H) * 0.62);
+  g.addColorStop(0, '#ffffff'); g.addColorStop(1, '#e4ddd2'); v.fillStyle = g; v.fillRect(0, 0, W, H); }
+const GRAIN = [0, 1, 2, 3].map(() => { const c = document.createElement('canvas'); c.width = W / 2; c.height = H / 2; const g = c.getContext('2d'); const d = g.createImageData(c.width, c.height);
+  for (let i = 0; i < d.data.length; i += 4) { const v = 128 + (rnd() - .5) * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; } g.putImageData(d, 0, 0); return c; });
 let frame = 0, burstDone = false, cleared = false, hit2 = false;
 window.renderFrame = () => {
   const t = frame / FPS;
@@ -227,7 +245,7 @@ window.renderFrame = () => {
     if (!burstDone && ts >= T_BURST) { burstDone = true; burst(); }
     if (!burstDone) pull();
     if (!cleared && ts >= T_CARD + 0.35) { cleared = true; clearWave1(); }
-    if (!hit2 && ts >= T_RAIN2 + 0.45) { hit2 = true; shake.amp = 0.5; shake.t = ts; }
+    if (!hit2 && ts >= T_RAIN2 + 0.45) { hit2 = true; shake.amp = 0.15; shake.t = ts; }
     world.step();
   }
   for (const c of coins) if (c.body) { const p = c.body.translation(), q = c.body.rotation(); c.g.position.set(p.x, p.y - TH / 2, p.z); c.g.quaternion.set(q.x, q.y, q.z, q.w); }
@@ -238,6 +256,9 @@ window.renderFrame = () => {
   X.drawImage(renderer.domElement, 0, 0);
   drawCard(t);
   drawLogo(t);
+  X.globalCompositeOperation = 'multiply'; X.drawImage(VIG, 0, 0);
+  X.globalCompositeOperation = 'overlay'; X.globalAlpha = 0.09; X.drawImage(GRAIN[frame % GRAIN.length], 0, 0, W, H);
+  X.globalCompositeOperation = 'source-over'; X.globalAlpha = 1;
   frame++;
   return OUTC.toDataURL('image/jpeg', 0.93).slice(23);
 };
