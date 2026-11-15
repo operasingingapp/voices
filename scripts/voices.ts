@@ -751,22 +751,58 @@ async function runLanguage(lang: string, todo: string[]) {
   }
   if (chars > config.maxCharsPerRun) throw new Error(`That is more than maxCharsPerRun (${config.maxCharsPerRun}) in voice.config.json; raise it to go on.`);
 
+  // what has been made so far is written down as it is made: a run that stops part-way (a blocked line, the month's
+  // characters used up, the network) never pays for the same clip twice on the next run
+  const record = () => {
+    for (const r of refs) if (bank[r.bankKey]) r.data.clips[r.clipKey] = { ...bank[r.bankKey], ...(r.data.clips[r.clipKey]?.sung ? { sung: r.data.clips[r.clipKey].sung } : {}) };
+    mkdirSync(dirname(bankPath), { recursive: true });
+    writeFileSync(bankPath, JSON.stringify(bank, null, 1));
+  };
+  let sinceSave = 0;
+  let stopped = "";
+  const blocked: string[] = [];
   // two at a time: the smaller plans allow only a few requests at once
   let next = 0;
   const worker = async () => {
-    while (next < jobs.length) {
+    while (next < jobs.length && !stopped) {
       const job = jobs[next++];
       const c = job.clip;
-      const sp = await speak(config.voiceId, c.text, !!c.slow);
+      let sp: Spoken;
+      try {
+        sp = await speak(config.voiceId, c.text, !!c.slow);
+      } catch (e) {
+        const msg = (e as Error).message;
+        // a line ElevenLabs refuses (its content filter) is left out and the run goes on; nothing else is retried here
+        if (/content_against_policy/.test(msg)) {
+          blocked.push(c.text);
+          console.log(`  BLOCKED by ElevenLabs, left out: ${c.key}: ${c.text}`);
+          continue;
+        }
+        stopped = msg;
+        break;
+      }
       // the voice's own slowest speed is still quick for learning: the slow line is also eased out a little
       const stretch = c.slow ? config.slowStretch : 1;
       save(c.file, sp.audio, stretch);
       const times = c.words ? wordTimes(sp, c.text, c.words).map(([a, b]) => [+(a / stretch).toFixed(3), +(b / stretch).toFixed(3)] as [number, number]) : undefined;
       job.done({ text: c.text, hash: hashOf(c), file: c.file, ...(times ? { words: times } : {}) });
       console.log(`  made ${c.key}: ${c.text}`);
+      if (++sinceSave >= 10) {
+        record();
+        sinceSave = 0;
+      }
     }
   };
   await Promise.all([worker(), worker()]);
+  record();
+  if (blocked.length) console.log(`${blocked.length} line(s) blocked by ElevenLabs and left out:\n  ${blocked.join("\n  ")}`);
+  if (stopped) {
+    for (const m of manifests) {
+      mkdirSync(dirname(m.path), { recursive: true });
+      writeFileSync(m.path, JSON.stringify(m.data, null, 1));
+    }
+    throw new Error(`Stopped (everything made so far is kept): ${stopped}`);
+  }
 
   // the words and joins, cut out of a line that holds them (the cleanest: the shortest such line)
   for (const job of toCut) {
