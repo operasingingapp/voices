@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { composerNamed } from "./composers";
 import { SongList } from "./songParts";
+import { ComposerRow } from "./choralParts";
 import { SONGS, SONG_LANGUAGES, SONG_LEVELS, songLanguage, type Song, type SongLevel } from "./songs";
 import { SONG_CONTEXT, SONG_CYCLES, rangeText } from "./songContext";
 import { SONG_META } from "./songInfo";
@@ -15,19 +16,21 @@ import { CloseIcon, Crumbs, SearchIcon, type Ctx } from "./flow";
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 /** kept while you move between the song pages, as Search keeps its own */
-const prefs: { q: string; lang: string | null; level: SongLevel | null } = {
+const prefs: { q: string; lang: string | null; level: SongLevel | null; composer: string | null } = {
   q: "",
   lang: null,
   level: null,
+  composer: null,
 };
 
 export function SongsHome({ ctx }: { ctx: Ctx }) {
   const [q, setQ] = useState(prefs.q);
   const [lang, setLang] = useState<string | null>(prefs.lang);
   const [level, setLevel] = useState<SongLevel | null>(prefs.level);
+  const [composer, setComposer] = useState<string | null>(prefs.composer);
   useEffect(() => {
-    Object.assign(prefs, { q, lang, level });
-  }, [q, lang, level]);
+    Object.assign(prefs, { q, lang, level, composer });
+  }, [q, lang, level, composer]);
   const t = fold(q.trim());
   const words = t.split(/\s+/).filter(Boolean);
   // a match is on the start of words, in the title, the composer (short or in full) or the language
@@ -39,7 +42,14 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
   // new language appears by itself when its first song arrives
   const ready = SONGS.filter((s) => !!s.editionId);
   const langs = SONG_LANGUAGES.filter(([l]) => ready.some((s) => s.lang === l));
-  const list = ready.filter((s) => (!t || matches(s)) && (!lang || s.lang === lang) && (!level || s.level === level));
+  // the composers whose songs are here, most songs first, with their faces where we have one
+  const counts = new Map<string, number>();
+  for (const s of ready) counts.set(s.composer, (counts.get(s.composer) ?? 0) + 1);
+  const composers = [...counts.keys()].sort((a, b) => counts.get(b)! - counts.get(a)! || a.localeCompare(b)).map(composerNamed);
+  const by = composer && counts.has(composer) ? composer : null;
+  const list = ready.filter(
+    (s) => (!t || matches(s)) && (!lang || s.lang === lang) && (!level || s.level === level) && (!by || s.composer === by),
+  );
   return (
     <main className="screen-body gutter page sx sg-home">
       <section className="sx-head">
@@ -89,6 +99,7 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
             ))}
           </div>
         </div>
+        <ComposerRow composers={composers} value={by} onChange={setComposer} />
       </section>
       {list.length === 0 ? (
         <div className="empty-field">
