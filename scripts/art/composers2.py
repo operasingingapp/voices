@@ -1,4 +1,4 @@
-"""The composer portraits from the user's later Figma files (composers_1_1, composers_2, composers_3, CHANGE): each frame named
+"""The composer portraits from the user's later Figma files (composers_1_1, composers_2, composers_3, CHANGE, change_2): each frame named
 after its composer, a 1792 x 2400 portrait and a 1000 x 1000 face, holding the cut-out exactly as placed. Each is drawn
 over its own pale backdrop with the same tone and paper grain as composers.py, at the app's two sizes.
 
@@ -69,7 +69,7 @@ os.makedirs(OUT, exist_ok=True)
 done = {}
 k = 0
 # the later files win over the earlier ones; mozart.fig's frames kept the name of the page they were copied from
-FILES = [('composers_1_1', None), ('composers_2', None), ('composers_3', None), ('mozart_new', 'Mozart'), ('change', None)]
+FILES = [('composers_1_1', None), ('composers_2', None), ('composers_3', None), ('mozart_new', 'Mozart'), ('change', None), ('change_2', None)]
 for f, rename in FILES:
     fig = f'{FIGS}/{f}'
     if not os.path.exists(f'{fig}/nodes.json'): continue

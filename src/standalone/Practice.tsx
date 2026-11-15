@@ -28,6 +28,8 @@ import {
 } from "../score/ScoreView";
 import type { Lane, ScoreLayout } from "../score/layout";
 import { ART_TONES, PORTRAITS } from "./opera-extra";
+import { composerNamed } from "./composers";
+import { SONGS } from "./songs";
 import {
   decorate,
   syllableRanges,
@@ -1004,6 +1006,12 @@ function RoleFace({ k }: { k: string }) {
   const art = PORTRAITS[k];
   if (art) return <img className="face-img" src={art.face} alt="" />;
   const [o, c] = k.split(":");
+  // a song has no character: its composer's face stands in
+  if (o === "songs") {
+    const s = SONGS.find((x) => x.id === c);
+    const face = s && composerNamed(s.composer).face;
+    return face ? <img className="face-img" src={face} alt="" /> : null;
+  }
   const ch = OPERAS.find((x) => x.id === o)?.chars.find((x) => x.id === c);
   return ch ? <NamePlate name={ch.name} small /> : null;
 }
