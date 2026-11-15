@@ -12,7 +12,7 @@ const srv = http.createServer((q, a) => { const f = path.join(__dirname, decodeU
   await p.goto(`http://localhost:${srv.address().port}/index.html?w=${W}&h=${H}&ids=${encodeURIComponent(JSON.stringify(ids))}`);
   await p.waitForFunction(() => window.ready === true, null, { timeout: 120000 });
   const stills = STILLS ? STILLS.split(',').map(Number) : null;
-  const N = stills ? Math.max(...stills) + 1 : 16 * 30;
+  const N = stills ? Math.max(...stills) + 1 : Math.round(await p.evaluate(() => window.duration) * 30);
   let ff;
   if (!stills) ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', '30', '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', OUT + '.tmp.mp4'], { stdio: ['pipe', 'inherit', 'inherit'] });
   const t0 = Date.now();
