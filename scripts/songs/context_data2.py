@@ -733,3 +733,108 @@ SONGS2.update({
         poem="Words by Paul Fleming (1609-1640), a German Baroque poet.",
         music="Fast and ardent, with a surging accompaniment that grows more urgent as he pleads."),
 })
+
+# batch 12: OpenScore songs (checked identical to OpenScore's own GitHub files)
+CYCLES2["chansonsdefrance"] = {"title": "Trois Chansons de France", "composer": "Debussy", "count": 3,
+    "overview": "Three songs written in 1904 and dedicated to Emma Bardac, who later became Debussy's wife: two rondels by "
+    "the fifteenth-century poet-prince Charles d'Orléans framing a poem by the seventeenth-century poet Tristan L'Hermite. "
+    "Debussy looks back to old French verse with archaic modes and spare, luminous textures."}
+_C = lambda no: dict(year="1904", written="Composed in 1904; published in 1904 in Trois Chansons de France", cycle="chansonsdefrance", no=no)
+SONGS2.update({
+    "tosti-sogno": dict(year="1886", written="Published in 1886",
+        story="He dreamt she knelt at his feet like a saint at prayer, gazing into his eyes and begging him softly for a "
+        "single promising look. He fought the temptation and said no; then her lips brushed his face, his strength gave way, "
+        "he opened his arms to her, and woke: it was only a dream.",
+        poem="Words by Lorenzo Stecchetti, the pen name of Olindo Guerrini (1845-1916).",
+        music="A sweeping Tosti romanza that builds from hushed narration to a big climax, and falls away on the waking."),
+    "leoncavallo-mattinata": dict(year="1904", written="Composed in 1904 for the Gramophone Company; recorded that year by Enrico Caruso with Leoncavallo at the piano",
+        story="A morning serenade. Dawn, dressed in white, opens the door to the sun and caresses the flowers; all creation "
+        "stirs, but she still sleeps while he sings in vain. Put on your white dress too, and open the door to your singer: "
+        "where you are not, there is no light; where you are, love is born.",
+        poem="Words by Ruggero Leoncavallo himself.",
+        music="Written for the gramophone and short enough for one side of a record: a lilting, bright tune with an "
+        "ardent refrain."),
+    "donaudy-spirate-pur-spirate": dict(year="1918", written="Published in 1918 in the 36 Arie di stile antico",
+        story="He sends the light breezes to blow around his beloved and find out whether she keeps him in her heart.",
+        poem="Words by Alberto Donaudy, the composer's brother.",
+        music="One of Donaudy's songs 'in the old style', modern imitations of Baroque arias. Quick and airy, with a "
+        "return to the sign (D.S. al Fine)."),
+    "rossini-l-invito": dict(year="1835", written="Published in 1835 in the Soirées musicales",
+        story="Eloisa calls to Ruggiero: she cannot bear to be apart from him. Come, my angel, rest on my breast; feel how "
+        "it beats, how love invites you.",
+        poem="Words by Carlo Pepoli (1796-1881), who also wrote the libretto of Bellini's I puritani.",
+        music="A bolero: Spanish dance rhythm in the piano, a flirtatious, ornamented vocal line."),
+    "verdi-in-solitaria-stanza": dict(year="1838", written="Published in 1838 in Verdi's Sei romanze, his first published music",
+        story="Irene lies alone and ill, without voice or breath, like a narcissus wilting in summer heat. Her lover runs "
+        "through lonely paths, crying out to the gods to save her: they could never make another Irene.",
+        poem="Words by Jacopo Vittorelli (1749-1835).",
+        music="Its melody looks forward to Leonora's 'Tacea la notte placida' in Il trovatore, written fifteen years later."),
+    "liszt-pace-non-trovo": dict(year="1883", written="Liszt's later version for voice and piano, published in 1883 (the first version dates from the 1840s)",
+        story="A sonnet of contradictions: I find no peace and cannot make war; I burn and freeze; I fly above the sky and "
+        "lie on the ground; I hold nothing and embrace the world. Love keeps me neither free nor captive. I feed on grief, "
+        "laugh as I weep, and all this, Lady, because of you.",
+        poem="Words by Francesco Petrarca (Petrarch), sonnet 134 of the Canzoniere (14th century).",
+        music="Liszt also turned the song into a famous piano piece (Sonetto 104 del Petrarca). Restless and operatic, "
+        "with a wide range and many changes of tempo."),
+    "faure-chanson-d-amour": dict(year="1882", written="Composed in 1882 (Op. 27 No. 1)",
+        story="I love your eyes, your brow, your mouth, your voice, everything that makes you beautiful: my rebel, my wild "
+        "one, my angel, my hell and my paradise.",
+        poem="Words by Armand Silvestre (1837-1901).",
+        music="Light, quick and charming, with a returning refrain."),
+    "faure-prison": dict(year="1894", written="Composed in 1894 (Op. 83 No. 1)",
+        story="Through a prison window: the sky above the roof is so blue, so calm; a tree rocks, a bell rings, a bird sings. "
+        "Life is out there, simple and peaceful. What have you done, you who weep without end, with your youth?",
+        poem="Words by Paul Verlaine, from Sagesse (1881); he wrote the poem in prison in Mons in 1873.",
+        music="Slow, hushed and dark, building to an anguished question at the end."),
+    "mahler-rheinlegendchen": dict(year="1893", written="Composed in 1893, one of Mahler's Des Knaben Wunderhorn songs",
+        story="A young mower whose sweetheart has left him throws his gold ring into the river. A fish will swallow it, the "
+        "fish will be served to the king, the king will ask whose ring it is, and his sweetheart will come running to bring "
+        "it back to him.",
+        poem="Words from Des Knaben Wunderhorn, the collection of German folk poems by Achim von Arnim and Clemens Brentano (1805-08).",
+        music="A lilting country dance (a Ländler), light and teasing."),
+    "flegier-le-cor": dict(year="1881", written="Published in 1881",
+        story="I love the sound of the horn in the woods at evening: it makes me smile, and more often weep, for I seem to "
+        "hear the horn that foretold the death of the knights of old. Is it the soul of Roland, still not at rest in the "
+        "valley of Roncevaux?",
+        poem="Words by Alfred de Vigny (1797-1863), from 'Le Cor' (1826), on the death of Roland at Roncevaux.",
+        music="A bass favourite: horn calls in the piano and a dark, heroic line."),
+    "paladilhe-psyche": dict(year="1887", written="Published in 1887",
+        story="Love speaks to Psyche: I am jealous of all nature. The sun kisses you too often, the wind strokes your hair, "
+        "the air you breathe touches your lips, your dress clings too close. Even your sighs alarm me.",
+        poem="Words by Pierre Corneille, from the tragédie-ballet Psyché (1671), written with Molière and Quinault.",
+        music="A graceful, gently rocking mélodie with a teasing jealousy."),
+    "chaminade-l-anneau-d-argent": dict(year="1891", written="Published in 1891",
+        story="The silver ring you gave me holds our promises in its narrow circle; it alone has comforted me in dark hours. "
+        "When I lie in my coffin among roses, I want it still to shine on my finger.",
+        poem="Words by Rosemonde Gérard (1866-1953), poet and wife of Edmond Rostand.",
+        music="A simple, tender melody: Chaminade's most popular song."),
+    "white-macushla": dict(year="1910", written="Published in 1910",
+        story="'Macushla' (from the Irish 'mo chuisle', my pulse, my darling): he hears his lost love's voice calling him, "
+        "feels her arms around him, and begs her to wake from her dream and stay.",
+        poem="Words by Josephine V. Rowe.",
+        music="An Irish parlour ballad made famous by the tenor John McCormack; a broad, singing tune."),
+    "bridge-so-early-in-the-morning-o": dict(year="1918", written="Published in 1918",
+        story="A bird sings of its morning: swinging on a branch, waking the sleepier birds, building its nest, and telling "
+        "the world that its mate has laid an egg, all so early in the morning.",
+        poem="Words by James Stephens (1880-1950), the Irish poet.",
+        music="Quick, chattering and bright, full of birdlike figures."),
+    "debussy-le-temps-a-laisse-son-manteau": dict(**_C(1),
+        story="The season has thrown off its cloak of wind, cold and rain and put on sunshine. Every beast and bird sings in "
+        "its own tongue; rivers and fountains wear silver: everyone dresses anew.",
+        poem="Words by Charles d'Orléans (1394-1465), a rondel.",
+        music="Fresh and springlike, with the rondel's refrain returning."),
+    "debussy-la-grotte": dict(**_C(2),
+        story="Beside a dark grotto, water and pebbles, light and shadow play. The waves rest in a pool where Narcissus once "
+        "died; the shadows of flowers and rushes are the dreams of the sleeping water.",
+        poem="Words by François Tristan L'Hermite (c. 1601-1655).",
+        music="Still and veiled. Debussy used it again as the first song of Le Promenoir des deux amants (1910)."),
+    "debussy-pour-ce-que-plaisance-est-morte": dict(**_C(3),
+        story="Because Pleasure is dead, I am dressed in black this May. The weather brings the news: rain closes the "
+        "fields, and nothing wants to be glad.",
+        poem="Words by Charles d'Orléans, a rondel.",
+        music="Grave and modal, like a little funeral march."),
+})
+SONGS2["faure-vocalise-etude"] = dict(year="1906", written="Composed in 1906",
+    story="A song without words: a study in long, even legato lines, sung on a vowel.",
+    poem="No words: sung on a vowel of the singer's choice.",
+    music="A slow, flowing melody over a gentle accompaniment; a lesson in breath, line and evenness across the range.")

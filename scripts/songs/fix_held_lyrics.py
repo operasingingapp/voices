@@ -58,3 +58,5 @@ save(t,s)
 s='schumann-weit-weit'; t,p=load(s)
 drop(at(p,'6',10,'1'),3); put(at(p,'6',0,'1'),3,'mir','single'); save(t,s)
 print('ok')
+# Liszt, Pace non trovo bar 38: "Tal m'ha in prigion": the first sung note carries only the German line's syllable;
+# the Italian "Tal" (Petrarch, Canzoniere 134) is added to it. The ossia piano part (P3, not played) was removed.

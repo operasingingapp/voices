@@ -1,0 +1,89 @@
+{
+ "editionId": "song-debussy-pour-ce-que-plaisance-est-morte",
+ "editionVersion": "1.0.0-openscore",
+ "title": "Rondel: Pour ce que Plaisance est morte",
+ "subtitle": "Claude Debussy: song, words by Charles d' Orléans",
+ "kind": "song",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Claude Debussy",
+ "librettist": "Charles d' Orléans",
+ "language": "fr",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "voice",
+   "name": "Voice",
+   "voiceType": "Voice",
+   "partKey": "voice"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "voice",
+   "label": "Voice",
+   "shortLabel": "Voice",
+   "kind": "voice",
+   "roleId": "voice",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Claude Debussy, Rondel: Pour ce que Plaisance est morte",
+   "author": "Claude Debussy",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Poem",
+   "source": "Rondel: Pour ce que Plaisance est morte",
+   "author": "Charles d' Orléans",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "OpenScore Lieder Corpus (https://github.com/OpenScore/Lieder/tree/main/scores/Debussy,_Claude/3_Chansons_de_France/03_Rondel_Pour_ce_que_Plaisance_est_morte)",
+   "author": "Transcribed by pental from IMSLP #09101. Source: https://imslp.org/wiki/Special:ReverseLookup/09101",
+   "licence": "CC0 1.0",
+   "notes": "Transcribed and proofread by OpenScore Lieder contributors; verse numbers taken off the first syllables. Playback tempo set for this app."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}
