@@ -1,0 +1,215 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: Cormorant; src: url(fonts/cormorant-garamond-latin-500-normal.woff); font-weight: 500; }
+@font-face { font-family: Cormorant; src: url(fonts/cormorant-garamond-latin-500-italic.woff); font-weight: 500; font-style: italic; }
+@font-face { font-family: Jost; src: url(fonts/jost-latin-400-normal.woff); font-weight: 400; }
+html, body { margin: 0; background: #fbfaf7; overflow: hidden; }
+#stage { position: relative; width: var(--w); height: var(--h); }
+canvas { position: absolute; inset: 0; }
+/* the words sit under the table's coins, in the page itself */
+#txt { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; color: #1a1814; pointer-events: none; }
+.hd { font: 500 var(--hs)/0.98 Cormorant; letter-spacing: -0.01em; }
+.hd .ln { display: block; overflow: hidden; padding: 0.04em 0.1em 0.12em; margin: -0.04em 0 -0.12em; }
+.hd .w { display: inline-block; }
+.hd em { font-style: italic; }
+.feats { list-style: none; margin: calc(var(--hs) * 0.45) 0 0; padding: 0; display: grid; gap: calc(var(--fs) * 0.9); text-align: left; font: 400 var(--fs)/1 Jost; }
+.feats li { display: flex; align-items: center; gap: calc(var(--fs) * 0.7); }
+.feats li i { width: calc(var(--fs) * 0.36); height: calc(var(--fs) * 0.36); border-radius: 50%; background: #17402c; flex: none; }
+#end { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: calc(var(--hs) * 0.18); opacity: 0; }
+#end .row { display: flex; margin-bottom: calc(var(--hs) * 0.2); }
+#end .row img { width: calc(var(--hs) * 0.9); height: calc(var(--hs) * 0.9); border-radius: 50%; margin-left: calc(var(--hs) * -0.12); box-shadow: 0 0 0 calc(var(--hs) * 0.04) #fbfaf7, 0 calc(var(--hs) * 0.08) calc(var(--hs) * 0.2) rgba(40, 30, 20, .25); }
+#end .row img:first-child { margin-left: 0; }
+#end b { font: italic 500 calc(var(--hs) * 1.05)/1 Cormorant; color: #1a1814; }
+#end span { font: 400 calc(var(--fs) * 0.78)/1 Jost; color: #77726a; letter-spacing: .02em; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "rapier": "./node_modules/@dimforge/rapier3d-compat/dist/rapier.mjs" } }</script>
+</head><body>
+<div id="stage"><canvas id="c"></canvas></div>
+<script type="module">
+import * as THREE from 'three';
+import RAPIER from 'rapier';
+
+const Q = new URLSearchParams(location.search);
+const W = +Q.get('w') || 1080, H = +Q.get('h') || 1920, FPS = 30;
+const PORT = W < H;
+const stage = document.getElementById('stage');
+stage.style.setProperty('--w', W + 'px'); stage.style.setProperty('--h', H + 'px');
+const U = Math.min(W, H) / 1080;
+stage.style.setProperty('--hs', (PORT ? 150 : 130) * U + 'px');
+stage.style.setProperty('--fs', (PORT ? 50 : 40) * U + 'px');
+
+// ---------- text, drawn in 2D under the coins ----------
+const OUTC = document.createElement('canvas'); OUTC.width = W; OUTC.height = H; const X = OUTC.getContext('2d');
+const HS = (PORT ? 150 : 130) * U, FS = (PORT ? 50 : 40) * U;
+const HEAD = PORT ? [[['Hundreds', 'of'], 0], [['art', 'songs'], 0], [['and', 'Lieder.'], 1]] : [[['Hundreds', 'of', 'art', 'songs'], 0], [['and', 'Lieder.'], 1]];
+const FEATS = ['The words, translated line by line', 'IPA for every word', 'Every word spoken, said right', 'A piano that slows down and loops', 'Score and texts to download as PDF'];
+const ROW = PORT ? ['schubert', 'schumann', 'faure', 'debussy', 'tosti', 'brahms', 'mozart'] : ['schubert', 'schumann', 'brahms', 'faure', 'debussy', 'tosti', 'mahler', 'puccini', 'mozart'];
+const rowImgs = await Promise.all(ROW.map((i) => new Promise((ok) => { const im = new Image(); im.onload = () => ok(im); im.src = `faces/composer-${i}-face.webp`; })));
+await document.fonts.load(`500 ${HS}px Cormorant`); await document.fonts.load(`italic 500 ${HS}px Cormorant`); await document.fonts.load(`400 ${FS}px Jost`);
+const T_BURST = 4.1, T_HEAD = T_BURST + 0.8, T_FEAT = 6.7, T_FEATD = 0.45, T_LOGO = 12.4;
+const ease = (x) => { x = Math.max(0, Math.min(1, x)); return 1 - (1 - x) ** 3; };
+const INK = (a) => `rgba(26,24,20,${a})`;
+function drawText(t) {
+  X.fillStyle = '#fbfaf7'; X.fillRect(0, 0, W, H);
+  const out = ease((t - T_LOGO) / 0.6);
+  const lh = HS * 0.98, featGap = FS * 1.9;
+  const block = lh * HEAD.length + 70 * U + featGap * FEATS.length;
+  const y0 = (H - block) / 2 - HS * 0.15 - 40 * U * out;
+  X.textBaseline = 'alphabetic';
+  if (out < 1) {
+    HEAD.forEach(([ws, it], n) => {
+      X.font = `${it ? 'italic ' : ''}500 ${HS}px Cormorant`;
+      const sp = X.measureText(' ').width, wd = ws.map((w) => X.measureText(w).width);
+      let x = (W - (wd.reduce((a, b) => a + b, 0) + sp * (ws.length - 1))) / 2;
+      const base = y0 + n * lh + HS * 0.78;
+      X.save(); X.beginPath(); X.rect(0, base - HS * 0.95, W, HS * 1.22); X.clip();
+      ws.forEach((w, k) => {
+        const p = ease((t - T_HEAD - n * 0.22 - k * 0.09) / 0.8);
+        if (p > 0) { X.fillStyle = INK(p * (1 - out)); X.fillText(w, x, base + (1 - p) * HS * 1.0); }
+        x += wd[k] + sp;
+      });
+      X.restore();
+    });
+    X.font = `400 ${FS}px Jost`;
+    const lw = Math.max(...FEATS.map((f) => X.measureText(f).width)) + 50 * U;
+    const fx = (W - lw) / 2 + 50 * U, fy = y0 + lh * HEAD.length + 70 * U;
+    FEATS.forEach((f, n) => {
+      const p = ease((t - T_FEAT - n * T_FEATD) / 0.6), a = p * (1 - out);
+      if (a <= 0) return;
+      const cy = fy + n * featGap + FS * 0.62;
+      X.fillStyle = `rgba(23,64,44,${a})`; X.beginPath(); X.arc(fx - 40 * U, cy, 9 * U * ease((t - T_FEAT - n * T_FEATD) / 0.35), 0, 7); X.fill();
+      X.fillStyle = INK(a); X.fillText(f, fx + 24 * U * (1 - p), fy + n * featGap + FS * 0.95);
+    });
+  }
+}
+function drawEnd(t) {
+  const a = ease((t - T_LOGO - 0.4) / 0.8);
+  if (a <= 0) return;
+  X.textAlign = 'center';
+  X.font = `italic 500 ${HS * 1.05}px Cormorant`; X.fillStyle = INK(a); X.fillText('Sottovoce', W / 2, H / 2 + HS * 0.35 + 30 * U * (1 - a));
+  X.font = `400 ${FS * 0.78}px Jost`; X.fillStyle = `rgba(119,114,106,${a})`; X.fillText('Opera · Songs · Choral', W / 2, H / 2 + HS * 0.95 + 30 * U * (1 - a));
+  X.textAlign = 'left';
+  const rr = HS * 0.45, gap = rr * 2 - HS * 0.12, x0 = W / 2 - gap * (ROW.length - 1) / 2;
+  rowImgs.forEach((im, n) => {
+    const p = ease((t - T_LOGO - 0.6 - n * 0.07) / 0.5); if (p <= 0) return;
+    const cx = x0 + n * gap, cy = H / 2 - HS * 0.75 + 30 * U * (1 - p);
+    X.save(); X.globalAlpha = p;
+    X.shadowColor = 'rgba(40,30,20,.28)'; X.shadowBlur = HS * 0.2; X.shadowOffsetY = HS * 0.07;
+    X.fillStyle = '#fbfaf7'; X.beginPath(); X.arc(cx, cy, rr + HS * 0.04, 0, 7); X.fill();
+    X.shadowColor = 'transparent'; X.beginPath(); X.arc(cx, cy, rr, 0, 7); X.clip(); X.drawImage(im, cx - rr, cy - rr, 2 * rr, 2 * rr);
+    X.restore();
+  });
+}
+
+// ---------- the table, the light, the camera ----------
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(W, H, false);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.NoToneMapping;
+const scene = new THREE.Scene();
+// world: one unit = 100 px of the frame at the table
+const VW = W / 100, VH = H / 100;
+const CAM_H = 34;
+const camera = new THREE.PerspectiveCamera(2 * Math.atan(VH / 2 / CAM_H) * 180 / Math.PI, W / H, 1, 100);
+camera.position.set(0, CAM_H, 0); camera.up.set(0, 0, -1); camera.lookAt(0, 0, 0);
+// the table only catches shadows: the paper itself is the page underneath, so the words sit on it
+const table = new THREE.Mesh(new THREE.PlaneGeometry(VW * 4, VH * 4), new THREE.ShadowMaterial({ color: 0x2a1e12, opacity: 0.32 }));
+table.rotation.x = -Math.PI / 2; table.receiveShadow = true; scene.add(table);
+scene.add(new THREE.HemisphereLight(0xffffff, 0xe9e2d6, 1.55));
+const sun = new THREE.DirectionalLight(0xfff6ea, 1.9);
+sun.position.set(-9, 30, -13); sun.castShadow = true;
+const sc = sun.shadow.camera; sc.left = -VW; sc.right = VW; sc.top = VH; sc.bottom = -VH; sc.near = 1; sc.far = 80;
+sun.shadow.mapSize.set(2048, 2048); sun.shadow.radius = 9; sun.shadow.blurSamples = 16; sun.shadow.bias = -0.0004;
+scene.add(sun);
+
+// ---------- the coins ----------
+const R = 1.18, TH = 0.16, BEV = 0.05;
+// the edge: a rounded rim turned on a lathe; the face is a flat disc on top
+const prof = [];
+prof.push(new THREE.Vector2(0, 0));
+for (let k = 0; k <= 8; k++) { const a = -Math.PI / 2 + (k / 8) * Math.PI / 2; prof.push(new THREE.Vector2(R - BEV + BEV * Math.cos(a), BEV + BEV * Math.sin(a))); }
+for (let k = 0; k <= 8; k++) { const a = (k / 8) * Math.PI / 2; prof.push(new THREE.Vector2(R - BEV + BEV * Math.cos(a), TH - BEV + BEV * Math.sin(a))); }
+prof.push(new THREE.Vector2(R - BEV * 1.6, TH)); prof.push(new THREE.Vector2(0, TH));
+const rimGeo = new THREE.LatheGeometry(prof, 72);
+const faceGeo = new THREE.CircleGeometry(R - BEV * 1.9, 72); faceGeo.rotateX(-Math.PI / 2); faceGeo.translate(0, TH + 0.002, 0);
+const backGeo = new THREE.CircleGeometry(R - BEV * 1.9, 72); backGeo.rotateX(Math.PI / 2); backGeo.translate(0, -0.002, 0);
+const rimMat = new THREE.MeshStandardMaterial({ color: 0xf4efe6, roughness: 0.62, metalness: 0 });
+const loader = new THREE.TextureLoader();
+const IDS = JSON.parse(Q.get('ids'));
+const texs = {};
+await Promise.all(IDS.map((i) => new Promise((ok) => loader.load(`faces/composer-${i}-face.webp`, (t) => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; texs[i] = t; ok(); }))));
+
+await RAPIER.init();
+const world = new RAPIER.World({ x: 0, y: -60, z: 0 });
+world.timestep = 1 / (FPS * 4);
+const ground = world.createCollider(RAPIER.ColliderDesc.cuboid(200, 0.5, 200).setTranslation(0, -0.5, 0).setFriction(0.45).setRestitution(0.15));
+
+// where each coin should come to rest: a loose honeycomb over the whole frame, filled from the middle outwards
+let seed = 11; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const sp = 2 * R * 1.05, rowH = sp * Math.sqrt(3) / 2;
+const spots = [];
+for (let r = -Math.ceil(VH / 2 / rowH) - 1; r <= Math.ceil(VH / 2 / rowH) + 1; r++)
+  for (let c = -Math.ceil(VW / 2 / sp) - 1; c <= Math.ceil(VW / 2 / sp) + 1; c++) {
+    const x = c * sp + (r & 1 ? sp / 2 : 0), z = r * rowH;
+    if (Math.abs(x) < VW / 2 + R * 0.9 && Math.abs(z) < VH / 2 + R * 0.9) spots.push({ x: x + (rnd() - .5) * 0.25, z: z + (rnd() - .5) * 0.25 });
+  }
+spots.sort((a, b) => Math.hypot(a.x, a.z * (VW / VH)) - Math.hypot(b.x, b.z * (VW / VH)));
+const decel = 0.45 * 60; // friction × gravity: how fast a sliding coin slows
+const coins = spots.map((s, n) => {
+  // thrown from outside the frame, along the line through the centre and its resting place
+  let ang = Math.atan2(s.z, s.x); if (Math.hypot(s.x, s.z) < 0.5) ang = rnd() * Math.PI * 2;
+  ang += (rnd() - .5) * 0.5;
+  const dx = Math.cos(ang), dz = Math.sin(ang);
+  const out = Math.min((VW / 2 + R * 2) / Math.abs(dx || 1e-9), (VH / 2 + R * 2) / Math.abs(dz || 1e-9)) + rnd() * 2;
+  const sx = dx * out, sz = dz * out;
+  const d = Math.hypot(s.x - sx, s.z - sz);
+  const v = Math.sqrt(2 * decel * d) * 1.02;
+  const t0 = 0.15 + (n / spots.length) * 2.3 + rnd() * 0.25;
+  const id = IDS[n % IDS.length];
+  const g = new THREE.Group();
+  const rim = new THREE.Mesh(rimGeo, rimMat); rim.castShadow = true; rim.receiveShadow = true;
+  const fm = new THREE.MeshStandardMaterial({ map: texs[id], roughness: 0.5, metalness: 0 });
+  const face = new THREE.Mesh(faceGeo, fm); face.receiveShadow = true;
+  const back = new THREE.Mesh(backGeo, fm);
+  g.add(rim, face, back); g.visible = false; scene.add(g);
+  return { g, t0, sx, sz, vx: (s.x - sx) / d * v, vz: (s.z - sz) / d * v, spin: (rnd() - .5) * 1.2, body: null };
+});
+
+function launch(c) {
+  const b = world.createRigidBody(RAPIER.RigidBodyDesc.dynamic().setTranslation(c.sx, TH / 2 + 0.002, c.sz).setLinvel(c.vx, 0, c.vz).setAngvel({ x: 0, y: c.spin, z: 0 }).setCcdEnabled(true).setAngularDamping(0.6).setLinearDamping(0.05));
+  world.createCollider(RAPIER.ColliderDesc.roundCylinder(TH / 2 - BEV, R - BEV, BEV).setFriction(0.45).setRestitution(0.25).setDensity(2), b);
+  c.body = b; c.g.visible = true;
+}
+function burst() {
+  ground.setFriction(0.12);
+  for (const c of coins) {
+    if (!c.body) continue;
+    const p = c.body.translation(); const d = Math.hypot(p.x, p.z) || 1;
+    const m = c.body.mass();
+    // pushed up from under the middle of the table: the nearer the middle, the higher they jump
+    const up = (4 + 6 * Math.max(0, 1 - d / 7)) * m, outv = (17 + d * 1.6) * m;
+    c.body.applyImpulseAtPoint({ x: p.x / d * outv, y: up, z: p.z / d * outv }, { x: p.x - p.x / d * R * 0.12, y: p.y, z: p.z - p.z / d * R * 0.12 }, true);
+  }
+}
+const toThree = (c) => { const p = c.body.translation(), q = c.body.rotation(); c.g.position.set(p.x, p.y - TH / 2, p.z); c.g.quaternion.set(q.x, q.y, q.z, q.w); };
+
+let frame = 0, burstDone = false;
+window.renderFrame = () => {
+  const t = frame / FPS;
+  for (let s = 0; s < 4; s++) {
+    const ts = t + s / (FPS * 4);
+    for (const c of coins) if (!c.body && ts >= c.t0) launch(c);
+    if (!burstDone && ts >= T_BURST) { burstDone = true; burst(); }
+    world.step();
+  }
+  for (const c of coins) if (c.body) toThree(c);
+  renderer.render(scene, camera);
+  drawText(t); X.drawImage(renderer.domElement, 0, 0); drawEnd(t);
+  frame++;
+  return OUTC.toDataURL('image/jpeg', 0.93).slice(23);
+};
+window.ready = true;
+</script>
+</body></html>
