@@ -1,151 +1,164 @@
-"""Sottovoce promo: composers' faces fall in circles, collide and fill the screen, then burst apart to reveal the text.
+"""Sottovoce promo, seen from above: composers' faces, all one size, slide in from every side like coins pushed across
+a table, pack edge to edge until the screen is full, then scatter outwards; the headline then rises in word by word.
 
     python3 promo.py <W> <H> <out.mp4> [--frames 30,90,...]   (frames: write PNG stills only)
 """
 import sys, os, math, random, subprocess
 import pymunk
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 W, H, OUT = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3]
 STILLS = [int(x) for x in sys.argv[5].split(',')] if len(sys.argv) > 5 and sys.argv[4] == '--frames' else None
 FPS = 30
-T_FILL, T_BURST, T_END = 4.6, 5.0, 16.0
+T_IN, T_BURST, T_END = 2.6, 4.0, 16.0
 N = int(T_END * FPS)
 PORT = W < H
-S = min(W, H) / 1080  # scale
+S = min(W, H) / 1080
 
 FONTS = '/tmp/claude-0/-home-claude/3ebe1904-2cd5-5bf6-b252-ae0b967f4c22/scratchpad/fonts/node_modules/@fontsource'
-def font(fam, w, st, px):
-    return ImageFont.truetype(f'{FONTS}/{fam}/files/{fam}-latin-{w}-{st}.woff', int(px))
+def font(fam, w, st, px): return ImageFont.truetype(f'{FONTS}/{fam}/files/{fam}-latin-{w}-{st}.woff', int(px))
 PAPER, INK, MUTED, GO = (251, 250, 247), (26, 24, 20), (119, 114, 106), (23, 64, 44)
+def mix(c, a): return tuple(int(PAPER[j] + (c[j] - PAPER[j]) * a) for j in range(3))
+def ease(x): x = max(0, min(1, x)); return 1 - (1 - x) ** 3
+def ease_io(x): x = max(0, min(1, x)); return 4 * x ** 3 if x < .5 else 1 - (-2 * x + 2) ** 3 / 2
 
 IMG = '/home/claude/voices/src/standalone/images'
 ids = sorted(f[9:-10] for f in os.listdir(IMG) if f.startswith('composer-') and f.endswith('-face.webp'))
-random.seed(7)
-random.shuffle(ids)
-faces = {i: Image.open(f'{IMG}/composer-{i}-face.webp').convert('RGB') for i in ids}
+rnd = random.Random(11); rnd.shuffle(ids)
+R = 118 * S
+D = int(2 * R)
+def disc(i, d):
+    im = Image.open(f'{IMG}/composer-{i}-face.webp').convert('RGB').resize((d, d), Image.LANCZOS)
+    m = Image.new('L', (d * 4, d * 4), 0); ImageDraw.Draw(m).ellipse((0, 0, d * 4 - 1, d * 4 - 1), fill=255)
+    im.putalpha(m.resize((d, d), Image.LANCZOS)); return im
+FACE = {i: disc(i, D) for i in ids}
 
-# ---- physics: drop circles until the screen is full ----
-space = pymunk.Space(); space.gravity = (0, 2600 * S)
-walls = [pymunk.Segment(space.static_body, a, b, 4) for a, b in [((0, H), (W, H)), ((0, -4000), (0, H)), ((W, -4000), (W, H))]]
-for w in walls: w.elasticity, w.friction = 0.3, 0.6
-space.add(*walls)
-area = 0; bodies = []
-rnd = random.Random(3)
-plan = []  # (drop time, radius, x, id)
-k = 0; t = 0.0
-target = W * H * 1.3
-while area < target:
-    r = rnd.uniform(70, 150) * S * (1.15 if not PORT else 1)
-    plan.append((t, r, rnd.uniform(r, W - r), ids[k % len(ids)])); k += 1
-    area += math.pi * r * r
-    t += 3.6 / (target / (math.pi * (110 * S) ** 2))
-sizes = {}
-def face(i, r):
-    key = (i, int(r))
-    if key not in sizes:
-        d = int(2 * r)
-        im = faces[i].resize((d, d), Image.LANCZOS)
-        m = Image.new('L', (d * 4, d * 4), 0); ImageDraw.Draw(m).ellipse((0, 0, d * 4 - 1, d * 4 - 1), fill=255)
-        im.putalpha(m.resize((d, d), Image.LANCZOS))
-        sizes[key] = im
-    return sizes[key]
+# ---- physics: no gravity; every face is pulled to the centre and settles into a tight packing ----
+space = pymunk.Space(); space.gravity = (0, 0); space.damping = 0.25
+C = pymunk.Vec2d(W / 2, H / 2)
+half_diag = math.hypot(W, H) / 2 + R * 0.6
+count = int(math.pi * half_diag ** 2 / (2 * math.sqrt(3) * R * R))
+bodies = []
+for n in range(count):
+    a = rnd.uniform(0, 2 * math.pi)
+    # start just outside the frame, on the line from the centre at this angle
+    dx, dy = math.cos(a), math.sin(a)
+    tx = (W / 2 + R) / abs(dx) if dx else 1e9; ty = (H / 2 + R) / abs(dy) if dy else 1e9
+    dist = min(tx, ty) + rnd.uniform(0, 500 * S) + R
+    b = pymunk.Body(1, float('inf'))  # never turns: the faces stay upright
+    b.position = C + (dx * dist, dy * dist)
+    sh = pymunk.Circle(b, R - 1.5 * S); sh.elasticity, sh.friction = 0.15, 0.4
+    bodies.append([b, sh, ids[n % len(ids)], rnd.uniform(0, T_IN), False])
+bodies.sort(key=lambda x: x[3])
+
+def pull(b, dt):
+    v = C - b.position; d = max(1, v.length)
+    b.velocity += v / d * min(5200 * S, 9 * d) * dt
 
 # ---- text ----
-def ease(x): x = max(0, min(1, x)); return 1 - (1 - x) ** 3
 if PORT:
     H1, H2 = font('cormorant-garamond', 500, 'normal', 150 * S), font('cormorant-garamond', 500, 'italic', 150 * S)
     FEAT, LOGO, SMALL = font('jost', 400, 'normal', 50 * S), font('cormorant-garamond', 500, 'italic', 150 * S), font('jost', 400, 'normal', 38 * S)
+    HEAD = [(['Hundreds', 'of'], H1), (['art', 'songs'], H1), (['and', 'Lieder.'], H2)]
 else:
     H1, H2 = font('cormorant-garamond', 500, 'normal', 130 * S), font('cormorant-garamond', 500, 'italic', 130 * S)
     FEAT, LOGO, SMALL = font('jost', 400, 'normal', 40 * S), font('cormorant-garamond', 500, 'italic', 140 * S), font('jost', 400, 'normal', 32 * S)
-HEAD = [('Hundreds of', H1), ('art songs', H1), ('and Lieder.', H2)] if PORT else [('Hundreds of art songs', H1), ('and Lieder.', H2)]
+    HEAD = [(['Hundreds', 'of', 'art', 'songs'], H1), (['and', 'Lieder.'], H2)]
 FEATS = ['The words, translated line by line', 'IPA for every word', 'Every word spoken, said right',
          'A piano that slows down and loops', 'Score and texts to download as PDF']
-T_FEAT0, T_FEATD = 6.2, 0.55
+T_HEAD = T_BURST + 0.75          # the words start rising once the faces have cleared the middle
+T_FEAT0, T_FEATD = 6.6, 0.45
 T_LOGO = 12.4
 
-def ctext(d, y, s, f, fill, alpha=1, dy=0):
-    w = d.textlength(s, font=f)
-    c = tuple(int(PAPER[j] + (fill[j] - PAPER[j]) * alpha) for j in range(3))
-    d.text(((W - w) / 2, y + dy), s, font=f, fill=c)
+def rise_line(im, words, f, y, t0, t, fade_out):
+    """a line whose words rise one by one out of a hidden baseline, each fading up as it comes"""
+    d = ImageDraw.Draw(im)
+    sp = d.textlength(' ', font=f)
+    ws = [d.textlength(w, font=f) for w in words]
+    x = (W - (sum(ws) + sp * (len(words) - 1))) / 2
+    lh = int(f.size * 1.3)
+    layer = Image.new('RGBA', (W, lh), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
+    for k, w in enumerate(words):
+        p = ease((t - t0 - k * 0.09) / 0.75)
+        if p > 0:
+            a = p * (1 - fade_out)
+            ld.text((x, f.size * 0.05 + (1 - p) * f.size * 0.9), w, font=f, fill=INK + (int(255 * a),))
+        x += ws[k] + sp
+    im.paste(layer, (0, int(y)), layer)
 
 def draw_text(im, t):
-    d = ImageDraw.Draw(im)
-    out = ease((t - T_LOGO) / 0.6)  # the headline and list leave for the logo
+    out = ease((t - T_LOGO) / 0.6)
     lh = H1.size * 0.98
     head_h = lh * len(HEAD)
     feat_gap = FEAT.size * 1.9
     block = head_h + 70 * S + feat_gap * len(FEATS)
     y0 = (H - block) / 2 - H1.size * 0.15
     if out < 1:
-        for n, (s, f) in enumerate(HEAD):
-            ctext(d, y0 + n * lh, s, f, INK, 1 - out, -40 * S * out)
+        for n, (words, f) in enumerate(HEAD):
+            rise_line(im, words, f, y0 + n * lh - 40 * S * out, T_HEAD + n * 0.22, t, out)
+        d = ImageDraw.Draw(im)
         y = y0 + head_h + 70 * S
-        lw = max(d.textlength(x, font=FEAT) for x in FEATS) + 50 * S
+        lw = max(d.textlength(s, font=FEAT) for s in FEATS) + 50 * S
         x = (W - lw) / 2 + 50 * S
         for n, s in enumerate(FEATS):
-            p = ease((t - T_FEAT0 - n * T_FEATD) / 0.5)
-            a = p * (1 - out)
+            p = ease((t - T_FEAT0 - n * T_FEATD) / 0.6); a = p * (1 - out)
             if a <= 0: continue
-            cy = y + n * feat_gap + FEAT.size * 0.62
-            rr = 9 * S
-            gc = tuple(int(PAPER[j] + (GO[j] - PAPER[j]) * a) for j in range(3))
-            d.ellipse((x - 40 * S - rr, cy - rr, x - 40 * S + rr, cy + rr), fill=gc)
-            c = tuple(int(PAPER[j] + (INK[j] - PAPER[j]) * a) for j in range(3))
-            d.text((x + 30 * S * (1 - p), y + n * feat_gap), s, font=FEAT, fill=c)
+            cy = y + n * feat_gap + FEAT.size * 0.62; rr = 9 * S * ease((t - T_FEAT0 - n * T_FEATD) / 0.35)
+            d.ellipse((x - 40 * S - rr, cy - rr, x - 40 * S + rr, cy + rr), fill=mix(GO, a))
+            d.text((x + 24 * S * (1 - p), y + n * feat_gap), s, font=FEAT, fill=mix(INK, a))
     a = ease((t - T_LOGO - 0.4) / 0.8)
     if a > 0:
-        ctext(d, H / 2 - LOGO.size * 0.8, 'Sottovoce', LOGO, INK, a, 30 * S * (1 - a))
-        ctext(d, H / 2 + LOGO.size * 0.45, 'Opera · Songs · Choral', SMALL, MUTED, a, 30 * S * (1 - a))
+        d = ImageDraw.Draw(im)
+        for s, f, yy, c in [('Sottovoce', LOGO, H / 2 - LOGO.size * 0.55, INK), ('Opera · Songs · Choral', SMALL, H / 2 + LOGO.size * 0.62, MUTED)]:
+            w = d.textlength(s, font=f); d.text(((W - w) / 2, yy + 30 * S * (1 - a)), s, font=f, fill=mix(c, a))
 
-# ---- run ----
+ROW = ['schubert', 'schumann', 'faure', 'debussy', 'tosti', 'brahms', 'mozart'] if PORT else ['schubert', 'schumann', 'brahms', 'faure', 'debussy', 'tosti', 'mahler', 'puccini', 'mozart']
+RR = int(70 * S)
+ROWF = {i: disc(i, 2 * RR) for i in ROW}
+def draw_row(im, t):
+    gap = RR * 2 - 18 * S; x0 = W / 2 - gap * (len(ROW) - 1) / 2
+    for n, i in enumerate(ROW):
+        a = ease((t - T_LOGO - 0.6 - n * 0.07) / 0.5)
+        if a <= 0: continue
+        ring = Image.new('RGBA', (2 * RR + int(8 * S),) * 2, (0, 0, 0, 0))
+        ImageDraw.Draw(ring).ellipse((0, 0, ring.width - 1, ring.height - 1), fill=PAPER + (255,))
+        ring.paste(ROWF[i], (int(4 * S), int(4 * S)), ROWF[i])
+        if a < 1: ring.putalpha(ring.getchannel('A').point(lambda v: int(v * a)))
+        yy = H / 2 - LOGO.size * 0.55 - RR - 40 * S + 30 * S * (1 - a)
+        im.paste(ring, (int(x0 + n * gap - ring.width / 2), int(yy - ring.height / 2)), ring)
+
 ff = None
 if not STILLS:
     ff = subprocess.Popen(['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}', '-r', str(FPS), '-i', '-',
                            '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', OUT + '.tmp.mp4'], stdin=subprocess.PIPE)
-pi = 0; burst = False
-final_ring = None
+burst = False
+SUB = 6
 for fr in range(N):
     t = fr / FPS
-    while pi < len(plan) and plan[pi][0] <= t:
-        _, r, x, i = plan[pi]; pi += 1
-        b = pymunk.Body(1, pymunk.moment_for_circle(1, 0, r)); b.position = (x, -r - rnd.uniform(0, 300 * S))
-        b.angular_velocity = rnd.uniform(-1, 1)
-        c = pymunk.Circle(b, r); c.elasticity, c.friction = 0.35, 0.5
-        space.add(b, c); bodies.append((b, r, i))
+    for e in bodies:
+        if not e[4] and e[3] <= t:
+            e[4] = True; b = e[0]
+            v = C - b.position; b.velocity = v / v.length * (1100 * S)
+            space.add(b, e[1])
     if not burst and t >= T_BURST:
-        burst = True
-        space.remove(*walls); space.gravity = (0, 0)
-        for b, r, i in bodies:
-            v = b.position - (W / 2, H / 2)
-            dist = max(1, v.length)
-            b.velocity = v / dist * (1500 * S + rnd.uniform(0, 700 * S) + dist * 0.8) + (rnd.uniform(-200, 200) * S, rnd.uniform(-200, 200) * S)
-            b.angular_velocity = rnd.uniform(-3, 3)
-    for _ in range(4): space.step(1 / FPS / 4)
+        burst = True; space.damping = 1.0
+        for e in bodies:
+            b = e[0]; v = b.position - C; d = max(1, v.length)
+            # the middle opens first, as if something pushed up from under the table
+            b.velocity = v / d * (420 * S + d * 1.5) + (rnd.uniform(-60, 60) * S, rnd.uniform(-60, 60) * S)
+    for _ in range(SUB):
+        if not burst:
+            for e in bodies:
+                if e[4]: pull(e[0], 1 / FPS / SUB)
+        space.step(1 / FPS / SUB)
     im = Image.new('RGB', (W, H), PAPER)
-    if t >= T_BURST - 0.2: draw_text(im, t)
-    for b, r, i in bodies:
+    if t >= T_HEAD - 0.1: draw_text(im, t)
+    for b, sh, i, t0, live in bodies:
+        if not live: continue
         x, y = b.position
-        if x < -r or x > W + r or y < -r or y > H + r: continue
-        f = face(i, r)
-        rot = f.rotate(-math.degrees(b.angle) * 0.15, resample=Image.BICUBIC)  # a gentle tilt, faces stay upright
-        im.paste(rot, (int(x - r), int(y - r)), rot)
-    # flash-free cut to the logo's quiet faces: a row of faces under the logo
-    if t >= T_LOGO + 0.6:
-        row = ['schubert', 'schumann', 'faure', 'debussy', 'tosti', 'brahms', 'mozart'] if PORT else ['schubert', 'schumann', 'brahms', 'faure', 'debussy', 'tosti', 'mahler', 'puccini', 'mozart']
-        rr = 70 * S; gap = rr * 2 - 18 * S
-        x0 = W / 2 - gap * (len(row) - 1) / 2
-        for n, i in enumerate(row):
-            a = ease((t - T_LOGO - 0.6 - n * 0.08) / 0.5)
-            if a <= 0: continue
-            f = face(i, rr)
-            yy = H / 2 - LOGO.size * 0.75 - rr - 30 * S + 30 * S * (1 - a)
-            ring = Image.new('RGBA', (int(2 * rr + 8 * S),) * 2, (0, 0, 0, 0))
-            ImageDraw.Draw(ring).ellipse((0, 0, ring.width - 1, ring.height - 1), fill=PAPER + (255,))
-            ring.paste(f, (int(4 * S), int(4 * S)), f)
-            if a < 1: ring.putalpha(ring.getchannel('A').point(lambda v: int(v * a)))
-            im.paste(ring, (int(x0 + n * gap - ring.width / 2), int(yy - ring.height / 2)), ring)
+        if x < -R or x > W + R or y < -R or y > H + R: continue
+        im.paste(FACE[i], (int(round(x - R)), int(round(y - R))), FACE[i])
+    if t >= T_LOGO + 0.6: draw_row(im, t)
     if STILLS:
         if fr in STILLS: im.save(f'{OUT}-{fr}.png')
         if fr >= max(STILLS): break
