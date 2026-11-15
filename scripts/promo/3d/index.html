@@ -28,12 +28,13 @@ const ease = (x) => 1 - (1 - clamp(x)) ** 3;
 const back = (x) => { x = clamp(x); const c = 2.2; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; };
 
 // timeline (seconds)
-const T_RAIN1 = [0.0, 1.5], T_BURST = 2.9;
-const T_W = [3.25, 3.75, 4.25];            // the headline's three beats
-const T_CARD = 5.6, FEAT_D = 1.3;        // the green card, and how long each line holds
+const T_RAIN1 = [0.0, 1.9], T_BURST = 3.2;
+const T_W = [3.55, 3.95, 4.35];            // the headline's three beats
+const T_CARD = 5.8, FEAT_D = 1.3;        // the green card, and how long each line holds
 const FEATS = [['Every line', 'translated.'], ['IPA for', 'every word.'], ['Tap a word', 'to hear it said.'], ['A piano that', 'slows down.'], ['Loop', 'the hard bits.'], ['Score and texts', 'as PDF.']];
-const T_CARD_OUT = T_CARD + 0.3 + FEATS.length * FEAT_D;
-const T_RAIN2 = T_CARD_OUT - 0.55, T_LOGO = T_CARD_OUT + 0.55, T_END = T_LOGO + 2.6;
+const T_CARD_OUT = T_CARD + 0.3;  // no card in this cut: the app's own screens come in between (promo.py)
+const T_RAIN2 = T_CARD + 0.4, T_LOGO = T_RAIN2 + 1.0, T_END = T_LOGO + 2.4;
+window.cut = [T_CARD, T_RAIN2];  // the 3D intro is [0, T_CARD), its end [T_RAIN2, T_END)
 window.duration = T_END;
 
 // ---------- 2D layers ----------
@@ -181,7 +182,7 @@ const N1 = Math.round(area1 / (2 * Math.sqrt(3) * R * R) * 1.25);
 for (let n = 0; n < N1; n++) {
   const a = rnd() * Math.PI * 2, out = 26 + rnd() * 6;
   const sx = Math.cos(a) * out, sz = Math.sin(a) * out * (PORT ? 1.5 : 1);
-  const aim = Math.atan2(-sz, -sx) + (rnd() - .5) * 0.35, v = 34 + rnd() * 14;
+  const aim = Math.atan2(-sz, -sx) + (rnd() - .5) * 0.35, v = 26 + rnd() * 9;
   makeCoin(sx, sz, Math.cos(aim) * v, Math.sin(aim) * v, T_RAIN1[0] + (n / N1) * (T_RAIN1[1] - T_RAIN1[0]) + rnd() * 0.12, 1);
 }
 // volley 2: crashes in around the name, leaving the middle clear; each aimed to come to rest at its own place
@@ -213,8 +214,8 @@ function pull() {
   for (const c of coins) {
     if (c.wave !== 1 || !c.body) continue;
     const p = c.body.translation(), d = Math.hypot(p.x, p.z) || 1, m = c.body.mass();
-    const f = Math.min(1, d / 3) * 85 * m / (FPS * 4);
-    c.body.applyImpulse({ x: -p.x / d * f + (rnd() - .5) * 2.2 * m / FPS, y: 0, z: -p.z / d * f + (rnd() - .5) * 2.2 * m / FPS }, true);
+    const f = Math.min(1, d / 3) * 52 * m / (FPS * 4);
+    c.body.applyImpulse({ x: -p.x / d * f + (rnd() - .5) * 1.1 * m / FPS, y: 0, z: -p.z / d * f + (rnd() - .5) * 1.1 * m / FPS }, true);
   }
 }
 function burst() {
@@ -223,11 +224,11 @@ function burst() {
     if (c.wave !== 1 || !c.body) continue;
     const p = c.body.translation(), d = Math.hypot(p.x, p.z) || 1, m = c.body.mass();
     c.body.setLinearDamping(0.02);
-    const up = (26 + 22 * Math.max(0, 1 - d / 8) + rnd() * 8) * m, outv = (12 + d * 2.2 + rnd() * 6) * m;
+    const up = (16 + 12 * Math.max(0, 1 - d / 8) + rnd() * 5) * m, outv = (11 + d * 1.9 + rnd() * 4) * m;
     c.body.applyImpulse({ x: p.x / d * outv, y: up, z: p.z / d * outv }, true);
     c.body.applyTorqueImpulse({ x: (rnd() - .5) * 6 * m, y: (rnd() - .5) * 2 * m, z: (rnd() - .5) * 6 * m }, true);
   }
-  shake.amp = 0.5; shake.t = T_BURST;
+  shake.amp = 0.25; shake.t = T_BURST;
 }
 function clearWave1() { ground.setFriction(0.4); for (const c of coins) if (c.wave === 1 && c.body) { world.removeRigidBody(c.body); c.body = null; c.g.visible = false; c.gone = true; } }
 
@@ -254,7 +255,6 @@ window.renderFrame = () => {
   X.globalAlpha = 1; X.fillStyle = PAPER; X.fillRect(0, 0, W, H);
   drawHead(t);
   X.drawImage(renderer.domElement, 0, 0);
-  drawCard(t);
   drawLogo(t);
   X.globalCompositeOperation = 'multiply'; X.drawImage(VIG, 0, 0);
   X.globalCompositeOperation = 'overlay'; X.globalAlpha = 0.09; X.drawImage(GRAIN[frame % GRAIN.length], 0, 0, W, H);

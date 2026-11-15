@@ -12,13 +12,16 @@ const srv = http.createServer((q, a) => { const f = path.join(__dirname, decodeU
   await p.goto(`http://localhost:${srv.address().port}/index.html?w=${W}&h=${H}&ids=${encodeURIComponent(JSON.stringify(ids))}`);
   await p.waitForFunction(() => window.ready === true, null, { timeout: 120000 });
   const stills = STILLS ? STILLS.split(',').map(Number) : null;
+  const SEQ = OUT.endsWith('/');
   const N = stills ? Math.max(...stills) + 1 : Math.round(await p.evaluate(() => window.duration) * 30);
+  if (SEQ) fs.writeFileSync(OUT + 'cut.json', JSON.stringify(await p.evaluate(() => window.cut)));
   let ff;
-  if (!stills) ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', '30', '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', OUT + '.tmp.mp4'], { stdio: ['pipe', 'inherit', 'inherit'] });
+  if (!stills && !SEQ) ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', '30', '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', OUT + '.tmp.mp4'], { stdio: ['pipe', 'inherit', 'inherit'] });
   const t0 = Date.now();
   for (let f = 0; f < N; f++) {
     const buf = Buffer.from(await p.evaluate(() => window.renderFrame()), 'base64');
-    if (stills) { if (stills.includes(f)) fs.writeFileSync(`${OUT}-${f}.jpg`, buf); }
+    if (SEQ) fs.writeFileSync(`${OUT}${String(f).padStart(4, '0')}.jpg`, buf);
+    else if (stills) { if (stills.includes(f)) fs.writeFileSync(`${OUT}-${f}.jpg`, buf); }
     else if (!ff.stdin.write(buf)) await new Promise((ok) => ff.stdin.once('drain', ok));
     if (f % 60 === 0) console.log('frame', f, ((Date.now() - t0) / 1000).toFixed(0) + 's');
   }
