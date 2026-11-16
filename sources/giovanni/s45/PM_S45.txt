@@ -1,0 +1,22 @@
+# ---- chunk 1: PM_J.txt (its bars 1-11 = piece bars 1-11)
+# S45 Recit. "Dunque quello sei tu" (p.213 sys 1-5), reader X: piano = continuo bass staff only (bass clef, whole-note chords); no RH staff is printed in this recitative, so only LH1 lines
+# page 213 system 1 starts bar 1
+# bar 1: Recit., C (common time), no key signature
+#@ bar 1 time=C key=0
+1 LH1: D3+F3+Bb3:w~
+2 LH1: D3+F3+Bb3:w
+# page 213 system 2 starts bar 3
+3 LH1: Eb3+G3+Bb3:w
+4 LH1: E3+G3+C4:w~
+# page 213 system 3 starts bar 5
+5 LH1: E3+G3+C4:w
+6 LH1: F3+A3+C4:h. F#3+A3+D4:q~
+# page 213 system 4 starts bar 7
+7 LH1: F#3+A3+D4:w
+8 LH1: G3+B3+D4:w
+# page 213 system 5 starts bar 9
+9 LH1: B2+D3+G3:w
+10 LH1: C3+G3+C4:w
+# bar 11: short final bar (two beats printed: quarter rest + quarter chord), double bar before No. 20; meta 2/4 only for the bar length
+#@ bar 11 len=2/4
+11 LH1: r:q D3+F#3+C4:q

@@ -726,6 +726,46 @@
     }
   },
   {
+    "editionId": "mozart-amico-che-ti-par",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-amico-che-ti-par@1.0.0-schirmer#64ba689be0",
+    "title": "Amico, che ti par?",
+    "subtitle": "Don Giovanni, Leporello and Donna Elvira: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      }
+    ],
+    "measures": 46,
+    "durationSec": 121,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-andate-la",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-andate-la@1.0.0-peters#b3a2ae504f",
@@ -1979,6 +2019,40 @@
     }
   },
   {
+    "editionId": "mozart-di-molte-faci-il-lume",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-di-molte-faci-il-lume@1.0.0-schirmer#3b7ee52c13",
+    "title": "Di molte faci il lume s'avvicina",
+    "subtitle": "Leporello and Donna Elvira: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      }
+    ],
+    "measures": 9,
+    "durationSec": 28,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 10,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-di-scrivermi-ogni-giorno",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-di-scrivermi-ogni-giorno@1.0.0-peters#8453986219",
@@ -2204,6 +2278,52 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 32,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-dunque-quello-sei-tu",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-dunque-quello-sei-tu@1.0.0-schirmer#1a0d4fe660",
+    "title": "Dunque quello sei tu",
+    "subtitle": "Zerlina, Donna Elvira, Don Ottavio and Masetto: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      }
+    ],
+    "measures": 11,
+    "durationSec": 20,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 10,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2932,6 +3052,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 13,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-ferma-perfido-ferma",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ferma-perfido-ferma@1.0.0-schirmer#3de75e2e1e",
+    "title": "Ferma, perfido, ferma!",
+    "subtitle": "Donna Elvira, Masetto, Zerlina and Don Ottavio: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 14,
+    "durationSec": 44,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 12,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -4196,6 +4362,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 16,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-leporello-signore",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-leporello-signore@1.0.0-schirmer#fe7a030828",
+    "title": "Leporello! Signore!",
+    "subtitle": "Don Giovanni and Leporello: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 46,
+    "durationSec": 103,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 48,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -6939,6 +7139,40 @@
     }
   },
   {
+    "editionId": "mozart-ve-gente-alla-finestra",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ve-gente-alla-finestra@1.0.0-schirmer#0fef4c047e",
+    "title": "V'è gente alla finestra",
+    "subtitle": "Don Giovanni and Masetto: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      }
+    ],
+    "measures": 27,
+    "durationSec": 65,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 24,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-vedrai-carino",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-vedrai-carino@1.0.0-schirmer#97cb141c0f",
@@ -7230,6 +7464,46 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-zitto-lascia-chio-senta",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-zitto-lascia-chio-senta@1.0.0-schirmer#d01db9fdc7",
+    "title": "Zitto, lascia ch'io senta!",
+    "subtitle": "Don Giovanni, Masetto and Zerlina: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      }
+    ],
+    "measures": 47,
+    "durationSec": 133,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 48,
       "withAudio": 0,
       "reviewed": 0
     }

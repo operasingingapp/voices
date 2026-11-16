@@ -1,0 +1,79 @@
+# ---- chunk 1: PM_J.txt (its bars 1-47 = piece bars 1-47)
+# S40 Recit. "Zitto, lascia ch'io senta!" -- piano (reader X)
+# The continuo is printed on ONE bass-clef staff only (no RH staff in this recitative): written as LH1.
+# page 182 system 4 starts bar 1
+#@ bar 1 time=C key=0
+# bar 1: Recit. (C, no key signature)
+1 LH1: A2+C3+F3:w~
+2 LH1: A2+C3+F3:w
+# page 182 system 5 starts bar 3
+3 LH1: B2+D3+G3:w~
+4 LH1: B2+D3+G3:w~
+5 LH1: B2+D3+G3:w
+# page 182 system 6 starts bar 6
+6 LH1: C3+E3+G3:w~
+7 LH1: C3+E3+G3:w
+8 LH1: A2+F3+C4:w~
+# page 182 system 7 starts bar 9
+9 LH1: A2+F3+C4:w
+10 LH1: Eb3+F3+A3+C4:w
+11 LH1: D3+F3+Bb3:w~
+# page 183 system 1 starts bar 12
+12 LH1: D3+F3+Bb3:h Eb3+G3+Bb3:h~
+13 LH1: Eb3+G3+Bb3:w~
+14 LH1: Eb3+G3+Bb3:w~
+# page 183 system 2 starts bar 15
+15 LH1: Eb3+G3+Bb3:w
+16 LH1: E3+G3+C4:w
+17 LH1: F3+A3+C4:w~
+# page 183 system 3 starts bar 18
+18 LH1: F3+A3+C4:w~
+19 LH1: F3+A3+C4:w
+20 LH1: F3+G3+B3+D4:h r:q G3+B3+D4:q
+# 20: double bar at the end of bar 20
+# page 183 system 4 starts bar 21
+# bar 21: C time signature printed again after the double bar (no change)
+21 LH1: F#3+A3+D4:w~
+22 LH1: F#3+A3+D4~:w
+# 22: tie arcs drawn from the whole chord into bar 23; only D4 is common to the next chord (G3 B3 D4), so only D4 is tied
+23 LH1: G3+B3+D4:h D#3+F#3+B3:h~
+# page 183 system 5 starts bar 24
+24 LH1: D#3+F#3+B3:w~
+25 LH1: D#3+F#3+B3:h E3+G3+B3:h
+26 LH1: D3+E3+G3+B3:h~ D3+E3+G3+B3:h
+# 26: natural printed before D3 in the first chord; the system break falls inside bar 26 (second half on system 6)
+# page 183 system 6 starts inside bar 26
+27 LH1: C3+E3+A3:w~
+28 LH1: C3+E3+A3:w~
+# page 183 system 7 starts bar 29
+29 LH1: C3+E3+A3:w
+30 LH1: G3+A3+C#4+E4:w~
+# 30: natural printed before G3
+31 LH1: G3+A3+C#4+E4:h C#3+E3+G3+A3:h
+# page 183 system 8 starts inside bar 31
+32 LH1: D3+F#3+A3:w
+33 LH1: F#3+A3+D4:w~
+# page 184 system 1 starts bar 34
+34 LH1: F#3+A3+D4:w~
+35 LH1: F#3+A3+D4:h G3+B3+D4:h~
+# page 184 system 2 starts bar 36
+36 LH1: G3+B3+D4:q F3+G3+B3+D4:h.
+# 36: natural printed before F3
+37 LH1: E3+G3+C4:w~
+38 LH1: E3+G3+C4:w
+# page 184 system 3 starts bar 39
+39 LH1: C#3+E3+A3:w~
+40 LH1: C#3+E3+A3:w
+# page 184 system 4 starts bar 41
+41 LH1: C3+D3+F#3+A3:w~
+# 41: natural printed before C3, sharp before F3
+42 LH1: C3+D3+F#3+A3:h B2+D3+G3:h~
+# page 184 system 5 starts bar 43
+43 LH1: B2+D3+G3:w~
+44 LH1: B2+D3+G3:q F3+G3+B3+D4:q~ F3+G3+B3+D4:h
+# 44: natural printed before F3
+# page 184 system 6 starts bar 45
+45 LH1: E3+G3+C4:w~
+46 LH1: E3+G3+C4:h r:q D3+A3+C4:q
+47 LH1: G2+G3+B3:h r:h
+# bar 47: last bar, double bar before No. 18

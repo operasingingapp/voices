@@ -1,0 +1,60 @@
+# ---- chunk 1: VM_J.txt (its bars 1-11 = piece bars 1-11)
+# S45 Recit. "Dunque quello sei tu" (p.213 sys 1-5), reader X
+# Singers: Z = Zerlina, E = Donna Elvira, O = Don Ottavio (sounding pitch, printed in treble clef), M = Masetto (bass clef)
+# page 213 system 1 starts bar 1
+# bar 1: Recit., C (common time), no key signature
+#@ bar 1 time=C key=0
+1 Z: r:e F4:s "Dun-" F4:s "-que" Bb4:e "quel-" Bb4:s "-lo" A4:s "sei" Bb4:e "tu," Bb4:e "che_il" Bb4:e "mio" C5:e "Ma-"
+1 E: r:w
+1 O: r:w
+1 M: r:w
+2 Z: Ab4:e "-set-" Ab4:e "-to" Ab4:e "po-" Ab4:e "-co" F4:e "fà" F4:s "cru-" G4:s "-del-" Ab4:s "-men-" Ab4:s "-te" Bb4:s "mal-" F4:s "-trat-"
+2 E: r:w
+2 O: r:w
+2 M: r:w
+# page 213 system 2 starts bar 3
+# bar 3: Donna Elvira enters after Zerlina's "-tasti!" (same staff)
+3 Z: G4:e "-ta-" G4:e "-sti!" r:q r:h
+3 E: r:q r:e G4:s "Dun-" G4:s "-que" G4:q "tu" G4:e "m'in-" G4:e "-gan-"
+3 O: r:w
+3 M: r:w
+4 Z: r:w
+4 E: C5:e "-na-" C5:e "-sti,_o" C5:e "scel-" E5:e "-le-" C5:e "-ra-" C5:e "-to," r:e C5:e "spac-"
+4 O: r:w
+4 M: r:w
+# page 213 system 3 starts bar 5
+5 Z: r:w
+5 E: C5:e "-cian-" G4:e "-do-" G4:e "-ti" A4:e "con" Bb4:e "me" Bb4:e "da" C5:e "Don" G4:e "Gio-"
+5 O: r:w
+5 M: r:w
+# bar 6: Don Ottavio enters (printed treble clef, sounds an octave lower) after Elvira's "-vanni!"
+6 Z: r:w
+6 E: A4:e "-van-" A4:e "-ni!" r:h r:q
+6 O: r:q A3:e "Dun-" A3:s "-que" A3:s "tu_in" A3:e "que-" D4:e "-sti" D4:e "pan-" A3:e "-ni"
+6 M: r:w
+# page 213 system 4 starts bar 7
+7 Z: r:w
+7 E: r:w
+7 O: r:s A3:s "ve-" A3:s "-ni-" B3:s "-sti" C4:e "qui" E4:e "per" C4:e "qual-" C4:e "-che" D4:e "tra-" A3:e "-di-"
+7 M: r:w
+8 Z: r:w
+8 E: r:q r:e D5:e "A" B4:q "me" B4:e "toc-" C5:s "-ca" D5:s "pu-"
+8 O: B3:e "-men-" B3:e "-to!" r:h r:q
+8 M: r:w
+# page 213 system 5 starts bar 9
+# bar 9: Elvira "-nirlo.", then Zerlina "Anzi a me.", then Don Ottavio "No, no, a me." (bar 9-10)
+9 Z: r:q r:e D5:s "An-" D5:s "-zi_a" B4:e "me." r:e r:q
+9 E: C5:e "-nir-" G4:e "-lo." r:h r:q
+9 O: r:h r:e G3:e "No," C4:e "no," r:s E4:s "a"
+9 M: r:w
+# bar 10: Masetto enters (bass clef) after Ottavio's "me."
+10 Z: r:w
+10 E: r:w
+10 O: C4:e "me." r:e r:q r:h
+10 M: r:e G3:s "Ac-" G3:s "-cop-" C4:e "-pa-" A3:s "-te-" G3:s "-lo" F#3:e "me-" F#3:e "-co" F#3:e "tut-" G3:e "-ti"
+# bar 11: last bar of the recitative, printed with only two beats (quarter + quarter rest) before the double bar (No. 20 follows); meta 2/4 only to make the short bar add up, no printed time change
+#@ bar 11 len=2/4
+11 Z: r:h
+11 E: r:h
+11 O: r:h
+11 M: D3:q "tre." r:q

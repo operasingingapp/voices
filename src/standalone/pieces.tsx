@@ -4028,6 +4028,188 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-leporello-signore": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 107, from the median length of three recordings (Fricsay, Böhm, Karajan; under two minutes)",
+    },
+    notePlaceholder: "Quick and conversational: Leporello sulky, Giovanni charming his way back, then all business about the disguise",
+    about: (
+      <>
+        <p>
+          Act 2, straight after the duet Eh via, buffone. Four gold pieces buy back Leporello, on one condition: his master must give up women. Don Giovanni laughs at the idea; women are more necessary to him than the bread he eats and the air he breathes, and to be faithful to one is to be cruel to all the others. Tonight he is after Donna Elvira's maid, and to court her in the dark he swaps cloak and hat with Leporello.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 162–164 (46 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. Leporello sings "avvezzaste" and Giovanni "si esteso" and "giacche", as the print has them.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-amico-che-ti-par": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, from the median length of three recordings (Fricsay, Böhm, Karajan; about two minutes)",
+    },
+    notePlaceholder: "Elvira hopeful and tender, Leporello playing the lover in his master's voice, Giovanni amused in the shadows",
+    about: (
+      <>
+        <p>
+          Act 2, after the trio at Elvira's window. Don Giovanni tells Leporello, now dressed in his master's clothes, to embrace Elvira when she comes down, imitate his voice and lead her away. Elvira believes her lover has come back repentant; Leporello warms to the part, while Giovanni, hidden, enjoys the joke and then frightens them off by pretending to be a robber.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 171–173 (46 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. The print's spelling is kept ("Va là", Leporello's interrupted "Signore—").
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ve-gente-alla-finestra": {
+    portrait: "giovanni:masetto",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 99, from the median length of three recordings (Fricsay, Böhm, Karajan; just over a minute)",
+    },
+    notePlaceholder: "Masetto fierce and determined; Giovanni, in disguise, all eager helpfulness, with his asides under his breath",
+    about: (
+      <>
+        <p>
+          Act 2, after the serenade. Don Giovanni thinks someone has come to the window, but it is Masetto with armed peasants, out to kill him. Wearing Leporello's hat and cloak, Giovanni copies his servant's voice, says he too has had enough of his wicked master, and offers to help them find him.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 176–177 (27 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. The asides are printed in round brackets and kept so.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-zitto-lascia-chio-senta": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 85, from the median length of three recordings (Fricsay, Böhm, Karajan; just over two minutes)",
+    },
+    notePlaceholder: "Giovanni innocent until the beating; Masetto boastful then howling; Zerlina half scolding, half comforting",
+    about: (
+      <>
+        <p>
+          Act 2, after Metà di voi quà vadano. Alone with Masetto, the disguised Don Giovanni asks to see his weapons, takes them, and beats him before running off. Zerlina hears his cries, finds him on the ground and scolds him for the jealousy that got him into this, then asks where it hurts.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 182–184 (47 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. Zerlina sings "con questo tua pazza gelosia" as the print has it (libretto: questa).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-di-molte-faci-il-lume": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 76, from the median length of three recordings (Fricsay, Böhm, Karajan; about half a minute)",
+    },
+    notePlaceholder: "Hushed and quick: Leporello looking for a way out, Elvira frightened and clinging",
+    about: (
+      <>
+        <p>
+          Act 2, a dark courtyard before Donna Anna's house. Leporello, still in his master's clothes, sees torches coming and wants to slip away from Elvira, who still thinks he is Don Giovanni. She begs her husband not to leave her alone.
+        </p>
+        <p>
+          Score: the recitative on vocal score page 187 (9 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. Leporello's "lume è" is sung on one note, so his line is kept whole.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-dunque-quello-sei-tu": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 126, from the median length of two recordings (Fricsay and Böhm; about twenty seconds)",
+    },
+    notePlaceholder: "Four angry voices, one after another, each claiming him; keep it fast",
+    about: (
+      <>
+        <p>
+          Act 2, after the sextet, when the man in Don Giovanni's cloak turns out to be Leporello. Zerlina accuses him of beating Masetto, Elvira of deceiving her in his master's clothes, Ottavio of coming here to do some treachery. Each claims the right to punish him, and Masetto wants all three to finish him off.
+        </p>
+        <p>
+          Score: the recitative on vocal score page 213 (11 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. The last bar is printed with only two beats before No. 20 and is kept so.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ferma-perfido-ferma": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 77, from the median length of two recordings (Fricsay and Böhm; under a minute)",
+    },
+    notePlaceholder: "A burst of shouting, then Ottavio, steady and resolved, taking charge",
+    about: (
+      <>
+        <p>
+          Act 2, after Ah, pietà! signori miei. Leporello has escaped them. Don Ottavio is now sure that Don Giovanni killed Donna Anna's father; he asks the others to wait in the house for a few hours while he goes to the authorities, and promises them vengeance.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 217–218 (14 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader and checked bar by bar by a separate fresh checker. Only the
+          Italian words are kept. The print's words are kept: Zerlina's "Con quel arte" (libretto: qual) and Ottavio's "un ricorsa" and "è in poch'istanti".
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

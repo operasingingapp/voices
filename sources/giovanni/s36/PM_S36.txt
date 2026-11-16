@@ -1,0 +1,82 @@
+# ---- chunk 1: PM_J.txt (its bars 1-46 = piece bars 1-46)
+# S36 Recit. "Amico, che ti par?" (p.171 sys 2 - p.173 end), reader X. Piano = one bass staff (secco continuo chords), written as LH1.
+# page 171 system 2 starts bar 1
+#@ bar 1 time=C key=0
+# bar 1: Recit. (secco), C, no key signature
+1 LH1: C#3+E3+A3:w~
+2 LH1: C#3+E3+A3:w~
+3 LH1: C#3+E3+A3:h D3+F#3+A3:h~
+# page 171 system 3 starts bar 4
+4 LH1: D3+F#3+A3:w
+5 LH1: B2+D3+G3:w~
+# page 171 system 4 starts bar 6
+6 LH1: B2+D3+G3:w~
+7 LH1: B2+D3+G3:w
+# page 171 system 5 starts bar 8
+# bar 8: natural sign before C3
+8 LH1: C3+E3+G3:w~
+9 LH1: C3+E3+G3:w
+# page 171 system 6 starts bar 10
+10 LH1: A2+C3+F3:w~
+# bar 11: second chord Eb3 F3 A3 C4 (Eb3 displaced left of the stem)
+11 LH1: A2+C3+F3:h. Eb3+F3+A3+C4:q~
+# page 172 system 1 starts bar 12
+12 LH1: Eb3+F3+A3+C4:w
+13 LH1: D3+F3+Bb3:w
+# bar 14 ends with a double bar (clef change in the voice), not the end of the piece
+14 LH1: Eb3+G3+Bb3:h r:q F3+A3+C4:q
+# page 172 system 2 starts bar 15
+# bar 15: time signature C printed again after the double bar (no change); natural sign before E3
+15 LH1: E3+G3+C4:w~
+16 LH1: E3+G3+C4:w~
+# page 172 system 3 starts bar 17
+17 LH1: E3+G3+C4:h G#3+B3+E4:h~
+18 LH1: G#3+B3+E4:h A3+C4+E4:h~
+19 LH1: A3+C4+E4:w
+# page 172 system 4 starts bar 20
+20 LH1: D#3+F#3+B3:w~
+21 LH1: D#3+F#3+B3:h E3+G3+B3:h~
+22 LH1: E3+G3+B3:w~
+# page 172 system 5 starts bar 23
+# bar 23: second chord D3 E3 G#3 B3 (D3 displaced left)
+23 LH1: E3+G3+B3:h D3+E3+G#3+B3:h~
+24 LH1: D3+E3+G#3+B3:w
+# page 172 system 6 starts bar 25
+25 LH1: C3+E3+A3:w~
+# bar 26: second chord C3 D3 F#3 A3 (C3 displaced left)
+26 LH1: C3+E3+A3:h C3+D3+F#3+A3:h~
+# page 172 system 7 starts bar 27
+27 LH1: C3+D3+F#3+A3:h B2+D3+G3:h~
+28 LH1: B2+D3+G3:w
+# page 172 system 8 starts bar 29
+# bar 29: natural sign before F3 (F3 displaced left)
+29 LH1: F3+G3+B3+D4:w
+30 LH1: E3+G3+C4:w~
+# page 173 system 1 starts bar 31
+31 LH1: E3+G3+C4:h C#3+E3+A3:h
+32 LH1: D3+F3+A3:w
+# page 173 system 2 starts bar 33
+# bar 33: first chord D3 E3 G#3 B3 (D3 displaced left)
+33 LH1: D3+E3+G#3+B3:h C3+E3+A3:h~
+34 LH1: C3+E3+A3:h D#3+F#3+B3:h~
+# page 173 system 3 starts bar 35
+35 LH1: D#3+F#3+B3:h E3+G3+B3:h~
+36 LH1: E3+G3+B3:w~
+# page 173 system 4 starts bar 37
+37 LH1: E3+G3+B3:h F#3+A3+D4:h~
+38 LH1: F#3+A3+D4:w~
+# page 173 system 5 starts bar 39
+39 LH1: F#3+A3+D4:w
+40 LH1: G3+B3+D4:w~
+# page 173 system 6 starts bar 41
+41 LH1: G3+B3+D4:w~
+42 LH1: G3+B3+D4:h C#3+E3+A3:h
+# bar 43: tr over the dotted G3; slur from it to the last G3; F#3 G3 are 32nds
+43 LH1: r:q A3:h G3:e.t( F#3:x G3:x)
+# page 173 system 7 starts bar 44
+44 LH1: F#3+A3+D4:h G3+B3+D4:h
+# bar 45: first chord G3 A3 C#4 E4 (G3 displaced left; sharp printed at C4)
+45 LH1: G3+A3+C#4+E4:h r:q A3+C#4+G4:q
+# bar 46: final double bar (end of the recitative, before No. 16)
+# FIX bar 46 LH1: D4 added (fresh check; zoomed print shows four heads D3 A3 D4 F#4)
+46 LH1: D3+A3+D4+F#4:q r:q r:h

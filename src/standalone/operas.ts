@@ -1451,7 +1451,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Leporello! Signore!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Leporello! Signore!"
+      "id": "Act 2: Leporello! Signore!",
+      "editionId": "mozart-leporello-signore"
      },
      {
       "title": "Ah, taci, ingiusto core!",
@@ -1461,7 +1462,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Amico, che ti par?",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Amico, che ti par?"
+      "id": "Act 2: Amico, che ti par?",
+      "editionId": "mozart-amico-che-ti-par"
      },
      {
       "title": "Deh vieni alla finestra",
@@ -1472,7 +1474,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "V'è gente alla finestra",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: V'è gente alla finestra"
+      "id": "Act 2: V'è gente alla finestra",
+      "editionId": "mozart-ve-gente-alla-finestra"
      },
      {
       "title": "Metà di voi quà vadano",
@@ -1483,7 +1486,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zitto, lascia ch'io senta!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Zitto, lascia ch'io senta!"
+      "id": "Act 2: Zitto, lascia ch'io senta!",
+      "editionId": "mozart-zitto-lascia-chio-senta"
      },
      {
       "title": "Ah, ah, ah, ah, questa è buona",
@@ -1596,7 +1600,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Leporello! Signore!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Leporello! Signore!"
+      "id": "Act 2: Leporello! Signore!",
+      "editionId": "mozart-leporello-signore"
      },
      {
       "title": "Ah, taci, ingiusto core!",
@@ -1606,12 +1611,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Amico, che ti par?",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Amico, che ti par?"
+      "id": "Act 2: Amico, che ti par?",
+      "editionId": "mozart-amico-che-ti-par"
      },
      {
       "title": "Di molte faci il lume s'avvicina",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Di molte faci il lume s'avvicina"
+      "id": "Act 2: Di molte faci il lume s'avvicina",
+      "editionId": "mozart-di-molte-faci-il-lume"
      },
      {
       "title": "Sola, sola in bujo loco",
@@ -1869,12 +1876,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Amico, che ti par?",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Amico, che ti par?"
+      "id": "Act 2: Amico, che ti par?",
+      "editionId": "mozart-amico-che-ti-par"
      },
      {
       "title": "Di molte faci il lume s'avvicina",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Di molte faci il lume s'avvicina"
+      "id": "Act 2: Di molte faci il lume s'avvicina",
+      "editionId": "mozart-di-molte-faci-il-lume"
      },
      {
       "title": "Sola, sola in bujo loco",
@@ -1889,12 +1898,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Dunque quello sei tu",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Dunque quello sei tu"
+      "id": "Act 2: Dunque quello sei tu",
+      "editionId": "mozart-dunque-quello-sei-tu"
      },
      {
       "title": "Ferma, perfido, ferma!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ferma, perfido, ferma!"
+      "id": "Act 2: Ferma, perfido, ferma!",
+      "editionId": "mozart-ferma-perfido-ferma"
      },
      {
       "title": "Amico, per pietà",
@@ -2007,7 +2018,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zitto, lascia ch'io senta!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Zitto, lascia ch'io senta!"
+      "id": "Act 2: Zitto, lascia ch'io senta!",
+      "editionId": "mozart-zitto-lascia-chio-senta"
      },
      {
       "title": "Vedrai, carino",
@@ -2028,12 +2040,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Dunque quello sei tu",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Dunque quello sei tu"
+      "id": "Act 2: Dunque quello sei tu",
+      "editionId": "mozart-dunque-quello-sei-tu"
      },
      {
       "title": "Ferma, perfido, ferma!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ferma, perfido, ferma!"
+      "id": "Act 2: Ferma, perfido, ferma!",
+      "editionId": "mozart-ferma-perfido-ferma"
      },
      {
       "title": "Restati quà!",
@@ -2148,12 +2162,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Dunque quello sei tu",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Dunque quello sei tu"
+      "id": "Act 2: Dunque quello sei tu",
+      "editionId": "mozart-dunque-quello-sei-tu"
      },
      {
       "title": "Ferma, perfido, ferma!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ferma, perfido, ferma!"
+      "id": "Act 2: Ferma, perfido, ferma!",
+      "editionId": "mozart-ferma-perfido-ferma"
      },
      {
       "title": "Il mio tesoro intanto",
@@ -2248,12 +2264,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "V'è gente alla finestra",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: V'è gente alla finestra"
+      "id": "Act 2: V'è gente alla finestra",
+      "editionId": "mozart-ve-gente-alla-finestra"
      },
      {
       "title": "Zitto, lascia ch'io senta!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Zitto, lascia ch'io senta!"
+      "id": "Act 2: Zitto, lascia ch'io senta!",
+      "editionId": "mozart-zitto-lascia-chio-senta"
      },
      {
       "title": "Sola, sola in bujo loco",
@@ -2268,12 +2286,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Dunque quello sei tu",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Dunque quello sei tu"
+      "id": "Act 2: Dunque quello sei tu",
+      "editionId": "mozart-dunque-quello-sei-tu"
      },
      {
       "title": "Ferma, perfido, ferma!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ferma, perfido, ferma!"
+      "id": "Act 2: Ferma, perfido, ferma!",
+      "editionId": "mozart-ferma-perfido-ferma"
      },
      {
       "title": "Amico, per pietà",
