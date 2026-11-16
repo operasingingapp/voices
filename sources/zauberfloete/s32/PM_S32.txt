@@ -1,0 +1,132 @@
+# S32 No. 13 Arie, piano (Edition Peters pp. 94-95)
+# bar 1: Allegro, 2/4, C major
+# page 094 system 1 starts bar 1
+# JUDGE bar 1 RH: Y - 'sempre pp possibile': pp is a dynamic, the words around it are expression words
+1 RH1: word:sempre dyn:pp word:possibile C6:q. D6:s B5:s
+# MARKS bar 1 LH1: dyn:pp (the 'sempre pp possibile' stands between the staves; words kept in RH only)
+# FIX bar 1 LH1: fresh check: LH starts in treble clef (confirmed)
+1 LH1: clef:G dyn:pp C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+2 RH1: C6:e D6:s B5:s C6:e D6:s B5:s
+2 LH1: C4+E4:s G4:s C4+F4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+3 RH1: C6:e* G5:e* C6:e* B5:e*
+3 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s
+4 RH1: A5:e* G5:e* A5:e* B5:e*
+4 LH1: C4:s F4:s C4:s E4:s C4:s F4:s C4:s D4:s
+# bar 5: 8va sign starts on the four 16ths (sounding pitch written), continues to bar 9
+5 RH1: C6:e r:e C6:s D6:s E6:s F6:s
+5 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s
+# page 094 system 2 starts bar 6
+6 RH1: G6:s A6:s G6:s F#6:s G6:s F6:s E6:s D6:s
+6 LH1: G3+B3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s
+7 RH1: C6:s D6:s C6:s B5:s C6:s D6:s E6:s F6:s
+7 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s
+8 RH1: G6:s A6:s G6:s F#6:s G6:s F6:s E6:s D6:s
+8 LH1: G3+B3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s
+# bar 9: 8va ends after the eighth C
+9 RH1: C6:q( C7:e) r:e
+9 LH1: C4+E4:q. r:e
+# bar 10: double bar with segno before this bar
+10 RH1: C6:q. D6:s B5:s
+10 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+# page 094 system 3 starts bar 11
+11 RH1: C6:e D6:s B5:s C6:e D6:s B5:s
+11 LH1: C4+E4:s G4:s C4+F4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+12 RH1: C6:e* G5:e* C6:e* B5:e*
+12 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s
+13 RH1: A5:e* G5:e* A5:e* B5:e*
+13 LH1: C4:s F4:s C4:s E4:s C4:s F4:s C4:s D4:s
+14 RH1: C6:s D6:s E6:s F6:s G6:s E6:s F6:s D6:s
+14 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s G3+B3:s G4:s
+15 RH1: C6:q. D6:s B5:s
+15 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+# page 094 system 4 starts bar 16
+16 RH1: C6:e D6:s B5:s C6:e D6:s B5:s
+16 LH1: C4+E4:s G4:s C4+F4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+# bar 17: LH clef change to bass clef in mid-bar
+17 RH1: C6:e G5:e A5+C6:e G5+B5:e
+17 LH1: C4+E4:s G4:s C4+E4:s G4:s clef:F C3:s C4:s C3:s C4:s
+18 RH1: G5+A5:e. G5+A5:s F#5+D6:e. F#5+D6:s
+18 LH1: D3:s D4:s D3:s D4:s D3:s D4:s D3:s D4:s
+19 RH1: G5+B5:e r:e A5+C6:e. G5+B5:s
+19 LH1: E3:s E4:s E3:s E4:s C3:s C4:s C3:s C4:s
+# bar 20: LH clef change back to treble at the end of the bar
+20 RH1: G5+A5:e. G5+A5:s F#5+D6:e. F#5+D6:s
+20 LH1: D3:s D4:s D3:s D4:s D3:s D4:s D3:s D4:s clef:G
+# page 094 system 5 starts bar 21
+# bar 21: 8va sign over the RH from the grace note of bar 21 to the G of bar 25 (sounding pitch written)
+21 RH1: g:G5:e( G6:q.) C6+A6:s F#6:s
+21 LH1: G3+B3+D4:s G4:s G3+B3+D4:s G4:s G3+B3+D4:s G4:s D4:s D5:s
+22 RH1: B5+G6:e C6+A6:s F#6:s B5+G6:e A5+F#6:s D#6:s
+22 LH1: G4:s D5:s D4:s D5:s G4:s D5:s B3:s B4:s
+23 RH1: G5+E6:e A5+F#6:s D#6:s G5+E6:e C7:s A6:s
+23 LH1: E4:s B4:s B3:s B4:s E4:s B4:s A3+C4+E4:s A4:s
+24 RH1: G6:s( F#6:s) E6:s* D6:s* C#6:s( D6:s) E6:s* F#6:s*
+24 LH1: D4+A4:s C5:s D4+A4:s C5:s D4+A4:s C5:s D4+A4:s C5:s
+# bar 25: 8va ends after the first note; LH changes to bass clef at the end of the bar
+25 RH1: G6:q r:q
+25 LH1: G4+B4:q r:q clef:F
+# page 095 system 1 starts bar 26
+26 RH1: r:e D4+G4+B4:e D4+G4+B4:e D4+G4+B4:e
+26 LH1: r:e G2+G3:e G2+G3:e G2+G3:e
+27 RH1: D4+G4+B4:e r:e C4+F#4+A4:e r:e
+27 LH1: G2+G3:e r:e D2+D3:e r:e
+28 RH1: B3+G4:s A4:s G4:s F#4:s G4:s A4:s B4:s C5:s
+28 LH1: G1+G2:q r:q
+# bar 29: Tutti (cue word); mfp between the staves
+29 RH1: dyn:mfp D5:s( E5:s D5:s C#5:s) D5:s( E5:s D5:s C#5:s)
+# MARKS bar 29 LH1: dyn:mfp (printed between the staves, just under the RH)
+29 LH1: dyn:mfp D3+F#3+A3:h~
+30 RH1: D5:s* E5:s* C5:s* D5:s* B4:s* C5:s* A4:s* B4:s*
+30 LH1: D3+F#3+A3:h
+31 RH1: G4:s D4:s E4:s F#4:s G4:s A4:s B4:s C5:s
+31 LH1: G3+B3:q r:q
+# page 095 system 2 starts bar 32
+32 RH1: dyn:mfp D5:s( E5:s D5:s C#5:s) D5:s( E5:s D5:s C#5:s)
+# MARKS bar 32 LH1: dyn:mfp (printed between the staves, just under the RH)
+32 LH1: dyn:mfp D3+F#3+A3:h~
+33 RH1: D5:s* E5:s* C5:s* D5:s* B4:s* C5:s* A4:s* B4:s*
+33 LH1: D3+F#3+A3:h
+# bar 34: LH changes to treble clef at the end of the bar
+34 RH1: G4:s* A4:s* B4:s* C5:s* D5:s* E5:s* F5:s* D5:s*
+34 LH1: G3+B3:q r:q clef:G
+# bar 35: RH 8va sign starts at the two 16ths (after the dotted-quarter C6, which is printed at pitch) and runs to the end of bar 43
+# JUDGE bar 35 RH: Y - the 8va line begins over the D/B sixteenths (written D5 B4, sounding D6 B5, as in bars 10/15)
+35 RH1: g:C5:e( C6:q.) D6:s B5:s
+35 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+# bar 36: 8va continues over the RH (sounding pitch written), into the next system
+36 RH1: C6:e D6:s B5:s C6:e D6:s B5:s
+36 LH1: C4+E4:s G4:s C4+F4:s G4:s C4+E4:s G4:s C4+F4:s G4:s
+# bar 37: LH changes to bass clef at the end of the bar
+37 RH1: C6:s D6:s C6:s B5:s C6:s D6:s E6:s F6:s
+37 LH1: C4:e E4+G4:e E4+G4:e E4+G4:e clef:F
+# page 095 system 3 starts bar 38
+# bars 38-43: 8va continues over the RH; ends at the end of bar 43 (sounding pitch written)
+# bars 38/40/42 RH second half is G E F(natural) D, unlike bars 6/8 (G F(natural) E D): checked on the print, both are as printed
+38 RH1: G6:s A6:s G6:s F#6:s G6:s E6:s F6:s D6:s
+38 LH1: G3:e B3+F4:e B3+F4:e B3+F4:e
+39 RH1: C6:s D6:s C6:s B5:s C6:s D6:s E6:s F6:s
+39 LH1: C3:e C4+E4:e C4+E4:e C4+E4:e
+40 RH1: G6:s A6:s G6:s F#6:s G6:s E6:s F6:s D6:s
+40 LH1: G3:e B3+F4:e B3+F4:e B3+F4:e
+41 RH1: C6:s D6:s C6:s B5:s C6:s D6:s E6:s F6:s
+41 LH1: C3:e C4+E4:e C4+E4:e C4+E4:e
+42 RH1: G6:s A6:s G6:s F#6:s G6:s E6:s F6:s D6:s
+42 LH1: G3:e B3+F4:e B3+F4:e B3+F4:e
+43 RH1: C6:q. F5+D6:s B5:s
+# JUDGE bar 43 LH: X - last 16th sits on the third ledger line above the bass staff (three ledgers: C4, E4, G4) = G4, not F4
+43 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s G3+D4:s G4:s
+# page 095 system 4 starts bar 44
+# bars 44-49: 8va sign over the RH from bar 44 to the third eighth of bar 49 (sounding pitch written)
+44 RH1: E5+C6:e F5+D6:s B5:s E5+C6:e D6+B6:s G#6:s
+44 LH1: C4+E4:s G4:s G3+D4:s G4:s C4+E4:s G4:s E3+B3:s E4:s
+45 RH1: C6+A6:e D6+B6:s G#6:s C6+A6:e F6:s D6:s
+45 LH1: A3+C4:s E4:s E3+B3:s E4:s A3+C4:s E4:s D3+A3:s D4:s
+46 RH1: C6:s B5:s A5:s G5:s F#5:s G5:s A5:s B5:s
+46 LH1: G3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s
+47 RH1: C6:s D6:s E6:s F6:s G6:s E6:s F6:s D6:s
+47 LH1: C4+E4:s G4:s C4+E4:s G4:s C4+E4:s G4:s F3+A3:s D4:s
+48 RH1: C6:s B5:s A5:s G5:s F#5:s G5:s A5:s B5:s
+48 LH1: G3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s G3+B3+D4:s F4:s
+# bar 49: 8va ends after the third eighth; double bar with segno signs above and below the piano system (D.S. to bar 10 for verse 2); no D.S./Fine words
+49 RH1: C6:e* G5+E6:e* E5+C6:e* r:e
+49 LH1: C4+E4:e* C4:e* C3:e* r:e

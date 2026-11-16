@@ -1,0 +1,111 @@
+# S36 No. 15 Arie "In diesen heil'gen Hallen", pp. 100-101, piano, reader A
+# bar 1: Larghetto, 2/4, E major
+# bar 1: pickup, 1/16
+# page 100 system 1 starts bar 1
+1 RH1: dyn:p G#4+B4:s
+# MARKS bar 1 LH1: dyn:p (p printed between the staves, both hands)
+1 LH1: dyn:p r:s
+# JUDGE bar 2 RH: X - second dotted 8th is C#4+F#4 (stem up, dot on C#4) over A3 8th stem down; the "E5" Y read in the 16ths is the partial 16th beam stub; no B3/G#3
+2 RH1: G#4+B4:e.( E4+G#4:s) C#4+F#4:e.( F#4+A4:s)
+2 RH2: B3:e r:e A3:e r:e
+2 LH1: E2+E3:e r:e A1+A2:e r:e
+# bar 3: segno (double bar with segno sign, both staves) before the last eighth
+# JUDGE bar 3 RH: X - f printed just above the LH staff (LH only); chords F#3+A3+D#4 and E3+G#3+E4 confirmed
+# MARKS bar 3 RH1: dyn:f (f printed between the staves under the RH chord, both hands)
+3 RH1: dyn:f F#3+A3+D#4:e* E3+G#3+E4:e* r:e
+3 LH1: dyn:f B1+B2:e* E1+E2:e* r:e
+# SPLIT (coordinator): printed bar 3 is divided by the segno double bar after its 3rd eighth; its last eighth is written as bar 4 (1/8) so the repeat barline can stand there. Later bars are +1 from the readers' numbering.
+4 RH1: r:e
+4 LH1: r:e
+# JUDGE bar 4 RH: X - lowest head of 2nd chord has the C4 ledger through it = C#4
+5 RH1: dyn:p E4+G#4+B4:q( C#4+F#4+A4:q)
+# MARKS bar 4 LH1: dyn:p (p printed between the staves, both hands)
+5 LH1: dyn:p E2+E3:q( A1+A2:q)
+6 RH1: E4+G#4:q( D#4+F#4:e) B4:e
+6 RH2: B3:q. r:e
+6 LH1: B1+B2:q. r:e
+# page 100 system 2 starts bar 7
+# JUDGE bar 6 RH: X - B4+D#5 16th shared by both voices (one stem through both beams)
+7 RH1: E5:e.( F#5:x E5:x) B4+D#5:s( E5:s B4+F#5:s E5+G#5:s)
+# MARKS bar 6 RH2: slur under the lower 16ths (printed from the shared B4+D#5 chord to G#4; started on E4 since the first 16th is a hidden rest in RH2)
+7 RH2: r:e B4:e s:s E4:s( F#4:s G#4:s)
+# bar 6 RH: the first 16th chord B4+D#5 of beat 2 is shared by both voices (one stem through both beams)
+# JUDGE bar 6 LH: X - first 16th chord is F#3+A3+D#4 (pixel check: no head in the B3 space)
+7 LH1: r:e G#3+B3+E4:e F#3+A3+D#4:s( E3+G#3:s D#3+F#3:s E3:s)
+8 RH1: G#4+E5+G#5:e( F#4+D#5+F#5:s) B3+D#4:s* C#4+E4:s* D#4+F#4:s* E4+G#4:s* F#4+A4:s*
+8 LH1: B2+B3:q r:q
+# JUDGE bar 8 RH: X - lowest head of 2nd chord on the C4 ledger = C#4
+9 RH1: E4+G#4+B4:q( C#4+F#4+A4:q)
+9 LH1: E2+E3:q( A1+A2:q)
+10 RH1: E4+G#4:q( D#4+F#4:e) r:e
+10 RH2: B3:q. r:e
+10 LH1: B1+B2:q. r:e
+# page 100 system 3 starts bar 11
+# bar 10: cross-staff: the RH-beamed eighths (stems down) take one LH-staff note each (bracketed): written as LH1
+11 RH1: r:e C#4+E4:e* B3+D#4:e* A#3+C#4:e*
+# JUDGE bar 10 LH: X - lower beamed voice E2+E3, F#2, F#1+F#2 (F#1 on 4th ledger, Y lacked it); bracketed G#3/F#3/E3 on the RH-beamed stems
+11 LH1: s:e G#3:e F#3:e E3:e
+11 LH2: r:e E2+E3:e F#2:e F#1+F#2:e
+# JUDGE bar 11 RH: OWN (both wrong) - X had D#5 as 8th starting the flute on the downbeat; Y had D#5/F#5 as 16ths; print: D#5 16th, F#5 8th, flute entering a 16th late
+12 RH1: s:s B5:e( G#5:x E5:x) F#4+D#5:s( F#5:e E5:x C#5:x)
+12 RH2: B3:e s:e s:q
+# bar 11 RH1: beams counted at 400 dpi: B5 one beam (8th), G#5 E5 three (32nds), D#5 one beam + right stub (16th), F#5 one beam (8th), E5 C#5 three (32nds) = 7/16; B5 stands a 16th to the right of the downbeat (midway between beat 0 and the LH 2nd eighth) and D#5 aligns with the voice rest on beat 2, so the flute enters after a 16th (echo of the voice rhythm of bar 10): hidden s:s at the start
+# JUDGE bar 11 LH: X - 2nd chord E4+C#5 in treble clef
+12 LH1: B1+B2+D#3:e clef:G E4+C#5:e* F#4+B4:e* F#4+A#4:e* clef:F
+13 RH1: B4:q r:s B4:s* C#5:s* D#5:s*
+13 LH1: B3:s* B3:s* B3:s* B3:s* A3+B3:s* A3+B3:s* A3+B3:s* A3+B3:s*
+14 RH1: E5:s* F#5:s* G#5:s* A5:s* B5:s* G#5+C#6:s* G#5+D#6:s* G#5+E6:s*
+14 LH1: G#3+B3:s* G#3+B3:s* G#3+B3:s* G#3+B3:s* G#3+B3:s* E3+B3:s* F#3+B3:s* G#3+B3:s*
+# page 101 system 1 starts bar 15
+15 RH1: E6:e( D#6:e) r:s B4:s* B4+C#5:s* B4+D#5:s*
+# JUDGE bar 14 RH2: Y - beam count at 400 dpi: F#5 2 beams + dot, G#5 3 beams, A5 primary beam only = 8th; sums to 1/4, no hidden rest needed
+15 RH2: F#5:s.( G#5:x A5:e) s:q
+15 LH1: A3+B3:s* G#3+B3:s* F#3+B3:s* E3+B3:s* D#3+B3:s* C#3+A3:s* B2+G#3:s* A2+F#3:s*
+16 RH1: B4+E5:s* B4+F#5:s* B4+G#5:s* B4+A5:s* B4+B5:s* G#5+C#6:s* G#5+D#6:s* G#5+E6:s*
+16 LH1: E3:s* D#3:s* E3:s* F#3:s* G#3:s* B3:s* B3:s* B3:s*
+16 LH2: G#2:q r:s E3:s* F#3:s* G#3:s*
+17 RH1: E6:e( D#6:e) r:s F#4:s( E4+G#4:s D#4+A4:s)
+# JUDGE bar 16 RH2: Y - beam count at 400 dpi: F#5 2 beams + dot, G#5 3 beams, A5 primary beam only = 8th; sums to 1/4, no hidden rest needed
+17 RH2: F#5:s.( G#5:x A5:e) s:q
+17 LH1: A3+B3:s* G#3+B3:s* F#3+B3:s* E3+B3:s* D#3+B3:s* C#3+A3:s* B2+G#3:s* A2+F#3:s*
+# page 101 system 2 starts bar 18
+18 RH1: r:e E4+B4:e r:e E4+G#4+B4:e
+18 LH1: G#2+E3:e r:e C#2+C#3:e r:e
+# JUDGE bar 18 RH: Y - first chord heads A4 space, E4 line, C#4 ledger (no F#4)
+19 RH1: r:e C#4+E4+A4:e r:e B3+D#4+A4:e
+19 LH1: F#1+F#2:e r:e B1+B2:e r:e
+20 RH1: B3+E4+G#4:e( C#4+F#4+A4:e B3+E4+G#4:e B3+D#4+F#4:e)
+20 LH1: E2+E3:e A1+A2:e B1+B2:e B1+B2:e
+# JUDGE bar 20 RH: X - B3 has its own down stem without flag (quarter) under the beamed D#4+F#4 / E4+G#4 eighths
+21 RH1: D#4+F#4:e( E4+G#4:e) r:s E4+E5:s( G#4+G#5:s A4+A5:s)
+21 RH2: B3:q s:q
+21 LH1: E2+E3:q r:q
+# page 101 system 3 starts bar 22
+22 RH1: B4+B5:e.( G#4+G#5:s) E4+E5:e.( F#4+F#5:x G#4+G#5:x)
+22 LH1: r:e E3+G#3:e r:e E3+G#3:e
+22 LH2: G#1+G#2:e r:e C#2+C#3:e r:e
+# JUDGE bar 22 RH: Y - slur printed over the two eighth octaves
+23 RH1: B4+B5:e( A4+A5:e) r:s F#4+F#5:s F#4+F#5:s F#4+F#5:s
+23 LH1: r:e E3+F#3:e r:e D#3+A3:e
+23 LH2: F#1+F#2:e r:e B1+B2:e r:e
+# JUDGE bar 23 RH: X - last chord D#4+F#4+A4+D#5 (four heads, no B4)
+24 RH1: G#4+G#5:e* F#4+C#5+F#5:x( G#4+G#5:x A4+A5:x F#4+F#5:x) E4+G#4+B4+E5:e( D#4+F#4+A4+D#5:e)
+24 LH1: E2+E3:e A1+A2:e B1+B2:e B1+B2:e
+25 RH1: E4+E5:e G#3+E4:e r:e G#3+C#4+E4:e
+25 LH1: E2+E3:e r:e C#2+C#3:e r:e
+# page 101 system 4 starts bar 26
+26 RH1: r:e A3+C#4+F#4:e r:e C#4+F#4+A4:e
+26 LH1: A1+A2:e r:e A1+A2:e r:e
+27 RH1: r:e G#4+E5+G#5:s* G#4+E5+G#5:s* A4+F#5+A5:s* A4+F#5+A5:s* F#4+D#5+F#5:s* F#4+D#5+F#5:s*
+27 LH1: r:e B3:e r:e A3:e
+27 LH2: B1+B2:e r:e B1+B2:e r:e
+# MARKS bar 27 RH1: removed slur end on last D#5: the slur from D#5 runs across the bar line to the bar-28 E5 eighth (bar 28 already closes it)
+28 RH1: E4+G#4+E5:e r:s E5:s D#5:s( A5:s F#5:s D#5:s
+# JUDGE bar 27 LH: X - treble chord B3 (below C4 ledger), F#4, A4; no D#4
+28 LH1: E2+E3:e r:e clef:G B3+F#4+A4:q(
+# JUDGE bar 28 RH: X for the slur on the 2nd 16th chord; OWN (both wrong) - the slur from bar 27 D#5 ends on this E5 eighth, closed here
+29 RH1: E5:e) r:s G#4+B4+E5+G#5:s F#4+C#5+F#5:s( C#5+C#6:s B4+D#5+B5:s D#4+D#5:s)
+29 LH1: C#4+E4+G#4:e) clef:F G#1+G#2:e A1+A2:e B1+B2:e
+# bar 29: incomplete final bar, 3/8; final double bar with segno sign above RH and below LH (and above the voice); no D.S. words. Segno in bar 3 after the third eighth.
+30 RH1: F#4+A4+D#5+F#5:q( E4+G#4+E5:e)
+30 LH1: B1+B2:q( E1+E2:e)

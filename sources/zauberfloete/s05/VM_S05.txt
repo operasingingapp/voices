@@ -1,0 +1,89 @@
+# G = Papageno (bass clef). Strophic: three German verses printed under one set of notes, written verse1|verse2|verse3
+# page 022 system 1 starts bar 1
+# bar 1: Andante, 2/4, G major
+# bar 1: pickup, 1/8
+# bars 1-27: orchestral introduction, no voice staff printed (p. 22 systems 1-5)
+1 G: r:e
+2 G: r:h
+3 G: r:h
+4 G: r:h
+5 G: r:h
+6 G: r:h
+# page 022 system 2 starts bar 7
+7 G: r:h
+8 G: r:h
+9 G: r:h
+10 G: r:h
+11 G: r:h
+12 G: r:h
+# page 022 system 3 starts bar 13
+13 G: r:h
+14 G: r:h
+15 G: r:h
+16 G: r:h
+17 G: r:h
+# page 022 system 4 starts bar 18
+18 G: r:h
+19 G: r:h
+20 G: r:h
+21 G: r:h
+22 G: r:h
+# page 022 system 5 starts bar 23
+23 G: r:h
+24 G: r:h
+25 G: r:h
+26 G: r:h
+# bar 27: only 3/8, ends at a double bar; the voice's 1/8 pickup after it is bar 28
+27 G: r:q.
+# page 022 system 6 starts bar 28
+# bar 28: pickup 1/8 after the double bar; segno sign printed over the first note (B3 16th) of the voice and over the piano RH; verse numbers 1. 2. 3. printed at this note
+# bar 28: B3-A3 under one slur, one syllable per verse
+28 G: B3:s "Der|Der|Wenn" A3:s
+# bar 29 verse 2/3 note: verse 3 prints 'Mädchen' as one word under A3..F#3 (no hyphen); split Mäd-/chen
+29 G: G3:e "Vo-|Vo-|al-" G3:e "gel-|gel-|le" A3:s "fän-|fän-|Mäd-" G3:s F#3:s "ger|ger|chen" G3:s
+# bars 30, 32, 34, 36, 40: extra stem-down notes/beams/slurs on the voice staff belong to the Italian text (ignored); every German verse fits the main stem-up notes, no German variant
+# JUDGE bar 30 G: Y - 2nd eighth is B3 (head in the space above the top line; notes 1 and 3 sit on the line), doubles piano RH A5 B5 A5
+# bar 30: stem-down beam + slur under notes 1-2 serves the Italian text only; all German verses sing the separate stem-up eighths
+30 G: A3:e "bin|bin|wä-" B3:e "ich|ich|ren" A3:e "ja,|ja,|mein," A3:s "stets|stets|so" F#3:s
+31 G: D3:e. "lu-|lu-|tausch-" D3:s "stig|stig|te" D4:e. "hei-|hei-|ich" D4:s "sa|sa|brav"
+# bar 32: verse 1/2 printed 'hop - sa - sa!'
+32 G: B3:e "hop-|hop-|Zu-" A3:e "sa-|sa-|cker" G3:e "sa!|sa!|ein," B3:e "ich|ich|die,"
+# page 023 system 1 starts bar 33
+33 G: A3:s "Vo-|Vo-|wel-" G3:s F#3:s "gel-|gel-|che" G3:s A3:s "fän-|fän-|mir" G3:s F#3:s "ger|ger|am" G3:s
+# JUDGE bar 34 G: OWN - pitch from Y (2nd eighth B3, doubles RH), words from X ("wär'," = apostrophe + comma, no semicolon dot)
+# bar 34: the stem-down 16th A3 under the 16th rest serves the Italian text only; German: r:s A3:s
+34 G: A3:e "bin|bin|lieb-" B3:e "be-|be-|sten" A3:e "kannt|kannt|wär'," r:s A3:s "bei|bei|der"
+# JUDGE bar 35 G: Y - 2nd half A3 (on the top line, staff slopes here), doubles RH D6 D6 A5 A5
+35 G: D4:e. "Alt|Alt|gäb'" D4:s "und|und|ich" A3:e. "Jung|Jung|gleich" A3:s "im|im|den"
+36 G: F#3:e "gan-|gan-|Zu-" E3:e "zen|zen|cker" D3:e "Land.|Land.|her." r:e
+# page 023 system 2 starts bar 37
+37 G: r:h
+# bar 38: D3-F#3 slurred, one syllable per verse
+38 G: r:q r:e D3:s "Weiss|Ein|Und" F#3:s
+# bar 39 verse 2: printed 'Mäd-' ... 'chen'
+39 G: A3:e "mit|Netz|küss-" A3:e "dem|für|te" B3:s "Lo-|Mäd-|sie" A3:s G3:s "cken|chen|mich" A3:s
+40 G: B3:e "um-|möch-|zärt-" A3:e "zu-|te|lich" G3:e "geh'n,|ich,|dann," D4:e "und|ich|wär'"
+# bar 41: small grace note D4 (16th) slurred to F#3
+# bar 41 verse 2: printed as one word 'dutzend -' under A3..F#3; split dut-/zend- (continues 'weis'' in bar 42)
+# JUDGE bar 41 G: X - grace note D4 has two flags (16th); verse 2 printed "dutzend -" (lower case, letters d-u-t-z-e-n-d), split dut-|zend- by German syllabification
+41 G: g:D4:s F#3:e. "mich|fing'|sie" F#3:s "auf's|sie|mein" A3:s "Pfei-|dut-|Weib" G3:s F#3:s "fen|zend-|und" G3:s
+# page 023 system 3 starts bar 42
+# bar 42: fermata over the third eighth
+# JUDGE bar 42 G: Y - 2nd eighth B3 (doubles RH A5 B5 A5); fermata over the 3rd eighth A3 (both)
+42 G: A3:e "zu|weis'|ich" B3:e "ver-|für|ihr" A3:e! "steh'n!|mich!|Mann." r:e
+43 G: r:h
+# bar 44: G3-A3 16ths under a slur; one syllable per verse (D'rum/Dann/Sie); print places verse-1 'kann' and verse-2 'sperr -' loosely between A3 and the next B3
+44 G: r:q r:e G3:s "D'rum|Dann|Sie" A3:s
+45 G: B3:e. "kann|sperr-|schlief" B3:s "ich|te|an" C4:s "froh|ich|mei-" B3:s A3:s "und|sie|ner" B3:s
+46 G: C4:e "lu-|bei|Sei-" D4:e "stig|mir|te" E4:e "sein,|ein,|ein," C4:s "denn|und|ich" A3:s
+# page 023 system 4 starts bar 47
+# bar 47 verse 2: 'Mädchen' printed as one word under G3..E3; split Mäd-/chen
+47 G: F#3:e. "al-|al-|wieg-" F#3:s "le|le|te" G3:s "Vö-|Mäd-|wie" F#3:s E3:s "gel|chen|ein" F#3:s
+# bar 48: stage direction after 'mein.' (verses 1 and 3): 'Er pfeift ...' (Papageno whistles); no panpipe notes printed on the voice staff
+48 G: G3:e "sind|wä-|Kind" A3:s "ja|ren|sie" F#3:s G3:e "mein.|mein.|ein." r:e
+49 G: r:h
+50 G: r:h
+51 G: r:h
+# bar 52: only 3/8; final double bar; a segno sign (no D.S. words) printed above the final barline = D.S. back to the segno at bar 28 (printed over the first 16th B3 of the bar-28 pickup)
+# JUDGE bar 52 G: Y - quarter rest + eighth rest printed
+52 G: r:q r:e

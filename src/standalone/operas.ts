@@ -4058,7 +4058,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Dies Bildnis ist bezaubernd schön",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "editionId": "mozart-dies-bildniss-ist-bezaubernd-schon"
      },
      {
       "title": "Zu Hülfe! zu Hülfe!",
@@ -4130,7 +4131,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Ach, ich fühl's",
-      "kind": "Aria · Act 2"
+      "kind": "Aria · Act 2",
+      "editionId": "mozart-ach-ich-fuhls"
      },
      {
       "title": "Du feines Täubchen, nur herein!",
@@ -4188,7 +4190,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Der Vogelfänger bin ich ja",
-      "kind": "Aria · Act 1"
+      "kind": "Aria · Act 1",
+      "editionId": "mozart-der-vogelfanger-bin-ich-ja"
      },
      {
       "title": "Bei Männern, welche Liebe fühlen",
@@ -4196,7 +4199,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Ein Mädchen oder Weibchen",
-      "kind": "Aria · Act 2"
+      "kind": "Aria · Act 2",
+      "editionId": "mozart-ein-madchen-oder-weibchen"
      },
      {
       "title": "Pa-pa-pa",
@@ -4262,7 +4266,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "O zittre nicht, mein lieber Sohn",
-      "kind": "Recitative and aria · Act 1"
+      "kind": "Recitative and aria · Act 1",
+      "editionId": "mozart-o-zittre-nicht"
      },
      {
       "title": "Der Hölle Rache",
@@ -4288,11 +4293,13 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "O Isis und Osiris",
-      "kind": "Aria with chorus · Act 2"
+      "kind": "Aria with chorus · Act 2",
+      "editionId": "mozart-o-isis-und-osiris"
      },
      {
       "title": "In diesen heil'gen Hallen",
-      "kind": "Aria · Act 2"
+      "kind": "Aria · Act 2",
+      "editionId": "mozart-in-diesen-heilgen-hallen"
      },
      {
       "title": "Herr! ich bin zwar Verbrecherin!",
@@ -4341,7 +4348,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Alles fühlt der Liebe Freuden",
       "kind": "Aria · Act 2",
-      "id": "Act 2: Alles fühlt der Liebe Freuden"
+      "id": "Act 2: Alles fühlt der Liebe Freuden",
+      "editionId": "mozart-alles-fuhlt-der-liebe-freuden"
      },
      {
       "title": "Nur stille, stille, stille, stille!",

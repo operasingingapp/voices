@@ -6668,6 +6668,222 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-der-vogelfanger-bin-ich-ja": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Song",
+    facts: {
+      key: "G major",
+      time: "2/4",
+      tempo: "Andante, played at ♩ = 76, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "Cheerful and simple; let the words lead",
+    about: (
+      <>
+        <p>
+          Act 1. Papageno, dressed in feathers with a birdcage on his back, introduces himself: he is the bird-catcher, always cheerful, known to young and old throughout the land; he knows how to lure the birds and how to whistle, and all the birds are his. He would like a net for girls as well, to catch them by the dozen. In the third verse he would trade his birds for sugar and give it to the girl he liked best, who would then be his wife. Between the lines he plays his panpipe while Tamino watches, unseen.
+        </p>
+        <p>
+          Score: vocal score pages 22–23 (52 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. Three verses on one set of notes, sung through the repeat. The third verse is printed in the score but is not in the text Mozart set. The print’s “D’rum” and “schlief” are kept.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-dies-bildniss-ist-bezaubernd-schon": {
+    portrait: "zauberfloete:tamino",
+    opera: "Die Zauberflöte",
+    kind: "Aria",
+    facts: {
+      key: "E-flat major",
+      time: "2/4",
+      tempo: "Larghetto, played at ♩ = 29, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "Wonder growing into certainty: it is love",
+    about: (
+      <>
+        <p>
+          Act 1. Tamino gazes at the portrait of Pamina: no eye has ever seen anything so lovely. It fills his heart with a feeling he cannot name, burning like fire, and he realises it is love. If only he could find her and she stood before him, he would press her to his heart, and she would be his for ever.
+        </p>
+        <p>
+          Score: vocal score pages 25–27 (64 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The print spells “Bildniss” and “gesehn”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-o-zittre-nicht": {
+    portrait: "zauberfloete:queen",
+    opera: "Die Zauberflöte",
+    kind: "Recitative and aria",
+    facts: {
+      key: "B-flat major; the Largo in G minor",
+      time: "4/4; the Largo in 3/4",
+      tempo: "Allegro maestoso, Recit., Largo and Allegro moderato, played at ♩ = 91, 72, 45 and 109, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "Grief first, then command; keep the runs light and exact",
+    about: (
+      <>
+        <p>
+          Act 1. The Queen of the Night appears in thunder and tells Tamino not to tremble: a young man as innocent, wise and devout as he can best comfort a grieving mother. Her daughter has been taken from her; a villain fled with her, and she still sees the girl trembling and hears her cry for help, while her own help was too weak. Tamino is to go and free her, and if he returns victorious, Pamina shall be his for ever.
+        </p>
+        <p>
+          Score: vocal score pages 27–31 (103 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The print’s words are kept: “dies tiefgebeugte Mutterherz” (libretto: das tief betrübte), “Hülfe”, and the Queen’s added “ja”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-o-isis-und-osiris": {
+    portrait: "zauberfloete:sarastro",
+    opera: "Die Zauberflöte",
+    kind: "Aria with chorus",
+    facts: {
+      key: "F major",
+      time: "3/4",
+      tempo: "Adagio, played at ♩ = 54, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "A long, calm line; a prayer, not a performance",
+    about: (
+      <>
+        <p>
+          Act 2. Sarastro prays to Isis and Osiris to give the new pair the spirit of wisdom and to strengthen the wanderers with patience in danger; the priests repeat his prayer. If the pair should die in their trials, he asks the gods to reward their courage and take them into their dwelling.
+        </p>
+        <p>
+          Score: vocal score pages 81–82 (55 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The priests’ chorus can be practised as tenors or basses: each sings the top line of its staff, and where a staff divides, the lower line plays along. The print’s “Wand’rer” and “doch sollen sie” (libretto: sollten) are kept.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-alles-fuhlt-der-liebe-freuden": {
+    portrait: "zauberfloete:monostatos",
+    opera: "Die Zauberflöte",
+    kind: "Aria",
+    facts: {
+      key: "C major",
+      time: "2/4",
+      tempo: "Allegro, “sempre pp possibile”, played at ♩ = 135, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "As quiet and quick as possible, creeping up on her",
+    about: (
+      <>
+        <p>
+          Act 2. Monostatos finds Pamina asleep and sings, very softly, that everyone feels the joys of love, but he is to avoid it because a black man is thought ugly. Has he no heart? He too is fond of girls, and to live without a woman would be hell. While he lives he will kiss and be tender; he asks the moon to forgive him, since a white girl has captivated him, and to close its eyes if it minds. He creeps towards the sleeping Pamina.
+        </p>
+        <p>
+          Score: vocal score pages 94–95 (49 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. Two verses, sung through the repeat. The print’s words are kept: “ich bin auch den Mädchen gut” (libretto: bin ich nicht von Fleisch und Blut), “herzt” and “Höllengluth”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-in-diesen-heilgen-hallen": {
+    portrait: "zauberfloete:sarastro",
+    opera: "Die Zauberflöte",
+    kind: "Aria",
+    facts: {
+      key: "E major",
+      time: "2/4",
+      tempo: "Larghetto, played at ♩ = 24, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "Low and steady; let the long phrases breathe",
+    about: (
+      <>
+        <p>
+          Act 2. Sarastro tells Pamina that within these holy halls nobody knows revenge: if someone has fallen, love leads him back to duty, and a friend’s hand guides him to a better land. Within these walls, where people love one another, no traitor can lurk, because enemies are forgiven; whoever does not delight in such teaching does not deserve to be called human.
+        </p>
+        <p>
+          Score: vocal score pages 100–101 (30 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. Two verses, sung through the repeat. The print spells “Verräther” and “vergiebt”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ach-ich-fuhls": {
+    portrait: "zauberfloete:pamina",
+    opera: "Die Zauberflöte",
+    kind: "Aria",
+    facts: {
+      key: "G minor",
+      time: "6/8",
+      tempo: "Andante, played at ♩ = 29 (♪ = 87), from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "Still and inward; the grief in the long notes, not the volume",
+    about: (
+      <>
+        <p>
+          Act 2. Tamino, bound to silence, will not speak to her. Pamina feels that the happiness of love is gone for ever and the hours of bliss will never return. She shows Tamino her tears, which flow for him alone: if he does not feel love’s longing, she will find peace in death. She goes slowly away.
+        </p>
+        <p>
+          Score: vocal score pages 105–106 (41 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The print’s words are kept: “ewig hin mein ganzes Glück” in bar 4 (the libretto has only “ewig hin der Liebe Glück”), “verschwunden”, “Nimmer kommt ihr”, and “so wird Ruhe” before “so wird Ruh’”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ein-madchen-oder-weibchen": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Aria",
+    facts: {
+      key: "F major",
+      time: "2/4; each stanza’s second half in 6/8",
+      tempo: "Andante for each refrain, played at ♩ = 52, and Allegro for each second half, played at ♩ = 131 (♩. ≈ 44), from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+    },
+    notePlaceholder: "Easy and longing in the refrain, then quick and cheeky",
+    about: (
+      <>
+        <p>
+          Act 2. Papageno, playing his magic bells, sings that he wants a sweetheart or a little wife: such a gentle little dove would be bliss. Then food and drink would taste good, he could measure himself against princes and live as in paradise. If none will grant him love, the flame will consume him, but one kiss from a woman’s mouth would make him well again. Can none of the charming girls like him? If none will help him, he will grieve himself to death.
+        </p>
+        <p>
+          Score: vocal score pages 114–119 (140 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The three stanzas are written out; the glockenspiel is in the piano’s right hand. The print sings “Wird keine mir Liebe gewähren” as the second stanza and “Ach, kann ich denn keiner von allen” as the third, the other way round from the libretto, and spells “Elisium” and “freun”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

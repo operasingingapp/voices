@@ -1,0 +1,233 @@
+# page 022 system 1 starts bar 1
+# bar 1: Andante, 2/4, G major
+# bar 1: pickup, 1/8
+# LH: where the 16th (viola) voice and the stem-down bass share a stacked chord, the shared middle notehead is written in LH1 (16th voice); LH2 has the bass note only
+1 RH1: dyn:p B5:s( A5:s)
+# MARKS bar 1 LH1: dyn:p (p printed between the staves, LH rests)
+1 LH1: dyn:p r:e
+2 RH1: G5:e* G5:e* A5:s( G5:s F#5:s G5:s)
+2 LH1: B3:s( D4:s B3:s D4:s B3:s D4:s B3:s D4:s)
+2 LH2: G3:q r:e G3:e*
+3 RH1: A5:e* B5:e* A5:e* A5:s( F#5:s)
+# JUDGE bar 3 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+3 LH1: F#3+A3:s( D4:s B3:s D4:s F#3+A3:s D4:s F#3+A3:s D4:s)
+# JUDGE bar 3 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+3 LH2: D3:e* G3:e* D3:e* r:e
+4 RH1: D5:e. D5:s D6:e. D6:s
+# JUDGE bar 4 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+4 LH1: F#3+A3:s( D4:s F#3+A3:s D4:s F#3+A3:s D4:s F#3+A3:s D4:s)
+# JUDGE bar 4 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+4 LH2: D3:q r:e D3:e*
+5 RH1: B5:e* A5:e* G5:e G5:s( B5:s)
+# JUDGE bar 5 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+5 LH1: B3:s( D4:s F#3+A3:s D4:s B3:s D4:s B3:s D4:s)
+# JUDGE bar 5 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+5 LH2: G3:e* D3:e* G3:e r:e
+6 RH1: F#5+A5:s( E5+G5:s D5+F#5:s E5+G5:s) F#5+A5:s( E5+G5:s D5+F#5:s E5+G5:s)
+6 LH1: D3:e r:e D3:e r:e
+# page 022 system 2 starts bar 7
+7 RH1: F#5+A5:e* G5+B5:e* F#5+A5:e* F#5+A5:e*
+7 LH1: A3:s( D4:s B3:s D4:s A3:s D4:s A3:s D4:s)
+7 LH2: D3:e* G3:e* D3:e* r:e
+8 RH1: D6:e. D6:s A5:e. A5:s
+# JUDGE bar 8 LH: Y - shared E3 head read with the 16th voice (E3+G3 16ths, as at the 4th eighth)
+8 LH1: F#3:s( A3:s F#3:s A3:s E3+G3:s A3:s E3+G3:s A3:s)
+# JUDGE bar 8 LH: Y - bass C#3 only; E3 belongs to the 16th voice
+8 LH2: D3:e r:e C#3:e r:e
+9 RH1: F#5:e* E5:e* D5:e D5:s( F#5:s)
+9 LH1: F#3:s( A3:s E3:s A3:s F#3:s A3:s F#3:s A3:s)
+9 LH2: D3:e* A2+C#3:e* D3:e* r:e
+10 RH1: A5:e* A5:e* B5:s( A5:s G5:s A5:s)
+# JUDGE bar 10 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+10 LH1: F#3+A3:s( D4:s F#3+A3:s D4:s F#3+A3:s D4:s F#3+A3:s D4:s)
+# JUDGE bar 10 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+10 LH2: D3:q r:e D3:e
+11 RH1: B5:e* A5:e* G5:e* D6:e*
+# JUDGE bar 11 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+11 LH1: B3:s( D4:s F#3+A3:s D4:s G3:s D4:s B3:s D4:s)
+# JUDGE bar 11 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+11 LH2: G3:e* D3:e* G3:e* r:e
+# MARKS bar 12 RH1: slur grace D6 -> F#5
+12 RH1: g:D6:s( F#5:e.) F#5:s A5:s( G5:s F#5:s G5:s)
+12 LH1: C4:s( D4:s C4:s D4:s B3:s D4:s B3:s D4:s)
+12 LH2: A3:q G3:q
+# page 022 system 3 starts bar 13
+# bar 13: LH clef changes to treble before the last eighth (horn chord)
+13 RH1: A5:e* B5:e* A5:e* C5+F#5:e(
+# JUDGE bar 13 LH: OWN - two stems on the 3rd-eighth chord: up-stem eighth F#3+A3 with staccato dot above (Y structure + X staccato)
+13 LH1: F#3+A3:s( D4:s B3:s D4:s) F#3+A3:e* clef:G D4+A4:e(
+# JUDGE bar 13 LH: Y - down-stem eighth D3 (no staccato), hidden rest to fill
+13 LH2: D3:e* G3:e* D3:e s:e
+# bar 14: 8va over the 32nds and the eighth after them (G6..D7 written sounding); ends before the last chord
+14 RH1: B4+G5:e) G6:x( A6:x B6:x C7:x D7:e) F#5+C6:e(
+14 LH1: G4:e) r:e r:e D4+A4:e(
+# bar 15: 8va over the 32nds and the eighth after them; LH bass clef at end of bar
+15 RH1: G5+B5:e) G6:x( A6:x B6:x C7:x D7:e) G5:s( A5:s)
+15 LH1: G4+B4:e) r:e r:q clef:F
+16 RH1: B5:e. B5:s C6:s( B5:s A5:s B5:s)
+16 LH1: D4:s( F4:s D4:s F4:s D4:s F4:s D4:s F4:s)
+16 LH2: G3:q r:e G3:e*
+17 RH1: C6:e* D6:e* E6:e* C6:s( A5:s)
+17 LH1: E4:s( G4:s D4:s G4:s E4:s G4:s E4:s C4:s)
+17 LH2: C4:e* G3+B3:e* C4:e r:e
+# page 022 system 4 starts bar 18
+18 RH1: F#5:e. F#5:s G5:s( F#5:s E5:s F#5:s)
+18 LH1: A3:s( C4:s A3:s C4:s A3:s C4:s A3:s C4:s)
+18 LH2: D3:q r:e D3:e
+19 RH1: G5:e* A5:s( F#5:s) G5:e* G5:s( A5:s)
+19 LH1: B3:s( D4:s C4:s A3:s B3:s D4:s B3:s D4:s)
+19 LH2: G3:e* D3:e* G3:e* r:e
+20 RH1: B5:e. B5:s C6:s( B5:s A5:s B5:s)
+20 LH1: D4:s( word:cresc. F4:s D4:s F4:s D4:s F4:s D4:s F4:s)
+20 LH2: G3:q r:e G3:e
+21 RH1: C6:e* D6:e* E6:e* C6:s( A5:s)
+21 LH1: E4:s( G4:s D4:s G4:s E4:s G4:s E4:s C4:s)
+# JUDGE bar 21 LH: Y - staccato dot under the 3rd eighth C4
+21 LH2: C4:e* G3+B3:e* C4:e* r:e
+# JUDGE bar 22 RH: Y - f printed between the staves at the 2nd-beat 16ths; attached to RH like the other between-staff dynamics
+22 RH1: F#5:e. F#5:s dyn:f G5:s( F#5:s E5:s F#5:s)
+# JUDGE bar 22 LH: Y - f moved to RH
+# MARKS bar 22 LH1: dyn:f (f between the staves, 2nd beat)
+22 LH1: A3:s( C4:s A3:s C4:s dyn:f A3:s C4:s A3:s C4:s)
+22 LH2: D3:q r:e D3:e
+# page 022 system 5 starts bar 23
+# bar 23: 8va starts at the 32nds and runs to the first eighth of bar 24 (D7); LH treble clef at end of bar
+23 RH1: G5:s( B5:s A5:s F#5:s) G5:e* G6:x( A6:x B6:x C7:x
+23 LH1: B3:s( D4:s C4:s A3:s) B3:e* r:e clef:G
+# JUDGE bar 23 LH: Y - one eighth rest printed (in LH1); LH2 filler hidden
+23 LH2: G3:e* D3:e* G3:e* s:e
+# bar 24: 8va ends after the first eighth; new 8va over the 32nds, running to the first eighth of bar 25 (D7)
+# JUDGE bar 24 RH: X - p printed between staves at the 2nd eighth
+24 RH1: D7:e) dyn:p F#5+C6:e( G5+B5:e) G6:x( A6:x B6:x C7:x
+# MARKS bar 24 LH1: dyn:p (p between the staves)
+24 LH1: r:e dyn:p D4+A4:e( G4+B4:e) r:e
+# bar 25: 8va ends after the first eighth; RH2 B4 is a stem-down eighth under the 16ths; LH bass clef at end of bar
+25 RH1: D7:e) C5+F#5:e( B4+G5:e) dyn:f G5:s( D5:s)
+# JUDGE bar 25 RH: X - equivalent hidden fill; one s:q.
+25 RH2: s:q. B4:e
+# MARKS bar 25 LH1: dyn:f (f between the staves at the 4th eighth)
+25 LH1: r:e D4+A4:e( G4:e) dyn:f r:e clef:F
+# JUDGE bar 26 RH: X - slur printed over B4 e. D5 s
+26 RH1: B4:e.( D5:s) B4+D5:s( A4+C5:s G4+B4:s F#4+A4:s)
+26 RH2: G4:s( D4:s G4:s B4:s) s:q
+26 LH1: G3:e B3:e D4:e D3+C4:e
+# bar 27: only 3/8, ends at a double bar; the 1/8 pickup after the double bar is bar 28
+27 RH1: G4:e* D4+G4+B4:e* B3+D4+G4:e*
+27 LH1: G3+B3:e* G2+G3:e* G2+G3:e*
+# page 022 system 6 starts bar 28
+# bar 28: pickup 1/8 after the double bar; segno sign here (D.S. target)
+28 RH1: dyn:p B5:s( A5:s)
+# MARKS bar 28 LH1: dyn:p (p printed between the staves, LH rests)
+28 LH1: dyn:p r:e
+29 RH1: G5:e* G5:e* A5:s( G5:s F#5:s G5:s)
+29 LH1: B3:s( D4:s B3:s D4:s B3:s D4:s B3:s D4:s)
+# JUDGE bar 29 LH: Y - no staccato dot under the last G3
+29 LH2: G3:q r:e G3:e
+30 RH1: A5:e* B5:e* A5:e* A5:s( F#5:s)
+# JUDGE bar 30 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+30 LH1: F#3+A3:s( D4:s B3:s D4:s F#3+A3:s D4:s F#3+A3:s D4:s)
+# JUDGE bar 30 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+30 LH2: D3:e* G3:e* D3:e* r:e
+31 RH1: D5:e. D5:s D6:e. D6:s
+# JUDGE bar 31 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+31 LH1: F#3+A3:s( D4:s F#3+A3:s D4:s F#3+A3:s D4:s F#3+A3:s D4:s)
+# JUDGE bar 31 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+31 LH2: D3:q r:e D3:e
+32 RH1: B5:e* A5:e* G5:e G5:s( B5:s)
+# JUDGE bar 32 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+32 LH1: B3:s( D4:s F#3+A3:s D4:s B3:s D4:s B3:s D4:s)
+# JUDGE bar 32 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+# MARKS bar 32 LH2: staccato on 3rd eighth G3
+32 LH2: G3:e* D3:e* G3:e* r:e
+# page 023 system 1 starts bar 33
+33 RH1: F#5+A5:s( E5+G5:s D5+F#5:s E5+G5:s) F#5+A5:s( E5+G5:s D5+F#5:s E5+G5:s)
+33 LH1: D3:e r:e D3:e r:e
+34 RH1: F#5+A5:e* G5+B5:e* F#5+A5:e* F#5+A5:e*
+34 LH1: A3:s( D4:s B3:s D4:s A3:s D4:s A3:s D4:s)
+34 LH2: D3:e* G3:e* D3:e* r:e
+35 RH1: D6:e. D6:s A5:e. A5:s
+# JUDGE bar 35 LH: Y - shared E3 head read with the 16th voice (E3+G3 16ths, as at the 4th eighth)
+35 LH1: F#3:s( A3:s F#3:s A3:s E3+G3:s A3:s E3+G3:s A3:s)
+# JUDGE bar 35 LH: Y - bass C#3 only; E3 belongs to the 16th voice
+35 LH2: D3:e r:e C#3:e r:e
+36 RH1: F#5:e* E5:e* D5:e dyn:f A5:e
+# MARKS bar 36 LH1: dyn:f (f between the staves, 4th eighth as RH)
+36 LH1: F#3:s( A3:s E3:s A3:s F#3:s A3:s dyn:f F#3:s A3:s)
+36 LH2: D3:e* A2+C#3:e* D3:e* r:e
+# page 023 system 2 starts bar 37
+37 RH1: D5+F#5+D6:e. D5+F#5+D6:s E5+A5:e. E5+A5:s
+# JUDGE bar 37 LH: Y - shared E3 head read with the 16th voice (E3+G3 16ths, as at the 4th eighth)
+37 LH1: F#3:s( A3:s F#3:s A3:s E3+G3:s A3:s E3+G3:s A3:s)
+# JUDGE bar 37 LH: Y - bass C#3 only; E3 belongs to the 16th voice
+37 LH2: D3:q C#3:q
+# JUDGE bar 38 RH: Y - pp printed after the D5 eighth, at the viola 16ths (Quart.)
+# FIX bar 38 RH1: fresh check: printed p, not pp (confirmed 3x)
+38 RH1: D5+F#5:e* C#5+E5:e* D5:e* dyn:p D5:s( F#5:s)
+# MARKS bar 38 LH1: dyn:pp (pp between the staves, 4th eighth as RH)
+# FIX bar 38 LH1: fresh check: printed p, not pp
+38 LH1: F#3:s( A3:s E3:s A3:s F#3:s A3:s dyn:p F#3:s A3:s)
+38 LH2: D3:e* A2:e* D3:e* r:e
+39 RH1: A5:e* A5:e* B5:s( A5:s G5:s A5:s)
+# JUDGE bar 39 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+39 LH1: F#3+A3:s( D4:s F#3+A3:s D4:s F#3+A3:s D4:s F#3+A3:s D4:s)
+# JUDGE bar 39 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+39 LH2: D3:q r:e D3:e
+40 RH1: B5:e* A5:e* G5:e* D6:e*
+# JUDGE bar 40 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+# FIX bar 40 LH1: recheck: second group starts with the chord G3+B3 (confirmed 500 dpi; bar 11 differs in print)
+40 LH1: B3:s( D4:s F#3+A3:s D4:s G3+B3:s D4:s B3:s D4:s)
+# JUDGE bar 40 LH: Y - shared notehead: the middle note of the stacked chord touches both stems; read with the 16th (viola) voice, as at the 4th eighth of bar 3 where F#3+A3 16ths stand alone
+40 LH2: G3:e* D3:e* G3:e* r:e
+# MARKS bar 41 RH1: slur grace D6 -> F#5
+41 RH1: g:D6:s( F#5:e.) F#5:s A5:s( G5:s F#5:s G5:s)
+41 LH1: C4:s( D4:s C4:s D4:s B3:s D4:s B3:s D4:s)
+41 LH2: A3:q( G3:q)
+# page 023 system 3 starts bar 42
+# bar 42: fermata on RH 3rd eighth and LH chord on beat 2; LH treble clef before last eighth
+# JUDGE bar 42 RH: X - fermata over 3rd eighth A5; the dot is the fermata dot
+42 RH1: A5:e* B5:e* A5:e! C5+F#5:e(
+# JUDGE bar 42 LH: OWN - as bar 13, fermata over the up-stem chord F#3+A3 (fermata replaces the staccato)
+42 LH1: F#3+A3:s( D4:s B3:s D4:s) F#3+A3:e! clef:G D4+A4:e(
+# JUDGE bar 42 LH: Y - down-stem D3 eighth without dot
+42 LH2: D3:e* G3:e* D3:e s:e
+# bar 43: 8va over 32nds and following eighth
+43 RH1: B4+G5:e) G6:x( A6:x B6:x C7:x D7:e) F#5+C6:e(
+43 LH1: G4:e) r:e r:e D4+A4:e(
+# bar 44: 8va over 32nds and following eighth; LH bass clef at end of bar
+44 RH1: G5+B5:e) G6:x( A6:x B6:x C7:x D7:e) G5:s( A5:s)
+44 LH1: G4+B4:e) r:e r:q clef:F
+45 RH1: B5:e. B5:s C6:s( B5:s A5:s B5:s)
+45 LH1: D4:s( F4:s D4:s F4:s D4:s F4:s D4:s F4:s)
+# FIX bar 45 LH2: fresh check: no staccato on last G3 (confirmed)
+45 LH2: G3:q r:e G3:e
+46 RH1: C6:e* D6:e* E6:e* C6:s( A5:s)
+46 LH1: E4:s( G4:s D4:s G4:s E4:s G4:s E4:s C4:s)
+# MARKS bar 46 LH2: staccato on 3rd eighth C4
+46 LH2: C4:e* G3+B3:e* C4:e* r:e
+# page 023 system 4 starts bar 47
+47 RH1: F#5:e. F#5:s G5:s( F#5:s E5:s F#5:s)
+47 LH1: A3:s( C4:s A3:s C4:s A3:s C4:s A3:s C4:s)
+# JUDGE bar 47 LH: X - no staccato dot under the last D3
+47 LH2: D3:q r:e D3:e
+# bar 48: 8va starts at the 32nds, runs to first eighth of bar 49
+48 RH1: G5:s( B5:s A5:s F#5:s) G5:e* G6:x( A6:x B6:x C7:x
+48 LH1: B3:s( D4:s C4:s A3:s) B3:e* r:e
+# JUDGE bar 48 LH: Y - one eighth rest printed (in LH1); LH2 filler hidden
+48 LH2: G3:e* D3:e* G3:e* s:e
+# bar 49: 8va ends after first eighth; LH treble clef after the eighth rest; new 8va over the 32nds to first eighth of bar 50
+# JUDGE bar 49 RH: Y - no p printed in bar 49 (only Hörn.)
+49 RH1: D7:e) F#5+C6:e( G5+B5:e) G6:x( A6:x B6:x C7:x
+49 LH1: r:e clef:G D4+A4:e( G4+B4:e) r:e
+# bar 50: 8va ends after first eighth; LH bass clef at end of bar
+50 RH1: D7:e) C5+F#5:e( B4+G5:e) dyn:f G5:s( D5:s)
+# JUDGE bar 50 RH: X - equivalent hidden fill; one s:q.
+50 RH2: s:q. B4:e
+# MARKS bar 50 LH1: dyn:f (f between the staves at the 4th eighth)
+50 LH1: r:e D4+A4:e( G4:e) dyn:f r:e clef:F
+# JUDGE bar 51 RH: X - slur printed over B4 e. D5 s
+51 RH1: B4:e.( D5:s) B4+D5:s( A4+C5:s G4+B4:s F#4+A4:s)
+51 RH2: G4:s( D4:s G4:s B4:s) s:q
+51 LH1: G3:e B3:e D4:e D3+C4:e
+# bar 52: only 3/8, final double bar; segno sign (no D.S. words) printed above the final barline = D.S. back to the segno at bar 28
+52 RH1: G4:e* D4+G4+B4:e* B3+D4+G4:e*
+52 LH1: G3+B3:e* G2+G3:e* G2+G3:e*
