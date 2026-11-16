@@ -1,0 +1,71 @@
+# ---- chunk 1: PM_J.txt (its bars 1-41 = piece bars 1-41)
+# S49 Recit. "Restati quà!" (Schirmer pp. 223-224), piano, reader X
+# Only ONE piano staff (bass clef) is printed throughout this chunk: written as LH1 (no RH staff exists).
+# page 223 system 1 starts bar 1
+#@ bar 1 time=C key=0
+# bar 1: a tempo, C, no key signature
+# FIX bar 1: printed "a tempo" added (fresh check)
+1 LH1: word:a_tempo F#3:h( A3:q D4:q)
+2 LH1: G3:q( B3:q D4:h)
+# bar 2: natural sign printed on B3 (cautionary)
+3 LH1: F#3:h( A3:q D4:q)
+4 LH1: G3:q( B3:q D4:h)
+5 LH1: F#3:h( A3:q D4:q)
+6 LH1: G3:q( B3:q D4:h)
+# page 223 system 2 starts bar 7
+7 LH1: F#3:h( A3:q D4:q)
+8 LH1: G3:q( B3:q D4:h)
+9 LH1: F#3:h( A3:q D4:q)
+10 LH1: G3:q( B3:q D4:h)
+11 LH1: F#3:h( A3:q D4:q)
+12 LH1: G3:q r:q r:h
+# page 223 system 3 starts bar 13
+# bar 13: Recit.
+# FIX bar 13: printed "Recit." added (fresh check)
+13 LH1: word:Recit. r:w
+14 LH1: r:w
+# page 223 system 4 starts bar 15
+15 LH1: E3+G3+C4:w~
+16 LH1: E3+G3+C4:w~
+# page 223 system 5 starts bar 17
+17 LH1: E3+G3+C4:h A2+C3+F3+C4:h~
+18 LH1: A2+C3+F3+C4:w~
+# bar 18: chord printed with a stem (half-note form) but it is the only chord of the bar
+# page 223 system 6 starts bar 19
+19 LH1: A2+C3+F3+C4:w~
+20 LH1: A2+C3+F3+C4:w
+# page 223 system 7 starts bar 21
+21 LH1: D3+F3+Bb3:w~
+22 LH1: D3+F3+Bb3:w~
+# page 223 system 8 starts bar 23
+23 LH1: D3+F3+Bb3:w~
+24 LH1: D3+F3+Bb3:q F#3+A3+D4:h.~
+# page 224 system 1 starts bar 25
+25 LH1: F#3+A3+D4:w~
+26 LH1: F#3+A3+D4:w~
+# page 224 system 2 starts bar 27
+27 LH1: F#3+A3+D4:w
+# FIX bar 28 LH1: chords re-read on the zoomed print (fresh check): G3+Bb3+D4, then G3+A3+C#4+E4 (lowest head in the top space, not below the staff)
+28 LH1: G3+Bb3+D4:h G3+A3+C#4+E4:h
+# page 224 system 3 starts bar 29
+29 LH1: r:q A3+C#4:q D3+F#3+A3+D4:h~
+30 LH1: D3+F#3+A3+D4:w~
+# page 224 system 4 starts bar 31
+31 LH1: D3+F#3+A3+D4:w~
+32 LH1: D3+F#3+A3+D4:w
+# page 224 system 5 starts bar 33
+33 LH1: D#3+F#3+B3:w~
+34 LH1: D#3+F#3+B3:h D3+E3+G#3+B3:h~
+# bar 34: natural printed on D3, sharp on G3 in the second chord
+# page 224 system 6 starts bar 35
+35 LH1: D3+E3+G#3+B3:h C#3+E3+A3:h~
+36 LH1: C#3+E3+A3:w
+# page 224 system 7 starts bar 37
+37 LH1: F3+A3+D4:q F3+A3+D4:h E3+G3+C4:q~
+# bar 37: natural printed on F3 in the first chord
+38 LH1: E3+G3+C4:w~
+# page 224 system 8 starts bar 39
+39 LH1: E3+G3+C4:h F3+A3+C4:h
+40 LH1: F3+G3+B3+D4:w
+41 LH1: r:q G3+D4+F4:q C3+G3+C4+E4:h
+# bar 41: final double bar (before No. 21b)

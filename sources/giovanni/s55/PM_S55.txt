@@ -1,0 +1,35 @@
+# ---- chunk 1: PM_J.txt (its bars 1-17 = piece bars 1-17)
+# S55 Recit. "Calmatevi, idol mio" -- piano -- reader X
+# Bars 1-16 (secco recitative): the piano is a SINGLE bass-clef continuo staff (no RH staff printed): LH1 only
+# page 250 system 4 starts bar 1
+# bar 1: Recit., C, no key signature
+#@ bar 1 time=C key=0
+1 LH1: C#3+E3+A3:w~
+2 LH1: C#3+E3+A3:w~
+# page 250 system 5 starts bar 3
+3 LH1: C#3+E3+A3:h D3+F#3+A3:h~
+4 LH1: D3+F#3+A3:h A#2+C#3+F#3:h~
+5 LH1: A#2+C#3+F#3:w~
+# page 251 system 1 starts bar 6
+6 LH1: A#2+C#3+F#3:h B2+D3+F#3:h~
+7 LH1: B2+D3+F#3:h E3+G3+C4:h~
+8 LH1: E3+G3+C4:h F#3+A3+C4+D4:h~
+# page 251 system 2 starts bar 9
+9 LH1: F#3+A3+C4+D4:w
+10 LH1: F3+G3+B3+D4:w
+11 LH1: E3+G#3+B3+D4:w
+# page 251 system 3 starts bar 12
+12 LH1: G#3+B3+D4+E4:w~
+13 LH1: G#3+B3+D4+E4:w
+14 LH1: G3+A3+C#4+E4:w~
+# page 251 system 4 starts bar 15
+15 LH1: G3+A3+C#4+E4:w~
+# bar 16: a small dot right of the first chord (looks like a speck, not an augmentation dot: bar would not add up)
+16 LH1: G3+A3+C#4+E4:h F3+A3+D4:q r:q
+# page 251 system 5 starts bar 17
+# SHARED bar: first bar of No. 23 (S56), copied here so the word is complete
+# bar 17: No. 23 "Crudele?" Recitative and Aria, Risoluto, C, no key signature; two piano staves from here
+#@ bar 17 time=C key=0
+# FIX bar 17: printed "Risoluto." (start of No. 23) added (fresh check)
+17 RH1: word:Risoluto. r:e. A4+C5+Eb5:s A4+C5+Eb5:e. Eb5+A5+C6:s Eb5+A5+C6:q r:q
+17 LH1: r:e. F#2:s F#2:e. F#3:s F#3:q r:q

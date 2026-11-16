@@ -4210,6 +4210,136 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-restati-qua": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "a tempo, then Recit. Free, as recitative is sung: played here at a speaking pace, ♩ = 91, estimated (the usual pace of this opera's Act 2 recitatives in recordings); this Vienna scene is left out of most recordings",
+    },
+    notePlaceholder: "Zerlina in full command, Leporello all panic",
+    about: (
+      <>
+        <p>
+          Act 2, a scene Mozart added for the Vienna performances of 1788. Zerlina, a razor in her hand, drags Leporello in by the hair. He begs for pity; she threatens to tear his hair and eyes out, calls for Masetto, and has a peasant help her tie Leporello to a chair.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 223–224 (41 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader, checked bar by bar by a separate fresh checker, then
+          checked against the print again. Only the Italian words are kept. The print's words are kept, among them “quà” and “rasojo”; Leporello's aside keeps its printed brackets.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-amico-per-pieta": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, estimated (the usual pace of this opera's Act 2 recitatives in recordings); this Vienna scene is left out of most recordings",
+    },
+    notePlaceholder: "Leporello struggling and pleading, then Zerlina's triumph turning to alarm",
+    about: (
+      <>
+        <p>
+          Act 2, after Per queste tue manine (a Vienna addition of 1788). Tied to a chair, Leporello begs a passing peasant for water, then struggles and tugs until the window frame comes loose, and he escapes, dragging chair and all. Zerlina returns with Elvira to find him gone, and they resolve to tell Ottavio.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 232–233 (33 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader, checked bar by bar by a separate fresh checker, then
+          checked against the print again. Only the Italian words are kept. The print's words are kept: Leporello's “d'aqua”, “io vo' vedere” and “alla calcagna”, and Zerlina's “a lui si aspetta” (libretto: d'acqua, veder, alle, s'aspetta); the print's accent on “aspettà” is a misprint and is left off.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-ah-ah-questa-e-buona": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4; the Commendatore's second entry in 3/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, from the median length of two recordings (Fricsay and Davis); the Commendatore's two Adagio entries at ♩ = 50 (estimated)",
+    },
+    notePlaceholder: "Giovanni laughing and careless, then the statue's voice, slow and solemn",
+    about: (
+      <>
+        <p>
+          Act 2, a churchyard with the statue of the Commendatore. Giovanni leaps the wall, laughing, and meets Leporello, who nearly lost his life in his master's clothes. Giovanni boasts of a girl who took him for Leporello. A voice from the statue warns that his laughter will end before dawn; they read the inscription, which promises vengeance on the murderer, and Giovanni tells Leporello to invite the statue to supper.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 239–244 (89 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader, checked bar by bar by a separate fresh checker, then
+          checked against the print again. Only the Italian words are kept. The Commendatore's two entries are accompanied by trombones (Adagio). The print's words are kept: “come è finito”, “incontrahi”, “allora me prende” and “che terribile occhiato” (libretto: com'è, incontrai, mi, terribili occhiate).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-calmatevi-idol-mio": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 82, from the median length of two recordings (Fricsay and Davis; under a minute)",
+    },
+    notePlaceholder: "Ottavio tender and hopeful, Anna holding back",
+    about: (
+      <>
+        <p>
+          Act 2, a dark room. Ottavio tells Donna Anna the villain will soon be punished, and asks her to marry him tomorrow. Anna protests that this is no moment for it, and he calls her cruel.
+        </p>
+        <p>
+          Score: the recitative on vocal score pages 250–251 (17 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader, checked bar by bar by a separate fresh checker, then
+          checked against the print again. Only the Italian words are kept. The print's “in si tristi” is kept without the accent; its “Ma iì padre” is a misprint and is sung “il”. The last bar is shared with No. 23: Anna's “Crudele?” in it begins the next piece, Non mi dir.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-si-segua-il-suo-passo": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Recitative",
+    facts: {
+      key: "No key signature: the recitative moves through several keys",
+      time: "4/4",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, estimated (the usual pace of this opera's Act 2 recitatives in recordings)",
+    },
+    notePlaceholder: "A short, warm resolve",
+    about: (
+      <>
+        <p>
+          Act 2, after Non mi dir. Left alone, Ottavio decides to follow Anna and share her sorrows: with him at her side, her sighs will be lighter.
+        </p>
+        <p>
+          Score: the recitative on vocal score page 256 (4 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages by one reader, checked bar by bar by a separate fresh checker, then
+          checked against the print again. Only the Italian words are kept. The print's “dividere i martiri” is kept (libretto: divider).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

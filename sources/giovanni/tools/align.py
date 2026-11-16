@@ -5,7 +5,7 @@ import sys, json, re, unicodedata
 import xml.etree.ElementTree as ET
 sid, xml = sys.argv[1], sys.argv[2]
 NAMES = {'Don Giovanni': 'dongiovanni', 'Leporello': 'leporello', 'Donna Elvira': 'elvira', 'Zerlina': 'zerlina', 'Masetto': 'masetto',
-         'Don Ottavio': 'ottavio', 'Donna Anna': 'anna'}
+         'Don Ottavio': 'ottavio', 'Donna Anna': 'anna', 'Commendatore': 'commendatore'}
 root = ET.parse(xml).getroot()
 pname = {sp.get('id'): sp.findtext('part-name') for sp in root.iter('score-part')}
 score = {}

@@ -168,6 +168,46 @@
     }
   },
   {
+    "editionId": "mozart-ah-ah-ah-questa-e-buona",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ah-ah-ah-questa-e-buona@1.0.0-schirmer#52e083bac1",
+    "title": "Ah, ah, ah, ah, questa è buona",
+    "subtitle": "Don Giovanni, Leporello and Commendatore: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "commendatore",
+        "name": "Commendatore",
+        "voiceType": "Bass",
+        "partKey": "commendatore"
+      }
+    ],
+    "measures": 89,
+    "durationSec": 240,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 81,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-che-tutta-in-un-momento",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-ah-che-tutta-in-un-momento@1.0.0-peters#79c7eb1d86",
@@ -514,6 +554,34 @@
     }
   },
   {
+    "editionId": "mozart-ah-si-segua-il-suo-passo",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ah-si-segua-il-suo-passo@1.0.0-schirmer#7a0a972743",
+    "title": "Ah, si segua il suo passo",
+    "subtitle": "Don Ottavio: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 4,
+    "durationSec": 11,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 3,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-signor-signor",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-ah-signor-signor@1.0.0-klengel#06176ca8d8",
@@ -761,6 +829,46 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-amico-per-pieta",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-amico-per-pieta@1.0.0-schirmer#83aaa157c9",
+    "title": "Amico, per pietà",
+    "subtitle": "Leporello, Zerlina and Donna Elvira: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      }
+    ],
+    "measures": 33,
+    "durationSec": 87,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 25,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -1275,6 +1383,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 9,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-calmatevi-idol-mio",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-calmatevi-idol-mio@1.0.0-schirmer#7d5a3be69b",
+    "title": "Calmatevi, idol mio",
+    "subtitle": "Don Ottavio and Donna Anna: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      }
+    ],
+    "measures": 17,
+    "durationSec": 50,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 14,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -5948,6 +6090,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 251,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-restati-qua",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-restati-qua@1.0.0-schirmer#85c482406e",
+    "title": "Restati quà!",
+    "subtitle": "Zerlina and Leporello: recitative from Don Giovanni, Act 2",
+    "kind": "recitative",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 41,
+    "durationSec": 108,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 35,
       "withAudio": 0,
       "reviewed": 0
     }

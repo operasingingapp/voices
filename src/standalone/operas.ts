@@ -1492,7 +1492,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah, ah, ah, ah, questa è buona",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ah, ah, ah, ah, questa è buona"
+      "id": "Act 2: Ah, ah, ah, ah, questa è buona",
+      "editionId": "mozart-ah-ah-ah-questa-e-buona"
      },
      {
       "title": "O statua gentilissima",
@@ -1639,7 +1640,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Restati quà!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Restati quà!"
+      "id": "Act 2: Restati quà!",
+      "editionId": "mozart-restati-qua"
      },
      {
       "title": "Per queste tue manine",
@@ -1649,12 +1651,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Amico, per pietà",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Amico, per pietà"
+      "id": "Act 2: Amico, per pietà",
+      "editionId": "mozart-amico-per-pieta"
      },
      {
       "title": "Ah, ah, ah, ah, questa è buona",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ah, ah, ah, ah, questa è buona"
+      "id": "Act 2: Ah, ah, ah, ah, questa è buona",
+      "editionId": "mozart-ah-ah-ah-questa-e-buona"
      },
      {
       "title": "O statua gentilissima",
@@ -1769,7 +1773,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Calmatevi, idol mio",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Calmatevi, idol mio"
+      "id": "Act 2: Calmatevi, idol mio",
+      "editionId": "mozart-calmatevi-idol-mio"
      },
      {
       "title": "Crudele? Ah no, mio bene!… Non mi dir",
@@ -1910,7 +1915,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Amico, per pietà",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Amico, per pietà"
+      "id": "Act 2: Amico, per pietà",
+      "editionId": "mozart-amico-per-pieta"
      },
      {
       "title": "In quali eccessi, o Numi… Mi tradì quell'alma ingrata",
@@ -2052,7 +2058,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Restati quà!",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Restati quà!"
+      "id": "Act 2: Restati quà!",
+      "editionId": "mozart-restati-qua"
      },
      {
       "title": "Per queste tue manine",
@@ -2062,7 +2069,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Amico, per pietà",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Amico, per pietà"
+      "id": "Act 2: Amico, per pietà",
+      "editionId": "mozart-amico-per-pieta"
      },
      {
       "title": "Ah! dov'è il perfido?",
@@ -2180,12 +2188,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Calmatevi, idol mio",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Calmatevi, idol mio"
+      "id": "Act 2: Calmatevi, idol mio",
+      "editionId": "mozart-calmatevi-idol-mio"
      },
      {
       "title": "Ah, si segua il suo passo",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ah, si segua il suo passo"
+      "id": "Act 2: Ah, si segua il suo passo",
+      "editionId": "mozart-ah-si-segua-il-suo-passo"
      },
      {
       "title": "Ah! dov'è il perfido?",
@@ -2333,7 +2343,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah, ah, ah, ah, questa è buona",
       "kind": "Recitative · Act 2",
-      "id": "Act 2: Ah, ah, ah, ah, questa è buona"
+      "id": "Act 2: Ah, ah, ah, ah, questa è buona",
+      "editionId": "mozart-ah-ah-ah-questa-e-buona"
      },
      {
       "title": "O statua gentilissima",
