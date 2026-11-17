@@ -4104,7 +4104,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?"
+      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?",
+      "editionId": "mozart-soll-ich-dich-theurer"
      },
      {
       "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
@@ -4127,7 +4128,8 @@ export const OPERAS: Opera[] = [
     "pieces": [
      {
       "title": "Bei Männern, welche Liebe fühlen",
-      "kind": "Duet with Papageno · Act 1"
+      "kind": "Duet with Papageno · Act 1",
+      "editionId": "mozart-bei-mannern-welche-liebe-fuhlen"
      },
      {
       "title": "Ach, ich fühl's",
@@ -4137,7 +4139,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Du feines Täubchen, nur herein!",
       "kind": "Trio · Act 1",
-      "id": "Act 1: Du feines Täubchen, nur herein"
+      "id": "Act 1: Du feines Täubchen, nur herein",
+      "editionId": "mozart-du-feines-taubchen"
      },
      {
       "title": "Schnelle Füsse, rascher Muth",
@@ -4162,7 +4165,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?"
+      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?",
+      "editionId": "mozart-soll-ich-dich-theurer"
      },
      {
       "title": "Bald prangt, den Morgen zu verkünden",
@@ -4195,7 +4199,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Bei Männern, welche Liebe fühlen",
-      "kind": "Duet with Pamina · Act 1"
+      "kind": "Duet with Pamina · Act 1",
+      "editionId": "mozart-bei-mannern-welche-liebe-fuhlen"
      },
      {
       "title": "Ein Mädchen oder Weibchen",
@@ -4219,7 +4224,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Du feines Täubchen, nur herein!",
       "kind": "Trio · Act 1",
-      "id": "Act 1: Du feines Täubchen, nur herein"
+      "id": "Act 1: Du feines Täubchen, nur herein",
+      "editionId": "mozart-du-feines-taubchen"
      },
      {
       "title": "Schnelle Füsse, rascher Muth",
@@ -4314,7 +4320,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?"
+      "id": "Act 2: Soll ich dich, Teurer, nicht mehr sehn?",
+      "editionId": "mozart-soll-ich-dich-theurer"
      },
      {
       "title": "Die Strahlen der Sonne vertreiben die Nacht",
@@ -4333,7 +4340,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Du feines Täubchen, nur herein!",
       "kind": "Trio · Act 1",
-      "id": "Act 1: Du feines Täubchen, nur herein!"
+      "id": "Act 1: Du feines Täubchen, nur herein!",
+      "editionId": "mozart-du-feines-taubchen"
      },
      {
       "title": "Schnelle Füsse, rascher Muth",
@@ -4504,7 +4512,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Seid uns zum zweitenmal willkommen",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Seid uns zum zweitenmal willkommen"
+      "id": "Act 2: Seid uns zum zweitenmal willkommen",
+      "editionId": "mozart-seid-uns-zum-zweitenmal-willkommen"
      },
      {
       "title": "Bald prangt, den Morgen zu verkünden",
@@ -4533,7 +4542,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Seid uns zum zweitenmal willkommen",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Seid uns zum zweitenmal willkommen"
+      "id": "Act 2: Seid uns zum zweitenmal willkommen",
+      "editionId": "mozart-seid-uns-zum-zweitenmal-willkommen"
      },
      {
       "title": "Bald prangt, den Morgen zu verkünden",
@@ -4562,7 +4572,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Seid uns zum zweitenmal willkommen",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Seid uns zum zweitenmal willkommen"
+      "id": "Act 2: Seid uns zum zweitenmal willkommen",
+      "editionId": "mozart-seid-uns-zum-zweitenmal-willkommen"
      },
      {
       "title": "Bald prangt, den Morgen zu verkünden",
@@ -4586,7 +4597,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Bewahret euch vor Weibertücken",
       "kind": "Duet · Act 2",
-      "id": "Act 2: Bewahret euch vor Weibertücken"
+      "id": "Act 2: Bewahret euch vor Weibertücken",
+      "editionId": "mozart-bewahret-euch-vor-weibertucken"
      }
     ]
    },
@@ -4600,7 +4612,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Bewahret euch vor Weibertücken",
       "kind": "Duet · Act 2",
-      "id": "Act 2: Bewahret euch vor Weibertücken"
+      "id": "Act 2: Bewahret euch vor Weibertücken",
+      "editionId": "mozart-bewahret-euch-vor-weibertucken"
      }
     ]
    },

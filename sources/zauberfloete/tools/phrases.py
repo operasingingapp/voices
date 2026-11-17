@@ -19,7 +19,7 @@ def build(sid, xmlf, parts, nverses=1, verse_of_part=None, extra_lex=None, trans
     SW = score_words(xmlf)
     out, problems, counter = [], [], {}
     for pname, role in parts.items():
-        drafts = [p for p in D if p['role'] == role or (role in ('tenor', 'bass') and p['role'] == 'chorus')]
+        drafts = [p for p in D if role in p['role'].split('+') or (role in ('tenor', 'bass') and p['role'] == 'chorus')]
         streams = SW[pname]
         per = len(drafts) // nverses if nverses > 1 else len(drafts)
         for vi, (v, stream) in enumerate(sorted(streams.items())):

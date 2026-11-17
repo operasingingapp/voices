@@ -1,0 +1,84 @@
+# page 083 system 1 starts bar 1
+# bar 1: Allegretto, 4/4 (C), C major
+# bar 1 RH: the first G4 is a half note (stem up) with a dot printed below it; read as half tied to the G4 eighth on beat 3 (a dotted half would overfill the bar)
+# JUDGE bar 1 RH: OWN - two half notes on beat 1: G4 half (stem up) tied to G4 eighth, and E4 dotted half (stem down, the dot below) + G4 quarter tied over (Y notes); p between the staves applies to both hands (X dyn)
+1 RH1: dyn:p G4:h~ G4:e( G4:e C5:e C5+E5:e)
+1 RH2: E4:h. G4:q~
+1 LH1: dyn:p C4:e( G3:e C4:e G3:e C4:e G3:e) s:q
+1 LH2: C3:h.( E3:e G3:e)
+2 RH1: C5+E5:q. C5+E5:e D5:e( C5:e D5:e E5:e)
+2 RH2: G4:e( G4:e E4:e C5:e B4:e G4:e F4:e B4:e)
+2 LH1: C4:h( G3:h)
+3 RH1: C5:e( F5:e) F5:q. F5:e( E5:e D5:e)
+3 RH2: E4:e( F4+A4:e F4:e A4:e C5:e) C5:q( B4:e)
+# JUDGE bar 3 LH: Y - A3 half tied to first A3 eighth; slur starts on the second eighth (A A G F); G3 up-stem on beat 4 as LH2
+3 LH1: A3:h~ A3:e A3:e( G3:e F3:e)
+3 LH2: s:h. G3:q
+# bar 4 RH2: the C4 (third eighth) is printed on a ledger line just above the bass staff, beamed with the RH
+4 RH1: G5:q.( C5:e) C5:e( B4:e D5:e C5:e)
+4 RH2: C5:e G4:e C4:e G4:e F4:q E4:q
+4 LH1: G3:h G3:q G3:q
+# JUDGE bar 4 LH: X - slur from E3 half ends at the C3 quarter
+# bar 4 LH2 (marks sweep, 4x crop): slur starts on the E3 half, passes under the D3 stem tip and ends just before the C3 quarter's stem (beat 4); it does not continue into bar 5. File already matched; nothing changed.
+4 LH2: E3:h( D3:q C3:q)
+# bar 5 RH2: C4 and B3 printed below the treble staff (cross-staff), beamed with the RH
+5 RH1: E5:q( D5:q) r:q D5:q
+# FIX bar 5 RH2 beat 3: D4 (the cross-staff note sits on top of the first ledger line above the bass staff), not C4. Fresh check 2, confirmed 4x
+5 RH2: G4:e( C5:e B4:e G4:e) D4:e( B3:e B4:e G4:e)
+5 LH1: G3:h r:q G3:q
+# page 083 system 2 starts bar 6
+6 RH1: D5:q.( E5:e) E5:e( D5:e) D5:e( C5:e)
+6 RH2: C5:e A4:e F#4:e G4:e F#4:e A4:e D4:e A4:e
+6 LH1: F#3:q A3:q D3:q F#3:q
+7 RH1: B4+D5:e( A4+C5:e) G4+B4:q r:q B4+D5:q
+7 LH1: r:q G3:q G2:q r:q
+8 RH1: B4+D#5:q( C5+E5:q) r:q F#4+A4:q
+# JUDGE bar 8 LH: X - second chord upper note sits just above the top line = B3 (A2+B3)
+# FIX bar 8 LH beat 3: octave A2+A3 (upper head on the top line = A3, not B3); bass line C-A-F# in octaves. Fresh check 1, confirmed 4x
+8 LH1: r:q C3+C4:q( A2+A3:q F#2+F#3:q)
+9 RH1: F#4+A#4:q( G4+B4:q) r:h
+9 LH1: r:q G2+G3:q( E2+E3:q B1+B2:q)
+# JUDGE bar 10 RH: X - slur starts on the dotted chord and ends on the second 16th
+10 RH1: A4+C5:q.( B4+D5:s C5+E5:s) G4+B4:q F#4+A4:q
+10 LH1: C2+C3:q C2+C3:q D2+D3:q D2+D3:q
+11 RH1: G4:q r:q r:q G4:q
+11 LH1: G2:e G3:e G2:e G3:e G2:e G3:e G2:e G3:e
+12 RH1: B4+D5:q. B4+D5:e B4+D5:e B4+D5:e B4+D5:e( A4+C5:e)
+12 LH1: G2:e G3:e G2:e G3:e G2:e G3:e G2:e G3:e
+# page 083 system 3 starts bar 13
+13 RH1: A4+C5:e( G4+B4:e) G4+B4:q r:q G4+D5:q
+13 LH1: G2:e G3:e G2:e G3:e G2:e G3:e G2:e G3:e
+14 RH1: C5+E5:q.( G4+D5:e E4+C5:e G4+D5:e C5+E5:e D5+F5:e)
+14 LH1: G2:e G3:e G2:e G3:e G2:e G3:e G2:e G3:e
+15 RH1: C5+E5:q( B4+D5:q) r:q r:e B4:e
+15 LH1: G2:e G3:e G2:e G3:e G2:e G3:e G2:e G3:e
+16 RH1: dyn:mf E4+G#4+B4+E5:q. E4+G#4+B4+E5:e E4+G#4+B4+E5:e B4:e G#4:e B4:e
+# JUDGE bar 16 LH: X - dynamic printed between the staves applies to both hands
+16 LH1: dyn:mf E3:e G#3:e B3:e G#3:e E3:e G#3:e B3:e G#3:e
+17 RH1: dyn:f E4+G#4+B4+E5:q* E4+G#4+B4+E5:q* r:h
+# JUDGE bar 17 LH: X - dynamic printed between the staves applies to both hands
+17 LH1: dyn:f E3:q* E3:q* r:h
+18 RH1: dyn:p E4:q* D4:e.* C4:s* B3:q* C4:q*
+# JUDGE bar 18 LH: X - dynamic printed between the staves applies to both hands
+18 LH1: dyn:p C3:q* F3:e.* A3:s* G3:q* C3:q*
+# page 083 system 4 starts bar 19
+19 RH1: A3:q* C#4:q* D4:q* r:q
+19 LH1: F3:q* A3:q* D3:q* r:q
+20 RH1: F4:q* E4:e.* D4:s* G4:q* C4:e.* D4:s*
+20 LH1: D3:q* G3:e.* F3:s* E3:q* A3:q*
+21 RH1: E4:q* D4:q* C4:q* r:q
+21 LH1: G3:q* G2:q* C3:q* r:q
+# bar 22: orchestral postlude (voices rest to the end)
+22 RH1: dyn:p G4+C5+E5:q* F4+A4+D5:e.* C4+F4+C5:s* D4+G4+B4:q* E4+G4+C5:q*
+# JUDGE bar 22 LH: X - dynamic printed between the staves applies to both hands
+22 LH1: dyn:p C2+C3:q* F2+F3:e.* A2+A3:s* G2+G3:q* C2+C3:q*
+23 RH1: C4+F4+A4:q* E4+G4+A4+C#5:q* F4+A4+D5:q* r:q
+23 LH1: F2+F3:q* A2+A3:q* D2+D3:q* r:q
+24 RH1: A4+D5+F5:q* G4+C5+E5:e.* G4+B4+D5:s* G4+C5+G5:q* C5:e.* D5:s*
+24 RH2: s:h. F4:q
+# JUDGE bar 24 LH: Y - staccato dot over the last chord A2+A3
+24 LH1: D2+D3:q* G2+G3:e.* F2+F3:s* E2+E3:q* A2+A3:q*
+25 RH1: G4+C5+E5:q* F4+G4+B4+D5:q* E4+G4+C5:q* r:q
+# JUDGE bar 25 LH: Y - staccato dot below G1+G2
+25 LH1: G2+G3:q* G1+G2:q* C2+C3:q* r:q
+# bar 25: final double bar

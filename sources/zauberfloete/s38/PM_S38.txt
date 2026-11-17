@@ -1,0 +1,110 @@
+# S38 No. 16 Terzett "Seid uns zum zweitenmal willkommen", Edition Peters pp. 102-104, piano reduction
+# Many 16th rests after the 32nd-note pairs in the RH are printed doubled (two rests stacked); written once.
+# JUDGE S38J merge (base = reader X). pdiff: 0 note differences; raw diff: one voicing difference (bar 14 RH), settled Y.
+# page 102 system 1 starts bar 1
+# bar 1: Allegretto, 6/8, A major (3 sharps); RH treble, LH bass clef
+1 RH1: dyn:p G#4:x( A4:x) r:s B#4:x( C#5:x) r:s D#5:x( E5:x) r:s G#5:x( A5:x) r:s r:e r:e
+# MARKS bar 1 LH1: added dyn:p at beat 1 (the p under "Viol." sits midway between the piano staves, so it goes to both hands; LH has a rest there)
+1 LH1: dyn:p r:q r:e r:e C#4+E4:e( A3+C#4:e)
+# 2: natural on D6 printed (cautionary)
+2 RH1: D#5:x( E5:x) r:s F##5:x( G#5:x) r:s A#5:x( B5:x) r:s C#6:x( D6:x) r:s r:e r:e
+2 LH1: r:q r:e r:e G#3+B3:e( E3+G#3:e)
+3 RH1: D#6:x( E6:x) r:s D6:x( C#6:x) r:s B5:xt( A5:x) r:s G#5:xt( F#5:x) r:s E5:xt( D5:x) r:s C#5:xt( B4:x) r:s
+3 LH1: C#3+E3+A3:e r:e r:e D3+F#3+A3:e r:e r:e
+# page 102 system 2 starts bar 4
+# JUDGE bar 4 RH: agreed, confirmed on 5x: the last A4 has TWO flags (16th) followed by a 16th rest (bar sums: 6/16 + A4 + 5/16)
+4 RH1: C#5+E5:e.( A4+C#5:s B4+D5:s G#4+B4:s A4:s) r:s B#4:x( C#5:x) r:s D#5:x( E5:x) r:s
+# 4 LH: clef change to treble at the end of the bar
+4 LH1: E3+E4:e* E3+E4:e* E3+E4:e* A3+C#4:e r:e r:e clef:G
+5 RH1: G#5:x( A5:x) r:s A4+C#5:e A4+C#5:e C#5:s.( D5:x E5:e) B4:e
+5 RH2: s:q. A4:q G#4:e
+5 LH1: A4:e( E4:e C#4:e A3:e C#4:e E4:e)
+6 RH1: A4+C#5:q( B4+D5:e) D#5:x( E5:x) r:s F##5:x( G#5:x) r:s A#5:x( B5:x) r:s
+# 6 LH: slur from A4 read as ending on D4 (slur end lies between F#4 and D4)
+# JUDGE bar 6 LH: agreed, confirmed on 4x: the slur from A4 ends under D4 (passes under F#4 and stops at the D4 head)
+6 LH1: A4:e( F#4:e D4:e) E4+A4+C#5:e( E4+G#4+B4:e) r:e
+7 RH1: A4+E5:e A4+E5:e A4+E5:e D5:e.( E5:s) F#5:e
+7 RH2: s:q. A4:q A4:e
+7 LH1: C#4:e C#4:e C#4:e F#4:e.( E4:s) D4:e
+# page 103 system 1 starts bar 8
+8 RH1: A4+C#5:e.( B4+D5:s G#4+B4:e) G#5:x( A5:x) r:s B#5:x( C#6:x) r:s D#6:x( E6:x) r:s
+8 LH1: E4:q E3:e A3:q r:e
+9 RH1: G#4+B4:e G#4+B4:e( G#4+E5:e) G#4+E5:e( F#4+D#5:e) F#4+D#5:e
+9 LH1: E4:e E4:e E4:e B3:q B3:e
+10 RH1: F#4+D#5:e.( G#4+E5:s) A4+F#5:e F#5:e D#5:x( E5:x) r:s F##5:x( G#5:x) r:s
+10 LH1: B3:q B3:e E4+A4:e( E4+G#4:e) r:e
+11 RH1: A#5:x( B5:x) r:s r:e r:e C#5+F#5:q C#5+A5:s( A4+F#5:s)
+11 RH2: E5:e E5:e E5:e s:q.
+11 LH1: E4+G#4:e( F#4+A4:e G#4+B4:e) A4:q A3:e
+# page 103 system 2 starts bar 12
+12 RH1: A4+F#5:e( G#4+E5:e F#4+D#5:e) G#4+E5:e F##5:x( G#5:x) r:s A#5:x( B5:x) r:s
+12 LH1: B3:q B3:e E4:q r:e
+13 RH1: D#6:x( E6:x) r:s G#4+B4:e G#4+B4:e G#4+B4:q( A4+C#5:e)
+13 LH1: E4:e E4:e E4:e E4:e( D4:e C#4:e)
+# JUDGE bar 14 RH: Y - on 5x the stem-down beam joins THREE stems (G#4, B4, A4); the third stem reaches the A4 head, so A4 belongs to the lower voice (RH2 G#4 B4 A4 = the 2nd Boy's line), and the stem-up flag carries C#5 alone (RH1 D5 quarter slurred to C#5 eighth)
+14 RH1: D5:q( C#5:e) D#5:x( E5:x) r:s F##5:x( G#5:x) r:s A#5:x( B5:x) r:s
+14 RH2: G#4:e B4:e A4:e s:q.
+14 LH1: B3:e( G#3:e A3:e) E4+A4+C#5:e( E4+G#4+B4:e) r:e
+15 RH1: D#6:x( E6:x) r:s G#4+B4:e G#4+B4:e G#4+B4:q( A4+C#5:e)
+15 LH1: E4+G#4+B4:e E4:e E4:e E4:e( D4:e C#4:e)
+# page 103 system 3 starts bar 16
+16 RH1: G#4+E5:e( B4+D5:e A4+C#5:e) D#5:x( E5:x) r:s F##5:x( G#5:x) r:s A#5:x( B5:x) r:s
+16 LH1: B3:e( G#3:e A3:e) E4:q r:e
+17 RH1: A4+C#5:e A4+C#5:e A4+C#5:e C#5:s.( D5:x E5:e) B4:e
+17 RH2: s:q. A4:q G#4:e
+17 LH1: A3:e( C#4:e E4:e) A4:e( C#4:e E4:e)
+18 RH1: C#5:s.( D5:x E5:e) B4:e D#5:x( E5:x) r:s F##5:x( G#5:x) r:s A#5:x( B5:x) r:s
+18 RH2: A4:q G#4:e s:q.
+# JUDGE bar 18 LH: agreed, confirmed on 5x: 2nd group A4+C#5 -> E4+G#4+B4
+18 LH1: A4:e( C#4:e E4:e) A4+C#5:e( E4+G#4+B4:e) r:e
+19 RH1: A4+C#5:e A4+C#5:e A4+C#5:e C#5:s.( D5:x E5:e) B4:e
+19 RH2: s:q. A4:q G#4:e
+19 LH1: A3:e( C#4:e E4:e) A4:e( C#4:e E4:e)
+20 RH1: A4+C#5:q( C#5+E5:s B4+D5:s) A4+C#5:e( G#4+B4:e) r:e
+20 LH1: A4:e( F#4:e D4:e) E4:q r:e
+# page 103 system 4 starts bar 21
+# 21: natural on D6 printed (cautionary)
+21 RH1: D#5:x( E5:x) r:s G#5:x( A5:x) r:s B#5:x( C#6:x) r:s E6:x( D6:x) r:s r:e r:e
+# 21 LH (treble clef): arc over the A4s read as a tie, arc below C#4 -> B3 as a slur
+# JUDGE bar 21 LH: agreed, confirmed on 3.5x: upper arc A4 -> A4 = tie; lower arc C#4 -> B3 = slur
+21 LH1: C#4+E4+A4~:q.( B3+F#4+A4:e) r:e r:e
+22 RH1: G#4+D5:e* G#4+D5:e* G#4+D5:e* A4+C#5:e r:e r:e
+# 22 LH: clef change to bass at the end of the bar
+22 LH1: E4:e* E4:e* E4:e* F#4:e r:e r:e clef:F
+23 RH1: D#6:x( E6:x) r:s D6:x( C#6:x) r:s B5:xt( A5:x) r:s G#5:xt( F#5:x) r:s E5:xt( D5:x) r:s C#5:xt( B4:x) r:s
+23 LH1: C#3+E3+A3:e r:e r:e D3+F#3+A3:e r:e r:e
+24 RH1: C#5+E5:e.( A4+C#5:s B4+D5:s G#4+B4:s A4:e) r:e r:e
+# 24 LH: two slurs (E4 -> C#4 and E3 -> A3) written as one chord slur; clef change to treble at the end of the bar
+24 LH1: E3+E4:q.( A3+C#4:e) r:e r:e clef:G
+# page 104 system 1 starts bar 25
+25 RH1: D#5:x( E5:x) r:s G#5:x( A5:x) r:s B#5:x( C#6:x) r:s E6:x( D6:x) r:s r:e r:e
+# JUDGE bar 25 LH: agreed, confirmed on 2.5x: same as bar 21 (tie on A4, slur C#4 -> B3)
+25 LH1: C#4+E4+A4~:q.( B3+F#4+A4:e) r:e r:e
+26 RH1: G#4+D5:e* G#4+D5:e* G#4+D5:e* A4+D5:e( C#5:e) r:e
+26 LH1: E4:e* E4:e* E4:e* F#4:e r:e r:e clef:F
+27 RH1: D#6:x( E6:x) r:s D6:x( C#6:x) r:s B5:xt( A5:x) r:s G#5:xt( F#5:x) r:s E5:xt( D5:x) r:s C#5:xt( B4:x) r:s
+27 LH1: C#3+E3+A3:e r:e r:e D3+F#3+A3:e r:e r:e
+28 RH1: C#5+E5:e.( A4+C#5:s B4+D5:s G#4+B4:s A4:e) G#5:x( A5:x) r:s B#5:x( C#6:x) r:s
+28 LH1: E3+E4:q.( A3+C#4:e) r:e r:e clef:G
+# page 104 system 2 starts bar 29
+29 RH1: r:e A#5:x( B5:x) r:s C#6:x( D6:x) r:s r:e B#5:x( C#6:x) r:s D#6:x( E6:x) r:s
+29 LH1: E4+G#4+B4:e r:e r:e A4+C#5:e r:e r:e clef:F
+# 30 RH: 2nd chord read A5+C#6 (an extra ink mass above the C#6 head at D6/E6 height, read as a print blot; the identical bar 32 is clean)
+# JUDGE bar 30 RH: agreed, confirmed at 400 and 600 dpi: 2nd chord A5+C#6; the ink above the C#6 head (no ledger line of its own) is a blot - the chord pairs double the Boys' thirds (C#5/A4) an octave up and the identical bar 32 is clean
+30 RH1: G#5+B5:s( A5+C#6:s B5+D6:s A5+C#6:s B5+D6:s G#5+B5:s A5:e) G#5:x( A5:x) r:s B#5:x( C#6:x) r:s
+30 LH1: E3+B3+D4:e* E3+B3+D4:e* E3+B3+D4:e* A3+C#4:e r:e r:e clef:G
+31 RH1: r:e A#5:x( B5:x) r:s C#6:x( D6:x) r:s r:e B#5:x( C#6:x) r:s D#6:x( E6:x) r:s
+31 LH1: E4+G#4+B4:e r:e r:e A4+C#5:e r:e r:e clef:F
+32 RH1: G#5+B5:s( A5+C#6:s B5+D6:s A5+C#6:s B5+D6:s G#5+B5:s A5:e) r:e r:e
+32 LH1: E3+B3+D4:e* E3+B3+D4:e* E3+B3+D4:e* A3+C#4:e r:e r:e
+# page 104 system 3 starts bar 33
+# p. 104 system 3: piano only to the final double bar (bass clef in LH)
+33 RH1: G#4:x( A4:x) r:s B#4:x( C#5:x) r:s D#5:x( E5:x) r:s G#5:x( A5:x) r:s r:e r:e
+33 LH1: r:q r:e r:e C#4+E4:e( A3+C#4:e)
+34 RH1: D#5:x( E5:x) r:s F##5:x( G#5:x) r:s A#5:x( B5:x) r:s C#6:x( D6:x) r:s r:e r:e
+34 LH1: r:q r:e r:e G#3+B3:e( E3+G#3:e)
+35 RH1: D#6:x( E6:x) r:s D6:x( C#6:x) r:s B5:xt( A5:x) r:s G#5:xt( F#5:x) r:s E5:xt( D5:x) r:s C#5:xt( B4:x) r:s
+35 LH1: C#3+E3+A3:e r:e r:e D3+F#3+A3:e r:e r:e
+# 36: staccato dots on the last RH A4 and the last LH chord (here only); final double bar
+36 RH1: C#5+E5:e.( A4+C#5:s B4+D5:s G#4+B4:s A4:e*) r:e r:e
+36 LH1: E3+E4:e* E3+E4:e* E3+E4:e* A3+C#4:e* r:e r:e

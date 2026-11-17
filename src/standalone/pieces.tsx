@@ -6884,6 +6884,141 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-du-feines-taubchen": {
+    portrait: "zauberfloete:monostatos",
+    opera: "Die Zauberflöte",
+    kind: "Trio",
+    facts: {
+      key: "G major",
+      time: "4/4",
+      tempo: "Allegro molto, played at ♩ = 154, from the median length of four complete recordings (Klemperer 1964, Böhm 1964, Abbado 2005, Christie 1995)",
+    },
+    notePlaceholder: "Fast and clipped; the fright at the end is comic",
+    about: (
+      <>
+        <p>
+          Act 1, Pamina’s room in Sarastro’s palace. Monostatos drags Pamina in and tells her that her life is lost. She is not afraid of death; she grieves only for her mother, who will die of sorrow. He has his slaves chain her, and she faints; he sends them away to be alone with her. Papageno appears at the window, ventures in and sees a lovely girl, then sees Monostatos: each takes the other for the devil, begs for mercy and runs off.
+        </p>
+        <p>
+          Score: vocal score pages 45–47 (71 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. Monostatos and Pamina share one staff in the print; each has a line here. The print spells “Sclaven” and “Hass” and prints Papageno’s “Aha!” as “A ha!” under two notes.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-bei-mannern-welche-liebe-fuhlen": {
+    portrait: "zauberfloete:pamina",
+    opera: "Die Zauberflöte",
+    kind: "Duet",
+    facts: {
+      key: "E-flat major",
+      time: "6/8",
+      tempo: "Andantino, played at ♩ = 47 (♩. ≈ 31), from the median length of five complete recordings (Klemperer 1964, Böhm 1964, Solti 1969, Abbado 2005, Christie 1995)",
+    },
+    notePlaceholder: "Simple and warm, like a folk song; two voices as one",
+    about: (
+      <>
+        <p>
+          Act 1. Pamina and Papageno sing that men who feel love have good hearts, and that it is a woman’s first duty to share their feelings. Love sweetens every trouble and works throughout nature; nothing is nobler than man and wife, who together reach up to the divine.
+        </p>
+        <p>
+          Score: vocal score pages 49–51 (50 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The two verses are printed one after the other. The print spells “versüsset”, “Creatur” and “Edler’s”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-bewahret-euch-vor-weibertucken": {
+    portrait: "zauberfloete:priest1",
+    opera: "Die Zauberflöte",
+    kind: "Duet",
+    facts: {
+      key: "C major",
+      time: "4/4",
+      tempo: "Allegretto, played at ♩ = 93, from the median length of four complete recordings (Klemperer 1964, Böhm 1964, Abbado 2005, Christie 1995)",
+    },
+    notePlaceholder: "A warning with a wink; keep it light",
+    about: (
+      <>
+        <p>
+          Act 2. Two priests warn Tamino and Papageno against women’s wiles, the brotherhood’s first duty: many a wise man was beguiled, found himself abandoned, his faithfulness repaid with scorn, and died in despair. The priests go out and it becomes dark.
+        </p>
+        <p>
+          Score: vocal score page 83 (25 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. Both priests are printed on one staff, tenor above and bass below; each has his own line here. The print spells “liess”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-seid-uns-zum-zweitenmal-willkommen": {
+    portrait: "zauberfloete:knabe1",
+    opera: "Die Zauberflöte",
+    kind: "Trio",
+    facts: {
+      key: "A major",
+      time: "6/8",
+      tempo: "Allegretto, played at ♩ = 72 (♩. = 24), from the median length of four complete recordings (Klemperer 1964, Abbado 2005, Christie 1995, Jacobs 2010)",
+    },
+    notePlaceholder: "Bright and floating; the three voices perfectly together",
+    about: (
+      <>
+        <p>
+          Act 2. The three boys welcome Tamino and Papageno a second time to Sarastro’s realm and bring back the flute and the bells; a table with food and drink rises from below. When they meet a third time, joy will reward their courage. They tell Tamino to take heart, the goal is near, and Papageno to keep quiet.
+        </p>
+        <p>
+          Score: vocal score pages 102–104 (36 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The First and Second Boys share one staff in the print; each boy has his own line here. The print spells “Muthes”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-soll-ich-dich-theurer": {
+    portrait: "zauberfloete:pamina",
+    opera: "Die Zauberflöte",
+    kind: "Trio",
+    facts: {
+      key: "B-flat major",
+      time: "¢ (alla breve)",
+      tempo: "Andante moderato, played at ♩ = 101, from the median length of four complete recordings (Klemperer 1964, Abbado 2005, Jacobs 2010, Christie 1995)",
+    },
+    notePlaceholder: "Pamina anxious, the men calm; the farewell quiet",
+    about: (
+      <>
+        <p>
+          Act 2. Pamina asks whether she will never see Tamino again; Sarastro promises that they will meet again in joy. She fears the deadly dangers awaiting him; Tamino and Sarastro trust in the gods’ will. If he loved her as she loves him, she says, he would not be so calm; both men assure her that he feels the same and will be faithful for ever. The hour strikes, Sarastro parts them, and the lovers say farewell.
+        </p>
+        <p>
+          Score: vocal score pages 109–113 (78 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate
+          7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every
+          difference, then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print
+          spells them. The print has “sehn” without an apostrophe but “seh’n” in Sarastro’s “wir seh’n uns wieder”, and spells “Theurer” and “tödtliche”. Sarastro sings “ihr Wink soll ihm Gesetze sein” where Tamino sings “mir”. In bar 37 the print gives Tamino no German syllable; he sings “wie” with Pamina.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-der-holle-rache": {
     portrait: "zauberfloete:queen",
     opera: "Die Zauberflöte",

@@ -3,7 +3,8 @@ halves when a page has more than three systems. Writes cmp/<sid>_p<page>_<h>.png
 import re, glob, io, sys, verovio, cairosvg, numpy as np
 import xml.etree.ElementTree as ET
 from PIL import Image
-IN = '/home/claude/work/zf_in/b1'; OUT = '/home/claude/work/zf_in/cmp'
+import os
+IN = os.environ.get('ZFIN', '/home/claude/work/zf_in/b1'); OUT = '/home/claude/work/zf_in/cmp'
 sids = sys.argv[1:] or ['S05', 'S07', 'S09', 'S25', 'S32', 'S36', 'S40', 'S46']
 for sid in sids:
     pm = glob.glob(f'{IN}/{sid}_*/PM_*.txt')[0]; xmlf = glob.glob(f'{IN}/{sid}_*/*.musicxml')[0]

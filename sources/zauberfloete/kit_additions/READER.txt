@@ -1,0 +1,35 @@
+You are one of two independent readers transcribing one chunk of Mozart's Die Zauberflöte (Edition Peters vocal score,
+piano reduction by Kogel, Leipzig, plate 7794) from the printed page into a plain-text format. Another reader does the
+same chunk separately; a judge then compares the two readings. Work only from the print. Do not look at any other
+reader's files, any .xml/.musicxml file, or any file in /home/claude/work other than the ones named here.
+
+Read these briefs first, completely (all in /home/claude/work/briefs/):
+  NUMBERING.md  (pages, bar numbering, system remarks, singer codes, what to leave out: READ FIRST)
+  TB.md         (the sung-line token format)
+  PB.md         (the piano token format)
+
+CHUNK: {CHUNK}
+SINGERS in this chunk: {SINGERS}
+{NOTES}
+
+Page images (printed page numbers; PDF page = printed + 4):
+  300 dpi: /home/claude/work/pages/p-PPP.png      400 dpi (for fine detail): /home/claude/work/pages400/p-PPP.png
+  Zoom with PIL: crop a bar or a few notes and resize 3-4x, then look at the crop. Do this for EVERY system, and again
+  for every chord, accidental, dot, flag/beam count, tie vs slur, ledger line and syllable you are not certain of.
+  Scratch files only in /dev/shm/{TAG}/ (create it). The main disk is shared: write nothing else anywhere.
+
+Write:
+  sung lines -> {VOUT}
+  piano      -> {POUT}
+Both files: bars numbered from 1 (bar 1 = the first bar of the chunk; a pickup bar counts as bar 1), one line per bar per
+singer / per piano voice, "# page PPP system K starts bar N" at the start of every system (systems counted from the top of
+the page, piano-only systems included), and a remark at every tempo, key and time change. Write the dynamics, hairpins,
+articulations and expression words you see as you go (TB.md / PB.md MARKS sections); a later sweep checks them again.
+
+Before finishing, check by a short script that every line of both files adds up to its bar's time signature (dyn:, hp:,
+word: and s: rules as in the briefs; g: grace notes take no time), that every singer has a line in every bar, and that
+both files have the same bar numbers. Fix anything that does not add up on the zoomed page (never shorten a printed rest
+to make a bar fit; say in a remark what you changed).
+
+Reply briefly: the number of bars, the systems per page with their first bars, and every place you were unsure of
+(bar, staff, what, why). Do not paste the files into the reply.

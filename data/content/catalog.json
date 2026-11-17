@@ -1186,6 +1186,40 @@
     }
   },
   {
+    "editionId": "mozart-bei-mannern-welche-liebe-fuhlen",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-bei-mannern-welche-liebe-fuhlen@1.0.0-peters#1e3a6ecd51",
+    "title": "Bei Männern, welche Liebe fühlen",
+    "subtitle": "Pamina and Papageno: duet from Die Zauberflöte, Act 1",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      }
+    ],
+    "measures": 50,
+    "durationSec": 190,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 30,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-bella-vita-militar",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-bella-vita-militar@1.0.0-peters#c198852b32",
@@ -1331,6 +1365,40 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 37,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-bewahret-euch-vor-weibertucken",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-bewahret-euch-vor-weibertucken@1.0.0-peters#cfde495dc4",
+    "title": "Bewahret euch vor Weibertücken",
+    "subtitle": "The two priests: duet from Die Zauberflöte, Act 2",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "priest1",
+        "name": "First Priest",
+        "voiceType": "Tenor",
+        "partKey": "priest1"
+      },
+      {
+        "id": "priest2",
+        "name": "Second Priest",
+        "voiceType": "Bass",
+        "partKey": "priest2"
+      }
+    ],
+    "measures": 25,
+    "durationSec": 65,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 18,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -2532,6 +2600,46 @@
     "time": "2/4",
     "languageStatus": {
       "phrases": 32,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-du-feines-taubchen",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-du-feines-taubchen@1.0.0-peters#9f6394a07b",
+    "title": "Du feines Täubchen, nur herein!",
+    "subtitle": "Monostatos, Pamina and Papageno: trio from Die Zauberflöte, Act 1",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "monostatos",
+        "name": "Monostatos",
+        "voiceType": "Tenor",
+        "partKey": "monostatos"
+      },
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      }
+    ],
+    "measures": 71,
+    "durationSec": 111,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 21,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -6679,6 +6787,46 @@
     }
   },
   {
+    "editionId": "mozart-seid-uns-zum-zweitenmal-willkommen",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-seid-uns-zum-zweitenmal-willkommen@1.0.0-peters#50742f3eb3",
+    "title": "Seid uns zum zweitenmal willkommen",
+    "subtitle": "The three boys: trio from Die Zauberflöte, Act 2",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "knabe1",
+        "name": "First Boy",
+        "voiceType": "Treble",
+        "partKey": "knabe1"
+      },
+      {
+        "id": "knabe2",
+        "name": "Second Boy",
+        "voiceType": "Treble",
+        "partKey": "knabe2"
+      },
+      {
+        "id": "knabe3",
+        "name": "Third Boy",
+        "voiceType": "Treble",
+        "partKey": "knabe3"
+      }
+    ],
+    "measures": 36,
+    "durationSec": 90,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 30,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-sento-o-dio",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-sento-o-dio@1.0.0-peters#05e5c78612",
@@ -6987,6 +7135,46 @@
     "durationSec": 159,
     "hasRepeats": false,
     "keySignature": "E major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-soll-ich-dich-theurer",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-soll-ich-dich-theurer@1.0.0-peters#4f3bff1196",
+    "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
+    "subtitle": "Pamina, Tamino and Sarastro: trio from Die Zauberflöte, Act 2",
+    "kind": "terzetto",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "sarastro",
+        "name": "Sarastro",
+        "voiceType": "Bass",
+        "partKey": "sarastro"
+      }
+    ],
+    "measures": 78,
+    "durationSec": 185,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
     "time": "2/2",
     "languageStatus": {
       "phrases": 50,
