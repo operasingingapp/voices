@@ -1635,7 +1635,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mille torbidi pensieri",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Mille torbidi pensieri"
+      "id": "Act 2: Mille torbidi pensieri",
+      "editionId": "mozart-mille-torbidi-pensieri"
      },
      {
       "title": "Ah, pietà! Signori miei!",
@@ -1777,7 +1778,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mille torbidi pensieri",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Mille torbidi pensieri"
+      "id": "Act 2: Mille torbidi pensieri",
+      "editionId": "mozart-mille-torbidi-pensieri"
      },
      {
       "title": "Calmatevi, idol mio",
@@ -1909,7 +1911,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mille torbidi pensieri",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Mille torbidi pensieri"
+      "id": "Act 2: Mille torbidi pensieri",
+      "editionId": "mozart-mille-torbidi-pensieri"
      },
      {
       "title": "Dunque quello sei tu",
@@ -2053,7 +2056,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mille torbidi pensieri",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Mille torbidi pensieri"
+      "id": "Act 2: Mille torbidi pensieri",
+      "editionId": "mozart-mille-torbidi-pensieri"
      },
      {
       "title": "Dunque quello sei tu",
@@ -2179,7 +2183,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mille torbidi pensieri",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Mille torbidi pensieri"
+      "id": "Act 2: Mille torbidi pensieri",
+      "editionId": "mozart-mille-torbidi-pensieri"
      },
      {
       "title": "Dunque quello sei tu",
@@ -2306,7 +2311,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Mille torbidi pensieri",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Mille torbidi pensieri"
+      "id": "Act 2: Mille torbidi pensieri",
+      "editionId": "mozart-mille-torbidi-pensieri"
      },
      {
       "title": "Dunque quello sei tu",

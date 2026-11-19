@@ -4507,6 +4507,41 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-mille-torbidi-pensieri": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Sextet",
+    facts: {
+      key: "E-flat major throughout",
+      time: "4/4 (common time) throughout",
+      tempo: "Molto allegro, played at ♩ = 245 (a half note ≈ 122), about 2½ minutes, the median of five recordings that give the Molto allegro its own track, apart from the Andante (Haitink, Keilberth, Busch, Norrington, Iván Fischer); Mozart gives the words only",
+    },
+    notePlaceholder: "Leporello's patter against the others' bewildered chorus: keep it light, quick and together, and save the full voice for the last pages",
+    about: (
+      <>
+        <p>
+          Act 2, the dark courtyard, straight on from “Sola, sola in bujo loco”. Leporello has just thrown off his master's hat
+          and cloak and shown his face: the man they caught is not Don Giovanni. In the sudden quick tempo all six are thrown into
+          confusion. Leporello, terrified, mutters that a thousand wild thoughts are spinning in his head and that it will be a
+          miracle if he comes out of this storm alive; Elvira, Anna, Ottavio, Zerlina and Masetto, against him, cry out at the
+          day they are having and at this turn of events nobody expected.
+        </p>
+        <p>
+          Score: No. 19, the Sextet, its Molto allegro from the top of page 200 to the end of the number (vocal score pages
+          200–212, 147 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written out from the
+          printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the
+          page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don
+          Ottavio's part, printed in the treble clef, is written at sounding pitch. Masetto's D natural in bar 93 (against D-flat
+          in the other voices) and the piano's B-flat and D chord in bar 23 are kept as printed. The Andante before it, “Sola,
+          sola in bujo loco”, is a separate piece. Only the Italian words are kept, with the print's spelling and punctuation
+          (Elvira's “Mille, mille”, and “novita” without its accent twice, for Elvira and Zerlina).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

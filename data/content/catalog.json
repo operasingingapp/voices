@@ -5263,6 +5263,64 @@
     }
   },
   {
+    "editionId": "mozart-mille-torbidi-pensieri",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-mille-torbidi-pensieri@1.0.0-schirmer#b9db3c834b",
+    "title": "Mille torbidi pensieri",
+    "subtitle": "Donna Elvira, Leporello, Donna Anna, Don Ottavio, Zerlina and Masetto: sextet from Don Giovanni, Act 2 (No. 19, Molto allegro)",
+    "kind": "sextet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      }
+    ],
+    "measures": 147,
+    "durationSec": 144,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 128,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-nel-padiglione-a-manca",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-nel-padiglione-a-manca@1.0.0-klengel#b078b165d7",

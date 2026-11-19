@@ -1,0 +1,9 @@
+S44 "Mille torbidi pensieri" (No. 19 Sextet, Molto allegro, Schirmer 1900 pp. 200-212, bars 1-147), build chain:
+  kit/build.sh VM_S44.clean.txt PM_S44.txt RAW "$(cat segs.txt)" "Mille torbidi pensieri" "$(cat singers.txt)"  -> s44.raw.xml (byte-identical)
+  kit/fix64.py s44.raw.xml S        -> s44.xml (0 fixes; identical to raw)
+  kit/xfix.py s44.xml F fixes.txt   -> s44f.xml (byte-identical; the only fix is "final": light-heavy barline at bar 147 in every part)
+Chunks: S44a pp. 200-203 bars 1-47, S44b pp. 204-207 bars 48-87, S44c pp. 208-212 bars 88-147 (VM_/PM_S44a-c, per-reader
+V_/P_S44x_A/B from b44/VA_, VB_, PA_, PB_); VM_S44.txt / PM_S44.txt are the merged files (VM_S44.clean.txt identical).
+Print questions kept as printed: Masetto bar 93 D natural against D-flat in the other voices; Elvira bar 105 "-ta," and
+Zerlina bar 54 "-ta!" without the accent of novità; piano right hand bar 23 B-flat4 + D5 chord.
+Judge/diff files (vdiff, pdiff, vsem, print_S44a-c.pdf) stay in ext/giovanni/b44.
