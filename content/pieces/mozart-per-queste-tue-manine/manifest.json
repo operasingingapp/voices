@@ -1,0 +1,153 @@
+{
+ "editionId": "mozart-per-queste-tue-manine",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Per queste tue manine",
+ "subtitle": "Zerlina and Leporello: duet from Don Giovanni, Act 2 (No. 21b, Vienna 1788)",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Per queste tue manine · abbi pietà di me",
+   "start": "1",
+   "end": "10"
+  },
+  {
+   "id": "b",
+   "label": "Non v'è pietà, briccone · Ah, di fuggir si provi · Sei morto se ti movi",
+   "start": "11",
+   "end": "24"
+  },
+  {
+   "id": "c",
+   "label": "Barbari, ingiusti Dei · Barbaro traditore · Deh non mi stringer tanto",
+   "start": "25",
+   "end": "37"
+  },
+  {
+   "id": "d",
+   "label": "Sen vada, o resti · Che strette, oh Dei · Di gioja e di diletto · così si fa",
+   "start": "38",
+   "end": "55"
+  },
+  {
+   "id": "e",
+   "label": "Sei morto (second time) · Deh non mi stringer · Sen vada · Che strette (second time)",
+   "start": "56",
+   "end": "71"
+  },
+  {
+   "id": "f",
+   "label": "Di gioja e di diletto (second time) · Che buja oscurità · così si fa (to the end)",
+   "start": "72",
+   "end": "96"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 21b Duet \"Per queste tue manine\" (K. 540b), added for the Vienna performances of 1788",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787; Vienna scene 1788)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (movi for muovi, quà, gioja, buja, ovver, oh Dei; the score's repeats)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 225–232, bars 1–96 of No. 21b",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker; a third, independent transcription was compared with it and every difference settled on the print. The English singing translation and the stage directions are left out. Allegro moderato, 4/4, 96 full bars; bars 94–96 are for the piano alone. Playback tempo: ♩ = 117, about 3:17, from the median of four complete recordings of the duet (Östman 1989 3:23, Norrington 1992 3:19, Gardiner 1994 3:15, Jacobs 2006 3:13); the duet is often left out of performances and recordings, and only recordings that include it whole were used. Mozart gives the words Allegro moderato only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

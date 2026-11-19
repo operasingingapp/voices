@@ -6055,6 +6055,40 @@
     }
   },
   {
+    "editionId": "mozart-per-queste-tue-manine",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-per-queste-tue-manine@1.0.0-schirmer#36c8a56a8a",
+    "title": "Per queste tue manine",
+    "subtitle": "Zerlina and Leporello: duet from Don Giovanni, Act 2 (No. 21b, Vienna 1788)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 96,
+    "durationSec": 197,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 54,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-perfida-e-in-quella-forma",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-perfida-e-in-quella-forma@1.0.0-klengel#23b8ce963f",

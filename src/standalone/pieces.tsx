@@ -4406,6 +4406,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-per-queste-tue-manine": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Duet",
+    facts: {
+      key: "C major",
+      time: "4/4",
+      tempo: "Allegro moderato, played at ♩ = 117, about 3¼ minutes, the median of four complete recordings of the duet (Östman, Norrington, Gardiner, Jacobs); it is cut from most performances, so only recordings that include it were used; Mozart gives the words only",
+    },
+    notePlaceholder: "Leporello wheedling and then wailing, Zerlina gleeful and merciless: keep the patter light and the così si fa crisp",
+    about: (
+      <>
+        <p>
+          Act 2, a scene Mozart added for the Vienna performances of 1788. Zerlina has caught Leporello, who beat her Masetto while
+          disguised as his master, and ties him to a chair. He flatters her pretty little hands and begs for pity; she has none: she
+          is a raging tigress, a viper, a lion, and he is dead if he moves. While he groans to the gods and feels the room spin like an
+          earthquake, she rejoices that this is how men are to be dealt with, and goes off to fetch the others, leaving him tied up.
+        </p>
+        <p>
+          Score: No. 21b, the Duet (vocal score pages 225–232, 96 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker; a
+          third, independent transcription was then compared with it and every difference settled on the print. Only the Italian
+          words are kept, with the print's spelling (“movi”, “quà”, “gioja”, “buja”, “ovver”, “oh Dei”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787; this scene 1788), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

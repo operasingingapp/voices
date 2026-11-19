@@ -1650,7 +1650,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Per queste tue manine",
       "kind": "Duet · Act 2",
-      "id": "Act 2: Per queste tue manine"
+      "id": "Act 2: Per queste tue manine",
+      "editionId": "mozart-per-queste-tue-manine"
      },
      {
       "title": "Amico, per pietà",
@@ -2069,7 +2070,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Per queste tue manine",
       "kind": "Duet · Act 2",
-      "id": "Act 2: Per queste tue manine"
+      "id": "Act 2: Per queste tue manine",
+      "editionId": "mozart-per-queste-tue-manine"
      },
      {
       "title": "Amico, per pietà",
