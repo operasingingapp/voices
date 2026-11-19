@@ -1,0 +1,265 @@
+{
+ "editionId": "mozart-trema-trema-scellerato",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Trema, trema, scellerato!",
+ "subtitle": "Donna Anna, Donna Elvira, Don Ottavio, Zerlina, Masetto, Don Giovanni and Leporello: the end of the finale from Don Giovanni, Act 1 (No. 13)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P8",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Allegro: Trema, trema, scelerato! · È confusa la mia testa · Non sò più quel ch’io mi faccia",
+   "start": "1",
+   "end": "15"
+  },
+  {
+   "id": "b",
+   "label": "Saprà tosto il mondo intero · E un orribile tempesta · La tua fiera crudeltà",
+   "start": "16",
+   "end": "26"
+  },
+  {
+   "id": "c",
+   "label": "Trema! trema! · È confusa la mia testa (again)",
+   "start": "27",
+   "end": "38"
+  },
+  {
+   "id": "d",
+   "label": "Odi il tuon della vendetta · Sul tuo capo in questo giorno il suo fulmine cadrà",
+   "start": "39",
+   "end": "53"
+  },
+  {
+   "id": "e",
+   "label": "È confusa la mia testa · Trema! trema! · Trema, o scelerato!",
+   "start": "54",
+   "end": "67"
+  },
+  {
+   "id": "f",
+   "label": "Odi il tuon della vendetta · Sì, cadrà · Ma non manca in me coraggio",
+   "start": "68",
+   "end": "90"
+  },
+  {
+   "id": "g",
+   "label": "Più stretto: Se cadesse ancora il mondo · Sul tuo capo · Nulla mai temer mi fa",
+   "start": "91",
+   "end": "106"
+  },
+  {
+   "id": "h",
+   "label": "Il suo fulmine cadrà · Nulla mai temer mi fa (to the end of Act 1)",
+   "start": "107",
+   "end": "121"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1, the end of the finale (No. 13): the Allegro “Trema, trema, scellerato!” after the masks come off, with the Più stretto, to the end of the act",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, which differ from the libretto in places: scelerato with one l (libretto scellerato; sung with ll); Don Giovanni’s “Non sò più quel ch’io mi faccia” (libretto “non so quel ch’io mi faccia”, without più), with più printed without its accent in bar 56; Leporello’s “non si perdo, o si confondo” (libretto perde, confonde). Shared lines are given to each singer separately, with the print’s repeats."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 147–158, 121 bars: from the Allegro at the top of page 147 (after the fermata and double bar that end page 146) to the final double bar of Act 1 on page 158",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in three chunks (pp. 147–150, 151–154, 155–158): the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don Ottavio’s part is written at sounding pitch. Donna Anna, Zerlina and Donna Elvira share one staff in the print; it is split into their parts, the upper note to Donna Anna and Zerlina, the lower to Donna Elvira. One clear misprint is corrected: in bar 47 the print has a natural before Don Ottavio’s C on “tuo”, against C sharp in every other voice and the piano; it is written as C sharp. The English singing translation and the stage directions are left out. Allegro 4/4, C major, bars 1–90; Più stretto bars 91–121, ending with the final double bar of Act 1. Playback tempo from complete recordings’ track times: no recording found gives the Più stretto a track of its own, so the whole number (the track “Trema, trema, o scellerato!”) was timed: median 2:20 of five sets (Giulini 1959 2:06, Klemperer 1966 2:26, Barenboim 1975 2:12, Marriner 1991 2:20, I. Fischer 2026 2:28), shared between the sections with the Più stretto taken 15% quicker than the Allegro: Allegro ♩ = 200 (a half note = 100), Più stretto ♩ = 230 (a half note = 115); about 2 minutes 20 seconds in all. Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

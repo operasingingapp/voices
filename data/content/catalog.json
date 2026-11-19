@@ -7935,6 +7935,70 @@
     }
   },
   {
+    "editionId": "mozart-trema-trema-scellerato",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-trema-trema-scellerato@1.0.0-schirmer#639ee84ead",
+    "title": "Trema, trema, scellerato!",
+    "subtitle": "Donna Anna, Donna Elvira, Don Ottavio, Zerlina, Masetto, Don Giovanni and Leporello: the end of the finale from Don Giovanni, Act 1 (No. 13)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 121,
+    "durationSec": 140,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 197,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-tutti-accusan-le-donne",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-tutti-accusan-le-donne@1.0.0-peters#dd1dde8086",

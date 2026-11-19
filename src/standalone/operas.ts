@@ -1444,7 +1444,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "Eh via, buffone",
@@ -1600,7 +1601,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "Eh via, buffone",
@@ -1777,7 +1779,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "Sola, sola in bujo loco",
@@ -1896,7 +1899,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "Ah, taci, ingiusto core!",
@@ -2050,7 +2054,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "Zitto, lascia ch'io senta!",
@@ -2193,7 +2198,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "Sola, sola in bujo loco",
@@ -2312,7 +2318,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Trema, trema, scellerato!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Trema, trema, scellerato!"
+      "id": "Act 1: Trema, trema, scellerato!",
+      "editionId": "mozart-trema-trema-scellerato"
      },
      {
       "title": "V'è gente alla finestra",

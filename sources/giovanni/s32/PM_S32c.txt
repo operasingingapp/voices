@@ -1,0 +1,138 @@
+# S32c piano: pp.155-158, bars numbered from 1 = p.155 sys 1 bar 1.
+# page 155 system 1 starts bar 1
+# bar 1: 4/4, C major (Allegro continuing). Unmarked triplet eighths throughout bars 2-9, 12-19 (the "3" is not printed)
+# bar 1 RH: two sharp signs printed before the chord (read as F#5 dim-7 chord F#5 A5 C6 Eb6; the chord is the dotted half of p.154 last bar repeated)
+1 RH1: F#5+A5+C6+Eb6:h. F#5:et( E5:s F#5:s)
+1 LH1: C3:e C4:e C3:e C4:e C3:e C4:e C4+Eb4:q
+# JUDGE bar 2 RH: X - bar 2 groups have a single beam (~13px at 400dpi, vs ~35px for the double beam of the 16ths in bar 1): unmarked triplet eighths
+2 RH1: G5:e3( A5:e3 G5:e3) F5:e3( G5:e3 F5:e3) E5:e3( F5:e3 E5:e3) D5:e3( E5:e3 D5:e3)
+2 LH1: B3+D4:q A3+C4:q G3+B3:q F3+A3:q
+3 RH1: C5:q C4:e3 D4:e3 E4:e3 G3:e3 A3:e3 B3:e3 G3:e3 A3:e3 B3:e3
+3 LH1: E3+G3:q C3:e3 D3:e3 E3:e3 G2:e3 A2:e3 B2:e3 G2:e3 A2:e3 B2:e3
+4 RH1: C4:e3 D4:e3 E4:e3 C4:e3 D4:e3 E4:e3 G3:e3 A3:e3 B3:e3 G3:e3 A3:e3 B3:e3
+4 LH1: C3:e3 D3:e3 E3:e3 C3:e3 D3:e3 E3:e3 G2:e3 A2:e3 B2:e3 G2:e3 A2:e3 B2:e3
+# page 155 system 2 starts bar 5
+5 RH1: C4:e3 D4:e3 E4:e3 C4:e3 D4:e3 E4:e3 A3:e3 B3:e3 C#4:e3 A3:e3 B3:e3 C#4:e3
+5 LH1: C3:e3 D3:e3 E3:e3 C3:e3 D3:e3 E3:e3 A2:e3 B2:e3 C#3:e3 A2:e3 B2:e3 C#3:e3
+6 RH1: D4:e3 E4:e3 F4:e3 D4:e3 E4:e3 F4:e3 B3:e3 C#4:e3 D#4:e3 B3:e3 C#4:e3 D#4:e3
+6 LH1: D3:e3 E3:e3 F3:e3 D3:e3 E3:e3 F3:e3 B2:e3 C#3:e3 D#3:e3 B2:e3 C#3:e3 D#3:e3
+7 RH1: E4:e3 F#4:e3 G4:e3 E4:e3 F#4:e3 G4:e3 C4:e3 D4:e3 E4:e3 C4:e3 D4:e3 E4:e3
+7 LH1: E3:e3 F#3:e3 G3:e3 E3:e3 F#3:e3 G3:e3 C3:e3 D3:e3 E3:e3 C3:e3 D3:e3 E3:e3
+8 RH1: F4:e3 G4:e3 A4:e3 F4:e3 G4:e3 A4:e3 D4:e3 E4:e3 F4:e3 D4:e3 E4:e3 F4:e3
+8 LH1: F3:e3 G3:e3 A3:e3 F3:e3 G3:e3 A3:e3 D3:e3 E3:e3 F3:e3 D3:e3 E3:e3 F3:e3
+# page 155 system 3 starts bar 9
+9 RH1: B3:e3 C4:e3 D4:e3 B3:e3 C4:e3 D4:e3 G3:q D5+F5+D6:q
+9 LH1: B2:e3 C3:e3 D3:e3 B2:e3 C3:e3 D3:e3 G2:e3 A2:e3 B2:e3 G2:e3 A2:e3 B2:e3
+# bar 10-11, 20-35: alternating tremolos (two beams) between the two half notes
+10 RH1: trem2:E5+C6|C5:h trem2:E5+C6|C5:h
+10 LH1: C3:h trem2:A2|A3:h
+11 RH1: trem2:A5+C6|D5:h trem2:G5+B5|D5:h
+11 LH1: trem2:F2|F3:h trem2:G2|G3:h
+# bar 12: "Vln" cue over the E6 (ignored)
+12 RH1: E5+C6:q r:q dyn:p E6:q.( C6:e)
+# JUDGE bar 12 LH: X - one "p" printed between the staves at beat 3; written once on the RH as in bar 16 (both readers)
+# MARKS bar 12 LH1: dyn:p at beat 3 (printed between the staves)
+12 LH1: C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3 dyn:p C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3
+# page 156 system 1 starts bar 13
+13 RH1: G5:q.( C6:e) E5:q.( G5:e)
+# bar 13 LH: the last note (E3) is badly printed (head smudged, looks like a rest) but its stem joins the beam; read as E3 as in bar 17
+13 LH1: C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3 C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3
+14 RH1: F5:q B5+D6:e* A5+C6:e* G5+B5:e* F5+A5:e* E5+G5:e* D5+F5:e*
+14 LH1: G2:e3 B2:e3 D3:e3 F3:e3 D3:e3 B2:e3 G2:e3 B2:e3 D3:e3 F3:e3 D3:e3 B2:e3
+15 RH1: C5+E5:q r:q dyn:f B4+D5+G5:q r:q
+# MARKS bar 15 LH1: dyn:f at beat 3 (printed between the staves)
+15 LH1: C3:e3 E3:e3 G3:e3 C3:e3 E3:e3 G3:e3 dyn:f G2:e3 B2:e3 D3:e3 G3:e3 D3:e3 B2:e3
+16 RH1: G4+C5+E5:q r:q dyn:p E6:q.( C6:e)
+# MARKS bar 16 LH1: dyn:p at beat 3 (printed between the staves)
+16 LH1: C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3 dyn:p C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3
+# page 156 system 2 starts bar 17
+17 RH1: G5:q.( C6:e) E5:q.( G5:e)
+17 LH1: C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3 C3:e3 E3:e3 G3:e3 C4:e3 G3:e3 E3:e3
+18 RH1: F5:q B5+D6:e* A5+C6:e* G5+B5:e* F5+A5:e* E5+G5:e* D5+F5:e*
+18 LH1: G2:e3 B2:e3 D3:e3 F3:e3 D3:e3 B2:e3 G2:e3 B2:e3 D3:e3 F3:e3 D3:e3 B2:e3
+19 RH1: C5+E5:q r:q dyn:f B4+D5+G5:q r:q
+# MARKS bar 19 LH1: dyn:f at beat 3 (printed between the staves)
+19 LH1: C3:e3 E3:e3 G3:e3 C3:e3 E3:e3 G3:e3 dyn:f G2:e3 B2:e3 D3:e3 G3:e3 D3:e3 B2:e3
+# bar 20: "ff più stretto"; "Bassi" cue under the LH triplet (ignored)
+# JUDGE bar 20 RH: Y - "più stretto" printed after ff under the RH: word mark per PB.md MARKS
+20 RH1: dyn:ff trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+# MARKS bar 20 LH1: dyn:ff (printed between the staves)
+20 LH1: dyn:ff C3:q r:e G2:s3( A2:s3 B2:s3 C3:q.) C3:e
+# page 157 system 1 starts bar 21
+21 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+21 LH1: C3:q r:e G3:s3( A3:s3 B3:s3 C4:q.) C4:e
+22 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+22 LH1: C4:q r:e G2:s3( A2:s3 B2:s3 C3:q.) C3:e
+23 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+23 LH1: C3:q r:e G3:s3( A3:s3 B3:s3 C4:q.) C4:e
+24 RH1: trem2:C6+E6|G5:h trem2:C6+E6|G5:h
+24 LH1: C4:q r:e G2:s3( A2:s3 B2:s3 C3:q.) C3:e
+# JUDGE bar 25 RH: Y - chords carry two ledger lines + head above: C6+E6 over G5 (as bar 24), p.157 sys1
+25 RH1: trem2:C6+E6|G5:h trem2:C6+E6|G5:h
+25 LH1: C3:q r:e G3:s3( A3:s3 B3:s3 C4:q.) C4:e
+# JUDGE bar 26 RH: Y - second chord: lower head on the A5 ledger, upper in the space = D6; lower note F5 (p.157 sys1, 400dpi)
+26 RH1: trem2:C6+E6|G5:h trem2:A5+D6|F5:h
+26 LH1: trem2:C3|C4:h trem2:F2|F3:h
+# page 157 system 2 starts bar 27
+# JUDGE bar 27 RH: Y - second half: G5+B5 over D5 (D5 on 4th line), p.157 sys2 400dpi
+27 RH1: trem2:G5+C6|E5:h trem2:G5+B5|D5:h
+27 LH1: trem2:G2|G3:h trem2:G2|G3:h
+28 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+28 LH1: C3:q r:e G2:s3( A2:s3 B2:s3 C3:q.) C3:e
+29 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+29 LH1: C3:q r:e G3:s3( A3:s3 B3:s3 C4:q.) C4:e
+30 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+30 LH1: C4:q r:e G2:s3( A2:s3 B2:s3 C3:q.) C3:e
+31 RH1: trem2:G5+C6|E5:h trem2:G5+C6|E5:h
+31 LH1: C3:q r:e G3:s3( A3:s3 B3:s3 C4:q.) C4:e
+32 RH1: trem2:C6+E6|G5:h trem2:C6+E6|G5:h
+32 LH1: C4:q r:e G2:s3( A2:s3 B2:s3 C3:q.) C3:e
+# page 158 system 1 starts bar 33
+# JUDGE bar 33 RH: Y - two ledger lines + head: C6+E6 over G5, p.158 sys1
+33 RH1: trem2:C6+E6|G5:h trem2:C6+E6|G5:h
+33 LH1: C3:q r:e G3:s3( A3:s3 B3:s3 C4:q.) C4:e
+# JUDGE bar 34 RH: Y - second chord A5+D6 over F5, as bar 26
+34 RH1: trem2:C6+E6|G5:h trem2:A5+D6|F5:h
+# JUDGE bar 34 LH: Y - first half: C3 (space between D3 and B2 lines) and C4 (ledger), p.158 sys1 400dpi
+34 LH1: trem2:C3|C4:h trem2:F2|F3:h
+35 RH1: trem2:G5+C6|E5:h trem2:G5+B5|D5:h
+35 LH1: trem2:G2|G3:h trem2:G2|G3:h
+36 RH1: E5+C6:q C5+E5+G5+C6:q r:q B4+D5+G5+B5:q
+36 LH1: C3:q r:q G2+B2+D3+G3:q r:q
+37 RH1: r:q C5+E5+G5+C6:q r:q B4+D5+G5+B5:q
+37 LH1: C3+E3+G3:q r:q G2+B2+D3+G3:q r:q
+38 RH1: r:q C5+E5+G5+C6:q r:q B4+D5+G5+B5:q
+38 LH1: C3+E3+G3:q r:q G2+B2+D3+G3:q r:q
+# page 158 system 2 starts bar 39
+39 RH1: r:q C5+E5+G5+C6:q r:q B4+D5+G5+B5:q
+39 LH1: C3+E3+G3:q r:q G2+B2+D3+G3:q r:q
+40 RH1: r:q C5+E5+G5+C6:q r:q B4+D5+G5+B5:q
+40 LH1: C3+E3+G3:q r:q G2+B2+D3+G3:q r:q
+41 RH1: r:q C5+E5+G5+C6:q r:q B4+D5+G5+B5:q
+41 LH1: C3+E3+G3:q r:q G2+B2+D3+G3:q r:q
+# MARKS bar 42 RH1: slur extended from the triplet to the G5 eighth
+42 RH1: C5+E5+G5+C6:q. C6:s3( B5:s3 A5:s3 G5:e) E5+G5:e E5+G5:e E5+G5:e
+42 LH1: C3+E3+G3:e C4:e C3+E3+G3:e C4:e C3+E3+G3:e C4:e C3+E3+G3:e C4:e
+# MARKS bar 43 RH1: slur extended from the triplet to the E5 eighth
+43 RH1: E5+G5:q. A5:s3( G5:s3 F5:s3 E5:e) C5+E5:e C5+E5:e C5+E5:e
+43 LH1: C3+E3+G3:e C4:e C3+E3+G3:e C4:e C3+E3+G3:e C4:e C3+E3+G3:e C4:e
+# page 158 system 3 starts bar 44
+# JUDGE bar 44 RH: Y - triplet heads F5 (top line) E5 D5, then single C5 eighth beamed with the E4+C5 eighths (p.158 sys3)
+# MARKS bar 44 RH1: slur extended from the triplet to the C5 eighth
+44 RH1: C5+E5:q. F5:s3( E5:s3 D5:s3 C5:e) E4+C5:e E4+C5:e E4+C5:e
+44 LH1: C3+E3+G3:e C4:e C3+E3+G3:e C4:e C3+E3+G3:e C4:e C3+E3+G3:e C4:e
+45 RH1: E4+C5:q E4+G4+C5:q E4+G4+C5:q E4+G4+C5:q
+45 LH1: C3:q C2+G2+C3:q C2+G2+C3:q C2+G2+C3:q
+46 RH1: E4+G4+C5:q E4:e E5:e G4:e G5:e E4:e E5:e
+# JUDGE bar 46 LH: Y - first chord has three heads C2 (2nd ledger) G2 C3
+46 LH1: C2+G2+C3:q E2+E3:q G2+G3:q E2+E3:q
+47 RH1: C4:e C5:e E4:e E5:e G4:e G5:e E4:e E5:e
+47 LH1: C2+C3:q E2+E3:q G2+G3:q E2+E3:q
+48 RH1: C4:q G4+C5+E5:e G4+C5+E5:e G4+C5+E5:q G4+C5+E5:q
+48 LH1: C2+C3:q C3+G3+C4:e C3+G3+C4:e C3+G3+C4:q C3+G3+C4:q
+# JUDGE bar 49 RH: Y - beat-3 chord fills C5 to C6 (C5+E5+G5+C6), same extent as the final chord
+49 RH1: G4+C5+E5:q r:q C5+E5+G5+C6:q r:q
+49 LH1: C3+G3+C4:q r:q C2+C3:q r:q
+# bar 50: final chord, double bar, "End of Act I."
+50 RH1: C5+E5+G5+C6:h r:h
+50 LH1: C2+G2+C3:h r:h

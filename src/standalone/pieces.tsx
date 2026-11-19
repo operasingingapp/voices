@@ -4690,6 +4690,45 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-trema-trema-scellerato": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "C major throughout",
+      time: "4/4 (common time) throughout; Allegro bars 1-90, Più stretto from bar 91 (“Se cadesse ancora il mondo”)",
+      tempo: "Allegro at ♩ = 200 (a half note = 100), Più stretto at ♩ = 230 (a half note = 115), about 2 minutes 20 seconds in all, the median track time of five recordings (Giulini, Klemperer, Barenboim, Marriner, Iván Fischer); none gives the Più stretto a track of its own, so it is taken 15% quicker than the Allegro (chosen); Mozart gives the words only",
+    },
+    notePlaceholder: "Everyone turns on Giovanni: tremble, the whole world will know and heaven's thunder will strike; Giovanni and Leporello, shaken, hold their ground to the end of the act",
+    about: (
+      <>
+        <p>
+          Act 1, the end of the finale in Don Giovanni's ballroom. The masks are off: Donna Anna, Donna Elvira and Don Ottavio,
+          with Zerlina and Masetto, round on Giovanni. Let him tremble: soon the whole world will know his black and dreadful
+          crime and his savage cruelty; they can hear heaven's thunder hissing round him, and today its lightning will strike his
+          head. Giovanni admits that his head is spinning and that a storm is closing in on him, and Leporello says the same of his
+          master. Then, in the Più stretto, Giovanni pulls himself together: he has not lost his nerve, and if the world itself
+          were to fall he would not be afraid. Leporello, beside him, echoes every word. The act ends with the two sides singing
+          against each other.
+        </p>
+        <p>
+          Score: the end of No. 13, the Finale, from the Allegro after the fermata of “Ecco il birbo” (a separate piece, “Meco tu
+          dei ballare”) to the end of Act 1, vocal score pages 147–158, 121 bars, from the G. Schirmer vocal score (New York, 1900;
+          IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by
+          fresh checkers, whose findings were corrected. Don Ottavio's part, printed in the treble clef, is written at sounding
+          pitch. Donna Anna, Zerlina and Donna Elvira share one staff in the print; it is split into their own parts, the upper
+          note to Donna Anna and Zerlina, the lower to Donna Elvira. One clear misprint is corrected: in bar 47 the print has a
+          natural before Don Ottavio's C on “tuo”, where every other voice and the piano have C sharp; it is written as C sharp.
+          Only the Italian words are kept, with the print's spelling (“scelerato” with one l, Don Giovanni's “Non sò più” and
+          one “piu” without its accent, and Leporello's “non si perdo, o si confondo”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

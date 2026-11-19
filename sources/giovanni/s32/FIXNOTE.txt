@@ -1,0 +1,17 @@
+S32 "Trema, trema, scellerato!" (end of No. 13 Finale, Act 1: the Allegro after the fermata and double bar ending p. 146, with the
+Più stretto from bar 91, to the final double bar of Act 1; Schirmer 1900 pp. 147-158, bars 1-121), build chain (reproduced byte for
+byte from the files here, TMPDIR on /dev/shm):
+  kit/cleanv.py VM_S32.txt VM_S32.clean.txt  (drops the voice slurs; the clean file is the build input)
+  kit/build.sh VM_S32.clean.txt PM_S32.txt RAW "$(cat segs.txt)" "Trema, trema, scellerato!" "$(cat singers.txt)"  -> s32.raw.xml
+  kit/fix64.py s32.raw.xml S        -> s32.xml (identical to s32.raw.xml, "fixed 0")
+  kit/xfix.py s32.xml F fixes.txt   -> s32f.xml (fixes.txt holds only "final": the light-heavy barline on bar 121 of all 8
+                                       parts, nothing else; the fresh-check findings were applied in VM_/PM_ before the build).
+Chunks: S32a pp. 147-150 bars 1-38, S32b pp. 151-154 bars 39-71, S32c pp. 155-158 bars 72-121 (VM_/PM_S32a-c, per-reader
+V_/P_S32x_A/B from b32/VA_, VB_, PA_, PB_); VM_S32.txt / PM_S32.txt are the merged files.
+Singers (staff order): Z, M, G, L, E, A, O (treble-8, sounding pitch); piano P8. No shared bar with S31 or S33.
+The print's shared ladies' staff is split: the upper note to Donna Anna and Zerlina, the lower to Donna Elvira.
+Misprint corrected (the user asked for clear misprints to be corrected): bar 47, Don Ottavio's 4th note ("tuo") has a natural in
+the print against C# in every other voice and the piano; written C#4 (see the JUDGE/MISPRINT comments in VM_S32.txt).
+Print readings kept: "scelerato" with one l; Don Giovanni "Non sò più" and "piu" without accent in bar 56; Leporello "non si perdo,
+o si confondo".
+Judge/diff files (vdiff, pdiff, vsem, print_S32a-c.pdf) stay in ext/giovanni/b32.
