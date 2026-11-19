@@ -54,7 +54,7 @@
           <line>2</line>
         </clef>
       </attributes>
-      <direction>
+      <direction placement="above">
         <direction-type>
           <words>Molto allegro</words>
         </direction-type>
@@ -25524,11 +25524,13 @@
       <note>
         <pitch>
           <step>D</step>
+          <alter>-1</alter>
           <octave>3</octave>
         </pitch>
         <duration>3360</duration>
         <voice>1</voice>
         <type>whole</type>
+        <accidental>flat</accidental>
         <staff>1</staff>
         <lyric number="1">
           <syllabic>end</syllabic>

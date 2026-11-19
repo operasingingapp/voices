@@ -420,7 +420,8 @@
 81 E: r:w
 81 L: r:w
 # JUDGE bar 81 A: Y - last eighth A4 has no printed natural (natural only on the next bar's A4): Ab4 by key, following the print
-81 A: r:q D5:q "è" E5:q. "Don-" Ab4:e "na_El-"
+# MISPRINT bar 81 A: no natural printed on the last eighth (Ab by the key), but the chord is A7 (piano C#, Ottavio A natural): corrected to A natural
+81 A: r:q D5:q "è" E5:q. "Don-" A4:e "na_El-"
 81 Z: B4:e "vi-" G4:e "ra?" r:q r:e G4:e "è" G4:e "Don-" G4:e "na_El-"
 # JUDGE bar 81 O: Y - words printed "È Donna Elvi-ra? Donna El-": "Don-" "na" on the two Bb3, "Elvi-" (one syllable as printed) and "ra?" on the first two A3, "Don-" on the third A3
 81 O: r:e word:sotto_voce G3:e "È" Bb3:e "Don-" Bb3:e "na" A3:e "Elvi-" A3:e "ra?" A3:e "Don-" E4:e "na_El-"
@@ -436,7 +437,8 @@
 83 E: r:w
 83 L: r:w
 # JUDGE bar 83 A: Y - last eighth A4 has no printed natural: Ab4 by key, following the print (as bar 15)
-83 A: D5:h "quel-" E5:q. "la" Ab4:e "ch'io"
+# MISPRINT bar 83 A: as bar 81, corrected to A natural
+83 A: D5:h "quel-" E5:q. "la" A4:e "ch'io"
 83 Z: B4:q "quel-" Bb4:q A4:q. "la" G4:e "ch'io"
 83 O: r:h r:e A3:e "quel-" A3:e "la" E4:e "ch'io"
 83 M: G3:h "quel-" C#3:q. "la" C#3:e "ch'io"
