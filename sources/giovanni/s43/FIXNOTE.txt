@@ -1,0 +1,11 @@
+S43 "Sola, sola in bujo loco" (No. 19 Sextet, Andante, Schirmer 1900 pp. 188-199, bars 1-130), build chain:
+  kit/build.sh VM_S43.clean.txt PM_S43.txt RAW "$(cat segs.txt)" "Sola, sola in bujo loco" "$(cat singers.txt)"  -> s43.raw.xml (byte-identical)
+  kit/fix64.py s43.raw.xml S        -> s43.xml (0 fixes; identical to raw)
+  kit/xfix.py s43.xml F fixes.txt   -> s43f.xml, except one hand fix made after xfix (b43/fixes_note.txt):
+    bar 1, piano left hand (P7 staff 2): the build put a bass clef and then a treble clef at onset 0; the bass clef and its
+    <attributes> were removed, so the left hand starts in the treble clef as printed. The final light-heavy barline (bar 130)
+    is already in the build.
+Chunks: S43a pp. 188-191 bars 1-66, S43b pp. 192-195 bars 67-93, S43c pp. 196-199 bars 94-130 (VM_/PM_S43a-c, per-reader
+V_/P_S43x_A/B from b43/VA_, VB_, PA_, PB_); VM_S43.txt / PM_S43.txt are the merged files (VM_S43.clean.txt identical).
+Print questions kept as printed: Anna bars 81 and 83 A-flat (no natural printed); piano bar 71 E natural (natural missing
+in the print, C major arpeggio). Judge/diff files (vdiff, pdiff, vsem, print_S43a-c.pdf) stay in ext/giovanni/b43.

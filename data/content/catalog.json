@@ -7291,6 +7291,64 @@
     }
   },
   {
+    "editionId": "mozart-sola-sola-in-bujo-loco",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-sola-sola-in-bujo-loco@1.0.0-schirmer#f2d4dfa823",
+    "title": "Sola, sola in bujo loco",
+    "subtitle": "Donna Elvira, Leporello, Donna Anna, Don Ottavio, Zerlina and Masetto: sextet from Don Giovanni, Act 2 (No. 19)",
+    "kind": "sextet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      }
+    ],
+    "measures": 130,
+    "durationSec": 312,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 116,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-soll-ich-dich-theurer",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-soll-ich-dich-theurer@1.0.0-peters#4f3bff1196",

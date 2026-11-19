@@ -4470,6 +4470,43 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-sola-sola-in-bujo-loco": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Sextet",
+    facts: {
+      key: "E-flat major; D major from bar 28 (“Tergi il ciglio”); E-flat major again from bar 49 to the end",
+      time: "4/4 (common time) throughout",
+      tempo: "Andante, played at ♩ = 100, about 5¼ minutes, the median of five recordings that give the Andante its own track or tracks, apart from the Molto allegro (Norrington, Haitink, Busch, Keilberth, Iván Fischer); Mozart gives the word only",
+    },
+    notePlaceholder: "Elvira's fear in the dark, Leporello groping and whispering, Ottavio's tender consolation, Anna's grief; then the sudden ambush and the stunned unison",
+    about: (
+      <>
+        <p>
+          Act 2, a dark courtyard outside Donna Anna's house. Elvira, left alone in the dark by the man she takes for Don Giovanni,
+          is frightened; Leporello, still in his master's clothes, gropes along the wall for a way out. Don Ottavio comes in with
+          Donna Anna, in mourning, and servants with torches, and begs her to dry her tears: her father's spirit would be grieved
+          by her sorrow. Anna answers that only death can end her weeping. Elvira calls for her husband; Leporello finds a door and
+          tries to slip out, but Zerlina and Masetto catch him there. All take him for Giovanni and call for his death; Elvira
+          begs mercy for her husband, and they cannot believe it is she. Leporello throws himself on his knees and shows his face:
+          it is not Giovanni. All stand thunderstruck, wondering what this can mean.
+        </p>
+        <p>
+          Score: No. 19, the Sextet, from its beginning to the fermata before the Molto allegro (vocal score pages 188–199, 130
+          bars), from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written out from the printed pages:
+          the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge,
+          then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don Ottavio's part, printed in
+          the treble clef, is written at sounding pitch. Donna Anna's A-flats in bars 81 and 83 and the piano's E natural in bar 71
+          (its natural is missing in the print) are kept as printed. The sextet goes on with the Molto allegro, “Mille torbidi
+          pensieri”, a separate piece. Only the Italian words are kept, with the print's spelling and punctuation (“bujo”, “dov'
+          è”, “la vegg' io”, “piccolo”, “O mio marito!”, “quà”, and “sar-rà”, written “sarrà”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

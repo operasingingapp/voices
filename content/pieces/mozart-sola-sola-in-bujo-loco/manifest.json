@@ -1,0 +1,239 @@
+{
+ "editionId": "mozart-sola-sola-in-bujo-loco",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Sola, sola in bujo loco",
+ "subtitle": "Donna Elvira, Leporello, Donna Anna, Don Ottavio, Zerlina and Masetto: sextet from Don Giovanni, Act 2 (No. 19)",
+ "kind": "sextet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  },
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Sola, sola in bujo loco · Più che cerco, men ritrovo · ecco il tempo di fuggir",
+   "start": "1",
+   "end": "27"
+  },
+  {
+   "id": "b",
+   "label": "Tergi il ciglio, o vita mia (D major)",
+   "start": "28",
+   "end": "44"
+  },
+  {
+   "id": "c",
+   "label": "Lascia almen alla mia pena · il mio pianto può finir",
+   "start": "45",
+   "end": "61"
+  },
+  {
+   "id": "d",
+   "label": "Ah dov' è lo sposo mio? · Una porta la vegg' io · Ferma, briccone! · Ah, mora il perfido! · O mio marito!",
+   "start": "62",
+   "end": "79"
+  },
+  {
+   "id": "e",
+   "label": "È Donna Elvira? · Appena il credo · No, no, morrà! · Pietà!",
+   "start": "80",
+   "end": "97"
+  },
+  {
+   "id": "f",
+   "label": "Perdon, perdono! · Quello io non sono · Viver lasciatemi per carità",
+   "start": "98",
+   "end": "113"
+  },
+  {
+   "id": "g",
+   "label": "Dei! Leporello? · Stupida resto! · Che mai sarrà (to the fermata)",
+   "start": "114",
+   "end": "130"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scenes 7–8, No. 19 Sextet, from the beginning to the fermata before the Molto allegro",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, which differ from the libretto in places: bujo (libretto buio); Ottavio dà and omai; Anna piccolo (some librettos picciolo); Elvira O mio marito! (libretto È mio marito); Elvira cheto, as Leporello (libretto cheta); Una porta la vegg' io, la without its accent; Perdon, perdono! Signori miei!; quà; stupida (the women) and stupido (Ottavio, Masetto); sarà printed sar-rà, so the word is written sarrà."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 188–199, bars 1–130 of No. 19 (to the fermata before the Molto allegro)",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in three chunks (pp. 188–191, 192–195, 196–199): the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected; the left hand of bar 1 starts in the treble clef, as printed. Don Ottavio's part, printed in the treble clef, is written at sounding pitch. Kept as printed: Donna Anna's A-flats in bars 81 and 83 (no natural printed) and the piano's E natural in bar 71 (the natural is missing in the print; the bar is a C major arpeggio). The English singing translation and the stage directions are left out. The sextet goes on with the Molto allegro, \"Mille torbidi pensieri\", a separate piece. Playback tempo: ♩ = 100, about 5¼ minutes, the median (5:12) of five recordings that put the Andante on its own track or tracks, apart from the Molto allegro (Norrington 4:38, Haitink 1984 4:58, Busch 1936 5:12, Keilberth 1962 5:20, I. Fischer 5:23); Mozart gives the word Andante only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

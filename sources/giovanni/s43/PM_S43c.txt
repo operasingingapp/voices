@@ -1,0 +1,152 @@
+# S43c: No. 19 "Sola, sola in bujo loco", pp. 196-199 (G. Schirmer). Piano. Judge merge of PA/PB (base = X).
+# Key E-flat major (3 flats), 4/4 throughout; no tempo, key or time change in this chunk.
+# page 196 system 1 starts bar 1
+# bar 1: RH beat 1 upper D6 16th alone (no D5) as read
+1 RH1: dyn:f D5+D6:e r:s dyn:p D6:s( D5:e) r:s D5:s( C#5+En5:e) r:s C#5+En5:s( Cn5+F#5:e) r:s Cn5+F#5:s(
+# MARKS bar 1 LH1: dyn:f (f printed between the staves; the p comes mid-bar where the LH has no new note)
+1 LH1: dyn:f D2+D3:w
+# bar 2: RH beat 3 natural printed before F5 is a courtesy natural (cancels F#5 of bar 1); chord Bb4+D5+F5
+2 RH1: dyn:f Bb4+G5:q) r:q Bb4+D5+F5:q G4+C5+Eb5:q*
+# MARKS bar 2 LH1: dyn:f (printed between the staves)
+2 LH1: dyn:f Eb2+Eb3:q r:q Bb1+Bb2:q C2+C3:q
+# bar 3: RH 32nd-note runs (triple beam)
+# JUDGE bar 3 RH: Y - each 32nd group is slurred on to the following eighth (arcs run D6..Bb5, Bb5..G5, G5..Eb5 of bar 4)
+3 RH1: An4+C5+D5:q r:e D6:x( C6:x Bb5:x An5:x Bb5:e) Bb5:x( An5:x G5:x F#5:x G5:e) G5:x( Fn5:x Eb5:x D5:x
+3 LH1: F#1+F#2:q r:q G3:h~
+3 LH2: s:h G2:q Bb2:q
+# page 196 system 2 starts bar 4
+# bar 4: RH 32nd groups after each eighth; LH G3 tied from bar 3
+# JUDGE bar 4 RH: Y - slur from bar 3 ends on the first Eb5; new slurs Eb5..C5 eighth and C5..G4 (under the beam)
+4 RH1: Eb5:e) Eb5:x( D5:x C5:x Bb4:x C5:e) C5:x( Bb4:x An4:x G4:x) D4:q An4+D5+F#5:q
+4 LH1: G3:h s:h
+4 LH2: C3:q Eb3:q D3:q D3:q
+# JUDGE bar 5 RH: Y - slur starts on the 2nd chord (over the three staccato chords), not on the first
+5 RH1: dyn:fp G4+G5:q G4+G5:q*( G4+G5:q* G4+G5:q*)
+# JUDGE bar 5 LH: Y - arc under the whole-note chord runs to the different chord of bar 6: slur
+# MARKS bar 5 LH1: dyn:fp (printed between the staves)
+5 LH1: dyn:fp G2+Bb2+D3:w(
+# JUDGE bar 6 RH: Y - "cresc." starts under the C# chord (2nd of the beamed group), not under D
+6 RH1: Ab4+Ab5:q( G4+G5:e F#4+F#5:e) G4+G5:e D5+D6:e( word:cresc. C#5+C#6:e Cn5+Cn6:e
+# JUDGE bar 6 LH: Y - slur from bar 5 ends on the first chord
+6 LH1: G2+C3+Eb3:h) G2+Bb2+D3:h~
+7 RH1: Bn4+Bn5:e Bb4+Bb5:e An4+An5:e Ab4+Ab5:e G4+G5:q) dyn:p G4+G5:q
+# JUDGE bar 7 LH: Y - arc under the whole-note chord runs into bar 8 (slur to the C-minor chord)
+7 LH1: G2+Bb2+D3:w(
+# page 196 system 3 starts bar 8
+# JUDGE bar 8 RH: Y - no "cresc." printed in this bar
+8 RH1: Ab4+Ab5:q( G4+G5:e F#4+F#5:e) G4+G5:e D5+D6:e( C#5+C#6:e Cn5+Cn6:e
+# JUDGE bar 8 LH: Y - slur from bar 7 ends on the first chord
+8 LH1: G2+C3+Eb3:h) G2+Bb2+D3:h~
+# bar 9 (and 11): two small grace 16ths G5, A5 before Bb5
+# MARKS bar 9 RH1: removed the extra slur start on the first chord (the slur from bar 8 D6 runs to the Ab chord); grace notes slurred to Bb5 ( ), phrase slur Bb5..G5 as [ ]
+9 RH1: Bn4+Bn5:e Bb4+Bb5:e An4+An5:e Ab4+Ab5:e) g:G5:s( g:An5:s dyn:p Bb5:q)[ An5:e G5:e]
+# JUDGE bar 9 LH: Y - the single p is printed between the staves at beat 3 (applies to both hands, as the f in bars 14/17)
+9 LH1: G2+Bb2+D3:h dyn:p G2+D3+G3:h
+# JUDGE bar 10 RH: Y - "cresc." starts under the C# chord
+10 RH1: F#5:q( An5:q) D5:e D5+D6:e( word:cresc. C#5+C#6:e Cn5+Cn6:e
+10 LH1: D3+An3:h( D3+F#3:h)
+# MARKS bar 11 RH1: grace notes slurred to Bb5 ( ), phrase slur Bb5..G5 as [ ]
+11 RH1: Bn4+Bn5:e Bb4+Bb5:e An4+An5:e Ab4+Ab5:e) g:G5:s( g:An5:s dyn:p Bb5:q)[ An5:e G5:e]
+11 LH1: G2+D3+G3:w
+# page 197 system 1 starts bar 12
+# JUDGE bar 12 RH: Y - "cresc." starts under the C# chord
+12 RH1: F#5:q( An5:q) D5:e D5+D6:e( word:cresc. C#5+C#6:e Cn5+Cn6:e
+12 LH1: D3+An3:h( D3+F#3:h)
+# JUDGE bar 13 RH: X - slur starts at the G4+G5 quarter; "cresc." starts under the A4+A5 eighth
+13 RH1: Bn4+Bn5:e Bb4+Bb5:e An4+An5:e Ab4+Ab5:e) G4+G5:q( word:cresc. An4+An5:e Bn4+Bn5:e
+13 LH1: G2+D3+G3:w
+# JUDGE bar 14 RH: OWN - the slur from bar 13 ends on the D5+D6 quarter (X left it open, Y ended it on the tied Eb chord)
+14 RH1: C5+C6:q D5+D6:q) dyn:f Eb5+Eb6:h~
+14 LH1: Eb3:q D3:q dyn:f C3:h
+# JUDGE bar 15 RH: Y - the tied Eb5+Eb6 is one chord on a single down-stem beamed to F#5 (lower voice); p under that chord; upper voice only r:e D6 C#6 C6
+15 RH1: s:h r:e D6:e( C#6:e Cn6:e)
+# MARKS bar 15 RH2: removed the slur over the three F#5 quarters (none printed here, unlike bar 18)
+15 RH2: dyn:p Eb5+Eb6:e( F#5:e) F#5:q word:cresc. F#5:q F#5:q
+# JUDGE bar 15 LH: X - single p between the staves applies to both hands
+15 LH1: dyn:p D3:w
+# page 197 system 2 starts bar 16
+16 RH1: Bn5:e( Bb5:e An5:e Ab5:e) G5:q( An4+An5:e Bn4+Bn5:e
+16 RH2: G5:h s:h
+16 LH1: G2:q( G3:h F3:q
+# JUDGE bar 17 RH: Y - slur from bar 16 ends on the Eb5+Eb6 half
+17 RH1: C5+C6:q D5+D6:q dyn:f Eb5+Eb6:h~)
+17 LH1: Eb3:q D3:q dyn:f C3:h)
+# JUDGE bar 18 RH: OWN - Y's voicing (tied Eb5+Eb6 chord on one down-stem in the lower voice, upper voice s:e then 7 eighths) but p printed under the F#5 eighth (X), and the long slur over the upper voice ends on G5 of bar 19
+18 RH1: s:e Eb6:e( D6:e C#6:e D6:e Cn6:e Bb5:e An5:e
+18 RH2: Eb5+Eb6:e dyn:p F#5:e F#5:q( word:cresc. F#5:q F#5:q)
+# JUDGE bar 18 LH: X - single p between the staves applies to both hands
+18 LH1: dyn:p D3:w
+# JUDGE bar 19 RH: X - half chord is C5+F#5 (lower head in the C5 space, upper on the F5 line with sharp; D7 over D); slur from bar 18 ends on G5 (OWN detail)
+19 RH1: G5:q) r:q dyn:p C5+F#5:h(
+# MARKS bar 19 LH1: dyn:p (printed between the staves)
+19 LH1: G3+Bb3:q r:q dyn:p D3:h(
+# page 197 system 3 starts bar 20
+# JUDGE bar 20 RH: X - same C5+F#5 half chord as bar 19 (lower head in the C5 space)
+20 RH1: Bb4+G5:q) r:q C5+F#5:h(
+20 LH1: G2:q) r:q D3:h(
+# bar 21-22: RH "tr" printed over the first 16th of each group (written t)
+21 RH1: Bb4+G5:e) Eb4:s* Eb4:s* Eb4:st( D4:s) Eb4:s* Eb4:s* Eb4:st( D4:s) Eb4:s* Eb4:s* Eb4:st( D4:s) Eb4:s* Eb4:s*
+# JUDGE bar 21 LH: X - the chords have four heads Eb3 G3 Bb3 Db4 (flat before the top head above the C4 ledger)
+21 LH1: Eb3:e) Eb3+G3+Bb3+Db4:q Eb3+G3+Bb3+Db4:q Eb3+G3+Bb3+Db4:q Eb3+G3+Bb3+Db4:e
+22 RH1: Eb4:st( D4:s) Eb4:s* Eb4:s* Eb4:st( D4:s) Eb4:s* Eb4:s* Eb4:st( D4:s) Eb4:s* Eb4:s* Eb4:st( D4:s) Eb4:s* Eb4:s*
+# JUDGE bar 22 LH: Y - the first eighth is the full Eb3+Ab3+C4 chord (flag down), not a single Eb3
+22 LH1: Eb3+Ab3+C4:e Eb3+Ab3+C4:q Eb3+Ab3+C4:q Eb3+Ab3+C4:q Eb3+Ab3+C4:e
+# bar 23: RH 16th chords are three notes G5+Bb5+Db6; LH lower octave E2 carries its own natural
+23 RH1: Db4:q r:e. G5+Bb5+Db6:s G5+Bb5+Db6:q r:e. G5+Bb5+Db6:s
+# JUDGE bar 23 LH: X - no f printed in the piano in this bar (f only in the voices)
+23 LH1: En3+G3+Bb3:q r:e. En2+En3:s En2+En3:q r:e. En2+En3:s
+# page 198 system 1 starts bar 24
+# bar 24: upper chords Bb5+Db6 and A5+C6 are quarters with stems up; 16th line stems down
+24 RH1: Bb5+Db6:q An5+C6:q s:h
+# JUDGE bar 24 RH: X - p printed under the F5 16th, not under the dotted eighth
+24 RH2: F5:e. dyn:p F5:s En5:s( F5:s G5:s F5:s) Bn4:s( C5:s Db5:s C5:s) G#4:s( An4:s Bb4:s An4:s)
+24 LH1: F2+F3:q r:q r:h
+25 RH1: F4:s( Gb4:s) F4:s* F4:s* F4:s( Gb4:s) F4:s* F4:s* F4:s( Gb4:s) F4:s* F4:s* F4:s( Gb4:s) F4:s* F4:s*
+# JUDGE bar 25 LH: Y - natural printed before the A3 head (F A C Eb); note Elvira's Ab4 in the same bar has no natural (followed as printed)
+25 LH1: F3+An3+C4+Eb4:e F3+An3+C4+Eb4:q F3+An3+C4+Eb4:q F3+An3+C4+Eb4:q F3+An3+C4+Eb4:e
+26 RH1: F4:s( Gb4:s) F4:s* F4:s* F4:s( Gb4:s) F4:s* F4:s* F4:s( Gb4:s) F4:s* F4:s* F4:s( Gb4:s) F4:s* F4:s*
+26 LH1: F3+Bb3+Db4:e F3+Bb3+Db4:q F3+Bb3+Db4:q F3+Bb3+Db4:q F3+Bb3+Db4:e
+# page 198 system 2 starts bar 27
+# bar 27: RH beat 1 head on the bottom line with a flat = Eb4 (not Db4)
+# JUDGE bar 27 RH: OWN - one f printed midway between the staves: given to both hands (X had it on RH only, Y on LH only)
+27 RH1: dyn:f Eb4:q r:e. An5+C6+Eb6:s An5+C6+Eb6:q r:e. An5+C6+Eb6:s
+# JUDGE bar 27 LH: OWN - see RH (f on both hands)
+27 LH1: dyn:f F#3+An3+C4:q r:e. F#2+F#3:s F#2+F#3:q r:e. F#2+F#3:s
+# bars 28-33: RH figure eighth + 16th rest + 16th repeated note; every bar read on the 400 dpi render
+# bar 28: beat 3 pair is F#5 F#5 (heads on the F5 line, sharp), then F5 F5 with natural
+28 RH1: G5+C6+Eb6:q G5+Bn5+D6:e r:s G5+Bn5+D6:s( F#5:e) r:s F#5:s( Fn5:e) r:s Fn5:s(
+28 LH1: G3:q r:q Bn3+D4:h
+# JUDGE bar 29 RH: Y - no p printed in the piano here (the (p) is in the voices only)
+29 RH1: En5:e) r:s En5:s( Eb5:e) r:s Eb5:s( D5:e) r:s D5:s( C5:e) r:s C5:s(
+# JUDGE bar 29 LH: X - upper half note has the third ledger line through its middle = G4 (not A4); lower head on the C4 ledger
+29 LH1: C4+G4:h F#3+F#4:h
+# JUDGE bar 30 LH: X - beat 4 quarter sits in the space above the G4 ledger (no ledger through it) = A4, no accidental, so Ab4 by key
+30 RH1: Bn4:e) r:s D5:s( G5:e) r:s G5:s( F#5:e) r:s F#5:s( Fn5:e) r:s Fn5:s(
+30 LH1: G4:q Bn3:q D4:q Ab4:q
+30 LH2: G3:h Bn3:h
+# page 199 system 1 starts bar 31
+31 RH1: En5:e) r:s En5:s( Eb5:e) r:s Eb5:s( D5:e) r:s D5:s( C5:e) r:s C5:s(
+# JUDGE bar 31 LH: X - upper half note on the third ledger line = G4
+31 LH1: C4+G4:h F#3+F#4:h
+# bar 32: RH first 16th is D5 (head on the D5 line)
+32 RH1: Bn4:e) r:s D5:s( G5:e) r:s G5:s( F#5:e) r:s F#5:s( Fn5:e) r:s Fn5:s(
+# JUDGE bar 32 LH: Y - beat 1 has only two heads G3 and G4 (empty ledger lines between); beat 3 only B3 (natural) and D4, no G3
+32 LH1: G3+G4:h( Bn3+D4:h
+33 RH1: En5:e) r:s En5:s( Eb5:e) r:s Eb5:s( D5:e) r:s D5:s( C5:e) r:s C5:s(
+# JUDGE bar 33 LH: X - upper half note on the third ledger line = G4
+33 LH1: C4+G4:h F#3+F#4:h)
+# page 199 system 2 starts bar 34
+# bars 34-36: RH chords written below the treble staff (stems up); G-chords G3+B3+D4 (natural on B) alternate with C-minor chords G3+C4+Eb4, matching LH G2 / C3
+# JUDGE bar 34 RH: OWN - the 16th chord is three notes G3+B3+D4 (no F4), the beat-3 and last chords are G3+C4+Eb4 (lowest head under the A3 ledger, top head on the E4 line); slur from bar 33 ends on B4
+34 RH1: Bn4:q) r:e. G3+Bn3+D4:s G3+C4+Eb4:q r:e. G3+C4+Eb4:s
+34 LH1: G3+G4:q r:e. G2:s C3:q r:e. C3:s
+# JUDGE bar 35 RH: OWN - G3+B3+D4 (three notes) then G3+C4+Eb4, as in bar 34
+35 RH1: G3+Bn3+D4:q r:e. G3+Bn3+D4:s G3+C4+Eb4:q r:e. G3+C4+Eb4:s
+35 LH1: G2:q r:e. G2:s C3:q r:e. C3:s
+# JUDGE bar 36 RH: OWN - alternating G3+B3+D4 and G3+C4+Eb4 pairs (three notes each)
+36 RH1: G3+Bn3+D4:e. G3+Bn3+D4:s G3+C4+Eb4:e. G3+C4+Eb4:s G3+Bn3+D4:e. G3+Bn3+D4:s G3+C4+Eb4:e. G3+C4+Eb4:s
+36 LH1: G2:e. G2:s C3:e. C3:s G2:e. G2:s C3:e. C3:s
+# bar 37: fermatas both staves, final double bar before "Molto allegro" (chunk S44a)
+# JUDGE bar 37 RH: X - fermata chord is G3+B3+D4 (natural on B3; lowest head under the A3 ledger), not B3+D4+G4
+37 RH1: G3+Bn3+D4:w!
+37 LH1: G2:w!

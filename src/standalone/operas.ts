@@ -1629,7 +1629,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sola, sola in bujo loco",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Sola, sola in bujo loco"
+      "id": "Act 2: Sola, sola in bujo loco",
+      "editionId": "mozart-sola-sola-in-bujo-loco"
      },
      {
       "title": "Mille torbidi pensieri",
@@ -1770,7 +1771,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sola, sola in bujo loco",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Sola, sola in bujo loco"
+      "id": "Act 2: Sola, sola in bujo loco",
+      "editionId": "mozart-sola-sola-in-bujo-loco"
      },
      {
       "title": "Mille torbidi pensieri",
@@ -1901,7 +1903,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sola, sola in bujo loco",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Sola, sola in bujo loco"
+      "id": "Act 2: Sola, sola in bujo loco",
+      "editionId": "mozart-sola-sola-in-bujo-loco"
      },
      {
       "title": "Mille torbidi pensieri",
@@ -2044,7 +2047,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sola, sola in bujo loco",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Sola, sola in bujo loco"
+      "id": "Act 2: Sola, sola in bujo loco",
+      "editionId": "mozart-sola-sola-in-bujo-loco"
      },
      {
       "title": "Mille torbidi pensieri",
@@ -2169,7 +2173,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sola, sola in bujo loco",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Sola, sola in bujo loco"
+      "id": "Act 2: Sola, sola in bujo loco",
+      "editionId": "mozart-sola-sola-in-bujo-loco"
      },
      {
       "title": "Mille torbidi pensieri",
@@ -2295,7 +2300,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Sola, sola in bujo loco",
       "kind": "Sextet · Act 2",
-      "id": "Act 2: Sola, sola in bujo loco"
+      "id": "Act 2: Sola, sola in bujo loco",
+      "editionId": "mozart-sola-sola-in-bujo-loco"
      },
      {
       "title": "Mille torbidi pensieri",
