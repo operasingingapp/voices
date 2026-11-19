@@ -38,7 +38,8 @@
 10 G: r:h.
 10 L: r:h.
 # JUDGE bar 11 E: X - Y differs only by slurs, which the sung format (TB.md) does not record
-11 E: E5:e "col-" E5:s3 D#5:s3 E5:s3 F#5:s3 "pa_a-" D5:s3 B4:s3 A4:q "ver" B4:e "pie-"
+# THIRD bar 11 E: B - small inner arc joins the two E5 heads (separate from the melisma slur, which starts on the 2nd E5): tie
+11 E: E5:e~ "col-" E5:s3 D#5:s3 E5:s3 F#5:s3 "pa_a-" D5:s3 B4:s3 A4:q "ver" B4:e "pie-"
 11 G: r:h.
 11 L: r:h.
 # page 165 system 2 starts bar 12
@@ -55,7 +56,8 @@
 14 E: A4:q "tà." r:e r:q r:e
 14 G: r:h.
 # JUDGE bar 14 L: X - Y differs only by slurs, which the sung format (TB.md) does not record
-14 L: r:q r:e A3:s "Zit-" G#3:s "to!" F#3:s "di" E3:s "Don-" F#3:s "na" G#3:s "El-"
+# THIRD bar 14 L: B - A3-G#3 beamed under a slur (melisma on "Zit-"); "to!" F#3, "di" E3, "Don-" F#3, "na El-" printed with elision arc on the last G#3
+14 L: r:q r:e A3:s "Zit-" G#3:s F#3:s "to!" E3:s "di" F#3:s "Don-" G#3:s "na_El-"
 # page 165 system 3 starts bar 15
 # bar 15: staff labelled "L. G." (Leporello and Don Giovanni share one bass staff)
 15 E: r:h.
@@ -172,7 +174,8 @@
 42 L: r:h.
 43 E: r:h.
 # JUDGE bar 43 G: X - Y differs only by slurs, which the sung format (TB.md) does not record
-43 G: B3:q "mi-" B3:s C4:x D4:x F3:q "a," D3:e "pen-"
+# THIRD bar 43 G: B - inner arc B3 quarter to B3 16th under the outer melisma slur: tie
+43 G: B3:q~ "mi-" B3:s C4:x D4:x F3:q "a," D3:e "pen-"
 43 L: r:h.
 44 E: r:h.
 44 G: E3:q. "ti-" F3:q "to" A3:e "io"
@@ -252,7 +255,8 @@
 61 G: A3:e. "que-" B3:s G#3:e "sto?" r:q r:e
 61 L: E3:q "ste-" E3:e "i," r:q r:e
 # JUDGE bar 62 E: X - B4 quarter tied to B4 eighth; G#4 printed with augmentation dot, so E4 = 16th (print shows a single flag on E4 - engraving slip, bar only sums with E4:s)
-62 E: A4:e "àh" B4:q~ "pro-" B4:e G#4:e. E4:s "teg-"
+# THIRD bar 62 E: OWN - tie kept (as A); G#4 printed with a dot but E4 has a single flag (13/16 as printed): dot taken as the slip, since the identical bar 74 prints G#4 eighth (no dot) + E4 eighth (rhythm as B)
+62 E: A4:e "àh" B4:q~ "pro-" B4:e G#4:e E4:e "teg-"
 62 G: r:q r:e r:s E3:s "più" G#3:s "fer-" B3:s "ti-" G#3:s "le" E3:s "ta-"
 # JUDGE bar 62 L: X - tie G#3:q~G#3:e printed (inner arc between equal pitches) under the slur
 62 L: A3:e "deh" G#3:q~ "pro-" G#3:e E3:e G#3:e "teg-"
@@ -309,7 +313,8 @@
 73 G: G#3:e "que-" G#3:q "sto!" r:q r:e
 73 L: E3:e "ste-" E3:q "i," r:q r:e
 # JUDGE bar 74 E: X - as bar 14: dotted G#4 + E4 16th
-74 E: A4:e "Ah" B4:q~ "pro-" B4:e G#4:e. E4:s "teg-"
+# THIRD bar 74 E: B - no dot on G#4 (zoomed 400 dpi) and E4 has a single flag: two eighths
+74 E: A4:e "Ah" B4:q~ "pro-" B4:e G#4:e E4:e "teg-"
 74 G: r:q r:e r:s E3:s "più" G#3:s "fer-" B3:s "ti-" G#3:s "le" E3:s "ta-"
 # JUDGE bar 74 L: X - tie G#3:q~G#3:e printed under the slur
 74 L: A3:e "deh" G#3:q~ "pro-" G#3:e E3:e G#3:e "teg-"
