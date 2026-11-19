@@ -1,0 +1,227 @@
+{
+ "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Questo è il fin di chi fa mal",
+ "subtitle": "Donna Anna, Donna Elvira, Zerlina, Don Ottavio, Masetto and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Questo è il fin (the entries: Anna, then the others, then Zerlina)",
+   "start": "1",
+   "end": "15"
+  },
+  {
+   "id": "b",
+   "label": "Questo è il fin di chi fa mal (all six)",
+   "start": "16",
+   "end": "32"
+  },
+  {
+   "id": "c",
+   "label": "E de' perfidi la morte · alla vita è sempre ugual (to the fermata)",
+   "start": "33",
+   "end": "57"
+  },
+  {
+   "id": "d",
+   "label": "E de' perfidi la morte (again)",
+   "start": "58",
+   "end": "88"
+  },
+  {
+   "id": "e",
+   "label": "alla vita è sempre ugual (to the end of the opera)",
+   "start": "89",
+   "end": "116"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 24 Finale (the closing ensemble, Presto)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, lines repeated as each part repeats them. Where the print adds notes for its English text (Ottavio and Masetto, bar 48), the Italian setting is kept."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 293–300, bars 1–116 of the Act 2 Finale's closing ensemble, from the Presto after the Larghetto's double bar (p. 293, system 1, bar 1) to the final chord of the opera",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. Donna Anna and Donna Elvira share a staff in the print (two parts in bars 16–17, in unison from bar 18); here each has her own part. Don Ottavio's part is in the tenor treble clef (sounding an octave lower) and is stored and played at sounding pitch. The English singing translation and the stage directions are left out. Presto, common time (4/4), D major throughout; the fermata in bar 57 is held. Playback tempo: ♩ = 270 (a half note = 135), 1:43 at score tempo before the fermata hold, the median of five complete recordings with this ensemble on its own track (Busch 1936 1:37, Giulini 1959 1:39, Haitink 1984 1:43, Barenboim 1975 1:44, Marriner 1991 1:49). Mozart gives the word Presto only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

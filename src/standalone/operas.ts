@@ -1716,7 +1716,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Questo è il fin di chi fa mal",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Questo è il fin di chi fa mal"
+      "id": "Act 2: Questo è il fin di chi fa mal",
+      "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal"
      }
     ]
    },
@@ -1825,7 +1826,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Questo è il fin di chi fa mal",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Questo è il fin di chi fa mal"
+      "id": "Act 2: Questo è il fin di chi fa mal",
+      "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal"
      }
     ]
    },
@@ -1982,7 +1984,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Questo è il fin di chi fa mal",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Questo è il fin di chi fa mal"
+      "id": "Act 2: Questo è il fin di chi fa mal",
+      "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal"
      }
     ]
    },
@@ -2133,7 +2136,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Questo è il fin di chi fa mal",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Questo è il fin di chi fa mal"
+      "id": "Act 2: Questo è il fin di chi fa mal",
+      "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal"
      }
     ]
    },
@@ -2266,7 +2270,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Questo è il fin di chi fa mal",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Questo è il fin di chi fa mal"
+      "id": "Act 2: Questo è il fin di chi fa mal",
+      "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal"
      }
     ]
    },
@@ -2386,7 +2391,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Questo è il fin di chi fa mal",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Questo è il fin di chi fa mal"
+      "id": "Act 2: Questo è il fin di chi fa mal",
+      "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal"
      }
     ]
    },

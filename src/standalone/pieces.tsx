@@ -4839,6 +4839,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-questo-e-il-fin-di-chi-fa-mal": {
+    portrait: "giovanni:anna",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "D major",
+      time: "4/4 (common time) throughout",
+      tempo: "Presto, played at ♩ = 270 (a half note = 135), about 1 minute 43 seconds before the fermata, the median of five recordings with this ensemble on its own track (Busch, Giulini, Haitink, Barenboim, Marriner); Mozart gives the word only",
+    },
+    notePlaceholder: "Light and quick: the voices come in one after another, then all six drive to the end together",
+    about: (
+      <>
+        <p>
+          Act 2, the very end of the opera. With Don Giovanni gone, the six who are left turn to the audience and sing the moral
+          together: this is how those who do wrong end up, and the treacherous always die the way they lived. Donna Anna starts it
+          alone and quietly, the others come in one after another, and after a held pause the whole company drives the old saying
+          home in a bright D major.
+        </p>
+        <p>
+          Score: the end of the Act 2 Finale (No. 24), the Presto from the double bar after the Larghetto to the final chord of the
+          opera (vocal score pages 293–300, 116 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain.
+          Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement
+          settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. Donna Anna and Donna Elvira
+          share a staff in the print; here each has her own part. The pause in bar 57 is held, and the last twelve bars are for the
+          piano alone. Only the Italian words are kept, with the print's spelling and punctuation; where the print adds a note for
+          its English words, the Italian setting is followed.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

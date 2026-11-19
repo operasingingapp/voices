@@ -6857,6 +6857,64 @@
     }
   },
   {
+    "editionId": "mozart-questo-e-il-fin-di-chi-fa-mal",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-questo-e-il-fin-di-chi-fa-mal@1.0.0-schirmer#1cdd4ae4d1",
+    "title": "Questo è il fin di chi fa mal",
+    "subtitle": "Donna Anna, Donna Elvira, Zerlina, Don Ottavio, Masetto and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 116,
+    "durationSec": 103,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 55,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-questo-giorno-di-tormenti",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-questo-giorno-di-tormenti@1.0.0-klengel#1ddc187834",
