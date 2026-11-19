@@ -1705,7 +1705,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! dov'è il perfido?",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! dov'è il perfido?"
+      "id": "Act 2: Ah! dov'è il perfido?",
+      "editionId": "mozart-ah-dove-il-perfido"
      },
      {
       "title": "Or che tutti, o mio tesoro",
@@ -1813,7 +1814,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! dov'è il perfido?",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! dov'è il perfido?"
+      "id": "Act 2: Ah! dov'è il perfido?",
+      "editionId": "mozart-ah-dove-il-perfido"
      },
      {
       "title": "Or che tutti, o mio tesoro",
@@ -1969,7 +1971,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! dov'è il perfido?",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! dov'è il perfido?"
+      "id": "Act 2: Ah! dov'è il perfido?",
+      "editionId": "mozart-ah-dove-il-perfido"
      },
      {
       "title": "Or che tutti, o mio tesoro",
@@ -2119,7 +2122,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! dov'è il perfido?",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! dov'è il perfido?"
+      "id": "Act 2: Ah! dov'è il perfido?",
+      "editionId": "mozart-ah-dove-il-perfido"
      },
      {
       "title": "Or che tutti, o mio tesoro",
@@ -2251,7 +2255,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! dov'è il perfido?",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! dov'è il perfido?"
+      "id": "Act 2: Ah! dov'è il perfido?",
+      "editionId": "mozart-ah-dove-il-perfido"
      },
      {
       "title": "Or che tutti, o mio tesoro",
@@ -2370,7 +2375,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah! dov'è il perfido?",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Ah! dov'è il perfido?"
+      "id": "Act 2: Ah! dov'è il perfido?",
+      "editionId": "mozart-ah-dove-il-perfido"
      },
      {
       "title": "Or che tutti, o mio tesoro",

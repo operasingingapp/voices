@@ -4803,6 +4803,42 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ah-dove-il-perfido": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "G major",
+      time: "3/4 throughout",
+      tempo: "Allegro assai, played at ♩ = 196 (a dotted half ≈ 65), about 1 minute 40 seconds, the median of five recordings with this scene on its own track (Marriner, Busch, Giulini, Barenboim, Haitink); Mozart gives the words only",
+    },
+    notePlaceholder: "The five burst in together, furious and quick; Leporello's tale comes out in breathless, broken scraps",
+    about: (
+      <>
+        <p>
+          Act 2, the finale's last scene. Don Giovanni has gone down to hell. Donna Elvira, Donna Anna, Zerlina, Don Ottavio and
+          Masetto burst in with officers of the law, hunting for him: they want to see the scoundrel and pour out their fury, and
+          Anna will find peace only when she sees him in chains. Leporello, still shaking, tells them to give up: he has gone a long
+          way off. Pressed to speak, he gets it out in pieces: a giant came, smoke and fire, the man of stone, a huge crash, and right
+          there the devil swallowed him. They are aghast: it must have been the ghost that they had met.
+        </p>
+        <p>
+          Score: the Act 2 Finale (No. 24) from the double bar and Allegro assai to the fermata before the Larghetto “Or che tutti, o
+          mio tesoro” (vocal score pages 282–288, 109 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public
+          domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers, every
+          disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. One clear
+          misprint is corrected: Don Ottavio's C sharp in bar 103, where the print has a damaged natural against C sharp in the piano.
+          The three ladies share staves in the print; here Donna Anna, Donna Elvira and Zerlina each have their own part. The first
+          two bars and the last four are for the piano alone. Only the Italian words are kept, with the print's spelling and
+          punctuation (“dov' è” and “Cos' è” on two notes, “fuoco”, Leporello's broken-off phrases; in bar 100 Anna's “certò e” and
+          the others' unaccented “e”, sung as “certo è”). The print gives “che l'incontrò” to Anna and “che m'incontrò” to the others.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

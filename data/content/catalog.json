@@ -344,6 +344,64 @@
     }
   },
   {
+    "editionId": "mozart-ah-dove-il-perfido",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ah-dove-il-perfido@1.0.0-schirmer#f3f48008a5",
+    "title": "Ah! dov'è il perfido?",
+    "subtitle": "Donna Elvira, Donna Anna, Zerlina, Don Ottavio, Masetto and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 109,
+    "durationSec": 100,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 63,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-ah-fuggi-il-traditor",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-ah-fuggi-il-traditor@1.0.0-schirmer#cac65e5afb",

@@ -1,0 +1,233 @@
+{
+ "editionId": "mozart-ah-dove-il-perfido",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ah! dov'è il perfido?",
+ "subtitle": "Donna Elvira, Donna Anna, Zerlina, Don Ottavio, Masetto and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ah! dov'è il perfido? · tutto il mio sdegno sfogar io vo'",
+   "start": "1",
+   "end": "16"
+  },
+  {
+   "id": "b",
+   "label": "Solo mirandolo stretto in catene (Anna)",
+   "start": "17",
+   "end": "29"
+  },
+  {
+   "id": "c",
+   "label": "Più non sperate di ritrovarlo · Cos'è? favella! · Venne un colosso",
+   "start": "30",
+   "end": "46"
+  },
+  {
+   "id": "d",
+   "label": "Ma se non posso · Presto favella, sbrigati!",
+   "start": "47",
+   "end": "57"
+  },
+  {
+   "id": "e",
+   "label": "Tra fumo e fuoco · l'uomo di sasso · se'l trangugiò · Stelle! che sento! · Vero è l'evento",
+   "start": "58",
+   "end": "78"
+  },
+  {
+   "id": "f",
+   "label": "Ah, certo è l'ombra che m'incontrò (to the end)",
+   "start": "79",
+   "end": "109"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 24 Finale (the last scene, Allegro assai)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (\"dov' è\" and \"Cos' è\" on two notes each; \"mirandolo.\" with the print's full stop; Leporello's dashes; \"fuoco\" where the libretto has foco). In the closing ensemble the print gives \"che m'incontrò\" to Elvira, Zerlina, Ottavio and Masetto and \"che l'incontrò\" to Donna Anna only. In bar 100 the print has Anna's \"cer-tò e\" (accent on the wrong vowel) and Ottavio's and Masetto's \"e\" without its accent; kept as printed, read as \"certo è\"."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 282–288, bars 1–109 of the Act 2 Finale's last scene, from the double bar and Allegro assai (p. 282, system 4, bar 4) to the fermata bar before the Larghetto \"Or che tutti, o mio tesoro\"",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. One clear misprint is corrected: Don Ottavio bar 103 C sharp (the print's damaged natural, against C sharp in the piano). The ladies' shared staves are split: top Donna Anna, middle Donna Elvira, bottom Zerlina (where Elvira and Zerlina share a staff, upper Elvira, lower Zerlina). Don Ottavio's part is in the tenor treble clef (sounding an octave lower) and is stored and played at sounding pitch. The English singing translation and the stage directions are left out. Allegro assai 3/4 in G major throughout. Playback tempo: ♩ = 196 (a dotted half ≈ 65), 1:40 at score tempo, the median of five complete recordings with this scene on its own track (Marriner 1991 1:34, Busch 1936 1:39, Giulini 1959 1:40, Barenboim 1975 1:44, Haitink 1984 1:44). Mozart gives the words Allegro assai only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}
