@@ -1,0 +1,4832 @@
+{
+ "editionId": "mozart-meco-tu-dei-ballare",
+ "language": "it",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Lorenzo Da Ponte (1787). Words follow the Schirmer vocal score's spelling and punctuation, and its repeats of words and lines. Where the print differs from the libretto the words follow the print: Zerlina \"ajuto\", \"Scelerato!\" (libretto scellerato; sung with ll), her second \"soccoretemi\" printed with one r (sung soccorretemi), \"son morta\" without the libretto's \"o\", and \"sà,\" with an accent in bars 115 and 117; \"Ah gittiamo giù la porta\" (libretto gettiamo); Don Giovanni \"Ecco il birbo chi t'ha offesa\" (libretto che); Donna Elvira \"malvaggio\" (libretto malvagio; sung malvagio); Donna Anna \"poss' io\" printed as two words. Don Giovanni's \"(Meco tu dei ballare; Zerlina, vien pur quà!)\" in bars 3-8 is printed in small notes with a footnote (not in the autograph score, found in the earliest copied voice parts) and is not in the libretto; it is sung here as part of his line. The first bar also ends the previous piece (\"Riposate, vezzose ragazze!\"): Don Giovanni's \"-rini!\" on its downbeat is the end of \"ballerini\" and is left out of this piece's words. IPA, word meanings and translations were drafted for this app (S31) and the IPA was checked against Castel. IPA follows sung Italian conventions: stressed syllable marked, elisions (two words on one note in the score) joined with ‿, open e/o as ɛ/ɔ. Translation literal, for meaning.",
+ "phrases": [
+  {
+   "id": "g1",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "(Meco tu dei ballare;",
+   "translation": "(You have to dance with me;",
+   "ipa": "ˈme.ko tu ˈdɛi balˈla.re",
+   "words": [
+    [
+     "(Meco",
+     "with me",
+     "ˈme.ko"
+    ],
+    [
+     "tu",
+     "you",
+     "tu"
+    ],
+    [
+     "dei",
+     "must (you have to)",
+     "ˈdɛi"
+    ],
+    [
+     "ballare;",
+     "dance",
+     "balˈla.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g2",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "Zerlina, vien pur quà!)",
+   "translation": "Zerlina, come over here!)",
+   "ipa": "dzerˈli.na ˈvjɛn pur ˈkwa",
+   "words": [
+    [
+     "Zerlina,",
+     "Zerlina",
+     "dzerˈli.na"
+    ],
+    [
+     "vien",
+     "come",
+     "ˈvjɛn"
+    ],
+    [
+     "pur",
+     "do (urging)",
+     "pur"
+    ],
+    [
+     "quà!)",
+     "over here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l1",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "10",
+   "original": "Da bravi via ballate!",
+   "translation": "Come on, everyone, be good and dance!",
+   "ipa": "da ˈbra.vi ˈvi.a balˈla.te",
+   "words": [
+    [
+     "Da",
+     "like (as)",
+     "da"
+    ],
+    [
+     "bravi",
+     "good folk",
+     "ˈbra.vi"
+    ],
+    [
+     "via",
+     "come on",
+     "ˈvi.a"
+    ],
+    [
+     "ballate!",
+     "dance",
+     "balˈla.te"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "like good folk"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e1",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Quella è la contadina.",
+   "translation": "That's the country girl.",
+   "ipa": "ˈkwel.la‿ˈɛ la kon.taˈdi.na",
+   "words": [
+    [
+     "Quella",
+     "that one",
+     "ˈkwel.la"
+    ],
+    [
+     "è",
+     "is",
+     "ˈɛ"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "contadina.",
+     "country girl",
+     "kon.taˈdi.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a1",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "Io moro!",
+   "translation": "I'm dying!",
+   "ipa": "jo ˈmɔ.ro",
+   "words": [
+    [
+     "Io",
+     "I",
+     "jo"
+    ],
+    [
+     "moro!",
+     "am dying",
+     "ˈmɔ.ro"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o1",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Simulate.",
+   "translation": "Keep up the act.",
+   "ipa": "si.muˈla.te",
+   "words": [
+    [
+     "Simulate.",
+     "keep up the act",
+     "si.muˈla.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g3",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Va bene in verità!",
+   "translation": "Things are going nicely, really!",
+   "ipa": "ˈva ˈbɛ.ne‿in ve.riˈta",
+   "words": [
+    [
+     "Va",
+     "goes",
+     "ˈva"
+    ],
+    [
+     "bene",
+     "well",
+     "ˈbɛ.ne"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "verità!",
+     "truth",
+     "ve.riˈta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "really, truly"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l2",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "Va bene in verità!",
+   "translation": "Things are going nicely, really!",
+   "ipa": "ˈva ˈbɛ.ne‿in ve.riˈta",
+   "words": [
+    [
+     "Va",
+     "goes",
+     "ˈva"
+    ],
+    [
+     "bene",
+     "well",
+     "ˈbɛ.ne"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "verità!",
+     "truth",
+     "ve.riˈta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "really, truly"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m1",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "Va bene, va bene, va bene in verità!",
+   "translation": "Going nicely, going nicely, going nicely, really!",
+   "ipa": "ˈva ˈbɛ.ne ˈva ˈbɛ.ne ˈva ˈbɛ.ne‿in ve.riˈta",
+   "words": [
+    [
+     "Va",
+     "goes",
+     "ˈva"
+    ],
+    [
+     "bene,",
+     "well",
+     "ˈbɛ.ne"
+    ],
+    [
+     "va",
+     "goes",
+     "ˈva"
+    ],
+    [
+     "bene,",
+     "well",
+     "ˈbɛ.ne"
+    ],
+    [
+     "va",
+     "goes",
+     "ˈva"
+    ],
+    [
+     "bene",
+     "well",
+     "ˈbɛ.ne"
+    ],
+    [
+     "in",
+     "in",
+     "in"
+    ],
+    [
+     "verità!",
+     "truth",
+     "ve.riˈta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "really, truly"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g4",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "A bada tien Masetto.",
+   "translation": "Keep Masetto busy.",
+   "ipa": "a ˈba.da ˈtjɛn maˈzet.to",
+   "words": [
+    [
+     "A",
+     "in",
+     "a"
+    ],
+    [
+     "bada",
+     "check",
+     "ˈba.da"
+    ],
+    [
+     "tien",
+     "hold",
+     "ˈtjɛn"
+    ],
+    [
+     "Masetto.",
+     "Masetto",
+     "maˈzet.to"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "keep busy, hold in check"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l3",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "Non balli, poveretto, poveretto!",
+   "translation": "Not dancing, you poor thing, poor thing!",
+   "ipa": "non ˈbal.li po.veˈret.to po.veˈret.to",
+   "words": [
+    [
+     "Non",
+     "not",
+     "non"
+    ],
+    [
+     "balli,",
+     "you dance",
+     "ˈbal.li"
+    ],
+    [
+     "poveretto,",
+     "poor thing",
+     "po.veˈret.to"
+    ],
+    [
+     "poveretto!",
+     "poor thing",
+     "po.veˈret.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g5",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "Il tuo compagno io sono,",
+   "translation": "I'll be your partner,",
+   "ipa": "il ˈtu.o komˈpaɲ.ɲo‿jo ˈso.no",
+   "words": [
+    [
+     "Il",
+     "the",
+     "il"
+    ],
+    [
+     "tuo",
+     "your",
+     "ˈtu.o"
+    ],
+    [
+     "compagno",
+     "partner",
+     "komˈpaɲ.ɲo"
+    ],
+    [
+     "io",
+     "I",
+     "jo"
+    ],
+    [
+     "sono,",
+     "am",
+     "ˈso.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I am"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l4",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "Vien quà, Masetto caro, caro!",
+   "translation": "Come along, Masetto, my friend, my friend,",
+   "ipa": "ˈvjɛn ˈkwa maˈzet.to ˈka.ro ˈka.ro",
+   "words": [
+    [
+     "Vien",
+     "come",
+     "ˈvjɛn"
+    ],
+    [
+     "quà,",
+     "over here",
+     "ˈkwa"
+    ],
+    [
+     "Masetto",
+     "Masetto",
+     "maˈzet.to"
+    ],
+    [
+     "caro,",
+     "my dear",
+     "ˈka.ro"
+    ],
+    [
+     "caro!",
+     "my dear",
+     "ˈka.ro"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g6",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "Zerlina, Zerlina, vien pur quà!",
+   "translation": "Zerlina, Zerlina, come over here!",
+   "ipa": "dzerˈli.na dzerˈli.na ˈvjɛn pur ˈkwa",
+   "words": [
+    [
+     "Zerlina,",
+     "Zerlina",
+     "dzerˈli.na"
+    ],
+    [
+     "Zerlina,",
+     "Zerlina",
+     "dzerˈli.na"
+    ],
+    [
+     "vien",
+     "come",
+     "ˈvjɛn"
+    ],
+    [
+     "pur",
+     "do (urging)",
+     "pur"
+    ],
+    [
+     "quà!",
+     "over here",
+     "ˈkwa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l5",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "facciam quel ch'altri fa.",
+   "translation": "let's join in like everyone else.",
+   "ipa": "fatˈtʃam kwel ˈkal.tri ˈfa",
+   "words": [
+    [
+     "facciam",
+     "let's do",
+     "fatˈtʃam"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "ch'altri",
+     "that others",
+     "ˈkal.tri"
+    ],
+    [
+     "fa.",
+     "do",
+     "ˈfa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "what the others do"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m2",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "32",
+   "original": "No, no, ballar non voglio!",
+   "translation": "No, no, I won't dance!",
+   "ipa": "ˈnɔ ˈnɔ balˈlar non ˈvɔʎ.ʎo",
+   "words": [
+    [
+     "No,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "ballar",
+     "dance",
+     "balˈlar"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "voglio!",
+     "I want",
+     "ˈvɔʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I won't"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l6",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "34",
+   "original": "Eh, balla, amico mio!",
+   "translation": "Hey, go on, dance, old friend!",
+   "ipa": "ˈɛ ˈbal.la‿aˈmi.ko ˈmi.o",
+   "words": [
+    [
+     "Eh,",
+     "hey",
+     "ˈɛ"
+    ],
+    [
+     "balla,",
+     "dance",
+     "ˈbal.la"
+    ],
+    [
+     "amico",
+     "friend",
+     "aˈmi.ko"
+    ],
+    [
+     "mio!",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m3",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "No!",
+   "translation": "No!",
+   "ipa": "ˈnɔ",
+   "words": [
+    [
+     "No!",
+     "no",
+     "ˈnɔ"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l7",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "38",
+   "original": "Sì! caro Masetto!",
+   "translation": "Yes! Masetto, my friend!",
+   "ipa": "ˈsi ˈka.ro maˈzet.to",
+   "words": [
+    [
+     "Sì!",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "caro",
+     "my dear",
+     "ˈka.ro"
+    ],
+    [
+     "Masetto!",
+     "Masetto",
+     "maˈzet.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a2",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "40",
+   "original": "Resister non poss' io!",
+   "translation": "I can't bear it!",
+   "ipa": "reˈzi.ster non pos ˈi.o",
+   "words": [
+    [
+     "Resister",
+     "hold out",
+     "reˈzi.ster"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "poss'",
+     "can",
+     "pos"
+    ],
+    [
+     "io!",
+     "I",
+     "ˈi.o"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "I cannot"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l8",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "Balla!",
+   "translation": "Dance!",
+   "ipa": "ˈbal.la",
+   "words": [
+    [
+     "Balla!",
+     "dance",
+     "ˈbal.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m4",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "No, no, non voglio!",
+   "translation": "No, no, I won't!",
+   "ipa": "ˈnɔ ˈnɔ non ˈvɔʎ.ʎo",
+   "words": [
+    [
+     "No,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "voglio!",
+     "I want",
+     "ˈvɔʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "I won't"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e2",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "42",
+   "original": "Fingete per pietà!",
+   "translation": "Keep up the act, I beg you!",
+   "ipa": "finˈdʒe.te per pjeˈta",
+   "words": [
+    [
+     "Fingete",
+     "feign",
+     "finˈdʒe.te"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "pietà!",
+     "pity",
+     "pjeˈta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "for pity’s sake"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o2",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "42",
+   "original": "Fingete per pietà!",
+   "translation": "Keep up the act, I beg you!",
+   "ipa": "finˈdʒe.te per pjeˈta",
+   "words": [
+    [
+     "Fingete",
+     "feign",
+     "finˈdʒe.te"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "pietà!",
+     "pity",
+     "pjeˈta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "for pity’s sake"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l9",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "Balla!",
+   "translation": "Dance!",
+   "ipa": "ˈbal.la",
+   "words": [
+    [
+     "Balla!",
+     "dance",
+     "ˈbal.la"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m5",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "No, no, non voglio.",
+   "translation": "No, no, I won't.",
+   "ipa": "ˈnɔ ˈnɔ non ˈvɔʎ.ʎo",
+   "words": [
+    [
+     "No,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "no,",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "non",
+     "not",
+     "non"
+    ],
+    [
+     "voglio.",
+     "I want",
+     "ˈvɔʎ.ʎo"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "I won't"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "l10",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "Eh, balla, amico mio!",
+   "translation": "Hey, go on, dance, old friend!",
+   "ipa": "ˈɛ ˈbal.la‿aˈmi.ko ˈmi.o",
+   "words": [
+    [
+     "Eh,",
+     "hey",
+     "ˈɛ"
+    ],
+    [
+     "balla,",
+     "dance",
+     "ˈbal.la"
+    ],
+    [
+     "amico",
+     "friend",
+     "aˈmi.ko"
+    ],
+    [
+     "mio!",
+     "my",
+     "ˈmi.o"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l11",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "facciam quel ch'altri fa.",
+   "translation": "let's join in like everyone else.",
+   "ipa": "fatˈtʃam kwel ˈkal.tri ˈfa",
+   "words": [
+    [
+     "facciam",
+     "let's do",
+     "fatˈtʃam"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "ch'altri",
+     "that others",
+     "ˈkal.tri"
+    ],
+    [
+     "fa.",
+     "do",
+     "ˈfa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "what the others do"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g7",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "Vieni con me, mia vita!",
+   "translation": "Come along with me, sweetheart!",
+   "ipa": "ˈvjɛ.ni kon ˈme ˈmi.a ˈvi.ta",
+   "words": [
+    [
+     "Vieni",
+     "come",
+     "ˈvjɛ.ni"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "me,",
+     "me",
+     "ˈme"
+    ],
+    [
+     "mia",
+     "my",
+     "ˈmi.a"
+    ],
+    [
+     "vita!",
+     "life (darling)",
+     "ˈvi.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "my darling"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m6",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "50",
+   "original": "Lasciami! Ah no! Zerlina!",
+   "translation": "Get off me! oh no! Zerlina!",
+   "ipa": "ˈlaʃ.ʃa.mi ˈa ˈnɔ dzerˈli.na",
+   "words": [
+    [
+     "Lasciami!",
+     "let me go",
+     "ˈlaʃ.ʃa.mi"
+    ],
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "no!",
+     "no",
+     "ˈnɔ"
+    ],
+    [
+     "Zerlina!",
+     "Zerlina",
+     "dzerˈli.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g8",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "51",
+   "original": "vieni, vieni!",
+   "translation": "come, come!",
+   "ipa": "ˈvjɛ.ni ˈvjɛ.ni",
+   "words": [
+    [
+     "vieni,",
+     "come",
+     "ˈvjɛ.ni"
+    ],
+    [
+     "vieni!",
+     "come",
+     "ˈvjɛ.ni"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z1",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "O numi! son tradita.",
+   "translation": "Heavens! I've been tricked.",
+   "ipa": "o ˈnu.mi son traˈdi.ta",
+   "words": [
+    [
+     "O",
+     "oh",
+     "o"
+    ],
+    [
+     "numi!",
+     "gods",
+     "ˈnu.mi"
+    ],
+    [
+     "son",
+     "I am",
+     "son"
+    ],
+    [
+     "tradita.",
+     "deceived",
+     "traˈdi.ta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l12",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "55",
+   "original": "Qui nasce una ruina.",
+   "translation": "This is where the disaster starts.",
+   "ipa": "ˈkwi ˈnaʃ.ʃe‿ˈu.na ruˈi.na",
+   "words": [
+    [
+     "Qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "nasce",
+     "springs up",
+     "ˈnaʃ.ʃe"
+    ],
+    [
+     "una",
+     "a",
+     "ˈu.na"
+    ],
+    [
+     "ruina.",
+     "disaster",
+     "ruˈi.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e3",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "L'iniquo da se stesso",
+   "translation": "The villain all on his own",
+   "ipa": "liˈni.kwo da ˈse ˈstes.so",
+   "words": [
+    [
+     "L'iniquo",
+     "the evil man",
+     "liˈni.kwo"
+    ],
+    [
+     "da",
+     "by",
+     "da"
+    ],
+    [
+     "se",
+     "himself",
+     "ˈse"
+    ],
+    [
+     "stesso",
+     "own (self)",
+     "ˈstes.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "of his own accord"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a3",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "L'iniquo da se stesso",
+   "translation": "The villain all on his own",
+   "ipa": "liˈni.kwo da ˈse ˈstes.so",
+   "words": [
+    [
+     "L'iniquo",
+     "the evil man",
+     "liˈni.kwo"
+    ],
+    [
+     "da",
+     "by",
+     "da"
+    ],
+    [
+     "se",
+     "himself",
+     "ˈse"
+    ],
+    [
+     "stesso",
+     "own (self)",
+     "ˈstes.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "of his own accord"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o3",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "L'iniquo da se stesso",
+   "translation": "The villain all on his own",
+   "ipa": "liˈni.kwo da ˈse ˈstes.so",
+   "words": [
+    [
+     "L'iniquo",
+     "the evil man",
+     "liˈni.kwo"
+    ],
+    [
+     "da",
+     "by",
+     "da"
+    ],
+    [
+     "se",
+     "himself",
+     "ˈse"
+    ],
+    [
+     "stesso",
+     "own (self)",
+     "ˈstes.so"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "of his own accord"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e4",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "nel laccio se ne va!",
+   "translation": "is stepping into the trap!",
+   "ipa": "nel ˈlat.tʃo se ne ˈva",
+   "words": [
+    [
+     "nel",
+     "into the",
+     "nel"
+    ],
+    [
+     "laccio",
+     "noose",
+     "ˈlat.tʃo"
+    ],
+    [
+     "se",
+     "himself (goes off: se ne va)",
+     "se"
+    ],
+    [
+     "ne",
+     "off (away)",
+     "ne"
+    ],
+    [
+     "va!",
+     "goes",
+     "ˈva"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "goes off"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a4",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "nel laccio se ne va!",
+   "translation": "is stepping into the trap!",
+   "ipa": "nel ˈlat.tʃo se ne ˈva",
+   "words": [
+    [
+     "nel",
+     "into the",
+     "nel"
+    ],
+    [
+     "laccio",
+     "noose",
+     "ˈlat.tʃo"
+    ],
+    [
+     "se",
+     "himself (goes off: se ne va)",
+     "se"
+    ],
+    [
+     "ne",
+     "off (away)",
+     "ne"
+    ],
+    [
+     "va!",
+     "goes",
+     "ˈva"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "goes off"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o4",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "58",
+   "original": "nel laccio se ne va!",
+   "translation": "is stepping into the trap!",
+   "ipa": "nel ˈlat.tʃo se ne ˈva",
+   "words": [
+    [
+     "nel",
+     "into the",
+     "nel"
+    ],
+    [
+     "laccio",
+     "noose",
+     "ˈlat.tʃo"
+    ],
+    [
+     "se",
+     "himself (goes off: se ne va)",
+     "se"
+    ],
+    [
+     "ne",
+     "off (away)",
+     "ne"
+    ],
+    [
+     "va!",
+     "goes",
+     "ˈva"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "goes off"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z2",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "62",
+   "original": "Gente, ajuto, ajuto! gente!",
+   "translation": "Somebody, help, help! somebody!",
+   "ipa": "ˈdʒɛn.te‿aˈju.to‿aˈju.to ˈdʒɛn.te",
+   "words": [
+    [
+     "Gente,",
+     "people",
+     "ˈdʒɛn.te"
+    ],
+    [
+     "ajuto,",
+     "help",
+     "aˈju.to"
+    ],
+    [
+     "ajuto!",
+     "help",
+     "aˈju.to"
+    ],
+    [
+     "gente!",
+     "people",
+     "ˈdʒɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e5",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Soccorriamo l'innocente,",
+   "translation": "Let's go to the poor girl's rescue,",
+   "ipa": "sok.korˈrja.mo lin.noˈtʃɛn.te",
+   "words": [
+    [
+     "Soccorriamo",
+     "let's go to help",
+     "sok.korˈrja.mo"
+    ],
+    [
+     "l'innocente,",
+     "the poor innocent",
+     "lin.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a5",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Soccorriamo l'innocente,",
+   "translation": "Let's go to the poor girl's rescue,",
+   "ipa": "sok.korˈrja.mo lin.noˈtʃɛn.te",
+   "words": [
+    [
+     "Soccorriamo",
+     "let's go to help",
+     "sok.korˈrja.mo"
+    ],
+    [
+     "l'innocente,",
+     "the poor innocent",
+     "lin.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o5",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Soccorriamo l'innocente,",
+   "translation": "Let's go to the poor girl's rescue,",
+   "ipa": "sok.korˈrja.mo lin.noˈtʃɛn.te",
+   "words": [
+    [
+     "Soccorriamo",
+     "let's go to help",
+     "sok.korˈrja.mo"
+    ],
+    [
+     "l'innocente,",
+     "the poor innocent",
+     "lin.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e6",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "67",
+   "original": "Soccorriamo l'innocente!",
+   "translation": "Let's go to the poor girl's rescue!",
+   "ipa": "sok.korˈrja.mo lin.noˈtʃɛn.te",
+   "words": [
+    [
+     "Soccorriamo",
+     "let's go to help",
+     "sok.korˈrja.mo"
+    ],
+    [
+     "l'innocente!",
+     "the poor innocent",
+     "lin.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a6",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "67",
+   "original": "Soccorriamo l'innocente!",
+   "translation": "Let's go to the poor girl's rescue!",
+   "ipa": "sok.korˈrja.mo lin.noˈtʃɛn.te",
+   "words": [
+    [
+     "Soccorriamo",
+     "let's go to help",
+     "sok.korˈrja.mo"
+    ],
+    [
+     "l'innocente!",
+     "the poor innocent",
+     "lin.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o6",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "67",
+   "original": "Soccorriamo l'innocente!",
+   "translation": "Let's go to the poor girl's rescue!",
+   "ipa": "sok.korˈrja.mo lin.noˈtʃɛn.te",
+   "words": [
+    [
+     "Soccorriamo",
+     "let's go to help",
+     "sok.korˈrja.mo"
+    ],
+    [
+     "l'innocente!",
+     "the poor innocent",
+     "lin.noˈtʃɛn.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m7",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "69",
+   "original": "Ah, Zerlina, ah Zerlina!",
+   "translation": "Oh, Zerlina, oh, Zerlina!",
+   "ipa": "ˈa dzerˈli.na ˈa dzerˈli.na",
+   "words": [
+    [
+     "Ah,",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "Zerlina,",
+     "Zerlina",
+     "dzerˈli.na"
+    ],
+    [
+     "ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "Zerlina!",
+     "Zerlina",
+     "dzerˈli.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z3",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "71",
+   "original": "Scelerato!",
+   "translation": "Villain!",
+   "ipa": "ʃel.leˈra.to",
+   "words": [
+    [
+     "Scelerato!",
+     "villain (printed with one l; sung scellerato)",
+     "ʃel.leˈra.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e7",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "73",
+   "original": "Ora grida da quel lato, da quel lato!",
+   "translation": "Now she's shouting from over there, from over there!",
+   "ipa": "ˈo.ra ˈgri.da da kwel ˈla.to da kwel ˈla.to",
+   "words": [
+    [
+     "Ora",
+     "now",
+     "ˈo.ra"
+    ],
+    [
+     "grida",
+     "she's shouting",
+     "ˈgri.da"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "lato,",
+     "side",
+     "ˈla.to"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "lato!",
+     "side",
+     "ˈla.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a7",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "73",
+   "original": "Ora grida da quel lato, da quel lato!",
+   "translation": "Now she's shouting from over there, from over there!",
+   "ipa": "ˈo.ra ˈgri.da da kwel ˈla.to da kwel ˈla.to",
+   "words": [
+    [
+     "Ora",
+     "now",
+     "ˈo.ra"
+    ],
+    [
+     "grida",
+     "she's shouting",
+     "ˈgri.da"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "lato,",
+     "side",
+     "ˈla.to"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "lato!",
+     "side",
+     "ˈla.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o7",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "73",
+   "original": "Ora grida da quel lato, da quel lato!",
+   "translation": "Now she's shouting from over there, from over there!",
+   "ipa": "ˈo.ra ˈgri.da da kwel ˈla.to da kwel ˈla.to",
+   "words": [
+    [
+     "Ora",
+     "now",
+     "ˈo.ra"
+    ],
+    [
+     "grida",
+     "she's shouting",
+     "ˈgri.da"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "lato,",
+     "side",
+     "ˈla.to"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "quel",
+     "what",
+     "kwel"
+    ],
+    [
+     "lato!",
+     "side",
+     "ˈla.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z4",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "76",
+   "original": "Scelerato!",
+   "translation": "Villain!",
+   "ipa": "ʃel.leˈra.to",
+   "words": [
+    [
+     "Scelerato!",
+     "villain (printed with one l; sung scellerato)",
+     "ʃel.leˈra.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e8",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "Ah gittiamo giù la porta, giù la porta!",
+   "translation": "Oh, let's smash the door in, smash the door in!",
+   "ipa": "ˈa dʒitˈtja.mo ˈdʒu la ˈpɔr.ta ˈdʒu la ˈpɔr.ta",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "gittiamo",
+     "let's throw",
+     "dʒitˈtja.mo"
+    ],
+    [
+     "giù",
+     "down",
+     "ˈdʒu"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "porta,",
+     "door",
+     "ˈpɔr.ta"
+    ],
+    [
+     "giù",
+     "down",
+     "ˈdʒu"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "porta!",
+     "door",
+     "ˈpɔr.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "let's break down the door"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "down the door"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a8",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "Ah gittiamo giù la porta, giù la porta!",
+   "translation": "Oh, let's smash the door in, smash the door in!",
+   "ipa": "ˈa dʒitˈtja.mo ˈdʒu la ˈpɔr.ta ˈdʒu la ˈpɔr.ta",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "gittiamo",
+     "let's throw",
+     "dʒitˈtja.mo"
+    ],
+    [
+     "giù",
+     "down",
+     "ˈdʒu"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "porta,",
+     "door",
+     "ˈpɔr.ta"
+    ],
+    [
+     "giù",
+     "down",
+     "ˈdʒu"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "porta!",
+     "door",
+     "ˈpɔr.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "let's break down the door"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "down the door"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o8",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "Ah gittiamo giù la porta, giù la porta!",
+   "translation": "Oh, let's smash the door in, smash the door in!",
+   "ipa": "ˈa dʒitˈtja.mo ˈdʒu la ˈpɔr.ta ˈdʒu la ˈpɔr.ta",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "gittiamo",
+     "let's throw",
+     "dʒitˈtja.mo"
+    ],
+    [
+     "giù",
+     "down",
+     "ˈdʒu"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "porta,",
+     "door",
+     "ˈpɔr.ta"
+    ],
+    [
+     "giù",
+     "down",
+     "ˈdʒu"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "porta!",
+     "door",
+     "ˈpɔr.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "let's break down the door"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "down the door"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z5",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "81",
+   "original": "Soccorretemi! Ah soccoretemi! son morta!",
+   "translation": "Come and help me! oh, help me! I'm done for!",
+   "ipa": "sok.korˈre.te.mi ˈa sok.korˈre.te.mi son ˈmɔr.ta",
+   "words": [
+    [
+     "Soccorretemi!",
+     "come and help me",
+     "sok.korˈre.te.mi"
+    ],
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "soccoretemi!",
+     "come and help me (printed with one r)",
+     "sok.korˈre.te.mi"
+    ],
+    [
+     "son",
+     "I am",
+     "son"
+    ],
+    [
+     "morta!",
+     "dead",
+     "ˈmɔr.ta"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "I'm done for"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m8",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "86",
+   "original": "Siam qui noi per tua difesa,",
+   "translation": "We're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "Siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e9",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "86",
+   "original": "Siam qui noi per tua difesa,",
+   "translation": "We're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "Siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a9",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "86",
+   "original": "Siam qui noi per tua difesa,",
+   "translation": "We're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "Siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o9",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "86",
+   "original": "Siam qui noi per tua difesa,",
+   "translation": "We're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "Siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m9",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "siam qui noi per tua difesa,",
+   "translation": "we're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e10",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "siam qui noi per tua difesa,",
+   "translation": "we're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a10",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "siam qui noi per tua difesa,",
+   "translation": "we're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o10",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "siam qui noi per tua difesa,",
+   "translation": "we're here, we'll protect you,",
+   "ipa": "ˈsjam ˈkwi ˈnoi per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "siam",
+     "are",
+     "ˈsjam"
+    ],
+    [
+     "qui",
+     "here",
+     "ˈkwi"
+    ],
+    [
+     "noi",
+     "we",
+     "ˈnoi"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m10",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "90",
+   "original": "per tua difesa, per tua difesa!",
+   "translation": "we'll protect you, we'll protect you!",
+   "ipa": "per ˈtu.a diˈfe.za per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa!",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "to defend you"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e11",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "90",
+   "original": "per tua difesa, per tua difesa!",
+   "translation": "we'll protect you, we'll protect you!",
+   "ipa": "per ˈtu.a diˈfe.za per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa!",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "to defend you"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a11",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "90",
+   "original": "per tua difesa, per tua difesa!",
+   "translation": "we'll protect you, we'll protect you!",
+   "ipa": "per ˈtu.a diˈfe.za per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa!",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "to defend you"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o11",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "90",
+   "original": "per tua difesa, per tua difesa!",
+   "translation": "we'll protect you, we'll protect you!",
+   "ipa": "per ˈtu.a diˈfe.za per ˈtu.a diˈfe.za",
+   "words": [
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa,",
+     "defence",
+     "diˈfe.za"
+    ],
+    [
+     "per",
+     "for",
+     "per"
+    ],
+    [
+     "tua",
+     "your",
+     "ˈtu.a"
+    ],
+    [
+     "difesa!",
+     "defence",
+     "diˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "to defend you"
+    },
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "to defend you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g9",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "94",
+   "original": "Ecco il birbo chi t'ha offesa!",
+   "translation": "Here's the rogue who did you wrong!",
+   "ipa": "ˈɛk.ko‿il ˈbir.bo ki ˈta‿ofˈfe.za",
+   "words": [
+    [
+     "Ecco",
+     "here is",
+     "ˈɛk.ko"
+    ],
+    [
+     "il",
+     "the",
+     "il"
+    ],
+    [
+     "birbo",
+     "rogue",
+     "ˈbir.bo"
+    ],
+    [
+     "chi",
+     "who",
+     "ki"
+    ],
+    [
+     "t'ha",
+     "you has",
+     "ˈta"
+    ],
+    [
+     "offesa!",
+     "wronged",
+     "ofˈfe.za"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "has wronged you"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g10",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "96",
+   "original": "ma da me la pena avrà, la pena avrà!",
+   "translation": "but I'll make him pay for it, make him pay!",
+   "ipa": "ma da ˈme la ˈpe.na‿aˈvra la ˈpe.na‿aˈvra",
+   "words": [
+    [
+     "ma",
+     "but",
+     "ma"
+    ],
+    [
+     "da",
+     "from",
+     "da"
+    ],
+    [
+     "me",
+     "me",
+     "ˈme"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "pena",
+     "penalty",
+     "ˈpe.na"
+    ],
+    [
+     "avrà,",
+     "will get",
+     "aˈvra"
+    ],
+    [
+     "la",
+     "the",
+     "la"
+    ],
+    [
+     "pena",
+     "penalty",
+     "ˈpe.na"
+    ],
+    [
+     "avrà!",
+     "will get",
+     "aˈvra"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "from me he will get his penalty"
+    },
+    {
+     "words": [
+      6,
+      7,
+      8
+     ],
+     "gloss": "he will get his penalty"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "g11",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "mori iniquo!",
+   "translation": "Die, you wretch!",
+   "ipa": "ˈmɔ.ri‿iˈni.kwo",
+   "words": [
+    [
+     "mori",
+     "die",
+     "ˈmɔ.ri"
+    ],
+    [
+     "iniquo!",
+     "wretch",
+     "iˈni.kwo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l13",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "Ah, cosa fate!",
+   "translation": "Hey, what are you up to!",
+   "ipa": "ˈa ˈkɔ.za ˈfa.te",
+   "words": [
+    [
+     "Ah,",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "fate!",
+     "are you doing",
+     "ˈfa.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g12",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "100",
+   "original": "mori, dico! mori, dico!",
+   "translation": "Die, I tell you! die, I tell you!",
+   "ipa": "ˈmɔ.ri ˈdi.ko ˈmɔ.ri ˈdi.ko",
+   "words": [
+    [
+     "mori,",
+     "die",
+     "ˈmɔ.ri"
+    ],
+    [
+     "dico!",
+     "I tell you",
+     "ˈdi.ko"
+    ],
+    [
+     "mori,",
+     "die",
+     "ˈmɔ.ri"
+    ],
+    [
+     "dico!",
+     "I tell you",
+     "ˈdi.ko"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "l14",
+   "role": "leporello",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "100",
+   "original": "ah cosa fate! ah cosa fate!",
+   "translation": "hey, what are you up to! hey, what are you up to!",
+   "ipa": "ˈa ˈkɔ.za ˈfa.te ˈa ˈkɔ.za ˈfa.te",
+   "words": [
+    [
+     "ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "fate!",
+     "are you doing",
+     "ˈfa.te"
+    ],
+    [
+     "ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "cosa",
+     "what",
+     "ˈkɔ.za"
+    ],
+    [
+     "fate!",
+     "are you doing",
+     "ˈfa.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o12",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "102",
+   "original": "Nol sperate! nol sperate!",
+   "translation": "Don't count on it! don't count on it!",
+   "ipa": "nol speˈra.te nol speˈra.te",
+   "words": [
+    [
+     "Nol",
+     "it not (non lo)",
+     "nol"
+    ],
+    [
+     "sperate!",
+     "hope",
+     "speˈra.te"
+    ],
+    [
+     "nol",
+     "it not (non lo)",
+     "nol"
+    ],
+    [
+     "sperate!",
+     "hope",
+     "speˈra.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o13",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "104",
+   "original": "L'empio crede con tal frode, con tal frode, con tal frode",
+   "translation": "The godless man thinks a trick like this, a trick like this, a trick like this",
+   "ipa": "ˈlɛm.pjo ˈkre.de kon ˈtal ˈfrɔ.de kon ˈtal ˈfrɔ.de kon ˈtal ˈfrɔ.de",
+   "words": [
+    [
+     "L'empio",
+     "the godless man",
+     "ˈlɛm.pjo"
+    ],
+    [
+     "crede",
+     "thinks",
+     "ˈkre.de"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "tal",
+     "such a",
+     "ˈtal"
+    ],
+    [
+     "frode,",
+     "trick",
+     "ˈfrɔ.de"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "tal",
+     "such a",
+     "ˈtal"
+    ],
+    [
+     "frode,",
+     "trick",
+     "ˈfrɔ.de"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "tal",
+     "such a",
+     "ˈtal"
+    ],
+    [
+     "frode",
+     "trick",
+     "ˈfrɔ.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "with such a trick"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "with such a trick"
+    },
+    {
+     "words": [
+      8,
+      9,
+      10
+     ],
+     "gloss": "with such a trick"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e12",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "L'empio crede con tal frode, con tal frode",
+   "translation": "The godless man thinks a trick like this, a trick like this",
+   "ipa": "ˈlɛm.pjo ˈkre.de kon ˈtal ˈfrɔ.de kon ˈtal ˈfrɔ.de",
+   "words": [
+    [
+     "L'empio",
+     "the godless man",
+     "ˈlɛm.pjo"
+    ],
+    [
+     "crede",
+     "thinks",
+     "ˈkre.de"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "tal",
+     "such a",
+     "ˈtal"
+    ],
+    [
+     "frode,",
+     "trick",
+     "ˈfrɔ.de"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "tal",
+     "such a",
+     "ˈtal"
+    ],
+    [
+     "frode",
+     "trick",
+     "ˈfrɔ.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "with such a trick"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "with such a trick"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a12",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "106",
+   "original": "L'empio crede con tal frode",
+   "translation": "The godless man thinks a trick like this",
+   "ipa": "ˈlɛm.pjo ˈkre.de kon ˈtal ˈfrɔ.de",
+   "words": [
+    [
+     "L'empio",
+     "the godless man",
+     "ˈlɛm.pjo"
+    ],
+    [
+     "crede",
+     "thinks",
+     "ˈkre.de"
+    ],
+    [
+     "con",
+     "with",
+     "kon"
+    ],
+    [
+     "tal",
+     "such a",
+     "ˈtal"
+    ],
+    [
+     "frode",
+     "trick",
+     "ˈfrɔ.de"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "with such a trick"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e13",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "107",
+   "original": "di nasconder l'empietà, l'empietà!",
+   "translation": "will cover up his crimes, his crimes!",
+   "ipa": "di naˈskon.der lem.pjeˈta lem.pjeˈta",
+   "words": [
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "nasconder",
+     "cover up",
+     "naˈskon.der"
+    ],
+    [
+     "l'empietà,",
+     "the ungodliness",
+     "lem.pjeˈta"
+    ],
+    [
+     "l'empietà!",
+     "the ungodliness",
+     "lem.pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a13",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "107",
+   "original": "di nasconder l'empietà, l'empietà!",
+   "translation": "will cover up his crimes, his crimes!",
+   "ipa": "di naˈskon.der lem.pjeˈta lem.pjeˈta",
+   "words": [
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "nasconder",
+     "cover up",
+     "naˈskon.der"
+    ],
+    [
+     "l'empietà,",
+     "the ungodliness",
+     "lem.pjeˈta"
+    ],
+    [
+     "l'empietà!",
+     "the ungodliness",
+     "lem.pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o14",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "107",
+   "original": "di nasconder l'empietà, l'empietà!",
+   "translation": "will cover up his crimes, his crimes!",
+   "ipa": "di naˈskon.der lem.pjeˈta lem.pjeˈta",
+   "words": [
+    [
+     "di",
+     "to",
+     "di"
+    ],
+    [
+     "nasconder",
+     "cover up",
+     "naˈskon.der"
+    ],
+    [
+     "l'empietà,",
+     "the ungodliness",
+     "lem.pjeˈta"
+    ],
+    [
+     "l'empietà!",
+     "the ungodliness",
+     "lem.pjeˈta"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g13",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "109",
+   "original": "Donna Elvira?",
+   "translation": "Donna Elvira?",
+   "ipa": "ˈdɔn.na‿elˈvi.ra",
+   "words": [
+    [
+     "Donna",
+     "Donna (lady)",
+     "ˈdɔn.na"
+    ],
+    [
+     "Elvira?",
+     "Elvira",
+     "elˈvi.ra"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e14",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "109",
+   "original": "Sì, malvaggio!",
+   "translation": "Yes, you evil man!",
+   "ipa": "ˈsi malˈva.dʒo",
+   "words": [
+    [
+     "Sì,",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "malvaggio!",
+     "evil man (printed malvaggio; sung malvagio)",
+     "malˈva.dʒo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g14",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "110",
+   "original": "Don Ottavio?",
+   "translation": "Don Ottavio?",
+   "ipa": "dɔn otˈta.vjo",
+   "words": [
+    [
+     "Don",
+     "Don (sir)",
+     "dɔn"
+    ],
+    [
+     "Ottavio?",
+     "Ottavio",
+     "otˈta.vjo"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o15",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "110",
+   "original": "Sì, signore.",
+   "translation": "Yes, my lord.",
+   "ipa": "ˈsi siɲˈɲo.re",
+   "words": [
+    [
+     "Sì,",
+     "yes",
+     "ˈsi"
+    ],
+    [
+     "signore.",
+     "sir",
+     "siɲˈɲo.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "g15",
+   "role": "dongiovanni",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "Ah credete!",
+   "translation": "Oh, you must believe me!",
+   "ipa": "ˈa kreˈde.te",
+   "words": [
+    [
+     "Ah",
+     "ah",
+     "ˈa"
+    ],
+    [
+     "credete!",
+     "believe (me)",
+     "kreˈde.te"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a14",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "Traditore, traditore, traditore!",
+   "translation": "Traitor, traitor, traitor!",
+   "ipa": "tra.diˈto.re tra.diˈto.re tra.diˈto.re",
+   "words": [
+    [
+     "Traditore,",
+     "traitor",
+     "tra.diˈto.re"
+    ],
+    [
+     "traditore,",
+     "traitor",
+     "tra.diˈto.re"
+    ],
+    [
+     "traditore!",
+     "traitor",
+     "tra.diˈto.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z6",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "112",
+   "original": "Traditore, traditore!",
+   "translation": "Traitor, traitor!",
+   "ipa": "tra.diˈto.re tra.diˈto.re",
+   "words": [
+    [
+     "Traditore,",
+     "traitor",
+     "tra.diˈto.re"
+    ],
+    [
+     "traditore!",
+     "traitor",
+     "tra.diˈto.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m11",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "112",
+   "original": "Traditore, traditore!",
+   "translation": "Traitor, traitor!",
+   "ipa": "tra.diˈto.re tra.diˈto.re",
+   "words": [
+    [
+     "Traditore,",
+     "traitor",
+     "tra.diˈto.re"
+    ],
+    [
+     "traditore!",
+     "traitor",
+     "tra.diˈto.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e15",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "112",
+   "original": "Traditore, traditore!",
+   "translation": "Traitor, traitor!",
+   "ipa": "tra.diˈto.re tra.diˈto.re",
+   "words": [
+    [
+     "Traditore,",
+     "traitor",
+     "tra.diˈto.re"
+    ],
+    [
+     "traditore!",
+     "traitor",
+     "tra.diˈto.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o16",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "112",
+   "original": "Traditore, traditore!",
+   "translation": "Traitor, traitor!",
+   "ipa": "tra.diˈto.re tra.diˈto.re",
+   "words": [
+    [
+     "Traditore,",
+     "traitor",
+     "tra.diˈto.re"
+    ],
+    [
+     "traditore!",
+     "traitor",
+     "tra.diˈto.re"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "z7",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "113",
+   "original": "Tutto, tutto già si sà,",
+   "translation": "We know everything, everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "Tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sà,",
+     "known (printed sà, with an accent)",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m12",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "114",
+   "original": "Tutto, tutto già si sa,",
+   "translation": "We know everything, everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "Tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e16",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "Tutto, tutto già si sa,",
+   "translation": "We know everything, everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "Tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a15",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "Tutto, tutto già si sa,",
+   "translation": "We know everything, everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "Tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o17",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "Tutto, tutto già si sa,",
+   "translation": "We know everything, everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "Tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z8",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "115",
+   "original": "tutto, tutto già si sà,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sà,",
+     "known (printed sà, with an accent)",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m13",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "116",
+   "original": "tutto tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e17",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "117",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a16",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "117",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o18",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "117",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z9",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "117",
+   "original": "tutto, tutto già si sa, già si sa,",
+   "translation": "everything, we know everything, we know it,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e18",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "118",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a17",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "118",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o19",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "119",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z10",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "120",
+   "original": "tutto, tutto, tutto, tutto già si sa,",
+   "translation": "everything, everything, everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m14",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "120",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "e19",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "120",
+   "original": "tutto, tutto, tutto, tutto già si sa,",
+   "translation": "everything, everything, everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "a18",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "120",
+   "original": "tutto, tutto, tutto, tutto già si sa,",
+   "translation": "everything, everything, everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "o20",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "121",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "m15",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "122",
+   "original": "tutto, tutto già si sa,",
+   "translation": "everything, we know everything,",
+   "ipa": "ˈtut.to ˈtut.to ˈdʒa si ˈsa",
+   "words": [
+    [
+     "tutto,",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "già",
+     "already",
+     "ˈdʒa"
+    ],
+    [
+     "si",
+     "(it) is",
+     "si"
+    ],
+    [
+     "sa,",
+     "known",
+     "ˈsa"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "is already known"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "z11",
+   "role": "zerlina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "124",
+   "original": "tutto! tutto! tutto!",
+   "translation": "everything! everything! everything!",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to",
+   "words": [
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "m16",
+   "role": "masetto",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "124",
+   "original": "tutto! tutto! tutto!",
+   "translation": "everything! everything! everything!",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to",
+   "words": [
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "e20",
+   "role": "elvira",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "124",
+   "original": "tutto! tutto! tutto!",
+   "translation": "everything! everything! everything!",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to",
+   "words": [
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "a19",
+   "role": "anna",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "124",
+   "original": "tutto! tutto! tutto!",
+   "translation": "everything! everything! everything!",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to",
+   "words": [
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "o21",
+   "role": "ottavio",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "124",
+   "original": "tutto! tutto! tutto!",
+   "translation": "everything! everything! everything!",
+   "ipa": "ˈtut.to ˈtut.to ˈtut.to",
+   "words": [
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ],
+    [
+     "tutto!",
+     "everything",
+     "ˈtut.to"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

@@ -1438,7 +1438,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",
@@ -1593,7 +1594,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",
@@ -1769,7 +1771,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",
@@ -1887,7 +1890,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",
@@ -2040,7 +2044,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",
@@ -2182,7 +2187,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",
@@ -2300,7 +2306,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Meco tu dei ballare",
       "kind": "Finale (Minuetto) · Act 1",
-      "id": "Act 1: Meco tu dei ballare"
+      "id": "Act 1: Meco tu dei ballare",
+      "editionId": "mozart-meco-tu-dei-ballare"
      },
      {
       "title": "Trema, trema, scellerato!",

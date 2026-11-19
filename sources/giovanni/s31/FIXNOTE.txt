@@ -1,0 +1,20 @@
+S31 "Meco tu dei ballare" (No. 13 Finale, from the Minuetto through the Allegro assai and the Andante maestoso "Ecco il birbo" to
+the fermata and double bar before the Allegro "Trema, trema, scellerato!"; Schirmer 1900 pp. 135-146, bars 1-127), build chain
+(reproduced byte for byte from the files here, TMPDIR on /dev/shm):
+  kit/cleanv.py VM_S31.txt VM_S31.clean.txt  (identical to VM_S31.txt: no voice slurs to drop)
+  kit/build.sh VM_S31.clean.txt PM_S31.txt RAW "$(cat segs.txt)" "Meco tu dei ballare" "$(cat singers.txt)"  -> s31.raw.xml
+  kit/fix64.py s31.raw.xml S        -> s31.xml (identical to s31.raw.xml)
+  kit/xfix.py s31.xml F fixes.txt   -> s31f.xml (fixes.txt holds only "final": the light-heavy barline on bar 127 of all 8
+                                       parts, nothing else; the fresh-check findings were applied in VM_/PM_ before the build).
+Chunks: S31a pp. 135-138 bars 1-56, S31b pp. 139-142 bars 57-99, S31c pp. 143-146 bars 100-127 (VM_/PM_S31a-c, per-reader
+V_/P_S31x_A/B from b31/VA_, VB_, PA_, PB_); VM_S31.txt / PM_S31.txt are the merged files.
+Singers (staff order): Z, M, G, L, E, A, O (treble-8, sounding pitch); piano P8.
+Shared bar: bar 1 (p.135 sys 1 bar 5, first Minuetto bar) also ends S30: Don Giovanni's "-ri-ni!" (end of "ballerini") on its
+downbeat; S30 ends on the bar before. The syllables are in the score here but in no phrase of language.json.
+Bars 3-8: Don Giovanni's bracketed "(Meco tu dei ballare; Zerlina, vien pur quà!)" in small notes (footnote: not in the autograph
+score, found in the earliest copied voice parts) is written as part of his line.
+Bars 49-56: the print gives Don Giovanni and Zerlina 2/4 and Leporello and Masetto 3/8 against the 3/4; the score writes every part
+on the 3/4 grid on purpose (3/8 notes as triplets).
+Print readings kept: Zerlina "sà," with an accent in bars 115 and 117; Donna Anna's dot in bar 106 and Don Ottavio's rest in bar 111
+supplied where the print omits them.
+Judge/diff files (vdiff, pdiff, vsem, print_S31a-c.pdf) stay in ext/giovanni/b31.

@@ -4649,6 +4649,47 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-meco-tu-dei-ballare": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Finale (Minuetto)",
+    facts: {
+      key: "G major for the Minuetto; no key signature from the Allegro assai (bar 63, Zerlina's cry for help) to the end, the changing keys written with accidentals",
+      time: "3/4 Minuetto (bars 1-62); 4/4 Allegro assai from bar 63; 4/4 Andante maestoso from bar 94 (“Ecco il birbo”)",
+      tempo: "Minuetto at ♩ = 89, from Iván Fischer's Minuetto track and three recordings whose track runs on through the Allegro assai (Giulini, Muti, Marriner); Allegro assai at ♩ = 232 (a half note = 116), from the one recording that gives it a track of its own (Iván Fischer), so less certain; Andante maestoso at ♩ = 89, the median of five recordings (Giulini, Klemperer, Barenboim, Marriner, Iván Fischer); the fermatas are held; about 4 minutes 10 seconds in all; Mozart gives the words only",
+    },
+    notePlaceholder: "Three dances at once while Giovanni steers Zerlina to the door; her scream; then Giovanni's bluff with Leporello, and the masks come off",
+    about: (
+      <>
+        <p>
+          Act 1, the ballroom of Don Giovanni's palace, in the finale. The music starts again: a minuet for the masked guests, and
+          two more dances on stage bands at the same time, a contredanse for Giovanni and Zerlina and a German dance into which
+          Leporello drags the unwilling Masetto. Donna Anna can hardly bear to watch; Don Ottavio and Donna Elvira tell her to keep
+          up the act, sure that the villain is walking into his own trap. Giovanni draws Zerlina into the next room, and her scream
+          for help stops everything. Anna, Elvira, Ottavio and Masetto run to break down the door. Giovanni comes out, sword in hand,
+          dragging Leporello and pretending he is the culprit; nobody believes him. The three guests take off their masks: Donna
+          Elvira, Don Ottavio, and Donna Anna. “Traitor! Everything is known!”
+        </p>
+        <p>
+          Score: No. 13, the Finale, from the Minuetto to the fermata before “Trema, trema, scellerato!” (a separate piece), vocal
+          score pages 135–146, 127 bars, from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written out
+          from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on
+          the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don
+          Ottavio's part, printed in the treble clef, is written at sounding pitch. In bars 49–56 the print gives Don Giovanni and
+          Zerlina 2/4 and Leporello and Masetto 3/8 against the Minuetto's 3/4, the three dances at once; this score writes every
+          part on the 3/4 grid on purpose, the 3/8 notes as triplets, so that the parts line up as they sound. Don Giovanni's
+          “(Meco tu dei ballare; Zerlina, vien pur quà!)” in bars 3–8 is printed in small notes, with a footnote that it is not in
+          the autograph score but is found in the earliest copied voice parts; it is kept as part of his line. The first bar is
+          also the last of the piece before: it holds Don Giovanni's “-rini!”, the end of “ballerini”, which is not part of this
+          piece's words. Only the Italian words are kept, with the print's spelling (“ajuto”, “Scelerato”, “gittiamo”, “chi t'ha
+          offesa”, “malvaggio”, and Zerlina's “sà” with an accent in two bars).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

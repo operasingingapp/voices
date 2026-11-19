@@ -1,0 +1,265 @@
+{
+ "editionId": "mozart-meco-tu-dei-ballare",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Meco tu dei ballare",
+ "subtitle": "Don Giovanni, Leporello, Zerlina, Masetto, Donna Elvira, Donna Anna and Don Ottavio: the Minuetto to “Ecco il birbo” in the finale from Don Giovanni, Act 1 (No. 13)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P8",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Minuetto: (Meco tu dei ballare) · Da bravi, via ballate! · Quella è la contadina · Io moro! · Simulate",
+   "start": "1",
+   "end": "17"
+  },
+  {
+   "id": "b",
+   "label": "Va bene in verità! · A bada tien Masetto · Il tuo compagno io sono · Vien quà, Masetto caro",
+   "start": "18",
+   "end": "33"
+  },
+  {
+   "id": "c",
+   "label": "Eh, balla, amico mio! · No, no, non voglio! · Resister non poss’ io! · Fingete per pietà!",
+   "start": "34",
+   "end": "48"
+  },
+  {
+   "id": "d",
+   "label": "Vieni con me, mia vita! · O numi! son tradita · Qui nasce una ruina · L’iniquo da se stesso nel laccio se ne va!",
+   "start": "49",
+   "end": "61"
+  },
+  {
+   "id": "e",
+   "label": "Allegro assai: Gente, ajuto! · Soccorriamo l’innocente · Scelerato! · Ora grida da quel lato",
+   "start": "62",
+   "end": "77"
+  },
+  {
+   "id": "f",
+   "label": "Ah gittiamo giù la porta · Soccorretemi! son morta! · Siam qui noi per tua difesa (to the fermata)",
+   "start": "78",
+   "end": "93"
+  },
+  {
+   "id": "g",
+   "label": "Andante maestoso: Ecco il birbo · Mori, iniquo! · Ah, cosa fate! · Nol sperate! · L’empio crede con tal frode",
+   "start": "94",
+   "end": "108"
+  },
+  {
+   "id": "h",
+   "label": "Donna Elvira? · Don Ottavio? · Ah credete! · Traditore! · Tutto già si sa (to the fermata)",
+   "start": "109",
+   "end": "127"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1, the end of the finale’s ballroom scene (scene 20 in most librettos; Castel’s Scene Twenty Two), No. 13 Finale, from the Minuetto (“Meco tu dei ballare”) through Zerlina’s cry for help (Allegro assai) and Don Giovanni’s “Ecco il birbo” (Andante maestoso) to the fermata before the Allegro “Trema, trema, scellerato!”",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, which differ from the libretto in places: Zerlina’s ajuto, Scelerato! (libretto scellerato), soccoretemi (her second, printed with one r), son morta! (libretto o son morta) and sà, with an accent in bars 115 and 117; Ah gittiamo (libretto gettiamo); Don Giovanni’s chi t’ha offesa (libretto che); Donna Elvira’s malvaggio (libretto malvagio); Donna Anna’s poss’ io printed as two words. Don Giovanni’s “(Meco tu dei ballare; Zerlina, vien pur quà!)” in bars 3–8 is printed in small notes with the footnote that it is not in the autograph score but is found in the earliest copied voice parts; it is not in the libretto and is kept as part of his line. The first bar ends the previous piece: Don Giovanni’s -rini! on its downbeat is the end of ballerini and is not part of this piece’s words."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 135–146, 127 bars: from page 135, system 1, bar 5 (the first bar of the Minuetto, shared with the previous piece) to the fermata and double bar at the end of page 146",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in three chunks (pp. 135–138, 139–142, 143–146): the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don Ottavio’s part is written at sounding pitch. In bars 49–56 the print gives some singers their own time signatures against the Minuetto’s 3/4 (Don Giovanni and Zerlina 2/4, the contredanse; Leporello and Masetto 3/8, the German dance); the score writes every part on the 3/4 grid on purpose, the 3/8 notes as triplets, so the parts line up as they sound. Print readings kept: Donna Anna’s dot in bar 106 and Don Ottavio’s rest in bar 111 are supplied where the print omits them. The English singing translation and the stage directions are left out. Minuetto 3/4 G major bars 1–62; Allegro assai 4/4, no key signature, bars 63–93 (fermatas in bar 93); Andante maestoso 4/4, no key signature, bars 94–127 (fermata in the last bar). Playback tempo from complete recordings’ track times: the Andante maestoso (bars 94–127, the track “Ecco il birbo”) median 1:32 of five sets (Giulini 1959 1:32, Klemperer 1966 1:37, Barenboim 1975 1:36, Marriner 1991 1:24, I. Fischer 2026 1:30): ♩ = 89; the Allegro assai (bars 63–93) from the one set that gives it a track of its own (I. Fischer, “Gente aiuto, aiuto gente!” 0:32): ♩ = 232 (half note 116); the Minuetto (bars 1–62) from I. Fischer’s own track (“Finale, Menuetto” 2:13) and from three sets whose track runs from the Minuetto (or the three bars before it) to the end of the Allegro assai (Giulini 2:47, Muti 1990 2:41, Marriner 2:29), less those bars and the Allegro assai: median ♩ = 89; about 4 minutes 10 seconds in all. Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}
