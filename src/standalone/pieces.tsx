@@ -4579,6 +4579,76 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-protegga-il-giusto-cielo": {
+    portrait: "giovanni:anna",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "B-flat major",
+      time: "¢ (alla breve)",
+      tempo: "Adagio, played at a half note = 19 (♩ = 38), about 2 minutes 20 seconds, the median of five recordings that give the trio its own track (Giulini, Klemperer, Barenboim, Haitink, Iván Fischer); Mozart gives the word only",
+    },
+    notePlaceholder: "Still and sustained: three long lines over soft wind chords, a prayer rather than a threat, with the turns in Anna's part sung lightly",
+    about: (
+      <>
+        <p>
+          Act 1, the garden outside Don Giovanni's palace, in the finale. Donna Elvira, Donna Anna and Don Ottavio, masked, have just
+          been invited in to the ball by Leporello from a window. Before they go in, they stop to pray. Anna and Ottavio ask heaven,
+          in its justice, to watch over the zeal of their hearts; Elvira asks it to take revenge for her betrayed love. It is a
+          still moment before they walk into the party to unmask him.
+        </p>
+        <p>
+          Score: the Adagio of No. 13, the Finale (vocal score pages 124–126, 22 bars), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a
+          fresh checker. The first bar is also the last of the piece before: it holds Leporello's “-mor!”, the end of his “prova
+          farà d'amor!”, and he sings nothing else here. Don Ottavio's part, printed in the treble clef, is written at sounding
+          pitch. Donna Anna's small-print turns in bars 11 and 15 are grace notes; the last two bars are for the piano alone. Only
+          the Italian words are kept, with the print's spelling and repeats.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-riposate-vezzose-ragazze": {
+    portrait: "giovanni:dongiovanni",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "E-flat major; C major from the Maestoso (bar 88) to the end",
+      time: "6/8 Allegro; 2/4 Maestoso from bar 88",
+      tempo: "Allegro at ♩ = 196 (a dotted quarter ≈ 65), from the median track time of five recordings (Giulini, Klemperer, Barenboim, Marriner, Iván Fischer); Maestoso at ♩ = 62, from the four recordings that give it a track of its own (Giulini, Marriner, Iván Fischer, Muti), about 2¾ minutes in all; Mozart gives the words only",
+    },
+    notePlaceholder: "Host and servant pressing ices and chocolate on the guests while Masetto seethes; the four-voice aside; then the masked guests' stately entry and everyone's 'Viva la libertà!'",
+    about: (
+      <>
+        <p>
+          Act 1, the ballroom of Don Giovanni's palace, during the Act 1 finale. A country dance has just ended. Giovanni and
+          Leporello send round coffee, chocolate, ices and sweets, flirting with the village girls, Giovanni above all with
+          Zerlina, while Masetto watches, furious, and warns her to be careful. Zerlina sees that Masetto looks wild-eyed and
+          fears things are turning ugly; Giovanni and Leporello see it too and tell themselves to keep their wits about them.
+          Leporello then shows in the three masked guests, Donna Elvira, Donna Anna and Don Ottavio, and Giovanni welcomes them:
+          the house is open to everyone. They thank him for his generosity, and all join in “Viva la libertà!” before Giovanni
+          calls for the music to start again.
+        </p>
+        <p>
+          Score: the ballroom scene of No. 13, the Finale, from its Allegro to the bar before the Minuetto (“Meco tu dei ballare”,
+          a separate piece), vocal score pages 127–135, 133 bars, from the G. Schirmer vocal score (New York, 1900; IMSLP #68957),
+          public domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers,
+          every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose
+          findings were corrected. Don Ottavio's part, printed in the treble clef, is written at sounding pitch. Only the Italian
+          words are kept, with the print's spelling (“giovinetti”, “Cioccolate”, “Gianotta”, Masetto's “Tocca, tocca!”, and
+          Leporello's one “liberta” printed without its accent); Don Giovanni's last word, “ballerini”, ends on the first bar of
+          the Minuetto.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

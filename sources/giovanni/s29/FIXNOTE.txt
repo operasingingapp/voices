@@ -1,0 +1,12 @@
+S29 "Protegga il giusto cielo" (No. 13 Finale, the Adagio, the trio of the masks; Schirmer 1900 pp. 124-126, from p.124
+sys 3 bar 2 to the last bar of p.126, bars 1-22), build chain (reproduced byte for byte from the files here, TMPDIR on /dev/shm):
+  kit/build.sh VM_S29.clean.txt PM_S29.txt RAW "$(cat segs.txt)" "Protegga il giusto cielo" "$(cat singers.txt)"  -> s29.raw.xml
+  kit/fix64.py s29.raw.xml S        -> s29.xml (identical to s29.raw.xml)
+  kit/xfix.py s29.xml F fixes.txt   -> s29f.xml (fixes.txt: "final", the light-heavy barline on bar 22 of all 5 parts, and
+                                       "timesym 1 cut", the cut-time symbol on bar 1's time signature; nothing else). No hand fix.
+One reader pass, no chunks: VM_S29.txt / PM_S29.txt are the merged files (VM_S29.clean.txt identical); per-reader
+V_/P_S29_A/B from b29/VA_, VB_, PA_, PB_.
+Singers (staff order): A, E, O (treble-8, sounding pitch), L (Leporello: bar 1 only, "-mor!", the end of "d'amor" from S28).
+Shared bar: bar 1 (p.124 sys 3 bar 2, the first Adagio bar) is S28's continuation: S28 ends on "d'a-", this piece starts on
+"-mor!". Anna's small-print turns in bars 11 and 15 (4 x 32nd each) and Elvira's small notes in bars 7 and 10 are grace notes.
+Judge/diff files (vdiff, pdiff, vsem, print_S29.pdf) stay in ext/giovanni/b29.

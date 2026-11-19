@@ -1432,7 +1432,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",
@@ -1586,7 +1587,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",
@@ -1755,12 +1757,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Protegga il giusto cielo",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Protegga il giusto cielo"
+      "id": "Act 1: Protegga il giusto cielo",
+      "editionId": "mozart-protegga-il-giusto-cielo"
      },
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",
@@ -1871,12 +1875,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Protegga il giusto cielo",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Protegga il giusto cielo"
+      "id": "Act 1: Protegga il giusto cielo",
+      "editionId": "mozart-protegga-il-giusto-cielo"
      },
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",
@@ -2028,7 +2034,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",
@@ -2163,12 +2170,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Protegga il giusto cielo",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Protegga il giusto cielo"
+      "id": "Act 1: Protegga il giusto cielo",
+      "editionId": "mozart-protegga-il-giusto-cielo"
      },
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",
@@ -2285,7 +2294,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Riposate, vezzose ragazze!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Riposate, vezzose ragazze!"
+      "id": "Act 1: Riposate, vezzose ragazze!",
+      "editionId": "mozart-riposate-vezzose-ragazze"
      },
      {
       "title": "Meco tu dei ballare",

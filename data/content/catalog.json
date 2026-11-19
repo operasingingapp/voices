@@ -6495,6 +6495,46 @@
     }
   },
   {
+    "editionId": "mozart-protegga-il-giusto-cielo",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-protegga-il-giusto-cielo@1.0.0-schirmer#322704e281",
+    "title": "Protegga il giusto cielo",
+    "subtitle": "Donna Anna, Donna Elvira and Don Ottavio: the trio of the masks in the finale from Don Giovanni, Act 1 (No. 13)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 22,
+    "durationSec": 139,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 29,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-quante-buffonerie",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-quante-buffonerie@1.0.0-klengel#d2e2a62b8f",
@@ -6830,6 +6870,70 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 209,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-riposate-vezzose-ragazze",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-riposate-vezzose-ragazze@1.0.0-schirmer#151c00c063",
+    "title": "Riposate, vezzose ragazze!",
+    "subtitle": "Don Giovanni, Leporello, Zerlina, Masetto, Donna Elvira, Donna Anna and Don Ottavio: the ballroom scene of the finale from Don Giovanni, Act 1 (No. 13)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      }
+    ],
+    "measures": 133,
+    "durationSec": 169,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 75,
       "withAudio": 0,
       "reviewed": 0
     }

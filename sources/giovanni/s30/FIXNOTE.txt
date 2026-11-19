@@ -1,0 +1,17 @@
+S30 "Riposate, vezzose ragazze!" (No. 13 Finale, the ballroom scene from its Allegro to the bar before the Minuetto; Schirmer
+1900 pp. 127-135, bars 1-133), build chain (reproduced byte for byte from the files here, TMPDIR on /dev/shm):
+  kit/cleanv.py VM_S30.txt VM_S30.clean.txt  (voice slurs dropped for the build; otherwise identical)
+  kit/build.sh VM_S30.clean.txt PM_S30.txt RAW "$(cat segs.txt)" "Riposate, vezzose ragazze!" "$(cat singers.txt)"  -> s30.raw.xml
+  kit/fix64.py s30.raw.xml S        -> s30.xml (identical to s30.raw.xml)
+  kit/xfix.py s30.xml F fixes.txt   -> s30f.xml (fixes.txt holds only "final": the light-heavy barline on bar 133 of all 8
+                                       parts, nothing else; the fresh-check findings were applied in VM_/PM_ before the build).
+Chunks: S30a pp. 127-130 bars 1-77, S30b pp. 131-135 bars 78-133 (VM_/PM_S30a-b, per-reader V_/P_S30x_A/B from b30/VA_,
+VB_, PA_, PB_); VM_S30.txt / PM_S30.txt are the merged files.
+Singers (staff order): Z, M, G, L, E, A, O (treble-8, sounding pitch). Bar 119: Don Giovanni's C4 has a second notehead (C3,
+on G2) on the same stem; it plays with the line, it is not a role.
+Shared bar: p.135 sys 1 bar 5 (first Minuetto bar, Giovanni's "-ri-ni!") belongs to S31; this piece ends on p.135 sys 1 bar 4,
+so Giovanni's last syllables here are "bal-le-".
+Print question kept as printed: bar 121, Leporello "ta," without the accent (liberta).
+Lyric artefact kept as built: bar 14, Leporello's syllable is "-sca" (the reader's continuation hyphen in VM "-sca-"); the
+importer matches words by letters, so it aligns; the app's score view may show the hyphen.
+Judge/diff files (vdiff, pdiff, vsem, print_S30a-b.pdf) stay in ext/giovanni/b30.

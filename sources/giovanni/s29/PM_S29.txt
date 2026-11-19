@@ -1,0 +1,69 @@
+# S29 Finale "Protegga il giusto cielo" (Act 1), Schirmer pp. 124-126, piano
+# page 124 system 3: bar 1 = its 2nd bar (the 1st bar of that system ends chunk S28c)
+# bar 1: Adagio, cut time (2/2), key B-flat major (two flats); "Orchestra p" (Str.); courtesy flat on E in both hands
+# JUDGE bar 1 RH: X - 'Orchestra p' is one marking starting under the downbeat chord (the p glyph itself sits under beat 2's Eb4; kept on the entry)
+1 RH1: dyn:p F4+A4+F5:q r:e. F4:s Eb4:e r:s Eb4:s D4:e r:s D4:s
+# MARKS bar 1 LH1: dyn:p (Orchestra p between the staves, both hands)
+1 LH1: dyn:p F3:q r:e. F3:s Eb3:e r:e D3:e r:e
+2 RH1: C4:q r:e. Eb4:s D4:e r:s D4:s C4:e r:s C4:s
+2 LH1: C3:q r:e. Eb3:s D3:e r:e C3:e r:e
+3 RH1: Bb3:q r:q r:h
+3 LH1: Bb2:q r:q r:h
+# page 124 system 4 starts bar 4
+# JUDGE bar 4 RH: X - staccato dot on all three chords under the slur, first included
+4 RH1: r:q Eb5+A5+C6:q*( Eb5+A5+C6:q* Eb5+A5+C6:q*)
+# JUDGE bar 4 LH: X - staccato dot on all three chords, first included
+4 LH1: r:q F3+C4+F4:q*( F3+C4+F4:q* F3+C4+F4:q*)
+5 RH1: Eb5+A5+C6:h r:h
+5 LH1: F3+C4+F4:h r:h
+# 6 RH: clef changes to bass at the end of the bar
+6 RH1: r:q D5+F5+Bb5:q*( D5+F5+Bb5:q* D5+F5+Bb5:q*) clef:F
+6 LH1: r:q Bb2+F3+Bb3:q*( Bb2+F3+Bb3:q* Bb2+F3+Bb3:q*)
+# page 125 system 1 starts bar 7 (RH in bass clef)
+7 RH1: D3:s( F3:s Bb3:s F3:s D3:s F3:s Bb3:s F3:s D3:s F3:s Bb3:s F3:s D3:s F3:s Bb3:s F3:s)
+7 LH1: Bb2:q Bb1:q r:e F2:e D2:e Bb1:e
+# MARKS bar 8 RH1: slur no longer ends on the last G3; it crosses the bar line to bar 9's first chord
+8 RH1: Eb3:s( G3:s Bb3:s G3:s Eb3:s G3:s Bb3:s G3:s Eb3:s G3:s Bb3:s G3:s Eb3:s G3:s Bb3:s G3:s
+8 LH1: Eb2:q Eb2:q r:e Bb2:e G2:e Eb2:e
+# page 125 system 2 starts bar 9 (RH bass clef, treble clef after the first chord)
+# MARKS bar 9 RH1: slur from bar 8 ends on the first chord
+9 RH1: C3+Eb3+A3:q) clef:G C5+Eb5+A5:q( Bb4+D5+Bb5:q Bb4+C5+G5:q)
+9 LH1: F2:q F3:q G3:q Eb3:q
+10 RH1: Bb4+D5+F5:q Bb4+D5:q A4+C5+Eb5:q Eb5+F5+A5+C6:q
+10 LH1: F3:h F2:h
+# 11 RH: clef changes to bass at the end of the bar
+11 RH1: Eb5+F5+A5+C6:h( D5+F5+Bb5+D6:q) r:q clef:F
+11 LH1: F3:h( Bb2+Bb3:q) r:q
+# page 125 system 3 starts bar 12 (RH in bass clef); 12-13 RH: groups of six sixteenths per quarter (sextuplets, no figure printed)
+# JUDGE bar 12 RH: X - each six-note group has its own slur on the print
+12 RH1: D3:s{6:4}( F3:s{6:4} Bb3:s{6:4} D4:s{6:4} Bb3:s{6:4} F3:s{6:4}) D3:s{6:4}( F3:s{6:4} Bb3:s{6:4} D4:s{6:4} Bb3:s{6:4} F3:s{6:4}) D3:s{6:4}( F3:s{6:4} Bb3:s{6:4} D4:s{6:4} Bb3:s{6:4} F3:s{6:4}) D3:s{6:4}( F3:s{6:4} Bb3:s{6:4} D4:s{6:4} Bb3:s{6:4} F3:s{6:4})
+12 LH1: Bb2:q Bb1:q r:e Bb2:e Bb1:e Bb2:e
+# JUDGE bar 13 RH: X - each six-note group has its own slur
+13 RH1: Eb3:s{6:4}( G3:s{6:4} Bb3:s{6:4} Eb4:s{6:4} Bb3:s{6:4} G3:s{6:4}) Eb3:s{6:4}( G3:s{6:4} Bb3:s{6:4} Eb4:s{6:4} Bb3:s{6:4} G3:s{6:4}) Eb3:s{6:4}( G3:s{6:4} Bb3:s{6:4} Eb4:s{6:4} Bb3:s{6:4} G3:s{6:4}) Eb3:s{6:4}( G3:s{6:4} Bb3:s{6:4} Eb4:s{6:4} Bb3:s{6:4} G3:s{6:4})
+13 LH1: Eb2:q Eb2:q r:e Bb2:e G2:e Eb2:e
+# page 126 system 1 starts bar 14 (RH bass clef, treble clef after the first chord)
+# JUDGE bar 14 RH: Y - bass-clef chord has two heads only, A3 (top line) and Eb3 (space); no C3 (bar 9 does have C3)
+14 RH1: Eb3+A3:q clef:G C5+Eb5+A5:q( Bb4+D5+Bb5:q Bb4+C5+G5:q)
+14 LH1: F2:q F3:q G3:q Eb3:q
+# JUDGE bar 15 RH: Y - Bb4, D5, F5 heads share one stem with an eighth flag: one eighth chord, no half-note second voice
+15 RH1: Bb4+D5+F5:e r:e r:q Eb4+F4+C5:h
+15 LH1: F3:h F2:h
+16 RH1: D4+F4+Bb4:q r:q r:h
+16 LH1: Bb2:q r:q r:h
+# page 126 system 2 starts bar 17
+17 RH1: D4+F4+Bb4+D5:h Eb4+F4+A4+C5:h
+17 LH1: F3:h F2:h
+18 RH1: D4+F4+Bb4:q r:q r:h
+18 LH1: Bb2:q r:q r:h
+19 RH1: D4+F4+Bb4+D5:h( Eb4+F4+A4+C5:h)
+19 LH1: F3:h F2:h
+# page 126 system 3 starts bar 20
+20 RH1: D4+F4+Bb4:e G4:s( F4:s Eb4:s D4:s C4:s Bb3:s A3:e) F4:s( Eb4:s D4:s C4:s Bb3:s A3:s
+20 LH1: Bb2:e r:e r:q F2+C3+Eb3:e r:e r:q
+21 RH1: Bb3:e) Bb5:s( A5:s G5:s F5:s Eb5:s D5:s C5:e) F5+F6:s( Eb5+Eb6:s D5+D6:s C5+C6:s Bb4+Bb5:s A4+A5:s)
+21 LH1: Bb2+D3:e r:e r:q F3+A3+C4:e r:e r:q
+# bar 22: double bar at the end; the next bar (chunk S30a) is Allegro 6/8, E-flat major
+22 RH1: dyn:sfp Eb5+F5+A5+C6:h( D5+F5+Bb5:e) r:e r:q
+# JUDGE bar 22 LH: Y - eighth chord has heads F4 and Bb3 only (nothing at D4 between the ledger lines)
+# MARKS bar 22 LH1: dyn:sfp (between the staves, both hands)
+22 LH1: dyn:sfp F3+F4:h( Bb3+F4:e) r:e r:q
