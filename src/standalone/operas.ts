@@ -1500,7 +1500,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O statua gentilissima",
       "kind": "Duet · Act 2",
-      "id": "Act 2: O statua gentilissima"
+      "id": "Act 2: O statua gentilissima",
+      "editionId": "mozart-o-statua-gentilissima"
      },
      {
       "title": "Già la mensa è preparata",
@@ -1668,7 +1669,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O statua gentilissima",
       "kind": "Duet · Act 2",
-      "id": "Act 2: O statua gentilissima"
+      "id": "Act 2: O statua gentilissima",
+      "editionId": "mozart-o-statua-gentilissima"
      },
      {
       "title": "Già la mensa è preparata",
@@ -2356,7 +2358,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "O statua gentilissima",
       "kind": "Duet · Act 2",
-      "id": "Act 2: O statua gentilissima"
+      "id": "Act 2: O statua gentilissima",
+      "editionId": "mozart-o-statua-gentilissima"
      },
      {
       "title": "Don Giovanni! a cenar teco",

@@ -4437,6 +4437,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-o-statua-gentilissima": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Duet",
+    facts: {
+      key: "E major",
+      time: "4/4 (common time) throughout",
+      tempo: "Allegro, played at ♩ = 126, about 3½ minutes, the median of five recordings with the duet on its own track (Giulini, Fricsay, Klemperer, Davis, Haitink); Mozart gives the word only",
+    },
+    notePlaceholder: "Leporello stammering and terrified, Giovanni amused and impatient; the statue's one word, slow and immovable",
+    about: (
+      <>
+        <p>
+          Act 2, the churchyard, by moonlight. Giovanni has ordered Leporello to invite the statue of the Commendatore, whom he
+          killed, to supper. Leporello tries, but keeps breaking off in fright; Giovanni threatens him with his sword and enjoys his
+          terror. When Leporello at last gets the words out, the statue bows its head. Giovanni does not believe him, sees it
+          himself, and asks the statue outright whether it will come to supper. It answers: “Yes!” Leporello can hardly move;
+          Giovanni calls it a strange business and goes off to have the supper prepared.
+        </p>
+        <p>
+          Score: No. 22, the Duet (vocal score pages 245–250, 108 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, compared
+          with a third independent reading, then checked bar by bar and checked again by fresh checkers, whose finding was corrected.
+          The Commendatore sings one word, “Sì!”, in bar 84. Only the Italian words are kept, with the print's spelling and
+          punctuation (“Io sento mi gelar”, “questo acciar”, “Bizarra è in ver”, “quà”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

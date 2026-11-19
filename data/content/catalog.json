@@ -5691,6 +5691,46 @@
     }
   },
   {
+    "editionId": "mozart-o-statua-gentilissima",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-o-statua-gentilissima@1.0.0-schirmer#84021ffa76",
+    "title": "O statua gentilissima",
+    "subtitle": "Leporello, Don Giovanni and the Commendatore: duet from Don Giovanni, Act 2 (No. 22)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "commendatore",
+        "name": "Il Commendatore",
+        "voiceType": "Bass",
+        "partKey": "commendatore"
+      }
+    ],
+    "measures": 108,
+    "durationSec": 206,
+    "hasRepeats": false,
+    "keySignature": "E major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 41,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-o-zittre-nicht",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-o-zittre-nicht@1.0.0-peters#c8dd1828e3",
