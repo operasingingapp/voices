@@ -662,6 +662,46 @@
     }
   },
   {
+    "editionId": "mozart-ah-taci-ingiusto-core",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-ah-taci-ingiusto-core@1.0.0-schirmer#ec282bb88b",
+    "title": "Ah, taci, ingiusto core!",
+    "subtitle": "Donna Elvira, Don Giovanni and Leporello: trio from Don Giovanni, Act 2 (No. 15)",
+    "kind": "trio",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 84,
+    "durationSec": 296,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 64,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-al-fato-dan-legge",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-al-fato-dan-legge@1.0.0-peters#75d00d859d",
@@ -3266,6 +3306,40 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 61,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-eh-via-buffone",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-eh-via-buffone@1.0.0-schirmer#aeabfe07c6",
+    "title": "Eh via, buffone",
+    "subtitle": "Don Giovanni and Leporello: duet from Don Giovanni, Act 2 (No. 14)",
+    "kind": "duet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      }
+    ],
+    "measures": 70,
+    "durationSec": 62,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 25,
       "withAudio": 0,
       "reviewed": 0
     }

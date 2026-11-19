@@ -1,0 +1,173 @@
+{
+ "editionId": "mozart-ah-taci-ingiusto-core",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Ah, taci, ingiusto core!",
+ "subtitle": "Donna Elvira, Don Giovanni and Leporello: trio from Don Giovanni, Act 2 (No. 15)",
+ "kind": "trio",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Ah, taci, ingiusto core! · Zitto! di Donna Elvira",
+   "start": "1",
+   "end": "15"
+  },
+  {
+   "id": "b",
+   "label": "Cogliere io vo' il momento · Elvira, idolo mio! · Sì, vita mia, son io",
+   "start": "16",
+   "end": "31"
+  },
+  {
+   "id": "c",
+   "label": "Numi, che strano effetto · State a veder la pazza · Discendi, o gioja bella",
+   "start": "32",
+   "end": "45"
+  },
+  {
+   "id": "d",
+   "label": "No, non ti credo · Ah, credemi! · Se seguitate, io rido",
+   "start": "46",
+   "end": "55"
+  },
+  {
+   "id": "e",
+   "label": "Dei, che cimento è questo! · Spero che cada presto · Già quel mendace labbro",
+   "start": "56",
+   "end": "67"
+  },
+  {
+   "id": "f",
+   "label": "Dei, che cimento (again) · Più fertile talento (to the end)",
+   "start": "68",
+   "end": "84"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scene 2, No. 15 Trio",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (gioja, quà, sò, son' io; \"strano effetto\" where the libretto has \"strano affetto\"; Giovanni's \"credemi\" for the libretto's \"credimi\"; Leporello's \"State a veder la pazza\" where the libretto has \"State a veder che la pazza\"; \"oh Dei\" for \"o Dei\")."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 164–171, bars 1–84 of No. 15",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, a separate sweep for dynamics, slurs and other marks, then checked bar by bar and checked again by a fresh checker (clean). The English singing translation and the stage directions are left out. Two print slips are read by the bar's sum: in bar 49 the piano's first chord (D4+A4), printed with an eighth flag, is a sixteenth, and in bar 62 Elvira's E4 after the dotted G#4, printed with one flag, is a sixteenth. Playback tempo: ♩ = 51 (a dotted quarter = 34), about 4:56, from the median (4:59) of five complete recordings (Solti 1996 4:38, Giulini 1959 4:49, Fricsay 1958 4:59, Karajan 1985 5:03, Böhm 1977 5:18); Mozart gives the word Andantino only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "editionId": "mozart-eh-via-buffone",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Eh via, buffone",
+ "subtitle": "Don Giovanni and Leporello: duet from Don Giovanni, Act 2 (No. 14)",
+ "kind": "duet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Eh via, buffone · No, no, padrone · Sentimi amico · Vo' andar, vi dico",
+   "start": "1",
+   "end": "14"
+  },
+  {
+   "id": "b",
+   "label": "Va chi ti ho fatto · O niente affatto · Va che sei matto · Ed io non burlo",
+   "start": "15",
+   "end": "29"
+  },
+  {
+   "id": "c",
+   "label": "Eh via, buffone (second time) · Va che sei matto · No, no, no",
+   "start": "30",
+   "end": "42"
+  },
+  {
+   "id": "d",
+   "label": "Va che sei matto · Sì, sì, sì · voglio andar",
+   "start": "43",
+   "end": "52"
+  },
+  {
+   "id": "e",
+   "label": "Eh via, buffone (third time) · Fu per burlar · Ma voglio andar (to the end)",
+   "start": "53",
+   "end": "70"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scene 1, No. 14 Duet",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (Va without its apostrophe; O for Oh; in bar 15 \"Va chi ti ho fatto\", a misprint for the libretto's \"Ma che ti ho fatto\"; Leporello's repeated \"no\" and \"sì\" as the score sets them)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 159–161, bars 1–70 of No. 14",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker (clean). The English singing translation, the stage direction and the instrument cues are left out. Allegro assai, 3/4, 70 full bars. Playback tempo: ♩ = 203 (a bar ≈ 68 a minute), about 1:02, from the median of five complete recordings (Fricsay 1958 1:01, Giulini 1959 1:08, Böhm 1977 1:08, Haitink 1984 1:00, Karajan 1985 1:02; median 1:02). Mozart gives the words Allegro assai only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

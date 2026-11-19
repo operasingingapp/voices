@@ -1446,7 +1446,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Eh via, buffone",
       "kind": "Duet · Act 2",
-      "id": "Act 2: Eh via, buffone"
+      "id": "Act 2: Eh via, buffone",
+      "editionId": "mozart-eh-via-buffone"
      },
      {
       "title": "Leporello! Signore!",
@@ -1457,7 +1458,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah, taci, ingiusto core!",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Ah, taci, ingiusto core!"
+      "id": "Act 2: Ah, taci, ingiusto core!",
+      "editionId": "mozart-ah-taci-ingiusto-core"
      },
      {
       "title": "Amico, che ti par?",
@@ -1596,7 +1598,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Eh via, buffone",
       "kind": "Duet · Act 2",
-      "id": "Act 2: Eh via, buffone"
+      "id": "Act 2: Eh via, buffone",
+      "editionId": "mozart-eh-via-buffone"
      },
      {
       "title": "Leporello! Signore!",
@@ -1607,7 +1610,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah, taci, ingiusto core!",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Ah, taci, ingiusto core!"
+      "id": "Act 2: Ah, taci, ingiusto core!",
+      "editionId": "mozart-ah-taci-ingiusto-core"
      },
      {
       "title": "Amico, che ti par?",
@@ -1876,7 +1880,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ah, taci, ingiusto core!",
       "kind": "Trio · Act 2",
-      "id": "Act 2: Ah, taci, ingiusto core!"
+      "id": "Act 2: Ah, taci, ingiusto core!",
+      "editionId": "mozart-ah-taci-ingiusto-core"
      },
      {
       "title": "Amico, che ti par?",

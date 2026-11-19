@@ -4340,6 +4340,72 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-eh-via-buffone": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Duet",
+    facts: {
+      key: "G major",
+      time: "3/4, felt one in a bar",
+      tempo: "Allegro assai, played at ♩ = 203 (about 68 bars a minute), about a minute in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only",
+    },
+    notePlaceholder: "Fast and light: Giovanni amused and teasing, Leporello stubborn, the two of you tossing the lines back and forth",
+    about: (
+      <>
+        <p>
+          Act 2 opens in a street at evening. Leporello has had enough: his master nearly got him killed at the party, and he wants
+          to leave his service. Don Giovanni laughs at him and calls him a clown; it was all a joke. Leporello will not be talked
+          round: he is not joking, he is going, and he answers every “you're mad” with a stream of no's and yes's until the two are
+          shouting over each other.
+        </p>
+        <p>
+          Score: No. 14, the Duet (vocal score pages 159–161, 70 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          Only the Italian words are kept, with the print's spelling and punctuation (“Va che sei matto” without the apostrophe,
+          Leporello's “O” for “Oh”), including its misprint in bar 15, “Va chi ti ho fatto”, where Da Ponte wrote and singers sing
+          “Ma che ti ho fatto”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-ah-taci-ingiusto-core": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Trio",
+    facts: {
+      key: "A major",
+      time: "6/8",
+      tempo: "Andantino, played at a dotted quarter = 34 (♩ = 51), about 5 minutes, the median of five recordings (Solti, Giulini, Fricsay, Karajan, Böhm); Mozart gives the word only",
+    },
+    notePlaceholder: "Elvira's line is sincere and the men's asides are comic: keep the 6/8 gentle and let her phrases breathe",
+    about: (
+      <>
+        <p>
+          Act 2. Evening, under Donna Elvira's window. Don Giovanni has changed cloaks and hats with Leporello, and hides behind him.
+          Elvira, at the window, tells her heart to be still: the man is godless and a betrayer, and pity for him is a fault.
+          Giovanni, using Leporello's figure in his own cloak, calls up to her: he has repented, she is the one his soul adores, he
+          begs for compassion and swears he will kill himself if she does not believe him. Leporello can hardly keep from laughing.
+          Elvira does not know whether to go or stay, and prays the gods to protect her trusting heart; Giovanni congratulates
+          himself on his talent, and Leporello prays for her credulity. She agrees to come down.
+        </p>
+        <p>
+          Score: No. 15, the Trio (vocal score pages 164–171, 84 bars), from the G. Schirmer vocal score (New York, 1900; IMSLP
+          #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two independent
+          readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by a fresh checker.
+          Two print slips are read by the bar's sum (a piano chord in bar 49 and Elvira's E in bar 62, each printed with one flag,
+          are sixteenths). Only the Italian words are kept, with the print's spelling and punctuation (“gioja”, “quà”, “sò”,
+          Giovanni's “credemi” for “credimi”, and “strano effetto” where the libretto has “strano affetto”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",
