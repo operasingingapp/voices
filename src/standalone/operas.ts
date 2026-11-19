@@ -1426,7 +1426,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Riposate, vezzose ragazze!",
@@ -1579,7 +1580,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Riposate, vezzose ragazze!",
@@ -1747,7 +1749,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Protegga il giusto cielo",
@@ -1862,7 +1865,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Protegga il giusto cielo",
@@ -2018,7 +2022,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Riposate, vezzose ragazze!",
@@ -2152,7 +2157,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Protegga il giusto cielo",
@@ -2273,7 +2279,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Presto, presto, pria ch'ei venga",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Presto, presto, pria ch'ei venga"
+      "id": "Act 1: Presto, presto, pria ch'ei venga",
+      "editionId": "mozart-presto-presto-pria-chei-venga"
      },
      {
       "title": "Riposate, vezzose ragazze!",

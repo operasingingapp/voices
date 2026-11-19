@@ -1,0 +1,16 @@
+S28 "Presto, presto, pria ch'ei venga" (No. 13 Finale, from its beginning to the bar before the Adagio; Schirmer 1900
+pp. 112-124, bars 1-250), build chain (reproduced byte for byte from the files here, TMPDIR on /dev/shm):
+  kit/build.sh VM_S28.clean.txt PM_S28.txt RAW "$(cat segs.txt)" "Presto, presto, pria ch'ei venga" "$(cat singers.txt)"  -> s28.raw.xml
+  kit/fix64.py s28.raw.xml S        -> s28.xml (identical to s28.raw.xml)
+  kit/xfix.py s28.xml F fixes.txt   -> s28f.xml (fixes.txt holds only "final": the light-heavy barline on bar 250 of all 10
+                                       parts, nothing else; the fresh-check findings were applied in VM_/PM_ before the
+                                       build). No hand fix.
+Chunks: S28a pp. 112-115 bars 1-81, S28b pp. 116-119 bars 82-150, S28c pp. 120-124 bars 151-250 (VM_/PM_S28a-c, per-reader
+V_/P_S28x_A/B from b28/VA_, VB_, PA_, PB_); VM_S28.txt / PM_S28.txt are the merged files (VM_S28.clean.txt identical).
+Singers (staff order): Z, M, G, L, E, A, O (treble-8, sounding pitch), K2/K3 = servants' chorus tenors/basses (one
+treble-clef staff in the print, written here as two parts at sounding pitch).
+Shared bar: p.124 sys 3 bar 2 (first Adagio bar, Leporello's "-mor!") belongs to S29; this piece ends on p.124 sys 3 bar 1,
+so Leporello's last syllable here is "d'a-".
+Print question kept as printed: bar 150, the 4th note of Zerlina and of the piano is D sharp by the bar rule (the sharp is
+printed on the 2nd D only; possibly D natural intended).
+Judge/diff files (vdiff, pdiff, vsem, print_S28a-c.pdf) stay in ext/giovanni/b28.

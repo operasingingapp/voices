@@ -4542,6 +4542,43 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-presto-presto-pria-chei-venga": {
+    portrait: "giovanni:zerlina",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "C major; F major from the Andante (bar 92) to the end",
+      time: "4/4 (common time) Allegro assai; 3/4 Andante from bar 92; 2/4 Allegretto from bar 139; 3/4 Menuetto from bar 218",
+      tempo: "Allegro assai at ♩ = 184 (a half note ≈ 92), Andante at ♩ = 78, Allegretto at ♩ = 91, Menuetto at ♩ = 83, about 6¾ minutes in all, from the median track times of five recordings (Giulini, Klemperer, Barenboim, Haitink, Iván Fischer); the Andante, Allegretto and Menuetto share tracks in these sets, so they are divided as in Fischer's and Currentzis's, which give the Menuetto its own track; Mozart gives the words only",
+    },
+    notePlaceholder: "Masetto's angry hiding and Zerlina's pleading at a scurry; Giovanni's rousing call and the servants' chorus; the seduction in the Andante; then the masked guests' grave resolve over the distant minuet",
+    about: (
+      <>
+        <p>
+          Act 1, the garden outside Don Giovanni's palace, at the start of the Act 1 finale. Masetto hides in an alcove to see how
+          Zerlina will behave with Giovanni; she begs him not to, afraid of what Giovanni might do. Giovanni comes out with his
+          servants and calls everyone in to the party, with refreshments for all, and the servants take up his call. He finds Zerlina
+          hiding among the trees and draws her towards the alcove, only to find Masetto there; unruffled, he tells Masetto that Zerlina
+          cannot bear to be without him, and the three go in to the dance. Three masked guests arrive: Donna Elvira, Donna Anna and
+          Don Ottavio, resolved to unmask him. As a minuet sounds from the palace, Leporello spots them from a window, and on his
+          master's orders invites them to the ball.
+        </p>
+        <p>
+          Score: No. 13, the Finale, from its beginning to the bar before the Adagio (“Protegga il giusto cielo”, a separate piece),
+          vocal score pages 112–124, 250 bars, from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written
+          out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on
+          the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don
+          Ottavio's part, printed in the treble clef, and the servants' chorus (tenors and basses on one treble staff) are written at
+          sounding pitch; the chorus is heard with the piano. In bar 150 the fourth note of Zerlina and of the piano is a D sharp by
+          the bar rule, as printed. Only the Italian words are kept, with the print's spelling (“pormi vo'”, “sei vede”, “a
+          abbondanza”, “rifreschi”, “scoppar”, “tutti tre”); Leporello's last word, “d'amor”, ends on the first bar of the Adagio.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

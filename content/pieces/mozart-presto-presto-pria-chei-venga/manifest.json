@@ -1,0 +1,297 @@
+{
+ "editionId": "mozart-presto-presto-pria-chei-venga",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Presto, presto, pria ch'ei venga",
+ "subtitle": "Masetto, Zerlina, Don Giovanni, Leporello, Donna Elvira, Donna Anna, Don Ottavio and the servants' chorus: the opening of the finale from Don Giovanni, Act 1 (No. 13)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P10",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Servants' chorus (tenors)",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Servants' chorus (basses)",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P9"
+   },
+   "channel": 12,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Allegro assai: Presto, presto, pria ch'ei venga · Senti, senti! dove vai? · Che capriccio ha nella testa?",
+   "start": "1",
+   "end": "34"
+  },
+  {
+   "id": "b",
+   "label": "Capirò se m'è fedele · Quell' ingrato, quel crudele (sotto voce)",
+   "start": "35",
+   "end": "51"
+  },
+  {
+   "id": "c",
+   "label": "Sù! svegliatevi da bravi · Alla stanza della danza (Don Giovanni)",
+   "start": "52",
+   "end": "69"
+  },
+  {
+   "id": "d",
+   "label": "Sù, svegliatevi da bravi (the servants' chorus)",
+   "start": "70",
+   "end": "91"
+  },
+  {
+   "id": "e",
+   "label": "Andante: Tra quest' arbori celata · Zerlinetta, mia garbata · fortunata io ti vo' far",
+   "start": "92",
+   "end": "121"
+  },
+  {
+   "id": "f",
+   "label": "Masetto? · La bella tua Zerlina non può più star senza di te",
+   "start": "122",
+   "end": "138"
+  },
+  {
+   "id": "g",
+   "label": "Allegretto: Adesso fate core · Sì, sì, facciamo core · andiamo tutti tre",
+   "start": "139",
+   "end": "168"
+  },
+  {
+   "id": "h",
+   "label": "Bisogna aver coraggio · L'amica dice bene · Il passo è periglioso",
+   "start": "169",
+   "end": "217"
+  },
+  {
+   "id": "i",
+   "label": "Menuetto: Signor, guardate un poco · Al volto ed alla voce · Zi! zi! · Grazie di tanto onore (to the bar before the Adagio)",
+   "start": "218",
+   "end": "250"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 1 scenes 17–20, No. 13 Finale, from its beginning to the bar before the Adagio (\"Protegga il giusto cielo\")",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, which differ from the libretto in places: pormi vo' (libretto por mi vo'); quell' ingrato; Ah! sei vede (libretto s'ei vede); sò; Sù!; ed a tutti a abbondanza (libretto in abbondanza); gran rifreschi (libretto rinfreschi); non scoppar (libretto scappar); gioja; E chiuso là; dì; andiamo tutti tre (libretto tutti e tre); Zi! zi!; Io temo pel caro sposo. Leporello's last word, d'amor, is split by the end of the piece: d'a- here, -mor! on the first bar of the Adagio."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 112–124, bars 1–250 of No. 13 (to page 124, system 3, bar 1, the bar before the Adagio)",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in three chunks (pp. 112–115, 116–119, 120–124): the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. Don Ottavio's part and the servants' chorus (printed on one treble-clef staff, tenors and basses on shared stems) are written at sounding pitch; the chorus is written out as two parts, heard in the mix, with no role. Kept as printed: in bar 150 the fourth note of Zerlina and of the piano is D sharp by the bar rule (the sharp is printed on the second D only; possibly D natural intended). The English singing translation and the stage directions are left out. Allegro assai 4/4 C major bars 1–91, Andante 3/4 F major bars 92–138, Allegretto 2/4 bars 139–217, Menuetto 3/4 bars 218–250. Playback tempo from five complete recordings (Giulini 1959, Klemperer 1966, Barenboim 1975, Haitink 1984, I. Fischer 2026), median track times: bars 1–91 1:59 (Allegro assai ♩ = 184); bars 92–168 2:28 and bars 169–250 2:16, divided between the sections by the Menuetto's share of the second span in the two sets that give it its own track (Fischer 1:09 of 2:13, Currentzis 1:02 of 1:57): Andante ♩ = 78, Allegretto ♩ = 91, Menuetto ♩ = 83; about 6¾ minutes in all. Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}
