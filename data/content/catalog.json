@@ -3876,6 +3876,40 @@
     }
   },
   {
+    "editionId": "mozart-gia-la-mensa-e-preparata",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-gia-la-mensa-e-preparata@1.0.0-schirmer#0aea40060d",
+    "title": "Già la mensa è preparata",
+    "subtitle": "Don Giovanni and Leporello: the opening of the finale from Don Giovanni, Act 2 (No. 24)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 199,
+    "durationSec": 289,
+    "hasRepeats": false,
+    "keySignature": "D major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 52,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-giacche-a-morir-vicini",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-giacche-a-morir-vicini@1.0.0-peters#18a1e4f200",
@@ -4916,6 +4950,46 @@
     "time": "6/8",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-lultima-prova-dellamor-mio",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-lultima-prova-dellamor-mio@1.0.0-schirmer#4886f2a456",
+    "title": "L'ultima prova dell'amor mio",
+    "subtitle": "Donna Elvira, Don Giovanni and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "dongiovanni",
+        "name": "Don Giovanni",
+        "voiceType": "Baritone",
+        "partKey": "dongiovanni"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 233,
+    "durationSec": 210,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 72,
       "withAudio": 0,
       "reviewed": 0
     }

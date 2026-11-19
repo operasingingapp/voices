@@ -1,0 +1,159 @@
+{
+ "editionId": "mozart-gia-la-mensa-e-preparata",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Già la mensa è preparata",
+ "subtitle": "Don Giovanni and Leporello: the opening of the finale from Don Giovanni, Act 2 (No. 24)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Allegro vivace: Già la mensa è preparata · Voi suonate, amici cari · Giacchè spendo i miei danari",
+   "start": "1",
+   "end": "29"
+  },
+  {
+   "id": "b",
+   "label": "Leporello, presto in tavola! · Son prontissimo a servir · Giacchè spendo (again)",
+   "start": "30",
+   "end": "46"
+  },
+  {
+   "id": "c",
+   "label": "Allegretto (Una cosa rara): Bravi! · Che ti par del bel concerto? · Ah che piatto saporito!",
+   "start": "47",
+   "end": "72"
+  },
+  {
+   "id": "d",
+   "label": "Ah che barbaro appetito! · Nel veder i miei bocconi · Piatto! Servo!",
+   "start": "73",
+   "end": "117"
+  },
+  {
+   "id": "e",
+   "label": "Allegretto (Fra i due litiganti): Evvivano i litiganti · Versa il vino! · Questo pezzo di fagiano",
+   "start": "118",
+   "end": "161"
+  },
+  {
+   "id": "f",
+   "label": "Moderato (Non più andrai): Questo poi la conosco · Leporello! · Parla schietto · Non mi lascia una flussione",
+   "start": "162",
+   "end": "182"
+  },
+  {
+   "id": "g",
+   "label": "Mentre io mangio fischia un poco · Scusate! · Sì eccellente (to the bar before “L'ultima prova”)",
+   "start": "183",
+   "end": "199"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2 scene 13, No. 24 Finale, from its beginning (Don Giovanni's supper) to the bar before Donna Elvira's entrance",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score: “Cosa rara!„ with the print's quotation marks, “vo'inghiottir” on one printed syllable, “Questo poi la conosco” (libretto Questa), “sò”, Leporello's “è'l” (libretto è il), Don Giovanni's “Cos' è?” on two notes, “Sì eccellente e il cuoco mio” (printed e without the accent, sung as è) and “anch' ei”. Both singers' last word, “provar”, is cut at the end of the piece: “pro-” here, “-var.” on the first bar of the next piece."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 257–263, bars 1–199 of the Act 2 Finale (No. 24), from its beginning to the last bar of p. 263, before the Allegro assai “L'ultima prova dell'amor mio”",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in two chunks (pp. 257–260, bars 1–113; pp. 261–263, bars 114–199): the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were corrected. The English singing translation and the stage directions are left out. Allegro vivace 4/4, D major, bars 1–46 (piano alone to bar 16); Allegretto 6/8, D major, bars 47–117 (the band plays from Martín y Soler's Una cosa rara); Allegretto 3/4, F major, bars 118–161 (Sarti's Fra i due litiganti); Moderato in cut time, B-flat major, bars 162–199 (“Non più andrai” from Figaro). One clear misprint was corrected: the piano's left hand in bars 178 and 180 is E natural. Single-chord tremolos are written as held chords. Fermatas in bars 72, 117 and 188 are held. Playback tempo: Allegro vivace ♩ = 180, Allegretto 6/8 ♩. = 80 (♩ = 120), Allegretto 3/4 ♩ = 170, Moderato ♩ = 123 (a half note ≈ 61), about 4:49 in all: the median of five complete recordings with this scene on its own track (Giulini 1959 4:36, Jacobs 2006 4:45, Iván Fischer 2026 4:49, Haitink 1984 4:50, C. Davis 1973 5:24), divided between the four sections as in Busch's 1936 Glyndebourne set, the only one found that gives each section its own track (1:02, 1:48, 0:47, 1:15). Mozart gives the words only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

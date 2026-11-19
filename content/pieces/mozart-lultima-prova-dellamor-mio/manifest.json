@@ -1,0 +1,179 @@
+{
+ "editionId": "mozart-lultima-prova-dellamor-mio",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "L'ultima prova dell'amor mio",
+ "subtitle": "Donna Elvira, Don Giovanni and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "dongiovanni",
+   "name": "Don Giovanni",
+   "voiceType": "Baritone",
+   "partKey": "dongiovanni"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dongiovanni",
+   "label": "Don Giovanni (Baritone)",
+   "shortLabel": "Don Giovanni",
+   "kind": "voice",
+   "roleId": "dongiovanni",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "L'ultima prova dell'amor mio · Da te non chiede quest'alma oppressa",
+   "start": "1",
+   "end": "31"
+  },
+  {
+   "id": "b",
+   "label": "Mi maraviglio! · Ah non deridere · Quasi da piangere · Che vuoi, mio bene?",
+   "start": "32",
+   "end": "63"
+  },
+  {
+   "id": "c",
+   "label": "Che vita cangi! · Cor perfido! · Lascia ch'io mangi",
+   "start": "64",
+   "end": "95"
+  },
+  {
+   "id": "d",
+   "label": "Restati, barbaro! · Se non si muove · Vivan le femmine",
+   "start": "96",
+   "end": "114"
+  },
+  {
+   "id": "e",
+   "label": "Restati, barbaro! (again) · Vivan le femmine (again) · Elvira's scream",
+   "start": "115",
+   "end": "154"
+  },
+  {
+   "id": "f",
+   "label": "Che grido è questo mai? · Leporello, che cos' è?",
+   "start": "155",
+   "end": "179"
+  },
+  {
+   "id": "g",
+   "label": "Allegro molto: Ah! Signor! per carità! · ta, ta, ta · Qualcun batte! (to the end)",
+   "start": "180",
+   "end": "233"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 24 Finale (Donna Elvira's last plea)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score (Cos' è on two notes, maraviglio, perchè, quà; Giovanni's \"Io ti deridere!\" in bar 50 before \"Io te deridere?\" in bar 54; the print's \"femine\" in bar 125, \"lamico\" in bar 227 and \"masconderò\" in bar 229, kept because the words must match the score; the libretto has meraviglio, femmine, l'amico, m'asconderò). Bar 1's \"-var.\" (Giovanni and Leporello), the end of \"provar\" from the previous piece, is not part of this piece's words."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 264–273, bars 1–233 of the Act 2 Finale from Elvira's entrance (Allegro assai) to the bar before the double bar and Andante where the Commendatore enters",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. Three clear misprints are corrected: piano left hand bar 54 E natural, piano right hand bar 155 A flat, Elvira bar 154 A flat (the held scream). Elvira's small ossia notes (bars 146–147) are left out. Single-chord tremolos (left hand bars 115–124 and elsewhere) are written as held chords. The English singing translation and the stage directions are left out. Bar 1 begins on the downbeat that ends Già la mensa (\"-var.\"). Allegro assai 3/4 in B-flat major bars 1–179; Allegro molto alla breve in F major bars 180–233. Playback tempo: Allegro assai ♩ = 205 (a dotted half ≈ 68) and Allegro molto 𝅗𝅥 = 122 (♩ = 244), about 3:30 in all, the median of five complete recordings with this scene on its own track or tracks (Maazel 1979 3:25, Fricsay 1958 3:26, Giulini 1959 3:30, Haitink 1984 3:37, Böhm 1967 3:42), divided between the sections as in Giulini's, which puts \"Che grido è questo mai?\" (bar 155) on its own track (2:15 + 1:15). Mozart gives the words Allegro assai and Allegro molto only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

@@ -1510,12 +1510,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Già la mensa è preparata",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Già la mensa è preparata"
+      "id": "Act 2: Già la mensa è preparata",
+      "editionId": "mozart-gia-la-mensa-e-preparata"
      },
      {
       "title": "L'ultima prova dell'amor mio",
       "kind": "Finale · Act 2",
-      "id": "Act 2: L'ultima prova dell'amor mio"
+      "id": "Act 2: L'ultima prova dell'amor mio",
+      "editionId": "mozart-lultima-prova-dellamor-mio"
      },
      {
       "title": "Don Giovanni! a cenar teco",
@@ -1685,12 +1687,14 @@ export const OPERAS: Opera[] = [
      {
       "title": "Già la mensa è preparata",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Già la mensa è preparata"
+      "id": "Act 2: Già la mensa è preparata",
+      "editionId": "mozart-gia-la-mensa-e-preparata"
      },
      {
       "title": "L'ultima prova dell'amor mio",
       "kind": "Finale · Act 2",
-      "id": "Act 2: L'ultima prova dell'amor mio"
+      "id": "Act 2: L'ultima prova dell'amor mio",
+      "editionId": "mozart-lultima-prova-dellamor-mio"
      },
      {
       "title": "Don Giovanni! a cenar teco",
@@ -1959,7 +1963,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "L'ultima prova dell'amor mio",
       "kind": "Finale · Act 2",
-      "id": "Act 2: L'ultima prova dell'amor mio"
+      "id": "Act 2: L'ultima prova dell'amor mio",
+      "editionId": "mozart-lultima-prova-dellamor-mio"
      },
      {
       "title": "Ah! dov'è il perfido?",

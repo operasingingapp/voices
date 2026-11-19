@@ -4729,6 +4729,80 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-lultima-prova-dellamor-mio": {
+    portrait: "giovanni:elvira",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "B-flat major (two flats), then F major (one flat) from bar 180",
+      time: "3/4 (Allegro assai), then ¢ (alla breve, Allegro molto) from bar 180",
+      tempo: "Allegro assai at ♩ = 205 (a dotted half ≈ 68), then Allegro molto at a half note = 122 (♩ = 244), about 3½ minutes in all, the median of five recordings with this scene on its own track or tracks (Maazel, Fricsay, Giulini, Haitink, Böhm), divided between the two sections as in Giulini's, which puts “Che grido è questo mai?” on its own track; Mozart gives the words only",
+    },
+    notePlaceholder: "Elvira's plea urgent and sincere, Giovanni's mockery light and careless, Leporello's asides quick; then the Allegro molto's panic",
+    about: (
+      <>
+        <p>
+          Act 2, the finale. Don Giovanni is at supper, Leporello waiting on him, when Donna Elvira bursts in. She has come to give
+          him a last proof of her love: she no longer thinks of how he deceived her, she feels only pity, and she asks nothing for
+          herself, only that he change his life. He mocks her, kneels to her in jest, tells her to let him eat or join him, and
+          raises his glass to women and good wine, the mainstay and glory of humankind. Leporello is close to tears: a man she
+          cannot move must have a heart of stone. Elvira leaves in disgust, screams at the door, and flees the other way. Leporello,
+          sent to look, comes back gibbering: the man of stone, the white man, is coming, ta, ta, ta, ta. There is a knock;
+          Leporello will not open, so Giovanni takes a light and goes to open the door himself.
+        </p>
+        <p>
+          Score: the Act 2 Finale (No. 24) from Elvira's entrance, Allegro assai and Allegro molto (vocal score pages 264–273, 233
+          bars), from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public domain. Written out from the printed pages:
+          the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then
+          checked bar by bar and checked again by fresh checkers. Three clear misprints are corrected: E natural in the piano's left
+          hand in bar 54, A flat in the right hand in bar 155, and A flat for Elvira's held scream in bar 154. Elvira's small ossia
+          notes (bars 146–147) are left out, and the piano's single-chord tremolos are written as held chords. Bar 1 begins on the
+          downbeat that ends “Già la mensa”; the piece ends in the bar before the Andante, where the statue enters. Only the Italian
+          words are kept, with the print's spelling and punctuation (“Cos' è”, “maraviglio”, “perchè”, “quà”, Giovanni's “Io ti
+          deridere!” before “Io te deridere?”, and Leporello's “lamico” and “masconderò”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-gia-la-mensa-e-preparata": {
+    portrait: "giovanni:leporello",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "D major; F major from bar 118; B-flat major from bar 162 to the end",
+      time: "4/4 (common time) Allegro vivace; 6/8 Allegretto from bar 47; 3/4 Allegretto from bar 118; cut time (2/2) Moderato from bar 162",
+      tempo: "Allegro vivace at ♩ = 180 (a half note = 90), Allegretto 6/8 at ♩. = 80, Allegretto 3/4 at ♩ = 170, Moderato at ♩ = 123 (a half note ≈ 61), about 4¾ minutes in all, the median track time of five recordings (Giulini, Jacobs, Iván Fischer, Haitink, Davis); the sections share one track in these sets, so they are divided as in Busch's 1936 Glyndebourne set, the only one found that gives each its own track; Mozart gives the words only",
+    },
+    notePlaceholder: "Giovanni grand and carefree at his supper; Leporello's hungry asides, then his whistling with his mouth full, over the stage band's three tunes",
+    about: (
+      <>
+        <p>
+          Act 2, the start of the finale: a lighted hall in Don Giovanni's house. Giovanni sits down to supper and tells his private band
+          to play: it is his money, and he means to enjoy himself. The band plays tunes from the fashionable operas of the day, first
+          Martín y Soler's “Una cosa rara”, then Sarti's “Fra i due litiganti”, and last “Non più andrai” from Mozart's own Figaro,
+          which Leporello knows only too well. Leporello serves, watching every mouthful his master takes, and steals a piece of pheasant
+          for himself. Giovanni notices and calls him; with his mouth full Leporello pleads a cold, and when told to whistle he cannot.
+          The master's cook is so good, he says, that he had to try the food himself.
+        </p>
+        <p>
+          Score: No. 24, the Finale, from its beginning to the bar before Donna Elvira's entrance (“L'ultima prova dell'amor mio”, a
+          separate piece), vocal score pages 257–263, 199 bars, from the G. Schirmer vocal score (New York, 1900; IMSLP #68957), public
+          domain. Written out from the printed pages: the sung lines and the piano each read by two independent readers, every
+          disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers, whose findings were
+          corrected. One clear misprint is corrected: in bars 178 and 180 the piano's left hand has E natural, as the right hand. Single-chord
+          tremolos are written as held chords. The first sixteen bars are for the piano alone. Only the Italian words are kept, with the
+          print's spelling and punctuation (“Cosa rara!„, “vo'inghiottir”, “Questo poi la conosco”, “sò”, “è'l”, “Cos' è?”, Giovanni's
+          “e il” without the accent, “anch' ei”); both singers' last word, “provar”, ends on the first bar of the next piece.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

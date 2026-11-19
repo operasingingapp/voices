@@ -1,0 +1,21 @@
+S58 "Già la mensa è preparata" (No. 24 Finale, from its beginning to the last bar of p. 263, before the Allegro assai "L'ultima
+prova dell'amor mio"; Schirmer 1900 pp. 257-263, bars 1-199), build chain (reproduced byte for byte from the files here, TMPDIR
+on /dev/shm):
+  kit/build.sh VM_S58.clean.txt PM_S58.txt RAW "$(cat segs.txt)" "Già la mensa è preparata" "$(cat singers.txt)"  -> s58.raw.xml
+  kit/fix64.py s58.raw.xml S        -> s58.xml (identical to s58.raw.xml)
+  kit/xfix.py s58.xml F fixes.txt   -> s58f.xml (fixes.txt: "final" = light-heavy barline on bar 199 of all 3 parts, and
+                                       "timesym 162 cut" = the cut-time symbol of the Moderato; the fresh-check findings were
+                                       applied in VM_/PM_ before the build). No hand fix.
+VM_S58.clean.txt = VM_S58.txt without the vocal slurs (the builder input); VM_S58.txt keeps them as read.
+Chunks: S58a pp. 257-260 bars 1-113, S58b pp. 261-263 bars 114-199 (VM_/PM_S58a/b; per-reader V_/P_S58x_A/B from b58/VA_, VB_,
+PA_, PB_). VM_S58.txt / PM_S58.txt are the merged files.
+Singers (staff order): G = Don Giovanni (P1), L = Leporello (P2), both bass clef; piano P3.
+Sections: Allegro vivace C, D major, bars 1-46 (piano alone to bar 16); Allegretto 6/8, D major, bars 47-117 (Una cosa rara);
+Allegretto 3/4, F major, bars 118-161 (Fra i due litiganti); Moderato cut time, B-flat major, bars 162-199 (Non più andrai).
+Shared bar: p. 264 sys 1 bar 1 (first Allegro assai bar, Giovanni's and Leporello's "-var.") belongs to S59; this piece ends on the
+last bar of p. 263, so both singers' last syllable here is "pro-".
+Corrected misprint (judge, PM_S58.txt): piano LH bars 178 and 180, the E's of the F-E-F turn printed without accidental (E flat by
+the key) are E natural (the RH has E natural on the same beats; as bars 64/66). Single-chord tremolos are written as held chords.
+Chunk S58b's readers wrote second syllables with a leading hyphen ("-to!"); the builder kept it, so 100 lyric texts in bars
+114-199 begin with "-" (the importer ignores hyphens when matching words; as mozart-dunque-quello-sei-tu).
+Judge/diff files (vdiff, pdiff, vsem, print_S58a/b.pdf) stay in ext/giovanni/b58.

@@ -1,0 +1,386 @@
+# S59b piano: p.269 sys 1 bar 1 to p.273 sys 2 bar 4
+# Piano. Single tremolo strokes (one stroke through the stem = repeated eighths) on the held chords: LH bars 1-6, RH and LH bars 17, 19, 21-24, RH bars 25-26; written with the printed value.
+# page 269 system 1 starts bar 1
+# bar 1: Allegro assai (from p.264), 3/4, B-flat major
+1 RH1: dyn:fp Bb4+Bb5:e A5:e Bb5:e F5:e D5:e Bb4:e
+# MARKS bar 1 LH1: dyn:fp (between staves)
+1 LH1: dyn:fp Bb3+D4+F4:h.
+# JUDGE bar 2 RH: X - print has fp (not p) in bar 2
+2 RH1: dyn:fp Eb5+F5:e D5:e Eb5:e C5:e A4:e F4:e
+# JUDGE bar 2 LH: X - no separate p in the LH; only the fp between the staves
+# MARKS bar 2 LH1: dyn:fp (between staves)
+2 LH1: dyn:fp A3+Eb4+F4:h.
+# JUDGE bar 3 RH: X - p printed at bar 3 beat 1
+3 RH1: dyn:p D5+Bb5:h C6:et( Bb5:s C6:s
+# MARKS bar 3 LH1: dyn:p (between staves)
+3 LH1: dyn:p Bb3+D4+F4:h A3+Eb4+F4:e A3+Eb4+F4:e
+# JUDGE bar 4 RH: X - cresc. stands over the LH eighth chords at beat 3
+4 RH1: D6:q) Bb5:q word:cresc. C6:et( Bb5:s C6:s
+# JUDGE bar 4 LH: X - cresc. belongs at beat 3 (on RH, as in base)
+# MARKS bar 4 LH1: word:cresc. (between staves)
+4 LH1: Bb3+D4+F4:h word:cresc. A3+Eb4+F4:e A3+Eb4+F4:e
+5 RH1: D6:q) Bb5:q C6:et( Bb5:s C6:s
+5 LH1: Bb3+D4+F4:h A3+Eb4+F4:e A3+Eb4+F4:e
+# page 269 system 2 starts bar 6
+# JUDGE bar 6 RH: X - slur from the tr C6 runs over the barline to D6 of bar 7; f under beat 3
+6 RH1: D6:q) Bb5:q dyn:f C6:et( Bb5:s C6:s
+# JUDGE bar 6 LH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 6 LH1: dyn:f (between staves)
+6 LH1: Bb3+D4+F4:h dyn:f A3+Eb4+F4:e A3+Eb4+F4:e
+# JUDGE bar 7 RH: X - slur from bar 6 ends on D6
+7 RH1: D6:q) r:q D5+F5+Bb5+D6:q
+7 LH1: Bb3+D4+F4:q r:q Bb3:q
+8 RH1: D5+F5+Bb5:q r:q D5+F5+Bb5+D6:q
+8 LH1: Bb2:q r:q Bb3:q
+9 RH1: D5+F5+Bb5:q r:q r:q
+9 LH1: Bb2:q r:q r:q
+10 RH1: dyn:p F4+F5:q*( F4+F5:q* F4+F5:q*)
+# JUDGE bar 10 LH: X - long slur over the LH octaves bars 10-12
+# MARKS bar 10 LH1: dyn:p (between staves)
+10 LH1: dyn:p D3+D4:h.(
+11 RH1: G4+G5:q.( A4+A5:e Bb4+Bb5:q)
+11 LH1: Eb3+Eb4:h.
+12 RH1: Bb4+Bb5:q( C5+C6:q A4+A5:q)
+# JUDGE bar 12 LH: X - slur 10-12 ends here
+12 LH1: F3+F4:h.)
+# page 269 system 3 starts bar 13
+# JUDGE bar 13 RH: X - slur starts at the D6 half and runs to F5 of bar 14
+13 RH1: dyn:mf D5+D6:h( dyn:p C6:s Bb5:s A5:s G5:s
+# MARKS bar 13 LH1: dyn:mf (between staves; the p at beat 3 falls inside the held LH note)
+13 LH1: dyn:mf Bb2+Bb3:h.
+14 RH1: F5:q) F4+F5:q*( F4+F5:q*)
+# JUDGE bar 14 LH: X - long slur bars 14-16
+14 LH1: D3+D4:h.(
+15 RH1: G4+G5:q.( A4+A5:e Bb4+Bb5:q)
+15 LH1: Eb3+Eb4:h.
+16 RH1: Bb4+Bb5:q( C5+C6:q A4+A5:q)
+# JUDGE bar 16 LH: X - slur 14-16 ends here
+16 LH1: F3+F4:h.)
+# JUDGE bar 17 RH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 17 RH1: staccato on the half chord
+17 RH1: dyn:f Bb4+D5+Bb5:h* Bb4+F5:e Bb4+F5:e
+# JUDGE bar 17 LH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 17 LH1: dyn:f (between staves)
+17 LH1: dyn:f Bb2+Bb3:h D3:e D3:e
+# JUDGE bar 18 RH: X - dynamic printed between the staves; base placement kept
+18 RH1: dyn:p Bb4+D5:et( A4+C5:s Bb4+D5:s C5+Eb5:q) A4+C5:q
+# JUDGE bar 18 LH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 18 LH1: dyn:p (between staves)
+18 LH1: dyn:p F3:h.
+# page 270 system 1 starts bar 19
+19 RH1: Bb4+D5+Bb5:h Bb4+F5:e Bb4+F5:e
+19 LH1: Bb2+Bb3:h D3:e D3:e
+# JUDGE bar 20 RH: X - dynamic printed between the staves; base placement kept
+20 RH1: dyn:p Bb4+D5:et( A4+C5:s Bb4+D5:s C5+Eb5:q) A4+C5:q
+# JUDGE bar 20 LH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 20 LH1: dyn:p (between staves)
+20 LH1: dyn:p F3:h( Eb3:q)
+21 RH1: Bb4+F5:h.
+21 LH1: D3:h.
+# JUDGE bar 22 RH: Y - cresc. printed under beat 1
+22 RH1: word:cresc. Bb4+G5:h G5+Bb5:e G5+Bb5:e
+# MARKS bar 22 LH1: word:cresc. (between staves)
+22 LH1: word:cresc. Eb3:h.
+23 RH1: F5+Bb5+D6:h.
+23 LH1: F3:h.
+# MARKS bar 24 RH1: dyn:f (between staves)
+24 RH1: dyn:f F5+A5+C6:h.
+24 LH1: dyn:f F2+F3:h.
+25 RH1: dyn:fp Bb4+Bb5:e Bb4:e Bb4:h
+# MARKS bar 25 LH1: dyn:fp (between staves)
+25 LH1: dyn:fp trem1:Bb2|Bb3:h.
+# page 270 system 2 starts bar 26
+# JUDGE bar 26 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+26 RH1: G#4+Bn4:e( A4+C5:e) A4+C5:h
+26 LH1: trem1:Bb2|Bb3:h.
+# JUDGE bar 27 RH: Y - a flat is printed before the 2nd chord: Bb4+D5 (cancelling the B natural of bar 26); natural before the 5th chord cancels C#
+27 RH1: A4+C#5:e( Bb4+D5:e) Bb4+D5:e Bb4+D5:e C5+Eb5:e C5+Eb5:e
+27 LH1: trem1:Bb2|Bb3:h.
+# JUDGE bar 28 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+28 RH1: dyn:fp C#5+En5:e( D5+F5:e) D5+F5:e D5+F5:e Eb5+G5:e Eb5+G5:e
+# MARKS bar 28 LH1: dyn:fp (between staves)
+28 LH1: dyn:fp trem1:Bb2|Bb3:h.
+29 RH1: dyn:sfp D5+F5+Ab5:e D5+F5+Ab5:q D5+F5+Ab5:q D5+F5+Ab5:e~
+# JUDGE bar 29 LH: X - dynamic printed between the staves; base placement kept; spelling only (explicit natural vs bare letter): same pitch, base kept
+# MARKS bar 29 LH1: dyn:sfp (between staves)
+29 LH1: dyn:sfp trem1:Bn2|Bn3:h.
+# JUDGE bar 30 RH: X - ties from bar 29 into the first chord; the slur starts on F5
+30 RH1: D5+F5+Ab5:e F5:e( D5:e Bn4:e Ab4:e F4:e) clef:F
+# JUDGE bar 30 LH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+30 LH1: Bn2+Bn3:q r:q r:q
+# JUDGE bar 31 RH: OWN - A printed without flat, but bars 29-31 are the diminished chord B-D-F-Ab over B natural in the LH: clear misprint, corrected to Ab3
+31 RH1: dyn:p trem2:Ab3+D4|F3:h.
+# JUDGE bar 31 LH: X - dynamic printed between the staves; base placement kept; spelling only (explicit natural vs bare letter): same pitch, base kept
+# MARKS bar 31 LH1: dyn:p (between staves)
+31 LH1: dyn:p Bn2:q Bn2:q Bn2:q
+32 RH1: trem2:G3+D4|F3:h.
+# JUDGE bar 32 LH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+32 LH1: Bn2:q Bn2:q Bn2:q
+# page 270 system 3 starts bar 33 (RH in bass clef)
+33 RH1: trem2:G3+C4|Eb3:h.
+33 LH1: C3:q C3:q C3:q
+# JUDGE bar 34 RH: Y - first chord (bass clef) is D3+G3+B3: middle head in the space below the top line
+34 RH1: D3+G3+B3:e clef:G G4+B4+D5:q G4+B4+D5:q B4+D5+G5:e(
+34 LH1: G2:e G3:e G2:e G3:e G2:e G3:e
+# JUDGE bar 35 RH: OWN - first three chords C5+Eb5+F#5 (Eb5 displaced left of the stem), last eighth chord has no Eb5: C5+F#5+C6
+35 RH1: C5+Eb5+F#5:e) dyn:f C5+Eb5+F#5+C6:q C5+Eb5+F#5+C6:q C5+F#5+C6:e(
+# JUDGE bar 35 LH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 35 LH1: dyn:f (between staves)
+35 LH1: Ab2:e dyn:f Ab3:e Ab2:e Ab3:e Ab2:e Ab3:e
+# JUDGE bar 36 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+# MARKS bar 36 RH1: dyn:p (between staves)
+36 RH1: D5+G5+Bn5:e) G4:e dyn:p G4:e G5:e G4:e G5:e
+36 LH1: G2+G3:q dyn:p G3:q G3:q
+# page 270 system 4 starts bar 37 (RH back in treble clef)
+# JUDGE bar 37 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+37 RH1: Ab4:e Ab5:e Ab4:e Ab5:e An4:e An5:e
+# JUDGE bar 37 LH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+37 LH1: Ab3:h( An3:q)
+# JUDGE bar 38 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+38 RH1: Bb4:e Bb5:e Bb4:e Bb5:e Bn4:e Bn5:e
+# JUDGE bar 38 LH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+38 LH1: Bb3:h( Bn3:q)
+39 RH1: dyn:fp C5+C6:e C4:e C4:e C4:e C4:e C4:e
+# JUDGE bar 39 LH: X - first LH eighth is C4 alone, stemmed into the C3 beam (no C3 under it)
+# MARKS bar 39 LH1: dyn:fp (between staves)
+39 LH1: dyn:fp C4:e C3:e C3:e C3:e C3:e C3:e
+# JUDGE bar 40 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+40 RH1: dyn:fp A#3+C#4:e( Bn3+D4:e) Bn3+D4:e Bn3+D4:e Bn3+D4:e Bn3+D4:e
+# MARKS bar 40 LH1: dyn:fp (between staves)
+40 LH1: dyn:fp C2:e C3:e C2:e C3:e C2:e C3:e
+# JUDGE bar 41 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+41 RH1: dyn:fp Bn3+D#4:e( C4+En4:e) C4+En4:e C4+En4:e Dn4+F4:e Dn4+F4:e
+# MARKS bar 41 LH1: dyn:fp (between staves)
+41 LH1: dyn:fp C2:e C3:e C2:e C3:e C2:e C3:e
+# JUDGE bar 42 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+42 RH1: dyn:fp D#4+F#4:e( En4+G4:e) En4+G4:e En4+G4:e Fn4+A4:e Fn4+A4:e
+# MARKS bar 42 LH1: dyn:fp (between staves)
+42 LH1: dyn:fp C2:e C3:e C2:e C3:e C2:e C3:e
+# page 271 system 1 starts bar 43
+# bar 43 LH: the first low C#2 is printed with an open head (held dotted half) stemmed into the eighth beam: LH2 C#2:h. under the alternating octave eighths
+# JUDGE bar 43 RH: X - chords are E5+G5+Bb5 (three heads, one ledger line, no C#6)
+43 RH1: dyn:sfp G4+Bb4:e En5+G5+Bb5:q En5+G5+Bb5:q En5+G5+Bb5:e~
+# JUDGE bar 43 LH: Y - the open-headed C#2 stemmed into the beam is a held dotted half: written as LH2 C#2:h. under the eighths
+# MARKS bar 43 LH1: dyn:sfp (between staves)
+43 LH1: dyn:sfp C#2:e C#3:e C#2:e C#3:e C#2:e C#3:e
+43 LH2: C#2:h.
+# JUDGE bar 44 RH: X - first chord E5+G5+Bb5 (no C#6); slur printed G5 to G4
+44 RH1: En5+G5+Bb5:e G5:e( En5:e C#5:e Bb4:e G4:e)
+44 LH1: C#2+C#3:q r:q r:q
+# JUDGE bar 45 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+45 RH1: dyn:p trem2:Bb3+En4|G3:h.
+# MARKS bar 45 LH1: dyn:p (between staves)
+45 LH1: dyn:p C#3:q C#3:q C#3:q
+# JUDGE bar 46 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+46 RH1: trem2:Bb3+En4|G3:h.
+46 LH1: C#3:q C#3:q C#3:q
+# JUDGE bar 47 RH: X - cresc. centred under the 3rd chord; arc into bar 48 printed
+47 RH1: F3+A3+D4:e F4+A4+D5:q word:cresc. F4+A4+D5:q F4+A4+D5:e(
+# MARKS bar 47 LH1: word:cresc. (between staves)
+47 LH1: D3:q word:cresc. D3:q D3:q
+# JUDGE bar 48 RH: X - arcs printed from bar 47 and into bar 49
+48 RH1: F#4+G4+D5:e) D5+F#5+G5:q D5+F#5+G5:q D5+G5:e(
+# JUDGE bar 48 LH: X - low notes hang below the second ledger line (Bb1), upper ones on the B line (Bb2)
+48 LH1: Bb1:e Bb2:e Bb1:e Bb2:e Bb1:e Bb2:e
+# page 271 system 2 starts bar 49
+# JUDGE bar 49 RH: X - slur from bar 48 ends here
+49 RH1: dyn:f C#5+En5+A5:e) En5+C#6:e En5+C#6:e En5+C#6:e F5+D6:e F5+D6:e
+# MARKS bar 49 LH1: dyn:f (between staves)
+49 LH1: dyn:f A1:e A2:e A1:e A2:e A1:e A2:e
+# JUDGE bar 50 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+50 RH1: En5+C#6:e En5+C#6:e En5+C#6:e En5+C#6:e F5+D6:e F5+D6:e
+50 LH1: A1:e A2:e A1:e A2:e A1:e A2:e
+# JUDGE bar 51 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+51 RH1: En5+C#6:e En5+C#6:e En5+C#6:e En5+C#6:e F5+D6:e F5+D6:e
+51 LH1: A1:e A2:e A1:e A2:e A1:e A2:e
+# JUDGE bar 52 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+52 RH1: En5+C#6:e En5+C#6:e En5+C#6:e En5+C#6:e F5+D6:e F5+D6:e
+52 LH1: A1:e A2:e A1:e A2:e A1:e A2:e
+# JUDGE bar 53 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+53 RH1: En5+C#6:q r:q r:q
+53 LH1: A1:q r:q r:q
+# JUDGE bar 54 RH: X - dynamic printed between the staves; base placement kept
+54 RH1: dyn:p D5+G#5:q* r:q r:q
+# JUDGE bar 54 LH: Y - heads in the space above the top line and on the B line: Bb2+Bb3 (augmented-sixth chord to A)
+54 LH1: dyn:p Bb2+Bb3:q r:q r:q
+# page 271 system 3 starts bar 55
+55 RH1: C#5+A5:q r:q r:q
+55 LH1: A2+A3:q r:q r:q
+# bar 56: Allegro molto, alla breve, F major
+56 RH1: r:e dyn:p A3+F4:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e G#3+E4:e G#3+E4:e
+# MARKS bar 56 LH1: dyn:p (between staves)
+56 LH1: dyn:p F2+F3:q r:q r:h
+57 RH1: r:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e G#3+E4:e G#3+E4:e
+57 LH1: F2+F3:q r:q r:h
+58 RH1: A3+F4:e A3+F4:e G#3+E4:e G#3+E4:e A3+F4:e A3+F4:e A3+F#4:e A3+F#4:e
+58 LH1: F2+F3:q r:q F2+F3:q r:q
+59 RH1: r:e Bb3+G4:e Bb3+G4:e Bb3+G4:e Bb3+G4:e Bb3+G4:e A3+F#4:e A3+F#4:e
+59 LH1: F2+F3:q r:q r:h
+# page 271 system 4 starts bar 60
+# JUDGE bar 60 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+60 RH1: Bb3+G4:e Bb3+G4:e A3+F#4:e A3+F#4:e Bb3+G4:e Bb3+G4:e Bn3+G#4:e Bn3+G#4:e
+60 LH1: F2+F3:q r:q F2+F3:q r:q
+61 RH1: r:e C4+A4:e C4+A4:e C4+A4:e C4+A4:e C4+A4:e C#4+A4:e C#4+A4:e
+61 LH1: F2+F3:q r:q r:h
+# JUDGE bar 62 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+62 RH1: r:e D4+Bb4:e D4+Bb4:e D4+Bb4:e r:e Cn4+A4:e Cn4+A4:e Cn4+A4:e
+62 LH1: F2+F3:q r:q F2+F3:q r:q
+# bars 63-64 RH: courtesy natural on G4 as in the voice
+# JUDGE bar 63 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+63 RH1: r:e Bb3+Gn4:e Bb3+G4:e Bb3+G4:e Bb3+G4:e Bb3+G4:e Bn3+G#4:e Bn3+G#4:e
+63 LH1: F2+F3:q r:q r:h
+# JUDGE bar 64 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+64 RH1: r:e C4+A4:e C4+A4:e C4+A4:e r:e Bb3+Gn4:e Bb3+G4:e Bb3+G4:e
+64 LH1: F2+F3:q r:q F2+F3:q r:q
+# page 271 system 5 starts bar 65
+65 RH1: r:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e A3+F4:e
+65 LH1: F2+F3:q r:q r:h
+66 RH1: r:e G3+E4:e G3+E4:e G3+E4:e r:e G#3+E4:e G#3+E4:e G#3+E4:e
+66 LH1: F2+F3:q r:q F2+F3:q r:q
+67 RH1: r:e A3+F4:e A3+F4:e A3+F4:e r:e A3+F#4:e A3+F#4:e A3+F#4:e
+67 LH1: F2+F3:q r:q F2+F3:q r:q
+68 RH1: r:e Bb3+G4:e Bb3+G4:e Bb3+G4:e r:e C4+A4:e C4+A4:e C4+A4:e
+68 LH1: F2+F3:q r:q F2+F3:q r:q
+# JUDGE bar 69 RH: X - spelling only (explicit natural vs bare letter): same pitch, base kept
+69 RH1: A3+Fn4:e A4+C5:e A4+C5:e A4+C5:e A4+C5:e A4+C5:e A4+C5:e A4+C5:e
+69 LH1: F3:q r:q r:h
+# page 272 system 1 starts bar 70
+70 RH1: E4+G4:e E4+G4:e F4+A4:e F4+A4:e C4+E4:e C4+E4:e D4+F4:e D4+F4:e
+70 LH1: r:w
+71 RH1: E4+G4:e C4+C5:e C4+C5:e C4+C5:e C4+C5:e C4+C5:e C4+C5:e C4+C5:e
+71 LH1: C2+C3:w
+# JUDGE bar 72 RH: X - flat before the 3rd chord, both 3rd and 4th chords F4+Ab4
+72 RH1: E4+G4:e E4+G4:e F4+Ab4:e F4+Ab4:e C4+E4:e C4+E4:e D4+F4:e D4+F4:e
+72 LH1: r:w
+73 RH1: E4+G4:h C4:h
+73 LH1: C2+C3:h C2+C3:h
+74 RH1: C4:h C4:h
+74 LH1: C2+C3:h C2+C3:h
+75 RH1: C4:q C5+E5+G5:q word:cresc. C5+G5:q C5+G5:q
+# MARKS bar 75 LH1: word:cresc. (between staves)
+75 LH1: C2+C3:h word:cresc. E3:e C3:e E3:e C3:e
+# page 272 system 2 starts bar 76
+76 RH1: C5+A5:q C5+A5:q C5+F5+A5:q C5+F5+A5:q
+76 LH1: F3:e C3:e F3:e C3:e A3:e F3:e A3:e F3:e
+77 RH1: dyn:f C5+E5+G5:h dyn:p C4:h
+# MARKS bar 77 LH1: dyn:f, dyn:p (between staves)
+77 LH1: dyn:f C3:h dyn:p C2+C3:h
+78 RH1: C4:h C4:h
+78 LH1: C2+C3:h C2+C3:h
+79 RH1: C4:q C5+E5+G5:q word:cresc. C5+G5:q C5+G5:q
+# MARKS bar 79 LH1: word:cresc. (between staves)
+79 LH1: C2+C3:h word:cresc. E3:e C3:e E3:e C3:e
+80 RH1: C5+F5+A5:q C5+F5+A5:q C5+F5+A5:q C5+F5+A5:q
+80 LH1: F3:e C3:e F3:e C3:e A3:e F3:e A3:e F3:e
+# MARKS bar 81 RH1: dyn:f (between staves)
+81 RH1: dyn:f E5+G5:e C5:e E5+G5:e C5:e F5+A5:e C5:e F5+A5:e Bb4:e
+# JUDGE bar 81 LH: X - all lower LH notes at the same height: C3 throughout
+81 LH1: dyn:f C3:e C4:e C3:e C4:e C3:e C4:e C3:e C4:e
+# page 272 system 3 starts bar 82
+82 RH1: E5+G5:e C5:e E5+G5:e C5:e F5+A5:e C5:e F5+A5:e C5:e
+82 LH1: C3:e C4:e C3:e C4:e C3:e C4:e C3:e C4:e
+# bar 83: stage direction "knocking heard at the door"; the triplets are 32nd-note triplets (three beams, "3")
+# JUDGE bar 83 RH: X - half chord heads in the spaces C5, E5 and above the top line G5
+83 RH1: C5+E5+G5:h r:q r:e. C4:x3( D4:x3 E4:x3
+83 LH1: C3:h r:q r:e. C3:x3( D3:x3 E3:x3
+84 RH1: dyn:sf F4:h) r:q r:e. C4:x3( D4:x3 E4:x3
+# MARKS bar 84 LH1: dyn:sf (between staves)
+84 LH1: dyn:sf F3:h) r:q r:e. C3:x3( D3:x3 E3:x3
+# MARKS bar 85 RH1: slur from the tr F4 into bar 86
+85 RH1: F4:h) F4:q F4:e.t( E4:x F4:x
+# JUDGE bar 85 RH2: X - both A3s are quarters (the dashes are ledger lines C4, not tenuto)
+85 RH2: s:h dyn:p A3:q A3:q
+# JUDGE bar 85 LH: X - slur from the bar-84 triplet ends on the F3 half
+# MARKS bar 85 LH1: dyn:p (between staves)
+85 LH1: F3:h) dyn:p F2:e F3:e F2:e F3:e
+# MARKS bar 86 RH1: slur from bar 85 trill ends here
+86 RH1: C4+A4:e) r:e A3+F4:e r:e C4+A4:e r:e A3+F4:e r:e
+86 LH1: F2:e F3:e F2:e F3:e F2:e F3:e F2:e F3:e
+# JUDGE bar 87 RH: X - f printed just before the triplet
+87 RH1: C4+A4:e r:e A3+F4:e r:e r:q r:e. dyn:f C4:x3( D4:x3 E4:x3
+# MARKS bar 87 LH1: dyn:f (between staves)
+87 LH1: F2:h r:q r:e. dyn:f C3:x3( D3:x3 E3:x3
+# page 272 system 4 starts bar 88
+88 RH1: F4:h) r:q r:e. C4:x3( D4:x3 E4:x3
+# MARKS bar 88 LH1: removed slur start: the printed slur ends on the LH2 whole F3 of bar 89 (cross-voice, cannot be written; it was left unclosed)
+88 LH1: F3:h) r:q r:e. C3:x3 D3:x3 E3:x3
+# bars 89-90, 92-93, 94-95: LH in two voices (whole note F3 below, half-note chords above with a printed half rest); in 92-93 and 94-95 the whole F3 is tied into the next bar's chord
+# JUDGE bar 89 RH: Y - the slur starts at F5 (beat 2), F4 only ends the triplet slur
+# MARKS bar 89 RH1: dyn:p (between staves, beat 2)
+89 RH1: F4:q) dyn:p F5:q( A5:q C6:q
+# JUDGE bar 89 LH: X - a half rest is printed over the whole note
+89 LH1: r:h dyn:p A3+C4:h(
+# JUDGE bar 89 LH2: X - no tenuto on the whole note
+89 LH2: F3:w
+90 RH1: Db6:q Bb5:q G5:q E5:q)
+# JUDGE bar 90 LH: X - two arcs printed: A3+C4 to G3+Bb3, and G3+Bb3 to Bb3+Db4
+90 LH1: G3+Bb3:h)( Bb3+Db4:h)
+90 LH2: F3:w
+91 RH1: dyn:f F5:q r:e. C4:x3( D4:x3 E4:x3 F4:q) r:e. C4:x3( D4:x3 E4:x3
+# MARKS bar 91 LH1: dyn:f (between staves)
+# MARKS bar 91 LH1: removed slur start: the printed slur ends on the LH2 whole F3 of bar 92 (cross-voice, left unclosed)
+91 LH1: dyn:f F3+A3+C4:q r:e. C3:x3( D3:x3 E3:x3 F3:q) r:e. C3:x3 D3:x3 E3:x3
+# JUDGE bar 92 RH: Y - the slur starts at F5
+# MARKS bar 92 RH1: dyn:p (between staves, beat 2)
+92 RH1: F4:q) dyn:p F5:q( A5:q C6:q
+# JUDGE bar 92 LH: OWN (both wrong) - no slur printed from the A3+C4 half chord; the arc below is a tie from the whole F3
+92 LH1: r:h dyn:p A3+C4:h
+# JUDGE bar 92 LH2: OWN (both wrong) - whole F3 tied into the F3 of the bar-93 chord
+92 LH2: F3:w~
+# JUDGE bar 93 RH: X - base spelling kept (D natural cancels Db)
+93 RH1: Db6:q Bb5:q E5:q) r:e. dyn:f C4:x3( Dn4:x3 E4:x3
+# JUDGE bar 93 LH: OWN - half chord is F3+G3+Bb3 (F3 tied from bar 92, displaced left of G3); quarter chord F3+Bb3+Db4
+# MARKS bar 93 LH1: dyn:f (between staves); removed slur start: the printed slur ends on the LH2 whole F3 of bar 94 (cross-voice, left unclosed)
+93 LH1: F3+G3+Bb3:h F3+Bb3+Db4:q r:e. dyn:f C3:x3 Dn3:x3 E3:x3
+# page 272 system 5 starts bar 94
+# JUDGE bar 94 RH: Y - the slur starts at F5
+# MARKS bar 94 RH1: dyn:p (between staves, beat 2)
+94 RH1: F4:q) dyn:p F5:q( A5:q C6:q
+# JUDGE bar 94 LH: OWN (both wrong) - no slur printed from the A3+C4 chord; the arc is a tie from the whole F3
+94 LH1: r:h dyn:p A3+C4:h
+# JUDGE bar 94 LH2: OWN - whole F3 tied into bar 95; no tenuto
+94 LH2: F3:w~
+# JUDGE bar 95 RH: X - base spelling kept (D natural cancels Db)
+95 RH1: Db6:q Bb5:q E5:q) r:e. dyn:f C4:x3( Dn4:x3 E4:x3
+# JUDGE bar 95 LH: OWN - as bar 93: F3+G3+Bb3 half (F3 tied), quarter F3+Bb3+Db4
+# MARKS bar 95 LH1: dyn:f (between staves)
+95 LH1: F3+G3+Bb3:h F3+Bb3+Db4:q r:e. dyn:f C3:x3( Dn3:x3 E3:x3
+96 RH1: F4:h) r:q dyn:p F4+F5:q(
+# MARKS bar 96 LH1: dyn:p (between staves)
+96 LH1: F3:h) r:q dyn:p F3:q(
+97 RH1: E4+E5:h G4+G5:h
+97 LH1: E3:h G3:h
+98 RH1: Bb4+Bb5:h G4+G5:q E4+E5:q)
+98 LH1: Bb3:h G3:q E3:q)
+99 RH1: F4+F5:h( A4+A5:h)
+99 LH1: F3:h( A3:h)
+# page 273 system 1 starts bar 100
+# JUDGE bar 100 RH: X - cresc. starts under the 3rd beat
+100 RH1: F5+C6:e C5:e F5+C6:e C5:e word:cresc. F5+D6:e D5:e F5+D6:e D5:e
+# MARKS bar 100 LH1: word:cresc. (between staves)
+100 LH1: A1:e A2:e A1:e A2:e word:cresc. Bb1:e Bb2:e Bb1:e Bb2:e
+101 RH1: F5+A5+C6:e C5:e F5+A5+C6:e C5:e dyn:f G5+Bb5:e C5:e G5+Bb5:e C5:e
+# MARKS bar 101 LH1: dyn:f (between staves)
+101 LH1: C2:e C3:e C2:e C3:e dyn:f C2:e C3:e C2:e C3:e
+102 RH1: F5+A5:q r:q r:q dyn:p F4+F5:q(
+# MARKS bar 102 LH1: dyn:p (between staves)
+102 LH1: F2:q r:q r:q dyn:p F3:q(
+103 RH1: E4+E5:h G4+G5:h
+103 LH1: E3:h G3:h
+104 RH1: Bb4+Bb5:h G4+G5:q E4+E5:q)
+104 LH1: Bb3:h G3:q E3:q)
+105 RH1: F4+F5:h( A4+A5:h)
+105 LH1: F3:h( A3:h)
+# page 273 system 2 starts bar 106 (Tutti)
+106 RH1: C5+C6:h( D5+D6:h)
+106 RH2: F5:w
+106 LH1: A2+A3:h( Bb2+Bb3:h)
+107 RH1: C5+F5+A5:h C5+E5+G5:h
+107 LH1: C3+C4:h C3+C4:h
+108 RH1: F5:q r:q r:h
+108 LH1: F3:q r:q r:h
+# JUDGE bar 109 RH: X - chord is A4+E5+A5 (heads in A4 and E5 spaces, A5 on the ledger)
+109 RH1: dyn:f A4+E5+A5:q r:q r:h
+# JUDGE bar 109 LH: X - dynamic printed between the staves; base placement kept
+# MARKS bar 109 LH1: dyn:f (between staves)
+109 LH1: dyn:f C2+C3:q r:q r:h
