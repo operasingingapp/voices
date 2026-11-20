@@ -4140,7 +4140,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zu Hülfe! zu Hülfe!",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Zu Hilfe! Zu Hilfe!"
+      "id": "Act 1: Zu Hilfe! Zu Hilfe!",
+      "editionId": "mozart-zu-hulfe-zu-hulfe"
      },
      {
       "title": "Hm! hm! hm!",
@@ -4150,7 +4151,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise",
+      "editionId": "mozart-drei-knabchen"
      },
      {
       "title": "Zum Ziele führt dich diese Bahn",
@@ -4295,7 +4297,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise",
+      "editionId": "mozart-drei-knabchen"
      },
      {
       "title": "Du feines Täubchen, nur herein!",
@@ -4466,7 +4469,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zu Hülfe! zu Hülfe!",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Zu Hülfe! zu Hülfe!"
+      "id": "Act 1: Zu Hülfe! zu Hülfe!",
+      "editionId": "mozart-zu-hulfe-zu-hulfe"
      },
      {
       "title": "Ich sollte fort?",
@@ -4482,7 +4486,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise",
+      "editionId": "mozart-drei-knabchen"
      },
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
@@ -4506,7 +4511,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zu Hülfe! zu Hülfe!",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Zu Hülfe! zu Hülfe!"
+      "id": "Act 1: Zu Hülfe! zu Hülfe!",
+      "editionId": "mozart-zu-hulfe-zu-hulfe"
      },
      {
       "title": "Ich sollte fort?",
@@ -4522,7 +4528,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise",
+      "editionId": "mozart-drei-knabchen"
      },
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
@@ -4546,7 +4553,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zu Hülfe! zu Hülfe!",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Zu Hülfe! zu Hülfe!"
+      "id": "Act 1: Zu Hülfe! zu Hülfe!",
+      "editionId": "mozart-zu-hulfe-zu-hulfe"
      },
      {
       "title": "Ich sollte fort?",
@@ -4562,7 +4570,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise"
+      "id": "Act 1: Drei Knäbchen, jung, schön, hold und weise",
+      "editionId": "mozart-drei-knabchen"
      },
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",

@@ -7642,6 +7642,64 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-drei-knabchen": {
+    portrait: "zauberfloete:dame1",
+    opera: "Die Zauberflöte",
+    kind: "Quintet",
+    facts: {
+      key: "B-flat major",
+      time: "4/4",
+      tempo: "Andante, played at ♩ = 78, about 1¾ minutes, the median of five recordings (Haitink 1981, whose track starts at “Drei Knäbchen”, and Klemperer 1964, Böhm 1964, Christie 1995 and Abbado 2005, whose tracks hold the whole quintet and were given this section's share of it in Haitink's)",
+    },
+    notePlaceholder: "Hushed and even: the Ladies' sotto voce promise, then a warm, unhurried farewell",
+    about: (
+      <>
+        <p>
+          Act 1, the rocky landscape, at the end of the quintet. Tamino and Papageno have asked how they are to find Sarastro's castle. The three Ladies come back and tell them that three boys, young, fair, gentle and wise, will hover about them on their way: they are to be their guides, and they must follow their counsel alone. Tamino and Papageno repeat the promise, and all five say goodbye until they meet again. They all go off.
+        </p>
+        <p>
+          Score: the last part of No. 5, the Quintet (vocal score pages 43–45, 34 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Each singer has their own line; the print puts the
+          Ladies two to a staff, then all three on one, and Tamino and Papageno on the Ladies' staves. The print spells “Rathe” and
+          writes “geh'n” and “Wiederseh'n”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-zu-hulfe-zu-hulfe": {
+    portrait: "zauberfloete:tamino",
+    opera: "Die Zauberflöte",
+    kind: "Introduction",
+    facts: {
+      key: "C minor, then E-flat major from the Ladies' “Triumph!” (three flats throughout), ending on a D major chord before “Ich sollte fort?”",
+      time: "4/4",
+      tempo: "Allegro, played at ♩ = 131, about 3½ minutes, the median of five recordings (Haitink 1981 and Norrington, whose tracks end before “Ich sollte fort?”, and Klemperer 1964, Böhm 1964 and Christie 1995, whose tracks hold the whole Introduction and were given this section's share of it in the first two); the fermatas are held",
+    },
+    notePlaceholder: "Tamino's panic, then three Ladies in triumph; keep the rivalry at the end quick and pointed",
+    about: (
+      <>
+        <p>
+          Act 1, a rough, rocky landscape. Prince Tamino runs in, pursued by a serpent: he cries for help, calls on the merciful gods to save him, and faints. Three veiled Ladies of the Queen of the Night rush in and kill the serpent, rejoicing in their heroic deed. They gaze at the unconscious young man: none of them has ever seen anyone so handsome, and each says that if she gave her heart to love, it would be to him. They decide to tell their princess, since this man might give her back her peace of mind, but each wants the other two to go while she stays to watch over him: I'll stay, I'll keep watch, I'll guard him alone.
+        </p>
+        <p>
+          Score: the first part of No. 1, the Introduction (vocal score pages 10–15, 119 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Tamino's line is printed in the treble clef and
+          sounds an octave lower. Each Lady has her own line; the print puts two of them on one staff in places. The print writes
+          “Zu Hülfe!”, “Ungeheu'r”, “Heldenthat”, “ertheilen”, “geseh'n”, “vor'ge Ruh'” and “bleib'”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

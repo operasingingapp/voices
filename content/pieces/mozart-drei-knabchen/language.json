@@ -1,0 +1,2301 @@
+{
+ "editionId": "mozart-drei-knabchen",
+ "language": "de",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Emanuel Schikaneder (1791). Words as printed in the Edition Peters vocal score, which the app follows where it differs from the libretto: \"Rathe\" in the old spelling, \"geh'n\" and \"Wiederseh'n\" with the apostrophe, and the repeats of the music (the Ladies sing \"Sie werden eure Führer sein, folgt ihrem Rathe ganz allein\" twice; all five end with \"auf Wiederseh'n\" three times). Each Lady has her own line; in bars 24–31 the print puts all three on one staff. IPA follows sung German stage diction: final -er, -ern as [ɐ]; the prefixes er-, ver-, zer- with [ɛr]; r elsewhere rolled or flipped; ch as [ç] after front vowels and [x] after back vowels; glottal stops [ʔ] before initial vowels; final b d g devoiced.",
+ "phrases": [
+  {
+   "id": "d1-01",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Drei Knäbchen, jung, schön, hold und weise,",
+   "translation": "Three little boys, young, fair, gentle and wise,",
+   "ipa": "ˈdrae ˈknɛːp.çən ˈjʊŋ ˈʃøːn ˈhɔlt ʔʊnt ˈvae.zə",
+   "words": [
+    [
+     "Drei",
+     "three",
+     "ˈdrae"
+    ],
+    [
+     "Knäbchen,",
+     "little boys",
+     "ˈknɛːp.çən"
+    ],
+    [
+     "jung,",
+     "young",
+     "ˈjʊŋ"
+    ],
+    [
+     "schön,",
+     "fair",
+     "ˈʃøːn"
+    ],
+    [
+     "hold",
+     "gentle",
+     "ˈhɔlt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "weise,",
+     "wise",
+     "ˈvae.zə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d1-02",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "umschweben euch auf eurer Reise,",
+   "translation": "will float around you as you travel;",
+   "ipa": "ʔʊmˈʃveː.bən ʔɔøç ʔaof ˈʔɔø.rɐ ˈrae.zə",
+   "words": [
+    [
+     "umschweben",
+     "float around",
+     "ʔʊmˈʃveː.bən"
+    ],
+    [
+     "euch",
+     "you",
+     "ʔɔøç"
+    ],
+    [
+     "auf",
+     "on",
+     "ʔaof"
+    ],
+    [
+     "eurer",
+     "your",
+     "ˈʔɔø.rɐ"
+    ],
+    [
+     "Reise,",
+     "journey",
+     "ˈrae.zə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "will float around you"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "on your way"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-03",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "sie werden eure Führer sein,",
+   "translation": "they are to show you the way,",
+   "ipa": "ziː ˈveːr.dən ˈʔɔø.rə ˈfyː.rɐ zaen",
+   "words": [
+    [
+     "sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "eure",
+     "your",
+     "ˈʔɔø.rə"
+    ],
+    [
+     "Führer",
+     "guides",
+     "ˈfyː.rɐ"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will be your guides"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-04",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "folgt ihrem Rathe ganz allein.",
+   "translation": "heed their counsel and no one else's.",
+   "ipa": "ˈfɔlkt ˈʔiː.rəm ˈraː.tə ˈgants ʔaˈlaen",
+   "words": [
+    [
+     "folgt",
+     "follow",
+     "ˈfɔlkt"
+    ],
+    [
+     "ihrem",
+     "their",
+     "ˈʔiː.rəm"
+    ],
+    [
+     "Rathe",
+     "counsel",
+     "ˈraː.tə"
+    ],
+    [
+     "ganz",
+     "entirely",
+     "ˈgants"
+    ],
+    [
+     "allein.",
+     "alone",
+     "ʔaˈlaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "and no one else's"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-05",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Sie werden eure Führer sein,",
+   "translation": "They are to show you the way,",
+   "ipa": "ziː ˈveːr.dən ˈʔɔø.rə ˈfyː.rɐ zaen",
+   "words": [
+    [
+     "Sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "eure",
+     "your",
+     "ˈʔɔø.rə"
+    ],
+    [
+     "Führer",
+     "guides",
+     "ˈfyː.rɐ"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will be your guides"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-06",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "folgt ihrem Rathe ganz allein.",
+   "translation": "heed their counsel and no one else's.",
+   "ipa": "ˈfɔlkt ˈʔiː.rəm ˈraː.tə ˈgants ʔaˈlaen",
+   "words": [
+    [
+     "folgt",
+     "follow",
+     "ˈfɔlkt"
+    ],
+    [
+     "ihrem",
+     "their",
+     "ˈʔiː.rəm"
+    ],
+    [
+     "Rathe",
+     "counsel",
+     "ˈraː.tə"
+    ],
+    [
+     "ganz",
+     "entirely",
+     "ˈgants"
+    ],
+    [
+     "allein.",
+     "alone",
+     "ʔaˈlaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "and no one else's"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-07",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-08",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n,",
+   "translation": "goodbye, goodbye! Till next time,",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-09",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "auf Wiederseh'n,",
+   "translation": "till next time,",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-10",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "auf Wiederseh'n.",
+   "translation": "till next time.",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-01",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Drei Knäbchen, jung, schön, hold und weise,",
+   "translation": "Three little boys, young, fair, gentle and wise,",
+   "ipa": "ˈdrae ˈknɛːp.çən ˈjʊŋ ˈʃøːn ˈhɔlt ʔʊnt ˈvae.zə",
+   "words": [
+    [
+     "Drei",
+     "three",
+     "ˈdrae"
+    ],
+    [
+     "Knäbchen,",
+     "little boys",
+     "ˈknɛːp.çən"
+    ],
+    [
+     "jung,",
+     "young",
+     "ˈjʊŋ"
+    ],
+    [
+     "schön,",
+     "fair",
+     "ˈʃøːn"
+    ],
+    [
+     "hold",
+     "gentle",
+     "ˈhɔlt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "weise,",
+     "wise",
+     "ˈvae.zə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2-02",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "umschweben euch auf eurer Reise,",
+   "translation": "will float around you as you travel;",
+   "ipa": "ʔʊmˈʃveː.bən ʔɔøç ʔaof ˈʔɔø.rɐ ˈrae.zə",
+   "words": [
+    [
+     "umschweben",
+     "float around",
+     "ʔʊmˈʃveː.bən"
+    ],
+    [
+     "euch",
+     "you",
+     "ʔɔøç"
+    ],
+    [
+     "auf",
+     "on",
+     "ʔaof"
+    ],
+    [
+     "eurer",
+     "your",
+     "ˈʔɔø.rɐ"
+    ],
+    [
+     "Reise,",
+     "journey",
+     "ˈrae.zə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "will float around you"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "on your way"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-03",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "sie werden eure Führer sein,",
+   "translation": "they are to show you the way,",
+   "ipa": "ziː ˈveːr.dən ˈʔɔø.rə ˈfyː.rɐ zaen",
+   "words": [
+    [
+     "sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "eure",
+     "your",
+     "ˈʔɔø.rə"
+    ],
+    [
+     "Führer",
+     "guides",
+     "ˈfyː.rɐ"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will be your guides"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-04",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "folgt ihrem Rathe ganz allein.",
+   "translation": "heed their counsel and no one else's.",
+   "ipa": "ˈfɔlkt ˈʔiː.rəm ˈraː.tə ˈgants ʔaˈlaen",
+   "words": [
+    [
+     "folgt",
+     "follow",
+     "ˈfɔlkt"
+    ],
+    [
+     "ihrem",
+     "their",
+     "ˈʔiː.rəm"
+    ],
+    [
+     "Rathe",
+     "counsel",
+     "ˈraː.tə"
+    ],
+    [
+     "ganz",
+     "entirely",
+     "ˈgants"
+    ],
+    [
+     "allein.",
+     "alone",
+     "ʔaˈlaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "and no one else's"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-05",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Sie werden eure Führer sein,",
+   "translation": "They are to show you the way,",
+   "ipa": "ziː ˈveːr.dən ˈʔɔø.rə ˈfyː.rɐ zaen",
+   "words": [
+    [
+     "Sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "eure",
+     "your",
+     "ˈʔɔø.rə"
+    ],
+    [
+     "Führer",
+     "guides",
+     "ˈfyː.rɐ"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will be your guides"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-06",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "folgt ihrem Rathe ganz allein.",
+   "translation": "heed their counsel and no one else's.",
+   "ipa": "ˈfɔlkt ˈʔiː.rəm ˈraː.tə ˈgants ʔaˈlaen",
+   "words": [
+    [
+     "folgt",
+     "follow",
+     "ˈfɔlkt"
+    ],
+    [
+     "ihrem",
+     "their",
+     "ˈʔiː.rəm"
+    ],
+    [
+     "Rathe",
+     "counsel",
+     "ˈraː.tə"
+    ],
+    [
+     "ganz",
+     "entirely",
+     "ˈgants"
+    ],
+    [
+     "allein.",
+     "alone",
+     "ʔaˈlaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "and no one else's"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-07",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-08",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n,",
+   "translation": "goodbye, goodbye! Till next time,",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-09",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "auf Wiederseh'n,",
+   "translation": "till next time,",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-10",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "auf Wiederseh'n.",
+   "translation": "till next time.",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-01",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "4",
+   "original": "Drei Knäbchen, jung, schön, hold und weise,",
+   "translation": "Three little boys, young, fair, gentle and wise,",
+   "ipa": "ˈdrae ˈknɛːp.çən ˈjʊŋ ˈʃøːn ˈhɔlt ʔʊnt ˈvae.zə",
+   "words": [
+    [
+     "Drei",
+     "three",
+     "ˈdrae"
+    ],
+    [
+     "Knäbchen,",
+     "little boys",
+     "ˈknɛːp.çən"
+    ],
+    [
+     "jung,",
+     "young",
+     "ˈjʊŋ"
+    ],
+    [
+     "schön,",
+     "fair",
+     "ˈʃøːn"
+    ],
+    [
+     "hold",
+     "gentle",
+     "ˈhɔlt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "weise,",
+     "wise",
+     "ˈvae.zə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d3-02",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "6",
+   "original": "umschweben euch auf eurer Reise,",
+   "translation": "will float around you as you travel;",
+   "ipa": "ʔʊmˈʃveː.bən ʔɔøç ʔaof ˈʔɔø.rɐ ˈrae.zə",
+   "words": [
+    [
+     "umschweben",
+     "float around",
+     "ʔʊmˈʃveː.bən"
+    ],
+    [
+     "euch",
+     "you",
+     "ʔɔøç"
+    ],
+    [
+     "auf",
+     "on",
+     "ʔaof"
+    ],
+    [
+     "eurer",
+     "your",
+     "ˈʔɔø.rɐ"
+    ],
+    [
+     "Reise,",
+     "journey",
+     "ˈrae.zə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "will float around you"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "on your way"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-03",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "sie werden eure Führer sein,",
+   "translation": "they are to show you the way,",
+   "ipa": "ziː ˈveːr.dən ˈʔɔø.rə ˈfyː.rɐ zaen",
+   "words": [
+    [
+     "sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "eure",
+     "your",
+     "ˈʔɔø.rə"
+    ],
+    [
+     "Führer",
+     "guides",
+     "ˈfyː.rɐ"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will be your guides"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-04",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "folgt ihrem Rathe ganz allein.",
+   "translation": "heed their counsel and no one else's.",
+   "ipa": "ˈfɔlkt ˈʔiː.rəm ˈraː.tə ˈgants ʔaˈlaen",
+   "words": [
+    [
+     "folgt",
+     "follow",
+     "ˈfɔlkt"
+    ],
+    [
+     "ihrem",
+     "their",
+     "ˈʔiː.rəm"
+    ],
+    [
+     "Rathe",
+     "counsel",
+     "ˈraː.tə"
+    ],
+    [
+     "ganz",
+     "entirely",
+     "ˈgants"
+    ],
+    [
+     "allein.",
+     "alone",
+     "ʔaˈlaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "and no one else's"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-05",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "16",
+   "original": "Sie werden eure Führer sein,",
+   "translation": "They are to show you the way,",
+   "ipa": "ziː ˈveːr.dən ˈʔɔø.rə ˈfyː.rɐ zaen",
+   "words": [
+    [
+     "Sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "eure",
+     "your",
+     "ˈʔɔø.rə"
+    ],
+    [
+     "Führer",
+     "guides",
+     "ˈfyː.rɐ"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "will be your guides"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-06",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "folgt ihrem Rathe ganz allein.",
+   "translation": "heed their counsel and no one else's.",
+   "ipa": "ˈfɔlkt ˈʔiː.rəm ˈraː.tə ˈgants ʔaˈlaen",
+   "words": [
+    [
+     "folgt",
+     "follow",
+     "ˈfɔlkt"
+    ],
+    [
+     "ihrem",
+     "their",
+     "ˈʔiː.rəm"
+    ],
+    [
+     "Rathe",
+     "counsel",
+     "ˈraː.tə"
+    ],
+    [
+     "ganz",
+     "entirely",
+     "ˈgants"
+    ],
+    [
+     "allein.",
+     "alone",
+     "ʔaˈlaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "and no one else's"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-07",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-08",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n,",
+   "translation": "goodbye, goodbye! Till next time,",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-09",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "28",
+   "original": "auf Wiederseh'n,",
+   "translation": "till next time,",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-10",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "30",
+   "original": "auf Wiederseh'n.",
+   "translation": "till next time.",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-01",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Drei Knäbchen, jung, schön, hold und weise,",
+   "translation": "Three little boys, young, fair, gentle and wise,",
+   "ipa": "ˈdrae ˈknɛːp.çən ˈjʊŋ ˈʃøːn ˈhɔlt ʔʊnt ˈvae.zə",
+   "words": [
+    [
+     "Drei",
+     "three",
+     "ˈdrae"
+    ],
+    [
+     "Knäbchen,",
+     "little boys",
+     "ˈknɛːp.çən"
+    ],
+    [
+     "jung,",
+     "young",
+     "ˈjʊŋ"
+    ],
+    [
+     "schön,",
+     "fair",
+     "ˈʃøːn"
+    ],
+    [
+     "hold",
+     "gentle",
+     "ˈhɔlt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "weise,",
+     "wise",
+     "ˈvae.zə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "ta-02",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "umschweben uns auf unsrer Reise.",
+   "translation": "will float around us as we travel.",
+   "ipa": "ʔʊmˈʃveː.bən ʔʊns ʔaof ˈʔʊn.zrɐ ˈrae.zə",
+   "words": [
+    [
+     "umschweben",
+     "float around",
+     "ʔʊmˈʃveː.bən"
+    ],
+    [
+     "uns",
+     "us",
+     "ʔʊns"
+    ],
+    [
+     "auf",
+     "on",
+     "ʔaof"
+    ],
+    [
+     "unsrer",
+     "our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Reise.",
+     "journey",
+     "ˈrae.zə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "will float around us"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "on our way"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-03",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-04",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n.",
+   "translation": "goodbye, goodbye! Till next time.",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-05",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-06",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n,",
+   "translation": "goodbye, goodbye! Till next time,",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-07",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "auf Wiederseh'n,",
+   "translation": "till next time,",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-08",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "auf Wiederseh'n.",
+   "translation": "till next time.",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-01",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "12",
+   "original": "Drei Knäbchen, jung, schön, hold und weise,",
+   "translation": "Three little boys, young, fair, gentle and wise,",
+   "ipa": "ˈdrae ˈknɛːp.çən ˈjʊŋ ˈʃøːn ˈhɔlt ʔʊnt ˈvae.zə",
+   "words": [
+    [
+     "Drei",
+     "three",
+     "ˈdrae"
+    ],
+    [
+     "Knäbchen,",
+     "little boys",
+     "ˈknɛːp.çən"
+    ],
+    [
+     "jung,",
+     "young",
+     "ˈjʊŋ"
+    ],
+    [
+     "schön,",
+     "fair",
+     "ˈʃøːn"
+    ],
+    [
+     "hold",
+     "gentle",
+     "ˈhɔlt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "weise,",
+     "wise",
+     "ˈvae.zə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-02",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "14",
+   "original": "umschweben uns auf unsrer Reise.",
+   "translation": "will float around us as we travel.",
+   "ipa": "ʔʊmˈʃveː.bən ʔʊns ʔaof ˈʔʊn.zrɐ ˈrae.zə",
+   "words": [
+    [
+     "umschweben",
+     "float around",
+     "ʔʊmˈʃveː.bən"
+    ],
+    [
+     "uns",
+     "us",
+     "ʔʊns"
+    ],
+    [
+     "auf",
+     "on",
+     "ʔaof"
+    ],
+    [
+     "unsrer",
+     "our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Reise.",
+     "journey",
+     "ˈrae.zə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "will float around us"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "on our way"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-03",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "20",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-04",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n.",
+   "translation": "goodbye, goodbye! Till next time.",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-05",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "So lebet wohl! wir wollen geh'n,",
+   "translation": "So goodbye! We must be on our way,",
+   "ipa": "zoː ˈleː.bət voːl viːr ˈvɔ.lən ˈgeːn",
+   "words": [
+    [
+     "So",
+     "so",
+     "zoː"
+    ],
+    [
+     "lebet",
+     "live",
+     "ˈleː.bət"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "wollen",
+     "mean to",
+     "ˈvɔ.lən"
+    ],
+    [
+     "geh'n,",
+     "go",
+     "ˈgeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "must be going"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-06",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "lebt wohl! lebt wohl! auf Wiederseh'n,",
+   "translation": "goodbye, goodbye! Till next time,",
+   "ipa": "ˈleːpt voːl ˈleːpt voːl ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "lebt",
+     "live",
+     "ˈleːpt"
+    ],
+    [
+     "wohl!",
+     "well",
+     "voːl"
+    ],
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "goodbye"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-07",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "auf Wiederseh'n,",
+   "translation": "till next time,",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n,",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-08",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "auf Wiederseh'n.",
+   "translation": "till next time.",
+   "ipa": "ʔaof ˈviː.dɐ.zeːn",
+   "words": [
+    [
+     "auf",
+     "till",
+     "ʔaof"
+    ],
+    [
+     "Wiederseh'n.",
+     "seeing again",
+     "ˈviː.dɐ.zeːn"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "see you again"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

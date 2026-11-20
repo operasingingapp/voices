@@ -2703,6 +2703,58 @@
     }
   },
   {
+    "editionId": "mozart-drei-knabchen",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-drei-knabchen@1.0.0-peters#7b92ca7094",
+    "title": "Drei Knäbchen, jung, schön, hold und weise",
+    "subtitle": "The three Ladies, Tamino and Papageno: quintet from Die Zauberflöte, Act 1",
+    "kind": "quintet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dame1",
+        "name": "First Lady",
+        "voiceType": "Soprano",
+        "partKey": "dame1"
+      },
+      {
+        "id": "dame2",
+        "name": "Second Lady",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dame2"
+      },
+      {
+        "id": "dame3",
+        "name": "Third Lady",
+        "voiceType": "Mezzo-soprano or contralto",
+        "partKey": "dame3"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      }
+    ],
+    "measures": 34,
+    "durationSec": 105,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 46,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-du-feines-taubchen",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-du-feines-taubchen@1.0.0-peters#9f6394a07b",
@@ -8952,6 +9004,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 48,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-zu-hulfe-zu-hulfe",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-zu-hulfe-zu-hulfe@1.0.0-peters#6c7067b0ee",
+    "title": "Zu Hülfe! zu Hülfe!",
+    "subtitle": "Tamino and the three Ladies: from the Introduction of Die Zauberflöte, Act 1 (No. 1)",
+    "kind": "introduction",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "dame1",
+        "name": "First Lady",
+        "voiceType": "Soprano",
+        "partKey": "dame1"
+      },
+      {
+        "id": "dame2",
+        "name": "Second Lady",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dame2"
+      },
+      {
+        "id": "dame3",
+        "name": "Third Lady",
+        "voiceType": "Mezzo-soprano or contralto",
+        "partKey": "dame3"
+      }
+    ],
+    "measures": 119,
+    "durationSec": 218,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 70,
       "withAudio": 0,
       "reviewed": 0
     }

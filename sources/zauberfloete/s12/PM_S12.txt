@@ -1,0 +1,116 @@
+# S12: Nr. 5 Quintett, "Drei Knäbchen" (pp. 43-45), piano reduction. RH treble, LH bass unless a clef token says otherwise.
+# page 043 system 2 starts inside the chunk at its bar 4 (= bar 1 here)
+# bar 1: Andante, 4/4 (C), B-flat major (2 flats)
+1 RH1: dyn:p word:dolce D5+F5:h( C5:h)
+# MARKS bar 1 LH1: dyn:p (printed between the staves)
+1 LH1: dyn:p Bb3:e* D4:e* Bb3:e* D4:e* A3:e* C4:e* A3:e* C4:e*
+2 RH1: Bb4+D5:h( A4:h)
+2 LH1: G3:e* Bb3:e* G3:e* Bb3:e* F3:e* A3:e* F3:e* A3:e*
+# page 043 system 3 starts bar 3
+# JUDGE bar 3 RH: X - the upper old-style half note sits on the B4 line, same height as the beat-3 Bb4: tie (lower G4 -> F4 slurred)
+3 RH1: Bb4:h~ Bb4:q. C5:s( D5:s)
+3 RH2: G4:h( F4:q) r:q
+3 LH1: Eb3:e* G3:e* Eb3:e* G3:e* D3:e* F3:e* D3:e* Bb3:e*
+# JUDGE bar 4 RH: X - separate short slurs over each dotted pair, slur C5 -> F4
+4 RH1: Eb5:e.( F5:s) D5:e.( Eb5:s) C5:q( F4:e) r:e
+4 RH2: A4:q( Bb4:q) A4:q s:q
+4 LH1: C3:e* A3:e* Bb2:e* Bb3:e* F3:q r:q
+5 RH1: D5+F5:h( C5:h)
+5 LH1: Bb3:e* D4:e* Bb3:e* D4:e* A3:e* C4:e* A3:e* C4:e*
+6 RH1: Bb4+D5:h( A4:h)
+6 LH1: G3:e* Bb3:e* G3:e* Bb3:e* F3:e* A3:e* F3:e* A3:e*
+# JUDGE bar 7 RH: X - as bar 3: half note on the B4 line tied to Bb4
+7 RH1: Bb4:h~ Bb4:q. C5:s( D5:s)
+7 RH2: G4:h( F4:q) r:q
+7 LH1: Eb3:e* G3:e* Eb3:e* G3:e* D3:e* F3:e* D3:e* Bb3:e*
+# page 043 system 4 starts bar 8
+# JUDGE bar 8 RH: X - slurs over each dotted pair printed
+8 RH1: Eb5:e.( F5:s) D5:e.( Eb5:s) C5:q( F4:e) r:e
+8 RH2: A4:q( Bb4:q) A4:q s:q
+8 LH1: C3:e* A3:e* Bb2:e* Bb3:e* F3:e* C4:e* A3:e* C4:e*
+9 RH1: A4+C5:h( Bb4+D5:h)
+9 LH1: F3:e* C4:e* A3:e* C4:e* F3:e* D4:e* Bb3:e* D4:e*
+# JUDGE bar 10 RH: X - slurs over each dotted pair printed
+10 RH1: C5+Eb5:e.( Bb4+D5:s) C5+Eb5:e.( A4+F5:s) Bb4+D5:q r:q
+10 LH1: F3:e* Eb4:e* C4:e* Eb4:e* G3:e* D4:e* Bb3:e* D4:e*
+11 RH1: dyn:mf G5:q. dyn:p G5:e G5:e( F5:e Eb5:e D5:e)
+11 RH2: Bb4:q. Bb4:e Bb4:h
+# JUDGE bar 11 LH: X - mf dynamic printed between the staves under the RH; attached to the RH line as both readers did, not duplicated on the LH
+# MARKS bar 11 LH1: dyn:mf, dyn:p (printed between the staves)
+11 LH1: dyn:mf Eb3:e* Bb3:e* G3:e* dyn:p Eb3:e* D3:e* Bb3:e* Eb3:e* Bb3:e*
+# page 044 system 1 starts bar 12
+12 RH1: Bb4+C5:q* A4+C5:q* Bb4:q* r:q
+12 LH1: F3:e* Bb3:e* F3:e* A3:e* Bb3:e* F3:e* D3:e* Bb2:e*
+13 RH1: D4+F4:h( C4:h)
+13 LH1: Bb2:e* D3:e* Bb2:e* D3:e* A2:e* C3:e* A2:e* C3:e*
+14 RH1: Bb3+D4:h( A3:h)
+14 LH1: G2:e* Bb2:e* G2:e* Bb2:e* F2:e* A2:e* F2:e* A2:e*
+# JUDGE bar 15 RH: X - upper head in the Bb3 space with its dot in the same space: Bb3 dotted half; the beat-4 Bb3 has a second stem down (lower voice quarter)
+15 RH1: Bb3:h. Bb3:e( C4:s D4:s)
+15 RH2: G3:h( F3:q) Bb3:q
+15 LH1: Eb2:e* G2:e* Eb2:e* G2:e* D2:e* F2:e* D2:e* F2:e*
+# page 044 system 2 starts bar 16
+# JUDGE bar 16 RH: X - beat 3 C4 stem up (RH1) with A3 stem down (RH2)
+16 RH1: Eb4:e.( F4:s) D4:e.( Eb4:s) C4:q r:q
+# JUDGE bar 16 RH2: OWN - X's notes (A3 Bb3 A3, lower stems), but no slur is printed on the lower voice
+16 RH2: A3:q Bb3:q A3:q s:q
+16 LH1: C2:e* A2:e* Bb1:e* Bb2:e* F2:e* A2:e* C3:e* F3:e*
+17 RH1: A4+C5:h( Bb4+D5:h)
+17 LH1: F3:e* C4:e* A3:e* C4:e* F3:e* D4:e* Bb3:e* D4:e*
+# JUDGE bar 18 RH: X - slurs over each dotted pair as bar 10
+18 RH1: C5+Eb5:e.( Bb4+D5:s) C5+Eb5:e.( A4+F5:s) Bb4+D5:q r:q
+18 LH1: F3:e* Eb4:e* C4:e* Eb4:e* G3:e* D4:e* Bb3:e* D4:e*
+19 RH1: dyn:sf G5:q. dyn:p G5:e G5:e( F5:e Eb5:e D5:e)
+19 RH2: Bb4:q. Bb4:e Bb4:h
+# JUDGE bar 19 LH: X - sf dynamic printed between the staves under the RH; attached to the RH line as both readers did, not duplicated on the LH
+# MARKS bar 19 LH1: dyn:sf, dyn:p (printed between the staves)
+19 LH1: dyn:sf Eb3:e* Bb3:e* G3:e* dyn:p Eb3:e* D3:e* Bb3:e* Eb3:e* Bb3:e*
+# page 044 system 3 starts bar 20
+20 RH1: Bb4+C5:q* A4+C5:q* Bb4:q* r:q
+20 LH1: F3:e* F4:e* F3:e* F4:e* Bb3:e* F3:e* D3:e* Bb2:e*
+21 RH1: A3+C4:h( Bb3+D4:h)
+21 LH1: F2:e* C3:e* A2:e* C3:e* F2:e* D3:e* Bb2:e* D3:e*
+22 RH1: C4+Eb4:e.( Bb3+D4:s) C4+Eb4:e.( A3+F4:s) Bb3+D4:q r:q
+22 LH1: F2:e* Eb3:e* C3:e* Eb3:e* G2:e* D3:e* Bb2:e* D3:e*
+23 RH1: G4:q. dyn:p G4:e G4:e( F4:e Eb4:e D4:e)
+23 RH2: dyn:sf Bb3:w
+# JUDGE bar 23 LH: X - sf dynamic printed between the staves under the RH; attached to the RH line as both readers did, not duplicated on the LH
+# MARKS bar 23 LH1: dyn:sf, dyn:p (printed between the staves)
+23 LH1: dyn:sf Eb2:e* Bb2:e* G2:e* dyn:p Eb2:e* D2:e* Bb2:e* Eb2:e* Bb2:e*
+# page 044 system 4 starts bar 24
+24 RH1: Bb3+C4:q* A3+C4:q* Bb3:q* r:e Bb4:e
+24 LH1: F2:e* F3:e* F2:e* F3:e* Bb2:e* F3:e* D3:e* Bb2:e*
+# JUDGE bar 25 RH: X - Bb4+G5 are one chord on a single stem (no second voice)
+25 RH1: dyn:f Bb4+G5:q. dyn:p Bb4+G5:e Bb4+F5:q r:e Bb4:e
+# JUDGE bar 25 LH: X - beat 1 is the octave Eb2+Eb3 on one stem; f/p dynamic printed between the staves under the RH; attached to the RH line as both readers did, not duplicated on the LH
+# MARKS bar 25 LH1: dyn:f, dyn:p (printed between the staves)
+25 LH1: dyn:f Eb2+Eb3:e* Bb3:e* G3:e* dyn:p Eb3:e* D3:e* Bb3:e* F3:e* D3:e*
+# JUDGE bar 26 RH: X - as bar 25, single-stem chords
+26 RH1: dyn:f Bb4+G5:q. dyn:p Bb4+G5:e Bb4+F5:q r:e Bb4:e
+# JUDGE bar 26 LH: X - octave Eb2+Eb3; f dynamic printed between the staves under the RH; attached to the RH line as both readers did, not duplicated on the LH
+# MARKS bar 26 LH1: dyn:f, dyn:p (printed between the staves)
+26 LH1: dyn:f Eb2+Eb3:e* Bb3:e* G3:e* dyn:p Eb3:e* D3:e* Bb3:e* F3:e* D3:e*
+27 RH1: dyn:f G5:q. G5:e G5:e( F5:e Eb5:e D5:e)
+27 RH2: Bb4:q. Bb4:e Bb4:q G4+Bb4:q
+# JUDGE bar 27 LH: X - octave Eb2+Eb3; f dynamic printed between the staves under the RH; attached to the RH line as both readers did, not duplicated on the LH
+# MARKS bar 27 LH1: dyn:f (printed between the staves)
+27 LH1: dyn:f Eb2+Eb3:e* Bb3:e* G3:e* Eb3:e* D3:e* Bb3:e* Eb3:e* Bb3:e*
+28 RH1: F4+Bb4+C5:q A4+C5:q Bb4:q r:e dyn:p Bb4:e
+28 RH2: s:q F4:e. Eb4:s D4+F4:q s:q
+28 LH1: F3:e* Eb3:e* F3:e* F2+F3:e* Bb2:q r:q clef:G
+# page 045 system 1 starts bar 29 (LH begins in treble clef: horns)
+# JUDGE bar 29 RH: X - E5 (natural) = En5, same note
+29 RH1: C5:e( F5:e E5:e Eb5:e D5:q) r:e D4:e
+29 LH1: F4+A4:h( Bb4:q) clef:F r:e Bb3:e
+30 RH1: C4:e( Bb3:e C4:e D4:e Bb3:q) r:e Bb4:e
+30 LH1: F3:q F3:q D3:q r:q clef:G
+# JUDGE bar 31 RH: X - E5 (natural) = En5, same note
+31 RH1: C5:e( F5:e E5:e Eb5:e D5:q) r:e D4:e
+31 LH1: F4+A4:h( Bb4:q) r:q clef:F
+32 RH1: C4:e( Bb3:e C4:e D4:e Bb3:q) r:e F4+D5:s( Eb4+C5:s
+32 LH1: F3:q F3:q Bb2:q r:q
+33 RH1: D4+Bb4:q) r:e F4+D5:s( Eb4+C5:s D4+Bb4:q) r:e F4+D5:s( Eb4+C5:s
+33 LH1: Bb2+F3:q r:q Bb2+F3:q r:q
+# bar 34: final double bar of No. 5
+34 RH1: D4+Bb4:q) r:q r:h
+34 LH1: Bb2+F3:q r:q r:h

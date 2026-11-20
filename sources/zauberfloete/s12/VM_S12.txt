@@ -1,0 +1,199 @@
+# S12: Nr. 5 Quintett, "Drei Knäbchen, jung, schön, hold und weise" (pp. 43-45), Edition Peters
+# Singers: D1 D2 D3 = 1st/2nd/3rd Lady, T = Tamino (printed treble clef, written here at sounding pitch, an octave lower), G = Papageno (bass clef, sounding)
+# No chorus codes in this chunk.
+# page 043 system 2 starts inside the chunk at its bar 4 (= bar 1 here)
+# bar 1: Andante, 4/4 (C), B-flat major (2 flats)
+1 D1: r:w
+1 D2: r:w
+1 D3: r:w
+1 T: r:w
+1 G: r:w
+2 D1: r:w
+2 D2: r:w
+2 D3: r:w
+2 T: r:w
+2 G: r:w
+# page 043 system 3 starts bar 3 ("Die drei Damen (zurückkommend)": staves D1/2 and D3)
+3 D1: r:w
+3 D2: r:w
+3 D3: r:w
+3 T: r:w
+3 G: r:w
+# bar 4: "1.u.2. Dame" / "3. Dame", sotto voce
+4 D1: r:h r:q r:e. word:sotto_voce F5:s "Drei"
+# JUDGE bar 4 D2: X - 'sotto voce' is printed over the D 1/2 staff, which D2 shares
+4 D2: r:h r:q r:e. word:sotto_voce D5:s "Drei"
+# JUDGE bar 4 D3: Y - 'sotto voce' is printed only over the D 1/2 staff, nothing on the D3 staff
+4 D3: r:h r:q r:e. Bb4:s "Drei"
+4 T: r:w
+4 G: r:w
+5 D1: F5:e "Knäb-" r:e F5:e "chen," r:e F5:e "jung," r:e F5:e "schön," r:e
+5 D2: D5:e "Knäb-" r:e D5:e "chen," r:e C5:e "jung," r:e C5:e "schön," r:e
+5 D3: Bb4:e "Knäb-" r:e Bb4:e "chen," r:e A4:e "jung," r:e A4:e "schön," r:e
+5 T: r:w
+5 G: r:w
+6 D1: D5:e "hold" r:e D5:e "und" r:e D5:q "wei-" D5:e "se," D5:e "um-"
+6 D2: Bb4:e "hold" r:e Bb4:e "und" r:e A4:q "wei-" A4:e "se," A4:e "um-"
+6 D3: G4:e "hold" r:e G4:e "und" r:e F4:q "wei-" F4:e "se," F4:e "um-"
+6 T: r:w
+6 G: r:w
+# JUDGE bar 7 D1: X - Slurs are not part of the sung format (TB.md: melisma = notes without a syllable)
+7 D1: Bb4:q. "schwe-" Bb4:e "ben" Bb4:q. "euch" C5:s "auf" D5:s
+7 D2: G4:q. "schwe-" G4:e "ben" F4:q. "euch" Bb4:e "auf"
+7 D3: Eb4:q. "schwe-" Eb4:e "ben" D4:q. "euch" D4:e "auf"
+7 T: r:w
+7 G: r:w
+# page 043 system 4 starts bar 8
+8 D1: Eb5:e. "eu-" F5:s D5:e. "rer" Eb5:s C5:q "Rei-" F4:e "se," r:s C5:s "sie"
+8 D2: A4:q "eu-" Bb4:q "rer" A4:q "Rei-" F4:e "se," r:s A4:s "sie"
+8 D3: C4:q "eu-" Bb3:q "rer" F4:q "Rei-" F4:e "se," r:s F4:s "sie"
+8 T: r:w
+8 G: r:w
+9 D1: C5:q. "wer-" C5:e "den" D5:q. "eu-" D5:e "re"
+9 D2: A4:q. "wer-" A4:e "den" Bb4:q. "eu-" Bb4:e "re"
+9 D3: F4:q. "wer-" F4:e "den" F4:q. "eu-" F4:e "re"
+9 T: r:w
+9 G: r:w
+10 D1: Eb5:e. "Füh-" D5:s Eb5:e. "rer" F5:s D5:q "sein," r:q
+10 D2: C5:e. "Füh-" Bb4:s C5:e. "rer" A4:s Bb4:q "sein," r:q
+10 D3: F4:q "Füh-" F4:q "rer" G4:q "sein," r:q
+10 T: r:w
+10 G: r:w
+11 D1: G5:q "folgt" G5:e "ih-" G5:e "rem" G5:e "Ra-" F5:e Eb5:e "the" D5:e
+11 D2: Bb4:q "folgt" Bb4:e "ih-" Bb4:e "rem" Bb4:q "Ra-" Bb4:q "the"
+11 D3: Eb4:q "folgt" Eb4:e "ih-" Eb4:e "rem" D4:q "Ra-" Eb4:q "the"
+11 T: r:w
+11 G: r:w
+# page 044 system 1 starts bar 12 (staff "D 1/2 / T" and staff "D 3 / P"; Tamino and Papageno ("Pap.", bass clef) enter on the Ladies' staves)
+12 D1: C5:q "ganz" C5:q "al-" Bb4:q "lein." r:q
+12 D2: Bb4:q "ganz" A4:q "al-" Bb4:q "lein." r:q
+12 D3: F4:q "ganz" F4:q "al-" Bb3:q "lein." r:q
+12 T: r:h r:q r:e. F4:s "Drei"
+12 G: r:h r:q r:e. Bb3:s "Drei"
+13 D1: r:w
+13 D2: r:w
+13 D3: r:w
+13 T: F4:e "Knäb-" r:e F4:e "chen," r:e F4:e "jung," r:e F4:e "schön," r:e
+13 G: Bb3:e "Knäb-" r:e D4:e "chen," r:e A3:e "jung," r:e C4:e "schön," r:e
+14 D1: r:w
+14 D2: r:w
+14 D3: r:w
+14 T: D4:e "hold" r:e D4:e "und" r:e D4:q "wei-" D4:e "se," D4:e "um-"
+# MARKS bar 14 G: staccato on G3 "hold"
+14 G: G3:e "hold" r:e Bb3:e "und" r:e F3:q "wei-" A3:e "se," F3:e "um-"
+15 D1: r:w
+15 D2: r:w
+15 D3: r:w
+15 T: Bb3:q. "schwe-" Bb3:e "ben" Bb3:q. "uns" C4:s "auf" D4:s
+15 G: Eb3:q. "schwe-" Eb3:e "ben" D3:q. "uns" Bb3:e "auf"
+# page 044 system 2 starts bar 16 (staves "T / D 1/2" and "P / D 3"; the 3rd Lady's entry has a treble clef in mid-staff)
+16 D1: r:h r:q r:e r:s C5:s "Sie"
+16 D2: r:h r:q r:e r:s A4:s "Sie"
+16 D3: r:h r:q r:e r:s F4:s "Sie"
+16 T: Eb4:e. "uns-" F4:s D4:e. "rer" Eb4:s C4:q "Rei-" F3:e "se." r:e
+16 G: A3:q "uns-" Bb3:q "rer" A3:q "Rei-" F3:e "se." r:e
+17 D1: C5:q. "wer-" C5:e "den" D5:q. "eu-" D5:e "re"
+17 D2: A4:q. "wer-" A4:e "den" Bb4:q. "eu-" Bb4:e "re"
+17 D3: F4:q. "wer-" F4:e "den" F4:q. "eu-" F4:e "re"
+17 T: r:w
+17 G: r:w
+18 D1: Eb5:e. "Füh-" D5:s Eb5:e. "rer" F5:s D5:q "sein," r:q
+18 D2: C5:e. "Füh-" Bb4:s C5:e. "rer" A4:s Bb4:q "sein," r:q
+18 D3: F4:q. "Füh-" F4:e "rer" G4:q "sein," r:q
+18 T: r:w
+18 G: r:w
+19 D1: G5:q "folgt" G5:e "ih-" G5:e "rem" G5:e "Ra-" F5:e Eb5:e "the" D5:e
+19 D2: Bb4:q "folgt" Bb4:e "ih-" Bb4:e "rem" Bb4:q "Ra-" Bb4:q "the"
+19 D3: Eb4:q "folgt" Eb4:e "ih-" Eb4:e "rem" D4:q "Ra-" Eb4:q "the"
+19 T: r:w
+19 G: r:w
+# page 044 system 3 starts bar 20 (staves "D 1/2 / T" and "D 3 / P" as in system 1)
+20 D1: C5:q "ganz" C5:q "al-" Bb4:q "lein." r:q
+20 D2: Bb4:q "ganz" A4:q "al-" Bb4:q "lein." r:q
+20 D3: F4:q "ganz" F4:q "al-" Bb3:q "lein." r:q
+20 T: r:h r:q r:e. C4:s "So"
+20 G: r:h r:q r:e. A3:s "So"
+21 D1: r:w
+21 D2: r:w
+21 D3: r:w
+21 T: C4:q. "le-" C4:e "bet" D4:q. "wohl!" D4:e "wir"
+21 G: A3:q. "le-" A3:e "bet" Bb3:q. "wohl!" Bb3:e "wir"
+22 D1: r:w
+22 D2: r:w
+22 D3: r:w
+22 T: Eb4:e. "wol-" D4:s Eb4:e. "len" F4:s D4:q "geh'n," r:e D4:e "lebt"
+22 G: C4:e. "wol-" Bb3:s C4:e. "len" A3:s Bb3:q "geh'n," r:e Bb3:e "lebt"
+23 D1: r:w
+23 D2: r:w
+23 D3: r:w
+23 T: G4:q. "wohl!" G4:e "lebt" G4:e "wohl!" F4:e Eb4:e "auf" D4:e
+23 G: Bb3:q. "wohl!" Bb3:e "lebt" Bb3:q "wohl!" Bb3:q "auf"
+# page 044 system 4 starts bar 24 (separate staves: "D 1/2/3", T, P; "1.2.u.3. Dame")
+# bars 24-31: the three Ladies share one staff with at most two noteheads (bar 29/31 three-note chords):
+#   upper (stem up) = D1, lower (stem down) = D2 and D3 (one printed note, both sing it); see reply
+24 D1: r:h r:q r:e dyn:f Bb4:e "So"
+24 D2: r:h r:q r:e dyn:f Bb4:e "So"
+24 D3: r:h r:q r:e dyn:f Bb4:e "So"
+24 T: C4:q "Wie-" C4:q "der-" Bb3:q "seh'n." r:e dyn:f Bb3:e "So"
+24 G: Bb3:q "Wie-" A3:q "der-" Bb3:q "seh'n." r:e dyn:f Bb3:e "So"
+25 D1: G5:q. "le-" G5:e "bet" F5:q "wohl!" r:e Bb4:e "wir"
+25 D2: Bb4:q. "le-" Bb4:e "bet" Bb4:q "wohl!" r:e Bb4:e "wir"
+25 D3: Bb4:q. "le-" Bb4:e "bet" Bb4:q "wohl!" r:e Bb4:e "wir"
+25 T: Eb4:q. "le-" Eb4:e "bet" Bb3:q "wohl!" r:e Bb3:e "wir"
+25 G: Eb3:q. "le-" Eb3:e "bet" D3:q "wohl!" r:e D3:e "wir"
+26 D1: G5:q. "wol-" G5:e "len" F5:q "geh'n," r:e Bb4:e "lebt"
+26 D2: Bb4:q. "wol-" Bb4:e "len" Bb4:q "geh'n," r:e Bb4:e "lebt"
+26 D3: Bb4:q. "wol-" Bb4:e "len" Bb4:q "geh'n," r:e Bb4:e "lebt"
+26 T: Eb4:q. "wol-" Eb4:e "len" Bb3:q "geh'n," r:e Bb3:e "lebt"
+26 G: Eb3:q. "wol-" Eb3:e "len" D3:q "geh'n," r:e D3:e "lebt"
+# JUDGE bar 27 D1: X - Slurs are not part of the sung format (TB.md: melisma = notes without a syllable); print: G5 eighth + F5 eighth, single beam
+27 D1: G5:q. "wohl!" G5:e "lebt" G5:e "wohl!" F5:e Eb5:e "auf" D5:e
+27 D2: Bb4:q. "wohl!" Bb4:e "lebt" Bb4:q "wohl!" Bb4:q "auf"
+27 D3: Bb4:q. "wohl!" Bb4:e "lebt" Bb4:q "wohl!" Bb4:q "auf"
+27 T: Eb4:q. "wohl!" Eb4:e "lebt" Bb3:q "wohl!" G4:q "auf"
+27 G: Eb3:q. "wohl!" Eb3:e "lebt" D3:q "wohl!" Eb3:q "auf"
+28 D1: C5:q "Wie-" C5:q "der-" Bb4:q "seh'n," r:e dyn:p Bb4:e "auf"
+28 D2: Bb4:q "Wie-" A4:q "der-" Bb4:q "seh'n," r:e dyn:p Bb4:e "auf"
+28 D3: Bb4:q "Wie-" A4:q "der-" Bb4:q "seh'n," r:e dyn:p Bb4:e "auf"
+# JUDGE bar 28 T: X - Slurs are not part of the sung format (TB.md: melisma = notes without a syllable)
+28 T: C4:q "Wie-" F4:e "der-" Eb4:e D4:q "seh'n," r:q
+28 G: F3:q "Wie-" F3:q "der-" Bb3:q "seh'n," r:q
+# page 045 system 1 starts bar 29 (D 1/2/3 three-note chords; last system of No. 5, No. 6 follows below)
+# JUDGE bars 29/31 D2/D3: X (agreed) - beats 1-2: C5 (shared head, up-stem D1) / A4 / F4 on the down-stem; beat 3: D5 up-stem (D1), Bb4 down-stem alone = D2 and D3 both (one printed note for two singers, NUMBERING.md), so D3 rises F4 -> Bb4
+# JUDGE bar 29 D1: X - plain eighths (single beam, no dot or 16th stub at 400 dpi); E5 natural = En5; Slurs are not part of the sung format (TB.md: melisma = notes without a syllable)
+29 D1: C5:e "Wie-" F5:e E5:e "der-" Eb5:e D5:q "seh'n," r:q
+29 D2: A4:q "Wie-" A4:q "der-" Bb4:q "seh'n," r:q
+29 D3: F4:q "Wie-" F4:q "der-" Bb4:q "seh'n," r:q
+29 T: r:h r:q r:e dyn:p D4:e "auf"
+29 G: r:h r:q r:e dyn:p Bb3:e "auf"
+# JUDGE bar 30 D1/D2/D3: X (agreed, confirmed) - the "auf" Bb4 carries an up-stem with flag AND a down-stem with flag, and the D4 below has its own down-stem with flag: three voices, D1 Bb4, D2 Bb4, D3 D4
+30 D1: r:h r:q r:e Bb4:e "auf"
+30 D2: r:h r:q r:e Bb4:e "auf"
+30 D3: r:h r:q r:e D4:e "auf"
+# JUDGE bar 30 T: X - Slurs are not part of the sung format (TB.md: melisma = notes without a syllable)
+30 T: C4:e "Wie-" Bb3:e C4:e "der-" D4:e Bb3:q "seh'n," r:q
+30 G: F3:q "Wie-" F3:q "der-" D3:q "seh'n," r:q
+# JUDGE bar 31 D1: X - as bar 29 (plain eighths); Slurs are not part of the sung format (TB.md: melisma = notes without a syllable)
+31 D1: C5:e "Wie-" F5:e E5:e "der-" Eb5:e D5:q "seh'n." r:q
+31 D2: A4:q "Wie-" A4:q "der-" Bb4:q "seh'n." r:q
+31 D3: F4:q "Wie-" F4:q "der-" Bb4:q "seh'n." r:q
+31 T: r:h r:q r:e D4:e "auf"
+31 G: r:h r:q r:e Bb3:e "auf"
+32 D1: r:w
+32 D2: r:w
+32 D3: r:w
+# JUDGE bar 32 T: X - Slurs are not part of the sung format (TB.md: melisma = notes without a syllable)
+32 T: C4:e "Wie-" Bb3:e C4:e "der-" D4:e Bb3:q "seh'n." r:q
+# JUDGE bar 32 G: Y - 'seh'n.' notehead sits on the 2nd line from the bottom of the bass staff = Bb2 (bar 30 is D3, middle line)
+32 G: F3:q "Wie-" F3:q "der-" Bb2:q "seh'n." r:q
+33 D1: r:w
+33 D2: r:w
+33 D3: r:w
+33 T: r:w
+33 G: r:w
+# bar 34: final double bar of No. 5
+34 D1: r:w
+34 D2: r:w
+34 D3: r:w
+34 T: r:w
+34 G: r:w
