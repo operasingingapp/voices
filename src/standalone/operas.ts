@@ -4146,7 +4146,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Hm! hm! hm!",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Hm! hm! hm!"
+      "id": "Act 1: Hm! hm! hm!",
+      "editionId": "mozart-hm-hm-hm"
      },
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
@@ -4157,7 +4158,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zum Ziele führt dich diese Bahn",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-zum-ziele-fuhrt-dich"
      },
      {
       "title": "Die Weisheitslehre dieser Knaben",
@@ -4228,7 +4230,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Es lebe Sarastro! Sarastro lebe!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Es lebe Sarastro! Sarastro lebe!"
+      "id": "Act 1: Es lebe Sarastro! Sarastro lebe!",
+      "editionId": "mozart-es-lebe-sarastro"
      },
      {
       "title": "Herr! ich bin zwar Verbrecherin!",
@@ -4292,7 +4295,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Hm! hm! hm!",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Hm! hm! hm!"
+      "id": "Act 1: Hm! hm! hm!",
+      "editionId": "mozart-hm-hm-hm"
      },
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
@@ -4314,7 +4318,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Es lebe Sarastro! Sarastro lebe!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Es lebe Sarastro! Sarastro lebe!"
+      "id": "Act 1: Es lebe Sarastro! Sarastro lebe!",
+      "editionId": "mozart-es-lebe-sarastro"
      },
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
@@ -4481,7 +4486,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Hm! hm! hm!",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Hm! hm! hm!"
+      "id": "Act 1: Hm! hm! hm!",
+      "editionId": "mozart-hm-hm-hm"
      },
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
@@ -4523,7 +4529,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Hm! hm! hm!",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Hm! hm! hm!"
+      "id": "Act 1: Hm! hm! hm!",
+      "editionId": "mozart-hm-hm-hm"
      },
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
@@ -4565,7 +4572,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Hm! hm! hm!",
       "kind": "Quintet · Act 1",
-      "id": "Act 1: Hm! hm! hm!"
+      "id": "Act 1: Hm! hm! hm!",
+      "editionId": "mozart-hm-hm-hm"
      },
      {
       "title": "Drei Knäbchen, jung, schön, hold und weise",
@@ -4595,7 +4603,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zum Ziele führt dich diese Bahn",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-zum-ziele-fuhrt-dich"
      },
      {
       "title": "Seid uns zum zweitenmal willkommen",
@@ -4625,7 +4634,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zum Ziele führt dich diese Bahn",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-zum-ziele-fuhrt-dich"
      },
      {
       "title": "Seid uns zum zweitenmal willkommen",
@@ -4655,7 +4665,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Zum Ziele führt dich diese Bahn",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-zum-ziele-fuhrt-dich"
      },
      {
       "title": "Seid uns zum zweitenmal willkommen",

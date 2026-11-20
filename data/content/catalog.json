@@ -3511,6 +3511,40 @@
     }
   },
   {
+    "editionId": "mozart-es-lebe-sarastro",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-es-lebe-sarastro@1.0.0-peters#8e59e13799",
+    "title": "Es lebe Sarastro! Sarastro lebe!",
+    "subtitle": "Pamina and Papageno, with the chorus: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      }
+    ],
+    "measures": 44,
+    "durationSec": 108,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 9,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-esci-omai-garzon-malnato",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-esci-omai-garzon-malnato@1.0.0-klengel#066a8136cf",
@@ -4402,6 +4436,58 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 59,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-hm-hm-hm",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-hm-hm-hm@1.0.0-peters#8e2cfe6b74",
+    "title": "Hm! hm! hm!",
+    "subtitle": "Papageno, Tamino and the three Ladies: quintet from Die Zauberflöte, Act 1",
+    "kind": "quintet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dame1",
+        "name": "First Lady",
+        "voiceType": "Soprano",
+        "partKey": "dame1"
+      },
+      {
+        "id": "dame2",
+        "name": "Second Lady",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dame2"
+      },
+      {
+        "id": "dame3",
+        "name": "Third Lady",
+        "voiceType": "Mezzo-soprano or contralto",
+        "partKey": "dame3"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      }
+    ],
+    "measures": 213,
+    "durationSec": 284,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 163,
       "withAudio": 0,
       "reviewed": 0
     }
@@ -9050,6 +9136,52 @@
     "time": "4/4",
     "languageStatus": {
       "phrases": 70,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-zum-ziele-fuhrt-dich",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-zum-ziele-fuhrt-dich@1.0.0-peters#2bf4a54543",
+    "title": "Zum Ziele führt dich diese Bahn",
+    "subtitle": "The three boys and Tamino: the opening of the finale from Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "knabe1",
+        "name": "First Boy",
+        "voiceType": "Treble or soprano",
+        "partKey": "knabe1"
+      },
+      {
+        "id": "knabe2",
+        "name": "Second Boy",
+        "voiceType": "Treble or soprano",
+        "partKey": "knabe2"
+      },
+      {
+        "id": "knabe3",
+        "name": "Third Boy",
+        "voiceType": "Treble or mezzo-soprano",
+        "partKey": "knabe3"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      }
+    ],
+    "measures": 38,
+    "durationSec": 91,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 29,
       "withAudio": 0,
       "reviewed": 0
     }

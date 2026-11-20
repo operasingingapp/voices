@@ -7700,6 +7700,95 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-es-lebe-sarastro": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "C major",
+      time: "4/4",
+      tempo: "Allegro maestoso, played at ♩ = 98, about 1¾ minutes, the median of four complete recordings whose track holds just this section (Norrington, Christie 1995, Haitink 1981, Böhm 1955); the closing fermata is held",
+    },
+    notePlaceholder: "Papageno's panic against the ceremonial march; Pamina's “Die Wahrheit” firm and simple",
+    about: (
+      <>
+        <p>
+          Act 1 finale, in Sarastro's realm. Pamina and Papageno are trying to escape when trumpets and drums sound and voices offstage hail Sarastro. Papageno trembles and wishes he were a mouse or a snail so that he could hide; Pamina knows they are lost, and when he asks what they will say, she answers: the truth, even if it were a crime. Sarastro arrives with his followers, who greet him as a wise man and the idol to whom all devote themselves.
+        </p>
+        <p>
+          Score: part of No. 8, the Act 1 Finale (vocal score pages 69–71, 44 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. The chorus, offstage at first, is printed on two
+          staves and is written out as four parts; it is heard with the piano. The print writes “Was soll das bedeuten?”, “gethan”,
+          “kröch'” and Pamina's “Die Wahrheit, die Wahrheit! wär' sie auch Verbrechen!”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-zum-ziele-fuhrt-dich": {
+    portrait: "zauberfloete:knabe1",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "C major",
+      time: "¢ (alla breve)",
+      tempo: "Larghetto, played at a half note = 50 (♩ = 100), about 1½ minutes, the median of five recordings whose track holds just this section (Jacobs 2010, Norrington, Christie 1995, Toscanini 1937, Haitink 1981)",
+    },
+    notePlaceholder: "Calm and solemn, in two beats to the bar: the boys' counsel moves as one, Tamino's question is urgent but quiet",
+    about: (
+      <>
+        <p>
+          Act 1, the opening of the finale. The scene changes to a grove with three temples, and the three boys lead Tamino in. They tell him that this path will bring him to his goal, but that he must win through as a man: he is to be steadfast, patient and silent. Tamino asks the gracious little ones whether he can rescue Pamina. It is not for them to tell, they answer; he must be steadfast, patient and silent, and, in a word, be a man: then he will win. They leave him alone before the temples.
+        </p>
+        <p>
+          Score: the opening of No. 8, the Finale of Act 1 (vocal score pages 51–53, 38 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Each boy has his own line; the print puts the First
+          and Second Boys on one staff, and Tamino sings on the Third Boy's staff, in the treble clef, sounding an octave lower. The
+          piece ends on the piano's chord before Tamino's recitative “Die Weisheitslehre dieser Knaben”. The print writes “Dies kund
+          zu thun” and “sagt mir an”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-hm-hm-hm": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Quintet",
+    facts: {
+      key: "B-flat major",
+      time: "2/2 (alla breve)",
+      tempo: "Allegro, played at a half note = 90 (♩ = 180), about 4¾ minutes, the median of five recordings (Haitink 1981, whose track ends before “Drei Knäbchen”, and Klemperer 1964, Böhm 1964, Christie 1995 and Abbado 2005, whose tracks hold the whole quintet and were given this section's share of it in Haitink's); the fermata at the end is held",
+    },
+    notePlaceholder: "Light and quick in two: Papageno's hums in rhythm, the Ladies' moral in hushed unison, and a sotto voce farewell",
+    about: (
+      <>
+        <p>
+          Act 1, the rocky landscape. Papageno, his mouth padlocked for lying, can only hum and point to the lock; Tamino pities him but is too weak to help. The three Ladies return: the Queen pardons Papageno, and the First Lady takes off the lock, which is to be a warning to him. Papageno promises never to lie again, and all five wish that every liar wore such a lock, so that love and brotherhood would take the place of hatred, slander and black bile. The First Lady gives Tamino a golden flute from the Queen: it will protect him, turn sadness into joy and change people's passions. Papageno wants to take his leave, but the Ladies tell him that the Queen orders him to go with the prince to Sarastro's castle; he is afraid Sarastro will have him plucked, roasted and thrown to the dogs. They promise him the prince's protection, and the First Lady gives him a little box of silver bells. They say goodbye, and Tamino and Papageno ask how they are to find the castle.
+        </p>
+        <p>
+          Score: the first part of No. 5, the Quintet (vocal score pages 32–43, 213 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Each singer has their own line; the print puts
+          Papageno and Tamino on one staff at first and the Ladies two to a staff. Tamino's line is printed in the treble clef and
+          sounds an octave lower. Papageno's “Hm!” is hummed with the mouth closed. The print writes “erlässt”, “Verläumdung”,
+          “bestände”, “thun”, “werth”, “Tigerthier”, “vonnöthen”, “darinnen” and “wie man die Burg”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

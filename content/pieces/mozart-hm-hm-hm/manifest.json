@@ -1,0 +1,218 @@
+{
+ "editionId": "mozart-hm-hm-hm",
+ "editionVersion": "1.0.0-peters",
+ "title": "Hm! hm! hm!",
+ "subtitle": "Papageno, Tamino and the three Ladies: quintet from Die Zauberflöte, Act 1",
+ "kind": "quintet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dame1",
+   "name": "First Lady",
+   "voiceType": "Soprano",
+   "partKey": "dame1"
+  },
+  {
+   "id": "dame2",
+   "name": "Second Lady",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dame2"
+  },
+  {
+   "id": "dame3",
+   "name": "Third Lady",
+   "voiceType": "Mezzo-soprano or contralto",
+   "partKey": "dame3"
+  },
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  },
+  {
+   "id": "papageno",
+   "name": "Papageno",
+   "voiceType": "Baritone",
+   "partKey": "papageno"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dame1",
+   "label": "First Lady (Soprano)",
+   "shortLabel": "First Lady",
+   "kind": "voice",
+   "roleId": "dame1",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame2",
+   "label": "Second Lady (Mezzo-soprano)",
+   "shortLabel": "Second Lady",
+   "kind": "voice",
+   "roleId": "dame2",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame3",
+   "label": "Third Lady (Mezzo-soprano or contralto)",
+   "shortLabel": "Third Lady",
+   "kind": "voice",
+   "roleId": "dame3",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "papageno",
+   "label": "Papageno (Baritone)",
+   "shortLabel": "Papageno",
+   "kind": "voice",
+   "roleId": "papageno",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Hm! hm! hm!: Papageno padlocked, Tamino pities him",
+   "start": "1",
+   "end": "33"
+  },
+  {
+   "id": "b",
+   "label": "Die Königin begnadigt dich · Dies Schloss soll deine Warnung sein",
+   "start": "34",
+   "end": "53"
+  },
+  {
+   "id": "c",
+   "label": "Bekämen doch die Lügner alle (all five)",
+   "start": "54",
+   "end": "79"
+  },
+  {
+   "id": "d",
+   "label": "O Prinz, nimm dies Geschenk · Hiemit kannst du allmächtig handeln",
+   "start": "80",
+   "end": "110"
+  },
+  {
+   "id": "e",
+   "label": "O! so eine Flöte ist mehr als Gold und Kronen werth (all five)",
+   "start": "111",
+   "end": "133"
+  },
+  {
+   "id": "f",
+   "label": "Nun, ihr schönen Frauenzimmer · Sarastro rupfen, braten",
+   "start": "134",
+   "end": "172"
+  },
+  {
+   "id": "g",
+   "label": "Hier nimm dies Kleinod · Silberglöckchen, Zauberflöten",
+   "start": "173",
+   "end": "191"
+  },
+  {
+   "id": "h",
+   "label": "Lebet wohl · Wie man die Burg wohl finden kann? (to the fermata)",
+   "start": "192",
+   "end": "213"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 5, Quintett (first part, to “Wie man die Burg wohl finden kann?”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 32–43 (213 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean (one fix: bar 163 Papageno D4); every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. The print puts the Ladies two to a staff and Tamino and Papageno on one staff in places; each singer has their own line here. Papageno’s “Hm!” is hummed with the mouth closed. The quintet goes on after the fermata and double bar with “Drei Knäbchen” (a separate piece in the app). Playback tempo from complete recordings: the median length of this section, about 4:43, from Haitink 1981, whose track ends before “Drei Knaben” (5:05), and Klemperer 1964, Böhm 1964, Christie 1995 and Abbado 2005, whose No. 5 tracks (6:44, 6:27, 5:50, 5:46) were given this section’s share of the quintet in Haitink’s recording (73.1%)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}
