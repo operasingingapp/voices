@@ -6155,6 +6155,64 @@
     }
   },
   {
+    "editionId": "mozart-or-che-tutti-o-mio-tesoro",
+    "editionVersion": "1.0.0-schirmer",
+    "scoreVersionId": "mozart-or-che-tutti-o-mio-tesoro@1.0.0-schirmer#b9b925f355",
+    "title": "Or che tutti, o mio tesoro",
+    "subtitle": "Don Ottavio, Donna Anna, Donna Elvira, Zerlina, Masetto and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "ottavio",
+        "name": "Don Ottavio",
+        "voiceType": "Tenor",
+        "partKey": "ottavio"
+      },
+      {
+        "id": "anna",
+        "name": "Donna Anna",
+        "voiceType": "Soprano",
+        "partKey": "anna"
+      },
+      {
+        "id": "elvira",
+        "name": "Donna Elvira",
+        "voiceType": "Soprano",
+        "partKey": "elvira"
+      },
+      {
+        "id": "zerlina",
+        "name": "Zerlina",
+        "voiceType": "Soprano",
+        "partKey": "zerlina"
+      },
+      {
+        "id": "masetto",
+        "name": "Masetto",
+        "voiceType": "Bass",
+        "partKey": "masetto"
+      },
+      {
+        "id": "leporello",
+        "name": "Leporello",
+        "voiceType": "Bass",
+        "partKey": "leporello"
+      }
+    ],
+    "measures": 45,
+    "durationSec": 177,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 39,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-or-sai-chi-lonore",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-or-sai-chi-lonore@1.0.0-schirmer#626b7d5aca",

@@ -1,0 +1,227 @@
+{
+ "editionId": "mozart-or-che-tutti-o-mio-tesoro",
+ "editionVersion": "1.0.0-schirmer",
+ "title": "Or che tutti, o mio tesoro",
+ "subtitle": "Don Ottavio, Donna Anna, Donna Elvira, Zerlina, Masetto and Leporello: finale from Don Giovanni, Act 2 (No. 24)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Lorenzo Da Ponte",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "ottavio",
+   "name": "Don Ottavio",
+   "voiceType": "Tenor",
+   "partKey": "ottavio"
+  },
+  {
+   "id": "anna",
+   "name": "Donna Anna",
+   "voiceType": "Soprano",
+   "partKey": "anna"
+  },
+  {
+   "id": "elvira",
+   "name": "Donna Elvira",
+   "voiceType": "Soprano",
+   "partKey": "elvira"
+  },
+  {
+   "id": "zerlina",
+   "name": "Zerlina",
+   "voiceType": "Soprano",
+   "partKey": "zerlina"
+  },
+  {
+   "id": "masetto",
+   "name": "Masetto",
+   "voiceType": "Bass",
+   "partKey": "masetto"
+  },
+  {
+   "id": "leporello",
+   "name": "Leporello",
+   "voiceType": "Bass",
+   "partKey": "leporello"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "ottavio",
+   "label": "Don Ottavio (Tenor)",
+   "shortLabel": "Don Ottavio",
+   "kind": "voice",
+   "roleId": "ottavio",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "anna",
+   "label": "Donna Anna (Soprano)",
+   "shortLabel": "Donna Anna",
+   "kind": "voice",
+   "roleId": "anna",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "elvira",
+   "label": "Donna Elvira (Soprano)",
+   "shortLabel": "Donna Elvira",
+   "kind": "voice",
+   "roleId": "elvira",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "zerlina",
+   "label": "Zerlina (Soprano)",
+   "shortLabel": "Zerlina",
+   "kind": "voice",
+   "roleId": "zerlina",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "masetto",
+   "label": "Masetto (Bass)",
+   "shortLabel": "Masetto",
+   "kind": "voice",
+   "roleId": "masetto",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "leporello",
+   "label": "Leporello (Bass)",
+   "shortLabel": "Leporello",
+   "kind": "voice",
+   "roleId": "leporello",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Or che tutti, o mio tesoro · non mi far languire ancor (Ottavio)",
+   "start": "1",
+   "end": "8"
+  },
+  {
+   "id": "b",
+   "label": "Lascia, o caro, un anno ancora (Anna)",
+   "start": "9",
+   "end": "13"
+  },
+  {
+   "id": "c",
+   "label": "Al desio di chi m'adora · ceder deve un fido amor (Ottavio and Anna)",
+   "start": "14",
+   "end": "29"
+  },
+  {
+   "id": "d",
+   "label": "Io men vado in un ritiro · Noi a casa andiamo · Ed io vado all'osteria",
+   "start": "30",
+   "end": "35"
+  },
+  {
+   "id": "e",
+   "label": "Resti dunque quel birbon · l'antichissima canzon (to the fermata)",
+   "start": "36",
+   "end": "45"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Don Giovanni, K. 527 (1787), Act 2, No. 24 Finale (the last scene's Larghetto)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Lorenzo Da Ponte, libretto of Don Giovanni (1787)",
+   "author": "Lorenzo Da Ponte (1749–1838)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Schirmer vocal score, lines repeated as each part repeats them (\"tesoro!\", \"caro!\"; Ottavio sings \"m'adora\", Anna \"t'adora\"; Leporello \"Ed io vado all'osteria\", with \"all'\" sung on the note of \"vado\")."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Schirmer vocal score, New York 1900 (plate 15147, IMSLP #68957), pages 289–292, bars 1–45 of the Act 2 Finale's last scene, from the Larghetto (p. 289, system 1, bar 1) to the fermata before the Presto \"Questo è il fin di chi fa mal\"",
+   "author": "G. Schirmer, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: the sung lines and the piano each read by two independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh checkers. One clear misprint is corrected: in bar 42 the piano's trilled C in the right hand is printed without its sharp; it is C sharp here, over A major harmony and as in the same figure in bar 40, where the sharp is printed. Bar 1 is a one-beat pickup. Donna Anna and Don Ottavio share a staff in the print in places; here each has their own part. Don Ottavio's part is in the tenor treble clef (sounding an octave lower) and is stored and played at sounding pitch. The English singing translation and the stage directions are left out. Larghetto, common time (4/4), G major throughout (it closes on A major, the dominant of the Presto's D major); the fermata in bar 45 is held. Playback tempo: ♩ = 60, 2:57 at score tempo, the median of five complete recordings (Busch 1936 2:33, Barenboim 1975 2:54, Giulini 1959 2:57, Muti 1990 2:58, Haitink 1984 3:22; where a set puts \"Resti dunque quel birbon\" on its own track, the two tracks are added). Mozart gives the word Larghetto only."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app (from the app's Don Giovanni libretto drafts, IPA checked against Castel)",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  },
+  {
+   "item": "Spoken pronunciation",
+   "source": "ElevenLabs recordings (scripts/voices.ts)",
+   "author": "Machine speech",
+   "licence": "Generated output",
+   "notes": "Spoken, not sung."
+  }
+ ]
+}

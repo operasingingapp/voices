@@ -4872,6 +4872,42 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-or-che-tutti-o-mio-tesoro": {
+    portrait: "giovanni:ottavio",
+    opera: "Don Giovanni",
+    kind: "Finale",
+    facts: {
+      key: "G major, closing in A major",
+      time: "4/4 (common time) throughout, from a one-beat pickup",
+      tempo: "Larghetto, played at ♩ = 60, about 2 minutes 57 seconds, the median of five recordings (Busch, Barenboim, Giulini, Muti, Haitink); Mozart gives the word only",
+    },
+    notePlaceholder: "Calm and tender after the storm: Ottavio pleads gently, Anna answers in long, ornamented lines",
+    about: (
+      <>
+        <p>
+          Act 2, the finale's last scene, after Don Giovanni has been dragged down to hell. Now that heaven has avenged them, Don
+          Ottavio asks Donna Anna not to make him wait any longer; she asks for one more year to grieve, and the two agree that a
+          faithful love must give way to the wish of the one it loves. Then each of the others says what comes next: Donna Elvira
+          will end her days in a convent, Zerlina and Masetto are going home to have supper together, and Leporello is off to the inn
+          to find a better master. The three of them wish the scoundrel joy of Proserpina and Pluto, and call on everyone to sing the
+          age-old moral.
+        </p>
+        <p>
+          Score: the Larghetto of the Act 2 Finale (No. 24), from its first bar to the fermata before the Presto “Questo è il fin di
+          chi fa mal” (vocal score pages 289–292, 45 bars, the first a one-beat pickup), from the G. Schirmer vocal score (New York,
+          1900; IMSLP #68957), public domain. Written out from the printed pages: the sung lines and the piano each read by two
+          independent readers, every disagreement settled on the page by a judge, then checked bar by bar and checked again by fresh
+          checkers. One clear misprint is corrected: in bar 42 the piano's trilled C is printed without its sharp; it is C sharp
+          here, over A major harmony, as in the same figure in bar 40 where the sharp is printed. Don Ottavio and Donna Anna share a
+          staff in the print in places; here each has their own part. Only the Italian words are kept, with the print's spelling and
+          punctuation (“tesoro!”, “caro!”; Leporello's “all'osteria”, where the libretto has “in osteria”).
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Lorenzo Da Ponte (1787), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretti (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "mozart-soave-sia-il-vento": {
     portrait: "cosi:fiordiligi",
     opera: "Così fan tutte",

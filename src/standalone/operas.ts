@@ -1711,7 +1711,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Or che tutti, o mio tesoro",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Or che tutti, o mio tesoro"
+      "id": "Act 2: Or che tutti, o mio tesoro",
+      "editionId": "mozart-or-che-tutti-o-mio-tesoro"
      },
      {
       "title": "Questo è il fin di chi fa mal",
@@ -1821,7 +1822,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Or che tutti, o mio tesoro",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Or che tutti, o mio tesoro"
+      "id": "Act 2: Or che tutti, o mio tesoro",
+      "editionId": "mozart-or-che-tutti-o-mio-tesoro"
      },
      {
       "title": "Questo è il fin di chi fa mal",
@@ -1979,7 +1981,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Or che tutti, o mio tesoro",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Or che tutti, o mio tesoro"
+      "id": "Act 2: Or che tutti, o mio tesoro",
+      "editionId": "mozart-or-che-tutti-o-mio-tesoro"
      },
      {
       "title": "Questo è il fin di chi fa mal",
@@ -2131,7 +2134,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Or che tutti, o mio tesoro",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Or che tutti, o mio tesoro"
+      "id": "Act 2: Or che tutti, o mio tesoro",
+      "editionId": "mozart-or-che-tutti-o-mio-tesoro"
      },
      {
       "title": "Questo è il fin di chi fa mal",
@@ -2265,7 +2269,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Or che tutti, o mio tesoro",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Or che tutti, o mio tesoro"
+      "id": "Act 2: Or che tutti, o mio tesoro",
+      "editionId": "mozart-or-che-tutti-o-mio-tesoro"
      },
      {
       "title": "Questo è il fin di chi fa mal",
@@ -2386,7 +2391,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Or che tutti, o mio tesoro",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Or che tutti, o mio tesoro"
+      "id": "Act 2: Or che tutti, o mio tesoro",
+      "editionId": "mozart-or-che-tutti-o-mio-tesoro"
      },
      {
       "title": "Questo è il fin di chi fa mal",
