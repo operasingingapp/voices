@@ -7612,6 +7612,36 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-ich-sollte-fort": {
+    portrait: "zauberfloete:dame1",
+    opera: "Die Zauberflöte",
+    kind: "Introduction",
+    facts: {
+      key: "G major (Allegretto), then C major from the Allegro in bar 34 to the end",
+      time: "6/8 (Allegretto), bars 1–33; cut time (Allegro), bars 34–86, with bars 55–68 repeated (first ending bar 68, second ending bar 69)",
+      tempo: "Allegretto, played at ♩. = 50 (♩ = 75), then Allegro at a half note = 75 (♩ = 150), about 3 minutes with the repeat, the median of five recordings (Haitink 1981 and Norrington, whose tracks start at “Ich sollte fort?”, and Klemperer 1964, Böhm 1964 and Christie 1995, whose tracks hold the whole Introduction and were given this section's share of it in the first two); no recording splits the Allegretto from the Allegro, so the Allegro's quarter note is set to the Allegretto's eighth; the fermatas are held",
+    },
+    notePlaceholder: "Three asides at once: keep the 6/8 sly and light, the nein, nein firm, then let the farewell sing",
+    about: (
+      <>
+        <p>
+          Act 1, a rough, rocky landscape. The three Ladies of the Queen of the Night have killed the serpent and are gazing at the unconscious young Tamino. Each says to herself that the others would like to be alone with him, and that she will not leave. Each would give anything to live with him and have him to herself, but none of them goes. At last they decide to go together, and bid the handsome youth a tender farewell until they see him again. Tamino lies unconscious on stage throughout and does not sing.
+        </p>
+        <p>
+          Score: the second part of No. 1, the Introduction (vocal score pages 16–21, 86 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Each Lady has her own line; the print puts two of
+          them on one staff in places. The repeat of “Du Jüngling, schön und liebevoll” is kept with its two endings. In bar 32 the
+          Third Lady sings the low G; the print also gives a small G an octave higher on the same stem, an alternative note for a
+          higher voice. The print asks “Ich sollte fort?” with a question mark and writes “könnt'”, “Hätt'”, “geh'” and “wiederseh'”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

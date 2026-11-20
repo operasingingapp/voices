@@ -1,0 +1,148 @@
+{
+ "editionId": "mozart-ich-sollte-fort",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ich sollte fort?",
+ "subtitle": "The three Ladies: from the Introduction of Die Zauberflöte, Act 1 (No. 1)",
+ "kind": "introduction",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dame1",
+   "name": "First Lady",
+   "voiceType": "Soprano",
+   "partKey": "dame1"
+  },
+  {
+   "id": "dame2",
+   "name": "Second Lady",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dame2"
+  },
+  {
+   "id": "dame3",
+   "name": "Third Lady",
+   "voiceType": "Mezzo-soprano or contralto",
+   "partKey": "dame3"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dame1",
+   "label": "First Lady (Soprano)",
+   "shortLabel": "First Lady",
+   "kind": "voice",
+   "roleId": "dame1",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame2",
+   "label": "Second Lady (Mezzo-soprano)",
+   "shortLabel": "Second Lady",
+   "kind": "voice",
+   "roleId": "dame2",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame3",
+   "label": "Third Lady (Mezzo-soprano or contralto)",
+   "shortLabel": "Third Lady",
+   "kind": "voice",
+   "roleId": "dame3",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Allegretto: Ich sollte fort? · Sie wären gern bei ihm allein",
+   "start": "1",
+   "end": "33"
+  },
+  {
+   "id": "b",
+   "label": "Allegro: Was wollte ich darum nicht geben · Am besten ist es nun, ich geh'",
+   "start": "34",
+   "end": "54"
+  },
+  {
+   "id": "c",
+   "label": "Du Jüngling, schön und liebevoll (repeated) · bis ich dich wiederseh' (to the end)",
+   "start": "55",
+   "end": "86"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 1, Introduction (second part, from “Ich sollte fort?”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 16–21 (86 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. In bar 32 the Third Lady's main note G3 is kept; the small G4 printed on the same stem as an alternative is left out. The print's repeat (bars 55–68, first ending bar 68, second ending bar 69) is kept. Tamino lies unconscious on stage and does not sing. Playback tempo from complete recordings: the median length of this section, 3:04, from Haitink 1981 (3:11) and Norrington with the London Classical Players (2:32), whose tracks split the Introduction here, and Klemperer 1964, Böhm 1964 and Christie 1995, whose No. 1 tracks (6:53, 6:44, 6:40) were given this section's mean share of the Introduction in the first two (45.5%); the Allegro's quarter is set to the Allegretto's eighth."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

@@ -4471,7 +4471,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ich sollte fort?",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Ich sollte fort?"
+      "id": "Act 1: Ich sollte fort?",
+      "editionId": "mozart-ich-sollte-fort"
      },
      {
       "title": "Hm! hm! hm!",
@@ -4510,7 +4511,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ich sollte fort?",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Ich sollte fort?"
+      "id": "Act 1: Ich sollte fort?",
+      "editionId": "mozart-ich-sollte-fort"
      },
      {
       "title": "Hm! hm! hm!",
@@ -4549,7 +4551,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Ich sollte fort?",
       "kind": "Introduction · Act 1",
-      "id": "Act 1: Ich sollte fort?"
+      "id": "Act 1: Ich sollte fort?",
+      "editionId": "mozart-ich-sollte-fort"
      },
      {
       "title": "Hm! hm! hm!",

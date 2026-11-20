@@ -4383,6 +4383,46 @@
     }
   },
   {
+    "editionId": "mozart-ich-sollte-fort",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-ich-sollte-fort@1.0.0-peters#0be8426999",
+    "title": "Ich sollte fort?",
+    "subtitle": "The three Ladies: from the Introduction of Die Zauberflöte, Act 1 (No. 1)",
+    "kind": "introduction",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dame1",
+        "name": "First Lady",
+        "voiceType": "Soprano",
+        "partKey": "dame1"
+      },
+      {
+        "id": "dame2",
+        "name": "Second Lady",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dame2"
+      },
+      {
+        "id": "dame3",
+        "name": "Third Lady",
+        "voiceType": "Mezzo-soprano or contralto",
+        "partKey": "dame3"
+      }
+    ],
+    "measures": 86,
+    "durationSec": 185,
+    "hasRepeats": true,
+    "keySignature": "G major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 82,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-il-capro-e-la-capretta",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-il-capro-e-la-capretta@1.0.0-klengel#cd87302c24",
