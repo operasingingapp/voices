@@ -1,0 +1,186 @@
+{
+ "editionId": "mozart-die-weisheitslehre-dieser-knaben",
+ "editionVersion": "1.0.0-peters",
+ "title": "Die Weisheitslehre dieser Knaben",
+ "subtitle": "Tamino and the Speaker, with the offstage chorus: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  },
+  {
+   "id": "speaker",
+   "name": "The Speaker",
+   "voiceType": "Bass-baritone",
+   "partKey": "speaker"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P7",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "speaker",
+   "label": "The Speaker (Bass-baritone)",
+   "shortLabel": "Speaker",
+   "kind": "voice",
+   "roleId": "speaker",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-tenors-1",
+   "label": "Chorus first tenors",
+   "shortLabel": "Chorus T. I",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors-2",
+   "label": "Chorus second tenors",
+   "shortLabel": "Chorus T. II",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses-1",
+   "label": "Chorus first basses (and the voice offstage)",
+   "shortLabel": "Chorus B. I",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses-2",
+   "label": "Chorus second basses",
+   "shortLabel": "Chorus B. II",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Die Weisheitslehre dieser Knaben · Es zeigen die Pforten · Zurück! (Tamino at the temple doors)",
+   "start": "1",
+   "end": "47"
+  },
+  {
+   "id": "b",
+   "label": "Wo willst du, kühner Fremdling hin? · Sarastro herrscht in diesen Gründen? · Er ist ein Unmensch, ein Tyrann!",
+   "start": "48",
+   "end": "81"
+  },
+  {
+   "id": "c",
+   "label": "Ein Weib hat also dich berückt? · Riss nicht der Räuber · Sobald dich führt der Freundschaft Hand",
+   "start": "82",
+   "end": "102"
+  },
+  {
+   "id": "d",
+   "label": "O ew'ge Nacht! · Bald, Jüngling, oder nie (the chorus offstage) · Pamina lebet noch (to the end)",
+   "start": "103",
+   "end": "121"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), Act 1 scene 15, No. 8, Finale (Tamino's scene at the temple doors, from the Recit. “Die Weisheitslehre dieser Knaben”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 53–60 (121 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. The section begins at “Recit.” after the double bar in the second system of p. 53 and ends at the fermata and double bar at the end of p. 60, before the flute Andante “Wie stark ist nicht dein Zauberton”. The singer the print calls “Priester” is the Speaker. The offstage voice that calls “Zurück!” (bars 32 and 39) is printed on Tamino's staff in the bass clef and is written out on the first basses' line; the offstage chorus (first and second tenors, first and second basses, sotto voce, from bar 105) is heard with the piano and has no role here. Bar 26: the print has no sharp on the F in the piano's D major scale; F sharp is written (a misprint corrected). Bar 56: the Speaker's last eighth and Tamino's first sixteenth overlap by a sixteenth, as printed (recitative). Bar 121 has three beats, as printed. Playback tempo from recordings: Recit. ♩ = 60, Allegro ♩ = 100, Allegro assai ♩ = 136, Adagio ♩ = 36, the Speaker's Recit. ♩ = 46, Andante ♩ = 48; about 8¼ minutes, the median of five complete recordings (Jacobs 2010 7:16, Norrington 7:14, Christie 1995 8:43, Haitink 1981 8:26, Böhm 1955 8:19), with the split before the Speaker's entry from Böhm's and Haitink's separate tracks."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

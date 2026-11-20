@@ -2521,6 +2521,40 @@
     }
   },
   {
+    "editionId": "mozart-die-weisheitslehre-dieser-knaben",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-die-weisheitslehre-dieser-knaben@1.0.0-peters#e69f923000",
+    "title": "Die Weisheitslehre dieser Knaben",
+    "subtitle": "Tamino and the Speaker, with the offstage chorus: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "speaker",
+        "name": "The Speaker",
+        "voiceType": "Bass-baritone",
+        "partKey": "speaker"
+      }
+    ],
+    "measures": 121,
+    "durationSec": 496,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 71,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-dies-bildniss-ist-bezaubernd-schon",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-dies-bildniss-ist-bezaubernd-schon@1.0.0-peters#f708f4f9ec",
@@ -7544,6 +7578,46 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 31,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-schnelle-fusse-rascher-muth",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-schnelle-fusse-rascher-muth@1.0.0-peters#eaa243a624",
+    "title": "Schnelle Füsse, rascher Muth",
+    "subtitle": "Pamina, Papageno and Monostatos, with the slaves: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      },
+      {
+        "id": "monostatos",
+        "name": "Monostatos",
+        "voiceType": "Tenor",
+        "partKey": "monostatos"
+      }
+    ],
+    "measures": 124,
+    "durationSec": 190,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 54,
       "withAudio": 0,
       "reviewed": 0
     }

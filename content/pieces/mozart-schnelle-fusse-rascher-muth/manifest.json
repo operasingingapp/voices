@@ -1,0 +1,180 @@
+{
+ "editionId": "mozart-schnelle-fusse-rascher-muth",
+ "editionVersion": "1.0.0-peters",
+ "title": "Schnelle Füsse, rascher Muth",
+ "subtitle": "Pamina, Papageno and Monostatos, with the slaves: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "pamina",
+   "name": "Pamina",
+   "voiceType": "Soprano",
+   "partKey": "pamina"
+  },
+  {
+   "id": "papageno",
+   "name": "Papageno",
+   "voiceType": "Baritone",
+   "partKey": "papageno"
+  },
+  {
+   "id": "monostatos",
+   "name": "Monostatos",
+   "voiceType": "Tenor",
+   "partKey": "monostatos"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "pamina",
+   "label": "Pamina (Soprano)",
+   "shortLabel": "Pamina",
+   "kind": "voice",
+   "roleId": "pamina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "papageno",
+   "label": "Papageno (Baritone)",
+   "shortLabel": "Papageno",
+   "kind": "voice",
+   "roleId": "papageno",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "monostatos",
+   "label": "Monostatos (Tenor)",
+   "shortLabel": "Monostatos",
+   "kind": "voice",
+   "roleId": "monostatos",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors (slaves)",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses (slaves)",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Andante: Schnelle Füsse, rascher Muth · Holder Jüngling! (the panpipe and Tamino's flute) · Welche Freude ist wohl grösser! · nur geschwinde",
+   "start": "1",
+   "end": "38"
+  },
+  {
+   "id": "b",
+   "label": "Allegro: Ha! hab' ich euch noch erwischt! · Wart', ich will euch Mores weisen · Ach, nun ist's mit uns vorbei! · He! ihr Sclaven",
+   "start": "39",
+   "end": "56"
+  },
+  {
+   "id": "c",
+   "label": "Wer viel wagt · Komm, du schönes Glockenspiel · Das klinget so herrlich (Monostatos and the slaves dance off, to the fermata)",
+   "start": "57",
+   "end": "100"
+  },
+  {
+   "id": "d",
+   "label": "Könnte jeder brave Mann · Nur der Freundschaft Harmonie (to the end)",
+   "start": "101",
+   "end": "124"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), Act 1 scenes 16–17, No. 8, Finale (“Schnelle Füsse, rascher Muth”, Andante – Allegro)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 64–69 (124 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Bar 1 is the one-beat upbeat (the missing beat of the last bar of “Wie stark ist nicht dein Zauberton”). Papageno's panpipe (bars 17–20, printed on his staff) and Tamino's flute answers are played by the piano; Papageno's magic bells (“Glockenspiel”, from bar 67 to bar 99) are in the piano's right hand, printed an octave lower under an 8va line and written here at sounding pitch. The slaves (tenors and basses, who sing “Das klinget so herrlich” with Monostatos, bars 75–99) are written out as two parts; they are heard with the piano and have no role here. The print gives Pamina's syllable in bar 34 as “gè-” (Papageno's is “ge-”); kept as printed. The section begins on Pamina's and Papageno's upbeat after the double bar on p. 63 and ends at the double bar on p. 69 (system 3), before “Es lebe Sarastro!”. Playback tempo: Andante ♩ = 146, Allegro ♩ = 160, about 3:11, the median of five complete recordings whose track or tracks hold exactly this section (Norrington 2:51, Christie 1995 3:05, Böhm 1964 3:11, Klemperer 1964 3:15, Abbado 2005 3:54); no recording splits it at the Allegro, so the Allegro's beat is set at 1.1 times the Andante's, the median of the three recordings that split the section elsewhere (Jacobs 2010, Klemperer 1964, Haitink 1981); each fermata is held one extra beat."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

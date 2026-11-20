@@ -4164,7 +4164,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Die Weisheitslehre dieser Knaben",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Die Weisheitslehre dieser Knaben"
+      "id": "Act 1: Die Weisheitslehre dieser Knaben",
+      "editionId": "mozart-die-weisheitslehre-dieser-knaben"
      },
      {
       "title": "Wie stark ist nicht dein Zauberton",
@@ -4226,7 +4227,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Schnelle Füsse, rascher Muth",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-schnelle-fusse-rascher-muth"
      },
      {
       "title": "Es lebe Sarastro! Sarastro lebe!",
@@ -4315,7 +4317,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Schnelle Füsse, rascher Muth",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-schnelle-fusse-rascher-muth"
      },
      {
       "title": "Es lebe Sarastro! Sarastro lebe!",
@@ -4433,7 +4436,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Schnelle Füsse, rascher Muth",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Schnelle Füsse, rascher Muth"
+      "id": "Act 1: Schnelle Füsse, rascher Muth",
+      "editionId": "mozart-schnelle-fusse-rascher-muth"
      },
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
@@ -4463,7 +4467,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Die Weisheitslehre dieser Knaben",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Die Weisheitslehre dieser Knaben"
+      "id": "Act 1: Die Weisheitslehre dieser Knaben",
+      "editionId": "mozart-die-weisheitslehre-dieser-knaben"
      }
     ]
    },

@@ -7848,6 +7848,69 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-die-weisheitslehre-dieser-knaben": {
+    portrait: "zauberfloete:tamino",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "No key signature (C major to A minor)",
+      time: "4/4",
+      tempo: "Recitative and short sections: Tamino's Recit. at a speaking pace, ♩ = 60, Allegro ♩ = 100, Allegro assai ♩ = 136, Adagio ♩ = 36; the Speaker's scene grave, Recit. ♩ = 46 and Andante ♩ = 48; about 8¼ minutes in all, the median of five complete recordings whose tracks hold just this scene (Norrington, Jacobs 2010, Böhm 1955, Haitink 1981, Christie 1995); the section relations are this app's choice; the fermatas are held",
+    },
+    notePlaceholder: "Tamino's resolve and impatience against the Speaker's calm, slow authority; the offstage chorus soft and mysterious",
+    about: (
+      <>
+        <p>
+          Act 1 finale, before the three temples. Tamino resolves to keep the boys' teaching in his heart and sees from the gates and pillars that wisdom, work and the arts dwell here. He tries the right-hand door and the left, and each time a voice calls “Zurück!”; at the middle door an old priest, the Speaker, appears. Tamino says he seeks love and virtue, but wants revenge on Sarastro, a tyrant who tore Pamina from her mother's arms; he has it from an unhappy woman. The Speaker answers that a woman does little and talks much, that Tamino is deceived, and that he may not yet say what has happened to Pamina: the veil will lift when the hand of friendship leads him into the sanctuary. Alone, Tamino asks when the endless night will end, and invisible voices answer: soon or never; Pamina is alive. He thanks them and longs to show his gratitude with every note.
+        </p>
+        <p>
+          Score: part of No. 8, the Act 1 Finale (vocal score pages 53–60, 121 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. The print calls the Speaker “Priester”. The
+          offstage voice that calls “Zurück!” is printed on Tamino's staff and is written on the chorus's first basses' line; the
+          offstage chorus (tenors and basses) is heard with the piano. One misprint is corrected: in bar 26 the piano's D major
+          scale has F sharp where the print omits the sharp. In bar 56 the Speaker's last note and Tamino's entry overlap by a
+          sixteenth, as printed; the last bar has three beats, as printed. The print writes “Es zeigen die Pforten”, “in dem
+          Weisheitstempel”, “So gieb”, “jetzund”, “Thätigkeit”, “Heiligthum” and “Räthsel”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-schnelle-fusse-rascher-muth": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "G major",
+      time: "4/4 (C), from a one-beat upbeat (the missing beat of the last bar of “Wie stark ist nicht dein Zauberton”)",
+      tempo: "Andante, played at ♩ = 146, then Allegro at ♩ = 160 from bar 39, just over 3 minutes, the median of five complete recordings whose tracks hold just this section (Norrington, Christie 1995, Böhm 1964, Klemperer 1964, Abbado 2005); no recording splits it at the Allegro, so the Allegro's beat is set at 1.1 times the Andante's, the median of the three recordings that split the section elsewhere (Jacobs 2010, Klemperer, Haitink 1981); the fermatas are held",
+    },
+    notePlaceholder: "Breathless flight, then Monostatos's sneer; the bells turn it all into a dance, and the duet at the end is simple and warm",
+    about: (
+      <>
+        <p>
+          Act 1 finale, in Sarastro's realm. Pamina and Papageno, in flight, hope that quick feet and courage will save them, if only they can find Tamino before they are caught. Pamina calls for him; Papageno pipes on his panpipe and Tamino's flute answers from nearby. As they hurry towards the sound, Monostatos blocks their way, mocks them and calls his slaves to bring chains and ropes. Papageno remembers his magic bells: at their sound Monostatos and the slaves begin to sing and dance, and go off dancing. Pamina and Papageno sing that if every good man had such bells, his enemies would vanish, and that only the harmony of friendship eases life's burdens.
+        </p>
+        <p>
+          Score: part of No. 8, the Act 1 Finale (vocal score pages 64–69, 124 bars), from the Edition Peters vocal score, piano
+          reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages by two
+          independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the print
+          again. Only the German words are kept, as the print spells them. Papageno's panpipe, Tamino's flute answers and Papageno's
+          magic bells are printed in the piano part; the slaves (tenors and basses), who sing “Das klinget so herrlich” with
+          Monostatos, are heard with the piano. The print writes “Füsse”, “Muth”, “Wuth”, “grösser”, “hieher”, “Flötenton”,
+          “Sclaven”, Monostatos's “Wart', ich will euch Mores weisen” and “gehört, noch geseh'n”, and once, in bar 34, Pamina's
+          syllable “gè-”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);
