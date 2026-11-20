@@ -1,0 +1,108 @@
+{
+ "editionId": "mozart-wie-stark-ist-nicht-dein-zauberton",
+ "editionVersion": "1.0.0-peters",
+ "title": "Wie stark ist nicht dein Zauberton",
+ "subtitle": "Tamino with his magic flute: from the finale of Die Zauberflöte, Act 1 (No. 8)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P2",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Wie stark ist nicht dein Zauberton · selbst wilde Thiere Freude fühlen",
+   "start": "1",
+   "end": "28"
+  },
+  {
+   "id": "b",
+   "label": "Doch nur Pamina bleibt davon · Pamina, höre mich! · Papageno's Ton",
+   "start": "29",
+   "end": "53"
+  },
+  {
+   "id": "c",
+   "label": "Presto: Vielleicht sah er Paminen schon (to the end)",
+   "start": "53",
+   "end": "69"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), Act 1 scene 15, No. 8 Finale (Tamino's flute scene, Andante – Presto)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 61–63 (69 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean, and checked against the print again here; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Tamino's flute and Papageno's panpipe answers are printed in the piano part and played by it. The word \"fühlen\" printed above the staff in bar 28 (footnoted in the print as missing in the full score) is not sung. The last bar has three beats, as printed: the missing beat is the upbeat of \"Schnelle Füsse, rascher Muth\". Playback tempo from the median length of complete recordings (Jacobs 2010 2:39, Norrington 2:39, Klemperer 1964 2:54, Christie 1995 2:54, Haitink 1981 3:05), shared between the Andante, Presto and Adagio sections in fixed proportions."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

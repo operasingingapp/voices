@@ -7789,6 +7789,65 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-wie-stark-ist-nicht-dein-zauberton": {
+    portrait: "zauberfloete:tamino",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "C major",
+      time: "4/4 (C), from a one-beat upbeat; the last bar has three beats (its fourth is the upbeat of the next scene)",
+      tempo: "Andante, played at ♩ = 90, Presto at ♩ = 180 (from bar 53 and again from bar 59) and Adagio at ♩ = 54 (bars 57–59), about 3 minutes, the median of five recordings whose track holds just this scene (Jacobs 2010, Norrington, Klemperer 1964, Christie 1995, Haitink 1981); no recording splits the sections, so the Presto is set at twice and the Adagio at 0.6 times the Andante's beat; the fermatas are held",
+    },
+    notePlaceholder: "Wonder first, sung as simply as the flute plays; then calling into silence, and the sudden hope of the Presto",
+    about: (
+      <>
+        <p>
+          Act 1, the finale. Left alone before the temples, Tamino plays his magic flute and marvels at its power: even wild animals come out and feel joy at its sound. Only Pamina stays away. He calls her, but in vain; he plays again, and Papageno's panpipe answers from offstage. Perhaps Papageno has already found her and is bringing her to him; perhaps the sound will lead him to her. Tamino hurries off towards it.
+        </p>
+        <p>
+          Score: part of No. 8, the Finale of Act 1 (vocal score pages 61–63, 69 bars), from the Edition Peters vocal score, piano
+          reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages by two
+          independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the print
+          again. Only the German words are kept, as the print spells them. Tamino's flute and Papageno's panpipe answers are printed
+          in the piano part. The print writes “Thiere” and “Papageno's”; the word “fühlen”, printed above the staff in bar 28 with a
+          footnote saying it is missing in the full score, is not sung, so the line breaks off at “Freude…”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-herr-ich-bin-zwar-verbrecherin": {
+    portrait: "zauberfloete:pamina",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "F major",
+      time: "4/4",
+      tempo: "Larghetto, played at ♩ = 67, about 2¾ minutes, the median of four complete recordings whose track holds just this section (Norrington, Nézet-Séguin 2018, Christie 1995, Haitink 1981); the last two bars are recitative",
+    },
+    notePlaceholder: "Pamina's confession plain and sincere; Sarastro calm and kind but unbending",
+    about: (
+      <>
+        <p>
+          Act 1 finale, before Sarastro and his followers. Pamina kneels and admits that she tried to escape his power, but the fault was not hers: the wicked Moor demanded her love. Sarastro tells her to rise and take heart: without asking, he knows that she loves another; he will not force her to love, but he will not set her free. When she speaks of her duty to her mother, he cuts in: her mother is in his power, and Pamina would lose her happiness if he left her in her hands. Pamina says the name of mother sounds sweet to her; Sarastro answers that her mother is a proud woman, and that a man must guide women's hearts, for without one a woman will step beyond her proper sphere.
+        </p>
+        <p>
+          Score: part of No. 8, the Act 1 Finale (vocal score pages 71–74, 46 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. The print writes “die Schuld liegt nicht an mir”,
+          “entflieh'n”, “erheit're”, “Muttername” in one word and “süsse”. Two slips in the print are set right: in bar 41 Sarastro's
+          German line has only a quarter rest and an eighth rest before “Und ein stolzes”, an eighth short of the bar, written here as
+          two quarter rests; in bar 26 the print has “zúr” with an accent, written “zur”. The last two bars are Sarastro's recitative.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

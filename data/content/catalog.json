@@ -4441,6 +4441,40 @@
     }
   },
   {
+    "editionId": "mozart-herr-ich-bin-zwar-verbrecherin",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-herr-ich-bin-zwar-verbrecherin@1.0.0-peters#d9a6e536b1",
+    "title": "Herr! ich bin zwar Verbrecherin!",
+    "subtitle": "Pamina and Sarastro: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "sarastro",
+        "name": "Sarastro",
+        "voiceType": "Bass",
+        "partKey": "sarastro"
+      }
+    ],
+    "measures": 46,
+    "durationSec": 165,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 23,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-hm-hm-hm",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-hm-hm-hm@1.0.0-peters#8e2cfe6b74",
@@ -9050,6 +9084,34 @@
     "time": "2/2",
     "languageStatus": {
       "phrases": 12,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-wie-stark-ist-nicht-dein-zauberton",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-wie-stark-ist-nicht-dein-zauberton@1.0.0-peters#4879352c77",
+    "title": "Wie stark ist nicht dein Zauberton",
+    "subtitle": "Tamino with his magic flute: from the finale of Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      }
+    ],
+    "measures": 69,
+    "durationSec": 166,
+    "hasRepeats": false,
+    "keySignature": "C major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 18,
       "withAudio": 0,
       "reviewed": 0
     }

@@ -4169,7 +4169,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Wie stark ist nicht dein Zauberton",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Wie stark ist nicht dein Zauberton"
+      "id": "Act 1: Wie stark ist nicht dein Zauberton",
+      "editionId": "mozart-wie-stark-ist-nicht-dein-zauberton"
      },
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
@@ -4236,7 +4237,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Herr! ich bin zwar Verbrecherin!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Herr! ich bin zwar Verbrecherin!"
+      "id": "Act 1: Herr! ich bin zwar Verbrecherin!",
+      "editionId": "mozart-herr-ich-bin-zwar-verbrecherin"
      },
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
@@ -4394,7 +4396,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Herr! ich bin zwar Verbrecherin!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Zum Ziele führt dich diese Bahn"
+      "id": "Act 1: Zum Ziele führt dich diese Bahn",
+      "editionId": "mozart-herr-ich-bin-zwar-verbrecherin"
      },
      {
       "title": "Nun stolzer Jüngling, nur hieher!",

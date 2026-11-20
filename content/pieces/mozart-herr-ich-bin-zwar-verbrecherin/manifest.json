@@ -1,0 +1,128 @@
+{
+ "editionId": "mozart-herr-ich-bin-zwar-verbrecherin",
+ "editionVersion": "1.0.0-peters",
+ "title": "Herr! ich bin zwar Verbrecherin!",
+ "subtitle": "Pamina and Sarastro: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "pamina",
+   "name": "Pamina",
+   "voiceType": "Soprano",
+   "partKey": "pamina"
+  },
+  {
+   "id": "sarastro",
+   "name": "Sarastro",
+   "voiceType": "Bass",
+   "partKey": "sarastro"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "pamina",
+   "label": "Pamina (Soprano)",
+   "shortLabel": "Pamina",
+   "kind": "voice",
+   "roleId": "pamina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "sarastro",
+   "label": "Sarastro (Bass)",
+   "shortLabel": "Sarastro",
+   "kind": "voice",
+   "roleId": "sarastro",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Herr! ich bin zwar Verbrecherin! (Pamina kneels) · Der böse Mohr verlangte Liebe",
+   "start": "1",
+   "end": "12"
+  },
+  {
+   "id": "b",
+   "label": "Steh' auf, erheit're dich, o Liebe! · Zur Liebe will ich dich nicht zwingen",
+   "start": "12",
+   "end": "31"
+  },
+  {
+   "id": "c",
+   "label": "Mich rufet ja die Kindespflicht · Mir klingt der Muttername süsse! · Ein Mann muss eure Herzen leiten (to the recitative)",
+   "start": "31",
+   "end": "46"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 8, Finale (the Larghetto, “Herr! ich bin zwar Verbrecherin!”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 71–74 (46 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. The section begins after the double bar on p. 71 (Larghetto) and ends at the double bar on p. 74, before the Allegro “Nun stolzer Jüngling, nur hieher!”; bars 45–46 are Sarastro's recitative (“Recit.”, with fermatas; the piano “colla parte”). Two slips in the print are set right: in bar 41 Sarastro's German line prints only a quarter rest and an eighth rest before “Und ein stolzes”, an eighth short of the bar, written here as two quarter rests; in bar 26 the print has “zúr” with an accent, written “zur”. Playback tempo: Larghetto ♩ = 67, about 2:45, the median of four complete recordings whose track holds exactly this section (Norrington with the London Classical Players 2:16, Nézet-Séguin 2018 2:43, Christie 1995 2:47, Haitink 1981 3:15)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}
