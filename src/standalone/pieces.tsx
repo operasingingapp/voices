@@ -8061,6 +8061,38 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-bald-prangt-den-morgen-zu-verkunden": {
+    // the three Boys have no portrait: Pamina, the one other singer, stands for it
+    portrait: "zauberfloete:pamina",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "E-flat major",
+      time: "Alla breve (¢) from a one-beat upbeat, then 3/4 (Allegro, from bar 95)",
+      tempo: "Andante, played at a half note = 51 (♩ = 102), then Allegro at ♩ = 128 from bar 95, about 6 minutes, the median of five complete recordings whose tracks hold just this scene (Klemperer 1964, Toscanini 1937, Haitink 1981, Christie 1995, Nézet-Séguin 2018); no recording splits it at the Allegro, so the Allegro's beat is set at 1.27 times the Andante's, from Nézet-Séguin's, whose first track holds the Andante up to Pamina's entry",
+    },
+    notePlaceholder: "The Boys' hymn to the dawn hushed and even; Pamina's despair wild and broken; then quick, warm comfort",
+    about: (
+      <>
+        <p>
+          The Act 2 finale opens as the three Boys come down and announce the coming dawn: soon the sun will rise on its golden course, superstition will vanish and the wise man will prevail; if gentle peace returns to people's hearts, the earth will be a heaven and mortals like gods. Then they see Pamina in despair. Believing that Tamino has abandoned her, she comes in with the dagger her mother gave her, half out of her mind, and calls it her bridegroom: she would rather die by it than waste away with the grief of love, and she curses her fate and bids her faithless lover farewell. As she raises the dagger, the Boys stop her: if Tamino saw this he would die of grief, for he loves only her. They cannot tell her why he was silent, but they promise to lead her to him and show her that he is ready to die for her. All four go off together, singing that two hearts burning with love can never be parted by human weakness: the gods themselves protect them.
+        </p>
+        <p>
+          Score: the first scene of No. 21, the Act 2 Finale (vocal score pages 120–129, 190 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Each singer has their own line; the print puts the
+          Boys two to a staff in places and Pamina on the First Boy's staff where she enters, and where two Boys share a printed note
+          both sing it. The print writes “und Sterbliche sind Göttern gleich”, “Sie kommt”, “bei Seite”, Pamina's “Ha! des Jammers Maas
+          ist voll!”, “Sieh Pamina stirbt durch dich!”, “tödte” and “er fühlet Gegenliebe”, the Boys' “vor Gram vergehen”, and once,
+          in bar 14, a full stop after the Third Boy's “Sonn'”. The piece ends with the piano before the Armed Men's Adagio.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

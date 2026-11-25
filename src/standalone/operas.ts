@@ -4259,7 +4259,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Bald prangt, den Morgen zu verkünden",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-bald-prangt-den-morgen-zu-verkunden"
      },
      {
       "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
@@ -4632,7 +4633,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Bald prangt, den Morgen zu verkünden",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-bald-prangt-den-morgen-zu-verkunden"
      },
      {
       "title": "Papagena, Papagena, Papagena!",
@@ -4663,7 +4665,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Bald prangt, den Morgen zu verkünden",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-bald-prangt-den-morgen-zu-verkunden"
      },
      {
       "title": "Papagena, Papagena, Papagena!",
@@ -4694,7 +4697,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Bald prangt, den Morgen zu verkünden",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-bald-prangt-den-morgen-zu-verkunden"
      },
      {
       "title": "Papagena, Papagena, Papagena!",

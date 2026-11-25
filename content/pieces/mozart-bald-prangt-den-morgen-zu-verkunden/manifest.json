@@ -1,0 +1,168 @@
+{
+ "editionId": "mozart-bald-prangt-den-morgen-zu-verkunden",
+ "editionVersion": "1.0.0-peters",
+ "title": "Bald prangt, den Morgen zu verkünden",
+ "subtitle": "The three boys and Pamina: the opening of the finale from Die Zauberflöte, Act 2",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "knabe1",
+   "name": "First Boy",
+   "voiceType": "Treble or soprano",
+   "partKey": "knabe1"
+  },
+  {
+   "id": "knabe2",
+   "name": "Second Boy",
+   "voiceType": "Treble or soprano",
+   "partKey": "knabe2"
+  },
+  {
+   "id": "knabe3",
+   "name": "Third Boy",
+   "voiceType": "Treble or mezzo-soprano",
+   "partKey": "knabe3"
+  },
+  {
+   "id": "pamina",
+   "name": "Pamina",
+   "voiceType": "Soprano",
+   "partKey": "pamina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "knabe1",
+   "label": "First Boy (Treble or soprano)",
+   "shortLabel": "First Boy",
+   "kind": "voice",
+   "roleId": "knabe1",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "knabe2",
+   "label": "Second Boy (Treble or soprano)",
+   "shortLabel": "Second Boy",
+   "kind": "voice",
+   "roleId": "knabe2",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "knabe3",
+   "label": "Third Boy (Treble or mezzo-soprano)",
+   "shortLabel": "Third Boy",
+   "kind": "voice",
+   "roleId": "knabe3",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "pamina",
+   "label": "Pamina (Soprano)",
+   "shortLabel": "Pamina",
+   "kind": "voice",
+   "roleId": "pamina",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Bald prangt: the Boys greet the coming dawn",
+   "start": "1",
+   "end": "28"
+  },
+  {
+   "id": "b",
+   "label": "Doch seht, Verzweiflung quält Paminen · Pamina and the dagger",
+   "start": "29",
+   "end": "94"
+  },
+  {
+   "id": "c",
+   "label": "Sollte dies dein Jüngling sehen · Zwei Herzen, die von Liebe brennen (to the end)",
+   "start": "95",
+   "end": "190"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (first scene, from “Bald prangt, den Morgen zu verkünden” to the Armed Men's Adagio)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 120–129 (190 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Each Boy has his own line; the print puts two Boys on one staff in places (a note printed once for two Boys is sung by both; where their voices cross, they are told apart by the stems), and Pamina on the First Boy's staff. Bar 1 is a one-beat upbeat. Playback tempo from complete recordings: the median length of this scene, 5:55, from Klemperer 1964 (6:22), Toscanini 1937 (6:12), Haitink 1981 (5:55), Christie 1995 (5:50) and Nézet-Séguin 2018 (1:38 + 3:54, split at Pamina's entry); no recording splits it at the Allegro, so the Andante and the Allegro keep the proportion of Nézet-Séguin's recording, whose first track times the Andante alone."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}
