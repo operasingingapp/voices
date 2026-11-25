@@ -1,0 +1,1004 @@
+# S50a: Nr. 21 Finale, "Tamino mein! O welch' ein Glück!", Edition Peters pp. 134-136
+# Singers: P = Pamina, T = Tamino (printed in treble clef, written here at sounding pitch), W1 = 1. geharnischter Mann (treble clef, sounding pitch), W2 = 2. geharnischter Mann (bass clef)
+# No chorus in this chunk.
+# Italian-only notes (extra small-stem notes serving the Italian text, e.g. bars 3, 4, 7, 8) are ignored.
+# bars 3-4, 7-8: the voice staff carries extra stems for the Italian text (two eighths for "mi-o!"/"mi-a!", an eighth for Italian "O" at the end of the bar, dotted eighth + 16th for "O qual"); the German line is the quarter-note stems
+# bars 19-20: a second E5 / A4 notehead (stem down, dotted) and a same-pitch small note before the D5 serve the Italian text; ignored
+# bars 39, 41-43: the extra stem-down notes (C5 eighth in 39; F#4 dotted quarter and small D5 16th in 41; D5/A4 eighths in 42; D4 quarter in 43) serve the Italian text; ignored
+# unhyphenated print words split one syllable per note: "Schreckens-" (14), "Rosen" (29), "Zauber-" (40), "tiefstem" (42), "tausendjähr'gen" (44), "wandelt" (65-67, W1 W2)
+# sung slurs are not transcribed (TB.md has no slur token); ties are kept
+# page 134 system 1 starts bar 1
+# bar 1: Andante, 3/4, one flat (F major); pickup, 1/4 in 3/4; "Pamina. (Tamino umarmend)"
+1 P: C5:q "Ta-"
+1 T: r:q
+1 W1: r:q
+1 W2: r:q
+2 P: A5:h "mi-" G5:s "no" F5:s E5:s D5:s
+2 T: r:h.
+2 W1: r:h.
+2 W2: r:h.
+3 P: C5:q "mein!" r:q r:q
+3 T: r:h.
+3 W1: r:h.
+3 W2: r:h.
+# JUDGE bar 4 P: X - no grace note: the stem-up F5 dotted eighth + F5 16th printed beside the F5 quarter serve the Italian "O qual"; German "O" is the F5 quarter
+4 P: F5:q "O" D5:q. "welch'" G5:e "ein"
+4 T: r:h.
+4 W1: r:h.
+4 W2: r:h.
+5 P: C5:q "Glück!" r:q r:q
+5 T: r:q r:q C4:q "Pa-"
+5 W1: r:h.
+5 W2: r:h.
+6 P: r:h.
+6 T: F4:q. "mi-" G4:s F4:s E4:s "na" D4:s C4:s Bb3:s
+6 W1: r:h.
+6 W2: r:h.
+7 P: r:h.
+7 T: A3:q "mein!" r:q r:q
+7 W1: r:h.
+7 W2: r:h.
+8 P: r:h.
+8 T: D4:q "o" G3:q. "welch'" C4:e "ein"
+8 W1: r:h.
+8 W2: r:h.
+# page 134 system 2 starts bar 9
+9 P: r:h.
+9 T: F3:q "Glück!" r:q r:q
+9 W1: r:h.
+9 W2: r:h.
+# bar 9: stage direction "(zeigt nach den Felsenhöhlen)" (Tamino)
+10 P: r:h.
+10 T: r:h.
+10 W1: r:h.
+10 W2: r:h.
+11 P: r:h.
+11 T: r:h.
+11 W1: r:h.
+11 W2: r:h.
+12 P: r:h.
+12 T: r:h.
+12 W1: r:h.
+12 W2: r:h.
+13 P: r:h.
+13 T: r:q r:q r:e C4:e "Hier"
+13 W1: r:h.
+13 W2: r:h.
+14 P: r:h.
+# JUDGE bar 14 T: X - all four heads sit on the top line (written F5 = F4 sounding); "sind" is F4, not G4
+14 T: F4:q. "sind" F4:e "die" F4:e "Schre-" F4:e "ckens-"
+14 W1: r:h.
+14 W2: r:h.
+# page 134 system 3 starts bar 15 (staff label "T / Pm")
+15 P: r:h.
+15 T: F4:q "pfor-" G3:q "ten," r:e F4:e "die"
+15 W1: r:h.
+15 W2: r:h.
+16 P: r:h.
+16 T: F4:q. "Noth" F4:e "und" F4:e "Tod" A3:e "mir"
+16 W1: r:h.
+16 W2: r:h.
+17 P: r:q r:q r:e F5:e "Ich"
+17 T: Bb3:q "dräu'n." r:q r:q
+17 W1: r:h.
+17 W2: r:h.
+# JUDGE bar 18 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+18 P: E5:e "wer-" F5:e "de" E5:e "al-" F5:e G5:e "ler" F5:e
+18 T: r:h.
+18 W1: r:h.
+18 W2: r:h.
+# JUDGE bar 19 P: X - the small D5 eighth before the D5 eighth is an Italian-only split (same pitch as its main note, extra syllable "m'av-"); German is grace F5, E5 dotted quarter, D5 C5 Bb4
+19 P: g:F5:e E5:q. "Or-" D5:e C5:e "ten" Bb4:e "an"
+19 T: r:h.
+19 W1: r:h.
+19 W2: r:h.
+# page 134 system 4 starts bar 20 (staff label "Pm")
+20 P: g:Bb4:e A4:q. "dei-" A4:e "ner" D5:e "Sei-" Bb4:e "te"
+20 T: r:h.
+20 W1: r:h.
+20 W2: r:h.
+# JUDGE bar 21 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+21 P: A4:q "sein." G4:q r:q
+21 T: r:h.
+21 W1: r:h.
+21 W2: r:h.
+22 P: r:q r:q r:e C5:e "Ich"
+22 T: r:h.
+22 W1: r:h.
+22 W2: r:h.
+23 P: D5:q. "sel-" D5:e "ber" D5:e "füh-" D5:e "re"
+23 T: r:h.
+23 W1: r:h.
+23 W2: r:h.
+24 P: E5:h "dich," r:e E5:e "die"
+24 T: r:h.
+24 W1: r:h.
+24 W2: r:h.
+# page 134 system 5 starts bar 25
+25 P: F5:q. "Lie-" F5:e "be" F5:e "lei-" F5:e "te"
+25 T: r:h.
+25 W1: r:h.
+25 W2: r:h.
+26 P: G5:h "mich." r:e C5:e "Sie"
+26 T: r:h.
+26 W1: r:h.
+26 W2: r:h.
+27 P: A5:e "mag" G5:e "den" F5:e "Weg" E5:e "mit" D5:e "Ro-" C5:e "sen"
+27 T: r:h.
+27 W1: r:h.
+27 W2: r:h.
+# JUDGE bar 28 P: OWN (both wrong) - the small grace note has a stem but no flag (small quarter), as in bar 30
+28 P: g:C5:q Bn4:h "streu'n," r:e D5:e "weil"
+28 T: r:h.
+28 W1: r:h.
+28 W2: r:h.
+29 P: F5:e "Ro-" E5:e "sen" D5:e "stets" C5:e "bei" Bn4:e "Dor-" A4:e "nen"
+29 T: r:h.
+29 W1: r:h.
+29 W2: r:h.
+# page 135 system 1 starts bar 30
+# JUDGE bar 30 P: X - grace A4 is a small quarter (stem, no flag)
+30 P: g:A4:q G4:h "sein." r:e G4:e "Spiel'"
+30 T: r:h.
+30 W1: r:h.
+30 W2: r:h.
+31 P: C5:h "du" E5:q "die"
+31 T: r:h.
+31 W1: r:h.
+31 W2: r:h.
+32 P: G5:h "Zau-" F5:s "ber-" E5:s D5:s C5:s
+32 T: r:h.
+32 W1: r:h.
+32 W2: r:h.
+33 P: Bn4:h "flö-" F5:q "te"
+33 T: r:h.
+33 W1: r:h.
+33 W2: r:h.
+# JUDGE bar 34 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+34 P: F5:q "an," E5:q A4:q "sie"
+34 T: r:h.
+34 W1: r:h.
+34 W2: r:h.
+35 P: D5:h "schü-" F5:q "tze"
+35 T: r:h.
+35 W1: r:h.
+35 W2: r:h.
+36 P: A5:h "uns" G5:s "auf" F5:s E5:s D5:s
+36 T: r:h.
+36 W1: r:h.
+36 W2: r:h.
+37 P: G5:h "uns'-" Bn4:e. "rer" C5:s
+37 T: r:h.
+37 W1: r:h.
+37 W2: r:h.
+# page 135 system 2 starts bar 38
+38 P: C5:q "Bahn." r:q r:e G4:e "Es"
+38 T: r:h.
+38 W1: r:h.
+38 W2: r:h.
+39 P: C5:h "schnitt" r:e C5:e "in"
+39 T: r:h.
+39 W1: r:h.
+39 W2: r:h.
+40 P: Eb5:q. "ei-" Eb5:e "ner" C5:e "Zau-" A4:e "ber-"
+40 T: r:h.
+40 W1: r:h.
+40 W2: r:h.
+41 P: F#4:q "stun-" D5:e. "de" D5:s "mein" D5:e "Va-" A4:e "ter"
+41 T: r:h.
+41 W1: r:h.
+41 W2: r:h.
+42 P: r:q A4:e "sie" A4:e "aus" F#4:e. "tief-" A4:s "stem"
+42 T: r:h.
+42 W1: r:h.
+42 W2: r:h.
+# page 135 system 3 starts bar 43
+43 P: A4:q "Grun-" D4:q "de" r:e D4:e "der"
+43 T: r:h.
+43 W1: r:h.
+43 W2: r:h.
+44 P: F#4:e. "tau-" G4:s "send-" A4:e "jähr'-" Bb4:e "gen" C5:e "Ei-" D5:e "che"
+44 T: r:h.
+44 W1: r:h.
+44 W2: r:h.
+45 P: Bb4:q "aus" r:e. G4:s "bei" D5:e. "Blitz" Bb4:s "und"
+45 T: r:h.
+45 W1: r:h.
+45 W2: r:h.
+46 P: Eb5:q "Don-" C5:q "ner," r:q
+46 T: r:h.
+46 W1: r:h.
+46 W2: r:h.
+# bar 47: the small stem-up notes around "und" (8th and 16th) serve the Italian text only; ignored
+47 P: A4:h "Sturm" F5:q "und"
+47 T: r:h.
+47 W1: r:h.
+47 W2: r:h.
+48 P: Bb4:h "Braus." r:e Bb4:e "Nun"
+48 T: r:h.
+48 W1: r:h.
+48 W2: r:h.
+# page 135 system 4 starts bar 49 (separate staves: Pm above, T below)
+# JUDGE bar 49 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+49 P: Bb4:h "komm" A4:e "und" G4:e
+49 T: r:h.
+49 W1: r:h.
+49 W2: r:h.
+50 P: C5:q. "spiel" C5:e "die" Bb4:e "Flö-" C5:e "te"
+50 T: r:h.
+50 W1: r:h.
+50 W2: r:h.
+51 P: A4:q "an;" r:e A4:e "sie" Bb4:e "lei-" C5:e "te"
+51 T: r:h.
+51 W1: r:h.
+51 W2: r:h.
+# JUDGE bar 52 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+52 P: D5:q "uns" F5:q E5:s "auf" D5:s C5:s Bb4:s
+52 T: r:h.
+52 W1: r:h.
+52 W2: r:h.
+# JUDGE bar 53 P: OWN (both wrong) - the grace A4 has no flag (small quarter, same as the piano grace); slur dropped (no sung slur token)
+53 P: g:A4:q G4:h "grau-" A4:e. "ser" G4:s
+53 T: r:h.
+53 W1: r:h.
+53 W2: r:h.
+# JUDGE bar 54 P: Y - "Bahn." head on the second line: G4 (same pitch as the preceding G4 16th)
+54 P: G4:q "Bahn." r:q C5:q "Wir"
+54 T: r:h.
+54 W1: r:h.
+54 W2: r:h.
+# JUDGE bar 55 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+55 P: C5:q "wan-" Bn4:e C5:e D5:e "deln" C5:e
+# JUDGE bar 55 T: Y - Tamino's staff in bar 55 reads quarter rest, quarter rest, C4 quarter "Wir" ("Wir" printed under beat 3 of bar 55, above the piano); bar 54 is a whole rest
+55 T: r:q r:q C4:q "Wir"
+55 W1: r:h.
+55 W2: r:h.
+# page 136 system 1 starts bar 56 (six staves: Pm, T, 1. geharnischter Mann (treble clef, tenor, sounding pitch written), 2. geharnischter Mann (bass clef), piano)
+56 P: C5:h "durch" C5:q "des"
+# JUDGE bar 56 T: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+56 T: F4:e "wan-" C4:e A4:e G4:e F4:e "deln" E4:e
+# JUDGE bar 56 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+56 W1: A3:q "Ihr" A3:e "wan-" Bb3:e C4:e "delt" Bb3:e
+# JUDGE bar 56 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+56 W2: F3:q "Ihr" F3:e "wan-" G3:e A3:e "delt" G3:e
+57 P: C5:h.~ "To-"
+# JUDGE bar 57 T: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+57 T: F4:e "durch" C4:e A4:e G4:e F4:e "des" E4:e
+# JUDGE bar 57 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+57 W1: A3:q. "durch" Bb3:e C4:e "des" Bb3:e
+# JUDGE bar 57 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+57 W2: F3:q. "durch" G3:e A3:e "des" G3:e
+58 P: C5:h C5:q "nes"
+# JUDGE bar 58 T: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+58 T: F4:e "To-" C4:e A4:e G4:e F4:e "nes" E4:e
+# JUDGE bar 58 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+58 W1: A3:q. "To-" Bb3:e C4:e "nes" Bb3:e
+# JUDGE bar 58 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+58 W2: F3:q. "To-" G3:e A3:e "nes" G3:e
+# JUDGE bar 59 P: Y - "froh" is printed under the second eighth pair (D5 C5); slurs C5-F5-E5 ("Macht") and D5-C5 ("froh")
+59 P: C5:q "Macht" F5:e E5:e D5:e "froh" C5:e
+# JUDGE bar 59 T: X - the curve joins F4 quarter "froh" to the F4 quarter of bar 60 (same pitch, extender after "froh"): a tie
+59 T: F4:h "Macht" F4:q~ "froh"
+59 W1: A3:h "Macht" r:q
+59 W2: F3:h "Macht" r:q
+60 P: g:C5:e Bb4:h "durch" Bb4:q "des"
+# JUDGE bar 60 T: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+60 T: F4:q E4:e "durch" F4:e G4:e "des" F4:e
+60 W1: D4:q "froh" D4:q "durch" D4:q "des"
+60 W2: G3:q "froh" G3:q "durch" G3:q "des"
+# JUDGE bar 61 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+61 P: Bb4:e "To-" D5:e C5:e Bb4:e A4:e "des" C5:e
+# JUDGE bar 61 T: Y - "To-" half note in the E5 space (written) = E4 sounding, not F4 ("des" is the F5 line = F4)
+61 T: E4:h "To-" F4:q "des"
+# JUDGE bar 61 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+61 W1: C4:e "To-" Bb3:e A3:e G3:e F3:q "des"
+61 W2: C3:h "To-" D3:q "des"
+# JUDGE bar 62 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+62 P: Bb4:s "dü-" A4:s Bb4:s G4:s F4:q G4:q "stre"
+# JUDGE bar 62 T: Y - "dü-" on the D5 line, then the C5 space (written) = D4, C4 sounding; "stre" E4
+62 T: D4:q "dü-" C4:q E4:q "stre"
+# JUDGE bar 62 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+62 W1: G3:q "dü-" A3:q Bb3:q "stre"
+62 W2: Bb2:q "dü-" C3:h "stre"
+# page 136 system 2 starts bar 63
+# JUDGE bar 63 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+63 P: G4:q "Nacht." A4:q r:q
+# JUDGE bar 63 T: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+63 T: E4:q "Nacht." F4:q C4:q "Wir"
+# JUDGE bar 63 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+63 W1: Bb3:q "Nacht." A3:q r:q
+# JUDGE bar 63 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+63 W2: C3:q "Nacht." F3:q r:q
+64 P: r:q r:q C5:q "Wir"
+# JUDGE bar 64 T: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+64 T: C4:q "wan-" Bn3:e C4:e D4:e "deln" C4:e
+64 W1: r:h.
+64 W2: r:h.
+# JUDGE bar 65 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+65 P: F5:e "wan-" C5:e A5:e G5:e F5:e "deln" E5:e
+65 T: C4:h "durch" C4:q "des"
+# JUDGE bar 65 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+65 W1: F4:q "Ihr" F4:e "wan-" G4:e A4:e "delt" G4:e
+# JUDGE bar 65 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+65 W2: A3:q "Ihr" A3:e "wan-" Bb3:e C4:e "delt" Bb3:e
+# JUDGE bar 66 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+66 P: F5:e "durch" C5:e A5:e G5:e F5:e "des" E5:e
+66 T: C4:h.~ "To-"
+# JUDGE bar 66 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+66 W1: F4:q. "durch" G4:e A4:e "des" G4:e
+# JUDGE bar 66 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+66 W2: A3:q. "durch" Bb3:e C4:e "des" Bb3:e
+# JUDGE bar 67 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+67 P: F5:e "To-" C5:e A5:e G5:e F5:e "nes" E5:e
+67 T: C4:h C4:q "nes"
+# JUDGE bar 67 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+67 W1: F4:q. "To-" G4:e A4:e "nes" G4:e
+# JUDGE bar 67 W2: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+67 W2: A3:q. "To-" Bb3:e C4:e "nes" Bb3:e
+# JUDGE bar 68 P: X - F5 quarter "froh" tied to the F5 quarter of bar 69 (same pitch, extender)
+68 P: F5:h "Macht" F5:q~ "froh"
+# JUDGE bar 68 T: Y - "froh" is printed under the second eighth pair (D4 C4), as in Pamina's bar 59; slurs C4-F4-E4 and D4-C4
+68 T: C4:q "Macht" F4:e E4:e D4:e "froh" C4:e
+# JUDGE bar 68 W1: X - A4 quarter "froh" tied to the A4 quarter of bar 69 (same pitch, extender)
+68 W1: F4:h "Macht" A4:q~ "froh"
+68 W2: A3:h "Macht" r:q
+# JUDGE bar 69 P: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+69 P: F5:q E5:e "durch" F5:e G5:e "des" F5:e
+69 T: g:C4:e Bb3:h "durch" Bb3:q "des"
+# JUDGE bar 69 W1: Y - slur marks only; TB.md has no slur token for sung lines (earlier merged files carry none), so the line is written without them
+69 W1: A4:q G4:e "durch" F4:e E4:e "des" F4:e
+69 W2: G3:q "froh" G3:q "durch" G3:q "des"
+# bar 69 is the last bar beginning on p.136 (the phrase continues on p.137, chunk S50b)
+# ---- end of b50/VM_S50a.txt (bars 1-69)
+# S50b: Nr. 21 Finale, "Tamino mein! O welch' ein Glück!" (second part), Edition Peters pp. 137-140
+# Singers: P = Pamina, T = Tamino, W1 = 1. geharnischter Mann, W2 = 2. geharnischter Mann,
+# K1 = Chor (von innen), Sopran; K2 = Alt; K3 = Tenor (treble clef, sounding octave lower); K4 = Bass (p.139 sys 3 - p.140 sys 3)
+# Chorus words: German is printed only under the Sopran and Tenor staves (Alt and Bass carry only the Italian); K2 takes the Sopran's German (the Alt's own German where printed under it, bars 53-56), K4 the Tenor's
+# Tenor lines (T, W1, K3) printed in treble clef: written here at sounding pitch (octave lower).
+# bar 70: Andante continues from S50a, 3/4, F major (one flat)
+# page 137 system 1 starts bar 70
+# JUDGE system starts checked on the page images: p.137 bars 1, 9, 17, 20, 23; p.138 bars 26, 28, 30, 33, 36; p.139 bars 39, 42, 45, 50; p.140 bars 54, 57, 61, 64 (both readers agree)
+# JUDGE bar 70 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+70 P: E5:h "To-" F5:q "des"
+# JUDGE bar 70 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+70 T: Bb3:q "To-" G4:q F4:q "des"
+# JUDGE bar 70 W1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+70 W1: G4:e "To-" E4:e C4:e Bb3:e A3:q "des"
+# JUDGE bar 70 W2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+70 W2: C3:q. "To-" C#3:e D3:q "des"
+70 K1: r:h.
+70 K2: r:h.
+70 K3: r:h.
+70 K4: r:h.
+# bar 71 W2: courtesy natural on the C (after the C# of bar 1)
+# JUDGE bar 71 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+71 P: D5:s "dü-" C5:s D5:s Bb4:s A4:q G4:q "stre"
+# JUDGE bar 71 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+71 T: F4:e. "dü-" G4:s F4:q E4:q "stre"
+# JUDGE bar 71 W1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+71 W1: G3:e. "dü-" D4:s C4:q Bb3:q "stre"
+# JUDGE bar 71 W2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+71 W2: Bb2:q "dü-" C3:h "stre"
+71 K1: r:h.
+71 K2: r:h.
+71 K3: r:h.
+71 K4: r:h.
+72 P: D5:h "Nacht," r:q
+72 T: F4:h "Nacht," r:q
+72 W1: Ab3:h "Nacht," r:q
+72 W2: B2:h "Nacht," r:q
+72 K1: r:h.
+72 K2: r:h.
+72 K3: r:h.
+72 K4: r:h.
+# JUDGE bar 73 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+73 P: A4:q. "dü-" Bb4:e G4:q "stre"
+# JUDGE bar 73 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+73 T: F4:q. "dü-" G4:e E4:q "stre"
+# JUDGE bar 73 W1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+73 W1: C4:h "dü-" C4:q "stre"
+# JUDGE bar 73 W2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+73 W2: C3:h "dü-" C3:q "stre"
+73 K1: r:h.
+73 K2: r:h.
+73 K3: r:h.
+73 K4: r:h.
+74 P: F5:h "Nacht," r:q
+74 T: Ab4:h "Nacht," r:q
+74 W1: D4:h "Nacht," r:q
+74 W2: B2:h "Nacht," r:q
+74 K1: r:h.
+74 K2: r:h.
+74 K3: r:h.
+74 K4: r:h.
+# JUDGE bar 75 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+75 P: A4:q. "dü-" C5:e G4:e "stre" C5:e
+# JUDGE bar 75 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+75 T: F4:h "dü-" E4:q "stre"
+# JUDGE bar 75 W1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+75 W1: C4:h "dü-" Bb3:q "stre"
+# JUDGE bar 75 W2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+75 W2: C3:h "dü-" C3:q "stre"
+75 K1: r:h.
+75 K2: r:h.
+75 K3: r:h.
+75 K4: r:h.
+76 P: F4:q "Nacht." r:q r:q
+76 T: F4:q "Nacht." r:q r:q
+76 W1: A3:q "Nacht." r:q r:q
+76 W2: F3:q "Nacht." r:q r:q
+76 K1: r:h.
+76 K2: r:h.
+76 K3: r:h.
+76 K4: r:h.
+# bar 77: all voices rest (still page 137 system 1)
+77 P: r:h.
+77 T: r:h.
+77 W1: r:h.
+77 W2: r:h.
+77 K1: r:h.
+77 K2: r:h.
+77 K3: r:h.
+77 K4: r:h.
+# page 137 system 2 starts bar 78 (piano only)
+78 P: r:h.
+78 T: r:h.
+78 W1: r:h.
+78 W2: r:h.
+78 K1: r:h.
+78 K2: r:h.
+78 K3: r:h.
+78 K4: r:h.
+79 P: r:h.
+79 T: r:h.
+79 W1: r:h.
+79 W2: r:h.
+79 K1: r:h.
+79 K2: r:h.
+79 K3: r:h.
+79 K4: r:h.
+80 P: r:h.
+80 T: r:h.
+80 W1: r:h.
+80 W2: r:h.
+80 K1: r:h.
+80 K2: r:h.
+80 K3: r:h.
+80 K4: r:h.
+81 P: r:h.
+81 T: r:h.
+81 W1: r:h.
+81 W2: r:h.
+81 K1: r:h.
+81 K2: r:h.
+81 K3: r:h.
+81 K4: r:h.
+82 P: r:h.
+82 T: r:h.
+82 W1: r:h.
+82 W2: r:h.
+82 K1: r:h.
+82 K2: r:h.
+82 K3: r:h.
+82 K4: r:h.
+83 P: r:h.
+83 T: r:h.
+83 W1: r:h.
+83 W2: r:h.
+83 K1: r:h.
+83 K2: r:h.
+83 K3: r:h.
+83 K4: r:h.
+84 P: r:h.
+84 T: r:h.
+84 W1: r:h.
+84 W2: r:h.
+84 K1: r:h.
+84 K2: r:h.
+84 K3: r:h.
+84 K4: r:h.
+# bar 85: fermata, double bar; key signature cancelled (C major), 4/4
+85 P: r:h.
+85 T: r:h.
+85 W1: r:h.
+85 W2: r:h.
+85 K1: r:h.
+85 K2: r:h.
+85 K3: r:h.
+85 K4: r:h.
+# bar 86: "Marsch. Adagio", 4/4, C major (Tamino plays the flute: the march is piano only)
+# page 137 system 3 starts bar 86 (piano only)
+86 P: r:w
+86 T: r:w
+86 W1: r:w
+86 W2: r:w
+86 K1: r:w
+86 K2: r:w
+86 K3: r:w
+86 K4: r:w
+87 P: r:w
+87 T: r:w
+87 W1: r:w
+87 W2: r:w
+87 K1: r:w
+87 K2: r:w
+87 K3: r:w
+87 K4: r:w
+88 P: r:w
+88 T: r:w
+88 W1: r:w
+88 W2: r:w
+88 K1: r:w
+88 K2: r:w
+88 K3: r:w
+88 K4: r:w
+# page 137 system 4 starts bar 89 (piano only)
+89 P: r:w
+89 T: r:w
+89 W1: r:w
+89 W2: r:w
+89 K1: r:w
+89 K2: r:w
+89 K3: r:w
+89 K4: r:w
+90 P: r:w
+90 T: r:w
+90 W1: r:w
+90 W2: r:w
+90 K1: r:w
+90 K2: r:w
+90 K3: r:w
+90 K4: r:w
+91 P: r:w
+91 T: r:w
+91 W1: r:w
+91 W2: r:w
+91 K1: r:w
+91 K2: r:w
+91 K3: r:w
+91 K4: r:w
+# page 137 system 5 starts bar 92 (piano only)
+92 P: r:w
+92 T: r:w
+92 W1: r:w
+92 W2: r:w
+92 K1: r:w
+92 K2: r:w
+92 K3: r:w
+92 K4: r:w
+93 P: r:w
+93 T: r:w
+93 W1: r:w
+93 W2: r:w
+93 K1: r:w
+93 K2: r:w
+93 K3: r:w
+93 K4: r:w
+94 P: r:w
+94 T: r:w
+94 W1: r:w
+94 W2: r:w
+94 K1: r:w
+94 K2: r:w
+94 K3: r:w
+94 K4: r:w
+# page 138 system 1 starts bar 95 (stage direction "(umarmen sich)"; Pamina and Tamino sing)
+95 P: r:h r:q r:e E5:e "Wir"
+95 T: r:h r:q r:e C4:e "Wir"
+95 W1: r:w
+95 W2: r:w
+95 K1: r:w
+95 K2: r:w
+95 K3: r:w
+95 K4: r:w
+# bar 96 T: a stray dot stands on the staff before the "then" eighth; it belongs to no note (rhythm read without it)
+# JUDGE bar 96 P: Y - r:s C5:s at the end: the rest and the last note have two flags (16ths), no dot after the rest; leading hyphens dropped (TB.md: only a trailing - marks a continued word)
+96 P: F5:e. "wan-" E5:s "del-" F5:s "ten" E5:s "durch" F5:s "Feu-" G5:s "er-" E5:q "glu-" C5:e "then" r:s C5:s "be-"
+# JUDGE bar 96 T: Y - r:s E4:s at the end: two flags on rest and note, no dotted rest (a stray dot stands left of the "then" eighth, belonging to no note: the bar adds up without it); leading hyphens dropped
+96 T: D4:e. "wan-" C4:s "del-" D4:s "ten" C4:s "durch" D4:s "Feu-" E4:s "er-" C4:q "glu-" E4:e "then" r:s E4:s "be-"
+96 W1: r:w
+96 W2: r:w
+96 K1: r:w
+96 K2: r:w
+96 K3: r:w
+96 K4: r:w
+# page 138 system 2 starts bar 97 ("(zur Flöte)" printed over both voices: not transcribed)
+# JUDGE bar 97 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+97 P: D5:e. "kämpf-" C5:s "ten" D5:s "mu-" C5:s "thig" D5:s "die" E5:s "Ge-" C5:q "fahr." r:e G4:e "Dein"
+# JUDGE bar 97 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+97 T: F4:e. "kämpf-" E4:s "ten" F4:s "mu-" E4:s "thig" F4:s "die" G4:s "Ge-" E4:q "fahr." r:e G4:e "Dein"
+97 W1: r:w
+97 W2: r:w
+97 K1: r:w
+97 K2: r:w
+97 K3: r:w
+97 K4: r:w
+# JUDGE bar 98 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+98 P: C5:e. "Ton" D5:s "sei" E5:s "Schutz" D5:s "in" E5:s "Was-" C5:s "ser-" F5:s "flu-" E5:s E5:q "then," D5:s "so" C5:s
+# JUDGE bar 98 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+98 T: E4:e. "Ton" F4:s "sei" G4:s "Schutz" F4:s "in" G4:s "Was-" E4:s "ser-" A4:s "flu-" G4:s G4:q "then," F4:s "so" E4:s
+98 W1: r:w
+98 W2: r:w
+98 K1: r:w
+98 K2: r:w
+98 K3: r:w
+98 K4: r:w
+# page 138 system 3 starts bar 99
+# bar 99 P: printed "Feuer - war," (stray hyphen); T: "Feuer war,"
+# JUDGE bar 99 P: X - print has "Feuer - war" with "Feu" and "er" under two notes and a stray hyphen after "er": syllables "Feu-" "er" as in Tamino's line (a hyphen on "er" would join it to "war"); leading hyphen dropped
+99 P: B4:e. "wie" C5:s "er" D5:s "es" C5:s "im" D5:s "Feu-" B4:s "er" C5:q "war," r:e G4:e "dein"
+# JUDGE bar 99 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+99 T: D4:e. "wie" E4:s "er" F4:s "es" E4:s "im" F4:s "Feu-" D4:s "er" E4:q "war," r:e G4:e "dein"
+99 W1: r:w
+99 W2: r:w
+99 K1: r:w
+99 K2: r:w
+99 K3: r:w
+99 K4: r:w
+# JUDGE bar 100 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+100 P: E5:e. "Ton" F5:s "sei" G5:s "Schutz" F5:s "in" G5:s "Was-" E5:s "ser-" A5:s "flu-" G5:s G5:q "then" F5:s "so" E5:s
+# JUDGE bar 100 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+100 T: C4:e. "Ton" D4:s "sei" E4:s "Schutz" D4:s "in" E4:s "Was-" C4:s "ser-" F4:s "flu-" E4:s E4:q "then" D4:s "so" C4:s
+100 W1: r:w
+100 W2: r:w
+100 K1: r:w
+100 K2: r:w
+100 K3: r:w
+100 K4: r:w
+# JUDGE bar 101 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+101 P: D5:e. "wie" E5:s "er" F5:s "es" E5:s "im" F5:s "Feu-" D5:s "er" C5:q "war." r:q
+# JUDGE bar 101 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+101 T: B3:e. "wie" C4:s "er" D4:s "es" C4:s "im" D4:s "Feu-" B3:s "er" C4:q "war." r:q
+101 W1: r:w
+101 W2: r:w
+101 K1: r:w
+101 K2: r:w
+101 K3: r:w
+101 K4: r:w
+# page 138 system 4 starts bar 102 (piano only: the march again, "Flöte", while they pass through the water)
+102 P: r:w
+102 T: r:w
+102 W1: r:w
+102 W2: r:w
+102 K1: r:w
+102 K2: r:w
+102 K3: r:w
+102 K4: r:w
+103 P: r:w
+103 T: r:w
+103 W1: r:w
+103 W2: r:w
+103 K1: r:w
+103 K2: r:w
+103 K3: r:w
+103 K4: r:w
+104 P: r:w
+104 T: r:w
+104 W1: r:w
+104 W2: r:w
+104 K1: r:w
+104 K2: r:w
+104 K3: r:w
+104 K4: r:w
+# page 138 system 5 starts bar 105 (piano only)
+105 P: r:w
+105 T: r:w
+105 W1: r:w
+105 W2: r:w
+105 K1: r:w
+105 K2: r:w
+105 K3: r:w
+105 K4: r:w
+106 P: r:w
+106 T: r:w
+106 W1: r:w
+106 W2: r:w
+106 K1: r:w
+106 K2: r:w
+106 K3: r:w
+106 K4: r:w
+107 P: r:w
+107 T: r:w
+107 W1: r:w
+107 W2: r:w
+107 K1: r:w
+107 K2: r:w
+107 K3: r:w
+107 K4: r:w
+# page 139 system 1 starts bar 108 (piano only)
+108 P: r:w
+108 T: r:w
+108 W1: r:w
+108 W2: r:w
+108 K1: r:w
+108 K2: r:w
+108 K3: r:w
+108 K4: r:w
+109 P: r:w
+109 T: r:w
+109 W1: r:w
+109 W2: r:w
+109 K1: r:w
+109 K2: r:w
+109 K3: r:w
+109 K4: r:w
+110 P: r:w
+110 T: r:w
+110 W1: r:w
+110 W2: r:w
+110 K1: r:w
+110 K2: r:w
+110 K3: r:w
+110 K4: r:w
+# page 139 system 2 starts bar 111 ("Offene Verwandlung. Tempel, hell erleuchtet.")
+111 P: r:h r:q r:e E5:e "Ihr"
+111 T: r:h r:q r:e C4:e "Ihr"
+111 W1: r:w
+111 W2: r:w
+111 K1: r:w
+111 K2: r:w
+111 K3: r:w
+111 K4: r:w
+# JUDGE bar 112 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+112 P: F5:e. "Göt-" E5:s "ter," F5:s "welch" E5:s "ein" F5:s "Au-" G5:s "gen-" E5:q "blick" r:e A5:e "ge-"
+# JUDGE bar 112 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+112 T: D4:e. "Göt-" C4:s "ter," D4:s "welch" C4:s "ein" D4:s "Au-" B3:s "gen-" C4:q "blick" r:e C4:e "ge-"
+112 W1: r:w
+112 W2: r:w
+112 K1: r:w
+112 K2: r:w
+112 K3: r:w
+112 K4: r:w
+# bar 113: incomplete bar (7/8 of 4/4), final double bar of the Andante section; its last eighth is bar 45 (the Allegro upbeat)
+# JUDGE bar 113 P: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+113 P: D5:e. "wäh-" D5:s "ret" D5:s "ist" D5:s "uns" G5:s "I-" G5:s "sis" C5:q "Glück." r:e
+# JUDGE bar 113 T: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+113 T: C4:e. "wäh-" C4:s "ret" B3:s "ist" B3:s "uns" B3:s "I-" B3:s "sis" C4:q "Glück." r:e
+113 W1: r:h r:q r:e
+113 W2: r:h r:q r:e
+113 K1: r:h r:q r:e
+113 K2: r:h r:q r:e
+113 K3: r:h r:q r:e
+113 K4: r:h r:q r:e
+# page 139 system 3 starts bar 114
+# bar 114: Allegro, 4/4 (C), C major; pickup, 1/8 in 4/4; "Chor (von innen)" enters in bar 46
+114 P: r:e
+114 T: r:e
+114 W1: r:e
+114 W2: r:e
+114 K1: r:e
+114 K2: r:e
+114 K3: r:e
+114 K4: r:e
+115 P: r:w
+115 T: r:w
+115 W1: r:w
+115 W2: r:w
+115 K1: r:h r:q r:e C5:e "Tri-"
+115 K2: r:h r:q r:e G4:e "Tri-"
+# JUDGE bar 115 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+115 K3: r:q r:e E4:e "Tri-" E4:h~ "umph,"
+# JUDGE bar 115 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+115 K4: r:q r:e C4:e "Tri-" C4:h~ "umph,"
+116 P: r:w
+116 T: r:w
+116 W1: r:w
+116 W2: r:w
+# JUDGE bar 116 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+116 K1: C5:q. "umph," E5:e "Tri-" E5:q. "umph," G5:e "Tri-"
+# JUDGE bar 116 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+116 K2: G4:q. "umph," C5:e "Tri-" C5:q. "umph," C5:e "Tri-"
+# JUDGE bar 116 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+116 K3: E4:q. G4:e "Tri-" G4:q. "umph," E4:e "Tri-"
+# JUDGE bar 116 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+116 K4: C4:q. C4:e "Tri-" C4:q. "umph," C4:e "Tri-"
+117 P: r:w
+117 T: r:w
+117 W1: r:w
+117 W2: r:w
+# JUDGE bar 117 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+117 K1: G5:q. "umph," G5:e "du" G5:q. "ed-" G5:e "les"
+# JUDGE bar 117 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+117 K2: B4:q. "umph," B4:e "du" B4:q. "ed-" B4:e "les"
+# JUDGE bar 117 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+117 K3: D4:q. "umph," D4:e "du" D4:q. "ed-" D4:e "les"
+# JUDGE bar 117 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+117 K4: G3:q. "umph," G3:e "du" G3:q. "ed-" G3:e "les"
+118 P: r:w
+118 T: r:w
+118 W1: r:w
+118 W2: r:w
+# JUDGE bar 118 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+118 K1: E5:h "Paar!" r:e C5:e "be-" E5:e "sie-" C5:e "get"
+# JUDGE bar 118 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+118 K2: C5:h "Paar!" r:e C5:e "be-" C5:e "sie-" C5:e "get"
+# JUDGE bar 118 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+118 K3: E4:h "Paar!" r:e E4:e "be-" C4:e "sie-" E4:e "get"
+# JUDGE bar 118 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+118 K4: C4:h "Paar!" r:e C4:e "be-" C4:e "sie-" C4:e "get"
+# page 139 system 4 starts bar 119
+119 P: r:w
+119 T: r:w
+119 W1: r:w
+119 W2: r:w
+119 K1: G5:q. "hast" G5:e "du" G5:q. "die" G5:e "Ge-"
+119 K2: B4:q. "hast" B4:e "du" B4:q. "die" B4:e "Ge-"
+119 K3: D4:q. "hast" D4:e "du" D4:q. "die" D4:e "Ge-"
+119 K4: G3:q. "hast" G3:e "du" G3:q. "die" G3:e "Ge-"
+120 P: r:w
+120 T: r:w
+120 W1: r:w
+120 W2: r:w
+# JUDGE bar 120 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+120 K1: C5:h "fahr!" r:e C5:e "der" C5:e "I-" C5:e "sis"
+# JUDGE bar 120 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+120 K2: C5:h "fahr!" r:e G4:e "der" G4:e "I-" G4:e "sis"
+# JUDGE bar 120 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+120 K3: E4:h "fahr!" r:e E4:e "der" E4:e "I-" E4:e "sis"
+# JUDGE bar 120 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+120 K4: C4:h "fahr!" r:e C4:e "der" C4:e "I-" C4:e "sis"
+121 P: r:w
+121 T: r:w
+121 W1: r:w
+121 W2: r:w
+# JUDGE bar 121 K1: X - the eighth on "he" sits on the top line (F5), the same height as the dotted quarter before it; E5 would be in the space below; leading hyphen dropped
+121 K1: F5:q. "Wei-" F5:e "he" G5:q. "ist" G5:e "nun"
+# JUDGE bar 121 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+121 K2: A4:q. "Wei-" A4:e "he" C5:q. "ist" C5:e "nun"
+# JUDGE bar 121 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+121 K3: F4:q. "Wei-" F4:e "he" E4:q. "ist" E4:e "nun"
+# JUDGE bar 121 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+121 K4: F3:q. "Wei-" F3:e "he" C4:q. "ist" C4:e "nun"
+# bar 122: the Alto and Bass staves carry their own German "Kommt," (the Tenor staff has only the Italian "Vien,": it takes the Bass's word)
+122 P: r:w
+122 T: r:w
+122 W1: r:w
+122 W2: r:w
+122 K1: A5:q "dein!" A5:q "Kommt," B4:q "kommt," r:q
+122 K2: C5:q "dein!" r:q r:q B4:q "Kommt,"
+122 K3: F4:q "dein!" r:q r:q D4:q "Kommt,"
+122 K4: F3:q "dein!" r:q r:q G3:q "Kommt,"
+# page 140 system 1 starts bar 123
+# bars 54-63: German printed under only some staves; a voice whose staff carries only the Italian takes the German of the voice singing the same rhythm
+123 P: r:w
+123 T: r:w
+123 W1: r:w
+123 W2: r:w
+123 K1: r:q G5:q "kommt," A4:q "kommt," r:q
+123 K2: B4:q "kommt," r:q r:q A4:q "kommt,"
+123 K3: G4:q "kommt," r:q r:q C4:q "kommt,"
+123 K4: E3:q "kommt," r:q r:q F3:q "kommt,"
+124 P: r:w
+124 T: r:w
+124 W1: r:w
+124 W2: r:w
+# JUDGE bar 124 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+124 K1: F5:q. "tre-" F5:e "tet" F5:e "in" F5:e "den" F5:e "Tem-" F5:e "pel"
+# JUDGE bar 124 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+124 K2: A4:q "kommt," r:q A4:q. "tre-" A4:e "tet,"
+# JUDGE bar 124 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+124 K3: F4:q "kommt," r:q D4:q. "tre-" D4:e "tet,"
+124 K4: D3:q "kommt," r:q r:h
+125 P: r:w
+125 T: r:w
+125 W1: r:w
+125 W2: r:w
+# JUDGE bar 125 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+125 K1: F5:q "ein," D5:e "in" D5:e "den" G5:q. "Tem-" G5:e "pel"
+# JUDGE bar 125 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+125 K2: B4:e "tre-" B4:e "tet" B4:e "in" B4:e "den" B4:q. "Tem-" B4:e "pel"
+# JUDGE bar 125 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+125 K3: D4:e "tre-" D4:e "tet" D4:e "in" D4:e "den" D4:q. "Tem-" D4:e "pel"
+# JUDGE bar 125 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+125 K4: G3:q. "tre-" G3:e "tet" G3:e "in" G3:e "den" G3:e "Tem-" G3:e "pel"
+# page 140 system 2 starts bar 126
+126 P: r:w
+126 T: r:w
+126 W1: r:w
+126 W2: r:w
+126 K1: E5:q "ein," C5:q "kommt," r:q E5:q "kommt,"
+126 K2: C5:q "ein," r:q G4:q "kommt," r:q
+126 K3: E4:q "ein," r:q E4:q "kommt," r:q
+126 K4: C3:q "ein," r:q C4:q "kommt," r:q
+127 P: r:w
+127 T: r:w
+127 W1: r:w
+127 W2: r:w
+127 K1: r:q G5:q "kommt," r:h
+127 K2: C5:q "kommt," r:q r:h
+127 K3: E4:q "kommt," r:q r:h
+127 K4: C4:q "kommt," r:q r:h
+128 P: r:w
+128 T: r:w
+128 W1: r:w
+128 W2: r:w
+# JUDGE bar 128 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+128 K1: E5:q. "tre-" E5:e "tet" G5:e "in" G5:e "den" G5:e "Tem-" G5:e "pel"
+# JUDGE bar 128 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+128 K2: C5:q. "tre-" C5:e "tet" B4:e "in" B4:e "den" B4:e "Tem-" B4:e "pel"
+# JUDGE bar 128 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+128 K3: E4:q. "tre-" E4:e "tet" D4:e "in" D4:e "den" D4:e "Tem-" D4:e "pel"
+# JUDGE bar 128 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+128 K4: G3:q. "tre-" G3:e "tet" G3:e "in" G3:e "den" G3:e "Tem-" G3:e "pel"
+129 P: r:w
+129 T: r:w
+129 W1: r:w
+129 W2: r:w
+129 K1: C5:q "ein," C5:q "kommt," r:q E5:q "kommt,"
+129 K2: C5:q "ein," r:q G4:q "kommt," r:q
+129 K3: E4:q "ein," r:q E4:q "kommt," r:q
+129 K4: C3:q "ein," r:q C4:q "kommt," r:q
+# page 140 system 3 starts bar 130
+130 P: r:w
+130 T: r:w
+130 W1: r:w
+130 W2: r:w
+130 K1: r:q G5:q "kommt," r:h
+130 K2: C5:q "kommt," r:q r:h
+130 K3: E4:q "kommt," r:q r:h
+130 K4: C4:q "kommt," r:q r:h
+131 P: r:w
+131 T: r:w
+131 W1: r:w
+131 W2: r:w
+# JUDGE bar 131 K1: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+131 K1: E5:q. "tre-" E5:e "tet" G5:e "in" G5:e "den" G5:e "Tem-" G5:e "pel"
+# JUDGE bar 131 K2: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+131 K2: C5:q. "tre-" C5:e "tet" B4:e "in" B4:e "den" B4:e "Tem-" B4:e "pel"
+# JUDGE bar 131 K3: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+131 K3: E4:q. "tre-" E4:e "tet" D4:e "in" D4:e "den" D4:e "Tem-" D4:e "pel"
+# JUDGE bar 131 K4: Y - same notes and words; continuation syllables written without a leading hyphen (TB.md)
+131 K4: G3:q. "tre-" G3:e "tet" G3:e "in" G3:e "den" G3:e "Tem-" G3:e "pel"
+# bar 132: stage direction "(Sarastro führt Tamino und Pamina in den Tempel.)"; piano postlude f to the end
+132 P: r:w
+132 T: r:w
+132 W1: r:w
+132 W2: r:w
+132 K1: C5:q "ein." r:q r:h
+132 K2: C5:q "ein." r:q r:h
+# JUDGE bar 132 K3: X - tenor head on "ein." measured in the 3rd space of the treble staff (C5 printed = C4 sounding), not E5; leading hyphen dropped
+132 K3: C4:q "ein." r:q r:h
+132 K4: C3:q "ein." r:q r:h
+# page 140 system 4 starts bar 133 (piano only)
+133 P: r:w
+133 T: r:w
+133 W1: r:w
+133 W2: r:w
+133 K1: r:w
+133 K2: r:w
+133 K3: r:w
+133 K4: r:w
+134 P: r:w
+134 T: r:w
+134 W1: r:w
+134 W2: r:w
+134 K1: r:w
+134 K2: r:w
+134 K3: r:w
+134 K4: r:w
+135 P: r:w
+135 T: r:w
+135 W1: r:w
+135 W2: r:w
+135 K1: r:w
+135 K2: r:w
+135 K3: r:w
+135 K4: r:w
+136 P: r:w
+136 T: r:w
+136 W1: r:w
+136 W2: r:w
+136 K1: r:w
+136 K2: r:w
+136 K3: r:w
+136 K4: r:w
+# bar 137: final chord, double bar; key change to one sharp and 6/8 follow (next number, "Verwandlung. Garten")
+137 P: r:w
+137 T: r:w
+137 W1: r:w
+137 W2: r:w
+137 K1: r:w
+137 K2: r:w
+137 K3: r:w
+137 K4: r:w
+# ---- end of b50/VM_S50b.txt (bars 70-137)

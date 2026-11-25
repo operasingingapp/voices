@@ -4200,7 +4200,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Tamino mein! O welch' ein Glück!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Tamino mein! O welch' ein Glück!"
+      "id": "Act 2: Tamino mein! O welch' ein Glück!",
+      "editionId": "mozart-tamino-mein-o-welch-ein-gluck"
      }
     ]
    },
@@ -4272,7 +4273,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Tamino mein! O welch' ein Glück!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Tamino mein! O welch' ein Glück!"
+      "id": "Act 2: Tamino mein! O welch' ein Glück!",
+      "editionId": "mozart-tamino-mein-o-welch-ein-gluck"
      }
     ]
    },
@@ -4755,7 +4757,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Tamino mein! O welch' ein Glück!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Tamino mein! O welch' ein Glück!"
+      "id": "Act 2: Tamino mein! O welch' ein Glück!",
+      "editionId": "mozart-tamino-mein-o-welch-ein-gluck"
      }
     ]
    },
@@ -4775,7 +4778,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Tamino mein! O welch' ein Glück!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Tamino mein! O welch' ein Glück!"
+      "id": "Act 2: Tamino mein! O welch' ein Glück!",
+      "editionId": "mozart-tamino-mein-o-welch-ein-gluck"
      }
     ]
    }

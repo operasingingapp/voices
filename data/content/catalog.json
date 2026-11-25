@@ -8621,6 +8621,52 @@
     }
   },
   {
+    "editionId": "mozart-tamino-mein-o-welch-ein-gluck",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-tamino-mein-o-welch-ein-gluck@1.0.0-peters#e3ae15a24a",
+    "title": "Tamino mein! O welch ein Glück!",
+    "subtitle": "Pamina and Tamino, the two Armed Men and the chorus: from the finale of Die Zauberflöte, Act 2",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "armored1",
+        "name": "First Armed Man",
+        "voiceType": "Tenor",
+        "partKey": "armored1"
+      },
+      {
+        "id": "armored2",
+        "name": "Second Armed Man",
+        "voiceType": "Bass",
+        "partKey": "armored2"
+      }
+    ],
+    "measures": 137,
+    "durationSec": 422,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "3/4",
+    "languageStatus": {
+      "phrases": 48,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-tradito-schernito",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-tradito-schernito@1.0.0-peters#be9b565f8c",

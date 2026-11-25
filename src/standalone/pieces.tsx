@@ -8124,6 +8124,38 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-tamino-mein-o-welch-ein-gluck": {
+    portrait: "zauberfloete:pamina",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "F major, then C major (the march and the chorus)",
+      time: "3/4 from a one-beat upbeat; the march and the chorus in 4/4 (C)",
+      tempo: "Andante, played at ♩ = 74, then the march (Adagio) at ♩ = 40 from bar 86 and the chorus (Allegro) at ♩ = 113 from bar 114, about 7 minutes, the median of five complete recordings whose tracks hold just this scene (Haitink 1981, Böhm 1964, Solti 1969, Klemperer 1964, Toscanini 1937); the three tempos are shared out as Solti's tracks split the scene at the march and Haitink's at the march and at the chorus",
+    },
+    notePlaceholder: "Pamina's greeting tender and full; her story of the flute warm and flowing; the march hushed and solemn; the chorus bright",
+    about: (
+      <>
+        <p>
+          The doors open and Pamina is allowed to join Tamino at the gates of terror, which threaten him with distress and death. She will be at his side everywhere and lead him herself, with love as her guide: love may strew the path with roses, for roses always grow among thorns. Let him play the magic flute to protect them on their way. Her father carved it, she tells him, in a magic hour, out of the deepest core of a thousand-year-old oak, amid lightning and thunder, storm and roaring wind. Now he must play it to lead them along the dreadful path. Together with the two Armed Men they sing that by the power of music they will walk gladly through death's dark night. To a slow march for the flute, with soft brass and drums, the two pass through the fire; they come out unharmed and embrace, and ask the flute to protect them in the water as it did in the fire. They pass through the water to the same march. A brilliantly lit temple opens before them: what a moment, they sing, the happiness of Isis is granted them, and the priests' chorus hails them from within the temple: triumph to the noble pair, who have overcome the danger; the consecration of Isis is theirs, and they may now enter the temple.
+        </p>
+        <p>
+          Score: Pamina and Tamino's scene of No. 21, the Act 2 Finale, to the chorus “Triumph” (vocal score pages 134–140, 137 bars),
+          from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain.
+          Written out from the printed pages by two independent readers, with a judge settling every difference, then a fresh check
+          until clean, and checked against the print again. Only the German words are kept, as the print spells them. Each singer has
+          their own line, and the four chorus parts are heard with the piano; the print gives the chorus German under only some staves,
+          and each chorus voice takes the German of the staff singing the same rhythm. The march's flute is in the piano part as
+          printed. The print writes “aller Orten”, “Ich selber führe dich” (the libretto has “selbsten”), “uns'rer”, the Armed Men's
+          “Ihr wandelt”, “Feuergluthen” and “Wasserfluthen”. Bar 113 is a 7/8 bar and bar 114 the chorus's one-eighth upbeat, as
+          printed.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

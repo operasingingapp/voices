@@ -1,0 +1,232 @@
+{
+ "editionId": "mozart-tamino-mein-o-welch-ein-gluck",
+ "editionVersion": "1.0.0-peters",
+ "title": "Tamino mein! O welch ein Glück!",
+ "subtitle": "Pamina and Tamino, the two Armed Men and the chorus: from the finale of Die Zauberflöte, Act 2",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "pamina",
+   "name": "Pamina",
+   "voiceType": "Soprano",
+   "partKey": "pamina"
+  },
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  },
+  {
+   "id": "armored1",
+   "name": "First Armed Man",
+   "voiceType": "Tenor",
+   "partKey": "armored1"
+  },
+  {
+   "id": "armored2",
+   "name": "Second Armed Man",
+   "voiceType": "Bass",
+   "partKey": "armored2"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P9",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "pamina",
+   "label": "Pamina (Soprano)",
+   "shortLabel": "Pamina",
+   "kind": "voice",
+   "roleId": "pamina",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "armored1",
+   "label": "First Armed Man (Tenor)",
+   "shortLabel": "First Armed Man",
+   "kind": "voice",
+   "roleId": "armored1",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "armored2",
+   "label": "Second Armed Man (Bass)",
+   "shortLabel": "Second Armed Man",
+   "kind": "voice",
+   "roleId": "armored2",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos",
+   "shortLabel": "Chorus S.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-altos",
+   "label": "Chorus altos",
+   "shortLabel": "Chorus A.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Tamino mein! · Hier sind die Schreckenspforten · Ich werde aller Orten an deiner Seite sein",
+   "start": "1",
+   "end": "29"
+  },
+  {
+   "id": "b",
+   "label": "Spiel' du die Zauberflöte an · Es schnitt in einer Zauberstunde · Nun komm und spiel die Flöte an",
+   "start": "30",
+   "end": "54"
+  },
+  {
+   "id": "c",
+   "label": "Wir wandeln durch des Tones Macht (with the Armed Men, to the fermata)",
+   "start": "55",
+   "end": "85"
+  },
+  {
+   "id": "d",
+   "label": "The march through fire and water · Wir wandelten durch Feuergluthen · Ihr Götter, welch ein Augenblick",
+   "start": "86",
+   "end": "113"
+  },
+  {
+   "id": "e",
+   "label": "Triumph, Triumph, du edles Paar! (the chorus from within, Allegro, to the end)",
+   "start": "114",
+   "end": "137"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (from Pamina's “Tamino mein!” through the trial by fire and water to the chorus “Triumph, Triumph, du edles Paar!”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 134–140 (137 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in two chunks, each by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check by three proofreaders until clean (one fix: no staccato on the left hand in bar 15); every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Andante, 3/4, F major, from a one-beat upbeat; the march (“Marsch. Adagio”, 4/4, C major) from bar 86, its flute solo played by the piano as printed; the chorus from within (“Triumph”, Allegro) from bar 114. Bar 113 is a 7/8 bar and bar 114 a one-eighth upbeat, as printed. The chorus German is printed under only some staves; each chorus voice takes the German of the staff singing the same rhythm. The chorus is heard with the piano and has no role here. Playback tempo from complete recordings: the median length of this scene, 7:02, from Haitink 1981 (7:28), Böhm 1964 (7:03), Solti 1969 (7:02), Klemperer 1964 (6:59) and Toscanini 1937 (6:04); Andante ♩ = 74, march ♩ = 40, Allegro ♩ = 113, from the splits of Solti's (at the march) and Haitink's (at the march and at the chorus) tracks."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

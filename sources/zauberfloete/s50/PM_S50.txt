@@ -1,0 +1,536 @@
+# S50a piano: Nr. 21 Finale, "Tamino mein! O welch' ein Glück!", Edition Peters pp. 134-136
+# page 134 system 1 starts bar 1
+# bar 1: Andante, 3/4, one flat (F major); pickup, 1/4 in 3/4; LH in treble clef at the start
+1 RH1: r:q
+1 LH1: r:q
+# JUDGE bar 2 RH1: OWN - short curve above joins C5 to the C5 of bar 3 (tie on C5 only), long curve below runs A4 to G4 (slur)
+2 RH1: dyn:p A4+C5~:h.(
+# MARKS bar 2 LH1: dyn:p (printed between the staves, both hands)
+2 LH1: dyn:p F4:h.(
+# JUDGE bar 3 RH1: OWN - slur from bar 2 ends here (see bar 2)
+3 RH1: G4+C5:q) r:q r:q
+3 LH1: E4:q) r:q r:q
+4 RH1: A4+C5+F5:q( Bn4+D5:h)
+4 LH1: D4:q( G4:h)
+# bar 5: LH clef changes to bass clef after the first beat
+5 RH1: C5:q r:q r:q
+5 LH1: C4+E4:q r:q r:q clef:F
+# JUDGE bar 6 RH1: OWN - short inner curve joins Bb4 to Bb4 (tie on Bb4); the long curve over the top runs from this chord to the chord of bar 7 (slur)
+# MARKS bar 6 RH1: nested slur [ ] under the chords, D4 to C4 (inside the long slur to bar 7)
+6 RH1: D4+F4+Bb4~:h([ C4+G4+Bb4:q]
+6 LH1: D2+D3:h( E2+E3:q
+# JUDGE bar 7 RH1: OWN - slur from bar 6 ends here
+7 RH1: C4+F4+A4:q) r:q r:q
+7 LH1: F2+F3:q) r:q r:q
+8 RH1: G4:q E4+G4:h
+8 RH2: D4+F4:q( C4:q Bb3:q)
+8 LH1: Bb1+Bb2:q( C2+C3:h)
+# page 134 system 2 starts bar 9
+9 RH1: A3+F4:q r:q r:q
+9 LH1: F1+F2:q r:q r:q
+10 RH1: A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e
+10 LH1: A1+A2:e* r:e C2+C3:e* r:e F2+F3:e* r:e
+11 RH1: Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e
+11 LH1: Bb1+Bb2:e* r:e G2+G3:e* r:e r:q
+12 RH1: Bb3+C4+E4+G4:e Bb3+C4+E4+G4:e Bb3+C4+E4+G4:e Bb3+C4+E4+G4:e Bb3+C4+E4+G4:e Bb3+C4+E4+G4:e
+12 LH1: C2+C3:e* r:e G2+G3:e* r:e Bb2+Bb3:e* r:e
+13 RH1: C4+F4+A4:e C4+F4+A4:e C4+F4+A4:e C4+F4+A4:e C4+F4+A4:e C4+F4+A4:e
+# JUDGE bar 13 LH1: Y - no staccato dot on the F2+F3 octave in bar 13 (bars 12 and 14 have them)
+13 LH1: F2+F3:e r:e C3:e r:e r:q
+14 RH1: A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e
+14 LH1: A1+A2:e* r:e C2+C3:e* r:e F2+F3:e* r:e
+# page 134 system 3 starts bar 15
+15 RH1: Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e Bb3+D4+F4+G4:e
+# FC bar 15 LH1: no staccato printed
+15 LH1: Bb1+Bb2:e r:e G2+G3:e r:e r:q
+16 RH1: C4+Eb4+F4+A4:e C4+Eb4+F4+A4:e C4+Eb4+F4+A4:e C4+Eb4+F4+A4:e C4+Eb4+F4+A4:e C4+Eb4+F4+A4:e
+16 LH1: C2+C3:e* r:e Eb2+Eb3:e* r:e A2+A3:e* r:e
+# bar 17: LH clef changes to treble clef after the fourth eighth
+# JUDGE bar 17 RH1: X - the slur over Bb4 - Bb4+F5 closes inside bar 17; bar 18 starts a new pair slur
+17 RH1: D4+F4+Bb4:e D4+F4+Bb4:e D4+F4+Bb4:e D4+F4+Bb4:e Bb4:e( Bb4+F5:e)
+17 LH1: D2+D3:e* r:e Bb2+Bb3:e* r:e clef:G D4+F4:e D4+F4:e
+# JUDGE bar 18 RH1: OWN - three two-chord slurs as X; "cresc." is printed between the staves under the third chord, not at the start of the bar
+18 RH1: Bb4+E5:e( A4+F5:e) word:cresc. Bb4+E5:e( A4+F5:e) Bb4+G5:e( A4+F5:e)
+# JUDGE bar 18 LH1: OWN - "cresc." moved to RH1 at the third eighth (it stands between the staves, nearer the RH)
+# MARKS bar 18 LH1: word:cresc. at the third eighth (between the staves, both hands)
+18 LH1: G4:e( F4:e) word:cresc. G4:e( F4:e) E4:e( F4:e)
+18 LH2: C4:h.
+# MARKS bar 19 RH1: nested grace-note slur [ ] F5 to E5
+19 RH1: dyn:fp g:F5:e[ E5:q.]( D5:e C5:e Bb4:e)
+19 RH2: Bb4:q. A4:e G4:q
+# MARKS bar 19 LH1: dyn:fp (between the staves, both hands)
+19 LH1: dyn:fp G4:q.( F4:e E4:q)
+19 LH2: C4:h.
+# page 134 system 4 starts bar 20 (LH still in treble clef)
+# MARKS bar 20 RH1: grace-note slur Bb4 to A4
+20 RH1: g:Bb4:e( A4:q.) A4:e Bb4+D5:e( G4+Bb4:e)
+# JUDGE bar 20 RH2: X - the lower F4 is an open-headed half note (stem down): F4:h then the hidden quarter
+20 RH2: F4:h s:q
+# JUDGE bar 20 LH1: X - half chord D4+F4 (D4 space below the staff, F4 space); the quarter chord has D4 above the C4 ledger and Bb3 below it: Bb3+D4
+20 LH1: D4+F4:h( Bb3+D4:q)
+# bar 21: LH clef changes to bass clef at the end of the bar
+21 RH1: F4+A4:q( E4+G4:e) C4:e* C4:e* C4:e*
+21 LH1: C4:q. r:e r:q clef:F
+22 RH1: C4:e C4:e C4:e C4:e C4:e C4:e
+22 LH1: E3+G3:e E3+G3:e E3+G3:e E3+G3:e E3+G3:e E3+G3:e
+22 LH2: E2:e r:e G2:e r:e C3:e r:e
+23 RH1: C4+D4:e C4+D4:e C4+D4:e C4+D4:e C4+D4:e C4+D4:e
+23 LH1: F3+A3:e F3+A3:e F3+A3:e F3+A3:e F3+A3:e F3+A3:e
+# JUDGE bar 23 LH2: X - the third-eighth head sits on the middle line of the bass staff: D3
+23 LH2: F2:e r:e D3:e r:e r:q
+24 RH1: G3+Bb3+C4+E4:e G3+Bb3+C4+E4:e G3+Bb3+C4+E4:e G3+Bb3+C4+E4:e G3+Bb3+C4+E4:e G3+Bb3+C4+E4:e
+# JUDGE bar 24 LH1: Y - second eighth sits on the B line: Bb2 (G2 bottom line, E3 space)
+24 LH1: G2:e* r:e Bb2:e* r:e E3:e* r:e
+# page 134 system 5 starts bar 25
+25 RH1: A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e
+25 LH1: A2:e* r:e F3:e* r:e r:q
+26 RH1: C4+E4+G4:e C4+E4+G4:e C4+E4+G4:e C4+E4+G4:e C4+E4+G4:e C4+E4+G4:e
+# JUDGE bar 26 LH1: X - third eighth is in the C3 space (between the D and B lines), not on the B line
+26 LH1: E2:e* r:e G2:e* r:e C3:e* r:e
+27 RH1: C4+F4+A4:q r:q r:q
+27 LH1: F2:q r:q r:q
+28 RH1: r:q F4+Bn4:q*( F4+Bn4:q*)
+28 LH1: r:q D4:q*( D4:q*)
+29 RH1: r:h.
+29 LH1: r:h.
+# page 135 system 1 starts bar 30
+30 RH1: r:q D4+F4+G4:q*( D4+F4+G4:q*)
+30 LH1: r:q Bn3:q*( Bn3:q*)
+31 RH1: E4+G4+C5:h( E5:q)
+31 LH1: C4:h r:q
+32 RH1: G5:h( F5:s E5:s D5:s C5:s)
+32 LH1: r:h.
+# JUDGE bar 33 RH1: Y - the B-natural4 head carries both a down stem (dotted half) and an up stem slurred to the F5 quarter
+33 RH1: Bn4:h( F5:q)
+33 RH2: Bn4:h.
+33 LH1: G3+D4+F4:h.
+34 RH1: F5:q( E5:q) A4:q
+34 RH2: Bn4:q( C5:q) s:q
+34 LH1: D4+F4:q( C4+E4:q) r:q
+# JUDGE bar 34 LH2: Y - the half-note head is centred on the top line (A3); bar 33's G3 sits in the space below
+34 LH2: A3:h s:q
+35 RH1: D5:h( F5:q)
+35 LH1: r:h.
+36 RH1: A5:h( G5:s F5:s E5:s D5:s)
+# JUDGE bar 36 RH2: Y - upper head of the dotted-half dyad on the D5 line: A4+D5
+36 RH2: A4+D5:h. 
+36 LH1: F3+F4:h.
+37 RH1: G5:h D4+F4+Bn4:e.( E4+C5:s)
+37 RH2: G4+C5:h s:q
+37 LH1: G3+E4:h G2:q
+# page 135 system 2 starts bar 38
+38 RH1: E4+C5:e E4+G4+C5:e r:e E4+G4+C5:e r:e E4+G4+C5:e
+38 LH1: C3:e r:e C3:e r:e C3:e r:e
+39 RH1: r:e G4+C5:e r:e G4+C5:e r:e G4+C5:e
+39 RH2: Eb4:h.~
+39 LH1: C3:e r:e C3:e r:e C3:e r:e
+# JUDGE bar 40 RH1: Y - the Eb4 heads on beats 2 and 3 hang on the stems of the A4+C5 eighths (chord members); only beat 1 has a separate stem-down Eb4 quarter
+40 RH1: r:e A4+C5:e r:e Eb4+A4+C5:e r:e Eb4+A4+C5:e
+# JUDGE bar 40 RH2: Y - see RH1: the second voice is the beat-1 Eb4 quarter only
+40 RH2: Eb4:q s:h
+40 LH1: s:q C4:q( A3:q)
+40 LH2: C3:e r:e C3:e r:e C3:e r:e
+41 RH1: r:e F#4+A4:e r:e F#4+A4:e r:e D4+F#4+A4:e
+# JUDGE bar 41 LH1: X - the slur runs from the D4 half to the F#3 16th
+41 LH1: D4:h( A3:e. F#3:s)
+41 LH2: D3:e r:e D3:e r:e D3:e r:e
+42 RH1: r:e D4+F#4+A4:e r:e D4+F#4+A4:e r:e D4+F#4+A4:e
+42 LH1: D3:q( F#3:q A3:q)
+42 LH2: D3:e r:e D3:e r:e D3:e r:e
+# page 135 system 3 starts bar 43
+43 RH1: r:e D4+F#4+A4:e r:e D4+F#4+A4:e r:e D4+F#4+A4:e
+# JUDGE bar 43 LH1: X - the slur runs from the C4 half to the F#3 16th
+43 LH1: C4:h( A3:e. F#3:s)
+43 LH2: D3:e r:e D3:e r:e D3:e r:e
+44 RH1: r:e D4+F#4+A4:e r:e D4+F#4+A4:e r:e D4+F#4+A4:e
+44 LH1: D3:e.( E3:s) F#3:e.( G3:s) A3:e.( F#3:s)
+44 LH2: D3:e r:e D3:e r:e D3:e r:e
+45 RH1: r:e D4+G4+Bb4:e r:e D4+G4+Bb4:e r:e D4+G4+Bb4:e
+45 LH1: G3:q( G2:e) r:e G2+G3:e r:e
+# bars 46-47: fingered tremolo (three beams) between C4+Eb4 and A3 in the RH, F2 and F3 in the LH; LH F2 has a (cautionary) natural; "G. Orch."
+46 RH1: dyn:fp trem3:C4+Eb4|A3:h.
+# MARKS bar 46 LH1: dyn:fp (between the staves, both hands)
+46 LH1: dyn:fp trem3:F2|F3:h.
+47 RH1: dyn:fp trem3:C4+Eb4|A3:h.
+# MARKS bar 47 LH1: dyn:fp (between the staves, both hands)
+47 LH1: dyn:fp trem3:F2|F3:h.
+48 RH1: Bb3+D4:e dyn:p F4+D5:e( D4+Bb4:e C4+A4:e Bb3+G4:e A3+F4:e)
+# MARKS bar 48 LH1: dyn:p (between the staves, both hands; printed under the RH's second eighth, LH has no note there, so it goes on the beat-1 octave)
+48 LH1: dyn:p Bb1+Bb2:q r:q r:q
+# page 135 system 4 starts bar 49 ("Quart.")
+49 RH1: G3+Bb3+E4:h.~
+49 LH1: C2+C3:h.~
+50 RH1: G3+Bb3+E4:q( Bb3+E4+G4:q E4+G4+Bb4:q)
+50 LH1: C2+C3:h.
+# bar 51: a dot printed after the second RH chord is read as a stray mark (the bar adds up without it)
+# JUDGE bar 51 RH1: Y - upper voice A4 eighth then Bb4 C5 (slurred); the dot after the second chord belongs to the stem-down F4 (dotted quarter)
+51 RH1: F4+A4:q r:e A4:e( Bb4:e C5:e)
+# JUDGE bar 51 RH2: Y - stem-down F4 with the dot: dotted quarter from beat 2.5
+51 RH2: s:q s:e F4:q.
+# JUDGE bar 51 LH1: Y - beamed stem-up eighths F3 F3 G3 A3 over a stem-down D3 C3 pair (slurred)
+51 LH1: D2+D3:q F3:e( F3:e G3:e A3:e)
+# JUDGE bar 51 LH2: Y - stem-down D3 and C3 quarters, slurred
+51 LH2: s:q D3:q( C3:q)
+52 RH1: D5:q( F5:q E5:s D5:s C5:s Bb4:s)
+52 RH2: F4:h.
+52 LH1: Bb2+Bb3:q D4:q( F4:q)
+# MARKS bar 52 LH2: tie Bb3 half to the Bb3 of bar 53 (printed curve below)
+52 LH2: s:q Bb3:h~
+# JUDGE bar 53 RH1: OWN - grace A4 has a stem but no flag (small quarter); the slur from the G4 half runs over the bar line to the G4 of bar 54
+# MARKS bar 53 RH1: nested grace-note slur [ ] A4 to G4
+53 RH1: g:A4:q[ G4:h]( A4:e. G4:s
+53 RH2: F4:h.
+53 LH1: Bb3+D4:q( Bb3:q G3:q)
+# JUDGE bar 53 LH2: Y - the Bb3 of the beat-1 chord also carries a down stem: lower voice Bb3, Bb2, B-natural2 (last two slurred)
+53 LH2: Bb3:q Bb2:q( Bn2:q)
+# JUDGE bar 54 RH1: OWN - slur from bar 53 ends on G4; E4 (stem down) and G4 (stem up) share the beat-1 position, written as one chord as Y; the lower rest stands under the C5 (beat 3)
+54 RH1: E4+G4:q) r:q C5:q
+# JUDGE bar 54 RH2: Y - folded into the RH1 chord (no independent rhythm)
+# JUDGE bar 54 LH1: Y - C4 (stem up) and C3 (stem down) on beat 1 = one chord; then C2+C3, rest
+54 LH1: C3+C4:q C2+C3:q r:q
+# JUDGE bar 54 LH2: Y - folded into LH1 (no independent rhythm)
+55 RH1: C5:q Bn4:e( C5:e D5:e C5:e)
+55 LH1: r:q r:q C4:q
+# page 136 system 1 starts bar 56
+56 RH1: C5:h.
+# JUDGE bar 56 RH2: X - a slur under the six eighths is printed
+56 RH2: F4:e( C4:e A4:e G4:e F4:e E4:e)
+# JUDGE bar 56 LH1: OWN (both wrong) - the slur starts on the dotted-quarter chord (as in bars 65-67) and ends on the last eighth chord
+56 LH1: F3+A3:q.( G3+Bb3:e A3+C4:e G3+Bb3:e)
+# JUDGE bar 56 LH2: OWN - the C3 curve runs to the down stem of bar 57's F3+A3 chord: a slur C3 to F3 (different pitch), not a tie
+56 LH2: r:q r:q C3:q(
+57 RH1: C5:h.
+# JUDGE bar 57 RH2: X - a slur under the six eighths is printed
+57 RH2: F4:e( C4:e A4:e G4:e F4:e E4:e)
+# JUDGE bar 57 LH1: OWN (both wrong) - the slur starts on the dotted-quarter chord (as in bars 65-67) and ends on the last eighth chord
+57 LH1: F3+A3:q.( G3+Bb3:e A3+C4:e G3+Bb3:e)
+# JUDGE bar 57 LH2: OWN - the beat-1 chord has a down stem too (lower voice F3 quarter, shared head), which ends the slur from C3; X put it on a hidden rest, Y wrote a rest that is not printed
+57 LH2: F3:q) r:q C3:q(
+58 RH1: C5:h.
+# JUDGE bar 58 RH2: X - a slur under the six eighths is printed
+58 RH2: F4:e( C4:e A4:e G4:e F4:e E4:e)
+# JUDGE bar 58 LH1: OWN (both wrong) - the slur starts on the dotted-quarter chord (as in bars 65-67) and ends on the last eighth chord
+58 LH1: F3+A3:q.( G3+Bb3:e A3+C4:e G3+Bb3:e)
+# JUDGE bar 58 LH2: OWN - the beat-1 chord has a down stem too (lower voice F3 quarter, shared head), which ends the slur from C3; X put it on a hidden rest, Y wrote a rest that is not printed
+58 LH2: F3:q) r:q C3:q(
+59 RH1: C5:q F5:e( E5:e D5:e C5:e)
+# JUDGE bar 59 RH2: OWN (both wrong) - a curve joins the F4 dotted half to the F4 quarter of bar 60 (same pitch: tie)
+59 RH2: F4:h.~
+# JUDGE bar 59 LH1: OWN - the slur from bar 58's C3 ends on the lower (stem-down) voice, written as LH2
+59 LH1: F3+A3:h r:q
+# JUDGE bar 59 LH2: OWN - lower voice F3 half (down stem on the chord) ends the slur from C3; one printed rest serves both voices
+59 LH2: F3:h) s:q
+# MARKS bar 60 RH1: grace-note slur C5 to Bb4
+60 RH1: g:C5:e( Bb4:h) Bb4:q
+60 RH2: F4:q E4:e( F4:e G4:e F4:e)
+# JUDGE bar 60 LH1: Y - three quarters in the space above the C4 ledger line: D4 (G minor: G3 bass, D4, Bb4)
+60 LH1: D4:q D4:q D4:q
+60 LH2: G3:h.
+61 RH1: Bb4:e( D5:e C5:e Bb4:e A4:e C5:e)
+61 RH2: E4:h F4:q
+# JUDGE bar 61 LH1: OWN (both wrong) - the slur over the eighths ends on the F3 quarter
+61 LH1: C4:e( Bb3:e A3:e G3:e F3:q)
+# JUDGE bar 61 LH2: X - a slur joins C3 half to D3 quarter
+61 LH2: C3:h( D3:q)
+# JUDGE bar 62 RH1: Y - the last chord has two stems: G4 up (upper voice), E4 down (lower voice)
+62 RH1: Bb4:s( A4:s Bb4:s G4:s F4:q) G4:q
+# JUDGE bar 62 RH2: Y - lower voice D4, C4, E4 quarters
+62 RH2: D4:q C4:q E4:q
+# JUDGE bar 62 LH1: Y - two voices with their own stems and slurs: upper G3 A3 Bb3, lower Bb2 C3 C3
+62 LH1: G3:q( A3:q) Bb3:q
+# JUDGE bar 62 LH2: Y - see LH1
+62 LH2: Bb2:q( C3:q) C3:q
+# page 136 system 2 starts bar 63
+63 RH1: E4+G4:q( F4+A4:q) r:q
+# JUDGE bar 63 LH1: OWN - upper voice Bb3 slurred to A3, then the C4 quarter (stem up, ledger) under "Fag."
+63 LH1: Bb3:q( A3:q) C4:q
+# JUDGE bar 63 LH2: OWN - lower voice C3, F3 (stems down), quarter rest; no slur is printed on the lower voice
+63 LH2: C3:q F3:q r:q
+# bar 64: "Fl." over the RH C5, "Fag." over the LH figure
+64 RH1: r:q r:q C5:q
+# JUDGE bar 64 LH1: X - the slur starts on the C4 quarter and ends on the last C4 eighth
+64 LH1: C4:q( Bn3:e C4:e D4:e C4:e)
+# JUDGE bar 64 LH2: OWN (both wrong) - both omitted the printed whole-bar rest low in the LH staff (lower voice)
+64 LH2: r:h.
+65 RH1: F5:e( C5:e A5:e G5:e F5:e E5:e)
+# JUDGE bar 65 RH2: Y - no slur on the lower RH eighths (the printed slur belongs to the upper eighths)
+65 RH2: F4:q. G4:e A4:e G4:e
+# JUDGE bar 65 LH1: X - beat-1 chord: upper head on the C4 ledger line, lower on the top line: A3+C4; the slur starts on the chord
+65 LH1: A3+C4:q.( Bb3:e C4:e Bb3:e)
+# JUDGE bar 65 LH2: X - r r C3 quarter; curve to bar 66 opens a slur
+65 LH2: r:q r:q C3:q(
+66 RH1: F5:e( C5:e A5:e G5:e F5:e E5:e)
+# JUDGE bar 66 RH2: Y - no slur on the lower RH eighths
+66 RH2: F4:q. G4:e A4:e G4:e
+# JUDGE bar 66 LH1: X - the slur starts on the dotted-quarter chord
+66 LH1: F3+A3:q.( Bb3:e C4:e Bb3:e)
+# JUDGE bar 66 LH2: OWN - down stem on the beat-1 chord (lower voice F3) ends the slur from C3; slur C3 to F3, not a tie
+66 LH2: F3:q) r:q C3:q(
+67 RH1: F5:e( C5:e A5:e G5:e F5:e E5:e)
+# JUDGE bar 67 RH2: Y - no slur on the lower RH eighths
+67 RH2: F4:q. G4:e A4:e G4:e
+# JUDGE bar 67 LH1: X - the slur starts on the dotted-quarter chord
+67 LH1: F3+A3:q.( Bb3:e C4:e Bb3:e)
+# JUDGE bar 67 LH2: OWN - down stem on the beat-1 chord (lower voice F3) ends the slur from C3; slur C3 to F3, not a tie
+# MARKS bar 67 LH2: removed the slur start on C3: no curve is printed from this C3 to bar 68 (unlike 56-58, 65-66)
+67 LH2: F3:q) r:q C3:q
+# JUDGE bar 68 RH1: OWN - the curve from the F5 quarter to the F5 of bar 69 is a tie (same pitch); the eighths of bar 69 have their own slur
+68 RH1: F5:h F5:q~
+# JUDGE bar 68 RH2: X - A4 quarter tied to the A4 of bar 69 (same pitch)
+68 RH2: F4:h A4:q~
+# JUDGE bar 68 LH1: X - a slur is printed over F4 E4 D4 C4
+68 LH1: F3+A3:q F4:e( E4:e D4:e C4:e)
+# JUDGE bar 68 LH2: OWN - the beat-1 chord has a down stem (lower voice F3) ending the slur from bar 67's C3; two printed rests follow
+# MARKS bar 68 LH2: removed the slur end (no slur printed from bar 67's C3); the shared F3 note kept
+68 LH2: F3:q r:q r:q
+# JUDGE bar 69 RH1: OWN - tie from bar 68 lands here; slur over the four eighths only
+69 RH1: F5:q E5:e( F5:e G5:e F5:e)
+# JUDGE bar 69 RH2: X - A4 (tied from bar 68), G4 half
+69 RH2: A4:q G4:h
+# JUDGE bar 69 LH1: Y - grace C4 (eighth) slurred to a Bb3 half (open head, stem up), then Bb3 quarter on beat 3 (space above the A line, not C4)
+69 LH1: g:C4:e( Bb3:h) Bb3:q
+# JUDGE bar 69 LH2: Y - stem-down G3 quarters on beats 1, 2, 3
+69 LH2: G3:q G3:q G3:q
+# ---- end of b50/PM_S50a.txt (bars 1-69)
+# S50b piano (Edition Peters pp. 137-140). RH = upper staff, LH = lower staff.
+# bar 70: Andante continues from S50a, 3/4, F major (one flat)
+# page 137 system 1 starts bar 70
+# bar 70: RH2 G4 E4 and LH1 C4 Bb3 are one cross-staff eighth beam (the 1st Armed Man's line)
+70 RH1: E5:h( F5:q)
+# JUDGE bar 70 RH2: X - no slur starts in the RH lower voice that ends in bar 2 (Y's slur ran into bar 2); the cross-staff slur is kept in LH1
+70 RH2: G4:e E4:e G4:q F4:q
+# JUDGE bar 70 LH1: X - the slur printed here is the 1st Armed Man's cross-staff slur, from the RH G4 eighth to the LH Bb3 eighth; it can only be kept on the LH ending at Bb3:e. Y's slur to A3 goes too far
+70 LH1: Bb3:q( C4:e Bb3:e) A3:q
+70 LH2: C3:q.( C#3:e) D3:q
+71 RH1: D5:s( C5:s D5:s Bb4:s A4:q) G4:q
+# JUDGE bar 71 RH2: X - no slur on the RH lower voice in bar 2
+71 RH2: F4:e. G4:s F4:q E4:q
+# JUDGE bar 71 LH1: X - beat 3 is one stem through C3 and C2 (a chord, both heads on one stem), not two voices; the lower voice has no rest on beat 2
+71 LH1: G3:e. s:s C3:q C2+C3:q
+# JUDGE bar 71 LH2: X - see LH1: the C2 is on the C3 stem
+71 LH2: Bb2:q s:h
+72 RH1: dyn:mfp F4+Ab4+D5:h.
+# MARKS bar 72 LH1: dyn:mfp (between the staves: both hands)
+72 LH1: dyn:mfp B1+B2:h.
+# JUDGE bar 73 RH1: X - the p is printed under the C4 half note (RH lower voice); notes agree
+73 RH1: F4+A4:q.( G4+Bb4:e) G4:q
+# JUDGE bar 73 RH2: X - p placed under the C4 half note
+73 RH2: dyn:p C4:h C4+E4:q
+# MARKS bar 73 LH1: dyn:p (between the staves: both hands)
+73 LH1: dyn:p C2+C3:q C2+C3:q C2+C3:q
+74 RH1: dyn:mf F4+Ab4+D5+F5:h.
+# MARKS bar 74 LH1: dyn:mf (between the staves: both hands)
+74 LH1: dyn:mf B1+B2:h.
+# JUDGE bar 75 RH1: OWN - F4 is a hollow HALF note on the C4 stem (only the A4 is a dotted quarter, one dot): RH1 = A4 alone as X; but the slurs are as Y: A4-C5, then a separate slur G4-C5
+75 RH1: A4:q.( C5:e) G4:e( C5:e)
+# JUDGE bar 75 RH2: X - C4+F4 half notes (hollow heads, one stem) with p under them
+75 RH2: dyn:p C4+F4:h Bb3+E4:q
+# MARKS bar 75 LH1: dyn:p (between the staves: both hands)
+75 LH1: dyn:p C2+C3:q C2+C3:q C2+C3:q
+# JUDGE bar 76 RH1: X - same pitch (B natural printed); explicit natural kept
+76 RH1: A3+F4:q r:e C5:e( Bn4:e C5:e)
+76 LH1: F1+F2:q r:e C4:e( B3:e C4:e)
+# MARKS bar 77 RH1: slur D5-F4 ends in bar 8 (bar 9 has its own slur)
+77 RH1: D5:e( Bb4:e G4:e C5:e A4:e F4:e)
+# MARKS bar 77 LH1: slur D4-F3 ends in bar 8 (bar 9 has its own slur)
+77 LH1: D4:e( Bb3:e G3:e C4:e A3:e F3:e)
+# page 137 system 2 starts bar 78 (piano only)
+# MARKS bar 78 RH1: new slur Bb4-D4
+78 RH1: Bb4:e( G4:e E4:e A4:e F4:e D4:e)
+# MARKS bar 78 LH1: new slur Bb3-D3
+78 LH1: Bb3:e( G3:e E3:e A3:e F3:e D3:e)
+79 RH1: C4:h( D4:e. E4:s
+79 LH1: F3+A3:e F3+A3:e E3+G3:e E3+G3:e G3+Bb3:e G3+Bb3:e
+79 LH2: C3:h C3:q
+# JUDGE bar 80 RH1: X - same pitch (B natural printed)
+80 RH1: F4:q) r:e C6:e( Bn5:e C6:e)
+80 LH1: F3+A3:q r:e A3:e( G#3:e A3:e)
+# JUDGE bar 81 RH1: Y - bar 12 has its own slur ending on F5; bar 13 starts a new slur
+81 RH1: D6:e( Bb5:e G5:e C6:e A5:e F5:e)
+81 LH1: Bb3:e( D4:e Bb3:e A3:e C4:e A3:e)
+# JUDGE bar 82 RH1: Y - new slur over bar 13 (Bb5 to D5)
+82 RH1: Bb5:e( G5:e E5:e A5:e F5:e D5:e)
+82 LH1: G3:e( E3:e G3:e F3:e D3:e F3:e)
+83 RH1: C5:h( D5:e. E5:s
+# JUDGE bar 83 LH1: X - same pitch (B natural printed)
+# MARKS bar 83 LH1: slur continues into bar 15 (ends on the F2+F3 quarter)
+83 LH1: E3:e( G3:e C4:e Bn3:e Bb3:e G3:e
+83 LH2: C3:h C3:q
+84 RH1: F5:q) r:q r:q
+# MARKS bar 84 LH1: slur from bar 14 ends here
+84 LH1: F2+F3:q) r:q r:q
+85 RH1: D4+F4+B4:q r:q r:q!
+85 LH1: G2+G3:q r:q r:q!
+# bar 85: fermata over the last rest, double bar; key signature cancelled (C major), time 4/4
+# bar 86: "Marsch. Adagio", 4/4, C major; flute solo in RH ("Solo Flöte"), LH brass chords ("Tromp. Horn. Pos.") and timpani ("Pauke")
+# page 137 system 3 starts bar 86 (piano only)
+# MARKS bar 86 RH1: grace slurs (graces to main note D5, graces to main note E5)
+86 RH1: C5:q C5:e. g:D5:x( g:C5:x g:B4:x g:C5:x D5:s*) E5:q r:e g:E5:x( g:F5:x g:E5:x g:D5:x E5:s.) F5:x*
+86 LH1: r:h C4+E4+G4:e C2+C3:e C2+C3:e r:e
+# bars 17, 19, 23 (33, 35, 39): the small notes are grace notes printed as 32nds under a slur; the trill terminations after the dotted 16ths are 64ths (:y)
+87 RH1: G5:q r:s. G5:x G5:s.t( F#5:y G5:y) C6:s* G5:s* E6:s* D6:s* C6:s* B5:s* A5:s* G5:s*
+87 LH1: C4+E4+G4:e C2+C3:e C2+C3:e r:e r:h
+# MARKS bar 88 RH1: grace slur to main note D5
+88 RH1: F5:q r:e g:D5:x( g:E5:x g:D5:x g:C#5:x D5:s.) E5:x* F5:q r:s. F5:x F5:s.t( E5:y F5:y)
+# JUDGE bar 88 LH1: Y - the treble-clef-height chord has two adjacent heads F4 and G4 on the top (offset second) over D4 and G3: G3+D4+F4+G4
+88 LH1: G3+D4+F4+G4:e G1+G2:e G1+G2:e r:e G3+D4+F4+G4:e G1+G2:e G1+G2:e r:e
+# page 137 system 4 starts bar 89 (piano only)
+89 RH1: B5:s* F5:s* D6:s* C6:s* B5:s* A5:s* G5:s* F5:s* E5:q r:e E5:x( F5:x G5:x E5:x)
+89 LH1: r:h C4+E4+G4:e C2+C3:e C2+C3:e r:e
+90 RH1: D5:e r:e E5:e r:e D5:q r:s. G5:x A5:x( G5:x F5:x E5:x)
+90 LH1: G3+B3+D4+G4:e G1+G2:e C4+E4+G4:e C2+C3:e G3+B3+D4+G4:e G1+G2:e G1+G2:e r:e
+91 RH1: D5:e r:s. D5:x E5:s.( C5:x) G5:s.( E5:x) D5:q r:q
+91 LH1: G3+B3+D4+G4:e G1+G2:e C4+E4+G4:e C2+C3:e G3+B3+D4+G4:e G1+G2:s. G1+G2:x G1+G2:e G1+G2:e
+# page 137 system 5 starts bar 92 (piano only)
+# MARKS bar 92 RH1: slur from the G5 dotted eighth under the graces to A5 (starts at the G5 head)
+92 RH1: G5:q G5:e.( g:A5:x g:G5:x g:F#5:x g:G5:x A5:s*) Bb5:q r:e E5:e
+92 LH1: r:h Bb3+C4+E4:e C2+C3:e C2+C3:e r:e
+93 RH1: F5:q r:e A5:e G5:q r:s F#5:x( G5:x A5:x G5:x F5:x E5:x)
+93 LH1: A3+C4+F4:e C2+C3:e C2+C3:e r:e G3+C4+E4:e C2+C3:e C2+C3:e r:e
+94 RH1: D5:e* r:e B5:e* r:e C6:q r:s C6:x( B5:x A5:x G5:x F5:x E5:x)
+94 LH1: G3+B3+F4:e G1+G2:e G3+D4+F4:e G1+G2:e C4+E4:e C2+C3:s. C2+C3:x C2+C3:e r:e
+# page 138 system 1 starts bar 95
+# bar 95: RH beat 1 D5, first 32nd G5 (measured; same in bar 42); the eighth chord on beat 3 is the "Quart." cue chord; RH clef change to bass after it
+# JUDGE bar 95 RH1: OWN - one slur over all six 32nds (G5 to D5) and none to the eighth chord (X closed a slur twice, Y split the 32nds); p printed under the E4+G4+C5 chord (Y); one slur over the six 16ths of beat 4, ending in this bar (X left it open to bar 27, Y started it on the 3rd note)
+95 RH1: D5:q r:s G5:x( A5:x G5:x E5:x F5:x D5:x) dyn:p E4+G4+C5:e clef:F C4+E4:s( G3:s C4+E4:s G3:s C4+E4:s G3:s)
+# MARKS bar 95 LH1: dyn:p ("p Quart." between the staves: both hands)
+95 LH1: G3+B3+F4:e G1+G2:s. G1+G2:x G1+G2:e r:e dyn:p C2+C3:e C2+C3:e C2+C3:e C2+C3:e
+# JUDGE bar 96 RH1: OWN - four slurs, one over each group of four 16ths (Y), the first one starting in this bar (Y had carried it over from a slur opened in bar 26; the bar-26 slur ends in bar 26)
+96 RH1: B3+D4+F4:s( G3:s B3+D4+F4:s G3:s) B3+D4+F4:s( G3:s B3+D4+F4:s G3:s) C4+E4:s( G3:s C4+E4:s G3:s) C4+E4:s( G3:s C4+E4:s G3:s)
+96 LH1: C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e
+# page 138 system 2 starts bar 97
+# page 138 system 2: both piano staves in bass clef (RH clef change in bar 26)
+# JUDGE bar 97 RH1: Y - four slurs, one per beat
+97 RH1: G3+B3+D4:s( F3:s G3+B3+D4:s F3:s) G3+B3+D4:s( F3:s G3+B3+D4:s F3:s) E3+C4:s( G3:s E3+C4:s G3:s) E3+C4:s( G3:s E3+C4:s G3:s)
+97 LH1: C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e
+# JUDGE bar 98 RH1: Y - long slur over the first six notes, short slurs A3+F4-G3+E4 and F3+D4-E3+C4
+98 RH1: E3+C4:e.( F3+D4:s G3+E4:s F3+D4:s G3+E4:s E3+C4:s) A3+F4:s( G3+E4:s) G3+E4:q F3+D4:s( E3+C4:s)
+98 LH1: C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e
+# page 138 system 3 starts bar 99
+# bar 99 RH: beats 3-4 an alternating 16th tremolo E3+C4 / G3 (two half notes joined by two beams); treble clef at the end of the bar
+# MARKS bar 99 RH1: slur over the tremolo pair
+99 RH1: D3+B3:e.( E3+C4:s F3+D4:s E3+C4:s F3+D4:s D3+B3:s) trem2:E3+C4|G3:h() clef:G
+99 LH1: G2:e G2:e G1+G2:e G1+G2:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e
+# JUDGE bar 100 RH1: Y - slur over the first six notes (under the staff), short slurs on the 16th pairs
+100 RH1: C4+E4:e.( D4+F4:s E4+G4:s D4+F4:s E4+G4:s C4+E4:s) F4+A4:s( E4+G4:s) E4+G4:q D4+F4:s( C4+E4:s)
+100 LH1: C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e C2+C3:e
+# JUDGE bar 101 RH1: Y - the slur ends on the 6th note B3+D4; the C4 quarter is outside it
+101 RH1: B3+D4:e.( C4+E4:s D4+F4:s C4+E4:s D4+F4:s B3+D4:s) C4:q r:q
+101 LH1: G2:e G2:e G1+G2:e G1+G2:e C2+C3:q r:q
+# bars 33-38: the march of bars 17-22 again, printed identically ("Flöte", "Bläser", "Pauk.")
+# page 138 system 4 starts bar 102 (piano only)
+# MARKS bar 102 RH1: slurs: C5 dotted eighth under graces to D5 (starts at the C5 head here); graces to main note E5
+102 RH1: C5:q C5:e.( g:D5:x g:C5:x g:B4:x g:C5:x D5:s*) E5:q r:e g:E5:x( g:F5:x g:E5:x g:D5:x E5:s.) F5:x*
+102 LH1: r:h C4+E4+G4:e C2+C3:e C2+C3:e r:e
+103 RH1: G5:q r:s. G5:x G5:s.t( F#5:y G5:y) C6:s* G5:s* E6:s* D6:s* C6:s* B5:s* A5:s* G5:s*
+103 LH1: C4+E4+G4:e C2+C3:e C2+C3:e r:e r:h
+# JUDGE bar 104 RH1: Y - staccato dot over the first F5 quarter in bar 35 (bar 19 has none there)
+# MARKS bar 104 RH1: grace slur to main note D5
+104 RH1: F5:q* r:e g:D5:x( g:E5:x g:D5:x g:C#5:x D5:s.) E5:x* F5:q r:s. F5:x F5:s.t( E5:y F5:y)
+# JUDGE bar 104 LH1: Y - as bar 19: G3+D4+F4+G4
+104 LH1: G3+D4+F4+G4:e G1+G2:e G1+G2:e r:e G3+D4+F4+G4:e G1+G2:e G1+G2:e r:e
+# page 138 system 5 starts bar 105 (piano only)
+105 RH1: B5:s* F5:s* D6:s* C6:s* B5:s* A5:s* G5:s* F5:s* E5:q r:e E5:x( F5:x G5:x E5:x)
+105 LH1: r:h C4+E4+G4:e C2+C3:e C2+C3:e r:e
+# JUDGE bar 106 RH1: Y - beat 3 is a D5 eighth with an eighth rest (as beats 1 and 2), not a quarter
+106 RH1: D5:e r:e E5:e r:e D5:e r:e r:s. G5:x A5:x( G5:x F5:x E5:x)
+106 LH1: G3+B3+D4+G4:e G1+G2:e C4+E4+G4:e C2+C3:e G3+B3+D4+G4:e G1+G2:e G1+G2:e r:e
+107 RH1: D5:e r:s. D5:x E5:s.( C5:x) G5:s.( E5:x) D5:q r:q
+107 LH1: G3+B3+D4+G4:e G1+G2:e C4+E4+G4:e C2+C3:e G3+B3+D4+G4:e G1+G2:s. G1+G2:x G1+G2:e G1+G2:e
+# bars 39-41: as bars 23-25
+# page 139 system 1 starts bar 108 (piano only)
+# MARKS bar 108 RH1: slur from the G5 dotted eighth under the graces to A5 (as bar 23)
+108 RH1: G5:q G5:e.( g:A5:x g:G5:x g:F#5:x g:G5:x A5:s*) Bb5:q r:e E5:e
+108 LH1: r:h Bb3+C4+E4:e C2+C3:e C2+C3:e r:e
+109 RH1: F5:q r:e A5:e G5:q r:s F#5:x( G5:x A5:x G5:x F5:x E5:x)
+109 LH1: A3+C4+F4:e C2+C3:e C2+C3:e r:e G3+C4+E4:e C2+C3:e C2+C3:e r:e
+110 RH1: D5:e* r:e B5:e* r:e C6:q r:s C6:x( B5:x A5:x G5:x F5:x E5:x)
+110 LH1: G3+B3+F4:e G1+G2:e G3+D4+F4:e G1+G2:e C4+E4:e C2+C3:s. C2+C3:x C2+C3:e r:e
+# page 139 system 2 starts bar 111
+# JUDGE bar 111 RH1: OWN - no p printed in bar 42 (Y); one slur over the six 32nds (X); slur over the six 16ths of beat 4 (both)
+111 RH1: D5:q r:s G5:x( A5:x G5:x E5:x F5:x D5:x) E4+G4+C5:e C4+E4:s( G3:s C4+E4:s G3:s C4+E4:s G3:s)
+# JUDGE bar 111 LH1: Y - a tie joins the C3 of the 3rd and 4th eighths (one tie, on the upper note only)
+111 LH1: G3+B3+F4:e G1+G2:s. G1+G2:x G1+G2:e r:e C2+C3:e C2+C3:e C2+C3~:e C2+C3:e
+# JUDGE bar 112 RH1: X - beat 3 chord measured C4, E4, C5 only; no head in the A4 space
+# bar 111: "Quart." over the RH eighth chord of beat 3; RH stays in treble clef (the 16th chords on ledger lines below the staff)
+112 RH1: B3+D4:q( D4+F4+B4:q) C4+E4+C5:e* r:e A4+C5+A5:e* r:e
+112 LH1: G2+G3:h A2+A3:e* r:e F2+F3:e* r:e
+# bar 113 RH first chord: G4 with C5+D5 printed as a side-by-side cluster (measured)
+# bar 113: incomplete bar, 7/8 of 4/4 (the last eighth is the Allegro upbeat, bar 45); double bar
+113 RH1: G4+C5+D5:e* r:e G4+B4+G5:e* r:e C4+C5:q r:e
+# JUDGE bar 113 LH1: Y - staccato dot under the G1+G2 eighth too
+113 LH1: G2+G3:e* r:e G1+G2:e* r:e C2+C3:q r:e
+# page 139 system 3 starts bar 114
+# bar 114: Allegro, 4/4 (C), C major; pickup, 1/8 in 4/4. LH: the "Pauk." figure is one C2+C3 eighth with a double tremolo stroke: written as a held eighth (house rule); same in bars 46-47
+114 RH1: dyn:f C4:e
+# JUDGE bar 114 LH1: OWN - one stem carries C3 and C2 (chord) with two strokes = a repeated-chord (single-note) tremolo, not an alternation: house rule writes it as the held eighth
+# MARKS bar 114 LH1: dyn:f (between the staves: both hands)
+114 LH1: dyn:f C2+C3:e
+115 RH1: C4:e C4:s C4:s C4:e C4+E4:e C4+E4:e C4+E4:s C4+E4:s C4+E4:e E4+G4:e
+# JUDGE bar 115 LH1: OWN - as bar 45: the C2+C3 eighth with two strokes written as a held eighth
+115 LH1: C2:q r:e C2+C3:e C2:q r:e C2+C3:e
+# JUDGE bar 116 RH1: Y - beats 3-4 measured: G4+C5, E4+G4, G4+C5, E4+G4+C5+E5; the p stands under the last chord of bar 47
+116 RH1: E4+G4:e E4+G4:s E4+G4:s E4+G4:e E4+G4:e G4+C5:e E4+G4:e G4+C5:e dyn:p E4+G4+C5+E5:e
+# JUDGE bar 116 LH1: OWN - beats 1-2 as bar 45 (held C2+C3 eighth); beats 3-4: the first eighth is C2 alone (no C3 head), then three C3 eighths (Y)
+# MARKS bar 116 LH1: dyn:p on the last eighth (between the staves: both hands)
+116 LH1: C2:q r:e C2+C3:e C2:e C3:e C3:e dyn:p C3:e
+# JUDGE bar 117 RH1: Y - the p belongs to the last chord of bar 47
+117 RH1: G4+B4+D5+G5:e G4+B4+D5+G5:s G4+B4+D5+G5:s G4+B4+D5+G5:e G4+B4+D5+G5:e G4+B4+D5+G5:e G4+B4+D5+G5:s G4+B4+D5+G5:s G4+B4+D5+G5:e G4+B4+D5+G5:e
+117 LH1: G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e
+118 RH1: G4+C5+E5:e G4+C5+E5:s G4+C5+E5:s G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e
+118 LH1: C3+C4:e C3+C4:s C3+C4:s C3+C4:e C3+C4:e C3+C4:e C3+C4:e C3+C4:e C3+C4:e
+# page 139 system 4 starts bar 119
+119 RH1: G4+B4+D5+G5:e G4+B4+D5+G5:s G4+B4+D5+G5:s G4+B4+D5+G5:e G4+B4+D5+G5:e G4+B4+D5+G5:e G4+B4+D5+G5:s G4+B4+D5+G5:s G4+B4+D5+G5:e G4+B4+D5+G5:e
+119 LH1: G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e
+120 RH1: G4+C5+E5:e G4+C5+E5:s G4+C5+E5:s G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e G4+C5+E5:e
+120 LH1: C3+C4:e C3+C4:s C3+C4:s C3+C4:e C3+C4:e C3+C4:e C3+C4:e C3+C4:e C3+C4:e
+121 RH1: A4+C5+F5:e A4+C5+F5:s A4+C5+F5:s A4+C5+F5:e A4+C5+F5:e C5+E5+G5:e C5+E5+G5:s C5+E5+G5:s C5+E5+G5:e C5+E5+G5:e
+121 LH1: F2+F3:e F2+F3:s F2+F3:s F2+F3:e F2+F3:e C2+C3:e C2+C3:s C2+C3:s C2+C3:e C2+C3:e
+122 RH1: C5+F5+A5:e A5:s A5:s A5:e A5:e B4:e B4:s B4:s B4:e B4:e
+122 LH1: F2+F3:q r:q r:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e
+# page 140 system 1 starts bar 123
+123 RH1: G4+G5:e G5:s G5:s G5:e G5:e A4:e A4:s A4:s A4:e A4:e
+123 LH1: E2+E3:q r:q r:e F2+F3:s F2+F3:s F2+F3:e F2+F3:e
+124 RH1: F4+A4+F5:e A4+D5+F5:s A4+D5+F5:s A4+D5+F5:e A4+D5+F5:e A4+D5+F5:e A4+D5+F5:e A4+C5+D5+F5:e A4+C5+D5+F5:e
+124 LH1: D2+D3:q r:q r:h
+125 RH1: B4+D5+F5+B5:e B4+D5+B5:s B4+D5+B5:s B4+D5+B5:e B4+D5+B5:e B4+D5+G5+B5:e B4+D5+G5+B5:e B4+D5+G5+B5:e B4+D5+G5+B5:e
+125 LH1: G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e G2+G3:e G2+G3:e G2+G3:e G2+G3:e
+# page 140 system 2 starts bar 126
+126 RH1: C5+E5+G5+C6:q r:q C5+E5+G5+C6:q r:q
+126 LH1: C2+C3:q r:q C3+C4:q r:q
+# JUDGE bar 127 RH1: Y - no slur printed over the 16th run
+127 RH1: C5+E5+G5+C6:q r:s G5:s A5:s B5:s C6:s B5:s A5:s G5:s F5:s E5:s D5:s C5:s
+# JUDGE bar 127 LH1: Y - no slur printed over the 16th run
+127 LH1: C2+C3:q r:s G3:s A3:s B3:s C4:s B3:s A3:s G3:s F3:s E3:s D3:s C3:s
+128 RH1: C5+E5+G5+C6:e C5+E5+G5+C6:s C5+E5+G5+C6:s C5+E5+G5+C6:e C5+E5+G5+C6:e B4+D5+G5+B5:e B4+D5+G5+B5:s B4+D5+G5+B5:s B4+D5+G5+B5:e B4+D5+G5+B5:e
+128 LH1: G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e
+129 RH1: C5+E5+G5+C6:q r:q C5+E5+G5+C6:q r:q
+129 LH1: C2+C3:q r:q C3+C4:q r:q
+# page 140 system 3 starts bar 130
+# JUDGE bar 130 RH1: Y - no slur printed over the 16th run
+130 RH1: C5+E5+G5+C6:q r:s G5:s A5:s B5:s C6:s B5:s A5:s G5:s F5:s E5:s D5:s C5:s
+# JUDGE bar 130 LH1: Y - no slur printed over the 16th run
+130 LH1: C2+C3:q r:s G3:s A3:s B3:s C4:s B3:s A3:s G3:s F3:s E3:s D3:s C3:s
+131 RH1: C5+E5+G5+C6:e C5+E5+G5+C6:s C5+E5+G5+C6:s C5+E5+G5+C6:e C5+E5+G5+C6:e B4+D5+G5+B5:e B4+D5+G5+B5:s B4+D5+G5+B5:s B4+D5+G5+B5:e B4+D5+G5+B5:e
+131 LH1: G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e G2+G3:e G2+G3:s G2+G3:s G2+G3:e G2+G3:e
+# JUDGE bar 132 RH1: X - second-half chords measured: D6 over G5 and F5 (offset), no head in the B5 space
+# MARKS bar 132 RH1: dyn:f (between the staves: both hands)
+132 RH1: dyn:f C5+E5+G5+C6:e E5+G5+C6:s E5+G5+C6:s E5+G5+C6:e E5+G5+C6:e F5+G5+D6:e F5+G5+D6:s F5+G5+D6:s F5+G5+D6:e E5+G5+C6:e
+132 LH1: dyn:f C2+C3:e C3+C4:s C3+C4:s C3+C4:e C3+C4:e B2+B3:e B2+B3:s B2+B3:s B2+B3:e C3+C4:e
+# page 140 system 4 starts bar 133 (piano only)
+# JUDGE bar 133 RH1: X - chords D6, G5, F5: no B5 between the C6 and A5 ledger lines
+133 RH1: F5+G5+D6:e E5+G5+C6:e F5+G5+D6:e E5+G5+C6:e D5+G5+C6:e D5+G5+C6:e D5+G5+B5:e D5+G5+B5:e
+# JUDGE bar 133 LH1: X - the last two eighths have only the G2 head (no G3)
+133 LH1: B2+B3:e C3+C4:e B2+B3:e C3+C4:e G2+G3:e G2+G3:e G2:e G2:e
+# JUDGE bar 134 RH1: X - as bar 63: F5+G5+D6
+134 RH1: E5+G5+C6:e E5+G5+C6:s E5+G5+C6:s E5+G5+C6:e E5+G5+C6:e F5+G5+D6:e F5+G5+D6:s F5+G5+D6:s F5+G5+D6:e E5+G5+C6:e
+134 LH1: C2+C3:e C3+C4:s C3+C4:s C3+C4:e C3+C4:e B2+B3:e B2+B3:s B2+B3:s B2+B3:e C3+C4:e
+# JUDGE bar 135 RH1: X - as bar 64: F5+G5+D6
+135 RH1: F5+G5+D6:e E5+G5+C6:e F5+G5+D6:e E5+G5+C6:e D5+G5+C6:e D5+G5+C6:e D5+G5+B5:e D5+G5+B5:e
+135 LH1: B2+B3:e C3+C4:e B2+B3:e C3+C4:e G2+G3:e G2+G3:e G2+G3:e G2+G3:e
+136 RH1: C5+E5+G5+C6:q D5+G5+B5:q E5+G5+C6:q D5+G5+B5:q
+136 LH1: C2+C3:q G2+G3:q C3+C4:q G2+G3:q
+137 RH1: C5+E5+G5+C6:q r:q r:h
+137 LH1: C2+C3:q r:q r:h
+# bar 137: double bar; key signature one sharp and 6/8 follow (next number)
+# ---- end of b50/PM_S50b.txt (bars 70-137)
