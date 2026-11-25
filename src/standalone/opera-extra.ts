@@ -13,16 +13,17 @@ const pic = (name: string) => pics[`./images/${name}.webp`];
 
 /** what each portrait shows (for screen readers) */
 const PORTRAIT_ALT: Record<string, string> = {
-  "figaro:figaro": "Figaro in an olive waistcoat and white shirt, dark hair tied back, a ribbon in his hands.",
-  "figaro:susanna": "Susanna in a dark teal dress with a white apron, dark hair pinned up, one hand held out.",
-  "figaro:countess": "The Countess in lilac silk with white sleeves, grey hair piled high, a white fan in her hand.",
-  "figaro:count": "Count Almaviva in a plum coat and grey waistcoat with a white jabot, dark hair tied back.",
-  "figaro:cherubino": "Cherubino in a mustard coat and brown breeches, light brown hair, a letter held to his chest.",
-  "figaro:marcellina": "Marcellina in a dark plum gown, grey hair pinned up, arms folded over a letter.",
-  "figaro:basilio": "Don Basilio in a long mustard coat, bald with a fringe of hair, a rolled sheet of music behind his back.",
-  "figaro:curzio": "Don Curzio in a black lawyer's gown with white bands and a grey wig, a red book under his arm.",
-  "figaro:barbarina": "Barbarina in an olive bodice, white blouse and ochre skirt, dark hair pinned up, a hand in her apron pocket.",
-  "figaro:antonio": "Antonio the gardener in an olive shirt and brown apron, grey hair, a red carnation in his hand.",
+  "figaro:figaro": "Figaro, head and shoulders: dark curly hair, a red waistcoat over a loose white shirt, looking out with a sly smile.",
+  "figaro:susanna": "Susanna, head and shoulders: dark hair pinned up with a white ribbon, a white blouse, a knowing sideways smile.",
+  "figaro:countess": "The Countess, head and shoulders: powdered curls, pearl earrings and a white ruffled gown, eyes raised in sorrow.",
+  "figaro:count": "Count Almaviva, head and shoulders: dark hair tied back with a black bow, a dark coat and white jabot, chin lifted.",
+  "figaro:cherubino": "Cherubino, head and shoulders: tousled fair curls, a red waistcoat and open white collar, gazing upward.",
+  "figaro:marcellina": "Marcellina, head and shoulders: dark hair streaked with grey, a high-necked dark dress, a proud half-smile.",
+  "figaro:basilio": "Don Basilio, head and shoulders: a long nose, grey-streaked hair, a dark coat and frothy white cravat, eyeing sideways.",
+  "figaro:curzio": "Don Curzio, head and shoulders: a thin lawyer with spectacles and grey hair, a dark coat, nose in the air.",
+  "figaro:barbarina": "Barbarina, head and shoulders: auburn hair with a red ribbon, a white blouse and red bodice, looking anxiously aside.",
+  "figaro:bartolo": "Doctor Bartolo, head and shoulders: a stout man in a grey wig, dark coat and white cravat, frowning.",
+  "figaro:antonio": "Antonio the gardener, head and shoulders: grey hair and a moustache, a dark waistcoat over a white shirt, scowling.",
   "giovanni:dongiovanni": "Don Giovanni in a black coat over a dark red waistcoat, dark hair swept back, a hand at his chest.",
   "giovanni:leporello": "Leporello in a long brown coat and green waistcoat, a small book in his hand.",
   "giovanni:anna": "Donna Anna in a dark navy gown with white cuffs, black hair drawn back, a hand at her breast.",
@@ -79,9 +80,7 @@ const COVER_ALT: Record<string, string> = {
 };
 
 /** characters who are the same person in another opera, drawn once (Beaumarchais's Bartolo and Basilio) */
-const SAME_AS: Record<string, string> = {
-  "figaro:bartolo": "barbiere:bartolob",
-};
+const SAME_AS: Record<string, string> = {};
 
 /** Portraits for the characters that have one (key: "opera:character"): a full portrait and a face crop for circles. */
 export const PORTRAITS: Record<string, { portrait: string; face: string; alt: string }> = Object.fromEntries(

@@ -41,3 +41,13 @@ Every picture is optimised before it goes in here. Never add an original export.
   on purpose). Bizet has no circle frame and keeps the plain crop. `composer-faces.py` reuses the colours, cut-outs
   and grain from the part of `composers.py` before its build loop (it splits that file at `os.makedirs(OUT`).
 - **Registering:** `../composers.ts` picks the files up by name and holds what each portrait shows (`ALT`).
+
+## Le nozze di Figaro, head-and-shoulders portraits (Nov 2026)
+
+- **Source:** the user's `figaro.fig` (11 character frames, each a 1792 × 2400 portrait and a 1500 × 1500 face; only the
+  cut-out paints are visible). In `scripts/art/chars.json` these are `"source": "figaro_busts.fig"`.
+- **Build:** unzip to `<dir>/x`, `node scripts/art/figma-nodes.cjs <dir>/x/canvas.fig <dir>/nodes2.json` (needs `fzstd`,
+  `kiwi-schema`, `pako`), then `python3 scripts/art/build.py <dir> scripts/art <out> figaro_busts.fig`; copy the webps here
+  and merge `<out>/tones.json` into `../art-tones.json`.
+- **Backdrops:** one pale tint per character, in the manner of the composer portraits (`palette.json`).
+- Bartolo now has his own portrait (he no longer borrows Il barbiere's Bartolo).
