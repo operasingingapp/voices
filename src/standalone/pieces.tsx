@@ -8001,6 +8001,36 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-o-isis-und-osiris-welche-wonne": {
+    // only the priests' chorus sings it: Sarastro, who leads the priests in and is on stage, stands for it
+    portrait: "zauberfloete:sarastro",
+    opera: "Die Zauberflöte",
+    kind: "Chorus",
+    facts: {
+      key: "D major",
+      time: "Alla breve (¢) throughout",
+      tempo: "Adagio, played at a half note = 26 (♩ = 52), about 3¼ minutes, the median of five complete recordings whose track holds just this number (Sawallisch 1972, Klemperer 1964, Haitink 1981, Christie 1995, Solti 1969); Mozart gives the word only",
+    },
+    notePlaceholder: "Hushed and solemn, like a hymn; long, even lines",
+    about: (
+      <>
+        <p>
+          Act 2, inside a pyramid. The priests, led in by Sarastro, rejoice in a solemn hymn to Isis and Osiris: the radiance of the sun drives away the gloomy night, and soon the noble youth will feel new life and be wholly devoted to their service. His spirit is bold and his heart pure: soon he will be worthy of them.
+        </p>
+        <p>
+          Score: No. 18, the Chorus of Priests (vocal score pages 107–108, 42 bars), from the Edition Peters vocal score, piano
+          reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages by two
+          independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the print
+          again. Only the German words are kept, as the print spells them. The two tenor parts, printed on one staff, are written out
+          as Tenor I and Tenor II; the basses have their own line of words for a few bars. The chorus is heard with the piano. The
+          print writes “ganz ergeben” and “unser würdig”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

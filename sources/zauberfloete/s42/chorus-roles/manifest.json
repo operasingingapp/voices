@@ -1,0 +1,148 @@
+{
+ "editionId": "mozart-o-isis-und-osiris-welche-wonne",
+ "editionVersion": "1.0.0-peters",
+ "title": "O Isis und Osiris! welche Wonne!",
+ "subtitle": "Chorus of priests (tenors and basses): from Die Zauberflöte, Act 2 (No. 18)",
+ "kind": "chorus",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "tenor-1",
+   "name": "Chorus Tenor I",
+   "voiceType": "Tenor",
+   "partKey": "tenor-1"
+  },
+  {
+   "id": "tenor-2",
+   "name": "Chorus Tenor II",
+   "voiceType": "Tenor",
+   "partKey": "tenor-2"
+  },
+  {
+   "id": "bass",
+   "name": "Chorus basses",
+   "voiceType": "Bass",
+   "partKey": "bass"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P4",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "tenor-1",
+   "label": "Chorus Tenor I (Tenor)",
+   "shortLabel": "Tenor I",
+   "kind": "voice",
+   "roleId": "tenor-1",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tenor-2",
+   "label": "Chorus Tenor II (Tenor)",
+   "shortLabel": "Tenor II",
+   "kind": "voice",
+   "roleId": "tenor-2",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "bass",
+   "label": "Chorus basses (Bass)",
+   "shortLabel": "Chorus B.",
+   "kind": "voice",
+   "roleId": "bass",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "O Isis und Osiris! welche Wonne! · Die düstre Nacht verscheucht der Glanz der Sonne",
+   "start": "1",
+   "end": "10"
+  },
+  {
+   "id": "b",
+   "label": "Bald fühlt der edle Jüngling neues Leben · bald ist er unserm Dienste ganz ergeben",
+   "start": "11",
+   "end": "19"
+  },
+  {
+   "id": "c",
+   "label": "Sein Geist ist kühn, sein Herz ist rein · bald wird er unser würdig sein (to the end)",
+   "start": "20",
+   "end": "42"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), Act 2, No. 18, Chor der Priester",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score (“ganz ergeben”, “unser würdig”, where the libretto has “ganz gegeben”, “unsrer würdig”)."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 107–108 (42 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean (one fix: a tie in the piano's right hand, bar 10), and checked against the print again; every bar of every part adds up. No. 18 Chor der Priester, Adagio alla breve in D major, for men's chorus: the two tenor parts, printed on one treble-clef staff sounding an octave lower, are written out as Tenor I and Tenor II; the basses have their own staff and, in bars 24–28, their own text line, a beat ahead of the tenors. The Italian translation, the notes printed only for it (bars 5, 22, 26, 32 and 37) and the stage direction (the priests enter, led by Sarastro) are left out. The number ends at the final double bar on p. 108; the spoken dialogue below it is not included. Playback tempo: Adagio ♩ = 52 (half note = 26), about 3:13, the median length of the No. 18 tracks of five complete recordings (Sawallisch 1972 3:10, Klemperer 1964 3:12, Haitink 1981 3:13, Christie 1995 3:18, Solti 1969 3:35). The three chorus parts can be practised as voice parts (they are not characters of the opera)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}
