@@ -7938,6 +7938,36 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-zauberfloete-ouverture": {
+    // no one sings it: it is played before the curtain, so Tamino, the first to appear, stands for it
+    portrait: "zauberfloete:tamino",
+    opera: "Die Zauberflöte",
+    kind: "Overture",
+    facts: {
+      key: "E-flat major throughout",
+      time: "4/4 (C) throughout",
+      tempo: "Adagio ♩ = 60, Allegro ♩ = 180 (half note = 90), the Adagio chords (bar 97) ♩ = 60 and the Allegro again, about 6 minutes in all, from the median (6:00) of five complete recordings (Norrington, Christie 1995, Jacobs 2010, Klemperer 1964, Haitink 1981); the tracks are not split at the sections, so the Adagio is set at a third of the Allegro's beat (about a minute for the introduction), with its fermatas held; Mozart gives the words only",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          The orchestra plays alone before the curtain rises. A slow Adagio opens with three loud chords and moves through hushed,
+          searching harmonies; then the Allegro sets off, a quick, busy fugue on a repeated-note theme passed from instrument to
+          instrument. In the middle it stops for an Adagio of three loud wind chords, each struck from a short upbeat and followed by
+          a pause: the threefold chord of Sarastro's priests, heard again in Act 2. Then the Allegro returns and drives on to a bright end in E-flat major.
+        </p>
+        <p>
+          Score: the Ouverture (vocal score pages 3–9, 226 bars), from the Edition Peters vocal score, piano reduction by Gustav F.
+          Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages by two independent readers for
+          each half, with a judge settling every difference, then a fresh check until clean, and checked against the print again.
+          The instrument cues printed over the staves are left off. Mozart gives no metronome number; the tempo words are Mozart's,
+          and the tempos are taken from the lengths of five complete recordings.
+        </p>
+        <p>Music by Wolfgang Amadeus Mozart (1791), public domain.</p>
+      </>
+    ),
+  },
   "mozart-nun-stolzer-jungling": {
     portrait: "zauberfloete:sarastro",
     opera: "Die Zauberflöte",

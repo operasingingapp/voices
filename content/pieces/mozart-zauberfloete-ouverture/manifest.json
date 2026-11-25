@@ -1,0 +1,54 @@
+{
+ "editionId": "mozart-zauberfloete-ouverture",
+ "editionVersion": "1.0.0-peters",
+ "title": "Ouverture",
+ "subtitle": "The overture to Die Zauberflöte, in Gustav F. Kogel's piano reduction",
+ "kind": "overture",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P1",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.8
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), Ouverture (overture), before Act 1 No. 1",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 3–9 (226 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: each half (pages 3–6 and 7–9) read by two independent readers, with a judge settling every difference and a sweep for the marks, then stitched and checked bar by bar by three fresh proofreaders, and checked against the print again; every bar adds up. Adagio in C (4/4), E-flat major, bars 1–15; Allegro, bars 16–96; Adagio, bars 97–102: the threefold chord, three wind chords each followed by a fermata on the rest; Allegro, bars 103–226. Instrument cues (G.Orch., Fl., Ob., Clar., Fag., Harm., Streich. …) and fingerings are left out; single-chord tremolo strokes are written as held chords; a few ties and slurs that pass from one voice to another in the print may not show; dynamics printed between the staves are given to both hands. Playback tempo: Allegro ♩ = 180 (half note = 90), Adagio ♩ = 60 (a third of the Allegro's beat, so the introduction takes about a minute), fermatas held; about 6 minutes in all, the median (6:00) of five complete recordings (Norrington 5:51, Christie 1995 5:57, Jacobs 2010 6:00, Klemperer 1964 7:17, Haitink 1981 7:33). Mozart gives the words only."
+  }
+ ]
+}
