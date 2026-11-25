@@ -7911,6 +7911,33 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-marsch-der-priester": {
+    // no one sings it: Sarastro, who leads the priests' procession and is the one character on stage, stands for it
+    portrait: "zauberfloete:sarastro",
+    opera: "Die Zauberflöte",
+    kind: "March",
+    facts: {
+      key: "F major (the march, bars 1–28), then B-flat major (the Adagio chords, bars 29–34)",
+      time: "Alla breve (¢) throughout",
+      tempo: "Andante, played at a half note ≈ 41.5 (♩ = 83) with both repeats, about 2¾ minutes, the median of five complete recordings that all take the repeats (Abbado 2005, Norrington, Haitink 1981, Christie 1995, Klemperer 1964); the closing Adagio chords at ♩ = 50, since no recording times them separately, with their fermatas held; Mozart gives the words only",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          Act 2 opens in a palm grove. To this hushed march, played sotto voce by the orchestra alone, the priests walk in solemn procession and take their places, and Sarastro steps into their midst. Then the priests' horns sound a threefold chord, slow and loud, which they sound again in the following council as their sign of assent to Tamino's trials.
+        </p>
+        <p>
+          Score: No. 9, the March of the Priests (vocal score page 80, 34 bars), from the Edition Peters vocal score, piano reduction
+          by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed page by two independent
+          readers, with a judge settling every difference, then a fresh check until clean, and checked against the print again. The
+          march's two halves are each repeated, as printed. The score ends the number with the threefold chord (“Dreimaliger Accord
+          der Priester in die Hörner”, Adagio, in B-flat major); the stage direction is left off.
+        </p>
+        <p>Music by Wolfgang Amadeus Mozart (1791), public domain.</p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

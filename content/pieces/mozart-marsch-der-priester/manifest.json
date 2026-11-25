@@ -1,0 +1,54 @@
+{
+ "editionId": "mozart-marsch-der-priester",
+ "editionVersion": "1.0.0-peters",
+ "title": "Marsch der Priester",
+ "subtitle": "The March of the Priests: from Die Zauberflöte, Act 2 (No. 9), in Gustav F. Kogel's piano reduction",
+ "kind": "march",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P1",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.8
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), Act 2, No. 9, Marsch der Priester, with the threefold chord (“Dreimaliger Accord der Priester in die Hörner”) that this score prints at its end",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), page 80 (34 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed page by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean, and checked against the print again; every bar adds up. Andante alla breve in F major, bars 1–8 and 9–28 each repeated as printed; then Adagio alla breve in B-flat major, bars 29–34: the priests' threefold chord, three chords each followed by a fermata on the rest (the restated alla-breve sign at bar 29 is the print's). The stage direction, the instrument cue (Bläser) and the spoken dialogue below are left out. Playback tempo: Andante ♩ = 83 (half note ≈ 41.5), from the median length (2:42) of the March tracks of five complete recordings, all with both repeats (Abbado 2005 2:23, Norrington 2:36, Haitink 1981 2:42, Christie 1995 3:02, Klemperer 1964 4:07); the threefold chord is not timed by any of them (in the sets with dialogue it sounds in the dialogue track), so the Adagio is set at 0.6 times the Andante's beat, ♩ = 50, and its fermatas are held. Mozart gives the words only."
+  }
+ ]
+}

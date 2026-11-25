@@ -6442,6 +6442,7 @@ const INSTRUMENTAL: Record<string, Record<string, string>> = {
   figaro: { Sinfonia: "mozart-figaro-sinfonia", "Giovani liete": "mozart-giovani-liete", "Giovani liete (repeated)": "mozart-giovani-liete-reprise", "Ricevete, o padroncina": "mozart-ricevete-o-padroncina" },
   cosi: { Sinfonia: "mozart-cosi-sinfonia", "Bella vita militar": "mozart-bella-vita-militar" },
   giovanni: { Ouverture: "mozart-giovanni-ouverture" },
+  zauberfloete: { "Marsch der Priester": "mozart-marsch-der-priester" },
 };
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {
