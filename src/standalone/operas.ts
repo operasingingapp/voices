@@ -4182,7 +4182,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
       "kind": "Quintet · Act 2",
-      "id": "Act 2: Wie? Wie? Wie?"
+      "id": "Act 2: Wie? Wie? Wie?",
+      "editionId": "mozart-wie-wie-wie"
      },
      {
       "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
@@ -4331,7 +4332,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
       "kind": "Quintet · Act 2",
-      "id": "Act 2: Wie? Wie? Wie?"
+      "id": "Act 2: Wie? Wie? Wie?",
+      "editionId": "mozart-wie-wie-wie"
      },
      {
       "title": "Papagena, Papagena, Papagena!",
@@ -4510,7 +4512,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
       "kind": "Quintet · Act 2",
-      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?"
+      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?",
+      "editionId": "mozart-wie-wie-wie"
      },
      {
       "title": "Nur stille, stille, stille, stille!",
@@ -4553,7 +4556,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
       "kind": "Quintet · Act 2",
-      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?"
+      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?",
+      "editionId": "mozart-wie-wie-wie"
      },
      {
       "title": "Nur stille, stille, stille, stille!",
@@ -4596,7 +4600,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
       "kind": "Quintet · Act 2",
-      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?"
+      "id": "Act 2: Wie? wie? wie? ihr an diesem Schreckensort?",
+      "editionId": "mozart-wie-wie-wie"
      },
      {
       "title": "Nur stille, stille, stille, stille!",

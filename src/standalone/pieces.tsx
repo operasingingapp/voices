@@ -7971,6 +7971,36 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-wie-wie-wie": {
+    portrait: "zauberfloete:dame1",
+    opera: "Die Zauberflöte",
+    kind: "Quintet",
+    facts: {
+      key: "G major",
+      time: "2/2 (alla breve)",
+      tempo: "Allegro, played at a half note = 96 (♩ = 192), about 3½ minutes, the median of five complete recordings whose track holds just this quintet (Abbado 2005, Haitink 1981, Klemperer 1964, Böhm 1964, Christie 1995)",
+    },
+    notePlaceholder: "Quick and light in two: the Ladies' whispered threats, Tamino's firm “Stille!”, Papageno bursting to talk",
+    about: (
+      <>
+        <p>
+          Act 2, the dark forecourt of the temple, where Tamino and Papageno have just been sworn to silence. The three Ladies of the Queen of the Night appear out of the darkness: the two men will never get away from this place alive. Tamino is doomed, Papageno is lost; the Queen herself has crept into the temple, and everyone knows that whoever joins the priests' brotherhood goes to hell, body and soul. Papageno is terrified and keeps trying to talk; Tamino stays silent, keeps hushing him and dismisses the warnings as gossip spread by women and made up by hypocrites. When neither man will answer them, the Ladies have to give up in shame, and all five agree that a steadfast man thinks before he speaks. Voices of the initiates cry out from within that the holy threshold has been profaned and the women must go down to hell; there is thunder and lightning, the Ladies flee, and Papageno falls to the ground.
+        </p>
+        <p>
+          Score: No. 12, the Quintet (vocal score pages 84–93, 164 bars), from the Edition Peters vocal score,
+          piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed pages
+          by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against the
+          print again. Only the German words are kept, as the print spells them. Each Lady has her own line; the print puts two of
+          them on one staff in places. Tamino's line is printed in the treble clef and sounds an octave lower. The chorus offstage
+          (tenors and basses in unison) is heard with the piano. The print writes “kommt ihr glücklich wieder fort”, “Beide”,
+          “Höll'”, “Schand'” and Papageno's “Ich möchte gerne wohl…”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

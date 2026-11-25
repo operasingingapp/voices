@@ -1,0 +1,232 @@
+{
+ "editionId": "mozart-wie-wie-wie",
+ "editionVersion": "1.0.0-peters",
+ "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+ "subtitle": "The three Ladies, Tamino and Papageno, with the chorus: quintet from Die Zauberflöte, Act 2",
+ "kind": "quintet",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "dame1",
+   "name": "First Lady",
+   "voiceType": "Soprano",
+   "partKey": "dame1"
+  },
+  {
+   "id": "dame2",
+   "name": "Second Lady",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dame2"
+  },
+  {
+   "id": "dame3",
+   "name": "Third Lady",
+   "voiceType": "Mezzo-soprano or contralto",
+   "partKey": "dame3"
+  },
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  },
+  {
+   "id": "papageno",
+   "name": "Papageno",
+   "voiceType": "Baritone",
+   "partKey": "papageno"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P8",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "dame1",
+   "label": "First Lady (Soprano)",
+   "shortLabel": "First Lady",
+   "kind": "voice",
+   "roleId": "dame1",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame2",
+   "label": "Second Lady (Mezzo-soprano)",
+   "shortLabel": "Second Lady",
+   "kind": "voice",
+   "roleId": "dame2",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame3",
+   "label": "Third Lady (Mezzo-soprano or contralto)",
+   "shortLabel": "Third Lady",
+   "kind": "voice",
+   "roleId": "dame3",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "papageno",
+   "label": "Papageno (Baritone)",
+   "shortLabel": "Papageno",
+   "kind": "voice",
+   "roleId": "papageno",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Wie? wie? wie? · Tamino, dir ist Tod geschworen · Papageno, schweige still!",
+   "start": "1",
+   "end": "32"
+  },
+  {
+   "id": "b",
+   "label": "Ganz nah' ist euch die Königin · Man zischelt viel sich in die Ohren · Ein Weiser prüft",
+   "start": "33",
+   "end": "64"
+  },
+  {
+   "id": "c",
+   "label": "Man sagt, wer ihrem Bunde schwört · Das wär' der Teufel! · Geschwätz, von Weibern nachgesagt",
+   "start": "65",
+   "end": "89"
+  },
+  {
+   "id": "d",
+   "label": "Warum bist du mit uns so spröde? · Ich möchte gerne wohl · Dass du nicht kannst das Plaudern lassen",
+   "start": "90",
+   "end": "111"
+  },
+  {
+   "id": "e",
+   "label": "Wir müssen sie mit Scham verlassen · Von festem Geiste ist ein Mann (all five)",
+   "start": "112",
+   "end": "150"
+  },
+  {
+   "id": "f",
+   "label": "Entweiht ist die heilige Schwelle (the chorus offstage) · O weh! (to the end)",
+   "start": "151",
+   "end": "164"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 12, Quintett",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 84–93 (164 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean (one fix: no staccatos in the right hand in bars 31–32); every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. The print puts the Ladies two to a staff in places; each Lady has her own line here. Tamino's line is printed in the treble clef and sounds an octave lower. The chorus (“Chor von innen”, tenors and basses in unison, bars 151–155) is written out as two parts and is heard with the piano, with no role. Bars 158–159 are the piano alone (the thunder); Papageno closes alone with “O weh!”. Playback tempo from five complete recordings whose No. 12 track holds exactly this quintet (Abbado 2005 3:04, Haitink 1981 3:09, Klemperer 1964 3:25, Böhm 1964 3:37, Christie 1995 3:46; median 3:25): Allegro, alla breve, ♩ = 192 (half note = 96)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

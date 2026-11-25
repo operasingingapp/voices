@@ -9258,6 +9258,58 @@
     }
   },
   {
+    "editionId": "mozart-wie-wie-wie",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-wie-wie-wie@1.0.0-peters#0f2ef4224a",
+    "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
+    "subtitle": "The three Ladies, Tamino and Papageno, with the chorus: quintet from Die Zauberflöte, Act 2",
+    "kind": "quintet",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "dame1",
+        "name": "First Lady",
+        "voiceType": "Soprano",
+        "partKey": "dame1"
+      },
+      {
+        "id": "dame2",
+        "name": "Second Lady",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dame2"
+      },
+      {
+        "id": "dame3",
+        "name": "Third Lady",
+        "voiceType": "Mezzo-soprano or contralto",
+        "partKey": "dame3"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      }
+    ],
+    "measures": 164,
+    "durationSec": 205,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 134,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-zitto-lascia-chio-senta",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-zitto-lascia-chio-senta@1.0.0-schirmer#d01db9fdc7",
