@@ -1,0 +1,1354 @@
+{
+ "editionId": "mozart-nun-stolzer-jungling",
+ "language": "de",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Emanuel Schikaneder (1791). Words as printed in the Edition Peters vocal score, which the app follows where it differs from the libretto: Monostatos's \"Nun stolzer Jüngling\" (the libretto has \"Na\"), the spellings \"Sclave\", \"Füssen\", \"büssen\", \"wusst'\" and \"auszuspüren\" (the libretto has \"aufzuspüren\"), the print's apostrophes in \"glaub'\", \"schling'\", \"wär'\", \"verweg'nen\", \"Frev'ler\", \"Bedenk'\", \"wollt'\", \"verhofft'\" and \"Sohlenstreich'\", Pamina's and Tamino's lines as the print gives them (Pamina \"Er ist's! Ich glaub' es kaum. Er ist's!\", Tamino \"Sie ist's! Sie ist's! Es ist kein Traum!\"), and Monostatos's \"Ach, Herr! ach, Herr!\". The chorus (sopranos, altos, tenors, basses: \"Was soll das heissen?\", \"Es lebe Sarastro\" and the closing \"Wenn Tugend und Gerechtigkeit\") is heard with the piano and has no phrases here. IPA follows sung German stage diction: final -er, -ern as [ɐ]; the prefixes er-, ver-, zer- with [ɛr]; r elsewhere rolled or flipped; ch as [ç] after front vowels and [x] after back vowels; glottal stops [ʔ] before initial vowels; final b d g devoiced.",
+ "phrases": [
+  {
+   "id": "mo-01",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "3",
+   "original": "Nun stolzer Jüngling, nur hieher!",
+   "translation": "Come along, proud young man, this way!",
+   "ipa": "nuːn ˈʃtɔl.tsɐ ˈjʏŋ.lɪŋ nuːr hiˈheːr",
+   "words": [
+    [
+     "Nun",
+     "now",
+     "nuːn"
+    ],
+    [
+     "stolzer",
+     "proud",
+     "ˈʃtɔl.tsɐ"
+    ],
+    [
+     "Jüngling,",
+     "young man",
+     "ˈjʏŋ.lɪŋ"
+    ],
+    [
+     "nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "hieher!",
+     "this way",
+     "hiˈheːr"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "this way, come"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-02",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "5",
+   "original": "Hier ist Sarastro, unser Herr.",
+   "translation": "Here stands Sarastro, our master.",
+   "ipa": "ˈhiːr ʔɪst zaˈra.stro ˈʔʊn.zɐ ˈhɛr",
+   "words": [
+    [
+     "Hier",
+     "here",
+     "ˈhiːr"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "Sarastro,",
+     "Sarastro",
+     "zaˈra.stro"
+    ],
+    [
+     "unser",
+     "our",
+     "ˈʔʊn.zɐ"
+    ],
+    [
+     "Herr.",
+     "master",
+     "ˈhɛr"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pm-01",
+   "role": "pamina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Er ist's! Ich glaub' es kaum. Er ist's!",
+   "translation": "It is he! I can scarcely believe it. It is he!",
+   "ipa": "ʔeːr ʔɪsts ʔɪç ˈglaop ʔɛs ˈkaom ʔeːr ʔɪsts",
+   "words": [
+    [
+     "Er",
+     "he",
+     "ʔeːr"
+    ],
+    [
+     "ist's!",
+     "it is",
+     "ʔɪsts"
+    ],
+    [
+     "Ich",
+     "I",
+     "ʔɪç"
+    ],
+    [
+     "glaub'",
+     "believe",
+     "ˈglaop"
+    ],
+    [
+     "es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "kaum.",
+     "scarcely",
+     "ˈkaom"
+    ],
+    [
+     "Er",
+     "he",
+     "ʔeːr"
+    ],
+    [
+     "ist's!",
+     "it is",
+     "ʔɪsts"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "it is he"
+    },
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "I can scarcely believe it"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "it is he"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-01",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "8",
+   "original": "Sie ist's! Sie ist's! Es ist kein Traum!",
+   "translation": "It is she! It is she! This is no dream!",
+   "ipa": "ziː ʔɪsts ziː ʔɪsts ʔɛs ʔɪst kaen ˈtraom",
+   "words": [
+    [
+     "Sie",
+     "she",
+     "ziː"
+    ],
+    [
+     "ist's!",
+     "it is",
+     "ʔɪsts"
+    ],
+    [
+     "Sie",
+     "she",
+     "ziː"
+    ],
+    [
+     "ist's!",
+     "it is",
+     "ʔɪsts"
+    ],
+    [
+     "Es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "kein",
+     "no",
+     "kaen"
+    ],
+    [
+     "Traum!",
+     "dream",
+     "ˈtraom"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "it is she"
+    },
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "it is she"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pm-02",
+   "role": "pamina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Es schling' mein Arm sich um ihn her,",
+   "translation": "Let my arms enfold him,",
+   "ipa": "ʔɛs ˈʃlɪŋ maen ˈʔarm zɪç ʔʊm ʔiːn heːr",
+   "words": [
+    [
+     "Es",
+     "(let)",
+     "ʔɛs"
+    ],
+    [
+     "schling'",
+     "wind",
+     "ˈʃlɪŋ"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Arm",
+     "arm",
+     "ˈʔarm"
+    ],
+    [
+     "sich",
+     "itself",
+     "zɪç"
+    ],
+    [
+     "um",
+     "around",
+     "ʔʊm"
+    ],
+    [
+     "ihn",
+     "him",
+     "ʔiːn"
+    ],
+    [
+     "her,",
+     "(around)",
+     "heːr"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "let my arms enfold him"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-02",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Es schling' mein Arm sich um sie her,",
+   "translation": "Let my arms enfold her,",
+   "ipa": "ʔɛs ˈʃlɪŋ maen ˈʔarm zɪç ʔʊm ziː heːr",
+   "words": [
+    [
+     "Es",
+     "(let)",
+     "ʔɛs"
+    ],
+    [
+     "schling'",
+     "wind",
+     "ˈʃlɪŋ"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Arm",
+     "arm",
+     "ˈʔarm"
+    ],
+    [
+     "sich",
+     "itself",
+     "zɪç"
+    ],
+    [
+     "um",
+     "around",
+     "ʔʊm"
+    ],
+    [
+     "sie",
+     "her",
+     "ziː"
+    ],
+    [
+     "her,",
+     "(around)",
+     "heːr"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "gloss": "let my arms enfold her"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pm-03",
+   "role": "pamina",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "und wenn es auch mein Ende wär'.",
+   "translation": "though it should cost me my life.",
+   "ipa": "ʔʊnt vɛn ʔɛs ʔaox maen ˈʔɛn.də vɛːr",
+   "words": [
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "wenn",
+     "if",
+     "vɛn"
+    ],
+    [
+     "es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "auch",
+     "even",
+     "ʔaox"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Ende",
+     "end",
+     "ˈʔɛn.də"
+    ],
+    [
+     "wär'.",
+     "were",
+     "vɛːr"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "even though"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "it were my death"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "ta-03",
+   "role": "tamino",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "und wenn es auch mein Ende wär'.",
+   "translation": "though it should cost me my life.",
+   "ipa": "ʔʊnt vɛn ʔɛs ʔaox maen ˈʔɛn.də vɛːr",
+   "words": [
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "wenn",
+     "if",
+     "vɛn"
+    ],
+    [
+     "es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "auch",
+     "even",
+     "ʔaox"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Ende",
+     "end",
+     "ˈʔɛn.də"
+    ],
+    [
+     "wär'.",
+     "were",
+     "vɛːr"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "even though"
+    },
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "it were my death"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-03",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "22",
+   "original": "Welch eine Dreistigkeit!",
+   "translation": "Such insolence!",
+   "ipa": "vɛlç ˈʔae.nə ˈdraes.tɪç.kaet",
+   "words": [
+    [
+     "Welch",
+     "what",
+     "vɛlç"
+    ],
+    [
+     "eine",
+     "a",
+     "ˈʔae.nə"
+    ],
+    [
+     "Dreistigkeit!",
+     "insolence",
+     "ˈdraes.tɪç.kaet"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "such"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-04",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "Gleich auseinander, das geht zu weit!",
+   "translation": "Break apart at once, this is too much!",
+   "ipa": "ˈglaeç ʔaos.ʔaeˈnan.dɐ das ˈgeːt tsuː ˈvaet",
+   "words": [
+    [
+     "Gleich",
+     "at once",
+     "ˈglaeç"
+    ],
+    [
+     "auseinander,",
+     "apart",
+     "ʔaos.ʔaeˈnan.dɐ"
+    ],
+    [
+     "das",
+     "this",
+     "das"
+    ],
+    [
+     "geht",
+     "goes",
+     "ˈgeːt"
+    ],
+    [
+     "zu",
+     "too",
+     "tsuː"
+    ],
+    [
+     "weit!",
+     "far",
+     "ˈvaet"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "this is too much"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-05",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "Dein Sclave liegt zu deinen Füssen,",
+   "translation": "At your feet your slave lies kneeling,",
+   "ipa": "daen ˈsklaː.və ˈliːkt tsuː ˈdae.nən ˈfyː.sən",
+   "words": [
+    [
+     "Dein",
+     "your",
+     "daen"
+    ],
+    [
+     "Sclave",
+     "slave",
+     "ˈsklaː.və"
+    ],
+    [
+     "liegt",
+     "lies",
+     "ˈliːkt"
+    ],
+    [
+     "zu",
+     "at",
+     "tsuː"
+    ],
+    [
+     "deinen",
+     "your",
+     "ˈdae.nən"
+    ],
+    [
+     "Füssen,",
+     "feet",
+     "ˈfyː.sən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-06",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "lass den verweg'nen Frev'ler büssen.",
+   "translation": "make the reckless wrongdoer pay.",
+   "ipa": "las deːn fɛrˈveːg.nən ˈfreːf.lɐ ˈbyː.sən",
+   "words": [
+    [
+     "lass",
+     "let",
+     "las"
+    ],
+    [
+     "den",
+     "the",
+     "deːn"
+    ],
+    [
+     "verweg'nen",
+     "reckless",
+     "fɛrˈveːg.nən"
+    ],
+    [
+     "Frev'ler",
+     "wrongdoer",
+     "ˈfreːf.lɐ"
+    ],
+    [
+     "büssen.",
+     "pay",
+     "ˈbyː.sən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      4
+     ],
+     "gloss": "make … pay"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-07",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "Bedenk', wie frech der Knabe ist!",
+   "translation": "Think how brazen the lad is!",
+   "ipa": "bəˈdɛŋk viː ˈfrɛç deːr ˈknaː.bə ʔɪst",
+   "words": [
+    [
+     "Bedenk',",
+     "think",
+     "bəˈdɛŋk"
+    ],
+    [
+     "wie",
+     "how",
+     "viː"
+    ],
+    [
+     "frech",
+     "brazen",
+     "ˈfrɛç"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Knabe",
+     "lad",
+     "ˈknaː.bə"
+    ],
+    [
+     "ist!",
+     "is",
+     "ʔɪst"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-08",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "Durch dieses seltnen Vogels List",
+   "translation": "With the trickery of this odd bird",
+   "ipa": "dʊrç ˈdiː.zəs ˈzɛlt.nən ˈfoː.gəls ˈlɪst",
+   "words": [
+    [
+     "Durch",
+     "by",
+     "dʊrç"
+    ],
+    [
+     "dieses",
+     "this",
+     "ˈdiː.zəs"
+    ],
+    [
+     "seltnen",
+     "odd",
+     "ˈzɛlt.nən"
+    ],
+    [
+     "Vogels",
+     "bird's",
+     "ˈfoː.gəls"
+    ],
+    [
+     "List",
+     "trickery",
+     "ˈlɪst"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-09",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "wollt' er Paminen dir entführen,",
+   "translation": "he meant to carry Pamina off from you,",
+   "ipa": "vɔlt ʔeːr paˈmiː.nən diːr ʔɛntˈfyː.rən",
+   "words": [
+    [
+     "wollt'",
+     "meant",
+     "vɔlt"
+    ],
+    [
+     "er",
+     "he",
+     "ʔeːr"
+    ],
+    [
+     "Paminen",
+     "Pamina",
+     "paˈmiː.nən"
+    ],
+    [
+     "dir",
+     "from you",
+     "diːr"
+    ],
+    [
+     "entführen,",
+     "carry off",
+     "ʔɛntˈfyː.rən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-10",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "allein ich wusst' ihn auszuspüren.",
+   "translation": "but I managed to hunt him down.",
+   "ipa": "ʔaˈlaen ʔɪç vʊst ʔiːn ˈʔaos.tsu.ʃpyː.rən",
+   "words": [
+    [
+     "allein",
+     "but",
+     "ʔaˈlaen"
+    ],
+    [
+     "ich",
+     "I",
+     "ʔɪç"
+    ],
+    [
+     "wusst'",
+     "knew how",
+     "vʊst"
+    ],
+    [
+     "ihn",
+     "him",
+     "ʔiːn"
+    ],
+    [
+     "auszuspüren.",
+     "to hunt down",
+     "ˈʔaos.tsu.ʃpyː.rən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      4
+     ],
+     "gloss": "managed to hunt down"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-11",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "42",
+   "original": "Du kennst mich, meine Wachsamkeit",
+   "translation": "You know me, how watchful I am",
+   "ipa": "duː ˈkɛnst mɪç ˈmae.nə ˈvax.zaːm.kaet",
+   "words": [
+    [
+     "Du",
+     "you",
+     "duː"
+    ],
+    [
+     "kennst",
+     "know",
+     "ˈkɛnst"
+    ],
+    [
+     "mich,",
+     "me",
+     "mɪç"
+    ],
+    [
+     "meine",
+     "my",
+     "ˈmae.nə"
+    ],
+    [
+     "Wachsamkeit",
+     "vigilance",
+     "ˈvax.zaːm.kaet"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "how watchful I am"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "sa-01",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "verdient, dass man ihr Lorbeer streut!",
+   "translation": "deserves to be crowned with laurels!",
+   "ipa": "fɛrˈdiːnt das man ʔiːr ˈlɔr.beːr ˈʃtrɔøt",
+   "words": [
+    [
+     "verdient,",
+     "deserves",
+     "fɛrˈdiːnt"
+    ],
+    [
+     "dass",
+     "that",
+     "das"
+    ],
+    [
+     "man",
+     "one",
+     "man"
+    ],
+    [
+     "ihr",
+     "to it",
+     "ʔiːr"
+    ],
+    [
+     "Lorbeer",
+     "laurel",
+     "ˈlɔr.beːr"
+    ],
+    [
+     "streut!",
+     "scatters",
+     "ˈʃtrɔøt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "to be crowned with laurels"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "sa-02",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "He! gebt dem Ehrenmann sogleich",
+   "translation": "Ho there! Give this worthy man at once",
+   "ipa": "ˈheː ˈgeːpt deːm ˈʔeː.rən.man zoˈglaeç",
+   "words": [
+    [
+     "He!",
+     "ho there",
+     "ˈheː"
+    ],
+    [
+     "gebt",
+     "give",
+     "ˈgeːpt"
+    ],
+    [
+     "dem",
+     "the",
+     "deːm"
+    ],
+    [
+     "Ehrenmann",
+     "worthy man",
+     "ˈʔeː.rən.man"
+    ],
+    [
+     "sogleich",
+     "at once",
+     "zoˈglaeç"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-12",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "51",
+   "original": "Schon deine Gnade macht mich reich!",
+   "translation": "Your kindness alone is wealth to me!",
+   "ipa": "ʃoːn ˈdae.nə ˈgnaː.də ˈmaxt mɪç ˈraeç",
+   "words": [
+    [
+     "Schon",
+     "alone",
+     "ʃoːn"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gnade",
+     "kindness",
+     "ˈgnaː.də"
+    ],
+    [
+     "macht",
+     "makes",
+     "ˈmaxt"
+    ],
+    [
+     "mich",
+     "me",
+     "mɪç"
+    ],
+    [
+     "reich!",
+     "rich",
+     "ˈraeç"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "sa-03",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "53",
+   "original": "nur siebenundsiebenzig Sohlenstreich'!",
+   "translation": "just seventy-seven blows on the soles of his feet!",
+   "ipa": "nuːr ˈziː.bən.ʔʊnt.ziː.bən.tsɪç ˈzoː.lən.ʃtraeç",
+   "words": [
+    [
+     "nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "siebenundsiebenzig",
+     "seventy-seven",
+     "ˈziː.bən.ʔʊnt.ziː.bən.tsɪç"
+    ],
+    [
+     "Sohlenstreich'!",
+     "blows on the soles",
+     "ˈzoː.lən.ʃtraeç"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-13",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "57",
+   "original": "Ach, Herr! ach, Herr! den Lohn verhofft' ich nicht!",
+   "translation": "Oh, my lord! oh, my lord! I never expected such a reward!",
+   "ipa": "ˈʔax ˈhɛr ˈʔax ˈhɛr deːn ˈloːn fɛrˈhɔft ʔɪç nɪçt",
+   "words": [
+    [
+     "Ach,",
+     "oh",
+     "ˈʔax"
+    ],
+    [
+     "Herr!",
+     "lord",
+     "ˈhɛr"
+    ],
+    [
+     "ach,",
+     "oh",
+     "ˈʔax"
+    ],
+    [
+     "Herr!",
+     "lord",
+     "ˈhɛr"
+    ],
+    [
+     "den",
+     "that",
+     "deːn"
+    ],
+    [
+     "Lohn",
+     "reward",
+     "ˈloːn"
+    ],
+    [
+     "verhofft'",
+     "expected",
+     "fɛrˈhɔft"
+    ],
+    [
+     "ich",
+     "I",
+     "ʔɪç"
+    ],
+    [
+     "nicht!",
+     "not",
+     "nɪçt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "gloss": "I never expected such a reward"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "sa-04",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "Nicht Dank! es ist ja meine Pflicht.",
+   "translation": "Don't thank me! I am only doing my duty.",
+   "ipa": "nɪçt ˈdaŋk ʔɛs ʔɪst jaː ˈmae.nə ˈpflɪçt",
+   "words": [
+    [
+     "Nicht",
+     "no",
+     "nɪçt"
+    ],
+    [
+     "Dank!",
+     "thanks",
+     "ˈdaŋk"
+    ],
+    [
+     "es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "ja",
+     "simply",
+     "jaː"
+    ],
+    [
+     "meine",
+     "my",
+     "ˈmae.nə"
+    ],
+    [
+     "Pflicht.",
+     "duty",
+     "ˈpflɪçt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "don't thank me"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "sa-05",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "72",
+   "original": "Führt diese beiden Fremdlinge",
+   "translation": "Take these two strangers",
+   "ipa": "ˈfyːrt ˈdiː.zə ˈbae.dən ˈfrɛmt.lɪ.ŋə",
+   "words": [
+    [
+     "Führt",
+     "lead",
+     "ˈfyːrt"
+    ],
+    [
+     "diese",
+     "these",
+     "ˈdiː.zə"
+    ],
+    [
+     "beiden",
+     "two",
+     "ˈbae.dən"
+    ],
+    [
+     "Fremdlinge",
+     "strangers",
+     "ˈfrɛmt.lɪ.ŋə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "sa-06",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "73",
+   "original": "in unsern Prüfungstempel ein,",
+   "translation": "into our temple of trial;",
+   "ipa": "ʔɪn ˈʔʊn.zɐn ˈpryː.fʊŋs.tɛm.pəl ʔaen",
+   "words": [
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "unsern",
+     "our",
+     "ˈʔʊn.zɐn"
+    ],
+    [
+     "Prüfungstempel",
+     "temple of trial",
+     "ˈpryː.fʊŋs.tɛm.pəl"
+    ],
+    [
+     "ein,",
+     "(lead) in",
+     "ʔaen"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "sa-07",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "75",
+   "original": "bedecket ihre Häupter dann,",
+   "translation": "then veil their heads;",
+   "ipa": "bəˈdɛ.kət ˈʔiː.rə ˈhɔøp.tɐ dan",
+   "words": [
+    [
+     "bedecket",
+     "cover",
+     "bəˈdɛ.kət"
+    ],
+    [
+     "ihre",
+     "their",
+     "ˈʔiː.rə"
+    ],
+    [
+     "Häupter",
+     "heads",
+     "ˈhɔøp.tɐ"
+    ],
+    [
+     "dann,",
+     "then",
+     "dan"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "sa-08",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "76",
+   "original": "sie müssen erst gereinigt sein.",
+   "translation": "first they must be made pure.",
+   "ipa": "ziː ˈmʏ.sən ʔeːrst gəˈrae.nɪçt zaen",
+   "words": [
+    [
+     "sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "müssen",
+     "must",
+     "ˈmʏ.sən"
+    ],
+    [
+     "erst",
+     "first",
+     "ʔeːrst"
+    ],
+    [
+     "gereinigt",
+     "purified",
+     "gəˈrae.nɪçt"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "be made pure"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

@@ -6172,6 +6172,52 @@
     }
   },
   {
+    "editionId": "mozart-nun-stolzer-jungling",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-nun-stolzer-jungling@1.0.0-peters#a32b871219",
+    "title": "Nun stolzer Jüngling, nur hieher!",
+    "subtitle": "Monostatos, Pamina, Tamino and Sarastro, with the chorus: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "monostatos",
+        "name": "Monostatos",
+        "voiceType": "Tenor",
+        "partKey": "monostatos"
+      },
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "sarastro",
+        "name": "Sarastro",
+        "voiceType": "Bass",
+        "partKey": "sarastro"
+      }
+    ],
+    "measures": 146,
+    "durationSec": 200,
+    "hasRepeats": false,
+    "keySignature": "F major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 27,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-o-isis-und-osiris",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-o-isis-und-osiris@1.0.0-peters#7d51722b57",

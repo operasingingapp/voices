@@ -7938,6 +7938,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-nun-stolzer-jungling": {
+    portrait: "zauberfloete:sarastro",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "F major; C major from the closing chorus",
+      time: "2/2 (alla breve)",
+      tempo: "Allegro, played at a half note = 84 (♩ = 168); Sarastro's recitative at a speaking pace, ♩ = 80, with its Adagio at ♩ = 40; the closing Presto at a half note = 104 (♩ = 208); about 3¼ minutes, the median of five complete recordings whose tracks hold just this section (Christie 1995, Nézet-Séguin 2018, Norrington, Haitink 1981, Klemperer 1964), split between the Allegro and the Presto as the two that give the closing chorus its own track; the recitative tempi are this app's choice; the fermata is held",
+    },
+    notePlaceholder: "Monostatos fawning and spiteful; the lovers' recognition breathless; Sarastro's sentence dry, his recitative grave",
+    about: (
+      <>
+        <p>
+          End of the Act 1 finale, before Sarastro and his followers. Monostatos brings in Tamino. Tamino and Pamina recognise each other at first sight and embrace; the chorus is astonished, and Monostatos pulls them apart and kneels to Sarastro, accusing the bold youth and his strange bird of trying to steal Pamina, and boasting of his own vigilance. Sarastro orders him a reward: seventy-seven strokes on the soles of his feet, and he is led away. The chorus praises Sarastro's justice; Sarastro orders the two strangers to be veiled and led into the temple of trial, and the chorus sings that when virtue and justice rule, the earth is a heaven and mortals are like the gods. Sarastro leads Pamina away; the priests lead Tamino and Papageno out.
+        </p>
+        <p>
+          Score: part of No. 8, the Act 1 Finale, to the end of the act (vocal score pages 74–79, 146 bars), from the Edition Peters
+          vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the
+          printed pages by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked
+          against the print again. Only the German words are kept, as the print spells them. The print writes “Nun stolzer Jüngling”,
+          “Sclave”, “Füssen”, “verweg'nen Frev'ler”, “wusst'”, “auszuspüren”, “siebenundsiebenzig Sohlenstreich'” and “der Grossen
+          Pfad”, gives Pamina “Er ist's!” and Tamino “Sie ist's!”, and has the chorus sing “er lohnet, er strafet”. Pamina and Tamino
+          share one staff where they sing together. The chorus, printed in unison on one staff and later on two, is written out as four
+          parts and is heard with the piano; where the print gives the words of the closing chorus under one staff only, the voices that
+          move with it sing the same words. Bars 72–77 are Sarastro's recitative; the closing chorus is a Presto in C major, and the
+          piano ends the act alone.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

@@ -4176,7 +4176,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!",
+      "editionId": "mozart-nun-stolzer-jungling"
      },
      {
       "title": "Wie? wie? wie? ihr an diesem Schreckensort?",
@@ -4245,7 +4246,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!",
+      "editionId": "mozart-nun-stolzer-jungling"
      },
      {
       "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
@@ -4405,7 +4407,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!",
+      "editionId": "mozart-nun-stolzer-jungling"
      },
      {
       "title": "Soll ich dich, Theurer! nicht mehr seh'n?",
@@ -4442,7 +4445,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nun stolzer Jüngling, nur hieher!",
       "kind": "Finale · Act 1",
-      "id": "Act 1: Nun stolzer Jüngling, nur hieher!"
+      "id": "Act 1: Nun stolzer Jüngling, nur hieher!",
+      "editionId": "mozart-nun-stolzer-jungling"
      },
      {
       "title": "Alles fühlt der Liebe Freuden",

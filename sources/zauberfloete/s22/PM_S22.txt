@@ -1,0 +1,538 @@
+# S22a piano: Nr. 8 Finale, 'Nun stolzer Jüngling, nur hieher!' (Edition Peters pp. 74-76), bars 1-67
+# LH clef at bar 1 is bass; clef changes are written as clef: tokens
+# page 074 system 1 (from its 2nd bar; its 1st bar is the end of S21) starts bar 1
+# bar 1: Allegro, alla breve (2/2), F major (one flat)
+# JUDGE bar 1 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 1 RH1: grace-note slurs (nested [ ])
+1 RH1: dyn:p A3+F4:e C5:e* C5:e* C5:e* C5:e* C5:e* g:D5:e[ C5:e]( Bb4:e)
+# MARKS bar 1 LH1: p (between the staves)
+1 LH1: dyn:p F2+F3:q clef:G r:e F4+A4:e E4+G4:q D4+F4:q
+# JUDGE bar 2 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 2 RH1: grace-note slurs (nested [ ])
+2 RH1: g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+2 LH1: C4+E4:q Bb3+D4:q A3+C4:q clef:F C3+G3+Bb3:q
+# JUDGE bar 3 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 3 RH1: grace-note slurs (nested [ ])
+3 RH1: F4:e* C5:e* C5:e* C5:e* C5:e* C5:e* g:D5:e[ C5:e]( Bb4:e)
+# JUDGE bar 3 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+3 LH1: F3+A3:q r:q C4:h~
+# JUDGE bar 3 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+3 LH2: s:h E3:h(
+# page 074 system 2 starts bar 4
+# JUDGE bar 4 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 4 RH1: grace-note slurs (nested [ ])
+4 RH1: g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+# JUDGE bar 4 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+4 LH1: C4:q C4:h C3+G3+Bb3:q
+# JUDGE bar 4 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+4 LH2: F3:q G3:q A3:q) s:q
+# JUDGE bar 5 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 5 RH1: grace-note slurs (nested [ ])
+# FIX bar 5: no staccato on the first F4 (marks sweep)
+5 RH1: F4:e C5:e* C5:e* C5:e* C5:e* C5:e* g:D5:e[ C5:e]( Bb4:e)
+# JUDGE bar 5 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+5 LH1: F3+A3:q r:q C4:h~
+# JUDGE bar 5 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+# MARKS bar 5 LH2: removed slur E3-A3 (not printed in bars 5-6)
+5 LH2: s:h E3:h(
+# JUDGE bar 6 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 6 RH1: grace-note slurs (nested [ ])
+6 RH1: g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+# JUDGE bar 6 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+6 LH1: C4:q C4:h C3+G3+Bb3:q
+# JUDGE bar 6 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+# MARKS bar 6 LH2: removed slur end (not printed)
+6 LH2: F3:q G3:q A3:q) s:q
+# JUDGE bar 7 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+7 RH1: F4:e* C4:e( F4:e A4:e) r:e A4:e( C5:e F5:e)
+7 LH1: F3+A3:q r:q A3+C4:q r:q
+# JUDGE bar 8 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+8 RH1: r:e E4:e( G4:e Bb4:e) r:e E5:e( G5:e Bb5:e)
+8 LH1: G3+Bb3+C4:q r:q C3+G3+C4:q r:q
+# page 074 system 3 starts bar 9
+# JUDGE bar 9 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+9 RH1: r:e A5:e( C6:e A5:e F5:e C5:e A4:e F4:e)
+9 LH1: F3+C4:q r:q r:h
+# JUDGE bar 10 RH: X - natural printed; same pitch either way
+10 RH1: Bn3+D4:w
+10 LH1: G2+F3:w
+# JUDGE bar 11 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+11 RH1: r:e C4:e( E4:e G4:e) r:e A4:e( C5:e F5:e)
+11 LH1: C3+E3:q r:q F3+A3+C4:q r:q
+# JUDGE bar 12 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+12 RH1: r:e E4:e( G4:e Bb4:e) r:e E5:e( G5:e Bb5:e)
+12 LH1: G3+Bb3+C4:q r:q C3+G3+C4:q r:q
+# JUDGE bar 13 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+13 RH1: r:e A5:e( C6:e A5:e F5:e C5:e A4:e F4:e)
+13 LH1: F3+C4:q r:q r:h
+# JUDGE bar 14 RH: X - natural printed; same pitch either way
+14 RH1: Bn3+D4:w
+14 LH1: G2+F3:w
+# JUDGE bar 15 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 15 RH1: grace-note slurs (nested [ ])
+15 RH1: C4:e G5:e* G5:e* G5:e* G5:e* G5:e* g:A5:e[ G5:e]( F5:e)
+# JUDGE bar 15 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+15 LH1: C3+E3:q clef:G r:e C5+E5:e Bn4+D5:q A4+C5:q
+# page 074 system 4 starts bar 16
+# JUDGE bar 16 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 16 RH1: grace-note slurs (nested [ ])
+16 RH1: g:G5:e[ F5:e]( E5:e) g:F5:e[ E5:e]( D5:e) g:E5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bn4:e)
+# JUDGE bar 16 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+16 LH1: G4+Bn4:q F4+A4:q E4+G4:q G3+D4+F4:q
+# JUDGE bar 17 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 17 RH1: grace-note slurs (nested [ ])
+17 RH1: C5:e* G5:e* G5:e* G5:e* G5:e* G5:e* g:A5:e[ G5:e]( F5:e)
+# JUDGE bar 17 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+# MARKS bar 17 LH1: slur from G4 to bar 19 C4+E4
+17 LH1: C4+E4:q r:q G4:h~(
+# JUDGE bar 17 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+# MARKS bar 17 LH2: removed slur Bn3-E4 (not printed)
+17 LH2: s:h Bn3:h
+# JUDGE bar 18 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 18 RH1: grace-note slurs (nested [ ])
+18 RH1: g:G5:e[ F5:e]( E5:e) g:F5:e[ E5:e]( D5:e) g:E5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bn4:e)
+# JUDGE bar 18 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+18 LH1: G4:q G4:h G3+D4+F4:q
+# JUDGE bar 18 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+# MARKS bar 18 LH2: removed slur end (not printed)
+18 LH2: C4:q D4:q E4:q s:q
+# JUDGE bar 19 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 19 RH1: grace-note slurs (nested [ ])
+19 RH1: C5:e* G5:e* G5:e* G5:e* G5:e* G5:e* g:A5:e[ G5:e]( F5:e)
+# JUDGE bar 19 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 19 LH1: slur end from bar 17; slur from E4+G4 to bar 20
+19 LH1: C4+E4:q) E4+G4:q( D4+A4:q G4+Bn4:q
+# JUDGE bar 20 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 20 RH1: grace-note slurs (nested [ ])
+20 RH1: g:G5:e[ F5:e]( E5:e) g:F5:e[ E5:e]( D5:e) g:E5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bn4:e)
+# JUDGE bar 20 LH: X - after the F clef the first chord's heads sit on the top two lines = F3+A3, not G3+B3
+# MARKS bar 20 LH1: slur end from bar 19
+20 LH1: C4+C5:q) clef:F F3+A3:q G3:q G2+G3:q
+# page 075 system 1 starts bar 21
+21 RH1: dyn:f E4+C5:q C5:e C6:e C5:e C6:e C5:e C6:e
+# JUDGE bar 21 LH: X - dynamic printed once between the staves, applies to both hands
+21 LH1: dyn:f C3+C4:q C3+C4:q C3+C4:q C3+C4:q
+# JUDGE bar 22 RH: X - dynamic printed once between the staves, applies to both hands
+22 RH1: Eb5:e Eb6:e C5:e C6:e dyn:p A4:e A5:e C5:e C6:e
+22 LH1: Eb3+Eb4:q C3+C4:q dyn:p A2+A3:q C3+C4:q
+23 RH1: dyn:f F#5:e D5+D6:e D5+D6:e D5+D6:e C5+C6:e Bb4+Bb5:e A4+A5:e G4+G5:e
+# JUDGE bar 23 LH: X - dynamic printed once between the staves, applies to both hands
+23 LH1: dyn:f F#2+F#3:e D3:e D3:e D3:e C3:e Bb2:e A2:e G2:e
+24 RH1: dyn:p F#5:e D6:e D6:e D6:e C6:e Bb5:e A5:e G5:e
+# JUDGE bar 24 LH: X - dynamic printed once between the staves, applies to both hands
+24 LH1: dyn:p F#2:e D3:e D3:e D3:e C3:e Bb2:e A2:e G2:e
+25 RH1: dyn:f F#5:e D5+D6:e D5+D6:e D5+D6:e C5+C6:e Bb4+Bb5:e A4+A5:e G4+G5:e
+# JUDGE bar 25 LH: X - dynamic printed once between the staves, applies to both hands
+25 LH1: dyn:f F#2:e D3:e D3:e D3:e C3:e Bb2:e A2:e G2:e
+# page 075 system 2 starts bar 26
+26 RH1: dyn:p F#5:e D6:e D6:e D6:e C6:e Bb5:e A5:e G5:e
+# JUDGE bar 26 LH: X - dynamic printed once between the staves, applies to both hands
+26 LH1: dyn:p F#2:e D3:e D3:e D3:e C3:e Bb2:e A2:e G2:e
+# JUDGE bar 27 RH: OWN - first eighth is D6 alone (ledger lines above, stem down to the beam, no D5 head on it) as Y; grace (one flag) and slur as printed, as X
+# MARKS bar 27 RH1: grace-note slurs (nested [ ])
+27 RH1: D6:e* D5:e* D5:e* D5:e* D5:e* D5:e* g:Eb5:e[ D5:e]( C5:e)
+# JUDGE bar 27 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+27 LH1: D2+D3:q r:q dyn:mfp Eb4+G4:h(
+# JUDGE bar 28 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 28 RH1: grace-note slurs (nested [ ])
+28 RH1: g:D5:e[ C5:e]( Bb4:e) g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F#4:e)
+# JUDGE bar 28 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 28 LH1: slur from bar 27 moved on to bar 29 (as printed)
+28 LH1: D4+F4:q C4+Eb4:q Bb3+D4:q D3+A3+C4:q
+# JUDGE bar 29 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 29 RH1: grace-note slurs (nested [ ])
+29 RH1: G4:e* D5:e* D5:e* D5:e* D5:e* D5:e* g:Eb5:e[ D5:e]( C5:e)
+# JUDGE bar 29 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+# MARKS bar 29 LH1: slur end from bar 27
+29 LH1: G3+Bb3:q) r:q D4:h~
+# JUDGE bar 29 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+29 LH2: s:h F#3:h(
+# JUDGE bar 30 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 30 RH1: grace-note slurs (nested [ ])
+30 RH1: g:D5:e[ C5:e]( Bb4:e) g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F#4:e)
+# JUDGE bar 30 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+30 LH1: D4:q D4:h D3+A3+C4:q
+# JUDGE bar 30 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+30 LH2: G3:q A3:q Bb3:q) s:q
+# page 075 system 3 starts bar 31
+# JUDGE bar 31 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 31 RH1: grace-note slurs (nested [ ])
+31 RH1: G4:e* D5:e* D5:e* D5:e* D5:e* D5:e* g:Eb5:e[ D5:e]( C5:e)
+# JUDGE bar 31 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+31 LH1: G3+Bb3:q r:q F#3+A3:h(
+# JUDGE bar 32 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 32 RH1: grace-note slurs (nested [ ])
+32 RH1: g:D5:e[ C5:e]( Bb4:e) g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F#4:e)
+# JUDGE bar 32 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+32 LH1: G3+Bb3:q A3+C4:q Bb3+D4:q D3+A3+C4:q)
+33 RH1: Bb3+G4:e Bb3+G4:e Bb3+G4:e Bb3+G4:e G4+Bb4+Eb5:e G4+Bb4+Eb5:e G4+Bb4+Eb5:e G4+Bb4+Eb5:e
+33 LH1: dyn:fp G2:e G3:e G2:e G3:e dyn:fp G2:e G3:e G2:e G3:e
+34 RH1: C4+F4:e C4+F4:e C4+F4:e C4+F4:e A3+C4+Eb4:e A3+C4+Eb4:e A3+C4+Eb4:e A3+C4+Eb4:e
+34 LH1: dyn:fp A2:e A3:e A2:e A3:e dyn:fp F2:e F3:e F2:e F3:e
+# JUDGE bar 35 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 35 RH1: grace-note slurs (nested [ ])
+35 RH1: Bb3+D4:e F5:e* F5:e* F5:e* F5:e* F5:e* g:G5:e[ F5:e]( Eb5:e)
+35 LH1: Bb2:q clef:G r:e Bb4+D5:e A4+C5:q G4+Bb4:q
+# page 075 system 4 starts bar 36
+# JUDGE bar 36 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 36 RH1: grace-note slurs (nested [ ])
+36 RH1: g:F5:e[ Eb5:e]( D5:e) g:Eb5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bb4:e) g:C5:e[ Bb4:e]( A4:e)
+36 LH1: F4+A4:q Eb4+G4:q D4+F4:q clef:F F3+C4+Eb4:q
+# JUDGE bar 37 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 37 RH1: grace-note slurs (nested [ ])
+37 RH1: Bb4:e* F5:e* F5:e* F5:e* F5:e* F5:e* g:G5:e[ F5:e]( Eb5:e)
+# JUDGE bar 37 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+37 LH1: Bb3+D4:q r:q F4:h~
+# JUDGE bar 37 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+37 LH2: s:h A3:h(
+# JUDGE bar 38 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 38 RH1: grace-note slurs (nested [ ])
+38 RH1: g:F5:e[ Eb5:e]( D5:e) g:Eb5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bb4:e) g:C5:e[ Bb4:e]( A4:e)
+# JUDGE bar 38 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+38 LH1: F4:q F4:h F3+C4+Eb4:q
+# JUDGE bar 38 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+38 LH2: Bb3:q C4:q D4:q) s:q
+39 RH1: D4+F4+Bb4:e D4+F4+Bb4:e D4+F4+Bb4:e D4+F4+Bb4:e G4+Bb4+D5:e G4+Bb4+D5:e G4+Bb4+D5:e G4+Bb4+D5:e
+39 LH1: dyn:fp Bb2:e Bb3:e Bb2:e Bb3:e dyn:fp G2:e G3:e G2:e G3:e
+# JUDGE bar 40 RH: X - first four chords: E4 on bottom line, Bb3 between the ledgers, G3 below; no head on the C4 ledger
+40 RH1: G3+Bb3+E4:e G3+Bb3+E4:e G3+Bb3+E4:e G3+Bb3+E4:e G3+Bb3+C4:e G3+Bb3+C4:e G3+Bb3+C4:e G3+Bb3+C4:e
+40 LH1: dyn:fp C2:e C3:e C2:e C3:e dyn:fp E2:e E3:e E2:e E3:e
+# page 075 system 5 starts bar 41
+# JUDGE bar 41 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 41 RH1: grace-note slurs (nested [ ])
+41 RH1: A3+C4:e C5:e* C5:e* C5:e* C5:e* C5:e* g:D5:e[ C5:e]( Bb4:e)
+41 LH1: F2+F3:q clef:G r:e F4+A4:e E4+G4:q D4+F4:q
+# JUDGE bar 42 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 42 RH1: grace-note slurs (nested [ ])
+42 RH1: g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+42 LH1: C4+E4:q Bb3+D4:q A3+C4:q clef:F C3+G3+Bb3:q
+# JUDGE bar 43 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 43 RH1: grace-note slurs (nested [ ])
+43 RH1: F4:e* C5:e* C5:e* C5:e* C5:e* C5:e* g:D5:e[ C5:e]( Bb4:e)
+43 LH1: F3+A3:q clef:G r:e F4+A4:e E4+G4:q D4+F4:q
+# JUDGE bar 44 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 44 RH1: grace-note slurs (nested [ ])
+44 RH1: g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+44 LH1: C4+E4:q Bb3+D4:q A3+C4:q clef:F C3+G3+Bb3:q
+# JUDGE bar 45 RH: X - chords are F4, C4 (1st ledger), A3 (2nd ledger); no head below for F3
+45 RH1: r:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e r:e A3+C4+F4:e A3+C4+F4:e A3+C4+F4:e
+45 LH1: F2+F3:q r:q F2+F3:q r:q
+# page 076 system 1 starts bar 46
+# JUDGE bar 46 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+46 RH1: r:e G3+C4+D4:e G3+C4+D4:e G3+C4+D4:e r:e G3+Bn3+D4:e G3+Bn3+D4:e G3+Bn3+D4:e
+46 LH1: G2:q r:q G1+G2:q r:q
+# JUDGE bar 47 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 47 RH1: grace-note slurs (nested [ ])
+47 RH1: G3+C4+E4:e G5:e* G5:e* G5:e* G5:e* G5:e* g:A5:e[ G5:e]( F5:e)
+# JUDGE bar 47 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+47 LH1: C2+C3:q clef:G r:e C5+E5:e Bn4+D5:q A4+C5:q
+# JUDGE bar 48 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 48 RH1: grace-note slurs (nested [ ])
+48 RH1: g:G5:e[ F5:e]( E5:e) g:F5:e[ E5:e]( D5:e) g:E5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bn4:e)
+# JUDGE bar 48 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+48 LH1: G4+Bn4:q F4+A4:q E4+G4:q G3+D4+F4:q
+# JUDGE bar 49 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 49 RH1: grace-note slurs (nested [ ])
+49 RH1: C5:e* G5:e* G5:e* G5:e* G5:e* G5:e* g:A5:e[ G5:e]( F5:e)
+# JUDGE bar 49 LH: X - half chord D4 (below E4 line) + B3 under the C4 ledger with natural sign; no G4
+# MARKS bar 49 LH1: slur to bar 51
+49 LH1: C4+E4:q r:q Bn3+D4:h(
+# JUDGE bar 50 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 50 RH1: grace-note slurs (nested [ ])
+50 RH1: g:G5:e[ F5:e]( E5:e) g:F5:e[ E5:e]( D5:e) g:E5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bn4:e)
+50 LH1: C4+E4:q D4+F4:q E4+G4:q G3+D4+F4:q
+# page 076 system 2 starts bar 51
+# JUDGE bar 51 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 51 RH1: grace-note slurs (nested [ ])
+51 RH1: C5:e* G5:e* G5:e* G5:e* G5:e* G5:e* g:A5:e[ G5:e]( F5:e)
+# JUDGE bar 51 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+# MARKS bar 51 LH1: slur end from bar 49
+51 LH1: C4+E4:q) r:q G4:h~
+# JUDGE bar 51 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+51 LH2: s:h Bn3:h(
+# JUDGE bar 52 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 52 RH1: grace-note slurs (nested [ ])
+52 RH1: g:G5:e[ F5:e]( E5:e) g:F5:e[ E5:e]( D5:e) g:E5:e[ D5:e]( C5:e) g:D5:e[ C5:e]( Bn4:e)
+# JUDGE bar 52 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+52 LH1: G4:q G4:h G3+D4+F4:q
+# JUDGE bar 52 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+52 LH2: C4:q D4:q E4:q) s:q
+53 RH1: C5:q* C4+C5:q( E4+E5:q G4+G5:q)
+53 LH1: C4+E4:q clef:F C3:q( E3:q G3:q)
+54 RH1: r:q A4+A5:q r:q C5+C6:q
+54 LH1: A2+A3:q r:q C3+C4:q r:q
+55 RH1: r:q A4+A5:q r:q F4+F5:q
+55 LH1: A2+A3:q r:q F2+F3:q r:q
+# JUDGE bar 56 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 56 RH1: grace-note slurs (nested [ ])
+56 RH1: r:e C5:e* C5:e* C5:e* C5:e* C5:e* g:Db5:e[ C5:e]( Bb4:e)
+56 LH1: C2+C3:q clef:G r:e F4+Ab4:e Eb4+G4:q Db4+F4:q
+# page 076 system 3 starts bar 57
+# JUDGE bar 57 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 57 RH1: grace-note slurs (nested [ ])
+57 RH1: g:C5:e[ Bb4:e]( Ab4:e) g:Bb4:e[ Ab4:e]( G4:e) g:Ab4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+57 LH1: C4+Eb4:q Bb3+Db4:q Ab3+C4:q clef:F C3+G3+Bb3:q
+# JUDGE bar 58 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 58 RH1: grace-note slurs (nested [ ])
+58 RH1: F4:e* C5:e* C5:e* C5:e* C5:e* C5:e* g:Db5:e[ C5:e]( Bb4:e)
+# JUDGE bar 58 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+58 LH1: F3+Ab3:q r:q C4:h~
+# JUDGE bar 58 LH: X - upper half tied to the next bar's first quarter (tie printed), lower Fag. half stem-down starting the slur; Y merges them into one untied chord
+58 LH2: s:h E3:h(
+# JUDGE bar 59 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 59 RH1: grace-note slurs (nested [ ])
+59 RH1: g:C5:e[ Bb4:e]( Ab4:e) g:Bb4:e[ Ab4:e]( G4:e) g:Ab4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+# JUDGE bar 59 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+59 LH1: C4:q C4:h C3+Bb3:q
+# JUDGE bar 59 LH: X - same notes in both; X keeps the incoming tie and slur end (beat-4 chord stem-down, voice placement cosmetic)
+59 LH2: F3:q G3:q Ab3:q) s:q
+# JUDGE bar 60 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 60 RH1: grace-note slurs (nested [ ])
+60 RH1: F4:e* C5:e* C5:e* C5:e* C5:e* C5:e* g:D5:e[ C5:e]( Bb4:e)
+# JUDGE bar 60 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+60 LH1: F3+An3:q r:q E3+G3:h(
+# JUDGE bar 61 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 61 RH1: grace-note slurs (nested [ ])
+61 RH1: g:C5:e[ Bb4:e]( A4:e) g:Bb4:e[ A4:e]( G4:e) g:A4:e[ G4:e]( F4:e) g:G4:e[ F4:e]( E4:e)
+# JUDGE bar 61 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 61 LH1: slur from bar 60 moved on to bar 62 (as printed)
+61 LH1: F3+A3:q G3+Bb3:q A3+C4:q C3+G3+Bb3:q
+# page 076 system 4 starts bar 62
+# JUDGE bar 62 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+62 RH1: F4:e( C4:e F4:e C4:e A3:e C4:e F4:e A4:e)
+# JUDGE bar 62 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+# MARKS bar 62 LH1: slur end from bar 60
+62 LH1: F3+A3:q) F2:q( A2:q C3:q)
+# JUDGE bar 63 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+63 RH1: A4:e( F4:e C4:e F4:e A3:e C4:e F4:e A4:e)
+# JUDGE bar 63 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+63 LH1: r:q F2:q( A2:q C3:q)
+# JUDGE bar 64 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+64 RH1: Bb4:e( G4:e E4:e G4:e C4:e E4:e G4:e Bb4:e)
+# JUDGE bar 64 LH: OWN - last quarter sits in the space between D3 and B2 lines = C3 (Y); slur printed (X)
+64 LH1: r:q E2:q( G2:q C3:q)
+# bars 65-66: RH1 = upper held note (G. Orch.), RH2 = eighth figure
+# JUDGE bar 65 RH: X - whole note in the top space = E5 (not D5), slurred to F5 in bar 66
+65 RH1: E5:w(
+# JUDGE bar 65 RH: X - f printed under the eighth figure; slur printed
+65 RH2: dyn:f Bb4:e( G4:e E4:e G4:e E4:e G4:e Bb4:e G4:e)
+# JUDGE bar 65 LH: OWN - last quarter in the space between D3 and B2 lines = C3 (Y); f and slur as X
+65 LH1: dyn:f r:q C2:q( G2:q C3:q)
+# JUDGE bar 66 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+66 RH1: F5:q) r:q r:h
+# JUDGE bar 66 RH: X - p printed between the staves; slur printed
+66 RH2: dyn:p A4:e( F4:e C4:e F4:e A3:e C4:e F4:e A4:e)
+# JUDGE bar 66 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+66 LH1: dyn:p r:q F2:q( A2:q C3:q)
+# JUDGE bar 67 RH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+67 RH1: A4:e( F4:e D4:e F4:e A3:e D4:e F4:e A4:e)
+# JUDGE bar 67 LH: X - as printed: grace notes are small slashed eighths (one flag), slurs/staccato as printed (Y omits them)
+67 LH1: r:q D2:q( F2:q A2:q)
+# ---- end of b22/PM_S22a.txt (bars 1-67)
+# S22b piano: Nr. 8 Finale, Edition Peters pp. 77-79
+# bar 68: alla breve, one flat (F major)
+# page 077 system 1 starts bar 68
+68 RH1: G4:e( F4:e D4:e F4:e G3:e D4:e F4:e G4:e)
+68 LH1: r:q Bb1:q( D2:q G2:q)
+69 RH1: dyn:f C5:w
+69 RH2: G4:e( E4:e C4:e E4:e Bb3:e E4:e C4:e E4:e)
+69 LH1: dyn:f r:q C2:q( E2:q G2:q)
+70 RH1: A3+F4:h r:q r:e. F4+A4+F5:s
+70 LH1: F2:h r:q r:e. F2+F3:s
+71 RH1: F4+A4+F5:q r:e. A4+F5+A5:s A4+F5+A5:q r:e. G4+D5+G5:s
+71 LH1: F2+F3:q r:e. D2+D3:s D2+D3:q r:e. B1+B2:s
+# bar 72: "Recit."
+72 RH1: G4+D5+G5:q r:q r:h
+72 LH1: B1+B2:w~
+# page 077 system 2 starts bar 73
+73 RH1: dyn:p G3+D4+F4:w~
+# JUDGE bar 73 LH: X - one p printed between the staves (just above the LH) applies to both hands
+73 LH1: dyn:p B1+B2:w~
+74 RH1: G3+D4+F4:q r:q r:q G3+C4+E4:q
+74 LH1: B1+B2:q r:q r:q C2+C3:q
+75 RH1: C4+G4:w
+75 LH1: E2+E3:w
+# bar 76: "Adagio." / "a tempo" printed above; upper chords cued Fl. Ob.
+# JUDGE bar 76 RH: X - last chord Eb5+F#5 and a head on the 2nd ledger line (C6); the A5 ledger line carries no head
+# MARKS bar 76 RH1: dyn:p (printed between the staves) before beat 3 chord; tie C6 into bar 10
+76 RH1: C4+A4:q r:q dyn:p D5+F5+B5:q( Eb5+F#5+C6~:q
+76 LH1: F2+F3:q r:q dyn:p G2+G3:e* B3+D4+F4:e* A2+A3:e* C4+Eb4+F#4:e*
+# page 077 system 3 starts bar 77
+# bar 77: fermatas over the final quarter rests; double bar at the end of the bar
+77 RH1: E5+G5+C6:q D5+F5+B5:q C5+E5+C6:q) r:q!
+77 LH1: G2+G3:e* C4+E4+G4:e* G2+G3:e* B3+D4+G4:e* C3+C4:q* r:q!
+# bar 78: Presto, alla breve, C major (key signature cancelled)
+78 RH1: dyn:f C4+E4+G4+C5:h r:h
+78 LH1: dyn:f C2+C3:h r:h
+79 RH1: r:w
+79 LH1: r:w
+80 RH1: E4+G4+C5+E5:h r:h
+80 LH1: C2+C3:h r:h
+81 RH1: r:w
+81 LH1: r:w
+# JUDGE bar 82 RH: Y - one f printed between the staves at beat 1 applies to both hands (as bars 6 and 11)
+82 RH1: dyn:f G5:e G4:e G5:e G4:e F5+G5:e G4:e E5+G5:e G4:e
+82 LH1: dyn:f r:q E3+E4:q* D3+D4:q* C3+C4:q*
+83 RH1: D5+G5:e G4:e C5+G5:e G4:e F5+G5:e G4:e E5+G5:e G4:e
+83 LH1: B2+B3:q* C3+C4:q* B2+B3:q* C3+C4:q*
+84 RH1: D5+G5:e G4:e G5:e G4:e F5+G5:e G4:e E5+G5:e G4:e
+84 LH1: G2+G3:q* E3+E4:q* D3+D4:q* C3+C4:q*
+# page 077 system 4 starts bar 85
+85 RH1: D5+G5:e G4:e C5+G5:e G4:e F5+G5:e G4:e E5+G5:e G4:e
+# JUDGE bar 85 LH: Y - lower head on the B2 line, upper above the top line (B3), as bar 16; bar 19 G2/G3 visibly lower
+85 LH1: B2+B3:q* C3+C4:q* B2+B3:q* C3+C4:q*
+86 RH1: D5+G5:e G4:e G5:e G4:e F5+G5:e G4:e E5+G5:e G4:e
+86 LH1: G2+G3:q* E3+E4:q* D3+D4:q* C3+C4:q*
+87 RH1: D5+G5:e G4:e C5+G5:e G4:e F5+G5:e G4:e E5+G5:e G4:e
+# JUDGE bar 87 LH: Y - as bar 18
+87 LH1: B2+B3:q* C3+C4:q* B2+B3:q* C3+C4:q*
+88 RH1: B4+D5+G5:q* E5+G5+C6:q* D5+G5+B5:q* E5+G5+C6:q*
+88 LH1: G2+G3:q* C3+C4:q* G2+G3:q* C3+C4:q*
+89 RH1: D5+G5+B5:q* E5+G5+C6:q* D5+G5+B5:q* E5+G5+C6:q*
+89 LH1: G2+G3:q* C3+C4:q* G2+G3:q* C3+C4:q*
+90 RH1: D5+G5+B5:h D4:e D5:e D4:e D5:e
+90 LH1: G2+G3:h r:h
+# page 078 system 1 starts bar 91
+91 RH1: B3:e B4:e B3:e B4:e G3:e G4:e G3:e G4:e
+91 LH1: r:w
+92 RH1: D4+F4:e B3:e D4+F4:e B3:e D4+F4:e B3:e D4+F4:e B3:e
+92 LH1: G2+G3:h G2+G3:q G2+G3:q
+93 RH1: B4+D5+F5:e G4:e B4+D5+F5:e G4:e B4+D5+F5:e G4:e B4+D5+F5:e G4:e
+93 LH1: G2+G3:q G2+G3:q G2+G3:q G2+G3:q
+94 RH1: G4+C5+E5:h G4:q G4:q
+94 LH1: C3+C4:h G2:e G3:e G2:e G3:e
+95 RH1: E4:q E4:q C4:q C4:q
+95 LH1: E2:e E3:e E2:e E3:e C2:e C3:e C2:e C3:e
+96 RH1: C4+E4+G4:e Bb3:e C4+E4+G4:e Bb3:e C4+E4+G4:e Bb3:e C4+E4+G4:e Bb3:e
+96 LH1: Bb1+Bb2:h. Bb1+Bb2:q
+# page 078 system 2 starts bar 97
+97 RH1: C5+E5:e G4:e C5+E5:e G4:e C5+E5:e G4:e C5+E5:e G4:e
+97 LH1: Bb2+Bb3:h. Bb2+Bb3:q
+98 RH1: C5+F5:e( A5:e) G5:e* E5:e* C5+F5:e( A5:e) G5:e* E5:e*
+98 LH1: A2+A3:q Bb2+Bb3:q A2+A3:q Bb2+Bb3:q
+99 RH1: C5+F5:e( A5:e) G5:e* E5:e* C5+F5:e( A5:e) G5:e* E5:e*
+99 LH1: A2+A3:q Bb2+Bb3:q A2+A3:q Bb2+Bb3:q
+100 RH1: C5+F5:e G5:e A5:e G5:e F5:e E5:e D5:e C5:e
+100 LH1: A2+A3:h r:h
+101 RH1: B4:e C5:e D5:e E5:e F5:e G5:e A5:e B5:e
+101 LH1: G2+G3:h. G2+G3:q
+102 RH1: C6:q E5+C6:q r:q E5+A5+C6:q
+102 LH1: C3+C4:q r:q A2+A3:q r:q
+# page 078 system 3 starts bar 103
+103 RH1: r:q D5+A5+C6:q r:q D5+G5+B5:q
+103 LH1: F2+F3:q r:q G2+G3:q r:q
+104 RH1: C5:e D5:e E5:e F5:e G5:e A5:e B5:e C6:e
+104 LH1: C2+C3:h r:h
+105 RH1: D5+F#5+A5+D6:q A4:e B4:e C5:e D5:e E5:e F#5:e
+105 LH1: C3+C4:h. C3+C4:q
+106 RH1: D5+G5:e( B5:e) A5:e* F#5:e* D5+G5:e( B5:e) A5:e* F#5:e*
+106 LH1: B2+B3:q C3+C4:q B2+B3:q C3+C4:q
+107 RH1: D5+G5:e( B5:e) A5:e* F#5:e* D5+G5:e( B5:e) A5:e* F#5:e*
+107 LH1: B2+B3:q C3+C4:q B2+B3:q C3+C4:q
+108 RH1: D5+G5:e D6:e D5+G5:e D6:e E5:e C6:e E5:e C6:e
+108 LH1: B2+B3:h C3+C4:q A2+A3:q
+# page 078 system 4 starts bar 109
+109 RH1: D5:e C6:e D5:e C6:e D5:e B5:e D5:e B5:e
+109 LH1: F2+F3:h G2+G3:h
+110 RH1: C5:e D5:e E5:e F5:e G5:e A5:e B5:e C6:e
+110 LH1: C2+C3:h r:h
+# JUDGE bar 111 RH: OWN (both wrong) - first chord has only two heads, F#5 (sharp, top line) and D6; the A5 and C6 ledger lines between are empty and there is no D5 (unlike bar 38)
+111 RH1: F#5+D6:q A4:e B4:e C5:e D5:e E5:e F#5:e
+111 LH1: C3+C4:h. C3+C4:q
+112 RH1: D5+G5:e( B5:e) A5:e* F#5:e* D5+G5:e( B5:e) A5:e* F#5:e*
+112 LH1: B2+B3:q C3+C4:q B2+B3:q C3+C4:q
+113 RH1: D5+G5:e( B5:e) A5:e* F#5:e* D5+G5:e( B5:e) A5:e* F#5:e*
+113 LH1: B2+B3:q C3+C4:q B2+B3:q C3+C4:q
+114 RH1: D5+G5:e D6:e D5+G5:e D6:e E5:e C6:e E5:e C6:e
+114 LH1: B2+B3:h C3+C4:q A2+A3:q
+# page 079 system 1 starts bar 115
+115 RH1: D5:e C6:e D5:e C6:e D5:e B5:e D5:e B5:e
+115 LH1: F2+F3:h G2+G3:h
+116 RH1: C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e
+116 LH1: C2+C3:q E2+E3:q G2+G3:q C3+C4:q
+# bar 117: sf under the LH
+117 RH1: C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e
+117 LH1: dyn:sf E3+E4:w~
+118 RH1: C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e
+118 LH1: E3+E4:h C3+C4:q A2+A3:q
+119 RH1: D5+A5:e C6:e D5+A5:e C6:e D5+G5:e B5:e D5+G5:e B5:e
+119 LH1: F2+F3:h G2+G3:h
+120 RH1: C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e
+120 LH1: C2+C3:q E2+E3:q G2+G3:q C3+C4:q
+# page 079 system 2 starts bar 121
+# bar 121: sf under the LH
+121 RH1: C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e
+# JUDGE bar 121 LH: X - sf printed under the LH as in bar 50
+121 LH1: dyn:sf E3+E4:w~
+122 RH1: C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e C5+E5:e C6:e
+122 LH1: E3+E4:h C3+C4:q A2+A3:q
+123 RH1: D5+A5:e C6:e D5+A5:e C6:e D5+G5:e B5:e D5+G5:e B5:e
+123 LH1: F2+F3:h G2+G3:h
+124 RH1: E5+C6:h r:q C5:q
+124 LH1: C3:e D3:e E3:e F3:e G3:e A3:e B3:e C4:e
+# JUDGE bar 125 RH: Y - the dot near C5 is a speck beside the stem, not a staccato at the notehead (bar 60 same figure, no dot)
+125 RH1: D5:e C5:e D5:e E5:e F5:e G5:e A5:e B5:e
+125 LH1: G3:h r:q G2:q
+126 RH1: E5+C6:h r:q C5:q
+126 LH1: C3:e D3:e E3:e F3:e G3:e A3:e B3:e C4:e
+# page 079 system 3 starts bar 127
+127 RH1: D5:e C5:e D5:e E5:e F5:e G5:e A5:e B5:e
+127 LH1: G3:h r:q G2:q
+128 RH1: C5+C6:q C5+C6:h C5+C6:q
+128 LH1: C3:q C4:q C4:q C4:q
+129 RH1: A4:e A5:e A4:e A5:e A4:e A5:e A4:e A5:e
+# JUDGE bar 129 LH: Y - first head in the bottom space (A2), octave below the A3 quarters
+129 LH1: A2:q A3:q A3:q A3:q
+130 RH1: D4:e D5:e D4:e D5:e D4:e D5:e D4:e D5:e
+130 LH1: D2:q D3:q D3:q D3:q
+131 RH1: G4:e G5:e G4:e G5:e G4:e G5:e G4:e G5:e
+131 LH1: G2:q G3:q G3:q G3:q
+# JUDGE bar 132 RH: Y - second note in the E5 space (D5 skipped); the run ends on D6 above the C6 ledger
+132 RH1: C5:e E5:e F5:e G5:e A5:e B5:e C6:e D6:e
+132 LH1: C3:q D3:e E3:e F3:e G3:e A3:e B3:e
+# page 079 system 4 starts bar 133 (piano only)
+# bars 67-68, 72-73: the D#6 sharp is printed on beat 2 only; the 4th upper note (no sign) is read as D#6 (accidental carried through the bar)
+133 RH1: G5+E6:h. D#6:e G5:e
+133 LH1: C3+C4:h. B2+B3:q
+134 RH1: E6:e G5:e D#6:e G5:e E6:e G5:e D#6:e G5:e
+134 LH1: C3+C4:q B2+B3:q C3+C4:q B2+B3:q
+135 RH1: E6:e G5:e D#6:e G5:e E6:e G5:e D#6:e G5:e
+135 LH1: C3+C4:q B2+B3:q C3+C4:q B2+B3:q
+# bar 136: fingering 5 2 4 1 ignored
+136 RH1: E6:e* G5:e C6:e E5:e D6:e F5:e B5:e D5:e
+136 LH1: C3+C4:h G2+G3:h
+137 RH1: C6:e E5:e F5:e G5:e A5:e B5:e C6:e D6:e
+137 LH1: C3:q D3:e E3:e F3:e G3:e A3:e B3:e
+138 RH1: G5+E6:h. D#6:e G5:e
+138 LH1: C3+C4:h. B2+B3:q
+139 RH1: E6:e G5:e D#6:e G5:e E6:e G5:e D#6:e G5:e
+139 LH1: C3+C4:q B2+B3:q C3+C4:q B2+B3:q
+# page 079 system 5 starts bar 140
+# JUDGE bar 140 RH: X - sharp printed on the 2nd upper note only; the 4th upper D6 carries it (as bars 67-68, 72)
+140 RH1: E6:e G5:e D#6:e G5:e E6:e G5:e D#6:e G5:e
+140 LH1: C3+C4:q B2+B3:q C3+C4:q B2+B3:q
+# JUDGE bar 141 RH: Y - no staccato dot over the first E6 here (unlike bar 69)
+141 RH1: E6:e G5:e C6:e E5:e D6:e F5:e B5:e D5:e
+141 LH1: C3+C4:h G2+G3:h
+# bar 142: "Bläser" cue (ignored)
+142 RH1: E5+C6:q C5+E5+G5:e C5+E5+G5:e C5+E5+G5:q C5+E5+G5:q
+# JUDGE bar 142 LH: Y - only two heads, C4 (ledger) and C3; no G3
+142 LH1: C3+C4:h r:h
+# JUDGE bar 143 RH: Y - 2nd/4th chords E5 (space), G5 (space above top line), C6 (2nd ledger); bars 76-79 from Y (X lost two bars of p.79 sys 5)
+143 RH1: C5+E5+G5:q E5+G5+C6:q C5+E5+G5:q E5+G5+C6:q
+# JUDGE bar 143 LH: Y - C3+C4 half (no G3), then C4 (1st ledger) + E4 (2nd ledger)
+143 LH1: C3+C4:h C4+E4:h
+# JUDGE bar 144 RH: Y - chord quarter, two beamed eighths, two quarters, lower voice G4
+144 RH1: C5+E5+G5:q G4+C5+E5:e G4+C5+E5:e G4+C5+E5:q G4+C5+E5:q
+# JUDGE bar 144 LH: Y
+144 LH1: C3+G3+C4:h r:h
+# JUDGE bar 145 RH: Y
+145 RH1: G4+C5+E5:q C5+E5+G5:q G4+C5+E5:q C5+E5+G5:q
+# JUDGE bar 145 LH: Y - second chord C4+E4 (two ledger heads), as bar 76
+145 LH1: C3+G3+C4:h C4+E4:h
+# bar 146: final double bar, "Ende des ersten Acts"
+# JUDGE bar 146 RH: Y
+146 RH1: C5+E5+C6:h r:h
+# JUDGE bar 146 LH: Y
+146 LH1: C3+G3+C4:h r:h
+# ---- end of b22/PM_S22b.txt (bars 68-146)

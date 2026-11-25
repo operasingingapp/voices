@@ -1,0 +1,226 @@
+{
+ "editionId": "mozart-nun-stolzer-jungling",
+ "editionVersion": "1.0.0-peters",
+ "title": "Nun stolzer Jüngling, nur hieher!",
+ "subtitle": "Monostatos, Pamina, Tamino and Sarastro, with the chorus: from the Finale of Die Zauberflöte, Act 1 (No. 8)",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "monostatos",
+   "name": "Monostatos",
+   "voiceType": "Tenor",
+   "partKey": "monostatos"
+  },
+  {
+   "id": "pamina",
+   "name": "Pamina",
+   "voiceType": "Soprano",
+   "partKey": "pamina"
+  },
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  },
+  {
+   "id": "sarastro",
+   "name": "Sarastro",
+   "voiceType": "Bass",
+   "partKey": "sarastro"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P9",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "monostatos",
+   "label": "Monostatos (Tenor)",
+   "shortLabel": "Monostatos",
+   "kind": "voice",
+   "roleId": "monostatos",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "pamina",
+   "label": "Pamina (Soprano)",
+   "shortLabel": "Pamina",
+   "kind": "voice",
+   "roleId": "pamina",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "sarastro",
+   "label": "Sarastro (Bass)",
+   "shortLabel": "Sarastro",
+   "kind": "voice",
+   "roleId": "sarastro",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos",
+   "shortLabel": "Chorus S.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-altos",
+   "label": "Chorus altos",
+   "shortLabel": "Chorus A.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Nun stolzer Jüngling, nur hieher! · Er ist's! / Sie ist's! · Es schling' mein Arm sich um ihn her",
+   "start": "1",
+   "end": "21"
+  },
+  {
+   "id": "b",
+   "label": "Was soll das heissen? (the chorus) · Welch eine Dreistigkeit! · Dein Sclave liegt zu deinen Füssen · Du kennst mich",
+   "start": "21",
+   "end": "44"
+  },
+  {
+   "id": "c",
+   "label": "verdient, dass man ihr Lorbeer streut! · nur siebenundsiebenzig Sohlenstreich'! · Es lebe Sarastro (the chorus) · Führt diese beiden Fremdlinge (recitative)",
+   "start": "45",
+   "end": "77"
+  },
+  {
+   "id": "d",
+   "label": "Wenn Tugend und Gerechtigkeit (the closing chorus, Presto, to the end of Act 1)",
+   "start": "78",
+   "end": "146"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 8, Finale (from the Allegro “Nun stolzer Jüngling, nur hieher!” to the end of Act 1)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 74–79 (146 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. The section begins after the double bar on p. 74 (Allegro, alla breve, as Monostatos brings in Tamino) and ends with the act (“Ende des ersten Acts”, p. 79). Pamina and Tamino share one staff where they sing together (bar 21, “Beide”). The chorus is printed on one staff in unison at “Was soll das heissen?” (bars 21–22: the tenors and basses written an octave below the sopranos and altos) and on two staves (sopranos and altos, tenors and basses) from bar 62; it is written out as four parts and is heard with the piano, with no role. Where the print gives the words of the closing chorus under only one staff, the voices that move with it are given the same words. Bars 72–77 are Sarastro's recitative (“Recit.”, with “Adagio.” and “a tempo” in bar 76 and a fermata in bar 77); the closing chorus is Presto, alla breve, in C major from bar 78; bars 133–146 are the piano alone. Playback tempo, from five complete recordings whose track(s) hold exactly this section (Christie 1995 3:12, Nézet-Séguin 2018 2:04 + 1:10, Norrington with the London Classical Players 1:52 + 1:28, Haitink 1981 3:22, Klemperer 1964 3:33; median 3:20): Allegro ♩ = 168 (half note = 84), the recitative ♩ = 80 with the Adagio at ♩ = 40, Presto ♩ = 208 (half note = 104); the split between the Allegro and the Presto follows the two sets that give the closing chorus its own track."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}
