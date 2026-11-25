@@ -4194,7 +4194,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-der-welcher-wandelt"
      },
      {
       "title": "Tamino mein! O welch' ein Glück!",
@@ -4265,7 +4266,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde"
+      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde",
+      "editionId": "mozart-der-welcher-wandelt"
      },
      {
       "title": "Tamino mein! O welch' ein Glück!",
@@ -4747,7 +4749,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde"
+      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde",
+      "editionId": "mozart-der-welcher-wandelt"
      },
      {
       "title": "Tamino mein! O welch' ein Glück!",
@@ -4766,7 +4769,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Der, welcher wandelt diese Strasse voll Beschwerde",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde"
+      "id": "Act 2: Der, welcher wandelt diese Strasse voll Beschwerde",
+      "editionId": "mozart-der-welcher-wandelt"
      },
      {
       "title": "Tamino mein! O welch' ein Glück!",

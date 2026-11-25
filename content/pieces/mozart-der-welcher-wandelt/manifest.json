@@ -1,0 +1,168 @@
+{
+ "editionId": "mozart-der-welcher-wandelt",
+ "editionVersion": "1.0.0-peters",
+ "title": "Der, welcher wandelt diese Strasse voll Beschwerden",
+ "subtitle": "The two Armed Men's chorale, Tamino and Pamina: from the finale of Die Zauberflöte, Act 2",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "armored1",
+   "name": "First Armed Man",
+   "voiceType": "Tenor",
+   "partKey": "armored1"
+  },
+  {
+   "id": "armored2",
+   "name": "Second Armed Man",
+   "voiceType": "Bass",
+   "partKey": "armored2"
+  },
+  {
+   "id": "tamino",
+   "name": "Tamino",
+   "voiceType": "Tenor",
+   "partKey": "tamino"
+  },
+  {
+   "id": "pamina",
+   "name": "Pamina",
+   "voiceType": "Soprano",
+   "partKey": "pamina"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "armored1",
+   "label": "First Armed Man (Tenor)",
+   "shortLabel": "First Armed Man",
+   "kind": "voice",
+   "roleId": "armored1",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "armored2",
+   "label": "Second Armed Man (Bass)",
+   "shortLabel": "Second Armed Man",
+   "kind": "voice",
+   "roleId": "armored2",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "tamino",
+   "label": "Tamino (Tenor)",
+   "shortLabel": "Tamino",
+   "kind": "voice",
+   "roleId": "tamino",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "pamina",
+   "label": "Pamina (Soprano)",
+   "shortLabel": "Pamina",
+   "kind": "voice",
+   "roleId": "pamina",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Der, welcher wandelt: the Armed Men read the inscription",
+   "start": "1",
+   "end": "49"
+  },
+  {
+   "id": "b",
+   "label": "Mich schreckt kein Tod · Tamino, halt!",
+   "start": "50",
+   "end": "59"
+  },
+  {
+   "id": "c",
+   "label": "Was hör' ich? Paminens Stimme? (Allegretto, to the end)",
+   "start": "60",
+   "end": "88"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (the Armed Men's scene, from “Der, welcher wandelt diese Strasse voll Beschwerden” to Pamina's entrance “Tamino mein!”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 129–133 (88 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Each Armed Man has his own line; the print puts the two on one bass-clef staff (the chorale in octaves), and Tamino on that staff in treble clef when he enters. The last bar has three beats, as printed (its fourth beat is Pamina's upbeat in the next number). Playback tempo from complete recordings: the median length of this scene, 5:11, from Böhm 1964 (5:24), Klemperer 1964 (5:14), Solti 1969 (5:11), Haitink 1981 (5:08) and Toscanini 1937 (4:25); no recording splits it at the Allegretto, so the Allegretto's beat is set at twice the Adagio's (the Adagio's quarter becomes the Allegretto's half note), with one extra beat for each fermata."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

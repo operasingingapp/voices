@@ -8093,6 +8093,37 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-der-welcher-wandelt": {
+    portrait: "zauberfloete:tamino",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "C minor (the chorale), then A-flat major (the Allegretto, which sets out from D-flat); three flats throughout",
+      time: "Alla breve (¢) throughout (Adagio, then Allegretto from bar 60); the last bar has three beats",
+      tempo: "Adagio, played at ♩ = 57, then Allegretto at ♩ = 114 (half note = 57) from bar 60, about 5 minutes, the median of five complete recordings whose tracks hold just this scene (Böhm 1964, Klemperer 1964, Solti 1969, Haitink 1981, Toscanini 1937); no recording splits it at the Allegretto, so the Allegretto's beat is set at twice the Adagio's, the Adagio's quarter becoming the Allegretto's half note",
+    },
+    notePlaceholder: "The chorale grave and even over the moving bass; Tamino firm; then the Allegretto bright and quick with joy",
+    about: (
+      <>
+        <p>
+          Two men in black armour lead Tamino to the gates of fire and water and read him the inscription written on a pyramid, to an old Lutheran chorale tune sung in octaves over a solemn fugal accompaniment: whoever walks this road full of hardship is made pure by fire, water, air and earth; if he can overcome the terror of death, he will rise from the earth to heaven, and, enlightened, he will be able to give himself wholly to the mysteries of Isis. Tamino answers that no death can frighten him from acting as a man and walking on in the path of virtue: let them open the gates of terror, he gladly dares the bold course. Then Pamina's voice is heard from within, calling him to stop: she must see him. The music turns to a quick Allegretto as the Armed Men tell him that she may go with him now, and no fate will part them even if death awaits; they may speak together. All three rejoice: what happiness to see each other again and go hand in hand into the temple; a woman who fears neither night nor death is worthy, and will be initiated. The doors open for Pamina.
+        </p>
+        <p>
+          Score: the Armed Men's scene of No. 21, the Act 2 Finale (vocal score pages 129–133, 88 bars), from the Edition Peters vocal
+          score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed
+          pages by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against
+          the print again. Only the German words are kept, as the print spells them. Each singer has their own line; the print gives
+          the chorale to the two men in octaves on one bass-clef staff, and Tamino sings on that staff in the treble clef when he enters.
+          The print writes “Der, welcher wandelt” (the libretto has “wandert”), “Beschwerde” and “Erde”, “von der Erde himmel an”,
+          “fort zu wandeln” and the Armed Men's “Dir ist erlaubt”. The last bar has three beats, as printed: its fourth is Pamina's
+          upbeat to “Tamino mein!”, which begins the next number.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

@@ -2457,6 +2457,52 @@
     }
   },
   {
+    "editionId": "mozart-der-welcher-wandelt",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-der-welcher-wandelt@1.0.0-peters#e2e31ca076",
+    "title": "Der, welcher wandelt diese Strasse voll Beschwerden",
+    "subtitle": "The two Armed Men's chorale, Tamino and Pamina: from the finale of Die Zauberflöte, Act 2",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "armored1",
+        "name": "First Armed Man",
+        "voiceType": "Tenor",
+        "partKey": "armored1"
+      },
+      {
+        "id": "armored2",
+        "name": "Second Armed Man",
+        "voiceType": "Bass",
+        "partKey": "armored2"
+      },
+      {
+        "id": "tamino",
+        "name": "Tamino",
+        "voiceType": "Tenor",
+        "partKey": "tamino"
+      },
+      {
+        "id": "pamina",
+        "name": "Pamina",
+        "voiceType": "Soprano",
+        "partKey": "pamina"
+      }
+    ],
+    "measures": 88,
+    "durationSec": 309,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 50,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-di-molte-faci-il-lume",
     "editionVersion": "1.0.0-schirmer",
     "scoreVersionId": "mozart-di-molte-faci-il-lume@1.0.0-schirmer#3b7ee52c13",
