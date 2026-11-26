@@ -55,18 +55,18 @@
 # page 002 system 1 starts bar 17
 17 RH1: r:w
 17 LH1: dyn:pp E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* B1+B2:e* E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* B1+B2:e*
-18 RH1: word:con_espress. hp:< E5+E6:h( D#5+D#6:q hp:> C#5+C#6:q) hp:end
+18 RH1: hp:> word:con_espress. E5+E6:h( D#5+D#6:q C#5+C#6:q)
 18 LH1: E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* B1+B2:e* E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* B1+B2:e*
-19 RH1: hp:< B4+B5:q.( A4+A5:e hp:end F#4+F#5:q) r:q
+19 RH1: B4+B5:q.( A4+A5:e hp:end F#4+F#5:q) r:q
 19 LH1: D#2+D#3:e* A3+B3+D#4:e* A3+B3+D#4:e* B1+B2:e* D#2+D#3:e* A3+B3+D#4:e* A3+B3+D#4:e* B1+B2:e*
-20 RH1: hp:< E5+E6:h( D#5+D#6:q hp:> C#5+C#6:q) hp:end
+20 RH1: hp:> E5+E6:h( D#5+D#6:q C#5+C#6:q)
 20 LH1: E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* B1+B2:e* E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* B1+B2:e*
 # page 002 system 2 starts bar 21
-21 RH1: hp:> B4+B5:q.( A4+A5:e hp:end F#4+F#5:q) r:q
+21 RH1: B4+B5:q.( A4+A5:e hp:end F#4+F#5:q) r:q
 21 LH1: D#2+D#3:e* A3+B3+D#4:e* A3+B3+D#4:e* B1+B2:e* D#2+D#3:e* A3+B3+D#4:e* A3+B3+D#4:e* B1+B2:e*
-22 RH1: hp:< G#5+G#6:h( A5+A6:q. G#5+G#6:e) hp:end
+22 RH1: hp:> G#5+G#6:h( A5+A6:q. G#5+G#6:e)
 22 LH1: E2+E3:e* G#3+B3+E4:e* G#3+B3+E4:e* G#2+G#3:e* D#2+D#3:e* G#3+B#3+F#4:e* G#3+B#3+F#4:e* G#2+G#3:e*
-23 RH1: F#5+F#6:e.( E5+E6:s) F#5+F#6:e.( E5+E6:s) dyn:pp D#5+D#6:e.( C#5+C#6:s) D#5+D#6:e.( C#5+C#6:s)
+23 RH1: F#5+F#6:e.( E5+E6:s) F#5+F#6:e.( E5+E6:s) hp:end dyn:pp D#5+D#6:e.( C#5+C#6:s) D#5+D#6:e.( C#5+C#6:s)
 23 LH1: C#2+C#3:e* G#3+C#4+E4:e* G#3+C#4+E4:e* E2+E3:e* A#1+A#2:e* G3+C#4+E4:e* G3+C#4+E4:e* A#2+A#3:e*
 24 RH1: C#5+C#6:q( B4+B5:e) r:e hp:> G#5+G#6:q.( F#5+F#6:e) hp:end
 24 LH1: B1+B2:e* G#3+B3+E4:e* G#3+B3+E4:e* B2+B3:e* B1+B2:e* A3+B3+D#4:e* A3+B3+D#4:e* B2+B3:e*
@@ -96,7 +96,7 @@
 33 RH1: hp:> G#5:s* E5+E6:s* E5+E6:s* E5+E6:s* F#5+F#6:s E5+E6:s* D#5+D#6:s* C#5+C#6:s* B#4+B#5:s* B#4+B#5:s* B#4+B#5:s* B#4+B#5:s* B#4+B#5:s* B#4+B#5:s* B#4+B#5:s* B#4+B#5:s*
 33 LH1: dyn:f G#4:h( A4:q. G#4:e)
 33 LH2: E3:e B3+E4:e B3+E4:e B3+E4:e D#3:e D#4+F#4:e D#4+F#4:e D#4+F#4:e
-34 RH1: D#5+D#6:s* C#5+C#6:s* D#5+D#6:s* C#5+C#6:s* D#5+D#6:s* C#5+C#6:s* D#5+D#6:s* C#5+C#6:s* F#5+F#6:s* E5+E6:s* F#5+F#6:s* E5+E6:s* F#5+F#6:s* E5+E6:s* F#5+F#6:s* E5+E6:s*
+34 RH1: D#5+D#6:s* C#5+C#6:s* D#5+D#6:s* C#5+C#6:s* D#5+D#6:s* C#5+C#6:s* D#5+D#6:s* C#5+C#6:s* hp:end F#5+F#6:s* E5+E6:s* F#5+F#6:s* E5+E6:s* F#5+F#6:s* E5+E6:s* F#5+F#6:s* E5+E6:s*
 34 LH1: F#4:e.( E4:s) F#4:e.( E4:s) D#4:e.( C#4:s) D#4:e.( C#4:s)
 34 LH2: C#3:e G#3+C#4:e r:e G#3+C#4:e dyn:pp A#2:ea E3+G3:e r:e E3+G3:e
 # page 003 system 1 starts bar 35
@@ -138,3 +138,4 @@
 48 LH1: E3+G#3+B3:e* r:e r:q word:morendo E3+G#3+B3:e* r:e r:q
 49 RH1: E5+E6:h r:h!
 49 LH1: E3+G#3+B3:h r:h!
+

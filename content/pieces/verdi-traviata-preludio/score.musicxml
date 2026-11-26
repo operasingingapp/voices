@@ -2170,13 +2170,13 @@
     <measure number="18">
       <direction placement="below">
         <direction-type>
-          <words>con espress.</words>
+          <wedge type="diminuendo" number="1" />
         </direction-type>
         <staff>1</staff>
       </direction>
       <direction placement="below">
         <direction-type>
-          <wedge type="crescendo" number="1" />
+          <words>con espress.</words>
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -2227,12 +2227,6 @@
         <type>quarter</type>
         <staff>1</staff>
       </note>
-      <direction placement="below">
-        <direction-type>
-          <wedge type="diminuendo" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -2259,12 +2253,6 @@
         <type>quarter</type>
         <staff>1</staff>
       </note>
-      <direction placement="below">
-        <direction-type>
-          <wedge type="stop" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <backup>
         <duration>3360</duration>
       </backup>
@@ -2534,12 +2522,6 @@
       </note>
     </measure>
     <measure number="19">
-      <direction placement="below">
-        <direction-type>
-          <wedge type="crescendo" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -2901,7 +2883,7 @@
     <measure number="20">
       <direction placement="below">
         <direction-type>
-          <wedge type="crescendo" number="1" />
+          <wedge type="diminuendo" number="1" />
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -2952,12 +2934,6 @@
         <type>quarter</type>
         <staff>1</staff>
       </note>
-      <direction placement="below">
-        <direction-type>
-          <wedge type="diminuendo" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>C</step>
@@ -2984,12 +2960,6 @@
         <type>quarter</type>
         <staff>1</staff>
       </note>
-      <direction placement="below">
-        <direction-type>
-          <wedge type="stop" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <backup>
         <duration>3360</duration>
       </backup>
@@ -3259,12 +3229,6 @@
       </note>
     </measure>
     <measure number="21">
-      <direction placement="below">
-        <direction-type>
-          <wedge type="diminuendo" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <note>
         <pitch>
           <step>B</step>
@@ -3626,7 +3590,7 @@
     <measure number="22">
       <direction placement="below">
         <direction-type>
-          <wedge type="crescendo" number="1" />
+          <wedge type="diminuendo" number="1" />
         </direction-type>
         <staff>1</staff>
       </direction>
@@ -3705,12 +3669,6 @@
         <type>eighth</type>
         <staff>1</staff>
       </note>
-      <direction placement="below">
-        <direction-type>
-          <wedge type="stop" number="1" />
-        </direction-type>
-        <staff>1</staff>
-      </direction>
       <backup>
         <duration>3360</duration>
       </backup>
@@ -4101,6 +4059,12 @@
         <type>16th</type>
         <staff>1</staff>
       </note>
+      <direction placement="below">
+        <direction-type>
+          <wedge type="stop" number="1" />
+        </direction-type>
+        <staff>1</staff>
+      </direction>
       <direction placement="below">
         <direction-type>
           <dynamics>
@@ -8652,6 +8616,12 @@
           </dynamics>
         </direction-type>
         <staff>2</staff>
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <wedge type="stop" number="1" />
+        </direction-type>
+        <staff>1</staff>
       </direction>
       <note>
         <pitch>
