@@ -1,0 +1,128 @@
+{
+ "editionId": "mozart-pa-pa-pa-papagena",
+ "editionVersion": "1.0.0-peters",
+ "title": "Pa-pa-pa-pa-pa-pa-Papagena!",
+ "subtitle": "Papageno and Papagena: from the finale of Die Zauberflöte, Act 2",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "papageno",
+   "name": "Papageno",
+   "voiceType": "Baritone",
+   "partKey": "papageno"
+  },
+  {
+   "id": "papagena",
+   "name": "Papagena",
+   "voiceType": "Soprano",
+   "partKey": "papagena"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P3",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "papageno",
+   "label": "Papageno (Baritone)",
+   "shortLabel": "Papageno",
+   "kind": "voice",
+   "roleId": "papageno",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "papagena",
+   "label": "Papagena (Soprano)",
+   "shortLabel": "Papagena",
+   "kind": "voice",
+   "roleId": "papagena",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Pa-pa-pa-pa-pa-pa-Papagena!: the two find each other at last",
+   "start": "1",
+   "end": "36"
+  },
+  {
+   "id": "b",
+   "label": "Welche Freude wird das sein · first a little Papageno, then a little Papagena",
+   "start": "37",
+   "end": "72"
+  },
+  {
+   "id": "c",
+   "label": "Es ist das höchste der Gefühle (to the end)",
+   "start": "73",
+   "end": "129"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (the duet of Papageno and Papagena, “Pa-pa-pa-pa-pa-pa-Papagena!”, to the double bar before “Nur stille! stille!”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 149–154 (129 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in two chunks, each by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check by two proofreaders until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Allegro, alla breve, G major; ritard. from bar 53, a tempo from bar 60. Each singer has their own line; the print puts the two on one staff (with clef changes) for the opening exchanges on page 149. The last bar is printed short (five eighths, its time signature not printed), as the print has it, before the double bar and the next number. Playback tempo from complete recordings: the median length of this duet, 2:33, from Klemperer 1964 (2:49), Haitink 1981 (2:37), Christie 1995 (2:33), Solti 1969 (2:26) and Nézet-Séguin 2018 (2:17), as one Allegro tempo with the ritard. of bar 53 slowing over two bars and the two fermatas each held one extra half-note beat."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

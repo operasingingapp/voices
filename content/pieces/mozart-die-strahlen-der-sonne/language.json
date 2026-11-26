@@ -1,0 +1,123 @@
+{
+ "editionId": "mozart-die-strahlen-der-sonne",
+ "language": "de",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Emanuel Schikaneder (1791). Words as printed in the Edition Peters vocal score, which the app follows where it differs from the libretto. Sarastro sings \"zernichten\", the old form of \"vernichten\" (destroy), as in the libretto. The chorus (sopranos, altos, tenors, basses: \"Heil sei euch Geweihten!\", \"Dank sei dir, Osiris\", \"Es siegte die Stärke\") is heard with the piano and has no phrases here. IPA follows sung German stage diction: final -er, -ern as [ɐ]; the prefixes er-, ver-, zer- with [ɛr]; r elsewhere rolled or flipped; ch as [ç] after front vowels and [x] after back vowels; glottal stops [ʔ] before initial vowels; final b d g devoiced.",
+ "phrases": [
+  {
+   "id": "sa-01",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Die Strahlen der Sonne vertreiben die Nacht,",
+   "translation": "The rays of the sun drive away the night,",
+   "ipa": "diː ˈʃtraː.lən deːr ˈzɔ.nə fɛrˈtrae.bən diː ˈnaxt",
+   "words": [
+    [
+     "Die",
+     "the",
+     "diː"
+    ],
+    [
+     "Strahlen",
+     "rays",
+     "ˈʃtraː.lən"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Sonne",
+     "sun",
+     "ˈzɔ.nə"
+    ],
+    [
+     "vertreiben",
+     "drive away",
+     "fɛrˈtrae.bən"
+    ],
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "gloss": "the sun's rays"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "sa-02",
+   "role": "sarastro",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "zernichten der Heuchler erschlichene Macht.",
+   "translation": "and destroy the power the hypocrites won by stealth.",
+   "ipa": "tsɛrˈnɪç.tən deːr ˈhɔøç.lɐ ʔɛrˈʃlɪ.çə.nə ˈmaxt",
+   "words": [
+    [
+     "zernichten",
+     "destroy",
+     "tsɛrˈnɪç.tən"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Heuchler",
+     "hypocrites",
+     "ˈhɔøç.lɐ"
+    ],
+    [
+     "erschlichene",
+     "won by stealth",
+     "ʔɛrˈʃlɪ.çə.nə"
+    ],
+    [
+     "Macht.",
+     "power",
+     "ˈmaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "the hypocrites'"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "power won by stealth"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

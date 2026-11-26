@@ -1,0 +1,168 @@
+{
+ "editionId": "mozart-papagena-papagena-papagena",
+ "editionVersion": "1.0.0-peters",
+ "title": "Papagena, Papagena, Papagena!",
+ "subtitle": "Papageno and the three Boys: from the finale of Die Zauberflöte, Act 2",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "papageno",
+   "name": "Papageno",
+   "voiceType": "Baritone",
+   "partKey": "papageno"
+  },
+  {
+   "id": "knabe1",
+   "name": "First Boy",
+   "voiceType": "Treble or soprano",
+   "partKey": "knabe1"
+  },
+  {
+   "id": "knabe2",
+   "name": "Second Boy",
+   "voiceType": "Treble or soprano",
+   "partKey": "knabe2"
+  },
+  {
+   "id": "knabe3",
+   "name": "Third Boy",
+   "voiceType": "Treble or mezzo-soprano",
+   "partKey": "knabe3"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P5",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "papageno",
+   "label": "Papageno (Baritone)",
+   "shortLabel": "Papageno",
+   "kind": "voice",
+   "roleId": "papageno",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "knabe1",
+   "label": "First Boy (Treble or soprano)",
+   "shortLabel": "First Boy",
+   "kind": "voice",
+   "roleId": "knabe1",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "knabe2",
+   "label": "Second Boy (Treble or soprano)",
+   "shortLabel": "Second Boy",
+   "kind": "voice",
+   "roleId": "knabe2",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "knabe3",
+   "label": "Third Boy (Treble or mezzo-soprano)",
+   "shortLabel": "Third Boy",
+   "kind": "voice",
+   "roleId": "knabe3",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Papagena! Weibchen! Täubchen!: Papageno calls for his lost love",
+   "start": "1",
+   "end": "61"
+  },
+  {
+   "id": "b",
+   "label": "Diesen Baum da will ich zieren · Papageno counts to three",
+   "start": "62",
+   "end": "131"
+  },
+  {
+   "id": "c",
+   "label": "Halt' ein! O Papageno · the glockenspiel (to the end)",
+   "start": "132",
+   "end": "204"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (Papageno's scene, from “Papagena, Papagena, Papagena!” to the duet “Pa-pa-pa-pa-pa-pa-Papagena!”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 141–148 (204 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in two chunks, each by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check by two proofreaders until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. Allegro, 6/8, G major, from a two-eighth upbeat; Andante from bar 122; Allegretto, alla breve, C major, from bar 132 (the three Boys); Allegro, alla breve, from bar 165 (the glockenspiel). Papageno's panpipe is in the piano part as a third right-hand voice at sounding pitch, where his own line rests; the spoken “Eins, zwei, drei” have no notes. The glockenspiel is in the piano part as printed, its 8va written out. Each Boy has his own line; the print puts the First and Second Boys on one staff in places, and a note printed once for two Boys is sung by both. Playback tempo from complete recordings: the median length of this scene, 5:22, from Klemperer 1964 (5:36), Nézet-Séguin 2018 (5:24), Toscanini 1937 (5:22), Christie 1995 (5:12) and Solti 1969 (5:10); no recording splits it, so the four tempos keep an assumed proportion (the Andante's beat half the Allegro's; the Allegretto's half note the Allegro's dotted quarter; the closing Allegro a fifth faster than the Allegretto), with the fermatas held."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

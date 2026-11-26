@@ -1,0 +1,3387 @@
+{
+ "editionId": "mozart-nur-stille-stille",
+ "language": "de",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Emanuel Schikaneder (1791). Words as printed in the Edition Peters vocal score, which the app follows where it differs from the libretto: \"bald dringen wir in Tempel ein\" (the libretto has \"im Tempel\"), \"Doch Fürstin, halte Wort, erfülle,\" with commas, \"muss\" and \"grosse\" with ss, \"Wiederhall\", \"Feuersgluth\", \"mächt'gem\", \"Erd'\", \"unsrer\", \"zernichtet\" and \"gestürzet\". The Ladies sing \"Ihr Kind soll deine Gattin sein\" where the Queen sings \"Mein Kind\"; the Third Lady repeats \"soll deine Gattin\". Repeats of the music are written out as sung: \"Nur stille\" and \"bald dringen wir in Tempel ein\" by Monostatos and then the women; \"Dort wollen wir sie überfallen\" twice (Monostatos the second time \"überfallen\" only); \"Dir, grosse Königin der Nacht\" twice. The Queen does not sing \"Dir, grosse Königin der Nacht, sei unsrer Rache Opfer gebracht!\"; Monostatos and the three Ladies sing it to her, kneeling. The Queen and the First and Second Ladies sing in unison on one printed staff from bar 65; each singer has her own line here. IPA follows sung German stage diction: final -er, -ern as [ɐ]; the prefixes er-, ver-, zer- with [ɛr]; r elsewhere rolled or flipped; ch as [ç] after front vowels and [x] after back vowels; glottal stops [ʔ] before initial vowels; final b d g devoiced.",
+ "phrases": [
+  {
+   "id": "mo-01",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "7",
+   "original": "Nur stille, stille, stille, stille,",
+   "translation": "Quiet now, quiet, quiet, quiet,",
+   "ipa": "nuːr ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə",
+   "words": [
+    [
+     "Nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-02",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "bald dringen wir in Tempel ein.",
+   "translation": "Soon we shall force our way into the temple.",
+   "ipa": "ˈbalt ˈdrɪ.ŋən viːr ʔɪn ˈtɛm.pəl ʔaen",
+   "words": [
+    [
+     "bald",
+     "soon",
+     "ˈbalt"
+    ],
+    [
+     "dringen",
+     "force our way",
+     "ˈdrɪ.ŋən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "Tempel",
+     "temple",
+     "ˈtɛm.pəl"
+    ],
+    [
+     "ein.",
+     "in",
+     "ʔaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      5
+     ],
+     "gloss": "force our way in"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-01",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Nur stille, stille, stille, stille!",
+   "translation": "Quiet now, quiet, quiet, quiet!",
+   "ipa": "nuːr ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə",
+   "words": [
+    [
+     "Nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille!",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d1-01",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Nur stille, stille, stille, stille!",
+   "translation": "Quiet now, quiet, quiet, quiet!",
+   "ipa": "nuːr ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə",
+   "words": [
+    [
+     "Nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille!",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2-01",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Nur stille, stille, stille, stille!",
+   "translation": "Quiet now, quiet, quiet, quiet!",
+   "ipa": "nuːr ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə",
+   "words": [
+    [
+     "Nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille!",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d3-01",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Nur stille, stille, stille, stille!",
+   "translation": "Quiet now, quiet, quiet, quiet!",
+   "ipa": "nuːr ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə ˈʃtɪ.lə",
+   "words": [
+    [
+     "Nur",
+     "just",
+     "nuːr"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille,",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ],
+    [
+     "stille!",
+     "quiet",
+     "ˈʃtɪ.lə"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "qu-02",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "bald dringen wir in Tempel ein.",
+   "translation": "Soon we shall force our way into the temple.",
+   "ipa": "ˈbalt ˈdrɪ.ŋən viːr ʔɪn ˈtɛm.pəl ʔaen",
+   "words": [
+    [
+     "bald",
+     "soon",
+     "ˈbalt"
+    ],
+    [
+     "dringen",
+     "force our way",
+     "ˈdrɪ.ŋən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "Tempel",
+     "temple",
+     "ˈtɛm.pəl"
+    ],
+    [
+     "ein.",
+     "in",
+     "ʔaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      5
+     ],
+     "gloss": "force our way in"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-02",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "bald dringen wir in Tempel ein.",
+   "translation": "Soon we shall force our way into the temple.",
+   "ipa": "ˈbalt ˈdrɪ.ŋən viːr ʔɪn ˈtɛm.pəl ʔaen",
+   "words": [
+    [
+     "bald",
+     "soon",
+     "ˈbalt"
+    ],
+    [
+     "dringen",
+     "force our way",
+     "ˈdrɪ.ŋən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "Tempel",
+     "temple",
+     "ˈtɛm.pəl"
+    ],
+    [
+     "ein.",
+     "in",
+     "ʔaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      5
+     ],
+     "gloss": "force our way in"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-02",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "bald dringen wir in Tempel ein.",
+   "translation": "Soon we shall force our way into the temple.",
+   "ipa": "ˈbalt ˈdrɪ.ŋən viːr ʔɪn ˈtɛm.pəl ʔaen",
+   "words": [
+    [
+     "bald",
+     "soon",
+     "ˈbalt"
+    ],
+    [
+     "dringen",
+     "force our way",
+     "ˈdrɪ.ŋən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "Tempel",
+     "temple",
+     "ˈtɛm.pəl"
+    ],
+    [
+     "ein.",
+     "in",
+     "ʔaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      5
+     ],
+     "gloss": "force our way in"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-02",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "13",
+   "original": "bald dringen wir in Tempel ein.",
+   "translation": "Soon we shall force our way into the temple.",
+   "ipa": "ˈbalt ˈdrɪ.ŋən viːr ʔɪn ˈtɛm.pəl ʔaen",
+   "words": [
+    [
+     "bald",
+     "soon",
+     "ˈbalt"
+    ],
+    [
+     "dringen",
+     "force our way",
+     "ˈdrɪ.ŋən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "Tempel",
+     "temple",
+     "ˈtɛm.pəl"
+    ],
+    [
+     "ein.",
+     "in",
+     "ʔaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      5
+     ],
+     "gloss": "force our way in"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-03",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "15",
+   "original": "Doch Fürstin, halte Wort,",
+   "translation": "But, Princess, keep your word:",
+   "ipa": "dɔx ˈfʏrs.tɪn ˈhal.tə ˈvɔrt",
+   "words": [
+    [
+     "Doch",
+     "but",
+     "dɔx"
+    ],
+    [
+     "Fürstin,",
+     "princess",
+     "ˈfʏrs.tɪn"
+    ],
+    [
+     "halte",
+     "keep",
+     "ˈhal.tə"
+    ],
+    [
+     "Wort,",
+     "word",
+     "ˈvɔrt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "keep your word"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-04",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "18",
+   "original": "erfülle, dein Kind muss meine Gattin sein.",
+   "translation": "fulfil it: your child must be my wife.",
+   "ipa": "ʔɛrˈfʏ.lə daen ˈkɪnt mʊs ˈmae.nə ˈga.tɪn zaen",
+   "words": [
+    [
+     "erfülle,",
+     "fulfil it",
+     "ʔɛrˈfʏ.lə"
+    ],
+    [
+     "dein",
+     "your",
+     "daen"
+    ],
+    [
+     "Kind",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "muss",
+     "must",
+     "mʊs"
+    ],
+    [
+     "meine",
+     "my",
+     "ˈmae.nə"
+    ],
+    [
+     "Gattin",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "be my wife"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-03",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "21",
+   "original": "Ich halte Wort; es ist mein Wille!",
+   "translation": "I keep my word; it is my will!",
+   "ipa": "ʔɪç ˈhal.tə ˈvɔrt ʔɛs ʔɪst maen ˈvɪ.lə",
+   "words": [
+    [
+     "Ich",
+     "I",
+     "ʔɪç"
+    ],
+    [
+     "halte",
+     "keep",
+     "ˈhal.tə"
+    ],
+    [
+     "Wort;",
+     "word",
+     "ˈvɔrt"
+    ],
+    [
+     "es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Wille!",
+     "will",
+     "ˈvɪ.lə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "keep my word"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-04",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "24",
+   "original": "Mein Kind soll deine Gattin sein,",
+   "translation": "My child shall be your wife,",
+   "ipa": "maen ˈkɪnt zɔl ˈdae.nə ˈga.tɪn zaen",
+   "words": [
+    [
+     "Mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Kind",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "soll",
+     "shall",
+     "zɔl"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gattin",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "be your wife"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-03",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "Ihr Kind, ihr Kind soll deine Gattin sein.",
+   "translation": "Her child, her child shall be your wife.",
+   "ipa": "ʔiːr ˈkɪnt ʔiːr ˈkɪnt zɔl ˈdae.nə ˈga.tɪn zaen",
+   "words": [
+    [
+     "Ihr",
+     "her",
+     "ʔiːr"
+    ],
+    [
+     "Kind,",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "ihr",
+     "her",
+     "ʔiːr"
+    ],
+    [
+     "Kind",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "soll",
+     "shall",
+     "zɔl"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gattin",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "be your wife"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-03",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "26",
+   "original": "Ihr Kind soll deine Gattin, soll deine Gattin sein.",
+   "translation": "Her child shall be your wife, shall be your wife.",
+   "ipa": "ʔiːr ˈkɪnt zɔl ˈdae.nə ˈga.tɪn zɔl ˈdae.nə ˈga.tɪn zaen",
+   "words": [
+    [
+     "Ihr",
+     "her",
+     "ʔiːr"
+    ],
+    [
+     "Kind",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "soll",
+     "shall",
+     "zɔl"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gattin,",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "soll",
+     "shall",
+     "zɔl"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gattin",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      8
+     ],
+     "gloss": "be your wife"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-05",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "mein Kind soll deine Gattin sein.",
+   "translation": "my child shall be your wife.",
+   "ipa": "maen ˈkɪnt zɔl ˈdae.nə ˈga.tɪn zaen",
+   "words": [
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Kind",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "soll",
+     "shall",
+     "zɔl"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gattin",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "be your wife"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-03",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Ihr Kind, ihr Kind soll deine Gattin sein.",
+   "translation": "Her child, her child shall be your wife.",
+   "ipa": "ʔiːr ˈkɪnt ʔiːr ˈkɪnt zɔl ˈdae.nə ˈga.tɪn zaen",
+   "words": [
+    [
+     "Ihr",
+     "her",
+     "ʔiːr"
+    ],
+    [
+     "Kind,",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "ihr",
+     "her",
+     "ʔiːr"
+    ],
+    [
+     "Kind",
+     "child",
+     "ˈkɪnt"
+    ],
+    [
+     "soll",
+     "shall",
+     "zɔl"
+    ],
+    [
+     "deine",
+     "your",
+     "ˈdae.nə"
+    ],
+    [
+     "Gattin",
+     "wife",
+     "ˈga.tɪn"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "be your wife"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-05",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "Doch still, ich höre schrecklich rauschen",
+   "translation": "But hush! I hear a terrible roaring,",
+   "ipa": "dɔx ˈʃtɪl ʔɪç ˈhøː.rə ˈʃrɛk.lɪç ˈrao.ʃən",
+   "words": [
+    [
+     "Doch",
+     "but",
+     "dɔx"
+    ],
+    [
+     "still,",
+     "hush",
+     "ˈʃtɪl"
+    ],
+    [
+     "ich",
+     "I",
+     "ʔɪç"
+    ],
+    [
+     "höre",
+     "hear",
+     "ˈhøː.rə"
+    ],
+    [
+     "schrecklich",
+     "terribly",
+     "ˈʃrɛk.lɪç"
+    ],
+    [
+     "rauschen",
+     "roaring",
+     "ˈrao.ʃən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      5
+     ],
+     "gloss": "hear roaring"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-06",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "wie Donnerton und Wasserfall.",
+   "translation": "like thunder and a waterfall.",
+   "ipa": "viː ˈdɔ.nɐ.toːn ʔʊnt ˈva.sɐ.fal",
+   "words": [
+    [
+     "wie",
+     "like",
+     "viː"
+    ],
+    [
+     "Donnerton",
+     "thunderclap",
+     "ˈdɔ.nɐ.toːn"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "Wasserfall.",
+     "waterfall",
+     "ˈva.sɐ.fal"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "qu-06",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "Ja, fürchterlich ist dieses Rauschen,",
+   "translation": "Yes, this roaring is terrible,",
+   "ipa": "jaː ˈfʏrç.tɐ.lɪç ʔɪst ˈdiː.zəs ˈrao.ʃən",
+   "words": [
+    [
+     "Ja,",
+     "yes",
+     "jaː"
+    ],
+    [
+     "fürchterlich",
+     "terrible",
+     "ˈfʏrç.tɐ.lɪç"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "dieses",
+     "this",
+     "ˈdiː.zəs"
+    ],
+    [
+     "Rauschen,",
+     "roaring",
+     "ˈrao.ʃən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d1-04",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "Ja, fürchterlich ist dieses Rauschen,",
+   "translation": "Yes, this roaring is terrible,",
+   "ipa": "jaː ˈfʏrç.tɐ.lɪç ʔɪst ˈdiː.zəs ˈrao.ʃən",
+   "words": [
+    [
+     "Ja,",
+     "yes",
+     "jaː"
+    ],
+    [
+     "fürchterlich",
+     "terrible",
+     "ˈfʏrç.tɐ.lɪç"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "dieses",
+     "this",
+     "ˈdiː.zəs"
+    ],
+    [
+     "Rauschen,",
+     "roaring",
+     "ˈrao.ʃən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2-04",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "Ja, fürchterlich ist dieses Rauschen,",
+   "translation": "Yes, this roaring is terrible,",
+   "ipa": "jaː ˈfʏrç.tɐ.lɪç ʔɪst ˈdiː.zəs ˈrao.ʃən",
+   "words": [
+    [
+     "Ja,",
+     "yes",
+     "jaː"
+    ],
+    [
+     "fürchterlich",
+     "terrible",
+     "ˈfʏrç.tɐ.lɪç"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "dieses",
+     "this",
+     "ˈdiː.zəs"
+    ],
+    [
+     "Rauschen,",
+     "roaring",
+     "ˈrao.ʃən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d3-04",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "35",
+   "original": "Ja, fürchterlich ist dieses Rauschen,",
+   "translation": "Yes, this roaring is terrible,",
+   "ipa": "jaː ˈfʏrç.tɐ.lɪç ʔɪst ˈdiː.zəs ˈrao.ʃən",
+   "words": [
+    [
+     "Ja,",
+     "yes",
+     "jaː"
+    ],
+    [
+     "fürchterlich",
+     "terrible",
+     "ˈfʏrç.tɐ.lɪç"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "dieses",
+     "this",
+     "ˈdiː.zəs"
+    ],
+    [
+     "Rauschen,",
+     "roaring",
+     "ˈrao.ʃən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "qu-07",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "wie fernen Donners Wiederhall!",
+   "translation": "like the echo of distant thunder!",
+   "ipa": "viː ˈfɛr.nən ˈdɔ.nɐs ˈviː.dɐ.hal",
+   "words": [
+    [
+     "wie",
+     "like",
+     "viː"
+    ],
+    [
+     "fernen",
+     "distant",
+     "ˈfɛr.nən"
+    ],
+    [
+     "Donners",
+     "thunder's",
+     "ˈdɔ.nɐs"
+    ],
+    [
+     "Wiederhall!",
+     "echo",
+     "ˈviː.dɐ.hal"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the echo of distant thunder"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-05",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "wie fernen Donners Wiederhall!",
+   "translation": "like the echo of distant thunder!",
+   "ipa": "viː ˈfɛr.nən ˈdɔ.nɐs ˈviː.dɐ.hal",
+   "words": [
+    [
+     "wie",
+     "like",
+     "viː"
+    ],
+    [
+     "fernen",
+     "distant",
+     "ˈfɛr.nən"
+    ],
+    [
+     "Donners",
+     "thunder's",
+     "ˈdɔ.nɐs"
+    ],
+    [
+     "Wiederhall!",
+     "echo",
+     "ˈviː.dɐ.hal"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the echo of distant thunder"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-05",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "wie fernen Donners Wiederhall!",
+   "translation": "like the echo of distant thunder!",
+   "ipa": "viː ˈfɛr.nən ˈdɔ.nɐs ˈviː.dɐ.hal",
+   "words": [
+    [
+     "wie",
+     "like",
+     "viː"
+    ],
+    [
+     "fernen",
+     "distant",
+     "ˈfɛr.nən"
+    ],
+    [
+     "Donners",
+     "thunder's",
+     "ˈdɔ.nɐs"
+    ],
+    [
+     "Wiederhall!",
+     "echo",
+     "ˈviː.dɐ.hal"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the echo of distant thunder"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-05",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "wie fernen Donners Wiederhall!",
+   "translation": "like the echo of distant thunder!",
+   "ipa": "viː ˈfɛr.nən ˈdɔ.nɐs ˈviː.dɐ.hal",
+   "words": [
+    [
+     "wie",
+     "like",
+     "viː"
+    ],
+    [
+     "fernen",
+     "distant",
+     "ˈfɛr.nən"
+    ],
+    [
+     "Donners",
+     "thunder's",
+     "ˈdɔ.nɐs"
+    ],
+    [
+     "Wiederhall!",
+     "echo",
+     "ˈviː.dɐ.hal"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the echo of distant thunder"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-07",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "41",
+   "original": "Nun sind sie in des Tempels Hallen.",
+   "translation": "Now they are in the halls of the temple.",
+   "ipa": "nuːn zɪnt ziː ʔɪn dɛs ˈtɛm.pəls ˈha.lən",
+   "words": [
+    [
+     "Nun",
+     "now",
+     "nuːn"
+    ],
+    [
+     "sind",
+     "are",
+     "zɪnt"
+    ],
+    [
+     "sie",
+     "they",
+     "ziː"
+    ],
+    [
+     "in",
+     "in",
+     "ʔɪn"
+    ],
+    [
+     "des",
+     "the",
+     "dɛs"
+    ],
+    [
+     "Tempels",
+     "temple's",
+     "ˈtɛm.pəls"
+    ],
+    [
+     "Hallen.",
+     "halls",
+     "ˈha.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "gloss": "in the temple's halls"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-08",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "Dort wollen wir sie überfallen,",
+   "translation": "There we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "Dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-06",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "43",
+   "original": "Dort wollen wir sie überfallen,",
+   "translation": "There we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "Dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-08",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "Dort wollen wir sie überfallen, überfallen,",
+   "translation": "There we shall fall upon them, fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "Dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-06",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "Dort wollen wir sie überfallen,",
+   "translation": "There we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "Dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-06",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "44",
+   "original": "Dort wollen wir sie überfallen,",
+   "translation": "There we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "Dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-09",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "dort wollen wir sie überfallen,",
+   "translation": "there we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-07",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "dort wollen wir sie überfallen,",
+   "translation": "there we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-07",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "dort wollen wir sie überfallen,",
+   "translation": "there we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-07",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "46",
+   "original": "dort wollen wir sie überfallen,",
+   "translation": "there we shall fall upon them,",
+   "ipa": "ˈdɔrt ˈvɔ.lən viːr ziː ʔyː.bɐˈfa.lən",
+   "words": [
+    [
+     "dort",
+     "there",
+     "ˈdɔrt"
+    ],
+    [
+     "wollen",
+     "want",
+     "ˈvɔ.lən"
+    ],
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "sie",
+     "them",
+     "ziː"
+    ],
+    [
+     "überfallen,",
+     "to fall upon",
+     "ʔyː.bɐˈfa.lən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      4
+     ],
+     "gloss": "want to fall upon"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-09",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "die Frömmler tilgen von der Erd'",
+   "translation": "and wipe the bigots off the face of the earth",
+   "ipa": "diː ˈfrœm.lɐ ˈtɪl.gən fɔn deːr ˈʔeːrt",
+   "words": [
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Frömmler",
+     "bigots",
+     "ˈfrœm.lɐ"
+    ],
+    [
+     "tilgen",
+     "wipe out",
+     "ˈtɪl.gən"
+    ],
+    [
+     "von",
+     "from",
+     "fɔn"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Erd'",
+     "earth",
+     "ˈʔeːrt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "wipe from the earth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-10",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "die Frömmler tilgen von der Erd'",
+   "translation": "and wipe the bigots off the face of the earth",
+   "ipa": "diː ˈfrœm.lɐ ˈtɪl.gən fɔn deːr ˈʔeːrt",
+   "words": [
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Frömmler",
+     "bigots",
+     "ˈfrœm.lɐ"
+    ],
+    [
+     "tilgen",
+     "wipe out",
+     "ˈtɪl.gən"
+    ],
+    [
+     "von",
+     "from",
+     "fɔn"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Erd'",
+     "earth",
+     "ˈʔeːrt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "wipe from the earth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-08",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "die Frömmler tilgen von der Erd'",
+   "translation": "and wipe the bigots off the face of the earth",
+   "ipa": "diː ˈfrœm.lɐ ˈtɪl.gən fɔn deːr ˈʔeːrt",
+   "words": [
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Frömmler",
+     "bigots",
+     "ˈfrœm.lɐ"
+    ],
+    [
+     "tilgen",
+     "wipe out",
+     "ˈtɪl.gən"
+    ],
+    [
+     "von",
+     "from",
+     "fɔn"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Erd'",
+     "earth",
+     "ˈʔeːrt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "wipe from the earth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-08",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "die Frömmler tilgen von der Erd'",
+   "translation": "and wipe the bigots off the face of the earth",
+   "ipa": "diː ˈfrœm.lɐ ˈtɪl.gən fɔn deːr ˈʔeːrt",
+   "words": [
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Frömmler",
+     "bigots",
+     "ˈfrœm.lɐ"
+    ],
+    [
+     "tilgen",
+     "wipe out",
+     "ˈtɪl.gən"
+    ],
+    [
+     "von",
+     "from",
+     "fɔn"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Erd'",
+     "earth",
+     "ˈʔeːrt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "wipe from the earth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-08",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "47",
+   "original": "die Frömmler tilgen von der Erd'",
+   "translation": "and wipe the bigots off the face of the earth",
+   "ipa": "diː ˈfrœm.lɐ ˈtɪl.gən fɔn deːr ˈʔeːrt",
+   "words": [
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Frömmler",
+     "bigots",
+     "ˈfrœm.lɐ"
+    ],
+    [
+     "tilgen",
+     "wipe out",
+     "ˈtɪl.gən"
+    ],
+    [
+     "von",
+     "from",
+     "fɔn"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Erd'",
+     "earth",
+     "ˈʔeːrt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "wipe from the earth"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-10",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "mit Feuersgluth und mächt'gem Schwert.",
+   "translation": "with blazing fire and mighty sword.",
+   "ipa": "mɪt ˈfɔø.ɐs.gluːt ʔʊnt ˈmɛçt.gəm ˈʃveːrt",
+   "words": [
+    [
+     "mit",
+     "with",
+     "mɪt"
+    ],
+    [
+     "Feuersgluth",
+     "blazing fire",
+     "ˈfɔø.ɐs.gluːt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "mächt'gem",
+     "mighty",
+     "ˈmɛçt.gəm"
+    ],
+    [
+     "Schwert.",
+     "sword",
+     "ˈʃveːrt"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "qu-11",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "mit Feuersgluth und mächt'gem Schwert.",
+   "translation": "with blazing fire and mighty sword.",
+   "ipa": "mɪt ˈfɔø.ɐs.gluːt ʔʊnt ˈmɛçt.gəm ˈʃveːrt",
+   "words": [
+    [
+     "mit",
+     "with",
+     "mɪt"
+    ],
+    [
+     "Feuersgluth",
+     "blazing fire",
+     "ˈfɔø.ɐs.gluːt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "mächt'gem",
+     "mighty",
+     "ˈmɛçt.gəm"
+    ],
+    [
+     "Schwert.",
+     "sword",
+     "ˈʃveːrt"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d1-09",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "mit Feuersgluth und mächt'gem Schwert.",
+   "translation": "with blazing fire and mighty sword.",
+   "ipa": "mɪt ˈfɔø.ɐs.gluːt ʔʊnt ˈmɛçt.gəm ˈʃveːrt",
+   "words": [
+    [
+     "mit",
+     "with",
+     "mɪt"
+    ],
+    [
+     "Feuersgluth",
+     "blazing fire",
+     "ˈfɔø.ɐs.gluːt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "mächt'gem",
+     "mighty",
+     "ˈmɛçt.gəm"
+    ],
+    [
+     "Schwert.",
+     "sword",
+     "ˈʃveːrt"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d2-09",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "mit Feuersgluth und mächt'gem Schwert.",
+   "translation": "with blazing fire and mighty sword.",
+   "ipa": "mɪt ˈfɔø.ɐs.gluːt ʔʊnt ˈmɛçt.gəm ˈʃveːrt",
+   "words": [
+    [
+     "mit",
+     "with",
+     "mɪt"
+    ],
+    [
+     "Feuersgluth",
+     "blazing fire",
+     "ˈfɔø.ɐs.gluːt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "mächt'gem",
+     "mighty",
+     "ˈmɛçt.gəm"
+    ],
+    [
+     "Schwert.",
+     "sword",
+     "ˈʃveːrt"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "d3-09",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "mit Feuersgluth und mächt'gem Schwert.",
+   "translation": "with blazing fire and mighty sword.",
+   "ipa": "mɪt ˈfɔø.ɐs.gluːt ʔʊnt ˈmɛçt.gəm ˈʃveːrt",
+   "words": [
+    [
+     "mit",
+     "with",
+     "mɪt"
+    ],
+    [
+     "Feuersgluth",
+     "blazing fire",
+     "ˈfɔø.ɐs.gluːt"
+    ],
+    [
+     "und",
+     "and",
+     "ʔʊnt"
+    ],
+    [
+     "mächt'gem",
+     "mighty",
+     "ˈmɛçt.gəm"
+    ],
+    [
+     "Schwert.",
+     "sword",
+     "ˈʃveːrt"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "mo-11",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "Dir, grosse Königin der Nacht,",
+   "translation": "To you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "Dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-10",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "Dir, grosse Königin der Nacht,",
+   "translation": "To you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "Dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-10",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "Dir, grosse Königin der Nacht,",
+   "translation": "To you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "Dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-10",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "52",
+   "original": "Dir, grosse Königin der Nacht,",
+   "translation": "To you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "Dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-12",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "dir, grosse Königin der Nacht,",
+   "translation": "to you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-11",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "dir, grosse Königin der Nacht,",
+   "translation": "to you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-11",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "dir, grosse Königin der Nacht,",
+   "translation": "to you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-11",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "dir, grosse Königin der Nacht,",
+   "translation": "to you, great Queen of the Night,",
+   "ipa": "diːr ˈgroː.sə ˈkøː.nɪ.gɪn deːr ˈnaxt",
+   "words": [
+    [
+     "dir,",
+     "to you",
+     "diːr"
+    ],
+    [
+     "grosse",
+     "great",
+     "ˈgroː.sə"
+    ],
+    [
+     "Königin",
+     "queen",
+     "ˈkøː.nɪ.gɪn"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Nacht,",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4
+     ],
+     "gloss": "Queen of the Night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-13",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "sei unsrer Rache Opfer gebracht!",
+   "translation": "be the sacrifice of our vengeance offered!",
+   "ipa": "zae ˈʔʊn.zrɐ ˈra.xə ˈʔɔ.pfɐ gəˈbraxt",
+   "words": [
+    [
+     "sei",
+     "be",
+     "zae"
+    ],
+    [
+     "unsrer",
+     "of our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Rache",
+     "vengeance",
+     "ˈra.xə"
+    ],
+    [
+     "Opfer",
+     "sacrifice",
+     "ˈʔɔ.pfɐ"
+    ],
+    [
+     "gebracht!",
+     "offered",
+     "gəˈbraxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      4
+     ],
+     "gloss": "be offered"
+    },
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the sacrifice of our vengeance"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-12",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "sei unsrer Rache Opfer gebracht!",
+   "translation": "be the sacrifice of our vengeance offered!",
+   "ipa": "zae ˈʔʊn.zrɐ ˈra.xə ˈʔɔ.pfɐ gəˈbraxt",
+   "words": [
+    [
+     "sei",
+     "be",
+     "zae"
+    ],
+    [
+     "unsrer",
+     "of our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Rache",
+     "vengeance",
+     "ˈra.xə"
+    ],
+    [
+     "Opfer",
+     "sacrifice",
+     "ˈʔɔ.pfɐ"
+    ],
+    [
+     "gebracht!",
+     "offered",
+     "gəˈbraxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      4
+     ],
+     "gloss": "be offered"
+    },
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the sacrifice of our vengeance"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-12",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "sei unsrer Rache Opfer gebracht!",
+   "translation": "be the sacrifice of our vengeance offered!",
+   "ipa": "zae ˈʔʊn.zrɐ ˈra.xə ˈʔɔ.pfɐ gəˈbraxt",
+   "words": [
+    [
+     "sei",
+     "be",
+     "zae"
+    ],
+    [
+     "unsrer",
+     "of our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Rache",
+     "vengeance",
+     "ˈra.xə"
+    ],
+    [
+     "Opfer",
+     "sacrifice",
+     "ˈʔɔ.pfɐ"
+    ],
+    [
+     "gebracht!",
+     "offered",
+     "gəˈbraxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      4
+     ],
+     "gloss": "be offered"
+    },
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the sacrifice of our vengeance"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-12",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "sei unsrer Rache Opfer gebracht!",
+   "translation": "be the sacrifice of our vengeance offered!",
+   "ipa": "zae ˈʔʊn.zrɐ ˈra.xə ˈʔɔ.pfɐ gəˈbraxt",
+   "words": [
+    [
+     "sei",
+     "be",
+     "zae"
+    ],
+    [
+     "unsrer",
+     "of our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Rache",
+     "vengeance",
+     "ˈra.xə"
+    ],
+    [
+     "Opfer",
+     "sacrifice",
+     "ˈʔɔ.pfɐ"
+    ],
+    [
+     "gebracht!",
+     "offered",
+     "gəˈbraxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      4
+     ],
+     "gloss": "be offered"
+    },
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the sacrifice of our vengeance"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-14",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Zerschmettert, zernichtet ist unsere Macht,",
+   "translation": "Shattered, destroyed is our power;",
+   "ipa": "tsɛrˈʃmɛ.tɐt tsɛrˈnɪç.tət ʔɪst ˈʔʊn.zə.rə ˈmaxt",
+   "words": [
+    [
+     "Zerschmettert,",
+     "shattered",
+     "tsɛrˈʃmɛ.tɐt"
+    ],
+    [
+     "zernichtet",
+     "destroyed",
+     "tsɛrˈnɪç.tət"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "unsere",
+     "our",
+     "ˈʔʊn.zə.rə"
+    ],
+    [
+     "Macht,",
+     "power",
+     "ˈmaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "our power"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-12",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Zerschmettert, zernichtet ist unsere Macht,",
+   "translation": "Shattered, destroyed is our power;",
+   "ipa": "tsɛrˈʃmɛ.tɐt tsɛrˈnɪç.tət ʔɪst ˈʔʊn.zə.rə ˈmaxt",
+   "words": [
+    [
+     "Zerschmettert,",
+     "shattered",
+     "tsɛrˈʃmɛ.tɐt"
+    ],
+    [
+     "zernichtet",
+     "destroyed",
+     "tsɛrˈnɪç.tət"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "unsere",
+     "our",
+     "ˈʔʊn.zə.rə"
+    ],
+    [
+     "Macht,",
+     "power",
+     "ˈmaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "our power"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-13",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Zerschmettert, zernichtet ist unsere Macht,",
+   "translation": "Shattered, destroyed is our power;",
+   "ipa": "tsɛrˈʃmɛ.tɐt tsɛrˈnɪç.tət ʔɪst ˈʔʊn.zə.rə ˈmaxt",
+   "words": [
+    [
+     "Zerschmettert,",
+     "shattered",
+     "tsɛrˈʃmɛ.tɐt"
+    ],
+    [
+     "zernichtet",
+     "destroyed",
+     "tsɛrˈnɪç.tət"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "unsere",
+     "our",
+     "ˈʔʊn.zə.rə"
+    ],
+    [
+     "Macht,",
+     "power",
+     "ˈmaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "our power"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-13",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Zerschmettert, zernichtet ist unsere Macht,",
+   "translation": "Shattered, destroyed is our power;",
+   "ipa": "tsɛrˈʃmɛ.tɐt tsɛrˈnɪç.tət ʔɪst ˈʔʊn.zə.rə ˈmaxt",
+   "words": [
+    [
+     "Zerschmettert,",
+     "shattered",
+     "tsɛrˈʃmɛ.tɐt"
+    ],
+    [
+     "zernichtet",
+     "destroyed",
+     "tsɛrˈnɪç.tət"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "unsere",
+     "our",
+     "ˈʔʊn.zə.rə"
+    ],
+    [
+     "Macht,",
+     "power",
+     "ˈmaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "our power"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-13",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "65",
+   "original": "Zerschmettert, zernichtet ist unsere Macht,",
+   "translation": "Shattered, destroyed is our power;",
+   "ipa": "tsɛrˈʃmɛ.tɐt tsɛrˈnɪç.tət ʔɪst ˈʔʊn.zə.rə ˈmaxt",
+   "words": [
+    [
+     "Zerschmettert,",
+     "shattered",
+     "tsɛrˈʃmɛ.tɐt"
+    ],
+    [
+     "zernichtet",
+     "destroyed",
+     "tsɛrˈnɪç.tət"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "unsere",
+     "our",
+     "ˈʔʊn.zə.rə"
+    ],
+    [
+     "Macht,",
+     "power",
+     "ˈmaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "our power"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "mo-15",
+   "role": "monostatos",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "wir alle gestürzet in ewige Nacht!",
+   "translation": "we are all cast down into eternal night!",
+   "ipa": "viːr ˈʔa.lə gəˈʃtʏr.tsət ʔɪn ˈʔeː.vɪ.gə ˈnaxt",
+   "words": [
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "alle",
+     "all",
+     "ˈʔa.lə"
+    ],
+    [
+     "gestürzet",
+     "cast down",
+     "gəˈʃtʏr.tsət"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "ewige",
+     "eternal",
+     "ˈʔeː.vɪ.gə"
+    ],
+    [
+     "Nacht!",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "eternal night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "qu-13",
+   "role": "queen",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "wir alle gestürzet in ewige Nacht!",
+   "translation": "we are all cast down into eternal night!",
+   "ipa": "viːr ˈʔa.lə gəˈʃtʏr.tsət ʔɪn ˈʔeː.vɪ.gə ˈnaxt",
+   "words": [
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "alle",
+     "all",
+     "ˈʔa.lə"
+    ],
+    [
+     "gestürzet",
+     "cast down",
+     "gəˈʃtʏr.tsət"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "ewige",
+     "eternal",
+     "ˈʔeː.vɪ.gə"
+    ],
+    [
+     "Nacht!",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "eternal night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d1-14",
+   "role": "dame1",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "wir alle gestürzet in ewige Nacht!",
+   "translation": "we are all cast down into eternal night!",
+   "ipa": "viːr ˈʔa.lə gəˈʃtʏr.tsət ʔɪn ˈʔeː.vɪ.gə ˈnaxt",
+   "words": [
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "alle",
+     "all",
+     "ˈʔa.lə"
+    ],
+    [
+     "gestürzet",
+     "cast down",
+     "gəˈʃtʏr.tsət"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "ewige",
+     "eternal",
+     "ˈʔeː.vɪ.gə"
+    ],
+    [
+     "Nacht!",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "eternal night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d2-14",
+   "role": "dame2",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "wir alle gestürzet in ewige Nacht!",
+   "translation": "we are all cast down into eternal night!",
+   "ipa": "viːr ˈʔa.lə gəˈʃtʏr.tsət ʔɪn ˈʔeː.vɪ.gə ˈnaxt",
+   "words": [
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "alle",
+     "all",
+     "ˈʔa.lə"
+    ],
+    [
+     "gestürzet",
+     "cast down",
+     "gəˈʃtʏr.tsət"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "ewige",
+     "eternal",
+     "ˈʔeː.vɪ.gə"
+    ],
+    [
+     "Nacht!",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "eternal night"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "d3-14",
+   "role": "dame3",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "wir alle gestürzet in ewige Nacht!",
+   "translation": "we are all cast down into eternal night!",
+   "ipa": "viːr ˈʔa.lə gəˈʃtʏr.tsət ʔɪn ˈʔeː.vɪ.gə ˈnaxt",
+   "words": [
+    [
+     "wir",
+     "we",
+     "viːr"
+    ],
+    [
+     "alle",
+     "all",
+     "ˈʔa.lə"
+    ],
+    [
+     "gestürzet",
+     "cast down",
+     "gəˈʃtʏr.tsət"
+    ],
+    [
+     "in",
+     "into",
+     "ʔɪn"
+    ],
+    [
+     "ewige",
+     "eternal",
+     "ˈʔeː.vɪ.gə"
+    ],
+    [
+     "Nacht!",
+     "night",
+     "ˈnaxt"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "eternal night"
+    }
+   ],
+   "audio": {}
+  }
+ ]
+}

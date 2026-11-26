@@ -8156,6 +8156,131 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "mozart-papagena-papagena-papagena": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "G major, then C major (from the Boys' entrance)",
+      time: "6/8 from an upbeat, then alla breve (¢) from bar 132",
+      tempo: "Allegro, played at ♩ = 120 (♩. = 80), Andante at ♩ = 60 from bar 122, Allegretto at ♩ = 160 (half note = 80) from bar 132 and Allegro at ♩ = 192 (half note = 96) from bar 165, about 5 minutes, the median of five complete recordings whose tracks hold just this scene (Klemperer 1964, Nézet-Séguin 2018, Toscanini 1937, Christie 1995, Solti 1969); no recording splits it, so the proportion is assumed: the Andante's beat half the Allegro's, the Allegretto's half note the Allegro's dotted quarter, and the closing Allegro a fifth faster than the Allegretto, with the fermatas held",
+    },
+    notePlaceholder: "Papageno's calls bright, then comically forlorn; the counting slow and hopeful; the Boys quick and firm; the bells gleeful",
+    about: (
+      <>
+        <p>
+          Papageno has lost Papagena, the little wife he was given and then had taken away again. Alone in the garden he calls for her with his panpipe: Papagena, little wife, little dove, it is all in vain, she is lost. He was born for bad luck; he chattered, and it serves him right. Ever since he tasted that wine and saw the pretty girl, his heart has been burning. Tired of life, he decides to hang himself from a tree: good night, false world. But if one girl will take pity on him before he hangs, he will let it go this time; he waits, and counts to three, piping between the numbers in the hope that someone will stop him. No one answers, and he takes up the rope. Then the three Boys appear: let him stop and be sensible, for one lives only once. They remind him of his magic bells, which will bring his little wife to him. What a fool he was to forget them! He plays his glockenspiel and calls on the bells to bring his girl, and the Boys fetch Papagena and tell him to look around.
+        </p>
+        <p>
+          Score: Papageno's scene of No. 21, the Act 2 Finale (vocal score pages 141–148, 204 bars), from the Edition Peters vocal
+          score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from the printed
+          pages by two independent readers, with a judge settling every difference, then a fresh check until clean, and checked against
+          the print again. Only the German words are kept, as the print spells them. Each singer has their own line; the print puts the
+          First and Second Boys on one staff in places, and where two Boys share a printed note both sing it. The panpipe and the
+          glockenspiel are in the piano part as printed; the spoken “Eins, zwei, drei” between the panpipe calls have no notes. The print
+          writes “und drum geschieht es mir schon recht”, “Herzenskämmerlein”, “misfällt”, “doch brennt' es euch” and, the second time,
+          “du falsche! Welt!”. The piece ends before the duet “Pa-pa-pa-pa-pa-pa-Papagena!”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-pa-pa-pa-papagena": {
+    portrait: "zauberfloete:papageno",
+    opera: "Die Zauberflöte",
+    kind: "Duet",
+    facts: {
+      key: "G major",
+      time: "Alla breve (¢) throughout; the last bar is printed short",
+      tempo: "Allegro, played at ♩ = 204 (half note = 102), about 2½ minutes, the median of five complete recordings whose tracks hold just this duet (Klemperer 1964, Haitink 1981, Christie 1995, Solti 1969, Nézet-Séguin 2018), with the ritard. before the a tempo of bar 60 and the two fermatas held",
+    },
+    notePlaceholder: "The stammered names light and quick, each answering the other; the vows warm; the children's names tumbling over each other in delight",
+    about: (
+      <>
+        <p>
+          Papageno's glockenspiel has brought Papagena back, the little wife he was given and then had taken away again. The two see each other, dance round each other and can hardly get the names out for joy: Pa-pa-pa-pa-pa-pa-Papagena! Pa-pa-pa-pa-pa-pa-Papageno! Is she now all his, he asks; now she is all his, she answers; then let her be his dear little wife, his little dove of his heart. What a joy it will be, they sing, if the gods remember them and give their love children, such dear little children: first a little Papageno, then a little Papagena, then another Papageno, then another Papagena, and more and more of them. It is the greatest of feelings when many, many Papagenos and Papagenas become their parents' cares. They go off together.
+        </p>
+        <p>
+          Score: the duet of Papageno and Papagena in No. 21, the Act 2 Finale (vocal score pages 149–154, 129 bars), from the Edition
+          Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), public domain. Written out from
+          the printed pages by two independent readers, with a judge settling every difference, then a fresh check until clean, and
+          checked against the print again. Only the German words are kept, as the print spells them. Each singer has their own line;
+          the print puts the two on one staff for their first exchanges. The stammered names keep as many “pa”s as the print gives
+          them. The print writes “ganz ergeben” (the libretto has “gegeben”), “unsrer” and “der Eltern Sorgen werden sein” (the
+          libretto has “Segen”), twice “Sorge”. The last bar is printed short, as the print has it, before the double bar and “Nur
+          stille!”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-nur-stille-stille": {
+    portrait: "zauberfloete:queen",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "C minor",
+      time: "Alla breve (¢), from a short upbeat",
+      tempo: "Più moderato, played at ♩ = 134 (half note = 67), about 2¼ minutes, the median of five complete recordings whose tracks hold just this scene (Haitink 1981, Böhm 1964, Solti 1969, Klemperer 1964, Toscanini 1937)",
+    },
+    notePlaceholder: "Hushed and creeping at first, every “stille” a whisper; the oath to the Queen dark and solemn; then the collapse loud and sudden",
+    about: (
+      <>
+        <p>
+          Night, in the rocky country outside the temple. Monostatos, who has gone over to the Queen of the Night, leads her and her three Ladies towards the temple by torchlight, to destroy Sarastro and his priests: quiet, quiet, soon they will force their way in. He reminds the Queen of her promise that her daughter Pamina shall be his wife; she gives her word, and the Ladies repeat it. Thunder rolls and water roars like a distant storm. Now the priests are in the halls of the temple, and the conspirators mean to fall upon them there and wipe the bigots from the earth with fire and the sword. Kneeling, Monostatos and the Ladies offer their revenge to the great Queen of the Night. Then thunder, lightning and storm break out: their power is shattered and destroyed, and all of them are cast down into eternal night. They sink into the earth, and the scene changes to the Temple of the Sun.
+        </p>
+        <p>
+          Score: the scene of the Queen of the Night, the three Ladies and Monostatos in No. 21, the Act 2 Finale (vocal score pages
+          155–159, 74 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP
+          #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every difference,
+          then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print spells them.
+          Each singer has their own line; the print puts the Queen and the Ladies two to a staff, and from bar 65 the Queen and the First
+          and Second Ladies in unison on one staff. Monostatos's line is printed in the treble clef and sounds an octave lower. The print
+          writes “bald dringen wir in Tempel ein”, “Wiederhall”, “Feuersgluth und mächt'gem Schwert”, “zernichtet” and “gestürzet”, and
+          the Ladies sing “Ihr Kind soll deine Gattin sein” where the Queen sings “Mein Kind”. The piece ends with the piano before
+          Sarastro's “Die Strahlen der Sonne”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
+  "mozart-die-strahlen-der-sonne": {
+    portrait: "zauberfloete:sarastro",
+    opera: "Die Zauberflöte",
+    kind: "Finale",
+    facts: {
+      key: "E-flat major",
+      time: "Alla breve, then 4/4 (Andante, the chorus), then 2/4 (Allegro)",
+      tempo: "The opening played at ♩ = 118 (half note = 59), Sarastro's recitative and the Maestoso at ♩ = 59, the Andante at ♩ = 59 from bar 11 and the Allegro at ♩ = 118 from bar 29, about 3 minutes, the median of five complete recordings whose tracks hold just this ending (Böhm 1964, Toscanini 1937, Klemperer 1964, Solti 1969, Haitink 1981); no recording splits it, so the proportion is assumed: the Andante's beat half the Allegro's, the opening's half note the Andante's quarter, and the free recitative set at the Andante's quarter",
+    },
+    notePlaceholder: "Sarastro's recitative broad and noble; the chorus's “Heil” warm and solemn; the Allegro bright and jubilant to the end",
+    about: (
+      <>
+        <p>
+          The conspirators have sunk into eternal night, and the whole stage is transformed into a sun. Sarastro stands on high, with Tamino and Pamina in priestly robes beside him and the priests on either side, and declares that the rays of the sun have driven away the night and destroyed the power the hypocrites had won by stealth. The chorus hails the initiates, who have made their way through the night, and gives thanks to Osiris and to Isis. Strength has triumphed, they sing, and as its reward it crowns beauty and wisdom with an everlasting crown. So the opera ends.
+        </p>
+        <p>
+          Score: the end of No. 21, the Act 2 Finale, from Sarastro's “Die Strahlen der Sonne” to the end of the opera (vocal score
+          pages 159–163, 103 bars), from the Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP
+          #225460), public domain. Written out from the printed pages by two independent readers, with a judge settling every difference,
+          then a fresh check until clean, and checked against the print again. Only the German words are kept, as the print spells them.
+          Each singer has their own line, and the four chorus parts are heard with the piano; the print puts the chorus two voices to a
+          staff in places and gives some voices only the Italian words, and each such voice takes the German of the part singing the
+          same rhythm. The print writes “zernichten der Heuchler erschlichene Macht”, “Dank, Dank, Dank sei dir, Osiris”, “und krönet zum
+          Lohn” and “mit ewiger Kron'”. The piece ends with the piano's last chord, “Ende der Oper”.
+        </p>
+        <p>
+          Music by Wolfgang Amadeus Mozart and text by Emanuel Schikaneder (1791), both public domain. The IPA, word meanings and translation were written for this app; the IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. They have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
 };
 // the songs with music in the app (songInfo.tsx)
 Object.assign(PIECE_INFO, SONG_PIECE_INFO);

@@ -1,0 +1,421 @@
+# MERGED by judge from VA (X, base) and VB (Y) for S53
+# S53 Nr. 21 Finale: Nur stille, stille, stille, stille! (pp. 155-159)
+# singers: N = Monostatos (staff label M, treble clef, written an octave higher: sounding pitch given), Q = Königin, D1 D2 D3 = the three Ladies
+# no chorus in this chunk
+# bar 1: pickup, 3/8 in 2/2 (alla breve); Più moderato, alla breve, three flats (C minor); "Verwandlung. Felsengegend. Es ist Nacht."
+# page 155 system 1 starts bar 1 (piano only)
+1 N: r:q.
+1 Q: r:q.
+1 D1: r:q.
+1 D2: r:q.
+1 D3: r:q.
+2 N: r:w
+2 Q: r:w
+2 D1: r:w
+2 D2: r:w
+2 D3: r:w
+3 N: r:w
+3 Q: r:w
+3 D1: r:w
+3 D2: r:w
+3 D3: r:w
+4 N: r:w
+4 Q: r:w
+4 D1: r:w
+4 D2: r:w
+4 D3: r:w
+5 N: r:w
+5 Q: r:w
+5 D1: r:w
+5 D2: r:w
+5 D3: r:w
+6 N: r:w
+6 Q: r:w
+6 D1: r:w
+6 D2: r:w
+6 D3: r:w
+# page 155 system 2 starts bar 7 ("Monostatos, Königin und die drei Damen (erscheinen mit brennenden Fackeln)")
+# bar 7: the extra Italian-only stems (quarter rest + two eighths, stems down) ignored
+7 N: r:h r:e G3:e "Nur" G3:e "stil-" G3:e "le,"
+7 Q: r:w
+7 D1: r:w
+7 D2: r:w
+7 D3: r:w
+8 N: C4:q "stil-" G3:q "le," C4:q "stil-" G3:q "le,"
+8 Q: r:w
+8 D1: r:w
+8 D2: r:w
+8 D3: r:w
+9 N: C4:q "stil-" G3:q "le," r:e G3:e "bald" G3:e "drin-" G3:e "gen"
+9 Q: r:w
+9 D1: r:w
+9 D2: r:w
+9 D3: r:w
+10 N: Ab3:q "wir" Eb3:q "in" Ab3:q "Tem-" Eb3:q "pel"
+10 Q: r:w
+10 D1: r:w
+10 D2: r:w
+10 D3: r:w
+# page 155 system 3 starts bar 11 (staves "K D1" = Queen upper / 1st Lady lower; "D 2/3" = 2nd Lady upper / 3rd Lady lower; "M")
+# bar 11: the upper-stem variant with a quarter rest (two eighths) serves the Italian "Zit-to"; German "Nur stil-le," = three eighths on both voices
+11 N: Ab3:h "ein." r:h
+11 Q: r:h r:e C5:e "Nur" C5:e "stil-" C5:e "le,"
+11 D1: r:h r:e C5:e "Nur" C5:e "stil-" C5:e "le,"
+11 D2: r:h r:e C5:e "Nur" C5:e "stil-" C5:e "le,"
+11 D3: r:h r:e C5:e "Nur" C5:e "stil-" C5:e "le,"
+12 N: r:w
+12 Q: F5:q "stil-" C5:q "le," F5:q "stil-" En5:q "le,"
+12 D1: F5:q "stil-" C5:q "le," C5:q "stil-" C5:q "le,"
+12 D2: F5:q "stil-" C5:q "le," Ab4:q "stil-" G4:q "le,"
+12 D3: F4:q "stil-" C4:q "le," F4:q "stil-" C4:q "le,"
+13 N: r:w
+13 Q: F5:q "stil-" C5:q "le!" r:e C5:e "bald" C5:e "drin-" C5:e "gen"
+13 D1: C5:q "stil-" C5:q "le!" r:e Ab4:e "bald" Ab4:e "drin-" Ab4:e "gen"
+# JUDGE bar 13 D2: X - "bald drin-gen" heads in the first space (F4), shared F4 with D3 (pixel check)
+13 D2: Ab4:q "stil-" Ab4:q "le!" r:e F4:e "bald" F4:e "drin-" F4:e "gen"
+# JUDGE bar 13 D3: X - F4 shared with D2 (two stems on one head in the first space)
+13 D3: F4:q "stil-" F4:q "le!" r:e F4:e "bald" F4:e "drin-" F4:e "gen"
+14 N: r:w
+# JUDGE bar 14 Q: X - beat 2 upper head centred in the C5 space (pixel check); Y B4 misread
+14 Q: Bn4:q "wir" C5:q "in" F5:q "Tem-" Eb5:q "pel"
+# JUDGE bar 14 D1: X - beat 2 lower head on the G4 line (pixel centre = G4 line); Y F4 misread
+14 D1: G4:q "wir" G4:q "in" D5:q "Tem-" C5:q "pel"
+14 D2: G4:q "wir" G4:q "in" G4:q "Tem-" G4:q "pel"
+14 D3: F4:q "wir" Eb4:q "in" Bn3:q "Tem-" C4:q "pel"
+15 N: r:h r:q G3:q "Doch"
+15 Q: D5:h "ein." r:h
+15 D1: Bn4:h "ein." r:h
+15 D2: G4:h "ein." r:h
+15 D3: G4:h "ein." r:h
+# page 155 system 4 starts bar 16 (Monostatos alone; Italian-only extra notes in bars 16, 18, 19 ignored)
+16 N: Bn3:h "Für-" G3:q "stin," r:q
+16 Q: r:w
+16 D1: r:w
+16 D2: r:w
+16 D3: r:w
+# JUDGE bar 17 N: X - "hal - te": syllable "te" without leading hyphen (TB.md: hyphen goes on the previous syllable)
+17 N: D4:h. "hal-" G4:q "te"
+17 Q: r:w
+17 D1: r:w
+17 D2: r:w
+17 D3: r:w
+18 N: Eb4:h "Wort," r:q Eb4:q "er-"
+18 Q: r:w
+18 D1: r:w
+18 D2: r:w
+18 D3: r:w
+19 N: F#3:q "fül-" An3:q "le," r:e An3:e "dein" An3:e "Kind" An3:e "muss"
+19 Q: r:w
+19 D1: r:w
+19 D2: r:w
+19 D3: r:w
+20 N: D4:q. "mei-" D4:e "ne" D4:q. "Gat-" An3:e "tin"
+20 Q: r:w
+20 D1: r:w
+20 D2: r:w
+20 D3: r:w
+# page 155 system 5 starts bar 21 (staff "M K": Monostatos then the Queen ("Königin."))
+21 N: Bb3:q "sein." r:q r:h
+21 Q: r:h r:e Bb4:e "Ich" An4:e "hal-" G4:e "te"
+21 D1: r:w
+21 D2: r:w
+21 D3: r:w
+# bar 22: the extra filled heads (Italian "so-no") ignored
+22 N: r:w
+22 Q: D5:h "Wort;" r:h
+22 D1: r:w
+22 D2: r:w
+22 D3: r:w
+23 N: r:w
+23 Q: r:q D5:q "es" G5:q. "ist" G5:e "mein"
+23 D1: r:w
+23 D2: r:w
+23 D3: r:w
+24 N: r:w
+24 Q: F#5:q "Wil-" D5:q "le!" r:e G5:e "Mein" F#5:e "Kind" G5:e "soll"
+24 D1: r:w
+24 D2: r:w
+24 D3: r:w
+25 N: r:w
+25 Q: Eb5:q "dei-" C5:q "ne" An4:q "Gat-" D5:q "tin"
+25 D1: r:w
+25 D2: r:w
+25 D3: r:w
+# page 156 system 1 starts bar 26 (staves K, D1, D2, D3; Monostatos has no staff here)
+26 N: r:w
+26 Q: G4:h "sein," r:h
+26 D1: r:w
+26 D2: r:h r:q G4:q "Ihr"
+26 D3: r:q Eb4:q "Ihr" D4:q "Kind" C4:q "soll"
+27 N: r:w
+27 Q: r:h r:q G4:q "mein"
+27 D1: r:q G4:q "Ihr" F5:q "Kind," F5:q "ihr"
+27 D2: D5:h. "Kind," D5:q "ihr"
+27 D3: Bn3:h. "dei-" Bn3:q "ne"
+# bar 28: D1, D2, D3 each print an extra head (Italian "mi-na,"); German: D1/D2 half "Kind", D3 two quarters "Gat-tin,"
+28 N: r:w
+28 Q: G5:h. "Kind" G5:q "soll"
+# JUDGE bar 28 D1: X - "soll" head on the middle line = Bb4 (same height as bar 29 "dei-")
+28 D1: Eb5:h "Kind" r:q Bb4:q "soll"
+28 D2: C5:h "Kind" r:q G4:q "soll"
+28 D3: C4:q "Gat-" C4:q "tin," r:q C#4:q "soll"
+29 N: r:w
+29 Q: G5:q. "dei-" G5:e "ne" D5:q. "Gat-" D5:e "tin"
+29 D1: Bb4:q. "dei-" Bb4:e "ne" An4:q. "Gat-" An4:e "tin"
+29 D2: G4:q. "dei-" G4:e "ne" F#4:q. "Gat-" F#4:e "tin"
+29 D3: D4:q. "dei-" D4:e "ne" D4:q. "Gat-" D4:e "tin"
+30 N: r:w
+30 Q: G4:h "sein." r:h
+30 D1: G4:h "sein." r:h
+30 D2: G4:h "sein." r:h
+30 D3: G4:h "sein." r:h
+# page 156 system 2 starts bar 31 ("(Donner, Geräusch von Wasser.)"; Monostatos alone)
+31 N: r:h r:e D4:e "Doch" D4:e "still," D4:e "ich"
+31 Q: r:w
+31 D1: r:w
+31 D2: r:w
+31 D3: r:w
+32 N: Eb4:q "hö-" Bb3:q "re" Eb4:q "schreck-" Bb3:q "lich"
+32 Q: r:w
+32 D1: r:w
+32 D2: r:w
+32 D3: r:w
+33 N: Eb4:q "rau-" Bb3:q "schen" r:e Bb3:e "wie" Bb3:e "Don-" Bb3:e "ner"
+33 Q: r:w
+33 D1: r:w
+33 D2: r:w
+33 D3: r:w
+34 N: C4:q. "ton" C4:e "und" C#4:q. "Was-" C#4:e "ser-"
+34 Q: r:w
+34 D1: r:w
+34 D2: r:w
+34 D3: r:w
+# page 156 system 3 starts bar 35 (staves K, D1, D2, D3, M)
+# bar 35: each Lady/Queen prints a filled quarter (German "Ja,") beside a half note (Italian "Oh"); German = quarter + quarter rest
+35 N: D4:h "fall." r:h
+35 Q: r:h D5:q "Ja," r:q
+35 D1: r:h An4:q "Ja," r:q
+35 D2: r:h F#4:q "Ja," r:q
+35 D3: r:h D4:q "Ja," r:q
+36 N: r:w
+36 Q: G5:q. "fürch-" G5:e "ter-" G5:e "lich" G5:e "ist" G5:e "die-" G5:e "ses"
+36 D1: Bb4:q. "fürch-" Bb4:e "ter-" C#5:e "lich" C#5:e "ist" C#5:e "die-" C#5:e "ses"
+36 D2: G4:q. "fürch-" G4:e "ter-" Bb4:e "lich" Bb4:e "ist" Bb4:e "die-" Bb4:e "ses"
+36 D3: D4:q. "fürch-" D4:e "ter-" D4:e "lich" D4:e "ist" D4:e "die-" D4:e "ses"
+37 N: r:w
+37 Q: F#5:q "Rau-" D5:q "schen," r:e D5:e "wie" D5:e "fer-" D5:e "nen"
+37 D1: D5:q "Rau-" An4:q "schen," r:e D5:e "wie" D5:e "fer-" D5:e "nen"
+37 D2: An4:q "Rau-" F#4:q "schen," r:e D4:e "wie" D4:e "fer-" D4:e "nen"
+37 D3: D4:q "Rau-" D4:q "schen," r:e D4:e "wie" D4:e "fer-" D4:e "nen"
+38 N: r:w
+# JUDGE bar 38 Q: X - printed "Wieder - hall!": hyphen after "der" (Wie-der-hall)
+38 Q: G5:q "Don-" D5:q "ners" Bb4:q "Wie-" G4:q "der-"
+# JUDGE bar 38 D1: X - printed "Wieder - hall!": hyphen after "der" (Wie-der-hall)
+38 D1: G5:q "Don-" D5:q "ners" Bb4:q "Wie-" G4:q "der-"
+# JUDGE bar 38 D2: X - printed "Wieder - hall!": hyphen after "der" (Wie-der-hall)
+38 D2: G4:q "Don-" D5:q "ners" Bb4:q "Wie-" G4:q "der-"
+# JUDGE bar 38 D3: X - printed "Wieder - hall!": hyphen after "der" (Wie-der-hall)
+38 D3: G4:q "Don-" D5:q "ners" Bb4:q "Wie-" G4:q "der-"
+39 N: r:w
+39 Q: D4:h "hall!" r:h
+39 D1: D4:h "hall!" r:h
+39 D2: D4:h "hall!" r:h
+39 D3: D4:h "hall!" r:h
+# page 157 system 1 starts bar 40 (staves K, D3, M only; D1 and D2 rest)
+40 N: r:w
+40 Q: r:w
+40 D1: r:w
+40 D2: r:w
+40 D3: r:w
+41 N: r:h r:e Bb3:e "Nun" Bn3:e "sind" Bn3:e "sie"
+41 Q: r:w
+41 D1: r:w
+41 D2: r:w
+41 D3: r:w
+42 N: C4:q "in" G3:q "des" C4:q "Tem-" G3:q "pels"
+42 Q: r:w
+42 D1: r:w
+42 D2: r:w
+42 D3: r:w
+43 N: C4:q "Hal-" G3:q "len." r:h
+43 Q: r:q Eb5:q "Dort" Eb5:q "wol-" Eb5:q "len"
+43 D1: r:w
+43 D2: r:w
+# JUDGE bar 43 D3: Y - "Dort wol-len" heads on the second line = G4 (zoom); X Eb4 wrong
+43 D3: r:h r:e G4:e "Dort" G4:e "wol-" G4:e "len"
+# page 157 system 2 starts bar 44 (staves K, "D 1/2" = 1st Lady upper / 2nd Lady lower, "1. u. 2. Dame", D3, M)
+44 N: r:h r:e Eb3:e "Dort" Eb3:e "wol-" Eb3:e "len"
+44 Q: Eb5:q. "wir" Eb5:e "sie" Eb5:q. "ü-" Eb5:e "ber-"
+44 D1: r:e C5:e "Dort" C5:e "wol-" C5:e "len" Db5:e "wir" Db5:e "sie" Db5:e "ü-" Db5:e "ber-"
+44 D2: r:e Ab4:e "Dort" Ab4:e "wol-" Ab4:e "len" Bb4:e "wir" Bb4:e "sie" Bb4:e "ü-" Bb4:e "ber-"
+44 D3: Ab4:q "wir" r:e Ab4:e "sie" G4:q "ü-" r:e G4:e "ber-"
+45 N: Ab3:q "wir" Ab3:q "sie" C4:q. "ü-" C4:e "ber-"
+45 Q: Eb5:q "fal-" C5:q "len," r:e C5:e "dort" C5:e "wol-" C5:e "len"
+45 D1: C5:q "fal-" C5:q "len," r:h
+45 D2: Ab4:q "fal-" Ab4:q "len," r:h
+45 D3: Ab4:q "fal-" Ab4:q "len," r:e En4:e "dort" En4:e "wol-" En4:e "len"
+46 N: C4:q "fal-" Ab3:q "len," C4:q "ü-" C3:q "ber-"
+46 Q: C5:q. "wir" C5:e "sie" C5:q. "ü-" C5:e "ber-"
+46 D1: r:e Ab4:e "dort" Ab4:e "wol-" Ab4:e "len" Bb4:e "wir" Bb4:e "sie" Bb4:e "ü-" Bb4:e "ber-"
+46 D2: r:e F4:e "dort" F4:e "wol-" F4:e "len" G4:e "wir" G4:e "sie" G4:e "ü-" G4:e "ber-"
+46 D3: F4:q "wir" r:e F4:e "sie" En4:q "ü-" r:e En4:e "ber-"
+# page 157 system 3 starts bar 47 (staves K, D 1/2, D3, M)
+47 N: F3:q "fal-" F3:q "len," r:e F3:e "die" F3:e "Frömm-" F3:e "ler"
+47 Q: C5:q "fal-" Ab4:q "len," r:e F5:e "die" F5:e "Frömm-" F5:e "ler"
+47 D1: Ab4:q "fal-" Ab4:q "len," r:e C5:e "die" C5:e "Frömm-" C5:e "ler"
+47 D2: F4:q "fal-" F4:q "len," r:e Ab4:e "die" Ab4:e "Frömm-" Ab4:e "ler"
+47 D3: F4:q "fal-" F4:q "len," r:e F4:e "die" F4:e "Frömm-" F4:e "ler"
+48 N: G3:q "til-" G3:q "gen" G3:q "von" G3:q "der"
+48 Q: F5:q "til-" Eb5:q "gen" D5:q "von" C5:q "der"
+# JUDGE bar 48 D1: X - natural on B4 at beat 1 lasts the bar: beat 3 is B natural
+48 D1: Bn4:q "til-" C5:q "gen" Bn4:q "von" C5:q "der"
+48 D2: G4:q "til-" G4:q "gen" G4:q "von" G4:q "der"
+48 D3: D4:q "til-" Eb4:q "gen" F4:q "von" Eb4:q "der"
+49 N: G3:q "Erd'" r:e G3:e "mit" G3:q. "Feu-" G3:e "ers-"
+49 Q: Bn4:q "Erd'" r:e D5:e "mit" D5:q. "Feu-" D5:e "ers-"
+49 D1: G4:q "Erd'" r:e D5:e "mit" D5:q. "Feu-" D5:e "ers-"
+49 D2: G4:q "Erd'" r:e Bn4:e "mit" Bn4:q. "Feu-" Bn4:e "ers-"
+49 D3: D4:q "Erd'" r:e G4:e "mit" G4:q. "Feu-" G4:e "ers-"
+50 N: C4:q "gluth" G3:q "und" Eb3:q "mächt'-" C3:q "gem"
+50 Q: Eb5:q "gluth" G5:q "und" Eb5:q "mächt'-" C5:q "gem"
+50 D1: Eb5:q "gluth" G5:q "und" Eb5:q "mächt'-" C5:q "gem"
+50 D2: C5:q "gluth" G4:q "und" Eb4:q "mächt'-" C4:q "gem"
+50 D3: C5:q "gluth" G4:q "und" Eb4:q "mächt'-" C4:q "gem"
+# page 158 system 1 starts bar 51 (staves K, D 1/2, D3, M)
+51 N: G3:h "Schwert." r:h
+51 Q: G4:h "Schwert." r:h
+51 D1: G4:h "Schwert." r:h
+51 D2: G4:h "Schwert." r:h
+51 D3: G4:h "Schwert." r:h
+# bar 52: "(knieend.)" (Ladies and Monostatos kneel)
+52 N: C4:h "Dir," C4:q. "gro-" C4:e "sse"
+52 Q: r:w
+52 D1: C5:h "Dir," C5:q. "gro-" C5:e "sse"
+52 D2: G4:h "Dir," G4:q. "gro-" G4:e "sse"
+52 D3: Eb4:h "Dir," Eb4:q. "gro-" Eb4:e "sse"
+53 N: C4:q. "Kö-" C4:e "ni-" C4:q. "gin" C4:e "der"
+53 Q: r:w
+53 D1: C5:q. "Kö-" C5:e "ni-" C5:q. "gin" C5:e "der"
+53 D2: G4:q. "Kö-" G4:e "ni-" G4:q. "gin" G4:e "der"
+53 D3: Eb4:q. "Kö-" Eb4:e "ni-" Eb4:q. "gin" Eb4:e "der"
+54 N: C4:w "Nacht,"
+54 Q: r:w
+54 D1: C5:w "Nacht,"
+54 D2: G4:w "Nacht,"
+54 D3: Eb4:w "Nacht,"
+55 N: r:w
+55 Q: r:w
+55 D1: r:w
+55 D2: r:w
+55 D3: r:w
+56 N: Ab3:h "dir," Ab3:q. "gro-" Ab3:e "sse"
+56 Q: r:w
+56 D1: C5:h "dir," C5:q. "gro-" C5:e "sse"
+56 D2: Ab4:h "dir," Ab4:q. "gro-" Ab4:e "sse"
+56 D3: Eb4:h "dir," Eb4:q. "gro-" Eb4:e "sse"
+57 N: Ab3:q. "Kö-" Ab3:e "ni-" Ab3:q. "gin" Ab3:e "der"
+57 Q: r:w
+57 D1: C5:q. "Kö-" C5:e "ni-" C5:q. "gin" C5:e "der"
+57 D2: Ab4:q. "Kö-" Ab4:e "ni-" Ab4:q. "gin" Ab4:e "der"
+57 D3: Eb4:q. "Kö-" Eb4:e "ni-" Eb4:q. "gin" Eb4:e "der"
+# page 158 system 2 starts bar 58 (staves D 1/2, D3, M; the Queen has no staff in this system)
+58 N: Ab3:w "Nacht,"
+58 Q: r:w
+58 D1: C5:w "Nacht,"
+58 D2: Ab4:w "Nacht,"
+# JUDGE bar 58 D3: Y - whole note on the bottom line = Eb4 (zoom); X F4 wrong
+58 D3: Eb4:w "Nacht,"
+59 N: r:w
+59 Q: r:w
+59 D1: r:w
+59 D2: r:w
+59 D3: r:w
+60 N: r:q F3:q "sei" F3:q "uns-" F3:q "rer"
+60 Q: r:w
+60 D1: r:q C5:q "sei" C5:q "uns-" C5:q "rer"
+60 D2: r:q Ab4:q "sei" Ab4:q "uns-" Ab4:q "rer"
+60 D3: r:q F4:q "sei" F4:q "uns-" F4:q "rer"
+61 N: G3:h "Ra-" C4:h "che"
+61 Q: r:w
+61 D1: Bn4:h "Ra-" C5:h "che"
+# JUDGE bar 61 D2: X - crowded half-note chord: lower head centred on the G4 line, upper B4 (pixel check), not F4
+61 D2: G4:h "Ra-" G4:h "che"
+61 D3: F4:h "Ra-" Eb4:h "che"
+62 N: G3:h "O-" G3:q. "pfer" G3:e "ge-"
+62 Q: r:w
+62 D1: C5:h "O-" Bn4:q. "pfer" Bn4:e "ge-"
+62 D2: G4:h "O-" G4:q. "pfer" G4:e "ge-"
+62 D3: D4:h "O-" D4:q. "pfer" D4:e "ge-"
+# bar 63: "(Donner, Blitz und Sturm.)"
+63 N: C3:h "bracht!" r:h
+63 Q: r:w
+63 D1: C5:h "bracht!" r:h
+63 D2: G4:h "bracht!" r:h
+63 D3: C4:h "bracht!" r:h
+# page 158 system 3 starts bar 64 (staff "K D 1/2" = "Königin und 2 Damen" in unison (one note for all three: written on Q, D1, D2); "3. Dame"; "Monost.")
+64 N: r:w
+64 Q: r:w
+64 D1: r:w
+64 D2: r:w
+64 D3: r:w
+65 N: r:h r:q r:e G4:e "Zer-"
+65 Q: r:h r:q r:e G5:e "Zer-"
+65 D1: r:h r:q r:e G5:e "Zer-"
+65 D2: r:h r:q r:e G5:e "Zer-"
+65 D3: r:h r:q r:e G5:e "Zer-"
+# JUDGE bar 66 N: Y - own staff: G5 printed = G4 sounding
+66 N: G4:h "schmet-" En4:q. "tert," En4:e "zer-"
+# JUDGE bar 66 Q: Y - "schmet-" half note in the space above the top line = G5 (same height as "Zer-"); X F5 wrong
+66 Q: G5:h "schmet-" En5:q. "tert," En5:e "zer-"
+# JUDGE bar 66 D1: Y - unison with Queen: G5
+66 D1: G5:h "schmet-" En5:q. "tert," En5:e "zer-"
+# JUDGE bar 66 D2: Y - unison with Queen: G5
+66 D2: G5:h "schmet-" En5:q. "tert," En5:e "zer-"
+# JUDGE bar 66 D3: Y - own staff: "schmet-" in the space above the top line = G5
+66 D3: G5:h "schmet-" En5:q. "tert," En5:e "zer-"
+# page 159 system 1 starts bar 67 (staves K D 1/2 (Queen + 1st and 2nd Lady in unison), D3, M)
+67 N: Db4:q "nich-" Bb3:e "tet" Bb3:e "ist" G3:q "un-" En3:e "se-" En3:e "re"
+67 Q: Db5:q "nich-" Bb4:e "tet" Bb4:e "ist" G4:q "un-" En4:e "se-" En4:e "re"
+67 D1: Db5:q "nich-" Bb4:e "tet" Bb4:e "ist" G4:q "un-" En4:e "se-" En4:e "re"
+67 D2: Db5:q "nich-" Bb4:e "tet" Bb4:e "ist" G4:q "un-" En4:e "se-" En4:e "re"
+67 D3: Db5:q "nich-" Bb4:e "tet" Bb4:e "ist" G4:q "un-" En4:e "se-" En4:e "re"
+68 N: F3:h "Macht," r:q r:e F4:e "wir"
+68 Q: F4:h "Macht," r:q r:e F5:e "wir"
+68 D1: F4:h "Macht," r:q r:e F5:e "wir"
+68 D2: F4:h "Macht," r:q r:e F5:e "wir"
+68 D3: F4:h "Macht," r:q r:e F5:e "wir"
+69 N: Ab4:h "al-" F4:q. "le" F4:e "ge-"
+69 Q: Ab5:h "al-" F5:q. "le" F5:e "ge-"
+69 D1: Ab5:h "al-" F5:q. "le" F5:e "ge-"
+69 D2: Ab5:h "al-" F5:q. "le" F5:e "ge-"
+69 D3: Ab5:h "al-" F5:q. "le" F5:e "ge-"
+# page 159 system 2 starts bar 70 ("Offene Verwandlung. Sonnentempel. Sarastro steht erhöht. Vor ihm Tamino und Pamina." printed over bars 72-74)
+70 N: C4:q "stür-" Ab3:e "zet" Ab3:e "in" F3:q "e-" Db3:e "wi-" Db3:e "ge"
+70 Q: C5:q "stür-" Ab4:e "zet" Ab4:e "in" F4:q "e-" Db4:e "wi-" Db4:e "ge"
+70 D1: C5:q "stür-" Ab4:e "zet" Ab4:e "in" F4:q "e-" Db4:e "wi-" Db4:e "ge"
+70 D2: C5:q "stür-" Ab4:e "zet" Ab4:e "in" F4:q "e-" Db4:e "wi-" Db4:e "ge"
+70 D3: C5:q "stür-" Ab4:e "zet" Ab4:e "in" F4:q "e-" Db4:e "wi-" Db4:e "ge"
+# bar 71: "(sie versinken)"; the K D 1/2 staff prints two adjacent unison whole notes Bn3 (Queen and Ladies 1/2)
+71 N: Bn2:w "Nacht!"
+# JUDGE bar 71 Q: X - both side-by-side whole notes hang below the C4 ledger at the same height (pixel profile: no head on the ledger) = unison B3; no C4
+71 Q: Bn3:w "Nacht!"
+# JUDGE bar 71 D1: X - unison B3 with Queen and 2nd Lady (two identical heads, one natural)
+71 D1: Bn3:w "Nacht!"
+71 D2: Bn3:w "Nacht!"
+71 D3: Bn3:w "Nacht!"
+72 N: r:w
+72 Q: r:w
+72 D1: r:w
+72 D2: r:w
+72 D3: r:w
+73 N: r:w
+73 Q: r:w
+73 D1: r:w
+73 D2: r:w
+73 D3: r:w
+74 N: r:w
+74 Q: r:w
+74 D1: r:w
+74 D2: r:w
+74 D3: r:w
+# end of S53: bar 74 = last bar of p.159 system 2 (no double bar; system 3 is S54)

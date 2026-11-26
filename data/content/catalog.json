@@ -2613,6 +2613,34 @@
     }
   },
   {
+    "editionId": "mozart-die-strahlen-der-sonne",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-die-strahlen-der-sonne@1.0.0-peters#60f75f475c",
+    "title": "Die Strahlen der Sonne vertreiben die Nacht",
+    "subtitle": "Sarastro and the chorus: the end of Die Zauberflöte",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "sarastro",
+        "name": "Sarastro",
+        "voiceType": "Bass",
+        "partKey": "sarastro"
+      }
+    ],
+    "measures": 103,
+    "durationSec": 178,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 2,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-die-weisheitslehre-dieser-knaben",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-die-weisheitslehre-dieser-knaben@1.0.0-peters#e69f923000",
@@ -6310,6 +6338,58 @@
     }
   },
   {
+    "editionId": "mozart-nur-stille-stille",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-nur-stille-stille@1.0.0-peters#ca495a8cc0",
+    "title": "Nur stille, stille, stille, stille!",
+    "subtitle": "Monostatos, the Queen of the Night and the three Ladies: from the finale of Die Zauberflöte, Act 2",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "monostatos",
+        "name": "Monostatos",
+        "voiceType": "Tenor",
+        "partKey": "monostatos"
+      },
+      {
+        "id": "queen",
+        "name": "The Queen of the Night",
+        "voiceType": "Soprano",
+        "partKey": "queen"
+      },
+      {
+        "id": "dame1",
+        "name": "First Lady",
+        "voiceType": "Soprano",
+        "partKey": "dame1"
+      },
+      {
+        "id": "dame2",
+        "name": "Second Lady",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "dame2"
+      },
+      {
+        "id": "dame3",
+        "name": "Third Lady",
+        "voiceType": "Mezzo-soprano or contralto",
+        "partKey": "dame3"
+      }
+    ],
+    "measures": 74,
+    "durationSec": 131,
+    "hasRepeats": false,
+    "keySignature": "E♭ major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 70,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-o-isis-und-osiris",
     "editionVersion": "1.0.0-peters",
     "scoreVersionId": "mozart-o-isis-und-osiris@1.0.0-peters#7d51722b57",
@@ -6747,6 +6827,40 @@
     }
   },
   {
+    "editionId": "mozart-pa-pa-pa-papagena",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-pa-pa-pa-papagena@1.0.0-peters#9d5901dddb",
+    "title": "Pa-pa-pa-pa-pa-pa-Papagena!",
+    "subtitle": "Papageno and Papagena: from the finale of Die Zauberflöte, Act 2",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      },
+      {
+        "id": "papagena",
+        "name": "Papagena",
+        "voiceType": "Soprano",
+        "partKey": "papagena"
+      }
+    ],
+    "measures": 129,
+    "durationSec": 152,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "2/2",
+    "languageStatus": {
+      "phrases": 41,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "mozart-pace-pace",
     "editionVersion": "1.0.0-klengel",
     "scoreVersionId": "mozart-pace-pace@1.0.0-klengel#62c1ca3a71",
@@ -6782,6 +6896,52 @@
     "time": "6/8",
     "languageStatus": {
       "phrases": 46,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
+    "editionId": "mozart-papagena-papagena-papagena",
+    "editionVersion": "1.0.0-peters",
+    "scoreVersionId": "mozart-papagena-papagena-papagena@1.0.0-peters#58f7ae4fb4",
+    "title": "Papagena, Papagena, Papagena!",
+    "subtitle": "Papageno and the three Boys: from the finale of Die Zauberflöte, Act 2",
+    "kind": "finale",
+    "fixture": false,
+    "composer": "Wolfgang Amadeus Mozart",
+    "roles": [
+      {
+        "id": "papageno",
+        "name": "Papageno",
+        "voiceType": "Baritone",
+        "partKey": "papageno"
+      },
+      {
+        "id": "knabe1",
+        "name": "First Boy",
+        "voiceType": "Treble or soprano",
+        "partKey": "knabe1"
+      },
+      {
+        "id": "knabe2",
+        "name": "Second Boy",
+        "voiceType": "Treble or soprano",
+        "partKey": "knabe2"
+      },
+      {
+        "id": "knabe3",
+        "name": "Third Boy",
+        "voiceType": "Treble or mezzo-soprano",
+        "partKey": "knabe3"
+      }
+    ],
+    "measures": 204,
+    "durationSec": 310,
+    "hasRepeats": false,
+    "keySignature": "G major",
+    "time": "6/8",
+    "languageStatus": {
+      "phrases": 59,
       "withAudio": 0,
       "reviewed": 0
     }

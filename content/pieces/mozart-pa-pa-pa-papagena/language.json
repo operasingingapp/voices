@@ -1,0 +1,2194 @@
+{
+ "editionId": "mozart-pa-pa-pa-papagena",
+ "language": "de",
+ "review": {
+  "status": "unreviewed-fixture"
+ },
+ "notes": "Libretto by Emanuel Schikaneder (1791). Words as printed in the Edition Peters vocal score, which the app follows where it differs from the libretto: Papageno's \"Bist du mir nun ganz ergeben?\" and Papagena's \"Nun bin ich dir ganz ergeben\" (the libretto has \"gegeben\"), \"unsrer\" without an apostrophe, \"der Eltern Sorgen werden sein\" (the libretto has \"Segen\", blessing), with \"Sorge\" in the singular where the print has it (bars 110 and 112), the comma in Papagena's \"wenn viele, viele\" and none in Papageno's \"wenn viele viele\", and the repeats of the music (\"unsrer Liebe Kinder schenken\", \"Kinderlein\", \"so liebe kleine Kinderlein\", \"Papageno\" and \"Papagena\", \"Es ist das höchste der Gefühle\" and \"der Eltern Sorgen werden sein\"). The stammered names are written with as many \"pa\" syllables as are sung: where a run of them ends in \"-geno\" or \"-gena\" it is written as the name after its stammered start (\"Pa-pa-pa-pa-pa-Papagena\", sung Pa-pa-pa-pa-pa-pa-pa-ge-na), and a run that stops short of the name is written as the syllables alone (\"Pa-pa-pa\"). The stage directions (\"sie umtanzend\", \"ihn umtanzend\", \"ab\") are left out. IPA follows sung German stage diction: final -er, -ern as [ɐ]; the prefixes er-, ver-, zer- with [ɛr]; r elsewhere rolled or flipped; ch as [ç] after front vowels and [x] after back vowels; glottal stops [ʔ] before initial vowels; final b d g devoiced.",
+ "phrases": [
+  {
+   "id": "pa-01",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "9",
+   "original": "Pa-pa-pa, Pa-pa-pa-pa,",
+   "translation": "Pa-pa-pa, Pa-pa-pa-pa,",
+   "ipa": "pa.pa.pa pa.pa.pa.pa",
+   "words": [
+    [
+     "Pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa"
+    ],
+    [
+     "Pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-02",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "17",
+   "original": "Pa-pa-pa-pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa-Papagena.",
+   "translation": "Pa-pa-pa-pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa-Papagena.",
+   "ipa": "pa.pa.pa.pa.pa.pa.pa.pa pa.pa.pa.pa.pa pa.pa.pa.pa.pa.pa.paˈgeː.na",
+   "words": [
+    [
+     "Pa-pa-pa-pa-pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa.pa.pa.pa.pa"
+    ],
+    [
+     "Pa-pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa.pa"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-Papagena.",
+     "Papagena (stammered)",
+     "pa.pa.pa.pa.pa.pa.paˈgeː.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-03",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "25",
+   "original": "Bist du mir nun ganz ergeben?",
+   "translation": "Are you all mine now?",
+   "ipa": "bɪst duː miːr nuːn gants ʔɛrˈgeː.bən",
+   "words": [
+    [
+     "Bist",
+     "are",
+     "bɪst"
+    ],
+    [
+     "du",
+     "you",
+     "duː"
+    ],
+    [
+     "mir",
+     "to me",
+     "miːr"
+    ],
+    [
+     "nun",
+     "now",
+     "nuːn"
+    ],
+    [
+     "ganz",
+     "wholly",
+     "gants"
+    ],
+    [
+     "ergeben?",
+     "devoted",
+     "ʔɛrˈgeː.bən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "wholly devoted"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-04",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "29",
+   "original": "Nun, so sei mein liebes Weibchen!",
+   "translation": "Well then, be my dear little wife!",
+   "ipa": "nuːn zoː zae maen ˈliː.bəs ˈvaep.çən",
+   "words": [
+    [
+     "Nun,",
+     "well",
+     "nuːn"
+    ],
+    [
+     "so",
+     "then",
+     "zoː"
+    ],
+    [
+     "sei",
+     "be",
+     "zae"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "liebes",
+     "dear",
+     "ˈliː.bəs"
+    ],
+    [
+     "Weibchen!",
+     "little wife",
+     "ˈvaep.çən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "well then"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-05",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "33",
+   "original": "mein liebes Weibchen, mein Herzenstäubchen!",
+   "translation": "my dear little wife, my little dove of my heart!",
+   "ipa": "maen ˈliː.bəs ˈvaep.çən maen ˈhɛr.tsəns.tɔøp.çən",
+   "words": [
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "liebes",
+     "dear",
+     "ˈliː.bəs"
+    ],
+    [
+     "Weibchen,",
+     "little wife",
+     "ˈvaep.çən"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Herzenstäubchen!",
+     "heart's little dove",
+     "ˈhɛr.tsəns.tɔøp.çən"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-06",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "37",
+   "original": "Welche Freude wird das sein, wenn die Götter uns bedenken,",
+   "translation": "What a joy it will be when the gods remember us",
+   "ipa": "ˈvɛl.çə ˈfrɔø.də vɪrt das zaen vɛn diː ˈgœ.tɐ ʔʊns bəˈdɛŋ.kən",
+   "words": [
+    [
+     "Welche",
+     "what",
+     "ˈvɛl.çə"
+    ],
+    [
+     "Freude",
+     "joy",
+     "ˈfrɔø.də"
+    ],
+    [
+     "wird",
+     "will",
+     "vɪrt"
+    ],
+    [
+     "das",
+     "that",
+     "das"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ],
+    [
+     "wenn",
+     "when",
+     "vɛn"
+    ],
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Götter",
+     "gods",
+     "ˈgœ.tɐ"
+    ],
+    [
+     "uns",
+     "us",
+     "ʔʊns"
+    ],
+    [
+     "bedenken,",
+     "remember",
+     "bəˈdɛŋ.kən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "what a joy that will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-07",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "unsrer Liebe Kinder schenken, unsrer Liebe Kinder schenken,",
+   "translation": "and give our love children, give our love children,",
+   "ipa": "ˈʔʊn.zrɐ ˈliː.bə ˈkɪn.dɐ ˈʃɛŋ.kən ˈʔʊn.zrɐ ˈliː.bə ˈkɪn.dɐ ˈʃɛŋ.kən",
+   "words": [
+    [
+     "unsrer",
+     "our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Liebe",
+     "love",
+     "ˈliː.bə"
+    ],
+    [
+     "Kinder",
+     "children",
+     "ˈkɪn.dɐ"
+    ],
+    [
+     "schenken,",
+     "give",
+     "ˈʃɛŋ.kən"
+    ],
+    [
+     "unsrer",
+     "our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Liebe",
+     "love",
+     "ˈliː.bə"
+    ],
+    [
+     "Kinder",
+     "children",
+     "ˈkɪn.dɐ"
+    ],
+    [
+     "schenken,",
+     "give",
+     "ˈʃɛŋ.kən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "give children"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "give children"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-08",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "so liebe kleine Kinderlein, Kinderlein, Kinderlein, Kinderlein,",
+   "translation": "such dear little children, little children, little children, little children,",
+   "ipa": "zoː ˈliː.bə ˈklae.nə ˈkɪn.dɐ.laen ˈkɪn.dɐ.laen ˈkɪn.dɐ.laen ˈkɪn.dɐ.laen",
+   "words": [
+    [
+     "so",
+     "such",
+     "zoː"
+    ],
+    [
+     "liebe",
+     "dear",
+     "ˈliː.bə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-09",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "so liebe kleine Kinderlein, so liebe kleine Kinderlein.",
+   "translation": "such dear little children, such dear little children.",
+   "ipa": "zoː ˈliː.bə ˈklae.nə ˈkɪn.dɐ.laen zoː ˈliː.bə ˈklae.nə ˈkɪn.dɐ.laen",
+   "words": [
+    [
+     "so",
+     "such",
+     "zoː"
+    ],
+    [
+     "liebe",
+     "dear",
+     "ˈliː.bə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "so",
+     "such",
+     "zoː"
+    ],
+    [
+     "liebe",
+     "dear",
+     "ˈliː.bə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Kinderlein.",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-10",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "60",
+   "original": "Erst einen kleinen Papageno.",
+   "translation": "First a little Papageno.",
+   "ipa": "ʔeːrst ˈʔae.nən ˈklae.nən pa.paˈgeː.no",
+   "words": [
+    [
+     "Erst",
+     "first",
+     "ʔeːrst"
+    ],
+    [
+     "einen",
+     "a",
+     "ˈʔae.nən"
+    ],
+    [
+     "kleinen",
+     "little",
+     "ˈklae.nən"
+    ],
+    [
+     "Papageno.",
+     "Papageno",
+     "pa.paˈgeː.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-11",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "64",
+   "original": "Dann wieder einen Papageno,",
+   "translation": "Then another Papageno,",
+   "ipa": "dan ˈviː.dɐ ˈʔae.nən pa.paˈgeː.no",
+   "words": [
+    [
+     "Dann",
+     "then",
+     "dan"
+    ],
+    [
+     "wieder",
+     "again",
+     "ˈviː.dɐ"
+    ],
+    [
+     "einen",
+     "a",
+     "ˈʔae.nən"
+    ],
+    [
+     "Papageno,",
+     "Papageno",
+     "pa.paˈgeː.no"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "another"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-12",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "Papageno, Papageno, Papageno, Papageno!",
+   "translation": "Papageno, Papageno, Papageno, Papageno!",
+   "ipa": "pa.paˈgeː.no pa.paˈgeː.no pa.paˈgeː.no pa.paˈgeː.no",
+   "words": [
+    [
+     "Papageno,",
+     "Papageno",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Papageno,",
+     "Papageno",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Papageno,",
+     "Papageno",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Papageno!",
+     "Papageno",
+     "pa.paˈgeː.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-13",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "75",
+   "original": "Es ist das höchste der Gefühle,",
+   "translation": "It is the greatest of feelings,",
+   "ipa": "ʔɛs ʔɪst das ˈhøːç.stə deːr gəˈfyː.lə",
+   "words": [
+    [
+     "Es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "das",
+     "the",
+     "das"
+    ],
+    [
+     "höchste",
+     "highest",
+     "ˈhøːç.stə"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Gefühle,",
+     "feelings",
+     "gəˈfyː.lə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "the greatest of feelings"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-14",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "78",
+   "original": "wenn viele Pa-pa-Papageno, Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-pa-pa,",
+   "translation": "when many Pa-pa-Papagenos, Pa-pa-pa-pa-Papagenos, Pa-pa-pa-pa-pa-pa,",
+   "ipa": "vɛn ˈfiː.lə pa.pa.pa.paˈgeː.no pa.pa.pa.pa.pa.paˈgeː.no pa.pa.pa.pa.pa.pa",
+   "words": [
+    [
+     "wenn",
+     "when",
+     "vɛn"
+    ],
+    [
+     "viele",
+     "many",
+     "ˈfiː.lə"
+    ],
+    [
+     "Pa-pa-Papageno,",
+     "Papagenos (stammered)",
+     "pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-Papageno,",
+     "Papagenos (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa.pa.pa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pa-15",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "81",
+   "original": "Pa-pa-pa-pa-pa-pa-Papageno der Eltern Sorgen werden sein.",
+   "translation": "Pa-pa-pa-pa-pa-pa-Papagenos become their parents' cares.",
+   "ipa": "pa.pa.pa.pa.pa.pa.pa.paˈgeː.no deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "Pa-pa-pa-pa-pa-pa-Papageno",
+     "Papagenos (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-16",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "86",
+   "original": "Es ist das höchste der Gefühle,",
+   "translation": "It is the greatest of feelings,",
+   "ipa": "ʔɛs ʔɪst das ˈhøːç.stə deːr gəˈfyː.lə",
+   "words": [
+    [
+     "Es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "das",
+     "the",
+     "das"
+    ],
+    [
+     "höchste",
+     "highest",
+     "ˈhøːç.stə"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Gefühle,",
+     "feelings",
+     "gəˈfyː.lə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "the greatest of feelings"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-17",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "90",
+   "original": "wenn viele viele Pa-pa-pa-pa-pa-pa-Papageno der Eltern Sorgen werden sein,",
+   "translation": "when many, many Pa-pa-pa-pa-pa-pa-Papagenos become their parents' cares,",
+   "ipa": "vɛn ˈfiː.lə ˈfiː.lə pa.pa.pa.pa.pa.pa.pa.paˈgeː.no deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "wenn",
+     "when",
+     "vɛn"
+    ],
+    [
+     "viele",
+     "many",
+     "ˈfiː.lə"
+    ],
+    [
+     "viele",
+     "many",
+     "ˈfiː.lə"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa-Papageno",
+     "Papagenos (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      7,
+      8
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-18",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "Papageno, Papageno, Pa-pa-pa-pa-pa-pa-pa-pa-Papageno der Eltern Sorgen werden sein,",
+   "translation": "Papagenos, Papagenos, Pa-pa-pa-pa-pa-pa-pa-pa-Papagenos become their parents' cares,",
+   "ipa": "pa.paˈgeː.no pa.paˈgeː.no pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.no deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "Papageno,",
+     "Papagenos",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Papageno,",
+     "Papagenos",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa-pa-pa-Papageno",
+     "Papagenos (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-19",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "Papageno, Papageno, Pa-pa-pa-pa-pa-pa-pa-pa-Papageno der Eltern Sorge werden sein,",
+   "translation": "Papagenos, Papagenos, Pa-pa-pa-pa-pa-pa-pa-pa-Papagenos become their parents' care,",
+   "ipa": "pa.paˈgeː.no pa.paˈgeː.no pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.no deːr ˈʔɛl.tɐn ˈzɔr.gə ˈveːr.dən zaen",
+   "words": [
+    [
+     "Papageno,",
+     "Papagenos",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Papageno,",
+     "Papagenos",
+     "pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa-pa-pa-Papageno",
+     "Papagenos (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorge",
+     "care",
+     "ˈzɔr.gə"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "the parents' care"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-20",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "der Eltern Sorge werden sein, der Eltern Sorgen werden sein,",
+   "translation": "become their parents' care, become their parents' cares,",
+   "ipa": "deːr ˈʔɛl.tɐn ˈzɔr.gə ˈveːr.dən zaen deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorge",
+     "care",
+     "ˈzɔr.gə"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "the parents' care"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "will be"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      8,
+      9
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pa-21",
+   "role": "papageno",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "118",
+   "original": "Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-Papageno.",
+   "translation": "Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-Papageno, Pa-pa-pa-pa-Papageno.",
+   "ipa": "pa.pa.pa.pa.pa.paˈgeː.no pa.pa.pa.pa.pa.paˈgeː.no pa.pa.pa.pa.pa.paˈgeː.no pa.pa.pa.pa.pa.paˈgeː.no",
+   "words": [
+    [
+     "Pa-pa-pa-pa-Papageno,",
+     "Papageno (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-Papageno,",
+     "Papageno (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-Papageno,",
+     "Papageno (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.no"
+    ],
+    [
+     "Pa-pa-pa-pa-Papageno.",
+     "Papageno (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-01",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "11",
+   "original": "Pa-pa-pa, Pa-pa-pa-pa,",
+   "translation": "Pa-pa-pa, Pa-pa-pa-pa,",
+   "ipa": "pa.pa.pa pa.pa.pa.pa",
+   "words": [
+    [
+     "Pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa"
+    ],
+    [
+     "Pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-02",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "19",
+   "original": "Pa-pa-pa-pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa-Papageno.",
+   "translation": "Pa-pa-pa-pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa, Pa-pa-pa-pa-pa-Papageno.",
+   "ipa": "pa.pa.pa.pa.pa.pa.pa.pa pa.pa.pa.pa.pa pa.pa.pa.pa.pa.pa.paˈgeː.no",
+   "words": [
+    [
+     "Pa-pa-pa-pa-pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa.pa.pa.pa.pa"
+    ],
+    [
+     "Pa-pa-pa-pa-pa,",
+     "(stammering the name)",
+     "pa.pa.pa.pa.pa"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-Papageno.",
+     "Papageno (stammered)",
+     "pa.pa.pa.pa.pa.pa.paˈgeː.no"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-03",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "27",
+   "original": "Nun bin ich dir ganz ergeben.",
+   "translation": "Now I am all yours.",
+   "ipa": "nuːn bɪn ʔɪç diːr gants ʔɛrˈgeː.bən",
+   "words": [
+    [
+     "Nun",
+     "now",
+     "nuːn"
+    ],
+    [
+     "bin",
+     "am",
+     "bɪn"
+    ],
+    [
+     "ich",
+     "I",
+     "ʔɪç"
+    ],
+    [
+     "dir",
+     "to you",
+     "diːr"
+    ],
+    [
+     "ganz",
+     "wholly",
+     "gants"
+    ],
+    [
+     "ergeben.",
+     "devoted",
+     "ʔɛrˈgeː.bən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "wholly devoted"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-04",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "31",
+   "original": "Nun, so sei mein Herzenstäubchen, mein Herzenstäubchen, mein Herzenstäubchen!",
+   "translation": "Well then, be my little dove of my heart, my little dove of my heart, my little dove of my heart!",
+   "ipa": "nuːn zoː zae maen ˈhɛr.tsəns.tɔøp.çən maen ˈhɛr.tsəns.tɔøp.çən maen ˈhɛr.tsəns.tɔøp.çən",
+   "words": [
+    [
+     "Nun,",
+     "well",
+     "nuːn"
+    ],
+    [
+     "so",
+     "then",
+     "zoː"
+    ],
+    [
+     "sei",
+     "be",
+     "zae"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Herzenstäubchen,",
+     "heart's little dove",
+     "ˈhɛr.tsəns.tɔøp.çən"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Herzenstäubchen,",
+     "heart's little dove",
+     "ˈhɛr.tsəns.tɔøp.çən"
+    ],
+    [
+     "mein",
+     "my",
+     "maen"
+    ],
+    [
+     "Herzenstäubchen!",
+     "heart's little dove",
+     "ˈhɛr.tsəns.tɔøp.çən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1
+     ],
+     "gloss": "well then"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-05",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "39",
+   "original": "Welche Freude wird das sein, wenn die Götter uns bedenken,",
+   "translation": "What a joy it will be when the gods remember us",
+   "ipa": "ˈvɛl.çə ˈfrɔø.də vɪrt das zaen vɛn diː ˈgœ.tɐ ʔʊns bəˈdɛŋ.kən",
+   "words": [
+    [
+     "Welche",
+     "what",
+     "ˈvɛl.çə"
+    ],
+    [
+     "Freude",
+     "joy",
+     "ˈfrɔø.də"
+    ],
+    [
+     "wird",
+     "will",
+     "vɪrt"
+    ],
+    [
+     "das",
+     "that",
+     "das"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ],
+    [
+     "wenn",
+     "when",
+     "vɛn"
+    ],
+    [
+     "die",
+     "the",
+     "diː"
+    ],
+    [
+     "Götter",
+     "gods",
+     "ˈgœ.tɐ"
+    ],
+    [
+     "uns",
+     "us",
+     "ʔʊns"
+    ],
+    [
+     "bedenken,",
+     "remember",
+     "bəˈdɛŋ.kən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "gloss": "what a joy that will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-06",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "45",
+   "original": "unsrer Liebe Kinder schenken, unsrer Liebe Kinder schenken,",
+   "translation": "and give our love children, give our love children,",
+   "ipa": "ˈʔʊn.zrɐ ˈliː.bə ˈkɪn.dɐ ˈʃɛŋ.kən ˈʔʊn.zrɐ ˈliː.bə ˈkɪn.dɐ ˈʃɛŋ.kən",
+   "words": [
+    [
+     "unsrer",
+     "our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Liebe",
+     "love",
+     "ˈliː.bə"
+    ],
+    [
+     "Kinder",
+     "children",
+     "ˈkɪn.dɐ"
+    ],
+    [
+     "schenken,",
+     "give",
+     "ˈʃɛŋ.kən"
+    ],
+    [
+     "unsrer",
+     "our",
+     "ˈʔʊn.zrɐ"
+    ],
+    [
+     "Liebe",
+     "love",
+     "ˈliː.bə"
+    ],
+    [
+     "Kinder",
+     "children",
+     "ˈkɪn.dɐ"
+    ],
+    [
+     "schenken,",
+     "give",
+     "ˈʃɛŋ.kən"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3
+     ],
+     "gloss": "give children"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "give children"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-07",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "49",
+   "original": "so liebe kleine Kinderlein, Kinderlein, Kinderlein, Kinderlein,",
+   "translation": "such dear little children, little children, little children, little children,",
+   "ipa": "zoː ˈliː.bə ˈklae.nə ˈkɪn.dɐ.laen ˈkɪn.dɐ.laen ˈkɪn.dɐ.laen ˈkɪn.dɐ.laen",
+   "words": [
+    [
+     "so",
+     "such",
+     "zoː"
+    ],
+    [
+     "liebe",
+     "dear",
+     "ˈliː.bə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-08",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "56",
+   "original": "so liebe kleine Kinderlein, so liebe kleine Kinderlein.",
+   "translation": "such dear little children, such dear little children.",
+   "ipa": "zoː ˈliː.bə ˈklae.nə ˈkɪn.dɐ.laen zoː ˈliː.bə ˈklae.nə ˈkɪn.dɐ.laen",
+   "words": [
+    [
+     "so",
+     "such",
+     "zoː"
+    ],
+    [
+     "liebe",
+     "dear",
+     "ˈliː.bə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Kinderlein,",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ],
+    [
+     "so",
+     "such",
+     "zoː"
+    ],
+    [
+     "liebe",
+     "dear",
+     "ˈliː.bə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Kinderlein.",
+     "little children",
+     "ˈkɪn.dɐ.laen"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-09",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "62",
+   "original": "Dann eine kleine Papagena.",
+   "translation": "Then a little Papagena.",
+   "ipa": "dan ˈʔae.nə ˈklae.nə pa.paˈgeː.na",
+   "words": [
+    [
+     "Dann",
+     "then",
+     "dan"
+    ],
+    [
+     "eine",
+     "a",
+     "ˈʔae.nə"
+    ],
+    [
+     "kleine",
+     "little",
+     "ˈklae.nə"
+    ],
+    [
+     "Papagena.",
+     "Papagena",
+     "pa.paˈgeː.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-10",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "66",
+   "original": "Dann wieder eine Papagena,",
+   "translation": "Then another Papagena,",
+   "ipa": "dan ˈviː.dɐ ˈʔae.nə pa.paˈgeː.na",
+   "words": [
+    [
+     "Dann",
+     "then",
+     "dan"
+    ],
+    [
+     "wieder",
+     "again",
+     "ˈviː.dɐ"
+    ],
+    [
+     "eine",
+     "a",
+     "ˈʔae.nə"
+    ],
+    [
+     "Papagena,",
+     "Papagena",
+     "pa.paˈgeː.na"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2
+     ],
+     "gloss": "another"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-11",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "68",
+   "original": "Papagena, Papagena, Papagena, Papagena!",
+   "translation": "Papagena, Papagena, Papagena, Papagena!",
+   "ipa": "pa.paˈgeː.na pa.paˈgeː.na pa.paˈgeː.na pa.paˈgeː.na",
+   "words": [
+    [
+     "Papagena,",
+     "Papagena",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Papagena,",
+     "Papagena",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Papagena,",
+     "Papagena",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Papagena!",
+     "Papagena",
+     "pa.paˈgeː.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-12",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "73",
+   "original": "Es ist das höchste der Gefühle,",
+   "translation": "It is the greatest of feelings,",
+   "ipa": "ʔɛs ʔɪst das ˈhøːç.stə deːr gəˈfyː.lə",
+   "words": [
+    [
+     "Es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "das",
+     "the",
+     "das"
+    ],
+    [
+     "höchste",
+     "highest",
+     "ˈhøːç.stə"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Gefühle,",
+     "feelings",
+     "gəˈfyː.lə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "the greatest of feelings"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-13",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "77",
+   "original": "wenn viele, viele Pa-pa-pa-pa-pa-pa-Papagena der Eltern Sorgen werden sein.",
+   "translation": "when many, many Pa-pa-pa-pa-pa-pa-Papagenas become their parents' cares.",
+   "ipa": "vɛn ˈfiː.lə ˈfiː.lə pa.pa.pa.pa.pa.pa.pa.paˈgeː.na deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "wenn",
+     "when",
+     "vɛn"
+    ],
+    [
+     "viele,",
+     "many",
+     "ˈfiː.lə"
+    ],
+    [
+     "viele",
+     "many",
+     "ˈfiː.lə"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa-Papagena",
+     "Papagenas (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein.",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      4,
+      5,
+      6
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      7,
+      8
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-14",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "88",
+   "original": "Es ist das höchste der Gefühle,",
+   "translation": "It is the greatest of feelings,",
+   "ipa": "ʔɛs ʔɪst das ˈhøːç.stə deːr gəˈfyː.lə",
+   "words": [
+    [
+     "Es",
+     "it",
+     "ʔɛs"
+    ],
+    [
+     "ist",
+     "is",
+     "ʔɪst"
+    ],
+    [
+     "das",
+     "the",
+     "das"
+    ],
+    [
+     "höchste",
+     "highest",
+     "ˈhøːç.stə"
+    ],
+    [
+     "der",
+     "of the",
+     "deːr"
+    ],
+    [
+     "Gefühle,",
+     "feelings",
+     "gəˈfyː.lə"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "gloss": "the greatest of feelings"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-15",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "91",
+   "original": "wenn viele Pa-pa-Papagena, Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena,",
+   "translation": "when many Pa-pa-Papagenas, Pa-pa-pa-pa-Papagenas, Pa-pa-pa-pa-Papagenas,",
+   "ipa": "vɛn ˈfiː.lə pa.pa.pa.paˈgeː.na pa.pa.pa.pa.pa.paˈgeː.na pa.pa.pa.pa.pa.paˈgeː.na",
+   "words": [
+    [
+     "wenn",
+     "when",
+     "vɛn"
+    ],
+    [
+     "viele",
+     "many",
+     "ˈfiː.lə"
+    ],
+    [
+     "Pa-pa-Papagena,",
+     "Papagenas (stammered)",
+     "pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-Papagena,",
+     "Papagenas (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-Papagena,",
+     "Papagenas (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  },
+  {
+   "id": "pga-16",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "94",
+   "original": "Pa-pa-pa-pa-Papagena der Eltern Sorgen werden sein,",
+   "translation": "Pa-pa-pa-pa-Papagenas become their parents' cares,",
+   "ipa": "pa.pa.pa.pa.pa.paˈgeː.na deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "Pa-pa-pa-pa-Papagena",
+     "Papagenas (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      1,
+      2,
+      3
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      4,
+      5
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-17",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "99",
+   "original": "Papagena, Papagena, Pa-pa-pa-pa-pa-pa-pa-pa-Papagena der Eltern Sorgen werden sein,",
+   "translation": "Papagenas, Papagenas, Pa-pa-pa-pa-pa-pa-pa-pa-Papagenas become their parents' cares,",
+   "ipa": "pa.paˈgeː.na pa.paˈgeː.na pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.na deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "Papagena,",
+     "Papagenas",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Papagena,",
+     "Papagenas",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa-pa-pa-Papagena",
+     "Papagenas (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-18",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "105",
+   "original": "Papagena, Papagena, Pa-pa-pa-pa-pa-pa-pa-pa-Papagena der Eltern Sorge werden sein,",
+   "translation": "Papagenas, Papagenas, Pa-pa-pa-pa-pa-pa-pa-pa-Papagenas become their parents' care,",
+   "ipa": "pa.paˈgeː.na pa.paˈgeː.na pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.na deːr ˈʔɛl.tɐn ˈzɔr.gə ˈveːr.dən zaen",
+   "words": [
+    [
+     "Papagena,",
+     "Papagenas",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Papagena,",
+     "Papagenas",
+     "pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-pa-pa-pa-pa-Papagena",
+     "Papagenas (stammered)",
+     "pa.pa.pa.pa.pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorge",
+     "care",
+     "ˈzɔr.gə"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      3,
+      4,
+      5
+     ],
+     "gloss": "the parents' care"
+    },
+    {
+     "words": [
+      6,
+      7
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-19",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "111",
+   "original": "der Eltern Sorge werden sein, der Eltern Sorgen werden sein,",
+   "translation": "become their parents' care, become their parents' cares,",
+   "ipa": "deːr ˈʔɛl.tɐn ˈzɔr.gə ˈveːr.dən zaen deːr ˈʔɛl.tɐn ˈzɔr.gən ˈveːr.dən zaen",
+   "words": [
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorge",
+     "care",
+     "ˈzɔr.gə"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ],
+    [
+     "der",
+     "the",
+     "deːr"
+    ],
+    [
+     "Eltern",
+     "parents'",
+     "ˈʔɛl.tɐn"
+    ],
+    [
+     "Sorgen",
+     "cares",
+     "ˈzɔr.gən"
+    ],
+    [
+     "werden",
+     "will",
+     "ˈveːr.dən"
+    ],
+    [
+     "sein,",
+     "be",
+     "zaen"
+    ]
+   ],
+   "glossGroups": [
+    {
+     "words": [
+      0,
+      1,
+      2
+     ],
+     "gloss": "the parents' care"
+    },
+    {
+     "words": [
+      3,
+      4
+     ],
+     "gloss": "will be"
+    },
+    {
+     "words": [
+      5,
+      6,
+      7
+     ],
+     "gloss": "the parents' cares"
+    },
+    {
+     "words": [
+      8,
+      9
+     ],
+     "gloss": "will be"
+    }
+   ],
+   "audio": {}
+  },
+  {
+   "id": "pga-20",
+   "role": "papagena",
+   "verse": 1,
+   "occurrence": 1,
+   "startMeasure": "116",
+   "original": "Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena.",
+   "translation": "Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena, Pa-pa-pa-pa-Papagena.",
+   "ipa": "pa.pa.pa.pa.pa.paˈgeː.na pa.pa.pa.pa.pa.paˈgeː.na pa.pa.pa.pa.pa.paˈgeː.na pa.pa.pa.pa.pa.paˈgeː.na",
+   "words": [
+    [
+     "Pa-pa-pa-pa-Papagena,",
+     "Papagena (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-Papagena,",
+     "Papagena (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-Papagena,",
+     "Papagena (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ],
+    [
+     "Pa-pa-pa-pa-Papagena.",
+     "Papagena (stammered)",
+     "pa.pa.pa.pa.pa.paˈgeː.na"
+    ]
+   ],
+   "glossGroups": [],
+   "audio": {}
+  }
+ ]
+}

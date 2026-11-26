@@ -1,0 +1,206 @@
+{
+ "editionId": "mozart-nur-stille-stille",
+ "editionVersion": "1.0.0-peters",
+ "title": "Nur stille, stille, stille, stille!",
+ "subtitle": "Monostatos, the Queen of the Night and the three Ladies: from the finale of Die Zauberflöte, Act 2",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "monostatos",
+   "name": "Monostatos",
+   "voiceType": "Tenor",
+   "partKey": "monostatos"
+  },
+  {
+   "id": "queen",
+   "name": "The Queen of the Night",
+   "voiceType": "Soprano",
+   "partKey": "queen"
+  },
+  {
+   "id": "dame1",
+   "name": "First Lady",
+   "voiceType": "Soprano",
+   "partKey": "dame1"
+  },
+  {
+   "id": "dame2",
+   "name": "Second Lady",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "dame2"
+  },
+  {
+   "id": "dame3",
+   "name": "Third Lady",
+   "voiceType": "Mezzo-soprano or contralto",
+   "partKey": "dame3"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "monostatos",
+   "label": "Monostatos (Tenor)",
+   "shortLabel": "Monostatos",
+   "kind": "voice",
+   "roleId": "monostatos",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "queen",
+   "label": "The Queen of the Night (Soprano)",
+   "shortLabel": "Queen",
+   "kind": "voice",
+   "roleId": "queen",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame1",
+   "label": "First Lady (Soprano)",
+   "shortLabel": "First Lady",
+   "kind": "voice",
+   "roleId": "dame1",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame2",
+   "label": "Second Lady (Mezzo-soprano)",
+   "shortLabel": "Second Lady",
+   "kind": "voice",
+   "roleId": "dame2",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dame3",
+   "label": "Third Lady (Mezzo-soprano or contralto)",
+   "shortLabel": "Third Lady",
+   "kind": "voice",
+   "roleId": "dame3",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "Nur stille, stille: Monostatos leads the women in",
+   "start": "1",
+   "end": "15"
+  },
+  {
+   "id": "b",
+   "label": "Doch Fürstin, halte Wort · Ich halte Wort; es ist mein Wille! · Ihr Kind soll deine Gattin sein",
+   "start": "15",
+   "end": "30"
+  },
+  {
+   "id": "c",
+   "label": "Doch still, ich höre schrecklich rauschen · Ja, fürchterlich ist dieses Rauschen",
+   "start": "31",
+   "end": "39"
+  },
+  {
+   "id": "d",
+   "label": "Nun sind sie in des Tempels Hallen · Dort wollen wir sie überfallen",
+   "start": "40",
+   "end": "51"
+  },
+  {
+   "id": "e",
+   "label": "Dir, grosse Königin der Nacht (kneeling)",
+   "start": "52",
+   "end": "63"
+  },
+  {
+   "id": "f",
+   "label": "Zerschmettert, zernichtet ist unsere Macht (to the end)",
+   "start": "64",
+   "end": "74"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (the scene of Monostatos, the Queen of the Night and the three Ladies, from “Nur stille, stille, stille, stille!” to “in ewige Nacht!”, before Sarastro's “Die Strahlen der Sonne”)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 155–159 (74 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check until clean; every bar of every part adds up. The Italian translation, the notes printed only for it, and the stage directions are left out. The print puts the Queen and the Ladies two to a staff (later the Queen and the First and Second Ladies in unison on one staff) and Monostatos on a staff of his own; each singer has their own line here. Monostatos's line is printed in the treble clef and sounds an octave lower. The piece opens with a three-eighth upbeat. Playback tempo from complete recordings: the median length of this scene, 2:12, from Haitink 1981 (2:20), Böhm 1964 (2:15), Solti 1969 (2:12), Klemperer 1964 (2:11) and Toscanini 1937 (2:07)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}

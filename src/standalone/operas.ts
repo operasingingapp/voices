@@ -4302,7 +4302,8 @@ export const OPERAS: Opera[] = [
      },
      {
       "title": "Pa-pa-pa",
-      "kind": "Duet with Papagena · Act 2"
+      "kind": "Duet with Papagena · Act 2",
+      "editionId": "mozart-pa-pa-pa-papagena"
      },
      {
       "title": "Hm! hm! hm!",
@@ -4343,7 +4344,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Papagena, Papagena, Papagena!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Papagena, Papagena, Papagena!"
+      "id": "Act 2: Papagena, Papagena, Papagena!",
+      "editionId": "mozart-papagena-papagena-papagena"
      }
     ]
    },
@@ -4357,7 +4359,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Pa-pa-pa-pa-pa-pa-Papagena!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Pa-pa-pa-pa-pa-pa-Papagena!"
+      "id": "Act 2: Pa-pa-pa-pa-pa-pa-Papagena!",
+      "editionId": "mozart-pa-pa-pa-papagena"
      }
     ]
    },
@@ -4384,7 +4387,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nur stille, stille, stille, stille!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-nur-stille-stille"
      }
     ]
    },
@@ -4426,7 +4430,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Die Strahlen der Sonne vertreiben die Nacht",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Bald prangt, den Morgen zu verkünden"
+      "id": "Act 2: Bald prangt, den Morgen zu verkünden",
+      "editionId": "mozart-die-strahlen-der-sonne"
      }
     ]
    },
@@ -4464,7 +4469,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nur stille, stille, stille, stille!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Nur stille, stille, stille, stille!"
+      "id": "Act 2: Nur stille, stille, stille, stille!",
+      "editionId": "mozart-nur-stille-stille"
      }
     ]
    },
@@ -4523,7 +4529,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nur stille, stille, stille, stille!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Nur stille, stille, stille, stille!"
+      "id": "Act 2: Nur stille, stille, stille, stille!",
+      "editionId": "mozart-nur-stille-stille"
      }
     ]
    },
@@ -4567,7 +4574,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nur stille, stille, stille, stille!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Nur stille, stille, stille, stille!"
+      "id": "Act 2: Nur stille, stille, stille, stille!",
+      "editionId": "mozart-nur-stille-stille"
      }
     ]
    },
@@ -4611,7 +4619,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Nur stille, stille, stille, stille!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Nur stille, stille, stille, stille!"
+      "id": "Act 2: Nur stille, stille, stille, stille!",
+      "editionId": "mozart-nur-stille-stille"
      }
     ]
    },
@@ -4643,7 +4652,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Papagena, Papagena, Papagena!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Papagena, Papagena, Papagena!"
+      "id": "Act 2: Papagena, Papagena, Papagena!",
+      "editionId": "mozart-papagena-papagena-papagena"
      }
     ]
    },
@@ -4675,7 +4685,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Papagena, Papagena, Papagena!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Papagena, Papagena, Papagena!"
+      "id": "Act 2: Papagena, Papagena, Papagena!",
+      "editionId": "mozart-papagena-papagena-papagena"
      }
     ]
    },
@@ -4707,7 +4718,8 @@ export const OPERAS: Opera[] = [
      {
       "title": "Papagena, Papagena, Papagena!",
       "kind": "Finale · Act 2",
-      "id": "Act 2: Papagena, Papagena, Papagena!"
+      "id": "Act 2: Papagena, Papagena, Papagena!",
+      "editionId": "mozart-papagena-papagena-papagena"
      }
     ]
    },

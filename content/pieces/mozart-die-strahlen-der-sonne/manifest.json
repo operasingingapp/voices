@@ -1,0 +1,166 @@
+{
+ "editionId": "mozart-die-strahlen-der-sonne",
+ "editionVersion": "1.0.0-peters",
+ "title": "Die Strahlen der Sonne vertreiben die Nacht",
+ "subtitle": "Sarastro and the chorus: the end of Die Zauberflöte",
+ "kind": "finale",
+ "fixture": false,
+ "pedal": "classical",
+ "composer": "Wolfgang Amadeus Mozart",
+ "librettist": "Emanuel Schikaneder",
+ "language": "de",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "sarastro",
+   "name": "Sarastro",
+   "voiceType": "Bass",
+   "partKey": "sarastro"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P6",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "sarastro",
+   "label": "Sarastro (Bass)",
+   "shortLabel": "Sarastro",
+   "kind": "voice",
+   "roleId": "sarastro",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos",
+   "label": "Chorus sopranos",
+   "shortLabel": "Chorus S.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-altos",
+   "label": "Chorus altos",
+   "shortLabel": "Chorus A.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors",
+   "label": "Chorus tenors",
+   "shortLabel": "Chorus T.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses",
+   "label": "Chorus basses",
+   "shortLabel": "Chorus B.",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The Temple of the Sun · Die Strahlen der Sonne vertreiben die Nacht (Sarastro)",
+   "start": "1",
+   "end": "12"
+  },
+  {
+   "id": "b",
+   "label": "Heil sei euch Geweihten! · Dank sei dir, Osiris (Andante)",
+   "start": "13",
+   "end": "28"
+  },
+  {
+   "id": "c",
+   "label": "Es siegte die Stärke und krönet zum Lohn (Allegro, to the fermata)",
+   "start": "29",
+   "end": "60"
+  },
+  {
+   "id": "d",
+   "label": "die Schönheit und Weisheit mit ewiger Kron' (to the end of the opera)",
+   "start": "61",
+   "end": "103"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "W. A. Mozart, Die Zauberflöte, K. 620 (1791), No. 21, Finale (the end of the opera: from Sarastro's “Die Strahlen der Sonne vertreiben die Nacht” through the chorus “Heil sei euch Geweihten!” to the last bar)",
+   "author": "Wolfgang Amadeus Mozart (1756–1791)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Emanuel Schikaneder, libretto of Die Zauberflöte (1791)",
+   "author": "Emanuel Schikaneder (1751–1812)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Edition Peters vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "Edition Peters vocal score, piano reduction by Gustav F. Kogel (Leipzig, plate 7794; IMSLP #225460), pages 159–163 (103 bars)",
+   "author": "Gustav F. Kogel, piano reduction as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages by two independent readers, with a judge settling every difference and a sweep for the marks, then a fresh check by two proofreaders (one fix: the slur of the right hand's lower voice in bars 19–20); every bar of every part adds up. The Italian translation, the notes printed only for it (the upbeats of bars 12 and 15), and the stage directions are left out. Alla breve to bar 10 (the piano, Sarastro's Recit. from bar 7, Maestoso from bar 9), Andante in 4/4 from bar 11 (the chorus), Allegro in 2/4 from bar 29 to the end; E-flat major. The print puts the chorus on three or four staves, two voices to a staff in places; each voice has its own line here, and where a voice's German is not printed under its staff it takes the German of the part singing the same rhythm. The chorus is heard with the piano and has no role here. Playback tempo from complete recordings: the median length of this scene, 3:00, from Böhm 1964 (3:13), Toscanini 1937 (3:05), Klemperer 1964 (3:00), Solti 1969 (2:59) and Haitink 1981 (2:55); no recording splits it, so the proportion is assumed: the Andante's quarter (♩ = 59) half the Allegro's (♩ = 118), the opening's half note the Andante's quarter, and Sarastro's free recitative and the Maestoso at the Andante's quarter."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "The IPA was checked against Nico Castel's published libretto (Leyerle Publications); this app is not affiliated with Castel or his publisher. Unreviewed by a diction coach."
+  }
+ ]
+}
