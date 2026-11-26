@@ -2899,7 +2899,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B-flat major",
       time: "2/4",
-      tempo: "Presto, played at a half note = 116 (♩ = 232), under 1½ minutes, the median of five recordings (Fricsay, Giulini, Davis, Böhm, Karajan); Mozart gives the word only",
+      tempo: "Presto, played at a half note = 121 (♩ = 242), under 1½ minutes, the median of five recordings (Fricsay, Giulini, Davis, Böhm, Karajan); Mozart gives the word only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:20)",
     },
     notePlaceholder: "Breathless but exact: light, short notes at full speed, with the words crisp on every eighth",
     about: (
@@ -2930,7 +2930,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "A major",
       time: "2/4 (Andante) for bars 1–49; 6/8 (Allegro) from the one-eighth upbeat in bar 50 to the end",
-      tempo: "Andante, played at ♩ = 43, then Allegro at a dotted quarter ≈ 57 (♩ = 86), about 3½ minutes in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); their tracks are not split at the Allegro, so its eighth note is set to the Andante's sixteenth; the fermata on “Andiam!” is held; Mozart gives the words only",
+      tempo: "Andante, played at ♩ = 47, then Allegro at a dotted quarter ≈ 62 (♩ = 94), about 3½ minutes in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); their tracks are not split at the Allegro, so its eighth note is set to the Andante's sixteenth; the fermata on “Andiam!” is held; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 9% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (3:12)",
     },
     notePlaceholder: "Zerlina's line warms as she gives in: keep the Andante unhurried and let the 6/8 dance",
     about: (
@@ -2963,7 +2963,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "2/4 (Andante grazioso) from the one-quarter upbeat in bar 1 to the fermata in bar 61; 6/8 (Allegro) from the three-eighth upbeat in bar 62 to the end",
-      tempo: "Andante grazioso, played at ♩ = 47, then Allegro at a dotted quarter ≈ 63 (♩ = 94), about 3¾ minutes in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); their tracks are not split at the Allegro, so its eighth note is set to the Andante's sixteenth; the fermata on “core” is held; Mozart gives the words only",
+      tempo: "Andante grazioso, played at ♩ = 50, then Allegro at a dotted quarter ≈ 67 (♩ = 100), about 3¾ minutes in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); their tracks are not split at the Allegro, so its eighth note is set to the Andante's sixteenth; the fermata on “core” is held; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (3:36)",
     },
     notePlaceholder: "Coax, don't plead: keep the 2/4 light and lilting, then let the 6/8 smile once Masetto gives in",
     about: (
@@ -2997,7 +2997,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E-flat major",
       time: "4/4",
-      tempo: "Allegro, played at ♩ = 123, about 3½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); the fermata on Giovanni's last “Signorina!” is held; Mozart gives the word only",
+      tempo: "Allegro, played at ♩ = 128, about 3½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); the fermata on Giovanni's last “Signorina!” is held; Mozart gives the word only; checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (3:26)",
     },
     notePlaceholder: "Elvira is furious, not tragic: keep the Allegro driving and the leaps clean, and let the men's asides stay light",
     about: (
@@ -3061,7 +3061,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major (one flat); from bar 149, as the duel begins, D minor under the same signature, and the Andante's darker harmony is written with accidentals",
       time: "4/4 (Molto allegro), after a two-beat upbeat bar, to bar 176; cut time (Andante) from bar 177 to the end",
-      tempo: "Molto allegro, played at ♩ = 156, then Andante at ♩ = 52, about 6 minutes in all, the median of five recordings (Fricsay, Giulini, Klemperer, Böhm, Karajan); their tracks are not split at the Andante, so its triplet eighths are set to the Molto allegro's quarter notes; the fermatas are held; Mozart gives the words only",
+      tempo: "Molto allegro, played at ♩ = 175, then Andante at ♩ = 58, about 6 minutes in all, the median of five recordings (Fricsay, Giulini, Klemperer, Böhm, Karajan); their tracks are not split at the Andante, so its triplet eighths are set to the Molto allegro's quarter notes; the fermatas are held; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 12% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (5:18)",
     },
     notePlaceholder: "Leporello grumbles in quick, crisp patter; once the duel starts, everyone sings at once, and the Andante drops to a hush",
     about: (
@@ -3096,7 +3096,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E♭ major (the aria; the recitative has no key signature)",
       time: "4/4; the aria begins with a one-beat upbeat bar",
-      tempo: "The recitative Allegro assai at ♩ = 63, then the aria at ♩ = 133; about 6 minutes in all (the recitative about 2¼, the aria about 4), from the median lengths of five recordings with the two on separate tracks (Fricsay, Davis, Böhm, Haitink, Muti); the print gives no tempo word for the aria",
+      tempo: "The recitative Allegro assai at ♩ = 65, then the aria at ♩ = 137; about 6 minutes in all (the recitative about 2¼, the aria about 4), from the median lengths of five recordings with the two on separate tracks (Fricsay, Davis, Böhm, Haitink, Muti); the print gives no tempo word for the aria; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:02)",
     },
     notePlaceholder: "Fury and pity in turn: declaim the recitative over the orchestra's outbursts, then keep the aria's long runs even and warm",
     about: (
@@ -3129,7 +3129,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "4/4 (C, four beats, not alla breve)",
-      tempo: "Allegro di molto, played at ♩ = 235 (a half note ≈ 118), about 1⅔ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only",
+      tempo: "Allegro di molto, played at ♩ = 247 (a half note ≈ 124), about 1⅔ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 5% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:34)",
     },
     notePlaceholder: "Seething under the bows: clipped and quick, polite to the master's face, then the asides through clenched teeth",
     about: (
@@ -3162,7 +3162,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major",
       time: "4/4 (Allegro) for bars 1–84; 3/4 (Andante con moto) from bar 85 (“Nella bionda”) to the end",
-      tempo: "Allegro, played at ♩ = 156 (a half note = 78), then Andante con moto at ♩ = 78, about 5½ minutes in all, the median of four recordings (Giulini, Haitink, Karajan, Jacobs); their tracks are not split at the Andante, so its quarter note is set to the Allegro's half note; the fermatas on “ma, in Ispagna”, “Ispagna!” and “maestosa” are held; Mozart gives the words only",
+      tempo: "Allegro, played at ♩ = 161 (a half note = 80), then Andante con moto at ♩ = 80, about 5½ minutes in all, the median of four recordings (Giulini, Haitink, Karajan, Jacobs); their tracks are not split at the Andante, so its quarter note is set to the Allegro's half note; the fermatas on “ma, in Ispagna”, “Ispagna!” and “maestosa” are held; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) (timed together with the numbers next to it, as some recordings join them on one track) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:00)",
     },
     notePlaceholder: "Patter, not bluster: keep the Allegro's numbers quick and clear, then let the 3/4 turn smooth and confiding",
     about: (
@@ -3199,7 +3199,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major (the aria; the recitative has no key signature)",
       time: "4/4",
-      tempo: "The recitative's Allegro assai at ♩ = 114 and its two Andante passages at ♩ = 57 (half the speed, a proportion chosen for this app), the stringendo before the Tempo I played as a gradual quickening; then the aria Andante at ♩ = 100; about 6¼ minutes in all, from the median lengths of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan), which time the recitative and the aria separately; the fermatas are held; Mozart gives the words only",
+      tempo: "The recitative's Allegro assai at ♩ = 123 and its two Andante passages at ♩ = 62 (half the speed, a proportion chosen for this app), the stringendo before the Tempo I played as a gradual quickening; then the aria Andante at ♩ = 108; about 6¼ minutes in all, from the median lengths of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan), which time the recitative and the aria separately; the fermatas are held; Mozart gives the words only; checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis) and played 8% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (5:47)",
     },
     notePlaceholder: "The recitative is a story told in shock: let the orchestra's outbursts drive it and the Andante narration hang; the aria is a command, broad and unbending",
     about: (
@@ -3303,7 +3303,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major (the rondo; the recitative has no key signature)",
       time: "4/4 for the recitative; the rondo's Larghetto in 2/4, its Allegretto moderato in 4/4",
-      tempo: "The recitative's Risoluto opening at ♩ = 84 and its Larghetto at ♩ = 28 (three times slower, a proportion chosen for this app), then the rondo's Larghetto at ♩ = 30 and Allegretto moderato at ♩ = 104; about 7 minutes in all (the recitative about 2, the rondo about 5¼), from the median lengths of five recordings with the recitative and the rondo on separate tracks (Busch, Fricsay, Giulini, Davis, Böhm), the rondo divided between its two sections as in Haitink's and Muti's, which put the Allegretto moderato on its own track",
+      tempo: "The recitative's Risoluto opening at ♩ = 89 and its Larghetto at ♩ = 30 (three times slower, a proportion chosen for this app), then the rondo's Larghetto at ♩ = 32 and Allegretto moderato at ♩ = 110; about 7 minutes in all (the recitative about 2, the rondo about 5¼), from the median lengths of five recordings with the recitative and the rondo on separate tracks (Busch, Fricsay, Giulini, Davis, Böhm), the rondo divided between its two sections as in Haitink's and Muti's, which put the Allegretto moderato on its own track; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Davis) (timed together with the numbers next to it, as some recordings join them on one track) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (7:00)",
     },
     notePlaceholder: "Tender, not cold: let the Larghetto breathe and keep the Allegretto's runs light, as a promise rather than a display",
     about: (
@@ -3338,7 +3338,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "3/8 throughout",
-      tempo: "Grazioso, played at ♩ = 44 (an eighth note = 88), about 3½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); the fermatas on “sta?” and on the last “quà!” are held; Mozart gives the word only",
+      tempo: "Grazioso, played at ♩ = 46 (an eighth note = 92), about 3½ minutes, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); the fermatas on “sta?” and on the last “quà!” are held; Mozart gives the word only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 5% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (3:26)",
     },
     notePlaceholder: "Tender and teasing, never heavy: let the 3/8 sway and keep “sentilo battere” light as a heartbeat",
     about: (
@@ -3441,7 +3441,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D minor (one flat), closing on a D major chord",
       time: "4/4 (common time) throughout: Andante, then Allegro from bar 122",
-      tempo: "Andante at ♩ = 82, then Allegro at ♩ = 163, about 7 minutes in all, the median of five recordings with this scene on its own track or tracks (Giulini, Fricsay, Davis, Haitink, Barenboim), divided between the two sections as in Giulini's, Haitink's and Barenboim's, which put “Da qual tremore” on its own track; Mozart gives the words only",
+      tempo: "Andante at ♩ = 85, then Allegro at ♩ = 169, about 7 minutes in all, the median of five recordings with this scene on its own track or tracks (Giulini, Fricsay, Davis, Haitink, Barenboim), divided between the two sections as in Giulini's, Haitink's and Barenboim's, which put “Da qual tremore” on its own track; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Fricsay 1958, Davis) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:54)",
     },
     notePlaceholder: "The statue's lines slow and immovable, Giovanni's defiant and quick, Leporello's whispered asides; then the Allegro's terror",
     about: (
@@ -3478,7 +3478,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "One flat in the first bar, carried over from the Introduction; from bar 2 no key signature, as the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 107, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; under 40 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 113, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; under 40 seconds); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) (timed together with the numbers next to it, as some recordings join them on one track) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (7:00)",
     },
     notePlaceholder: "Speak it first: two hushed voices in the dark, then Anna and Ottavio bursting in",
     about: (
@@ -3509,7 +3509,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature for the accompanied recitative, which moves through several keys; D minor (one flat) for the duet",
       time: "4/4, the duet starting with Anna's two-beat upbeat bar",
-      tempo: "The recitative's Allegro assai at ♩ = 118 and its Maestoso and Andante at ♩ = 59 (half the speed, a proportion chosen for this app); the duet's Allegro and Tempo I at ♩ = 168, its Maestoso at ♩ = 84 and Adagio at ♩ = 56; about 6¾ minutes in all, from the median lengths of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan), which time the recitative and the duet separately; the fermatas are held; Mozart gives the words only",
+      tempo: "The recitative's Allegro assai at ♩ = 125 and its Maestoso and Andante at ♩ = 62 (half the speed, a proportion chosen for this app); the duet's Allegro and Tempo I at ♩ = 178, its Maestoso at ♩ = 89 and Adagio at ♩ = 59; about 6¾ minutes in all, from the median lengths of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan), which time the recitative and the duet separately; the fermatas are held; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) (timed together with the numbers next to it, as some recordings join them on one track) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (7:00)",
     },
     notePlaceholder: "Anna's horror breaks over the orchestra in the recitative; in the duet, push Fuggi, crudele forward and let the oath ring out",
     about: (
@@ -3574,7 +3574,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 87, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2¾ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 92, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2¾ minutes); checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (2:36)",
     },
     notePlaceholder: "Speak it first: Elvira's charge sheet in one breath, Giovanni smooth and evasive, Leporello's asides dry",
     about: (
@@ -3612,7 +3612,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 73, from the median length of five recordings (Giulini, Haitink, Karajan, Nézet-Séguin, Currentzis; about half a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 75, from the median length of five recordings (Giulini, Haitink, Karajan, Nézet-Séguin, Currentzis; about half a minute); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) (timed together with the numbers next to it, as some recordings join them on one track) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:00)",
     },
     notePlaceholder: "Speak it first: shock turning to fury, and the last lines already looking ahead to revenge",
     about: (
@@ -3677,7 +3677,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4 (C)",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 94, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2¼ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 99, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2¼ minutes); checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Krips 1955) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (2:08)",
     },
     notePlaceholder: "Speak it first: Giovanni all charm, Leporello aside, Zerlina flattered, Masetto stubborn until he sees the sword",
     about: (
@@ -3710,7 +3710,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4 (C)",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 69, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2 minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 76, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 2 minutes); checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 11% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:50)",
     },
     notePlaceholder: "Speak it first: Giovanni smooth and flattering, Zerlina tempted but wary",
     about: (
@@ -3741,7 +3741,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4 (C)",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 83, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 45 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 98, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; about 45 seconds); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 18% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:40)",
     },
     notePlaceholder: "Speak it first: Elvira bursting in, Giovanni whispering to each woman in turn, Zerlina caught between them",
     about: (
@@ -3844,7 +3844,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 70, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; under half a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 80, from the median length of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan; under half a minute); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 14% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:22)",
     },
     notePlaceholder: "Speak it first: smooth concern for Elvira, gallant to Anna, then off in a hurry",
     about: (
@@ -3873,7 +3873,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 73, from the median length of five recordings (Fricsay, Giulini, Haitink, Karajan, Nézet-Séguin; about half a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 80, from the median length of five recordings (Fricsay, Giulini, Haitink, Karajan, Nézet-Séguin; about half a minute); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Davis) and played 9% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:30)",
     },
     notePlaceholder: "Thinking aloud: disbelief first, then the resolve of the last line, which leads into Dalla sua pace",
     about: (
@@ -3906,7 +3906,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 116, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; about 1½ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 122, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; about 1½ minutes); checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 5% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:28)",
     },
     notePlaceholder: "Tell it as a story: Leporello's report runs on, Giovanni's “Bravo!” lands drier each time",
     about: (
@@ -3940,7 +3940,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4, with a one-beat last bar that leads straight into “Batti, batti”",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 77, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; about 1¼ minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 88, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; about 1¼ minutes); checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 14% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:10)",
     },
     notePlaceholder: "Zerlina coaxing, Masetto sulking and then exploding; let her end soft enough to lead into “Batti, batti”",
     about: (
@@ -3973,7 +3973,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: it moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 100, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; under 40 seconds)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 112, from the median length of five recordings (Fricsay, Giulini, Böhm, Karajan, Solti; under 40 seconds); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 12% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:34)",
     },
     notePlaceholder: "Masetto's mood turns in a moment: rueful at first, then suspicious once he sees Zerlina's fear",
     about: (
@@ -4004,7 +4004,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 107, from the median length of three recordings (Fricsay, Böhm, Karajan; under two minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 117, from the median length of three recordings (Fricsay, Böhm, Karajan; under two minutes); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 9% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:34)",
     },
     notePlaceholder: "Quick and conversational: Leporello sulky, Giovanni charming his way back, then all business about the disguise",
     about: (
@@ -4030,7 +4030,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, from the median length of three recordings (Fricsay, Böhm, Karajan; about two minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 96, from the median length of three recordings (Fricsay, Böhm, Karajan; about two minutes); checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis) and played 5% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:56)",
     },
     notePlaceholder: "Elvira hopeful and tender, Leporello playing the lover in his master's voice, Giovanni amused in the shadows",
     about: (
@@ -4082,7 +4082,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 85, from the median length of three recordings (Fricsay, Böhm, Karajan; just over two minutes)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 99, from the median length of three recordings (Fricsay, Böhm, Karajan; just over two minutes); checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis) and played 17% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:54)",
     },
     notePlaceholder: "Giovanni innocent until the beating; Masetto boastful then howling; Zerlina half scolding, half comforting",
     about: (
@@ -4108,7 +4108,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 76, from the median length of three recordings (Fricsay, Böhm, Karajan; about half a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 83, from the median length of three recordings (Fricsay, Böhm, Karajan; about half a minute); checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 9% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:26)",
     },
     notePlaceholder: "Hushed and quick: Leporello looking for a way out, Elvira frightened and clinging",
     about: (
@@ -4160,7 +4160,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 77, from the median length of two recordings (Fricsay and Böhm; under a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 84, from the median length of two recordings (Fricsay and Böhm; under a minute); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 9% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:40)",
     },
     notePlaceholder: "A burst of shouting, then Ottavio, steady and resolved, taking charge",
     about: (
@@ -4238,7 +4238,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4; the Commendatore's second entry in 3/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, from the median length of two recordings (Fricsay and Davis); the Commendatore's two Adagio entries at ♩ = 50 (estimated)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 97, from the median length of two recordings (Fricsay and Davis); the Commendatore's two Adagio entries at ♩ = 53 (estimated); checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (3:46)",
     },
     notePlaceholder: "Giovanni laughing and careless, then the statue's voice, slow and solemn",
     about: (
@@ -4264,7 +4264,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 82, from the median length of two recordings (Fricsay and Davis; under a minute)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 87, from the median length of two recordings (Fricsay and Davis; under a minute); checked against the track times of 4 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (0:48)",
     },
     notePlaceholder: "Ottavio tender and hopeful, Anna holding back",
     about: (
@@ -4290,7 +4290,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature: the recitative moves through several keys",
       time: "4/4",
-      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 91, estimated (the usual pace of this opera's Act 2 recitatives in recordings)",
+      tempo: "Free, as recitative is sung: played here at a speaking pace, ♩ = 96, estimated (the usual pace of this opera's Act 2 recitatives in recordings); checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Davis) (timed together with the numbers next to it, as some recordings join them on one track) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (7:00)",
     },
     notePlaceholder: "A short, warm resolve",
     about: (
@@ -4316,7 +4316,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "3/4, felt one in a bar",
-      tempo: "Allegro assai, played at ♩ = 203 (about 68 bars a minute), about a minute in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only",
+      tempo: "Allegro assai, played at ♩ = 196 (about 68 bars a minute), about a minute in all, the median of five recordings (Fricsay, Giulini, Böhm, Haitink, Karajan); Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (1:04)",
     },
     notePlaceholder: "Fast and light: Giovanni amused and teasing, Leporello stubborn, the two of you tossing the lines back and forth",
     about: (
@@ -4518,7 +4518,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major; F major from the Andante (bar 92) to the end",
       time: "4/4 (common time) Allegro assai; 3/4 Andante from bar 92; 2/4 Allegretto from bar 139; 3/4 Menuetto from bar 218",
-      tempo: "Allegro assai at ♩ = 184 (a half note ≈ 92), Andante at ♩ = 78, Allegretto at ♩ = 91, Menuetto at ♩ = 83, about 6¾ minutes in all, from the median track times of five recordings (Giulini, Klemperer, Barenboim, Haitink, Iván Fischer); the Andante, Allegretto and Menuetto share tracks in these sets, so they are divided as in Fischer's and Currentzis's, which give the Menuetto its own track; Mozart gives the words only",
+      tempo: "Allegro assai at ♩ = 190 (a half note ≈ 95), Andante at ♩ = 80, Allegretto at ♩ = 94, Menuetto at ♩ = 86, about 6¾ minutes in all, from the median track times of five recordings (Giulini, Klemperer, Barenboim, Haitink, Iván Fischer); the Andante, Allegretto and Menuetto share tracks in these sets, so they are divided as in Fischer's and Currentzis's, which give the Menuetto its own track; Mozart gives the words only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) (timed together with the numbers next to it, as some recordings join them on one track) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (8:46)",
     },
     notePlaceholder: "Masetto's angry hiding and Zerlina's pleading at a scurry; Giovanni's rousing call and the servants' chorus; the seduction in the Andante; then the masked guests' grave resolve over the distant minuet",
     about: (
@@ -4555,7 +4555,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B-flat major",
       time: "¢ (alla breve)",
-      tempo: "Adagio, played at a half note = 19 (♩ = 38), about 2 minutes 20 seconds, the median of five recordings that give the trio its own track (Giulini, Klemperer, Barenboim, Haitink, Iván Fischer); Mozart gives the word only",
+      tempo: "Adagio, played at a half note = 20 (♩ = 39), about 2 minutes 20 seconds, the median of five recordings that give the trio its own track (Giulini, Klemperer, Barenboim, Haitink, Iván Fischer); Mozart gives the word only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) (timed together with the numbers next to it, as some recordings join them on one track) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (8:46)",
     },
     notePlaceholder: "Still and sustained: three long lines over soft wind chords, a prayer rather than a threat, with the turns in Anna's part sung lightly",
     about: (
@@ -4705,7 +4705,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B-flat major (two flats), then F major (one flat) from bar 180",
       time: "3/4 (Allegro assai), then ¢ (alla breve, Allegro molto) from bar 180",
-      tempo: "Allegro assai at ♩ = 205 (a dotted half ≈ 68), then Allegro molto at a half note = 122 (♩ = 244), about 3½ minutes in all, the median of five recordings with this scene on its own track or tracks (Maazel, Fricsay, Giulini, Haitink, Böhm), divided between the two sections as in Giulini's, which puts “Che grido è questo mai?” on its own track; Mozart gives the words only",
+      tempo: "Allegro assai at ♩ = 212 (a dotted half ≈ 70), then Allegro molto at a half note = 126 (♩ = 252), about 3½ minutes in all, the median of five recordings with this scene on its own track or tracks (Maazel, Fricsay, Giulini, Haitink, Böhm), divided between the two sections as in Giulini's, which puts “Che grido è questo mai?” on its own track; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Fricsay 1958, Davis) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (3:24)",
     },
     notePlaceholder: "Elvira's plea urgent and sincere, Giovanni's mockery light and careless, Leporello's asides quick; then the Allegro molto's panic",
     about: (
@@ -4743,7 +4743,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major; F major from bar 118; B-flat major from bar 162 to the end",
       time: "4/4 (common time) Allegro vivace; 6/8 Allegretto from bar 47; 3/4 Allegretto from bar 118; cut time (2/2) Moderato from bar 162",
-      tempo: "Allegro vivace at ♩ = 180 (a half note = 90), Allegretto 6/8 at ♩. = 80, Allegretto 3/4 at ♩ = 170, Moderato at ♩ = 123 (a half note ≈ 61), about 4¾ minutes in all, the median track time of five recordings (Giulini, Jacobs, Iván Fischer, Haitink, Davis); the sections share one track in these sets, so they are divided as in Busch's 1936 Glyndebourne set, the only one found that gives each its own track; Mozart gives the words only",
+      tempo: "Allegro vivace at ♩ = 190 (a half note = 95), Allegretto 6/8 at ♩. = 84, Allegretto 3/4 at ♩ = 180, Moderato at ♩ = 130 (a half note ≈ 64), about 4¾ minutes in all, the median track time of five recordings (Giulini, Jacobs, Iván Fischer, Haitink, Davis); the sections share one track in these sets, so they are divided as in Busch's 1936 Glyndebourne set, the only one found that gives each its own track; Mozart gives the words only; checked against the track times of 3 complete recordings (Giulini 1959, Fricsay 1958, Davis) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (4:36)",
     },
     notePlaceholder: "Giovanni grand and carefree at his supper; Leporello's hungry asides, then his whistling with his mouth full, over the stage band's three tunes",
     about: (
@@ -4779,7 +4779,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "3/4 throughout",
-      tempo: "Allegro assai, played at ♩ = 196 (a dotted half ≈ 65), about 1 minute 40 seconds, the median of five recordings with this scene on its own track (Marriner, Busch, Giulini, Barenboim, Haitink); Mozart gives the words only",
+      tempo: "Allegro assai, played at ♩ = 203 (a dotted half ≈ 67), about 1 minute 40 seconds, the median of five recordings with this scene on its own track (Marriner, Busch, Giulini, Barenboim, Haitink); Mozart gives the words only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:10)",
     },
     notePlaceholder: "The five burst in together, furious and quick; Leporello's tale comes out in breathless, broken scraps",
     about: (
@@ -4815,7 +4815,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D major",
       time: "4/4 (common time) throughout",
-      tempo: "Presto, played at ♩ = 270 (a half note = 135), about 1 minute 43 seconds before the fermata, the median of five recordings with this ensemble on its own track (Busch, Giulini, Haitink, Barenboim, Marriner); Mozart gives the word only",
+      tempo: "Presto, played at ♩ = 280 (a half note = 140), about 1 minute 43 seconds before the fermata, the median of five recordings with this ensemble on its own track (Busch, Giulini, Haitink, Barenboim, Marriner); Mozart gives the word only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:10)",
     },
     notePlaceholder: "Light and quick: the voices come in one after another, then all six drive to the end together",
     about: (
@@ -4848,7 +4848,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major, closing in A major",
       time: "4/4 (common time) throughout, from a one-beat pickup",
-      tempo: "Larghetto, played at ♩ = 60, about 2 minutes 57 seconds, the median of five recordings (Busch, Barenboim, Giulini, Muti, Haitink); Mozart gives the word only",
+      tempo: "Larghetto, played at ♩ = 62, about 2 minutes 57 seconds, the median of five recordings (Busch, Barenboim, Giulini, Muti, Haitink); Mozart gives the word only; checked against the track times of 5 complete recordings (Giulini 1959, Böhm 1967, Fricsay 1958, Davis, Krips 1955) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (6:10)",
     },
     notePlaceholder: "Calm and tender after the storm: Ottavio pleads gently, Anna answers in long, ornamented lines",
     about: (
