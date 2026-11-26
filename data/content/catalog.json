@@ -18888,9 +18888,73 @@
     }
   },
   {
+    "editionId": "verdi-dell-invito-trascorsa",
+    "editionVersion": "1.0.0-ricordi",
+    "scoreVersionId": "verdi-dell-invito-trascorsa@1.0.0-ricordi#88118a7b4d",
+    "title": "Dell'invito trascorsa è già l'ora",
+    "subtitle": "Introduzione to Act 1 of La traviata, in the Ricordi vocal score",
+    "kind": "ensemble",
+    "fixture": false,
+    "composer": "Giuseppe Verdi",
+    "roles": [
+      {
+        "id": "violetta",
+        "name": "Violetta",
+        "voiceType": "Soprano",
+        "partKey": "violetta"
+      },
+      {
+        "id": "flora",
+        "name": "Flora",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "flora"
+      },
+      {
+        "id": "alfredo",
+        "name": "Alfredo",
+        "voiceType": "Tenor",
+        "partKey": "alfredo"
+      },
+      {
+        "id": "gastone",
+        "name": "Gastone",
+        "voiceType": "Tenor",
+        "partKey": "gastone"
+      },
+      {
+        "id": "douphol",
+        "name": "Barone Douphol",
+        "voiceType": "Baritone",
+        "partKey": "douphol"
+      },
+      {
+        "id": "dottore",
+        "name": "Dottore Grenvil",
+        "voiceType": "Bass",
+        "partKey": "dottore"
+      },
+      {
+        "id": "marchese",
+        "name": "Marchese d'Obigny",
+        "voiceType": "Bass",
+        "partKey": "marchese"
+      }
+    ],
+    "measures": 181,
+    "durationSec": 288,
+    "hasRepeats": false,
+    "keySignature": "A major",
+    "time": "4/4",
+    "languageStatus": {
+      "phrases": 92,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "verdi-traviata-preludio",
     "editionVersion": "1.0.0-ricordi",
-    "scoreVersionId": "verdi-traviata-preludio@1.0.0-ricordi#de33d0407e",
+    "scoreVersionId": "verdi-traviata-preludio@1.0.0-ricordi#dd2e3f0ef8",
     "title": "Preludio",
     "subtitle": "The prelude to Act 1 of La traviata, in the Ricordi vocal score",
     "kind": "overture",
@@ -18898,7 +18962,7 @@
     "composer": "Giuseppe Verdi",
     "roles": [],
     "measures": 49,
-    "durationSec": 214,
+    "durationSec": 231,
     "hasRepeats": false,
     "keySignature": "E major",
     "time": "4/4",
