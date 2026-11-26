@@ -37,7 +37,7 @@ import { ComposerRow, ModeSwitch, WorksGrid, type Mode } from "./choralParts";
 import { SongList } from "./songParts";
 import { SONGS } from "./songs";
 import { AddMine } from "./mineUI";
-import { ariaId, listenId, seedMine, useMine, type MineItem } from "./mine";
+import { ariaId, listenId, seedMine, songId, useMine, type MineItem } from "./mine";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
 export type Tone = "pink" | "lilac" | "peach" | "sky" | "mint" | "butter";
@@ -698,7 +698,7 @@ function Sidebar({ ctx }: { ctx: Ctx }) {
     >
       <ModeSwitch
         className="rail-mode"
-        mode={ctx.mode}
+        mode={ctx.place.screen === "home" ? null : ctx.mode}
         onChange={ctx.setMode}
       />
       <nav className="rail-top" aria-label="Main">
@@ -1092,7 +1092,7 @@ export function Shell({ ctx, children }: { ctx: Ctx; children: ReactNode }) {
           </button>
           <ModeSwitch
             className="topbar-mode"
-            mode={ctx.mode}
+            mode={ctx.place.screen === "home" ? null : ctx.mode}
             onChange={ctx.setMode}
           />
           {ctx.mode === "opera" && <NowPill ctx={ctx} />}
@@ -4374,12 +4374,15 @@ function MyPieces({
   if (!rows.length) {
     const mineRoles = [ctx.current, ...ctx.roles].map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
     const seen = new Set<string>();
-    const pool = [
+    const arias = [
       ...mineRoles.flatMap(({ opera, ch }) =>
         ch.pieces.filter((p) => p.editionId).map((p) => ariaId(opera.id, ch.id, pieceKey(p))),
       ),
       ...readyPieces().map(({ opera, ch, index }) => ariaId(opera.id, ch.id, pieceKey(ch.pieces[index]))),
     ];
+    const songs = SONGS.filter((x) => x.editionId).map((x) => songId(x.id));
+    // what you sing decides what is offered first
+    const pool = ctx.mode === "songs" ? [...songs, ...arias] : mineRoles.length ? [...arias, ...songs] : [...songs.slice(0, 3), ...arias];
     for (const id of pool) {
       if (suggest.length >= 6 || seen.has(id)) continue;
       seen.add(id);

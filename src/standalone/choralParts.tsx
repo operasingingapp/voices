@@ -14,7 +14,8 @@ export function ModeSwitch({
   onChange,
   className,
 }: {
-  mode: Mode;
+  /** the search you are in; none on Home, which is your own list */
+  mode: Mode | null;
   onChange: (m: Mode) => void;
   className?: string;
 }) {
@@ -35,7 +36,7 @@ export function ModeSwitch({
           key={m}
           type="button"
           aria-pressed={mode === m}
-          onClick={() => mode !== m && onChange(m)}
+          onClick={() => onChange(m)}
         >
           {label}
         </button>

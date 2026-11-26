@@ -5,7 +5,7 @@ import { ComposerRow } from "./choralParts";
 import { SONGS, SONG_LANGUAGES, SONG_LEVELS, songLanguage, type Song, type SongLevel } from "./songs";
 import { SONG_CONTEXT, SONG_CYCLES, rangeText } from "./songContext";
 import { SONG_META } from "./songInfo";
-import { CloseIcon, Crumbs, MySongs, SearchIcon, type Ctx } from "./flow";
+import { CloseIcon, Crumbs, SearchIcon, type Ctx } from "./flow";
 
 /**
  * Songs: "Find your song", every song whose music is in the app, by its title, composer, language or level, grouped
@@ -52,7 +52,6 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
   );
   return (
     <main className="screen-body gutter page sx sg-home">
-      <MySongs ctx={ctx} />
       <section className="sx-head">
         <h1 className="sx-h">Find your song</h1>
         <label className="sx-line">

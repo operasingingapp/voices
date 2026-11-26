@@ -202,7 +202,8 @@ export function App() {
     const m = read<string | null>(K.mode, null);
     return m === "choral" || m === "songs" ? m : "opera";
   });
-  const home = (): Place => (mode === "choral" ? { screen: "choral" } : mode === "songs" ? { screen: "songs" } : roles.length ? { screen: "home" } : { screen: "onboarding", step: 1 });
+  // Home is your list (My pieces) whatever you sing; the Opera / Songs / Choral switch leads to each one's search
+  const home = (): Place => ({ screen: "home" });
   // a role just learned in full: the celebration shows over whatever screen you are on
   const [bravo, setBravo] = useState<RoleRef | null>(null);
   // the side panel over the practice screen
@@ -235,7 +236,7 @@ export function App() {
     const s = place.screen;
     if (s === "choral" || s === "work") setModeState("choral");
     else if (s === "songs" || s === "song" || s === "sing") setModeState("songs");
-    else if (s !== "onboarding" && s !== "profile") setModeState("opera");
+    else if (s !== "onboarding" && s !== "profile" && s !== "home") setModeState("opera");
   }, [place]);
 
   const addRole = (r: RoleRef) => setRoles((rs) => (rs.some((x) => same(x, r)) ? rs : [...rs, r]));
@@ -338,13 +339,12 @@ export function App() {
     mode,
     setMode: (m) => {
       setModeState(m);
-      go(m === "choral" ? { screen: "choral" } : m === "songs" ? { screen: "songs" } : roles.length ? { screen: "home" } : { screen: "explore", by: "opera" });
+      go(m === "choral" ? { screen: "choral" } : m === "songs" ? { screen: "songs" } : { screen: "explore", by: "opera" });
     },
   };
 
   const bravoEl = bravo ? <Bravo ctx={ctx} r={bravo} onClose={() => setBravo(null)} /> : null;
 
-  if (place.screen === "home" && !roles.length) return <Onboarding ctx={ctx} step={1} />;
   if (place.screen === "onboarding") return <Onboarding ctx={ctx} step={place.step} role={place.role} by={place.by} opera={place.opera} sing={place.sing} both={place.both} modes={place.modes} />;
 
   // a piece's score is fetched when it opens: show a short wait until it is here
