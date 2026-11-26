@@ -72,6 +72,7 @@ const COVER_ALT: Record<string, string> = {
   zauberfloete: "A crescent moon low over glowing clouds and hills, under a night sky of stars set in rays like a vaulted dome.",
   barbiere: "Figaro with his scissors and Count Almaviva lean towards Rosina, who holds a letter.",
   traviata: "Violetta in red between Alfredo and his father Germont.",
+  boheme: "Paris rooftops at night, one attic window lit, and a ribbon of warm smoke rising from its chimney into the dark sky.",
   carmen: "Carmen with a rose in her hair, between Don José, Micaëla and Escamillo.",
   butterfly: "Pinkerton in uniform with Cio-Cio-San in her kimono, and Suzuki beside them.",
 };
