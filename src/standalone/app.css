@@ -9366,3 +9366,37 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
     white-space: nowrap;
   }
 }
+
+/* meeting an opera, on a wide screen: a landscape card. The picture as a band across the top, the title under it, then the
+   story on the left and its people on the right; the choice at the foot */
+@media (min-width: 721px) {
+  .meet--opera .meet-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    /* the picture band stays exactly 5:2: the card narrows on a short screen rather than cropping the band further */
+    width: min(1080px, 100%, calc((100dvh - 510px) * 2.5));
+    min-width: min(680px, 100%);
+    height: auto;
+    max-height: calc(100dvh - 48px);
+  }
+  .meet--opera .meet-pic {
+    aspect-ratio: 5 / 2;
+    width: 100%;
+  }
+  .meet--opera .meet-pic img { object-position: 50% 35%; }
+  .meet--opera .meet-head { padding: 28px 40px 0; }
+  .meet--opera .meet-head h2 { font-size: clamp(34px, 3.6vw, 46px); }
+  .meet--opera .meet-scroll {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 44px;
+    row-gap: 0;
+    align-content: start;
+    padding: 16px 40px 8px;
+  }
+  .meet--opera .meet-story { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
+  .meet--opera .meet-people { grid-column: 2; grid-row: 1; margin-top: 4px; }
+  .meet--opera .meet-note { grid-column: 2; grid-row: 2; margin-top: 12px; }
+  .meet--opera .meet-actions { padding: 16px 40px 24px; }
+}
