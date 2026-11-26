@@ -7,6 +7,7 @@ import {
   type CSSProperties,
   type ReactNode,
 } from "react";
+import operaCard from "./images/opera-card.webp";
 import { createPortal } from "react-dom";
 import {
   ART,
@@ -3729,7 +3730,7 @@ export function Onboarding({
           <div className="ob-sing-grid" role="group" aria-label="What you sing">
             {(
               [
-                ["opera", "Opera", "Your role in arias, duets and ensembles", ART.figaro?.square, false],
+                ["opera", "Opera", "Your role in arias, duets and ensembles", operaCard, false],
                 ["songs", "Songs", "Italian songs, Lieder and mélodies with piano", composerNamed("Schubert").portrait ?? composerNamed("Fauré").portrait, true],
                 ["choral", "Choral", "Your part in requiems, masses and oratorios", composerNamed("Handel").portrait, true],
               ] as const
