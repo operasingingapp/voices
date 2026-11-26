@@ -9430,10 +9430,17 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .mine-add.is-on { color: var(--on-now); }
 .mine-add.is-on .mine-fill { fill: var(--now); stroke: none; }
 .mine-add.is-on path { stroke: var(--on-now); }
-.pc-line { display: flex; align-items: center; gap: 2px; border-bottom: 1px solid var(--fog); }
-.pc-line > .pc-row { flex: 1 1 auto; min-width: 0; border-bottom: 0 !important; }
-.sg-line { display: flex; align-items: center; gap: 2px; min-width: 0; }
-.sg-line > .sg-row { flex: 1 1 auto; }
+/* the + sits inside the row's own band, just before its play button (or at the row's end), so the hover and the
+   spacing take in the whole line */
+.pc-line { position: relative; border-bottom: 1px solid var(--fog); }
+.pc-line > .pc-row { border-bottom: 0 !important; }
+.pc-line > .pc-row .pc-play { margin-left: 48px; }
+.pc-line > .pc-row .pc-soon { margin-right: 40px; }
+.pc-line > .mine-add { position: absolute; top: 50%; right: 62px; transform: translateY(-50%); }
+.pc-line:has(.pc-soon) > .mine-add { right: 6px; }
+.sg-line { position: relative; min-width: 0; }
+.sg-line > .sg-row { padding-right: 52px; }
+.sg-line > .mine-add { position: absolute; top: 50%; right: 6px; transform: translateY(-50%); }
 .num > .mine-add { align-self: center; }
 
 .my-pieces { margin: 6px 0 28px; }
@@ -9537,3 +9544,8 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   .my-tile > .mine-add { opacity: 0; transition: opacity 120ms ease; }
   .my-tile:hover > .mine-add, .my-tile:focus-within > .mine-add { opacity: 1; }
 }
+.my-hint { margin: -4px 0 12px; color: var(--ink-muted); font-size: 14.5px; }
+/* suggestions keep their + visible everywhere: adding is the point */
+.my-grid--suggest .my-tile > .mine-add { opacity: 1 !important; display: grid !important; }
+/* the songs lists hold only songs ready to sing: the pill said it on every row; the + takes its place */
+.sg-line .sg-ready { display: none; }

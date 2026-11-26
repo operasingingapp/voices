@@ -4369,6 +4369,24 @@ function MyPieces({
     .filter((x): x is MineRow => !!x && (!only || x.kind === only))
     .sort((a, b) => b.t - a.t);
   if (only && !rows.length) return null;
+  // nothing added yet: pieces to start with, each with its +, from your roles (the current one first)
+  const suggest: MineRow[] = [];
+  if (!rows.length) {
+    const mineRoles = [ctx.current, ...ctx.roles].map(resolve).filter((x): x is NonNullable<typeof x> => !!x);
+    const seen = new Set<string>();
+    const pool = [
+      ...mineRoles.flatMap(({ opera, ch }) =>
+        ch.pieces.filter((p) => p.editionId).map((p) => ariaId(opera.id, ch.id, pieceKey(p))),
+      ),
+      ...readyPieces().map(({ opera, ch, index }) => ariaId(opera.id, ch.id, pieceKey(ch.pieces[index]))),
+    ];
+    for (const id of pool) {
+      if (suggest.length >= 6 || seen.has(id)) continue;
+      seen.add(id);
+      const r = resolveMine(ctx, recs, { id, at: 0 });
+      if (r) suggest.push(r);
+    }
+  }
   const hasSongs = rows.some((r) => r.kind === "song");
   const hasOpera = rows.some((r) => r.kind !== "song");
   const shown = rows.filter((r) => filter === "all" || (filter === "song" ? r.kind === "song" : r.kind !== "song"));
@@ -4418,20 +4436,25 @@ function MyPieces({
           ))}
         </ul>
       ) : (
-        <div className="my-empty">
-          <p>
-            Tap <span className="my-plus" aria-label="plus">+</span> next to any aria, ensemble or song and it appears
-            here, ready to practise.
-          </p>
-          <div className="my-empty-act">
-            <button type="button" className="cp-btn cp-btn--ink" onClick={() => ctx.go({ screen: "explore", by: "piece" })}>
-              Browse arias
-            </button>
-            <button type="button" className="cp-btn cp-btn--ghost" onClick={() => ctx.go({ screen: "songs" })}>
-              Songs
-            </button>
-          </div>
-        </div>
+        <>
+          <p className="my-hint">Tap + on any aria, ensemble or song to keep it here. To start:</p>
+          <ul className="my-grid my-grid--suggest">
+            {suggest.map((r) => (
+              <li key={r.id} className="my-tile">
+                <button type="button" className="my-open" onClick={r.open}>
+                  <span className={`my-thumb my-thumb--${r.kind}`} {...(r.tone ?? {})} aria-hidden="true">
+                    {r.thumb}
+                  </span>
+                  <span className="my-text">
+                    <b lang={r.lang}>{r.title}</b>
+                    <span>{r.sub}</span>
+                  </span>
+                </button>
+                <AddMine id={r.id} title={r.title} />
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </section>
   );
