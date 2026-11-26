@@ -128,6 +128,18 @@ export const PREMIERES: Record<string, { theatre: string; city: string }> = {
   butterfly: { theatre: "La Scala", city: "Milan" },
 };
 
+/** a shorter telling for the opera's pop-up, where the full story would not fit; others use STORIES */
+export const SHORT_STORIES: Record<string, string> = {
+  figaro:
+    "On their wedding day, Susanna tells Figaro that their master, Count Almaviva, wants her for himself. With the neglected Countess they plot to catch him out, through a day of hiding, disguises and a surprise about Figaro's parents. That night in the garden the Countess takes Susanna's place, the Count is caught courting his own wife, and he begs her forgiveness.",
+  cosi:
+    "Two officers, Ferrando and Guglielmo, bet the cynical Don Alfonso that their fiancées, the sisters Fiordiligi and Dorabella, will stay faithful. Disguised as exotic strangers, each woos the other's love, helped along by the maid Despina. The sisters give way, the men reveal the trick, and the couples are reunited, wiser than before.",
+  zauberfloete:
+    "Prince Tamino falls in love with a portrait of Pamina, daughter of the Queen of the Night, who sends him with a magic flute and the bird-catcher Papageno to rescue her from Sarastro. But Sarastro is a wise priest, and the Queen the true danger. Tamino and Pamina pass through trials of silence, fire and water, Papageno finds his Papagena, and light overcomes the night.",
+  boheme:
+    "Four penniless friends share a freezing Paris garret. On Christmas Eve the poet Rodolfo meets his neighbour Mimì, and they fall in love; the painter Marcello wins back his old flame Musetta at the Café Momus. By winter's end Mimì is gravely ill and Rodolfo too poor to care for her, and they part. Months later Musetta brings her back to the garret, where she dies among the friends.",
+};
+
 export const STORIES: Record<string, string> = {
   figaro:
     "On their wedding day, Susanna tells Figaro that their master, Count Almaviva, wants her for himself. With the neglected Countess they plot to catch him out, while the Count does all he can to put off the wedding, the lovesick page Cherubino keeps turning up where he shouldn't, and old Marcellina tries to hold Figaro to a promise of marriage, until a mark on his arm shows that she and Doctor Bartolo are his long-lost parents, and the two couples marry together. Meanwhile, as bait, Susanna has promised the Count a meeting in the garden that night, but the Countess will go in her place. Figaro, not in on the plan, thinks Susanna is betraying him and lies in wait. In the dark the Count is caught courting his own wife, and he begs her forgiveness.",

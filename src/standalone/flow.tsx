@@ -16,6 +16,7 @@ import {
   PORTRAITS,
   PREMIERES,
   STORIES,
+  SHORT_STORIES,
 } from "./opera-extra";
 import { SYNOPSES, Story, storyOf } from "./synopses";
 import { ARCS } from "./arcs";
@@ -3453,12 +3454,12 @@ function MeetOpera({
           </div>
           <div className="meet-scroll">
             {STORIES[opera.id] && (
-              <p className="meet-story">{STORIES[opera.id]}</p>
+              <p className="meet-story">{SHORT_STORIES[opera.id] ?? STORIES[opera.id]}</p>
             )}
             {people.length > 0 && (
               <div className="meet-people" aria-label="Its people">
                 {people.map((ch) => (
-                  <div key={ch.id} className="meet-person">
+                  <div key={ch.id} className="meet-person" title={ch.name}>
                     <img src={PORTRAITS[`${opera.id}:${ch.id}`].face} alt="" />
                     <span>{ch.name}</span>
                   </div>
