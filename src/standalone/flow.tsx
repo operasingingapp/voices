@@ -4254,6 +4254,39 @@ const noteText = (n: Note) => {
  * opera act by act, what you practised lately and the notes you wrote, and last, other roles for your voice.
  * Everything shown is what this device has kept; nothing is made up to fill the page.
  */
+/** Home's top: the pieces you practised last, latest first, as tiles that open where you stopped */
+function RecentPieces({ ctx, recs }: { ctx: Ctx; recs: Record<string, HomeRef> }) {
+  const rows = Object.values(recs)
+    .filter((r) => r.piece.editionId && r.t)
+    .sort((a, b) => (b.t ?? 0) - (a.t ?? 0))
+    .slice(0, 6)
+    .map((r) => resolveMine(ctx, recs, { id: ariaId(r.opera.id, r.ch.id, pieceKey(r.piece)), at: r.t ?? 0 }))
+    .filter((x): x is MineRow => !!x);
+  if (!rows.length) return null;
+  return (
+    <section className="my-recent" aria-labelledby="recent-h">
+      <h2 className="my-h2" id="recent-h">
+        Last practised
+      </h2>
+      <ul className="my-grid">
+        {rows.map((r) => (
+          <li key={r.id} className="my-tile">
+            <button type="button" className="my-open" onClick={r.open}>
+              <span className={`my-thumb my-thumb--${r.kind}`} {...(r.tone ?? {})} aria-hidden="true">
+                {r.thumb}
+              </span>
+              <span className="my-text">
+                <b lang={r.lang}>{r.title}</b>
+                <span>{[r.bar ? `Bar ${r.bar}` : "", relTime(r.t)].filter(Boolean).join(" · ")}</span>
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 /** My pieces on a home other than the opera one (songs): the songs you added, above the search */
 export function MySongs({ ctx }: { ctx: Ctx }) {
   return <MyPieces ctx={ctx} recs={savedPlaces()} only="song" />;
@@ -4396,7 +4429,7 @@ function MyPieces({
   return (
     <section className="my-pieces" aria-labelledby="my-h">
       <div className="my-head">
-        <h2 className="pv-h2 my-h" id="my-h">
+        <h2 className="my-h2" id="my-h">
           My pieces
         </h2>
         {!only && hasSongs && hasOpera && (
@@ -4422,16 +4455,16 @@ function MyPieces({
         )}
       </div>
       {shown.length ? (
-        <ul className="my-grid">
+        <ul className="my-list">
           {shown.map((r) => (
-            <li key={r.id} className="my-tile">
+            <li key={r.id} className="my-row">
               <button type="button" className="my-open" onClick={r.open}>
                 <span className={`my-thumb my-thumb--${r.kind}`} {...(r.tone ?? {})} aria-hidden="true">
                   {r.thumb}
                 </span>
                 <span className="my-text">
                   <b lang={r.lang}>{r.title}</b>
-                  <span>{r.bar ? `Bar ${r.bar} · ${r.sub}` : r.sub}</span>
+                  <span>{r.sub}</span>
                 </span>
               </button>
               <AddMine id={r.id} title={r.title} />
@@ -4441,9 +4474,9 @@ function MyPieces({
       ) : (
         <>
           <p className="my-hint">Tap + on any aria, ensemble or song to keep it here. To start:</p>
-          <ul className="my-grid my-grid--suggest">
+          <ul className="my-list my-list--suggest">
             {suggest.map((r) => (
-              <li key={r.id} className="my-tile">
+              <li key={r.id} className="my-row">
                 <button type="button" className="my-open" onClick={r.open}>
                   <span className={`my-thumb my-thumb--${r.kind}`} {...(r.tone ?? {})} aria-hidden="true">
                     {r.thumb}
@@ -4952,64 +4985,8 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
           </button>
         )}
       </header>
+      <RecentPieces ctx={ctx} recs={recs} />
       {myEl}
-      <div className={`pv-below${upNextEl ? "" : " is-single"}`}>
-        {upNextEl}
-      </div>
-      {roles.length > 1 && (
-        // every role you are learning, side by side: a tap makes it the current role and opens it
-        <section className="pv-roles" aria-labelledby="hm-roles-h">
-          <h2 className="pv-h3 pv-roles-h" id="hm-roles-h">
-            Your roles
-          </h2>
-          <ul className="pv-roles-list">
-            {roles.map(({ opera, ch }) => {
-              const pr = progressOf(ctx, opera, ch);
-              const isCur =
-                !!cur && cur.opera.id === opera.id && cur.ch.id === ch.id;
-              return (
-                <li key={`${opera.id}:${ch.id}`}>
-                  <button
-                    type="button"
-                    className={`pv-role${isCur ? " is-cur" : ""}`}
-                    data-tone={voiceTone(ch.voice)}
-                    style={toneStyle(opera.id, ch.id)}
-                    aria-label={`${ch.name}, ${opera.title}: ${pr.done} of ${pr.total} learned${isCur ? ", your current role" : ""}`}
-                    onClick={() => {
-                      ctx.chooseRole({ opera: opera.id, character: ch.id });
-                      ctx.go({
-                        screen: "role",
-                        opera: opera.id,
-                        character: ch.id,
-                      });
-                    }}
-                  >
-                    <span className="pv-role-face" aria-hidden="true">
-                      <Face opera={opera} ch={ch} />
-                    </span>
-                    <span className="pv-role-text">
-                      <span className="pv-role-name">{ch.name}</span>
-                      <i className="pv-role-opera" lang={opera.lang}>
-                        {opera.title}
-                      </i>
-                      <span className="pv-role-bar" aria-hidden="true">
-                        <span
-                          style={{
-                            width: `${pr.total ? Math.round((pr.done / pr.total) * 100) : 0}%`,
-                          }}
-                        />
-                      </span>
-                      <span className="pv-role-count">
-                        {pr.done} of {pr.total} learned
-                      </span>
-                    </span>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      )}
     </main>
   );
 }

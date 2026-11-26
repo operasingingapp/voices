@@ -9549,3 +9549,18 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .my-grid--suggest .my-tile > .mine-add { opacity: 1 !important; display: grid !important; }
 /* the songs lists hold only songs ready to sing: the pill said it on every row; the + takes its place */
 .sg-line .sg-ready { display: none; }
+
+/* Home: Last practised (tiles) above My pieces (a list) */
+.my-recent { margin: 8px 0 34px; }
+.my-h2 { margin: 0 0 12px; font: 500 26px/1.1 var(--font-display); color: var(--ink); }
+.my-recent + .my-pieces { margin-top: 0; }
+.my-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.my-row { position: relative; display: flex; align-items: center; min-width: 0; border-bottom: 1px solid var(--fog); }
+.my-row:hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.my-row .my-open { padding: 8px 52px 8px 4px; border-radius: 8px; }
+.my-row .my-thumb { width: 52px; height: 52px; border-radius: 6px; }
+.my-row .my-text > span { display: block !important; }
+.my-row .my-text b { font-size: 15px; }
+.my-row > .mine-add { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); opacity: 1 !important; display: grid !important; width: 40px; height: 40px; }
+.my-row > .mine-add svg { width: 24px; height: 24px; }
+@media (min-width: 900px) { .my-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; } }
