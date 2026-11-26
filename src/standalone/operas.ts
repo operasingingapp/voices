@@ -5040,7 +5040,7 @@ export const OPERAS: Opera[] = [
     "id": "violetta",
     "name": "Violetta Valéry",
     "voice": "Soprano",
-    "desc": "A Parisian courtesan.",
+    "desc": "A celebrated Parisian courtesan, already ill, who gives up her life of pleasure for Alfredo.",
     "avatar": "bun",
     "pieces": [
      {
@@ -5069,7 +5069,7 @@ export const OPERAS: Opera[] = [
     "id": "alfredo",
     "name": "Alfredo Germont",
     "voice": "Tenor",
-    "desc": "A young man in love with Violetta.",
+    "desc": "A young man from Provence who has loved Violetta from afar for a year.",
     "avatar": "curls",
     "pieces": [
      {
@@ -5090,7 +5090,7 @@ export const OPERAS: Opera[] = [
     "id": "germont",
     "name": "Giorgio Germont",
     "voice": "Baritone",
-    "desc": "Alfredo's father.",
+    "desc": "Alfredo's father, who comes to Paris to save his family's honour.",
     "avatar": "beard",
     "pieces": [
      {
@@ -5107,8 +5107,24 @@ export const OPERAS: Opera[] = [
     "id": "flora",
     "name": "Flora Bervoix",
     "voice": "Mezzo-soprano",
-    "desc": "Violetta's friend, who gives the party in Act 2.",
+    "desc": "Violetta's friend, who gives the masked party in Act 2.",
     "avatar": "long",
+    "pieces": []
+   },
+   {
+    "id": "annina",
+    "name": "Annina",
+    "voice": "Soprano",
+    "desc": "Violetta's maid, who stays with her to the end.",
+    "avatar": "bun",
+    "pieces": []
+   },
+   {
+    "id": "gastone",
+    "name": "Gastone, Viscount de Letorières",
+    "voice": "Tenor",
+    "desc": "A friend of Violetta's, who brings Alfredo to her party.",
+    "avatar": "curls",
     "pieces": []
    },
    {
@@ -5120,11 +5136,43 @@ export const OPERAS: Opera[] = [
     "pieces": []
    },
    {
-    "id": "annina",
-    "name": "Annina",
-    "voice": "Soprano",
-    "desc": "Violetta's maid.",
-    "avatar": "bun",
+    "id": "marchese",
+    "name": "Marchese d'Obigny",
+    "voice": "Bass",
+    "desc": "A friend of Flora's, who escorts her to Violetta's party.",
+    "avatar": "short",
+    "pieces": []
+   },
+   {
+    "id": "dottore",
+    "name": "Doctor Grenvil",
+    "voice": "Bass",
+    "desc": "Violetta's doctor, a friend who stays to the end.",
+    "avatar": "beard",
+    "pieces": []
+   },
+   {
+    "id": "giuseppe",
+    "name": "Giuseppe",
+    "voice": "Tenor",
+    "desc": "Violetta's manservant at the country house.",
+    "avatar": "short",
+    "pieces": []
+   },
+   {
+    "id": "domestico",
+    "name": "Flora's servant",
+    "voice": "Bass",
+    "desc": "A servant at Flora's party, who announces supper.",
+    "avatar": "cap",
+    "pieces": []
+   },
+   {
+    "id": "commissionario",
+    "name": "A messenger",
+    "voice": "Bass",
+    "desc": "A messenger who brings Alfredo Violetta's farewell letter.",
+    "avatar": "hat",
     "pieces": []
    }
   ]
