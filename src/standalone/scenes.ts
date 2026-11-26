@@ -563,22 +563,4 @@ export const SCENES: Record<string, Scene[]> = {
     ]),
   ],
 
-  schicchi: A("The opera", [
-    ["Mourning Buoso", "Ensemble", ["zita", "rinuccio", "nella", "ciesca", "simone"], "Buoso Donati's relatives weep round his deathbed, loudly."],
-    ["The rumour, and the search for the will", "Ensemble", ["zita", "rinuccio", "nella", "ciesca", "simone"], "Word is he left everything to the monks. They tear the room apart; Rinuccio finds the will, makes Zita promise he may marry Lauretta, and sends for Schicchi. The will is read: everything goes to the monks."],
-    ["Avete torto… Firenze è come un albero fiorito", "Aria", ["rinuccio"], "The relatives despair and turn on Simone; Rinuccio says only Schicchi can save them, and praises Florence and its new men."],
-    ["Schicchi's arrival and the quarrel with Zita", "Scene", ["schicchi", "lauretta", "rinuccio", "zita"], "Schicchi arrives with Lauretta; Zita insults them, and he refuses to help."],
-    ["Addio, speranza bella", "Duet", ["lauretta", "rinuccio"], "The lovers fear they will be parted."],
-    ["O mio babbino caro", "Aria", ["lauretta"], "Lauretta begs her father to help, or she will throw herself in the Arno.", ["schicchi", "rinuccio", "zita", "nella", "ciesca", "simone"]],
-    ["Addio, speranza bella (reprise)", "Duet over the reading of the will", ["lauretta", "rinuccio", "schicchi"], "Schicchi reads the will while the lovers sigh."],
-    ["Back from the terrace", "Short exchange", ["lauretta", "schicchi"], "Schicchi, with an idea forming, sends Lauretta out to the terrace to feed the bird, so that she knows nothing of the fraud; she calls back that it will not eat, and he tells her to give it some water."],
-    ["The doctor's visit", "Scene · Schicchi as Buoso", ["schicchi"], "Hidden in the bed, Schicchi fools the doctor with Buoso's voice."],
-    ["Si corre dal notaio", "Aria", ["schicchi"], "Schicchi explains his plan: he will be Buoso and dictate a new will."],
-    ["The relatives bargain", "Ensemble", ["zita", "nella", "ciesca", "simone", "rinuccio", "schicchi"], "They squabble over the mule, the house and the mills, and each secretly bribes Schicchi."],
-    ["Spogliati, bambolino", "Trio", ["nella", "ciesca", "zita"], "The women dress Schicchi as Buoso.", ["schicchi"]],
-    ["Prima un avvertimento", "Schicchi's warning", ["schicchi"], "Forging a will means exile and the loss of a hand, for all of them: “Addio, Firenze”."],
-    ["The new will", "Scene · with the notary", ["schicchi", "zita", "nella", "ciesca", "simone", "rinuccio"], "Schicchi leaves the mule, the house and the mills of Signa to ‘his devoted friend Gianni Schicchi’. The relatives cannot protest; he drives them out, and they loot what they can as they go."],
-    ["Lauretta mia", "Love duet", ["lauretta", "rinuccio"], "With the relatives driven out, the lovers look out over Florence."],
-    ["Ditemi voi, signori", "Schicchi's words to the audience, spoken", ["schicchi"], "Schicchi asks the audience to forgive him, given the happy ending."],
-  ]),
 };

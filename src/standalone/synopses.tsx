@@ -356,19 +356,6 @@ export const SYNOPSES: Record<string, Act[]> = {
       ],
     },
   ],
-  schicchi: [
-    {
-      title: "The opera",
-      where: "Florence, 1299: the bedroom of Buoso Donati, who has just died. In one act",
-      paras: [
-        "Buoso's relatives kneel weeping round his bed, until they hear a rumour that he has left everything to the monks. They hunt for the will, and the young Rinuccio finds it; before handing it over he makes his aunt Zita promise he can marry Lauretta, daughter of Gianni Schicchi, and sends for her father. The will confirms the worst.",
-        "The relatives despair and turn on old Simone. Rinuccio says only Schicchi can save them; the relatives sneer at the newcomer from the country, and Rinuccio praises Florence and its new men (“Firenze è come un albero fiorito”). Schicchi arrives with Lauretta and, insulted by Zita, refuses to help; the lovers fear they will be parted, until Lauretta begs her father (“O mio babbino caro”). He reads the will while the lovers sigh.",
-        "Schicchi has an idea. He sends Lauretta out to the terrace to feed the bird, so that she knows nothing of the fraud. Nobody yet knows Buoso is dead: Schicchi has the body hidden, climbs into the bed and, imitating the dead man's voice, fools the doctor. Then he explains his plan (“Si corre dal notaio”): he will be Buoso, and dictate a new will.",
-        "The relatives squabble over the mule, the house and the mills of Signa, and each secretly bribes Schicchi for them. The women dress him in Buoso's nightclothes, and he warns them that forging a will means exile and the loss of a hand, for all of them (“Addio, Firenze”).",
-        "Before the notary Schicchi dictates the new will and leaves the mule, the house and the mills to ‘my devoted friend Gianni Schicchi’. The relatives can say nothing. When the notary has gone he drives them out, looting as they go, and Lauretta and Rinuccio look out over Florence together. Schicchi asks the audience to forgive him, given the happy ending.",
-      ],
-    },
-  ],
 };
 
 /** A name as it appears in the story ("The Countess" is "the Countess" mid-sentence; "Don Giovanni" may be just "Giovanni"). */

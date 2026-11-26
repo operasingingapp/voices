@@ -337,26 +337,4 @@ export const ARCS: Record<string, ArcStep[]> = {
     { act: "Act 3", text: "He returns with Pinkerton and his wife, and reproaches Pinkerton for what he has done." },
   ],
 
-  // ---------------- Gianni Schicchi (one act) ----------------
-  "schicchi:schicchi": [
-    { act: "The opera", text: "Called in by Rinuccio to save the relatives' inheritance, Gianni Schicchi refuses until his daughter Lauretta begs him. He hides the body, climbs into Buoso's bed, dictates a new will to the notary, and leaves the best of it to himself, so the young couple can marry." },
-  ],
-  "schicchi:lauretta": [
-    { act: "The opera", text: "Lauretta loves Rinuccio, but his family scorn her father. When Schicchi refuses to help them, she begs him, threatening to throw herself in the Arno if she cannot marry (“O mio babbino caro”). At the end she and Rinuccio embrace, free to marry." },
-  ],
-  "schicchi:rinuccio": [
-    { act: "The opera", text: "Rinuccio finds the will, makes Zita promise he may marry Lauretta, and sends for Schicchi. When the will is read, he says only Schicchi can save them and praises Florence and its new men (“Firenze è come un albero fiorito”). Schicchi's trick lets him marry Lauretta." },
-  ],
-  "schicchi:zita": [
-    { act: "The opera", text: "Buoso's cousin Zita leads the mourning, and the hunt for the will. She scorns Schicchi and his daughter, and is driven out of the house at the end." },
-  ],
-  "schicchi:nella": [
-    { act: "The opera", text: "One of the relatives, Nella helps dress Schicchi as the dead man and is driven out with the others." },
-  ],
-  "schicchi:ciesca": [
-    { act: "The opera", text: "La Ciesca joins the greedy relatives, secretly bribes Schicchi for the best property, and is driven out empty-handed." },
-  ],
-  "schicchi:simone": [
-    { act: "The opera", text: "The oldest relative, Simone, knows the law. He hopes for the mills of Signa, and is driven out with the rest." },
-  ],
 };

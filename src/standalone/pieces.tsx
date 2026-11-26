@@ -83,37 +83,6 @@ export interface PieceInfo {
 }
 
 export const PIECE_INFO: Record<string, PieceInfo> = {
-  "puccini-o-mio-babbino-caro": {
-    portrait: "schicchi:lauretta",
-    opera: "Gianni Schicchi",
-    kind: "Aria",
-    facts: {
-      key: "A♭ major, after a 4-bar introduction",
-      time: "6/8 (the introduction in 3/4)",
-      tempo: "Andantino ingenuo, ♩. ≈ 33 (♪ = 100), the engraving's marking: Puccini gives no number",
-    },
-    notePlaceholder: "Breathe after “caro”, keep the line through “mi piace”",
-    about: (
-      <>
-        <p>
-          Score: engraving by{" "}
-          <a href="https://www.cafe-puccini.dk" target="_blank" rel="noreferrer">
-            www.cafe-puccini.dk
-          </a>{" "}
-          (MuseScore, 8 January 2023), licensed{" "}
-          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noreferrer">
-            Creative Commons BY-NC-ND
-          </a>
-          . Played unchanged, for non-commercial use. On screen it is shown on one line; the tempo and rehearsal marks appear in the bar box, the engraving's
-          playback-only tempo numbers and the opening stage direction are left off the line, and joined syllables use ‿.
-        </p>
-        <p>
-          Music by Giacomo Puccini (public domain). Text by Giovacchino Forzano, first published 1918: public domain in the US, still protected in the EU until
-          2040. The IPA, word meanings and translation were written for this app and have not yet been reviewed by a diction coach.
-        </p>
-      </>
-    ),
-  },
   "puccini-al-quartiere-latin": {
     portrait: "boheme:rodolfo",
     opera: "La bohème",

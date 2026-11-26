@@ -64,8 +64,6 @@ const PORTRAIT_ALT: Record<string, string> = {
   "butterfly:goro": "Goro in a mustard robe over a black kimono, dark hair, his hands tucked together.",
   "butterfly:bonze": "The Bonze in black robes with a rust-red stole, his head shaved, one hand raised.",
   "butterfly:kate": "Kate Pinkerton in a slate-blue dress with a high collar, fair hair pinned up, her arms crossed.",
-  "schicchi:schicchi": "Gianni Schicchi in a red hood and red robe, white beard, holding the will and raising a hand.",
-  "schicchi:lauretta": "Lauretta in a red dress with a white shawl, dark hair tied with a white ribbon, hands at her throat.",
 };
 const COVER_ALT: Record<string, string> = {
   figaro: "A bride and groom stand in a toppled wedding cake while a third figure has fallen headfirst into it, legs in the air.",
@@ -76,7 +74,6 @@ const COVER_ALT: Record<string, string> = {
   traviata: "Violetta in red between Alfredo and his father Germont.",
   carmen: "Carmen with a rose in her hair, between Don José, Micaëla and Escamillo.",
   butterfly: "Pinkerton in uniform with Cio-Cio-San in her kimono, and Suzuki beside them.",
-  schicchi: "Gianni Schicchi, in a red cap, reads the will while Buoso's relatives crowd round the bed; Florence beyond the window.",
 };
 
 /** characters who are the same person in another opera, drawn once (Beaumarchais's Bartolo and Basilio) */
@@ -129,7 +126,6 @@ export const PREMIERES: Record<string, { theatre: string; city: string }> = {
   boheme: { theatre: "Teatro Regio", city: "Turin" },
   tosca: { theatre: "Teatro Costanzi", city: "Rome" },
   butterfly: { theatre: "La Scala", city: "Milan" },
-  schicchi: { theatre: "Metropolitan Opera", city: "New York" },
 };
 
 export const STORIES: Record<string, string> = {
@@ -157,7 +153,5 @@ export const STORIES: Record<string, string> = {
     "Rome, 1800. The singer Floria Tosca's lover, the painter Cavaradossi, hides an escaped political prisoner. The police chief Scarpia tortures Cavaradossi and demands Tosca as the price of his life; she kills Scarpia, but the promised mock execution is real, and she leaps from the castle walls.",
   butterfly:
     "In Nagasaki the American naval officer Pinkerton marries the young Cio-Cio-San, Butterfly, and sails away. She waits three years with their child; when he returns with an American wife to take the boy, she takes her own life.",
-  schicchi:
-    "Florence, 1299. Buoso Donati is dead, and his greedy relatives find he has left everything to the monks. Rinuccio calls in the shrewd Gianni Schicchi, whose daughter Lauretta he wants to marry. Schicchi impersonates the dead man, dictates a new will, and leaves the best of it to himself, so the young lovers can marry.",
 };
 
