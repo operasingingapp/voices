@@ -6376,6 +6376,8 @@ const INSTRUMENTAL: Record<string, Record<string, string>> = {
   cosi: { Sinfonia: "mozart-cosi-sinfonia", "Bella vita militar": "mozart-bella-vita-militar" },
   giovanni: { Ouverture: "mozart-giovanni-ouverture" },
   zauberfloete: { "Marsch der Priester": "mozart-marsch-der-priester", "O Isis und Osiris! welche Wonne!": "mozart-o-isis-und-osiris-welche-wonne", "Ouverture": "mozart-zauberfloete-ouverture" },
+  // keyed "act: title" where two numbers share a title (both acts open with a Preludio)
+  traviata: { "Act 1: Preludio": "verdi-traviata-preludio" },
 };
 export const RUNNING: Record<string, RunningNumber[]> = {};
 for (const opera of OPERAS) {
@@ -6394,7 +6396,7 @@ for (const opera of OPERAS) {
       }
       piece ??= { character: id, index };
     }
-    const editionId = s.who.length ? undefined : INSTRUMENTAL[opera.id]?.[s.title];
+    const editionId = s.who.length ? undefined : (INSTRUMENTAL[opera.id]?.[`${s.act}: ${s.title}`] ?? INSTRUMENTAL[opera.id]?.[s.title]);
     return { title: s.title, kind: s.kind, act: actOf(s.act), who: s.who, ...(piece ? { piece } : {}), ...(editionId ? { editionId } : {}) };
   });
 }

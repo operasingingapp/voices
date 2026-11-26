@@ -1,0 +1,54 @@
+{
+ "editionId": "verdi-traviata-preludio",
+ "editionVersion": "1.0.0-ricordi",
+ "title": "Preludio",
+ "subtitle": "The prelude to Act 1 of La traviata, in the Ricordi vocal score",
+ "kind": "overture",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Giuseppe Verdi",
+ "librettist": "Francesco Maria Piave",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P1",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.8
+  }
+ ],
+ "passages": [],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giuseppe Verdi, La traviata (1853), Preludio to Act 1",
+   "author": "Giuseppe Verdi (1813–1901)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score (Milan, plate 42314; IMSLP #392068), pages 1–3 (49 bars)",
+   "author": "Ricordi piano reduction, as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages: read by two independent readers and compared with a scan (OMR) reading, every disagreement settled on zoomed images of the page, then checked bar by bar by two fresh proofreaders and corrected. Adagio, 4/4, four sharps; the left hand is in treble clef in bars 1–16. Playback tempo ♩ = 55 (the print gives ♩ = 66), so that the piece lasts as long as the median (3:36) of five complete recordings (Kleiber 1977 3:33, Toscanini 1946 3:36, Muti 1980 3:50, Rahbari 1994 3:56, Mehta 3:01). The tie from the left hand's tremolo half note into the following chord in bars 25–27 is not shown."
+  }
+ ]
+}

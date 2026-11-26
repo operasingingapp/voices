@@ -3023,6 +3023,35 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "verdi-traviata-preludio": {
+    // no one sings it: it is played before the curtain, so Violetta, the title role, stands for it
+    portrait: "traviata:violetta",
+    opera: "La traviata",
+    kind: "Prelude",
+    facts: {
+      key: "four sharps (E major) throughout; it opens in B minor and ends in E major",
+      time: "4/4 (C) throughout",
+      tempo: "Adagio; the print gives ♩ = 66, the app plays ♩ = 55, so that it lasts as long as the median (3:36) of five complete recordings (Kleiber 1977, Toscanini 1946, Muti 1980, Rahbari 1994, Mehta)",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          The orchestra plays alone with the curtain down. It begins very softly, high and slow, in B minor: music that comes back at
+          the start of Act 3, by Violetta's sickbed. Then, in E major, the broad melody Violetta sings in Act 2 (“Amami, Alfredo”) is
+          heard, first plainly and then low, under a light, quick, decorated figure above it, until it slows and dies away.
+        </p>
+        <p>
+          Score: the Preludio (vocal score pages 1–3, 49 bars), from the G. Ricordi & C. vocal score (Milan, plate 42314; IMSLP
+          #392068), public domain. Written out from the printed pages: read by two independent readers and compared with a scan,
+          every disagreement settled on zoomed images of the page, then checked bar by bar by fresh proofreaders. The left hand is
+          printed in treble clef for the first 16 bars, as in the print. The tie from the left hand's tremolo half note into the
+          following chord in bars 25–27 is not shown.
+        </p>
+        <p>Music by Giuseppe Verdi (1853), public domain.</p>
+      </>
+    ),
+  },
   "mozart-giovanni-ouverture": {
     // no one sings it: the opera's own picture (the title role, first in the cast list) stands for it
     portrait: "giovanni:dongiovanni",
