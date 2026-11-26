@@ -7212,7 +7212,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "2/4",
-      tempo: "Andante, played at ♩ = 76, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+      tempo: "Andante, played at ♩ = 73, from the length of two complete recordings (Böhm 1964 and Klemperer 1964); checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Haitink 1981) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (2:42)",
     },
     notePlaceholder: "Cheerful and simple; let the words lead",
     about: (
@@ -7266,7 +7266,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "B-flat major; the Largo in G minor",
       time: "4/4; the Largo in 3/4",
-      tempo: "Allegro maestoso, Recit., Largo and Allegro moderato, played at ♩ = 91, 72, 45 and 109, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+      tempo: "Allegro maestoso, Recit., Largo and Allegro moderato, played at ♩ = 94, 72, 45 and 109, from the length of two complete recordings (Böhm 1964 and Klemperer 1964); checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Haitink 1981) and played 3% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (5:04)",
     },
     notePlaceholder: "Grief first, then command; keep the runs light and exact",
     about: (
@@ -7293,7 +7293,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "3/4",
-      tempo: "Adagio, played at ♩ = 54, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+      tempo: "Adagio, played at ♩ = 57, from the length of two complete recordings (Böhm 1964 and Klemperer 1964); checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Haitink 1981) and played 6% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (2:53)",
     },
     notePlaceholder: "A long, calm line; a prayer, not a performance",
     about: (
@@ -7320,7 +7320,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "2/4",
-      tempo: "Allegro, “sempre pp possibile”, played at ♩ = 135, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+      tempo: "Allegro, “sempre pp possibile”, played at ♩ = 140, from the length of two complete recordings (Böhm 1964 and Klemperer 1964); checked against the track times of 3 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995) and played 4% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (1:16)",
     },
     notePlaceholder: "As quiet and quick as possible, creeping up on her",
     about: (
@@ -7347,7 +7347,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E major",
       time: "2/4",
-      tempo: "Larghetto, played at ♩ = 24, from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+      tempo: "Larghetto, played at ♩ = 27, from the length of two complete recordings (Böhm 1964 and Klemperer 1964); checked against the track times of 5 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980, Haitink 1981) and played 12% quicker, so that with its fermatas held and its written slowings the app lasts as long as their median (4:02)",
     },
     notePlaceholder: "Low and steady; let the long phrases breathe",
     about: (
@@ -7374,7 +7374,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G minor",
       time: "6/8",
-      tempo: "Andante, played at ♩ = 29 (♪ = 87), from the length of two complete recordings (Böhm 1964 and Klemperer 1964)",
+      tempo: "Andante, played at ♩ = 28 (♪ = 84), from the length of two complete recordings (Böhm 1964 and Klemperer 1964); checked against the track times of 5 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980, Haitink 1981) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (4:28)",
     },
     notePlaceholder: "Still and inward; the grief in the long notes, not the volume",
     about: (
@@ -7455,7 +7455,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E-flat major",
       time: "6/8",
-      tempo: "Andantino, played at ♩ = 47 (♩. ≈ 31), from the median length of five complete recordings (Klemperer 1964, Böhm 1964, Solti 1969, Abbado 2005, Christie 1995)",
+      tempo: "Andantino, played at ♩ = 45 (♩. ≈ 30), from the median length of five complete recordings (Klemperer 1964, Böhm 1964, Solti 1969, Abbado 2005, Christie 1995); checked against the track times of 5 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980, Haitink 1981) and played 3% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (3:16)",
     },
     notePlaceholder: "Simple and warm, like a folk song; two voices as one",
     about: (
@@ -7482,7 +7482,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "4/4",
-      tempo: "Allegretto, played at ♩ = 93, from the median length of four complete recordings (Klemperer 1964, Böhm 1964, Abbado 2005, Christie 1995)",
+      tempo: "Allegretto, played at ♩ = 89, from the median length of four complete recordings (Klemperer 1964, Böhm 1964, Abbado 2005, Christie 1995); checked against the track times of 3 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (1:08)",
     },
     notePlaceholder: "A warning with a wink; keep it light",
     about: (
@@ -7509,7 +7509,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "A major",
       time: "6/8",
-      tempo: "Allegretto, played at ♩ = 72 (♩. = 24), from the median length of four complete recordings (Klemperer 1964, Abbado 2005, Christie 1995, Jacobs 2010)",
+      tempo: "Allegretto, played at ♩ = 62 (♩. = 21), from the median length of four complete recordings (Klemperer 1964, Abbado 2005, Christie 1995, Jacobs 2010); checked against the track times of 3 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995) and played 14% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (1:46)",
     },
     notePlaceholder: "Bright and floating; the three voices perfectly together",
     about: (
@@ -7563,7 +7563,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "D minor",
       time: "4/4",
-      tempo: "Allegro assai, ♩ ≈ 144: the engraving's playback number, Mozart gives words only",
+      tempo: "Allegro assai, ♩ ≈ 130: the engraving's playback number, Mozart gives words only; checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Haitink 1981) and played 9% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (3:02)",
     },
     notePlaceholder: "Keep the staccato high notes light; breathe before “Hört”",
     about: (
@@ -7676,7 +7676,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "4/4",
-      tempo: "Allegro maestoso, played at ♩ = 98, about 1¾ minutes, the median of four complete recordings whose track holds just this section (Norrington, Christie 1995, Haitink 1981, Böhm 1955); the closing fermata is held",
+      tempo: "Allegro maestoso, played at ♩ = 94, about 1¾ minutes, the median of four complete recordings whose track holds just this section (Norrington, Christie 1995, Haitink 1981, Böhm 1955); the closing fermata is held; checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (8:20)",
     },
     notePlaceholder: "Papageno's panic against the ceremonial march; Pamina's “Die Wahrheit” firm and simple",
     about: (
@@ -7705,7 +7705,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C major",
       time: "¢ (alla breve)",
-      tempo: "Larghetto, played at a half note = 50 (♩ = 100), about 1½ minutes, the median of five recordings whose track holds just this section (Jacobs 2010, Norrington, Christie 1995, Toscanini 1937, Haitink 1981)",
+      tempo: "Larghetto, played at a half note = 48 (♩ = 96), about 1½ minutes, the median of five recordings whose track holds just this section (Jacobs 2010, Norrington, Christie 1995, Toscanini 1937, Haitink 1981); checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (10:17)",
     },
     notePlaceholder: "Calm and solemn, in two beats to the bar: the boys' counsel moves as one, Tamino's question is urgent but quiet",
     about: (
@@ -7794,7 +7794,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major",
       time: "4/4",
-      tempo: "Larghetto, played at ♩ = 67, about 2¾ minutes, the median of four complete recordings whose track holds just this section (Norrington, Nézet-Séguin 2018, Christie 1995, Haitink 1981); the last two bars are recitative",
+      tempo: "Larghetto, played at ♩ = 64, about 2¾ minutes, the median of four complete recordings whose track holds just this section (Norrington, Nézet-Séguin 2018, Christie 1995, Haitink 1981); the last two bars are recitative; checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (8:20)",
     },
     notePlaceholder: "Pamina's confession plain and sincere; Sarastro calm and kind but unbending",
     about: (
@@ -7824,7 +7824,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "No key signature (C major to A minor)",
       time: "4/4",
-      tempo: "Recitative and short sections: Tamino's Recit. at a speaking pace, ♩ = 60, Allegro ♩ = 100, Allegro assai ♩ = 136, Adagio ♩ = 36; the Speaker's scene grave, Recit. ♩ = 46 and Andante ♩ = 48; about 8¼ minutes in all, the median of five complete recordings whose tracks hold just this scene (Norrington, Jacobs 2010, Böhm 1955, Haitink 1981, Christie 1995); the section relations are this app's choice; the fermatas are held",
+      tempo: "Recitative and short sections: Tamino's Recit. at a speaking pace, ♩ = 57, Allegro ♩ = 96, Allegro assai ♩ = 130, Adagio ♩ = 34; the Speaker's scene grave, Recit. ♩ = 44 and Andante ♩ = 46; about 8¼ minutes in all, the median of five complete recordings whose tracks hold just this scene (Norrington, Jacobs 2010, Böhm 1955, Haitink 1981, Christie 1995); the section relations are this app's choice; the fermatas are held; checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (10:17)",
     },
     notePlaceholder: "Tamino's resolve and impatience against the Speaker's calm, slow authority; the offstage chorus soft and mysterious",
     about: (
@@ -7915,7 +7915,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "E-flat major throughout",
       time: "4/4 (C) throughout",
-      tempo: "Adagio ♩ = 60, Allegro ♩ = 180 (half note = 90), the Adagio chords (bar 97) ♩ = 60 and the Allegro again, about 6 minutes in all, from the median (6:00) of five complete recordings (Norrington, Christie 1995, Jacobs 2010, Klemperer 1964, Haitink 1981); the tracks are not split at the sections, so the Adagio is set at a third of the Allegro's beat (about a minute for the introduction), with its fermatas held; Mozart gives the words only",
+      tempo: "Adagio ♩ = 49, Allegro ♩ = 148 (half note = 74), the Adagio chords (bar 97) ♩ = 49 and the Allegro again, about 6 minutes in all, from the median (6:00) of five complete recordings (Norrington, Christie 1995, Jacobs 2010, Klemperer 1964, Haitink 1981); the tracks are not split at the sections, so the Adagio is set at a third of the Allegro's beat (about a minute for the introduction), with its fermatas held; Mozart gives the words only; checked against the track times of 5 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980, Haitink 1981) and played 18% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (7:16)",
     },
     notePlaceholder: "",
     about: (
@@ -7944,7 +7944,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "F major; C major from the closing chorus",
       time: "2/2 (alla breve)",
-      tempo: "Allegro, played at a half note = 84 (♩ = 168); Sarastro's recitative at a speaking pace, ♩ = 80, with its Adagio at ♩ = 40; the closing Presto at a half note = 104 (♩ = 208); about 3¼ minutes, the median of five complete recordings whose tracks hold just this section (Christie 1995, Nézet-Séguin 2018, Norrington, Haitink 1981, Klemperer 1964), split between the Allegro and the Presto as the two that give the closing chorus its own track; the recitative tempi are this app's choice; the fermata is held",
+      tempo: "Allegro, played at a half note = 81 (♩ = 162); Sarastro's recitative at a speaking pace, ♩ = 77, with its Adagio at ♩ = 38; the closing Presto at a half note = 100 (♩ = 200); about 3¼ minutes, the median of five complete recordings whose tracks hold just this section (Christie 1995, Nézet-Séguin 2018, Norrington, Haitink 1981, Klemperer 1964), split between the Allegro and the Presto as the two that give the closing chorus its own track; the recitative tempi are this app's choice; the fermata is held; checked against the track times of 4 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980) (timed together with the numbers next to it, as some recordings join them on one track) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (8:20)",
     },
     notePlaceholder: "Monostatos fawning and spiteful; the lovers' recognition breathless; Sarastro's sentence dry, his recitative grave",
     about: (
@@ -7977,7 +7977,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "2/2 (alla breve)",
-      tempo: "Allegro, played at a half note = 96 (♩ = 192), about 3½ minutes, the median of five complete recordings whose track holds just this quintet (Abbado 2005, Haitink 1981, Klemperer 1964, Böhm 1964, Christie 1995)",
+      tempo: "Allegro, played at a half note = 91 (♩ = 183), about 3½ minutes, the median of five complete recordings whose track holds just this quintet (Abbado 2005, Haitink 1981, Klemperer 1964, Böhm 1964, Christie 1995); checked against the track times of 3 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995) and played 5% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (3:36)",
     },
     notePlaceholder: "Quick and light in two: the Ladies' whispered threats, Tamino's firm “Stille!”, Papageno bursting to talk",
     about: (
@@ -8069,7 +8069,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "C minor (the chorale), then A-flat major (the Allegretto, which sets out from D-flat); three flats throughout",
       time: "Alla breve (¢) throughout (Adagio, then Allegretto from bar 60); the last bar has three beats",
-      tempo: "Adagio, played at ♩ = 57, then Allegretto at ♩ = 114 (half note = 57) from bar 60, about 5 minutes, the median of five complete recordings whose tracks hold just this scene (Böhm 1964, Klemperer 1964, Solti 1969, Haitink 1981, Toscanini 1937); no recording splits it at the Allegretto, so the Allegretto's beat is set at twice the Adagio's, the Adagio's quarter becoming the Allegretto's half note",
+      tempo: "Adagio, played at ♩ = 55, then Allegretto at ♩ = 109 (half note = 55) from bar 60, about 5 minutes, the median of five complete recordings whose tracks hold just this scene (Böhm 1964, Klemperer 1964, Solti 1969, Haitink 1981, Toscanini 1937); no recording splits it at the Allegretto, so the Allegretto's beat is set at twice the Adagio's, the Adagio's quarter becoming the Allegretto's half note; checked against the track times of 3 complete recordings (Klemperer 1964, Böhm 1964, Karajan 1980) and played 4% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (5:24)",
     },
     notePlaceholder: "The chorale grave and even over the moving bass; Tamino firm; then the Allegretto bright and quick with joy",
     about: (
@@ -8132,7 +8132,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major, then C major (from the Boys' entrance)",
       time: "6/8 from an upbeat, then alla breve (¢) from bar 132",
-      tempo: "Allegro, played at ♩ = 120 (♩. = 80), Andante at ♩ = 60 from bar 122, Allegretto at ♩ = 160 (half note = 80) from bar 132 and Allegro at ♩ = 192 (half note = 96) from bar 165, about 5 minutes, the median of five complete recordings whose tracks hold just this scene (Klemperer 1964, Nézet-Séguin 2018, Toscanini 1937, Christie 1995, Solti 1969); no recording splits it, so the proportion is assumed: the Andante's beat half the Allegro's, the Allegretto's half note the Allegro's dotted quarter, and the closing Allegro a fifth faster than the Allegretto, with the fermatas held",
+      tempo: "Allegro, played at ♩ = 114 (♩. = 76), Andante at ♩ = 57 from bar 122, Allegretto at ♩ = 152 (half note = 76) from bar 132 and Allegro at ♩ = 183 (half note = 91) from bar 165, about 5 minutes, the median of five complete recordings whose tracks hold just this scene (Klemperer 1964, Nézet-Séguin 2018, Toscanini 1937, Christie 1995, Solti 1969); no recording splits it, so the proportion is assumed: the Andante's beat half the Allegro's, the Allegretto's half note the Allegro's dotted quarter, and the closing Allegro a fifth faster than the Allegretto, with the fermatas held; checked against the track times of 5 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980, Haitink 1981) (timed together with the numbers next to it, as some recordings join them on one track) and played 5% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (8:08)",
     },
     notePlaceholder: "Papageno's calls bright, then comically forlorn; the counting slow and hopeful; the Boys quick and firm; the bells gleeful",
     about: (
@@ -8163,7 +8163,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "G major",
       time: "Alla breve (¢) throughout; the last bar is printed short",
-      tempo: "Allegro, played at ♩ = 204 (half note = 102), about 2½ minutes, the median of five complete recordings whose tracks hold just this duet (Klemperer 1964, Haitink 1981, Christie 1995, Solti 1969, Nézet-Séguin 2018), with the ritard. before the a tempo of bar 60 and the two fermatas held",
+      tempo: "Allegro, played at ♩ = 194 (half note = 97), about 2½ minutes, the median of five complete recordings whose tracks hold just this duet (Klemperer 1964, Haitink 1981, Christie 1995, Solti 1969, Nézet-Séguin 2018), with the ritard. before the a tempo of bar 60 and the two fermatas held; checked against the track times of 5 complete recordings (Klemperer 1964, Böhm 1964, Christie 1995, Karajan 1980, Haitink 1981) (timed together with the numbers next to it, as some recordings join them on one track) and played 5% slower, so that with its fermatas held and its written slowings the app lasts as long as their median (8:08)",
     },
     notePlaceholder: "The stammered names light and quick, each answering the other; the vows warm; the children's names tumbling over each other in delight",
     about: (
