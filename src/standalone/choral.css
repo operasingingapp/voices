@@ -15,10 +15,11 @@
   .shell .topbar.gutter { padding-left: 8px; padding-right: 12px; }
   .topbar-mark { min-width: 0; overflow: hidden; white-space: nowrap; }
 }
-@media (max-width: 380px) {
+@media (max-width: 430px) {
   .topbar:has(.now-pill) { gap: 6px; }
-  .topbar:has(.now-pill) .topbar-mark { font-size: 23px !important; }
-  .topbar:has(.now-pill) .topbar-mode button { padding: 0 9px; }
+  .topbar:has(.now-pill) .topbar-mark { font-size: 22px !important; }
+  .topbar:has(.now-pill) .topbar-mode button { padding: 0 7px; font-size: 13.5px; }
+  .topbar:has(.now-pill) .now-pill .np-face { width: 40px; height: 40px; }
 }
 @media (max-width: 340px) {
   .topbar:has(.now-pill) .topbar-mark { visibility: hidden; flex: 1 1 0; width: 0; padding: 0; }

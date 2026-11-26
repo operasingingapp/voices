@@ -36,6 +36,8 @@ import { composerNamed } from "./composers";
 import { ComposerRow, ModeSwitch, WorksGrid, type Mode } from "./choralParts";
 import { SongList } from "./songParts";
 import { SONGS } from "./songs";
+import { AddMine } from "./mineUI";
+import { ariaId, listenId, seedMine, useMine, type MineItem } from "./mine";
 
 /** Pastel tones. A character's tone follows the voice type, so a soprano is always pink, a tenor always sky. */
 export type Tone = "pink" | "lilac" | "peach" | "sky" | "mint" | "butter";
@@ -1629,6 +1631,7 @@ export function RolePage({
                         )}
                         <span className="rp-status">{status}</span>
                         <span className="rp-tools">
+                          <AddMine id={ariaId(opera.id, ch.id, k)} title={p.title} />
                           {p.context && (
                             <button
                               type="button"
@@ -2050,6 +2053,11 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                     ))}
                   </span>
                 </div>
+                {ch && p ? (
+                  <AddMine id={ariaId(opera.id, ch.id, pieceKey(p))} title={row.title} />
+                ) : listen ? (
+                  <AddMine id={listenId(opera.id, listen)} title={row.title} />
+                ) : null}
                 {p?.context && (
                   <button
                     type="button"
@@ -2257,6 +2265,7 @@ function PieceItem({
       ctx.roles.some((r) => same(r, { opera: row.opera.id, character: ch.id })),
     ) ?? row.singers[0];
   return (
+    <div className="pc-line">
     <button
       type="button"
       className={`pc-row${row.ready ? " ready" : " soon"}`}
@@ -2306,6 +2315,11 @@ function PieceItem({
         <span className="pc-soon">No music yet</span>
       )}
     </button>
+    <AddMine
+      id={ariaId(row.opera.id, first.ch.id, pieceKey(first.ch.pieces[first.index]))}
+      title={row.title}
+    />
+    </div>
   );
 }
 
@@ -4240,6 +4254,189 @@ const noteText = (n: Note) => {
  * opera act by act, what you practised lately and the notes you wrote, and last, other roles for your voice.
  * Everything shown is what this device has kept; nothing is made up to fill the page.
  */
+/** My pieces on a home other than the opera one (songs): the songs you added, above the search */
+export function MySongs({ ctx }: { ctx: Ctx }) {
+  return <MyPieces ctx={ctx} recs={savedPlaces()} only="song" />;
+}
+
+/** a My pieces id resolved to what Home shows and what a tap opens */
+interface MineRow {
+  id: string;
+  kind: "aria" | "song" | "listen";
+  title: string;
+  lang?: string;
+  sub: string;
+  thumb: ReactNode;
+  tone?: { "data-tone"?: string; style?: CSSProperties };
+  open: () => void;
+  /** last activity: added or practised (ms) */
+  t: number;
+  /** where you stopped, when there is a saved place past bar 1 */
+  bar?: string;
+}
+function resolveMine(ctx: Ctx, recs: Record<string, HomeRef>, it: MineItem): MineRow | null {
+  const [kind, ...rest] = it.id.split(":");
+  if (kind === "aria") {
+    const [op, chId, ...key] = rest;
+    const opera = OPERAS.find((o) => o.id === op);
+    const ch = opera?.chars.find((c) => c.id === chId);
+    const k = key.join(":");
+    const index = ch ? ch.pieces.findIndex((p) => pieceKey(p) === k) : -1;
+    if (!opera || !ch || index < 0) return null;
+    const piece = ch.pieces[index];
+    const rec = recs[`${op}:${chId}:${k}`];
+    const ref: HomeRef = { ...(rec ?? {}), opera, ch, piece, index };
+    return {
+      id: it.id,
+      kind: "aria",
+      title: piece.title,
+      lang: opera.lang,
+      sub: `${ch.name} · ${opera.title}${piece.editionId ? "" : " · no music yet"}`,
+      thumb: <Face opera={opera} ch={ch} />,
+      tone: { "data-tone": voiceTone(ch.voice), style: toneStyle(opera.id, ch.id) },
+      open: () =>
+        piece.editionId
+          ? openPiece(ctx, ref, rec?.t ? "resume" : "start")
+          : ctx.go({ screen: "role", opera: opera.id, character: ch.id }),
+      t: Math.max(it.at, rec?.t ?? 0),
+      bar: rec ? barOf(rec) || undefined : undefined,
+    };
+  }
+  if (kind === "song") {
+    const sg = SONGS.find((x) => x.id === rest.join(":"));
+    if (!sg) return null;
+    const c = composerNamed(sg.composer);
+    return {
+      id: it.id,
+      kind: "song",
+      title: sg.title,
+      lang: sg.lang === "zxx" ? undefined : sg.lang,
+      sub: `Song · ${sg.composer}`,
+      thumb: c.face ? <img src={c.face} alt="" loading="lazy" /> : <i className="my-initial">{sg.composer[0]}</i>,
+      open: () => ctx.go(sg.editionId ? { screen: "sing", song: sg.id } : { screen: "song", song: sg.id }),
+      t: it.at,
+    };
+  }
+  if (kind === "listen") {
+    const [op, ...ed] = rest;
+    const opera = OPERAS.find((o) => o.id === op);
+    const edition = ed.join(":");
+    const num = RUNNING[op]?.find((n) => n.editionId === edition);
+    if (!opera || !num) return null;
+    const pic = ART[op]?.square;
+    return {
+      id: it.id,
+      kind: "listen",
+      title: num.title,
+      lang: opera.lang,
+      sub: `${num.kind} · ${opera.title}`,
+      thumb: pic ? <img src={pic} alt="" loading="lazy" /> : <i className="my-initial">{opera.title[0]}</i>,
+      open: () => ctx.go({ screen: "listen", opera: op, edition }),
+      t: it.at,
+    };
+  }
+  return null;
+}
+
+/**
+ * Home's first section: every piece you added with a + (arias, songs, numbers to hear), the latest first, as compact
+ * tiles that open the piece where you stopped. Before anything is added, the pieces you have already practised are
+ * added for you once, so Home is never empty for someone who has sung here before.
+ */
+function MyPieces({
+  ctx,
+  recs,
+  only,
+}: {
+  ctx: Ctx;
+  recs: Record<string, HomeRef>;
+  /** songs' home: only the songs, and nothing at all while there are none */
+  only?: "song";
+}) {
+  const mine = useMine();
+  useEffect(() => {
+    seedMine(
+      Object.values(recs)
+        .filter((r) => r.piece.editionId && r.t)
+        .sort((a, b) => (b.t ?? 0) - (a.t ?? 0))
+        .map((r) => ({ id: ariaId(r.opera.id, r.ch.id, pieceKey(r.piece)), at: r.t ?? Date.now() })),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const [filter, setFilter] = useState<"all" | "aria" | "song">("all");
+  const rows = mine
+    .map((it) => resolveMine(ctx, recs, it))
+    .filter((x): x is MineRow => !!x && (!only || x.kind === only))
+    .sort((a, b) => b.t - a.t);
+  if (only && !rows.length) return null;
+  const hasSongs = rows.some((r) => r.kind === "song");
+  const hasOpera = rows.some((r) => r.kind !== "song");
+  const shown = rows.filter((r) => filter === "all" || (filter === "song" ? r.kind === "song" : r.kind !== "song"));
+  return (
+    <section className="my-pieces" aria-labelledby="my-h">
+      <div className="my-head">
+        <h2 className="pv-h2 my-h" id="my-h">
+          My pieces
+        </h2>
+        {!only && hasSongs && hasOpera && (
+          <div className="my-chips" role="group" aria-label="Show">
+            {(
+              [
+                ["all", "All"],
+                ["aria", "Opera"],
+                ["song", "Songs"],
+              ] as const
+            ).map(([k, l]) => (
+              <button
+                key={k}
+                type="button"
+                className={`my-chip${filter === k ? " is-on" : ""}`}
+                aria-pressed={filter === k}
+                onClick={() => setFilter(k)}
+              >
+                {l}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+      {shown.length ? (
+        <ul className="my-grid">
+          {shown.map((r) => (
+            <li key={r.id} className="my-tile">
+              <button type="button" className="my-open" onClick={r.open}>
+                <span className={`my-thumb my-thumb--${r.kind}`} {...(r.tone ?? {})} aria-hidden="true">
+                  {r.thumb}
+                </span>
+                <span className="my-text">
+                  <b lang={r.lang}>{r.title}</b>
+                  <span>{r.bar ? `Bar ${r.bar} · ${r.sub}` : r.sub}</span>
+                </span>
+              </button>
+              <AddMine id={r.id} title={r.title} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="my-empty">
+          <p>
+            Tap <span className="my-plus" aria-label="plus">+</span> next to any aria, ensemble or song and it appears
+            here, ready to practise.
+          </p>
+          <div className="my-empty-act">
+            <button type="button" className="cp-btn cp-btn--ink" onClick={() => ctx.go({ screen: "explore", by: "piece" })}>
+              Browse arias
+            </button>
+            <button type="button" className="cp-btn cp-btn--ghost" onClick={() => ctx.go({ screen: "songs" })}>
+              Songs
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export function HomePage({ ctx }: { ctx: Ctx }) {
   const [, tick] = useState(0);
   useEffect(() => {
@@ -4697,6 +4894,8 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
     </section>
   );
 
+  const myEl = <MyPieces ctx={ctx} recs={recs} />;
+
   const hour = new Date().getHours();
   const greeting =
     hour < 5
@@ -4727,7 +4926,7 @@ export function HomePage({ ctx }: { ctx: Ctx }) {
           </button>
         )}
       </header>
-      {resume}
+      {myEl}
       <div className={`pv-below${upNextEl ? "" : " is-single"}`}>
         {upNextEl}
       </div>

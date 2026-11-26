@@ -1,6 +1,8 @@
 import { composerNamed } from "./composers";
 import { SONG_CONTEXT } from "./songContext";
 import { SONG_GROUPS, songLanguage, type Song } from "./songs";
+import { AddMine } from "./mineUI";
+import { songId } from "./mine";
 
 /**
  * The songs as a list, grouped as a singer thinks of them (arie antiche, Lieder, mélodies…): the composer's face (his
@@ -32,7 +34,7 @@ export function SongList({
             {list.map((s) => {
               const c = composerNamed(s.composer);
               return (
-                <li key={s.id}>
+                <li key={s.id} className="sg-line">
                   <button type="button" className="sg-row" onClick={() => onPick(s.id)}>
                     <span className="sg-face" aria-hidden="true">
                       {c.face ? <img src={c.face} alt="" loading="lazy" decoding="async" /> : <i>{s.composer[0]}</i>}
@@ -45,6 +47,7 @@ export function SongList({
                     </span>
                     {s.editionId ? <span className="sg-ready">Ready to sing</span> : null}
                   </button>
+                  <AddMine id={songId(s.id)} title={s.title} />
                 </li>
               );
             })}
