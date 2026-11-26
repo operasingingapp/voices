@@ -69,7 +69,7 @@ const COVER_ALT: Record<string, string> = {
   figaro: "A bride and groom stand in a toppled wedding cake while a third figure has fallen headfirst into it, legs in the air.",
   giovanni: "Don Giovanni in his cloak among Donna Anna, Donna Elvira and Zerlina.",
   cosi: "Fiordiligi and Dorabella between their officers, with Don Alfonso and Despina looking on.",
-  zauberfloete: "The Queen of the Night reaches over Pamina, while Tamino holds the flute.",
+  zauberfloete: "A crescent moon low over glowing clouds and hills, under a night sky of stars set in rays like a vaulted dome.",
   barbiere: "Figaro with his scissors and Count Almaviva lean towards Rosina, who holds a letter.",
   traviata: "Violetta in red between Alfredo and his father Germont.",
   carmen: "Carmen with a rose in her hair, between Don José, Micaëla and Escamillo.",
