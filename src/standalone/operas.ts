@@ -5044,24 +5044,125 @@ export const OPERAS: Opera[] = [
     "avatar": "bun",
     "pieces": [
      {
-      "title": "Libiamo ne' lieti calici",
-      "kind": "Brindisi with Alfredo and chorus · Act 1"
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
      },
      {
-      "title": "È strano… Ah, fors'è lui… Sempre libera",
-      "kind": "Scena and aria · Act 1"
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi with Alfredo and chorus · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Un dì, felice, eterea",
+      "kind": "Duet · Act 1",
+      "id": "Act 1: Un dì, felice, eterea"
+     },
+     {
+      "title": "È strano!… Ah, fors'è lui",
+      "kind": "Scene and aria · Act 1",
+      "id": "Act 1: È strano!… Ah, fors'è lui"
+     },
+     {
+      "title": "Follie!… Sempre libera",
+      "kind": "Cabaletta · Act 1",
+      "id": "Act 1: Follie!… Sempre libera"
+     },
+     {
+      "title": "Alfredo?… Per Parigi or or partiva",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Alfredo?… Per Parigi or or partiva"
+     },
+     {
+      "title": "Madamigella Valéry?",
+      "kind": "Scene and duet · Act 2",
+      "id": "Act 2: Madamigella Valéry?"
      },
      {
       "title": "Pura siccome un angelo",
-      "kind": "Duet with Germont · Act 2"
+      "kind": "Duet with Germont · Act 2",
+      "id": "Act 2: Pura siccome un angelo"
+     },
+     {
+      "title": "Non sapete quale affetto",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Non sapete quale affetto"
+     },
+     {
+      "title": "Bella voi siete… Un dì, quando le veneri",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Bella voi siete… Un dì, quando le veneri"
+     },
+     {
+      "title": "Ah! Dite alla giovine",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Ah! Dite alla giovine"
+     },
+     {
+      "title": "Imponete… Morrò! la mia memoria",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Imponete… Morrò! la mia memoria"
+     },
+     {
+      "title": "Dammi tu forza, o cielo!… Amami, Alfredo",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Dammi tu forza, o cielo!… Amami, Alfredo"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     },
+     {
+      "title": "Annina?… Teneste la promessa",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Annina?… Teneste la promessa"
      },
      {
       "title": "Addio, del passato",
-      "kind": "Aria · Act 3"
+      "kind": "Aria · Act 3",
+      "id": "Act 3: Addio, del passato"
+     },
+     {
+      "title": "Signora… Che t'accadde?",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Signora… Che t'accadde?"
      },
      {
       "title": "Parigi, o cara",
-      "kind": "Duet with Alfredo · Act 3"
+      "kind": "Duet with Alfredo · Act 3",
+      "id": "Act 3: Parigi, o cara"
+     },
+     {
+      "title": "Ah, non più… Gran Dio! morir sì giovane",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Ah, non più… Gran Dio! morir sì giovane"
+     },
+     {
+      "title": "Ah, Violetta!",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ah, Violetta!"
+     },
+     {
+      "title": "Prendi, quest'è l'immagine",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Prendi, quest'è l'immagine"
      }
     ]
    },
@@ -5073,16 +5174,105 @@ export const OPERAS: Opera[] = [
     "avatar": "curls",
     "pieces": [
      {
-      "title": "Libiamo ne' lieti calici",
-      "kind": "Brindisi with Violetta and chorus · Act 1"
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
      },
      {
-      "title": "De' miei bollenti spiriti",
-      "kind": "Aria · Act 2"
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi with Violetta and chorus · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Un dì, felice, eterea",
+      "kind": "Duet · Act 1",
+      "id": "Act 1: Un dì, felice, eterea"
+     },
+     {
+      "title": "Follie!… Sempre libera",
+      "kind": "Cabaletta · Act 1",
+      "id": "Act 1: Follie!… Sempre libera"
+     },
+     {
+      "title": "Lunge da lei… De' miei bollenti spiriti",
+      "kind": "Scene and aria · Act 2",
+      "id": "Act 2: Lunge da lei… De' miei bollenti spiriti"
+     },
+     {
+      "title": "Annina, donde vieni?… O mio rimorso!",
+      "kind": "Scene and cabaletta · Act 2",
+      "id": "Act 2: Annina, donde vieni?… O mio rimorso!"
+     },
+     {
+      "title": "Dammi tu forza, o cielo!… Amami, Alfredo",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Dammi tu forza, o cielo!… Amami, Alfredo"
+     },
+     {
+      "title": "Ah, vive sol quel core",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ah, vive sol quel core"
+     },
+     {
+      "title": "Né rispondi d'un padre all'affetto?… No, non udrai rimproveri",
+      "kind": "Scene and cabaletta · Act 2",
+      "id": "Act 2: Né rispondi d'un padre all'affetto?… No, non udrai rimproveri"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Ogni suo aver tal femmina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ogni suo aver tal femmina"
+     },
+     {
+      "title": "Di sprezzo degno se stesso rende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Di sprezzo degno se stesso rende"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     },
+     {
+      "title": "Signora… Che t'accadde?",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Signora… Che t'accadde?"
      },
      {
       "title": "Parigi, o cara",
-      "kind": "Duet with Violetta · Act 3"
+      "kind": "Duet with Violetta · Act 3",
+      "id": "Act 3: Parigi, o cara"
+     },
+     {
+      "title": "Ah, non più… Gran Dio! morir sì giovane",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Ah, non più… Gran Dio! morir sì giovane"
+     },
+     {
+      "title": "Ah, Violetta!",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ah, Violetta!"
+     },
+     {
+      "title": "Prendi, quest'è l'immagine",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Prendi, quest'è l'immagine"
      }
     ]
    },
@@ -5094,12 +5284,69 @@ export const OPERAS: Opera[] = [
     "avatar": "beard",
     "pieces": [
      {
+      "title": "Madamigella Valéry?",
+      "kind": "Scene and duet · Act 2",
+      "id": "Act 2: Madamigella Valéry?"
+     },
+     {
       "title": "Pura siccome un angelo",
-      "kind": "Duet with Violetta · Act 2"
+      "kind": "Duet with Violetta · Act 2",
+      "id": "Act 2: Pura siccome un angelo"
+     },
+     {
+      "title": "Non sapete quale affetto",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Non sapete quale affetto"
+     },
+     {
+      "title": "Bella voi siete… Un dì, quando le veneri",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Bella voi siete… Un dì, quando le veneri"
+     },
+     {
+      "title": "Ah! Dite alla giovine",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Ah! Dite alla giovine"
+     },
+     {
+      "title": "Imponete… Morrò! la mia memoria",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Imponete… Morrò! la mia memoria"
+     },
+     {
+      "title": "Ah, vive sol quel core",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ah, vive sol quel core"
      },
      {
       "title": "Di Provenza il mar, il suol",
-      "kind": "Aria · Act 2"
+      "kind": "Aria · Act 2",
+      "id": "Act 2: Di Provenza il mar, il suol"
+     },
+     {
+      "title": "Né rispondi d'un padre all'affetto?… No, non udrai rimproveri",
+      "kind": "Scene and cabaletta · Act 2",
+      "id": "Act 2: Né rispondi d'un padre all'affetto?… No, non udrai rimproveri"
+     },
+     {
+      "title": "Di sprezzo degno se stesso rende",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Di sprezzo degno se stesso rende"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     },
+     {
+      "title": "Ah, Violetta!",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Ah, Violetta!"
+     },
+     {
+      "title": "Prendi, quest'è l'immagine",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Prendi, quest'è l'immagine"
      }
     ]
    },
@@ -5109,7 +5356,64 @@ export const OPERAS: Opera[] = [
     "voice": "Mezzo-soprano",
     "desc": "Violetta's friend, who gives the masked party in Act 2.",
     "avatar": "long",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
+     },
+     {
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Si ridesta in ciel l'aurora",
+      "kind": "Stretta of the introduction · Act 1",
+      "id": "Act 1: Si ridesta in ciel l'aurora"
+     },
+     {
+      "title": "Avrem lieta di maschere la notte",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Avrem lieta di maschere la notte"
+     },
+     {
+      "title": "Noi siamo zingarelle",
+      "kind": "Chorus of gypsy women · Act 2",
+      "id": "Act 2: Noi siamo zingarelle"
+     },
+     {
+      "title": "Di Madride noi siam mattadori",
+      "kind": "Chorus of matadors · Act 2",
+      "id": "Act 2: Di Madride noi siam mattadori"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Ogni suo aver tal femmina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ogni suo aver tal femmina"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     }
+    ]
    },
    {
     "id": "annina",
@@ -5117,7 +5421,43 @@ export const OPERAS: Opera[] = [
     "voice": "Soprano",
     "desc": "Violetta's maid, who stays with her to the end.",
     "avatar": "bun",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Annina, donde vieni?… O mio rimorso!",
+      "kind": "Scene and cabaletta · Act 2",
+      "id": "Act 2: Annina, donde vieni?… O mio rimorso!"
+     },
+     {
+      "title": "Alfredo?… Per Parigi or or partiva",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Alfredo?… Per Parigi or or partiva"
+     },
+     {
+      "title": "Dammi tu forza, o cielo!… Amami, Alfredo",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Dammi tu forza, o cielo!… Amami, Alfredo"
+     },
+     {
+      "title": "Annina?… Teneste la promessa",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Annina?… Teneste la promessa"
+     },
+     {
+      "title": "Signora… Che t'accadde?",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Signora… Che t'accadde?"
+     },
+     {
+      "title": "Ah, non più… Gran Dio! morir sì giovane",
+      "kind": "Duet · Act 3",
+      "id": "Act 3: Ah, non più… Gran Dio! morir sì giovane"
+     },
+     {
+      "title": "Prendi, quest'è l'immagine",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Prendi, quest'è l'immagine"
+     }
+    ]
    },
    {
     "id": "gastone",
@@ -5125,7 +5465,59 @@ export const OPERAS: Opera[] = [
     "voice": "Tenor",
     "desc": "A friend of Violetta's, who brings Alfredo to her party.",
     "avatar": "curls",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
+     },
+     {
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Un dì, felice, eterea",
+      "kind": "Duet · Act 1",
+      "id": "Act 1: Un dì, felice, eterea"
+     },
+     {
+      "title": "Si ridesta in ciel l'aurora",
+      "kind": "Stretta of the introduction · Act 1",
+      "id": "Act 1: Si ridesta in ciel l'aurora"
+     },
+     {
+      "title": "Di Madride noi siam mattadori",
+      "kind": "Chorus of matadors · Act 2",
+      "id": "Act 2: Di Madride noi siam mattadori"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Ogni suo aver tal femmina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ogni suo aver tal femmina"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     }
+    ]
    },
    {
     "id": "douphol",
@@ -5133,7 +5525,49 @@ export const OPERAS: Opera[] = [
     "voice": "Baritone",
     "desc": "Violetta's protector, and Alfredo's rival.",
     "avatar": "beard",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
+     },
+     {
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Si ridesta in ciel l'aurora",
+      "kind": "Stretta of the introduction · Act 1",
+      "id": "Act 1: Si ridesta in ciel l'aurora"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Ogni suo aver tal femmina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ogni suo aver tal femmina"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     }
+    ]
    },
    {
     "id": "marchese",
@@ -5141,7 +5575,64 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "A friend of Flora's, who escorts her to Violetta's party.",
     "avatar": "short",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
+     },
+     {
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Si ridesta in ciel l'aurora",
+      "kind": "Stretta of the introduction · Act 1",
+      "id": "Act 1: Si ridesta in ciel l'aurora"
+     },
+     {
+      "title": "Avrem lieta di maschere la notte",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Avrem lieta di maschere la notte"
+     },
+     {
+      "title": "Noi siamo zingarelle",
+      "kind": "Chorus of gypsy women · Act 2",
+      "id": "Act 2: Noi siamo zingarelle"
+     },
+     {
+      "title": "Di Madride noi siam mattadori",
+      "kind": "Chorus of matadors · Act 2",
+      "id": "Act 2: Di Madride noi siam mattadori"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Ogni suo aver tal femmina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ogni suo aver tal femmina"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     }
+    ]
    },
    {
     "id": "dottore",
@@ -5149,7 +5640,74 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "Violetta's doctor, a friend who stays to the end.",
     "avatar": "beard",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Dell'invito trascorsa è già l'ora",
+      "kind": "Introduction · Act 1",
+      "id": "Act 1: Dell'invito trascorsa è già l'ora",
+      "editionId": "verdi-dell-invito-trascorsa"
+     },
+     {
+      "title": "Libiamo ne' lieti calici",
+      "kind": "Brindisi · Act 1",
+      "id": "Act 1: Libiamo ne' lieti calici"
+     },
+     {
+      "title": "Che è ciò?",
+      "kind": "Waltz and scene · Act 1",
+      "id": "Act 1: Che è ciò?"
+     },
+     {
+      "title": "Si ridesta in ciel l'aurora",
+      "kind": "Stretta of the introduction · Act 1",
+      "id": "Act 1: Si ridesta in ciel l'aurora"
+     },
+     {
+      "title": "Avrem lieta di maschere la notte",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Avrem lieta di maschere la notte"
+     },
+     {
+      "title": "Noi siamo zingarelle",
+      "kind": "Chorus of gypsy women · Act 2",
+      "id": "Act 2: Noi siamo zingarelle"
+     },
+     {
+      "title": "Di Madride noi siam mattadori",
+      "kind": "Chorus of matadors · Act 2",
+      "id": "Act 2: Di Madride noi siam mattadori"
+     },
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     },
+     {
+      "title": "Invitato a qui seguirmi",
+      "kind": "Duet · Act 2",
+      "id": "Act 2: Invitato a qui seguirmi"
+     },
+     {
+      "title": "Ogni suo aver tal femmina",
+      "kind": "Finale · Act 2",
+      "id": "Act 2: Ogni suo aver tal femmina"
+     },
+     {
+      "title": "Alfredo, Alfredo, di questo core",
+      "kind": "Concertato · Act 2",
+      "id": "Act 2: Alfredo, Alfredo, di questo core"
+     },
+     {
+      "title": "Annina?… Teneste la promessa",
+      "kind": "Scene · Act 3",
+      "id": "Act 3: Annina?… Teneste la promessa"
+     },
+     {
+      "title": "Prendi, quest'è l'immagine",
+      "kind": "Finale · Act 3",
+      "id": "Act 3: Prendi, quest'è l'immagine"
+     }
+    ]
    },
    {
     "id": "giuseppe",
@@ -5157,7 +5715,18 @@ export const OPERAS: Opera[] = [
     "voice": "Tenor",
     "desc": "Violetta's manservant at the country house.",
     "avatar": "short",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Alfredo?… Per Parigi or or partiva",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Alfredo?… Per Parigi or or partiva"
+     },
+     {
+      "title": "Ah, vive sol quel core",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ah, vive sol quel core"
+     }
+    ]
    },
    {
     "id": "domestico",
@@ -5165,7 +5734,13 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "A servant at Flora's party, who announces supper.",
     "avatar": "cap",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Alfredo!… Voi!",
+      "kind": "Scene of the card game · Act 2",
+      "id": "Act 2: Alfredo!… Voi!"
+     }
+    ]
    },
    {
     "id": "commissionario",
@@ -5173,7 +5748,13 @@ export const OPERAS: Opera[] = [
     "voice": "Bass",
     "desc": "A messenger who brings Alfredo Violetta's farewell letter.",
     "avatar": "hat",
-    "pieces": []
+    "pieces": [
+     {
+      "title": "Ah, vive sol quel core",
+      "kind": "Scene · Act 2",
+      "id": "Act 2: Ah, vive sol quel core"
+     }
+    ]
    }
   ]
  },

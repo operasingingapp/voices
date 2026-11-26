@@ -3023,6 +3023,39 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "verdi-dell-invito-trascorsa": {
+    // Violetta, the hostess, stands for the ensemble
+    portrait: "traviata:violetta",
+    opera: "La traviata",
+    kind: "Introduction",
+    facts: {
+      key: "three sharps (A major) throughout, with long passages in other keys written with accidentals",
+      time: "4/4 (C) throughout",
+      tempo: "Allegro brillantissimo e molto vivace, ♩ = 151, so that it lasts as long as the median (4:48) of six complete recordings (Kleiber 1977, Muti 1980, Santini 1954, Panizza, Bellezza, Serafin)",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          The curtain rises on a party in Violetta's salon in Paris. The latecomers arrive from a night of gambling at Flora's;
+          Violetta greets them and declares that pleasure is her remedy. Gastone brings in Alfredo Germont, who, he tells her, came
+          every day to ask after her while she was ill. Violetta teases the Baron for not having done as much, the guests sit down to
+          supper, and when the Baron declines to propose a toast, Alfredo is pressed to sing one instead.
+        </p>
+        <p>
+          Score: No. 2, the Introduzione (vocal score pages 4–20, 181 bars), from the G. Ricordi & C. vocal score (Milan, plate 42314;
+          IMSLP #392068), public domain. Written out from the printed pages in six chunks, each read by two independent readers, every
+          disagreement settled on the page by a separate judge, then checked bar by bar by five fresh proofreaders and corrected. The
+          chorus soprano and tenor staves, which print chords, are split into one line per part; a note the whole section sings is on
+          every line. Only the Italian words are kept, with the engraving's spellings (gioje, perchè, nè).
+        </p>
+        <p>
+          Music by Giuseppe Verdi and text by Francesco Maria Piave (1853), both public domain. The IPA, word meanings and translation
+          were written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "verdi-traviata-preludio": {
     // no one sings it: it is played before the curtain, so Violetta, the title role, stands for it
     portrait: "traviata:violetta",
@@ -3031,7 +3064,7 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
     facts: {
       key: "four sharps (E major) throughout; it opens in B minor and ends in E major",
       time: "4/4 (C) throughout",
-      tempo: "Adagio; the print gives ♩ = 66, the app plays ♩ = 55, so that it lasts as long as the median (3:36) of five complete recordings (Kleiber 1977, Toscanini 1946, Muti 1980, Rahbari 1994, Mehta)",
+      tempo: "Adagio; the print gives ♩ = 66, the app plays ♩ = 51, so that it lasts as long as the median (3:50) of five complete recordings (Kleiber 1977, Muti 1980, Rahbari 1994, Santini 1954, Mehta)",
     },
     notePlaceholder: "",
     about: (
