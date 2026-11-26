@@ -2110,7 +2110,14 @@ button.ck-text:focus-visible {
   width: 100%;
   margin-top: 4px;
   padding: 16px 0 calc(16px + env(safe-area-inset-bottom, 0px));
-  background: linear-gradient(to bottom, rgb(255 255 255 / 0), var(--canvas) 30%);
+  background: var(--canvas);
+  border-top: 1px solid var(--line);
+}
+/* not chosen yet: the same button, solid and quieter, never see-through over the portraits */
+.ob-sticky .ob-go.cp-btn[disabled] {
+  opacity: 1;
+  background: color-mix(in srgb, var(--now) 38%, var(--canvas));
+  color: var(--on-now);
 }
 .ob-sticky .back-to.inline {
   margin: 0;
@@ -9328,5 +9335,34 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
   .cp-icon-btn.is-loading {
     animation: none;
     opacity: 0.6;
+  }
+}
+
+/* the role picker's bar on a phone: the button across the width, the two links on one line under it */
+@media (max-width: 640px) {
+  .ob-sticky.ob-sticky {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4px;
+    padding-top: 12px;
+  }
+  .ob-sticky.ob-sticky > .cp-btn {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    max-width: none;
+  }
+  .ob-sticky.ob-sticky > .back-to {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+  .ob-sticky.ob-sticky > .ob-whole {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    flex-basis: auto;
+    padding: 0 6px 0 14px;
+    white-space: nowrap;
   }
 }
