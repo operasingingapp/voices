@@ -8094,7 +8094,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
   border-radius: var(--radius-pill);
   background: var(--fog);
 }
-.words-view .w-tools .w-seg button {
+.words-view .w-tools .w-seg button:not(.card-menu button) {
   display: inline-flex;
   align-items: center;
   height: 30px;
@@ -8112,7 +8112,7 @@ body.cp-dragsel * { user-select: none !important; -webkit-user-select: none !imp
 .words-view .w-tools .w-seg button:hover {
   color: var(--ink);
 }
-.words-view .w-tools .w-seg button[aria-pressed="true"] {
+.words-view .w-tools .w-seg button[aria-pressed="true"]:not(.card-menu button) {
   background: color-mix(in srgb, var(--now-mark) 14%, var(--canvas));
   color: var(--ink);
 }
@@ -9585,3 +9585,9 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 /* a line faded in the score: a paler face (no mark); a chorus line: its abbreviation on a soft ground */
 .bar-parts.many .part.is-faded .part-face { opacity: 0.55; filter: grayscale(0.4); }
 .part-face .chorus-plate { display: grid; place-items: center; width: 100%; height: 100%; background: #cfc6d8; color: #3d3550; font: italic 600 13px/1 var(--font-display); white-space: nowrap; letter-spacing: -0.02em; }
+
+/* Words view: the second half of Everyone | <character> opens a list of the singers */
+.w-seg .w-who-btn { display: inline-flex; align-items: center; gap: 4px; }
+.w-seg .w-who-btn svg { width: 14px; height: 14px; }
+.w-seg .card-menu-wrap { position: relative; display: inline-flex; }
+.w-seg .card-menu { right: 0; left: auto; top: calc(100% + 6px); z-index: 30; }

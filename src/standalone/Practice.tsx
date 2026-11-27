@@ -1375,7 +1375,7 @@ function PracticeScreen({
   const wordsName =
     edition.roles.find((r) => r.id === wordsRole)?.name ?? roleName;
   // the small menus in the line card's header: whose words (an ensemble), and what to show under them
-  const [cardMenu, setCardMenu] = useState<null | "words" | "show">(null);
+  const [cardMenu, setCardMenu] = useState<null | "words" | "show" | "wwho">(null);
   useBackToClose(!!cardMenu, () => setCardMenu(null));
   useEffect(() => {
     if (!cardMenu) return;
@@ -1541,9 +1541,7 @@ function PracticeScreen({
     () =>
       !ens || allWords
         ? language.phrases
-        : language.phrases.filter(
-            (p) => p.roleId === (view === "words" ? roleId : wordsRole),
-          ),
+        : language.phrases.filter((p) => p.roleId === wordsRole),
     [ens, allWords, view, wordsRole],
   );
   // the line box over the music can be put away altogether (the score gets the room); a button in the header brings it back
@@ -4937,14 +4935,50 @@ function PracticeScreen({
                     >
                       Everyone
                     </button>
-                    <button
-                      type="button"
-                      aria-pressed={justMine}
-                      onClick={() => setJustMine(true)}
-                      aria-label="Only my lines"
-                    >
-                      Mine
-                    </button>
+                    {/* one character's lines: yours at first, any other from its menu */}
+                    <span className="card-menu-wrap">
+                      <button
+                        type="button"
+                        className="card-menu-btn w-who-btn"
+                        aria-pressed={justMine}
+                        aria-haspopup="menu"
+                        aria-expanded={cardMenu === "wwho"}
+                        onClick={() => {
+                          if (!justMine) setJustMine(true);
+                          setCardMenu(cardMenu === "wwho" ? null : "wwho");
+                        }}
+                        aria-label={`Only ${wordsName}'s lines. Choose whose`}
+                      >
+                        {wordsName}
+                        {Icon.down}
+                      </button>
+                      {cardMenu === "wwho" && (
+                        <span className="card-menu" role="menu" aria-label="Whose lines to show">
+                          {voiceParts.map((p) => {
+                            const on = justMine && p.roleId === wordsRole;
+                            return (
+                              <button
+                                key={p.key}
+                                type="button"
+                                role="menuitemradio"
+                                aria-checked={on}
+                                onClick={() => {
+                                  if (p.roleId) setWordsRole(p.roleId);
+                                  setJustMine(true);
+                                  setCardMenu(null);
+                                }}
+                              >
+                                <span className="cm-check" aria-hidden="true">
+                                  {on ? Icon.check : null}
+                                </span>
+                                <span>{p.shortLabel}</span>
+                                {p === voicePart && <em className="cmb-you">you</em>}
+                              </button>
+                            );
+                          })}
+                        </span>
+                      )}
+                    </span>
                   </span>
                 )}
                 <button
