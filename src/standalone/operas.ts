@@ -17,7 +17,7 @@ export interface Piece {
 export interface Character { id: string; name: string; voice: string; desc: string; avatar: AvatarKind; pieces: Piece[] }
 export interface Opera { id: string; title: string; composer: string; composerFull: string; year: number; librettist: string; lang: string; chars: Character[] }
 
-export const OPERAS: Opera[] = [
+const ALL_OPERAS: Opera[] = [
  {
   "id": "figaro",
   "title": "Le nozze di Figaro",
@@ -6846,6 +6846,9 @@ export const OPERAS: Opera[] = [
   ]
  }
 ];
+/** operas taken out of the app for now (Nov 27): their data stays here, nothing lists them */
+const HIDDEN = new Set(["rigoletto", "butterfly", "tosca", "elisir"]);
+export const OPERAS: Opera[] = ALL_OPERAS.filter((o) => !HIDDEN.has(o.id));
 
 /* ------------------------------------------------------------------------------------------------
    Each character's music is every number they sing in, in the order of the opera, taken from the
