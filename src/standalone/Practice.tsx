@@ -5526,7 +5526,7 @@ function PracticeScreen({
         <div className="bar-parts many" role="group" aria-label="Parts">
           <button
             type="button"
-            className="part"
+            className={`part${showOf(voicePart) ? "" : " is-hidden"}`}
             aria-pressed={hearVoice}
             aria-haspopup="menu"
             onClick={(e) => openFaceMenu(voicePart.key, e.currentTarget)}
@@ -5580,7 +5580,7 @@ function PracticeScreen({
                     <button
                       key={p.key}
                       type="button"
-                      className="part"
+                      className={`part${showOf(p) ? "" : " is-hidden"}`}
                       aria-pressed={on}
                       aria-haspopup="menu"
                       onClick={(e) => openFaceMenu(p.key, e.currentTarget)}

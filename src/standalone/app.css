@@ -805,7 +805,7 @@ p {
   display: grid;
   place-items: center;
 }
-.part[aria-pressed="false"] .part-face {
+.part.is-hidden .part-face {
   opacity: 0.55;
 }
 .part-face.piano {
@@ -5834,12 +5834,18 @@ button.lane-label:hover {
   width: 13px;
   height: 13px;
 }
+/* the badge says what you hear: a green speaker while the line plays, a grey crossed one when it is muted */
 .bar-parts.many .part[aria-pressed="true"] .part-icon {
-  display: none;
+  background: var(--now-strong);
+  color: #fff;
 }
-.bar-parts.many .part[aria-pressed="false"] .part-face {
-  opacity: 0.35;
+.bar-parts.many .part[aria-pressed="false"] .part-icon {
+  background: var(--canvas);
+  color: var(--ink-muted);
 }
+/* a face fades only when its line is hidden from the score (muted or not) */
+.bar-parts.many .part[aria-pressed="false"] .part-face { opacity: 1; }
+.bar-parts.many .part.is-hidden .part-face { opacity: 0.35; filter: grayscale(0.6); }
 .mix-sing .cp-seg {
   display: flex;
   flex-wrap: wrap;
