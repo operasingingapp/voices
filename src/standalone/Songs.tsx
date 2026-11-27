@@ -131,8 +131,6 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
       )
     : [];
   const sungIn = s.lang === "zxx" ? "No words: sung on a vowel" : songLanguage(s.lang);
-  // a phone opens the page folded: the story, the credits and the play button first
-  const narrow = typeof window !== "undefined" && window.matchMedia?.("(max-width: 640px)").matches;
   return (
     <main className="screen-body gutter page op-page ch-page sg-page">
       <Crumbs
@@ -177,59 +175,66 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
               The music for this song is being prepared.
             </p>
           )}
-          {x ? <p className="oh-story">{x.story}</p> : s.note && <p className="oh-story">{s.note}.</p>}
-          <div className="oh-credits" aria-label="About this song">
-            <p>
-              <i>Music by</i> {s.composerFull}
-            </p>
-            {poet && (
-              <p>
-                <i>Words by</i> {poet}
-              </p>
-            )}
-            {cycle && (
-              <p>
-                <i>From</i> {cycle.title}, No. {x!.no} of {cycle.count}
-              </p>
-            )}
-            <p>
-              <i>Sung in</i> {sungIn}
-            </p>
-            {x && (
-              <p>
-                <i>Range</i> {rangeText(x.range)}
-              </p>
-            )}
-          </div>
         </div>
       </section>
-      {x && (
-        <section className="oh-cast sg-about" aria-labelledby="sg-about-h">
-          <div className="pv-sec-head">
-            <h2 className="pv-h2" id="sg-about-h">
-              About the song
-            </h2>
+      {/* one reading column: the facts at a glance, then the song in a few paragraphs (what it says, how it
+          sings, where it comes from) */}
+      <section className="sg-read" aria-label="About the song">
+        <dl className="sg-card">
+          <div>
+            <dt>Music</dt>
+            <dd>{s.composerFull}</dd>
           </div>
-          {/* three short blocks; on a phone each folds to its heading and opens with a tap */}
-          <div className="sg-facts">
-            {([
-              ["Written", `${x.written}.`],
-              ["The words", x.poem],
-              ["The music", x.music],
-            ] as const).map(([h, t]) => (
-              <details key={h} open={!narrow}>
-                <summary>
-                  <h3>{h}</h3>
-                  <svg className="sg-chev" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" />
-                  </svg>
-                </summary>
-                <p>{t}</p>
-              </details>
-            ))}
+          {poet && (
+            <div>
+              <dt>Words</dt>
+              <dd>{poet}</dd>
+            </div>
+          )}
+          <div>
+            <dt>Sung in</dt>
+            <dd>{sungIn}</dd>
           </div>
-        </section>
-      )}
+          {x && (
+            <div>
+              <dt>Range</dt>
+              <dd>{rangeText(x.range)}</dd>
+            </div>
+          )}
+          {x?.year && (
+            <div>
+              <dt>Written</dt>
+              <dd>{x.year}</dd>
+            </div>
+          )}
+          {s.level && (
+            <div>
+              <dt>Level</dt>
+              <dd>{s.level}</dd>
+            </div>
+          )}
+          {cycle && (
+            <div className="sg-card-wide">
+              <dt>From</dt>
+              <dd>
+                {cycle.title}, No. {x!.no} of {cycle.count}
+              </dd>
+            </div>
+          )}
+        </dl>
+        {(x?.story || s.note) && (
+          <>
+            <h2 className="sg-h">About the song</h2>
+            <p className="sg-p sg-lead">{x ? x.story : `${s.note}.`}</p>
+            {x && <p className="sg-p">{x.music}</p>}
+            {x && (
+              <p className="sg-p sg-note">
+                {x.written}. {x.poem}
+              </p>
+            )}
+          </>
+        )}
+      </section>
       {cycle && (
         <section className="oh-cast sg-cycle" aria-labelledby="sg-cycle-h">
           <div className="pv-sec-head">

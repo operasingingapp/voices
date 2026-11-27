@@ -725,3 +725,25 @@
   .sg-page .sg-practise.rp-go { position: fixed; left: 16px; right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); z-index: 30; margin: 0; box-shadow: 0 8px 24px rgba(20, 30, 25, 0.22); }
   .sg-page { padding-bottom: 96px; }
 }
+
+/* a song's page, below the portrait: one calm reading column */
+.sg-read { max-width: 680px; margin: 8px 0 0; padding-top: 28px; border-top: 1px solid var(--fog); }
+.sg-read .sg-h { margin: 32px 0 10px; font: 500 26px/1.15 var(--font-display); color: var(--ink); }
+.sg-read .sg-h:first-child { margin-top: 0; }
+.sg-read .sg-p { margin: 0; font: 400 17px/1.65 var(--font-sans); color: var(--ink); max-width: 62ch; }
+.sg-read .sg-lead { font-size: 18px; }
+.sg-card { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; margin: 0 0 8px; padding: 20px 22px; border-radius: var(--radius-md, 14px); background: color-mix(in srgb, var(--ink) 4%, var(--canvas)); }
+.sg-card > div { min-width: 0; }
+.sg-card dt { margin: 0 0 4px; font: 600 11.5px/1.2 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.sg-card dd { margin: 0; font: 400 16px/1.35 var(--font-sans); color: var(--ink); }
+.sg-card .sg-card-wide { grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .sg-read { padding-top: 22px; }
+  .sg-read .sg-h { font-size: 23px; margin-top: 28px; }
+  .sg-read .sg-p { font-size: 16.5px; }
+  .sg-card { grid-template-columns: 1fr 1fr; padding: 16px 18px; gap: 14px 16px; }
+}
+.sg-read .sg-h { margin-top: 36px; }
+.sg-read .sg-p + .sg-p { margin-top: 14px; }
+.sg-read .sg-note { font-size: 15px; color: var(--ink-muted); }
+.sg-read { border-top: 0; padding-top: 4px; }
