@@ -662,3 +662,23 @@
   /* the piece's name under the header's buttons: room to breathe */
   .practice > .p-head .p-title { margin-top: 12px; }
 }
+
+/* phone: an opera's numbers keep the title wide. The scene opens with a tap on the row, so its arrow goes;
+   the number, the + and the play button get smaller and sit closer */
+@media (max-width: 640px) {
+  .numbers .num.num, .numbers .num.num:nth-child(odd), .numbers .num.num.yours, .numbers .num.num.ready {
+    column-gap: 6px; padding: 10px 10px 10px 4px; min-height: 64px;
+  }
+  .numbers .num.num > .ck-scene { display: none; }
+  .numbers .num.num .num-i { width: 28px; flex: none; text-align: center; font-size: 13.5px; }
+  .numbers .num.num > .mine-add { width: 36px; height: 36px; flex: none; }
+  .numbers .num.num > .mine-add svg { width: 22px; height: 22px; }
+  .numbers .num.num .num-go.cp-btn { width: 40px; height: 40px; min-height: 40px; flex: none; }
+  .numbers .num.num .num-text b { font-size: 18px; }
+  .numbers .num.num .num-text > span { font-size: 13px; }
+  .numbers .num.num .ck-panel { padding-left: 34px; }
+}
+/* phone: a role's list too; the scene opens with a tap on the title */
+@media (max-width: 640px) {
+  .rp-tools .rp-scene { display: none !important; }
+}
