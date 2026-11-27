@@ -682,3 +682,22 @@
 @media (max-width: 640px) {
   .rp-tools .rp-scene { display: none !important; }
 }
+
+/* phone: the line card's IPA / English / Tips stay whole and readable */
+@media (max-width: 640px) {
+  .now-show { flex: none; }
+  .now-show .nl-btn { height: 30px; padding: 0 8px; gap: 5px; font-size: 13px; white-space: nowrap; flex: none; overflow: visible; }
+  .now-show .tg-dot { width: 7px; height: 7px; }
+  .now-tools { flex-wrap: nowrap; gap: 6px; }
+  .practice > .now-panel .now-show .nl-btn { width: auto; height: 30px; }
+  .now-show .nl-btn:first-child .tg-dot { display: block; }
+}
+
+/* a song's page: the play button under the title (as on a role's page); on a phone a taller portrait, the face in view */
+.sg-page .sg-practise.rp-go { align-self: flex-start; margin: 4px 0 6px; }
+@media (max-width: 640px) {
+  .now-show .nl-btn .tg-dot { display: block !important; }
+  .sg-page .oh.has-art .ch-cover { aspect-ratio: 1 / 1; min-height: 0; height: auto; }
+  .sg-page .oh.has-art .ch-cover img { object-position: 50% 18%; }
+  .sg-page .sg-practise.rp-go { align-self: stretch; justify-content: center; max-width: none; min-height: 50px; }
+}

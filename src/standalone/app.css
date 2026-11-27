@@ -5444,10 +5444,9 @@ span.ck-text {
   max-width: 62ch;
   text-wrap: pretty;
 }
+/* your character's name in the story: plain text, like the rest */
 .syn-you {
-  font-weight: 600;
-  background: linear-gradient(transparent 58%, var(--you) 58%);
-  padding: 0 1px;
+  font-weight: inherit;
 }
 @media (max-width: 700px) {
   .syn-body {

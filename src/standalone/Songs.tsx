@@ -155,6 +155,26 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
               {[s.group, x?.year, s.level].filter(Boolean).join(" · ")}
             </p>
           </div>
+          {/* the play button sits under the title, as on a role's page: in reach before the story */}
+          {s.editionId ? (
+            <button
+              type="button"
+              className="cp-btn cp-btn--ink rp-go sg-practise"
+              onClick={() => ctx.go({ screen: "sing", song: s.id })}
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M7 4.5v15L19.5 12z" />
+              </svg>
+              <span className="rp-go-word">Practise</span>
+              <i className="rp-go-title" lang={s.lang === "zxx" ? undefined : s.lang}>
+                {s.title}
+              </i>
+            </button>
+          ) : (
+            <p className="part-note" role="status">
+              The music for this song is being prepared.
+            </p>
+          )}
           {x ? <p className="oh-story">{x.story}</p> : s.note && <p className="oh-story">{s.note}.</p>}
           <div className="oh-credits" aria-label="About this song">
             <p>
@@ -179,15 +199,6 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
               </p>
             )}
           </div>
-          {s.editionId ? (
-            <button type="button" className="cp-btn cp-btn--ink sg-practise" onClick={() => ctx.go({ screen: "sing", song: s.id })}>
-              Practise this song
-            </button>
-          ) : (
-            <p className="part-note" role="status">
-              The music for this song is being prepared.
-            </p>
-          )}
         </div>
       </section>
       {x && (
