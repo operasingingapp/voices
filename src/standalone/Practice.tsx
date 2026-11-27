@@ -1478,6 +1478,13 @@ function PracticeScreen({
       : p.kind === "piano"
         ? hearPiano
         : (lineSets[p.key]?.hear ?? p.kind === "chorus");
+  /** a line drawn grey in the score: the other singers by default, the chorus only when asked */
+  const fadeOf = (p: CompiledEdition["parts"][number]) =>
+    p === voicePart
+      ? !!lineSets[p.key]?.fade
+      : p.kind === "piano"
+        ? pianoFaded
+        : (lineSets[p.key]?.fade ?? p.kind !== "chorus");
   const setHear = (p: CompiledEdition["parts"][number], x: boolean) =>
     p === voicePart
       ? setHearVoice(x)
@@ -4602,11 +4609,12 @@ function PracticeScreen({
             ...(pianoFaded && !hiddenIds.includes(pianoPart.source.xmlPartId)
               ? [pianoPart.source.xmlPartId]
               : []),
-            ...voiceParts
+            ...edition.parts
               .filter(
                 (p) =>
+                  p.kind !== "piano" &&
                   p !== voicePart &&
-                  (lineSets[p.key]?.fade ?? true) &&
+                  fadeOf(p) &&
                   showOf(p),
               )
               .map((p) => p.source.xmlPartId),
@@ -4627,20 +4635,12 @@ function PracticeScreen({
           const isPiano = faceMenu.key === pianoPart.key;
           const p = isPiano
             ? pianoPart
-            : voiceParts.find((x) => x.key === faceMenu.key);
+            : edition.parts.find((x) => x.key === faceMenu.key);
           if (!p) return null;
           const mine = p === voicePart;
-          const on = mine
-            ? hearVoice
-            : isPiano
-              ? hearPiano
-              : (lineSets[p.key]?.hear ?? false);
+          const on = hearOf(p);
           const shown = showOf(p);
-          const faded = isPiano
-            ? pianoFaded
-            : mine
-              ? !!lineSets[p.key]?.fade
-              : (lineSets[p.key]?.fade ?? true);
+          const faded = fadeOf(p);
           const name = isPiano ? "Piano" : mine ? roleName : p.shortLabel;
           const setLook = (look: "show" | "fade" | "hide") => {
             if (look === "hide") return setLine(p.key, { show: false });
@@ -5573,23 +5573,30 @@ function PracticeScreen({
             >
               {orderedIds
                 .map(partByXml)
-                .filter((p) => otherVoices.includes(p))
+                // every line the score has, in the score's order: the other singers and the chorus lines, so the faces
+                // always match the staves above (hidden: crossed eye; faded in the score: a paler face)
+                .filter((p) => otherVoices.includes(p) || p.kind === "chorus")
                 .map((p) => {
-                  const on = lineSets[p.key]?.hear ?? false;
+                  const on = lineSets[p.key]?.hear ?? p.kind === "chorus";
+                  const look = !showOf(p) ? " is-hidden" : fadeOf(p) ? " is-faded" : "";
                   return (
                     <button
                       key={p.key}
                       type="button"
-                      className={`part${showOf(p) ? "" : " is-hidden"}`}
+                      className={`part${look}`}
                       aria-pressed={on}
                       aria-haspopup="menu"
                       onClick={(e) => openFaceMenu(p.key, e.currentTarget)}
-                      {...holdHandlers(p, p.shortLabel)}
+                      {...(p.kind === "chorus" ? {} : holdHandlers(p, p.shortLabel))}
                       aria-label={`${p.shortLabel}'s line ${on ? "plays" : "is muted"}${showOf(p) ? "" : ", hidden in the score"}`}
                       title={`${p.shortLabel}: ${on ? "plays" : "muted, sung live"}`}
                     >
                       <span className="part-face" aria-hidden="true">
-                        <RoleFace k={partnerKey(p)} />
+                        {p.kind === "chorus" ? (
+                          <span className="chorus-plate">{laneAbbr[p.source.xmlPartId] ?? p.shortLabel}</span>
+                        ) : (
+                          <RoleFace k={partnerKey(p)} />
+                        )}
                       </span>
                       {!showOf(p) && <span className="part-hid" aria-hidden="true">{Icon.eyeOff}</span>}
                       <span className="part-text">

@@ -5845,7 +5845,7 @@ button.lane-label:hover {
 }
 /* a face fades only when its line is hidden from the score (muted or not) */
 .bar-parts.many .part[aria-pressed="false"] .part-face { opacity: 1; }
-.bar-parts.many .part.is-hidden .part-face { opacity: 0.35; filter: grayscale(0.6); }
+.bar-parts.many .part.is-hidden .part-face { opacity: 0.25; filter: grayscale(0.8); }
 .mix-sing .cp-seg {
   display: flex;
   flex-wrap: wrap;
@@ -9581,3 +9581,7 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .bar-parts.many .part { position: relative; }
 .bar-parts.many .part-hid { position: absolute; left: 0; top: 2px; display: grid; place-items: center; width: 20px; height: 20px; border-radius: var(--radius-round); background: var(--canvas); color: var(--ink-muted); box-shadow: 0 1px 2px rgba(20, 20, 40, 0.15); }
 .bar-parts.many .part-hid svg { width: 13px; height: 13px; display: block; }
+
+/* a line faded in the score: a paler face (no mark); a chorus line: its abbreviation on a soft ground */
+.bar-parts.many .part.is-faded .part-face { opacity: 0.55; filter: grayscale(0.4); }
+.part-face .chorus-plate { display: grid; place-items: center; width: 100%; height: 100%; background: #cfc6d8; color: #3d3550; font: italic 600 13px/1 var(--font-display); white-space: nowrap; letter-spacing: -0.02em; }
