@@ -9563,4 +9563,6 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .my-row .my-text b { font-size: 15px; }
 .my-row > .mine-add { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); opacity: 1 !important; display: grid !important; width: 40px; height: 40px; }
 .my-row > .mine-add svg { width: 24px; height: 24px; }
-@media (min-width: 900px) { .my-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; } }
+/* one column everywhere: a list, like a playlist */
+.my-row--recent .my-open { padding-right: 4px; }
+.my-row .my-text > span { display: block !important; }

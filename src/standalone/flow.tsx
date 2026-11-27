@@ -4268,9 +4268,9 @@ function RecentPieces({ ctx, recs }: { ctx: Ctx; recs: Record<string, HomeRef> }
       <h2 className="my-h2" id="recent-h">
         Last practised
       </h2>
-      <ul className="my-grid">
+      <ul className="my-list">
         {rows.map((r) => (
-          <li key={r.id} className="my-tile">
+          <li key={r.id} className="my-row my-row--recent">
             <button type="button" className="my-open" onClick={r.open}>
               <span className={`my-thumb my-thumb--${r.kind}`} {...(r.tone ?? {})} aria-hidden="true">
                 {r.thumb}
