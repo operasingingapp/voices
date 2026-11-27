@@ -1,0 +1,307 @@
+{
+ "editionId": "verdi-libiamo-ne-lieti-calici",
+ "editionVersion": "1.0.0-ricordi",
+ "title": "Libiamo ne' lieti calici",
+ "subtitle": "Brindisi from Act 1 of La traviata, in the Ricordi vocal score",
+ "kind": "ensemble",
+ "fixture": false,
+ "pedal": "romantic",
+ "composer": "Giuseppe Verdi",
+ "librettist": "Francesco Maria Piave",
+ "language": "it",
+ "files": {
+  "musicxml": "score.musicxml",
+  "language": "language.json",
+  "audioDir": "audio"
+ },
+ "roles": [
+  {
+   "id": "violetta",
+   "name": "Violetta",
+   "voiceType": "Soprano",
+   "partKey": "violetta"
+  },
+  {
+   "id": "flora",
+   "name": "Flora",
+   "voiceType": "Mezzo-soprano",
+   "partKey": "flora"
+  },
+  {
+   "id": "alfredo",
+   "name": "Alfredo",
+   "voiceType": "Tenor",
+   "partKey": "alfredo"
+  },
+  {
+   "id": "gastone",
+   "name": "Gastone",
+   "voiceType": "Tenor",
+   "partKey": "gastone"
+  },
+  {
+   "id": "douphol",
+   "name": "Barone Douphol",
+   "voiceType": "Baritone",
+   "partKey": "douphol"
+  },
+  {
+   "id": "dottore",
+   "name": "Dottore Grenvil",
+   "voiceType": "Bass",
+   "partKey": "dottore"
+  },
+  {
+   "id": "marchese",
+   "name": "Marchese d'Obigny",
+   "voiceType": "Bass",
+   "partKey": "marchese"
+  }
+ ],
+ "partMapping": [
+  {
+   "key": "piano",
+   "label": "Piano",
+   "shortLabel": "Piano",
+   "kind": "piano",
+   "source": {
+    "xmlPartId": "P15",
+    "staves": [
+     1,
+     2
+    ]
+   },
+   "channel": 0,
+   "program": 0,
+   "velocityScale": 0.8,
+   "defaultVolume": 0.7
+  },
+  {
+   "key": "violetta",
+   "label": "Violetta (Soprano)",
+   "shortLabel": "Violetta",
+   "kind": "voice",
+   "roleId": "violetta",
+   "source": {
+    "xmlPartId": "P1"
+   },
+   "channel": 3,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "flora",
+   "label": "Flora (Mezzo-soprano)",
+   "shortLabel": "Flora",
+   "kind": "voice",
+   "roleId": "flora",
+   "source": {
+    "xmlPartId": "P2"
+   },
+   "channel": 4,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "alfredo",
+   "label": "Alfredo (Tenor)",
+   "shortLabel": "Alfredo",
+   "kind": "voice",
+   "roleId": "alfredo",
+   "source": {
+    "xmlPartId": "P3"
+   },
+   "channel": 5,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "gastone",
+   "label": "Gastone (Tenor)",
+   "shortLabel": "Gastone",
+   "kind": "voice",
+   "roleId": "gastone",
+   "source": {
+    "xmlPartId": "P4"
+   },
+   "channel": 6,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "douphol",
+   "label": "Barone Douphol (Baritone)",
+   "shortLabel": "Barone Douphol",
+   "kind": "voice",
+   "roleId": "douphol",
+   "source": {
+    "xmlPartId": "P5"
+   },
+   "channel": 7,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "dottore",
+   "label": "Dottore Grenvil (Bass)",
+   "shortLabel": "Dottore Grenvil",
+   "kind": "voice",
+   "roleId": "dottore",
+   "source": {
+    "xmlPartId": "P6"
+   },
+   "channel": 8,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "marchese",
+   "label": "Marchese d'Obigny (Bass)",
+   "shortLabel": "Marchese d'Obigny",
+   "kind": "voice",
+   "roleId": "marchese",
+   "source": {
+    "xmlPartId": "P7"
+   },
+   "channel": 10,
+   "program": 0,
+   "velocityScale": 0.85,
+   "defaultVolume": 1.0
+  },
+  {
+   "key": "chorus-sopranos-1",
+   "label": "Chorus sopranos I",
+   "shortLabel": "Chorus S. I",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P8"
+   },
+   "channel": 11,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-sopranos-2",
+   "label": "Chorus sopranos II",
+   "shortLabel": "Chorus S. II",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P9"
+   },
+   "channel": 12,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-sopranos-3",
+   "label": "Chorus sopranos III",
+   "shortLabel": "Chorus S. III",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P10"
+   },
+   "channel": 13,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors-1",
+   "label": "Chorus tenors I",
+   "shortLabel": "Chorus T. I",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P11"
+   },
+   "channel": 14,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-tenors-2",
+   "label": "Chorus tenors II",
+   "shortLabel": "Chorus T. II",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P12"
+   },
+   "channel": 15,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses-1",
+   "label": "Chorus basses I",
+   "shortLabel": "Chorus B. I",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P13"
+   },
+   "channel": 1,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  },
+  {
+   "key": "chorus-basses-2",
+   "label": "Chorus basses II",
+   "shortLabel": "Chorus B. II",
+   "kind": "chorus",
+   "source": {
+    "xmlPartId": "P14"
+   },
+   "channel": 2,
+   "program": 0,
+   "velocityScale": 0.75,
+   "defaultVolume": 0.55
+  }
+ ],
+ "passages": [
+  {
+   "id": "a",
+   "label": "The whole piece",
+   "start": "1",
+   "end": "194"
+  }
+ ],
+ "licences": [
+  {
+   "item": "Music",
+   "source": "Giuseppe Verdi, La traviata (1853), Act 1 No. 3, Brindisi",
+   "author": "Giuseppe Verdi (1813–1901)",
+   "licence": "Public domain",
+   "notes": ""
+  },
+  {
+   "item": "Libretto text",
+   "source": "Francesco Maria Piave, libretto of La traviata (1853)",
+   "author": "Francesco Maria Piave (1810–1876)",
+   "licence": "Public domain",
+   "notes": "Words as printed in the Ricordi vocal score."
+  },
+  {
+   "item": "Score (score.musicxml)",
+   "source": "G. Ricordi & C. vocal score (Milan, plate 42314; IMSLP #392068), pages 20–32 (194 bars)",
+   "author": "Ricordi piano reduction, as printed",
+   "licence": "Public domain",
+   "notes": "Written out from the printed pages in four chunks: each read by two independent readers, every disagreement settled on zoomed images of the page by a separate judge, then stitched and checked bar by bar against the print by four fresh proofreaders and corrected. The Soprani and Tenori chorus staves are split into one line per printed part (a note sung by the whole section is on every line). Playback tempo ♩. = 64 (the print's metronome mark is ♩. = 69), so that it lasts as long as the median (3:03) of six complete recordings (Kleiber 1977 2:55, Muti 1980 2:49, Santini 1954 4:07, Panizza 3:07, Bellezza 3:04, Serafin 3:02)."
+  },
+  {
+   "item": "IPA, gloss and translation",
+   "source": "Written for this app",
+   "author": "Counterpart development team",
+   "licence": "CC0 1.0",
+   "notes": "Unreviewed by a diction coach."
+  }
+ ]
+}

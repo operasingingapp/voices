@@ -5052,7 +5052,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi with Alfredo and chorus · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",
@@ -5182,7 +5183,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi with Violetta and chorus · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",
@@ -5366,7 +5368,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",
@@ -5475,7 +5478,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",
@@ -5535,7 +5539,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",
@@ -5585,7 +5590,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",
@@ -5650,7 +5656,8 @@ const ALL_OPERAS: Opera[] = [
      {
       "title": "Libiamo ne' lieti calici",
       "kind": "Brindisi · Act 1",
-      "id": "Act 1: Libiamo ne' lieti calici"
+      "id": "Act 1: Libiamo ne' lieti calici",
+      "editionId": "verdi-libiamo-ne-lieti-calici"
      },
      {
       "title": "Che è ciò?",

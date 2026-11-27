@@ -18952,6 +18952,70 @@
     }
   },
   {
+    "editionId": "verdi-libiamo-ne-lieti-calici",
+    "editionVersion": "1.0.0-ricordi",
+    "scoreVersionId": "verdi-libiamo-ne-lieti-calici@1.0.0-ricordi#f9b38a5cde",
+    "title": "Libiamo ne' lieti calici",
+    "subtitle": "Brindisi from Act 1 of La traviata, in the Ricordi vocal score",
+    "kind": "ensemble",
+    "fixture": false,
+    "composer": "Giuseppe Verdi",
+    "roles": [
+      {
+        "id": "violetta",
+        "name": "Violetta",
+        "voiceType": "Soprano",
+        "partKey": "violetta"
+      },
+      {
+        "id": "flora",
+        "name": "Flora",
+        "voiceType": "Mezzo-soprano",
+        "partKey": "flora"
+      },
+      {
+        "id": "alfredo",
+        "name": "Alfredo",
+        "voiceType": "Tenor",
+        "partKey": "alfredo"
+      },
+      {
+        "id": "gastone",
+        "name": "Gastone",
+        "voiceType": "Tenor",
+        "partKey": "gastone"
+      },
+      {
+        "id": "douphol",
+        "name": "Barone Douphol",
+        "voiceType": "Baritone",
+        "partKey": "douphol"
+      },
+      {
+        "id": "dottore",
+        "name": "Dottore Grenvil",
+        "voiceType": "Bass",
+        "partKey": "dottore"
+      },
+      {
+        "id": "marchese",
+        "name": "Marchese d'Obigny",
+        "voiceType": "Bass",
+        "partKey": "marchese"
+      }
+    ],
+    "measures": 194,
+    "durationSec": 182,
+    "hasRepeats": false,
+    "keySignature": "B♭ major",
+    "time": "3/8",
+    "languageStatus": {
+      "phrases": 97,
+      "withAudio": 0,
+      "reviewed": 0
+    }
+  },
+  {
     "editionId": "verdi-traviata-preludio",
     "editionVersion": "1.0.0-ricordi",
     "scoreVersionId": "verdi-traviata-preludio@1.0.0-ricordi#dd2e3f0ef8",

@@ -3056,6 +3056,38 @@ export const PIECE_INFO: Record<string, PieceInfo> = {
       </>
     ),
   },
+  "verdi-libiamo-ne-lieti-calici": {
+    // Alfredo leads the toast
+    portrait: "traviata:alfredo",
+    opera: "La traviata",
+    kind: "Brindisi",
+    facts: {
+      key: "two flats (B-flat major) throughout",
+      time: "3/8 throughout",
+      tempo: "Allegretto; the print marks ♩. = 69. Played at ♩. = 64, so that it lasts as long as the median (3:03) of six complete recordings (Kleiber 1977, Muti 1980, Santini 1954, Panizza, Bellezza, Serafin)",
+    },
+    notePlaceholder: "",
+    about: (
+      <>
+        <p>
+          Pressed by the guests, Alfredo raises his glass: let us drink, and let the fleeting hour grow drunk with pleasure. Violetta
+          answers him verse for verse: life is only pleasure, and love a flower that blooms and dies. The whole party takes up the
+          refrain, and the two sing on until the new day finds them in this paradise.
+        </p>
+        <p>
+          Score: No. 3, the Brindisi (vocal score pages 20–32, 194 bars), from the G. Ricordi & C. vocal score (Milan, plate 42314;
+          IMSLP #392068), public domain. Written out from the printed pages in four chunks, each read by two independent readers, every
+          disagreement settled on the page by a separate judge, then checked bar by bar by four fresh proofreaders and corrected. The
+          chorus staves, which print chords, are split into one line per part; a note the whole section sings is on every line. Only
+          the Italian words are kept, with the engraving's spellings (poichè, nè).
+        </p>
+        <p>
+          Music by Giuseppe Verdi and text by Francesco Maria Piave (1853), both public domain. The IPA, word meanings and translation
+          were written for this app and have not yet been reviewed by a diction coach.
+        </p>
+      </>
+    ),
+  },
   "verdi-traviata-preludio": {
     // no one sings it: it is played before the curtain, so Violetta, the title role, stands for it
     portrait: "traviata:violetta",
