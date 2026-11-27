@@ -9576,3 +9576,8 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 /* an opera with no music yet: its card says so */
 .og-card .og-soon { background: var(--ink); color: var(--canvas); letter-spacing: 0.06em; text-transform: uppercase; font-size: 11px; font-weight: 600; }
 .og-card.is-soon .og-pic img, .og-card.is-soon .og-plate { filter: saturate(0.55); opacity: 0.85; }
+
+/* a line hidden from the score: its face fades and carries a small crossed eye, top left */
+.bar-parts.many .part { position: relative; }
+.bar-parts.many .part-hid { position: absolute; left: 0; top: 2px; display: grid; place-items: center; width: 20px; height: 20px; border-radius: var(--radius-round); background: var(--canvas); color: var(--ink-muted); box-shadow: 0 1px 2px rgba(20, 20, 40, 0.15); }
+.bar-parts.many .part-hid svg { width: 13px; height: 13px; display: block; }

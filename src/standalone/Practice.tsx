@@ -5585,12 +5585,13 @@ function PracticeScreen({
                       aria-haspopup="menu"
                       onClick={(e) => openFaceMenu(p.key, e.currentTarget)}
                       {...holdHandlers(p, p.shortLabel)}
-                      aria-label={`${p.shortLabel}'s line ${on ? "plays. Mute it" : "is muted. Play it"}`}
+                      aria-label={`${p.shortLabel}'s line ${on ? "plays" : "is muted"}${showOf(p) ? "" : ", hidden in the score"}`}
                       title={`${p.shortLabel}: ${on ? "plays" : "muted, sung live"}`}
                     >
                       <span className="part-face" aria-hidden="true">
                         <RoleFace k={partnerKey(p)} />
                       </span>
+                      {!showOf(p) && <span className="part-hid" aria-hidden="true">{Icon.eyeOff}</span>}
                       <span className="part-text">
                         <b>{p.shortLabel}</b>
                         <small>{on ? "Plays" : "Muted"}</small>
