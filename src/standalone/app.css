@@ -9591,3 +9591,10 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .w-seg .w-who-btn svg { width: 14px; height: 14px; }
 .w-seg .card-menu-wrap { position: relative; display: inline-flex; }
 .w-seg .card-menu { right: 0; left: auto; top: calc(100% + 6px); z-index: 30; }
+
+/* the line card's IPA / English / Tips: toggles with a dot, filled and tinted when shown (as in the Words view) */
+.now-show .nl-btn + .nl-btn::before { display: none; }
+.now-show .nl-btn { gap: 7px; padding: 0 12px; color: var(--ink-muted); }
+.now-show .nl-btn[aria-pressed="true"] { background: color-mix(in srgb, var(--now-mark) 14%, var(--canvas)); color: var(--ink); }
+.now-show .tg-dot { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid currentColor; box-sizing: border-box; }
+.now-show .nl-btn[aria-pressed="true"] .tg-dot { background: var(--now-mark); border-color: var(--now-mark); }

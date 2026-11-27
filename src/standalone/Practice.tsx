@@ -4076,7 +4076,7 @@ function PracticeScreen({
               You’re ready
             </strong>
             Your settings are back as they were. You can take the tour again any
-            time from Show, above the words.
+            time from Settings.
           </p>
           <div className="tip-actions">
             <button
@@ -4211,31 +4211,26 @@ function PracticeScreen({
           </p>
         </div>
         <div className="p-tools">
-          <button
-            type="button"
-            className="cp-icon-btn cp-icon-btn--ghost p-pdf"
-            onClick={() => setExportOpen("score")}
-            aria-label="Save the score or the libretto as a PDF"
-            title="Score or libretto as PDF"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M7 3.5h7l4.5 4.5v11a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M13.5 3.5V8.5h5M12 11v6M9.5 14.5 12 17l2.5-2.5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+          <div className="cp-seg view-switch p-pdf-seg">
+            <button
+              type="button"
+              onClick={() => setExportOpen("score")}
+              aria-label="Save the score or the libretto as a PDF"
+              title="Score or libretto as PDF"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 4v10M7.5 10 12 14.5 16.5 10M5 16.5V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span className="label">PDF</span>
+            </button>
+          </div>
           <div
             className="cp-seg view-switch"
             role="group"
@@ -4375,81 +4370,42 @@ function PracticeScreen({
                 >
                   {Icon.speaker}
                 </button>
-                <button
-                  type="button"
-                  className="nl-btn nl-slow"
-                  onClick={() => sayPhrase(shown.ph.id, true)}
-                  aria-label="Hear it slowly"
-                  title="Slowly"
-                >
-                  {Icon.slow}
-                </button>
               </div>
-              {/* what to show under the words: set once, so it lives in a small menu, not on every line */}
-              <span className="card-menu-wrap">
+              {/* what shows under the words: three toggles, lit when shown */}
+              <div className="now-listen now-show" role="group" aria-label="Show under the words">
                 <button
                   type="button"
-                  className="card-menu-btn show-btn"
-                  aria-haspopup="menu"
-                  aria-expanded={cardMenu === "show"}
-                  onClick={() =>
-                    setCardMenu(cardMenu === "show" ? null : "show")
-                  }
-                  aria-label="Show under the words: IPA, English, pronunciation tips"
-                  title="Show"
+                  className="nl-btn"
+                  aria-pressed={showIpa}
+                  onClick={() => setShowIpa(!showIpa)}
+                  title={showIpa ? "Hide the IPA" : "Show the IPA"}
                 >
-                  <span>Show</span>
-                  {Icon.down}
+                  <span className="tg-dot" aria-hidden="true" />
+                  IPA
                 </button>
-                {cardMenu === "show" && (
-                  <span
-                    className="card-menu card-menu--end"
-                    role="menu"
-                    aria-label="Show under the words"
+                <button
+                  type="button"
+                  className="nl-btn"
+                  aria-pressed={showTr}
+                  onClick={() => setShowTr(!showTr)}
+                  title={showTr ? "Hide the English" : "Show the English"}
+                >
+                  <span className="tg-dot" aria-hidden="true" />
+                  English
+                </button>
+                {hasTips && (
+                  <button
+                    type="button"
+                    className="nl-btn"
+                    aria-pressed={showTips}
+                    onClick={() => setShowTips(!showTips)}
+                    title={showTips ? "Hide the pronunciation tips" : "Show the pronunciation tips"}
                   >
-                    <button
-                      type="button"
-                      role="menuitemcheckbox"
-                      aria-checked={showIpa}
-                      onClick={() => setShowIpa(!showIpa)}
-                    >
-                      <span className="cm-check" aria-hidden="true">
-                        {showIpa ? Icon.check : null}
-                      </span>
-                      <span>IPA</span>
-                    </button>
-                    <button
-                      type="button"
-                      role="menuitemcheckbox"
-                      aria-checked={showTr}
-                      onClick={() => setShowTr(!showTr)}
-                    >
-                      <span className="cm-check" aria-hidden="true">
-                        {showTr ? Icon.check : null}
-                      </span>
-                      <span>English</span>
-                    </button>
-                    {hasTips && (
-                      <button
-                        type="button"
-                        role="menuitemcheckbox"
-                        aria-checked={showTips}
-                        onClick={() => setShowTips(!showTips)}
-                      >
-                        <span className="cm-check" aria-hidden="true">
-                          {showTips ? Icon.check : null}
-                        </span>
-                        <span>Pronunciation tips</span>
-                      </button>
-                    )}
-                    <span className="cm-sep" role="separator" />
-                    <button type="button" role="menuitem" onClick={replayGuide}>
-                      <span className="cm-check" aria-hidden="true" />
-                      <span>Take the tour</span>
-                    </button>
-                  </span>
+                    <span className="tg-dot" aria-hidden="true" />
+                    Tips
+                  </button>
                 )}
-              </span>
+              </div>
               {/* fold the box away to one line, to give the music the room */}
               <button
                 type="button"
