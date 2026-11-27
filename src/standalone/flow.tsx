@@ -2638,9 +2638,11 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
               (!f.voice || voiceGroup(c.voice) === f.voice) &&
               (!f.music || c.pieces.some((p) => p.editionId)),
           );
+        // operas with no music yet come last, marked Coming soon
+        const soon = (o: Opera) => !o.chars.some((c) => c.pieces.some((p) => p.editionId));
         const list = OPERAS.filter(
           (o) => suits(o).length > 0 && (!by || o.composer === by),
-        );
+        ).sort((a, b) => Number(soon(a)) - Number(soon(b)));
         const row = (
           <ComposerRow
             composers={composers}
@@ -2680,7 +2682,7 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
                     <button
                       key={o.id}
                       type="button"
-                      className={`og-card${art ? " has-art" : ""}`}
+                      className={`og-card${art ? " has-art" : ""}${soon(o) ? " is-soon" : ""}`}
                       data-tone={
                         OPERA_TONES[OPERAS.indexOf(o) % OPERA_TONES.length]
                       }
@@ -2701,7 +2703,9 @@ export function ExploreOperas({ ctx }: { ctx: Ctx }) {
                             <span>{o.year}</span>
                           </span>
                         )}
-                        {yours.length > 0 && (
+                        {soon(o) ? (
+                          <span className="pv-tag og-soon">Coming soon</span>
+                        ) : yours.length > 0 && (
                           <span className="pv-tag">
                             {yours.length === 1
                               ? `Your role: ${yours[0].name}`
