@@ -131,6 +131,8 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
       )
     : [];
   const sungIn = s.lang === "zxx" ? "No words: sung on a vowel" : songLanguage(s.lang);
+  // a phone opens the page folded: the story, the credits and the play button first
+  const narrow = typeof window !== "undefined" && window.matchMedia?.("(max-width: 640px)").matches;
   return (
     <main className="screen-body gutter page op-page ch-page sg-page">
       <Crumbs
@@ -208,19 +210,23 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
               About the song
             </h2>
           </div>
+          {/* three short blocks; on a phone each folds to its heading and opens with a tap */}
           <div className="sg-facts">
-            <div>
-              <h3>Written</h3>
-              <p>{x.written}.</p>
-            </div>
-            <div>
-              <h3>The words</h3>
-              <p>{x.poem}</p>
-            </div>
-            <div>
-              <h3>The music</h3>
-              <p>{x.music}</p>
-            </div>
+            {([
+              ["Written", `${x.written}.`],
+              ["The words", x.poem],
+              ["The music", x.music],
+            ] as const).map(([h, t]) => (
+              <details key={h} open={!narrow}>
+                <summary>
+                  <h3>{h}</h3>
+                  <svg className="sg-chev" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" />
+                  </svg>
+                </summary>
+                <p>{t}</p>
+              </details>
+            ))}
           </div>
         </section>
       )}
