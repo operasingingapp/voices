@@ -9598,3 +9598,6 @@ li[data-here] > .hm-pc { background: var(--tone-soft, var(--fog)); box-shadow: i
 .now-show .nl-btn[aria-pressed="true"] { background: color-mix(in srgb, var(--now-mark) 14%, var(--canvas)); color: var(--ink); }
 .now-show .tg-dot { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid currentColor; box-sizing: border-box; }
 .now-show .nl-btn[aria-pressed="true"] .tg-dot { background: var(--now-mark); border-color: var(--now-mark); }
+
+/* a row without a scene keeps an invisible slot where the scene button would be, so the buttons line up */
+.rp-gap { visibility: hidden; pointer-events: none; }

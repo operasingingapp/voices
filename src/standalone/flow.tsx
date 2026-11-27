@@ -1647,6 +1647,12 @@ export function RolePage({
                               </span>
                             </button>
                           )}
+                          {/* an empty slot keeps the + and the play button in the same place on every row */}
+                          {!p.context && (
+                            <span className="rp-scene rp-gap" aria-hidden="true">
+                              <ChevronDown />
+                            </span>
+                          )}
                           {isReady && (
                             <button
                               type="button"
@@ -1656,6 +1662,11 @@ export function RolePage({
                             >
                               <Play />
                             </button>
+                          )}
+                          {!isReady && (
+                            <span className="rp-play rp-gap" aria-hidden="true">
+                              <Play />
+                            </span>
                           )}
                         </span>
                         {p.context && (
@@ -2073,6 +2084,12 @@ export function OperaPage({ ctx, opera }: { ctx: Ctx; opera: Opera }) {
                     <ChevronDown />
                     <span className="sr-only">: {row.title}</span>
                   </button>
+                )}
+                {!p?.context && (ch && p || listen) && (
+                  <span className="ck-scene rp-gap" aria-hidden="true">
+                    <span className="ck-scene-label">Scene</span>
+                    <ChevronDown />
+                  </span>
                 )}
                 {ready && ch && row.piece && (
                   <button
