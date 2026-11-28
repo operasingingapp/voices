@@ -2361,6 +2361,8 @@ function PracticeScreen({
   const [barOpen, setBarOpen] = useLocalSetting("p:barOpen", false);
   // phone: More opens a sheet over the music (piano, speed, count-in, Arrange, Notes) instead of growing the bar
   const [moreSheet, setMoreSheet] = useState(false);
+  // Arrange on a phone: one line opened at a time to show its volume, sound and ink
+  const [mixOpenLine, setMixOpenLine] = useState<string | null>(null);
   const isPhone = () => typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches;
   // the note-picking menu opens upwards from the pencil (when the pencil is on screen), as a short list
   const [pickAt, setPickAt] = useState<CSSProperties | null>(null);
@@ -5827,6 +5829,26 @@ function PracticeScreen({
                   </div>
                 )}
                 <div className="mix-sing mix-order">
+                  <div className="ms-row mix-ontop">
+                    <span className="ms-label">
+                      My line on top
+                      <small>Otherwise the lines stay in the score's order</small>
+                    </span>
+                    <button
+                      type="button"
+                      role="switch"
+                      className="ms-switch"
+                      aria-checked={meOnTop && !scoreOrder}
+                      aria-label="My line on top"
+                      onClick={() =>
+                        meOnTop && !scoreOrder
+                          ? setOrder([])
+                          : placeLine(orderedIds.indexOf(voicePart.source.xmlPartId), 0)
+                      }
+                    >
+                      <i />
+                    </button>
+                  </div>
                   <div className="mix-order-head">
                     <span className="mix-sub">
                       Each line: sound, show, volume, instrument and order
@@ -5881,7 +5903,7 @@ function PracticeScreen({
                         : "";
                     return (
                       <div
-                        className={`mix-line${dragging ? " dragging" : ""}${dropHere}${on ? "" : " off"}`}
+                        className={`mix-line${dragging ? " dragging" : ""}${dropHere}${on ? "" : " off"}${mixOpenLine === xid ? " open" : ""}`}
                         key={xid}
                       >
                         <button
@@ -5922,7 +5944,10 @@ function PracticeScreen({
                             <RoleFace k={partnerKey(p)} />
                           )}
                         </span>
-                        <b className="mix-line-name">
+                        <b
+                          className="mix-line-name"
+                          onClick={() => setMixOpenLine(mixOpenLine === xid ? null : xid)}
+                        >
                           {name}
                           {isYou && <em className="mix-you">you</em>}
                         </b>
@@ -5991,6 +6016,15 @@ function PracticeScreen({
                               </button>
                             );
                           })()}
+                          <button
+                            type="button"
+                            className="mix-mini mix-expand"
+                            aria-expanded={mixOpenLine === xid}
+                            aria-label={`${name}: volume and sound`}
+                            onClick={() => setMixOpenLine(mixOpenLine === xid ? null : xid)}
+                          >
+                            {Icon.down}
+                          </button>
                         </span>
                         <input
                           type="range"
