@@ -3190,8 +3190,12 @@ function CastReel({
       <div className="reel-all" role="group" aria-label="All characters">
         {byOpera.map(({ opera, list }) => (
           <section key={opera.id} className="reel-all-group">
-            <h2 className="reel-all-head" lang={opera.lang}>
-              {opera.title} <small>{opera.composer}</small>
+            {/* the composer and year as a small line above the title, as on a programme */}
+            <h2 className="reel-all-head">
+              <small>
+                {opera.composer} · {opera.year}
+              </small>
+              <span lang={opera.lang}>{opera.title}</span>
             </h2>
             <div className="reel-grid">
               {list.map(({ ch }) => {
@@ -3798,7 +3802,9 @@ export function Onboarding({
             disabled={!chosen.length}
             onClick={begin}
           >
-            Continue
+            {/* on a phone the button sits over the hint: until something is chosen it says the hint itself */}
+            <span className="ob-begin-wait">{chosen.length ? "Continue" : "Choose one or more"}</span>
+            <span className="ob-begin-go">Continue</span>
           </button>
         </main>
       )}
