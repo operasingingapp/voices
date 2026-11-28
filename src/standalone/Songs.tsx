@@ -3,7 +3,8 @@ import { composerNamed } from "./composers";
 import { SongList } from "./songParts";
 import { ComposerRow } from "./choralParts";
 import { SONGS, SONG_LANGUAGES, SONG_LEVELS, songLanguage, type Song, type SongLevel } from "./songs";
-import { SONG_CONTEXT, SONG_CYCLES, rangeText } from "./songContext";
+import { SONG_CONTEXT, SONG_CYCLES, rangeText, type SongContext } from "./songContext";
+import ABOUT from "./songAbout.json";
 import { SONG_META } from "./songInfo";
 import { CloseIcon, Crumbs, SearchIcon, type Ctx } from "./flow";
 
@@ -122,7 +123,9 @@ export function SongsHome({ ctx }: { ctx: Ctx }) {
  */
 export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
   const c = composerNamed(s.composer);
-  const x = SONG_CONTEXT[s.id];
+  // songs with music have their full context (range read from the score); the others a description of their own
+  const x: (Omit<SongContext, "range"> & { range?: SongContext["range"] }) | undefined =
+    SONG_CONTEXT[s.id] ?? (ABOUT as Record<string, Omit<SongContext, "range">>)[s.id];
   const poet = SONG_META[s.id]?.poet;
   const cycle = x?.cycle ? SONG_CYCLES[x.cycle] : undefined;
   const siblings = x?.cycle
@@ -181,7 +184,7 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
               <dt>Sung in</dt>
               <dd>{sungIn}</dd>
             </div>
-            {x && (
+            {x?.range && (
               <div>
                 <dt>Range</dt>
                 <dd>{rangeText(x.range)}</dd>
