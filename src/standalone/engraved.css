@@ -869,3 +869,25 @@
 @media (max-width: 640px) {
   .practice > .p-timeline { height: auto; padding-bottom: 6px; align-content: start; }
 }
+
+/* phone: the ⋯ button matches the Music / Words switch beside it (no outlined circle), and its menu reads as a list
+   of clear choices: an icon, a name and one line saying what it does */
+@media (max-width: 640px) {
+  .p-tools-more.cp-icon-btn { border: 0; box-shadow: none; border-radius: 12px; background: color-mix(in srgb, var(--ink) 6%, var(--canvas)); width: 44px; height: 44px; color: var(--ink); }
+  .p-tools-more[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 12%, var(--canvas)); }
+  .p-tools-menu { min-width: 290px; padding: 8px; border-radius: 16px; box-shadow: 0 12px 32px rgba(26, 24, 20, 0.16), 0 0 0 1px color-mix(in srgb, var(--ink) 8%, transparent); background: var(--canvas); }
+  .p-tools-menu .p-tools-h { margin: 4px 10px 6px; font: 600 11px/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+  .p-tools-menu button { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 56px; padding: 8px 10px; border-radius: 10px; text-align: left; color: var(--ink); }
+  .p-tools-menu button:active, .p-tools-menu button[aria-checked="true"] { background: color-mix(in srgb, var(--now-mark) 8%, transparent); }
+  .ptm-ic { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: color-mix(in srgb, var(--ink) 6%, var(--canvas)); }
+  .ptm-ic svg { width: 20px !important; height: 20px !important; color: var(--ink) !important; }
+  .ptm-tx { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .ptm-tx b { font: 500 15px/1.2 var(--font-sans); }
+  .ptm-tx small { font: 400 12.5px/1.3 var(--font-sans); color: var(--ink-muted); }
+  .ptm-ok svg { width: 18px; height: 18px; color: var(--now-mark); }
+  .p-tools-menu hr { margin: 6px 8px; }
+}
+@media (max-width: 640px) {
+  .practice .p-tools > button.p-tools-more { border: 0 !important; outline: 0; box-shadow: none !important; border-radius: 12px !important; background: color-mix(in srgb, var(--ink) 6%, var(--canvas)) !important; }
+  .practice .p-tools > button.p-tools-more[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 12%, var(--canvas)) !important; }
+}

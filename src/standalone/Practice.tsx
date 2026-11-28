@@ -4364,15 +4364,19 @@ function PracticeScreen({
               <div className="lane-menu p-tools-menu" role="menu">
                 {musicOn && (
                   <>
-                    <p className="p-tools-h">Music shown as</p>
+                    <p className="p-tools-h">View</p>
                     <button
                       type="button"
                       role="menuitemradio"
                       aria-checked={!pageView}
                       onClick={() => (setPageView(false), setToolsMenu(false))}
                     >
-                      <span>One line, scrolling sideways</span>
-                      {!pageView && Icon.check}
+                      <span className="ptm-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" d="M2.5 8.5h14M2.5 12h14M2.5 15.5h14" /><path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M18.5 8.5 22 12l-3.5 3.5" /></svg></span>
+                      <span className="ptm-tx">
+                        <b>One line</b>
+                        <small>Scrolls sideways as it plays</small>
+                      </span>
+                      {!pageView && <span className="ptm-ok">{Icon.check}</span>}
                     </button>
                     <button
                       type="button"
@@ -4380,8 +4384,12 @@ function PracticeScreen({
                       aria-checked={pageView}
                       onClick={() => (setPageView(true), setToolsMenu(false))}
                     >
-                      <span>Page, scrolling down</span>
-                      {pageView && Icon.check}
+                      <span className="ptm-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="2.5" width="15" height="19" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.8" /><path fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" d="M8 7.5h8M8 10h8M8 14.5h8M8 17h8" /></svg></span>
+                      <span className="ptm-tx">
+                        <b>Full page</b>
+                        <small>Like the printed score</small>
+                      </span>
+                      {pageView && <span className="ptm-ok">{Icon.check}</span>}
                     </button>
                     <hr />
                   </>
@@ -4391,7 +4399,11 @@ function PracticeScreen({
                   role="menuitem"
                   onClick={() => (setExportOpen("score"), setToolsMenu(false))}
                 >
-                  <span>Save the score or words as PDF</span>
+                  <span className="ptm-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10M7.5 10 12 14.5 16.5 10M5 16.5V19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
+                  <span className="ptm-tx">
+                    <b>Download PDF</b>
+                    <small>Score or words, ready to print</small>
+                  </span>
                 </button>
               </div>
             </>
