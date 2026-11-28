@@ -891,3 +891,23 @@
   .practice .p-tools > button.p-tools-more { border: 0 !important; outline: 0; box-shadow: none !important; border-radius: 12px !important; background: color-mix(in srgb, var(--ink) 6%, var(--canvas)) !important; }
   .practice .p-tools > button.p-tools-more[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 12%, var(--canvas)) !important; }
 }
+
+/* phone: the bottom is only the progress line and the round controls; the piano and the speed live behind More */
+@media (max-width: 640px) {
+  .practice > .p-timeline .grand-chip, .practice > .p-timeline .tl-speed { display: none !important; }
+  .practice > .p-timeline { padding-bottom: 2px; }
+}
+/* phone, More open: the same small words under the extra controls, and the Grand piano chip comes back */
+@media (max-width: 640px) {
+  .p-bar:not(.folded) [data-cap] { position: relative; overflow: visible; }
+  .p-bar:not(.folded) [data-cap]::after {
+    content: attr(data-cap); position: absolute; left: 50%; top: calc(100% + 4px); transform: translateX(-50%);
+    font: 500 11px/1 var(--font-sans); color: var(--ink-muted); white-space: nowrap; pointer-events: none;
+  }
+  .p-bar:not(.folded) { row-gap: 26px !important; }
+  .practice:has(> .p-bar:not(.folded)) > .p-timeline .grand-chip { display: inline-flex !important; }
+}
+@media (max-width: 640px) {
+  .p-bar:not(.folded) .countin[data-cap]::after { content: none; }
+  .p-bar:not(.folded) .countin > span { display: inline !important; font: 500 14px/1 var(--font-sans); margin-left: 6px; }
+}

@@ -5707,6 +5707,7 @@ function PracticeScreen({
                   <button
                     type="button"
                     className="pg-btn pg-piano"
+                    data-cap="Piano"
                     aria-pressed={hearPiano}
                     aria-haspopup="menu"
                     onClick={(e) =>
@@ -5723,6 +5724,7 @@ function PracticeScreen({
             <button
               type="button"
               className="cp-btn part-fade mix-btn"
+              data-cap="Arrange"
               aria-haspopup="dialog"
               aria-expanded={mixOpen}
               aria-label={
@@ -5739,6 +5741,7 @@ function PracticeScreen({
             <button
               type="button"
               className="cp-btn part-fade mix-btn notes-btn"
+              data-cap="Notes"
               aria-pressed={notePick}
               aria-label={
                 notePick
@@ -6271,6 +6274,7 @@ function PracticeScreen({
           <button
             type="button"
             className="cp-toggle countin"
+            data-cap="Count-in"
             aria-pressed={countIn}
             onClick={() => setCountIn(!countIn)}
             aria-label={
