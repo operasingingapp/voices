@@ -5768,18 +5768,34 @@ function PracticeScreen({
               className="mix-scrim"
               aria-label="Close Arrange"
               tabIndex={-1}
-              onClick={() => setMixOpen(false)}
+              onClick={() => {
+                setMixOpen(false);
+                setMoreSheet(false);
+              }}
             />
           )}
           {mixOpen && (
             <div className="mix-pop ens" role="dialog" aria-label="Arrange">
               <>
                 <div className="mix-head">
+                  {moreSheet && (
+                    <button
+                      type="button"
+                      className="mix-back"
+                      onClick={() => setMixOpen(false)}
+                      aria-label="Back to the settings"
+                    >
+                      {Icon.left}
+                    </button>
+                  )}
                   <p className="mix-title">Arrange</p>
                   <button
                     type="button"
                     className="cp-btn cp-btn--ink mix-done"
-                    onClick={() => setMixOpen(false)}
+                    onClick={() => {
+                      setMixOpen(false);
+                      setMoreSheet(false);
+                    }}
                   >
                     Done
                   </button>
@@ -6306,10 +6322,33 @@ function PracticeScreen({
         >
           {Icon.chevUp}
         </button>
-        {moreSheet && (
+        {moreSheet && !mixOpen && (
           <>
             <button type="button" className="more-scrim" aria-label="Close" tabIndex={-1} onClick={() => setMoreSheet(false)} />
             <div className="more-sheet" role="dialog" aria-label="Practice settings">
+              {/* a handle to pull the sheet down and away */}
+              <div
+                className="ms-grab"
+                onPointerDown={(e) => {
+                  const y0 = e.clientY;
+                  const sheet = e.currentTarget.parentElement as HTMLElement;
+                  const move = (ev: PointerEvent) => {
+                    const dy = Math.max(0, ev.clientY - y0);
+                    sheet.style.transform = `translateY(${dy}px)`;
+                  };
+                  const up = (ev: PointerEvent) => {
+                    window.removeEventListener("pointermove", move);
+                    window.removeEventListener("pointerup", up);
+                    sheet.style.transform = "";
+                    if (ev.clientY - y0 > 70) setMoreSheet(false);
+                  };
+                  window.addEventListener("pointermove", move);
+                  window.addEventListener("pointerup", up);
+                }}
+                aria-hidden="true"
+              >
+                <i />
+              </div>
               {grandUrl && (
                 <div className="ms-row">
                   <span className="ms-label">Piano</span>
@@ -6375,10 +6414,7 @@ function PracticeScreen({
               <div className="ms-links">
                 <button
                   type="button"
-                  onClick={() => {
-                    setMoreSheet(false);
-                    setMixOpen(true);
-                  }}
+                  onClick={() => setMixOpen(true)}
                 >
                   <span className="ms-ic">{Icon.sliders}</span>
                   <span>

@@ -935,3 +935,23 @@
   .practice .p-bar.p-bar.folded > .bar-parts > .mix-pop { display: block !important; }
   .practice .p-bar.p-bar.folded > .bar-parts > .mix-scrim { display: block !important; }
 }
+
+/* phone: the settings pull up from the bottom edge (a handle to pull them down again); Arrange opens in the same place
+   with a back arrow to the settings */
+@media (max-width: 640px) {
+  .more-sheet {
+    left: 0; right: 0; bottom: 0; border-radius: 22px 22px 0 0;
+    padding: 0 20px calc(16px + env(safe-area-inset-bottom));
+    animation: ms-up 220ms cubic-bezier(.2,.8,.2,1);
+    transition: transform 160ms ease;
+  }
+  @keyframes ms-up { from { transform: translateY(100%); } to { transform: none; } }
+  .ms-grab { display: grid; place-items: center; height: 26px; margin: 0 -20px 2px; cursor: grab; touch-action: none; }
+  .ms-grab i { width: 40px; height: 5px; border-radius: 3px; background: color-mix(in srgb, var(--ink) 18%, transparent); }
+  .more-sheet .ms-links button:last-child { border-bottom: 0; }
+  .practice .mix-pop { animation: ms-up 220ms cubic-bezier(.2,.8,.2,1); }
+  .mix-head { display: flex; align-items: center; gap: 8px; }
+  .mix-head .mix-title { flex: 1; }
+  .mix-back { display: grid; place-items: center; width: 40px; height: 40px; margin-left: -8px; border: 0; border-radius: 12px; background: color-mix(in srgb, var(--ink) 6%, var(--canvas)); color: var(--ink); }
+  .mix-back svg { width: 20px; height: 20px; }
+}
