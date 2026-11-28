@@ -140,88 +140,80 @@ export function SongPage({ ctx, song: s }: { ctx: Ctx; song: Song }) {
           { label: s.title, lang: s.lang === "zxx" ? undefined : s.lang },
         ]}
       />
-      <section className={`oh${c.portrait ? " has-art" : " no-art"}`}>
+      {/* the portrait with the song's facts beside it, then one long button across both to practise it */}
+      <section className={`sg-hero${c.portrait ? "" : " no-art"}`}>
         {c.portrait && (
-          <figure className="oh-cover ch-cover">
+          <figure className="sg-art">
             <img src={c.portrait} alt={c.alt ?? ""} />
           </figure>
         )}
-        <div className="oh-text">
-          <div className="oh-titleblock">
-            <h1 className="oh-title" lang={s.lang === "zxx" ? undefined : s.lang}>
-              {s.title}
-            </h1>
-            <p className="oh-meta">
-              {[s.group, x?.year, s.level].filter(Boolean).join(" · ")}
-            </p>
-          </div>
-          {/* the play button sits under the title, as on a role's page: in reach before the story */}
-          {s.editionId ? (
-            <button
-              type="button"
-              className="cp-btn cp-btn--ink rp-go sg-practise"
-              onClick={() => ctx.go({ screen: "sing", song: s.id })}
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M7 4.5v15L19.5 12z" />
-              </svg>
-              <span className="rp-go-word">Practise</span>
-              <i className="rp-go-title" lang={s.lang === "zxx" ? undefined : s.lang}>
-                {s.title}
-              </i>
-            </button>
-          ) : (
-            <p className="part-note" role="status">
-              The music for this song is being prepared.
-            </p>
-          )}
+        <div className="sg-side">
+          <p className="sg-kind">{s.group}</p>
+          <h1 className="sg-title" lang={s.lang === "zxx" ? undefined : s.lang}>
+            {s.title}
+          </h1>
+          <dl className="sg-facts">
+            <div>
+              <dt>Music</dt>
+              <dd>{s.composerFull}</dd>
+            </div>
+            {poet && (
+              <div>
+                <dt>Words</dt>
+                <dd>{poet}</dd>
+              </div>
+            )}
+            {cycle && (
+              <div>
+                <dt>From</dt>
+                <dd>
+                  {cycle.title}, No. {x!.no} of {cycle.count}
+                </dd>
+              </div>
+            )}
+            {x?.year && (
+              <div>
+                <dt>Written</dt>
+                <dd>{x.year}</dd>
+              </div>
+            )}
+            <div>
+              <dt>Sung in</dt>
+              <dd>{sungIn}</dd>
+            </div>
+            {x && (
+              <div>
+                <dt>Range</dt>
+                <dd>{rangeText(x.range)}</dd>
+              </div>
+            )}
+            {s.level && (
+              <div>
+                <dt>Level</dt>
+                <dd>{s.level}</dd>
+              </div>
+            )}
+          </dl>
         </div>
+        {s.editionId ? (
+          <button
+            type="button"
+            className="cp-btn cp-btn--ink sg-go"
+            onClick={() => ctx.go({ screen: "sing", song: s.id })}
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M7 4.5v15L19.5 12z" />
+            </svg>
+            <span>Practise</span>
+            <i lang={s.lang === "zxx" ? undefined : s.lang}>{s.title}</i>
+          </button>
+        ) : (
+          <p className="sg-wait" role="status">
+            The music for this song is being prepared.
+          </p>
+        )}
       </section>
-      {/* one reading column: the facts at a glance, then the song in a few paragraphs (what it says, how it
-          sings, where it comes from) */}
       <section className="sg-read" aria-label="About the song">
-        <dl className="sg-card">
-          <div>
-            <dt>Music</dt>
-            <dd>{s.composerFull}</dd>
-          </div>
-          {poet && (
-            <div>
-              <dt>Words</dt>
-              <dd>{poet}</dd>
-            </div>
-          )}
-          <div>
-            <dt>Sung in</dt>
-            <dd>{sungIn}</dd>
-          </div>
-          {x && (
-            <div>
-              <dt>Range</dt>
-              <dd>{rangeText(x.range)}</dd>
-            </div>
-          )}
-          {x?.year && (
-            <div>
-              <dt>Written</dt>
-              <dd>{x.year}</dd>
-            </div>
-          )}
-          {s.level && (
-            <div>
-              <dt>Level</dt>
-              <dd>{s.level}</dd>
-            </div>
-          )}
-          {cycle && (
-            <div className="sg-card-wide">
-              <dt>From</dt>
-              <dd>
-                {cycle.title}, No. {x!.no} of {cycle.count}
-              </dd>
-            </div>
-          )}
-        </dl>
         {(x?.story || s.note) && (
           <>
             <h2 className="sg-h">About the song</h2>
