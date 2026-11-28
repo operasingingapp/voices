@@ -2359,6 +2359,9 @@ function PracticeScreen({
   // on a phone the bar folds to one slim row while the music plays (the score gets the room); a tap opens it
   // phones: the bar is one slim row (play, loop, speed); the arrow opens every control, and closes them again
   const [barOpen, setBarOpen] = useLocalSetting("p:barOpen", false);
+  // phone: More opens a sheet over the music (piano, speed, count-in, Arrange, Notes) instead of growing the bar
+  const [moreSheet, setMoreSheet] = useState(false);
+  const isPhone = () => typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches;
   // the note-picking menu opens upwards from the pencil (when the pencil is on screen), as a short list
   const [pickAt, setPickAt] = useState<CSSProperties | null>(null);
   useLayoutEffect(() => {
@@ -5609,7 +5612,7 @@ function PracticeScreen({
           })(),
           document.body,
         )}
-      <footer className={`p-bar gutter ens${barOpen ? "" : " folded"}`}>
+      <footer className={`p-bar gutter ens${barOpen && !isPhone() ? "" : " folded"}`}>
         <div className="bar-parts many" role="group" aria-label="Parts">
           <button
             type="button"
@@ -6290,9 +6293,9 @@ function PracticeScreen({
         </div>
         <button
           type="button"
-          className={`cp-icon-btn bar-more${barOpen ? " open" : ""}`}
-          data-cap={barOpen ? "Less" : "More"}
-          onClick={() => setBarOpen(!barOpen)}
+          className={`cp-icon-btn bar-more${barOpen || moreSheet ? " open" : ""}`}
+          data-cap={moreSheet ? "Close" : "More"}
+          onClick={() => (isPhone() ? setMoreSheet(!moreSheet) : setBarOpen(!barOpen))}
           aria-expanded={barOpen}
           aria-label={
             barOpen
@@ -6303,6 +6306,108 @@ function PracticeScreen({
         >
           {Icon.chevUp}
         </button>
+        {moreSheet && (
+          <>
+            <button type="button" className="more-scrim" aria-label="Close" tabIndex={-1} onClick={() => setMoreSheet(false)} />
+            <div className="more-sheet" role="dialog" aria-label="Practice settings">
+              {grandUrl && (
+                <div className="ms-row">
+                  <span className="ms-label">Piano</span>
+                  <div className="cp-seg ms-seg" role="group" aria-label="Piano sound">
+                    <button
+                      type="button"
+                      aria-pressed={!(useGrand && asPrinted)}
+                      onClick={() => setPianoSound("app")}
+                    >
+                      App piano
+                    </button>
+                    <button
+                      type="button"
+                      aria-pressed={useGrand && asPrinted}
+                      onClick={() => {
+                        setPianoSound("grand");
+                        engine?.setTempoFactor(1);
+                      }}
+                    >
+                      Grand piano
+                    </button>
+                  </div>
+                </div>
+              )}
+              <div className="ms-row">
+                <span className="ms-label">
+                  Speed
+                  <small>{asPrinted ? "As written" : beatBpm < printedBpm ? "Slower than written" : "Faster than written"}</small>
+                </span>
+                <div className="ms-speed" role="group" aria-label="Tempo">
+                  <button type="button" aria-label="Slower" onClick={slower} disabled={!canSlower}>
+                    {Icon.minus}
+                  </button>
+                  <button
+                    type="button"
+                    className="ms-bpm"
+                    onClick={() => engine?.setTempoFactor(1)}
+                    aria-label={tempoLabel}
+                  >
+                    <BeatNote symbol={beatSymbol} /> {beatBpm}
+                  </button>
+                  <button type="button" aria-label="Faster" onClick={faster} disabled={!canFaster}>
+                    {Icon.plus}
+                  </button>
+                </div>
+              </div>
+              <div className="ms-row">
+                <span className="ms-label">
+                  Count-in
+                  <small>A bar of clicks before the music</small>
+                </span>
+                <button
+                  type="button"
+                  role="switch"
+                  className="ms-switch"
+                  aria-checked={countIn}
+                  aria-label="Count-in"
+                  onClick={() => setCountIn(!countIn)}
+                >
+                  <i />
+                </button>
+              </div>
+              <div className="ms-links">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMoreSheet(false);
+                    setMixOpen(true);
+                  }}
+                >
+                  <span className="ms-ic">{Icon.sliders}</span>
+                  <span>
+                    <b>Arrange</b>
+                    <small>Who plays, and what shows in the score</small>
+                  </span>
+                  {Icon.right}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMoreSheet(false);
+                    setDrawer(null);
+                    setNoteEdit(null);
+                    setMixOpen(false);
+                    setNotePick(true);
+                  }}
+                >
+                  <span className="ms-ic">{Icon.note}</span>
+                  <span>
+                    <b>Add a note{notes.length ? ` (${notes.length} so far)` : ""}</b>
+                    <small>Then tap the bar it belongs to</small>
+                  </span>
+                  {Icon.right}
+                </button>
+              </div>
+            </div>
+          </>
+        )}
         {pb.status === "error" && <p className="dock-status">{pb.error}</p>}
         {/* "tap the bar": sits just above this bar, so it never covers the title or the words */}
         {notePick && guide < 0 && (
