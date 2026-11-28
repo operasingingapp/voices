@@ -966,6 +966,26 @@ export function fmtTime(sec: number): string {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
 
+/** A character's name as printed at the start of a staff: short names whole (Figaro, Mimì), longer ones cut after
+ *  their first syllable's consonants (Sus., Cher., Bart.), titles dropped (Don, Donna, The), ordinals kept (Lady 1). */
+export function roleAbbr(name: string): string {
+  const fixed: Record<string, string> = { countess: "Ctss.", count: "Count", queen: "Queen" };
+  let n = name.trim().replace(/^(The|Il|La|Lo|Don|Donna|Barone|Dottore|Marchese)\s+/i, "").replace(/^d'/i, "");
+  const ord = n.match(/^(First|Second|Third)\s+(.+)$/i);
+  let num = "";
+  if (ord) {
+    num = " " + ({ first: "1", second: "2", third: "3" } as Record<string, string>)[ord[1].toLowerCase()];
+    n = ord[2];
+  }
+  const word = n.split(/\s+/)[0];
+  const key = word.toLowerCase();
+  if (fixed[key]) return fixed[key] + num;
+  if (word.length <= 6) return word + num;
+  const m = word.match(/^[^aeiouàèéìòù]*[aeiouàèéìòùy]+[^aeiouàèéìòùy]*/i);
+  const cut = m && m[0].length < word.length ? m[0] : word.slice(0, 4);
+  return cut + "." + num;
+}
+
 const TIPS_KEY = "cp:guide3";
 
 type PracticeProps = {
@@ -1245,16 +1265,25 @@ function PracticeScreen({
         const nm =
           sp.getElementsByTagName("part-name")[0]?.textContent?.trim() ?? "";
         const p = edition.parts.find((x) => x.source.xmlPartId === id);
+        // a soloist's abbreviation comes from the character's name as the app gives it (the scanned scores carry
+        // the German edition's, Gn. for the Countess); the chorus keeps its printed S. / A. / T. / B.
         const base =
           p?.kind === "piano"
             ? "Pno."
-            : ab && ab.length <= 6
+            : p?.kind === "chorus" && ab && ab.length <= 6
               ? ab
-              : (p?.shortLabel ?? nm)
-                  .replace(/^(Il|La|Lo|Don|Donna|The)\s+/i, "")
-                  .slice(0, 4) + ".";
+              : roleAbbr(p?.shortLabel ?? nm);
         if (id) out[id] = base;
       }
+      // two singers who would read the same (Papageno, Papagena): their names in full
+      const seen = new Map<string, string[]>();
+      for (const [id, a] of Object.entries(out)) seen.set(a, [...(seen.get(a) ?? []), id]);
+      for (const [, ids] of seen)
+        if (ids.length > 1)
+          for (const id of ids) {
+            const p = edition.parts.find((x) => x.source.xmlPartId === id);
+            if (p && p.kind !== "piano") out[id] = p.shortLabel.replace(/^(The|Il|La|Lo)\s+/i, "");
+          }
     } catch {
       /* names stay */
     }
@@ -1603,6 +1632,8 @@ function PracticeScreen({
   const [notesMsg, setNotesMsg] = useState("");
   // the score for print (Save as PDF), with your notes written on it: being made, or what became of it
   const [exportOpen, setExportOpen] = useState<ExportKind | null>(null);
+  // phone: the PDF and the Line / Page choice live in one ⋯ menu, so the header keeps a single switch
+  const [toolsMenu, setToolsMenu] = useState(false);
   const printDoc = useRef<{ key: string; html: string } | null>(null);
   const makeScoreHtml = async (
     withNotes: boolean,
@@ -4313,6 +4344,58 @@ function PracticeScreen({
               </button>
             </div>
           )}
+          <button
+            type="button"
+            className="cp-icon-btn p-tools-more"
+            aria-haspopup="menu"
+            aria-expanded={toolsMenu}
+            aria-label="More: PDF, and how the music is laid out"
+            onClick={() => setToolsMenu(!toolsMenu)}
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="5.5" cy="12" r="1.8" fill="currentColor" />
+              <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+              <circle cx="18.5" cy="12" r="1.8" fill="currentColor" />
+            </svg>
+          </button>
+          {toolsMenu && (
+            <>
+              <div className="p-tools-scrim" onClick={() => setToolsMenu(false)} />
+              <div className="lane-menu p-tools-menu" role="menu">
+                {musicOn && (
+                  <>
+                    <p className="p-tools-h">Music shown as</p>
+                    <button
+                      type="button"
+                      role="menuitemradio"
+                      aria-checked={!pageView}
+                      onClick={() => (setPageView(false), setToolsMenu(false))}
+                    >
+                      <span>One line, scrolling sideways</span>
+                      {!pageView && Icon.check}
+                    </button>
+                    <button
+                      type="button"
+                      role="menuitemradio"
+                      aria-checked={pageView}
+                      onClick={() => (setPageView(true), setToolsMenu(false))}
+                    >
+                      <span>Page, scrolling down</span>
+                      {pageView && Icon.check}
+                    </button>
+                    <hr />
+                  </>
+                )}
+                <button
+                  type="button"
+                  role="menuitem"
+                  onClick={() => (setExportOpen("score"), setToolsMenu(false))}
+                >
+                  <span>Save the score or words as PDF</span>
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </header>
 
@@ -5370,6 +5453,7 @@ function PracticeScreen({
           <button
             type="button"
             className="grand-chip"
+            data-cap={useGrand && asPrinted ? "Grand piano" : "App piano"}
             aria-pressed={useGrand && asPrinted}
             onClick={() => {
               // on: back to the app piano; off (another tempo, or the app piano chosen): the grand, at the printed tempo
@@ -5403,6 +5487,7 @@ function PracticeScreen({
             <button
               type="button"
               className={`tl-speed-chip${asPrinted ? "" : " changed"}`}
+              data-cap={asPrinted ? "Full speed" : beatBpm < printedBpm ? "Slower" : "Faster"}
               aria-expanded={speedPop}
               aria-label={`${tempoLabel.split(".")[0]}. Change it`}
               onClick={() => setSpeedPop(!speedPop)}
@@ -5517,6 +5602,7 @@ function PracticeScreen({
           <button
             type="button"
             className={`part${showOf(voicePart) ? "" : " is-hidden"}`}
+            data-cap={hearVoice ? "Your line on" : "You sing"}
             aria-pressed={hearVoice}
             aria-haspopup="menu"
             onClick={(e) => openFaceMenu(voicePart.key, e.currentTarget)}
@@ -6047,6 +6133,7 @@ function PracticeScreen({
           <button
             type="button"
             className="cp-icon-btn bar-again"
+            data-cap="Again"
             onClick={async () => {
               if (!engine) return;
               stepLine(-1);
@@ -6092,6 +6179,7 @@ function PracticeScreen({
           <button
             type="button"
             className="cp-icon-btn bar-loop"
+            data-cap="Loop"
             aria-pressed={!!loop}
             onClick={() => {
               if (loop) {
@@ -6187,6 +6275,7 @@ function PracticeScreen({
         <button
           type="button"
           className={`cp-icon-btn bar-more${barOpen ? " open" : ""}`}
+          data-cap={barOpen ? "Less" : "More"}
           onClick={() => setBarOpen(!barOpen)}
           aria-expanded={barOpen}
           aria-label={

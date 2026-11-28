@@ -81,6 +81,8 @@ export async function newVerovioToolkit(): Promise<Toolkit> {
 const PX_PER_SPACE_AT_100 = 18;
 /** width (px) of the names' column at the left of the single line */
 export const LANE_GUTTER_PX = 104;
+/** on a phone the names are short abbreviations, so the column is narrower and the music starts sooner */
+const laneGutter = () => (typeof window !== "undefined" && window.innerWidth < 640 ? 54 : LANE_GUTTER_PX);
 /** width (px) of the names' column at the left of the page view: a grip and the part's short name */
 export const PAGE_GUTTER_PX = 62;
 /** each staff carries its number, and each mark drawn between staves the staff it belongs to, so a part can be faded
@@ -195,7 +197,7 @@ export class VrvScore {
       pageMarginTop: Math.round(o.topPx * unitsPerPx),
       pageMarginBottom: 40,
       // the single line keeps a gutter at its left for the parts' names, beside their staves
-      pageMarginLeft: Math.round((o.strip ? LANE_GUTTER_PX : PAGE_GUTTER_PX) * unitsPerPx),
+      pageMarginLeft: Math.round((o.strip ? laneGutter() : PAGE_GUTTER_PX) * unitsPerPx),
       pageMarginRight: 30,
       spacingSystem: Math.max(6, Math.round(o.systemGapPx / (o.zoom * 10))),
       header: "none",

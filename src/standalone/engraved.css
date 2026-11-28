@@ -772,3 +772,70 @@
   .sg-facts > div { grid-template-columns: 84px minmax(0, 1fr); padding: 8px 0; }
   .sg-hero + .sg-read { margin-top: 30px; }
 }
+
+/* the line card, simpler: one soft card (no frame inside a frame), no dot in its header */
+.practice > .now-panel .line-card {
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--ink) 9%, transparent);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--ink) 3%, var(--canvas));
+}
+.now-panel .now-dot { display: none; }
+/* the syllable being sung: a firm green underline under the letters, not a box */
+.now-it .syl-now {
+  background-image: linear-gradient(var(--now-mark), var(--now-mark));
+  background-size: 100% 0.09em;
+  background-position: 0 100%;
+  border-radius: 0;
+  color: var(--ink);
+}
+/* a word with a tip: the whole word underlined (dotted, in the tips' colour); tap it for the tip */
+.now-it .now-word:has(.w-mark.anchor) {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: var(--tip-ink);
+}
+.now-it .now-word .w-mark { text-decoration: none; }
+
+/* the header's ⋯ menu: only on a phone, where PDF and Line / Page move into it */
+.p-tools-more, .p-tools-menu, .p-tools-scrim { display: none; }
+@media (max-width: 640px) {
+  .p-tools { position: relative; }
+  .p-tools .p-pdf-seg, .p-tools .layout-switch { display: none; }
+  .p-tools-more { display: inline-flex; width: 44px; height: 44px; }
+  .p-tools-more svg { width: 22px; height: 22px; }
+  .p-tools-scrim { display: block; position: fixed; inset: 0; z-index: 60; }
+  .p-tools-menu { display: block; position: absolute; right: 0; top: calc(100% + 6px); z-index: 61; min-width: 250px; padding: 6px; }
+  .p-tools-menu button { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 15px; text-align: left; }
+  .p-tools-menu button svg { width: 18px; height: 18px; color: var(--now-mark); }
+  .p-tools-menu .p-tools-h { margin: 6px 12px 2px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+  .p-tools-menu hr { margin: 6px 4px; border: 0; border-top: 1px solid var(--fog); }
+}
+
+/* phone: the bottom controls carry a small word under them, so each says what it does */
+@media (max-width: 640px) {
+  .p-bar.folded [data-cap], .p-timeline [data-cap] { position: relative; overflow: visible; }
+  .p-bar.folded [data-cap]::after, .p-timeline [data-cap]::after {
+    content: attr(data-cap);
+    position: absolute; left: 50%; top: calc(50% + 29px); transform: translateX(-50%);
+    font: 500 11px/1 var(--font-sans); letter-spacing: 0.01em; color: var(--ink-muted);
+    white-space: nowrap; pointer-events: none;
+  }
+  .p-timeline [data-cap]::after { top: calc(100% + 4px); font-size: 10.5px; }
+  .p-bar.folded { padding-bottom: calc(18px + env(safe-area-inset-bottom)); }
+}
+
+/* phone, the single line: it sits in the middle of the room under the words, not at the top with a gap below */
+@media (max-width: 640px) {
+  .p-stage > .score-scroll.strip > .strip-clip { margin-block: auto; }
+  .p-timeline .tl-speed { overflow: visible; }
+}
+@media (max-width: 640px) {
+  .p-timeline .tl-speed .tl-speed-chip[data-cap]::after {
+    content: attr(data-cap) !important; top: calc(100% + 4px) !important; left: 50% !important; right: auto !important;
+    width: auto !important; height: auto !important; background: none !important; border: 0 !important;
+    font: 500 10.5px/1 var(--font-sans) !important; color: var(--ink-muted) !important;
+  }
+}
